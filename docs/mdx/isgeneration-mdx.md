@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a726470f89f2d3ea1677259e849735a09909a42d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105229"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
 

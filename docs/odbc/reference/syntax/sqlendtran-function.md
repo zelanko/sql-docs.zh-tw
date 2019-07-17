@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16b4bcfec2640c0dbd55d43be9df2391ed1f66c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82045d5dbbee356f084d587100edfbafd4947f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104636"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函數
 **合規性**  

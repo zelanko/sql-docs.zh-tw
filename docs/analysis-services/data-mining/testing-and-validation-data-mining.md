@@ -1,5 +1,5 @@
 ---
-title: 測試和驗證 （資料採礦） |Microsoft 文件
+title: 測試和驗證 （資料採礦） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ce983ed5d5a645f32466ab38d5c67ff1c68897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182313"
 ---
 # <a name="testing-and-validation-data-mining"></a>測試和驗證 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "34018405"
   
 -   篩選模型，以定型和測試相同來源資料的不同組合。  
   
--   測量 *「增益」* (Lift) 和 *「改善」*(Gain)。 *「增益圖」* (Lift chart) 是當您將使用資料採礦模型而獲得的改進與隨機猜測進行比較時，將改進的程度視覺化的方法。  
+-   測量 *「增益」* (Lift) 和 *「改善」* (Gain)。 *「增益圖」* (Lift chart) 是當您將使用資料採礦模型而獲得的改進與隨機猜測進行比較時，將改進的程度視覺化的方法。  
   
--   執行資料集的「交叉驗證」  
+-   執行資料集的「交叉驗證」   
   
--   產生 *「分類矩陣」*(Classification matrices)。 這些圖表可將良好和不正確的猜測排序成資料表，即可快速簡易地量測出模型在預測目標值時精確度。  
+-   產生 *「分類矩陣」* (Classification matrices)。 這些圖表可將良好和不正確的猜測排序成資料表，即可快速簡易地量測出模型在預測目標值時精確度。  
   
 -   建立 *「散佈圖」* (Scatter plot) 評估迴歸公式的適合度。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "34018405"
 |------------|-----------|  
 |了解如何使用精靈或 DMX 命令來設定測試資料集|[定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |了解如何測試採礦結構中資料的散發及代表意義|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|深入了解所提供的精確度圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|深入了解所提供的精確度圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |了解如何建立分類矩陣 (也稱為混淆矩陣) 以評估真肯定、誤判、真否定、誤否定的數量。|[分類矩陣 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦工具](../../analysis-services/data-mining/data-mining-tools.md)   
+ [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
- [測試和驗證工作及操作方式 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

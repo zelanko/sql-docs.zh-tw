@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625858"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266538"
 ---
 # <a name="refresh-from-database-oracletosql"></a>從資料庫重新整理 (OracleToSQL)
 **從資料庫重新整理**對話方塊可讓您選取要從 Oracle 資料庫重新整理的物件。 在對話方塊中的資料列的色彩標示根據中繼資料的狀態：  
@@ -32,7 +32,7 @@ ms.locfileid: "62625858"
   
 若要存取**從資料庫重新整理** 對話方塊中，以滑鼠右鍵按一下物件，在 Oracle 中繼資料總管，然後按一下**從資料庫重新整理**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **摺疊 （-）**  
 摺疊所有的物件群組，若要隱藏個別的物件。  
   

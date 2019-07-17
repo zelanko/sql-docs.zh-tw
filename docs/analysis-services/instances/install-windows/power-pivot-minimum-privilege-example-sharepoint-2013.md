@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f26430a70d3ff6f2688727b135e8bf46649af62
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181343"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot 最低權限範例-SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   本主題描述使用最低權限的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態範例。 此組態會分別針對三個元件使用不同的帳戶，而且每個帳戶都具有最低層級的權限。  
   
 ## <a name="summary-of-accounts"></a>帳戶摘要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 支援使用網路服務帳戶作為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需有關服務帳戶的詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(http://msdn.microsoft.com/library/ms143504.aspx)。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 支援使用網路服務帳戶作為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需有關服務帳戶的詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(http://msdn.microsoft.com/library/ms143504.aspx) 。  
   
  下表將摘要說明用於這個最低權限組態範例的三個帳戶。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "40393824"
   
  **若要建立要當做 SharePoint 服務帳戶使用的新網域帳戶 SPsvc：**  
   
-1.  在 SharePoint 管理中心，選取 [安全性]。  
+1.  在 SharePoint 管理中心，選取 [安全性]  。  
   
-2.  選取 [設定服務帳戶]  
+2.  選取 [設定服務帳戶]   
   
-3.  選取 [註冊新的受管理帳戶]。  
+3.  選取 [註冊新的受管理帳戶]  。  
   
  **SPSvc** 帳戶沒有任何本機系統管理員權限，而且 SPsvc 沒有 SharePoint 資料庫的任何權限。 SPsvc 所需的唯一權限就是 Analysis Services 之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 執行個體的系統管理權限。  
   
  **若要將適當的應用程式集區設定為使用 SPsvc 帳戶：**  
   
-1.  在 SharePoint 管理中心，選取 [安全性]。  
+1.  在 SharePoint 管理中心，選取 [安全性]  。  
   
-2.  選取 [設定服務帳戶]。  
+2.  選取 [設定服務帳戶]  。  
   
 3.  選取 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式所使用的服務應用程式集區。 然後，選取 SPSvc 帳戶。  
   

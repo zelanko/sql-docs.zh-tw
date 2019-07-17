@@ -1,5 +1,5 @@
 ---
-title: 定義 Cube 階層屬性 |Microsoft 文件
+title: 定義 Cube 階層屬性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 65cd9ae51a89e32c85b46da0c8f14f0c9a593976
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208998"
 ---
 # <a name="define-cube-hierarchy-properties"></a>定義 Cube 階層屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cube 階層屬性可以讓您根據同一個資料庫維度，為 Cube 維度中的使用者自訂階層指定唯一設定。 下表描述 Cube 階層的屬性。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**已啟用**|決定是否為 Cube 維度啟用階層。|  
 |**HierarchyID**|包含階層的唯一識別碼 (ID)。|  

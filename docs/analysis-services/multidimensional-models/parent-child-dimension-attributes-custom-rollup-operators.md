@@ -1,5 +1,5 @@
 ---
-title: 父子式維度中的自訂積存運算子 |Microsoft 文件
+title: 父子式維度中的自訂積存運算子 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 000d6355aee1fc38aa4fdcb97cf02df2a4ef09da
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165422"
 ---
-# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>父子式維度屬性自訂積存運算子
+# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>父子式維度屬性 - 自訂積存運算子
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   自訂積存運算子提供簡易的方法，控制在父子式階層中成員值如何積存到父系值中。 在包含父子式關聯性的維度中，您可指定包含一元運算子的資料行，為父屬性的所有非導出成員指定積存。 只要評估父成員的值時，就會將一元運算子套用至成員。  
   

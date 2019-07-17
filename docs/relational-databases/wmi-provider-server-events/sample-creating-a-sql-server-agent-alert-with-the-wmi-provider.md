@@ -1,5 +1,5 @@
 ---
-title: 範例： 建立 SQL Server Agent 警示的 WMI 提供者 |Microsoft Docs
+title: 範例：使用 WMI 提供者建立 SQL Server Agent 警示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 03802fba0b2a36716fdac5674053a56061f26c85
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139485"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>範例：使用 WMI 提供者建立 SQL Server Agent 警示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   使用 WMI 事件提供者的常見方式為建立回應特定事件的 SQL Server Agent 警示。 下列範例顯示一個簡單的警示，可將 XML 死結圖形事件儲存在資料表中，以便稍後進行分析。 SQL Server Agent 會提交 WQL 要求、接收 WMI 事件，以及執行工作來回應事件。 請注意，雖然在處理通知訊息時包含數個 Service Broker 物件，但是 WMI 事件提供者會處理建立與管理這些物件的詳細資料。  
   
 ## <a name="example"></a>範例  
- 首先，在 `AdventureWorks` 資料庫中建立一個資料表來容納死結圖形事件。 此資料表包含兩個資料行：`AlertTime` 資料行容納警示執行的時間，而 `DeadlockGraph` 資料行容納其中包含死結圖形的 XML 文件。  
+ 首先，在 `AdventureWorks` 資料庫中建立一個資料表來容納死結圖形事件。 資料表包含兩個資料行：`AlertTime`資料行容納警示執行的時間和`DeadlockGraph`的資料行具有 XML 文件，其中包含死結圖表。  
   
  接著，建立警示。 指令碼會先建立警示將執行的工作、將作業步驟加入到工作中，然後將工作目標瞄準為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 然後，指令碼會建立警示。  
   
@@ -104,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在另一個查詢索引標籤中執行下列指令碼。此指令碼會產生一個結果集，然後封鎖，等待取得 `Production.Product` 上的鎖定。  
+ 第二個 [查詢] 索引標籤中，執行下列指令碼。此指令碼會產生一個結果集，然後封鎖，等待取得的鎖定上`Production.Product`。  
   
 ```  
 USE AdventureWorks ;  
@@ -120,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第一個查詢索引標籤中執行下列指令碼。此指令碼會封鎖，等待取得 `Production.Location` 上的鎖定。 短暫的逾時之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會選擇此指令碼或範例中的指令碼，做為死結的犧牲者，然後結束交易。  
+ 在第一個查詢索引標籤中，執行下列指令碼。此指令碼區塊，等候上取得鎖定`Production.Location`。 短暫的逾時之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會選擇此指令碼或範例中的指令碼，做為死結的犧牲者，然後結束交易。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

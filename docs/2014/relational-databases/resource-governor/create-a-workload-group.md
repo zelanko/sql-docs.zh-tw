@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198924"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立工作負載群組。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要建立工作負載群組，請使用：**[SQL Server Management Studio](#CreWGProp)， [Transact SQL](#CreWGTSQL)  
+-   **若要建立工作負載群組，請使用下列方式：** [SQL Server Management Studio](#CreWGProp)、[Transact-SQL](#CreWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52814050"
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至包含要修改之工作負載群組的資源集區。  
   
-2.  以滑鼠右鍵按一下 [工作負載群組] 資料夾，然後按一下 [新增工作負載群組]。  
+2.  以滑鼠右鍵按一下 [工作負載群組]  資料夾，然後按一下 [新增工作負載群組]  。  
   
 3.  在 **[資源集區]** 方格中，確定已反白顯示要新增工作負載群組的資源集區。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52814050"
   
 6.  在資料列中按一下或按兩下要變更預設值的任何其他資料格，然後輸入新值。  
   
-7.  若要儲存變更，請按一下 **[確定]**。  
+7.  若要儲存變更，請按一下 **[確定]** 。  
   
 ##  <a name="CreWGTSQL"></a> 使用 Transact-SQL 建立工作負載群組  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

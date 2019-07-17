@@ -10,12 +10,12 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5a703adf94d4708a4ee222a6cfcc442386202567
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f5380aa17cb75baaca18c8c241970b8954b9d05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288543"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266179"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant for MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 適用於 MySQL 是一項工具將 MySQL 資料庫移轉至[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 在 Windows 和 Linux （預覽） / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB。 SSMA for MySQL 將 MySQL 資料庫物件轉換成 SQL Server 資料庫物件，會建立這些物件中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後移轉資料，從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -26,7 +26,7 @@ ms.locfileid: "63288543"
   
 |||  
 |-|-|  
-|**章節**|**說明**|  
+|**章節**|**描述**|  
 |[SSMA for MySQL 中最新消息](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|在這個版本的 SSMA for MySQL 最新消息|  
 |[安裝 SSMA for MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|包含的主題會提供先決條件與指示在執行 SQL Server 的電腦上安裝 SSMA for MySQL 用戶端和必要的元件。|  
 |[開始使用 SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|導入的使用者介面、 專案和組態選項。|  

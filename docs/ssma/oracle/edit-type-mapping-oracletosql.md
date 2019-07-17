@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288577"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264227"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>編輯類型對應 (OracleToSQL)
 **編輯類型對應**對話方塊可讓您指定類型的來源和目的地的資料庫物件之間的對應方式。  
@@ -37,7 +37,7 @@ ms.locfileid: "63288577"
 **來源**  
 指定此對應的最小長度。 例如，對於**nchar**資料類型，您可以輸入 10，以指定此對應是範圍開始**nchar(10)** 。  
   
-**若要**  
+**To**  
 指定此對應的最大長度。 例如，對於**nchar**資料類型，您可以輸入以指定此對應是範圍結束時間的 20 **nchar(20)** 。  
   
 **目標類型**  

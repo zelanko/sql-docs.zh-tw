@@ -1,5 +1,5 @@
 ---
-title: Tuple |Microsoft 文件
+title: Tuple |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33bfe1d6e46a7687736afd837614eec350a941ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165759"
 ---
 # <a name="tuples"></a>Tuples
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,9 +66,9 @@ FROM [Adventure Works]
 >  屬性成員可以其成員名稱或成員索引鍵代表。 在上述範例中，您可以將參考值從 [CY 2004] 取代成 &[2004]。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Cube 空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
- [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [自動存在](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [使用成員、 Tuple 及集合 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

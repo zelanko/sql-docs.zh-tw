@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209900"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264556"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>功能表命令和其他快速鍵 (Oracle 到 SQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於 Oracle 應用程式。  
@@ -67,10 +67,10 @@ ms.locfileid: "63209900"
 |顯示錯誤清單 窗格。|ALT + V + E 或 CTRL + E|  
 |顯示 [輸出] 窗格。|ALT + V + O 或 CTRL + O|  
 |存取版面配置 子功能表。|ALT + V 鍵 + L|  
-|新增目前的版面配置。|ALT + V + L + A|  
+|新增目前的版面配置。|ALT + V 鍵 + L + A|  
 |選取預設的版面配置。|ALT + V 鍵 + L + D 或 CTRL + ALT + 1|  
 |選取此選項，而總管版面配置。|ALT + V 鍵 + L + W 或 CTRL + ALT + 2|  
-|顯示 [管理配置] 對話方塊。|ALT + V + L + M|  
+|顯示 [管理配置] 對話方塊。|ALT + V 鍵 + L + M|  
   
 ## <a name="tools-menu-commands"></a>工具功能表命令  
 若要存取 工具 功能表，使用鍵盤快速鍵為 ALT + t。下表描述的鍵盤快速鍵來存取工具 功能表底下的功能表項目。  
