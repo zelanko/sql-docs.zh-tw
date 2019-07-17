@@ -1,5 +1,5 @@
 ---
-title: 連接到 Analysis Services 資料庫的線上模式中的 |Microsoft 文件
+title: 連接到 Analysis Services 資料庫的線上模式中的 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 612e538ef01040778497242606115a01c6ef6921
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179009"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在連線模式下連接至 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "34021305"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
-2.  指向 **[檔案]** 功能表上的 **[開啟舊檔]** ，再按一下 **[Analysis Services 資料庫]**。  
+2.  指向 **[檔案]** 功能表上的 **[開啟舊檔]** ，再按一下 **[Analysis Services 資料庫]** 。  
   
-3.  選取 **[連接到現有的資料庫]**。  
+3.  選取 **[連接到現有的資料庫]** 。  
   
 4.  指定伺服器名稱和資料庫名稱。  
   
      您可以輸入資料庫名稱或是查詢伺服器，以檢視伺服器上現有的資料庫。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
      您現在可以直接編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的任何物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [在開發階段使用 Analysis Services 專案和資料庫](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
- [建立使用 SQL Server Data Tools & #40; 多維度模型SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [使用 SQL Server 資料工具建立多維度模型 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

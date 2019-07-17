@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120053"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |值|描述|  
 |-----------|-----------------|  
 |**JOB**|刪除作業類別目錄。|  
-|**ALERT**|刪除警示類別目錄。|  
+|**警示**|刪除警示類別目錄。|  
 |**運算子**|刪除操作員類別目錄。|  
   
 `[ @name = ] 'name'` 要移除的類別目錄名稱。 *名稱*已**sysname**，沒有預設值。  
@@ -81,7 +80,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_update_category &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

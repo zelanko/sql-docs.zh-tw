@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625882"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266576"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 (類型對應) (OracleToSQL)
 類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
@@ -60,8 +60,8 @@ ms.locfileid: "62625882"
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|ssNoversion|  
 |blob|varbinary(max)|  
 |boolean|bit|  
@@ -70,17 +70,17 @@ ms.locfileid: "62625882"
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |clob|varchar(max)|  
-|日期|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
-|Decimal|float[53]|  
-|雙精度|float[53]|  
-|FLOAT|float[53]|  
+|decimal|float [53]|  
+|雙精度|float [53]|  
+|FLOAT|float [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
-|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
-|long raw[8001..\*]<sup>*</sup>|varbinary(max)|  
+|長時間的原始 [\*...8000]<sup>*</sup>|varbinary[*]|  
+|長時間的原始 [8001...\*]<sup>*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |national char varying|nvarchar(max)|  
 |國家字元集|nvarchar(max)|  
@@ -88,22 +88,22 @@ ms.locfileid: "62625882"
 |不同的國家字元集<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
-|NUMERIC|float[53]|  
+|number|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |未經處理的|varbinary(max)|  
-|REAL|float[53]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
+|Varchar2|varchar(max)|  
 |xmltype|Xml|  
   
 <sup>*</sup> 傳回值型別對應只會套用。  
@@ -116,8 +116,8 @@ ms.locfileid: "62625882"
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
 |char varying [*..\*]|varchar[*]|  
@@ -126,17 +126,17 @@ ms.locfileid: "62625882"
 |可變長度字元 [*..\*]|varchar[*]|  
 |字元 [*..\*]|char[*]|  
 |clob|varchar(max)|  
-|日期|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*..\*]|dec[*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
-|雙精度|float[53]|  
-|FLOAT|float[53]|  
+|雙精度|float [53]|  
+|FLOAT|float [53]|  
 |float [*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[54..*]|float [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
@@ -155,7 +155,7 @@ ms.locfileid: "62625882"
 |NCHAR|NCHAR|  
 |nchar[*]|nchar[*]|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
+|number|float [53]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |NUMERIC|NUMERIC|  
@@ -163,10 +163,10 @@ ms.locfileid: "62625882"
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..\*]|nvarchar[*]|  
 |原始 [*..\*]|varbinary[*]|  
-|REAL|float[53]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset[*]|  
 |時區的時間戳記|datetimeoffset|  
@@ -184,14 +184,14 @@ ms.locfileid: "62625882"
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
-|布林|bit|  
+|Boolean|bit|  
 |Char|char|  
 |char varying [*..8000]|varchar[*]|  
-|char varying[8001..*]|varchar(max)|  
+|char varying [8001..*]|varchar(max)|  
 |char [*..8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |字元|char|  
@@ -200,17 +200,17 @@ ms.locfileid: "62625882"
 |字元 [*..8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |clob|varchar(max)|  
-|日期|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*..\*]|dec[*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
-|雙精度|float[53]|  
-|float|float[53]|  
+|雙精度|float [53]|  
+|float|float [53]|  
 |float [*..53]|float[*]|  
-|float[54..*]|float[53]|  
+|float[54..*]|float [53]|  
 |int|ssNoversion|  
 |Integer|ssNoversion|  
 |整數 [*..\*]|numeric[*][0]|  
@@ -233,8 +233,8 @@ ms.locfileid: "62625882"
 |nchar[4001..*]|nvarchar(max)|  
 |nchar 變動 [*..4000]|nvarchar[*]|  
 |nchar 不同 [4001..*]|nvarchar(max)|  
-|Nclob|nvarchar(max)|  
-|Number|float[53]|  
+|nclob|nvarchar(max)|  
+|Number|float [53]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |Numeric|numeric[38][0]|  
@@ -245,13 +245,13 @@ ms.locfileid: "62625882"
 |pls_integer|ssNoversion|  
 |原始 [*..8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
-|Real|float[53]|  
+|Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |Smallint|SMALLINT|  
 |字串 [*..8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset[*]|  

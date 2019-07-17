@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b74d52f21b056caa14b2ade7fca85426f877128
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120211"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**ins_cmd**||要執行的 INSERT 陳述式；否則，便從記錄檔中建構它。|  
 |**pre_creation_cmd**||可以在套用同步處理之前，卸除、刪除或截斷目的地資料表的預先建立命令。|  
-||**none**|不使用命令。|  
+||**None**|不使用命令。|  
 ||**drop**|卸除目的地資料表。|  
 ||**delete**|刪除目的地資料表。|  
 ||**truncate**|截斷目的地資料表。|  
@@ -124,7 +123,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**包含資料行名稱**|資料行名稱包括在複寫的 INSERT 陳述式中。|  
 ||**沒有資料行名稱**|資料行名稱不包括在複寫的 INSERT 陳述式中。|  
 ||**dts 水平資料分割**|發行項的水平資料分割並非由可轉換的訂閱來定義。|  
-||**none**|中的所有狀態選項會都清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並將標示為非作用中的發行項。|  
+||**None**|中的所有狀態選項會都清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並將標示為非作用中的發行項。|  
 ||**parameters**|利用參數化的命令，將變更傳播到訂閱者。 這是新發行項的預設值。|  
 ||**字串常值**|利用字串常值，將變更傳播到訂閱者。|  
 |**sync_object**||用於產生同步處理輸出檔之資料表或檢視的名稱。 預設值是 NULL。 不支援 Oracle 發行者使用這個值。|  
@@ -244,6 +243,6 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

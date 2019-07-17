@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211400"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中編輯 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
@@ -28,7 +28,7 @@ ms.locfileid: "52795740"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目編輯警示：**  
   
@@ -49,15 +49,15 @@ ms.locfileid: "52795740"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要編輯之警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要編輯的警示，並且選取 [屬性]。  
+4.  以滑鼠右鍵按一下要編輯的警示，並且選取 [屬性]  。  
   
-5.  更新 **[一般]**、 **[回應]** 和 **[選項]** 頁面上的警示屬性。  
+5.  更新 **[一般]** 、 **[回應]** 和 **[選項]** 頁面上的警示屬性。  
   
-6.  完成後，請按一下 **[確定]**。  
+6.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52795740"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  

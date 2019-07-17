@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 429a0c439f5257989e6fb7e85d34a8ea576ad41a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7e857539c26f7806712c3c8e0fd4222064eac8c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108697"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將指定的發行集的快照集資料夾複製到資料夾中列出**@destination_folder**。 這個預存程序執行於發行集資料庫的發行者端。 這個預存程序可用來將快照集複製到抽取式媒體 (如 CD-ROM)。  
+  將指定的發行集的快照集資料夾複製到資料夾中列出 **@destination_folder** 。 這個預存程序執行於發行集資料庫的發行者端。 這個預存程序可用來將快照集複製到抽取式媒體 (如 CD-ROM)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'` 是快照集內容是要複製的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
-`[ @destination_folder = ] 'destination_folder'` 是要複製發行集快照集內容名稱。 *destination_folder*已**nvarchar(255)**，沒有預設值。 *Destination_folder*可以是替代位置例如另一部伺服器、 網路磁碟機或抽取式媒體 （如 Cd-rom 或抽取式磁碟）。  
+`[ @destination_folder = ] 'destination_folder'` 是要複製發行集快照集內容名稱。 *destination_folder*已**nvarchar(255)** ，沒有預設值。 *Destination_folder*可以是替代位置例如另一部伺服器、 網路磁碟機或抽取式媒體 （如 Cd-rom 或抽取式磁碟）。  
   
 `[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 NULL。  
   

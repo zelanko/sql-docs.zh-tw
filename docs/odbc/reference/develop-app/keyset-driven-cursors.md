@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138836"
 ---
 # <a name="keyset-driven-cursors"></a>索引鍵集導向的資料指標
 索引鍵集驅動資料指標的靜態和動態資料指標之間在於它能夠偵測變更。 如同靜態資料指標，它不一定會偵測結果集的成員資格和順序變更。 動態資料指標，例如它沒有偵測到值的資料列的變更結果集中 （受限於 SQL_ATTR_TXN_ISOLATION 連接屬性所設定的交易隔離等級）。  

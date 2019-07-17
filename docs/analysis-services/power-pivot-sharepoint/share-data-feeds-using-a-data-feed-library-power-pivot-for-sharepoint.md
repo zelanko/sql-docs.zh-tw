@@ -1,5 +1,5 @@
 ---
-title: 共用資料摘要使用資料摘要的庫 (Power Pivot for SharePoint) |Microsoft 文件
+title: 使用資料摘要的庫 (Power Pivot for SharePoint) 共用資料摘要 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f262fe19ba39f217135908173189bf93a7e68817
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163703"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34030689"
   
  [修改資料服務文件](#modifydsdoc)  
   
- [下一步：使用資料服務文件](#usedsdoc)  
+ [下一個步驟：使用資料服務文件](#usedsdoc)  
   
 > [!NOTE]  
 >  雖然資料摘要是用來將 Web 資料加入您在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中建立的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]資料來源，但是任何可讀取 Atom 摘要的用戶端應用程式都可以處理資料服務文件。  
@@ -51,11 +51,11 @@ ms.locfileid: "34030689"
   
  單一文件可以指定多份資料摘要。 如果您想要在單一匯入作業中，從相同的服務 (或甚至不同的服務) 擷取一組資料裝載，這項功能會很有用。  
   
-1.  在 SharePoint 網站上，開啟資料摘要庫，或已經加入並設定資料服務內容類型的另一個文件庫。 若要尋找先前已建立的資料摘要庫，請按一下 [快速啟動] 上的 [全部檢視]。  
+1.  在 SharePoint 網站上，開啟資料摘要庫，或已經加入並設定資料服務內容類型的另一個文件庫。 若要尋找先前已建立的資料摘要庫，請按一下 [快速啟動] 上的 [全部檢視]  。  
   
-2.  在頁面頂端功能區上的 [文件工具] 中，按一下 [文件]。  
+2.  在頁面頂端功能區上的 [文件工具] 中，按一下 [文件]  。  
   
-3.  按一下 [新增文件]，然後選取 [資料服務文件]。  
+3.  按一下 [新增文件]  ，然後選取 [資料服務文件]  。  
   
 4.  在 [新資料服務文件] 頁面中輸入下列資訊：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34030689"
   
 6.  儲存文件。 資料服務文件是以實體檔案 (.atomsvc) 儲存於內容庫中，內容庫必須已設定為此內容類型。  
   
- 若要使用資料服務文件，您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，然後在 [匯入資料精靈] 中選擇 [從資料摘要] 選項。 接到提示時，使用者要指定資料服務文件的 SharePoint URL，以啟動資料匯入作業。 如需詳細資訊，請參閱 [使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
+ 若要使用資料服務文件，您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，然後在 [匯入資料精靈] 中選擇 [從資料摘要]  選項。 接到提示時，使用者要指定資料服務文件的 SharePoint URL，以啟動資料匯入作業。 如需詳細資訊，請參閱 [使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="securedsdoc"></a> 保護資料服務文件的安全  
  資料服務文件會繼承包含該文件之文件庫的權限。 您在項目上設定的權限會決定使用者是否可以開啟、修改或刪除資料服務文件。  
@@ -107,8 +107,8 @@ ms.locfileid: "34030689"
 > [!IMPORTANT]  
 >  雖然資料服務文件只讀取一次，但提供實際資料的資料服務可以定期進行存取，以取得更新的摘要。 如需如何重新整理資料的詳細資訊，請參閱 [Power Pivot 資料重新整理](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)。  
   
-##  <a name="usedsdoc"></a> 下一步：使用資料服務文件  
- 若要使用您在 SharePoint 文件庫中建立的資料服務文件，可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源中使用 [從資料摘要] 匯入選項。 如需指示，請參閱[使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
+##  <a name="usedsdoc"></a> 下一個步驟：使用資料服務文件  
+ 若要使用您在 SharePoint 文件庫中建立的資料服務文件，可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源中使用 [從資料摘要]  匯入選項。 如需指示，請參閱[使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Power Pivot 資料摘要](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  

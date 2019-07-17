@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072205"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207666"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中啟用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072205"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，連接到具有表格式模型的執行個體。  
   
-2.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性] > [相容性層級]。  
+2.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性]   > [相容性層級]  。  
   
      值會是 **SQL Server 2016 (1200)** 或 **SQL Server 2012 SP1 或更新版本 (1103)** 等較舊層級。 在下一個步驟中，請遵循適用於該相容性層級的指示。  
   
@@ -57,21 +57,21 @@ ms.locfileid: "53072205"
   
 ## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步驟 2a:將表格式 1200年資料庫切換至 DirectQuery 模式  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性] > [模型] > [預設模式]。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性]   > [模型]   > [預設模式]  。  
   
-2.  將模式設為 [DirectQuery] 。  
+2.  將模式設為 [DirectQuery]  。  
   
     |||  
     |-|-|  
-    |**有效的值**|**說明**|  
+    |**有效的值**|**描述**|  
     |**DirectQuery**|查詢會使用為模型定義的資料來源連線，針對後端關聯式資料庫執行。<br /><br /> 模型的查詢會轉換成原生資料庫查詢，並重新導向到資料來源。<br /><br /> 當您處理設為 DirectQuery 模式的模型時，只會編譯及部署中繼資料。 資料本身在模型外部，位於運作中資料來源的資料庫檔案中。|  
     |**匯入**|查詢會以 MDX 或 DAX 針對表格式資料庫執行。<br /><br /> 當您處理設為匯入模式的模型時，會從後端資料來源擷取資料，並將其儲存在磁碟上。 資料庫載入時，資料會完整複製到記憶體中，讓資料表掃描或查詢的速度能夠很快。<br /><br /> 這是表格式模型的預設模式，也是特定 (非關聯式) 資料來源的唯一模式。|  
   
 ## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步驟 2b:將表格式 1100-1103年資料庫切換為 DirectQuery 模式  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性] > [資料庫] > [DirectQuery 模式]。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性]   > [資料庫]   > [DirectQuery 模式]  。  
   
-2.  將模式設為 [DirectQuery] 。  
+2.  將模式設為 [DirectQuery]  。  
   
      [預設模式] 屬性包含下列項目：  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53072205"
   
  如需 DirectQuery 案例的使用者身分識別委派相關背景資訊，請檢閱 **Configure Analysis Services for Kerberos constrained delegation** 中的 [設定 Analysis Services 進行受信任委派](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 一節。  
   
-1.  在物件總管中展開 [連線]，然後按兩下連線以檢視其屬性。  
+1.  在物件總管中展開 [連線]  ，然後按兩下連線以檢視其屬性。  
   
      對於 DirectQuery 模型，必須只為資料庫定義了一個連線，而且資料來源必須為關聯式，並屬於支援的資料庫類型。 請參閱[支援的資料來源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
   

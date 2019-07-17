@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線性迴歸演算法 |Microsoft 文件
+title: Microsoft 線性迴歸演算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20d052ad91a00a7b70b658ff9118dfb73736a410
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183010"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34017925"
   
  關聯性會以最能夠代表一系列資料的線性方程式表示。 例如，下列圖表中的線條是最佳的資料線性表示法。  
   
- ![模型的一組資料列](../../analysis-services/data-mining/media/linear-regression.gif "模型的一組資料行")  
+ ![模型一組資料列](../../analysis-services/data-mining/media/linear-regression.gif "模型一組資料列")  
   
  圖表中的每一個資料點都有錯誤，與它到迴歸線的距離相關聯。 迴歸方程式中的係數 a 和 b 會調整迴歸線的角度和位置。 您可以調整 a 和 b，直到與所有點相關聯的錯誤總和達到最小值為止，以取得迴歸方程式。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34017925"
  如需詳細資訊，請參閱的 [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-a-linear-regression-model"></a>檢視線性迴歸模型  
- 若要瀏覽此模型，您可使用 [Microsoft 樹狀檢視器]。 線性迴歸模型的樹狀結構非常簡單，其中包含有關單一節點內所包含之迴歸方程式的所有資訊。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)。  
+ 若要瀏覽此模型，您可使用 [Microsoft 樹狀檢視器]  。 線性迴歸模型的樹狀結構非常簡單，其中包含有關單一節點內所包含之迴歸方程式的所有資訊。 如需詳細資訊，請參閱 [使用 Microsoft 樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
  如果您想要知道此方程式的詳細資料，也可以使用 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)來檢視係數和其他詳細資料。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34017925"
 -   支援 OLAP 採礦模型的使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [線性迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

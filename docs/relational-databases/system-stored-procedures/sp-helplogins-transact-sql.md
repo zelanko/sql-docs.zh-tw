@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122445"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +54,14 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**DefDBName**|**sysname**|預設資料庫**LoginName**執行個體的連接時所用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**DefLangName**|**sysname**|預設所使用的語言**LoginName**。|  
 |**Auser**|**char(5)**|Yes = **LoginName**資料庫中具有相關聯的使用者名稱。<br /><br /> 否 = **LoginName**沒有相關聯的使用者名稱。|  
-|**ARemote**|**char(7)**|Yes = **LoginName**具有相關聯的遠端登入。<br /><br /> 否 = **LoginName**沒有相關聯的登入。|  
+|**Xxxxx**|**char(7)**|Yes = **LoginName**具有相關聯的遠端登入。<br /><br /> 否 = **LoginName**沒有相關聯的登入。|  
   
  第二份報表包含有關對應到每一項登入的使用者以及登入的角色成員資格等資訊，如下表所示。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登入名稱。|  
-|**DBName**|**sysname**|預設資料庫**LoginName**執行個體的連接時所用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**資料庫名稱**|**sysname**|預設資料庫**LoginName**執行個體的連接時所用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**UserName**|**sysname**|使用者帳戶**LoginName**會對應到在**DBName**，以及角色的**LoginName**中的成員**DBName**。|  
 |**UserOrAlias**|**char(8)**|MemberOf = **UserName**是一種角色。<br /><br /> 使用者 = **UserName**是使用者帳戶。|  
   
@@ -103,7 +102,7 @@ John        pubs     John       User
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 172915d99b231490cbdca24f70d1d38da27a1d3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2884e23cbee78acacdb72e386f0e99610e9629f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135831"
 ---
 # <a name="customdata-mdx"></a>CustomData (MDX)
 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 844e11e72bb46b69229a9a4747ac7e64f013f14e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d36996f49cb58fbb8812ae5fee8928fdc8bddf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104643"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 函式
 **SQLDriverToDataSource** ODBC 驅動程式支援翻譯。 啟用 ODBC 的應用程式; 不會呼叫此函式應用程式會要求透過翻譯**SQLSetConnectAttr**。 驅動程式相關聯*ConnectionHandle*中指定**SQLSetConnectAttr**呼叫指定的 DLL，以執行從驅動程式傳輸到資料來源的所有資料的翻譯。 ODBC 初始化檔案中，就可以指定的預設轉譯 DLL。  

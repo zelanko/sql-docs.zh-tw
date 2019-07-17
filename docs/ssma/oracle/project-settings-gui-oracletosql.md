@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 90c6c1a75c975d8c4c79c87516ac628cfab15690
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991470"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266568"
 ---
 # <a name="project-settings-gui-oracletosql"></a>專案設定 (GUI) (OracleToSQL)
 GUI 專案設定可讓您設定資料顯示的方式**資料** 索引標籤，以及是否要顯示轉換後的評估報告，或不。  
@@ -26,7 +26,7 @@ GUI 窗格位於**專案設定**並**預設專案設定**對話方塊。
   
 -   使用**預設專案設定**對話方塊來設定所有專案的使用者介面選項。 若要存取 GUI 設定，在**工具**功能表上，選取**預設專案設定**，選取移轉的專案類型，則需要可以檢視或變更設定**移轉版本為目標**下拉式清單，然後再按**GUI**左窗格的底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源的最大資料列數目**  
 設定上顯示的資料列的數目**資料**的所選的來源資料表索引標籤。  
   

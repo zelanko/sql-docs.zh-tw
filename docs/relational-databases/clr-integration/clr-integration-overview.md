@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 96f64be7d380f2243945fb0b9a6c67244d7571cb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7b6db8bb34130ec844ffc7c982723c871defe961
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134901"
 ---
 # <a name="clr-integration---overview"></a>CLR 整合 - 概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ad944432b2a00acb923732863624a69dcbaf227f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209902"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264682"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>將 Oracle 資料移轉到 SQL Server (OracleToSQL)
 您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從 Oracle 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -59,7 +59,7 @@ ms.locfileid: "63209902"
   
 **若要將資料移轉**  
   
-1.  驗證下列項目：  
+1.  驗證下列各項：  
   
     -   執行 SSMA 的電腦上安裝的 Oracle 提供者。  
   

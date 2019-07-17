@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 984f9f2796edf1012e852d014e94ed6f6a6f7d57
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136543"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>變更追蹤目錄檢視-sys.change_tracking_databases 和
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

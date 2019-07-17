@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e77be71458eb10e97a82c925d34141a7bcaf1dc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4606b4345cc52d1371649449890400e01dbc5f51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114345"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>環境、連線和陳述式屬性
 ODBC 定義多個環境、 連線或陳述式相關聯的屬性。  

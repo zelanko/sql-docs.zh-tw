@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3817b33aa294d6081b9fa2ee240e67ac38dd2a25
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 748347b0a5b20f22cf7191213c59d2879df67522
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118721"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 資料類型
 ODBC 定義的 C 資料類型所使用的應用程式變數和其對應的型別識別項。 這些使用繫結至結果集資料行和陳述式參數的緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行中的資料。 它會宣告變數與 SQLCHAR * 資料類型，並將此變數繫結 SQL_C_CHAR 的型別識別項的結果集資料行。 如需 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  

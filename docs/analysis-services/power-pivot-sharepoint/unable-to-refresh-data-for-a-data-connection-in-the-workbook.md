@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207988"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>無法重新整理活頁簿中資料連接的資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53203137"
   
  您嘗試開啟的活頁簿可能已在 SQL Server 2008 R2 版的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中建立。 最有可能是因為資料連接字串中指定的 Analysis Services 資料提供者不存在於處理要求的電腦上。  
   
- 在此情況下，ULS 記錄檔中會出現此訊息：「 重新整理失敗 ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t 資料' 活頁簿中 '\<活頁簿 URL >' 」，後面接著 「 無法取得連接 」。  
+ 如果發生這種情況，您會在 ULS 記錄檔中找到此訊息：「 重新整理失敗 ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t 資料' 活頁簿中 '\<活頁簿 URL >' 」，後面接著 「 無法取得連接 」。  
   
  若要判斷活頁簿的版本，您可以在 Excel 開啟它並檢查連接字串中指定的資料提供者。 SQL Server 2008 R2 活頁簿使用 MSOLAP.4 做為其資料提供者。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53203137"
   
  執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的伺服器會自動取得更新的 OLE DB 資料提供者。 其他伺服器，例如執行 Excel Services 獨立執行個體但在相同電腦上並沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的伺服器，則必須先安裝修補程式，以使用較新版的用戶端程式庫。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
- **案例 3:網域控制站是無法使用**  
+ **案例 3：網域控制站是無法使用**  
   
  可能是無法使用網域控制站驗證使用者識別所致。 對 Windows Token Service 的宣告需要網域控制站，才能針對每個連接驗證 SharePoint 使用者。 對 Windows Token Service 的宣告無法使用快取認證。 它會針對每一個連接來驗證使用者識別。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53203137"
   
  如果您的目標是在離線狀態下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，在電腦上安裝網域控制站相當實用。 如需詳細指示，有關如何使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]離線，請參閱部落格文章，以 「 花您[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]遠離網路的伺服器 」 上[ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)。  
   
- **案例 4:伺服器不穩定**  
+ **案例 4：伺服器不穩定**  
   
  可能有一項或多項服務處於不一致的狀態。 在某些情況下，執行 IISRESET 即可解決問題。  
   

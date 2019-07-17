@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a1631532cb31813d8425fbf97ee4eec1936d9a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3b34cebe15155cf590cec5008ef8f8eaf5ba117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62683833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133104"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62683833"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|識別權限所在項目的類別。<br /><br /> 100 = 伺服器<br /><br /> 101 = 伺服器-主體<br /><br /> 105 = 端點|  
-|**class_desc**|**nvarchar(60)**|權限所在類別的描述。 為下列其中一個值：<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|權限所在類別的描述。 為下列其中一個值：<br /><br /> **伺服器**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|權限所在安全性實體的識別碼，它是根據類別加以解譯。 對大部份的項目來說，這只是套用至類別代表的識別碼。 下面是非標準的解譯：<br /><br /> 100 = 永遠為 0|  
 |**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。|  
 |**grantee_principal_id**|**int**|獲授與權限的伺服器主體識別碼。|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: cd652a9f308bd7a564a61d165f9c47875a900737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138292"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 指令碼 - FREEZE
 

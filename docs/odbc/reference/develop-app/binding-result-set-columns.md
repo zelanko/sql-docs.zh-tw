@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: becda51a0fac924fce31e6cb15331321990d8a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134996"
 ---
 # <a name="binding-result-set-columns"></a>繫結結果集資料行
 應用程式可以為多或較少的資料行，結果集，當他們選擇，包括完全沒有資料行繫結的繫結。 當擷取的資料列時，驅動程式可以傳回應用程式的繫結的資料行的資料。 不論應用程式繫結所有資料行在結果集中，則應用程式而定。 比方說，通常是產生報表的應用程式有固定的格式;這類應用程式建立結果集包含所有在報表中使用的資料行然後再繫結和擷取所有這些資料行的資料。 有時候顯示完整的資料畫面的應用程式可讓使用者決定要顯示; 的資料行這類應用程式會建立包含使用者可能會想，但繫結，並只為這些使用者所選擇的資料行擷取資料的所有資料行的結果集。  

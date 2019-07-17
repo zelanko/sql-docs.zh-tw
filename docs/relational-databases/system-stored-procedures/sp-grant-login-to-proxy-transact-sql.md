@@ -1,5 +1,5 @@
 ---
-title: sp_grant_login_to_proxy (Transact-SQL) | Microsoft Docs
+title: sp_grant_login_to_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-manager: jrothj
-ms.openlocfilehash: 81aeb41fdf7c8c17d5035347d384e7175bbd891b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e944a3b8e2f7b46f22ff0a349e061b03072407b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123851"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209507"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services 可以安裝在三種伺服器模式的其中一個：多維度和資料採礦 （預設）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+  Analysis Services 可以安裝在三種伺服器模式之一：多維度和資料採礦 （預設）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需有關功能可用性的特定模式的詳細資訊，請參閱 <<c0> [ 比較表格式和多維度解決方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   

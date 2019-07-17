@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196711"
 ---
 # <a name="table-properties"></a>資料表屬性
   本主題描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]之 [資料表屬性] 對話方塊中顯示的資料表屬性。 如需如何顯示這些屬性的詳細資訊，請參閱 [檢視資料表定義](view-the-table-definition.md)。  

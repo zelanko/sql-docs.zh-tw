@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63308420"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264497"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>開始使用 SSMA for Oracle 主控台 (OracleToSQL)
 本章節描述的程序啟動並開始使用 Oracle 的主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  

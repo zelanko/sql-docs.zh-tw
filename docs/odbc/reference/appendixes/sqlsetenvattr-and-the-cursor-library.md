@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74e57f98b7d5e3e1508a960b342521ea5d315a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db1608415ae74bcaafd89f4afe01393cfb700379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125562"
 ---
 # <a name="sqlsetenvattr-and-the-cursor-library"></a>SQLSetEnvAttr 和資料指標程式庫
 > [!IMPORTANT]  
