@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 313f85c5d5ec3590e231bdac4a746318c927a33a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104219"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 功能和功能
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -106,7 +105,7 @@ WideWorldImportersDW 被設計來展示支援許多 SQL server 適用於資料�
 
 是用於所有資料分割資料表的資料分割函數`PF_Date`，而且正在使用的資料分割配置`PS_Date`。
 
-## <a name="in-memory-oltp"></a>In-Memory OLTP
+## <a name="in-memory-oltp"></a>記憶體內部 OLTP
 
 （完整版的範例）
 

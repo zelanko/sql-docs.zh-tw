@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9931d3d02ff2d0afe69f410d94474c16f235b94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e23e6993f66dd706a800ae2b34a9fdc0d219898d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132463"
 ---
 # <a name="sqltables-access-driver"></a>SQLTables (Access 驅動程式)
 > [!NOTE]  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: aec3b91a52667e0ef0801bd2532689e39ebf9ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121155"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +32,11 @@ ms.locfileid: "47845146"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|原則的識別碼。|  
-|NAME|**sysname**|此原則的名稱。|  
+|name|**sysname**|此原則的名稱。|  
 |condition_id|**int**|這個原則所強制施行或測試之條件的識別碼。|  
 |root_condition_id|**int**|僅供內部使用。|  
 |date_created|**datetime**|建立此原則的日期和時間。|  
-|execution_mode|**int**|此原則的評估模式。 可能的值如下：<br /><br /> 0 = 視需要<br /><br /> 這種模式會在使用者直接指定時評估原則。<br /><br /> 1 = 變更時: 避免<br /><br /> 這種自動模式會使用 DDL 觸發程序來防止原則違規。<br /><br /> 2 = 變更時: 僅限記錄<br /><br /> 這種自動模式會在發生相關變更時使用事件通知來評估原則，並且記錄原則違規。<br /><br /> 4 = 按排程時間<br /><br /> 這種自動模式會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業來定期評估原則。 此模式會記錄原則違規。<br /><br /> 注意： 3 這個值不是可能的值。|  
+|execution_mode|**int**|此原則的評估模式。 可能的值如下：<br /><br /> 0 = 視需要<br /><br /> 這種模式會在使用者直接指定時評估原則。<br /><br /> 1 = 變更時: 避免<br /><br /> 這種自動模式會使用 DDL 觸發程序來防止原則違規。<br /><br /> 2 = 變更時: 僅限記錄<br /><br /> 這種自動模式會在發生相關變更時使用事件通知來評估原則，並且記錄原則違規。<br /><br /> 4 = 按排程時間<br /><br /> 這種自動模式會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業來定期評估原則。 此模式會記錄原則違規。<br /><br /> 注意:值為 3 不可能的值。|  
 |policy_category|**int**|此原則所屬之以原則為基礎之管理原則類別目錄的識別碼。 如果它是預設原則群組，就會是 NULL。|  
 |schedule_uid|**uniqueidentifier**|當 execution_mode 為 [按排程時間] 時，會包含此排程的識別碼，否則為 NULL。|  
 |description|**nvarchar(max)**|此原則的描述。 描述資料行為選擇性，而且可為 NULL。|  

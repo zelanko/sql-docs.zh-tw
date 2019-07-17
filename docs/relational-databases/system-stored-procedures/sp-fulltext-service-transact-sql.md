@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c43d969f56619109cfb6ebe09b8a416824f59638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ede8b65cb3f11ed6640121031ea6a2fe5b57b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124186"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 > [!NOTE]  
 >  下列動作將在未來版本中移除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**， **connect_timeout**， **data_timeout**，以及**resource_使用量**。 請避免在新的開發工作中使用這些動作，並規劃修改目前使用任何這些動作的應用程式。  
   
-|動作|資料類型|描述|  
+|Action|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
 |**connect_timeout**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  

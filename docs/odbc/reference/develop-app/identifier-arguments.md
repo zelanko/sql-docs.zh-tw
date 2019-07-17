@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139001"
 ---
 # <a name="identifier-arguments"></a>識別碼引數
 如果已加上引號的識別碼引數的字串，驅動程式會移除開頭和尾端空白，並將解譯為常值的引號內的字串。 如果字串不加上引號，驅動程式會移除尾端的空白和摺疊成大寫的字串。 識別碼引數設定為 null 指標會傳回 SQL_ERROR，而且 SQLSTATE HY009 （使用無效的 null 指標），除非引數是類別目錄名稱，而且不支援目錄。  

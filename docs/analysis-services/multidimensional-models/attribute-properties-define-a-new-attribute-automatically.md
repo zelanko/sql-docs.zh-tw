@@ -1,5 +1,5 @@
 ---
-title: 自動定義新屬性 |Microsoft 文件
+title: 自動定義新的屬性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5368288930526435682723ba8f50d878ff029ce1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179621"
 ---
-# <a name="attribute-properties---define-a-new-attribute-automatically"></a>屬性內容-自動定義新屬性
+# <a name="attribute-properties---define-a-new-attribute-automatically"></a>屬性內容 - 自動定義新屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   您可以在 [維度設計師] 中使用拖放式編輯，在維度中建立新屬性。  
   
@@ -30,6 +30,6 @@ ms.locfileid: "34021705"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的維度](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   
- [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

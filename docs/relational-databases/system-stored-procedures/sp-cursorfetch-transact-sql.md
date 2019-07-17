@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108515"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  所解碼的字元： 如果未不傳回任何資料列，緩衝區內容會維持原狀。  
   
-|*\<rownum>*|設定為|  
+|*\<rownum >*|設定為|  
 |------------------|------------|  
 |如果未開啟|0|  
 |如果位於結果集的前面|0|  
@@ -193,7 +192,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

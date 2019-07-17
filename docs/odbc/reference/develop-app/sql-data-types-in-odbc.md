@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35b4d12d48f48aa4bab3d80ab551708b7a2311d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f728c3c71e00b952c433874c0637c02724fec145
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107498"
 ---
 # <a name="sql-data-types-in-odbc"></a>ODBC 中的 SQL 資料類型
 SQL 資料類型是資料儲存在資料來源中的類型。  

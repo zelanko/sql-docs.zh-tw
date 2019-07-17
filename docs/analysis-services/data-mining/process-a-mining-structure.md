@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182503"
 ---
 # <a name="process-a-mining-structure"></a>處理採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "37999730"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA：處理命令  
+-   XMLA:處理程序命令  
   
  如需如何處理個別模型的資訊，請參閱 [處理採礦模型](../../analysis-services/data-mining/process-a-mining-model.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "37999730"
   
 1.  從 **中的** [採礦模型] **功能表項目選取** [處理採礦結構和所有模型] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
-     如果您變更了結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
+     如果您變更了結構，在處理模型之前，會提示您重新部署結構。 按一下 [ **是**]。  
   
 2.  按一下 [**執行**中**處理採礦結構 –\<結構 >** ] 對話方塊。  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c4f09cf3110c202caeaa5079a3124bd64ffedae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210205"
 ---
 # <a name="association-model-query-examples"></a>關聯模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,7 @@ WHERE MODEL_NAME = 'Association'
  [回頁首](#bkmk_top2)  
   
 ## <a name="finding-information-about-rules-and-itemsets"></a>尋找有關規則和項目集的資訊  
- 關聯模型有兩種常見用法：探索有關常用項目集的詳細資訊，以及擷取有關特定規則和項目集的詳細資料。 例如，您可能想要擷取計分為特別有趣的規則清單，或建立最常見項目集的清單。 您可以使用 DMX 內容查詢擷取此類資訊。 也可以使用 [Microsoft 關聯檢視器] 瀏覽此資訊。  
+ 關聯模型有兩種常見用法：探索有關常用項目集的詳細資訊，以及擷取有關特定規則和項目集的詳細資料。 例如，您可能想要擷取計分為特別有趣的規則清單，或建立最常見項目集的清單。 您可以使用 DMX 內容查詢擷取此類資訊。 也可以使用 [Microsoft 關聯檢視器]  瀏覽此資訊。  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4:擷取項目集和產品的清單  
  下列查詢會擷取所有的項目集，並附上列出每個項目集中所包含產品的巢狀資料表。 NODE_NAME 資料行包含項目集在模型內的唯一識別碼，NODE_CAPTION 則提供項目的文字描述。 在此範例中，巢狀資料表會扁平化，使包含兩個產品的項目集會在結果中產品兩個資料列。 如果用戶端支援階層資料，則您可以省略 FLATTENED 關鍵字。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139044"
 ---
 # <a name="handles"></a>處理
 控點是不透明，32 位元的值，識別特定的項目;在 ODBC 中，此項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員] 或 [驅動程式會建立指定型別的新項目和其控制代碼傳回應用程式。 稍後在應用程式會使用控制代碼呼叫 ODBC 函數時，找出該項目。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  

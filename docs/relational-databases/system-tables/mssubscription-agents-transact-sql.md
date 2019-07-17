@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b1b8680343f233c35b704f3805b06ea9dc47c12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139790"
 ---
 # <a name="mssubscriptionagents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52808500"
 |**id**|**int**|資料列的識別碼。|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**subscription_type**|**int**|訂閱類型：<br /><br /> 0 = 發送。<br /><br /> 1 = 提取<br /><br /> 2 = 提取匿名。|  
 |**queue_id**|**sysname**|識別碼[!INCLUDE[msCoName](../../includes/msconame-md.md)]訊息在發行者端的佇列。 *queue_id*設定為**SQL**的 SQL 架構佇列更新。|  
 |**update_mode**|**tinyint**|更新的類型：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。<br /><br /> **2** = 使用 Message Queuing 的佇列更新。<br /><br /> **3** = 立即更新與佇列更新進行容錯移轉使用訊息佇列。<br /><br /> **4** = 使用 SQL Server 佇列的佇列更新。<br /><br /> **5** = 立即更新與佇列的更新容錯移轉時，使用 SQL Server 佇列。|  

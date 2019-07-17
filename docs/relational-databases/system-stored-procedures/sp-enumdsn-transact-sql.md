@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f58a16b3d4d393a94dc5e42413ddfeb2a8eb5d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124594"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +44,8 @@ sp_enumdsn
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**資料來源名稱**|**sysname**|資料來源的名稱。|  
-|**說明**|**varchar(255)**|資料來源的描述。|  
-|**型別**|**int**|資料來源的類型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 資料來源|  
+|**描述**|**varchar(255)**|資料來源的描述。|  
+|**型別**|**int**|資料來源的類型：<br /><br /> **1** = ODBC 資料來源名稱<br /><br /> **3** = OLE DB 資料來源|  
 |**提供者名稱**|**varchar(255)**|OLE DB 提供者的名稱。 ODBC DSN 的這個值是 NULL。|  
   
 ## <a name="remarks"></a>備註  

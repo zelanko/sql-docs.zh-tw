@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e290e0e15797a8b84a6d52c945a5fd78458515fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208198"
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 Power Pivot 組態
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52505633"
   
  使用 PowerShell 檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 的清單：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  輸入下列命令：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52505633"
 ## <a name="enable-power-pivot-cmdlets-on-a-server"></a>在伺服器上啟用 Power Pivot Cmdlet  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Cmdlet 可以在您安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 並部署伺服器陣列方案之後使用。 這些方案會在您執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具時部署。 請依照下列步驟啟用指令程式：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  執行第一個 Cmdlet：  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52505633"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  關閉視窗。 再次使用 [以系統管理員身分執行] 選項重新開啟該視窗。  
+4.  關閉視窗。 再次使用 [以系統管理員身分執行]  選項重新開啟該視窗。  
   
 ## <a name="related-content"></a>相關內容  
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  

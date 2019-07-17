@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde493edbc6d677b27ef72a24736b504959a7b59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114134"
 ---
 # <a name="step-5-commit-the-transaction"></a>步驟 5：認可交易
 下一個步驟是認可交易，如下圖所示。  

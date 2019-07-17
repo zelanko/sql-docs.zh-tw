@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2c8eb24f9fc3928d1b62ed5461f4a44ccdab4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29002e403b028f9f879782241588961a04007b65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110107"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "53205617"
   
  執行此範例時，您必須傳遞伺服器的名稱或 server\instance_name，以及一個介於 4 MB (0x400001) 和 4 GB (0xFFFFFFFF) 之間的值，表示要寫入的資料量。  
   
- 第四個 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所建立的資料庫。  
+ 第四個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所建立的資料庫。  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

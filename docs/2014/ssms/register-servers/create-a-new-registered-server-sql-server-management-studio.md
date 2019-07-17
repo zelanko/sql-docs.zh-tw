@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188143"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
   本主題描述如何藉由在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  
@@ -42,17 +42,17 @@ ms.locfileid: "52757960"
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>自動註冊本機伺服器執行個體  
   
--   在 [已註冊的伺服器] 中，以滑鼠右鍵按一下 [已註冊的伺服器] 樹狀目錄的任何節點，然後按一下 [更新本機伺服器註冊]。  
+-   在 [已註冊的伺服器] 中，以滑鼠右鍵按一下 [已註冊的伺服器] 樹狀目錄的任何節點，然後按一下 [更新本機伺服器註冊]  。  
   
 #### <a name="to-create-a-new-registered-server"></a>建立新的已註冊伺服器  
   
-1.  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中看不到「已註冊的伺服器」，請在 **[檢視]** 功能表上按一下 **[已註冊的伺服器]**。  
+1.  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中看不到「已註冊的伺服器」，請在 **[檢視]** 功能表上按一下 **[已註冊的伺服器]** 。  
   
      **伺服器類型**  
-     從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 窗格中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]** 工具列上按一下 **[Database Engine]**、 **[Analysis Server]**、 **[Reporting Services]** 或 **[Integration Services]** ，然後再開始註冊新的伺服器。  
+     從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型]  方塊是唯讀的，且會與 [已註冊的伺服器] 窗格中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]** 工具列上按一下 **[Database Engine]** 、 **[Analysis Server]** 、 **[Reporting Services]** 或 **[Integration Services]** ，然後再開始註冊新的伺服器。  
   
      **伺服器名稱**  
-     選取要以下列格式註冊的伺服器執行個體：\<伺服器名稱>[\\\<執行個體名稱>]。  
+     選取要以下列格式註冊的伺服器執行個體：\<伺服器名稱>  [\\\<執行個體名稱>  ]。  
   
      **驗證**  
      當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時，有兩種可用的驗證模式。  
@@ -67,7 +67,7 @@ ms.locfileid: "52757960"
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 如需詳細資訊，請參閱 [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
      **使用者名稱**  
-     顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]**，請以不同使用者登入電腦。  
+     顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]** ，請以不同使用者登入電腦。  
   
      **登入**  
      輸入要用來連接的登入。 只有在您已選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接時，才可以使用此選項。  
@@ -79,7 +79,7 @@ ms.locfileid: "52757960"
      選取即可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密和儲存您輸入的密碼。 只有在您已選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接時，才會顯示此選項。  
   
     > [!NOTE]  
-    >  如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
+    >  如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]  。  
   
      **已註冊的伺服器名稱**  
      您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需要與 **[伺服器名稱]** 方塊中的名稱相符。  
@@ -88,7 +88,7 @@ ms.locfileid: "52757960"
      輸入伺服器的選擇性描述。  
   
      **測試**  
-     按一下以測試與 [伺服器名稱] 中選取之伺服器的連接。  
+     按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。  
   
      **儲存**  
      按一下即可儲存已註冊的伺服器設定。  
@@ -96,9 +96,9 @@ ms.locfileid: "52757960"
 ## <a name="multiserver-queries"></a>多伺服器查詢  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢編輯器] 視窗可以同時連接及查詢多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此查詢傳回的結果可以合併到單一結果窗格，或者可以在不同的結果窗格中傳回。 還有一個選擇如下：[查詢編輯器] 所包含的資料行可提供產生每一個資料列的伺服器名稱，以及連接到提供每一個資料列之伺服器所用的登入。 如需如何執行多伺服器查詢的詳細資訊，請參閱[同時對多部伺服器執行陳述式 &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)。  
   
- 若要針對本機伺服器群組內的所有伺服器執行查詢，請以滑鼠右鍵按一下伺服器群組，並指向 [連接]，然後按一下 [新增查詢]。 在新的 [查詢編輯器] 視窗中執行查詢時，將會使用包含使用者驗證內容的預存連接資訊，針對此群組中的所有伺服器來執行。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所註冊但是未儲存密碼的伺服器將會連接失敗。  
+ 若要針對本機伺服器群組內的所有伺服器執行查詢，請以滑鼠右鍵按一下伺服器群組，並指向 [連接]  ，然後按一下 [新增查詢]  。 在新的 [查詢編輯器] 視窗中執行查詢時，將會使用包含使用者驗證內容的預存連接資訊，針對此群組中的所有伺服器來執行。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所註冊但是未儲存密碼的伺服器將會連接失敗。  
   
- 若要針對使用中央管理伺服器註冊的所有伺服器執行查詢，請展開中央管理伺服器，然後以滑鼠右鍵按一下伺服器群組，並指向 [連接]，再按一下 [新增查詢]。 在新的 [查詢編輯器] 視窗中執行查詢時，將會使用預存連接資訊及使用者的 Windows 驗證內容，針對此伺服器群組中的所有伺服器來執行。  
+ 若要針對使用中央管理伺服器註冊的所有伺服器執行查詢，請展開中央管理伺服器，然後以滑鼠右鍵按一下伺服器群組，並指向 [連接]  ，再按一下 [新增查詢]  。 在新的 [查詢編輯器] 視窗中執行查詢時，將會使用預存連接資訊及使用者的 Windows 驗證內容，針對此伺服器群組中的所有伺服器來執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [在物件總管中隱藏系統物件](../object/hide-system-objects-in-object-explorer.md)   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196412"
 ---
 # <a name="delete-views"></a>刪除檢視
   您可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中刪除 (卸除) 檢視，方法是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -46,12 +46,12 @@ ms.locfileid: "52513494"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要刪除的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要刪除的檢視，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下您要刪除的檢視，然後按一下 [刪除]  。  
   
-3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
+3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!IMPORTANT]  
-    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 [<檢視名稱> 相依性] 對話方塊。 這就會顯示相依於檢視的所有物件以及檢視所相依的所有物件。  
+    >  在 [刪除物件]  對話方塊中按一下 [顯示相依性]  ，開啟 [<檢視名稱>  相依性]  對話方塊。 這就會顯示相依於檢視的所有物件以及檢視所相依的所有物件。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -59,9 +59,9 @@ ms.locfileid: "52513494"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例只在指定的檢視已存在時才會予以刪除。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例只在指定的檢視已存在時才會予以刪除。  
   
     ```  
     USE AdventureWorks2012 ;  

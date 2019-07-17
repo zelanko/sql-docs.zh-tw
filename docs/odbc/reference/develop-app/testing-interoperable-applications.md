@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59f6f5a37e65c802c8d51a1f56a40380f054e39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114091"
 ---
 # <a name="testing-interoperable-applications"></a>測試可互通的應用程式
 測試可互通的應用程式是在最耗時的商務和最糟的情況不可能因為市場上不斷出現新的驅動程式。 不過，一定的測試可能會。 有限或低的互通性的應用程式只需要針對保證可支援這些驅動程式進行測試。 不過，它們必須是完全針對測試這些驅動程式。  

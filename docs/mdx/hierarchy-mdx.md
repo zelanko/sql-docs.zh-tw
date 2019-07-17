@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0699ce1d66c420061091436ebf879c9b32b3ca7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba105499fd3f94429c73152f4471541e13e9af98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105423"
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
 

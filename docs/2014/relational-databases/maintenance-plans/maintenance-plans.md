@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206848"
 ---
 # <a name="maintenance-plans"></a>維護計畫
   維護計畫會建立必要的工作流程，確保資料庫已最佳化、定期備份，而且沒有任何不一致性。 「維護計畫精靈」也會建立核心維護計畫，但手動建立計畫能提供更大的彈性。  
@@ -56,14 +56,14 @@ ms.locfileid: "52803070"
   
 -   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 這可用來建立執行各種動作的作業，以及執行這些作業的維護計畫。  
   
- 維護工作產生的結果可以當做報表寫入文字檔，或寫入 `sysmaintplan_log` 中的維護計畫資料表 `sysmaintplan_logdetail` 和 `msdb`。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
+ 維護工作產生的結果可以當做報表寫入文字檔，或寫入 `sysmaintplan_log` 中的維護計畫資料表 `sysmaintplan_logdetail` 和 `msdb`。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]  ，然後按一下 [檢視記錄]  。  
   
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用維護計畫，請使用下列主題。  
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建立維護計畫。|[建立維護計畫](create-a-maintenance-plan.md)|  
 |描述如何使用維護計畫設計介面建立維護計畫。|[建立維護計畫 &#40;維護計畫設計介面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |記載 [物件總管] 中可用的維護計畫功能。|[維護計畫節點 &#40;物件總管&#41;](../../ssms/object/object-explorer.md)|  

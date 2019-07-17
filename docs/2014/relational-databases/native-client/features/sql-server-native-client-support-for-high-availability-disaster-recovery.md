@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206639"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
   本主題將討論適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 支援 (在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中所新增)。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[作用中次要複本：</c2>可讀取次要複本 （AlwaysOn 可用性群組）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "56040229"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   使用 `MultiSubnetFailover` 連接屬性之應用程式的行為不受驗證類型影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication、Kerberos Authentication 或 Windows Authentication。  
+-   使用的應用程式的行為`MultiSubnetFailover`連接屬性不會影響基礎的驗證類型：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、 Kerberos 驗證或 Windows 驗證。  
   
 -   您可以增加 `loginTimeout` 的值，來容納容錯移轉時間並減少應用程式連接重試次數。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "56040229"
  `IDBProperties::SetProperties`  
  若要設定 `ApplicationIntent` 屬性值，請呼叫 `IDBProperties::SetProperties` 來傳入 `SSPROP_INIT_APPLICATIONINTENT` 屬性 (該屬性的值為 "`ReadWrite`" 或 "`ReadOnly`")，或是傳入 `DBPROP_INIT_PROVIDERSTRING` 屬性 (該屬性的值包含 "`ApplicationIntent=ReadOnly`" 或 "`ApplicationIntent=ReadWrite`")。  
   
- 您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
+ 您可以在 [資料連結屬性]  對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
   
  當建立隱含連接時，隱含連接將會使用父連接的應用程式意圖設定。 同樣地，從相同資料來源建立的多個工作階段將會繼承資料來源的應用程式意圖設定。  
   

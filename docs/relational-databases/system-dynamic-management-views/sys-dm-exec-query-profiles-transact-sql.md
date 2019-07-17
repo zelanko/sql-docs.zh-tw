@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 9e5ada5c47d49b801a9dba1a70f22754096f4b27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135174"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -92,10 +91,10 @@ ms.locfileid: "58860719"
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。   
    
 ## <a name="examples"></a>範例  
- 步驟 1:登入您打算執行的查詢，您會使用分析工作階段`sys.dm_exec_query_profiles`。 若要設定分析用查詢`SET STATISTICS PROFILE ON`。 在此相同工作階段中執行查詢。  
+ 步驟 1：登入您打算執行的查詢，您會使用分析工作階段`sys.dm_exec_query_profiles`。 若要設定分析用查詢`SET STATISTICS PROFILE ON`。 在此相同工作階段中執行查詢。  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -109,7 +108,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 步驟 2:登入不同於您的查詢執行所在工作階段的第二個工作階段。  
+ 步驟 2：登入不同於您的查詢執行所在工作階段的第二個工作階段。  
   
  下列陳述式摘要目前正在工作階段 54 中執行的查詢進度。 為了達成目的，它會計算每個節點所有執行緒的輸出資料列總數，並且將它和該節點的輸出資料列預估數比較。  
   

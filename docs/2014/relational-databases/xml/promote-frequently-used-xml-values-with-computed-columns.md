@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195577"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
   如果查詢主要只是針對少數的元素和屬性值來執行，您可能會想要將那些量升級至關聯式資料行。 若已擷取整個 XML 執行個體，但您只是要針對小部分的 XML 資料來發出查詢要求時，這是很有幫助的。 您不需要在 XML 資料行上建立 XML 索引， 即可為升級的資料行建立索引。 您必須撰寫查詢來使用升級的資料行。 意即，查詢最佳化工具不再將 XML 資料行查詢的目標放在升級的資料行。  
@@ -28,7 +28,7 @@ ms.locfileid: "58533310"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>以 xml 資料類型為基礎的計算的資料行  
  使用使用者定義的函式會叫用，也可以建立計算資料行`xml`資料類型方法。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例基礎的計算資料行的 xml 資料類型方法  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例以 xml 資料類型方法為基礎的計算資料行  
  針對書籍的 ISBN 號碼來建立使用者自訂函數：  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以用一般的方式來檢索計算的資料行。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例在計算資料行以 xml 為基礎的資料類型方法查詢  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例查詢以 xml 資料類型方法為基礎的計算資料行  
  若要取得 ISBN 為 0-7356-1588-2 的 <`book`>，請：  
   
 ```  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   在 XML 資料行上建立觸發程序，以維護屬性資料表。 在觸發程序中執行下列其中之一：  
   
-    -   使用`xml`資料類型方法，例如**nodes （)** 並**value （)**，進而插入及刪除屬性資料表的資料列。  
+    -   使用`xml`資料類型方法，例如**nodes （)** 並**value （)** ，進而插入及刪除屬性資料表的資料列。  
   
     -   在 Common Language Runtime (CLR) 中建立資料流資料表值函式，以插入及刪除屬性資料表的資料列。  
   
@@ -91,7 +91,7 @@ WHERE  ISBN = '0-7356-1588-2'
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例建立使用者定義函式來產生 XML 執行個體的資料列集  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例建立使用者自訂函數，以從 XML 執行個體產生資料列集  
  下列資料表值函式 udf_XML2Table 可接受主索引鍵值和 XML 執行個體。 它會擷取 <`book`> 元素中所有作者的名字，並傳回主索引鍵的資料列集 (名字配對)。  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>範例建立觸發程序來擴展屬性資料表  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>範例建立觸發程序以填入屬性資料表  
  插入觸發程序會在屬性資料表中插入資料列：  
   
 ```  
@@ -155,7 +155,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>範例尋找作者名字相同的 XML 執行個體  
- 查詢可以在 XML 資料行上形成。 或者，可以在屬性資料表中搜尋 "David" 這個名字，然後執行向後聯結基底資料表，以傳回 XML 執行個體。 例如：  
+ 查詢可以在 XML 資料行上形成。 或者，可以在屬性資料表中搜尋 "David" 這個名字，然後執行向後聯結基底資料表，以傳回 XML 執行個體。 例如:  
   
 ```  
 SELECT xCol   

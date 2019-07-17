@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163146"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>表格式模型中的雙向交叉篩選
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙向交叉篩選」，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。  
+  SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙向交叉篩選」  ，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。  
   
- 此概念可分解成以下元件組件：「交叉篩選」是指根據相關資料表中的值設定資料表篩選內容的功能，而「雙向」是指將篩選內容傳遞至資料表關聯性另一端的第二個相關資料表。 正如其名，您有兩種方向可以切入關聯性，而不是只有一種方向。  就內部而言，雙向篩選會展開篩選內容來查詢資料的超集。  
+ 此概念可分解成以下元件組件：「交叉篩選」  是指根據相關資料表中的值設定資料表篩選內容的功能，而「雙向」  是指將篩選內容傳遞至資料表關聯性另一端的第二個相關資料表。 正如其名，您有兩種方向可以切入關聯性，而不是只有一種方向。  就內部而言，雙向篩選會展開篩選內容來查詢資料的超集。  
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
@@ -46,15 +46,15 @@ ms.locfileid: "53072305"
   
  在專案的層級，建立專案時會評估設定，因此若您將預設值變更為雙向，建立下一個專案時便會看到您選取的設定生效。  
   
-1.  在 SSDT 中，選取 [工具] > [選項] > [Analysis Services Tabular Designers] > [新增專案設定]。  
+1.  在 SSDT 中，選取 [工具]   > [選項]   > [Analysis Services Tabular Designers]   > [新增專案設定]  。  
   
-2.  將 [預設篩選方向]  設為 [單向]  或 [雙向] 。  
+2.  將 [預設篩選方向]  設為 [單向]  或 [雙向]  。  
   
  同樣地，您也可以變更模型上的預設值。  
   
-1.  在方案總管中，選取 [Model.bim] > [屬性]。  
+1.  在方案總管中，選取 [Model.bim]   > [屬性]  。  
   
-2.  將 [預設篩選方向]  設為 [單向]  或 [雙向] 。  
+2.  將 [預設篩選方向]  設為 [單向]  或 [雙向]  。  
   
 ## <a name="walkthrough-an-example"></a>範例逐步說明  
  了解雙向交叉篩選的最佳方法是透過範例。 請考慮以下來自 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)的資料集，其反映預設建立的基數和交叉篩選。  
@@ -99,23 +99,23 @@ ms.locfileid: "53072305"
   
 1.  啟動 Visual Studio 2015 的 SQL Server Data Tools。  
   
-2.  按一下 [檔案] > [新增] > [專案] > [Analysis Services 表格式模型]。  
+2.  按一下 [檔案]   > [新增]   > [專案]   > [Analysis Services 表格式模型]  。  
   
 3.  在 [表格式模型設計工具] 中，將工作區資料庫設為表格式伺服器模式的 SQL Server 2016 Preview Analysis Services。  
   
 4.  確認模型相容性層級設定為**SQL Server 2016 RTM (1200)** 或更高版本。  
   
-     按一下 **[確定]** 建立專案。  
+     按一下 \[確定\] 來建立專案。   
   
 ### <a name="add-data"></a>加入資料  
   
-1.  按一下 [模型] > [從資料來源匯入] > [Microsoft SQL Server]。  
+1.  按一下 [模型]   > [從資料來源匯入]   > [Microsoft SQL Server]  。  
   
 2.  指定伺服器、資料庫和驗證方法。  
   
 3.  選擇 [ContosoRetailDW] 資料庫。  
   
-4.  按 [下一步] 。  
+4.  按一下 [下一步]  。  
   
 5.  選取資料表時，按下 Ctrl 並選取下列資料表：  
   
@@ -142,36 +142,36 @@ ms.locfileid: "53072305"
   
  ![SSAS BIDI 2-模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2-模型")  
   
- 或者，按一下 [資料表] > [管理關聯性] 以在表格配置中檢視相同的資訊。  
+ 或者，按一下 [資料表]   > [管理關聯性]  以在表格配置中檢視相同的資訊。  
   
  ![ssas bidi-3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi-3 defaultrelationships")  
   
 ### <a name="create-measures"></a>建立量值  
  您將需要的彙總，來加總銷售量的不同 facet 的維度資料。 在 **DimProduct** 中，您可以建立計算產品的量值，並將它用於產品推銷的分析，顯示針對指定的年份、指定的地區或客戶類型所銷售之產品的計數。  
   
-1.  按一下 [模型] > [模型檢視] > [圖表檢視]。  
+1.  按一下 [模型]   > [模型檢視]   > [圖表檢視]  。  
   
-2.  按一下 [FactOnlineSales] 。  
+2.  按一下 [FactOnlineSales]  。  
   
 3.  選取 [SalesAmount]  資料行。  
   
-4.  按一下 [資料行] > [自動加總] > [總和] 來建立銷售的量值。  
+4.  按一下 [資料行]   > [自動加總]   > [總和]  來建立銷售的量值。  
   
-5.  按一下 [DimProduct] 。  
+5.  按一下 [DimProduct]  。  
   
-6.  選取 [ProductKeycolumn] 。  
+6.  選取 [ProductKeycolumn]  。  
   
-7.  按一下 [資料行] > [自動加總] > [DistinctCount] 來建立唯一產品的量值。  
+7.  按一下 [資料行]   > [自動加總]   > [DistinctCount]  來建立唯一產品的量值。  
   
 ### <a name="analyze-in-excel"></a>在 Excel 中分析  
   
-1.  按一下 [模型] > [在 Excel 中進行分析] 來將所有資料加入一個樞紐分析表。  
+1.  按一下 [模型]   > [在 Excel 中進行分析]  來將所有資料加入一個樞紐分析表。  
   
 2.  從欄位清單選取兩個您剛才建立的量值。  
   
-3.  選取 [產品] > [製造商]。  
+3.  選取 [產品]   > [製造商]  。  
   
-4.  選取 [日期] > [日曆年度]。  
+4.  選取 [日期]   > [日曆年度]  。  
   
  請注意，銷售會如預期般按照年度和製造商分類。 這是因為預設的篩選內容之間**FactOnlineSales**， **DimProduct**，並**DimDate**相鄰的關聯性的 「 多 」 端上可以正常運作的量值。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "53072305"
   
 ### <a name="change-the-cross-filter"></a>變更交叉篩選  
   
-1.  回到模型中，選取 [資料表] > [管理關聯性]。  
+1.  回到模型中，選取 [資料表]   > [管理關聯性]  。  
   
 2.  編輯 **FactOnlineSales** 和 **DimProduct**之間的關聯性。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53072305"
   
 3.  儲存設定。  
   
-4.  在活頁簿中，按一下 [重新整理] 重新讀取模型。  
+4.  在活頁簿中，按一下 [重新整理]  重新讀取模型。  
   
  您現在應該會看到產品計數和銷售都以相同的篩選內容篩選，其中不只包含來自 **DimProducts** 的製造商，也包含來自 **DimDate**的日曆年度。  
   

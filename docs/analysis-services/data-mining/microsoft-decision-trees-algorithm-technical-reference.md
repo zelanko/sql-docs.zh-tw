@@ -1,5 +1,5 @@
 ---
-title: Microsoft 決策樹演算法技術參考 |Microsoft 文件
+title: Microsoft 決策樹演算法技術參考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 186245b549d8aa9370551311e792067e0131e076
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018735"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183102"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34018735"
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>實作決策樹演算法  
  Microsoft 決策樹演算法將貝氏方法套用至學習因果互動模型，取得模型的近似事後分佈。 如需這種方法的詳細說明，請參閱 Microsoft Research 網站上由 [結構和參數學習](http://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)提供的文件。  
   
- 評估學習所需之 *「優先」* (Priors) 資訊值的方法，是根據 *「可能性相等」*(Likelihood Equivalence) 的假設。 此假設認為，資料無法協助您區分代表條件式獨立之相同判斷提示的網路結構。 每個案例都假設擁有一個單一的貝氏優先網路以及對於該網路之信心的單一量值。  
+ 評估學習所需之 *「優先」* (Priors) 資訊值的方法，是根據 *「可能性相等」* (Likelihood Equivalence) 的假設。 此假設認為，資料無法協助您區分代表條件式獨立之相同判斷提示的網路結構。 每個案例都假設擁有一個單一的貝氏優先網路以及對於該網路之信心的單一量值。  
   
  使用這些優先網路，演算法就可以根據目前的定型資料，計算網路結構的相對 *「事後機率」* (Posterior Probabilities)，並識別事後機率最高的網路結構。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "34018735"
   
  當可預測的屬性是連續數值資料類型時，也會將特徵選取套用到輸出中，以降低可能的結果數目並讓模型的建立更為快速。 您可以變更特徵選取的臨界值，並藉此設定 MAXIMUM_OUTPUT_ATTRIBUTES 參數來增加或減少可能值的數目。  
   
- 如需有關 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何與分隔可預測的資料行搭配使用的詳細說明，請參閱＜ [學習貝氏網路：知識與統計資料的組合](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何與連續可預測資料行一起運作的詳細資訊，請參閱 [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(時間序列分析的自動迴歸樹狀模型) 的附錄。  
+ 如需有關如何搭配使用的詳細說明[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法如何與分隔可預測資料行，請參閱[學習 Bayesian 網路：知識與統計資料的組合](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何與連續可預測資料行一起運作的詳細資訊，請參閱 [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(時間序列分析的自動迴歸樹狀模型) 的附錄。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>計分方法與特徵選取  
- Microsoft 決策樹演算法提供三個計算資訊改善分數的公式：「Shannon 熵」、「使用 K2 優先的貝氏網路」以及「使用優先統一狄氏分配的貝氏網路」。 三種方法全都堅實的建立在資料採礦欄位中。 建議您試驗不同的參數與計分方法來判斷哪個公式會提供最佳的結果。 如需有關這些計分方法的詳細資訊，請參閱＜ [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70)＞。  
+ Microsoft 決策樹演算法提供三個資訊改善的公式：Shannon 的 entropy、 Bayesian 網路 K2 prior 和統一狄氏分配 Bayesian 網路。 三種方法全都堅實的建立在資料採礦欄位中。 建議您試驗不同的參數與計分方法來判斷哪個公式會提供最佳的結果。 如需有關這些計分方法的詳細資訊，請參閱＜ [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70)＞。  
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 特徵選取所使用的方法取決於建立模型所使用的演算法。 針對決策樹模型控制特徵選取的演算法參數為 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34018735"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援會影響所產生之採礦模型效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
   
 > [!NOTE]  
->  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可以搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法使用的參數。  
@@ -139,7 +139,7 @@ ms.locfileid: "34018735"
  *SCORE_METHOD*  
  決定用來計算分岔準則的方法。 下列是可以使用的選項：  
   
-|ID|名稱|  
+|id|名稱|  
 |--------|----------|  
 |1|熵|  
 |3|使用 K2 優先的貝氏|  
@@ -152,20 +152,20 @@ ms.locfileid: "34018735"
  *SPLIT_METHOD*  
  決定用來分岔節點的方法。 下列是可以使用的選項：  
   
-|ID|名稱|  
+|id|名稱|  
 |--------|----------|  
-|1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
-|2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
-|3|**Both:** 指定 Analysis Services 可以決定應該使用二進位還是完整分岔來產生最佳的結果。|  
+|1|**二進位：** 表示，無論屬性值的實際數目，樹狀結構都會分岔為兩個分支。|  
+|2|**完成：** 表示樹狀結構可以建立有屬性值的分岔。|  
+|3|**兩者：** 指定 Analysis Services 可以決定是否應該使用二進位還是完整分岔來產生最佳的結果。|  
   
  預設值是 3。  
   
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
-|模型旗標|說明|  
+|模型旗標|描述|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態： **Missing** 和 **Existing**。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
+|MODEL_EXISTENCE_ONLY|表示資料行都會被視為擁有兩個可能狀態：**遺漏**並**現有**。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
 ### <a name="regressors-in-decision-tree-models"></a>決策樹模型中的迴歸輸入變數  
@@ -183,7 +183,7 @@ ms.locfileid: "34018735"
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered、Table|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Ordered、Table|  
@@ -194,6 +194,6 @@ ms.locfileid: "34018735"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [決策樹模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

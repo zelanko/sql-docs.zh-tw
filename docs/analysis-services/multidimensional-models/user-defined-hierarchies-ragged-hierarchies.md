@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164846"
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>使用者定義階層 - 不完全階層
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "52529340"
   
 1.  在 SSDT 中按兩下維度，在維度設計師中加以開啟。 第一個索引標籤 [維度結構] 會在 [階層] 窗格中顯示屬性階層。  
   
-2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]。 將 **HideMemberIf** 設定為底下描述的其中一個值。  
+2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]  。 將 **HideMemberIf** 設定為底下描述的其中一個值。  
   
     |HideMemberIf 設定|描述|  
     |--------------------------|-----------------|  

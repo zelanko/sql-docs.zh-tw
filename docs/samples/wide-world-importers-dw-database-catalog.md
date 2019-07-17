@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104291"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 資料庫目錄
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ WideWorldImportersDW 有下列維度資料表。 描述包含 WideWorldImporters
 |-----------------------------|---------------------|
 |[縣/市]|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |客戶|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|date|新的資料表的資訊包括會計年度的日期 (根據年 11 月 1 日的會計年度開始)。|
+|Date|新的資料表的資訊包括會計年度的日期 (根據年 11 月 1 日的會計年度開始)。|
 |員工|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供應商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
@@ -78,7 +77,7 @@ WideWorldImportersDW 有以下的事實資料表。 描述會包含來源資料�
 
 若要設定此範例會使用這些程序。 它們用來將 enterprise edition 的功能套用至標準版版本的範例中，加入 PolyBase，並重設 ETL。
 
-|程序|目的|
+|程序|用途|
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|適用於事實資料表的資料分割和資料行存放區索引。|
 |Configuration_ConfigureForEnterpriseEdition|適用於資料分割資料行存放區索引和記憶體中。|
@@ -98,7 +97,7 @@ ETL 程序中使用的程序可在這些類別：
 
 若要設定資料庫中的序列的程序。
 
-|程序|目的|
+|程序|用途|
 |-----------------------------|---------------------|
 |ReseedAllSequences|呼叫程序`ReseedSequenceBeyondTableValue`所有序列 (sequence)。|
 |ReseedSequenceBeyondTableValue|用來調整中使用的相同順序的任何資料表的位置超出值的下一個順序值。 (例如`DBCC CHECKIDENT`序列 (sequence)，但可能有多個資料表之間的身分識別的資料行相等的。)|

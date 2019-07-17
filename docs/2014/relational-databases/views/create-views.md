@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211663"
 ---
 # <a name="create-views"></a>建立檢視表
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立檢視。 檢視可用於下列目的：  
@@ -34,7 +34,7 @@ ms.locfileid: "54134398"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立檢視：**  
   
@@ -60,19 +60,19 @@ ms.locfileid: "54134398"
   
 1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [檢視] 資料夾，然後按一下 [新增檢視…]。  
+2.  以滑鼠右鍵按一下 [檢視]  資料夾，然後按一下 [新增檢視…]  。  
   
-3.  在 **加入資料表**對話方塊方塊中，選取項目或您想要包含在新的檢視，從下列索引標籤中的項目：資料表、 檢視、 函數和同義字。  
+3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 與 [同義字]。  
   
-4.  按一下 **[加入]**，然後按一下 **[關閉]**。  
+4.  按一下 **[加入]** ，然後按一下 **[關閉]** 。  
   
 5.  在 **[圖表]** 窗格中，選取要包含在新檢視中的資料行或其他元素。  
   
 6.  在 **[準則]** 窗格中，選擇資料行的其他排序或篩選準則。  
   
-7.  在 [檔案]  功能表上，按一下 [儲存] _view name_。  
+7.  在 [檔案]  功能表上，按一下 [儲存]  _view name_。  
   
-8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]**。  
+8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]** 。  
   
      如需查詢和檢視表設計工具的詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "54134398"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012 ;   

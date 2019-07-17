@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138614"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 整合使用者入門
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ End Class
   
 ```  
   
- 此簡單的程式包含公用類別上的單一靜態方法。 這個方法會使用兩個新的類別， **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 並 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，來建立 managed 資料庫物件以輸出簡單的文字訊息。 此方法也會將字串 "Hello world!" 指派 為 out 參數的值。 此方法可以宣告為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的預存程序，然後以與 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序相同的方法執行。  
+ 此簡單的程式包含公用類別上的單一靜態方法。 這個方法會使用兩個新的類別， **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 並 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** ，來建立 managed 資料庫物件以輸出簡單的文字訊息。 此方法也會將字串 "Hello world!" 指派 為 out 參數的值。 此方法可以宣告為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的預存程序，然後以與 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序相同的方法執行。  
   
  此程式編譯為程式庫，並將其載入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並執行預存程序。  
   
@@ -97,7 +96,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- Version 包含已安裝之 .NET Framework 可轉散發套件的版本號碼。 例如：  
+ Version 包含已安裝之 .NET Framework 可轉散發套件的版本號碼。 例如:  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v4.6.1  

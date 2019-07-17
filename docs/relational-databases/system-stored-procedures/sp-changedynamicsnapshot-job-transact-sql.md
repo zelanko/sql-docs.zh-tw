@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fc3b5e8fb8b6bc8d5d98d14ede475b8f5a3f75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110854"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,9 +120,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` 是 「 合併代理程式停止的當日時間排程，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
-`[ @job_login = ] 'job_login'` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]快照集代理程式執行時產生快照集使用參數化資料列篩選器的訂用帳戶的 Windows 帳戶。 *job_login*已**nvarchar(257)**，預設值是 NULL。  
+`[ @job_login = ] 'job_login'` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]快照集代理程式執行時產生快照集使用參數化資料列篩選器的訂用帳戶的 Windows 帳戶。 *job_login*已**nvarchar(257)** ，預設值是 NULL。  
   
-`[ @job_password = ] 'job_password'` 快照集代理程式執行時產生快照集的訂用帳戶的 Windows 帳戶的密碼使用參數化資料列篩選器。 *job_password*已**nvarchar(257)**，預設值是 NULL。  
+`[ @job_password = ] 'job_password'` 快照集代理程式執行時產生快照集的訂用帳戶的 Windows 帳戶的密碼使用參數化資料列篩選器。 *job_password*已**nvarchar(257)** ，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  

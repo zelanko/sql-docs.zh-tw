@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107653"
 ---
 # <a name="binding-parameter-markers"></a>繫結參數標記
 藉由呼叫應用程式繫結的參數**SQLBindParameter**。 **SQLBindParameter**將一個參數繫結一次。 有了它，應用程式則指定下列項目：  

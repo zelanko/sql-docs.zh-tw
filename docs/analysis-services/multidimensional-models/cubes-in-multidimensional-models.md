@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的 cube |Microsoft 文件
+title: 多維度模型中的 cube |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5962889f38043e675b70558e7561bfc3f63b39ce
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209050"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多維度模型中的 Cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,25 +26,25 @@ ms.locfileid: "34020145"
 ## <a name="components-of-cubes"></a>Cube 的元件  
  Cube 是由下列元件構成：  
   
-|元素|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |維度|[多維度模型中的維度](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)|  
-|量值和量值群組|[多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|  
-|資料分割|[多維度模型中的資料分割](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)|  
-|檢視方塊|[多維度模型中的檢視方塊](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|  
+|量值和量值群組|[在多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|資料分割|[多維度模型中的分割區](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)|  
+|「檢視方塊」|[多維度模型中的檢視方塊](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|  
 |階層|[建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)|  
 |動作|[多維度模型中的動作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
-|關鍵效能指標 (KPI)|[關鍵效能指標 & #40;Kpi & #41;多維度模型中](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|計算|[多維度模型中的計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
+|關鍵效能指標 (KPI)|[多維度模型中的關鍵效能指標 &#40;KPI&#41;](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|[新增命名集]|[多維度模型中的計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
 |翻譯|[多維度模型中的翻譯 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
-|[使用 「 Cube 精靈 」 建立 Cube](../../analysis-services/multidimensional-models/create-a-cube-using-the-cube-wizard.md)|描述如何使用 Cube 精靈來定義 Cube、維度、維度屬性和使用者自訂階層。|  
-|[多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|描述如何定義量值群組。|  
-|[多維度模型中的計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|描述如何定義及設定 MDX 指令碼中的計算。|  
+|[使用 Cube 精靈來建立 Cube](../../analysis-services/multidimensional-models/create-a-cube-using-the-cube-wizard.md)|描述如何使用 Cube 精靈來定義 Cube、維度、維度屬性和使用者自訂階層。|  
+|[在多維度模型中建立量值和量值群組](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|描述如何定義量值群組。|  
+|[Calculations in Multidimensional Models](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|描述如何定義及設定 MDX 指令碼中的計算。|  
 |[多維度模型中的動作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|描述如何定義及設定動作。|  
 |[多維度模型中的檢視方塊](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|描述如何定義及設定檢視方塊。|  
 |[定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|描述如何使用預存程序。|  

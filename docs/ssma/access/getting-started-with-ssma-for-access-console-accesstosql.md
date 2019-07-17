@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68222227"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>開始使用 SSMA for Access 主控台 (AccessToSQL)
 本章節描述的程序啟動並開始使用存取主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  

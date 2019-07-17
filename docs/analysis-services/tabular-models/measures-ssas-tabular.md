@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072195"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207611"
 ---
 # <a name="measures"></a>量值
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -78,9 +78,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**[量值名稱]**|若使用自動加總，量值名稱後面會接著資料行名稱和冒號。 若是輸入自訂公式，請輸入名稱，後面接著冒號，然後再輸入公式。|量值名稱就是報表用戶端欄位清單中顯示的名稱。|  
   
 ##  <a name="bkmk_KPI"></a> 使用 KPI 中的量值  
- KPI (關鍵效能指標) 是由「基底」值定義，而基底值是由「目標」值 (由量值或絕對值定義) 對應的量值來定義。 KPI 也包括 *「狀態」*(Status)，其為計算基底值和目標值之間的臨界值，且會以圖形格式顯示。 商務專業人士常常利用 KPI 來識別重要商務標準中的趨勢。  
+ KPI (關鍵效能指標) 是由「基底」  值定義，而基底值是由「目標」  值 (由量值或絕對值定義) 對應的量值來定義。 KPI 也包括 *「狀態」* (Status)，其為計算基底值和目標值之間的臨界值，且會以圖形格式顯示。 商務專業人士常常利用 KPI 來識別重要商務標準中的趨勢。  
   
- 任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 若要進一步了解，請參閱[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
+ 任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]  。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 若要進一步了解，請參閱[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   

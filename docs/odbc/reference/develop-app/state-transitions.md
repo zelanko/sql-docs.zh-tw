@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107293"
 ---
 # <a name="state-transitions"></a>狀態轉換
 ODBC 定義離散*狀態*每個環境中，每個連線，和每個陳述式。 例如，環境會有三種可能狀態：未配置 （在而無環境在配置），已配置 （所在環境配置，但沒有連線會配置） 和 （所在的環境和一個或多個連線都已配置） 的連線。 連接有七個可能的狀態;陳述式有 13 的可能狀態。  

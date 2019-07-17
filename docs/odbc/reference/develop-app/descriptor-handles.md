@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24e3d4c87f3bc461a339a6cb635d64f20dc73e20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106158"
 ---
 # <a name="descriptor-handles"></a>描述項控制代碼
 A*描述元*是描述 SQL 陳述式的參數或結果集的資料行的中繼資料的集合，所看到的應用程式或驅動程式 (也稱為*實作*)。 因此，可以填入任何四個角色描述元：  

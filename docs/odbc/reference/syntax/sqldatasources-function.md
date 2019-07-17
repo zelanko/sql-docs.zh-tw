@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9207dde54a14e345e99d3c04d4cb66622d85972e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121384"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 函式
 **合規性**  
@@ -71,7 +70,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [輸出]在其中傳回 （不包括 null 結束字元） 的字元總數緩衝區的指標來傳回在可用\* *ServerName*。 可用來傳回字元的數目是否大於或等於*BufferLength1*中的資料來源名稱\* *ServerName*會被截斷成*BufferLength1*減去 null 結束字元的長度。  
   
- *說明*  
+ *描述*  
  [輸出]在其中傳回的資料來源相關聯的驅動程式描述緩衝區的指標。 比方說，dBASE 或 SQL Server。  
   
  如果*描述*為 NULL，就*NameLength2Ptr*仍會傳回 （不含字元資料的 null 終止字元） 的字元總數可用來傳回中所指向的緩衝區*描述*。  

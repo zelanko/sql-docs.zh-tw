@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108683"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @filename = ] 'file_name'` 是指定完整路徑，包括檔案名稱，來儲存資料檔案 (.mdf) 副本的字串。 *檔名*已**nvarchar(260)**，沒有預設值。  
+`[ @filename = ] 'file_name'` 是指定完整路徑，包括檔案名稱，來儲存資料檔案 (.mdf) 副本的字串。 *檔名*已**nvarchar(260)** ，沒有預設值。  
   
-`[ @temp_dir = ] 'temp_dir'` 是包含暫存檔名稱。 *temp_dir*已**nvarchar(260)**，預設值是 NULL。 如果是 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
+`[ @temp_dir = ] 'temp_dir'` 是包含暫存檔名稱。 *temp_dir*已**nvarchar(260)** ，預設值是 NULL。 如果是 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 是選擇性的布林值旗標，指定是否要覆寫現有的檔案中指定的相同名稱的**@filename**。 *overwrite_existing_file*已**位元**，預設值是**0**。 如果**1**，它會覆寫所指定的檔案**@filename**，如果有的話。 如果**0**，預存程序失敗時，如果檔案存在，而且不會覆寫檔案。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 是選擇性的布林值旗標，指定是否要覆寫現有的檔案中指定的相同名稱的 **@filename** 。 *overwrite_existing_file*已**位元**，預設值是**0**。 如果**1**，它會覆寫所指定的檔案 **@filename** ，如果有的話。 如果**0**，預存程序失敗時，如果檔案存在，而且不會覆寫檔案。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

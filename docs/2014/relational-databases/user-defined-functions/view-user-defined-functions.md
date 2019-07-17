@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211687"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
@@ -35,7 +35,7 @@ ms.locfileid: "54100553"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法取得函數的相關資訊：**  
   
@@ -66,9 +66,9 @@ ms.locfileid: "54100553"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]  。  
   
-     下列屬性會出現在 [函數屬性 - _function_name_] 對話方塊中。  
+     下列屬性會出現在 [函數屬性 - _function_name_]  對話方塊中。  
   
      **[資料庫備份]**  
      包含此函數之資料庫的名稱。  
@@ -115,9 +115,9 @@ ms.locfileid: "54100553"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -156,9 +156,9 @@ ms.locfileid: "54100553"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

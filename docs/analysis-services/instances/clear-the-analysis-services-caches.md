@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181991"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 快取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "51700326"
   
 #### <a name="step-1-get-the-object-identifier"></a>步驟 1：取得物件識別碼  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件，並選取 [屬性]，然後將 ID 屬性的值複製到 [屬性] 窗格。 這種方法適用於資料庫、Cube、維度或資料表。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件，並選取 [屬性]  ，然後將 ID 屬性的值複製到 [屬性]  窗格。 這種方法適用於資料庫、Cube、維度或資料表。  
   
-2.  若要取得量值群組識別碼，以滑鼠右鍵按一下該量值群組並選取 [編寫量值群組的指令碼為]。 選擇 [建立] 或 [改變]，並將查詢傳送至視窗。 量值群組識別碼會在物件定義中顯示。 複製物件定義的識別碼。  
+2.  若要取得量值群組識別碼，以滑鼠右鍵按一下該量值群組並選取 [編寫量值群組的指令碼為]  。 選擇 [建立]  或 [改變]  ，並將查詢傳送至視窗。 量值群組識別碼會在物件定義中顯示。 複製物件定義的識別碼。  
   
 #### <a name="step-2-run-the-query"></a>步驟 2：執行查詢  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下資料庫，並指向 [新增查詢]，然後選取 [XMLA]。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下資料庫，並指向 [新增查詢]  ，然後選取 [XMLA]  。  
   
 2.  將下列程式碼範例複製到 XMLA 查詢視窗。 將 **DatabaseID** 變更為目前連接上的資料庫識別碼。  
   

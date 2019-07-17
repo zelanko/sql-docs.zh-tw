@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211975"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔
   在高度安全性的環境中，Windows 安全性記錄檔是寫入記錄物件存取之事件的適當位置。 雖然支援其他稽核位置，但是這些位置容易遭算改。  
@@ -45,7 +45,7 @@ ms.locfileid: "48056778"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要將 SQL Server 稽核事件寫入安全性記錄檔：**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48056778"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的管理員應該了解安全性記錄檔的本機設定可以由網域原則覆寫。 在此情況下，網域原則可能會覆寫子類別目錄設定 (**auditpol /get /subcategory:"application generated"**)。 這可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 記錄事件的功能，讓它無法偵測出系統無法繼續記錄 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正嘗試稽核的事件。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的管理員應該了解安全性記錄檔的本機設定可以由網域原則覆寫。 在此情況下，網域原則可能會覆寫子類別目錄設定 (**auditpol /get /subcategory:"application generated"** )。 這可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 記錄事件的功能，讓它無法偵測出系統無法繼續記錄 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正嘗試稽核的事件。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48056778"
   
 1.  以系統管理權限開啟命令提示字元。  
   
-    1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]、以滑鼠右鍵按一下 [命令提示字元]，然後按一下 [以系統管理員身分執行]。  
+    1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  、以滑鼠右鍵按一下 [命令提示字元]  ，然後按一下 [以系統管理員身分執行]  。  
   
-    2.  如果開啟 **[使用者帳戶控制]** 對話方塊，請按一下 **[繼續]**。  
+    2.  如果開啟 **[使用者帳戶控制]** 對話方塊，請按一下 **[繼續]** 。  
   
 2.  執行下列陳述式，以便啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的稽核。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "48056778"
   
 ##  <a name="secpolAccess"></a> 使用 secpol 將 generate security audits 權限授與帳戶  
   
-1.  在任何 Windows 作業系統的 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在任何 Windows 作業系統的 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  輸入 **secpol.msc** ，然後按一下 **[確定]**。 如果出現 **[使用者存取控制]** 對話方塊，請按一下 **[繼續]**。  
+2.  輸入 **secpol.msc** ，然後按一下 **[確定]** 。 如果出現 **[使用者存取控制]** 對話方塊，請按一下 **[繼續]** 。  
   
-3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]**，然後按一下 **[使用者權限指派]**。  
+3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]** ，然後按一下 **[使用者權限指派]** 。  
   
-4.  在結果窗格中，按兩下 [產生安全性稽核]。  
+4.  在結果窗格中，按兩下 [產生安全性稽核]  。  
   
-5.  在 **[本機安全性設定]** 索引標籤上，按一下 **[新增使用者或群組]**。  
+5.  在 **[本機安全性設定]** 索引標籤上，按一下 **[新增使用者或群組]** 。  
   
-6.  在 [選取使用者、電腦或群組] 對話方塊中，輸入使用者帳戶的名稱 (例如 **domain1\user1**) 並按一下 [確定]，或按一下 [進階] 並搜尋帳戶。  
+6.  在 [選取使用者、電腦或群組]  對話方塊中，輸入使用者帳戶的名稱 (例如 **domain1\user1**) 並按一下 [確定]  ，或按一下 [進階]  並搜尋帳戶。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -103,15 +103,15 @@ ms.locfileid: "48056778"
   
 ##  <a name="secpolPermission"></a> 使用 secpol 在 Windows 中設定稽核物件存取設定  
   
-1.  如果作業系統是 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 之前的版本，請在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  如果作業系統是 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 之前的版本，請在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  輸入 **secpol.msc** ，然後按一下 **[確定]**。 如果出現 **[使用者存取控制]** 對話方塊，請按一下 **[繼續]**。  
+2.  輸入 **secpol.msc** ，然後按一下 **[確定]** 。 如果出現 **[使用者存取控制]** 對話方塊，請按一下 **[繼續]** 。  
   
-3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]**，然後按一下 **[稽核原則]**。  
+3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]** ，然後按一下 **[稽核原則]** 。  
   
-4.  在結果窗格中，按兩下 [稽核物件存取]。  
+4.  在結果窗格中，按兩下 [稽核物件存取]  。  
   
-5.  在 **[本機安全性設定]** 索引標籤的 **[稽核這些嘗試]** 區域中，同時選取 **[成功]** 和 **[失敗]**。  
+5.  在 **[本機安全性設定]** 索引標籤的 **[稽核這些嘗試]** 區域中，同時選取 **[成功]** 和 **[失敗]** 。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

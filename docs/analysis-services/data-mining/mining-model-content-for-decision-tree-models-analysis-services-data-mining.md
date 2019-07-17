@@ -1,5 +1,5 @@
 ---
-title: 決策樹模型的採礦模型內容 |Microsoft 文件
+title: 決策樹模型的採礦模型內容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 493ee56380a3e4665b10cbe27ef1cd1ea764438b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182776"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "34019365"
 > [!NOTE]  
 >  如果您的模型包含多個樹狀結構，可以在 **[Microsoft 樹狀檢視器]** 中，一次僅檢視一個樹狀結構。 不過，在 **[一般內容樹狀檢視器]** 中，相同模型中的所有樹狀結構會同時顯示出來。  
   
- ![決策樹模型內容結構](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "的決策樹模型內容結構")  
+ ![結構的決策樹模型內容](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "的決策樹模型內容結構")  
   
- 每個可預測屬性的樹狀結構所包含的資訊會描述您選擇的輸入資料行如何影響該特定可預測屬性和結果。 每個樹狀結構開頭都是一個包含可預測屬性的節點 (NODE_TYPE = 9)，後面接著代表輸入屬性的一連串節點 (NODE_TYPE = 10)。 屬性會對應到案例層級的資料行或巢狀資料表資料行的值，這通常是巢狀資料表之 [索引鍵] 資料行中的值。  
+ 每個可預測屬性的樹狀結構所包含的資訊會描述您選擇的輸入資料行如何影響該特定可預測屬性和結果。 每個樹狀結構開頭都是一個包含可預測屬性的節點 (NODE_TYPE = 9)，後面接著代表輸入屬性的一連串節點 (NODE_TYPE = 10)。 屬性會對應到案例層級的資料行或巢狀資料表資料行的值，這通常是巢狀資料表之 [索引鍵]  資料行中的值。  
   
  內部和分葉節點代表分岔條件。 樹狀結構可以在相同的屬性上分岔多次。 例如， **TM_DecisionTree** 模型可能會針對 [Yearly Income] 和 [Number of Children] 分割，然後針對樹狀結構下的 [Yearly Income] 再分割一次。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34019365"
  Microsoft 決策樹演算法不允許使用連續資料類型當做輸入，因此，如果任何資料行有連續數值資料類型，就會將這些值離散化。 此演算法會在所有連續屬性的分岔點執行自己的離散化。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動選擇儲存連續屬性; 方法不過，您可以控制將輸入中的如何連續值離散化的採礦結構資料行的內容類型設定**Discretized** ，然後設定<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>屬性。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動選擇儲存連續屬性; 方法不過，您可以控制如何連續值輸入中的所要的採礦結構資料行的內容類型設定離散化**Discretized** ，然後設定<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>屬性。  
   
  [頂端](#bkmk_Top)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "34019365"
  NODE_TYPE  
  在決策樹模型中，會建立下列類型的節點：  
   
-|節點類型|Description|  
+|節點類型|描述|  
 |---------------|-----------------|  
 |1 (模型)|模型的根節點。|  
-|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」**。|  
+|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」** 。|  
 |3 (內部)|內部分支的標頭，可在分類樹狀結構或迴歸樹狀結構中找到。|  
 |4 (分佈)|分葉節點，可在分類樹狀結構或迴歸樹狀結構中找到。|  
-|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」**。|  
+|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」** 。|  
   
  NODE_CAPTION  
  提供顯示用途的好記名稱。  
@@ -231,7 +231,7 @@ ms.locfileid: "34019365"
 |Age < 30|40|Age < 30 而且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 而且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中進行小調整就可以計算可能的遺漏值。 若是連續屬性，每個值範圍以狀態表示 (例如，Age \<30、 Age = 30，和 Age > 30) 和機率計算方式如下： 狀態存在 (值 = 1)，其他特定狀態存在 (值 = 0)，狀態是**遺漏**。 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中進行小調整就可以計算可能的遺漏值。 若是連續屬性，每個值範圍以狀態表示 (例如，Age \<Lt;30、age = 30，和 Age > 30) 和機率計算方式如下： 狀態存在 (值 = 1)，其他特定狀態存在 (值 = 0)，狀態會是**遺漏**。 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
  每個節點的機率幾乎都直接從分佈計算，如下所示：  
   
@@ -251,7 +251,7 @@ ms.locfileid: "34019365"
   
  在 <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 列舉的類型中，下列類型用於分類樹狀結構。  
   
-|值類型|Description|  
+|值類型|描述|  
 |----------------|-----------------|  
 |1 (遺漏)|指出與遺漏值相關的計數、機率或其他統計資料。|  
 |4 (離散)|指出與離散或離散化值相關的計數、機率或其他統計資料。|  
@@ -267,7 +267,7 @@ ms.locfileid: "34019365"
   
  若是樹狀結構中的其他所有節點 (分葉節點除外)，每個節點的分數都代表目前節點的最佳分岔準則，減去父節點的分岔準則。 父節點的分岔準則通常永遠比任何其中一個子節點的分岔準則好。 那是因為理論上決策樹模型會先針對最重要的屬性分岔。  
   
- 計算分岔準則的方式有很多，端視您選擇的演算法參數而定。 如何針對每個計分方法計算分數不在本主題的討論範圍內。 如需詳細資訊，請參閱[參考資料網站上的＜](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)了解 Bayesian 網路：知識與統計資料的組合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ＞。  
+ 計算分岔準則的方式有很多，端視您選擇的演算法參數而定。 如何針對每個計分方法計算分數不在本主題的討論範圍內。 如需詳細資訊，請參閱 「[學習 Bayesian 網路：組合的知識與統計資料](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)"上[!INCLUDE[msCoName](../../includes/msconame-md.md)]研究的網站。  
   
 > [!NOTE]  
 >  如果您建立的決策樹模型同時擁有連續和離散的可預測屬性，您將會在 (All) 節點中看到代表每個樹狀結構類型完全不同的分數。 每個模型都應該分別考量，而且用於計分迴歸的方法與用於計分分類的方法完全不同。 節點分數值無法進行比較。  
@@ -279,7 +279,7 @@ ms.locfileid: "34019365"
   
  一般而言，迴歸會將連續相依 (可預測的變數) 中的變更對應為輸入中變更的功能。 如果相依變數有任何連續輸入，而且輸入和已預測值之間的關聯性夠穩定，可以當做線條圖計算，迴歸的節點就會包含公式。  
   
- 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」*(Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
+ 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」* (Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
   
 |分岔條件|節點的結果|  
 |---------------------|--------------------|  
@@ -290,7 +290,7 @@ ms.locfileid: "34019365"
  如需迴歸節點的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 決策樹演算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212058"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改發行集屬性。  
@@ -55,9 +55,9 @@ ms.locfileid: "54135828"
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。  
+ 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>]  對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。  
   
- [發行集屬性 - \<發行集>] 對話方塊上包含下列頁面：  
+ [發行集屬性 - \<發行集>]  對話方塊上包含下列頁面：  
   
 -   **[一般]** 頁面包含發行集名稱和描述、發行集類型以及訂閱過期設定。  
   
@@ -85,17 +85,17 @@ ms.locfileid: "54135828"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]** 。  
   
-4.  必要時修改任何屬性，然後按一下 **[確定]**。  
+4.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>若要在複寫監視器中檢視和修改發行集屬性  
   
 1.  展開「複寫監視器」左窗格中的「發行者」群組，然後展開一個「發行者」。  
   
-2.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]**。  
+2.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]** 。  
   
-3.  必要時修改任何屬性，然後按一下 **[確定]**。  
+3.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式修改發行集及傳回其屬性。 您使用的預存程序將根據發行集的類型而定。  
@@ -109,7 +109,7 @@ ms.locfileid: "54135828"
 1.  執行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，在 **@property** 參數中指定要變更的發行集屬性，並在 **@value** 參數指定發行集的名稱。  
   
     > [!NOTE]  
-    >  如果此變更將需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot**的值，而如果此變更將需要重新初始化訂閱者，您就必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription**。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
+    >  如果此變更將需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** 的值，而如果此變更將需要重新初始化訂閱者，您就必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>檢視合併式發行集的屬性  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54135828"
  [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [從發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-a-publication.md)   
- [檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [檢視和修改發行項屬性](view-and-modify-article-properties.md)  
   
   

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207378"
 ---
 # <a name="create-relationships"></a>建立關聯性
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685603"
 
 在這一課，您可以確認您匯入資料時自動建立的關聯性，並新增新不同資料表之間的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，DimProduct 資料表和 DimProductSubcategory 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 若要進一步了解，請參閱[關聯性](../tabular-models/relationships-ssas-tabular.md)。
   
-完成本課程的估計時間：**10 分鐘**  
+估計的時間才能完成這一課：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
