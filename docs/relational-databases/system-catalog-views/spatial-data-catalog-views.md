@@ -12,23 +12,22 @@ dev_langs:
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f230620d20dc01c327b47717e03de6e40851896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6558e944df0107eb13abb4658ebefe048af33da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018250"
 ---
 # <a name="spatial-data-catalog-views"></a>空間資料目錄檢視
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本節描述可提供空間資料資訊的目錄檢視。  
   
- [sys.spatial_index_tessellations &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
+ [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  表示有關鑲嵌式配置和每一個空間索引之參數的資訊。  
   
- [sys.spatial_indexes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
+ [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  表示空間索引的主要索引資訊。  
   
  [sys.spatial_reference_systems &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  

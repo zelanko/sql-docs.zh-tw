@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6bda48b3645260ed3886316a0ba478aad214b593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047766"
 ---
 # <a name="approval-required-master-data-services"></a>需要核准 (Master Data Services)
 

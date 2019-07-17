@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1359fa3a69c013a7d268cd20e71324e16e629b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd243b21b7003c524c3483f5b8d7bb92be1e18d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922065"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4：伺服器會傳回資料錄集 (RDS 教學課程)
 > [!IMPORTANT]

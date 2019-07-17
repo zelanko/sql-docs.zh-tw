@@ -5,17 +5,16 @@ description: 了解如何瀏覽和管理 Azure SQL Server、 Azure SQL Database 
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 91e766fae5dca7a3d9e2dec56af17161d684e145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959710"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>瀏覽和管理 Azure SQL 資源使用 Azure 資源總管
 

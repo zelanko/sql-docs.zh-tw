@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078977"
 ---
 # <a name="writing-an-interoperable-application"></a>撰寫可互通的應用程式
 每當應用程式使用相同的程式碼對多個驅動程式，該程式碼必須在這些驅動程式之間的互通性。 在大部分情況下，這是件簡單的工作。 比方說，程式碼來擷取順向資料指標的資料列也適用於所有的驅動程式。 在某些情況下，這可以是更困難。 比方說，建構 SQL 陳述式中使用的識別項的程式碼必須考慮識別碼大小寫、 加註引號於，以及一段、 兩部分和三部分命名慣例。  

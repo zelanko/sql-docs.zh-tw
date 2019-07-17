@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b58ab23dabb6528783422e82b493f4a721f2fb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23c5697b863646bac824b196696345566c06a747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906457"
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
 

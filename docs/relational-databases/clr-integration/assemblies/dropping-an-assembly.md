@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ebf362854b1a4ccc7857e502af1167f67e0cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f28f51f73faca8a72bdea3b8af70e14046d73f8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074340"
 ---
 # <a name="dropping-an-assembly"></a>卸除組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +67,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [管理 CLR 整合組件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [變更組件](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [建立組件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [卸除彙總&#40;Transact SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [卸除類型&#40;Transact SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

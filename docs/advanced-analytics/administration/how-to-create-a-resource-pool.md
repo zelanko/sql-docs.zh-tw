@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f180f6223f255734f353348c0d5fef58d19b0cbd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963156"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中建立機器學習服務的資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "58512085"
 
     **範例結果**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|預設|0|100|0|100|100|0|0|
 
-2.  檢查配置給預設「外部」資源集區的資源。
+2.  檢查配置給預設「外部」  資源集區的資源。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
@@ -50,7 +49,7 @@ ms.locfileid: "58512085"
 
     **範例結果**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|預設|100|20|0|2|
  
@@ -62,13 +61,13 @@ ms.locfileid: "58512085"
 
 ## <a name="modify-server-resource-usage"></a>修改伺服器資源量
 
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，執行下列陳述式以將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用量限制為 [最大伺服器記憶體] 設定值的 **60%**。
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，執行下列陳述式以將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用量限制為 [最大伺服器記憶體] 設定值的 **60%** 。
 
     ```sql
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  同樣地，執行下列陳述式以將外部處理序的記憶體使用量限制為總電腦資源的 **40%**。
+2.  同樣地，執行下列陳述式以將外部處理序的記憶體使用量限制為總電腦資源的 **40%** 。
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -89,7 +88,7 @@ ms.locfileid: "58512085"
   
      因此，為了能夠以更精細的方式控制哪些工作負載應該優先，您可以建立一個新的使用者定義外部資源集區。 您還應該定義一個分類函數，並將它指派給外部資源集區。 **外部**關鍵字是新。
   
-     請從建立一個新的「使用者定義的外部資源集區」開始著手。 在接下來的範例中，該集區是命名為 **ds_ep**。
+     請從建立一個新的「使用者定義的外部資源集區」  開始著手。 在接下來的範例中，該集區是命名為 **ds_ep**。
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -160,7 +159,7 @@ ms.locfileid: "58512085"
 
     **範例結果**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|內部|中|25|0|0|0|0|1|2|
     |2|預設|中|25|0|0|0|0|2|2|
@@ -174,7 +173,7 @@ ms.locfileid: "58512085"
 
     **範例結果**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|預設|100|20|0|2|
     |256|ds_ep|100|40|0|1|

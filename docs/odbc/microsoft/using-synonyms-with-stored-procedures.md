@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8620b039-a086-4534-8710-cc8b1787dc80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf56bcc674299fd576529929da10763c26a74ed4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e798a9c7fa3365082a2e6dab562596d56649ec4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088017"
 ---
 # <a name="using-synonyms-with-stored-procedures"></a>搭配使用同義字與預存程序
 > [!IMPORTANT]  

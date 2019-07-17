@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 92015d55d35264205270a4c7d575be7cb048fabc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693ae7e34c6857ae70c9a20b8e60dd2b0a57032e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926096"
 ---
 # <a name="ado-event-instantiation-vbscript"></a>ADO 事件具現化：VBScript
 Microsoft Visual Basic Scripting Edition 不支援 ADO 事件。

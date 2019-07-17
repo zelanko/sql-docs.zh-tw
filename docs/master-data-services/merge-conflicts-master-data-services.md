@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092572"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合併衝突 (Master Data Services)
 

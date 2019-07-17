@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3fcadc7435c3a4527367faf41ae412dd1afa67e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966407"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 屬性範例 (VB)
 此範例示範[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件。 程式碼會將附加的新[表格](../../../ado/reference/adox-api/table-object-adox.md)，然後定義新的主要金鑰，設定**DeleteRule**來**adRICascade**。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adee8d8dd8d6db0d79b37ff853c41e7604fe21de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0e9e62c8e03166ec2f76b1c6bcb5000a062bac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63302124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082043"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>連線到資料來源 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9681edb9cc020294673f5697286714a17819747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5986d2e9c6e61f3d0fa73e1f9460f6a056a4d211
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018313"
 ---
 # <a name="security-catalog-views-transact-sql"></a>安全性目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

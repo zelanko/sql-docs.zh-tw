@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006279"
 ---
 # <a name="comment---mdx-operator-reference"></a>註解-MDX 運算子參考
 
@@ -57,7 +56,7 @@ WHERE
   
 ## <a name="see-also"></a>另請參閱  
  [註解 &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

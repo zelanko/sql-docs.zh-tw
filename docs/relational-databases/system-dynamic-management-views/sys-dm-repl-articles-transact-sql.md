@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088596"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "56031829"
 |**artcache_table_address**|**varbinary(8)**|已發行之資料表發行項的快取資料表結構的記憶體中位址。|  
 |**artcache_schema_address**|**varbinary(8)**|已發行之資料表發行項的快取發行項結構描述結構的記憶體中位址。|  
 |**artcache_article_address**|**varbinary(8)**|已發行之資料表發行項的快取發行項結構的記憶體中位址。|  
-|**artid**|**bigint**|唯一識別這份資料表內的每一個項目。|  
+|**artid&lt**|**bigint**|唯一識別這份資料表內的每一個項目。|  
 |**artfilter**|**bigint**|用來水平篩選發行項之預存程序的識別碼。|  
 |**artobjid**|**bigint**|已發行物件的識別碼。|  
 |**artpubid**|**bigint**|發行集所屬發行集的識別碼。|  
@@ -53,7 +52,7 @@ ms.locfileid: "56031829"
 |**wszArtpartialupdcmd**|**nvarchar(510)**|用於部分更新的命令或預存程序。|  
 |**cmdTypePartialUpd**|**int**|用於部分更新預存程序的呼叫語法，它可以是下列值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|用於垂直篩選發行項之資料分割中的資料行數目。|  
-|**artcmdtype**|**tinyint**|目前複寫的命令類型，它可以是下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = DELETE<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 無<br /><br /> **6** = 僅供內部使用<br /><br /> **7** = 僅供內部使用<br /><br /> **8** = 部分 UPDATE|  
+|**artcmdtype**|**tinyint**|目前複寫的命令類型，它可以是下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 刪除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 無<br /><br /> **6** = 僅供內部使用<br /><br /> **7** = 僅供內部使用<br /><br /> **8** = 部分 UPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|以發行項包含的資料行為基礎之 INSERT 命令範本。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE 命令範本可包含發行項所包含的主索引鍵或資料行，隨著使用的呼叫語法而不同。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令範本可包含主索引鍵、更新的資料行或完整資料行清單，隨著使用的呼叫語法而不同。|  

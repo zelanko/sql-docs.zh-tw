@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061800"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @configname = ] 'option_name'` 是組態選項的名稱。 *option_name* is **varchar(35)**，預設值為 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
+`[ @configname = ] 'option_name'` 是組態選項的名稱。 *option_name* is **varchar(35)** ，預設值為 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
   
  如需有關可用組態選項及其設定的資訊，請參閱[伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
@@ -98,7 +97,7 @@ RECONFIGURE
   
  RECONFIGURE 陳述式會動態更新某些選項；其他選項則需要伺服器停止再重新啟動。 例如，**最小伺服器記憶體**並**最大伺服器記憶體**伺服器記憶體選項會動態更新[!INCLUDE[ssDE](../../includes/ssde-md.md)]; 因此，您可以變更它們而不需要重新啟動伺服器。 相反地，重新設定的執行中的值**填滿因數**選項需要重新啟動[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
- 執行之後重新設定組態選項，您可以看到是否選項已動態更新執行**sp_configure'***option_name***'**。 中的值**run_value**並**config_value**資料行應該符合動態更新的選項。 您也可以檢查以查看哪些選項是動態的藉由查看**sys.configurations**資料行**sys.configurations**目錄檢視。  
+ 執行之後重新設定組態選項，您可以看到是否選項已動態更新執行**sp_configure'***option_name***'** 。 中的值**run_value**並**config_value**資料行應該符合動態更新的選項。 您也可以檢查以查看哪些選項是動態的藉由查看**sys.configurations**資料行**sys.configurations**目錄檢視。  
   
 > [!NOTE]  
 >  如果指定*值*太高的選項，如**run_value**資料行反映，[!INCLUDE[ssDE](../../includes/ssde-md.md)]已預設為動態記憶體，而不是使用不是有效的設定。  

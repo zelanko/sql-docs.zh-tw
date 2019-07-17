@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076857"
 ---
 # <a name="default-data-source"></a>預設資料來源
 驅動程式可能會選取資料來源，呼叫預設的資料來源，在某些情況下，應用程式並未明確指定其中一個：  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9b5b2356e7f244ec7fc07e28ea50dee9fd8e104
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 55452bb5b7444acef6fb37f21d9d2c39d59daf7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093222"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ ms.locfileid: "56013349"
 </xsd:schema>  
 ```  
   
- 在對應結構描述**\<連絡人 >** 項目，會使用對應至範例 AdventureWorks 資料庫中的 Person.Contact 資料表**sql: relation**註釋。 ConID、 FName 和 LName 屬性會對應到 Person.Contact 資料表中的 ContactID、 FirstName 和 LastName 資料行，使用**sql: field**註解。  
+ 在對應結構描述 **\<連絡人 >** 項目，會使用對應至範例 AdventureWorks 資料庫中的 Person.Contact 資料表**sql: relation**註釋。 ConID、 FName 和 LName 屬性會對應到 Person.Contact 資料表中的 ContactID、 FirstName 和 LastName 資料行，使用**sql: field**註解。  
   
  此註解式 XSD 結構描述會提供關聯式資料的 XML 檢視。 您可以使用 XPath 語言來查詢這個 XML 檢視。 XPath 查詢會傳回 XML 文件當做結果，而不是 SQL 查詢所傳回的資料列集。  
   

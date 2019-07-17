@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 616e4241c6d28e846a56116a70e79254e13dd5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8f24fe59da1377ea42900a8f1f0b89eb97125f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019175"
 ---
 # <a name="constructing-searched-statements"></a>建構搜尋的陳述式
 > [!IMPORTANT]  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087796"
 ---
 # <a name="types-of-descriptors"></a>描述項的類型
 描述元用來描述下列其中一項：  

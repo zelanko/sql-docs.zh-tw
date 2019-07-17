@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 639a7475-7c92-41e0-a8ab-ad630eb5aea3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 33d6ad4a8a22186fdf6174a0605eadfe62108dee
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8e90ef2298241dd9e59917f2ad6877a6a92b0960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001092"
 ---
 # <a name="syspdwtabledistributionproperties-transact-sql"></a>sys.pdw_table_distribution_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "56035619"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|指定屬性的三個資料表的識別碼。||  
-|**distribution_policy**|**tinyint**|0 = 未定義<br /><br /> 1 = 無<br /><br /> 2 = 雜湊<br /><br /> 3 = REPLICATE<br /><br /> 4 = ROUND_ROBIN|REPLICATE 只適用於[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|  
+|**distribution_policy**|**tinyint**|0 = 未定義<br /><br /> 1 = 無<br /><br /> 2 = 雜湊<br /><br /> 3 = 複寫<br /><br /> 4 = ROUND_ROBIN|REPLICATE 只適用於[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|  
 |**distribution_policy_desc**|**nvarchar(60)**|未定義，NONE、 雜湊，複寫，SEGMENTED_HEAP|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 傳回雜湊或複寫。|  
   
 ## <a name="see-also"></a>另請參閱  

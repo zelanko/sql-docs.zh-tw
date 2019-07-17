@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de00026a0d48a9850d7c13b18525c1a1d84820f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 269afec77614cdcd92e23b1fa66915c44cfa28e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069508"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52511802"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會在 TABLES 和 TABLE_INFO 結構描述資料列集中傳回同義字，而且 TABLE_TYPE 會設定為 SYNONYM。  
   
--   傳回值的資料型別**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**， **udt**，或其他大型物件類型不會傳回至用戶端的版本早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 如果您想要使用這些類型當做傳回值，則必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。  
+-   傳回值的資料型別**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**， **udt**，或其他大型物件類型不會傳回至用戶端的版本早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 如果您想要使用這些類型當做傳回值，則必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。  
   
 -   MDAC 允許在手動和隱含交易的開頭執行以下陳述式，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 則不允許。 它們必須在自動認可模式中執行。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "52511802"
   
 -   當 MDAC 應用程式連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料類型將會以 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 相容的資料類型形式出現，如下表所示。  
   
-    |SQL Server 2005 類型|SQL Server 2000 型別|  
+    |SQL Server 2005 類型|SQL Server 2000 類型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -112,9 +111,9 @@ ms.locfileid: "52511802"
   
 -   使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，ITransactionLocal::BeginTransaction 會導致立即開始交易。 當使用 MDAC 時，交易會延遲到應用程式執行陳述式之後才開始，這需要交易處於隱含交易模式中。 如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
--   使用時，您可能會遇到錯誤[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驅動程式，以存取 System.Data.Odbc[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會公開新的伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定資料類型或功能。 System.Data.Odbc 提供一般的 ODBC 實作，而且後續不會公開供應商特有的功能或延伸模組。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驅動程式會更新為可原本就支援最新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能)。若要解決此問題，您可以還原成 MDAC 或移轉至 System.Data.SqlClient。  
+-   使用時，您可能會遇到錯誤[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驅動程式，以存取 System.Data.Odbc[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會公開新的伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定資料類型或功能。 System.Data.Odbc 提供一般的 ODBC 實作，而且後續不會公開供應商特有的功能或延伸模組。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端驅動程式會更新以原生支援最新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。)若要解決此問題，您可以還原成 MDAC 或移轉至 System.Data.SqlClient。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離  (在程式設計的詞彙中，使用資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都可使用資料列版本設定來支援讀取認可的交易隔離，但是只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可支援快照集交易隔離 (在程式設計的詞彙中，使用資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Native Client 建置應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

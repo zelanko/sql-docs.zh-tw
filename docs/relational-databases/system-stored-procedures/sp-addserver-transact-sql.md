@@ -1,5 +1,5 @@
 ---
-title: sp_addserver (Transact-SQL) | Microsoft Docs
+title: sp_addserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 616b835b2b190346df4891caa4d7295c8fb328e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022427"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您在一部電腦安裝多個  執行個體時，每一個執行個體的運作方式，就好像分別位於不同的伺服器上。 藉由參考指定的具名執行個體*伺服器*作為*servername\instancename*。  
   
-`[ @local = ] 'LOCAL'` 指定要新增為本機伺服器的伺服器。 **@local** 已**varchar(10)**，預設值是 NULL。 指定**@local**作為**本機**定義**@server**原因與本機伺服器的名稱為 @@SERVERNAME傳回值的函式*server*。  
+`[ @local = ] 'LOCAL'` 指定要新增為本機伺服器的伺服器。 **@local** 已**varchar(10)** ，預設值是 NULL。 指定 **@local** 作為**本機**定義 **@server** 原因與本機伺服器的名稱為 @@SERVERNAME傳回值的函式*server*。  
   
  在安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會將這個變數設為電腦名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依預設，電腦名稱是使用者在不用其他組態的情況下，連接  執行個體的方法。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 本機定義在  重新啟動之後才會生效。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]每個  執行個體只能定義一部本機伺服器。  
   
-`[ @duplicate_ok = ] 'duplicate_OK'` 指定是否允許重複的伺服器名稱。 **@duplicate_OK** 已**varchar(13)**，預設值是 NULL。 **@duplicate_OK** 只能有值**duplicate_OK**或 NULL。 如果**duplicate_OK**指定並已新增的伺服器名稱存在，不會引發錯誤。 如果沒有使用具名的參數，就**@local**必須指定。  
+`[ @duplicate_ok = ] 'duplicate_OK'` 指定是否允許重複的伺服器名稱。 **@duplicate_OK** 已**varchar(13)** ，預設值是 NULL。 **@duplicate_OK** 只能有值**duplicate_OK**或 NULL。 如果**duplicate_OK**指定並已新增的伺服器名稱存在，不會引發錯誤。 如果沒有使用具名的參數，就 **@local** 必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -80,7 +79,7 @@ sp_addserver 'ACCOUNTS', 'local';
 ## <a name="see-also"></a>另請參閱  
  [重新命名主控 SQL Server 的獨立執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  

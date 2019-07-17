@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b825139c99fe97cfce27d03e65429bb076558413
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 98b34b985650f92fb840b14daba8d5bf16d8454a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924362"
 ---
 # <a name="required-providers-for-data-shaping"></a>資料成形所需的提供者
 資料成形時，通常會需要兩個提供者。 服務提供者[OLE db Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供的資料成形功能，並為資料提供者，例如 OLE DB Provider for SQL Server，提供資料列的資料來填入形狀[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067676"
 ---
 # <a name="installation-and-configuration"></a>安裝和組態
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ Wide World Importers OLTP 資料庫安裝和組態指示。
 1. 開啟 SQL Server Management Studio 並連接至目標 SQL Server 執行個體。
 2. 以滑鼠右鍵按一下**資料庫**節點，然後選取**Restore Database**。
 3. 選取 **裝置**，然後按一下按鈕 **...**
-4. 在對話方塊**選取備份裝置**，按一下**新增**，瀏覽至伺服器的檔案系統中的資料庫備份，並選取備份。 按一下 [確定] 。
+4. 在對話方塊**選取備份裝置**，按一下**新增**，瀏覽至伺服器的檔案系統中的資料庫備份，並選取備份。 按一下 [確定]  。
 5. 如有需要變更資料的目標位置，並在記錄檔**檔案**窗格。 請注意，您要放置資料和記錄檔在不同的磁碟機上的最佳作法。
-6. 按一下 [確定] 。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 WideWorldImporters 的資料庫。
+6. 按一下 [確定 **Deploying Office Solutions**]。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 WideWorldImporters 的資料庫。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -76,7 +75,7 @@ Wide World Importers OLTP 資料庫安裝和組態指示。
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
-適用於： SQL Server
+適用於：[SQL Server]
 
 啟用 SQL Server 中的稽核需要伺服器的設定。 若要啟用 SQL Server 稽核，WideWorldImporters 範例，請在資料庫中執行下列陳述式：
 
@@ -86,7 +85,7 @@ Wide World Importers OLTP 資料庫安裝和組態指示。
 
 ### <a name="row-level-security"></a>資料列層級安全性
 
-適用於： Azure SQL Database
+適用於：Azure SQL Database
 
 根據預設，WideWorldImporters bacpac 下載在未啟用資料列層級安全性。 若要啟用資料庫中的資料列層級安全性，請執行下列預存程序：
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecdd7d7d4b597c4cae218e18b40b0f78e27a6bd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47646fd6fdf1e8fd16165af1bcfc5e741c6e610f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080719"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>對應資料類型 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

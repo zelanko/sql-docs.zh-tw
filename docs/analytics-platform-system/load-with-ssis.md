@@ -2,19 +2,18 @@
 title: 使用 Integration Services-平行處理資料倉儲載入 |Microsoft Docs
 description: 提供用於載入資料到 Parallel Data Warehouse (PDW) 使用 SQL Server Integration Services (SSIS) 套件的參考和部署資訊。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960674"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用平行處理資料倉儲的 Integration Services 載入資料
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  

@@ -2,19 +2,18 @@
 title: 設備實體元件 Analytics Platform System |Microsoft Docs
 description: 名稱及描述 PDW 與設備網狀架構實體元件。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960420"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>設備實體元件 Analytics Platform System
 名稱及描述 PDW 與設備網狀架構實體元件。 

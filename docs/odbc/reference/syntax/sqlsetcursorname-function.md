@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a976d7caad790c80b15c17d65686ee1f6308f415
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092993"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函式
 **合規性**  

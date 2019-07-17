@@ -2,19 +2,18 @@
 title: 硬體安裝-Analytics Platform System |Microsoft Docs
 description: 本文說明如何移動、 打開包裝、 及安裝您的 SQL Server PDW 應用裝置的硬體。 本文章只是參考，並可協助您了解此程序。 應該打開包裝後，安裝，而且之前已給您驗證您的應用裝置。 客戶參與是必要項目，例如資料中心存取、 電力和乙太網路連線。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864a560bb37d27a5bb8ef306ac66815e8b5149c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960872"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Analytics Platform System appliance 的硬體安裝
 本文說明如何移動、 打開包裝、 及安裝您的 SQL Server PDW 應用裝置的硬體。 本文章只是參考，並可協助您了解此程序。 應該打開包裝後，安裝，而且之前已給您驗證您的應用裝置。 客戶參與是必要項目，例如資料中心存取、 電力和乙太網路連線。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c36f1850a5ab6aff1537d8000872d157dbe2eb41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085676"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
 

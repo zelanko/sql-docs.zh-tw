@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3b8c47c79209c11f4c9f7023b8b69f8e0f4b605
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4c00dc0f155ed79cddd715aad96238cfe8723a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046550"
 ---
-# <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大量載入簡介 (SQLXML 4.0) 
+# <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大量載入簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "56028329"
 ## <a name="streaming-of-xml-data"></a>XML 資料的資料流  
  因為來源 XML 文件可能很大，所以不會將整個文件讀入記憶體來進行大量載入處理， 而是由 XML 大量載入以資料流的方式解譯 XML 資料，再加以讀取。 此公用程式讀取資料時會識別資料庫資料表，從 XML 資料來源產生適當的記錄，然後再將記錄傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行插入。  
   
- 例如，下列的來源 XML 文件所組成**\<客戶 >** 項目並**\<順序 >** 子項目：  
+ 例如，下列的來源 XML 文件所組成 **\<客戶 >** 項目並 **\<順序 >** 子項目：  
   
 ```  
 <Customer ...>  
@@ -59,7 +58,7 @@ ms.locfileid: "56028329"
 ...  
 ```  
   
- XML 大量載入讀取**\<客戶 >** 項目，為 Customertable 產生一筆記錄。 當讀取 **\</Customer >** 結束標記時，XML 大量載入將該記錄插入資料表中插入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在同一個方法，當它讀取**\<順序 >** 元素，XML 大量載入 Ordertable，產生一筆記錄，然後將插入到該記錄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表，在讀取時 **\</ 排序 >** 結束標記。  
+ XML 大量載入讀取 **\<客戶 >** 項目，為 Customertable 產生一筆記錄。 當讀取 **\</Customer >** 結束標記時，XML 大量載入將該記錄插入資料表中插入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在同一個方法，當它讀取 **\<順序 >** 元素，XML 大量載入 Ordertable，產生一筆記錄，然後將插入到該記錄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表，在讀取時 **\</ 排序 >** 結束標記。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>交易和非交易 XML 大量載入作業  
  XML 大量載入可以在交易或非交易模式中操作。 通常效能會最佳化如果您是以非交易模式的大量載入： 也就是 [交易] 屬性設定為 FALSE) 和其中一個下列條件成立：  

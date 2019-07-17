@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b68b6def32b50a7a03560015e21d23f51145085c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0087234d48c60779d783a934c99767b2a3613306
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053775"
 ---
 # <a name="sqlfetch-visual-foxpro-odbc-driver"></a>SQLFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

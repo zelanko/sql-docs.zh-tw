@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dbfda01d96cad53e5830e598b5812ed79d8f04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8420589761a1f8cb1f9cf8a3022842863fd30758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046896"
 ---
 # <a name="dynamic-tracing"></a>動態追蹤
 追蹤可以啟用或停用在執行應用程式中的任何時間點。 這可讓應用程式，以追蹤任何數目的函式呼叫。  

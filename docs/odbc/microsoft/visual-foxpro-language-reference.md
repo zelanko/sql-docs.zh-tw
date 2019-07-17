@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9faaf17df559f41b82f849fa9d596b1eb21582df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087819"
 ---
 # <a name="visual-foxpro-language-reference"></a>Visual FoxPro 語言參考
 此章節包含下列主題。  

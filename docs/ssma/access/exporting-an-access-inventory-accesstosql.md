@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006562"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出 Access 清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以匯出專案中的所有存取資料庫的詳細目錄。 您可以檢閱，然後查詢庫存中繼資料，以判斷哪一個資料庫和那些要移轉的資料庫內的物件。 此清查可讓您快速尋找解答，如下所示：  
@@ -58,7 +57,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
 2.  在 [檔案]  功能表上，選取 [新增專案]  。  
   
-    [新增專案]  對話方塊隨即出現。  
+    [ **新增專案** ] 對話方塊隨即出現。  
   
 3.  在 **名稱**方塊中，輸入您專案的名稱。  
   
@@ -107,7 +106,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
-    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如：MyServer\MyInstance。  
+    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如: MyServer\MyInstance。  
   
 3.  在 **資料庫**方塊中，輸入匯出的中繼資料的目標資料庫的名稱。  
   

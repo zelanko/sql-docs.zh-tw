@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7af34a618fb6f02790e45a1fed0aef0252489e6
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ffe5e1f8d4ec36fd69f972dcfa631162b7547ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061913"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>資源管理員相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

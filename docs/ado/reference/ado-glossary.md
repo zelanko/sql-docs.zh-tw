@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911697"
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題會定義與 ADO 的詞彙。  
@@ -49,7 +48,7 @@ ms.locfileid: "66709981"
  繫結項目  
  資料表中的欄位和變數之間的對應。 在 ADO VisualC++延伸模組**資料錄集**欄位會對應至 C /C++變數。  
   
- bitmask  
+ 位元遮罩  
  數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中 **&** 並 **&#124;** 在C++。  
   
  例如，ADO **FieldAttributeEnum**值可用來當做位元遮罩來決定欄位的屬性。 假設您想要判斷欄位是否可更新。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`  
@@ -65,7 +64,7 @@ ms.locfileid: "66709981"
  商務規則  
  驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務往來的演算轉換組合。 也稱為*商務邏輯*。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  導出的運算式  
  運算式不是常數，但其值取決於其他值。 要評估，必須取得的導出的運算式，並將其計算從其他來源，通常是在其他欄位或資料列的值中。  
   
@@ -230,7 +229,7 @@ ms.locfileid: "66709981"
  父系 (parent)  
  階層式關聯性控制側邊。 在階層式結構中，父代有階層中的正下方的一個或多個子節點。 另請參閱父別名，父子式關聯性，子系。  
   
- parent-alias  
+ 父別名  
  父代是指的別名。 請參閱也別名、 父代。  
   
  父子式關聯性  
@@ -279,10 +278,10 @@ ms.locfileid: "66709981"
  預存程序  
  先行編譯程式碼，例如 SQL 陳述式和選擇性的流程控制陳述式集合的名稱下儲存，並當做一個單位處理。 預存程序會儲存在資料庫中;他們可以使用一次呼叫，從應用程式執行，並允許使用者宣告的變數、 條件式執行及其他功能強大的程式設計功能。  
   
- stub  
+ 虛設常式  
  提供參數封送處理的特定介面的物件，並接收來自不同的執行緒上，或在另一個處理序在不同的執行環境中，執行這類的用戶端呼叫的應用程式物件所需的通訊。 虛設常式會位於與應用程式物件，而且會與對應的 proxy 位於與它所呼叫的用戶端通訊。 請參閱 「 proxy 」。  
   
- sub-node  
+ 子節點  
  請參閱子系。  
   
  同步作業  

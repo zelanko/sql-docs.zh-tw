@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f54d31426773f294a4a23f059c9f906d430056f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ad9a20ab8abd40123ec4e4d7369373e68699205
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028373"
 ---
 # <a name="processing-select-for-update-statements"></a>處理 SELECT FOR UPDATE 陳述式
 > [!IMPORTANT]  

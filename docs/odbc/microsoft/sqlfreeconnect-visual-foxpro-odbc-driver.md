@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8f20f8acb407d9dcba266d932891ca7025465c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bba68f2accd12afd2328234577c93d623bcf8529
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053729"
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

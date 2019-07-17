@@ -10,13 +10,12 @@ ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
 author: MightyPen
-manager: craigg
-ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057194"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 00cdd9f4968af4e0af47259341a60255d32faa8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8733b93648080e02a4d98a5be90faf1ec7ceba06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074422"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
 
@@ -32,7 +31,7 @@ ms.locfileid: "65486088"
 |-|-|-|  
 |索引標籤和區段|設定|描述|  
 |設定：發行|在發行時顯示 [發行並註解]  對話方塊|在您按一下 [發行]  之後，選取此選項可顯示 [發行並註解]  對話方塊，好讓您輸入所有變更的單一註解，或輸入每一項變更的註解。<br /><br /> 取消選取此選項可指定發行程序已起始，而不必顯示 [發行並註解]  對話方塊。 您將沒有機會輸入註解。|  
-|設定：版本|版本選取項目|選取將載入 Excel 增益集中之主要資料的版本。 可為以下項目：<br /><br /> [無]  表示具有未預設為任何版本的版本<br /><br /> [最舊]  表示預設為最舊的版本；[最新]  表示預設為最新的版本。|  
+|設定：Version|版本選取項目|選取將載入 Excel 增益集中之主要資料的版本。 可為以下項目：<br /><br /> [無]  表示具有未預設為任何版本的版本<br /><br /> [最舊]  表示預設為最舊的版本；[最新]  表示預設為最新的版本。|  
 |設定：記錄|開啟詳細記錄|啟用從 MDS 將主要資料載入 Excel 增益集之程序的記錄，好讓服務中每一個命令的結果都會記錄下來。|  
 |設定：遙測|開啟遙測資料收集|啟用遙測有助於改善 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Excel 增益集的品質、可靠性與效能。|  
 |設定：批次大小|要載入的資料格數目|選取一個數字，此數字指示在從 MDS 伺服器載入 Excel 的批次中，將會載入幾千個資料格。 預設值是 50,000 個資料格。|  

@@ -2,19 +2,18 @@
 title: 設定 Windows 以接收遠端資料表複本-Parallel Data Warehouse |Microsoft Docs
 description: 說明如何購買並設定非應用裝置的 Windows 系統，平行處理資料倉儲之遠端資料表複製功能搭配使用 InfiniBand 網路連線。 Windows 系統將裝載 SQL Server 資料庫從 SQL Server PDW 資料庫接收遠端資料表複本。 它是分開購買應用裝置，並連接到設備的 InfiniBand 網路。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961302"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>設定外部 Windows 系統以接收遠端資料表複本使用 InfiniBand-平行處理資料倉儲
 說明如何購買並設定 SQL Server PDW 中的遠端資料表複製功能搭配使用 InfiniBand 網路連接非應用裝置 Windows 系統。 Windows 系統將裝載 SQL Server 資料庫從 SQL Server PDW 資料庫接收遠端資料表複本。 它是分開購買應用裝置，並連接到設備的 InfiniBand 網路。  

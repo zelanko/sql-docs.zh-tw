@@ -5,17 +5,16 @@ description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958916"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 來部署應用程式到 SQL Server 的巨量資料叢集
 
@@ -23,7 +22,7 @@ ms.locfileid: "67729309"
 
 本文說明如何使用 Visual Studio Code 部署應用程式擴充功能的 SQL Server 巨量資料叢集來部署應用程式。 CTP 2.3 中引進了這項功能。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [SQL Server 的巨量資料叢集](big-data-cluster-overview.md)CTP 2.3 或更新版本。
@@ -59,7 +58,7 @@ ms.locfileid: "67729309"
 
 SQL Server 的巨量資料叢集應用程式部署之後在安裝延伸模組，它會提示您重新載入 VS Code。 現在，您應該會看到 SQL Server BDC 應用程式總管，VS Code 資訊看板中。
 
-### <a name="app-explorer"></a>App Explorer
+### <a name="app-explorer"></a>應用程式總管
 
 按一下 載入側邊面板，以顯示 應用程式總管 中的資訊看板中的擴充功能。 [應用程式總管] 中的下列範例螢幕擷取畫面會顯示任何應用程式或可用的應用程式規格：
 

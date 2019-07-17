@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fccbc9b258cbff1e14ccc76e10af9d26efc4b70b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d1a37043d332b54d0d5c5ebb7b2ba9f3acce000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071763"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE 命令
 指定是否開啟資料表的檔案，以進行獨佔或共用網路上使用。  

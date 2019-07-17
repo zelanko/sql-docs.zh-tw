@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea8e6825a2019667734a9d68f5798da00084c71b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2c66fbc1cdf98d45a7440d2def9cb3fd1be5635a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583041"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255757"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ ms.locfileid: "59583041"
 |encryptor_thumbprint|**varbinary(20)**|顯示加密程式的指模。|  
 |encryptor_type|**nvarchar(32)**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。<br /><br /> 描述加密程式。|  
 |percent_complete|**real**|資料庫加密狀態變更的完成百分比。 如果沒有狀態變更，這將會是 0。|
-|encryption_state_desc|**nvarchar(32)**|**適用於**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]和更新版本。<br><br> 指出資料庫是否已加密，或未加密的字串。<br><br>無<br><br>未加密<br><br>加密<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**適用於**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]和更新版本。<br><br>表示加密掃描的目前狀態。 <br><br>0 = 否在起始掃描，未啟用 TDE<br><br>1 = 掃描正在進行中。<br><br>2 = 掃描正在進行中，但已暫停也無妨，使用者可以繼續。<br><br>3 = 已順利完成掃描，啟用 TDE 加密已完成。<br><br>4 = 掃描已中止，因為某些原因，則需要手動操作。 如需更多協助，請連絡 Microsoft 支援服務。|
-|encryption_scan_state_desc|**nvarchar(32)**|**適用於**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]和更新版本。<br><br>字串，表示加密掃描的目前狀態。<br><br> 無<br><br>RUNNING<br><br>SUSPENDED<br><br>完成<br><br>ABORTED|
-|encryption_scan_modify_date|**datetime**|**適用於**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]和更新版本。<br><br> 將日期顯示上次修改加密掃描狀態 （以 utc 表示）。|
+|encryption_state_desc|**nvarchar(32)**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br> 指出資料庫是否已加密，或未加密的字串。<br><br>無<br><br>未加密<br><br>加密<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br>表示加密掃描的目前狀態。 <br><br>0 = 否在起始掃描，未啟用 TDE<br><br>1 = 掃描正在進行中。<br><br>2 = 掃描正在進行中，但已暫停也無妨，使用者可以繼續。<br><br>3 = 已順利完成掃描，啟用 TDE 加密已完成。<br><br>4 = 掃描已中止，因為某些原因，則需要手動操作。 如需更多協助，請連絡 Microsoft 支援服務。|
+|encryption_scan_state_desc|**nvarchar(32)**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br>字串，表示加密掃描的目前狀態。<br><br> 無<br><br>RUNNING<br><br>SUSPENDED<br><br>完成<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br> 將日期顯示上次修改加密掃描狀態 （以 utc 表示）。|
   
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
 
 ## <a name="see-also"></a>另請參閱  
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f16080935fb7ddb82cd04a9a0431eed4c1cd6886
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919978"
 ---
 # <a name="clone-method-example-vc"></a>Clone 方法範例 (VC++)
 這個範例會使用[複製品](../../../ado/reference/ado-api/clone-method-ado.md)方法建立的複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)然後讓每個複本的記錄指標放在個別的使用者。  

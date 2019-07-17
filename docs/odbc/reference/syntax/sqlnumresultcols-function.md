@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42d90172c9e0d0fafb836e5b917a88d52a994b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d42512c2d5d7671c35197c7968f317f688e304c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005829"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols 函數
 **合規性**  

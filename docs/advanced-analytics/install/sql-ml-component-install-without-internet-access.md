@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962910"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 無法存取網際網路的電腦上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65836220"
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2-取得 SQL Server 2017 安裝媒體
@@ -55,7 +54,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 的離線安裝
 
-SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔產品套件和 Microsoft 發佈的開放原始碼 R，分別。 先安裝這些版本的任何一個：RTM, SP 1, SP 2. 就地的基底安裝之後，可以在下一個步驟套用累計更新。
+SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔產品套件和 Microsoft 發佈的開放原始碼 R，分別。 先安裝這些版本的任何一個：RTM，SP 1，SP 2。 就地的基底安裝之後，可以在下一個步驟套用累計更新。
 
 在具有網際網路連線的電腦，下載安裝程式用來安裝 SQL Server 2016 上的資料庫內分析封包檔。 
 

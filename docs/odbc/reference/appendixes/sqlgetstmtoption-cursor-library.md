@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c7429bd4a3780caaf5bc7e0624d0e92ef4dd3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f3749cf860463c79b5f489243544529498222a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073823"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (資料指標程式庫)
 > [!IMPORTANT]  

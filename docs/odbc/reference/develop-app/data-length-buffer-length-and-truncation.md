@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081473"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>資料長度、緩衝區長度和截斷
 *的資料長度*是資料的位元組長度，因為它會儲存在應用程式的資料緩衝區，不如它會儲存在資料來源。 這項區別很重要的因為資料通常儲存在不同的類型，比在資料來源中資料緩衝區中。 針對傳送至資料來源的資料，這是之前轉換成資料來源的類型資料的位元組長度。 從資料來源擷取的資料，這可以是資料的位元組長度轉換成資料緩衝區的型別和任何截斷完成之前後。  

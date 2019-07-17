@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924730"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大型的子系**資料錄集**，特別是相較於父代的大小**資料錄集**，但需要存取只有少數子章節中，您可能會發現它使用更有效率參數化的命令。  
@@ -75,7 +74,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  使用非參數化的階層，沒有任何方法可以與小組及遊戲的資料表的方式相關的子系**資料錄集**每個小組包含其完整的排程。 您可以建立包含主排程或 road 排程，但不是能兩者都包含的章節。 這是因為 RELATE 子句會限制您的表單的父子式關聯性 (pc1 = cc1) AND (pc2 = pc2)。 因此，如果您的命令包含"RELATE team_id TO home_team，team_id TO visiting_team 」，您會取得的遊戲，小組已播放本身。 您想要為"(team_id=home_team) 或者 (team_id = visiting_team) 」，但 Shape 提供者不支援 OR 子句。  
   
- 若要取得所要的結果，您可以使用參數化的命令。 例如：  
+ 若要取得所要的結果，您可以使用參數化的命令。 例如:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

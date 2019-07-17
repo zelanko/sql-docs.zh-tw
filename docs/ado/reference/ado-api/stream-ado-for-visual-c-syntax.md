@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f638d993064beb37921e6546632e69d4b7ca8d25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930699"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  

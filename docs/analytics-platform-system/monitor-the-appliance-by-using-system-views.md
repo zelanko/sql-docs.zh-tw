@@ -2,19 +2,18 @@
 title: 透過系統檢視表-分析平台系統監視 |Microsoft Docs
 description: 本文章列出可用於監視 Analytics Platform system appliance 的系統檢視表。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 954b65a1882e47ff931800854bdd5f273d4c3392
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960526"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>監視與系統檢視表-Analytics Platform System appliance
 本文章列出可用於監視 SQL Server PDW 系統檢視表。  

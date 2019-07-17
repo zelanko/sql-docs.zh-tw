@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e0c2a9c367df9cd71d68d73ff676c8df915237b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7ad13ef3d443e2c99a44ad1cbefbf9f08fa2e742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039675"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 函式
 **合規性**  

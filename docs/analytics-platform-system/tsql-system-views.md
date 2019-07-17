@@ -2,19 +2,18 @@
 title: 系統檢視表-Analytics Platform System Parallel Data Warehouse |Microsoft Docs
 description: 系統檢視表的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0cf828263d8d3c70fc9b972bbc584b73397cbf91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c459b3656f4b7a2d61cbe0109a78848894600fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63252615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959960"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System 平行資料倉儲系統檢視表
 系統檢視表的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。

@@ -5,17 +5,16 @@ description: 這篇文章說明如何在 Azure Data Studio 已連接到 SQL Serv
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958292"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 
@@ -52,7 +51,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 ![PostgreSQL 連接](media/notebooks-guidance/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>SQL 核心
 
 在程式碼內的資料格的 Notebook，類似於查詢編輯器中，我們支援最新的 SQL 程式碼撰寫體驗，可讓您日常的工作更容易利用內建的功能，例如豐富的 SQL 編輯器、 IntelliSense 和內建的程式碼片段。 程式碼片段可讓您產生適當的 SQL 語法來建立資料庫、 資料表、 檢視、 預存程序等，並更新現有的資料庫物件。 使用程式碼片段來快速建立您用於開發或測試用途的資料庫副本，以及產生和執行指令碼。
 
@@ -60,7 +59,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 若要連接到 SQL Server 執行個體的 SQL 核心
 
-![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+![SQL 核心](media/notebooks-guidance/intellisense-code-cell.png)
 
 查詢結果
 
@@ -99,10 +98,10 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 |核心|描述
 |:-----|:-----
-| SQL Kernel | 撰寫 SQL 程式碼在您的關聯式資料庫為目標。
+| SQL 核心 | 撰寫 SQL 程式碼在您的關聯式資料庫為目標。
 |PySpark3 和 PySpark 核心| 撰寫使用從叢集的 Spark 計算的 Python 程式碼。
 |Spark 核心|撰寫使用 Spark 的計算，從叢集的 Scala 和 R 程式碼。
-|Python Kernel|撰寫適用於本機開發的 Python 程式碼。
+|Python 核心|撰寫適用於本機開發的 Python 程式碼。
 
 `Attach to` 提供的核心，以附加的內容。 如果您使用的 SQL 核心，則您可以`Attach to`任何您的 SQL Server 執行個體。
 

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942570"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67716598"
 |**direction**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：資料移入[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 輸出：移出資料[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**class**|使用的頻寬類別，下列其中一個值：<br />內部：在 Azure 平台中移動的資料。<br />外部功能：Azure 平台移出的資料。<br /><br /> 這個類別只會在資料庫參與區域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 之間的連續複製關聯性時傳回。 如果指定的資料庫未參與任何連續複製關聯性，則不會傳回"Interlink"資料列。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**time_period**|發生使用時的時間週期是尖峰時間或離峰。 The Peak time is based on the region in which the server was created. 例如，如果伺服器是在 "US_Northwest" 區域中建立，則尖峰時間會定義為介於太平洋標準時間上午 10:00 到 和 06:00:00 執行報表， 之間。|  
-|**quantity**|使用的頻寬數量，以 KB 為單位。|  
+|**數量**|使用的頻寬數量，以 KB 為單位。|  
   
 ## <a name="permissions"></a>Permissions
 

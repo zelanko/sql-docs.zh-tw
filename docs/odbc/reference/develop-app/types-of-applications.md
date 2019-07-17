@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087797"
 ---
 # <a name="types-of-applications"></a>應用程式的類型
 ODBC 應用程式分類如下：  

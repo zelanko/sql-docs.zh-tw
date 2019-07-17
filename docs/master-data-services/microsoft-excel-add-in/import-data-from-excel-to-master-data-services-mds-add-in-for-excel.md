@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c134a2e540fd597c36f07bc312e2f67a73e07d28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 093f8a471210b73b8c3cdaf1b2bb083b31980c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65476965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092283"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>將資料從 Excel 匯入 Master Data Services (適用於 Excel 的 MDS 增益集)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65476965"
 >  -   當您發行變更時，系統會刪除 MDS 管理之資料格的註解。  
 > -   MDS 管理的資料格中不支援公式。 MDS 管理之資料格中的公式會處理為文字值。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  

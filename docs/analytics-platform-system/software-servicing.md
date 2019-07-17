@@ -2,19 +2,18 @@
 title: 軟體服務-Analytics Platform System |Microsoft Docs
 description: 軟體服務 Analytics Platform System (APS)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97f0ccaed9cded73241f473d81400b30acbe402c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960082"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System 中的軟體維護
 本節摘要說明服務的需求，Analytics Platform System appliance，包括 WSUS 和 Analytics Platform System hotfix 的軟體。  

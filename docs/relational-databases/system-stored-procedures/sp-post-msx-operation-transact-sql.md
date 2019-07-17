@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056375"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @operation = ] 'operation'` 所公佈之作業的類型。 *作業*已**varchar(64)**，沒有預設值。 有效的動作會隨著*object_type*。  
+`[ @operation = ] 'operation'` 所公佈之作業的類型。 *作業*已**varchar(64)** ，沒有預設值。 有效的動作會隨著*object_type*。  
   
 |物件類型|運算|  
 |-----------------|---------------|  
 |**JOB**|Insert<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
-|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**伺服器**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**排程**|Insert<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` 要張貼作業的物件型別。 有效的類型為**作業**，**伺服器**，並**排程**。 *物件*已**varchar(64)**，預設值是**作業**。  
+`[ @object_type = ] 'object'` 要張貼作業的物件型別。 有效的類型為**作業**，**伺服器**，並**排程**。 *物件*已**varchar(64)** ，預設值是**作業**。  
   
 `[ @job_id = ] job_id` 要套用作業的工作作業識別碼。 *job_id*已**uniqueidentifier**，沒有預設值。 **0x00**表示所有作業。 如果*物件*是**伺服器**，然後*job_id*並非必要。  
   
-`[ @specific_target_server = ] 'target_server'` 指定的作業所適用的目標伺服器的名稱。 如果*job_id*未指定，但*target_server*未指定，作業會張貼的所有作業之作業的伺服器。 *target_server*已**nvarchar(30)**，預設值是 NULL。  
+`[ @specific_target_server = ] 'target_server'` 指定的作業所適用的目標伺服器的名稱。 如果*job_id*未指定，但*target_server*未指定，作業會張貼的所有作業之作業的伺服器。 *target_server*已**nvarchar(30)** ，預設值是 NULL。  
   
 `[ @value = ] value` 輪詢間隔，以秒為單位。 *value* 是 **int**，預設值是 NULL。 指定此參數才*作業*是**集民意調查**。  
   
@@ -87,11 +86,11 @@ sp_post_msx_operation
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_resync_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
+ [sp_resync_targetserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
  [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_update_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

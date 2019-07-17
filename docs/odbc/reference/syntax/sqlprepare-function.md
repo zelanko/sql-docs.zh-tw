@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c77f8e6bd137b557b150ba91c143abb5438778c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292b1c4d9cd0281de610af4e53f25aa3d0ab6f90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005762"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函數
 **合規性**  

@@ -1,5 +1,5 @@
 ---
-title: CalculationPassValue (MDX) | Microsoft Docs
+title: CalculationPassValue (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016870"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 

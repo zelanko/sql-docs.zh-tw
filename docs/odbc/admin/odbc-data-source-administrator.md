@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adbc90288789838199a0eee866eb36896a360009
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da8dd850e62f46042287569f1e4bb8520b18151f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901649"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 資料來源管理員
 Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來源。 此應用程式位於下的 [Windows] 控制台中**系統管理工具**。 從 Windows 8 開始，圖示名為**ODBC 資料來源**，還有在 64 位元作業系統上的 32 位元和 64 位元版本。  

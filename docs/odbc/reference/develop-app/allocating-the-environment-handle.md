@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077177"
 ---
 # <a name="allocating-the-environment-handle"></a>配置環境控制代碼
 ODBC 中的任何應用程式的第一個工作是載入驅動程式管理員;如何做到這點與作業系統相關。 比方說，在電腦上執行 Microsoft® Windows NT® Server/Windows 2000 Server、 Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，應用程式可能是所連結的驅動程式管理員文件庫或呼叫**LoadLibrary**載入驅動程式管理員的 DLL。  
   
  下一步的工作中，應用程式可以呼叫任何其他的 ODBC 函式必須先完成，是初始化 ODBC 環境並配置環境控制代碼，如下所示：  
   
-1.  應用程式宣告型別 SQLHENV 的變數。 然後它會呼叫**SQLAllocHandle**並傳遞此變數和 SQL_HANDLE_ENV 選項的位址。 例如：  
+1.  應用程式宣告型別 SQLHENV 的變數。 然後它會呼叫**SQLAllocHandle**並傳遞此變數和 SQL_HANDLE_ENV 選項的位址。 例如:  
   
     ```  
     SQLHENV henv1;  

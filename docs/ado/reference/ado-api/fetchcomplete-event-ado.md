@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b5fb32f567dcfffb6112e843b53cb99a3b106bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932838"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
 **FetchComplete**冗長的非同步作業中的所有記錄都擷取到之後，會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac7fb545938a0ec5f212e9c0da867fbea5db4817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053667"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 函式
 **合規性**  

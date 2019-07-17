@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917009"
 ---
 # <a name="seek-method"></a>Seek 方法
 搜尋的索引[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來快速尋找符合指定的值，並變更該資料列目前的資料列位置的資料列。  

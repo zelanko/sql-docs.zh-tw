@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941744"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_name = ] 'job_name'` 作業名稱。 名稱必須是唯一的而且不能包含百分比 (**%**) 字元。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
+`[ @job_name = ] 'job_name'` 作業名稱。 名稱必須是唯一的而且不能包含百分比 ( **%** ) 字元。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，沒有預設值。  
   
 `[ @enabled = ] enabled` 指出所加入作業的狀態。 *已啟用*已**tinyint**，預設值是 1 （已啟用）。 如果**0**，作業不會啟用，且不會執行根據其排程; 不過，它可以手動執行。  
   
-`[ @description = ] 'description'` 作業描述。 *描述*已**nvarchar(512)**，預設值是 NULL。 如果*描述*已省略，會使用 「 沒有可用的說明 」。  
+`[ @description = ] 'description'` 作業描述。 *描述*已**nvarchar(512)** ，預設值是 NULL。 如果*描述*已省略，會使用 「 沒有可用的說明 」。  
   
 `[ @start_step_id = ] step_id` 執行作業的第一個步驟的識別碼。 *step_id*已**int**，預設值是 1。  
   
@@ -67,7 +66,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` 指定作業類別目錄的語言無關的機制。 *category_id*已**int**，預設值是 NULL。  
   
-`[ @owner_login_name = ] 'login'` 擁有作業的登入名稱。 *登入*已**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值**@owner_login_name**。 如果使用者不是成員的**sysadmin**角色設定，或變更的值**@owner_login_name**，此預存程序的執行會失敗，且會傳回錯誤。  
+`[ @owner_login_name = ] 'login'` 擁有作業的登入名稱。 *登入*已**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
   
 `[ @notify_level_eventlog = ] eventlog_level` 值，指出項目放在這個工作的 Microsoft Windows 應用程式記錄檔的時機。 *eventlog_level*已**int**，而且可以是下列值之一。  
   
@@ -123,7 +122,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  如需有關與每一種固定相關聯的特定權限資訊中，資料庫角色，請參閱 < [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值**@owner_login_name**。 如果使用者不是成員的**sysadmin**角色設定，或變更的值**@owner_login_name**，此預存程序的執行會失敗，且會傳回錯誤。  
+ 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
   
 ## <a name="examples"></a>範例  
   

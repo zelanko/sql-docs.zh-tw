@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a69f19b7fda01194410771b8b044950545076d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4705ec549fb13ba056f5128167a6f5b7a39cff41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063273"
 ---
 # <a name="sqlallocenv-visual-foxpro-odbc-driver"></a>SQLAllocEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47711a7e974373e9da4ac8068295029d88accaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e744d3de177197923540fc3101c58dcbb4d3490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990735"
 ---
 # <a name="numeric-functions"></a>數值函數
 下表描述 ODBC 純量函式集合中包含的數值函式。 藉由呼叫**SQLGetInfo**具有*資訊類型*的 SQL_NUMERIC_FUNCTIONS，應用程式可以判斷驅動程式支援的數值函式。  
@@ -50,11 +49,11 @@ ms.locfileid: "63181299"
 |**LOG(** _float_exp_ **)**  (ODBC 1.0)|傳回自然對數*float_exp*。|  
 |**LOG10(** _float_exp_ **)**  (ODBC 2.0)|傳回基底 10 對數*float_exp*。|  
 |**MOD(** _integer_exp1_, _integer_exp2_ **)**  (ODBC 1.0)|傳回的餘數 （模數） *integer_exp1*除以*integer_exp2*。|  
-|**PI( )**  (ODBC 1.0)|傳回 pi 的常數值為浮點值。|  
+|**PI （)** (ODBC 1.0)|傳回 pi 的常數值為浮點值。|  
 |**POWER(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|傳回的值*則 numeric_exp*冪*integer_exp*。|  
 |**RADIANS(** _numeric_exp_ **)**  (ODBC 2.0)|傳回從轉換的弧度的數目*則 numeric_exp*度。|  
 |**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|傳回隨機浮點數的值，使用*integer_exp*做為選擇性的種子值。|  
-|**ROUND(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|傳回*則 numeric_exp*捨入到*integer_exp*會放在小數點右邊。 如果*integer_exp*是負數*則 numeric_exp 就*會捨入到&#124; *integer_exp* &#124;會放在小數點左邊。|  
+|**ROUND (** _則 numeric_exp_， _integer_exp_ **)** (ODBC 2.0)|傳回*則 numeric_exp*捨入到*integer_exp*會放在小數點右邊。 如果*integer_exp*是負數*則 numeric_exp 就*會捨入到&#124; *integer_exp* &#124;會放在小數點左邊。|  
 |**SIGN(** _numeric_exp_ **)**  (ODBC 1.0)|傳回的正負號的指標*則 numeric_exp*。 如果*則 numeric_exp*小於零，-1 會傳回。 如果*則 numeric_exp*等於零，就會傳回 0。 如果*則 numeric_exp*是小於或等於零，則傳回 1。|  
 |**SIN(** _float_exp_ **)**  (ODBC 1.0)|傳回正弦*float_exp*，其中*float_exp*是角度以弧度表示。|  
 |**SQRT(** _float_exp_ **)**  (ODBC 1.0)|傳回平方根*float_exp*。|  

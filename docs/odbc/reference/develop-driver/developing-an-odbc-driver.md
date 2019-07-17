@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c4affd835931c00fd5f8ad2514070527ce1b80f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6509a1627a753bc0bb0db354ee0a20b304e19774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078896"
 ---
 # <a name="developing-an-odbc-driver"></a>開發 ODBC 驅動程式
 本節將討論如何開發 ODBC 驅動程式的主題。  

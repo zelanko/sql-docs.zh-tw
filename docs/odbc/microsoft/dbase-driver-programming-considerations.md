@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa9303f5108ef97f077764122481565df1937a4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dac34e8b3559b4d77aec411fd636ac7850932a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096397"
 ---
 # <a name="dbase-driver-programming-considerations"></a>dBASE 驅動程式的程式設計考量
 此章節包含下列主題。  

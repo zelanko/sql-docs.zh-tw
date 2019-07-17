@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 70f74c9c3782cb8da5a12f5b785e410356a2c088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925331"
 ---
 # <a name="filtering-for-updated-records"></a>篩選更新的記錄
 在呼叫 UpdateBatch 之前，您可以使用資料錄集篩選器屬性，以檢視這些資料錄集開啟之後已經變更的記錄或 UpdateBatch 的最後一個呼叫。 若要這樣做，請設定篩選條件等於 adFilterPendingRecords 來判斷多少筆記錄將會更新，在下一節中的程式碼範例所示。  

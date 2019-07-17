@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfeb9b5965c61977ab8d152c67a626534bb88910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8609c7bac3d701ef6c6cf087f46e8b236842b71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964371"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory 物件 (RDSServer) 屬性、方法和事件
 > [!IMPORTANT]
@@ -40,7 +39,7 @@ ms.locfileid: "66718797"
 |[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|使用連接字串 （適用於 ADO 2.5 或更新版本） 所指定的資料庫，同步處理指定的資料錄集。|  
 |[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|使用連接字串 （適用於 ADO 2.1） 所指定的資料庫，同步處理指定的資料錄集。|  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

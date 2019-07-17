@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028681"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>專案設定 (同步處理) (SybaseToSQL)
 同步處理頁面**專案設定** 對話方塊中包含自訂 SSMA 到所載入的資料庫物件，例如資料表和預存程序，設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -26,7 +25,7 @@ ms.locfileid: "62667979"
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，然後選取**同步處理**左窗格的底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **嘗試**  
 指定載入物件時，應該要 SSMA 的嘗試次數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 物件，不會載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中目前嘗試將會重試，直到 SSMA 到達目前的同步處理程序中的嘗試次數上限。  
   

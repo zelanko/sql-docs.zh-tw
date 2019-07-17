@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084845"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  數字，指出操作員目前狀態 (**1**目前已啟用，如果**0**如果不是)。 *已啟用*已**tinyint**，預設值是 NULL。 如果未啟用，操作員不會收到警示通知。  
   
  [ @email_address=] '*email_address*'  
- 操作員的電子郵件地址。 這個字串會直接傳遞至電子郵件系統。 *email_address*已**nvarchar(100)**，預設值是 NULL。  
+ 操作員的電子郵件地址。 這個字串會直接傳遞至電子郵件系統。 *email_address*已**nvarchar(100)** ，預設值是 NULL。  
   
  [ @pager_address=] '*pager_number*'  
- 操作員的呼叫器號碼。 這個字串會直接傳遞至電子郵件系統。 *pager_number*已**nvarchar(100)**，預設值是 NULL。  
+ 操作員的呼叫器號碼。 這個字串會直接傳遞至電子郵件系統。 *pager_number*已**nvarchar(100)** ，預設值是 NULL。  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  指定從星期一到星期五，在什麼時間之後，可以將呼叫器通知傳給這位操作員。 *weekday_pager_start_time*已**int**，預設值是 NULL，而且必須使用 HHMMSS 格式輸入 24 小時制。  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|星期六|  
   
  [ @netsend_address=] '*netsend_address*'  
- 要傳送網路訊息的目標操作員網路位址。 *netsend_address&lt*已**nvarchar(100)**，預設值是 NULL。  
+ 要傳送網路訊息的目標操作員網路位址。 *netsend_address&lt*已**nvarchar(100)** ，預設值是 NULL。  
   
  [ @category_name=] '*分類*'  
  這個警示的類別目錄名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
@@ -116,7 +115,7 @@ sp_update_operator
  這個程序的執行權限預設會授與系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將操作員狀態更新為已啟用，並設定能夠呼叫操作員的日子  (星期一至星期五，上午 8 點至下午 5 點)。  
+ 下列範例會將操作員狀態更新為已啟用，並設定能夠呼叫操作員的日子 (星期一至星期五，上午 8 點至下午 5 點)。  
   
 ```  
 USE msdb ;  
@@ -134,9 +133,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

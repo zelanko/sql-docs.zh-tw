@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption Function | Microsoft Docs
+title: SQLGetStmtOption 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff2abca6d68e2de225bdbb2bb806c531b50804f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030674"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption 函式
 **合規性**  

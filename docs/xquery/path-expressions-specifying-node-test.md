@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1d216db1a0d8d83279babb2e772413dfb94889c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946439"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路徑運算式 - 指定節點測試
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "51657963"
 >  在 XQuery 路徑運算式中指定的節點名稱，並不受限於與永遠區分大小寫的 Transact-SQL 查詢相同的區分定序規則。  
   
 ## <a name="node-name-as-node-test"></a>做為節點測試的節點名稱  
- 當在路徑運算式步驟中指定節點名稱做為節點測試時，您必須了解主體節點種類的概念。 每個軸、子系、父系或屬性都有主要節點類型。 例如：  
+ 當在路徑運算式步驟中指定節點名稱做為節點測試時，您必須了解主體節點種類的概念。 每個軸、子系、父系或屬性都有主要節點類型。 例如:  
   
 -   屬性軸只能包含屬性。 因此，屬性節點是屬性軸的主要節點種類。  
   
@@ -202,7 +201,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. 指定節點測試中的節點名稱  
  下列範例在所有的路徑運算式中指定節點名稱做為節點測試。 結果，所有的運算式都會傳回在節點測試中有指定節點名稱的軸中主要節點種類的節點。  
   
- 下列查詢運算式會從儲存在 `Production.ProductModel` 資料表中的產品目錄 XML 文件，傳回  <`Warranty`> 元素：  
+ 下列查詢運算式會傳回 <`Warranty`> 項目從產品目錄 XML 文件儲存在`Production.ProductModel`資料表：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -222,7 +221,7 @@ WHERE ProductModelID=19
   
 -   在運算式的任一步中均無法指定軸步的選擇性步驟限定詞部份。  
   
- 查詢會傳回 <`ProductDescription`> 元素中 <`Features`> 元素子系的所有 <`Warranty`> 元素子系。  
+ 此查詢會傳回 <`Warranty`> 元素子系的 <`Features`> 元素子系 <`ProductDescription`> 項目。  
   
  以下是結果：  
   
@@ -245,9 +244,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 萬用字元是針對節點名稱所指定。 因此，查詢會傳回 <`ProductDescription`> 元素節點中 <`Features`> 元素節點子系的所有元素子系。  
+ 萬用字元是針對節點名稱所指定。 因此，查詢會傳回所有元素節點子系的 <`Features`> 元素節點子系 <`ProductDescription`> 項目節點。  
   
- 除了與萬用字元搭配使用以外，下列查詢與上一個查詢相似，都指定了命名空間。 結果，會傳回在該命名空間的所有元素節點子系。 請注意 <`Features`> 元素可包含不同命名空間的元素。  
+ 除了與萬用字元搭配使用以外，下列查詢與上一個查詢相似，都指定了命名空間。 結果，會傳回在該命名空間的所有元素節點子系。 請注意，<`Features`> 項目可以包含不同的命名空間中的項目。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -271,7 +270,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 此查詢會從產品目錄 XML文件傳回所有命名空間的 <`Maintenance`> 元素節點子系。  
+ 此查詢會傳回 <`Maintenance`> 從產品目錄 XML 文件的所有命名空間中的元素節點子系。  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. 指定節點測試中的節點種類  
  下列範例在所有的路徑運算式中指定節點種類做為節點測試。 結果，所有的運算式都會傳回在節點測試中所指定的節點種類。  
@@ -296,7 +295,7 @@ WHERE ProductModelID=19
   
 -   前兩步指定節點名稱做為節點測試，而第三步指定節點種類做為節點測試。  
   
--   該運算式會傳回 <`ProductDescription`> 元素節點中 <`Features`> 元素子系的文字節點子系。  
+-   運算式會傳回文字節點子系的 <`Features`> 元素子系 <`ProductDescription`> 項目節點。  
   
  只會傳回一個文字節點。 以下是結果：  
   
@@ -304,7 +303,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 下列查詢會傳回 <`ProductDescription`> 元素的註解節點子系。  
+ 下列查詢會傳回註解節點子系 <`ProductDescription`> 項目：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -320,7 +319,7 @@ WHERE ProductModelID=19
   
 -   第二步指定節點種類做為節點測試  
   
--   結果，運算式會傳回 <`ProductDescription`> 元素節點的註解節點子系。  
+-   如此一來，運算式會傳回註解節點子系 <`ProductDescription`> 元素節點。  
   
  以下是結果：  
   

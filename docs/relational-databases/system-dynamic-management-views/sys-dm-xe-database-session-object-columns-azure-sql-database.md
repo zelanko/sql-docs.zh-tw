@@ -9,14 +9,13 @@ ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a4a1807adb4d04c3e38332ffd9fe71e874c82233
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0e193f51aef6c01edeb0900956f152dae212434b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090397"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "56035269"
 |column_name|**nvarchar(60)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
 |column_value|**nvarchar(2048)**|資料行的設定值。 可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。  不是 nullable.object_type 是其中一個：<br /><br /> event<br /><br /> 目標|  
+|object_type|**nvarchar(60)**|物件的型別。  不是 nullable.object_type 是其中一個：<br /><br /> event<br /><br /> target|  
 |object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   

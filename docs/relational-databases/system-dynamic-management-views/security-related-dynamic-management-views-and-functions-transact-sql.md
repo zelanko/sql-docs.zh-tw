@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1776ae47a76ee83520157c4d0c1760396e97a21f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4f2eccae414ec8ad12a5677052e5fd90519c24d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061889"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>安全性相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

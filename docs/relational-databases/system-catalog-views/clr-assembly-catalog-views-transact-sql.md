@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7fa3d80a4ce54721c834ab07970b26d49a40490
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b57221daa18d23d3dd88794e851d67712704f76c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050847"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR 組件目錄檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

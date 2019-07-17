@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946116"
 ---
 # <a name="xqueries-involving-order"></a>與順序有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 擷取第二個工作中心位置的所有的屬性。  
   
--   FLWOR 反覆運算 (FOR ...RETURN) 擷取第二個工作中心位置的所有 <`step`> 子元素。  
+-   FLWOR 反覆運算 (FOR...RETURN) 擷取所有 <`step`> 子元素的第二個工作中心位置。  
   
 -   [: Column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)正在建構的 XML 中包含的關聯式值。  
   
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 從產品目錄中擷取前兩個產品的功能描述  
- 針對特定產品型號，此查詢從產品型號目錄的 <`Features`> 元素中擷取前兩個功能描述。  
+ 針對特定產品型號，此查詢會擷取前的兩個功能描述從 <`Features`> 產品型號目錄中的項目。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
- 查詢主題建構 XML 來包含具有 ProductModelID 和 ProductModelName 屬性的 <`ProductModel`> 元素。  
+ 查詢主體建構 XML 來包含 <`ProductModel`> 具有 ProductModelID 和 ProductModelName 屬性的項目。  
   
--   此查詢使用 FOR ...RETURN 迴圈來擷取產品型號功能描述。 **Position （)** 函式用來擷取前兩個功能。  
+-   此查詢會使用 FOR...RETURN 迴圈來擷取產品型號功能描述。 **Position （)** 函式用來擷取前兩個功能。  
   
  以下是結果：  
   

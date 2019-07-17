@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209416"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV) 
 
@@ -58,7 +58,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
 
 ## <a name="examples-and-scenarios"></a>範例和案例
 
-DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 例如：
+DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 例如:
   
  `Select * from $System.discover_object_activity`  
 自上次啟動服務後，此查詢會報告的物件活動。 

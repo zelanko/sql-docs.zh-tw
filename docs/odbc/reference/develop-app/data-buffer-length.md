@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40fe9d23f14d4a7af80fe31a418cccf7133b7252
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067423"
 ---
 # <a name="data-buffer-length"></a>資料緩衝區長度
 應用程式將傳遞的引數，名為驅動程式的資料緩衝區的位元組長度*Columnsize*或其他類似的名稱。 例如，在下列呼叫來**SQLBindCol**，應用程式指定的長度*ValuePtr*緩衝區 (**sizeof (***ValuePtr***)** ):  

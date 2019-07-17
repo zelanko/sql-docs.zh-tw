@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8cd46fbc8f633ef31f00fa60ced885f9455f185
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062736"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC 中的目錄函式
 ODBC 會包含下列目錄函式：  

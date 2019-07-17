@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989738"
 ---
 # <a name="data-migration-settings-db2tosql"></a>資料移轉設定 (DB2ToSQL)
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a26b9caa7b6ba54238ef5436cafb472e2d53010a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d7df0fe0917a684f1050197e6706ba5b5414f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63207759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948470"
 ---
 # <a name="creating-script-files-sybasetosql"></a>建立指令碼檔 (SybaseToSQL)
 第一個步驟是啟動 SSMA 主控台應用程式建立的指令碼檔案之前，並在必要時建立的變數值檔案和伺服器連線檔案。  
@@ -31,7 +30,7 @@ ms.locfileid: "63207759"
   
 2.  **伺服器：** 可讓使用者設定的來源/目標伺服器定義。 這也可以是不同的伺服器連線檔案中。  
   
-3.  **script-commands:** 可讓使用者執行 SSMA 工作流程命令。  
+3.  **指令碼命令：** 可讓使用者執行 SSMA 工作流程命令。  
   
 以下將詳細說明每個區段：  
   
@@ -89,7 +88,7 @@ ms.locfileid: "63207759"
   
     可以也就使用一部或其他指定的屬性：  
   
-    -   source-use-last-used="true" (default) or source-server="source_servername"  
+    -   來源-使用-上次使用 ="true"（預設值） 或來源伺服器 ="source_servername 」  
   
     -   target-use-last-used="true" (default) or target-server="target_servername"  
   

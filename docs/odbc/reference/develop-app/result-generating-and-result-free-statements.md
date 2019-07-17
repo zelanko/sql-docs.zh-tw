@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020598"
 ---
 # <a name="result-generating-and-result-free-statements"></a>會產生結果和不會產生結果的陳述式
 SQL 陳述式可以鬆散分為下列五個類別：  

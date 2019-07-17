@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063643"
 ---
 # <a name="set-path-command"></a>SET PATH 命令
 指定的路徑來搜尋檔案。 驅動程式專屬資訊，請參閱 < 備註 >。  

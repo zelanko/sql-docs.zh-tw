@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019473"
 ---
 # <a name="index-command"></a>INDEX 命令
 建立索引檔案來顯示和存取資料表記錄，依照邏輯順序。  
@@ -46,10 +45,10 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  您可建立索引鍵長度為零。 例如，索引運算式是空的備忘 欄位的子字串時，會建立零長度索引鍵。 零長度索引鍵會產生一則錯誤訊息。 當 Visual FoxPro 建立索引時，它會評估資料表中的第一個記錄中的欄位。 如果欄位是空的它可能必須在第一筆記錄，以防止某個 0 長度索引鍵欄位中輸入一些暫存的資料。  
   
- TO *IDXFileName*  
+ 若要*IDXFileName*  
  建立.idx 索引檔案。 索引檔案指定預設延伸模組.idx。  
   
- TAG *TagName*[OF *CDXFileName*]  
+ 標記*TagName*[OF *CDXFileName*]  
  建立複合的索引檔。 是複合的索引檔是單一索引檔案，其中包含任意數目的個別標記 （索引項目）。 每個標記是由其唯一的標記名稱識別。 標記名稱必須以字母或底線開頭，且可以包含最多 10 個字母、 數字或底線的任意組合。 是複合的索引檔中的標記數目只受到可用記憶體和磁碟空間。  
   
  多個項目的複合的索引檔案都壓縮。 它不需要在建立複合的索引檔案時加入 COMPACT。 .Cdx 延伸模組提供的複合的索引檔案的名稱。  

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63060988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083476"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>連線到 Azure SQL DB (SybaseToSQL)
 使用 [連線到 Azure SQL DB] 對話方塊中，連接到您想要移轉的 Azure SQL DB 資料庫。  
   
 若要存取此對話方塊中，在**檔案**功能表上，選取**連線到 Azure SQL DB**。 如果您先前曾經連線，則命令是**重新連接到 Azure SQL DB。**  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱連接到 Azure SQL DB。  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf8c7dd55130026c54cc4e7b8aa24e1c99e96ada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 116857437426e8736382f80bc8c7107c19056cc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028243"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>使用使用者定義型別 - 定義 UDT 資料表及資料行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

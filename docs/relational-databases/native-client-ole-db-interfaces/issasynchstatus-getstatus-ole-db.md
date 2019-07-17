@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b67b474a9038d4d94b7e209ff6ef36bb75488361
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 855bc71e1a7ad7c0d462d16e266f392128b04519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051025"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  正在要求其非同步狀態的作業。 這應該為下列值：  
   
- DBASYNCHOP_OPEN 取用者會要求有關非同步開啟或母體擴展的資料列集或是非同步初始化資料來源物件的相關資訊。 如果提供者是 OLE DB 2.5 相容且支援 URL 直接繫結的提供者，則取用者會要求有關非同步初始化或資料來源、資料列集、資料列或資料流物件擴展的資訊。  
+ DBASYNCHOP_OPEN：取用者會要求有關非同步開啟或資料列集擴展的資訊，或有關資料來源物件的非同步初始化的資訊。 如果提供者是 OLE DB 2.5 相容且支援 URL 直接繫結的提供者，則取用者會要求有關非同步初始化或資料來源、資料列集、資料列或資料流物件擴展的資訊。  
   
  *pulProgress*[out]  
  記憶體的指標，會從中傳回相對於 *pulProgressMax* 參數所指出之預期最大值的非同步作業的目前進度。 如需 *pulProgress* 之意義的詳細資訊，請參閱 *peAsynchPhase* 的描述。  
@@ -65,16 +64,16 @@ HRESULT GetStatus(
  *peAsynchPhase*[out]  
  記憶體的指標，會從中傳回有關非同步作業的其他資訊。 有效值包括：  
   
- DBASYNCHPHASE_INITIALIZATION 物件正處於初始化階段。 *pulProgress* 和 *pulProgressMax* 引數指出預估的完成率。 物件尚未完全具體化。 呼叫任何其他介面的嘗試可能失敗，而物件可能無法使用完整的介面集。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，而且如果 *cParamSets* 大於 1，則 *pulProgress* 和 *pulProgressMax* 可能代表單一參數集或參數集完整陣列的進度。  
+ DBASYNCHPHASE_INITIALIZATION：物件正處於初始化階段。 *pulProgress* 和 *pulProgressMax* 引數指出預估的完成率。 物件尚未完全具體化。 呼叫任何其他介面的嘗試可能失敗，而物件可能無法使用完整的介面集。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，而且如果 *cParamSets* 大於 1，則 *pulProgress* 和 *pulProgressMax* 可能代表單一參數集或參數集完整陣列的進度。  
   
- DBASYNCHPHASE_POPULATION 物件正處於擴展階段。 雖然資料列集會完全初始化，而且物件可以使用完整的介面範圍，則可能有其他的資料列尚未擴展到資料列集中。 *pulProgress* 和 *pulProgressMax* 雖然可以根據擴展的資料列數目而定，但通常是根據擴展資料列集所需的時間或努力來決定。 因此呼叫者應該使用此項資訊 (而非最後的資料列計數) 做為處理序所可能花費時間的大略估計。 此階段只會在資料列集擴展期間傳回，而不會在初始化資料來源物件時傳回，或由更新、刪除或插入資料列的命令執行傳回。  
+ DBASYNCHPHASE_POPULATION：物件正處於擴展階段。 雖然資料列集會完全初始化，而且物件可以使用完整的介面範圍，則可能有其他的資料列尚未擴展到資料列集中。 *pulProgress* 和 *pulProgressMax* 雖然可以根據擴展的資料列數目而定，但通常是根據擴展資料列集所需的時間或努力來決定。 因此呼叫者應該使用此項資訊 (而非最後的資料列計數) 做為處理序所可能花費時間的大略估計。 此階段只會在資料列集擴展期間傳回，而不會在初始化資料來源物件時傳回，或由更新、刪除或插入資料列的命令執行傳回。  
   
- DBASYNCHPHASE_COMPLETE 所有非同步處理之物件的已完成。 **Issasynchstatus:: Getstatus**傳回 HRESULT，指出作業的結果。 一般而言，這會是在同步呼叫作業時所傳回的 HRESULT。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，則 *pulProgress* 和 *pulProgressMax* 等於受到該命令影響的資料列總數。 如果 *cParamSets* 大於 1，這是受到執行所指定的所有參數集影響的資料列總數。 如果 *peAsynchPhase* 是 Null 指標，則不會傳回狀態碼。  
+ DBASYNCHPHASE_COMPLETE：物件的所有非同步處理已完成。 **Issasynchstatus:: Getstatus**傳回 HRESULT，指出作業的結果。 一般而言，這會是在同步呼叫作業時所傳回的 HRESULT。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，則 *pulProgress* 和 *pulProgressMax* 等於受到該命令影響的資料列總數。 如果 *cParamSets* 大於 1，這是受到執行所指定的所有參數集影響的資料列總數。 如果 *peAsynchPhase* 是 Null 指標，則不會傳回狀態碼。  
   
- 物件的 DBASYNCHPHASE_CANCELED 非同步處理已中止。 **Issasynchstatus:: Getstatus**會傳回 DB_E_CANCELED。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，則 *pulProgress* 等於所有參數集在該命令取消前受其影響的資料列總數。  
+ DBASYNCHPHASE_CANCELED：物件的非同步處理已中止。 **Issasynchstatus:: Getstatus**會傳回 DB_E_CANCELED。 如果非同步作業是針對更新、刪除或插入資料列的命令呼叫 **ICommand::Execute** 的結果，則 *pulProgress* 等於所有參數集在該命令取消前受其影響的資料列總數。  
   
  *ppwszStatusText*[in/out]  
- 記憶體的指標，這個記憶體包含有關作業的其他資訊。 提供者可能會使用此值來區別不同的項目作業的-例如，不同的資源進行存取。 這個字串會根據資料來源物件的 DBPROP_INIT_LCID 屬性而當地語系化。  
+ 記憶體的指標，這個記憶體包含有關作業的其他資訊。 提供者可以使用此值來區別作業的不同元素，例如，正在存取的不同資源。 這個字串會根據資料來源物件的 DBPROP_INIT_LCID 屬性而當地語系化。  
   
  如果輸入上的 *ppwszStatusText* 非 Null，則提供者會傳回與 *ppwszStatusText* 所識別的特定元素相關聯的狀態。 如果 *ppwszStatusText* 並不代表 *eOperation* 的元素，則提供者會傳回 S_OK，且 *pulProgress* 和 *pulProgressMax* 會設定為相同的值。 如果提供者並未根據文字識別碼來區分元素，則它會將 *ppwszStatusText* 設定為 NULL，並傳回整個作業的相關資訊；否則，如果輸入上的 *ppwszStatusText* 非 Null，提供者會保留 *ppwszStatusText* 不變。  
   

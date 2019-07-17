@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_merge_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c7ff8638aeeb02cdb86643fd1fc6a3241a8db26
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026809"
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 

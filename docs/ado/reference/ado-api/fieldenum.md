@@ -1,5 +1,5 @@
 ---
-title: FieldEnum | Microsoft Docs
+title: FieldEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 204ffb54eb0a48f55d4ec1974b123ed4a0e430be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5fe89d90510e95468e18b0d744ff566f69654320
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932686"
 ---
 # <a name="fieldenum"></a>FieldEnum
 指定中參考的特殊欄位[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件的[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  

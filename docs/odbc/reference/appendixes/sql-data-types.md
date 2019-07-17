@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4be0e017988670d740067011f775f8477037aa18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057036"
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 類型。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 驅動程式的對應方式的相關資訊 DBMS SQL 類型對 ODBC 定義的 SQL 型別識別項和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 型別識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型，描述資料類型的資料行和參數，透過呼叫時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，並**SQLSpecialColumns**。  
@@ -35,7 +34,7 @@ ms.locfileid: "67794157"
   
  下表列出所有的 SQL 資料類型的有效 SQL 型別識別項。 這個表格也列出的名稱和對應的資料類型從 SQL-92 的描述 （如果有的話）。  
   
-|SQL type identifier[1]|典型的 SQL 資料<br /><br /> type[2]|一般型別描述|  
+|[1] 的 SQL 類型識別碼|典型的 SQL 資料<br /><br /> type[2]|一般型別描述|  
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR(*n*)|字元的固定的字串長度的字串*n*。|  
 |SQL_VARCHAR|VARCHAR(*n*)|可變長度字元字串，最大字串長度*n*。|  
@@ -43,8 +42,8 @@ ms.locfileid: "67794157"
 |SQL_WCHAR|WCHAR(*n*)|固定的字串長度的 Unicode 字元字串*n*|  
 |SQL_WVARCHAR|VARWCHAR(*n*)|Unicode 可變長度字元字串的最大字串長度*n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可變長度字元資料。 最大長度是資料來源而定|  
-|SQL_DECIMAL|DECIMAL(*p*,*s*)|帶正負號的確切數值的有效位數至少*p*和小數位數*s。* （最大有效位數為驅動程式定義）。(1 < = *p* < = 15;*s* <= *p*)。 [4]|  
-|SQL_NUMERIC|NUMERIC(*p*,*s*)|帶正負號的確切數值有效位數*p*和小數位數*s* (1 < = *p* < = 15;*s* <= *p*)。 [4]|  
+|SQL_DECIMAL|十進位 (*p*，*s*)|帶正負號的確切數值的有效位數至少*p*和小數位數*s。* （最大有效位數為驅動程式定義）。(1 < = *p* < = 15;*s* <= *p*)。 [4]|  
+|SQL_NUMERIC|數字 (*p*，*s*)|帶正負號的確切數值有效位數*p*和小數位數*s* (1 < = *p* < = 15;*s* <= *p*)。 [4]|  
 |SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號:-32,768 < = *n* < = 32767，不帶正負號：0 < = *n* < = 65,535) [3]。|  
 |SQL_INTEGER|INTEGER|確切的數值有效位數 10 的值和小數點位數為 0 (帶正負號:-2 [31] < = *n* < = 2 [31]-1，不帶正負號：0 < = *n* < = 2 [32]-1) [3]。|  
 |SQL_REAL|real|帶正負號的概略數值其二進位整數位數為 24 （零或絕對值 10 [-38] 到 10[38])。|  
@@ -57,22 +56,22 @@ ms.locfileid: "67794157"
 |SQL_VARBINARY|VARBINARY(*n*)|可變長度二進位資料的最大長度*n*。 最大值是由使用者設定。[9]|  
 |SQL_LONGVARBINARY|長 VARBINARY|可變長度二進位資料。 最大長度是資料來源而定。[9]|  
 |SQL_TYPE_DATE[6]|DATE|年、 月和日等欄位，符合西曆的規則。 (請參閱[西曆的條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)稍後在本附錄中。)|  
-|SQL_TYPE_TIME[6]|TIME(*p*)|小時、 分鐘和具有有效的值為 00 到 23，有效的值時的 00 到 59 的分鐘數和有效的值為 00 到 61 秒的第二個欄位。 有效位數*p*表示秒數有效位數。|  
+|SQL_TYPE_TIME[6]|時間 (*p*)|小時、 分鐘和具有有效的值為 00 到 23，有效的值時的 00 到 59 的分鐘數和有效的值為 00 到 61 秒的第二個欄位。 有效位數*p*表示秒數有效位數。|  
 |SQL_TYPE_TIMESTAMP[6]|TIMESTAMP(*p*)|年、 月、 日、 小時、 分鐘和第二個欄位，以有效的值為日期和時間資料類型所定義。|  
 |SQL_TYPE_UTCDATETIME|UTCDATETIME|年、 月、 日、 小時、 分鐘、 秒、 utchour 和 utcminute 欄位。 Utchour 和 utcminute 欄位具有 1/10 微秒的精確度。|  
 |SQL_TYPE_UTCTIME|UTCTIME|小時、 分鐘、 秒、 utchour 和 utcminute 欄位。 Utchour 和 utcminute 欄位具有 1/10 微秒的精確度...|  
 |SQL_INTERVAL_MONTH[7]|間隔月 (*p*)|兩個日期; 之間的月數*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_YEAR[7]|INTERVAL YEAR(*p*)|兩個日期; 之間的年數*p*是間隔開頭有效位數。|  
+|SQL_INTERVAL_YEAR[7]|間隔年 (*p*)|兩個日期; 之間的年數*p*是間隔開頭有效位數。|  
 |SQL_INTERVAL_YEAR_TO_MONTH[7]|間隔年 (*p*) 個月|年數和兩個日期; 之間的月數*p*是間隔開頭有效位數。|  
 |SQL_INTERVAL_DAY[7]|INTERVAL DAY(*p*)|兩個日期; 之間的天數*p*是間隔開頭有效位數。|  
 |SQL_INTERVAL_HOUR[7]|間隔小時 (*p*)|兩個之間的小時數的日期/時間;*p*是間隔開頭有效位數。|  
 |SQL_INTERVAL_MINUTE[7]|間隔分鐘 (*p*)|兩個之間的分鐘數的日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_SECOND[7]|INTERVAL SECOND(*p*,*q*)|兩個之間的秒數的日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
-|SQL_INTERVAL_DAY_TO_HOUR[7]|INTERVAL DAY(*p*) TO HOUR|兩個之間的天數或時數的數字日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_DAY_TO_MINUTE[7]|INTERVAL DAY(*p*) TO MINUTE|天/小時/之間的分鐘數兩個日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_DAY_TO_SECOND[7]|INTERVAL DAY(*p*) TO SECOND(*q*)|數天/小時/分鐘/秒之間兩個日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
+|SQL_INTERVAL_SECOND[7]|間隔第二個 (*p*，*q*)|兩個之間的秒數的日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
+|SQL_INTERVAL_DAY_TO_HOUR[7]|間隔日 (*p*) 小時的時間|兩個之間的天數或時數的數字日期/時間;*p*是間隔開頭有效位數。|  
+|SQL_INTERVAL_DAY_TO_MINUTE[7]|間隔日 (*p*) 分鐘的時間|天/小時/之間的分鐘數兩個日期/時間;*p*是間隔開頭有效位數。|  
+|SQL_INTERVAL_DAY_TO_SECOND[7]|間隔日 (*p*) 第二個 (*q*)|數天/小時/分鐘/秒之間兩個日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
 |SQL_INTERVAL_HOUR_TO_MINUTE[7]|間隔小時 (*p*) 分鐘的時間|小時/之間的分鐘數兩個日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_HOUR_TO_SECOND[7]|INTERVAL HOUR(*p*) TO SECOND(*q*)|兩個小時/分鐘/秒鐘的日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
+|SQL_INTERVAL_HOUR_TO_SECOND[7]|間隔小時 (*p*) 第二個 (*q*)|兩個小時/分鐘/秒鐘的日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
 |SQL_INTERVAL_MINUTE_TO_SECOND[7]|間隔分鐘 (*p*) 第二個 (*q*)|分鐘/之間的秒數兩個日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
 |SQL_GUID|GUID|固定的長度的 GUID。|  
   

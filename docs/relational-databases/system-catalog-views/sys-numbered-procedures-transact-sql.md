@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 926fc5a64e165360eac5e43704826ed4de816ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102306"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63018719"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|預存程序的物件識別碼。|  
 |**procedure_number**|**smallint**|這個程序在物件內的編號，大於或等於 2。|  
-|**definition**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
+|**定義**|**nvarchar(max)**|定義這個程序的 SQL Server 文字。<br /><br /> NULL = 已加密。|  
   
 > [!NOTE]  
 >  編號程序並不支援 XML 和 CLR 參數。  

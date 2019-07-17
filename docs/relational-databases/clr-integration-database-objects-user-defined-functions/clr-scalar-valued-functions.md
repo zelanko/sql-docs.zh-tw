@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ac063fa59d22308cb90206816555eea8474acca6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009767"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` 表示應該產生程式庫，而不是可執行檔。 可執行檔無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊。  
   
 > [!NOTE]  
->  Visual c + + 資料庫物件以編譯 **/clr: pure**上不支援執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，這類資料庫物件包括純量值函式。  
+>  視覺化C++資料庫物件以編譯 **/clr: pure**上不支援執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，這類資料庫物件包括純量值函式。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢及註冊組件和 UDF 的範例引動過程為：  
   
@@ -154,7 +153,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [CLR 整合自訂屬性的概觀](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
- [使用者定義函式](../../relational-databases/user-defined-functions/user-defined-functions.md)   
+ [使用者定義的函式](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [從 CLR 資料庫物件進行資料存取](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

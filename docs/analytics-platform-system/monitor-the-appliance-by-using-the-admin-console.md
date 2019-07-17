@@ -2,19 +2,18 @@
 title: 以系統管理員主控台-分析平台系統監視 |Microsoft Docs
 description: Analytics Platform System，系統管理員主控台是呈現應用裝置狀態、 健全狀況和效能資訊的 web 應用程式。 使用者連線到系統管理員主控台，透過網際網路瀏覽器。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960482"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>監視與系統管理員主控台-Analytics Platform System appliance
 系統管理員主控台是呈現應用裝置狀態、 健全狀況和效能資訊的 SQL Server PDW web 應用程式。 使用者連線到透過 Internet Explorer 的系統管理員主控台。  
@@ -22,7 +21,7 @@ ms.locfileid: "63027535"
 ## <a name="About"></a>關於系統管理員主控台  
 ![應用裝置主控台首頁](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Appliance**  
+**應用裝置**  
 主資料夾  
 提供設備狀態的快速摘要。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5611508b77c2966fe9e8e76578cf1861f4c304eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079608"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
 

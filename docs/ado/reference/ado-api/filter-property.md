@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918634"
 ---
 # <a name="filter-property"></a>Filter 屬性
 表示資料的篩選條件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -57,7 +56,7 @@ ms.locfileid: "66697971"
 -   相反地，您會建構為此篩選器  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在 **像**子句中，您可以使用萬用字元的開頭和結尾的模式。 例如，您可以使用`LastName Like '*mit*'`。 或使用**像**您只能在模式結尾使用萬用字元。 例如， `LastName Like 'Smit*'` 。  
+-   在 **像**子句中，您可以使用萬用字元的開頭和結尾的模式。 例如，您可以使用`LastName Like '*mit*'`。 或使用**像**您只能在模式結尾使用萬用字元。 例如： `LastName Like 'Smit*'` 。  
   
  篩選條件常數讓您更輕鬆地解決個別記錄的衝突，在批次更新模式，可讓您檢視，比方說，這些記錄，僅影響在最後一[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法呼叫。  
   

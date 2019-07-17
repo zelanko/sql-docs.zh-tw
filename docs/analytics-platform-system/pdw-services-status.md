@@ -2,19 +2,18 @@
 title: PDW 服務狀態-Analytics Platform System |Microsoft 文件
 description: Parallel Data Warehouse (PDW) 的分析平台系統服務狀態。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960360"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Analytics Platform System 的平行資料倉儲服務狀態
 Parallel Data Warehouse **Services 狀態**頁面 Microsoft Analytics Platform System Configuration Manager 中會顯示所有的 SQL Server PDW 服務的目前狀態，並讓您能夠停止和啟動 PDW 服務。 這是唯一支援的方法，以啟動及停止 PDW 服務。 請注意，個別的元件或服務無法啟動獨立的。  

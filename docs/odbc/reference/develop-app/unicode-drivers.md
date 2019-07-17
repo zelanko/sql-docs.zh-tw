@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087875"
 ---
 # <a name="unicode-drivers"></a>Unicode 驅動程式
 Unicode 驅動程式或 ANSI 驅動程式，驅動程式是否應該是完全取決於資料來源的本質。 如果資料來源支援 Unicode 資料，則驅動程式應該是 Unicode 驅動程式。 如果資料來源只支援 ANSI 資料，則驅動程式應保留的 ANSI 驅動程式。  

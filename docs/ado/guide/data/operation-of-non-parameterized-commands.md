@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40677971cc2bc5b97c62aad1e638e52deb24c67e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924742"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業
 所有提供者命令執行的非參數化命令，而**資料錄集**命令執行期間所建立。 如果此命令會以同步方式執行所有**資料錄集**會完全擴展。 如果選取的非同步擴展模式，填入的狀態**資料錄集**母體擴展的模式和大小而定**資料錄集**。  

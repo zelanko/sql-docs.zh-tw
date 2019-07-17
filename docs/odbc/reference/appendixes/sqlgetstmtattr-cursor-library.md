@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9eef3ceba6fed1315d68038299640c772e92c9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073853"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (資料指標程式庫)
 > [!IMPORTANT]  

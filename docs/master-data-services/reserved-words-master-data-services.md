@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f12b95a192535b037f01a601146a0bba544d8fae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085695"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 

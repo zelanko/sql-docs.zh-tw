@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 262e8487e8133cf1c312659fa2fc28276aafa07e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5203a7216faa008aade21c4e3e1dc54fc794461b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901436"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>新增 Visual FoxPro 資料來源
 若要存取 Visual FoxPro 資料從您的應用程式，您必須使用資料來源。 您可以建立資料來源，如下所示：  

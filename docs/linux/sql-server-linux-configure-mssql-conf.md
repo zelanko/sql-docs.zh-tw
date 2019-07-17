@@ -3,18 +3,17 @@ title: 在 Linux 上設定 SQL Server 設定
 description: 本文說明如何在 Linux 上設定 SQL Server 設定時，用以 mssql-conf 工具。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077606"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834015"
 
 |||
 |---|---|
-| [代理程式](#agent) | 啟用 SQL Server Agent |
+| [代理程式](#agent) | 啟用 SQL Server 代理程式。 |
 | [定序](#collation) | 在 Linux 上 SQL Server 設定新的定序。 |
 | [客戶的意見反應](#customerfeedback) | 選擇 SQL Server 傳送意見反應給 Microsoft。 |
 | [Database Mail 設定檔](#dbmail) | 在 Linux 上設定 SQL Server 預設 database mail 設定檔。 |
@@ -396,8 +395,8 @@ ms.locfileid: "67834015"
 
     | type | 描述 |
     |-----|-----|
-    | **mini** | 迷你是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
-    | **miniplus** | Mini、 miniPlus 大致，但包含額外的記憶體。 它了解 SQLPAL 和主機環境中，加入傾印中的下列記憶體區域的內部項目：</br></br> -各種全域變數</br> -所有的記憶體，大於 64 TB</br> -所有名為區域中找到 **/proc/$ pid/對應**</br> -間接與執行緒堆疊的記憶體</br> 執行緒的資訊</br> -關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
+    | **迷你** | 迷你是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
+    | **迷你加強** | Mini、 miniPlus 大致，但包含額外的記憶體。 它了解 SQLPAL 和主機環境中，加入傾印中的下列記憶體區域的內部項目：</br></br> -各種全域變數</br> -所有的記憶體，大於 64 TB</br> -所有名為區域中找到 **/proc/$ pid/對應**</br> -間接與執行緒堆疊的記憶體</br> 執行緒的資訊</br> -關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
     | **filtered** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非特別排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
     | **full** | 完整包含所有區域的完整程序傾印位於 **/proc/$ pid/對應**。 這不會受到**coredump.captureminiandfull**設定。 |
 

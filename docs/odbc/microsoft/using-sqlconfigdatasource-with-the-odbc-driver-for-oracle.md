@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088029"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>搭配使用 SQLConfigDatasource 與 ODBC Driver for Oracle
 > [!IMPORTANT]  
@@ -46,7 +45,7 @@ ms.locfileid: "63259340"
 |RDOSupport|2|""|0 或 1|可讓 RDO 呼叫 Oracle 程序。|  
 |備註|2|0|0 或 1|目錄函式中包含註解。|  
 |RowLimit|4|""|0 到 99 之間|SELECT 陳述式所傳回的資料列的數目上限。 長度為零的字串表示會套用任何限制。|  
-|[伺服器]|128|""|A/N|Oracle 伺服器名稱。|  
+|伺服器|128|""|A/N|Oracle 伺服器名稱。|  
 |SynonymColumns|2|1|0 或 1|納入 SQLColumns 同義字。|  
 |SystemTable|2|""|0 或 1|如果為 0，不會顯示系統資料表。 如果是 1，將會顯示系統資料表。|  
 |TranslationDLL|33|""|A/N|轉譯.dll 名稱。|  

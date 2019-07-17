@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028657"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 (類型對應) (SybaseToSQL)
 類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 Sybase Adaptive Server Enterprise (ASE) 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
@@ -26,7 +25,7 @@ ms.locfileid: "62667918"
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，然後選取**型別對應**左窗格的底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
 對應的資料類型 ASE。  
   
@@ -59,14 +58,14 @@ ms.locfileid: "62667918"
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char varying[\*..8000]**|**varchar[\*]**|  
-|**char varying[8001..\*]**|**varchar(max)**|  
+|**char varying [\*...8000]**|**varchar[\*]**|  
+|**char varying [8001...\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**可變長度字元**|**varchar**|  
-|**character varying[\*..8000]**|**varchar[\*]**|  
-|**character varying[8001..\*]**|**varchar(max)**|  
+|**可變長度字元 [\*...8000]**|**varchar[\*]**|  
+|**可變長度字元 [8001...\*]**|**varchar(max)**|  
 |**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -99,11 +98,11 @@ ms.locfileid: "62667918"
 |**不同的國家字元集 [\*...4000]**|**nvarchar[\*]**|  
 |**不同的國家字元集 [4001...\*]**|**nvarchar(max)**|  
 |**national varchar**|**nvarchar**|  
-|**national varchar[\*..4000]**|**nvarchar[\*]**|  
-|**national varchar[4001..\*]**|**nvarchar(max)**|  
+|**national varchar [\*...4000]**|**nvarchar[\*]**|  
+|**national varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar 不同**|**nvarchar**|  
-|**nchar varying[\*..4000]**|**nvarchar[\*]**|  
+|**nchar 不同 [\*...4000]**|**nvarchar[\*]**|  
 |**nchar varying[4001..\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  

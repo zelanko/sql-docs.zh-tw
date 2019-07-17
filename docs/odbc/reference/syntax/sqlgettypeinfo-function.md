@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo Function | Microsoft Docs
+title: SQLGetTypeInfo 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aef1e90053eba71db84e1fe89aa90684829a4941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030595"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函數
 **合規性**  

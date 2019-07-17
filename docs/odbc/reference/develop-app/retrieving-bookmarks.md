@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020570"
 ---
 # <a name="retrieving-bookmarks"></a>擷取書籤
 如果應用程式會使用書籤，它必須設 SQL_UB_VARIABLE 之前準備或執行陳述式來 SQL_ATTR_USE_BOOKMARKS 陳述式屬性。 這是必要的因為建置和維護的書籤可以昂貴的作業，因此只有在應用程式可以進行良好時，才應該啟用書籤使用它們。  

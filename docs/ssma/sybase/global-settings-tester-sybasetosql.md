@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028989"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全域設定 (測試器) (SybaseToSQL)
 使用軟體測試人員頁面**全域設定**對話方塊來指定設定 SSMA 軟體測試人員。  
@@ -24,7 +23,7 @@ ms.locfileid: "63126351"
   
 ## <a name="options"></a>選項。  
 **可測試的物件分析**  
-此設定指定是否要執行之測試的物件的分析。 選取 [**是**如果您想要分析，並自動檢查相依物件的 SSMA 測試人員。 設定預設選項是**是**。  
+此設定指定是否要執行之測試的物件的分析。 選取 **是**如果您想要分析，並自動檢查相依物件的 SSMA 測試人員。 設定預設選項是**是**。  
   
 此設定有下列選項：  
   

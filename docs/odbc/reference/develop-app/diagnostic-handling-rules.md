@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f59953dee77453bb8b453a40a36d17e865a1fe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 269e021d3fd4610c2fccda46bcd8ca160982543c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039923"
 ---
 # <a name="diagnostic-handling-rules"></a>診斷處理規則
 下列規則可管理中的診斷處理**SQLGetDiagRec**並**SQLGetDiagField**。  

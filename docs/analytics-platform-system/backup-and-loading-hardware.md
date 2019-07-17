@@ -2,19 +2,18 @@
 title: 備份及載入硬體-平行處理資料倉儲
 description: 若要部署您的端對端資料倉儲解決方案 Analytics Platform System (APS) Parallel Data Warehouse (PDW)，您需要建立備份資料倉儲和載入資料的計劃。 您可以使用本指引來取得和設定將符合您的業務需求的備份及載入伺服器。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4d7f7b6b4edea9dacab7287a7936b7fd87fd7973
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90f142a8bb86f99ed5cf5d9ff926bdf849060324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961410"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>備份及載入硬體概觀-平行處理資料倉儲
 若要部署您的端對端資料倉儲解決方案 Analytics Platform System (APS) Parallel Data Warehouse (PDW)，您需要建立備份資料倉儲和載入資料的計劃。 您可以使用本指引來取得和設定將符合您的業務需求的備份及載入伺服器。  

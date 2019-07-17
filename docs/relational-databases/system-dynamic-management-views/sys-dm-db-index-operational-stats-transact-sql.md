@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004892"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>引數    
- *database_id* | NULL | 0 | DEFAULT    
+ *database_id* |NULL |0 |預設值    
  資料庫的識別碼。 *database_id*已**smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 NULL *database_id*，您也必須指定，則為 NULL *object_id*， *index_id*，以及*partition_number*。    
@@ -72,7 +71,7 @@ sys.dm_db_index_operational_stats (
     
  請指定 NULL 來傳回基底資料表或檢視表所有索引的快取資訊。 如果您指定 NULL *index_id*，您也必須指定，則為 NULL *partition_number*。    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* |NULL |0 |預設值    
  物件的分割區編號。 *partition_number*已**int**。有效輸入如下*partion_number*索引或堆積中，NULL，0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回索引或堆積之所有分割區的快取資訊。    
@@ -156,7 +155,7 @@ sys.dm_db_index_operational_stats (
     
      這些資料行會指出索引或堆積上是否有閂鎖競爭的情形，以及競爭的嚴重程度。    
     
--   **row_lock_count** and **page_lock_count**    
+-   **row_lock_count**和**page_lock_count**    
     
      這些資料行會指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖取得資料列和頁面鎖定的次數。    
     

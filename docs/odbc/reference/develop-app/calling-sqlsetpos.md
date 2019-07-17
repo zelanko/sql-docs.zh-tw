@@ -1,5 +1,5 @@
 ---
-title: Calling SQLSetPos | Microsoft Docs
+title: 呼叫 SQLSetPos |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f94b1191815f37728a2d8de8fc1175113644bc5a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068680"
 ---
 # <a name="calling-sqlsetpos"></a>呼叫 SQLSetPos
 在 ODBC *2.x*，資料列狀態陣列的指標是引數**SQLExtendedFetch**。 藉由呼叫稍後更新資料列狀態陣列**SQLSetPos**。 有些驅動程式有依賴這個陣列不會變更之間的事實**SQLExtendedFetch**並**SQLSetPos**。 在 ODBC *3.x*狀態陣列的指標是描述項欄位，因此應用程式可以輕鬆地將它變更為指向不同的陣列。 這可以是 ODBC 時發生問題*3.x*應用程式使用 ODBC *2.x*驅動程式會呼叫，但**SQLSetStmtAttr**陣列狀態指標設定，然後會呼叫**SQLFetchScroll**來提取資料。 驅動程式管理員會將它對應為一連串的呼叫**SQLExtendedFetch**。 下列程式碼會通常會引發錯誤時，驅動程式管理員會對應第二個**SQLSetStmtAttr**使用 ODBC 時呼叫*2.x*驅動程式：  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: ccf4e15657c3fd19e42c5a3fd0ae61ec63973173
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 846eec4cb8ac678b5636bc436acce62dc7e2ecf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935231"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
 

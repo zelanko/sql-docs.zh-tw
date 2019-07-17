@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077207"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>配置陳述式控制代碼 ODBC
 應用程式可以執行陳述式之前，必須配置陳述式控制代碼，如下所示：  
   
-1.  應用程式宣告型別 HSTMT 的變數。 然後它會呼叫**SQLAllocHandle** ，並將傳遞這個變數，用來配置陳述式，並利用 SQL_HANDLE_STMT 選項連接的控制代碼位址。 例如：  
+1.  應用程式宣告型別 HSTMT 的變數。 然後它會呼叫**SQLAllocHandle** ，並將傳遞這個變數，用來配置陳述式，並利用 SQL_HANDLE_STMT 選項連接的控制代碼位址。 例如:  
   
     ```  
     SQLHSTMT hstmt1;  

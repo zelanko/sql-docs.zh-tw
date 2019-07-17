@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e6d88e53ae40d98f9f6edf799be714ad0ba2814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddc680dce5e4d39dd88e8677718a83ad0ea89cac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063408"
 ---
 # <a name="setup-dll"></a>安裝程式 DLL
 ODBC 管理員呼叫的函式**ConfigDSN**當使用者設定資料來源。

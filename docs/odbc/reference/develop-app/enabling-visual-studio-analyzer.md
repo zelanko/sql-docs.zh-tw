@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a640d2432e6a079174644646fed5106fbc040c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046784"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>啟用 Visual Studio Analyzer
 > [!IMPORTANT]  

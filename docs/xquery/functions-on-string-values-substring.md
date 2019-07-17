@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3185da6f25f0e224240ad0891ad448267b26465c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004648"
 ---
 # <a name="functions-on-string-values---substring"></a>字串值的相關函式 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ fn:substring($sourceString as xs:string?,
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. 使用 substring() XQuery 函式擷取產品型號描述的部分摘要  
- 此查詢會擷取產品型號描述文字的前 50 個字元，即文件中的 <`Summary`> 元素。  
+ 此查詢會擷取產品型號，描述的文字的前 50 個字元 <`Summary`> 文件中的項目。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  請注意下列項目是從上一個查詢而來：  
   
--   **String （)** 函式會傳回的字串值 <`Summary`> 項目。 會使用此函數，是因為 <`Summary`> 元素同時包含文字和子元素 (html 格式設定元素)，而且因為您會略過這些元素而擷取所有文字。  
+-   **String （)** 函式會傳回的字串值 <`Summary`> 項目。 使用此函式，因為 <`Summary`> 項目包含文字和子元素 (html 格式設定項目)，而且因為您將會略過這些項目，並擷取所有文字。  
   
--   **Substring （)** 函式會從所擷取的字串值中擷取前 50 個字元**string （)**。  
+-   **Substring （)** 函式會從所擷取的字串值中擷取前 50 個字元**string （)** 。  
   
  以下是部份結果：  
   

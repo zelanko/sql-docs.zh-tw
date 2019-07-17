@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94211a63c65c2b796714da5c79e78da3944b1e47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9151ed5bbd02cce20ebd0c817197b8921a391c16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053835"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (Visual FoxPro ODBC Driver)
 > [!NOTE]  

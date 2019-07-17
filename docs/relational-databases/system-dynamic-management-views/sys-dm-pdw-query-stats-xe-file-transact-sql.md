@@ -11,16 +11,15 @@ dev_langs:
 ms.assetid: e0cd402f-04d0-4a5b-b725-88b31bb7862e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4111fb62f9b86cdea1edb7543f58c316bc00b026
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044507"
 ---
-# <a name="sysdmpdwquerystatsxefile-transact-sql"></a>sys.dm_pdw_query_stats_xe_file (Transact-SQL)
+# <a name="sysdmpdwquerystatsxefile-transact-sql"></a>sys.dm_pdw_query_stats_xe_file & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   此 DMV 已被取代，並將在未來版本中移除。 在此版本中，它會傳回 0 個資料列。  

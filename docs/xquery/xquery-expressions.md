@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6988b6326af34f13cfaa8a56ecab3744645ff04f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1f136f07b500a52a5382fff6f4388840d2007892
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946022"
 ---
 # <a name="xquery-expressions"></a>XQuery 運算式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

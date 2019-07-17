@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e12c62d9cbbc1f856e862fc64331f6cbb280ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079168"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52792760"
 |**id**|**int**|識別正在更新之訂閱者。|  
 |**publisher_database_id**|**int**|識別發行集資料庫。|  
 |**srvname**|**sysname**|正在更新之伺服器的名稱。|  
-|**資料庫名稱**|**sysname**|正在更新之資料庫的名稱。|  
+|**dbname**|**sysname**|正在更新之資料庫的名稱。|  
 |**publication_id**|**int**|識別發行集。|  
 |**dbversion**|**int**|識別資料庫版本。|  
   

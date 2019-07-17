@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0140cc76a47df26ee42701152794f2ef9ec0f51e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35227d129f70a505a33157d1aa945da5acb219d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045215"
 ---
 # <a name="correlation-mdx"></a>Correlation (MDX)
 

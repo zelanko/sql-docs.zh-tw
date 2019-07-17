@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017906"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @type = ] 'type'` 正在移除自訂預存程序或指令碼的型別。 *型別*已**varchar(16)**，沒有預設值，它可以是下列值之一。  
+`[ @type = ] 'type'` 正在移除自訂預存程序或指令碼的型別。 *型別*已**varchar(16)** ，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

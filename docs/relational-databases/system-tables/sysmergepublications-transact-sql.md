@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029786"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "62817018"
 |**allow_subscriber_initiated_snapshot**|**bit**|指出訂閱者能夠起始利用參數化篩選來產生發行集快照集的處理序。 **1**指出訂閱者可以起始快照集處理。|  
 |**dynamic_snapshot_queue_timeout**|**int**|指定在使用參數化篩選時，訂閱者必須在佇列中等待快照集產生程序開始的分鐘數。|  
 |**dynamic_snapshot_ready_timeout**|**int**|指定在使用參數化篩選時，訂閱者等待快照集產生程序完成的分鐘數。|  
-|**distributor**|**sysname**|發行集散發者的名稱。|  
+|**散發者**|**sysname**|發行集散發者的名稱。|  
 |**snapshot_jobid**|**binary(16)**|識別在訂閱者能夠起始快照集產生程序時，產生快照集的代理程式作業。|  
 |**allow_web_synchronization**|**bit**|指定是否要將發行集啟用 Web 同步處理，其中**1**表示發行集啟用 Web 同步處理。|  
 |**web_synchronization_url**|**nvarchar(500)**|指定 Web 同步處理所用的網際網路 URL 預設值。|  

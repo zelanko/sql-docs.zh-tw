@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3c976cd33e73828698eac0ac43b5cd6878ac36b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 616cd0bcbf9275598ce94e3935e56e37048f6f64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033887"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 語法元素 (MDX)
 

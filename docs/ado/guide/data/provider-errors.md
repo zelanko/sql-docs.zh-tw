@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924540"
 ---
 # <a name="provider-errors"></a>提供者錯誤
 發生提供者錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到此錯誤時，請檢查**錯誤**作用中的集合**連線**物件，其中會包含描述所發生的一或多個錯誤。  
@@ -67,7 +66,7 @@ End Function
   
 |屬性名稱|描述|  
 |-------------------|-----------------|  
-|**說明**|發生錯誤的文字描述。|  
+|**描述**|發生錯誤的文字描述。|  
 |**HelpContext、 HelpFile**|是指包含所發生的錯誤描述的說明主題，並說明檔案。|  
 |**NativeError**|提供者特有的錯誤數目。|  
 |**數字**|長整數，表示數字 (列入**ErrorValueEnum**) 發生的錯誤。|  

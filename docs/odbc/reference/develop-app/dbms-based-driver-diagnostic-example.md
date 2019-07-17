@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076888"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>以 DBMS 為基礎的驅動程式診斷範例
 以 DBMS 為基礎的驅動程式將要求傳送至 DBMS，並傳回至應用程式透過驅動程式管理員的資訊。 因為驅動程式介面驅動程式管理員使用的元件，其格式，並傳回引數**SQLGetDiagRec**。  

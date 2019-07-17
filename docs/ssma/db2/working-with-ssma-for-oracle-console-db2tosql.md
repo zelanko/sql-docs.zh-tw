@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 99eaef8a8612669f8a155672cccf0cb0c74e7f39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01aa8586e97677ed8d1071ec4dc2cb65a6aa0436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63077836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086195"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>使用 SSMA for Oracle 主控台 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 的移轉小幫手 (SSMA) 版本現在已可透過在命令列主控台應用程式。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式中，SSMA 啟用指令碼層級互動可減少移轉週期，並調整的移轉工作。  
@@ -26,7 +25,7 @@ ms.locfileid: "63077836"
   
 |||  
 |-|-|  
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |[開始使用 SSMA for DB2 主控台&#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|說明執行主控台應用程式的程序。|  
 |[SSMA 主控台中的命令列選項&#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|描述操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令碼檔案&#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)|說明如何建立指令碼檔案。|  

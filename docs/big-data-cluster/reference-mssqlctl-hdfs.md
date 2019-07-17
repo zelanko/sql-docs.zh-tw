@@ -5,17 +5,16 @@ description: Mssqlctl hdfs 命令的參考文件。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957911"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -26,13 +25,13 @@ ms.locfileid: "67728524"
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | HDFS 殼層是簡單的互動式命令殼層的 HDFS 檔案系統。
+[mssqlctl hdfs 殼層](#mssqlctl-hdfs-shell) | HDFS 殼層是簡單的互動式命令殼層的 HDFS 檔案系統。
 [mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | 列出指定的檔案或目錄的狀態。
-[mssqlctl hdfs exists](#mssqlctl-hdfs-exists) | 判斷檔案或目錄是否存在。  傳回存在則為 True 和 False 否則。
+[mssqlctl hdfs 存在](#mssqlctl-hdfs-exists) | 判斷檔案或目錄是否存在。  傳回存在則為 True 和 False 否則。
 [mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | 建立位於指定路徑的目錄。
 [mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | 將指定的檔案或路徑移到指定的位置。
-[mssqlctl hdfs create](#mssqlctl-hdfs-create) | 建立文字檔案，在指定的位置。  可以透過資料參數中加入簡單的文字內容。
-[mssqlctl hdfs read](#mssqlctl-hdfs-read) | 讀取的檔案的內容。  位移和長度，以位元組為單位是選擇性的參數。
+[建立 mssqlctl hdfs](#mssqlctl-hdfs-create) | 建立文字檔案，在指定的位置。  可以透過資料參數中加入簡單的文字內容。
+[讀取 mssqlctl hdfs](#mssqlctl-hdfs-read) | 讀取的檔案的內容。  位移和長度，以位元組為單位是選擇性的參數。
 [mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | 移除檔案或目錄。
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | 以遞迴方式移除檔案或目錄。
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | 變更指定的檔案或目錄的權限。

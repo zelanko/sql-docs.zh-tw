@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2e218035473d1ebb980aa5f44da8cc7b8ef843d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f713f9a0c96aaf3798cf160e648404470e3a4363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064503"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (資料指標程式庫)
 > [!IMPORTANT]  

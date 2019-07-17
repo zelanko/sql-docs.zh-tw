@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0b3c421ad00a1627ddfb7e6f4fb63ee5d30981a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9f2fc32287df9da61d8eabc1b22445d19a0f027
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090860"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (dBASE 驅動程式)
 > [!NOTE]  

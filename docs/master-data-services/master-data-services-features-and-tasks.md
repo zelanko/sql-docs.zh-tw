@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1fe37b8bf80f9fc3255dfcf38abf87f9c54f82a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a40e380b883e7a6fb160cdfc0f787d0ec3bdd2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896854"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
 

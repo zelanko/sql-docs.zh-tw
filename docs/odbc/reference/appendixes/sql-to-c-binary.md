@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e280afb03eeac46a58943d276137e2019340a0a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057005"
 ---
 # <a name="sql-to-c-binary"></a>SQL 轉換為 C：二進位
 二進位的 ODBC SQL 資料類型的識別項是：  
@@ -36,9 +35,9 @@ ms.locfileid: "63270954"
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|（資料中的位元組長度）\* 2 < *Columnsize*<br /><br /> （資料中的位元組長度）\* 2 > = *Columnsize*|資料<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|（字元長度的資料）\* 2 < *Columnsize*<br /><br /> （字元長度的資料）\* 2 > = *Columnsize*|資料<br /><br /> 截斷的資料|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度|n/a<br /><br /> 01004|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_CHAR|（資料中的位元組長度）\* 2 < *Columnsize*<br /><br /> （資料中的位元組長度）\* 2 > = *Columnsize*|Data<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_WCHAR|（字元長度的資料）\* 2 < *Columnsize*<br /><br /> （字元長度的資料）\* 2 > = *Columnsize*|Data<br /><br /> 截斷的資料|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|Data<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
   
  當 SQL 的二進位資料轉換成字元 C 資料時，來源資料的每個位元組 （8 位元） 被以兩個 ASCII 字元。 這些字元是十六進位格式的數字的 ASCII 字元表示。 例如，二進位 00000001 會轉換成"01"，而二進位 11111111 會轉換成"FF"。  
   

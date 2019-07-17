@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8abf4d73342105bf244adbccfe59e550b9f70c4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b49ed0d0569359177c1d556cf01fe8eda7bfe46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072852"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 提供者簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ oTestCommand.Execute , , adExecuteStream
 |基底路徑|""|指定基底檔案路徑。 基底檔案路徑是用來指定 XML 樣式表語言 (XSL) 或對應結構描述檔案的位置。 基底檔案路徑也會用來解析相對路徑的 XSL 或對應的 XSL 或對應結構描述屬性中所指定的結構描述檔案中。<br /><br /> 如需使用這個屬性的範例，請參閱[執行 XPath 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果您希望將資料列集轉換成 XML 的程序發生在用戶端而不是伺服器上，請將這個屬性設定為 True。 如果您想要將效能負載移到中介層，這個作法會很實用。<br /><br /> 如需使用這個屬性的範例，請參閱[執行 SQL 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)或是[執行範本，包含 SQL 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
 |內容類型||傳回輸出內容類型。 這是 READ ONLY 屬性。<br /><br /> 這個屬性會將有關內容類型 (如 TEXT/XML、TEXT/HTML、image/jpeg 等等) 的資訊提供給瀏覽器。 這個屬性的值會變成**內容類型**傳送至瀏覽器的 HTTP 標頭，其中包含 MIME 類型 （多用途網際網路郵件延伸標準） 做為主體所傳送的文件的一部分的欄位。|  
-|對應結構描述|NULL|如果用戶端應用程式針對對應結構描述 (XDR 或 XSD) 執行 XPath 查詢，這個屬性會用來指定對應結構描述的名稱。<br /><br /> 指定的路徑可以是相對路徑 (xyz/abc/MySchema.xml) 或絕對路徑 (C:\MyFolder\abc\MySchema.xml)。<br /><br /> 如果指定的相對路徑，則基底路徑屬性所指定的基底路徑用來解析相對路徑。 如果已在基底路徑屬性不指定任何路徑，相對路徑是相對於目前的目錄。<br /><br /> 在指定的對應結構描述屬性的值，您可以指定本機目錄路徑或 URL (https://...)。如果您指定 URL，您必須透過 Proxy 伺服器來設定 WinHTTP 存取 HTTP 和 HTTPS 伺服器。 您可以執行 Proxycfg.exe 公用程式來進行這項處理。 如需詳細資訊，請參閱 MSDN Library 中的＜使用 WinHTTP Proxy 組態公用程式＞(英文)。<br /><br /> 如需使用這個屬性的範例，請參閱[執行 XPath 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
+|對應結構描述|NULL|如果用戶端應用程式針對對應結構描述 (XDR 或 XSD) 執行 XPath 查詢，這個屬性會用來指定對應結構描述的名稱。<br /><br /> 指定的路徑可以是相對路徑 (xyz/abc/MySchema.xml) 或絕對路徑 (C:\MyFolder\abc\MySchema.xml)。<br /><br /> 如果指定的相對路徑，則基底路徑屬性所指定的基底路徑用來解析相對路徑。 如果已在基底路徑屬性不指定任何路徑，相對路徑是相對於目前的目錄。<br /><br /> 在指定的對應結構描述屬性的值，您可以指定本機目錄路徑或 URL (https://...)。如果您指定的 URL，您必須設定 WinHTTP 存取 HTTP 和 HTTPS 伺服器，透過 proxy 伺服器。 您可以執行 Proxycfg.exe 公用程式來進行這項處理。 如需詳細資訊，請參閱 MSDN Library 中的＜使用 WinHTTP Proxy 組態公用程式＞(英文)。<br /><br /> 如需使用這個屬性的範例，請參閱[執行 XPath 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |命名空間||這個屬性會讓使用命名空間的 XPath 查詢得以執行。 如需使用這個屬性的範例，請參閱[執行含有命名空間的 XPath 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)。|  
 |ss 資料流旗標||這個屬性是用來指定特定類型的安全性限制。 例如，您可能不想允許指向檔案的 URL 參考或是指向檔案的絕對路徑 (如外部網站)。 或者，您可能不想允許範本中有查詢存在。<br /><br /> 下面的值可以指派給這個屬性：<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> 下一個表格中將提供有關這些值的其他資訊。|  
 |xml root||這個屬性是用來定義產生之 XML 的根標記。 例如，如果您針對資料庫執行 SQL 查詢，而且產生的 XML 文件沒有單一根元素，此屬性的值可用來將單一根元素加入到文件中。<br /><br /> 如需使用這個屬性的範例，請參閱[執行 SQL 查詢&#40;SQLXMLOLEDB 提供者&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)。|  

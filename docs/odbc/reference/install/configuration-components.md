@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcf7d34f8faf70f57373ad1a5dae55261799145b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 248a9e31b176444ad51cb3a62c7c5f12f1b7bde3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068579"
 ---
 # <a name="configuration-components"></a>設定元件
 > [!NOTE]  

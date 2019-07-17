@@ -1,5 +1,5 @@
 ---
-title: CursorOptionEnum | Microsoft Docs
+title: CursorOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9136a3057000258518cb64d048a8cc6245e7c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933268"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定哪些功能[支援](../../../ado/reference/ado-api/supports-method.md)方法應該先進行測試。  

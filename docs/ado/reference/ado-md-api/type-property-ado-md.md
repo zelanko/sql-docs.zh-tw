@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ec8cd49556462091f38b32c80c2202459fece75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1109ef6cae68fb2edb4ab3867971064637a6385f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949113"
 ---
 # <a name="type-property-ado-md"></a>Type 屬性 (ADO MD)
 指出目前的型別[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  

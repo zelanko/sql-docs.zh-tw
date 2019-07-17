@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 994ead2df766436dfd6c28912faf6905ffac359c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9857a3c7d8d0f783c83e5bcb5b8fbe18aa7e7250
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052078"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>變更實體交易記錄類型 (Master Data Services)
 
@@ -41,14 +40,14 @@ ms.locfileid: "65485314"
   
  **變更交易記錄類型。**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [管理模型] 頁面上，選取您要編輯的實體模型資料列，然後按一下 [實體]。  
+2.  在 [管理模型]  頁面上，選取您要編輯的實體模型資料列，然後按一下 [實體]  。  
   
-3.  在 [管理實體] 頁面上，選取您要更新的實體資料列，然後按一下 [編輯]。  
+3.  在 [管理實體]  頁面上，選取您要更新的實體資料列，然後按一下 [編輯]  。  
   
 4.  選擇下拉式清單中的交易記錄類型。  
   
-5.  按一下 [儲存] 。  
+5.  按一下 [儲存]  。  
   
   

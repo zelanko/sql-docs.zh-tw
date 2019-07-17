@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071058"
 ---
-# <a name="dmx-statements---data-manipulation"></a>DMX 陳述式-資料操作
+# <a name="dmx-statements---data-manipulation"></a>DMX 陳述式 - 資料操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   下表會列出屬於資料採礦延伸模組 (DMX) 中資料採礦資料操作語言 (DML) 一部份的陳述式。  

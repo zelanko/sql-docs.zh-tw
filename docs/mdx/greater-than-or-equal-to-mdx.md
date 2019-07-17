@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 14babb777aa4c5de85c0a0324621aebf91cb5367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005846"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (大於或等於) (MDX)
 

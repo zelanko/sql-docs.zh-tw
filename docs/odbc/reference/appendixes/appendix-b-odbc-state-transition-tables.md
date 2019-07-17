@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996248"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附錄 B：ODBC 狀態轉換資料表
 本附錄中的表格會顯示如何 ODBC 函式會造成的環境、 連接、 陳述式，以及描述項狀態轉換。 環境、 連接、 陳述式，或描述元的狀態通常會規定，使用對應的型別控制代碼 （環境、 連接、 陳述式或描述元） 的函式可以呼叫時的位置。 環境、 連接、 陳述式，以及描述項狀態重疊大致如下列圖例所示。 比方說，C5，C6，確切的重疊的連線狀態和陳述式指出 S12 透過 S1 會是資料來源而異，因為交易開始在不同的資料來源上不同的時間，並描述項狀態 D1i （隱含配置描述元） 而定陳述式與描述元相關聯的狀態，狀態 D1e （明確配置描述項） 時都無關的任何陳述式的狀態。 如需每個狀態的描述，請參閱 <<c0> [ 環境轉換](../../../odbc/reference/appendixes/environment-transitions.md)，[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)，[陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述項轉換](../../../odbc/reference/appendixes/descriptor-transitions.md)稍後在本附錄中。  
@@ -82,7 +81,7 @@ ms.locfileid: "63026944"
   
 |E0<br /><br /> 未配置|E1<br /><br /> 配置|E2<br /><br /> 連接|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|E0|(HY010)|  
+|(KARTRIS)|E0|(HY010)|  
   
  如果**SQLFreeHandle**呼叫中使用的環境狀態 E0 *HandleType*設定為 SQL_HANDLE_ENV，驅動程式管理員會傳回 SQL_INVALID_HANDLE。 如果呼叫狀態 E1 *HandleType*設定為 SQL_HANDLE_ENV，移至狀態 E0，如果函式成功，並在函數失敗時，會保留在狀態 E1 的環境。 如果呼叫狀態 E2 *HandleType*設定為 SQL_HANDLE_ENV，驅動程式管理員一律會傳回 SQL_ERROR，而且 SQLSTATE HY010 （函數順序錯誤） 和環境仍處於 E2。  
   

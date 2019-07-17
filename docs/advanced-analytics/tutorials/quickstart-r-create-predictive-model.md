@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 278eba1189b376b57f2dec7249a378832c18095c
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962032"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>快速入門：建立預測模型，在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,7 +87,7 @@ GO
 
 ## <a name="create-a-table-for-the-model"></a>建立模型的資料表
 
-接下來，儲存模型，以便您可以重新定型或預測中使用它。 R 套件如果會建立模型，其輸出通常會是「二進位物件」。 因此，將模型儲存的資料表必須提供的資料行**varbinary （max)** 型別。
+接下來，儲存模型，以便您可以重新定型或預測中使用它。 R 套件如果會建立模型，其輸出通常會是「二進位物件」  。 因此，將模型儲存的資料表必須提供的資料行**varbinary （max)** 型別。
 
 ```sql
 CREATE TABLE GLM_models (

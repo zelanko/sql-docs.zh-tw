@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036396"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>應用程式回溯相容性的取代函式對應
 ODBC *3.x*透過 ODBC 使用的應用程式*3.x*驅動程式管理員能針對 ODBC *2.x*只要使用任何新功能的驅動程式。 同時複製功能和行為的變更，不過，會影響的方式，ODBC *3.x*應用程式適用於 ODBC *2.x*驅動程式。 使用 ODBC 時*2.x*驅動程式，則驅動程式管理員會對應下列 ODBC *3.x*函式，已取代一個或多個 ODBC *2.x*函式，到對應的 ODBC *2.x*函式。  

@@ -2,19 +2,18 @@
 title: Dwloader 的資料類型轉換規則-Parallel Data Warehouse |Microsoft Docs
 description: 本主題描述的輸入的資料格式和隱含資料類型轉換成 Parallel Data Warehouse (PDW) 載入資料時，命令列載入器支援該 dwloader。 」
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a15e129ad1cbf52a3daab5459e9ca7d06d195b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961030"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>資料類型轉換規則 dwloader-平行處理資料倉儲
 本主題描述的輸入的資料格式和隱含資料類型轉換的[dwloader 命令列載入器](dwloader.md)時它會將資料載入 PDW 支援。 輸入的資料不符合 SQL Server PDW 目標資料表中的資料類型時，就會發生隱含資料轉換。 設計您的載入程序，以確保您的資料將可順利載入至 SQL Server PDW 時，請使用此資訊。  
@@ -35,8 +34,8 @@ ms.locfileid: "63042564"
   
 |輸入的資料類型|輸入的資料範例|轉換成日期時間資料類型|  
 |-------------------|-----------------------|------------------------------------|  
-|字串常值**datetime**格式|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />範例'2007-05-08 12:35:29.123'|插入值時，遺失的小數位數會設定為 0。 例如，常值 '2007年-05-08 12:35' 會插入做為 ' 2007年-05-08 12:35:00.000'。|  
-|字串常值**smalldatetime**格式|' yyyy 為 yyyy-mm-dd hh: mm '<br /><br />範例'2007-05-08 12:35'|秒數和剩餘的小數位數會設定為 0 時則會插入值。|  
+|字串常值**datetime**格式|' yyyy-mm-dd 的-ss [.fff]'<br /><br />範例'2007-05-08 12:35:29.123'|插入值時，遺失的小數位數會設定為 0。 例如，常值 '2007年-05-08 12:35' 會插入做為 ' 2007年-05-08 12:35:00.000'。|  
+|字串常值**smalldatetime**格式|' yyyy 為 yyyy-mm-dd hh: mm '<br /><br />範例' 2007年-05-08 12:35 '|秒數和剩餘的小數位數會設定為 0 時則會插入值。|  
 |字串常值**日期**格式|'-yyyy-mm-dd '<br /><br />範例'2007-05-08'|時間值 （小時、 分鐘、 秒和分數） 會設為 12:00:00.000 時則會插入值。|  
 |字串常值**datetime2**格式|' yyyy-mm-dd/MM: ss.fffffff '<br /><br />範例'2007-05-08 12:35:29.1234567'|來源資料不能超過三個小數位數。 例如，常值 '2007年-05-08 12:35:29.123' 將會插入，但值' 2007年-05-8 12:35:29.1234567' 會產生錯誤。|  
   
@@ -67,18 +66,18 @@ ms.locfileid: "63042564"
   
 |輸入的資料類型|輸入的資料範例|轉換成 datetimeoffset 資料類型|  
 |-------------------|-----------------------|------------------------------------------|  
-|字串常值**datetime**格式|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />範例'2007-05-08 12:35:29.123'|遺漏的小數位數和位移的值會設定為 0 時則會插入值。 例如，常值 '2007年-05-08 12:35:29.123' 會插入做為' 2007年-05-08 12:35:29.1230000 + 00:00 '。|  
-|字串常值**smalldatetime**格式|' yyyy 為 yyyy-mm-dd hh: mm '<br /><br />範例'2007-05-08 12:35'|秒數、 剩餘的小數位數和位移的值會設定為 0 時則會插入值。|  
+|字串常值**datetime**格式|' yyyy-mm-dd 的-ss [.fff]'<br /><br />範例'2007-05-08 12:35:29.123'|遺漏的小數位數和位移的值會設定為 0 時則會插入值。 例如，常值 '2007年-05-08 12:35:29.123' 會插入做為' 2007年-05-08 12:35:29.1230000 + 00:00 '。|  
+|字串常值**smalldatetime**格式|' yyyy 為 yyyy-mm-dd hh: mm '<br /><br />範例' 2007年-05-08 12:35 '|秒數、 剩餘的小數位數和位移的值會設定為 0 時則會插入值。|  
 |字串常值**日期**格式|'-yyyy-mm-dd '<br /><br />範例'2007-05-08'|時間值 （小時、 分鐘、 秒和分數） 會設定為 0，則會插入值時。 例如，常值 '2007年-05-08' 會插入做為' 2007年-05-08 00:00:00.0000000 + 00:00 '。|  
 |字串常值**datetime2**格式|' yyyy-mm-dd/MM: ss.fffffff '<br /><br />範例'2007-05-08 12:35:29.1234567'|來源資料不能超過指定的 datetimeoffset 資料行中的小數秒數。 如果資料來源有小於或等於的小數秒數，就會進行填補右側以零。 比方說，如果資料類型為 datetimeoffset (5)，常值 '2007年-05-08 12:35:29.123 + 12:15' 會插入做為 ' 12:35:29.12300 + 12:15 '。|  
-|字串常值**datetimeoffset**格式|'yyyy-MM-dd hh:mm:ss.fffffff {+&#124;-} hh:mm'<br /><br />範例'2007-05-08 12:35:29.1234567 +12:15'|來源資料不能超過指定的 datetimeoffset 資料行中的小數秒數。 如果資料來源有小於或等於的小數秒數，就會進行填補右側以零。 比方說，如果資料類型為 datetimeoffset (5)，常值 '2007年-05-08 12:35:29.123 + 12:15' 會插入做為 ' 12:35:29.12300 + 12:15 '。|  
+|字串常值**datetimeoffset**格式|' yyyy-mm-dd/MM: ss.fffffff {+&#124;-} hh: mm '<br /><br />範例' 2007年-05-08 12:35:29.1234567 + 12:15 '|來源資料不能超過指定的 datetimeoffset 資料行中的小數秒數。 如果資料來源有小於或等於的小數秒數，就會進行填補右側以零。 比方說，如果資料類型為 datetimeoffset (5)，常值 '2007年-05-08 12:35:29.123 + 12:15' 會插入做為 ' 12:35:29.12300 + 12:15 '。|  
   
 ### <a name="datetime2-data-type"></a>datetime2 資料類型  
 下表定義的預設格式和載入類型的資料行中的常值的規則**datetime2** (*n*)。 預設格式為 ' yyyy-mm-dd/MM: ss.fffffff'。 空字串 （"） 轉換的預設值為 ' 1900年-01-01 12:00:00 '。 字串，包含只有空白 (' ') 會產生錯誤。 小數位數的數目取決於資料行定義。 例如，定義為資料行**datetime2** (2) 將會有兩個小數位數。  
   
 |輸入的資料類型|輸入的資料範例|轉換成 datetime2 資料類型|  
 |-------------------|-----------------------|-------------------------------------|  
-|字串常值**datetime**格式|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />範例'2007-05-08 12:35:29.123'|小數秒數是選擇性的則會插入值時，會設定為 0。|  
+|字串常值**datetime**格式|' yyyy-mm-dd 的-ss [.fff]'<br /><br />範例'2007-05-08 12:35:29.123'|小數秒數是選擇性的則會插入值時，會設定為 0。|  
 |字串常值**smalldatetime**格式|' yyyy 為 yyyy-mm-dd hh: mm '<br /><br />範例'2007-05-08 12'|選擇性的秒數和剩餘的小數位數會設定為 0 時則會插入值。|  
 |字串常值**日期**格式|'-yyyy-mm-dd '<br /><br />範例'2007-05-08'|時間值 （小時、 分鐘、 秒和分數） 會設定為 0，則會插入值時。 例如，常值 '2007年-05-08' 會插入做為' 2007年-05-08 12:00:00.0000000'。|  
 |字串常值**datetime2**格式|' yyyy-mm-dd 的-hh:mm:ss:fffffff'<br /><br />範例'2007-05-08 12:35:29.1234567'|如果資料來源包含日期和時間會小於或等於指定值的元件**datetime2**(*n*)，將資料插入; 否則會產生錯誤。|  
@@ -86,7 +85,7 @@ ms.locfileid: "63042564"
 ### <a name="DateFormats"></a>日期時間格式  
 Dwloader 會支援下列資料格式，它會載入到 SQL Server PDW 的輸入資料。 表格後面列出更多詳細資料。  
   
-|datetime|smalldatetime|日期|datetime2|datetimeoffset|  
+|datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  

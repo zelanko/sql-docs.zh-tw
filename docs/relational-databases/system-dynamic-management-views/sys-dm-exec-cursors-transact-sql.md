@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097846"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +64,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|如果是 FAST_FORWARD 和 DYNAMIC 資料指標，如果該資料指標未開啟，或是位於第一個資料列前面，它會傳回 0。 否則，它會傳回 -1。<br /><br /> 如果是 STATIC 和 KEYSET 資料指標，如果該資料指標未開啟，它會傳回 0，如果資料指標位於最後一個資料列後面，它會傳回 -1。<br /><br /> 否則，它會傳回其所在位置的資料列號碼。|  
 |**ansi_position**|**int**|提取緩衝區內的資料指標位置。|  
 |**worker_time**|**bigint**|執行這個資料指標之工作者所花的時間 (以百萬分之一秒為單位)。|  
-|**reads**|**bigint**|資料指標執行的讀取次數。|  
-|**writes**|**bigint**|資料指標執行的寫入次數。|  
+|**讀取**|**bigint**|資料指標執行的讀取次數。|  
+|**寫入**|**bigint**|資料指標執行的寫入次數。|  
 |**dormant_duration**|**bigint**|自從這個資料指標上的最後一個查詢 (開啟或提取) 啟動以來的毫秒數。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -82,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供有關資料指標類型的資訊，並包括屬性資料行的可能值。  
   
-|類型|描述|  
+|type|描述|  
 |----------|-----------------|  
 |索引鍵集|資料指標宣告為索引鍵集。|  
 |動態|資料指標宣告為動態。|  

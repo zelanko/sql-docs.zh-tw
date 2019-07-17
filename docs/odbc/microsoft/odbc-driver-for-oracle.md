@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fc15968501fed6b94a7ccddb984cbdf76bcbcb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915798"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  

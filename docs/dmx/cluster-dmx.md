@@ -1,5 +1,5 @@
 ---
-title: 群集 (DMX) |Microsoft 文件
+title: 群集 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 41f835a93e5976945281b6b04258c516b0322236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071084"
 ---
 # <a name="cluster-dmx"></a>群集 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +33,13 @@ Cluster()
 ## <a name="return-type"></a>傳回類型  
  **叢集**函式不需要參數。  
   
- **叢集**函式會傳回純量值的叢集名稱。 不過，如果您使用此函式為另一個函式的引數時，您必須將它做為\<叢集資料行參考 >。  
+ **叢集**函式會傳回純量值的叢集名稱。 不過，如果您使用此函式為另一個函式的引數時，您必須將其做為\<叢集資料行參考 >。  
   
 ## <a name="remarks"></a>備註  
- **叢集**也可用來當作`<`叢集資料行參考`>`如**PredictHistogram**函式。  
+ **叢集**也可用來當做`<`叢集資料行參考`>`如**PredictHistogram**函式。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用單一查詢及[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)和叢集函式來傳回 TM Clustering 採礦模型的每一個叢集中的個別案例的距離，個別的案例會存在於每個群集的機率。  
+ 下列範例會使用單一查詢及[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)和叢集函式來傳回 TM Clustering 採礦模型的每一個叢集中的個別案例的距離，個別的案例會存在於每一個群集的機率。  
   
 ```  
 SELECT  
@@ -57,7 +56,7 @@ FROM
   
 ## <a name="see-also"></a>另請參閱  
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

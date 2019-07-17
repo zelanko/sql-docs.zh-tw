@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb6d8eaf4a1f4eaadc4e8e9a7030b81c373d8377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24f80e0e81e4be8895d59256492b868c53aab7b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046787"
 ---
 # <a name="enabling-tracing"></a>啟用追蹤
 追蹤可以啟用下列三種方式：  
