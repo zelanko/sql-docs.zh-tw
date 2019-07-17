@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106287"
 ---
 # <a name="arguments-in-catalog-functions"></a>目錄函式中的引數
 所有目錄函式都接受引數與應用程式可以限制傳回的資料範圍。 比方說，第一個和第二個呼叫**SQLTables**在下列程式碼會傳回包含所有資料表的相關資訊，而第三個呼叫會傳回 Orders 資料表的相關資訊的結果集：  
@@ -34,7 +33,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
  目錄函式的字串引數可分為四種不同類型： 一般引數 (OA)、 模式值引數 (PV)、 識別碼引數 (ID) 和值清單引數 (VL)。 大部分的字串引數可以是其中一種兩種不同類型的詳細資訊，根據 SQL_ATTR_METADATA_ID 陳述式屬性的值。 下表列出每個目錄函式的引數，並描述 SQL_ATTR_METADATA_ID SQL_TRUE 或 SQL_FALSE 值的引數的型別。  
   
-|函數|引數|輸入當 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|輸入當 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
+|函數|引數|輸入當 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|輸入當 SQL_<br /><br /> ATTR_METADATA_<br /><br /> 識別碼 = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|識別碼 ID 識別碼 ID|  
 |**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|識別碼 ID 識別碼 ID|  

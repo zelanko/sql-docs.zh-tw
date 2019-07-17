@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 23d018a8d551a5c3a7f2978339b6cf7612f378fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103187"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Azure 中，您必須連接到 SQL Azure 的目標執行個體。 當您連線時，SSMA 取得 SQL Azure 執行個體中的所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料總管 會顯示資料庫中繼資料。 SSMA 會儲存您要連線，但不會儲存密碼的 SQL Azure 執行個體的資訊。  

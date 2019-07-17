@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163124"
 ---
 # <a name="analyze-a-tabular-model-in-excel"></a>在 Excel 中分析表格式模型  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,17 +27,17 @@ ms.locfileid: "53072225"
   
 #### <a name="to-analyze-a-tabular-model-project-by-using-the-analyze-in-excel-feature"></a>若要使用在 Excel 中進行分析功能來分析表格式模型專案  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[在 Excel 中進行分析]**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[在 Excel 中進行分析]** 。  
   
 2.  在 **[選擇認證和檢視方塊]** 對話方塊中，選取下列其中一個認證選項，以連接至模型工作空間資料來源：  
   
-    -   若要使用目前的使用者帳戶，請選取 **[目前的 Windows 使用者]**。  
+    -   若要使用目前的使用者帳戶，請選取 **[目前的 Windows 使用者]** 。  
   
-    -   若要使用其他使用者帳戶，請選取 **[其他 Windows 使用者]**。  
+    -   若要使用其他使用者帳戶，請選取 **[其他 Windows 使用者]** 。  
   
          此使用者帳戶通常是角色的成員。 不需要密碼。 只能在工作空間資料庫的 Excel 連接環境中使用此帳戶。  
   
-    -   若要使用安全性角色，請選取 **[角色]**，然後在清單方塊中選取一個或多個角色。  
+    -   若要使用安全性角色，請選取 **[角色]** ，然後在清單方塊中選取一個或多個角色。  
   
          您必須使用角色管理員定義安全性角色。 如需詳細資訊，請參閱 <<c0> [ 建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "53072225"
      您必須使用 [檢視方塊] 對話方塊定義檢視方塊 (非預設值)。 如需詳細資訊，請參閱 <<c0> [ 建立和管理檢視方塊](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
   
 > [!NOTE]  
->  當您在模型設計師中變更模型專案時，Excel 的樞紐分析表欄位清單不會自動重新整理。 若要重新整理樞紐分析表欄位清單，請在 Excel 的 **[選項]** 功能區上，按一下 **[重新整理]**。  
+>  當您在模型設計師中變更模型專案時，Excel 的樞紐分析表欄位清單不會自動重新整理。 若要重新整理樞紐分析表欄位清單，請在 Excel 的 **[選項]** 功能區上，按一下 **[重新整理]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Excel 中進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  

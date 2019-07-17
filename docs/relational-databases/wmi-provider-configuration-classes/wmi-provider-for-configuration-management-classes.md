@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 542f7f29b6067e6d833afbcf8caba91161c624cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7ac0d4975890a6aa949bac1050a4bb7cefe00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139414"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>組態管理類別的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

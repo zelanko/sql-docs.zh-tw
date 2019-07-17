@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbe2404c77844d635ff7078809b3eae0e3259649
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d1085968e76771539c0fa439bc35ed86540dcbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109458"
 ---
 # <a name="sysxmlschemawildcardnamespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

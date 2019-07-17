@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212231"
 ---
 本文提供 SQL Server 中有關業務持續性解決方案之高可用性和災害復原的概觀。 
 
@@ -12,7 +12,7 @@ ms.locfileid: "59055621"
 
 SQL Server 2017 引進了許多新功能或現有項目的增強功能，有些就是針對可用性。 SQL Server 2017 最大的變化是新增 Linux 發行版本的 SQL Server 支援。 如需 SQL Server 2017 新功能的完整清單，請參閱 [SQL Server 2017 的新功能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)主題。
 
-本文著重於涵蓋 SQL Server 2017 的可用性案例，以及 SQL Server 2017 中新增和強化的可用性功能。 包括跨 Windows Server 和 Linux 的 SQL Server 部署混合式案例，以及能增加可讀取資料庫複本數目的案例。 雖然本文不涵蓋 SQL Server 外部的可用性選項，例如虛擬化提供的可用性選項，但這裡討論的所有內容都適用於客體虛擬機器內的 SQL Server 安裝，無論在公用雲端或由內部部署 Hypervisor 伺服器所主控。
+本文著重於涵蓋 SQL Server 2017 的可用性案例，以及 SQL Server 2017 中新增和強化的可用性功能。 包括跨 Windows Server 和 Linux 的 SQL Server 部署混合式案例，以及能增加可讀取資料庫複本數目的案例。 雖然此文章不涵蓋 SQL Server 外部的可用性選項，例如虛擬化提供的可用性選項，但這裡討論的所有內容都適用於客體虛擬機器內的 SQL Server 安裝，無論在公用雲端或由內部部署 Hypervisor 伺服器所主控。
 
 ## <a name="sql-server-2017-scenarios-using-the-availability-features"></a>使用可用性功能的 SQL Server 2017 案例
 

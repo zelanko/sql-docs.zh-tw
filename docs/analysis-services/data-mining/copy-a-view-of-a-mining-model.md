@@ -1,5 +1,5 @@
 ---
-title: 複製採礦模型的檢視 |Microsoft 文件
+title: 複製採礦模型的檢視 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 685d4ce90312e9f34dcf9b8a6e0c94b419f37ee4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210166"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>複製採礦模型的檢視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，資料採礦設計師的 [採礦模型檢視器] 索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，資料採礦設計師的 [採礦模型檢視器]  索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集檢視器和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器中的群集圖表  
   
@@ -37,31 +37,31 @@ ms.locfileid: "34014235"
   
 ### <a name="to-copy-the-complete-model-to-the-clipboard"></a>將完整的模型複製到剪貼簿  
   
-1.  從 [採礦模型檢視器] 索引標籤的 [採礦模型] 清單中，選取您要檢視的採礦模型。  
+1.  從 [採礦模型檢視器]  索引標籤的 [採礦模型]  清單中，選取您要檢視的採礦模型。  
   
-2.  選取適當的索引標籤，例如 [相依性網路] 索引標籤，然後按一下該索引標籤之工具列上的 [複製整個圖表]。  
+2.  選取適當的索引標籤，例如 [相依性網路]  索引標籤，然後按一下該索引標籤之工具列上的 [複製整個圖表]  。  
   
 ### <a name="to-copy-the-visible-piece-of-the-model-to-the-clipboard"></a>若要將模型的可見部份複製到剪貼簿  
   
-1.  從 [採礦模型檢視器] 索引標籤的 [採礦模型] 清單中，選取您要檢視的採礦模型。  
+1.  從 [採礦模型檢視器]  索引標籤的 [採礦模型]  清單中，選取您要檢視的採礦模型。  
   
-2.  選取適合的索引標籤，例如 [相依性網路] 索引標籤，然後放大或縮小，在您要的層級上檢視模型。  
+2.  選取適合的索引標籤，例如 [相依性網路]  索引標籤，然後放大或縮小，在您要的層級上檢視模型。  
   
-3.  按一下所選取索引標籤之工具列上的 [複製圖表檢視]。  
+3.  按一下所選取索引標籤之工具列上的 [複製圖表檢視]  。  
   
 ### <a name="to-copy-the-mining-model-content-to-the-clipboard"></a>將採礦模型內容複製到剪貼簿  
   
-1.  從 [採礦模型檢視器] 索引標籤的 [採礦模型] 清單中，選取您要檢視的採礦模型。  
+1.  從 [採礦模型檢視器]  索引標籤的 [採礦模型]  清單中，選取您要檢視的採礦模型。  
   
-2.  從 [檢視器] 下拉式清單中，選取 [Microsoft 一般內容樹狀檢視器]。  
+2.  從 [檢視器]  下拉式清單中，選取 [Microsoft 一般內容樹狀檢視器]  。  
   
-3.  在 [節點標題 (唯一 ID)] 窗格中，按一下節點。  
+3.  在 [節點標題 (唯一 ID)]  窗格中，按一下節點。  
   
-4.  以滑鼠右鍵按一下 [節點詳細資料] 窗格，然後選取 [全選]。  
+4.  以滑鼠右鍵按一下 [節點詳細資料]  窗格，然後選取 [全選]  。  
   
-5.  再次以滑鼠右鍵按一下 [節點詳細資料] 窗格，然後選取 [複製]。  
+5.  再次以滑鼠右鍵按一下 [節點詳細資料]  窗格，然後選取 [複製]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

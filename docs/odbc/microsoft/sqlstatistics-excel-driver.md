@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 044ea7e2c536685afef3534eacb5745fb33edf49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c36d68f42b9b7f76310c453d704c6815ee6de22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132470"
 ---
 # <a name="sqlstatistics-excel-driver"></a>SQLStatistics (Excel 驅動程式)
 > [!NOTE]  

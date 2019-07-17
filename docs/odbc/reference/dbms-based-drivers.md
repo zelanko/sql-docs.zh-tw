@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcd2221d9a0bb9cba42745901e5f00a6f8c8415e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111253"
 ---
 # <a name="dbms-based-drivers"></a>以 DBMS 為基礎的驅動程式
 以 DBMS 為基礎的驅動程式可搭配 Oracle 或 SQL Server 等提供獨立的資料庫引擎的驅動程式使用的資料來源。 這些驅動程式透過獨立的引擎，來存取實體的資料也就是他們提交 SQL 陳述式，並從引擎中擷取結果。  

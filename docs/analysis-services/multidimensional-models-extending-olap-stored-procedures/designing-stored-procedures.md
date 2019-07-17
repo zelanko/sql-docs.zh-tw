@@ -1,5 +1,5 @@
 ---
-title: 設計預存程序 |Microsoft 文件
+title: 設計預存程序 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a617df9d88bde17c08fb4d2235ad751a5609e2d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181091"
 ---
 # <a name="designing-stored-procedures"></a>設計預存程序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

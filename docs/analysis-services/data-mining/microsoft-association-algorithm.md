@@ -1,5 +1,5 @@
 ---
-title: Microsoft 關聯分析演算法 |Microsoft 文件
+title: Microsoft 關聯分析演算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5a6f5046c93355b3b1359c59d2e935c9aa6288a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209910"
 ---
-# <a name="microsoft-association-algorithm"></a>Microsoft 關聯分析演算法
+# <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是常用於建議引擎的演算法。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議項目。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。   
   
- 關聯模型是建立在包含個別案例和案例所含項目之識別碼的資料集上。 案例中的項目群組稱為 *「項目集」*(itemset)。 關聯模型是由一系列項目集和規則所組成，這些規則描述那些項目在案例內如何分組。 演算法識別的規則可依據客戶購物車已有的項目，來預測客戶未來可能購買的項目。 下列圖表顯示項目集內的一系列規則。  
+ 關聯模型是建立在包含個別案例和案例所含項目之識別碼的資料集上。 案例中的項目群組稱為 *「項目集」* (itemset)。 關聯模型是由一系列項目集和規則所組成，這些規則描述那些項目在案例內如何分組。 演算法識別的規則可依據客戶購物車已有的項目，來預測客戶未來可能購買的項目。 下列圖表顯示項目集內的一系列規則。  
   
- ![一組規則，對於關聯模型](../../analysis-services/data-mining/media/association.gif "一組關聯模型的規則")  
+ ![一組規則，對於關聯模型](../../analysis-services/data-mining/media/association.gif "一組規則，對於關聯模型")  
   
- 如圖表所示， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法可能會在資料集內找到許多規則。 演算法使用兩個參數 (案例數和機率) 來描述它產生的項目集和規則。 例如，若 X 和 Y 代表可能存在於購物車內的兩個項目，則案例數參數就是指資料集內包含 X 和 Y 項目結合的案例數目。藉由使用案例數參數來結合使用者定義的 *MINIMUM_SUPPORT* 和 *MAXIMUM_SUPPORT* 參數，演算法可控制產生的項目集數目。 機率參數也稱為 *「信心」*(confidence)，它代表資料集內包含 X 也包含 Y 之案例的比例。將機率參數搭配 *MINIMUM_PROBABILITY* 參數使用時，此演算法就會控制所產生的規則數目。  
+ 如圖表所示， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法可能會在資料集內找到許多規則。 演算法使用兩個參數 (案例數和機率) 來描述它產生的項目集和規則。 例如，若 X 和 Y 代表可能存在於購物車內的兩個項目，則案例數參數就是指資料集內包含 X 和 Y 項目結合的案例數目。藉由使用案例數參數來結合使用者定義的 *MINIMUM_SUPPORT* 和 *MAXIMUM_SUPPORT* 參數，演算法可控制產生的項目集數目。 機率參數也稱為 *「信心」* (confidence)，它代表資料集內包含 X 也包含 Y 之案例的比例。將機率參數搭配 *MINIMUM_PROBABILITY* 參數使用時，此演算法就會控制所產生的規則數目。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] Cycle 公司正在重新設計其網站的功能。 重新設計的目標是要增加產品的實際銷售。 因為公司會在交易式資料庫中記錄每一筆銷售，所以他們可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法來識別可能一起購買的產品集。 然後，他們可以依據客戶購物籃已有的項目，來預測客戶可能感興趣的其他項目。  
@@ -48,9 +48,9 @@ ms.locfileid: "34017185"
  如需關聯模型所支援內容類型和資料類型的詳細資訊，請參閱 [Microsoft 關聯分析演算法技術參考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-an-association-model"></a>檢視關聯模型  
- 若要瀏覽此模型，您可以使用 [Microsoft 關聯檢視器]。 當您檢視關聯模型時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會從不同的角度展示關聯，使您可以更了解資料中的關聯性和規則。 檢視器中的 [項目集] 窗格會提供最常見組合或項目集的詳細細目。 [規則] 窗格可用來表示已從資料產生的規則清單、加入機率的計算，並依照相對重要性排列規則的次序。 相依性網路檢視器則可用來以視覺方式探索不同的個別項目的連接方式。 如需詳細資訊，請參閱 [使用 Microsoft 叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)。  
+ 若要瀏覽此模型，您可以使用 [Microsoft 關聯檢視器]  。 當您檢視關聯模型時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會從不同的角度展示關聯，使您可以更了解資料中的關聯性和規則。 檢視器中的 [項目集]  窗格會提供最常見組合或項目集的詳細細目。 [規則]  窗格可用來表示已從資料產生的規則清單、加入機率的計算，並依照相對重要性排列規則的次序。 相依性網路檢視器則可用來以視覺方式探索不同的個別項目的連接方式。 如需詳細資訊，請參閱 [使用 Microsoft 叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)。  
   
- 如果想要知道有關任何項目集和規則的詳細資訊，可以在 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個項目集的支援、每個規則的分數以及其他的統計資料。 如需詳細資訊，請參閱[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
+ 如果想要知道有關任何項目集和規則的詳細資訊，可以在 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個項目集的支援、每個規則的分數以及其他的統計資料。 如需詳細資訊，請參閱 [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)(itemset)。  
   
 ## <a name="creating-predictions"></a>建立預測  
  當模型經過處理之後，就可以使用規則和項目集來進行預測。 在關聯模型中，預測可告訴您在有指定的項目時可能會發生什麼項目，而該預測可能包含機率、支援或重要性之類的資訊。 如需如何根據關聯模型建立查詢的範例，請參閱 [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)。  
@@ -77,9 +77,9 @@ ms.locfileid: "34017185"
 -   支援建立資料採礦維度。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [瀏覽模型，使用 Microsoft 關聯規則檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [關聯模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [使用 Microsoft 關聯規則檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 關聯分析演算法技術參考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)  
   

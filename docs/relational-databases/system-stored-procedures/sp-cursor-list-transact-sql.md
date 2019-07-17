@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108583"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cursor_return= ] *cursor_variable_name*OUTPUT  
+ [ @cursor_return=] *cursor_variable_name*輸出  
  這是宣告資料指標變數的名稱。 *cursor_variable_name*已**游標**，沒有預設值。 資料指標是一個可捲動的動態唯讀資料指標。  
   
  [ @cursor_scope= ] *cursor_scope*  

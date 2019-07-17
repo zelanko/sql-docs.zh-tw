@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183175"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,28 +23,28 @@ ms.locfileid: "52545587"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法都可用來分析關聯，但每個演算法所找到的規則都可能不同。 在決策樹模型中，導致特定規則的分岔是根據資訊改善而定，在關聯模型中，規則則是完全根據信心而定。 因此，在關聯模型中，強大的規則或具有高信心指數的規則可能因為沒有提供新資訊而不具有高「有趣性」。  
   
 ## <a name="implementation-of-the-microsoft-association-algorithm"></a>Microsoft 關聯分析演算法的實作  
- Apriori 演算法並不會分析模式，而是產生「候選項目集」並接著加以計算。 項目可能代表事件、產品或屬性的值，根據分析的資料類型而定。  
+ Apriori 演算法並不會分析模式，而是產生「候選項目集」  並接著加以計算。 項目可能代表事件、產品或屬性的值，根據分析的資料類型而定。  
   
  在常見類型的關聯模型中，代表「是/否」或「遺漏/現有」值的布林值變數會指派給每個屬性，例如產品或事件名稱。 購物籃分析是關聯規則模型的其中一個範例，該模型使用布林值變數代表客戶購物籃中的特定產品是否存在。  
   
  接著，演算法會針對每個項目集建立代表支援及信心的分數。 這些分數可用來從項目集衍生有趣性規則並排列其次序。  
   
- 您也可以針對數值屬性建立關聯模型。 如果是連續屬性，可以將數字「分隔」或群組到值區中。 接著就可以將離散化的值當做布林值或屬性值配對處理。  
+ 您也可以針對數值屬性建立關聯模型。 如果是連續屬性，可以將數字「分隔」  或群組到值區中。 接著就可以將離散化的值當做布林值或屬性值配對處理。  
   
 ### <a name="support-probability-and-importance"></a>支援、機率和重要性  
- 「支援」(有時也稱為「頻率」) 代表包含目標項目或項目組合的案例數。 只有至少具有指定支援量的項目才能包含在模型中。  
+ 「支援」  (有時也稱為「頻率」  ) 代表包含目標項目或項目組合的案例數。 只有至少具有指定支援量的項目才能包含在模型中。  
   
- 「常見項目集」代表項目的集合，其中的項目組合也具有 MINIMUM_SUPPORT 參數所定義臨界值以上的支援。 例如，如果項目集為 {A,B,C} 而 MINIMUM_SUPPORT 值為 10，則每個個別的 A、B 及 C 項目都必須至少存在於模型所含的 10 個案例中，且項目組合 {A,B,C} 也必須存在於至少 10 個案例中。  
+ 「常見項目集」  代表項目的集合，其中的項目組合也具有 MINIMUM_SUPPORT 參數所定義臨界值以上的支援。 例如，如果項目集為 {A,B,C} 而 MINIMUM_SUPPORT 值為 10，則每個個別的 A、B 及 C 項目都必須至少存在於模型所含的 10 個案例中，且項目組合 {A,B,C} 也必須存在於至少 10 個案例中。  
   
  **注意** ：您也可以指定項目集的最大長度 (長度代表項目數) 來控制採礦模型中的項目集數目。  
   
  根據預設，任何特定項目或項目集的支援都代表包含該項目或項目集的案例計數。 不過，您也可以將數字輸入為小於 1 的小數值，將 MINIMUM_SUPPORT 表示為資料集總案例數的百分比。 例如，如果將 MINIMUM_SUPPORT 值指定為 0.03，該值代表資料集中至少有 3% 的總案例數必須包含此項目或項目集，才能加入模型。 您應該試用模型，以判斷是計數或是百分比比較適用。  
   
- 相反地，規則的臨界值不會表示為計數或百分比，而是以機率表示，這有時也稱為「信心」。 例如，如果項目集 {A,B,C} 出現在 50 個案例中，但項目 {A,B,D} 也出現在 50 個案例中，而項目集 {A,B} 則出現在另外 50 個案例中，則很明顯地 {A,B} 並不能準確地預測 {C}。 因此，為了針對所有已知結果來計算特定結果的加權， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用項目集 {A,B,C} 的支援除以所有相關項目集的支援來計算個別規則的機率 (例如 If {A,B} Then {C})。  
+ 相反地，規則的臨界值不會表示為計數或百分比，而是以機率表示，這有時也稱為「信心」  。 例如，如果項目集 {A,B,C} 出現在 50 個案例中，但項目 {A,B,D} 也出現在 50 個案例中，而項目集 {A,B} 則出現在另外 50 個案例中，則很明顯地 {A,B} 並不能準確地預測 {C}。 因此，為了針對所有已知結果來計算特定結果的加權， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用項目集 {A,B,C} 的支援除以所有相關項目集的支援來計算個別規則的機率 (例如 If {A,B} Then {C})。  
   
  您也可以藉由設定 MINIMUM_PROBABILITY 的值來限制模型所產生的規則數。  
   
- 對於每個建立的規則，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都會輸出分數指出其「重要性」，也稱為「增益」。 項目集和規則的增益重要性計算方式不同。  
+ 對於每個建立的規則，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都會輸出分數指出其「重要性」  ，也稱為「增益」  。 項目集和規則的增益重要性計算方式不同。  
   
  項目集的重要性計算方式是用項目集的機率除以項目集中個別項目的複合機率。 例如，如果項目集包含 {A,B}，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先計算所有包含此 A 和 B 組合的案例數，並將該值除以總案例數，然後再正規化為機率。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52545587"
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態： **遺漏**並**現有**。 Null 為遺漏值。  
+ 表示資料行都會被視為擁有兩個可能狀態：**遺漏**並**現有**。 Null 為遺漏值。  
   
  適用於採礦模型資料行。  
   

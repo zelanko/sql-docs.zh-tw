@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 827f7195c5d4eb4f67cb3298b75519a5583053d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4d0f88d2d9eaba7d95ba887ffbe11e728320b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123375"
 ---
 # <a name="sqlclosecursorodbc"></a>SQLCloseCursor_ODBC
 > [!IMPORTANT]  

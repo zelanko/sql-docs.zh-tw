@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2e710bdbe8f026624ea71357afb6d204b333c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130485"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62714161"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
+|**artid&lt**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**pubid**|**int**|發行項所屬發行集的識別碼。|  
 |**sync_ins_proc**|**int**|處理「插入同步交易」之預存程序的識別碼。|  
 |**sync_upd_proc**|**int**|處理「更新同步交易」之預存程序的識別碼。|  

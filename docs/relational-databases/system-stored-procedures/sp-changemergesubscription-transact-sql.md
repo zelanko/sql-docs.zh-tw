@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62993115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124874"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||訂閱者的登入名稱。|  
 |**subscriber_password**||提供之訂閱者登入的增強式密碼。|  
 |**sync_type**|**automatic**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
-||**none**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
+||**None**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_interactive_resolver**|**true**|可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。|  
 ||**false**|衝突是利用預設解析程式或自訂解析程式加以自動解析。|  
 |NULL (預設值)|NULL (預設值)||  
@@ -85,9 +84,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changemergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

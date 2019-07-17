@@ -42,11 +42,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199389"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
   在建立發行集時，您可以選擇想要發行的資料表和其他資料庫物件。 您可以使用複寫發行下列資料庫物件。  
@@ -168,7 +168,7 @@ ms.locfileid: "52777130"
 -   如果您發行的資料庫物件相依於一或多個其他資料庫物件，就必須發行所有參考物件。 例如，如果您發行相依於資料表的檢視表，同時也必須發行該資料表。  
   
     > [!NOTE]  
-    >  如果您將發行項加入至合併式發行集且現有的某發行項相依於新的發行項，您必須使用 **@processing_order** 的 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)＞。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函數加入至發行集時：將 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；將 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，指定 **@article**＞。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+    >  如果您將發行項加入至合併式發行集且現有的某發行項相依於新的發行項，您必須使用 **@processing_order** 的 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)＞。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函數加入至發行集時：將 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；將 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，指定 **@article** ＞。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 -   發行集名稱不能包含下列字元：% * [ ] | : " ? \ / \< >。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "52777130"
   
 -   不會複寫使用 [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) 建立的繫結預設值 (繫結預設值已經棄用，以支援使用 ALTER TABLE 或 CREATE TABLE 的 DEFAULT 關鍵字建立的預設值)。  
   
--   因為散發代理程式傳遞順序的關係，索引檢視表上含有 `NOEXPAND` 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 `NOEXPAND` 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，建立這些函式的指令碼，並傳遞指令碼使用*@post_snapshot_script*參數`sp_addpublication`。  
+-   因為散發代理程式傳遞順序的關係，索引檢視表上含有 `NOEXPAND` 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 `NOEXPAND` 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，建立這些函式的指令碼，並傳遞指令碼使用 *@post_snapshot_script* 參數`sp_addpublication`。  
   
 ### <a name="schemas-and-object-ownership"></a>結構描述和物件擁有權  
  針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  

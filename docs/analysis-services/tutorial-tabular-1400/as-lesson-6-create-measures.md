@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207329"
 ---
 # <a name="create-measures"></a>建立量值
 
@@ -23,15 +23,15 @@ ms.locfileid: "57685645"
 
 在這一課，您可以建立要包含在您的模型中的量值。 類似於您所建立的導出資料行，量值是使用 DAX 公式所建立的計算。 不過，不同於導出資料行，量值評估是根據使用者選取*篩選*。 例如，特定資料行或交叉分析篩選器加入至樞紐分析表中的資料列標籤 欄位。 然後套用的量值就會計算篩選中每個資料格的值。 量值是功能強大又靈活的計算，您想要包含在幾乎所有表格式模型中，對數值資料執行動態計算。 若要進一步了解，請參閱[量值](../tabular-models/measures-ssas-tabular.md)。
   
-若要建立量值，您使用*量值方格*。 根據預設，每個資料表都有一個空的量值方格;不過，您通常請勿建立針對每個資料表的量值。 在 [資料檢視] 中，量值方格會出現在模型設計師中的資料表下方。 若要隱藏或顯示資料表的量值方格，請按一下 [資料表] 功能表，然後按一下 [顯示量值方格]。  
+若要建立量值，您使用*量值方格*。 根據預設，每個資料表都有一個空的量值方格;不過，您通常請勿建立針對每個資料表的量值。 在 [資料檢視] 中，量值方格會出現在模型設計師中的資料表下方。 若要隱藏或顯示資料表的量值方格，請按一下 [資料表]  功能表，然後按一下 [顯示量值方格]  。  
   
 若要建立量值，您可以按一下空白儲存格在量值方格中，然後在公式列中輸入 DAX 公式。 當您按 ENTER 完成公式，量值，則會出現在資料格。 您也可以建立使用標準彙總函式，藉由按一下資料行，然後按一下 自動加總 按鈕的量值 (**∑**) 工具列上。 使用 「 自動加總 」 功能建立量值會出現在資料行的下方的量值方格資料格中，但是可以移動。  
   
 在這一課，您會建立量值，在公式列中，輸入 DAX 公式和使用 「 自動加總 」 功能。  
   
-完成本課程的估計時間：**30 分鐘**  
+估計的時間才能完成這一課：**30 分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 
 這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 5 課：建立計算結果的欄](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57685645"
   
 2.  按一下  **SalesOrderNumber**資料行標題。  
   
-3.  在工具列上按一下 [自動加總] \(**∑**) 按鈕旁的向下箭號，然後選取 [DistinctCount]。  
+3.  在工具列上按一下 [自動加總] \(**∑**) 按鈕旁的向下箭號，然後選取 [DistinctCount]  。  
   
     [自動加總] 功能會使用 DistinctCount 標準彙總公式，自動為選取的資料行建立量值。  
     

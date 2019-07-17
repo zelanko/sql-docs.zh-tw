@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209570"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "52505315"
   
 4.  按一下 瀏覽按鈕 **（...）** 從目前的伺服器上的資料來源檢視的清單選擇外部資料集。  
   
-5.  按一下 [選取案例資料表] 。 在 **[選取資料表]** 對話方塊中，從資料來源檢視中選取包含案例資料的資料表，然後按一下 **[確定]**。  
+5.  按一下 [選取案例資料表]  。 在 **[選取資料表]** 對話方塊中，從資料來源檢視中選取包含案例資料的資料表，然後按一下 **[確定]** 。  
   
-6.  按一下 **[選取巢狀資料表]**。 在 **[選取資料表]** 對話方塊中，選取包含巢狀資料的資料表，然後按一下 **[確定]**。  
+6.  按一下 **[選取巢狀資料表]** 。 在 **[選取資料表]** 對話方塊中，選取包含巢狀資料的資料表，然後按一下 **[確定]** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

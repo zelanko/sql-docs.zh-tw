@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 21a18dc77a8ab1b714676cc299d26797ba0d41bd
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139431"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 存取組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "51215483"
   
 1.  從**開始**功能表上，按一下**執行**，然後輸入**WBEMtest**。  
   
-2.  [WBEMtest.exe] 對話方塊隨即出現。 按一下 **[連接]**。  
+2.  [WBEMtest.exe] 對話方塊隨即出現。 按一下 **[連接]** 。  
   
-3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 **[連接]**。  
+3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 **[連接]** 。  
   
-4.  按一下 **查詢**。 輸入查詢，以傳回本機電腦上執行的目前服務：**選取\*從 SqlService。** 按一下 **[套用]**。  
+4.  按一下 **查詢**。 輸入查詢，以傳回本機電腦上執行的目前服務：**選取\*FROM SqlService。** 按一下 **[套用]** 。  
   
-5.  進一步精簡查詢，藉由新增**其中 ServiceName ="MSSQLSERVER"**。  
+5.  進一步精簡查詢，藉由新增**其中 ServiceName ="MSSQLSERVER"** 。  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7fefceede2cc3b76a36615a050037eb9e1fba9dc
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181051"
 ---
 # <a name="calculations"></a>[新增命名集]
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52983769"
  若要建立導出的成員，請使用**計算**的標籤，Cube 設計師中。 如需詳細資訊，請參閱[建立導出成員](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>命名集  
- 命名集是會傳回集合的 CREATE SET MDX 陳述式運算式； MDX 運算式會儲存為 cube 中定義的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 建立命名集，以供在多維度運算式 (MDX) 查詢中重複使用。 命名集可讓商務使用者簡化查詢，以及針對複雜且常用的集合運算式來使用集合名稱 (而非集合運算式)。 **相關的主題：**[建立命名集](../../analysis-services/multidimensional-models/create-named-sets.md)  
+ 命名集是會傳回集合的 CREATE SET MDX 陳述式運算式； MDX 運算式會儲存為 cube 中定義的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 建立命名集，以供在多維度運算式 (MDX) 查詢中重複使用。 命名集可讓商務使用者簡化查詢，以及針對複雜且常用的集合運算式來使用集合名稱 (而非集合運算式)。 **相關的主題：** [建立命名集](../../analysis-services/multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>指令碼命令  
  指令碼命令是 MDX 指令碼，包含在 Cube 的定義中。 指令碼命令幾乎可讓您在 Cube 上執行 MDX 所支援的任何動作 (例如，設定計算的範圍使其只適用於 Cube 的一部分)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，MDX 指令碼可以套用至整個 cube 或特定的 cube，在特定時間點執行作業的指令碼區段。 預設指令碼命令 (CALCULATE 陳述式) 會使用根據預設範圍的彙總資料來填入 Cube 中的資料格。  

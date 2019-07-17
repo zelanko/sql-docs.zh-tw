@@ -4,17 +4,16 @@ description: 這篇文章會提供在 Linux 上執行 SQL Server 效能最佳做
 author: rgward
 ms.author: bobward
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105446"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>效能最佳做法和 Linux 上的 SQL Server 組態指導方針
 
@@ -67,14 +66,14 @@ ms.locfileid: "67834853"
 | CPU 頻率管理員 | 效能 | 請參閱**cpupower**命令 |
 | ENERGY_PERF_BIAS | 效能 | 請參閱**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | Intel p 狀態上看到您的文件 |
-| C-States | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或 system 文件 |
+| C 狀態 | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或 system 文件 |
 
 下表提供磁碟設定的建議：
 
 | 設定 | 值 | 詳細資訊 |
 |---|---|---|
 | 磁碟 readahead | 4096 | 請參閱**blockdev**命令 |
-| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 請參閱**sysctl**命令 |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | 請參閱**sysctl**命令 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>平衡多節點 NUMA 系統的核心設定自動 numa
 

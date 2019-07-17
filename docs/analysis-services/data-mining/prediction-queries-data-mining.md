@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209748"
 ---
 # <a name="prediction-queries-data-mining"></a>預測查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52506036"
 ##  <a name="bkmk_PredQuery"></a> 基本預測查詢設計  
  當您建立預測時，通常要提供一些新資料並要求模型根據新的資料產生預測。  
   
--   在批次預測查詢中，您會使用 *「預測聯結」*(Prediction Join) 將模型對應至外部資料來源。  
+-   在批次預測查詢中，您會使用 *「預測聯結」* (Prediction Join) 將模型對應至外部資料來源。  
   
 -   在單一預測查詢中，您會輸入一個或多個值當做輸入。 您可以使用單一預測查詢來建立多個預測。 但是，如果您需要建立多個預測，當您使用批次查詢時的效能會更好。  
   

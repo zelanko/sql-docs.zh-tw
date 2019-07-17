@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 8762f13eab6cf56e85cb4802db0d3b8fa962a306
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118527"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>監視與疑難排解 Managed 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "58305976"
 ## <a name="profiler-trace-events"></a>Profiler 追蹤事件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 SQL 追蹤與事件通知，可監視 Database Engine 中所發生的事件。 SQL 追蹤可記錄指定的事件，藉以協助您進行效能的疑難排解、稽核資料庫活動、收集測試環境的範本資料、為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與預存程序偵錯，以及收集效能分析工具的資料等。 如需詳細資訊，請參閱 < [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)並[擴充事件](../../relational-databases/extended-events/extended-events.md)。  
   
-|事件|描述|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |[Assembly Load 事件類別](/sql/database-engine/assembly-load-event-class)|用於監視組件載入要求 (成功或失敗)。|  
 |[Sql: batchstarting 事件類別](../../relational-databases/event-classes/sql-batchstarting-event-class.md)， [sql: batchcompleted 事件類別](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|提供已啟動或已完成之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次的相關資訊。|  

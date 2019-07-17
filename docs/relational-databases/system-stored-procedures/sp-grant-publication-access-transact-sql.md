@@ -1,5 +1,5 @@
 ---
-title: sp_grant_publication_access (Transact-SQL) | Microsoft Docs
+title: sp_grant_publication_access (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 76871b93dc05f68f5678833c81ee7426e7f8f950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a94c22c7f524572a4b629c27d49ad35a84c3b02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123814"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -58,7 +57,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
   
 ## <a name="see-also"></a>另請參閱  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [保護發行者](../../relational-databases/replication/security/secure-the-publisher.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
