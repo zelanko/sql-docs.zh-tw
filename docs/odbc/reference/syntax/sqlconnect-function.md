@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121455"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函數
 **合規性**  

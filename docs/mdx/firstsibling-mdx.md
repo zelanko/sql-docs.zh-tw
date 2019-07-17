@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1cb097e89a36eaa4d7ef68eca3b88aa6ca03d49a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 671dd0b2b400362fe3a2274c4687f93192f04da4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105453"
 ---
 # <a name="firstsibling-mdx"></a>FirstSibling (MDX)
 

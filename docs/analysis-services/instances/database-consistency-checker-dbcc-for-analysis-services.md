@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181783"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis services 的 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "52413085"
  您可能需要重新啟動服務，才能收取上次服務重新啟動之後所發生的任何損毀錯誤。 重新連接伺服器不足以收取這些變更。  
   
 ### <a name="run-dbcc-commands-in-management-studio"></a>在 Management Studio 中執行 DBCC 命令  
- 針對臨機操作查詢，請在 SQL Server Management Studio 中開啟 MDX 或 XMLA 查詢視窗。 若要這樣做，請以滑鼠右鍵按一下資料庫 | [新增查詢] | [XMLA] 以執行命令及讀取輸出。  
+ 針對臨機操作查詢，請在 SQL Server Management Studio 中開啟 MDX 或 XMLA 查詢視窗。 若要這樣做，請以滑鼠右鍵按一下資料庫 | [新增查詢]   | [XMLA]  以執行命令及讀取輸出。  
   
  ![在 Management Studio 中的 DBCC XML 命令](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "在 Management Studio 中的 DBCC XML 命令")  
   
@@ -186,13 +186,13 @@ Execution complete
 ### <a name="trace-dbcc-output-in-an-xevent-session-in-ssms"></a>SSMS 中 xEvent 工作階段的追蹤 DBCC 輸出  
  擴充事件工作階段可以使用 Profiler 事件或 xEvent。 如需加入 **Command** 和 **Progress Report** 事件的指引，請參閱上一節。  
   
-1.  以滑鼠右鍵按一下資料庫以啟動工作階段 > [管理] > [擴充事件] >  [工作階段] > [新增工作階段]。 如需詳細資訊，請參閱  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 。  
+1.  以滑鼠右鍵按一下資料庫以啟動工作階段 > [管理]   > [擴充事件]   >  [工作階段]   > [新增工作階段]  。 如需詳細資訊，請參閱  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 。  
   
 2.  選擇 Profiler 事件類別目錄的任一或所有 **進度報表** 事件，或 PureXevent 類別目錄的 **RequestProgress** 事件。  
   
 3.  使用上一節所提供的語法，在 Management Studio 的 XMLA 或 MDX 查詢視窗中執行 DBCC 命令。  
   
-4.  在 SSMS 中，重新整理 Sessions 資料夾。 以用滑鼠右鍵按一下工作階段名稱 > [觀看即時資料]。  
+4.  在 SSMS 中，重新整理 Sessions 資料夾。 以用滑鼠右鍵按一下工作階段名稱 > [觀看即時資料]  。  
   
 5.  檢閱 DBCC 傳回之訊息的 TextData 值。  TextData 是事件欄位的屬性，它能顯示事件傳回的狀態和錯誤訊息。  
   
@@ -218,8 +218,8 @@ Execution complete
 ||||  
 |-|-|-|  
 |**物件**|**DBCC 檢查描述**|**失敗錯誤**|  
-|[資料庫]|檢查資料庫中的資料表數目。  小於零的值表示損毀。|儲存層發生損毀。 '%{parent/}' 資料庫中的資料表集合已損毀。|  
-|[資料庫]|檢查用來追蹤參考完整性的內部結構，並在大小不正確時擲回錯誤。|資料庫檔案無法通過一致性檢查。|  
+|資料庫|檢查資料庫中的資料表數目。  小於零的值表示損毀。|儲存層發生損毀。 '%{parent/}' 資料庫中的資料表集合已損毀。|  
+|資料庫|檢查用來追蹤參考完整性的內部結構，並在大小不正確時擲回錯誤。|資料庫檔案無法通過一致性檢查。|  
 |資料表|檢查用來判斷資料表是維度資料表或事實資料表的內部值。  超出已知範圍的值表示損毀。|檢查資料表統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |資料表|檢查資料表之區段對應中的分割區數目是否與資料表的已定義分割區數目相符。|儲存層發生損毀。 '%{parent/}' 資料表中的分割區集合已損毀。|  
 |資料表|如果表格式資料庫是從 PowerPivot for Excel 2010 建立或匯入，且其分割區計數大於一，該狀況將引發錯誤，因為分割區支援是在更新版本中加入，而這就表示損毀。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  

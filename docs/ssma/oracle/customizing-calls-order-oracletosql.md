@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 6df6d5139ae74697e58ab2fc7b6962bab1588bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287247"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266102"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>自訂呼叫順序 (OracleToSQL)
 在此步驟中，您選取要測試的物件將會在其中叫用的順序。  

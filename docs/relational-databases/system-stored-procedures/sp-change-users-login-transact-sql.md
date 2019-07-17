@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120234"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="arguments"></a>引數  
  [ @Action= ] '*action*'  
- 描述此程序所要執行的動作。 *動作*已**varchar(10)**。 *動作*可以有下列值之一。  
+ 描述此程序所要執行的動作。 *動作*已**varchar(10)** 。 *動作*可以有下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -54,10 +53,10 @@ sp_change_users_login [ @Action = ] 'action'
 |**報表**|列出目前資料庫中未連結至任何登入的使用者和對應的安全性識別碼 (SID)。 *使用者*，*登入*，以及*密碼*必須是 NULL 或未指定。<br /><br /> 若要取代查詢中使用的系統資料表中的 [報表] 選項，比較中的項目**sys.server_prinicpals**與中的項目**sys.database_principals**。|  
 |**Update_One**|指定的連結*使用者*在目前資料庫的現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*登入*。 *使用者*並*登入*必須指定。 *密碼*必須是 NULL 或未指定。|  
   
- [ @UserNamePattern= ] '*user*'  
+ [ @UserNamePattern=] '*使用者*'  
  這是目前資料庫中的使用者名稱。 *使用者*已**sysname**，預設值是 NULL。  
   
- [ @LoginName= ] '*login*'  
+ [ @LoginName=] '*登入*'  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 *login* 是預設值為 NULL 的 **sysname**。  
   
  [ @Password= ] '*password*'  
@@ -124,7 +123,7 @@ GO
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

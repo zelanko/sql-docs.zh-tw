@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f3a7568c0849844526ef5f172bcecc0a5857268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114333"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server 瀏覽範例
 下列範例示範如何**SQLBrowseConnect**可能會用來瀏覽 SQL Server 隨附的驅動程式的連線。 首先，應用程式會要求在連接控制代碼：  
@@ -77,7 +76,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- 驅動程式所傳回的最後一個連接字串不包含使用者易記的名稱之後每個關鍵字，, 也不會包含未指定應用程式的選擇性關鍵字。 應用程式可以使用此字串**SQLDriverConnect** （之後中斷連接） 重新連線到目前的連接控制代碼上的資料來源，或連接到不同的連接控制代碼上的資料來源。 例如：  
+ 驅動程式所傳回的最後一個連接字串不包含使用者易記的名稱之後每個關鍵字，, 也不會包含未指定應用程式的選擇性關鍵字。 應用程式可以使用此字串**SQLDriverConnect** （之後中斷連接） 重新連線到目前的連接控制代碼上的資料來源，或連接到不同的連接控制代碼上的資料來源。 例如:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

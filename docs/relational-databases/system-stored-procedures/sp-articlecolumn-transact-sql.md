@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105082"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 是要加入或卸除的資料行的名稱。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL，就會發行所有資料行。  
   
-`[ @operation = ] 'operation'` 指定是否要加入或卸除發行項中的資料行。 *作業*已**nvarchar(5)**，預設值是 add。 **新增**標示複寫的資料行。 **卸除**會取消標示資料行。  
+`[ @operation = ] 'operation'` 指定是否要加入或卸除發行項中的資料行。 *作業*已**nvarchar(5)** ，預設值是 add。 **新增**標示複寫的資料行。 **卸除**會取消標示資料行。  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` 指定是否支援立即更新訂閱的預存程序會重新產生以符合複寫的資料行數目。 *refresh_synctran_procs*已**位元**，預設值是**1**。 如果**1**，預存程序會重新產生。  
   
@@ -68,7 +67,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1**指定發行項的變更可能使快照集失效，如果有現有的訂閱需要新的快照集，提供權限來標示為已棄用之現有快照集和產生新的快照集。  
   
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
  認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*已**位元**，預設值是**0**。  
   
  **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。 **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
@@ -99,11 +98,11 @@ sp_articlecolumn [ @publication = ] 'publication'
  [定義及修改資料行篩選](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [篩選發行的資料](../../relational-databases/replication/publish/filter-published-data.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_articleview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_helparticlecolumns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67ba6df9955a1b138ebb919d410ef7817e1fb48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd3076ba19b9f5372074a9256e20d73858f69c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132669"
 ---
 # <a name="sqlcolattributes-excel-driver"></a>SQLColAttributes (Excel 驅動程式)
 > [!NOTE]  

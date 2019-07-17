@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211779"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
   本教學課程的主要對象是對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 有經驗，但對 `hierarchyid` 資料類型是新手的使用者。  

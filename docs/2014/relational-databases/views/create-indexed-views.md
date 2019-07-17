@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196434"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立索引檢視表。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
@@ -43,7 +43,7 @@ ms.locfileid: "54131808"
 5.  在檢視表上建立唯一的叢集索引。  
   
 ###  <a name="Restrictions"></a> 需要索引檢視表的 SET 選項  
- 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 CONCAT_NULL_YIELDS_NULL 設為 ON 之後，運算式 **'** abc **'** + NULL 會傳回 NULL 值。 不過，將 CONCAT_NULL_YIEDS_NULL 設為 OFF 之後，相同的運算式則會產生 **'** abc **'**。  
+ 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 CONCAT_NULL_YIELDS_NULL 設為 ON 之後，運算式 **'** abc **'** + NULL 會傳回 NULL 值。 不過，將 CONCAT_NULL_YIEDS_NULL 設為 OFF 之後，相同的運算式則會產生 **'** abc **'** 。  
   
  若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 下表中的 SET 選項必須設定中顯示的值為**RequiredValue**發生下列狀況時的資料行：  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54131808"
   
 -   當您建立索引時，IGNORE_DUP_KEY 選項必須設定為 OFF (預設值)。  
   
--   在檢視定義中，兩部分名稱 _schema_**.**_tablename_ 必須參考資料表。  
+-   在檢視定義中，兩部分名稱 _schema_ **.** _tablename_ 必須參考資料表。  
   
 -   檢視中所參考的使用者自訂函數，必須使用 WITH SCHEMABINDING 選項來建立。  
   
--   檢視中參考的任何使用者定義函數，必須以兩部分名稱參考 _schema_**.**_function_。  
+-   檢視中參考的任何使用者定義函數，必須以兩部分名稱參考 _schema_ **.** _function_。  
   
 -   使用者自訂函數的資料存取屬性必須是 NO SQL，而外部存取屬性必須是 NO。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "54131808"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會建立檢視表並在該檢視表上建立索引。 內含使用索引檢視的兩項查詢。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立檢視表並在該檢視表上建立索引。 內含使用索引檢視的兩項查詢。  
   
     ```  
     USE AdventureWorks2012;  

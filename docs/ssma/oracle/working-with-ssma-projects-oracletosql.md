@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283556"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266365"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
 若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
@@ -64,7 +64,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
 1.  在 **檔案**功能表上，按一下**新的專案**。  
   
-    [新增專案]  對話方塊隨即出現。  
+    [ **新增專案** ] 對話方塊隨即出現。  
   
 2.  在 **名稱**方塊中，輸入您專案的名稱。  
   

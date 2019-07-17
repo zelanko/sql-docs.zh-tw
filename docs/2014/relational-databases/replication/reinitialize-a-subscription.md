@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199223"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來重新初始化 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的訂閱。 個別訂閱可標示為要重新初始化，好讓下一次同步處理期間會套用新的快照集。  
@@ -60,9 +60,9 @@ ms.locfileid: "52771390"
   
 3.  展開含有您要重新初始化之訂閱的發行集。  
   
-4.  以滑鼠右鍵按一下訂閱，然後按一下 **[重新初始化]**。  
+4.  以滑鼠右鍵按一下訂閱，然後按一下 **[重新初始化]** 。  
   
-5.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]**。  
+5.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]** 。  
   
 #### <a name="to-mark-a-single-pull-subscription-for-reinitialization-in-management-studio-at-the-subscriber"></a>若要在 Management Studio (在訂閱者端) 中標示要重新初始化的單一提取訂閱  
   
@@ -70,9 +70,9 @@ ms.locfileid: "52771390"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下訂閱，然後按一下 **[重新初始化]**。  
+3.  以滑鼠右鍵按一下訂閱，然後按一下 **[重新初始化]** 。  
   
-4.  在顯示的確認對話方塊中，按一下 **[是]**。  
+4.  在顯示的確認對話方塊中，按一下 **[是]** 。  
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-management-studio"></a>若要在 Management Studio 中標示要重新初始化的所有訂閱  
   
@@ -80,9 +80,9 @@ ms.locfileid: "52771390"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下包含您要重新初始化之訂閱的發行集，然後按一下 **[重新初始化所有訂閱]**。  
+3.  以滑鼠右鍵按一下包含您要重新初始化之訂閱的發行集，然後按一下 **[重新初始化所有訂閱]** 。  
   
-4.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]**。  
+4.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]** 。  
   
 #### <a name="to-mark-a-single-push-or-pull-subscription-for-reinitialization-in-replication-monitor"></a>若要在複寫監視器中標示要重新初始化的單一發送或提取訂閱  
   
@@ -90,36 +90,36 @@ ms.locfileid: "52771390"
   
 2.  按一下 **[所有訂閱]** 索引標籤。  
   
-3.  在您要重新初始化的訂閱上按一下滑鼠右鍵，再按一下 **[重新初始化訂閱]**。  
+3.  在您要重新初始化的訂閱上按一下滑鼠右鍵，再按一下 **[重新初始化訂閱]** 。  
   
-4.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]**。  
+4.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]** 。  
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-replication-monitor"></a>若要在複寫監視器中標示要重新初始化的所有訂閱  
   
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。  
   
-2.  以滑鼠右鍵按一下包含您要重新初始化之訂閱的發行集，然後按一下 **[重新初始化所有訂閱]**。  
+2.  以滑鼠右鍵按一下包含您要重新初始化之訂閱的發行集，然後按一下 **[重新初始化所有訂閱]** 。  
   
-3.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]**。  
+3.  在 **[重新初始化訂閱]** 對話方塊中選取選項，然後按一下 **[標示為重新初始化]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用複寫預存程序來以程式設計的方式重新初始化訂閱。 使用的預存程序取決於訂閱的類型 (發送訂閱或提取訂閱) 以及訂閱所屬的發行集類型而定。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>重新初始化交易式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql)。 指定 **@publisher**或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db**和 **@publication**資料夾中可用。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql)。 指定 **@publisher** 或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db** 和 **@publication** 資料夾中可用。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
 2.  (選擇性) 在訂閱者上啟動散發代理程式，以同步處理此訂閱。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)。  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>重新初始化交易式發行集的發送訂閱  
   
-1.  在發行者端，執行 [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@subscriber**和 **@destination_db**資料夾中可用。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
+1.  在發行者端，執行 [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql)。 指定 **@publication** 或 Replication Management Objects (RMO) 來重新初始化 **@subscriber** 和 **@destination_db** 資料夾中可用。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
 2.  (選擇性) 在散發者上啟動散發代理程式，以同步處理此訂閱。 如需詳細資訊，請參閱 [同步處理發送訂閱](synchronize-a-push-subscription.md)。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)。 指定 **@publisher**或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db**和 **@publication**資料夾中可用。 若要重新初始化發生之前，請上傳變更從訂閱者，指定其值為`true`for **@upload_first**。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)。 指定 **@publisher** 或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db** 和 **@publication** 資料夾中可用。 若要重新初始化發生之前，請上傳變更從訂閱者，指定其值為`true`for **@upload_first** 。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -128,7 +128,7 @@ ms.locfileid: "52771390"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的發送訂閱  
   
-1.  在發行者端，執行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@subscriber**和 **@subscriber_db**資料夾中可用。 若要重新初始化發生之前，請上傳變更從訂閱者，指定其值為`true`for **@upload_first**。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
+1.  在發行者端，執行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)。 指定 **@publication** 或 Replication Management Objects (RMO) 來重新初始化 **@subscriber** 和 **@subscriber_db** 資料夾中可用。 若要重新初始化發生之前，請上傳變更從訂閱者，指定其值為`true`for **@upload_first** 。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -137,7 +137,7 @@ ms.locfileid: "52771390"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>在建立新的合併式發行集時，設定重新初始化原則  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，針對 **@automatic_reinitialization_policy**指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，針對 **@automatic_reinitialization_policy** 指定下列其中一個值：  
   
     -   **1** - 在發行集的變更需要自動重新初始化訂閱之前，從訂閱者上傳變更。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "52771390"
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
   
-     如需詳細資訊，請參閱 [Create a Publication](publish/create-a-publication.md)。  
+     如需詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)。  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>針對現有的合併式發行集變更重新初始化原則  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，針對 **@property** @upload_first **@property** ，並針對 **@value**指定下列其中一個值：  
+1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，針對 **@property** @upload_first **@property** ，並針對 **@value** 指定下列其中一個值：  
   
     -   **1** - 在發行集的變更需要自動重新初始化訂閱之前，從訂閱者上傳變更。  
   

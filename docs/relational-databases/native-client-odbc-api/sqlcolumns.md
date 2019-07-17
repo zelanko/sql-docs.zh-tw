@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft Docs
+title: SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113552"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +82,8 @@ ms.locfileid: "63014610"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
-|SS_IS_COLUMN_SET|**Smallint**|如果資料行**column_set**  欄中，這是 SQL_TRUE，否則 SQL_FALSE。|  
+|SS_IS_SPARSE|**smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
+|SS_IS_COLUMN_SET|**smallint**|如果資料行**column_set**  欄中，這是 SQL_TRUE，否則 SQL_FALSE。|  
   
  ODBC 規格，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 會出現所有已新增至驅動程式專用資料行之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，以及 ODBC 本身所託管的所有資料行之後。  
   

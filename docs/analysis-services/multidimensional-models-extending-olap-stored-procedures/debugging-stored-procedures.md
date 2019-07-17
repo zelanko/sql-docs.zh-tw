@@ -1,5 +1,5 @@
 ---
-title: 偵錯預存程序 |Microsoft 文件
+title: 偵錯預存程序 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d37eebfad3f8a3e89dc65ad9602f4b5d61b5072e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181137"
 ---
 # <a name="debugging-stored-procedures"></a>除錯預存程序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34024985"
   
 3.  使用 Visual Studio 建立預存程序 DLL 的偵錯建置。  
   
-4.  將 DLL 部署到伺服器。 如需有關將 DLL 部署到伺服器的詳細資訊，請參閱[建立預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md)。  
+4.  將 DLL 部署到伺服器。 如需將 DLL 部署到伺服器的詳細資訊，請參閱[建立預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md)。  
   
 5.  您需要一個應用程式來呼叫您要測試的預存程序。 如果您還沒有這樣的應用程式，可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 MDX 查詢編輯器，建立一個 MDX 查詢來呼叫您要測試的預存程序。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "34024985"
   
     1.  從**偵錯**功能表上，選擇**附加 toProcess**。  
   
-    2.  在**附加 toProcess**對話方塊中，選取**顯示所有使用者的處理序**。  
+    2.  在  **附加 toProcess**對話方塊中，選取**顯示所有使用者的處理序**。  
   
-    3.  在**可用的處理序**清單中，**程序**資料行中，按一下  **Msmdsrv.exe**。 如果在伺服器上執行一個以上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，您需要以您要使用之執行個體的識別碼來識別處理序。  
+    3.  在**可用的處理序**清單中，於**程序**資料行中，按一下  **Msmdsrv.exe**。 如果在伺服器上執行一個以上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，您需要以您要使用之執行個體的識別碼來識別處理序。  
   
-    4.  在**附加至**文字，請確定已選取適當的程式類型。 為 CLR dll，請按一下**選取**，然後按一下 **偵錯這些程式碼類型**，然後按一下  **Managed**，然後按一下  **確定**。 COM DLL，請按一下**選取**，然後按一下 **偵錯這些程式碼類型**，然後按一下 **原生**，然後按一下 **確定**。  
+    4.  在 **附加至**文字，請確定已選取適當的程式類型。 為 CLR dll，請按一下**選取**，然後按一下**偵錯這些程式碼類型**，然後按一下 **受控**，然後按一下 **確定**。 COM DLL，請按一下**選取**，然後按一下**偵錯這些程式碼類型**，然後按一下 **原生**，然後按一下**確定**。  
   
-    5.  按一下**附加**。  
+    5.  按一下 **附加**。  
   
 7.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，叫用程式或 MDX 指令碼來呼叫預存程序。 當偵錯工具到達包含中斷點的那一行時就會中斷。 您可以在監看式視窗中評估變數、檢視地區設定和逐步執行程式碼。  
   

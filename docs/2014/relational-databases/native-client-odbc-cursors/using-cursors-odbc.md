@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206817"
 ---
 # <a name="using-cursors-odbc"></a>使用資料指標 (ODBC)
   ODBC 支援的資料指標模型允許：  
@@ -38,7 +38,7 @@ ms.locfileid: "48084034"
   
  這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼和 ODBC 應用程式如何搭配資料指標使用的比較。  
   
-|動作|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |定義資料指標行為|指定透過 DECLARE CURSOR 參數|使用設定資料指標屬性[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
 |開啟資料指標|宣告資料指標開啟*cursor_name*|**SQLExecDirect**或**SQLExecute**|  

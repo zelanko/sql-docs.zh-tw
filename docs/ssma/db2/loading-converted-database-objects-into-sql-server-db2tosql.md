@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 21962c8849204db6f3e5f114b6f8f86994d53b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7af5566094c9cc4c40ba2aa33f27e79bae1c7445
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141030"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>已轉換的資料庫物件載入至 SQL Server (DB2ToSQL)
 轉換 DB2 結構描述之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
@@ -26,14 +25,14 @@ ms.locfileid: "63298847"
 如果您想要修改[!INCLUDE[tsql](../../includes/tsql-md.md)]用來建立物件，或如果您想要更充分掌控物件建立時，使用 SSMA 建立指令碼。 您可以修改這些指令碼，會個別建立每個物件然後甚至使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 來排程建立這些物件。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 與 SQL Server 同步處理物件  
-要用來建立的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件中，選取中的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管]，然後再同步處理的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下列程序中所示。 根據預設，如果物件已存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和如果 SSMA 中繼資料中的物件比新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 會改變中的物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以變更預設行為，藉由編輯**專案設定**。  
+要用來建立的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件中，選取中的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管，然後再同步處理的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下列程序中所示。 根據預設，如果物件已存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和如果 SSMA 中繼資料中的物件比新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 會改變中的物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以變更預設行為，藉由編輯**專案設定**。  
   
 > [!NOTE]  
 > 您可以選取現有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫未轉換從 DB2 資料庫的物件。 不過，這些物件將不會重新建立或更改 SSMA。  
   
 **若要使用 SQL Server 同步處理物件**  
   
-1.  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管] 中，展開最上方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]節點，然後展開**資料庫**。  
+1.  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，展開最上方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]節點，然後展開**資料庫**。  
   
 2.  選取要處理的物件：  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63298847"
   
     -   若要同步處理，或省略個別物件或類別目錄的物件，選取或清除的物件或資料夾旁邊的核取方塊。  
   
-3.  選取要處理的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管] 中，以滑鼠右鍵按一下**資料庫**，然後按一下**同步處理資料庫**。  
+3.  選取要處理的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，以滑鼠右鍵按一下**資料庫**，然後按一下**同步處理資料庫**。  
   
     您也可同步個別物件或類別目錄的物件，該物件或其父資料夾上按一下滑鼠右鍵，然後按一下**同步處理資料庫**。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63298847"
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
-2.  在 [**開啟**] 對話方塊中，選取您的指令碼檔案，然後按一下 [[確定]。
+2.  在 **開啟** 對話方塊中，選取您的指令碼檔案，然後按一下 確定。
   
 3.  使用查詢編輯器中編輯指令碼檔案。  
   
@@ -90,11 +89,11 @@ ms.locfileid: "63298847"
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
-2.  在 [**開啟**對話方塊方塊中，選取您的指令碼檔案，然後 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  在 **開啟**對話方塊方塊中，選取您的指令碼檔案，然後 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  若要執行完整的指令碼，請按**F5**索引鍵。  
   
-4.  若要執行一組陳述式，選取陳述式在查詢編輯器] 視窗，然後按**F5**索引鍵。  
+4.  若要執行一組陳述式，選取陳述式在查詢編輯器 視窗，然後按**F5**索引鍵。  
   
 如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查詢 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   

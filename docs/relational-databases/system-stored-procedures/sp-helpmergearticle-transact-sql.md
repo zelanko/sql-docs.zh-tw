@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122338"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是要擷取其資訊之發行集的名稱。 *發行集*已**sysname**，預設值是**%**，傳回包含在目前資料庫中的所有發行集的所有合併發行項的相關資訊。  
+`[ @publication = ] 'publication'` 是要擷取其資訊之發行集的名稱。 *發行集*已**sysname**，預設值是 **%** ，傳回包含在目前資料庫中的所有發行集的所有合併發行項的相關資訊。  
   
-`[ @article = ] 'article'` 是要傳回資訊的發行項的名稱。 *發行項*已**sysname**，預設值是**%**，傳回給定發行集中所有合併發行項的相關資訊。  
+`[ @article = ] 'article'` 是要傳回資訊的發行項的名稱。 *發行項*已**sysname**，預設值是 **%** ，傳回給定發行集中所有合併發行項的相關資訊。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -81,7 +80,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**delete_tracking**|**bit**|是否要刪除複寫;何處**1**表示複寫刪除，並**0**意謂著它們不是。|  
 |**compensate_for_errors**|**bit**|指出在同步處理; 期間發生錯誤時，是否採取補償動作何處**1**表示，是否採取補償動作，以及**0**表示不採取補償動作。|  
 |**partition_options**|**tinyint**|定義發行項資料進行資料分割的方式，當所有資料列只屬於單一資料分割或單一訂閱時，能夠使效能最佳化。 *partition_options*可以是下列值之一。<br /><br /> **0** = 發行項的篩選是靜態或不產生每個分割區資料的唯一子集; 也就是說，它是 「 重疊 」 的資料分割。<br /><br /> **1** = 重疊資料分割，並將訂閱者端的資料操作語言 (DML) 更新無法變更資料列所屬的資料分割。<br /><br /> **2** = 篩選發行項會產生非重疊資料分割，但多個訂閱者可以接收相同的資料分割。<br /><br /> **3** = 篩選發行項產生每個訂閱都是唯一的非重疊資料分割。|  
-|**artid**|**uniqueidentifier**|唯一識別發行項的識別碼。|  
+|**artid&lt**|**uniqueidentifier**|唯一識別發行項的識別碼。|  
 |**pubid**|**uniqueidentifier**|唯一識別發行項發行在其中之發行集的識別碼。|  
 |**stream_blob_columns**|**bit**|這是指當複寫二進位大型物件資料行時，是否使用資料流最佳化。 **1**表示要使用的最佳化，並**0**表示不使用最佳化。|  
   

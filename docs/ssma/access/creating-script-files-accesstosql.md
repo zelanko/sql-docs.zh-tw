@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138770"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259831"
 ---
 # <a name="creating-script-files-accesstosql"></a>建立指令碼檔 (AccessToSQL)
 第一個步驟是啟動 SSMA 主控台應用程式建立的指令碼檔案之前，並在必要時建立的變數值檔案和伺服器連線檔案。  
@@ -26,7 +26,7 @@ ms.locfileid: "63138770"
   
 2.  **伺服器：** 可讓使用者設定的來源/目標伺服器定義。 這也可以是不同的伺服器連線檔案中。  
   
-3.  **script-commands:** 可讓使用者執行 SSMA 工作流程命令。  
+3.  **指令碼命令：** 可讓使用者執行 SSMA 工作流程命令。  
   
 以下將詳細說明每個區段：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "63138770"
   
     可以也就使用一部或其他指定的屬性：  
   
-    - source-use-last-used="true" (default) or source-server="source_servername"  
+    - 來源-使用-上次使用 ="true"（預設值） 或來源伺服器 ="source_servername 」  
   
     - target-use-last-used="true" (default) or target-server="target_servername"  
   

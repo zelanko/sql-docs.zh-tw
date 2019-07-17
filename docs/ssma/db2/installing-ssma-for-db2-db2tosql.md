@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 88a1d6554f8a8975918a59a4ab3ec9d728a8d201
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4628f745f17a3a694d20fe27c134753bc108a6b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141047"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>安裝 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for DB2 包含您用來從 DB2，以便執行移轉的用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 Azure SQL DB。 它也包含支援已移轉的資料庫中的資料移轉以及使用 DB2 系統函式的延伸模組組件。  

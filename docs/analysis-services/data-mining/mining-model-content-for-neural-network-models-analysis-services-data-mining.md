@@ -1,5 +1,5 @@
 ---
-title: 類神經網路模型的採礦模型內容 |Microsoft 文件
+title: 類神經網路模型的採礦模型內容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e01fea742e5af04efa470bd80da4e2c75c5eebc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182675"
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>類神經網路模型的採礦模型內容 (Analysis Services - 資料採礦)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   本主題描述使用 Microsoft 類神經網路演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34018525"
   
 -   第一個節點 (NODE_TYPE = 18) 永遠代表輸入層的最上層節點。 在這個最上層節點之下，您可以找到包含實際輸入屬性及其值的輸入節點 (NODE_TYPE = 21)。  
   
--   每個後續節點都包含不同的「子網路」 (NODE_TYPE = 17)。 每個子網路永遠包含一個隱藏層 (NODE_TYPE = 19)，以及一個該子網路的輸出層 (NODE_TYPE = 20)。  
+-   每個後續節點都包含不同的「子網路」  (NODE_TYPE = 17)。 每個子網路永遠包含一個隱藏層 (NODE_TYPE = 19)，以及一個該子網路的輸出層 (NODE_TYPE = 20)。  
   
  ![類神經網路模型內容結構](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "的類神經網路模型內容結構")  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34018525"
  NODE_TYPE  
  類神經網路模型會輸出下列節點類型：  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |1|模型。|  
 |17|子網路的組合管理節點。|  
@@ -206,11 +206,11 @@ ms.locfileid: "34018525"
 ### <a name="input-nodes"></a>輸入節點  
  輸入層包含模型中所使用之屬性每個值的節點。  
   
- **離散屬性** ：此輸入節點僅會將屬性的名稱及其值儲存在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 資料行中。 例如，如果 [Work Shift] 為資料行，系統就會針對模型中使用之資料行的每個值建立個別的節點，例如，AM 和 PM。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
+ **離散屬性：** 輸入的節點會 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 資料行中儲存的屬性和其值的名稱。 例如，如果 [Work Shift] 為資料行，系統就會針對模型中使用之資料行的每個值建立個別的節點，例如，AM 和 PM。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
   
- **離散化數值屬性** ：此輸入節點會儲存屬性的名稱及值，這可能是一個範圍或一個特定的值。 所有值都會以運算式表示，例如，'77.4 - 87.4' 或 ' < 64.0' 用於 [Time Per Issue] 的值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
+ **離散化數值屬性：** 輸入的節點會儲存屬性和值，這可以是範圍或特定值的名稱。 所有值都會以運算式表示，例如，'77.4 - 87.4' 或 ' < 64.0' 用於 [Time Per Issue] 的值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
   
- **連續屬性** ：輸入節點會儲存屬性的平均值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
+ **連續屬性：** 輸入的節點會儲存屬性的平均值。 每個節點的 NODE_DISTRIBUTION 資料表僅會列出屬性目前的值。  
   
 ### <a name="hidden-layer-nodes"></a>隱藏層節點  
  隱藏層包含節點的變數數目。 在每個節點中，NODE_DISTRIBUTION 資料表在輸入層中都包含隱藏層到節點的對應。 ATTRIBUTE_NAME 資料行包含對應到輸入層中之節點的節點識別碼。 ATTRIBUTE_VALUE 資料行包含與輸入節點和隱藏層節點組合關聯的加權。 資料表中的最後一個資料列包含代表隱藏層中該隱藏節點之加權的係數。  
@@ -220,15 +220,15 @@ ms.locfileid: "34018525"
   
  NODE_DISTRIBUTION 資料表包含的下列額外資訊取決於屬性的類型為：  
   
- **離散屬性** ：NODE_DISTRIBUTION 資料表的最後兩個資料列包含整個節點的係數，以及屬性目前的值。  
+ **離散屬性：** NODE_DISTRIBUTION 資料表的最後兩個資料列包含整個，以及屬性目前的值節點的係數。  
   
- **離散化數值屬性** ：除了屬性的值為一個範圍的值之外，與離散屬性相同。  
+ **離散化數值屬性：** 與離散屬性相同，不同之處在於屬性的值是一個範圍的值。  
   
- **連續屬性** ：NODE_DISTRIBUTION 資料表的最後兩個資料列包含屬性的平均值、整個節點的係數，以及係數的變異數。  
+ **連續屬性：** NODE_DISTRIBUTION 資料表的最後兩個資料列包含整個節點的係數，屬性的平均值和係數的變異數。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

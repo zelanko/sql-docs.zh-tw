@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f597f1968f947b9e0dd792568ea59f42af1d2a0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209456"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "52521086"
 ##  <a name="bkmk_location"></a> 記錄檔的位置和類型  
  Analysis Services 提供如下所述的記錄檔。  
   
-|檔案名稱或位置|類型|用於|依預設開啟|  
+|檔案名稱或位置|type|用於|依預設開啟|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|錯誤記錄檔|例行監視和基本疑難排解|是|  
 |關聯式資料庫中的 OlapQueryLog 資料表|查詢記錄|收集使用方式的最佳化精靈的輸入|否|  
 |Sqldmp<guid\<guid >.mdmp 檔|當機和例外狀況|深入疑難排解|否|  
   
- 我們強烈建議使用下列連結，以取得本主題中未涵蓋的其他資訊資源：[初始資料收集提示，Microsoft 支援服務](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
+ 我們強烈建議下列連結以取得此主題中未涵蓋的其他資訊資源：[初始資料收集提示，Microsoft 支援服務](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
 ##  <a name="bkmk_general"></a> 記錄檔組態設定的一般資訊  
  您可以在 msmdsrv.ini 伺服器組態檔案中找到每個記錄檔的區段，其位於 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 資料夾。 如需編輯此檔案的指示，請參閱 [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md) 。  
@@ -107,7 +107,7 @@ ms.locfileid: "52521086"
   
 2.  授與 Analysis Services 服務帳戶資料庫的足夠權限。 帳戶需要建立資料表、寫入資料表，並從資料表讀取的權限。  
   
-3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 **[Analysis Services]** | **[屬性]** | **[一般]**，並將 **CreateQueryLogTable** 設為 true。  
+3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 **[Analysis Services]**  |  **[屬性]**  |  **[一般]** ，並將 **CreateQueryLogTable** 設為 true。  
   
 4.  如果您想要以不同的速率對查詢取樣，或使用不同的資料表名稱，請選擇性地變更 **QueryLogSampling** 或 **QueryLogTableName** 。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "52521086"
   
 -   設定 msmdsrv.log 檔案來控制 msmdsrv 記錄檔的大小和數目。 預設不會啟用此設定，因此務必將它們加入做為後續安裝步驟。 請參閱本主題的 [MSMDSRV 服務記錄檔](#bkmk_msmdsrv) 。  
   
--   檢閱來自 Microsoft 客戶支援的這些部落格文章，以了解他們用何資源來取得有關伺服器作業的資訊：[初始資料收集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   檢閱來自 Microsoft 客戶支援，以了解他們用來取得有關伺服器作業的資訊何資源此部落格文章：[初始資料收集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   若要找出查詢 Cube 的對象，請使用 ASTrace2012，而不是查詢記錄。 查詢記錄通常用來對使用方式的最佳化精靈提供輸入，其擷取的資料並不易閱讀或解譯。 ASTrace2012 是廣泛使用的社群工具，可擷取查詢作業。 請參閱[Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   

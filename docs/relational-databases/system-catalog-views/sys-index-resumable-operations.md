@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122658"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 
@@ -44,7 +43,7 @@ ms.locfileid: "63004373"
 |**state**|**tinyint**|可繼續索引作業的狀態：<br /><br />0 = 正在執行<br /><br />1 = 暫停|
 |**state_desc**|**nvarchar(60)**|操作狀態 （執行或暫停） 的可繼續索引的描述|  
 |**start_time**|**datetime**|索引作業開始時間 (不可為 null)|
-|**last_pause_time**|**datatime**| 索引作業 (可為 null) 的上次暫停時間。 如果作業執行，而且永遠不會暫停，則為 NULL。|
+|**last_pause_time**|**日期時間**| 索引作業 (可為 null) 的上次暫停時間。 如果作業執行，而且永遠不會暫停，則為 NULL。|
 |**total_execution_time**|**int**|從以分鐘為單位 (不可為 null) 的開始時間的總執行時間|
 |**percent_complete**|**real**|索引作業的進度完成，在 %(不可為 null)。|
 |**page_count**|**bigint**|新的索引建立作業和 (不可為 null) 的對應索引配置的索引頁的總數。

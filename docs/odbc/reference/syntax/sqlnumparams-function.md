@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05e65eac94cffa0e31e3ec71179f18704a7e8b71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e88439d537d8b115d656fbe5389253efb3ea5580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138774"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 函數
 **合規性**  

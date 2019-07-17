@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33b679f1c08ac94baf8daeb936950f4f88c1c031
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 923215eb107ab72011dc4697b3beaee157b6ed4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128665"
 ---
 # <a name="data-source-properties-ole-db"></a>資料來源屬性 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,15 +31,15 @@ ms.locfileid: "47609857"
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|DBPROP_CURRENTCATALOG|R/W：讀取/寫入 預設值：無<br /><br /> 描述： DBPROP_CURRENTCATALOG 的值會報告目前資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者工作階段。 設定屬性值的效果與使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE *database* 陳述式設定目前資料庫的效果相同。<br /><br /> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，如果您呼叫 [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) 並以小寫指定資料庫名稱，即使資料庫原始是以混合大小寫的名稱建立，DBPROP_CURRENTCATALOG 也會以小寫傳回名稱。 使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，DBPROP_CURRENTCATALOG 會傳回預期的混合大小寫。|  
-|DBPROP_MULTIPLECONNECTIONS|R/W：讀取/寫入 預設值：VARIANT_FALSE<br /><br /> 描述：如果連接執行的命令不會產生資料列集，或者產生的資料列集不是伺服器資料指標，而且您執行其他命令，當 DBPROP_MULTIPLECONNECTIONS 為 VARIANT_TRUE 時，將會建立一個新的連接來執行新命令。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會建立另一個連接，如果 DBPROP_MULTIPLECONNECTION 為 VARIANT_FALSE，或如果交易在連接上作用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會傳回 db_e_objectopen，而如果 DBPROP_MULTIPLECONNECTIONS 為 VARIANT_FALSE，而且如果沒有使用中交易，傳回 E_FAIL。 交易與鎖定是以連接為基礎，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。 如果產生另一個連接，個別連接上的命令不會共用鎖定。 為確保命令之間不會互相封鎖，保留另一個命令要求之資料列上的鎖定。 建立多個工作階段時也是如此。<br /><br /> 每個工作階段都有一個個別的連接。|  
+|DBPROP_CURRENTCATALOG|R/W:讀取/寫入預設值：None<br /><br /> 描述：DBPROP_CURRENTCATALOG 的值會報告目前資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者工作階段。 設定屬性值的效果與使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] USE *database* 陳述式設定目前資料庫的效果相同。<br /><br /> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，如果您呼叫 [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) 並以小寫指定資料庫名稱，即使資料庫原始是以混合大小寫的名稱建立，DBPROP_CURRENTCATALOG 也會以小寫傳回名稱。 使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，DBPROP_CURRENTCATALOG 會傳回預期的混合大小寫。|  
+|DBPROP_MULTIPLECONNECTIONS|R/W:讀取/寫入預設值：VARIANT_FALSE<br /><br /> 描述：如果連接正在執行的命令，不會產生一個資料列集，或產生不是伺服器資料指標的資料列集，而且您執行其他命令，則會建立新的連接，以執行新的命令，如果 DBPROP_MULTIPLECONNECTIONS 為 VARIANT_TRUE。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會建立另一個連接，如果 DBPROP_MULTIPLECONNECTION 為 VARIANT_FALSE，或如果交易在連接上作用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會傳回 db_e_objectopen，而如果 DBPROP_MULTIPLECONNECTIONS 為 VARIANT_FALSE，而且如果沒有使用中交易，傳回 E_FAIL。 交易與鎖定是以連接為基礎，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。 如果產生另一個連接，個別連接上的命令不會共用鎖定。 為確保命令之間不會互相封鎖，保留另一個命令要求之資料列上的鎖定。 建立多個工作階段時也是如此。<br /><br /> 每個工作階段都有一個個別的連接。|  
   
  在提供者專用的屬性集 DBPROPSET_SQLSERVERDATASOURCE 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義下列額外的資料來源屬性。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_ENABLEFASTLOAD|R/W：讀取/寫入 預設值：VARIANT_FALSE<br /><br /> 描述：若要從記憶體中啟用大量複製，SSPROP_ENABLEFASTLOAD 屬性應該設定為 VARIANT_TRUE。 在資料來源上設定此屬性之後，新建立的工作階段就會允許取用者存取 [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 介面。<br /><br /> 如果屬性設定為 VARIANT_TRUE，**IRowsetFastLoad** 介面會要求 **IID_IRowsetFastLoad** 介面，或將 **SSPROP_IRowsetFastLoad** 設定為 VARIANT_TRUE，以便透過 **IOpenRowset::OpenRowset** 取得。|  
-|SSPROP_ENABLEBULKCOPY|R/W：讀取/寫入 預設值：VARIANT_FALSE<br /><br /> 描述：若要從檔案中啟用大量複製，SSPROP_ENABLEBULKCOPY 屬性應該設定為 VARIANT_TRUE。 在資料來源上設定此屬性之後，取用者對於 IBCPSession 介面的存取會在與 Sessions 相同的層級下取得。<br /><br /> SSPROP_IRowsetFastLoad 也必須設定為 VARIANT_TRUE。|  
+|SSPROP_ENABLEFASTLOAD|R/W:讀取/寫入預設值：VARIANT_FALSE<br /><br /> 描述：若要啟用記憶體中的大量複製，SSPROP_ENABLEFASTLOAD 屬性應該設定為 VARIANT_TRUE。 在資料來源上設定此屬性之後，新建立的工作階段就會允許取用者存取 [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 介面。<br /><br /> 如果屬性設定為 VARIANT_TRUE，**IRowsetFastLoad** 介面會要求 **IID_IRowsetFastLoad** 介面，或將 **SSPROP_IRowsetFastLoad** 設定為 VARIANT_TRUE，以便透過 **IOpenRowset::OpenRowset** 取得。|  
+|SSPROP_ENABLEBULKCOPY|R/W:讀取/寫入預設值：VARIANT_FALSE<br /><br /> 描述：若要啟用從檔案大量複製，SSPROP_ENABLEBULKCOPY 屬性應該設定為 VARIANT_TRUE。 在資料來源上設定此屬性之後，取用者對於 IBCPSession 介面的存取會在與 Sessions 相同的層級下取得。<br /><br /> SSPROP_IRowsetFastLoad 也必須設定為 VARIANT_TRUE。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源物件&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

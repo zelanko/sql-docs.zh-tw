@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103781"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 
@@ -195,7 +194,7 @@ SQLRETURN SQLGetDiagField(
 |*assertion-definition*|「 建立判斷提示 」|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|「 建立字元集 」|SQL_DIAG_CREATE_CHARACTER_SET|  
 |*collation-definition*|「 建立定序 」|SQL_DIAG_CREATE_COLLATION|  
-|*domainn-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+|*domainn-definition*|[建立定義域]|SQL_DIAG_CREATE_DOMAIN|
 |*create-index-statement*|「 建立索引 」|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|[建立資料表]|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|[建立檢視]|SQL_DIAG_CREATE_VIEW|  

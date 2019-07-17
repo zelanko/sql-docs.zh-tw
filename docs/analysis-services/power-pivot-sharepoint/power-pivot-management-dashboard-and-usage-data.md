@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208097"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理儀表板和使用量資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "55087747"
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>從一般應用程式設定開啟儀表板  
   
-1.  在管理中心的 [一般應用程式設定] 群組中，按一下 [[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板]。  
+1.  在管理中心的 [一般應用程式設定]  群組中，按一下 [[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板]  。  
   
 2.  在主頁面上選取您要檢視作業資料的 Power Pivot 服務應用程式。  
   
 ### <a name="open-the-dashboard-from-a-power-pivot-service-application"></a>從 Power Pivot 服務應用程式開啟儀表板  
   
-1.  在 [管理中心] 的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的名稱。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板就會顯示目前服務應用程式的作業資料。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "55087747"
   
 1.  在頂端[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理儀表板中，記下目前服務應用程式的名稱，例如**預設[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服務應用程式**。  
   
-2.  在 **[動作]** 儀表板中，按一下 **[列示服務應用程式]**。  
+2.  在 **[動作]** 儀表板中，按一下 **[列示服務應用程式]** 。  
   
 3.  按一下您想要查看管理儀表板報表之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的名稱。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "55087747"
   
 -   [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 若要擷取 Power Pivot 伺服器系統的相關資料，請確認已針對每個 Power Pivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意：** 如果關閉事件或使用量記錄，綜合報表會不完整或錯誤。  
+ 若要擷取 Power Pivot 伺服器系統的相關資料，請確認已針對每個 Power Pivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意：** 如果您關閉事件或使用量記錄，綜合報表會不完整或發生錯誤。  
   
 ##  <a name="edit"></a> 編輯 Power Pivot 儀表板  
  如果您擁有開發或自訂儀表板的專業技術，可以編輯儀表板以包含新的網頁組件。 您也可以編輯包含於儀表板中的網頁組件屬性。  
@@ -81,7 +81,7 @@ ms.locfileid: "55087747"
  為了協助您開始使用自訂報表， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板會提供 Office 資料連線 (.odc) 檔案以連線到來源活頁簿。 例如，您可以在 Excel 中使用 .odc 檔案來建立其他報表。  
   
 > [!NOTE]  
->  當您嘗試在 Excel 中使用 .odc 檔案時，請編輯該檔案以防止下列錯誤：「初始化資料來源失敗」。 自動產生的 .odc 檔案包含 MSOLAP OLE DB 提供者不支援的參數。 下列指示提供移除參數的因應措施。  
+>  編輯該檔案以防止下列錯誤，當您嘗試使用在 Excel 中的.odc 檔案時：「 初始化資料來源失敗 」。 自動產生的 .odc 檔案包含 MSOLAP OLE DB 提供者不支援的參數。 下列指示提供移除參數的因應措施。  
   
  您必須是伺服陣列或服務管理員，才能根據管理中心的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿建立報表。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "55087747"
   
 2.  捲動到頁面底部的 **[報表]** 區段。  
   
-3.  按一下 [[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理資料]。  
+3.  按一下 [[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理資料]  。  
   
 4.  將 .odc 檔案儲存至本機資料夾。  
   
@@ -101,39 +101,39 @@ ms.locfileid: "55087747"
   
 8.  1.  啟動 Excel 2013。  
   
-    2.  在 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** 功能區中，按一下 [管理] 。  
+    2.  在 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** 功能區中，按一下 [管理]  。  
   
-    3.  按一下 **[取得外部資料]** ，然後按一下 **[現有連接]**。  
+    3.  按一下 **[取得外部資料]** ，然後按一下 **[現有連接]** 。  
   
     4.  如果您看到 .ODC 檔案，請按一下該檔案。 如果您看不到 .ODC 檔案，請按一下 **[瀏覽其他]** ，然後在檔案路徑中，指定 .odc 檔案。  
   
-    5.  按一下 **[開啟]**。  
+    5.  按一下 **[開啟]** 。  
   
     6.  按一下 **[測試連接]** 確認連接是否成功。  
   
-    7.  輸入連接的名稱，然後按 **[下一步]**。  
+    7.  輸入連接的名稱，然後按 **[下一步]** 。  
   
     8.  在 [指定 MDX 查詢] 中，按一下**設計**以開啟 MDX 查詢設計工具以組合您要使用的資料**如果您看到錯誤訊息**「 編輯模式屬性名稱格式不正確。 」，請確認您的編輯。ODC 檔案。  
   
-    9. 按一下 **[確定]** ，然後按一下 **[完成]**。  
+    9. 按一下 **[確定]** ，然後按一下 **[完成]** 。  
   
     10. 建立樞紐分析表或樞紐分析圖報表，將 Excel 中的資料視覺化。  
   
 9. 1.  啟動 Excel 2010。  
   
-    2.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能區中，按一下 [啟動 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 視窗]。  
+    2.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能區中，按一下 [啟動 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 視窗]  。  
   
-    3.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 視窗的 [設計] 功能區中，按一下 [現有連接] 。  
+    3.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 視窗的 [設計] 功能區中，按一下 [現有連接]  。  
   
-    4.  按一下 **[瀏覽其他]**。  
+    4.  按一下 **[瀏覽其他]** 。  
   
     5.  在檔案路徑中，指定 .odc 檔。  
   
-    6.  按一下 **[開啟]**。 [資料表匯入精靈] 隨即使用包含使用方式資料之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的連接字串啟動。  
+    6.  按一下 **[開啟]** 。 [資料表匯入精靈] 隨即使用包含使用方式資料之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 活頁簿的連接字串啟動。  
   
     7.  按一下 **[測試連接]** 確認您是否擁有存取權。  
   
-    8.  為連接輸入易記的名稱，然後按 **[下一步]**。  
+    8.  為連接輸入易記的名稱，然後按 **[下一步]** 。  
   
     9. 在 [指定 MDX 查詢] 中，按一下 **[設計]** 開啟 MDX 查詢設計工具以組合您要使用的資料，然後建立樞紐分析表或樞紐分析圖報表，將 Excel 中的資料視覺化。  
   

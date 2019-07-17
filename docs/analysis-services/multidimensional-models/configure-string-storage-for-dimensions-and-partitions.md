@@ -1,5 +1,5 @@
 ---
-title: 設定維度和分割區的字串儲存體 |Microsoft 文件
+title: 設定字串存放區的維度和資料分割 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209116"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>設定維度及分割區的字串存放區
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34023855"
   
  這個屬性的有效值包括：  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**1050**|指定每個存放區 4 GB 檔案大小上限的預設字串存放區架構。|  
 |**1100**|指定較大的字串存放區，每個存放區最多支援 40 億個唯一字串。|  
@@ -38,7 +38,7 @@ ms.locfileid: "34023855"
   
 -   [必要條件](#bkmk_prereq)  
   
--   [步驟 1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性](#bkmk_step1)  
+-   [步驟 1：SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性](#bkmk_step1)  
   
 -   [步驟 2：處理物件](#bkmk_step2)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34023855"
   
  資料庫相容性層級必須設定為 1100。 如果您使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立或部署資料庫，則資料庫相容性層級已經設定為 1100。 如果您將使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫移到 ssSQL11 或更新版本，必須更新相容性層級。 如果是移動但未重新部署的資料庫，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定相容性層級。 如需詳細資訊，請參閱 [多維度資料庫的相容性層級 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)(在 SSAS 中重新整理連結維度)。  
   
-##  <a name="bkmk_step1"></a> 步驟 1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性  
+##  <a name="bkmk_step1"></a> 步驟 1：SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性  
   
 1.  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]開啟包含您要修改之維度或資料分割的專案。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "34023855"
 ##  <a name="bkmk_step2"></a> 步驟 2：處理物件  
  處理物件之後，將會使用新的儲存體架構。 處理物件也會證明您已經成功解決儲存限制問題，因為先前回報字串存放溢位情況的錯誤應該不會再發生。  
   
--   在方案總管中，以滑鼠右鍵按一下您剛修改的維度，然後選取 [處理]。  
+-   在方案總管中，以滑鼠右鍵按一下您剛修改的維度，然後選取 [處理]  。  
   
  您必須針對即將使用新字串存放架構的每個物件，使用 [完整處理] 選項。 在處理之前，請務必針對維度執行影響分析，以確認相依物件是否也需要處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理的工具和方式 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [處理選項和設定 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [資料分割儲存模式及處理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [維度儲存](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

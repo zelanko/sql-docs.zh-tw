@@ -19,12 +19,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df7af5de2fa18875168c5528d27481dac016fea9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124444"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290359"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -248,8 +248,6 @@ EXECUTE sp_executesql
           N'@level tinyint',  
           @level = 109;  
 ```  
-  
- 如需其他範例，請參閱 < [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

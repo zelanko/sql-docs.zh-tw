@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 20cda553190074236f8cf50bb719a5c1e019e416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de3a1619a1ff5f7e6b44b40e07d73892d2742949
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139325"
 ---
 # <a name="appendix---1-mysqltosql"></a>附錄 - 1 (MySQLToSQL)
 SSMA 主控台命令列選項的快速檢視：  
@@ -28,7 +27,7 @@ SSMA 主控台命令列選項的快速檢視：
 |4|-x/xmloutput|否|xmloutputfile|這個選項表示以 XML 格式的主控台輸出。 如果未指定此選項，預設的輸出是文字格式。<br /><br />如果未指定 xmloutputfile，XML 輸出會導向至 STDOUT。<br /><br />Xmloutputfile 是以 XML 格式的主控台輸出會寫入至其中之檔案的名稱。|  
 |5|-l/log|否|logfile|有效的檔案名稱。|  
 |6|-e/projectenvironment|否|projectenvironmentfolder|有效的資料夾名稱包含 SSMA 專案環境檔案。|  
-|7|-p/securepassword|否|-a/add {<server_id> [,...n] &#124; all} -c&#124;serverconnection  <server-connection-file> [-v&#124;variable <variable-value-file>] [-o/overwrite]<br /><br />中的多個<br /><br />-a/add {<server_id> [,...n] &#124; all} -s&#124;script <script-file> [-v&#124;variable <variable-value-file>] [-o/overwrite]<br /><br />-r/remove {<server_id> [, ...n] &#124; all}<br /><br />-l/list<br /><br />-e/export {<server-id> [, ...n] &#124; all} <encrypted-password -file><br /><br />-i/import {<server-id> [, ...n] &#124; all} <encrypted-password-file>|如果指定，此選項必須不與其他任何選項結合。<br /><br />伺服器識別碼：提供給 {string} 的伺服器唯一識別碼<br /><br />伺服器連線檔案： 伺服器定義檔案 （serverconnectionfile 或指令碼檔案）。<br /><br />變數值檔案：它是變數的定義檔案，並使用伺服器連線檔案中。<br /><br />加密密碼-檔案：這是使用使用者指定的複雜密碼來加密伺服器密碼檔案。|  
+|7|-p/securepassword|否|-a/add {<server_id> [,...n] &#124; all} -c&#124;serverconnection  <server-connection-file> [-v&#124;variable <variable-value-file>] [-o/overwrite]<br /><br />或<br /><br />-a/add {<server_id> [,...n] &#124; all} -s&#124;script <script-file> [-v&#124;variable <variable-value-file>] [-o/overwrite]<br /><br />-r/remove {<server_id> [, ...n] &#124; all}<br /><br />-l/list<br /><br />-e/export {<server-id> [, ...n] &#124; all} <encrypted-password -file><br /><br />-i/import {<server-id> [, ...n] &#124; all} <encrypted-password-file>|如果指定，此選項必須不與其他任何選項結合。<br /><br />伺服器識別碼：提供給 {string} 的伺服器唯一識別碼<br /><br />伺服器連線檔案： 伺服器定義檔案 （serverconnectionfile 或指令碼檔案）。<br /><br />變數值檔案：它是變數的定義檔案，並使用伺服器連線檔案中。<br /><br />加密密碼-檔案：這是使用使用者指定的複雜密碼來加密伺服器密碼檔案。|  
 |8|-?|否|不適用|不適用|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ee91a2e544babdd02a22bcbe426a7fb0d770f66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109677"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
 ODBC 是做為資料庫存取語言會使用結構化查詢語言 (SQL) API。 您可以使用相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼，來存取各種不同的資料庫管理系統 (Dbms)。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，請查詢，啟用 ODBC 的應用程式的使用者，並將其更新透過 ODBC 介面的桌面資料庫中。  

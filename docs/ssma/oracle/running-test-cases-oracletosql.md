@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625788"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266552"
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -43,29 +43,29 @@ SSMA 軟體測試人員會檢查是否符合所有必要條件，以測試執行
   
 ||||  
 |-|-|-|  
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |USER_TABLE$Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
-|USER_TABLE$AUD|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$AUDID|資料表|儲存新的和變更的資料列的資料表。|  
+|USER_TABLE$AUD|table|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$AUDID|table|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
-|USER_TABLE$NEW|檢視|簡化的插入與覆寫的資料列表示。|  
+|新 USER_TABLE $|檢視|簡化的插入與覆寫的資料列表示。|  
 |USER_TABLE$NEW_ID|檢視|識別已插入和已變更的資料列。|  
-|USER_TABLE$OLD|檢視|簡化的已刪除和覆寫的資料列表示。|  
+|USER_TABLE$ 舊|檢視|簡化的已刪除和覆寫的資料列表示。|  
   
 在已驗證的資料表結構描述中建立下列物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ||||  
 |-|-|-|  
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |USER_TABLE$Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
   
 下列物件會在建立和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb 資料庫中。  
   
 ||||  
 |-|-|-|  
-|名稱|類型|描述|  
-|USER_TABLE$Aud|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$AudID|資料表|儲存新的和變更的資料列的資料表。|  
+|名稱|type|描述|  
+|USER_TABLE$Aud|table|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$AudID|table|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |USER_TABLE$new|檢視|簡化的插入與覆寫的資料列表示。|  
 |USER_TABLE$new_id|檢視|識別已插入和已變更的資料列。|  

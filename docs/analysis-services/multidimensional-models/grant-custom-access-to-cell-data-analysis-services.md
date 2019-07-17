@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177717"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授與資料格資料的自訂存取權 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "52539045"
 ## <a name="allow-access-to-specific-measures"></a>允許存取特定量值  
  您可以使用資料格安全性，明確選擇要使用哪些量值。 一旦明確識別允許的成員之後，所有其他成員就會變成無法使用。 這可能是透過 MDX 指令碼實作的最簡單案例，如同下列步驟所述。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色] 資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有 Cube 的 **Read** 存取權。 如需設定維度權限的詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色]  資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有 Cube 的 **Read** 存取權。 如需設定維度權限的詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) 。  
   
-2.  在 **[資料格資料]** 中，檢查 Cube 選取項目以確定您已選擇正確的選項，然後選取 **[啟用讀取權限]**。  
+2.  在 **[資料格資料]** 中，檢查 Cube 選取項目以確定您已選擇正確的選項，然後選取 **[啟用讀取權限]** 。  
   
      如果您只選取這個核取方塊，而且未提供 MDX 運算式，效果就和拒絕存取 Cube 中的所有資料格一樣。 這是因為當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解析 Cube 資料格子集時，預設允許的集合是空集合。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52539045"
      這個運算式會明確識別使用者可看見的量值。 透過這個角色連線的使用者將無法使用其他任何量值。 請注意，[CurrentMember &#40;MDX&#41;](../../mdx/currentmember-mdx.md) 會設定內容，且後面會接著允許的量值。 若目前的成員包含 **Reseller Sales Amount** 或 **Reseller Total Product Cost**，則此運算式會顯示值。 否則，便會拒絕存取。 運算式含有多個部分，每個部分都會以括號括起來。 **OR** 運算子可用來指定多個量值。  
   
 ## <a name="deny-access-to-specific-measures"></a>拒絕存取特定量值  
- 下列 MDX 運算式 (同時在 [建立角色] | [資料格資料] | [允許讀取 Cube 內容] 中指定) 的效果則相反，會致使某些量值無法使用。 在此範例中，使用 **NOT** 及 **AND** 運算子會致使 **Discount Amount** 及 **Discount Percentage** 無法使用。 透過這個角色連接的使用者將可看見所有其他量值。  
+ 下列 MDX 運算式 (同時在 [建立角色]   | [資料格資料]   | [允許讀取 Cube 內容]  中指定) 的效果則相反，會致使某些量值無法使用。 在此範例中，使用 **NOT** 及 **AND** 運算子會致使 **Discount Amount** 及 **Discount Percentage** 無法使用。 透過這個角色連接的使用者將可看見所有其他量值。  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -65,7 +65,7 @@ ms.locfileid: "52539045"
 ## <a name="set-read-permissions-on-calculated-measures"></a>設定導出量值的讀取權限  
  導出量值的權限可以獨立設定它的構成部分。 如果您想要協調導出量值與其相依量值之間的權限，請直接前往下一節有關「意外讀取」的部分。  
   
- 若要了解導出量值的讀取權限如何運作，請考量 AdventureWorks 中的 **Reseller Gross Profit** 。 它是衍生自 **Reseller Sales Amount** 和 **Reseller Total Product Cost** 量值。 只要角色擁有 **Reseller Gross Profit** 資料格的讀取權限，就可以檢視這個量值，即使權限在其他量值上明確遭到拒絕也可以檢視。 基於示範用途，將下列 MDX 運算式複製到 [建立角色] | [資料格資料] | [允許讀取 Cube 內容]。  
+ 若要了解導出量值的讀取權限如何運作，請考量 AdventureWorks 中的 **Reseller Gross Profit** 。 它是衍生自 **Reseller Sales Amount** 和 **Reseller Total Product Cost** 量值。 只要角色擁有 **Reseller Gross Profit** 資料格的讀取權限，就可以檢視這個量值，即使權限在其他量值上明確遭到拒絕也可以檢視。 基於示範用途，將下列 MDX 運算式複製到 [建立角色]   | [資料格資料]   | [允許讀取 Cube 內容]  。  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Reseller Sales Amount])  
@@ -77,12 +77,12 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![具有可用與無法使用之資料格的 Excel 資料表](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "含有可用與無法使用之資料格的 Excel 資料表")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>設定導出量值的意外讀取權限  
- 資料格安全性提供另一種選擇 (意外讀取)，用以設定參與計算之相關資料格的權限。 請再次考量 **Reseller Gross Profit** 範例。 當您在 [建立角色] | [資料格資料] 對話方塊的第二個文字區域中 (位於 [允許讀取資料格內容 (視資料格安全性而定)] 下方的文字區域中)，輸入上一節中所提供的同一個 MDX 運算式時，在 Excel 中檢視的結果會很明顯。 由於 **Reseller Gross Profit** 會根據 **Reseller Sales Amount** 和 **Reseller Total Product Cost**而定，所以，現在會因為無法存取毛利的構成部分而無法存取毛利。  
+ 資料格安全性提供另一種選擇 (意外讀取)，用以設定參與計算之相關資料格的權限。 請再次考量 **Reseller Gross Profit** 範例。 當您在 [建立角色]   | [資料格資料]  對話方塊的第二個文字區域中 (位於 [允許讀取資料格內容 (視資料格安全性而定)]  下方的文字區域中)，輸入上一節中所提供的同一個 MDX 運算式時，在 Excel 中檢視的結果會很明顯。 由於 **Reseller Gross Profit** 會根據 **Reseller Sales Amount** 和 **Reseller Total Product Cost**而定，所以，現在會因為無法存取毛利的構成部分而無法存取毛利。  
   
 > [!NOTE]  
 >  如果您在同一角色內同時設定資料格的讀取和意外讀取權限會發生什麼事？ 角色將在資料格上提供讀取權限，而非意外讀取權限。  
   
- 一如前文所述，在只選取 [啟用意外讀取權限] 核取方塊，而未提供任何 MDX 運算式的情況下，會拒絕對 Cube 中所有資料格的存取。 這是因為當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解析 Cube 資料格子集時，預設允許的集合是空集合。  
+ 一如前文所述，在只選取 [啟用意外讀取權限]  核取方塊，而未提供任何 MDX 運算式的情況下，會拒絕對 Cube 中所有資料格的存取。 這是因為當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解析 Cube 資料格子集時，預設允許的集合是空集合。  
   
 ## <a name="set-readwrite-permissions-on-a-cell"></a>設定資料格的讀取/寫入權限  
  假設成員對 Cube 本身具有讀取/寫入權限，即可使用資料格的讀取/寫入權限來啟用回寫功能。 在資料格層級授與的權限不得大於在 Cube 層級授與的權限。 如需詳細資訊，請參閱＜ [Set Partition Writeback](../../analysis-services/multidimensional-models/set-partition-writeback.md) ＞。  

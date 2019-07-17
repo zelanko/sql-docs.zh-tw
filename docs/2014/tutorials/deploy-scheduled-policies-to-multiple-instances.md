@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185808"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>將已排程的原則部署至多個執行個體
   您可以使用已註冊的伺服器，將已排程的原則從中央位置部署到 Managed 伺服器。 您可以從本機伺服器群組，或從中央管理伺服器部署已排程的原則。  
@@ -28,7 +28,7 @@ ms.locfileid: "56016719"
   
  您必須在已完成本課程先前工作的電腦上執行這些工作。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  此工作的必要條件如下：  
   
 -   您必須先完成本課程先前的工作。  
@@ -47,7 +47,7 @@ ms.locfileid: "56016719"
   
 1.  在伺服器上您在先前的工作設定排程的原則，依序展開**管理**，展開**原則管理**，然後按一下**原則**。  
   
-2.  在 [檢視] 功能表上，按一下 [物件總管詳細資料]。  
+2.  在 [檢視]  功能表上，按一下 [物件總管詳細資料]  。  
   
 3.  在 **物件總管詳細資料**窗格中，選取所有已排程的最佳做法原則，您想要部署到其他伺服器透過已註冊的伺服器。  
   
@@ -64,14 +64,14 @@ ms.locfileid: "56016719"
   
 ### <a name="to-deploy-the-scheduled-policies-to-servers-that-are-managed-through-registered-servers"></a>若要將已排程的原則部署到透過已註冊的伺服器所管理的伺服器  
   
-1.  在 [檢視] 功能表上，按一下 [已註冊的伺服器]。  
+1.  在 [檢視]  功能表上，按一下 [已註冊的伺服器]  。  
   
 2.  依序展開**Database Engine**，展開**本機伺服器群組**或**中央管理伺服器**，以滑鼠右鍵按一下您想要部署原則的節點，然後按一下 **匯入原則**。  
   
     > [!NOTE]  
     >  如果您以滑鼠右鍵按一下**本機伺服器群組**或中央管理伺服器本身，原則就會部署到所有受管理的伺服器。 如果以滑鼠右鍵按一下特定的伺服器群組，原則就只會部署到該群組中的伺服器。 如果以滑鼠右鍵按一下特定的已註冊伺服器，原則就只會部署到該伺服器。  
   
-3.  旁**匯入的檔案**，按一下省略符號按鈕 (**...**).  
+3.  旁**匯入的檔案**，按一下省略符號按鈕 ( **...** ).  
   
 4.  在 [**選取原則**] 對話方塊中，瀏覽至您儲存已排程的原則的資料夾位置。 此範例中，瀏覽到位置**C:\Scheduled_BP_Policies**。  
   

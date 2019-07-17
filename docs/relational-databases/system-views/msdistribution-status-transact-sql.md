@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5942bf485673ad484a58edc43176da4ae5c95965
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129584"
 ---
 # <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

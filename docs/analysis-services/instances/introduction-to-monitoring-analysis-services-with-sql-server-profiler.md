@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c72c30584137caa998d4bec3bd6194abfbdc6a7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181312"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>使用 SQL Server Profiler 監視 Analysis Services 簡介
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "54128148"
 -   在螢幕上顯示有關擷取事件的資料，或擷取有關每個事件的資料並儲存到檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，以供未來分析或播放使用。 當您重新執行資料時，可以即時或逐步返回儲存的事件，如同最初發生時一般。  
   
 ## <a name="using-sql-server-profiler"></a>使用 SQL Server Profiler  
- 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始] 功能表上的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 程式集啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始]  功能表上的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 程式集啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  當您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，請注意下列事項：  
   

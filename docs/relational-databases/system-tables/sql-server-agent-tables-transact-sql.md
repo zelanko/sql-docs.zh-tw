@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bdab681e7946df0845193ebcd183e392e000c74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130594"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server Agent 資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -19,13 +19,12 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 0183694382851f023c9f6863848a3e525cc0b7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 114109e0ee7bf7ba8855ad65f4ab7438c9815187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133861"
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "64945625"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|全文檢索目錄的識別碼。 這在各個資料庫中的全文檢索目錄都是唯一的。|  
-|NAME|**sysname**|目錄名稱。 在資料庫中，這是唯一的。|  
+|name|**sysname**|目錄名稱。 在資料庫中，這是唯一的。|  
 |路徑|**nvarchar(260)**|檔案系統中全文檢索目錄的目錄名稱。|  
 |is_default|**bit**|預設全文檢索目錄。<br /><br /> True = 是預設值。<br /><br /> False = 不是預設值。|  
 |is_accent_sensitivity_on|**bit**|目錄的區分腔調字設定。<br /><br /> True = 區分腔調字。<br /><br /> False = 不區分腔調字。|  

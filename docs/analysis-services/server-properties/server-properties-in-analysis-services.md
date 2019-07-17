@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207958"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的伺服器屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,9 +34,9 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-2. 在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後按一下 [屬性]。 [一般] 頁面隨即顯示，其中顯示最常使用的屬性。  
+2. 在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後按一下 [屬性]  。 [一般] 頁面隨即顯示，其中顯示最常使用的屬性。  
 
-3.  若要檢視其他屬性，請按一下頁面底部的 [顯示進階 (全部) 屬性] 核取方塊。  
+3.  若要檢視其他屬性，請按一下頁面底部的 [顯示進階 (全部) 屬性]  核取方塊。  
   
      只有表格式模式和多維度模式伺服器支援修改伺服器屬性。 如果您已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，除非 Microsoft 支援服務另有指示，否則請一律使用預設值。  
   

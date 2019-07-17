@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211766"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用資料表值參數 (Database Engine)
   資料表值參數是藉由使用使用者定義的資料表類型來進行宣告。 您可以使用資料表值參數，將多個資料列傳送到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或常式 (如預存程序或函數)，而不需要建立暫存資料表或許多參數。  

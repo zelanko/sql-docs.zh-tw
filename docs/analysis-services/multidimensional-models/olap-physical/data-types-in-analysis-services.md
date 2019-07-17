@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea192588186f69adbc04ab6a56123206e1fb7817
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208614"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的資料類型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "50146453"
 |-|-|  
 |BigInt|64 位元帶正負號的整數。 *BigInt*實值型別代表整數值範圍從負數 9223372036854775808 到正數 9,223,372,036,854,775,807。|  
 |二進位|二進位資料的資料流**位元組**型別。 **位元組**實值型別代表不帶正負號的整數，且範圍從 0 到 255 的值。|  
-|布林|此類型的執行個體的值為其中一個 **，則為 true**或是**false**。|  
-|CURRENCY|A*貨幣*值範圍從-922,337,203,685,477.5808 到 + 922337203685，477.5807 精確度為貨幣單位 （四個小數位數） 的千分之十。|  
-|date|日期和時間資料，儲存為雙精確度浮點數。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分或當天的時間。|  
+|Boolean|此類型的執行個體的值為其中一個 **，則為 true**或是**false**。|  
+|Currency|A*貨幣*值範圍從-922,337,203,685,477.5808 到 + 922337203685，477.5807 精確度為貨幣單位 （四個小數位數） 的千分之十。|  
+|Date|日期和時間資料，儲存為雙精確度浮點數。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分或當天的時間。|  
 |Double|浮點數，範圍在 -1.79769313486232E +308 到 1.79769313486232E +308 之間。 Double 值儲存最多有效位數為 15 個小數位數的數字資訊。|  
 |Integer|32 位元帶正負號的整數，代表範圍從複數 2,147,483,648 到正數 2,147,483,647 的帶正負號的整數值。|  
 |Single|浮點數，範圍在 - 3.4028235E +38 到 3.4028235E +38 之間。 Single 值儲存最多有效位數為 7 個小數位數的數字資訊。|  
@@ -47,7 +47,7 @@ ms.locfileid: "50146453"
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|二進位以外的所有資料類型|  
 ||NameColumn|僅 WChar|  
-||SkippedLevelsColumn|僅限整數類型：BigInt、整數、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+||SkippedLevelsColumn|僅限整數類型：BigInt、 整數、 SmallInt、 TinyInt、 UnsignedBigInt、 UnsignedInt、 UnsignedSmallInt、 UnsignedTinyInt|  
 ||CustomRollupColumn|僅 WChar|  
 ||CustomRollupPropertiesColumn|僅 WChar|  
 ||UnaryOperatorColumn|僅 WChar|  
@@ -57,6 +57,6 @@ ms.locfileid: "50146453"
 ||NameColumn|僅 WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|二進位以外的所有資料類型|  
 |MeasureGroupAttribute|KeyColumns|二進位以外的所有資料類型|  
-|相異計數量值|來源|BigInt、貨幣、Double、整數、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+|相異計數量值|Source|BigInt、貨幣、Double、整數、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   
