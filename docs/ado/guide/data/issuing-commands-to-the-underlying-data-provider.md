@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 231d9ced5bf370b8ee7c507e930e6961cfbed5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924940"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>發出命令給基礎資料提供者
 任何開頭不是圖形的命令傳遞給資料提供者。 這就相當於發出"SHAPE {提供者命令}"形式的圖形命令。 這些命令*不*擁有以產生**資料錄集**。 比方說，「 圖形 {卸除資料表 MyTable} 是完全有效圖形命令，假設此資料提供者支援卸除資料表。  

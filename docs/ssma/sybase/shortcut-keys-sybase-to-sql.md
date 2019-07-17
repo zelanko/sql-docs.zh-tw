@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b918534fc70cbe2e707f4e2e32d1818ac8dea277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 933563a35d86e51afc34ae19bdd356e43b472227
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944614"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>快速鍵 (Sybase 到 SQL)
 您可以使用鍵盤快速鍵來巡覽 SSMA 應用程式。 如需詳細資訊，請參閱下列主題。  

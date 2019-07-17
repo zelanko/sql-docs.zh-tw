@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b3f40621645aad2d1e52cb0a89baa8ff29b01446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952447"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>硬體和軟體需求 (ODBC)
 本主題列出使用 ODBC 桌面資料庫驅動程式的需求。  

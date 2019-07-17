@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7175b99eb20710f5dd08689bd055d3a4ec93ae92
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 00fdcb0c8c9c535645268a0212e52eef6f7c88f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961999"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>快速入門：從 SQL Server 中使用 R 的模型預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

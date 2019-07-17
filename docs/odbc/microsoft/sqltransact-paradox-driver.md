@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa6049b2f0eecefe3238dbc642aa245e0a342482
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71361d479a1d4a98a49aaafed72577321c091a76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948891"
 ---
 # <a name="sqltransact-paradox-driver"></a>SQLTransact (Paradox 驅動程式)
 > [!NOTE]  

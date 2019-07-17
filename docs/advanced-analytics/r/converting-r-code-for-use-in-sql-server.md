@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac4c00830c9f678c467a75c1531b97fd3723c0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962716"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換 R 程式碼，以便在 SQL Server （資料庫內） 執行個體中執行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913844"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>引數  
- *結構*  
+ *structure*  
  要對其加入採礦模型之採礦結構的名稱。  
   
  *model*  
@@ -177,7 +176,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>範例 3：將篩選的模型加入具有巢狀資料表的結構  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>範例 3︰將篩選的模型加入具有巢狀資料表的結構  
  下列範例將採礦模型加入至購物籃採礦結構的修改版本中。 在範例中使用的採礦結構已經過修改，加入**區域**資料行，其中包含客戶地區的屬性，以及**Income Group**資料行中，將客戶收入分類使用值**高**，**中等**，或**低**。  
   
  此採礦結構也會包含列出客戶已購買之項目清單的巢狀資料表。  

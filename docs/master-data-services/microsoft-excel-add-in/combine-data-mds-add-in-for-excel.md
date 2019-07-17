@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d81fdef23f1d35997aaddce8d6e61e5ce51f76dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 990e86f905ac1ce82a25831c29f55153e78da236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988130"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>結合資料 (適用於 Excel 的 MDS 增益集)
 
@@ -32,7 +31,7 @@ ms.locfileid: "65488896"
   
 ### <a name="to-combine-non-managed-data-into-an-mds-managed-sheet"></a>若要將非管理的資料合併到 MDS 管理的工作表中  
   
-1.  在包含 MDS 管理之資料的工作表上，按一下 **[發行和驗證]** 群組中的 **[結合資料]**。  
+1.  在包含 MDS 管理之資料的工作表上，按一下 **[發行和驗證]** 群組中的 **[結合資料]** 。  
   
 2.  在 **[結合資料]** 對話方塊中，按一下 **[要與 MDS 資料結合的範圍]** 文字方塊旁邊的圖示。 此對話方塊會收縮。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "65488896"
   
 6.  對於為 MDS 實體列出的資料行，選取 **[對應資料行]** 底下的資料行。 並不是所有 MDS 資料行都需要對應資料行。  
   
-7.  按一下 **[合併]**。 **SOURCE** 資料行將顯示，表示資料來自 MDS 或外部來源。  
+7.  按一下 **[合併]** 。 **SOURCE** 資料行將顯示，表示資料來自 MDS 或外部來源。  
   
 ## <a name="next-steps"></a>後續步驟  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ca778a91b154de3a4dbcde1d663af5173af5ebe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8549d71fdb0ed6a081c7143931ca3d8a26d5e0bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945283"
 ---
 # <a name="filter-operators-master-data-services"></a>篩選運算子 (Master Data Services)
 

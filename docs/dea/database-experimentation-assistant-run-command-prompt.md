@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: c4603bf5fec8f1df8ae1e7fe0e711bf7b6e8f1e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 475c3dc1366e69dbc164547bbf5dfc8c06515c56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050475"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示字元中執行 資料庫測試助理
 

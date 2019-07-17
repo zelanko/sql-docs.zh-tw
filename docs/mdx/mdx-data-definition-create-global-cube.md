@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57ee0867373f67bfd0684734685ab39791bafc39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098416"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 資料定義 - CREATE GLOBAL CUBE
 

@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-manager: cgronlun
-ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: bb9eb4d706b37501a1919ea3b2178525a6026af3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962419"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 或 R Server 的升級及安裝常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +70,7 @@ SQL Server 2016 的早期發行版本無法在沒有網際網路連線的離線�
 
 下列版本已安裝的 SQL Server 2016 發行前版本。
 
-| 版本 | 建置         |
+| Version | 建置         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedserver (Transact-SQL) | Microsoft Docs
+title: sp_addlinkedserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b4ff861015fc669defee69fece5c26ee45d66eaa
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8df629aa707e5c0f63ef5bdcb9c77d7f8f2e2aca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072679"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,20 +46,20 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="arguments"></a>引數  
 `[ @server = ] 'server'` 是要建立連結名稱。 *server* 是 **sysname**，沒有預設值。  
   
-`[ @srvproduct = ] 'product_name'` 是 OLE DB 資料來源，以加入成為連結伺服器的產品名稱。 *product_name*已**nvarchar (** 128 **)**，預設值是 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，及*目錄*就不必指定。  
+`[ @srvproduct = ] 'product_name'` 是 OLE DB 資料來源，以加入成為連結伺服器的產品名稱。 *product_name*已**nvarchar (** 128 **)** ，預設值是 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，及*目錄*就不必指定。  
   
-`[ @provider = ] 'provider_name'` 是對應到此資料來源的 OLE DB 提供者的唯一程式設計識別碼 (PROGID)。 *provider_name*必須是唯一指定的 OLE DB 提供者安裝在目前的電腦上。 *provider_name*是**nvarchar (** 128 **)**，預設值是 NULL; 但是，如果*provider_name*已省略，就使用 SQLNCLI。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。OLE DB 提供者預期要登錄在登錄中的指定 PROGID。  
+`[ @provider = ] 'provider_name'` 是對應到此資料來源的 OLE DB 提供者的唯一程式設計識別碼 (PROGID)。 *provider_name*必須是唯一指定的 OLE DB 提供者安裝在目前的電腦上。 *provider_name*是**nvarchar (** 128 **)** ，預設值是 NULL; 但是，如果*provider_name*已省略，就使用 SQLNCLI。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。OLE DB 提供者應該在登錄中指定的 PROGID 註冊。  
   
-`[ @datasrc = ] 'data_source'` OLE DB 提供者所解譯為資料來源的名稱。 *data_source* is **nvarchar(** 4000 **)**. *data_source*被當做 DBPROP_INIT_DATASOURCE 屬性傳入來初始化 OLE DB 提供者。  
+`[ @datasrc = ] 'data_source'` OLE DB 提供者所解譯為資料來源的名稱。 *data_source*已**nvarchar (** 4000 **)** 。 *data_source*被當做 DBPROP_INIT_DATASOURCE 屬性傳入來初始化 OLE DB 提供者。  
   
-`[ @location = ] 'location'` 這是 OLE DB 提供者所解譯的資料庫位置。 *位置*已**nvarchar (** 4000 **)**，預設值是 NULL。 *位置*被當做 DDBPROP_INIT_LOCATION 屬性來初始化 OLE DB 提供者。  
+`[ @location = ] 'location'` 這是 OLE DB 提供者所解譯的資料庫位置。 *位置*已**nvarchar (** 4000 **)** ，預設值是 NULL。 *位置*被當做 DDBPROP_INIT_LOCATION 屬性來初始化 OLE DB 提供者。  
   
-`[ @provstr = ] 'provider_string'` 是識別唯一資料來源的 OLE DB 提供者特有的連接字串。 *provider_string*已**nvarchar (** 4000 **)**，預設值是 NULL。 *provstr*傳遞至 IDataInitialize，或設定為 DBPROP_INIT_PROVIDERSTRING 屬性以初始化 OLE DB 提供者。  
+`[ @provstr = ] 'provider_string'` 是識別唯一資料來源的 OLE DB 提供者特有的連接字串。 *provider_string*已**nvarchar (** 4000 **)** ，預設值是 NULL。 *provstr*傳遞至 IDataInitialize，或設定為 DBPROP_INIT_PROVIDERSTRING 屬性以初始化 OLE DB 提供者。  
   
  針對建立連結的伺服器時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，可以藉由使用 「 SERVER 關鍵字做為伺服器指定的執行個體 =*servername*\\*instancename*指定的特定執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*所在電腦的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在執行，並*instancename*是特定執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者連接。  
   
 > [!NOTE]
->  若要存取鏡像資料庫，連接字串必須包含資料庫名稱。 這個名稱是讓資料存取提供者進行容錯移轉嘗試所需的名稱。 可以在指定的資料庫**@provstr**或是**@catalog**參數。 此外，連接字串也可以提供容錯移轉夥伴名稱。  
+>  若要存取鏡像資料庫，連接字串必須包含資料庫名稱。 這個名稱是讓資料存取提供者進行容錯移轉嘗試所需的名稱。 可以在指定的資料庫 **@provstr** 或是 **@catalog** 參數。 此外，連接字串也可以提供容錯移轉夥伴名稱。  
   
 `[ @catalog = ] 'catalog'` 是連接 OLE DB 提供者時所要使用的目錄。 *型錄*已**sysname**，預設值是 NULL。 *目錄*被當做 DBPROP_INIT_CATALOG 屬性傳入來初始化 OLE DB 提供者。 當您對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體定義連結伺服器時，目錄會參考連結伺服器所對應的預設資料庫。  
   
@@ -78,13 +77,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> （預設值）||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者||**SQLNCLI**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路名稱 (適用於預設執行個體)|||資料庫名稱 (選擇性)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者||**SQLNCLI**|*servername*\\*instancename* （適用於特定的執行個體）|||資料庫名稱 (選擇性)|  
-|Oracle 第 8 版和更新的版本|Oracle OLE DB 提供者|任意|**OraOLEDB.Oracle**|Oracle 資料庫的別名||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Jet 資料庫檔案的完整路徑||||  
-|ODBC 資料來源|Microsoft OLE DB Provider for ODBC|任意|**MSDASQL**|ODBC 資料來源的系統 DSN||||  
-|ODBC 資料來源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|任意|**MSDASQL**|||ODBC 連接字串||  
-|檔案系統|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|任意|**MSIDXS**|索引服務目錄名稱||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 試算表|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|任意|**Microsoft.Jet.OLEDB.4.0**|Excel 檔的完整路徑||Excel 5.0||  
-|IBM DB2 資料庫|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|任意|**DB2OLEDB**|||請參閱[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for DB2 文件。|DB2 資料庫的目錄名稱|  
+|Oracle 第 8 版和更新的版本|Oracle OLE DB 提供者|Any|**OraOLEDB.Oracle**|Oracle 資料庫的別名||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet 資料庫檔案的完整路徑||||  
+|ODBC 資料來源|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC 資料來源的系統 DSN||||  
+|ODBC 資料來源|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 連接字串||  
+|檔案系統|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|Any|**MSIDXS**|索引服務目錄名稱||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 試算表|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel 檔的完整路徑||Excel 5.0||  
+|IBM DB2 資料庫|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||請參閱[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for DB2 文件。|DB2 資料庫的目錄名稱|  
   
  <sup>1</sup>這種設定連結的伺服器會強迫連結伺服器的遠端執行個體的網路名稱相同的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用*data_source*以指定的伺服器。  
   
@@ -301,7 +300,7 @@ select * from myLinkedServer.myDatabase.dbo.myTable
  [分散式查詢預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

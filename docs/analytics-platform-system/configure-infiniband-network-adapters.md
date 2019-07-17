@@ -2,19 +2,18 @@
 title: 設定 InfiniBand-Analytics Platform System |Microsoft Docs
 description: 描述如何 InfiniBand 網路介面卡的伺服器上設定非應用裝置用戶端連接到控制節點上 Parallel Data Warehouse (PDW)。 基本連線能力和高可用性，以便載入、 備份及其他處理程序會自動連線到作用中的 InfiniBand 網路，使用下列指示。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961257"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System 設定 InfiniBand 網路介面卡
 描述如何 InfiniBand 網路介面卡的伺服器上設定非應用裝置用戶端連接到控制節點上 Parallel Data Warehouse (PDW)。 基本連線能力和高可用性，以便載入、 備份及其他處理程序會自動連線到作用中的 InfiniBand 網路，使用下列指示。  
@@ -53,7 +52,7 @@ ms.locfileid: "63057171"
   
 您必須在已設定的網路介面卡的權限的用戶端伺服器上的 Windows 帳戶。  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
 這些指示假設用戶端伺服器是已經 racked 並連接所有纜線到設備 InfiniBand 網路。 機架和纜線的指示，請參閱[取得並設定載入伺服器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般備註  

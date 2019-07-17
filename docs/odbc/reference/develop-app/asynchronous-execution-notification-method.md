@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077058"
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)
 ODBC 可讓您連接和陳述式作業的非同步執行。 應用程式執行緒可以處於非同步模式下呼叫 ODBC 函數，並在作業完成時，可讓應用程式執行緒執行其他工作之前，函式可以傳回。 在 Windows 7 SDK 中，針對非同步的陳述式或連接作業，應用程式會判斷非同步作業已完成使用輪詢方法。 如需詳細資訊，請參閱 <<c0> [ 非同步執行 （輪詢的方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 從 Windows 8 SDK 中，您就可以判斷非同步作業已完成使用的通知方法。  
@@ -44,7 +43,7 @@ ODBC 可讓您連接和陳述式作業的非同步執行。 應用程式執行�
 |------------------------------|----------------------------|--------------------|--------------|  
 |新的應用程式的任何 ODBC 版本|ODBC 3.81|ODBC 3.80 驅動程式|應用程式可以使用這項功能，如果驅動程式支援這項功能，否則驅動程式管理員會發生錯誤。|  
 |新的應用程式的任何 ODBC 版本|ODBC 3.81|Pre-ODBC 3.80 驅動程式|如果驅動程式不支援這項功能，驅動程式管理員將會發生錯誤。|  
-|新的應用程式的任何 ODBC 版本|Pre-ODBC 3.81|任意|當應用程式會使用這項功能時，舊的驅動程式管理員會將新的屬性，為驅動程式特定屬性，且驅動程式應該發生錯誤。新的驅動程式管理員會將這些屬性傳遞至驅動程式。|  
+|新的應用程式的任何 ODBC 版本|Pre-ODBC 3.81|Any|當應用程式會使用這項功能時，舊的驅動程式管理員會將新的屬性，為驅動程式特定屬性，且驅動程式應該發生錯誤。新的驅動程式管理員會將這些屬性傳遞至驅動程式。|  
   
  應用程式應該檢查驅動程式管理員版本，才能使用此功能。 否則，如果撰寫不夠周全的驅動程式不發生錯誤，驅動程式管理員版本會預先 ODBC 3.81 行為未定義。  
   

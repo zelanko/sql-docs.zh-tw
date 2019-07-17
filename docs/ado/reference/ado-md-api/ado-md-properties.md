@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e4b7d4f79b3ba3572a20cb8876909f90e4e5870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930556"
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
 
@@ -31,7 +30,7 @@ ms.locfileid: "66709993"
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|傳回的集合**成員**為其目前**成員**階層中的父系。|  
 |[計數](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  
 |[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|表示層級之間的數字**層級**和階層的根。|  
-|[說明](../../../ado/reference/ado-md-api/description-property-ado-md.md)|傳回目前物件的文字說明。|  
+|[描述](../../../ado/reference/ado-md-api/description-property-ado-md.md)|傳回目前物件的文字說明。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|表示在座標軸上的維度數目。|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|表示軸上是否沒有子系緊接在此成員後面。|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|指出目前的資料格集的篩選資訊。|  

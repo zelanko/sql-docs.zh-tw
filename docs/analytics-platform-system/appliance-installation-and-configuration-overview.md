@@ -2,19 +2,18 @@
 title: 設備安裝和設定-Analytics Platform System |Microsoft Docs
 description: Analytics Platform System (APS) 設備系統管理員可以透過設定和開始使用您新的應用裝置的初始步驟將逐步引導。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f32cbeccb9a71d1d4c801443b40df5a762b8f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961483"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Analytics Platform System 的設備安裝和設定
 Analytics Platform System (APS) 設備系統管理員可以透過設定和開始使用您新的應用裝置的初始步驟將逐步引導。  
@@ -37,7 +36,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**工作**|**說明**|  
+|**工作**|**描述**|  
 |確認文件|請確認您已從您的獨立硬體廠商 (IHV) 接收所有必要的文件和資訊。 請參閱[ihv 提供的資訊&#40;Analytics Platform System&#41;](information-to-obtain-from-your-ihv.md)。|  
 |安裝硬體|確認資料中心可以容納應用裝置。 將設備元件移到資料中心。 機架的網路交換器，Pdu，並將纜線。 請參閱[硬體安裝&#40;Analytics Platform System&#41;](hardware-installation.md)。|  
   
@@ -52,7 +51,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**工作**|**說明**|  
+|**工作**|**描述**|  
 |||  
 |使用 SQL Server PDW 設定設備**Configuration Manager**|使用 Configuration Manager 來設定您的應用裝置上的應用裝置密碼、 時區、 網路和防火牆設定、 安全性憑證，以及效能和其他設定。 請參閱[設備設定&#40;Analytics Platform System&#41;](appliance-configuration.md)。|  
   
@@ -72,7 +71,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**工作**|**說明**|  
+|**工作**|**描述**|  
 |安裝 SQL Server PDW 驅動程式和設定連線|設定本機電腦連接到 SQL Server PDW 中，使用 SQL Server Data Tools、 sqlcmd、 business intelligence 軟體或其他工具。 <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |建立登入和伺服器角色，並指派權限|規劃並建立可讓使用者登入 SQL Server PDW 的適當權限的登入和伺服器角色。 <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |設定 Azure 資料管理閘道|閘道會啟用 Azure 的使用者存取內部 AP 資料公開 AP 安全 OData 摘要的資料。 閘道已安裝在控制節點上。 Microsoft 尋求協助。|  

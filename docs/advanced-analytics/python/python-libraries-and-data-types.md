@@ -7,13 +7,12 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6a7cb7e8f93489bb52c1457fbf25bf7206026914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 652824e4b038e629cf9b998dd6fae64465426d0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962763"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>在 Python 和 SQL Server 之間的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

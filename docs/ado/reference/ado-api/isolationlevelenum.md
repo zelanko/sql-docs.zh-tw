@@ -1,5 +1,5 @@
 ---
-title: IsolationLevelEnum | Microsoft Docs
+title: IsolationLevelEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aea36947856b26d33a0d777374eccf02a7cddb6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918368"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定的交易隔離層級[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

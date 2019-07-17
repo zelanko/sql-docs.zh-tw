@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08eb9db7645448157a76b3bcfdd302f6654f68f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12dffe315485aadc839654996f6af3a561161246
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003132"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 函式
 **合規性**  

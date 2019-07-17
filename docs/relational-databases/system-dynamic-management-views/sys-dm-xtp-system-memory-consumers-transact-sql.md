@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebc5947611129086952394f157c6173a3b4efcf0
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090089"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

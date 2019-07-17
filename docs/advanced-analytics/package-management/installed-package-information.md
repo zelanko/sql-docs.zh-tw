@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3126872e3333383d0cea53f38b3cfd06be86b704
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962799"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server 中的預設 R 和 Python 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +97,7 @@ SQL Server 2017 Machine Learning 是第一個版本，具有 R 和 Python 支援
 
 下表列出的二進位檔的預設路徑，安裝 SQL Server 2016 R Server （獨立式） 或 SQL Server 2017 Machine Learning Server （獨立式） 伺服器時。 
 
-|版本| 安裝|預設路徑|
+|Version| 安裝|預設路徑|
 |-------|-------------|------------|
 | SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning 伺服器，使用 R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|

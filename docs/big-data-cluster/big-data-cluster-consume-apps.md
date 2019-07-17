@@ -5,17 +5,16 @@ description: 使用 SQL Server 2019 巨量資料叢集使用 RESTful web 服務 
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958886"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服務的巨量資料叢集上部署的應用程式
 
@@ -23,7 +22,7 @@ ms.locfileid: "67729292"
 
 本文說明如何使用 SQL Server 2019 巨量資料叢集使用 RESTful web 服務 （預覽） 上部署的應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [SQL Server 2019 巨量資料叢集](deployment-guidance.md)
 - [mssqlctl 命令列公用程式](deploy-install-mssqlctl.md)

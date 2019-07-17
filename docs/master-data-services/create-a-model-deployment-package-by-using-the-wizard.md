@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac16ab79970e642a2e13000babb9bc9ba8679442
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947619"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
 

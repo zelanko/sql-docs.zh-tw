@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86647601dfc0223dd6fa4f0ffcc0e5db695868b5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037713"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>呼叫 SQLSetPos 以插入資料
 當 ODBC *2.x*應用程式使用 ODBC *3.x*驅動程式呼叫**SQLSetPos**具有*作業*SQL_ADD，引數驅動程式管理員不會對應至這個呼叫**SQLBulkOperations**。 如果 ODBC *3.x*驅動程式應該使用應用程式呼叫**SQLSetPos** SQL_ADD，與驅動程式應該支援這項操作。  

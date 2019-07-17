@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fa3c8cfcb4eb90c34bbab94a0d61998a6bc3c916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033951"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
 
@@ -83,7 +82,7 @@ ms.locfileid: "65485570"
     </setting>  
     ```  
   
-3.  在 "ConnectionString" 設定下方新增 "WorkflowTypeExtenders" 設定，讓標籤名稱與您的工作流程處理常式組件建立關聯。 例如：  
+3.  在 "ConnectionString" 設定下方新增 "WorkflowTypeExtenders" 設定，讓標籤名稱與您的工作流程處理常式組件建立關聯。 例如:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -145,7 +144,7 @@ ms.locfileid: "65485570"
   
 1.  使用服務嵌入式管理單元停止服務。  
   
-2.  開啟命令提示字元，瀏覽至服務的位置，並在主控台模式下執行服務，方式是輸入：Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  開啟命令提示字元，瀏覽至服務的位置，並在主控台模式下執行服務，方式是輸入：Microsoft.MasterDataServices.Workflow.exe-console。  
   
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成員，然後再次套用商務規則。 詳細的記錄顯示在主控台視窗中。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addarticle (Transact-SQL) | Microsoft Docs
+title: sp_addarticle & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 045b1cb853603a2550110db18f5658453f19e6ce
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: d56f33a3a5d27ceaf95fe715675f16bd7825cfa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032956"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +124,7 @@ sp_addarticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**NONE**|不採取任何動作。|  
 |**CALLsp_MSdel_**<br /> **_表格_** （預設值）<br /><br /> -或-<br /><br /> **呼叫 custom_stored_procedure_name**|呼叫要在訂閱者端執行的預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 *custom_stored_procedure*是使用者建立的預存程序的名稱。 <strong>sp_MSdel_*表格*</strong>包含名稱的目的地資料表，取代 *（_t)* 參數的一部分。 當*destination_owner*指定時，它會附加至目的地資料表的名稱。 例如，對於**ProductCategory**資料表屬於**生產**參數會是 「 訂閱者 」 端的結構描述， `CALL sp_MSdel_ProductionProductCategory`。 在對等複寫拓撲中，發行項 *（_t)* 會附加 GUID 值。 指定*custom_stored_procedure*不支援更新訂閱者。|  
-|**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> -或-<br /><br /> **XCALL custom_stored_procedure_name**|以 XCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
+|**XCALL sp_MSdel_**<br /> **_資料表_**<br /><br /> -或-<br /><br /> **XCALL custom_stored_procedure_name**|以 XCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
 |**SQL**或 NULL|複寫 DELETE 陳述式。 提供所有主索引鍵資料行值給 DELETE 陳述式。 刪除時複寫這個命令：<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
@@ -135,10 +134,10 @@ sp_addarticle [ @publication = ] 'publication'
 |值|描述|  
 |-----------|-----------------|  
 |**NONE**|不採取任何動作。|  
-|**CALL sp_MSupd_**<br /> **_table_**<br /><br /> -或-<br /><br /> **呼叫 custom_stored_procedure_name**|呼叫要在訂閱者端執行的預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。|  
-|**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> -或-<br /><br /> **MCALL custom_stored_procedure_name**|以 MCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 *custom_stored_procedure*是使用者建立的預存程序的名稱。 <strong>sp_MSupd_*表格*</strong>包含名稱的目的地資料表，取代 *（_t)* 參數的一部分。 當*destination_owner*指定時，它會附加至目的地資料表的名稱。 例如，對於**ProductCategory**資料表屬於**生產**參數會是 「 訂閱者 」 端的結構描述， `MCALL sp_MSupd_ProductionProductCategory`。 在對等複寫拓撲中，發行項 *（_t)* 會附加 GUID 值。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
+|**CALL sp_MSupd_**<br /> **_資料表_**<br /><br /> -或-<br /><br /> **呼叫 custom_stored_procedure_name**|呼叫要在訂閱者端執行的預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。|  
+|**MCALL sp_MSupd_**<br /> **_資料表_**<br /><br /> -或-<br /><br /> **MCALL custom_stored_procedure_name**|以 MCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 *custom_stored_procedure*是使用者建立的預存程序的名稱。 <strong>sp_MSupd_*表格*</strong>包含名稱的目的地資料表，取代 *（_t)* 參數的一部分。 當*destination_owner*指定時，它會附加至目的地資料表的名稱。 例如，對於**ProductCategory**資料表屬於**生產**參數會是 「 訂閱者 」 端的結構描述， `MCALL sp_MSupd_ProductionProductCategory`。 在對等複寫拓撲中，發行項 *（_t)* 會附加 GUID 值。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
 |**SCALL sp_MSupd_**<br /> **_表格_** （預設值）<br /><br /> -或-<br /><br /> **SCALL custom_stored_procedure_name**|以 SCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 *custom_stored_procedure*是使用者建立的預存程序的名稱。 <strong>sp_MSupd_*表格*</strong>包含名稱的目的地資料表，取代 *（_t)* 參數的一部分。 當*destination_owner*指定時，它會附加至目的地資料表的名稱。 例如，對於**ProductCategory**資料表屬於**生產**參數會是 「 訂閱者 」 端的結構描述， `SCALL sp_MSupd_ProductionProductCategory`。 在對等複寫拓撲中，發行項 *（_t)* 會附加 GUID 值。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
-|**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> -或-<br /><br /> **XCALL custom_stored_procedure_name**|以 XCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
+|**XCALL sp_MSupd_**<br /> **_資料表_**<br /><br /> -或-<br /><br /> **XCALL custom_stored_procedure_name**|以 XCALL 樣式參數來呼叫預存程序。 若要使用這個複寫方法，使用*schema_option*來指定自動建立預存程序，或每個訂閱者的發行項在目的地資料庫中建立指定的預存程序。 當更新訂閱者時，不允許指定使用者建立的預存程序。|  
 |**SQL**或 NULL|複寫 UPDATE 陳述式。 在所有資料行值及主索引鍵資料行值上，提供 UPDATE 陳述式。 更新時複寫這個命令：<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
@@ -152,7 +151,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**none**|不使用命令。|  
+|**None**|不使用命令。|  
 |**delete**|在套用快照集之前，從目的地資料表中刪除資料。 當水平篩選發行項時，只刪除篩選子句指定的資料行中之資料。 當定義水平篩選時，不支援 Oracle 發行者使用這個值。|  
 |**卸除**（預設值）|卸除目的地資料表。|  
 |**truncate**|截斷目的地資料表。 對 ODBC 或 OLE DB 訂閱者無效。|  
@@ -287,9 +286,9 @@ sp_addarticle [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**none**|複寫未執行明確識別範圍管理。 建議您只將這個選項用於與舊版 SQL Server 的回溯相容性。 對等複寫不允許這個值。|  
-|**manual**|利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動的識別範圍處理。|  
-|**auto**|指定自動管理識別範圍。|  
+|**None**|複寫未執行明確識別範圍管理。 建議您只將這個選項用於與舊版 SQL Server 的回溯相容性。 對等複寫不允許這個值。|  
+|**手動**|利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動的識別範圍處理。|  
+|**自動**|指定自動管理識別範圍。|  
 |NULL(default)|預設值為**無**時的值*auto_identity_range*不**true**。 預設值為**手動**在預設的對等項目-拓樸 (*auto_identity_range*會被忽略)。|  
   
  回溯相容性，當的值*identityrangemanagementoption*是 NULL，值*auto_identity_range*已核取。 不過，當 windows 7 *identityrangemanagementoption*不是 NULL，則值*auto_identity_range*會被忽略。  
@@ -396,11 +395,11 @@ sp_addarticle [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
- [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_articleview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_helparticlecolumns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

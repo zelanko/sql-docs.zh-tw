@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 543ab436ac7dca5e0d5965220cd90a798afb5ccf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02509ddb6a986ebb7796d80aca10c6f18cde6e69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939700"
 ---
 # <a name="testing-the-odbc-connection"></a>測試 ODBC 連線
 > [!IMPORTANT]  

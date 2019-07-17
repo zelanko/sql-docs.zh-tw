@@ -2,19 +2,18 @@
 title: 鎖定行為-Parallel Data Warehouse |Microsoft Docs
 description: 了解如何平行處理資料倉儲會使用鎖定來確保交易完整性，並當多位使用者同時存取資料，同時維護資料庫一致性。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960648"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>在平行處理資料倉儲中的鎖定行為
 了解如何平行處理資料倉儲會使用鎖定來確保交易完整性，並當多位使用者同時存取資料，同時維護資料庫一致性。  
@@ -91,7 +90,7 @@ SQL Server 支援下列類型的鎖定。 並非所有的鎖定類型的控制�
   
 -   RangeX_S。 索引鍵範圍轉換鎖定，由 RangeI_N 和 RangeS_S 鎖定的重疊建立 。  
   
--   RangeX_U. 索引鍵範圍轉換鎖定，由 RangeI_N 和 RangeS_U 鎖定的重疊建立。  
+-   RangeX_U。 索引鍵範圍轉換鎖定，由 RangeI_N 和 RangeS_U 鎖定的重疊建立。  
   
 -   RangeX_X （獨佔索引鍵範圍和獨佔資源鎖定）。 這是更新範圍中的索引鍵時所用的轉換鎖定。  
   

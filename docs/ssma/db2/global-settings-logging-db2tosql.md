@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989565"
 ---
 # <a name="global-settings-logging-db2tosql"></a>全域設定 （記錄） (DB2ToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您會在與產品支援人員合作時，才變更這些設定。  
   
 若要存取此對話方塊中，在**工具**功能表上，選取**全域設定**，然後按一下 **記錄**在左窗格底部的按鈕。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **訊息層級**  
 底下有下列選項**訊息層級**:  
   
@@ -30,13 +29,13 @@ ms.locfileid: "63299223"
 |----------|---------------|  
 |**[所有類別目錄]**|用來設定下列選項的所有的記錄層級。|  
 |**Collector**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
-|**Converter**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構。|  
+|**轉換子**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構。|  
 |**資料遷移程式**|將資料從來源資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**格式器**|產生的指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構描述。|  
 |**圖形化使用者介面**|當您使用 SSMA 工具時出現的訊息。|  
 |**連結器**|解析的 SQL 識別項，並提供其他元件的資訊。|  
 |**其他**|不在任何其他分類中的所有訊息。|  
-|**Parser**|剖析來源結構描述。|  
+|**剖析器**|剖析來源結構描述。|  
 |**同步器**|載入來源資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**TreeConverter**|將來源中繼資料中的物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料。|  
 |**軟體測試人員**|使用 SSMA 測試人員時，會出現的訊息。|  

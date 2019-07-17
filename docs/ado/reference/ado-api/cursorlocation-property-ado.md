@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 344956b349e51a448a768988ff5062bfbc532562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933281"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
 指出資料指標服務的位置。  

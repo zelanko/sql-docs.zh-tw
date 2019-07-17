@@ -2,19 +2,18 @@
 title: 遙測意見反應-Analytics Platform System |Microsoft Docs
 description: 將遙測意見反應傳送給 Microsoft 分析平台系統。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960098"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>將遙測意見反應傳送給 Microsoft 分析平台系統
 Analytics Platform System 有一項選擇性的遙測功能，管理主控台資料傳送給 Microsoft。 

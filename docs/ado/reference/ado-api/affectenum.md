@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6ff6704ca12fbb20c93133d7e73f29a5f72c9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920750"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定的記錄會受到影響的作業。  

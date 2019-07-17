@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d3df1bd07e73c3c363a0fd275e910c3c32cbe71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c409581771055e2c6d85d2cdd01937e2f033ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046386"
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  這是要回報之指定擷取執行個體的擷取資料行。 *column_name*已**sysname**。  
   
  *update_mask*  
- 這是在任何相關聯變更資料列中識別已更新資料行的遮罩。 *update_mask*已**varbinary(128)**。  
+ 這是在任何相關聯變更資料列中識別已更新資料行的遮罩。 *update_mask*已**varbinary(128)** 。  
   
 ## <a name="return-type"></a>傳回類型  
  **bit**  

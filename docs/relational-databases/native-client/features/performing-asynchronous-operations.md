@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc08bc82fa4a02b2e78479d3075357b8816874b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9702fd9ece40171b528fb7a9e5fb0e0f2a67d16a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016647"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

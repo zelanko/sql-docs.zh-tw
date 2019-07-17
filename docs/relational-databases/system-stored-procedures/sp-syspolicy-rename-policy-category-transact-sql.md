@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a9993591bf1073ef5c72636571e9127496f3d3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7deb06c004b1c961a3e9bb61b77ad333fd71308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997293"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

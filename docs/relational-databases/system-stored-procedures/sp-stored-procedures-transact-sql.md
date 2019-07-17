@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032699"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|保留供日後使用。|  
 |**NUM_OUTPUT_PARAMS**|**int**|保留供日後使用。|  
 |**NUM_RESULT_SETS**|**int**|保留供日後使用。|  
-|**REMARKS**|**varchar(254)**|程序的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**註解**|**varchar(254)**|程序的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |**PROCEDURE_TYPE**|**smallint**|程序類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會傳回 2.0。 這個值可以是下列其中一個值：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>備註  

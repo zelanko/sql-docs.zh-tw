@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959398"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 SQL Server 連線及查詢 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*，並用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。

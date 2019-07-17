@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f00183cdc91fabfcf168ceee8871b6033af2fdc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c759b196c250f4f3f868fba81a45f161dd75f67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906645"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>建立數值屬性 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65477017"
 > [!NOTE]  
 >  數值屬性有限制。 如需詳細資訊，請參閱 [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

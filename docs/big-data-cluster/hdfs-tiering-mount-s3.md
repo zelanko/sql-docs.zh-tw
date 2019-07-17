@@ -5,23 +5,22 @@ description: 這篇文章說明如何設定 HDFS 上的 SQL Server 2019 巨量�
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ba4d488c411d51b3aa55ec8aba424f4763f0fd98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958300"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何掛接 S3 層的巨量資料叢集的 HDFS 的
 
 下列各節提供如何設定 HDFS 階層處理的 S3 儲存體資料來源的範例。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)

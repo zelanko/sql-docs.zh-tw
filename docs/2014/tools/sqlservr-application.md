@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211013"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
-   **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
+  **sqlservr** 應用程式會在命令提示字元之下，啟動、停止、暫停和繼續執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53591862"
  啟動只含最小組態的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。  
   
  **-e** _error_log_path_  
- 指出錯誤記錄檔的完整路徑。 如果未指定此選項，預設執行個體的預設位置會是 *\<磁碟機>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog，而具名執行個體的預設位置會是 *\<磁碟機>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog。 **-e** 和 *error_log_path*之間沒有空格。  
+ 指出錯誤記錄檔的完整路徑。 如果未指定此選項，預設執行個體的預設位置會是 *\<磁碟機>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog，而具名執行個體的預設位置會是 *\<磁碟機>* :\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog。 **-e** 和 *error_log_path*之間沒有空格。  
   
  **-l** _master_log_path_  
  指出 **master** 資料庫交易記錄檔的完整路徑。 **-l** 和 *master_log_path*之間沒有空格。  
@@ -73,10 +73,10 @@ ms.locfileid: "53591862"
  可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **選項啟動** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** _trace#_  
- 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#*)。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#* )。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
 > [!IMPORTANT]  
->  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
+>  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
   
  **-v**  
  顯示伺服器版本號碼。  
@@ -91,9 +91,9 @@ ms.locfileid: "53591862"
   
  除非您在 **錯誤記錄檔中見到下列任何警告，否則，請使用** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 參數的預設值：  
   
--   「 無法虛擬配置位元組：FAIL_VIRTUAL_RESERVE\<大小 >"  
+-   "Failed Virtual Allocate Bytes:FAIL_VIRTUAL_RESERVE \<大小>"  
   
--   「 無法虛擬配置位元組：FAIL_VIRTUAL_COMMIT\<大小 >"  
+-   "Failed Virtual Allocate Bytes:FAIL_VIRTUAL_COMMIT \<大小>"  
   
  這些訊息可能表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 正在嘗試釋出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區的可用部分，以便找出擴充預存程序 .dll 檔或自動化物件等項目的空間。 在這種情況下，可考慮加大 **-g**`` 參數所保留的記憶體數量。  
   

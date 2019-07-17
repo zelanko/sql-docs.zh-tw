@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: c3c763f0342456b91914f154dd19ec0c2ae8875a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e01be5f013beeaed58b5f851063524950c338c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935599"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
 

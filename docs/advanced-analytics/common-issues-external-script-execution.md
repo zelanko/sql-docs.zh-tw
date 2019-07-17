@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963125"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Launchpad 服務與 SQL Server 中的外部指令碼執行的一般問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 
 若要修正此問題，請確定群組 **SQLRUserGroup** 擁有系統權限「允許本機登入」  。
 
-如需詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
+如需詳細資訊，請參閱[設定 Windows 服務帳戶與權限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
 ## <a name="permissions-to-run-external-scripts"></a>若要執行外部指令碼的權限
 
@@ -178,7 +177,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
+*[1]"c:\\程式檔案\\Microsoft SQL Server\\MSSQL13。SQL2016\\R_SERVICES"*
 
 *[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 

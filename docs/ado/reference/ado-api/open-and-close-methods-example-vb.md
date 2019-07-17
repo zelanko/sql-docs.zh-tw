@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a96f0fabdc4a9d725b78f4cffb78c563ab238a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a37568f6bf4435d762d62c0475abb7d0fb8065a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917986"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open 和 Close 方法範例 (VB)
 這個範例會使用**開啟**並[關閉](../../../ado/reference/ado-api/close-method-ado.md)方法兩者[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)已開啟的物件。  

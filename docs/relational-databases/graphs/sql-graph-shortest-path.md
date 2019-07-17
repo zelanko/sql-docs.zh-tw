@@ -17,16 +17,15 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035885"
 ---
-# <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
+# <a name="shortestpath-transact-sql"></a>SHORTEST_PATH & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   指定搜尋條件圖形，也就是搜尋以遞迴方式或重複。 SHORTEST_PATH 可用在 MATCH 內使用 SELECT 陳述式中圖形節點和邊緣資料表。 
@@ -49,7 +48,7 @@ SHORTEST_PATH 函式可讓您尋找：
 ## <a name="arbitrary-length-pattern"></a>任意長度的模式
 此模式包含節點和邊緣，直到達到所需的節點，或直到此模式中所指定的反覆項目數上限必須重複周遊成立。 執行查詢時，每次執行此模式的結果會在節點與邊緣周遊的路徑從 [開始] 節點以結束節點的已排序的集合。 這是規則運算式樣式語法模式，並支援下列兩個模式數量詞：
 
-* **‘+’** :重複模式 1 或多次。 在找到最短路徑後立即終止。
+* **'+'** :重複模式 1 或多次。 在找到最短路徑後立即終止。
 * **{1,n}** ：重複模式 1 至 'n' 次。 終止只要找到最短。
 
 ## <a name="lastnode"></a>LAST_NODE

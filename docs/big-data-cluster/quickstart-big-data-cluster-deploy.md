@@ -5,17 +5,16 @@ description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1688725e8944b4099623688f92931c261b7fdcb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958279"
 ---
 # <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -30,7 +29,7 @@ ms.locfileid: "67728779"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Azure 訂用帳戶。
 - [巨量資料工具](deploy-big-data-tools.md):

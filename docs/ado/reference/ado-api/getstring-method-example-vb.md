@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5dcbeb7f9fbdb8cb1ab3306f88eed351572e17d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6928d870c00fce0f712e7a9fc01cc2a2a33a57d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918504"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 方法範例 (VB)
 此範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  

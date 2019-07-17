@@ -5,17 +5,16 @@ description: 了解如何執行離線部署的 SQL Server 的巨量資料叢集�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 25145a7278f5b0feb85641d8798a34e4258f6b3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958518"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行離線部署的 SQL Server 的巨量資料叢集
 

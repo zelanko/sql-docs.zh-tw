@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 9644bf7d055bef0f087562ff75591fbc90ddf486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73bcb228383cb5d80554c0f0059215cb4acbb9c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935050"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
 

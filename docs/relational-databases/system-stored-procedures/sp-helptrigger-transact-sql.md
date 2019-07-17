@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048225"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'table'` 是要傳回觸發程序資訊的目前資料庫中資料表的名稱。 *表格*已**nvarchar(776)**，沒有預設值。  
+`[ @tabname = ] 'table'` 是要傳回觸發程序資訊的目前資料庫中資料表的名稱。 *表格*已**nvarchar(776)** ，沒有預設值。  
   
-`[ @triggertype = ] 'type'` 是要傳回相關資訊的 DML 觸發程序的類型。 *型別*已**char(6)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @triggertype = ] 'type'` 是要傳回相關資訊的 DML 觸發程序的類型。 *型別*已**char(6)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

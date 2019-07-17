@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a808883b706700bb28888e4d66b8aa64bf1c7ee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fb0978443c50bd38bb743feed65f4769831340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906507"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>建立資料庫精靈 (Master Data Services 組態管理員)
 
@@ -37,7 +36,7 @@ ms.locfileid: "65484533"
 |**密碼**|指定已與使用者帳戶建立關聯的密碼：<br /><br /> 當 [驗證類型]  為 [目前使用者 - 整合式安全性]  ，[密碼]  方塊會是唯讀的，而且將會使用指定的 Windows 使用者帳戶認證來連接。<br /><br /> [驗證類型]  為 [SQL Server 帳戶]  時，將會啟用 [密碼]  方塊，而且您必須指定與指定的使用者帳戶有關聯的密碼。|  
 |**測試連接**|確認指定的使用者帳戶可以連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，而且此帳戶擁有建立該執行個體之 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的權限。 如果您沒有按一下 [測試連接]  ，則按 [下一步]  時將會測試連接。|  
   
-## <a name="database"></a>[資料庫]  
+## <a name="database"></a>資料庫  
  為新的資料庫指定資料庫名稱和定序選項。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 char 和 varchar) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 如需資料庫定序的詳細資訊，請參閱 [定序和 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 |控制項名稱|描述|  

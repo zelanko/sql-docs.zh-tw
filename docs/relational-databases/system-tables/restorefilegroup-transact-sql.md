@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b0fdece346bf77efb9ae78092717bfba9098089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910158"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47676916"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|用來識別對應的還原作業的唯一識別碼。 參考**restorehistory （restore_history_id)**。|  
+|**restore_history_id**|**int**|用來識別對應的還原作業的唯一識別碼。 參考**restorehistory （restore_history_id)** 。|  
 |**filegroup_name**|**nvarchar(128)**|正在還原的檔案群組名稱。 可以是 NULL。<br /><br /> 當資料庫還原為資料庫快照集時，會依照完整還原的相同方式來擴展這個值。|  
   
 ## <a name="remarks"></a>備註  
