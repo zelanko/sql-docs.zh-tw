@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130016"
 ---
 # <a name="display-size"></a>顯示大小
 資料行的顯示大小是以字元格式顯示資料所需字元數目上限。 下表定義每個 ODBC SQL 資料類型的顯示大小。  
@@ -40,7 +39,7 @@ ms.locfileid: "63241244"
 |所有的二進位類型 [a]|定義或 （適用於變數的型別） 的最大資料行長度逾 2。 （每個二進位的位元組被以 2 位數的十六進位數字。）|  
 |SQL_TYPE_DATE|10 (格式的日期*yyyy-mm-dd 的-* )。|  
 |SQL_TYPE_TIME|8 (時間格式*hh: mm:* )<br /><br /> - 或 -<br /><br /> 9 + *s* (時間格式*hh: mm:* [.fff...]，其中*s*小數秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|19 (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* [.fff]] 格式，其中*s*小數秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|19 (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* 格式)<br /><br /> - 或 -<br /><br /> 20 + *s* (針對在時間戳記*yyyy 為 yyyy-mm-dd hh: mm:* [.fff] 格式，其中*s*小數秒數有效位數)。|  
 |間隔的所有資料類型|請參閱[間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)。|  
 |SQL_GUID|36 (中的字元數*aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*格式|  
   

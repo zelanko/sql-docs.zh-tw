@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961690"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型，並將它用於 SQL Server （逐步解說）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "58510595"
 
     + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 從資料表擷取模型**varbinary （max)** 儲存在 SQL 變數的資料 _\@lmodel2_，並做為參數傳遞*mod*系統預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 計分是定義為 SQL 查詢，並儲存為字串，以在 SQL 變數，當做輸入使用的資料_\@輸入_。 從資料庫擷取資料時，它會儲存在名為資料框架*InputDataSet*，這是預設名稱的輸入資料來[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義另一個變數的名稱視使用的參數  *_\@input_data_1_name_*。
+    + 計分是定義為 SQL 查詢，並儲存為字串，以在 SQL 變數，當做輸入使用的資料 _\@輸入_。 從資料庫擷取資料時，它會儲存在名為資料框架*InputDataSet*，這是預設名稱的輸入資料來[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義另一個變數的名稱視使用的參數 * _\@input_data_1_name_* 。
 
     + 若要產生分數，預存程序呼叫的 rxPredict 函式**RevoScaleR**程式庫。
 

@@ -2,19 +2,18 @@
 title: 下載 Microsoft Updates-Analytics Platform System |Microsoft Docs
 description: 本主題討論如何以 Windows Server Update Services (WSUS) 從 Microsoft Update Catalog 下載更新，並將這些更新套用至 Analytics Platform System appliance 伺服器。 Microsoft Update 會安裝所有適用的更新，適用於 Windows 和 SQL Server。 VMM 虛擬機器的應用裝置上安裝 WSUS。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78da7bd46282bb42bc3630c71c1cafd1ea0f11bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961042"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下載並套用 Analytics Platform System 的 Microsoft 更新
 本主題討論如何以 Windows Server Update Services (WSUS) 從 Microsoft Update Catalog 下載更新，並將這些更新套用至 Analytics Platform System appliance 伺服器。 Microsoft Update 會安裝所有適用的更新，適用於 Windows 和 SQL Server。 VMM 虛擬機器的應用裝置上安裝 WSUS。  
@@ -77,7 +76,7 @@ ms.locfileid: "63042302"
   
     您可以也在所選的更新，以滑鼠右鍵按一下，然後按一下**核准**。 系統可能會提示您接受 「 Microsoft 軟體授權條款 」。 如果是的話，按一下**我接受**在視窗中，以繼續。  
   
-    ![選取 [全部套用更新，並按一下 [核准]。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
+    ![選取 全部套用更新，並按一下 [核准]。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
 4.  選取您在中建立的應用裝置伺服器群組[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   

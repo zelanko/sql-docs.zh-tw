@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029016"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安裝 SSMA 元件 (SybaseToSQL)
 除了安裝 SSMA，適用於使用伺服器端資料移轉，您必須也安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些元件包括資料移轉以及若要啟用伺服器對伺服器連線的 Sybase 提供者所支援的 SSMA 延伸模組組件。  
@@ -63,7 +62,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb_syb**
   
     如果**安裝的軟體測試人員資料庫**選項會檢查軟體測試人員**ssmatesterdb_syb**就會建立資料庫。  
   
-11. 若要安裝公用程式的另一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取**回到 執行個體**，然後按一下 **下一步]** 。 或者，若要結束精靈，請按一下**結束**。  
+11. 若要安裝公用程式的另一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取**回到 執行個體**，然後按一下 [**下一步]** 。 或者，若要結束精靈，請按一下**結束**。  
   
 ### <a name="sql-server-database-objects"></a>SQL Server 資料庫物件  
 安裝延伸模組組件之後，您將會，請參閱**ssma_syb.bcp_migration_packages**資料表中**sysdb**資料庫。 您也會看到下列的預存程序：  

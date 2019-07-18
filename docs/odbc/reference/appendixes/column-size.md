@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019230"
 ---
 # <a name="column-size"></a>資料行大小
 數值資料類型的資料行 （或參數） 大小定義為資料行或參數的資料類型或資料的精確度所使用的數字的最大數目。 字元類型，這是以字元為單位的資料; 長度二進位資料類型資料行大小被定義為資料的位元組長度。 時間、 時間戳記，和所有的間隔資料類型，這是此資料的字元表示法中的字元數。 下表顯示每種精簡的 SQL 資料類型所定義的資料行大小。  
@@ -46,7 +45,7 @@ ms.locfileid: "63224474"
 |SQL_INTERVAL_DAY_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 9 +*p* (如果*s*= 0) 或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 3 +*p* (如果*s*= 0) 或 4 +*p* + *s* (如果*s*> 0)。 [d]|  
-|SQL_INTERVAL_YEAR  SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*，其中*p*是間隔開頭有效位數。 [d]|  
+|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*，其中*p*是間隔開頭有效位數。 [d]|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*，其中*p*是間隔開頭有效位數。 [d]|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*，其中*p*是間隔開頭有效位數。 [d]|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*，其中*p*是間隔開頭有效位數。 [d]|  

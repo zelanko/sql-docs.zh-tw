@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165461"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "52509467"
 |------------|------------------------|  
 |**Server**|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 請參閱[命名慣例 (Windows)](/windows/desktop/DNS/naming-conventions)如需詳細資訊。|  
 |**DataSource**|: / \ * &#124; ? "（) [] {} <>|  
-|**層級**或**屬性**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**維度**或**階層**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
-|所有其他物件|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} < >|  
+|**層級**或**屬性**|. , ; ' ` : / \ * &#124; ? "& %$ ！ + = [] {} < >|  
+|**維度**或**階層**|. , ; ' ` : / \ * &#124; ? "& %$ ！ + = （) [] {} \<，>|  
+|所有其他物件|. , ; ' ` : / \ * &#124; ? "& %$ ！ + = （) [] {} < >|  
   
  **例外狀況：當允許保留的字元**  
   

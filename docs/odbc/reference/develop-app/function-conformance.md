@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069748"
 ---
 # <a name="function-conformance"></a>函式一致性
 下表指出這是妥善定義的每個 ODBC 函式，一致性層級。  
