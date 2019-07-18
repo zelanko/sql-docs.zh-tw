@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a44415653cffdbd98f7ef7bc1a39ba58c5473a86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666547"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -240,7 +240,7 @@ AS { sql_statement
 ## <a name="logon-triggers"></a>登入觸發程序  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援登入事件的觸發程序。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  變更 DML 觸發程序需要定義觸發程序的資料表或檢視表的 ALTER 權限。  
   
  若要變更以伺服器範圍 (ON ALL SERVER) 定義的 DDL 觸發程序或登入觸發程序，則需要伺服器的 CONTROL SERVER 權限。 若要變更以資料庫範圍 (ON DATABASE) 定義的 DDL 觸發程序，則需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。  

@@ -1,7 +1,7 @@
 ---
 title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,23 +15,23 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20007b2918d8e0b8675c082edc5040c092973579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806092"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786364"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法來偵測可見資料列刪除。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```cpp
 public boolean deletesAreDetected(int type)  
 ```  
   
@@ -59,7 +59,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果一個洞來取代刪除的資料列。 **false**如果移除刪除的資料列。  
+ **true**如果間隔來取代刪除的資料列。 **false**如果移除刪除的資料列。  
   
  當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會針對 TYPE_SS_SCROLL_KEYSET 資料指標傳回 **true**，而針對所有的其他結果集類型傳回 **false**。  
   

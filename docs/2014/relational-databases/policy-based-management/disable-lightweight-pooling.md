@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8e04ec8fa809f4bea8c19e2e0167b943767224c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705333"
 ---
 # <a name="disable-lightweight-pooling"></a>停用輕量型共用
   這個規則會檢查輕量型共用是否已經在伺服器上停用。 將 lightweightpooling 設定為 1 會使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 切換到 Fiber 模式排程。 Fiber 模式適用於 UMS 工作者的環境切換是重要效能瓶頸的某些狀況。 因為這個狀況非常罕見，所以 Fiber 模式幾乎不太會提高一般系統上的效能或延展性。  

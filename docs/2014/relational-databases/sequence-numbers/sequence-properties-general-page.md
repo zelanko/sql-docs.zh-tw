@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184426"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
   建立順序物件，並指定其屬性。 序列是使用者定義之結構描述繫結的物件，該物件會根據建立序列所使用的規格產生一連串的數值。 數值序列會在定義的間隔依照遞增或遞減順序來產生，而且在用完時可設定為重新啟動 (循環)。 順序不會與特定資料表產生關聯，與識別欄位不同。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者的應用程式可以參考序列物件，並協調跨越多個資料列和資料表的值。  
@@ -26,9 +26,9 @@ ms.locfileid: "52781601"
   
  如需使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函數的相關資訊和案例，請參閱[序號](sequence-numbers.md)。  
   
- 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]，然後按一下 [新增順序]，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性] 時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql) 陳述式或卸除然後重新建立順序物件。  
+ 此頁面可經由兩種方式存取：以滑鼠右鍵按一下 [物件總管] 中的 [順序]  ，然後按一下 [新增順序]  ，或者以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]  。 以滑鼠右鍵按一下現有的順序，然後按一下 [屬性]  時，無法編輯選項。 若要變更順序選項，請使用 [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql) 陳述式或卸除然後重新建立順序物件。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **順序名稱**  
  在此處輸入順序名稱。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52781601"
 -   以這些類型之一為基礎的任何使用者定義的資料類型 (別名類型)。  
   
  **有效位數**  
- 如果是 `decimal` 或 `numeric` 資料類型，請指定有效位數  (小數位數一定是 0)。  
+ 如果是 `decimal` 或 `numeric` 資料類型，請指定有效位數 (小數位數一定是 0)。  
   
  **開始值**  
  順序物件會傳回的第一個值。 **START** 值必須是小於或等於順序物件的最大值，而且大於或等於最小值。 新順序物件的預設開始值是遞增順序物件的最小值，是遞減順序物件的最大值。  

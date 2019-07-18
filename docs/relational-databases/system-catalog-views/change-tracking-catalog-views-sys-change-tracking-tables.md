@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a9bc9e99600fdc2aa80e04fc7af3fb5de362453
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 158203b7dedfec3228821f6368c8f6c92b8041f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050867"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingtables"></a>變更追蹤目錄檢視-sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51673118"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|擁有變更日誌之資料表的識別碼。 即使變更追蹤目前為關閉狀態，資料表也可以擁有變更日誌。<br /><br /> 資料表識別碼在資料庫中是唯一的。|  
-|is_track_columns_updated_on|**bit**|變更追蹤在資料表上的目前狀態：<br /><br /> 0 = OFF<br /><br /> 1 = ON |  
+|is_track_columns_updated_on|**bit**|變更追蹤在資料表上的目前狀態：<br /><br /> 0 = OFF<br /><br /> 1 = ON|  
 |begin_version|**bigint**|針對資料表開始變更追蹤時的資料庫版本。 這個版本通常會指出啟用變更追蹤的時間，但如果資料表遭到截斷，就會重設這個值。|  
 |cleanup_version|**bigint**|清除可能已經移除變更追蹤資訊多早的版本。|  
 |min_valid_version|**bigint**|可用於資料表之變更追蹤資訊的最大有效版本。<br /><br /> 從與此資料列相關聯之資料表取得變更時，last_sync_version 的值必須大於或等於此資料行所報告的版本。 如需詳細資訊，請參閱 < [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)。|  

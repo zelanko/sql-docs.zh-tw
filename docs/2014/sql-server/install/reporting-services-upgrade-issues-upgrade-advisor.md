@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], upgrade issues
@@ -16,12 +15,12 @@ ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de69a25d1689883fdcbce8796d3cdcd30374a8f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092583"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 升級問題 (Upgrade Advisor)
   下列主題將描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可能會影響升級到的問題[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 這些主題會描述一些可讓您採取的動作，以便減輕這些變更對環境的影響。  

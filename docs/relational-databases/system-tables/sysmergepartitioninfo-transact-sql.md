@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cea1f26a93627d2a3719ad362d2bd62ee1e3ba1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c188cf1ad72033976136496914844c14c3a35867
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029835"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

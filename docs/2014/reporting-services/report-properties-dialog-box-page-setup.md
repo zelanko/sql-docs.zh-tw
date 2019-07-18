@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe4abae7db246a9d18388b1d479b6cc9d8048e5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104380"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>報表屬性對話方塊、版面設定
   選取 **版面**上**報表屬性**，來設定整個報表的分頁選項的對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **英吋為單位**  
  以英吋為單位指定頁面大小。 依預設，您的本機設定會決定選取的頁面單位。  
   
@@ -41,10 +40,10 @@ ms.locfileid: "56296866"
  從可在「寬度」和「高度」控制項中自動輸入大小的清單選取大小。 或者，選取 **[自訂大小]** ，然後變更「寬度」和「高度」控制項，以反映您要使用的大小。  
   
  **寬度**  
- 顯示 [紙張類型] 清單中選取之紙張大小的寬度。  
+ 顯示 [紙張類型]  清單中選取之紙張大小的寬度。  
   
  **高度**  
- 顯示 [紙張類型] 清單中選取之紙張大小的高度。  
+ 顯示 [紙張類型]  清單中選取之紙張大小的高度。  
   
  **頂端**  
  設定報表頂端和報表第一行頂端之間的距離。  

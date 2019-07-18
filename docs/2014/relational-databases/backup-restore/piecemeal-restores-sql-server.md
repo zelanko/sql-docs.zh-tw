@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62876076"
 ---
 # <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
   這個主題僅與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版中包含多個檔案或檔案群組 (若是簡單模式，僅適用唯讀檔案群組) 的資料庫有關。  

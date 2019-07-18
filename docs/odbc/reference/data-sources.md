@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135626"
 ---
 # <a name="data-sources"></a>資料來源
 A*資料來源*是資料的來源。 它可以是檔案、 DBMS 或甚至是即時的資料摘要上特定資料庫。 資料可能位於程式，在同一部電腦或網路上的某個位置的另一部電腦上。 例如，資料來源可能 OS/2® 作業系統，存取 Novell® Netware; 上執行 Oracle DBMS透過閘道; 存取 IBM DB2 DBMS在伺服器目錄; Xbase 檔案的集合或本機的 Microsoft® Access 資料庫檔案。  

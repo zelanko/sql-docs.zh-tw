@@ -19,21 +19,21 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 476d6d4ca92b806f0973983de5815f57782076e8
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d094b8540609810d134c52fb5755b21db4fc0f6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947112"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>用來還原、復原和管理備份的 RESTORE 陳述式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
-  此章節描述備份所用的 RESTORE 陳述式。 除了用來還原和復原備份的主要 RESTORE {DATABASE | LOG} 陳述式之外，還有許多輔助的 RESTORE 陳述式可協助您管理備份和計畫還原順序。 輔助的 RESTORE 命令包括：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 及 RESTORE VERIFYONLY。  
+  此章節描述備份所用的 RESTORE 陳述式。 除了用來還原和復原備份的主要 RESTORE {DATABASE | LOG} 陳述式之外，還有許多輔助的 RESTORE 陳述式可協助您管理備份和計畫還原順序。 輔助的 RESTORE 命令包括：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。  
   
 > [!IMPORTANT]  
 >  在舊版的 SQL Server 中，任何使用者都可以使用 RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY 和 RESTORE VERIFYONLY 等 Transact-SQL 陳述式來取得有關備份組及備份裝置的資訊。 因為這些陳述式會揭露有關備份檔案內容的資訊，所以在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新的版本中，這些陳述式需要 CREATE DATABASE 權限。 與舊版相較，這項需求更能完整地保障備份檔案及備份資訊的安全。 如需這個權限的相關資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "54242179"
 |引數|Description|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|描述利用 BACKUP 命令從備份中還原和復原資料庫時，所用的 RESTORE DATABASE 和 RESTORE LOG Transact-SQL 陳述式。 在所有復原模式之下，資料庫都會使用 RESTORE DATABASE。 只有完整復原模式和大量記錄復原模式會使用 RESTORE LOG。 您也可以利用 RESTORE DATABASE，將資料庫回復為資料庫快照集。|  
-|[RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|記下 RESTORE 陳述式之「語法」一節中所述的引數，以及輔助陳述式之關聯集中的引數：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 及 RESTORE VERIFYONLY。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。|  
+|[RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|記下 RESTORE 陳述式的＜語法＞一節中所述引數，以及輔助陳述式的關聯集中引數：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|描述 RESTORE FILELISTONLY Transact-SQL 陳述式，這個陳述式用來傳回含有資料庫清單的結果集，以及備份組所包含的記錄檔。|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|描述 RESTORE HEADERONLY Transact-SQL 陳述式，這個陳述式用來傳回含有特定備份裝置上的所有備份組之所有備份標頭資訊的結果集。|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|描述 RESTORE LABELONLY Transact-SQL 陳述式，這個陳述式用來傳回含有給定備份裝置所識別的備份媒體之相關資訊的結果集。|  

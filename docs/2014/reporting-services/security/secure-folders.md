@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101713"
 ---
 # <a name="secure-folders"></a>保護資料夾的安全
   資料夾安全性是保護報表伺服器中之所有內容的基礎。 因為安全性會在整個資料夾結構繼承，所以您可以指定很多或很少區段的資料夾階層，來允許特定類型的存取。  
@@ -30,7 +29,7 @@ ms.locfileid: "56034819"
   
  低安全性資料夾可以用來儲存您要很容易存取的報表。  
   
- 資料夾安全性會形成項目層級安全性的基礎，以報表伺服器資料夾階層的根節點開始，也就是 [主資料夾] 資料夾。 因為安全性是繼承的，建議在 [主資料夾] 資料夾設定較嚴格的安全性原則。 使用 [主資料夾] 角色指派裡的 [瀏覽器] 角色，即可提供只供檢視存取。  
+ 資料夾安全性會形成項目層級安全性的基礎，以報表伺服器資料夾階層的根節點開始，也就是 [主資料夾] 資料夾。 因為安全性是繼承的，建議在 [主資料夾] 資料夾設定較嚴格的安全性原則。 使用 [主資料夾] 角色指派裡的 [瀏覽器]  角色，即可提供只供檢視存取。  
   
 ## <a name="tasks-and-folder-access"></a>工作和資料夾存取  
  建立資料夾的角色指派時，請考慮下表列出的工作。  

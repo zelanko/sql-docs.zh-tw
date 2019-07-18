@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e3eee8a69013975f7bfe9febcfa85d8143dcef68
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056780"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>資料分割處理目的地編輯器 (進階頁面)
   使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[進階]** 頁面，來設定錯誤處理。  
@@ -30,7 +29,7 @@ ms.locfileid: "58374894"
 > [!NOTE]  
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用預設錯誤組態。**  
  指定是否要使用預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 `True`。  
   
@@ -49,10 +48,10 @@ ms.locfileid: "58374894"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]，請指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]  ，請指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]，請指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]  ，請指定到達錯誤臨界值時要採取的動作。  
   
 |值|描述|  
 |-----------|-----------------|  

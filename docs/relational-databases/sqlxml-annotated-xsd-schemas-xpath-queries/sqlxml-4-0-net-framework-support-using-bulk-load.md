@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f87258630e033949c1dc83efacb959c5c9796cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ed725ac58b7224ad157dd7b5d06b3b522395023b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220396"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 支援 - 使用大量載入
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -142,7 +141,7 @@ ms.locfileid: "56041612"
 9. 若要將 XML 載入到您所建立的資料表中，建立並執行專案。  
   
     > [!NOTE]  
-    >  大量載入元件 (xblkld4.dll) 的參考也可以使用 tlbimp.exe 工具加入，該工具是 .NET Framework 的一部分。 此工具會針對原生 DLL (xblkld4.dll) 建立 Managed 包裝函數，然後就可以在任何 .NET 專案中使用。 例如：  
+    >  大量載入元件 (xblkld4.dll) 的參考也可以使用 tlbimp.exe 工具加入，該工具是 .NET Framework 的一部分。 此工具會針對原生 DLL (xblkld4.dll) 建立 Managed 包裝函數，然後就可以在任何 .NET 專案中使用。 例如:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

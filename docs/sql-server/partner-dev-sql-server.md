@@ -11,11 +11,11 @@ ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
 ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044901"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506937"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開發夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], about objects
@@ -19,12 +17,12 @@ ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04f490e5b4305b665fc38793439626e3e5f651c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62725653"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>資料庫物件 (Analysis Services - 多維度資料)
   A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體包含資料庫物件和組件適用於線上分析處理 (OLAP) 和資料採礦。  
@@ -62,7 +60,7 @@ ms.locfileid: "48090758"
 |-----------|-----------------|  
 |[多維度模型中的資料來源](../data-sources-in-multidimensional-models.md)|描述 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的資料來源。|  
 |[多維度模型中的資料來源檢視](../data-source-views-in-multidimensional-models.md)|描述在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中以一或多個資料來源為根據的邏輯資料模型。|  
-|[多維度模型中的 cube](../cubes-in-multidimensional-models.md)|描述 Cube 和 Cube 物件，包括：量值、量值群組、維度使用方式關聯性、計算、關鍵效能指標、動作、翻譯、分割與檢視方塊。|  
+|[多維度模型中的 Cube](../cubes-in-multidimensional-models.md)|描述 Cube 和 Cube 物件，包括：量值、量值群組、維度使用方式關聯性、計算、關鍵效能指標、動作、翻譯、分割與檢視方塊。|  
 |[維度 &#40;Analysis Services-多維度資料 &#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|描述維度和維度物件，其中包括屬性、屬性關聯性、階層、層級與成員。|  
 |[採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|描述採礦結構和採礦物件，其中包括採礦模型。|  
 |[安全性角色 &#40;Analysis Services-多維度資料 &#41;](security-roles-analysis-services-multidimensional-data.md)|描述角色，也就是在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中控制存取物件權限的安全性機制。|  

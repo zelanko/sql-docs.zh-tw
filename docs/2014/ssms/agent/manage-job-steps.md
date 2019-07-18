@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189157"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
   作業步驟是指作業對資料庫或伺服器所採取的動作， 每一個作業必須至少有一個作業步驟。 作業步驟可以是：  
@@ -75,7 +75,7 @@ ms.locfileid: "52768450"
   
 -   指令成功時傳回的處理序結束代碼。  
   
--   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 外部程式，則程式和程式的引數的名稱，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q"sp_who"**  
+-   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 若為外部程式，則是指程式名稱和程式的引數，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  如果可執行檔不在系統路徑或執行作業步驟的使用者路徑中，您必須提供可執行檔的完整路徑。  
@@ -157,7 +157,7 @@ Set oServer = nothing
   
 -   識別要執行作業步驟的資料庫 OLAP 伺服器。  
   
--   輸入要執行的陳述式。  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
+-   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
   
 ### <a name="analysis-services-query-job-steps"></a>SQL Server Analysis Services 查詢作業步驟  
  當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查詢作業步驟時，必須：  
@@ -191,7 +191,7 @@ Set oServer = nothing
   
 -   新增或修改命令列選項。  
   
- 請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄] 指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態] 索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
+ 請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄]  指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態]  索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
   
  如需建立用於執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之作業步驟的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
@@ -199,7 +199,7 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |描述如何建立包含可執行程式的作業步驟。|[建立 CmdExec 作業步驟](create-a-cmdexec-job-step.md)|  
 |描述如何重設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權限。|[設定使用者可建立及管理 SQL Server Agent 作業](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |描述如何建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  

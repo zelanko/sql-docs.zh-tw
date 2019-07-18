@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101093"
 ---
 # <a name="subscriptions-page-report-manager"></a>訂閱頁面 (報表管理員)
   使用 [訂閱] 頁面即可列出目前報表或共用資料來源的全部訂閱。 如果您擁有足夠的權限 (如同「管理所有訂閱」工作所表示)，就可以檢視所有使用者的訂閱。 否則，此頁面只會顯示您擁有的訂閱。  
@@ -40,11 +39,11 @@ ms.locfileid: "56031539"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 4.  選取 **[訂閱]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **刪除**  
  按一下即可刪除訂閱。 在刪除訂閱之前，請選取您想要刪除之每一個訂閱旁邊的核取方塊。  
   

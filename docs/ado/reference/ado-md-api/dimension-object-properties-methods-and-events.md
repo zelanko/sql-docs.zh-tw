@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c161898599cadd5e31a45720cbace26243ea7ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938526"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -35,7 +34,7 @@ ms.locfileid: "47696547"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

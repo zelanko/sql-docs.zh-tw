@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64774943"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,17 +126,18 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > Azure SQL Database 不支援從檔案或使用私密金鑰檔案建立憑證。
   
+ BINARY =*asn_encoded_certificate*  
+ 指定為二進位常數的 ASN 編碼憑證位元組。  
+ **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+  
  WITH PRIVATE KEY  
- 指定憑證的私密金鑰必須載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 只有在從檔案建立憑證的情況下，這個子句才有效。 若要載入組件的私密金鑰，請使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
+ 指定憑證的私密金鑰必須載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 從組件建立憑證時，這個子句無效。 若要載入從組件所建立憑證的私密金鑰，請使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
   
  FILE ='*path_to_private_key*'  
  指定通往私密金鑰的完整路徑 (包括檔案名稱)。 *path_to_private_key* 可以是本機路徑或通往網路位置的 UNC 路徑。 您可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶的安全性內容中存取這個檔案。 這個帳戶必須有必要的檔案系統權限。  
   
 > [!IMPORTANT]  
 >  此選項在自主資料庫或 Azure SQL Database 中無法使用。  
-  
- asn_encoded_certificate  
- 指定為二進位常數的 ASN 編碼憑證位元。  
   
  BINARY =*private_key_bits*  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -150,7 +151,7 @@ CREATE CERTIFICATE certificate_name
  指定用來加密私密金鑰的密碼。 請只在您要利用密碼來加密憑證時才使用這個選項。 如果省略這個子句，則會使用資料庫主要金鑰加密此私密金鑰。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
  SUBJECT ='*certificate_subject_name*'  
- 「主旨」一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
+ 「主旨」  一詞是指憑證中繼資料的欄位，如 X.509 標準所定義。 主旨不應超過 64 個字元，並會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux 強制執行這項限制。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows，主旨長度最多可達 128 個字元。 超過 128 個字元的主旨在儲存至目錄時會被截斷，但包含憑證的二進位大型物件 (BLOB) 會保留完整的主旨名稱。  
   
  START_DATE ='*datetime*'  
  這是憑證生效的日期。 若未指定，會將 START_DATE 設為等於目前的日期。 START_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。  
@@ -162,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話交談的起始端能夠使用該憑證。 預設值是 ON。  
   
 ## <a name="remarks"></a>Remarks  
- 憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 CREATE CERTIFICATE 可以從檔案或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
+ 憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 CREATE CERTIFICATE 可以從檔案、二進位常數或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
   
  私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 止，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
   
@@ -183,7 +184,7 @@ CREATE CERTIFICATE certificate_name
   
  您可以使用 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 函式來建立憑證的二進位描述。 如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製到其他資料庫的範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 一文中的範例 B。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫的 CREATE CERTIFICATE 權限。 只有 Windows 登入、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，以及應用程式角色可以擁有憑證。 群組和角色無法擁有憑證。  
   
 ## <a name="examples"></a>範例  
@@ -233,7 +234,10 @@ GO
 ```  
 > [!IMPORTANT]
 > Azure SQL Database 不支援從檔案建立憑證。
-   
+
+> [!IMPORTANT]
+> 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，['CLR strict security'](../../database-engine/configure-windows/clr-strict-security.md) 伺服器設定選項可防止在未先為其設定安全性的情況下載入組件。 請載入憑證，從中建立登入，向該登入授與 `UNSAFE ASSEMBLY`，然後載入組件。
+
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 建立自我簽署憑證  
  下列範例會建立稱為 `Shipping04` 的憑證，而不指定加密密碼。 這個範例可以搭配使用 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
   
@@ -251,6 +255,8 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
  [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

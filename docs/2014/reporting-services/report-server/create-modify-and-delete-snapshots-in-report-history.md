@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ecddbed328d1625f525069fe3d502c3348eb065a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103906"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
   報表記錄是報表快照集的集合。 您可以加入和刪除快照集，或修改影響報表記錄儲存區的屬性，來維護報表記錄。 您可以用手動方式或依據排程來建立報表記錄。  
@@ -52,7 +51,7 @@ ms.locfileid: "56010960"
   
 -   針對單一或群組，以手動的方式刪除快照集。  
   
-     您可以從報表管理員的 [記錄] 頁面中刪除快照集。 導覽至報表，按一下 [記錄]，選取您要刪除的快照集旁邊的核取方塊，然後按一下 **[刪除]**。  
+     您可以從報表管理員的 [記錄] 頁面中刪除快照集。 導覽至報表，按一下 [記錄]，選取您要刪除的快照集旁邊的核取方塊，然後按一下 **[刪除]** 。  
   
 -   降低報表記錄限制，以減少儲存的快照集數量。 報表記錄限制可以針對報表伺服器或特定的報表進行設定。 當限制降低時，系統會從記錄中刪除最舊的快照集。  
   

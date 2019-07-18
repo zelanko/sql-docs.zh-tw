@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63065479"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>使用資料庫圖表中的資料表 (Visual Database Tools)
   您可以在 [資料表設計工具] 或 [資料庫圖表設計工具] 中修改和建立資料庫資料表。  

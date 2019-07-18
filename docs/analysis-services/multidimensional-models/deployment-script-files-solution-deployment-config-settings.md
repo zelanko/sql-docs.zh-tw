@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208942"
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>部署指令碼檔 - 方案部署組態設定
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "52525656"
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>修改部署的組態設定  
  在某些情況下，您可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的組態設定所儲存的專案\<*專案名稱*>.configsettings 檔案。 例如，您可能需要變更一個或多個資料來源的連接字串，或為特定的資料分割或量值群組指定儲存位置。  
   
- 若要修改的資料分割和角色部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，您必須變更這項資訊內\<*專案名稱*>.configsettings 檔案，如下列程序中所述。 您無法變更專案內的資料分割與角色設定，因為*\<專案名稱 >* **屬性頁** 對話方塊中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]並未顯示這些選項。  
+ 若要修改的資料分割和角色部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，您必須變更這項資訊內\<*專案名稱*>.configsettings 檔案，如下列程序中所述。 您無法變更專案內的資料分割與角色設定，因為 *\<專案名稱 >* **屬性頁** 對話方塊中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]並未顯示這些選項。  
   
 > [!NOTE]  
 >  組態設定可以套用至所有物件，或僅套用至新建立的物件。 唯有將其他物件部署到先前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，而且不想要覆寫現有的物件時，才會將組態設定套用至新建立的物件。 若要指定組態設定套用到所有物件或僅至新建立的項目，請將此選項設定\<*專案名稱*>.deploymentoptions 檔案。 如需詳細資訊，請參閱 [指定資料分割和角色部署選項](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)。  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>在已產生輸入檔之後，變更組態設定  
   
--   以互動方式執行 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並在 [組態設定] 頁面上，指定正在部署之物件的組態設定。  
+-   以互動方式執行 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並在 [組態設定]  頁面上，指定正在部署之物件的組態設定。  
   
      -或-  
   

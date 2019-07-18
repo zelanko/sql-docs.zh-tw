@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204625"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
   您可以使用 [查詢和檢視表設計工具](visual-database-tools.md) 處理任何語言的資料，並在任何版本的 Windows 作業系統中執行。 下列方針即簡要說明您將注意到的不同處，並提供管理國際應用程式資料的資訊。  

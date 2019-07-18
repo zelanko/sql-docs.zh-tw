@@ -21,16 +21,16 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8fd56f8043a24766490dbb8550046c693eef496
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 429be4403d1df512b43a049b0014afcafea15740
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947500"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ SUBSTRING ( expression ,start , length )
 ## <a name="remarks"></a>Remarks  
  *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext** **char**或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary**或 **varbinary** 資料類型)。  
   
- 當 *start* 或 *length* 包含大於 2147483647 的值時，*expression* 必須是 **varchar(max)** 或 **varbinary(max)**。  
+ 當 *start* 或 *length* 包含大於 2147483647 的值時，*expression* 必須是 **varchar(max)** 或 **varbinary(max)** 。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
  當使用增補字元 (SC) 定序時，*start* 和 *length* 會將 *expression* 中的每個代理字組算成單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  

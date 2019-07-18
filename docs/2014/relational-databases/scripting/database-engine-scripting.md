@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
@@ -16,12 +15,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10e7b4c7e2972ed797048dbcaedcaaeec4d682d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090520"
 ---
 # <a name="database-engine-scripting"></a>Database Engine 指令碼
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支援使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 指令碼環境來管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體和執行個體中的物件。 此外，您也可以在與指令碼環境非常相似的環境中，建立並執行含有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 XQuery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
@@ -39,7 +38,7 @@ ms.locfileid: "54127428"
   
 -   PowerShell 指令碼檔案可以當做依排程間隔或為了回應系統事件而執行指令碼之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell 作業步驟的輸入使用。  
   
--   啟動 PowerShell 並匯入 **模組的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式。 然後您可以執行此模組支援的所有動作。 您可以透過命令提示字元，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 的物件總管樹狀目錄中以滑鼠右鍵按一下節點並選取 [啟動 PowerShell]，啟動 **sqlps** 公用程式。  
+-   啟動 PowerShell 並匯入 **模組的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式。 然後您可以執行此模組支援的所有動作。 您可以透過命令提示字元，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 的物件總管樹狀目錄中以滑鼠右鍵按一下節點並選取 [啟動 PowerShell]  ，啟動 **sqlps** 公用程式。  
   
 ## <a name="database-engine-queries"></a>Database Engine 查詢  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢指令碼包含三種元素：  
@@ -58,7 +57,7 @@ ms.locfileid: "54127428"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 您通常會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以互動方式在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中編寫查詢指令碼檔案的程式碼。 然後，您就可以在下列其中一個環境內開啟此檔案：  
   
--   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]/[開啟] 功能表，在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中開啟此檔案。  
+-   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  /[開啟]  功能表，在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中開啟此檔案。  
   
 -   使用 **-i**_input_file_參數來執行具有檔案`sqlcmd`公用程式。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "54127428"
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟，依排程間隔或為了回應系統事件而執行指令碼。  
   
- 此外，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [產生指令碼精靈] 來產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下物件，然後選取 [產生指令碼] 功能表項目。 [產生指令碼] 就會啟動此精靈，並逐步引導您完成建立指令碼的程序。  
+ 此外，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [產生指令碼精靈] 來產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下物件，然後選取 [產生指令碼]  功能表項目。 [產生指令碼]  就會啟動此精靈，並逐步引導您完成建立指令碼的程序。  
   
 ## <a name="database-engine-scripting-tasks"></a>Database Engine 指令碼工作  
   
@@ -75,10 +74,10 @@ ms.locfileid: "54127428"
 |描述如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的程式碼和文字編輯器，以互動方式開發、偵錯和執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
 |描述如何使用 `sqlcmd` 公用程式，從命令提示字元執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，包含以互動方式開發指令碼的能力。|[sqlcmd 使用說明主題](../../database-engine/sqlcmd-how-to-topics.md)|  
 |描述如何將 SQL Server 元件整合至 Windows PowerShell 2.0 環境，然後建立 PowerShell 指令碼以管理 SQL Server 執行個體和物件。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
-|描述如何使用 [產生和發佈指令碼精靈]，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼以重新建立資料庫中的一個或多個物件。|[產生指令碼 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
+|描述如何使用 [產生和發佈指令碼精靈]  ，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼以重新建立資料庫中的一個或多個物件。|[產生指令碼 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [教學課程：撰寫 TRANSACT-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教學課程：撰寫 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

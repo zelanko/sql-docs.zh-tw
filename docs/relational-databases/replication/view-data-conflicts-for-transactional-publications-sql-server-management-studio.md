@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0df33614cbb10708c6438db69807a1ec3c78d4c3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047932"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>檢視交易式發行集的資料衝突 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54129869"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]**。  
+3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]** 。  
   
 4.  在 **[選取衝突資料表]** 對話方塊中，選取要檢視衝突的資料庫、發行集和資料表。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "54129869"
   
     -   在上方格內選取資料列，以便於下方格的該資料列顯示資訊。  
   
-    -   在上方格中選取一個或多個資料列，然後按一下 **[移除]**，會從衝突中繼資料表中移除資料列。  
+    -   在上方格中選取一個或多個資料列，然後按一下 **[移除]** ，會從衝突中繼資料表中移除資料列。  
   
-    -   按一下屬性按鈕 (**[…]**) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕 ( **[…]** ) 以檢視更多有關於衝突的資料行資訊。  
   
-    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]**。 輸入值，或按一下瀏覽按鈕 (**[...]**)，然後導覽至適當的檔案。 按一下 **[確定]** 關閉 **[選項]** 對話方塊。  
+    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]** 。 輸入值，或按一下瀏覽按鈕 ( **[...]** )，然後導覽至適當的檔案。 按一下 **[確定]** 關閉 **[選項]** 對話方塊。  
   
 6.  關閉複寫衝突檢視器。  
   

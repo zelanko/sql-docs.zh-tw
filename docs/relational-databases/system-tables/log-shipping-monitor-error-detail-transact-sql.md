@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0228072bee91f96e816a1d0f369f85fa486728
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990050"
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ ms.locfileid: "47770326"
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
@@ -24,19 +23,19 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068887"
 ---
 # <a name="memory-properties"></a>記憶體屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器記憶體屬性。 如需設定這些屬性的指引，請參閱《 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)》。  
   
  1 - 100 之間的值代表 **實體記憶體總計** 或 **虛擬位址空間**的百分比，以較少者為準。 超過 100 的值代表記憶體限制 (位元組)。  
   
- **適用於：** 多維度與表格式伺服器模式 (除非另有指示)。  
+ **適用於：** 多維度與表格式伺服器模式，除非另有指示。  
   
 ## <a name="properties"></a>屬性  
  `LowMemoryLimit`  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067723"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   若要描述的任何 SQL 陳述式中，參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會建置並執行[!INCLUDE[tsql](../../includes/tsql-md.md)]SQLDescribeParam 備妥的 ODBC 陳述式控制代碼上呼叫時，SELECT 陳述式。 結果集的中繼資料則會決定已備妥之陳述式中的參數特性。 SQLDescribeParam 可以傳回 SQLExecute 或 SQLExecDirect 可能會傳回任何錯誤程式碼。  
@@ -75,7 +75,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
   
 ||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |日期|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  

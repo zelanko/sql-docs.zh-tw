@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 991fdab41b7e14e88e621927371d7cc2da3ed3c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165242"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的需求和考量
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

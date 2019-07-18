@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a52a8482f56bb81f6d4436d8196a39e9e277ea7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059217"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>引數  
  '*filename*'  
- 指定所要讀取的初始追蹤檔。 *檔名*已**nvarchar(256)**，沒有預設值。  
+ 指定所要讀取的初始追蹤檔。 *檔名*已**nvarchar(256)** ，沒有預設值。  
   
  *number_files*  
  指定要讀取的換用檔案的數目。 這個數目包括在指定的初始檔案*filename*。 *number_files&lt*已**int**。  
@@ -53,7 +52,7 @@ fn_trace_gettable ( 'filename' , number_files )
 ## <a name="remarks"></a>備註  
  如果*number_files&lt*指定為**預設**， **fn_trace_gettable**讀取所有換用檔案，直到到達追蹤結尾為止。 **fn_trace_gettable**適用於指定的追蹤會傳回所有資料行的資料表。 如需詳細資訊，請參閱 < [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
- 請注意，fn_trace_gettable 函數不會載入換用檔案 (藉由指定這個選項時*number_files&lt*引數) 的原始追蹤檔案名稱以底線加一個數字值的結束位置。 (若為檔案換用時自動附加的底線及數值，則不在此列)。為了因應此情況，您可以重新命名追蹤檔案，移除原始檔案名稱中的底線。 比方說，如果原始的檔案命名為**Trace_Oct_5.trc**和名為換用檔案**Trace_Oct_5_1.trc**，您可以重新命名的檔案**TraceOct5.trc**並**TraceOct5_1.trc**。  
+ 請注意，fn_trace_gettable 函數不會載入換用檔案 (藉由指定這個選項時*number_files&lt*引數) 的原始追蹤檔案名稱以底線加一個數字值的結束位置。 (若為檔案換用時自動附加的底線及數值，則不在此列)。因應措施，您可以重新命名追蹤檔案，移除原始檔案名稱中的底線。 比方說，如果原始的檔案命名為**Trace_Oct_5.trc**和名為換用檔案**Trace_Oct_5_1.trc**，您可以重新命名的檔案**TraceOct5.trc**並**TraceOct5_1.trc**。  
   
  這個函數可以讀取在執行它的執行個體中仍然有效的追蹤。  
   

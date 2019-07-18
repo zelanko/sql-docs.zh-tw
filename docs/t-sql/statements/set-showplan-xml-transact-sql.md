@@ -26,11 +26,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16707627e7df326fe88edb3712a7c4bd11a2c92c
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816372"
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
@@ -52,7 +52,7 @@ SET SHOWPLAN_XML 的設定是在執行階段進行設定，而不是在剖析階
 
 當 SET SHOWPLAN_XML 是 ON 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在未執行陳述式的情況下，傳回每個陳述式的執行計畫資訊，且不會執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 在這個選項設為 ON 之後，會傳回所有後續 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的執行計畫相關資訊，直到這個選項設為 OFF 為止。 例如，如果執行 CREATE TABLE 陳述式時，SET SHOWPLAN_XML 是 ON，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從包含這份相同資料表的後續 SELECT 陳述式傳回錯誤訊息；指定的資料表並不存在。 因此，後來參考這份資料表都會失敗。 當 SET SHOWPLAN_XML 是 OFF 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在未產生報表的情況下，執行這些陳述式。
 
-SET SHOWPLAN_XML 用來傳回應用程式 (如 **sqlcmd** 公用程式) 的輸出為 **nvarchar(max)**，其中 XML 輸出後續可供其他工具顯示和處理查詢計劃資訊。
+SET SHOWPLAN_XML 用來傳回應用程式 (如 **sqlcmd** 公用程式) 的輸出為 **nvarchar(max)** ，其中 XML 輸出後續可供其他工具顯示和處理查詢計劃資訊。
 
 > [!NOTE]
 > 動態管理檢視 **sys.dm_exec_query_plan** 會以 **xml** 資料類型傳回 SET SHOWPLAN XML 的相同資訊。 這項資訊是從 **sys.dm_exec_query_plan** 的 **query_plan** 資料行傳回。 如需詳細資訊，請參閱 [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)。
@@ -62,7 +62,7 @@ SET SHOWPLAN_XML 用來傳回應用程式 (如 **sqlcmd** 公用程式) 的輸�
 SET SHOWPLAN_XML 會將資訊當作一組 XML 文件傳回。 SET SHOWPLAN_XML ON 陳述式之後的每個批次都會反映在單一文件的輸出中。 每份文件都包含批次內各陳述式的文字，後面接著執行步驟的詳細資料。 文件會顯示估計的成本、資料列數、存取的索引、執行的運算子類型、聯結順序，以及執行計畫的詳細資訊。
 
 > [!NOTE]
-> 如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫] 按鈕。
+> 如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]  ，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫]  按鈕。
 
 ### <a name="location-of-showplan-output"></a>SHOWPLAN 輸出的位置
 
@@ -74,7 +74,7 @@ SET SHOWPLAN_XML 會將資訊當作一組 XML 文件傳回。 SET SHOWPLAN_XML O
 
 也可以在[這個網站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)找到執行程序表結構描述。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 若要使用 SET SHOWPLAN_XML，您必須有執行 SET SHOWPLAN_XML 所針對的陳述式之充份權限，且您必須有包含所參考物件的所有資料庫之 SHOWPLAN 權限。
 

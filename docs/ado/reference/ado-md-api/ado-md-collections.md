@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2e96b05ed8d772fc86679aafda1397ac972277d
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940017"
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
 

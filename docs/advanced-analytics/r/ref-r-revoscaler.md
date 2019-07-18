@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3745c6cd8c340ce4ad89cac84c5b6286126e3f89
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d0691508ff3be52a4af744c1167ca799f8d23050
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962489"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR （SQL Server 中的 R 程式庫）
 
@@ -38,7 +37,7 @@ RevoScaleR 作為分散式的資料科學平台。 比方說，您可以使用 R
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
-+ [Microsoft R client](set-up-a-data-science-client.md)
++ [Microsoft R 用戶端](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 完整的產品版本是 Windows 專屬，從 SQL Server 2017 開始。 Linux 支援**RevoScaleR**的新功能[SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md)。

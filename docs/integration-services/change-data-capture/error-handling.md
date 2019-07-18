@@ -11,14 +11,18 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c957089cf73ba9992c04d56162b1a0cb9901f29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728864"
 ---
 # <a name="error-handling"></a>錯誤處理
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  
   
  CDC 執行個體會在稱為 **cdc.xdbcdc_state**的系統資料表中維護其狀態。 可以隨時查詢此資料表，以尋找 CDC 執行個體的狀態。 如需 cdc.xdbcdc_state 資料表的詳細資訊，請參閱 [cdc.xdbcdc_state](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)。  

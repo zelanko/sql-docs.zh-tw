@@ -1,24 +1,23 @@
 ---
-title: 報表疑難排解：地圖報表 （報表產生器及 SSRS） |Microsoft Docs
+title: 報表疑難排解：地圖報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0660eb1e4e9ae682e1a7c64005a767280c441445
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104640"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 （報表產生器及 SSRS）
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
   
 > [!NOTE]  
@@ -42,7 +41,7 @@ ms.locfileid: "56296236"
   
 1.  將 ESRI .shp 和 .dbf 檔案上傳或發行至報表伺服器。  
   
-2.  在報表之 [設計] 檢視的 [地圖] 窗格中，選取包含內嵌資料的圖層，然後開啟 **[圖層資料]** 屬性。 在 **[使用以下來源的空間資料]** 中，選取 **[連結到 ESRI 形狀檔 (.shp)]**，然後瀏覽到報表伺服器上包含 ESRI 形狀檔的資料夾來選取它，然後按一下 [確定]。  
+2.  在報表之 [設計] 檢視的 [地圖] 窗格中，選取包含內嵌資料的圖層，然後開啟 **[圖層資料]** 屬性。 在 **[使用以下來源的空間資料]** 中，選取 **[連結到 ESRI 形狀檔 (.shp)]** ，然後瀏覽到報表伺服器上包含 ESRI 形狀檔的資料夾來選取它，然後按一下 [確定]。  
   
 3.  儲存報表。 您變更之圖層的內嵌資料已從報表定義中移除。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "56296236"
 ### <a name="i-set-the-map-center-and-view-in-my-report-when-i-reopen-the-report-why-isnt-the-map-view-the-same"></a>我在報表中設定地圖置中與檢視。 當我重新開啟報表時，為什麼地圖檢視不一樣了？  
  如果讀取空間資料所需的使用者認證在您開啟報表時無法用於該報表，則會使用預留位置空間資料。 根據針對地圖檢視區設定的置中與縮放選項，地圖檢視可能會在不同的圖層上置中。  
   
- 若要重新載入空間資料並使用儲存在報表中的地圖檢視置中，以滑鼠右鍵按一下地圖檢視區，然後按一下 **[重新載入]**。 輸入空間資料來源的認證之後，圖層會載入空間資料，並還原地圖檢視。  
+ 若要重新載入空間資料並使用儲存在報表中的地圖檢視置中，以滑鼠右鍵按一下地圖檢視區，然後按一下 **[重新載入]** 。 輸入空間資料來源的認證之後，圖層會載入空間資料，並還原地圖檢視。  
   
 ### <a name="the-center-and-view-for-a-map-layer-option-does-not-work"></a>地圖圖層選項的置中與檢視沒有作用。  
  當檢視區設定為在特定圖層的空間資料上置中，而且檢視的中心似乎不是圖層的中心時，可能會有包含在空間資料中的小島或小區域太小，因此在檢視區中看不到。 例如，國家 (地區) 的空間資料可能會包含小島或其他小領域做為領域的一部分。 檢視區會使用所有空間資料計算圖層的中心。  
@@ -141,7 +140,7 @@ ms.locfileid: "56296236"
   
 -   **透明度：** 您可以針對每個地圖圖層分別指定透明度。 透明度的預設值會根據您加入圖層的方式而有所不同。 透明度為 0% 時，表示圖層不透明，而且不會透過此圖層顯示其他任何圖層資料。 若要讓其他資料透過現有的圖層顯示，請將值調整為較高的百分比，就可以提供您想要的效果。  
   
--   **可見度。** 根據地圖檢視區的縮放層級，圖層的可見性為 [Visible]、[Hidden] 或 [ZoomBased]。 您也可以指定縮放層級的最大與最小範圍。 可見性可以根據評估為這些值之其中一個的運算式。  
+-   **可見度。** 根據地圖檢視區的縮放層級，圖層的可見性為 [Visible]  、[Hidden]  或 [ZoomBased]  。 您也可以指定縮放層級的最大與最小範圍。 可見性可以根據評估為這些值之其中一個的運算式。  
   
     > [!TIP]  
     >  您可以在 [地圖] 窗格中切換每個圖層的可見性。 當您要設計每個圖層時，關閉其他所有圖層，就可以判斷問題出在個別圖層還是出在圖層間的透明度問題。  
@@ -188,11 +187,11 @@ ms.locfileid: "56296236"
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>我看不到 Bing 地圖底圖背景。  
  下列設定會影響 Bing Map 圖格背景顯示在本機預覽中，還是顯示在從報表伺服器執行的報表上：  
   
--   地圖底圖圖層必須存在。 在地圖精靈或圖層精靈中，選取 **[加入此地圖檢視的 Bing Maps 背景]**。 這樣會針對目前的地圖檢視區檢視置中與縮放層級加入圖格圖層。 您也可以從 [地圖] 窗格工具列加入圖格圖層。  
+-   地圖底圖圖層必須存在。 在地圖精靈或圖層精靈中，選取 **[加入此地圖檢視的 Bing Maps 背景]** 。 這樣會針對目前的地圖檢視區檢視置中與縮放層級加入圖格圖層。 您也可以從 [地圖] 窗格工具列加入圖格圖層。  
   
--   檢視區的地圖座標系統必須是 **[地理]**，而非 **[平面]**。  
+-   檢視區的地圖座標系統必須是 **[地理]** ，而非 **[平面]** 。  
   
--   地圖投射必須為 **[Mercator]**。  
+-   地圖投射必須為 **[Mercator]** 。  
   
 -   對於本機預覽，您必須擁有網際網路存取權。 對於從報表伺服器執行的報表，必須將報表伺服器設定為支援影像分割背景。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜規劃地圖支援＞。  
   

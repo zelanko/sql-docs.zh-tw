@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213c86a7f7b81a997082aa5653e00a830197f9d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21f72a13f8f5f7ac93b0f31716632c9280df5fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107007"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>中繼資料 - 日期和時間以及結構描述資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +29,12 @@ ms.locfileid: "52415575"
 ## <a name="columns-rowset"></a>COLUMNS 資料列集  
  系統會傳回日期/時間類型的下列資料行值：  
   
-|資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
+|資料行型別|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|日期|DBTYPE_DBDATE|Clear|0|  
+|date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|將|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|將|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|將|0..7|  
   
@@ -69,9 +68,9 @@ ms.locfileid: "52415575"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 資料列集  
  系統會傳回日期/時間類型的下列資料列：  
   
-|類型 -><br /><br /> 「資料行」|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|類型 -><br /><br /> 「資料行」|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -83,7 +82,7 @@ ms.locfileid: "52415575"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -96,6 +95,6 @@ ms.locfileid: "52415575"
  OLE DB 只會定義數值和十進位類型的 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 對於 time、datetime2 和 datetimeoffset 這些資料行的用法不是標準的。  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [中繼資料 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

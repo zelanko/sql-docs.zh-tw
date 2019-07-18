@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63209717"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 停用資源管理員。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要停用資源管理員中，使用：**[物件總管](#RGOffObjEx)， [Resource Governor 屬性](#RGOffProp)， [Transact SQL](#RGOffTSQL)  
+-   **若要停用 Resource Governor，請使用下列方式：** [物件總管](#RGOffObjEx)、[Resource Governor 屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  停用資源管理員會產生下列結果：  
@@ -52,18 +52,18 @@ ms.locfileid: "52761420"
 ##  <a name="RGOffObjEx"></a> 使用物件總管停用資源管理員  
  **若要使用物件總管停用資源管理員**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [停用]。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [停用]  。  
   
 ##  <a name="RGOffProp"></a> 使用資源管理員屬性停用資源管理員  
  **若要使用資源管理員屬性頁面來停用資源管理員**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
   
-3.  按一下 **[啟用資源管理員]** 核取方塊，確定未選取方塊，然後按一下 **[確定]**。  
+3.  按一下 **[啟用資源管理員]** 核取方塊，確定未選取方塊，然後按一下 **[確定]** 。  
   
 ##  <a name="RGOffTSQL"></a> 使用 Transact-SQL 停用資源管理員  
  **若要使用 Transact-SQL 停用資源管理員**  

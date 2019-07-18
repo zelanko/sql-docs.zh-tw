@@ -2,20 +2,20 @@
 title: 設計使用報表設計師 (SSRS) 報表 |Microsoft 文件
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25e3f58f4c104f6d21d72731fa95cc3f807605da
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577864"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
@@ -99,7 +99,7 @@ ms.locfileid: "56291387"
  使用 **[預覽]** 確認報表資料和配置設計。 預覽報表時，報表處理器會驗證報表定義和運算式語法，並列出 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 視窗中的問題。  
   
 > [!NOTE]  
->  預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>*.rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
+>  預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>* .rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
   
  您可以利用下列方式預覽報表。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56291387"
   
 -   **獨立預覽。** 在瀏覽器中執行本機報表。 透過使用偵錯組態，您也可以使用此模式以偵錯所撰寫的自訂組件。 有三種方法可在偵錯模式中執行專案：  
   
-    -   在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+    -   在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
     -   在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 標準工作列上，按一下 **[啟動]** 按鈕。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "56291387"
      如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 **StartItem** 屬性中所指定的報表，會在另一個預覽視窗中開啟。  
   
     > [!NOTE]  
-    >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案，再按一下 **[屬性]**，然後在 **[StartItem]** 中選取要顯示的報表名稱。  
+    >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案，再按一下 **[屬性]** ，然後在 **[StartItem]** 中選取要顯示的報表名稱。  
   
-     如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 **[執行]**。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
+     如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 **[執行]** 。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   
 -   **預覽列印。**  
   
@@ -144,7 +144,7 @@ ms.locfileid: "56291387"
  在報表設計師中，請務必了解您設計的報表是使用報表定義結構描述，且此報表定義結構描述是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中目前版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]所支援。 當您針對特定報表伺服器或 SharePoint 網站設定專案部署屬性並儲存報表時，報表設計師會將報表定義儲存至結構描述中的組建目錄，且此結構描述符合目標報表伺服器上的版本。 若要建立可在下層報表伺服器上發行的報表，報表設計師則會卸除不存在於目標結構描述中的報表項目。 這個動作會自動發生，而不需要提示。 如果出現此錯誤，原始的報表定義會保留在專案資料夾中。 部署的已修改報表定義位於組建資料夾中。  
   
 > [!NOTE]  
->  針對偵錯運算式和部署錯誤，您必須檢視組建資料夾中的報表定義。 請勿使用 **[檢視原始檔]**。 **[檢視原始檔]** 會顯示專案資料夾中的報表定義來源。  
+>  針對偵錯運算式和部署錯誤，您必須檢視組建資料夾中的報表定義。 請勿使用 **[檢視原始檔]** 。 **[檢視原始檔]** 會顯示專案資料夾中的報表定義來源。  
   
  如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   

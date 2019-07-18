@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 922ccc2768b317d3ea0dac612bf965def9c7f2e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921700"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition 和 CursorLocation 屬性範例 （VC + +）
 此範例示範如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性可以追蹤列舉的所有記錄迴圈的進度[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性，來啟用**AbsolutePosition**藉由設定資料指標，用戶端資料指標的屬性。  

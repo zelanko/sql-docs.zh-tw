@@ -11,15 +11,15 @@ helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a211647949ff4f234ac0287076e608b83e5a9421
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 5abf4fb0713e96dde95d8ac0a1be390e6bcc9b3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502203"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686526"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>將資料表加入圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,19 +29,19 @@ ms.locfileid: "52502203"
   
 1.  確定您已經連接想要建立資料表的資料庫。  
   
-    若要在目前的圖表中建立資料表，請按一下工具列上的 [新增資料表] 按鈕。  
+    若要在目前的圖表中建立資料表，請按一下工具列上的 [新增資料表]  按鈕。  
   
     -或-  
   
-    在圖表上按一下滑鼠右鍵，然後選取 [新增資料表]。  
+    在圖表上按一下滑鼠右鍵，然後選取 [新增資料表]  。  
   
-2.  在 [選擇名稱] 對話方塊中，修改或接受系統指派的資料表名稱，然後選擇 [確定]。  
+2.  在 [選擇名稱]  對話方塊中，修改或接受系統指派的資料表名稱，然後選擇 [確定]  。  
   
     新資料表會以標準檢視顯示於圖表中。  
   
 3.  在新資料表的第一個資料格中，輸入資料行名稱。 然後按下 TAB 鍵以移至下一個資料格。  
   
-4.  在 [資料類型] 下，選取資料行的資料類型。 每個資料行都必須有名稱和資料類型。  
+4.  在 [資料類型]  下，選取資料行的資料類型。 每個資料行都必須有名稱和資料類型。  
   
     您可以在 [資料表設計工具] 中設定資料行的其他屬性。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52502203"
   
 1.  確定您已經連接到想要編輯資料表的資料庫。  
   
-2.  在 [資料表] 資料夾中選取資料表。  
+2.  在 [資料表]  資料夾中選取資料表。  
   
 3.  將資料表拖曳至資料庫圖表中。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52502203"
   
 1.  在資料庫圖表中選取一個或多個具有外部索引鍵條件約束的資料表。  
   
-2.  在選取的資料表上按一下滑鼠右鍵，然後選擇 [加入關聯資料表]。  
+2.  在選取的資料表上按一下滑鼠右鍵，然後選擇 [加入關聯資料表]  。  
   
 > [!NOTE]  
 > 選定的資料表的外部索引鍵條件約束所參考的資料表，以及參考具有外部索引鍵條件約束的選定資料表的資料表，都會加入圖表中。  

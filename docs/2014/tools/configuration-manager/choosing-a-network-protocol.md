@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035278"
 ---
 # <a name="choosing-a-network-protocol"></a>選擇網路通訊協定
   若要連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必須啟用網路通訊協定。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以同時處理多個通訊協定的要求。 用戶端會使用單一通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果用戶端程式不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽哪個通訊協定，請設定用戶端循序嘗試多個通訊協定。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來啟用、停用及設定網路通訊協定。  

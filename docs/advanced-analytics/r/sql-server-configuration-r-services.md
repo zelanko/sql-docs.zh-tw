@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: efeb55e9fb3a241978fd31944f662250b0f36d48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962440"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>搭配 R 的 SQL Server 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

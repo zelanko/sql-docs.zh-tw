@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061926"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查詢通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +37,12 @@ ms.locfileid: "51657247"
 |**sid**|**varbinary(85)**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |**object_id**|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
 |**建立**|**datetime**|建立訂閱的日期和時間。|  
-|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意： 實際的引發時間可能會大於指定的逾時。不過，如果在指定的逾時時間之後，但在訂閱引發之前，執行一項變更讓訂閱無效，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會讓引發作業發生在變更時。|  
+|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意:實際的引發時間可能大於指定的逾時。不過，如果失效的變更訂用帳戶，就會發生在指定的逾時後，但引發的訂用帳戶時之前,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可確保讓引發作業發生在已變更的時間。|  
 |**status**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|來源|若要|開啟|類型|  
+|來源|若要|開啟|type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多對一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多對一|  

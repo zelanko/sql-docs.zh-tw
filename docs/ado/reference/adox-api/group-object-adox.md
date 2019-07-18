@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 537e0d3b1408a3cb159a79ad4e256fc8b5cf720f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966219"
 ---
 # <a name="group-object-adox"></a>Group 物件 (ADOX)
 代表可受保護的資料庫內的存取權限的群組帳戶。  

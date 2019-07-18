@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63240119"
 ---
 # <a name="view-project-properties"></a>檢視專案屬性
   您可以在 [屬性] 視窗中，檢視專案的相關屬性。  
@@ -27,7 +27,7 @@ ms.locfileid: "52772800"
   
 1.  在 [方案總管] 中選取專案。  
   
-2.  若 [屬性] 視窗未開啟，可在 [檢視] 功能表上，按一下 [屬性視窗]。  
+2.  若 [屬性] 視窗未開啟，可在 [檢視]  功能表上，按一下 [屬性視窗]  。  
   
 3.  在 [屬性] 視窗中，檢視專案的屬性。  
   

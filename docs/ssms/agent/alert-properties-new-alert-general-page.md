@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.general.f1
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6d6c4db00e382724ebf0f3f781a8cd0e907bc2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b43801ae2889e5eddec99af05bdefb0ebf49bcb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630286"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689062"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警示屬性 - 新增警示 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47630286"
 指定要監視之計數器的執行個體。  
   
 **發出警示的時機為計數器達**  
-指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)] 計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec] 高於某個值時，您可能會希望警示針對如此的條件做出回應。  
+指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]  計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]  高於某個值時，您可能會希望警示針對如此的條件做出回應。  
   
 **Value**  
 指定計數器的值。  

@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812731"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028346"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重複的資料列 (Visual Database Tools)
   如果您只想在結果集中查看唯一的值，您可以指定您要從結果集排除重複的項目。  
   
 ### <a name="to-exclude-duplicate-rows-from-the-result-set"></a>若要從結果集排除重複資料列  
   
-1.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [屬性]。  
+1.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [屬性]  。  
   
-2.  在 [屬性] 視窗中，按一下 [重複資料僅顯示一筆]，並且將值設定為 [是]。  
+2.  在 [屬性] 視窗中，按一下 [重複資料僅顯示一筆]  ，並且將值設定為 [是]  。  
   
      [查詢和檢視設計師] 會將關鍵字 DISTINCT 插入至 SQL 陳述式中顯示資料行清單的前面。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09b29277d74383abff1510ca7394aecad036fc7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036446"
 ---
 # <a name="connection-attributes"></a>連接屬性
 連接屬性是連接的特性。 例如，因為交易發生在連接層級，所以交易隔離等級是連接屬性。 同樣地，登入逾時或嘗試連接逾時之前, 等待的秒數是連接屬性。  

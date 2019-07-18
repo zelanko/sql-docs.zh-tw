@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80b6c00b0abcd09d4712b82df1d0d138cb37a390
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559175"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653161"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
 
@@ -250,7 +250,7 @@ ms.locfileid: "51559175"
   
 -   大型物件 (LOB) 值  
   
-     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
+     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntext**、 **xml**和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
   
 -   壓縮  
   

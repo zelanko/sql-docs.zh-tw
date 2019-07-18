@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207007"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
   此範例會示範如何使用 IRowsetFastLoad 來串流處理每個資料列中不同長度的 BLOB 資料。  
@@ -24,7 +24,7 @@ ms.locfileid: "53349290"
   
  在原始程式碼中，當您取消註解 #define USE_ISEQSTREAM 時，此範例會使用 ISequentialStream。 範例中定義了資料流實作，而且只要變更 MAX_BLOB，即可傳送任何大小的 BLOB 資料。 資料流資料並不需要配合記憶體或以單一區塊使用。 您可以使用 IRowsetFastLoad::InsertRow 來呼叫此提供者。 請使用 IRowsetFastLoad::InsertRow，將指標和可從資料流讀取的資料量傳送至資料緩衝區中的資料流實作 (rgBinding.obValue 位移)。 在繫結進行時，某些提供者可能不需要知道資料的長度。 在此例中，繫結中可以省略長度。  
   
- 此範例不使用提供者的資料流介面來將資料寫入至提供者。 而會將指標傳送給資料流物件，提供者會取用該指標來讀取資料。 一般而言，Microsoft 提供者 (SQLOLEDB 和 SQLNCLI) 會以 1024 位元組的區塊從物件讀取資料，直到所有資料都經過處理。 SQLOLEDB 或 SQLNCLI 都沒有完整的實作，無法讓取用者將資料寫入至提供者的資料流物件。 只有零長度的資料可以透過提供者的資料流物件傳送。  
+ 此範例不會使用提供者的資料流介面來將資料寫入提供者， 而會將指標傳送給資料流物件，提供者會取用該指標來讀取資料。 一般而言，Microsoft 提供者 (SQLOLEDB 和 SQLNCLI) 會以 1024 位元組的區塊從物件讀取資料，直到所有資料都經過處理。 SQLOLEDB 或 SQLNCLI 都沒有完整的實作，無法讓取用者將資料寫入至提供者的資料流物件。 只有零長度的資料可以透過提供者的資料流物件傳送。  
   
  取用者實作的 ISequentialStream 物件可和資料列集資料 (IRowsetChange::InsertRow、IRowsetChange::SetData) 搭配使用，也可以透過將參數繫結為 DBTYPE_IUNKNOWN 的方式，與參數搭配使用。  
   

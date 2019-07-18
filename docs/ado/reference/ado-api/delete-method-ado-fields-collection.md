@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 097286f14de4dead4490c322615a6405c157f118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919137"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete 方法 (ADO Fields 集合)
 刪除的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  

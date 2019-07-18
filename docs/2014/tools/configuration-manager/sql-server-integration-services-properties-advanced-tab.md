@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c854e26ee7acfc34931e5b08f1179494d2cbd096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63252671"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>SQL Server Integration Services 屬性 (進階索引標籤)
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是以 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務的方式來實作。 如果定義了自訂屬性，屬性與其值會在這個索引標籤上顯示。 這個索引標籤可能不會列出屬性。  

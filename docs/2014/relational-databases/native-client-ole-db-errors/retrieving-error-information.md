@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ffc13d634c5f213980f837db958860ea7ff51b32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63186127"
 ---
 # <a name="retrieving-error-information"></a>擷取錯誤資訊
   此範例會從所公開之各種錯誤介面取得資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  

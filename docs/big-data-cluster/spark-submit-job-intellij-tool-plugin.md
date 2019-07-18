@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 提交適用於 IntelliJ 的 Azure 工具組中的 SQL Server 巨量資料叢集上的 Spark 作業。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 5d2bb4b55b578530a29490a0a1a284f338686c38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860320"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728365"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>將 SQL Server 在 IntelliJ 中的巨量資料叢集上的 Spark 作業提交
 
@@ -60,9 +60,9 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 
     ![[新增專案] 對話方塊](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. 選取 **[下一步]**。
+2. 選取 [下一步]  。
 
-3. Scala 專案建立精靈會自動偵測您是否已安裝 Scala 外掛程式。 選取 [安裝]。
+3. Scala 專案建立精靈會自動偵測您是否已安裝 Scala 外掛程式。 選取 [安裝]  。
 
    ![Scala 外掛程式檢查](./media/spark-submit-job-intellij-tool-plugin/Scala-Plugin-check-Reminder.PNG) 
 
@@ -78,15 +78,15 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 
    b. 在 **專案 SDK**下拉式清單中，選取**Java 1.8**適用於 Spark 2.x 叢集或選取**Java 1.7**適用於 Spark 1.x 叢集。
 
-   c.  在  **Spark 版本**下拉式清單中，Scala 專案建立精靈會為 Spark SDK 和 Scala SDK 整合正確的版本。 如果 Spark 叢集版本早於 2.0，請選取**Spark 1.x**。 否則，請選取**Spark2.x**。 這個範例會使用**Spark 2.0.2 (Scala 2.11.8)**。
+   c. 在  **Spark 版本**下拉式清單中，Scala 專案建立精靈會為 Spark SDK 和 Scala SDK 整合正確的版本。 如果 Spark 叢集版本早於 2.0，請選取**Spark 1.x**。 否則，請選取**Spark2.x**。 這個範例會使用**Spark 2.0.2 (Scala 2.11.8)** 。
 
-6. 選取 [完成]。
+6. 選取 [完成]  。
 
 7. Spark 專案會自動為您建立成品。 若要檢視構件，請執行下列步驟：
 
    a. 在 **檔案**功能表上，選取**專案結構**。
 
-   b. 在 **專案結構**對話方塊中，選取**成品**檢視建立的預設構件。 您也可以建立自己的構件，方法是選取加號 (**+**)。
+   b. 在 **專案結構**對話方塊中，選取**成品**檢視建立的預設構件。 您也可以建立自己的構件，方法是選取加號 ( **+** )。
 
       ![在對話方塊中的構件資訊](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -100,11 +100,11 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 
     ![巨量資料叢集-config 連結](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
 
-    * 針對**Spark 叢集 (僅限 Linux)**，選取您要執行您的應用程式的叢集。
+    * 針對**Spark 叢集 (僅限 Linux)** ，選取您要執行您的應用程式的叢集。
 
     * 從 IntelliJ 專案中，選取構件，或從硬碟中選取一個。
 
-    * **主要類別名稱**欄位：預設值是從選取的檔案的主要類別。 您可以變更類別選取省略符號 (**...**) 並選擇另一個類別。   
+    * **主要類別名稱**欄位：預設值是從選取的檔案的主要類別。 您可以變更類別選取省略符號 ( **...** ) 並選擇另一個類別。   
 
     * **作業組態**欄位：預設值會設定為如上所示的圖片。 您可以變更值，或加入新的索引鍵/值的作業提交作業。 如需詳細資訊：[Apache Livy REST API](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
@@ -131,9 +131,9 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 ### <a name="spark-local-consolescala"></a>Spark 本機 Console(Scala)
 請確定您符合 WINUTILS。EXE 必要條件。
 
-1. 從功能表列中，瀏覽至**執行** > **編輯組態...**.
+1. 從功能表列中，瀏覽至**執行** > **編輯組態...** .
 
-2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**巨量資料的 SQL Server 叢集上的 Apache Spark** > **[在 SQL 上的 Spark] myApp**。
+2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**巨量資料的 SQL Server 叢集上的 Apache Spark** >  **[在 SQL 上的 Spark] myApp**。
 
 3. 從主視窗中，選取**在本機執行** 索引標籤。
 
@@ -141,7 +141,7 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 
     |屬性 |值 |
     |----|----|
-    |作業的主要類別|預設值是從選取的檔案的主要類別。 您可以變更類別選取省略符號 (**...**) 並選擇另一個類別。|
+    |作業的主要類別|預設值是從選取的檔案的主要類別。 您可以變更類別選取省略符號 ( **...** ) 並選擇另一個類別。|
     |環境變數|請確定 HADOOP_HOME 的值正確無誤。|
     |WINUTILS.exe 位置|請確認路徑正確。|
 
@@ -149,7 +149,7 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 
 5. 從專案中，瀏覽至**myApp** > **src** > **主要** > **scala**  >  **myApp**。  
 
-6. 從功能表列中，瀏覽至**工具** > **Spark 主控台** > **執行 Spark 本機 Console(Scala)**。
+6. 從功能表列中，瀏覽至**工具** > **Spark 主控台** > **執行 Spark 本機 Console(Scala)** 。
 
 7. 然後可能顯示兩個對話方塊，詢問您是否要自動修正相依性。 若是如此，選擇**自動修正**。
 
@@ -165,9 +165,9 @@ SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作�
 ### <a name="spark-livy-interactive-session-consolescala"></a>Spark Livy 互動式工作階段 Console(Scala)
 IntelliJ 2018.2 和 2018.3 只支援 Spark Livy 互動式工作階段 Console(Scala)。
 
-1. 從功能表列中，瀏覽至**執行** > **編輯組態...**.
+1. 從功能表列中，瀏覽至**執行** > **編輯組態...** .
 
-2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**巨量資料的 SQL Server 叢集上的 Apache Spark** > **[在 SQL 上的 Spark] myApp**。
+2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**巨量資料的 SQL Server 叢集上的 Apache Spark** >  **[在 SQL 上的 Spark] myApp**。
 
 3. 從主視窗中，選取**從遠端在叢集中執行** 索引標籤。
 
@@ -176,13 +176,13 @@ IntelliJ 2018.2 和 2018.3 只支援 Spark Livy 互動式工作階段 Console(Sc
     |屬性 |值 |
     |----|----|
     |Spark 叢集 (僅限 Linux)|選取您想要執行您的應用程式所在的 SQL Server 的巨量資料叢集。|
-    |主要類別名稱|預設值是從選取的檔案的主要類別。 您可以變更類別選取省略符號 (**...**) 並選擇另一個類別。|
+    |主要類別名稱|預設值是從選取的檔案的主要類別。 您可以變更類別選取省略符號 ( **...** ) 並選擇另一個類別。|
 
     ![互動式主控台設定組態](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
 
 5. 從專案中，瀏覽至**myApp** > **src** > **主要** > **scala**  >  **myApp**。  
 
-6. 從功能表列中，瀏覽至**工具** > **Spark 主控台** > **執行 Spark Livy 互動式的工作階段 Console(Scala)**。
+6. 從功能表列中，瀏覽至**工具** > **Spark 主控台** > **執行 Spark Livy 互動式的工作階段 Console(Scala)** 。
 
 7. [] 主控台看起來應該如下列圖片所示。 在主控台視窗輸入`sc.appName`，然後按下 ctrl + enter 鍵。  將顯示結果。 您可以按一下紅色按鈕，以終止本機主控台。
 

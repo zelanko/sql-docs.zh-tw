@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 86889fa3800ea2e2542ecbbc3e1996b486c14fe9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991919"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 

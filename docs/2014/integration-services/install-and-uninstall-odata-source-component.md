@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34a71ed768c49436a4dba4ecf225bdd009132866
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058043"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>安裝及解除安裝 OData 來源元件
   本主題提供在電腦上安裝或移除 OData 來源元件的指示。  

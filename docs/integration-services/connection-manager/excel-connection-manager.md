@@ -18,22 +18,26 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67b3b3446cc6890a802e972e9c12a93b3e58c6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a089ea233f99294c1e4a38a643e93607e5c56d13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728298"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
-  Excel 連線管理員可讓套件連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿檔案。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Excel 來源和 Excel 目的地使用 Excel 連線管理員。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  Excel 連線管理員可讓套件連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿檔案。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Excel 來源和 Excel 目的地使用 Excel 連線管理員。  
  
 > [!IMPORTANT]
 > 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
 
  當您將 Excel 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立一個連線管理員 (該連線管理員在執行階段會被解析為 Excel 連接)、設定連線管理員屬性，並將該連線管理員加入封裝上的 **Connections** 集合。  
   
- 連線管理員的 **ConnectionManagerType** 屬性會設為 [EXCEL]。  
+ 連線管理員的 **ConnectionManagerType** 屬性會設為 [EXCEL]  。  
   
 ## <a name="configure-the-excel-connection-manager"></a>設定 Excel 連線管理員  
  您可以利用下列方式設定 Excel 連接管理員：  
@@ -51,20 +55,20 @@ ms.locfileid: "58282352"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="excel-connection-manager-editor"></a>Excel 連接管理員編輯器
-  使用 [Excel 連線管理員編輯器] 對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿檔案。  
+  使用 [Excel 連線管理員編輯器]  對話方塊，將連接加入現有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 活頁簿檔案。  
   
 ### <a name="options"></a>選項。  
  **Excel 檔案路徑**  
  輸入現有或新的 Excel 活頁簿檔案的路徑和檔案名稱。  
    
  **瀏覽**  
- 使用 [開啟] 對話方塊巡覽至 Excel 檔存在的資料夾，或您要建立新檔案之處。  
+ 使用 [開啟]  對話方塊巡覽至 Excel 檔存在的資料夾，或您要建立新檔案之處。  
   
  **Excel 版本**  
  指定用於建立檔案的 Microsoft Excel 版本。  
   
  **第一個資料列有資料行名稱**  
- 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]**。  
+ 指定選取之工作表中資料的第一個資料列是否包含資料行名稱。 此選項的預設值是 **[True]** 。  
   
 ## <a name="related-tasks"></a>相關工作  
 [使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)  

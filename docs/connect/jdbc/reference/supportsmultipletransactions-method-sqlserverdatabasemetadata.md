@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ab606d2898cd6792ad53dd3221e0c05f6f08b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d984d5cf52ad0bc5b5b58df6914d00ef7722b8a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810746"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764130"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>supportsMultipleTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

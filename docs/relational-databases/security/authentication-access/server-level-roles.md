@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213707"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59429354"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "53213707"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表**系統管理員**固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表**系統管理員**固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)。  
   
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  

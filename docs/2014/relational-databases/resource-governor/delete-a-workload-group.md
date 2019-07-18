@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63215794"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除工作負載群組或資源集區。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要刪除工作負載群組，請使用：**[物件總管](#DelWGObjEx)， [Resource Governor 屬性](#DelWGRGProp)， [Transact SQL](#DelWGTSQL)  
+-   **若要刪除工作負載群組，請使用下列方式：** [物件總管](#DelWGObjEx)、[Resource Governor 屬性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果工作負載群組包含作用中工作階段，您就無法刪除該工作負載群組。  
@@ -35,7 +35,7 @@ ms.locfileid: "52764020"
   
 -   等到受影響之群組的所有工作階段已經中斷連接後，重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。  
   
--   在受影響的群組中，使用 KILL 命令明確地停止工作階段，然後重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。 在您使用 [刪除] 之後但停止使用中工作階段之前，如果您決定不想要明確地停止工作階段，請使用原始名稱來重新建立群組，然後將該群組移到原始的資源集區。  
+-   在受影響的群組中，使用 KILL 命令明確地停止工作階段，然後重新執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。 在您使用 [刪除]  之後但停止使用中工作階段之前，如果您決定不想要明確地停止工作階段，請使用原始名稱來重新建立群組，然後將該群組移到原始的資源集區。  
   
 -   重新啟動伺服器。 重新啟動程序完成後，將不會建立已經刪除的群組，而且已經移動的群組將會使用新的資源集區指派。  
   
@@ -45,24 +45,24 @@ ms.locfileid: "52764020"
 ##  <a name="DelWGObjEx"></a> 使用物件總管刪除工作負載群組  
  **若要使用物件總管刪除工作負載群組**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源集區]**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源集區]** 。  
   
 2.  遞迴地向下展開 **[資源集區]** 至資源集區中的 **[工作負載群組]** 節點，此資源集區包含要刪除的工作負載群組。  
   
-3.  以滑鼠右鍵按一下工作負載群組，然後按一下 [刪除]。  
+3.  以滑鼠右鍵按一下工作負載群組，然後按一下 [刪除]  。  
   
-4.  在 **[刪除物件]** 視窗中，工作負載群組便列於 **[要刪除的物件]** 清單內。 若要刪除工作負載群組，請按一下 **[確定]**。  
+4.  在 **[刪除物件]** 視窗中，工作負載群組便列於 **[要刪除的物件]** 清單內。 若要刪除工作負載群組，請按一下 **[確定]** 。  
   
 ##  <a name="DelWGRGProp"></a> 使用資源管理員屬性刪除工作負載群組  
  **若要使用資源管理員屬性頁面來刪除工作負載群組**  
   
-1.  在 [物件總管] 中，遞迴地展開 **[管理]** 節點底下，包括 **[資源集區]**。  
+1.  在 [物件總管] 中，遞迴地展開 **[管理]** 節點底下，包括 **[資源集區]** 。  
   
-2.  以滑鼠右鍵按一下包含要修改之工作負載群組的資源集區，然後選取 [屬性]。 這會開啟 **[資源管理員屬性]** 頁面。  
+2.  以滑鼠右鍵按一下包含要修改之工作負載群組的資源集區，然後選取 [屬性]  。 這會開啟 **[資源管理員屬性]** 頁面。  
   
-3.  在 [資源集區的工作負載群組] 視窗中，按一下要刪除之工作負載群組的資料列，然後以滑鼠右鍵按一下資料列左側的向右箭頭，再按一下 [刪除]。  
+3.  在 [資源集區的工作負載群組]  視窗中，按一下要刪除之工作負載群組的資料列，然後以滑鼠右鍵按一下資料列左側的向右箭頭，再按一下 [刪除]  。  
   
-4.  若要刪除工作負載群組，請按一下 **[確定]**。  
+4.  若要刪除工作負載群組，請按一下 **[確定]** 。  
   
 ##  <a name="DelWGTSQL"></a> 使用 Transact-SQL 刪除工作負載群組  
  **若要使用 Transact-SQL 刪除工作負載群組**  

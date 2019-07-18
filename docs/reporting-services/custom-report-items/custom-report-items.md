@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Reporting Services, extending
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7f761af835db61d9c2d5f3071ff4da9b4f445ad6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ee4b1e82ec3671cdc978c9af889d201ec430ed87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194150"
 ---
 # <a name="custom-report-items"></a>自訂報表項目
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一組豐富的工具，以建立和發行企業報表、管理安全性與訂閱以及透過完整的 API 來擴充和報告功能。 報表是利用稱為「報表定義語言」(RDL) 的以 XML 為基礎之語言來定義。 RDL 提供描述報表之配置、查詢資訊以及項目類型的指示。 您可以撰寫自訂報表項目來擴充 RDL。 自訂報表項目是由執行階段元件 (由報表處理器在執行階段所呼叫) 以及設計階段元件 (允許在報表設計師中使用自訂報表項目) 所組成。  

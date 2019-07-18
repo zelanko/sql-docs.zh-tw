@@ -17,14 +17,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a23c9ece7522d2b7785b77789ba9e87b5ef356c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65801355"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。  
   
  如需指令碼元件的概觀，請參閱[使用指令碼元件擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
@@ -120,7 +124,7 @@ ms.locfileid: "58271616"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表至少包含 **AddressID** 和 **City** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表至少包含 **AddressID** 和 **City** 資料行。  
   
 5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
   
@@ -237,7 +241,7 @@ public class ScriptMain:
   
 2.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，而且應該至少包含 **AddressID** 和 **City** 資料行。  
+3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，而且應該至少包含 **AddressID** 和 **City** 資料行。  
   
 4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 資料行。  
   

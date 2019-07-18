@@ -1,27 +1,25 @@
 ---
-title: 針對 Linux 上的 SQL Server 開發應用程式 |Microsoft Docs
+title: 針對 Linux 上的 SQL Server 開發應用程式
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077409"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發應用程式在 Linux 上的 SQL server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-您可以建立連線至並使用 SQL Server 從各種程式設計語言，例如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的應用程式。 您也可以使用熱門的 web 架構和物件關聯式對應 (ORM) 架構。
+您可以建立應用程式連接到並從各種程式設計語言，在 Linux 上使用 SQL Server，例如C#、 Java、 Node.js、 PHP、 Python、 Ruby 和C++。 您也可以使用熱門的 web 架構和物件關聯式對應 (ORM) 架構。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 

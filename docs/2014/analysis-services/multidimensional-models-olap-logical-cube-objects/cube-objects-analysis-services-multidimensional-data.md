@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], objects
@@ -14,12 +12,12 @@ ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47befc9fb80f84318cd090bb673b6b6906da6508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702640"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Cube 物件 (Analysis Services - 多維度資料)
     
@@ -35,7 +33,7 @@ ms.locfileid: "48047607"
 |||  
 |-|-|  
 |主題||  
-|[動作&#40;Analysis Services-多維度資料&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[動作 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[彙總和彙總設計](aggregations-and-aggregation-designs.md)||  
 |[計算](calculations.md)||  
 |[Cube 資料格&#40;Analysis Services-多維度資料&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -43,9 +41,9 @@ ms.locfileid: "48047607"
 |[Cube 儲存區&#40;Analysis Services-多維度資料&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Cube 翻譯](cube-translations.md)||  
 |[維度關聯性](dimension-relationships.md)||  
-|[關鍵效能指標&#40;Kpi&#41;多維度模型中](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[多維度模型中的關鍵效能指標 &#40;KPI&#41;](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[量值和量值群組](../multidimensional-models/measures-and-measure-groups.md)||  
-|[資料分割&#40;Analysis Services-多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[資料分割 &#40;Analysis Services - 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[檢視方塊](perspectives.md)||  
   
   

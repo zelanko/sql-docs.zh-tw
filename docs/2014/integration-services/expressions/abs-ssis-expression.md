@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769614"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 運算式)
   傳回數值運算式的絕對正數值。  

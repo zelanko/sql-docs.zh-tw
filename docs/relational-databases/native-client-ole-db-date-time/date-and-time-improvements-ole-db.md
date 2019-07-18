@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bec338184bdc88d04368d141ce15816af512566
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: dc78f8c63b24b72dbfb09887fbf7db54dc0f4efe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107024"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和時間改善 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "53202057"
  [對 OLE DB 日期和時間改善的資料類型支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  提供 OLE DB 的相關資訊 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 類型支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和時間資料類型。  
   
- [中繼資料&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [中繼資料 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
  包含有關 DBBINDING 結構、 資訊**icommandwithparameters:: Getparameterinfo**， **icommandwithparameters:: Setparameterinfo**， **IColumnsRowset::GetColumnsRowset**，接著**ColumnsInfo::GetColumnInfo**。 同時提供有關 OLE DB 結構描述資料列集更新的資訊。  
   
  [繫結和轉換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  

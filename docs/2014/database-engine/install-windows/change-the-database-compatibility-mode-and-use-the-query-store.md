@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779110"
 ---
 # <a name="migrate-query-plans"></a>移轉查詢計劃
   在大多數的情況下，將資料庫升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最新版，可提升查詢效能。 但是，如果您的關鍵任務查詢已針對效能謹慎地加以微調，您可能會想要在升級之前為這些查詢保留查詢計劃，透過的方式是為每一個查詢建立計畫指南。 如果在升級之後，查詢最佳化工具針對一個或多個查詢選擇比較沒有效率的計畫，您可啟用計畫指南，並強制查詢最佳化工具使用升級前計畫。  
@@ -41,7 +41,7 @@ ms.locfileid: "53352510"
 ## <a name="example"></a>範例  
  下列範例會示範如何藉由建立計畫指南來為查詢記錄升級前計畫。  
   
-### <a name="step-1-collect-the-plan"></a>步驟 1：收集計畫  
+### <a name="step-1-collect-the-plan"></a>步驟 1:收集計畫  
  計畫指南中所記錄的查詢計劃必須使用 XML 格式。 XML 格式的查詢計劃可透過下列方式來產生：  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>步驟 2：建立計畫指南以強制計畫  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>步驟 2:建立計畫指南以強制執行計劃  
  在計畫指南中使用 XML 格式的查詢計畫 (由上述的任何一個方法取得)，可在 sp_create_plan_guide 的 OPTION 子句中所指定的 USE PLAN 查詢提示內，以字串常值的形式複製並貼上查詢計畫。  
   
  在 XML 計畫本身內，以第二個引號逸出計畫中所出現的引號 (')，然後再建立計畫指南。 例如，含有 `WHERE A.varchar = 'This is a string'` 的計畫必須將程式碼修改為 `WHERE A.varchar = ''This is a string''` 而加以逸出。  
@@ -88,7 +88,7 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>步驟 3：確認此計畫指南已套用到查詢  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>步驟 3：確認計畫指南已套用至查詢  
  再次執行此查詢，並檢查所產生的查詢計劃。 您應該會發現此計畫符合您在計畫指南中所指定的計畫。  
   
 ## <a name="see-also"></a>另請參閱  

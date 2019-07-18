@@ -1,5 +1,5 @@
 ---
-title: 升級複寫的資料庫 | Microsoft Docs
+title: 升級或修補複寫的資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794723"
 ---
-# <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
+# <a name="upgrade-or-patch-replicated-databases"></a>升級或修補複寫的資料庫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
 
 複寫拓撲並存升級所採用常見方法是將部分發行者/訂閱者配對移到新的並存環境，而不是移動整個拓撲。 這種階段式方法可協助控制停機時間，並針對取決於複寫的商務將影響降低到某個程度。  
 
-
-> [!NOTE]  
-> **如需將複寫拓撲升級至 SQL 2016 的詳細資訊，請參閱部落格文章 [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)** (將複寫拓撲升級至 SQL Server 2016)。 
+本文主要針對升級 SQL Server 版本。 不過，使用 Service Pack 或累積更新修補 SQL Server 時，應該也會使用就地升級程序。 
 
  >[!WARNING]
  > 升級複寫拓樸是多步驟程序。 建議您先在測試環境中嘗試升級複寫拓撲的複本，再於實際生產環境上執行升級。 這有助於制訂順暢處理升級所需的任何操作文件，而不會在實際升級過程期間導致昂貴且長時間的停機。 我們已看到客戶升級其複寫拓樸時，透過為其生產環境使用 Always On 可用性群組和/或 SQL Server 容錯移轉叢集執行個體，大幅減少停機時間。 此外，建議您先備份所有的資料庫 (包括 MSDB、Master、散發資料庫及參與複寫的使用者資料庫)，再嘗試升級。
@@ -123,7 +121,7 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
 
 
   >[!NOTE]
-  > 若要減少停機時間，建議您將「並存移轉」散發者作為一個活動執行，並將「就地升級至 SQL Server 2016」作為另一個活動執行。 這可讓您採取階段式方法、降低風險，並將停機時間縮至最短。
+  > 若要減少停機時間，建議您將「並存移轉」  散發者作為一個活動執行，並將「就地升級至 SQL Server 2016」  作為另一個活動執行。 這可讓您採取階段式方法、降低風險，並將停機時間縮至最短。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理  
  合併式複寫的 Web 同步處理選項要求，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 複製到用於同步處理之 Internet Information Services (IIS) 伺服器上的虛擬目錄。 當您設定 Web 同步處理時，「設定 Web 同步處理精靈」會將檔案複製到虛擬目錄。 如果您升級安裝在 IIS 伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，就必須將 replisapi.dll 從 COM 目錄手動複製到 IIS 伺服器上的虛擬目錄。 如需設定 Web 同步處理的詳細資訊，請參閱 [設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)。  

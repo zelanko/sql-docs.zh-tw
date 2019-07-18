@@ -2,7 +2,7 @@
 title: 升級內部部署 SQL Server 到 SQL Server 或 SQL Server Azure Vm 上使用資料移轉小幫手 |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 將升級至較新版的 SQL Server 或 Azure Vm 上的 SQL Server 的內部部署 SQL Server
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,19 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.author: jtoland
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058819"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在內部部署 SQL Server 升級至 SQL Server 或 SQL Server Azure Vm 上使用 Data Migration Assistant
 
 Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署和更新版本的 SQL Server 的升級或移轉至 SQL Server 的 Azure Vm 或 Azure SQL Database。
 
-本文提供使用 Data Migration Assistant 較新版本的 SQL Server 或 Azure Vm 上的 SQL Server 升級 SQL Server 內部部署的逐步指示。   
+本文提供使用 Data Migration Assistant 更新版的 SQL Server 或 Azure Vm 上的 SQL Server 升級 SQL Server 內部部署的逐步指示。
 
 ## <a name="create-a-new-migration-project"></a>建立新的移轉專案
 
@@ -34,7 +33,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
 2. 若要設定來源和目標伺服器類型**SQL Server**如果您要升級內部部署 SQL Server 的內部部署 SQL Server 更新版本。
 
-3. 選取 [建立]。
+3. 選取 [建立]  。
 
    ![建立移轉專案](../dma/media/NewCreate.png)
 
@@ -50,7 +49,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
 5. 建議您選取加密的連接**加密連接**中**連接屬性**一節。
 
-6. 按一下 [下一步] 。
+6. 按一下 [下一步]  。
 
    ![指定來源和目標頁面](../dma/media/SourceTarget.png)
 
@@ -79,7 +78,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
    ![若要將資料庫備份複製到不同位置的選項](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. 選取 **[下一步]**。
+5. 選取 [下一步]  。
 
 Data Migration Assistant 上備份的資料夾、 資料和記錄檔位置執行驗證。 如果任何驗證失敗，修正選項，然後按**下一步**。
 

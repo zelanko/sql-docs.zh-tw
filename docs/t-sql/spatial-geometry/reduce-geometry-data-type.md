@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e3177340b6944da812c93075f6b2fd5561192f33
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+ms.openlocfilehash: f66cdcebb92127486d75de270d93d0507131c4d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937356"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "55807418"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  就集合類型而言，此演算法會在執行個體所含的每個 **geometry** 上獨立運作。  

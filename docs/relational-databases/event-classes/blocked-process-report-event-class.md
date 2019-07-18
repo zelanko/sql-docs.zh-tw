@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 790cbbd195e96304a150b06627a10113dfb5aba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686628"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **Blocked Process Report** 事件類別指出封鎖工作的時間已超過指定的時間量。 這個事件類別不包含系統工作，或在無法偵測死結的資源上等候的工作。  
   
- 若要設定產生報告的臨界值和頻率，請使用 **sp_configure** 命令來設定 [已封鎖的處理序臨界值] 選項。 預設不會針對已封鎖的處理序產生任何報告。 如需設定 [已封鎖的處理序臨界值] 選項的詳細資訊，請參閱[已封鎖的處理序臨界值伺服器組態選項](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
+ 若要設定產生報告的臨界值和頻率，請使用 **sp_configure** 命令來設定 [已封鎖的處理序臨界值]  選項。 預設不會針對已封鎖的處理序產生任何報告。 如需設定 [已封鎖的處理序臨界值]  選項的詳細資訊，請參閱[已封鎖的處理序臨界值伺服器組態選項](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
  如需篩選 **Blocked Process Report** 事件類別所傳回資料的詳細資訊，請參閱[篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)、[設定追蹤篩選 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) 或 [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   

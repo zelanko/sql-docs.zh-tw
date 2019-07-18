@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924170"
 ---
 # <a name="shape-commands-in-general"></a>一般 Shape 命令
 資料成形定義形狀的資料行**Recordset**，資料行中的方式所表示的實體之間的關聯性**資料錄集**已填入資料。  

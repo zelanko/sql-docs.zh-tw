@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786934"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **index create memory** 選項會控制最初配置來建立索引的記憶體數量上限。 這個選項的預設值是 0 (自我設定)。 若稍後在建立索引時需要更多記憶體，且有足夠的記憶體可用，則伺服器會使用該記憶體，因而超過此選項的設定。 若沒有更多可用的記憶體，則會使用預先配置的記憶體繼續進行索引建立作業。  
@@ -38,7 +38,7 @@ ms.locfileid: "58534080"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定之後 index create memory 選項](#FollowUp)  
+-   **後續操作：** [設定索引建立記憶體選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -54,7 +54,7 @@ ms.locfileid: "58534080"
   
 -   這個選項是進階選項，只有有經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術人員才可變更。  
   
--   [索引建立記憶體] 選項為自我設定，並且通常不需要調整便可使用。 然而，如果無法建立索引，請考慮增加這個選項的執行值。  
+-   [索引建立記憶體]  選項為自我設定，並且通常不需要調整便可使用。 然而，如果無法建立索引，請考慮增加這個選項的執行值。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -65,13 +65,13 @@ ms.locfileid: "58534080"
   
 #### <a name="to-configure-the-index-create-memory-option"></a>若要設定 index create memory 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[記憶體]** 節點。  
   
 3.  在 **[索引建立記憶體]** 之下，輸入或選取所要的索引建立記憶體選項值。  
   
-     **index create memory** 選項可用來控制索引建立排序所使用的記憶體大小。 [索引建立記憶體] 屬於自我設定的選項，而且不需調整即可適用於大部份情況。 然而，如果無法建立索引，請考慮增加這個選項的執行值。 查詢排序是透過 **min memory per query** 選項來控制。  
+     **index create memory** 選項可用來控制索引建立排序所使用的記憶體大小。 [索引建立記憶體]  屬於自我設定的選項，而且不需調整即可適用於大部份情況。 然而，如果無法建立索引，請考慮增加這個選項的執行值。 查詢排序是透過 **min memory per query** 選項來控制。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "58534080"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `index create memory` 選項的值設定為 `4096`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `index create memory` 選項的值設定為 `4096`。  
   
 ```sql  
 USE AdventureWorks2012 ;  

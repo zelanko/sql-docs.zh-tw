@@ -19,14 +19,18 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95ffb58c54bd2cf23a4eddb11890d55f83e5bc22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 69bf16c82c3a7ee13f75de4f954f35bb11979c08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273677"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729344"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>以程式設計的方式連接資料流程元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在將元件加入資料流程工作後，就可以連接元件以建立執行樹狀目錄，以代表從來源經過轉換到目的地的資料流程。 您使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件以連接資料流程中的元件。  
   
 ## <a name="creating-a-path"></a>建立路徑  

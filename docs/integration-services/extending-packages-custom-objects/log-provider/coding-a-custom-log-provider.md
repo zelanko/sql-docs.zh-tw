@@ -13,14 +13,18 @@ ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 140fcb93c3259a1a7c4c43c710f52a387f3f2956
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c291eecac9972bea6d2fbde5d6e8ccc1c0356178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724536"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
   
  如需自訂記錄提供者的實用範例，請參閱[開發自訂記錄提供者的使用者介面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)。  

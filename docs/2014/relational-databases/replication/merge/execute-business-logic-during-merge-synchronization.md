@@ -18,18 +18,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999569"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合併同步處理期間執行商務邏輯
   商務邏輯處理常式架構允許您撰寫在合併同步處理過程中呼叫的 Managed 程式碼組件。 組件包括可對應至幾種同步處理條件的商務邏輯：資料變更、衝突和錯誤。 商務邏輯處理常式架構提供了簡單的程式設計模型，且合併處理為您組件提供的資料是 ADO.NET 資料集的形式，因此您可以利用 ADO.NET 知識而無需了解專屬介面。 如需程式設計商務邏輯處理常式的詳細資訊，請參閱：  
   
 -   應用程式開發介面 (API) 參考： <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   如何實作商務邏輯處理常式上的指示：[為合併發行項實作商務邏輯處理常式](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   有關如何實作商務邏輯處理常式的說明：[為合併發行項實作商務邏輯處理常式](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>商務邏輯處理常式的使用  
  合併同步處理可以叫用商務邏輯處理常式以執行下列作業：  

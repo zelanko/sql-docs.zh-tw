@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d556a80e018a9d3707aa03de7fdefe8c45bcb611
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990152"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52802580"
 |**table_id**|**int**|識別已發行的資料表。|  
 |**publisher_id**|**smallint**|識別非 SQL Server 發行者資料表正在發行。|  
 |**name**|**sysname**|已發行之資料表的名稱。|  
-|**擁有者**|**sysname**|資料表擁有者。|  
+|**owner**|**sysname**|資料表擁有者。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

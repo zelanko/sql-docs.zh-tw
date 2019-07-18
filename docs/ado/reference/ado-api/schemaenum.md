@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931116"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的結構描述型別**Recordset**可[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法擷取。  
   
 ## <a name="remarks"></a>備註  
- 函式和資料行的其他資訊傳回每一個 ADO 常數，請參閱主題[附錄 b： 結構描述資料列集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程式設計人員參考。 下表的 [描述] 部分中的括號括住，會列出每個主題的名稱。  
+ 函式和資料行的其他資訊傳回每一個 ADO 常數，請參閱中的主題[附錄 b:結構描述資料列集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程式設計人員參考。 下表的 [描述] 部分中的括號括住，會列出每個主題的名稱。  
   
  函式和資料行的其他資訊傳回每一個 ADO MD 常數，請參閱主題[OLE DB for OLAP 物件和結構描述資料列集](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的線上分析處理 (OLAP) 文件。 下表描述資料行中的括號括住，會列出每個主題的名稱。  
   

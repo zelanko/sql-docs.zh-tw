@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 132d302d994da5de812347f7c4d0396d5b5cf8ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8992acf5652d4fad1e4e14a67c847bb30c6d34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919819"
 ---
 # <a name="command-object-properties-methods-and-events"></a>命令物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -53,7 +52,7 @@ ms.locfileid: "47705506"
   
  [Execute 方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

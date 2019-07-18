@@ -20,13 +20,13 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e59c536a369dd1d68e6f3af2b02b2032aa81c3b8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605889"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777890"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,14 +57,14 @@ ms.locfileid: "51605889"
  OLE DB Driver for SQL Server 支援密碼逾期，透過使用者介面和以程式設計的方式。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 使用者介面密碼逾期  
- OLE DB Driver for SQL Server 支援透過 [SQL Server 登入] 對話方塊上所做的變更來處理密碼逾期。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
+ OLE DB Driver for SQL Server 支援透過 [SQL Server 登入]  對話方塊上所做的變更來處理密碼逾期。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
   
- 如果 DBPROP_INIT_PROMPT 已設定為其他任何值，不管密碼是否到期，使用者都會看到 [SQL Server 登入] 對話方塊。 使用者可以按一下 [選項] 按鈕，然後核取 [變更密碼] 來變更密碼。  
+ 如果 DBPROP_INIT_PROMPT 已設定為其他任何值，不管密碼是否到期，使用者都會看到 [SQL Server 登入]  對話方塊。 使用者可以按一下 [選項]  按鈕，然後核取 [變更密碼]  來變更密碼。  
   
- 如果使用者按一下 [確定]，而且密碼已到期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會使用 [變更 SQL Server 密碼] 對話方塊提示使用者輸入並確認新密碼。  
+ 如果使用者按一下 [確定]，而且密碼已到期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會使用 [變更 SQL Server 密碼]  對話方塊提示使用者輸入並確認新密碼。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入] 對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼] 對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入]  對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼]  對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  

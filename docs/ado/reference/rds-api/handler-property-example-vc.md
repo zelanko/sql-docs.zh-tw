@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61403b9a720a456c08b121be4f36cef0d59ced17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 15bbdd0b1e3627453a3ea10a4ea6207f446988f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964066"
 ---
 # <a name="handler-property-example-vc"></a>Handler 屬性範例 (VC++)
 > [!IMPORTANT]

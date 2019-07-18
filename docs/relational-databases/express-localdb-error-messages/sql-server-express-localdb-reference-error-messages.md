@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb937510fcfb8bef049d90a254591958a54999ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f59e898dcb8c51155bebb53352265eb95ebebd4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126955"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 參考 - 錯誤訊息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

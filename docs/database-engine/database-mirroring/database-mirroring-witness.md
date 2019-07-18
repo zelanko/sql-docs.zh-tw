@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11c66e1ec21787fa263a999e9beaaf0e22646b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795457"
 ---
 # <a name="database-mirroring-witness"></a>資料庫鏡像見證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47646736"
   
 -   如果鏡像伺服器與見證中斷連接，而且也與主體伺服器中斷連接，則不管主體伺服器的狀態如何，都不可能進行自動容錯移轉。  
   
- 至少連接兩個伺服器執行個體的需求，即所謂的 *「仲裁」*。 仲裁確保資料庫一次只能由一個夥伴提供服務。 如需仲裁如何運作及如何影響工作階段的相關資訊，請參閱 [仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 至少連接兩個伺服器執行個體的需求，即所謂的 *「仲裁」*。 仲裁確保資料庫一次只能由一個夥伴提供服務。 如需仲裁運作方式及其對工作階段影響的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ##  <a name="AddRemoveWitness"></a> 加入或移除見證  
  **加入見證**  

@@ -5,21 +5,21 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87de35c23a89e49f376b41676462dd275f676871
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2f0a49af4e808c24530ce1eac4d01594044d58b5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269462"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682659"
 ---
 # <a name="options-environment---startup-page"></a>選項 ([環境] - [啟動] 頁面)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-使用 [選項] 對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具] 功能表上按一下 [選項]，展開 [環境] 資料夾，然後按一下 [啟動]。
+使用 [選項]  對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]  功能表上按一下 [選項]  ，展開 [環境]  資料夾，然後按一下 [啟動]  。
 
 ## <a name="uielement-list"></a>UIElement 清單
 
@@ -27,15 +27,15 @@ ms.locfileid: "51269462"
 
 選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 選項包括：
 
-- [開啟物件總管] 會提示進行連接，然後開啟物件總管。
+- [開啟物件總管]  會提示進行連接，然後開啟物件總管。
 
-- [開啟新增查詢視窗] 會提示進行連接，然後開啟 SQL 查詢編輯器。
+- [開啟新增查詢視窗]  會提示進行連接，然後開啟 SQL 查詢編輯器。
 
-- [開啟物件總管和查詢視窗] 會提示進行連線，然後使用該連線開啟 [物件總管] 和 [SQL 查詢編輯器]。
+- [開啟物件總管和查詢視窗]  會提示進行連線，然後使用該連線開啟 [物件總管] 和 [SQL 查詢編輯器]。
 
-- [開啟物件總管和活動監視器]
+- [開啟物件總管和活動監視器] 
 
-- [開啟空白環境] 會開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但沒有 SQL 查詢編輯器視窗，且不會將物件總管連接到伺服器。
+- [開啟空白環境]  會開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但沒有 SQL 查詢編輯器視窗，且不會將物件總管連接到伺服器。
 
 **在 [物件總管] 中隱藏系統物件**
 

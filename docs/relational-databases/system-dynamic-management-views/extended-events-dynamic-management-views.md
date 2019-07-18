@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccab5287b4c986bdb6f22a34b80d3736a1f967d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0b49bc25b8c5ac73224a41198d50b6e8099ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130856"
 ---
 # <a name="extended-events-dynamic-management-views"></a>擴充的事件動態管理檢視
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

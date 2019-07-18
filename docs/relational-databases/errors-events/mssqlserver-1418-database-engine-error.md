@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe7fad0dcea0d80552025f1168bab4d109c3258c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62861428"
 ---
 # <a name="mssqlserver1418"></a>MSSQLSERVER_1418
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,5 +100,5 @@ ms.locfileid: "47803316"
 [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)  
 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](~/database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
 [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
-[為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+[疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   

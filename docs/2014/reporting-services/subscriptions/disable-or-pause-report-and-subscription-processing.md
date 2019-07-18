@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100916"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暫停報表與訂閱處理
   您無法直接暫停報表或訂閱。 但是，您可以在處理開始之前，或在進行資料來源連接時，中斷報表與訂閱處理。 您也可以不讓使用者存取報表或訂閱，以禁止處理報表或訂閱。  

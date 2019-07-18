@@ -1,7 +1,7 @@
 ---
 title: 設定報表伺服器服務帳戶 (SSRS 設定管理員) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 19eca52c1686f218b2c59449b139d684700822b5
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63261075"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
 
@@ -66,7 +66,7 @@ ms.locfileid: "53328958"
   
 - 《SQL Server 線上叢書》中的[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
   
-- [服務和服務帳戶安全性規劃指南](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
+- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733) (服務和服務帳戶安全性規劃指南)。  
   
 ## <a name="updating-an-expired-password"></a>更新已過期的密碼
 

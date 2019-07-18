@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01e6e1d47061f445d7aa7d53fb548a2ebfcaefd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109487"
 ---
 # <a name="sysconversationgroups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62800026"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 資料格屬性-使用資料格屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ SELECT [<axis_specification>
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|代表存在於資料格上動作類型的位元遮罩。 此屬性可以有下列其中一個值：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：包含 where 子句中之集合的查詢，不包括鑽研動作。|  
+|**ACTION_TYPE**|代表存在於資料格上動作類型的位元遮罩。 此屬性可以有下列其中一個值：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意:鑽研動作不會包含在其中包含一組查詢子句。|  
 |**BACK_COLOR**|用以顯示 **VALUE** 或 **FORMATTED_VALUE** 屬性的背景色彩。 如需詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
 |**CELL_ORDINAL**|資料集中資料格的序數。|  
 |**FONT_FLAGS**|影響字型的位元遮罩詳細資料。 該值是以下其中一或多個常數的位元 OR 運算結果。<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> 例如，值 5 表示結合了粗體 (**MDFF_BOLD**) 及底線 (**MDFF_UNDERLINE**) 字型效果。|  

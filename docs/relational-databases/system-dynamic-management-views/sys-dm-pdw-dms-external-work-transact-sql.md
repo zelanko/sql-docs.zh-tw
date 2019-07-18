@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_external_work (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899495"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "58658115"
 |step_index|**int**|查詢會叫用這個 DMS 背景工作的步驟。<br /><br /> request_id、 step_index 和 dms_step_index 形成這個檢視的索引鍵。|相同中 step_index [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |dms_step_index|**int**|目前在 DMS 計劃中的步驟。<br /><br /> request_id、 step_index 和 dms_step_index 形成這個檢視的索引鍵。|相同中 dms___step_index [sys.dm_pdw_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)。|  
 |pdw_node_id|**int**|執行 DMS 背景工作角色的節點。|相同的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
-|型別|**nvarchar(60)**|此節點正在執行的外部作業類型。<br /><br /> 分割檔案是已分割成多個較小的落在外部 Hadoop 檔案上作業。|' 檔案分割 '|  
+|type|**nvarchar(60)**|此節點正在執行的外部作業類型。<br /><br /> 分割檔案是已分割成多個較小的落在外部 Hadoop 檔案上作業。|' 檔案分割 '|  
 |work_id|**int**|分割的檔案識別碼。|大於或等於 0。<br /><br /> 每個計算節點是唯一的。|  
 |input_name|**nvarchar(60)**|正在讀取的輸入名稱的字串。|Hadoop 檔案，這是 Hadoop 檔案名稱。|  
 |read_location|**bigint**|讀取位置的位移。||  

@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8a339d52b04b297227e28833ea490f615ed268f9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 0da478798e87497da7828126b2168bbae5d980f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962170"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R （SQL Server 和 RevoScaleR 教學課程） 來轉換資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135668"
 ---
 # <a name="call-level-interfaces"></a>呼叫層級介面
 將 SQL 陳述式傳送至 DBMS 的最後一個技巧是透過呼叫層級介面 (CLI)。 呼叫層級介面提供應用程式可以呼叫的 DBMS 函式的程式的庫。 因此，而不是嘗試使用另一種程式設計語言融合 SQL，則呼叫層級介面便是類似於大部分的程式設計人員已經習慣使用，例如字串、 I/O 或 C.便箋支援內嵌的 SQL 該 Dbms 中的數學程式庫常式的程式庫已呼叫層級介面，先行編譯器所產生的呼叫。 不過，這些呼叫都未記載並可能有所變更，恕不另行通知。  

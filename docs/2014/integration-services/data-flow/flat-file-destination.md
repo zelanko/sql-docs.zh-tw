@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62902442"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
   「一般檔案」目的地會將資料寫入文字檔。 該文字檔的格式可以是使用分隔符號、固定寬度、具有資料列分隔符號的固定寬度，或不齊右。  

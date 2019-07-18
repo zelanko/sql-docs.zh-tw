@@ -12,15 +12,14 @@ helpviewer_keywords:
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 585f619e84d7a55b0bf8416bd3586d30b9da72a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904001"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>概觀：匯出資料 (Master Data Services)
 

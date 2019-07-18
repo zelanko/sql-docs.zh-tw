@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e475abb699c7fa7240ca6eb39b1b32f1730d33c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125743"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C 到 SQL 資料轉換範例
 下列範例說明如何驅動程式將 C 資料轉換為 SQL 資料：  
   
 |C 類型識別碼|C 資料值|SQL 類型<br /><br /> 識別碼 (identifier)|「資料行」<br /><br /> 長度|SQL 資料<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/a|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
-|SQL_C_CHAR|[a] 1234.56\0|SQL_DECIMAL|8 [b]|1234.56|n/a|  
-|SQL_C_CHAR|[a] 1234.56\0|SQL_DECIMAL|7 [b]|1234.5|22001|  
-|SQL_C_CHAR|[a] 1234.56\0|SQL_DECIMAL|4|----|22003|  
+|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|6|abcdef|n/a|  
+|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|5|abcde|22001|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|8[b]|1234.56|n/a|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|7[b]|1234.5|22001|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|4|----|22003|  
 |SQL_C_FLOAT|1234.56|SQL_FLOAT|n/a|1234.56|n/a|  
 |SQL_C_FLOAT|1234.56|SQL_INTEGER|n/a|1234|22001|  
 |SQL_C_FLOAT|1234.56|SQL_TINYINT|n/a|----|22003|  

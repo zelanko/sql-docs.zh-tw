@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb5fda15d9509b5fc07da13ff91a3d361f48ab98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da4b01d6e691b2964d2dbb0381d405aaf68d5ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110207"
 ---
 # <a name="filestream-and-ole-db"></a>資料流及 OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

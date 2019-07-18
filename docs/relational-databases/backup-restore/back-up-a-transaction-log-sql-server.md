@@ -1,7 +1,7 @@
 ---
 title: 備份交易記錄 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b110483faa6fd1f051cc35849858bd20b9fc1b04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256dc3c1733ece7b03686d6911c327b697ec094e
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756856"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652808"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>備份交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +44,27 @@ ms.locfileid: "47756856"
 預設必須將 BACKUP DATABASE 和 BACKUP LOG 權限授與 **系統管理員** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
  備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)並不會檢查檔案存取權限。 當您嘗試備份或還原時，在嘗試存取 [實體資源](backup-devices-sql-server.md) 之前，備份裝置實體檔案的權限問題可能不太明顯。 同樣地，請檢查權限，再開始進行！
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="back-up-using-ssms"></a>使用 SSMS 備份  
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 **[工作]**，然後按一下 **[備份]**。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向 **[工作]** ，然後按一下 **[備份]** 。 會出現 **[備份資料庫]** 對話方塊。  
   
 4.  在 **[資料庫]** 清單方塊中確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
   
-5.  確認復原模式是否為 **[FULL]** 或 **[BULK_LOGGED]**。  
+5.  確認復原模式是否為 **[FULL]** 或 **[BULK_LOGGED]** 。  
   
-6.  在 **[備份類型]** 清單方塊中，選取 **[交易記錄]**。  
+6.  在 **[備份類型]** 清單方塊中，選取 **[交易記錄]** 。  
   
-7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
+7.  或者，您也可以選取 **[僅複製備份]** 來建立僅複製備份。 「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
-    >** 注意！** 選取 [差異] 選項時，您無法建立「僅複製備份」。  
+    > [!NOTE]
+    > 選取 **[差異]** 選項時，您無法建立「只複製」備份。  
   
 8.  接受 **[名稱]** 文字方塊中建議的預設備份組名稱，或者輸入不同的備份組名稱。  
   
@@ -74,11 +76,11 @@ ms.locfileid: "47756856"
   
          預設值會在 **[伺服器屬性]** 對話方塊 ( **[資料庫設定]** 頁面) 的 **[預設備份媒體保留 (以天為單位)]** 選項中設定。 若要存取此對話方塊，請以滑鼠右鍵按一下 [物件總管] 中的伺服器名稱並選取 [屬性]，然後選取 **[資料庫設定]** 頁面。  
   
-    -   若要讓備份組在特定日期過期，請按一下 **[於]**，然後輸入備份組將過期的日期。  
+    -   若要讓備份組在特定日期過期，請按一下 **[於]** ，然後輸入備份組將過期的日期。  
   
-11. 按一下 **[磁碟]**、 **[URL]** 或 **[磁帶]**，以選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]**。 選取的路徑會在 **[備份至]** 清單方塊中顯示。  
+11. 按一下 **[磁碟]** 、 **[URL]** 或 **[磁帶]** ，以選擇備份目的地的類型。 若要選取包含單一媒體集的磁碟或磁帶機 (最多 64 個) 的路徑，請按一下 **[加入]** 。 選取的路徑會在 **[備份至]** 清單方塊中顯示。  
   
-     若要移除備份目的地，請選取目的地，然後按一下 **[移除]**。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]**。  
+     若要移除備份目的地，請選取目的地，然後按一下 **[移除]** 。 若要檢視備份目的地的內容，請選取目的地，然後按一下 **[內容]** 。  
   
 12. 若要檢視或選取進階選項，請按一下 **[選取頁面]** 窗格中的 **[選項]** 。  
   
@@ -86,7 +88,7 @@ ms.locfileid: "47756856"
   
     -   **備份至現有的媒體集**  
   
-         針對這個選項，按一下 **[附加至現有的備份組]** 或 **[覆寫所有現有的備份組]**。 如需詳細資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+         針對這個選項，按一下 **[附加至現有的備份組]** 或 **[覆寫所有現有的備份組]** 。 如需詳細資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
   
          另外，也可以選取 **[檢查媒體集名稱及備份組是否逾期]** ，以讓備份作業確認媒體集及備份組逾期的日期和時間。  
   
@@ -100,19 +102,19 @@ ms.locfileid: "47756856"
   
 14. (選擇性) 在 **[可靠性]** 區段中選取：  
   
-    -   **[完成後驗證備份]**。  
+    -   **[完成後驗證備份]** 。  
   
-    -   **[寫入媒體之前執行總和檢查碼]** 及/或 **[發生總和檢查碼錯誤時繼續]**。 如需總和檢查碼的相關資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **[寫入媒體之前執行總和檢查碼]** 及/或 **[發生總和檢查碼錯誤時繼續]** 。 如需總和檢查碼的相關資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
 15. 在 **[交易記錄]** 區段中：  
   
-    -   對於例行的記錄備份，請保留預設選項 **[移除非使用中的項目以截斷交易記錄]**。  
+    -   對於例行的記錄備份，請保留預設選項 **[移除非使用中的項目以截斷交易記錄]** 。  
   
-    -   若要備份記錄的結尾 (亦即，使用中的記錄)，請勾選 **[備份記錄檔的結尾，並讓資料庫保持在還原狀態]**。  
+    -   若要備份記錄的結尾 (亦即，使用中的記錄)，請勾選 **[備份記錄檔的結尾，並讓資料庫保持在還原狀態]** 。  
   
          結尾記錄備份是在發生失敗後進行的，會備份記錄的結尾，以防止遺失工作資料。 在以下兩種情況時應備份使用中的記錄 (結尾記錄備份)：發生失敗後開始還原資料庫之前，或是容錯移轉到次要資料庫時。 選取此選項相當於在 Transact-SQL 的 BACKUP LOG 陳述式中，指定 NORECOVERY 選項。 如需結尾記錄備份的詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
-16. 如果是備份至磁帶機 (在 [一般] 頁面的 [目的地] 區段中指定)，[備份後卸載磁帶] 選項會啟用供選擇。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
+16. 如果是備份至磁帶機 (在 [一般]  頁面的 [目的地]  區段中指定)，[備份後卸載磁帶]  選項會啟用供選擇。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
   
 17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
   
@@ -168,7 +170,7 @@ GO
   
 -   [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

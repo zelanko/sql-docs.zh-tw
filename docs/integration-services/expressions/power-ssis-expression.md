@@ -13,14 +13,18 @@ ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f75364a019bbf6f4827d060cfd1daa7076137ea
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4515d920039c6dacd48e4b969928d525a1cec67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725046"
 ---
 # <a name="power-ssis-expression"></a>POWER (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回數值運算式的乘冪結果。 power 參數必須評估為整數。  
   
 ## <a name="syntax"></a>語法  

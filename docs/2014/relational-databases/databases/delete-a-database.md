@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871912"
 ---
 # <a name="delete-a-database"></a>刪除資料庫
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]刪除使用者定義資料庫。  
@@ -45,7 +45,7 @@ ms.locfileid: "58538540"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[刪除資料庫之後](#FollowUp)  
+-   **後續操作：** [刪除資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -76,9 +76,9 @@ ms.locfileid: "58538540"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，以滑鼠右鍵按一下要刪除的資料庫，再按一下 **[刪除]**。  
+2.  展開 **[資料庫]** ，以滑鼠右鍵按一下要刪除的資料庫，再按一下 **[刪除]** 。  
   
-3.  確認已選取正確的資料庫，再按一下 **[確定]**。  
+3.  確認已選取正確的資料庫，再按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,9 +86,9 @@ ms.locfileid: "58538540"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會移除 `Sales` 和 `NewSales` 資料庫。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會移除 `Sales` 和 `NewSales` 資料庫。  
   
 ```sql  
 USE master ;  

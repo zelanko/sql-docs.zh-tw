@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8dc64c84a8d14ea86893d52044894e0af2b1a3bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103207"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>連線到 SQL Server (MySQLToSQL)
 使用**連接到 SQL Server**對話方塊中，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊的 **檔案**功能表上，按一下 **連接到 SQL Server**。  
@@ -24,7 +23,7 @@ ms.locfileid: "52407945"
 **伺服器名稱**  
 輸入或選取 連接到 SQL Server 執行個體。 根據預設，會顯示您連線到最近的執行個體。  
   
--   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+-   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
 -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   

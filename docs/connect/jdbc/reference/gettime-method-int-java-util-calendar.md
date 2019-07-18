@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5c0172dd04e13775b977a93f05f2976791a2343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779010"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public java.sql.Time getTime(int index,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這項 getTime 方法由 java.sql.CallableStatement 介面中的 getTime 方法指定。  
   
  圖表標題為 「 Getter 方法轉換 」 所示[了解資料類型轉換](../../../connect/jdbc/understanding-data-type-conversions.md)若要查看哪些[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以使用此方法擷取的資料型別。  

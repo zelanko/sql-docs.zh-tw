@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961629"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>監視 PREDICT 陳述式的擴充事件
 
@@ -34,7 +33,7 @@ ms.locfileid: "58510535"
 
 在 SQL Server 2017 引進了 T-SQL 預測陳述式。 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |event  |內建執行時間分解|
 |predict_model_cache_hit |event|發生於從 PREDICT 函式模型快取中擷取模型。 使用這個事件及其他 predict_model_cache_ * 事件，PREDICT 函式模型快取所造成的問題進行疑難排解。|

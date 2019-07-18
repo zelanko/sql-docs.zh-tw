@@ -2,20 +2,20 @@
 title: 報表內嵌資料集和共用資料集 (報表產生器及 SSRS)| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500295"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
   資料集會從資料連接指定您要使用的資料。 資料集是以報表中儲存為內嵌資料來源或報表伺服器上共用資料來源參考的資料連接為基礎。 資料集包含指定一組欄位的查詢。 當您將這些欄位拖曳至設計介面時，您可以建立報表執行時評估為實際資料的運算式。  
@@ -52,7 +52,7 @@ ms.locfileid: "50020382"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Overview"></a> 了解報表資料集與查詢  
- 報表資料集包含的查詢命令可在外部資料來源上執行，並指定要擷取的資料。 若要建立查詢指令，您可以使用與外部資料來源之資料延伸模組相關聯的查詢設計工具。 在查詢設計工具中，您可以執行查詢命令並檢視結果集。 結果集是一個矩形資料列集，其中的資料行名稱和資料列在每個資料列中都有相同數目的值。 不支援階層式資料，也稱為 *「不完全階層」*(Ragged Hierarchy)。 資料行名稱會當做資料集欄位的清單儲存在報表定義中。  
+ 報表資料集包含的查詢命令可在外部資料來源上執行，並指定要擷取的資料。 若要建立查詢指令，您可以使用與外部資料來源之資料延伸模組相關聯的查詢設計工具。 在查詢設計工具中，您可以執行查詢命令並檢視結果集。 結果集是一個矩形資料列集，其中的資料行名稱和資料列在每個資料列中都有相同數目的值。 不支援階層式資料，也稱為 *「不完全階層」* (Ragged Hierarchy)。 資料行名稱會當做資料集欄位的清單儲存在報表定義中。  
   
  將資料集加入至報表後，您可以將欄位從 [報表資料] 窗格中的欄位集合拖曳至資料表、圖表，以及您用來設計報表配置的其他報表項目。 如需使用欄位的詳細資訊，請參閱 [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "50020382"
  您也可以使用參數與排序運算式的組合，讓使用者選擇資料在報表中的排序次序。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
 ### <a name="grouping-data-in-a-dataset"></a>在資料集中分組資料  
- 您無法在資料集中分組資料。 若要彙總資料集中的資料，您可以在擷取報表的資料前，編輯查詢命令來計算彙總。 這些值稱為 *「伺服器彙總」*(Server Aggregate)。 在運算式中，若要將這些值識別為預先計算的彙總，請使用彙總函式。 如需詳細資訊，請參閱[彙總函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
+ 您無法在資料集中分組資料。 若要彙總資料集中的資料，您可以在擷取報表的資料前，編輯查詢命令來計算彙總。 這些值稱為 *「伺服器彙總」* (Server Aggregate)。 在運算式中，若要將這些值識別為預先計算的彙總，請使用彙總函式。 如需詳細資訊，請參閱[彙總函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
 ##  <a name="Parameters"></a> 使用參數與資料集  
  針對包含查詢變數的內嵌資料集查詢，系統會自動建立查詢參數和對應的報表參數。 當報表執行時，報表參數的值會連結到資料集查詢參數。 利用這個方式，在外部資料來源上執行的查詢命令會包含針對報表參數所指定的值。 報表參數可讓使用者選擇他們想要在報表中查看的資料。 您可以在 [資料集屬性] 對話方塊的 [參數] 頁面中檢視如何連結查詢參數與報表參數。  
@@ -219,7 +219,7 @@ ms.locfileid: "50020382"
   
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

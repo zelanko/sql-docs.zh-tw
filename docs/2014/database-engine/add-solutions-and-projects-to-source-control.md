@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62792088"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>將方案與專案加入原始檔控制
   當您將方案加入原始檔控制中，方案會成為原始檔控制提供者所建立和維護之動態版本控制保存檔的一部份。 每次有人簽入方案的新版本時，這個版本都會成為保存檔的一部份，其他原始檔控制使用者可以使用它。  

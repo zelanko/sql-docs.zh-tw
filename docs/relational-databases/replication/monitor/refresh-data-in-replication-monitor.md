@@ -13,12 +13,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59271c303494cf4e1e3dbb52be204c76ce767271
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b4d29d3f616a9545aead55937012cffed74bee5d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129048"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582683"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>在複寫監視器中重新整理資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,12 +28,14 @@ ms.locfileid: "54129048"
   
 ### <a name="to-set-refresh-options-for-replication-monitor"></a>若要為複寫監視器設定重新整理選項  
   
-1.  以滑鼠右鍵按一下「複寫監視器」左窗格中的「發行者」，然後按一下 **[發行者設定]**。  
+1.  以滑鼠右鍵按一下「複寫監視器」左窗格中的「發行者」，然後按一下 **[發行者設定]** 。  
   
 2.  在 **[發行者設定]** 對話方塊中，設定 **[自動重新整理]** 與 **[重新整理的速率]** 選項。 **[自動重新整理]** 設定會影響「複寫監視器」中的主視窗。 **[重新整理的速率]** 設定也可以影響所有設定為自動重新整理的詳細資料視窗 (設定的變更僅影響在變更後開啟的詳細資料視窗)。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>若要指定詳細資料視窗應自動重新整理  
   
 1.  在「複寫監視器」中開啟詳細資料視窗。 例如：  
@@ -42,9 +44,9 @@ ms.locfileid: "54129048"
   
     2.  按一下 **[所有訂閱]** 索引標籤。  
   
-    3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
+    3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。  
   
-2.  在 [訂閱 \<訂閱名稱>] 視窗中，按一下 [動作]，然後按一下 [自動重新整理]。 重新整理速率將由 **[發行者設定]** 對話方塊中的 **[重新整理的速率]** 設定決定。  
+2.  在 [訂閱 \<訂閱名稱>]  視窗中，按一下 [動作]  ，然後按一下 [自動重新整理]  。 重新整理速率將由 **[發行者設定]** 對話方塊中的 **[重新整理的速率]** 設定決定。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  

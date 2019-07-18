@@ -1,5 +1,5 @@
 ---
-title: CREATE SUBCUBE 陳述式 (MDX) |Microsoft 文件
+title: CREATE SUBCUBE 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038272"
 ---
-# <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義-建立 SUBCUBE
+# <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義 - CREATE SUBCUBE
 
 
   將指定 Cube 或 Subcube 的 Cube 空間重新定義為指定的 Subcube。 此陳述式會變更後續作業的明顯 Cube 空間。  
@@ -36,7 +35,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  不包含 WITH、NON EMPTY 或 HAVING 子句，並且不要求維度或資料格屬性的有效多維度運算式 (MDX) SELECT 運算式。  
   
- 請參閱[SELECT 陳述式&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md)如需有關 Select 陳述式的詳細的語法說明和**NON VISUAL**子句。  
+ 請參閱[SELECT 陳述式&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md)如需在 Select 陳述式的詳細的語法說明並**NON VISUAL**子句。  
   
 ## <a name="remarks"></a>備註  
  Subcube 定義內排除預設成員時，座標將會相應地變更。 對於可彙總的屬性而言，預設成員會移動到 [All] 成員。 對於不可彙總的屬性而言，預設成員會移動到存在於 Subcube 內的成員。 下表包含 Subcube 範例以及預設成員組合。  
@@ -53,7 +52,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Subcube 內容中建立的工作階段物件會在卸除 Subcube 時一併卸除。  
   
- 如需有關 subcube 的詳細資訊，請參閱[在 MDX 中建立 Subcube &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)。  
+ 如需有關 subcube 的詳細資訊，請參閱 <<c0> [ 在 MDX 中建立 Subcube &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)。</c0>  
   
 ## <a name="example"></a>範例  
  下列範例會建立 Subcube，將明顯 Cube 空間限制於國家 (地區) 為加拿大的成員。 然後它會使用**成員**函數來傳回 Geography 使用者定義階層-只傳回加拿大的層級的國家/地區的所有成員。  
@@ -129,9 +128,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] 和 [All Resellers] 的資料行與資料列個別包含所有成員的總計，而不只是可見成員的總計。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 指令碼陳述式&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT 陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

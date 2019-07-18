@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679316"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264406"
 ---
 # <a name="global-settings-tester-oracletosql"></a>全域設定 (測試器) (OracleToSQL)
 使用軟體測試人員頁面**全域設定**對話方塊來指定設定 SSMA 軟體測試人員。  

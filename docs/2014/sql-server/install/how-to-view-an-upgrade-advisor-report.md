@@ -1,11 +1,10 @@
 ---
-title: 如何： 檢視 Upgrade Advisor 報表 |Microsoft Docs
+title: HOW TO：檢視 Upgrade Advisor 報表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -17,14 +16,14 @@ ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094800"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>如何：檢視 Upgrade Advisor 報表
+# <a name="how-to-view-an-upgrade-advisor-report"></a>HOW TO：檢視 Upgrade Advisor 報表
   Upgrade Advisor 會針對您選取要分析的每個元件建立報表。 此主題描述如何從 Upgrade Advisor 開始頁面檢視 Upgrade Advisor 報表。  
   
 > [!IMPORTANT]  
@@ -32,7 +31,7 @@ ms.locfileid: "48201928"
   
 ### <a name="to-view-a-report"></a>若要檢視報表  
   
-1.  按一下 **開始**，按一下**所有程式**，按一下  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**。  
+1.  按一下 **開始**，按一下**所有程式**，按一下  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**。  
   
 2.  在 Upgrade Advisor 開始頁面上，按一下**啟動 Upgrade Advisor 報表檢視器**。  
   
@@ -74,8 +73,8 @@ ms.locfileid: "48201928"
 >  報表可能會包含無法偵測之問題的項目。 這些是無法偵測或是會產生過多誤判結果的問題。 按一下 **告訴我更多關於此問題，以及如何解決它**連結來查看元件無法偵測之問題的清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)   
- [如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [如何：將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [如何：執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Upgrade Advisor 的如何主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

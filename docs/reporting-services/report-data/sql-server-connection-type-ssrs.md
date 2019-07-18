@@ -2,18 +2,18 @@
 title: SQL Server 連線類型 (SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3ee7030c869ff39c18fdf1f6efc3e3cee61bffec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a12a9a0d7b219fd3e950ace9ceed143cc8bcc58c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032007"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500157"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，您必須具有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至目前版本和舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並從中擷取資料。  
@@ -31,7 +31,7 @@ ms.locfileid: "50032007"
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
@@ -48,7 +48,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源及連接字串&#40;報表產生器及 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或是[指定的認證及連接資訊，為報表資料來源](specify-credential-and-connection-information-for-report-data-sources.md).</c0>  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -86,7 +86,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 按一下工具列上的 **[執行]** 按鈕 (**!**) 來執行查詢並顯示結果集。  
+ 按一下工具列上的 **[執行]** 按鈕 ( **!** ) 來執行查詢並顯示結果集。  
   
  若要將這個查詢參數化，請加入查詢參數。 例如，將 WHERE 子句變更為下列：  
   
@@ -126,7 +126,7 @@ WHERE EmployeeID = (@EmpID)
   
  報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如：  
   
--   根據預設，每一個報表參數的資料類型都是 **[文字]**。 如果基礎資料是不同的資料類型，則必須變更參數資料類型。  
+-   根據預設，每一個報表參數的資料類型都是 **[文字]** 。 如果基礎資料是不同的資料類型，則必須變更參數資料類型。  
   
 -   如果您為多值參數選取此選項，則必須使用 **IN** 運算子手動變更查詢，測試值是否為集合的一部分，例如 `WHERE EmployeeID IN (@EmpID)`。  
   
@@ -156,7 +156,7 @@ WHERE EmployeeID = (@EmpID)
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

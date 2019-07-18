@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], Excel rendering
 - Excel [Reporting Services], rendering
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f287e26bac61f2c29b1a60d72f66f4fd32bca966
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109213"
 ---
 # <a name="excel-device-information-settings"></a>Excel 裝置資訊設定
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式轉譯的裝置資訊設定。  

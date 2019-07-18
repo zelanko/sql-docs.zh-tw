@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019195"
 ---
 # <a name="connection-transitions"></a>連線轉換
 ODBC 連接擁有以下狀態。  
@@ -39,12 +38,12 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> 沒有環境中。|未配置的 C1|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|未配置的 C1|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |(KARTRIS)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |(KARTRIS)[3]|(KARTRIS)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(KARTRIS)[4]|(KARTRIS)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|(IH)[4]|(KARTRIS)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
  [1] 這個資料列會顯示轉換時*HandleType*已 SQL_HANDLE_ENV。  
   
@@ -58,15 +57,15 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|C4 C3 [d] [s]|-[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|-[1] C5 [2]|  
+|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--[1] C5[2]|  
   
  [1] 的連接已在手動認可模式。  
   
@@ -74,9 +73,9 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges、 SQLColumns、 SQLForeignKeys、 SQLGetTypeInfo、 SQLPrimaryKeys、 SQLProcedureColumns、 SQLProcedures、 SQLSpecialColumns、 q、 SQLTablePrivileges 和 SQLTables  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|-[1] C6 [2]|--|  
+|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--[1] C6[2]|--|  
   
  [1] 的連接已在自動認可模式中，或資料來源未開始交易。  
   
@@ -84,13 +83,13 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc、 SQLGetDescField、 SQLGetDescRec、 SQLSetDescField 和 SQLSetDescRec  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--[1]|--|--|  
   
@@ -98,25 +97,25 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 和 SQLDrivers  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)|(KARTRIS)|C4 s--n [f]|(08002)|(08002)|(08002)|(08002)|  
+|(KARTRIS)|(KARTRIS)|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)[1]|--[3]|--[3]|--[3]|--|--|-[4] 或 ([5]、 [6] 和 [8]) C4 [5] 和 [7] C5 [5]、 [6] 和 [9]|  
 |(KARTRIS)[2]|(KARTRIS)|(08003)|(08003)|--|--|C5|  
@@ -141,24 +140,24 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect 和 SQLExecute  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|-C6 [1] C6 [2] [3]|--|  
+|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--[1] C6[2] C6[3]|--|  
   
- [1] 連接處於自動認可模式，並執行的陳述式不是*游標**規格*（例如 SELECT 陳述式），或是在手動認可模式和陳述式連接執行未開始交易。  
+ [1] 連接處於自動認可模式，並執行的陳述式不是*游標* *規格*（例如 SELECT 陳述式），或是在手動認可模式和陳述式連接執行未開始交易。  
   
- [2] 的連接處於自動認可模式，並執行的陳述式已*游標**規格*（例如 SELECT 陳述式）。  
+ [2] 的連接處於自動認可模式，並執行的陳述式已*游標* *規格*（例如 SELECT 陳述式）。  
   
  [3] 連線在手動認可模式，且資料來源開始交易。  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
 |(KARTRIS)[2]|(KARTRIS)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(KARTRIS)[3]|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|C4 [5]-[6]|-[7] C4 [5] 和 [8] C5 [6] 和 [8]|  
-|(KARTRIS)[4]|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|--|  
+|(KARTRIS)[3]|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|C4[5] --[6]|-[7] C4 [5] 和 [8] C5 [6] 和 [8]|  
+|(IH)[4]|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|--|  
   
  [1] 這個資料列會顯示轉換時*HandleType*已 SQL_HANDLE_ENV。  
   
@@ -178,9 +177,9 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)[1]|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|C5 [3]，[4]|  
+|(KARTRIS)[1]|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|C5[3] --[4]|  
 |(KARTRIS)[2]|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|  
   
  [1] 這個資料列顯示的交易時*選項*引數是 SQL_CLOSE。  
@@ -193,9 +192,9 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|KARTRIS|KARTRIS|--[1] 08003[2]|HY010|--|--|--|  
+|IH|IH|--[1] 08003[2]|HY010|--|--|--|  
   
  [1]*屬性*引數為 SQL_ATTR_ACCESS_MODE、 SQL_ATTR_AUTOCOMMIT、 SQL_ATTR_LOGIN_TIMEOUT，SQL_ATTR_ODBC_CURSORS、 SQL_ATTR_TRACE 或 SQL_ATTR_TRACEFILE，或連接屬性已設定的值。  
   
@@ -203,12 +202,12 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 和 SQLGetDiagRec  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)[1]|--|--|--|--|--|--|  
 |(KARTRIS)[2]|(KARTRIS)|--|--|--|--|--|  
 |(KARTRIS)[3]|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|  
-|(KARTRIS)[4]|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|--|  
+|(IH)[4]|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|--|  
   
  [1] 這個資料列會顯示轉換時*HandleType*已 SQL_HANDLE_ENV。  
   
@@ -220,21 +219,21 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|KARTRIS|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|KARTRIS|KARTRIS|HY010|HY010|--|--|--|  
+|IH|IH|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|KARTRIS|KARTRIS|--[1] 08003[2]|08003|--|--|--|  
+|IH|IH|--[1] 08003[2]|08003|--|--|--|  
   
  [1]*資訊類型*引數為 SQL_ODBC_VER。  
   
@@ -242,9 +241,9 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|-[1] C6 [2]|-C5 [3] [1]|  
+|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--[1] C6[2]|--[3] C5[1]|  
   
  [1] 連接處於自動認可模式，並呼叫**SQLMoreResults**未初始化的處理結果集的資料指標規格。  
   
@@ -254,15 +253,15 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|-[1] C6 [2]|--|  
+|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--[1] C6[2]|--|  
   
  [1] 的連接已在自動認可模式中，或資料來源未開始交易。  
   
@@ -270,9 +269,9 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|KARTRIS|KARTRIS|--[1] 08003[2]|HY010|-[3] 08002 [4] HY011 [5]|-[3] 08002 [4] HY011 [5]|-[3] 和 [6] C5 [8] [4] HY011 08002 [5] 或 [7]|  
+|IH|IH|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|-[3] 和 [6] C5 [8] [4] HY011 08002 [5] 或 [7]|  
   
  [1]*屬性*引數不是 SQL_ATTR_TRANSLATE_LIB 或 SQL_ATTR_TRANSLATE_OPTION。  
   
@@ -292,12 +291,12 @@ ODBC 連接擁有以下狀態。
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|--|--|(HY010)|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>所有其他的 ODBC 函數  
   
-|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 引數|C6<br /><br /> Transaction|  
+|C0<br /><br /> 沒有環境中。|C1<br /><br /> 未配置|C2<br /><br /> 配置|C3<br /><br /> 需要的資料|C4<br /><br /> 已連接|C5<br /><br /> 陳述式|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|(KARTRIS)|--|--|

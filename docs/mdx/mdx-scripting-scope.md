@@ -1,5 +1,5 @@
 ---
-title: SCOPE 陳述式 (MDX) |Microsoft 文件
+title: SCOPE 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138275"
 ---
-# <a name="mdx-scripting---scope"></a>MDX 指令碼-範圍
+# <a name="mdx-scripting---scope"></a>MDX 指令碼 - SCOPE
 
 
   將指定的多維度運算式 (MDX) 陳述式的範圍限制為指定的 Subcube。  
@@ -79,12 +78,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  隱藏 SCOPE 陳述式中公開的成員。  
   
- SCOPE 陳述式會建立 subcube，不論公開 「 洞 」 **MDX 相容性**設定。 例如，陳述式 `Scope( Customer.State.members )` 可以包括不含州/省 (但已插入不可見的預留位置成員) 之國家 (地區) 中的州/省。  
+ SCOPE 陳述式會建立 subcube，不論公開 「 洞孔 」 裡**MDX Compatibility**設定。 例如，陳述式 `Scope( Customer.State.members )` 可以包括不含州/省 (但已插入不可見的預留位置成員) 之國家 (地區) 中的州/省。  
   
  SCOPE 陳述式內建立的導出成員與命名集，不會受到 SCOPE 陳述式的影響。  
   
 ## <a name="example"></a>範例  
- 下列範例中的，從 MDX 計算指令碼，在 Adventure Works 範例方案中，將目前的範圍為 2005年會計年度銷售量配額量值中的會計季度定義，然後將指定要使用目前的範圍中的資料格的值**ParallelPeriod**函式。 此範例接著會使用另一個 SCOPE 陳述式，範圍內修改，然後執行 另一個作業使用[This (MDX)](../mdx/this-mdx.md)函式。  
+ 下列範例中的，從 MDX 計算指令碼，在 Adventure Works 範例方案為 2005年會計年度和 [銷售量配額] 量中的會計季度定義目前的範圍，然後將值指派給目前的範圍中的資料格所使用的**ParallelPeriod**函式。 此範例接著會使用另一個 SCOPE 陳述式，範圍內修改，然後執行 另一個指派使用[This (MDX)](../mdx/this-mdx.md)函式。  
   
 ```  
 Scope   
@@ -115,6 +114,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 指令碼陳述式&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX 指令碼陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

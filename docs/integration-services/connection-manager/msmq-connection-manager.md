@@ -18,15 +18,19 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b4d6e6d23014cc54f2aef5416f37bd54fdecb086
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a057c6678e27f51aba438b6dd57129777867e759
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728215"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
-  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
   
  當您將 MSMQ 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 MSMQ 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。 連線管理員的 **ConnectionManagerType** 屬性會設為 **MSMQ**。  
   
@@ -53,7 +57,7 @@ ms.locfileid: "58274351"
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="msmq-connection-manager-editor"></a>MSMQ 連線管理員編輯器
-  使用 [MSMQ 連線管理員] 對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  
+  使用 [MSMQ 連線管理員]  對話方塊，來指定 Message Queuing (又稱為 MSMQ) 訊息佇列的路徑。  
   
  若要深入了解 MSMQ 連線管理員，請參閱＜ [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)＞。  
   
@@ -78,7 +82,7 @@ ms.locfileid: "58274351"
  您可以使用 "." 代表本機電腦。  
   
  **測試**  
- 在設定 MSMQ 連線管理員之後，請按一下 [測試] 來確認連接已可使用。  
+ 在設定 MSMQ 連線管理員之後，請按一下 [測試]  來確認連接已可使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../../integration-services/control-flow/message-queue-task.md)   

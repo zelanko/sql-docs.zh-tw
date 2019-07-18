@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03ede2272de2c574909ed44bb0291b3c56911f0b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768726"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減) (SSIS 運算式)
   將第一個數值運算式減第二個數值運算式。  

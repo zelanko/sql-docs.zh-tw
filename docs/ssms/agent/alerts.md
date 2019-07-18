@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SQL Server Agent alerts, about alerts
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0622dee859f8097ba5c0ec6ee607477267080063
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 46c11d921076e3124e9b15fcfbb8d4ce6e63dfdf
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700876"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688966"
 ---
 # <a name="alerts"></a>警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51700876"
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在指定事件的事件訊息中含有特定的文字字串時發出警示。 例如，您可以定義警示來回應含有特定資料表名稱或特定條件約束名稱的訊息。  
   
 ## <a name="selecting-a-performance-condition"></a>選取效能條件  
-您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
+您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  
   
 -   **物件**  
   
@@ -95,17 +95,17 @@ ms.locfileid: "51700876"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可為要監視的屬性定義特定的執行個體 (如果有的話)。  
   
--   **如果是計數器和值則發出警示**  
+-   **如果是計數器和值則發出警示**   
   
-    警示的臨界值和產生警示的行為。 臨界值是一個數值。 此行為是下列其中一項：低於、變成等於或高於在 [值] 中指定的數值。 [值] 是一個描述效能行況計數器的數值。 例如，若要設定警示在效能物件 **SQLServer:Locks** 的 **Lock Wait Time** 超過 30 分鐘時產生，您就必須選擇 [高於]，並指定 30 為 [值]。  
+    警示的臨界值和產生警示的行為。 臨界值是一個數值。 此行為是下列其中一項：低於  、變成等於  或高於在 [值] 中指定的數值  。 [值]  是一個描述效能行況計數器的數值。 例如，若要設定警示在效能物件 **SQLServer:Locks** 的 **Lock Wait Time** 超過 30 分鐘時產生，您就必須選擇 [高於]  ，並指定 30 為 [值]  。  
   
-    至於另一個範例，您可以指定效能物件 **SQLServer:Transactions** 在 **tempdb** 中的可用空間低於 1000 KB 時發出警示。 若要進行此設定，您必須選擇計數器 **Free space in tempdb (KB)**、低於，並在 [值] 中指定 **1000**。  
+    至於另一個範例，您可以指定效能物件 **SQLServer:Transactions** 在 **tempdb** 中的可用空間低於 1000 KB 時發出警示。 若要進行此設定，您必須選擇計數器 **Free space in tempdb (KB)** 、低於  ，並在 [值]  中指定 **1000**。  
   
     > [!NOTE]  
     > 效能資料是定期取樣的，因此在到達臨界值與發出效能警示之間可能會有一點延遲 (幾秒鐘)。  
   
 ## <a name="selecting-a-wmi-event"></a>選取 WMI 事件  
-您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
+您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  
   
 -   **Namespace**  
   

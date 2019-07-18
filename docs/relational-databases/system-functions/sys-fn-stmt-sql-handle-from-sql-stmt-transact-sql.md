@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL) |Microsoft Docs
+title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059276"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引數  
  *query_sql_text*  
- 這是查詢的您想要的控制代碼的查詢存放區中的文字。 *query_sql_text*已**nvarchar （max)**，沒有預設值。  
+ 這是查詢的您想要的控制代碼的查詢存放區中的文字。 *query_sql_text*已**nvarchar （max)** ，沒有預設值。  
   
  *query_param_type*  
  是查詢的參數類型。 *query_param_type*已**tinyint**。 可能的值為：  
@@ -58,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>傳回的資料行  
  下表列出的資料行傳回該 sys.fn_stmt_sql_handle_from_sql_stmt。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 控制代碼。|  
 |**query_sql_text**|**nvarchar(max)**|文字[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。|  
@@ -99,7 +98,7 @@ JOIN sys.dm_exec_query_stats AS qs
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
- [sp_query_store_remove_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

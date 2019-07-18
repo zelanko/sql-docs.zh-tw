@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771624"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
   使用 **[設定參數值]** 對話方塊來針對專案和封裝設定參數與連接管理員屬性的值。  
@@ -36,7 +36,7 @@ ms.locfileid: "58376696"
   
 3.  展開 **[SSISDB]** 節點。  
   
-4.  以滑鼠右鍵按一下封裝或專案，再按一下 [設定]，然後按一下 [參數] 索引標籤或 [連線管理員] 索引標籤中的省略符號按鈕。  
+4.  以滑鼠右鍵按一下封裝或專案，再按一下 [設定]  ，然後按一下 [參數]  索引標籤或 [連線管理員]  索引標籤中的省略符號按鈕。  
   
 ##  <a name="option"></a> 設定選項  
  **參數**  

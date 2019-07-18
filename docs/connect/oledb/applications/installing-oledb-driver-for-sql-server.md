@@ -21,13 +21,13 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: e779d51f535d3b3489c1fbe043c7ff9212b0e875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744378"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800875"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>安裝 OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

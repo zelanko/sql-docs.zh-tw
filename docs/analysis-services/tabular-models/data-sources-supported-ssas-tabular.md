@@ -1,6 +1,6 @@
 ---
 title: 支援 SQL Server Analysis Services 表格式 1200年模型中的資料來源 |Microsoft Docs
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269681"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597356"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>支援 SQL Server Analysis Services 中表格式 1200年模型的資料來源
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
   
 |||||  
 |-|-|-|-|  
-|來源|版本|檔案類型|提供者|  
+|`Source`|版本|檔案類型|提供者|  
 |Access 資料庫|Microsoft Access 2010 及更新版本。|.accdb 或 .mdb|ACE 14 OLE DB 提供者<sup> [1](#dnu)</sup>|  
 |SQL Server 關聯式資料庫|SQL Server 2008 及更新版本、 SQL Server 資料倉儲 2008年及更新版本中，Azure SQL Database，Azure SQL 資料倉儲、 Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) 過去被稱為 「 為 SQL Server Parallel Data Warehouse (PDW)。 從 Analysis Services 連接至 PDW 原本需要特殊資料提供者。 此提供者在 SQL Server 2012 中被取代。 從 SQL Server 2012 開始，將使用 SQL Server Native Client 連接至 PDW/AP。 |(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle 關聯式資料庫|Oracle 9i 和更新版本。|(不適用)|Oracle OLE DB Provider<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 及更新版本      |       OLE DB Provider for
 Microsoft Azure SQL Database    |   All      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB 提供者、.NET Framework Data Provider for SQL Client            
 Microsoft Azure SQL 資料倉儲     |   All     |  SQL Server Native Client OLE DB 提供者、.NET Framework Data Provider for SQL Client       
 Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB 提供者、.NET Framework Data Provider for SQL Client       
+|Microsoft SQL Server Always Encrypted <sup> [2](#ae)</sup> | 2016 和更新版本。 2014 及更早版本僅限企業版。 | .NET Framework Data Provider for SQL Client
+|永遠加密 azure SQL Database <sup> [2](#ae)</sup>| All | .NET Framework Data Provider for SQL Client
 Oracle 關聯式資料庫     |  Oracle 9i 和更新版本       |  Oracle OLE DB Provider       
 Teradata 關聯式資料庫    |  Teradata V2R6 和更新版本     | .Net Data Provider for Teradata    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>使用 SQL Server Analysis Services with Always Encrypted
+
+<a name="ae">[2]</a> SQL Server Analysis Services 可做為資料庫使用的用戶端[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)在 SQL Server 或 Azure SQL Database，在下列情況下： 
+
+*  保護加密的資料行的資料行具有必須是 Windows 憑證存放區中儲存的憑證。 不支援 Azure Key Vault 中儲存的資料行主要金鑰。   
+*  Analysis Services 安裝的 Windows 電腦已安裝所需要的資料行主要金鑰的憑證。 若要進一步了解，請參閱[在 Windows 憑證存放區中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store)。
+*  Analysis Services 用來連接到 SQL 資料來源根據.Net Framework 提供者和資料行加密設定，必須啟用資料來源上的屬性。 .NET framework 4.6.1 或更新版本必須要有 Analysis Services 伺服器上。
+*  必須是 SQL Server 或 SQL Database 資料來源*提供者*1200年相容性層級所支援的資料來源類型。 不適用於 Power Query*結構化*1400年相容性層級導入的資料來源。
   
 ##  <a name="bkmk_tips"></a> 選擇資料來源的秘訣  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946436"
 ---
 # <a name="path-expressions---specifying-predicates"></a>路徑運算式 - 指定述詞
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- 請注意，在每個情況下，述詞都會繫結到路徑運算式中述詞所套用到的節點。 例如，第一個路徑運算式會選取每個 /People/Person 節點內的第一個 <`Name`> 元素，並以提供的 XML 執行個體傳回下列項目：  
+ 請注意，在每個情況下，述詞都會繫結到路徑運算式中述詞所套用到的節點。 例如，第一個路徑運算式會選取第一個 <`Name`> 項目每人美金 /people/person 節點內，並使用提供的 XML 執行個體，會傳回下列：  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- 但是，第二個路徑運算式會選取第一個 /People/Person 節點下的所有 <`Name`> 元素。 因此，它會傳回下列項目：  
+ 不過，第二個路徑運算式會選取所有 <`Name`> 屬於第一個//people/person 節點下的項目。 因此，它會傳回下列項目：  
   
 ```  
 <Name>John</Name>  
@@ -106,7 +105,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- 此述詞指定的條件會套用到所有 <`Location`> 元素節點子系。 結果是，只會傳回 LocationID 屬性值為 10 的那些工作中心位置。  
+ 這個述詞所指定的條件會套用到所有 <`Location`> 元素節點子系。 結果是，只會傳回 LocationID 屬性值為 10 的那些工作中心位置。  
   
  上一個路徑運算式會在下列的 SELECT 陳述式中執行：  
   
@@ -124,7 +123,7 @@ WHERE ProductModelID=7
   
 1.  若述詞運算式的值是空的序列，則述詞真值為 False。  
   
-     例如：  
+     例如:  
   
     ```  
     SELECT Instructions.query('  
@@ -135,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     此查詢中的路徑運算式只會傳回那些指定了 LotSize 屬性的 <`Location`> 元素節點。 若述詞針對特定的 <`Location`> 傳回空的序列，則結果中就不會傳回該工作中心位置。  
+     此查詢的路徑運算式只會傳回那些 <`Location`> 了 LotSize 屬性指定的項目節點。 如果述詞會傳回空的序列，針對特定 <`Location`>，結果中不會傳回工作中心位置。  
   
 2.  述詞值只能是 xs: integer、 xs: boolean 或節點\*。 節點\*，述詞評估為 True，如果有任何節點，並將空序列，則為 False。 任何其他數值類型 (例如 Double 和浮點類型) 都會產生靜態類型錯誤。 只有當產生的整數等於內容位置的值時，運算式的述詞真值才是 True。 此外，只有整數常值和**last （)** 函式會減少為 1 的已篩選之步驟運算式的基數。  
   
-     例如，下列查詢會擷取 <`Features`> 元素的第三個子元素節點。  
+     例如，下列查詢會擷取第三個子元素節點 <`Features`> 項目。  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -157,7 +156,7 @@ WHERE ProductModelID=7
   
     -   第三個步驟也指定了萬用字元 (*)，表示節點測試中的所有節點。 但是，述詞會篩選節點，並且只會傳回在第三個位置的節點。  
   
-    -   查詢會傳回文件根節點之 <`ProductDescription`> 元素子系之 <`Features`> 元素子系的第三個子元素節點。  
+    -   查詢傳回的第三個子元素節點 <`Features`> 元素子系 <`ProductDescription`> 文件根項目子系。  
   
 3.  若述詞運算式的值是一個簡單類型的布林類型值，則此述詞真值會等於述詞運算式的值。  
   

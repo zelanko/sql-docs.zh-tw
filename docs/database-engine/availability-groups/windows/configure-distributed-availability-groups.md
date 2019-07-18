@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+manager: jroth
+ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566557"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793751"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>設定分散式 Always On 可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>建立第一個可用性群組
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一個叢集上建立主要可用性群組  
-在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」。 Server1 在此範例中是全域主要。        
+在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」  。 Server1 在此範例中是全域主要。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -112,7 +112,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>建立第二個可用性群組  
- 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」。 在此範例中，server3 是轉寄站。 
+ 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」  。 在此範例中，server3 是轉寄站。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -223,7 +223,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 下列 Transact-SQL 範例說明對名為 `distributedag` 的分散式可用性群組進行容錯移轉的詳細步驟：
 
-1. 透過同時在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
+1. 透過同時  在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 

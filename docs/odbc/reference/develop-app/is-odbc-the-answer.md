@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138854"
 ---
 # <a name="is-odbc-the-answer"></a>答案是 ODBC 嗎？
-在探究之前的互通性問題，請考慮下列問題： 應用程式應該使用 ODBC 完全嗎？ 這看起來似乎很奇怪的問題 ODBC，指南中，但它其實只是，合法。 ODBC 的設計無法完全取代原生資料庫 Api，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，要用來釋放應用程式設計人員不必了解和維護多個資料庫的連結。  
+在探究之前的互通性問題，請考慮下列問題：應用程式應該使用 ODBC 完全嗎？ 這看起來似乎很奇怪的問題 ODBC，指南中，但它其實只是，合法。 ODBC 的設計無法完全取代原生資料庫 Api，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，要用來釋放應用程式設計人員不必了解和維護多個資料庫的連結。  
   
  自訂的應用程式是原生資料庫 Api 的最佳候選項。 自訂應用程式通常使用單一的 DBMS，而不需要是互通的主要原因。 原生資料庫 Api 可能會表現最好，能比 ODBC 公開特定 DBMS 的功能，並可能會公開不 ODBC 所公開的功能。 此外，自訂應用程式的開發人員熟悉通常他們 DBMS 的原生資料庫 API，因為不太需要了解 ODBC。 不過，值得注意的某些 Dbms，ODBC API 的原生資料庫。  
   

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STContains method (geography)
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9fa8502097b203be8ea6a94f13ebc3eb136e1640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa5b37955db2aace7785f7a39b768807e7b0e3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937145"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47824096"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  如果呼叫 **geography** 執行個體在空間上包含傳遞給方法的 **geography** 執行個體，則傳回 1，否則傳回 0。 如果兩個 **geography** 執行個體的 SRID 並不相同，則傳回 **null**。  

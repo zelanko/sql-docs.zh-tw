@@ -1,25 +1,28 @@
 ---
 title: 報表資料
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 1469f8467e455dbf4bfe70a502d1f29698dc6d1a
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: e75714085c7eb515de60d35af0dafabe04755e12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500382"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的報表資料
 
   報表資料可能是來自組織中的多個資料來源。 您設計報表的第一個步驟，就是建立資料來源，及代表基礎報表資料的資料集。 每個資料來源包含資料連接資訊。 每個資料集都包含將一組欄位定義使用為資料來源中資料的查詢命令。 若要視覺化每個資料集的資料，請加入資料區，例如資料表、矩陣、圖表或對應。 處理報表時，查詢會在資料來源上執行，且每個資料區會視需要展開，以顯示資料集的查詢結果。  
+
+> [!NOTE]
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
 ##  <a name="BkMk_ReportDataTerms"></a> 詞彙  
   
@@ -27,11 +30,11 @@ ms.locfileid: "53553080"
   
 - **共用資料來源定義。** 包含報表資料來源之 XML 表示的檔案。 報表發行時，其資料來源會儲存到報表伺服器或 SharePoint 網站上做為資料來源定義，與報表定義分開。 例如，報表伺服器管理員可能會更新連接字串或認證。 在原生報表伺服器上，檔案類型為 .rds。 在 SharePoint 網站上，檔案類型為 .rsds。  
   
-- **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
+- **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)＞。  
   
 - **共用資料來源。** 報表伺服器或 SharePoint 網站上提供的資料來源，可供多個報表使用。  
   
-- **內嵌資料來源。** 也稱為 *「報表特定資料來源」*(report-specific data source)。 在報表中定義而且僅供該報表使用的資料來源。  
+- **內嵌資料來源。** 也稱為 *「報表特定資料來源」* (report-specific data source)。 在報表中定義而且僅供該報表使用的資料來源。  
   
 - **認證。** 認證是驗證資訊，您必須提供這項資訊才能存取外部資料。  
   

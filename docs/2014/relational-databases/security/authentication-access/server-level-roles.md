@@ -23,14 +23,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011929"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器  (「角色」就像是 Windows 作業系統中的「群組」)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器 (「角色」  就像是 Windows 作業系統中的「群組」  )。  
   
  固定伺服器角色是為了方便和回溯相容性所提供。 請盡可能指派更特定的權限。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "58531850"
  每個固定伺服器角色都擁有指派給它的特定權限。 如需指派給伺服器角色之權限的圖表，請參閱 [資料庫引擎固定伺服器與固定資料庫角色](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER` 權限與 `sysadmin` 固定伺服器角色類似但沒有完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 不代表 `sysadmin` 固定伺服器角色中的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序，需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  `CONTROL SERVER` 權限與 `sysadmin` 固定伺服器角色類似但沒有完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 並不表示中的成員資格`sysadmin`固定的伺服器角色。)不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序，需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  

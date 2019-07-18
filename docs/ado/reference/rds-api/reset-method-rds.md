@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fc769436a919a4d522fb48699c6fc6faa0d6e5c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963498"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
 用戶端上執行排序或篩選**資料錄集**根據指定的排序和篩選屬性。  

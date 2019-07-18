@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da64525978a5655df1832d70959929d6221c9a7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16aa77224f45a07540f7c5e688f9e3b6bc9bb6ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915140"
 ---
 # <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,13 +25,13 @@ ms.locfileid: "47595526"
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及更新的版本。|  
+|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和更新的版本。|  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |event_id|**int**|事件的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|NAME|**sysname**|動作的名稱。 可為 Null。|  
+|name|**sysname**|動作的名稱。 可為 Null。|  
 |封裝|**sysname**|包含此事件之事件封裝的名稱。 可為 Null。|  
 |module|**sysname**|包含此事件之模組的名稱。 可為 Null。|  
   

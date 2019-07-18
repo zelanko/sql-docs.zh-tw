@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50da9f42927747d0d901e24a6c1018cc7ab3f3f6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963576"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset 屬性 (RDS)
 指出**資料錄集**從自訂商務物件傳回的物件。  

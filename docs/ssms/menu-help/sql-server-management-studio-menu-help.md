@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - SQL Server Management Studio Help [SQL Server], menu items
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 419ac5b4cc088d379d21dc868f057955afc49ea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e266a686dbfbc583992316f6d1b1936cb54f08eb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717226"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682630"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 功能表說明 [SQL Server]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,18 +2,18 @@
 title: RunningValue 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1828388fd3079a6a59e840143c2db25d55f4072a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577177"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>報表產生器函式 - RunningValue 函式
   傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。  

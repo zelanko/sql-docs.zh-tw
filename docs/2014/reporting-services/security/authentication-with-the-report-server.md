@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102193"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。  

@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_add_profile_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f70661db4dbd34475a5708b8ae9ca3691c94e689
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017804"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="arguments"></a>引數  
 `[ @profile_name = ] 'profile\_name'` 新的設定檔的名稱。 *profile_name*已**sysname**，沒有預設值。  
   
-`[ @description = ] 'description'` 新的設定檔的選擇性描述。 *描述*已**nvarchar(256)**，沒有預設值。  
+`[ @description = ] 'description'` 新的設定檔的選擇性描述。 *描述*已**nvarchar(256)** ，沒有預設值。  
   
 `[ @profile_id = ] _new\_profile\_idOUTPUT` 傳回新的設定檔的識別碼。 *new_profile_id*已**int**，預設值是 NULL。  
   

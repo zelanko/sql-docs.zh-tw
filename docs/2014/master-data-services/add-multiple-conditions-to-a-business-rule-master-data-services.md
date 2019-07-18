@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f9f8114186aa3593f2218037add9a0611a8fe23
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 54ab01033fc65f829f2a06bb5cbad8fc9e4d08f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480186"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
   如果您想要比較複雜的規則，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將多個 **AND** 或 **OR** 條件新增至商務規則。  
@@ -36,27 +36,27 @@ ms.locfileid: "52792951"
   
 ### <a name="to-add-multiple-conditions-to-a-business-rule"></a>若要將多個條件加入至商務規則  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
   
-3.  在 [商務規則維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [商務規則維護]  頁面上，選取 [模型]  清單中的模型。  
   
-4.  從 [實體] 清單中選取實體。  
+4.  從 [實體]  清單中選取實體。  
   
 5.  從**的成員型別**清單中，選取 成員類型。  
   
-6.  從 [屬性] 清單中，選取屬性或保留預設值 [全部]。  
+6.  從 [屬性]  清單中，選取屬性或保留預設值 [全部]  。  
   
 7.  按一下您想要編輯之商務規則的資料列。  
   
-8.  按一下 [編輯選取的商務規則]。  
+8.  按一下 [編輯選取的商務規則]  。  
   
 9. 在 **元件**窗格中，展開**邏輯運算子**節點。  
   
 10. 按一下  **AND**或是**OR**將它拖曳到**如果**窗格的**AND**標籤。  
   
-11. 在 [元件] 窗格中，展開 [條件] 節點。  
+11. 在 [元件]  窗格中，展開 [條件]  節點。  
   
 12. 按一下條件並將它拖曳至**IF**窗格中，以**AND**或**OR**步驟 10 中的標籤。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52792951"
   
 14. 在 [**編輯條件**] 窗格中，完成任何必要的欄位。  
   
-15. 在 [編輯條件] 窗格中，按一下 [儲存項目]。  
+15. 在 [編輯條件]  窗格中，按一下 [儲存項目]  。  
   
 16. （選擇性） 若要新增更多條件，從**元件**窗格拖曳到**AND**或**OR**任何**AND**或**OR**中**如果**窗格。 接著遵循上述步驟 13 - 15。  
   

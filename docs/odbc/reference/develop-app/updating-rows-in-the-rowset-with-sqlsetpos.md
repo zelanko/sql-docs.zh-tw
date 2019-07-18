@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091603"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 更新資料列集中的資料列
 更新作業**SQLSetPos** ，使得更新的資料表，使用資料的應用程式緩衝區中，針對每個繫結的資料行 （除非長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE） 的一或多個所選資料列的資料來源。 未繫結的資料行不會更新。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108124"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新增系統角色指派：編輯系統角色指派頁面 （報表管理員）
   使用 [新增系統角色指派] 或 [編輯系統角色指派] 頁面來定義報表伺服器的安全性。 所有的安全性都透過角色指派來定義，角色指派會對應特定使用者或群組至其可執行的工作。 以您在進行角色指派時選取的角色定義來表示工作清單。  
@@ -36,13 +35,13 @@ ms.locfileid: "56032389"
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下右邊角落的 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下右邊角落的 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
 3.  選取 **[安全性]** 索引標籤。您必須擁有「內容管理員」和「系統管理員」權限才能存取此頁面。  
   
 4.  若要建立新的角色指派，請在工具列中，按一下 **[新增角色指派]** 。 若要編輯現有的角色指派，請在 [安全性] 屬性頁面上，按一下群組或使用者旁的 **[編輯]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **群組或使用者**  
  輸入網域中之群組或使用者帳戶的名稱。 如果是以本機帳戶執行報表伺服器，您就必須指定本機群組或使用者。 如果是以網域帳戶執行報表伺服器，您就必須指定網域群組或使用者。 這種格式來輸入帳戶：\<網域 >\\< 帳戶\>。  
   

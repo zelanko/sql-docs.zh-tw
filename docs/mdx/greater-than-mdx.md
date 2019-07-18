@@ -1,5 +1,5 @@
 ---
-title: '&gt; （大於）(MDX) |Microsoft 文件'
+title: '&gt; （大於）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0b7eb0cdcfbe6a22a18236362b4a2277eb42eb42
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906031"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt; （大於）(MDX)
 

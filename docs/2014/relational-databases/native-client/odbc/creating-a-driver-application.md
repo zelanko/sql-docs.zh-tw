@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362170"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205272"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>建立 SQL Server Native Client ODBC 驅動程式應用程式
   ODBC 架構包含四個執行下列函數的元件。  
@@ -66,7 +66,7 @@ ms.locfileid: "53362170"
   
 -   執行大量複製作業  
   
--   管理大型資料 (**varchar （max)**， **nvarchar （max)**，並**varbinary （max)** 資料行) 作業  
+-   管理大型資料 (**varchar （max)** ， **nvarchar （max)** ，並**varbinary （max)** 資料行) 作業  
   
 -   設定資料庫鏡像時，使用重新連接邏輯來簡化容錯移轉  
   
@@ -100,7 +100,7 @@ ms.locfileid: "53362170"
   
 -   針對連結之伺服器及其目錄的清單，呼叫分散式查詢中繼資料 API 函數。  
   
- 使用大量複製功能的任何 C 或 c + + ODBC 應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式必須與 sqlncli11.lib 檔連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli.h 和 sqlncli11.lib 檔案會隨著發佈[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發人員工具。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
+ 任何 C 或C++使用大量複製功能的 ODBC 應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式必須與 sqlncli11.lib 檔連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli.h 和 sqlncli11.lib 檔案會隨著發佈[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發人員工具。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

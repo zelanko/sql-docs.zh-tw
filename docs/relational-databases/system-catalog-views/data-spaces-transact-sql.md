@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7caa791bc1a6bfc2bb08fd3d30ec38d8a06cd0db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 11ab2a034dde90f5e868d49fe23b7a036ea1b830
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033138"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

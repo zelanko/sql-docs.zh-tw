@@ -2,21 +2,21 @@
 title: HTML 裝置資訊設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503105"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
 下表列出以 HTML 格式轉譯的裝置資訊設定。  
@@ -49,7 +49,7 @@ ms.locfileid: "52403633"
 |**工具列**|指出是否要顯示或隱藏工具列。 這個參數的預設值為 **true**。 如果這個參數的值為 **false**，則會忽略所有剩餘的選項 (文件引導模式除外)。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。<br /><br /> 當您使用 URL 存取來轉譯報表時，會轉譯報表檢視器工具列。 工具列不是透過 SOAP API 來轉譯。 不過， **Toolbar** 裝置資訊設定會影響使用 SOAP **Render** 方法時顯示報表的方式。 如果此參數值在使用 SOAP 轉譯為 HTML 時為 **true** ，則會轉譯報表的第一個區段。 如果值是 **false**，則會將整個 HTML 報表轉譯為單一 HTML 頁面。|  
 |**UserAgent**|提出要求之瀏覽器的 **user-agent** 字串，該字串可在 HTTP 要求中找到。|  
 |**Zoom (\*)**|報表縮放值，以整數百分比或字串常數表示。 標準字串值包括 **Page Width** 和 **Whole Page**。 Internet Explorer 5.0 之前的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 版本和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 **100**。|  
-|**DataVisualizationFitSizing**|指示資料在 Tablix 內的視覺效果調整行為。 其中包括圖表、量測計和地圖。<br /><br /> 可能的值為 **[近似]** 和 **[精確]**。<br /><br /> 預設值為 **[近似]**。 如果從 **rsreportserver.config** 檔案中移除此設定，則預設行為是 **[精確]**。<br /><br /> 啟用 **[精確]** 可能會影響效能，因為判斷精確大小的處理所花的時間可能會比較長。|  
+|**DataVisualizationFitSizing**|指示資料在 Tablix 內的視覺效果調整行為。 其中包括圖表、量測計和地圖。<br /><br /> 可能的值為 **[近似]** 和 **[精確]** 。<br /><br /> 預設值為 **[近似]** 。 如果從 **rsreportserver.config** 檔案中移除此設定，則預設行為是 **[精確]** 。<br /><br /> 啟用 **[精確]** 可能會影響效能，因為判斷精確大小的處理所花的時間可能會比較長。|  
   
 ## <a name="see-also"></a>另請參閱  
  [將裝置資訊設定傳遞至轉譯延伸模組](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   

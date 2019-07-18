@@ -12,15 +12,14 @@ helpviewer_keywords:
 - domain-based attributes [Master Data Services]
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81d978ed13f08eeeb4fee542c78b3ad39fef431d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a1a905ebe84754c792c32a1151740cf0134b0a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086487"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>網域屬性 (Master Data Services)
 

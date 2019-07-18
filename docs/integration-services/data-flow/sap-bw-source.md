@@ -11,14 +11,18 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2191132ecd09b2ebc8744927542e524af601bf1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c2489e492674a37a63e84b409e60dd40247800e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726366"
 ---
 # <a name="sap-bw-source"></a>SAP BW 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP BW 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的來源元件。 因此，SAP BW 來源會從 SAP Netweaver BW 版本 7 系統中擷取資料，並將這項資料提供給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
   
  此來源有一個輸出和一個錯誤輸出。  
@@ -45,37 +49,37 @@ ms.locfileid: "58273368"
   
 1.  透過 SAP GUI 登入 SAP Netweaver BW、輸入交易代碼 SM59，並且建立 RFC 目的地：  
   
-    1.  針對 [連接類型]，選取 [TCP/IP]。  
+    1.  針對 [連接類型]  ，選取 [TCP/IP]  。  
   
-    2.  針對 **[啟動類型]**，選取 **[已註冊的伺服器程式]**。  
+    2.  針對 **[啟動類型]** ，選取 **[已註冊的伺服器程式]** 。  
   
-    3.  針對 [目標系統的通訊類型]，選取 [非 Unicode (非使用中 MDMP 設定)]。  
+    3.  針對 [目標系統的通訊類型]  ，選取 [非 Unicode (非使用中 MDMP 設定)]  。  
   
     4.  指派適當的程式識別碼。  
   
 2.  建立開放式中心目的地 (Open Hub Destination)：  
   
-    1.  移至 Administrator Workbench (交易代碼 RSA1)，並且在左窗格中，選取 [開放式中心目的地]。  
+    1.  移至 Administrator Workbench (交易代碼 RSA1)，並且在左窗格中，選取 [開放式中心目的地]  。  
   
-    2.  在中間窗格中，以滑鼠右鍵按一下 InfoArea，然後選取 [建立開放式中心目的地]。  
+    2.  在中間窗格中，以滑鼠右鍵按一下 InfoArea，然後選取 [建立開放式中心目的地]  。  
   
-    3.  針對 **[目的地類型]**，選取 **[協力廠商工具]**，然後輸入先前建立的 RFC 目的地。  
+    3.  針對 **[目的地類型]** ，選取 **[協力廠商工具]** ，然後輸入先前建立的 RFC 目的地。  
   
     4.  儲存並啟用新的開放式中心目的地。  
   
 3.  建立資料傳輸處理序 (DTP)：  
   
-    1.  在 InfoArea 的中間窗格中，以滑鼠右鍵按一下先前建立的目的地，然後選取 [建立資料傳輸處理序]。  
+    1.  在 InfoArea 的中間窗格中，以滑鼠右鍵按一下先前建立的目的地，然後選取 [建立資料傳輸處理序]  。  
   
     2.  設定、儲存並啟用 DTP。  
   
-    3.  在功能表上，按一下 **[移至]**，然後按一下 **[批次管理員的設定]**。  
+    3.  在功能表上，按一下 **[移至]** ，然後按一下 **[批次管理員的設定]** 。  
   
     4.  將 **[處理序數目]** 更新為 1，進行序列處理。  
   
 4.  建立處理序鏈結：  
   
-    1.  設定處理序鏈結時，請選取 **[使用中繼資料鏈結或 API 啟動]** 做為 **[啟動處理序]** 的 **[排程選項]**，然後加入先前建立的 DTP 做為後續節點。  
+    1.  設定處理序鏈結時，請選取 **[使用中繼資料鏈結或 API 啟動]** 做為 **[啟動處理序]** 的 **[排程選項]** ，然後加入先前建立的 DTP 做為後續節點。  
   
     2.  儲存並啟用處理序鏈結。  
   
@@ -101,11 +105,11 @@ ms.locfileid: "58273368"
   
 -   根據選取的資料擷取方法，提供下列其他資訊：  
   
-    -   針對 [P - 觸發處理鏈結] 選項，提供閘道器主機名稱、閘道器服務名稱、RFC 目的地的程式識別碼，以及處理序鏈結的名稱。  
+    -   針對 [P - 觸發處理鏈結]  選項，提供閘道器主機名稱、閘道器服務名稱、RFC 目的地的程式識別碼，以及處理序鏈結的名稱。  
   
-    -   針對 [W - 等候通知] 選項，提供閘道器主機名稱、閘道器伺服器名稱，以及 RFC 目的地的程式識別碼。 您也可以指定逾時 (以秒為單位)。 逾時就是來源將等候收到通知的最大期限。  
+    -   針對 [W - 等候通知]  選項，提供閘道器主機名稱、閘道器伺服器名稱，以及 RFC 目的地的程式識別碼。 您也可以指定逾時 (以秒為單位)。 逾時就是來源將等候收到通知的最大期限。  
   
-    -   針對 [E - 僅限擷取] 選項，提供要求識別碼。  
+    -   針對 [E - 僅限擷取]  選項，提供要求識別碼。  
   
 -   指定字串轉換的規則 (例如，根據 SAP Netweaver BW 系統是否為 Unicode 而轉換所有字串，或將所有字串轉換為 **varchar** 或 **nvarchar**)。  
   

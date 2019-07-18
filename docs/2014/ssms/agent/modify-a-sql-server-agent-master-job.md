@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653878"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server Agent 主要作業
   下列主題描述如何修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業。  

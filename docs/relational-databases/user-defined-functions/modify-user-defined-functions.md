@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0705e18841fe4d7e67199e9a7d7e885712a53077
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535584"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581453"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "52535584"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方式修改使用者定義函數：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52535584"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要函數或結構描述的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,21 +69,23 @@ ms.locfileid: "52535584"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您要修改的函數，然後選取 [修改]。  
+4.  以滑鼠右鍵按一下您要修改的函數，然後選取 [修改]  。  
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  在 [檔案] 功能表上，按一下 [儲存 _function_name_]。  
-  
+6.  在 [檔案]  功能表上，按一下 [儲存 _function_name_]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>若要修改使用者定義函數  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Scalar-Valued Function  

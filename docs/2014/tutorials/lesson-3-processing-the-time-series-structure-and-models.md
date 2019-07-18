@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042874"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 課：處理時間序列結構和模型
   在這一課，您將使用[插入&#40;DMX&#41; ](/sql/dmx/insert-into-dmx)陳述式來處理時間序列採礦結構和採礦模型所建立。  
@@ -151,6 +151,6 @@ OPENQUERY (<source data definition>)
 ## <a name="see-also"></a>另請參閱  
  [處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;來源資料查詢&#62;](/sql/dmx/source-data-query)   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

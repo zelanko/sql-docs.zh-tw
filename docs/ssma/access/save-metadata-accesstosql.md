@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051557"
 ---
 # <a name="save-metadata-accesstosql"></a>儲存中繼資料 (AccessToSQL)
 **儲存中繼資料**對話方塊會提示您載入 SSMA 專案中的中繼資料，才能將它儲存。 這可以讓您擁有完整的專案檔案，您可離線使用，並傳送給其他人，例如技術支援人員。  

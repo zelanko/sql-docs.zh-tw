@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049521"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>設定叢集仲裁 NodeWeight 設定
   本主題說明如何設定 Windows Server 容錯移轉叢集 (WSFC) 叢集中成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
   
--   **在開始之前：**[必要條件](#Prerequisites)，[安全性](#Security)  
+-   **開始之前：** [必要條件](#Prerequisites)、[安全性](#Security)  
   
--   **若要檢視仲裁 NodeWeight 設定，使用：**[使用 Powershell](#PowerShellProcedure)，[使用 Cluster.exe](#CommandPromptProcedure)  
+-   **若要使用下列工具檢視仲裁 NodeWeight 設定：** [使用 Powershell](#PowerShellProcedure)，[使用 Cluster.exe](#CommandPromptProcedure)  
   
 -   [相關內容](#RelatedContent)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "53349877"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036):提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中沒有仲裁投票  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：Hotfix 是可讓您設定在沒有仲裁投票的叢集節點[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  如果未安裝此 Hotfix，本主題的範例會針對 NodeWeight 傳回空的值或 NULL 值。  

@@ -1,5 +1,5 @@
 ---
-title: Instr (MDX) |Microsoft 文件
+title: Instr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105305"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -38,12 +37,12 @@ InStr([start, ]searched_string, search_string[, compare])
  搜尋目標的字串運算式。  
   
  *比較*  
- (選擇性) 整數值。 一律會忽略這個引數。 定義與其他相容性**Instr**其他語言中的函式。  
+ (選擇性) 整數值。 一律會忽略這個引數。 定義與其他的相容性**Instr**其他語言中的函式。  
   
 ## <a name="return-value"></a>傳回值  
- 整數值的開始位置與*String2*中*String1*。  
+ 整數值的開始位置*String2*中*String1*。  
   
- 此外， **InStr**函式會傳回的值列於下表根據條件：  
+ 此外， **InStr**函式會傳回根據條件下表所列的值：  
   
 |條件|傳回值|  
 |---------------|------------------|  
@@ -60,7 +59,7 @@ InStr([start, ]searched_string, search_string[, compare])
 >  **Instr**一律會執行不區分大小寫的比較。  
   
 ## <a name="example"></a>範例  
- 下列範例示範使用**Instr**函式並顯示不同的結果案例。  
+ 下列範例顯示的使用方式**Instr**函式並顯示不同的結果案例。  
   
 ```  
 with   
@@ -103,7 +102,7 @@ from [Adventure Works]
 |小寫字串中找到大寫|16|  
 |搜尋的字串是空的|0|  
 |搜尋的字串是 Null|未定義|  
-|搜尋的字串是空的|@shouldalert|  
+|搜尋的字串是空的|1|  
 |搜尋字串從 10 開始處為空的|10|  
 |搜尋字串是 Null|未定義|  
 |從 10 開始處找到|16|  

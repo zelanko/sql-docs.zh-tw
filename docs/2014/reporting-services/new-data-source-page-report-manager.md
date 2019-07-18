@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108181"
 ---
 # <a name="new-data-source-page-report-manager"></a>新增資料來源頁面 (報表管理員)
   使用 [新增資料來源] 頁面來建立共用資料來源項目。 共用資料來源定義外部資料來源的連接。 您可以利用共用資料來源來建立和維護資料來源連接的設定，與使用該資料來源的報表、模型和資料驅動訂閱分開處理。  
@@ -28,7 +27,7 @@ ms.locfileid: "56029099"
   
 1.  開啟報表管理員中，然後導覽至您想要在其中建立資料來源的資料夾。  
   
-2.  在工具列中，按一下 **[新增資料來源]**。 您必須擁有「內容管理員」權限才能建立共用資料來源。  
+2.  在工具列中，按一下 **[新增資料來源]** 。 您必須擁有「內容管理員」權限才能建立共用資料來源。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

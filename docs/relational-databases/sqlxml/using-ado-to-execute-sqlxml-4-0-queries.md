@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c80ec6b02af9e639c04eb1e30b730bcd22b6f78
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f2b5f8ce7f2b7e0fab2da5eed698fadfb9538c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135327"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +106,9 @@ ms.locfileid: "56028869"
 4.  確認您已建立了任何其他的檔案，例如屬於您嘗試在電腦本機上重新建立之範例的 XML 範本或結構描述。 這些檔案應該位於與您儲存測試指令碼檔案 (Sqlxml4test.vbs) 相同的目錄中。  
   
 5.  請遵照下一節中的指示來使用 SQLXML 4.0 測試指令碼。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-the-sqlxml-40-test-script"></a>使用 SQLXML 4.0 測試指令碼  
  下列程序描述如何使用 Sqlxml4test.vbs 檔案來測試本文件集所提供的範例查詢。  
   

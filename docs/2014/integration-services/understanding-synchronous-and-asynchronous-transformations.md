@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62878058"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。  

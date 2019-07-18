@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334705"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265715"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "57334705"
 |**object_name**|**nchar(128)**|這個計數器所屬的類別目錄。|  
 |**counter_name**|**nchar(128)**|計數器的名稱。 若要取得計數器的詳細資訊，這是要從中計數器的清單中選取的主題名稱[使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)。 |  
 |**instance_name**|**nchar(128)**|計數器的特定執行個體名稱。 通常包含資料庫名稱。|  
-|**cntr_value**|**bigint**|計數器的目前值。<br /><br /> **注意：** 如果是每秒計數器，這個值就是累計的。 必須以不連續時間間隔取樣值來計算該速率值。 任何兩個連續取樣值之間的差等於所使用的時間間隔速率。|  
+|**cntr_value**|**bigint**|計數器的目前值。<br /><br /> **注意：** 對於每秒計數器，這個值是累計的。 必須以不連續時間間隔取樣值來計算該速率值。 任何兩個連續取樣值之間的差等於所使用的時間間隔速率。|  
 |**cntr_type**|**int**|Windows 效能架構所定義的計數器類型。 請參閱[WMI 效能計數器類型](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types)Docs 上您的 Windows Server 文件，如需有關效能計數器型別。|  
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
@@ -57,7 +56,7 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
 ## <a name="permission"></a>權限
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
  
 ## <a name="examples"></a>範例  
  下列範例會傳回效能計數器值。  

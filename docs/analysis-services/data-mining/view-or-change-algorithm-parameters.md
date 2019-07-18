@@ -1,5 +1,5 @@
 ---
-title: 檢視或變更演算法參數 |Microsoft 文件
+title: 檢視或變更演算法參數 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58b512d726d45a8ceabb76a4ce2b1e6c8c62815b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209566"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>檢視或變更演算法參數
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34018215"
   
 -   指定模型建立所使用之內部鑑效組集合的初始值或大小。  
   
- 為每個演算法提供的參數會有很大的差異；如需您可以為每個演算法設定的參數清單，請參閱本節中的技術參考主題：[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 提供給每個演算法的參數會有很大;如需您可以針對每個演算法設定參數的清單，請參閱這一節的技術參考主題：[資料採礦演算法&#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
 ### <a name="change-an-algorithm-parameter"></a>變更演算法參數  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型] 索引標籤上，以滑鼠右鍵按一下您要微調演算法之採礦模型的演算法類型，並選取 [設定演算法參數]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型]  索引標籤上，以滑鼠右鍵按一下您要微調演算法之採礦模型的演算法類型，並選取 [設定演算法參數]  。  
   
      就會開啟 **[演算法參數]** 對話方塊。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34018215"
   
      如果您沒有在 **[值]** 資料行中輸入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用預設參數值。 **[範圍]** 資料行描述您可以輸入的可能值。  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定]  。  
   
      演算法參數就會以新值設定。 要等到您重新處理採礦模型之後，參數變更才會反映在該採礦模型中。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34018215"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

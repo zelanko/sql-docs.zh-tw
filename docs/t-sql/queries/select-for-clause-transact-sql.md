@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 866afe80cb6c93260b43eb3150b12df78ad813e5
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9052c8192f7ea9e8fb7155a027344742a443a1b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66175703"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 
@@ -217,7 +217,10 @@ _隱藏不想要的分行符號：_ 您可以使用 SQL Server Management Studio
  指定以子元素來傳回資料行。 否則這些資料行會對應到 XML 屬性。 只有 RAW、AUTO 和 PATH 模式支援這個選項。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。  
   
  XSINIL  
- 指定針對 NULL 資料行值建立一個 **xsi:nil** 屬性設定為 **True** 的元素。 這個選項只能搭配 ELEMENTS 指示詞來指定。 如需詳細資訊，請參閱[使用 XSINIL 參數為 NULL 值產生元素](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)。  
+ 指定針對 NULL 資料行值建立一個 **xsi:nil** 屬性設定為 **True** 的元素。 這個選項只能搭配 ELEMENTS 指示詞來指定。 如需詳細資訊，請參閱：
+
+- [使用 XSINIL 參數為 NULL 值產生項目](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)。
+- [SELECT 陳述式上的 FOR XML](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  指出對於 NULL 資料行值而言，不會在 XML 結果中加入對應的 XML 元素。 請只搭配 ELEMENTS 來指定這個選項。  

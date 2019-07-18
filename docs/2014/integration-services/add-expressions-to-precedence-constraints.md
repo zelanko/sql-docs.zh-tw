@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061899"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
   優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 `Success`、`Failure` 或 `Completion`。 `Success` 表示優先順序可執行檔必須執行成功；`Failure` 表示優先順序可執行檔必須執行失敗；`Completion` 則指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](control-flow/precedence-constraints.md)。  
@@ -38,9 +37,9 @@ ms.locfileid: "58377346"
   
  ![優先順序條件約束上的運算式](media/mw-dts-04.gif "優先順序條件約束上的運算式")  
   
- 使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中的 [優先順序條件約束編輯器] 及 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗，可以新增或修改運算式。 然而，[屬性] 視窗不提供運算式語法的驗證。  
+ 使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中的 [優先順序條件約束編輯器]  及 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的 [屬性] 視窗，可以新增或修改運算式。 然而，[屬性] 視窗不提供運算式語法的驗證。  
   
- 如果優先順序條件約束包含運算式，則會在 [控制流程] 索引標籤之設計介面上優先順序條件約束的旁邊出現圖示，且圖示上的工具提示會顯示運算式。  
+ 如果優先順序條件約束包含運算式，則會在 [控制流程]  索引標籤之設計介面上優先順序條件約束的旁邊出現圖示，且圖示上的工具提示會顯示運算式。  
   
 ## <a name="combining-execution-values-and-expressions"></a>組合執行值與運算式  
  下表描述將執行值條件約束與優先順序條件約束中的運算式進行組合的影響。  

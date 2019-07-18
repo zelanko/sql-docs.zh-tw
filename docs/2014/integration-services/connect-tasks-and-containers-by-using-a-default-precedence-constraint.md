@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -16,12 +15,12 @@ ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060424"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用預設的優先順序條件約束來連接工作和容器
   優先順序條件約束可以連接兩個可執行檔。 可執行檔可以是任何工作或「For 迴圈」、「Foreach 迴圈」或「時序」容器。 此程序描述如何設定優先順序條件約束的預設行為，及如何使用預設的優先順序條件約束來連接可執行檔。  
@@ -33,15 +32,15 @@ ms.locfileid: "58389236"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+2.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-3.  在 [選項] 對話方塊中，展開 [商業智慧設計師]，然後展開 [Integration Services 設計師]。  
+3.  在 [選項]  對話方塊中，展開 [商業智慧設計師]  ，然後展開 [Integration Services 設計師]  。  
   
-4.  按一下 [控制流程自動連接]，然後選取 [依預設，將新形狀連接到選取的形狀]。  
+4.  按一下 [控制流程自動連接]  ，然後選取 [依預設，將新形狀連接到選取的形狀]  。  
   
-5.  在下拉式清單中，選擇 [在新形狀使用「失敗」條件約束] 或 [在新形狀使用「完成」條件約束]。  
+5.  在下拉式清單中，選擇 [在新形狀使用「失敗」條件約束]  或 [在新形狀使用「完成」條件約束]  。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 #### <a name="to-create-a-default-precedence-constraint"></a>建立預設的優先順序條件約束  
   
@@ -51,7 +50,7 @@ ms.locfileid: "58389236"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  在 [控制流程] 索引標籤的設計介面上，按一下工作或容器，然後將其連接子拖曳到您要套用優先順序條件約束的可執行檔。  
+4.  在 [控制流程]  索引標籤的設計介面上，按一下工作或容器，然後將其連接子拖曳到您要套用優先順序條件約束的可執行檔。  
   
 5.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

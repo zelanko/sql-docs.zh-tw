@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - templates [SQLXML], caching
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38459f470bf75d12d9fcd69da96a4d772776c01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0024066a5a687828cc59d5053d62e891bbf198d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013204"
 ---
 # <a name="template-caching-sqlxml-40"></a>範本快取 (SQLXML 4.0)
   範本快取會大幅改善效能。 如果設定範本快取，範本在第一次執行後仍會保留在記憶體中。 這樣可以增進後續執行範本的效能。  

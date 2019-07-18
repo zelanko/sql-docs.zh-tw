@@ -1,11 +1,10 @@
 ---
-title: 如何：執行 Upgrade Advisor 分析精靈 |Microsoft Docs
+title: HOW TO：執行 Upgrade Advisor 分析精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -13,14 +12,14 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094832"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>如何：執行 Upgrade Advisor 分析精靈
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>HOW TO：執行 Upgrade Advisor 分析精靈
   您可以從 Upgrade Advisor 開始頁面啟動 Upgrade Advisor 分析精靈。 此主題描述如何執行 Upgrade Advisor 分析精靈。  
   
 > [!IMPORTANT]
@@ -41,7 +40,7 @@ ms.locfileid: "53207647"
     > [!WARNING]  
     >  Upgrade Advisor 不支援連接到未設定為使用標準通訊埠 (1433) 進行用戶端連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果要連接到不使用標準通訊埠 (1433) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請使用 IP 位址和通訊埠建立別名。 如需有關設定用戶端通訊協定及建立別名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，請參閱[Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  
     >   
-    >  如果您不需要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝在執行 Upgrade Advisor 的電腦上，按一下**開始**，然後執行`cliconfg`。 這會開啟**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端網路公用程式** 對話方塊。 使用**別名**索引標籤來建立別名。  
+    >  如果您不需要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝在執行 Upgrade Advisor 的電腦上，按一下**開始**，然後執行`cliconfg`。 這會開啟 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端網路公用程式** 對話方塊。 使用**別名**索引標籤來建立別名。  
   
 3.  檢閱偵測到的元件清單，如有必要，修改選取範圍，然後按一下**下一步**。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "53207647"
 8.  當分析完成時，按一下**啟動報表**若要檢視偵測到的升級問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [操作說明：啟動 Upgrade Advisor](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [如何：啟動 Upgrade Advisor](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [執行 Upgrade Advisor&#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

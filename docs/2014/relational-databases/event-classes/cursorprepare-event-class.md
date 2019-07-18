@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663382"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 事件類別
   **CursorPrepare** 事件類別描述在應用程式開發介面 (API) 資料指標中發生的資料指標準備事件。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將與資料指標相關聯的 SELECT 陳述式編譯到執行計畫中，但並未建立資料指標時，就會發生資料指標準備事件。  

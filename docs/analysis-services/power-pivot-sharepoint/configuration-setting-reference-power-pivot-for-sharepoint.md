@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e2da78373d8bcb613bb11dca54857bc7b98dfe1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208337"
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,8 +76,8 @@ ms.locfileid: "38982610"
 |----------|-------------|------------------|-----------------|  
 |開始時間|上午 04:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的下限。|  
 |結束時間|下午 08:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的上限。|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 無人看管的資料重新整理帳戶|無|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱 [設定 Power Pivot 無人看管的資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)。|  
-|允許使用者輸入自訂的 Windows 認證|已啟用|布林|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱 [設定 Power Pivot 資料重新整理的預存認證 (Power Pivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 無人看管的資料重新整理帳戶|None|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱 [設定 Power Pivot 無人看管的資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)。|  
+|允許使用者輸入自訂的 Windows 認證|Enabled|Boolean|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱 [設定 Power Pivot 資料重新整理的預存認證 (Power Pivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。|  
 |最大處理記錄長度|365|1 到 5000 天|決定資料重新整理歷程記錄要保留在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱 [Power Pivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)。|  
   
 ##  <a name="UsageData"></a> 使用量資料收集  
@@ -94,7 +94,7 @@ ms.locfileid: "38982610"
   
 ## <a name="see-also"></a>另請參閱  
  [在管理中心建立和設定 Power Pivot 服務應用程式](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Power Pivot 資料重新整理與 SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [SharePoint 2010 中的 PowerPivot 資料重新整理](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [設定 Power Pivot 服務帳戶](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

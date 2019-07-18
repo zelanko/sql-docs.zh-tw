@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da038c619f4679600087fb3d46e88d96b059794b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503314"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,8 +46,7 @@ ms.locfileid: "56801562"
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
-    [ { database_name .[ schema_name ] . | schema_name . } ]  
-    table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( PARTITIONS ( { <partition_number_expression> | <range> }   
     [ , ...n ] ) ) ]  
 [ ; ]  
@@ -59,7 +58,7 @@ TRUNCATE TABLE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
+TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -78,7 +77,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，**WITH PARTITIONS** 引數將會產生錯誤。 如果未提供 **WITH PARTITIONS** 子句，將會截斷整個資料表。  
   
- 您可以使用下列方式來指定 *\<partition_number_expression>*： 
+ 您可以使用下列方式來指定 *\<partition_number_expression>* ： 
   
 -   提供資料分割的編號，例如：`WITH (PARTITIONS (2))`  
   
@@ -131,7 +130,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>截斷大型資料表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠卸除或截斷含有超出 128 個範圍的資料表，而不需在卸除所需的所有範圍內保留同時鎖定。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  *table_name* 上所需的最小權限是 ALTER。 TRUNCATE TABLE 權限預設會授與資料表擁有者、系統管理員 (sysadmin) 固定伺服器角色成員，以及 db_owner 和 db_ddladmin 固定資料庫角色的成員，這些權限不能轉讓。 不過，您可以將 TRUNCATE TABLE 陳述式納入模組 (如預存程序) 中，再利用 EXECUTE AS 子句，將適當的權限授與模組。  
   
 ## <a name="examples"></a>範例  

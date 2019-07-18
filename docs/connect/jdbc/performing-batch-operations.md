@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2ed699e9c3eabfb2df1317794d8343d637244c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693286"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801822"
 ---
 # <a name="performing-batch-operations"></a>執行批次作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -2,20 +2,19 @@
 title: 擷取與 Spark 作業的資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 Studio 中使用 Azure 資料的 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 03/27/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957819"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
@@ -56,7 +55,7 @@ ms.locfileid: "58860669"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. 建立名為外部資料表**web_clickstreams_spark_results**資料集區中。
@@ -74,13 +73,13 @@ ms.locfileid: "58860669"
       );
    ```
   
-1. 在 CTP 2.4，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 3.1 中，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 
 下一個步驟是建立 Spark 串流作業，從存放集區 (HDFS) 載入 web 點選流資料到您建立資料集區中的外部資料表。
 
-1. 在 Azure Data Studio，連接到**HDFS/Spark 閘道**的巨量資料叢集。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](connect-to-big-data-cluster.md#hdfs)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連線至巨量資料叢集](connect-to-big-data-cluster.md)。
 
 1. 在 HDFS/Spark 閘道連按兩下**伺服器**視窗。 然後選取**新的 Spark 作業**。
 
@@ -108,7 +107,7 @@ ms.locfileid: "58860669"
    |---|---|
    | 伺服器名稱 (server name) | SQL Server 使用，來讀取資料表的結構描述 |
    | 連接埠編號 | SQL Server 連接埠 （預設值 1433年） 上接聽 |
-   | username | SQL Server 登入使用者名稱 |
+   | userName | SQL Server 登入使用者名稱 |
    | 密碼 | SQL Server 登入密碼 |
    | 資料庫名稱 | 目標資料庫 |
    | 外部資料表名稱 | 使用查詢結果的資料表 |

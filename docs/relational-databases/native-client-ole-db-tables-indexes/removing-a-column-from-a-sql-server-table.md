@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab69ebd55bf14bd20a0fe452aee0ad81f35d1e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b4c8101c365f32b9ba67d10ac6eb21b9b40f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069529"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>從 SQL Server 資料表中移除資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**itabledefinition:: Dropcolumn**函式。 這可讓取用者移除的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**itabledefinition:: Dropcolumn**函式。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中移除資料行。  
   
  取用者指定為 Unicode 字元字串中的資料表名稱 *pwszName* 隸屬 *uName* 聯集 *pTableID* 參數。 *EKind* 隸屬 *pTableID* 必須是 DBKIND_NAME。  
   

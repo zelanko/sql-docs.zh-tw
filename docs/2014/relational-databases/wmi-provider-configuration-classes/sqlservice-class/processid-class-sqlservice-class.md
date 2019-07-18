@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b9e6c04a0ae0000284f3550d39e47c973adbe8ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061916"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 類別 (SqlService 類別)
   取得可唯一識別服務的系統處理序識別碼。  

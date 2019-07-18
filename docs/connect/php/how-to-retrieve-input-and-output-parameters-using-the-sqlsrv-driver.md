@@ -1,5 +1,5 @@
 ---
-title: 如何： 擷取使用 SQLSRV 驅動程式的 I/O 參數 |Microsoft Docs
+title: 如何：使用 SQLSRV 驅動程式擷取 I/O 參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c865207156703d87ae827a3274e788b7b8bda270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799323"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

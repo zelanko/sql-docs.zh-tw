@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3adc4a41b9259d09d86fe450352c8f2d92c43cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d483cdd91ca349010c6b59b9003155d4166fb63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119992"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

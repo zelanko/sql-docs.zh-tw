@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - job step token syntax [SQL Server Agent]
@@ -14,12 +13,12 @@ ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98e52afac4a14a1572658e74faf114d603081685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091670"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>更新 SQL Server Agent 作業步驟中的 Token 語法
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟中使用的 Token 語法已變更。  

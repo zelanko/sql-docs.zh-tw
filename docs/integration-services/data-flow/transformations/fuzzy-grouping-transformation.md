@@ -29,14 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a30e2b2ff3ee716f48b3ba91bf0bbea6b4cf571d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba1a50942233f44586be498306e2b58f6fa04223
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726102"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  
   
 > [!NOTE]  
@@ -106,10 +110,10 @@ ms.locfileid: "58274462"
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增] 按鈕來建立新的連接。  
+ 使用清單方塊來選取現有的 OLE DB 連接管理員，或使用 [新增]  按鈕來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可指定用於將具有重複值之資料列分組的資料行。  
@@ -125,7 +129,7 @@ ms.locfileid: "58274462"
  選取轉換的輸出是否包含輸入資料行。 用來分組的所有資料行，都會自動複製到輸出。 您可以核取此資料行來包含其他資料行。  
   
  **輸入資料行**  
- 選取先前在 [可用的輸入資料行] 清單中選取的其中一個輸入資料行。  
+ 選取先前在 [可用的輸入資料行]  清單中選取的其中一個輸入資料行。  
   
  **輸出別名**  
  輸入對應之輸出資料行的描述性名稱。 依預設，輸出資料行的名稱會與輸入資料行的名稱相同。  

@@ -14,14 +14,18 @@ ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a10ddc0db0edf2509b6b74b5f3d3c394dab0ad2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ccb2fc90312b20ae44081e847e92cf4e9710494
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725167"
 ---
 # <a name="--negate-ssis-expression"></a>- (負) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行數值運算式的否定運算。  
   
 ## <a name="syntax"></a>語法  

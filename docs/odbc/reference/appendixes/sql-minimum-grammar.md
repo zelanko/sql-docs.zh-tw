@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057015"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
 本節描述 ODBC 驅動程式必須支援的最小 SQL 語法。 在本節中所述的語法是以 SQL-92 的項目層級語法子集。  
@@ -28,12 +27,12 @@ ms.locfileid: "47818898"
   
  僅適用於唯讀資料來源的驅動程式可能不支援這一節包含文法的處理變更資料的這些組件。 應用程式可以判斷資料來源是否唯讀藉由呼叫**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 資訊類型。  
   
-## <a name="statement"></a>引數  
+## <a name="statement"></a>陳述式  
  *建立資料表陳述式*:: =  
   
  CREATE TABLE*基底資料表名稱*  
   
- (*資料行識別碼資料型別*[*，資料行識別碼資料型別*]...)  
+ (*資料行識別碼資料型別*[ *，資料行識別碼資料型別*]...)  
   
 > [!IMPORTANT]  
 >  作為*資料型別*中*建立資料表陳述式*，應用程式必須使用來自 TYPE_NAME 資料行所傳回的結果集的資料型別**SQLGetTypeInfo**。  
@@ -58,21 +57,21 @@ ms.locfileid: "47818898"
   
  [所在*搜尋條件*]  
   
- [*order by 子句*]  
+ [*order-by-clause*]  
   
  *陳述式*:: =*建立資料表陳述式*  
   
  &#124;*delete 陳述式搜尋*  
   
- &#124;*drop table 陳述式*  
+ &#124; *drop-table-statement*  
   
- &#124;*insert 陳述式*  
+ &#124; *insert-statement*  
   
  &#124;*select 陳述式*  
   
- &#124;*update 陳述式搜尋*  
+ &#124; *update-statement-searched*  
   
- *update 陳述式搜尋*  
+ *update-statement-searched*  
   
  更新*資料表名稱*  
   

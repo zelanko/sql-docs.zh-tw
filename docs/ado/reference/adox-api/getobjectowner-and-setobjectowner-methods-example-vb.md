@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2442124889e6217edc730d4cd47b2c98fa1d2d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03850fdaef19ece963bb7b196ab14edccd290fde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966383"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 和 SetObjectOwner 方法範例 (VB)
 此範例示範[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)並[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此程式碼假設有群組帳戶處理 (請參閱[群組和使用者附加、 ChangePassword 方法範例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)以了解如何將此群組新增到系統)。 類別目錄資料表的擁有者設為 會計。  

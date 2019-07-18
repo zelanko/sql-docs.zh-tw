@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915685"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
     
@@ -33,7 +33,7 @@ ms.locfileid: "48214128"
 |訊息文字|必須宣告純量變數 "%.*ls"。|  
   
 ## <a name="explanation"></a>說明  
- 當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 陳述式傳回錯誤 137，因為未宣告 **@mycol**。  
+ 當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 陳述式傳回錯誤 137，因為未宣告 **@mycol** 。  
   
  SET @mycol = 'ContactName';  
   

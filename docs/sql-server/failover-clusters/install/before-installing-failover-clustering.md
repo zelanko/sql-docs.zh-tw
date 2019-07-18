@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25b7f1be157d6557842e9d482db2404c2705e932
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58913293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632107"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58913293"
 |說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 容錯移轉叢集概念，並提供連結至相關的內容及工作。|[AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉原則概念，並提供連結設定容錯移轉原則，以符合您組織的需求。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |說明如何維護以及您現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。|[容錯移轉叢集執行個體管理及維護](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|說明如何在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|[如何將 SQL Server Analysis Services 叢集化](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|說明如何在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何將 SQL Server Analysis Services 叢集化](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
   
@@ -44,11 +44,11 @@ ms.locfileid: "58913293"
   
 -   安裝必要元件軟體。 執行安裝程式來安裝或升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，請先安裝下列必要元件以縮短安裝時間。 您可以在執行安裝程式之前，於每個容錯移轉叢集節點上安裝必要元件軟體，然後重新啟動節點一次。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將不再安裝 Windows PowerShell。 Windows PowerShell 是安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 元件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的必要條件。 如果您的電腦沒有 Windows PowerShell，可以遵循 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) 頁面上的指示啟用此元件。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將不再安裝 Windows PowerShell。 Windows PowerShell 是安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 元件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的必要條件。 如果您的電腦沒有 Windows PowerShell，可以遵循 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) 頁面上的指示啟用此元件。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新封裝：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式會要求在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新封裝：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式要求電腦上必須已安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
   
     -   .NET Framework 4：安裝程式會在叢集作業系統上安裝 .NET Framework 4。 若要縮短安裝時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "58913293"
   
 ##  <a name="WSFC"></a> 設定 Windows Server 容錯移轉叢集  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC)。 您也必須結合 WSFC 一併執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 最多支援含有 16 個節點的容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支援兩個節點的容錯移轉叢集。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 您至少必須在伺服器叢集的一個節點上設定 Cluster Service (WSFC)。 您也必須結合 WSFC 一併執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 最多支援含有 16 個節點的容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支援兩個節點的容錯移轉叢集。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的資源 DLL 會匯出兩個函數，可讓 WSFC 叢集管理員用來檢查 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的可用性。 如需詳細資訊，請參閱 [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)。  
   

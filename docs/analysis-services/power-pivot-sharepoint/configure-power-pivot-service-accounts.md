@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208299"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>設定 Power Pivot 服務帳戶
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,51 +44,51 @@ ms.locfileid: "52509556"
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (Power Pivot) 執行個體的過期密碼  
   
-1.  指向 [開始]，然後按一下 **[系統管理工具]**，再按一下 **[服務]**。 按兩下 [SQL Server Analysis Services] **([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 按一下 **[登入]**，然後輸入帳戶的新密碼。  
+1.  指向 [開始]，然後按一下 **[系統管理工具]** ，再按一下 **[服務]** 。 按兩下 [SQL Server Analysis Services] **([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 。 按一下 **[登入]** ，然後輸入帳戶的新密碼。  
   
-2.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定 Managed 帳戶]**。  
+2.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定 Managed 帳戶]** 。  
   
 3.  按一下 **[編輯]** 來變更特定的帳戶。  
   
-4.  選取 **[立即變更密碼]**。  
+4.  選取 **[立即變更密碼]** 。  
   
-5.  選取 **[將帳戶密碼設定為新的值]**。 在 Managed 帳戶下執行的所有服務都會使用更新的認證。  
+5.  選取 **[將帳戶密碼設定為新的值]** 。 在 Managed 帳戶下執行的所有服務都會使用更新的認證。  
   
 ##  <a name="bkmk_passwordapp"></a> 更新 Power Pivot 服務應用程式的過期密碼  
   
-1.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定 Managed 帳戶]**。  
+1.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定 Managed 帳戶]** 。  
   
 2.  按一下 **[編輯]** 來變更特定的帳戶。  
   
-3.  選取 **[立即變更密碼]**。  
+3.  選取 **[立即變更密碼]** 。  
   
-4.  選取 **[將帳戶密碼設定為新的值]**。 在 Managed 帳戶下執行的所有服務都會使用更新的認證。  
+4.  選取 **[將帳戶密碼設定為新的值]** 。 在 Managed 帳戶下執行的所有服務都會使用更新的認證。  
   
 ##  <a name="bkmk_newacct"></a> 變更每個服務執行所用的帳戶  
   
-1.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定服務帳戶]**。  
+1.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定服務帳戶]** 。  
   
 2.  選取 **[Windows 服務 - SQL Server Analysis Services]** ，以變更 Analysis Services 服務帳戶。  
   
 3.  在 **[選取此服務的帳戶]** 中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
   
-4.  選取 [服務應用程式集區 - SharePoint Web 服務系統]，以變更預設 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式的應用程式集區身分識別。 依據設定安裝的方式，服務可能會在已針對 SharePoint 服務建立的現有服務應用程式集區之中執行。 依預設，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具會將此服務登錄為**預設的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式 ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式)**。  
+4.  選取 [服務應用程式集區 - SharePoint Web 服務系統]  ，以變更預設 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式的應用程式集區身分識別。 依據設定安裝的方式，服務可能會在已針對 SharePoint 服務建立的現有服務應用程式集區之中執行。 依預設，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具會將此服務登錄為**預設的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式 ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式)** 。  
   
      若此服務由 SharePoint 管理員手動設定，則此服務極可能會擁有自己的服務應用程式集區。  
   
 5.  在 **[選取此服務的帳戶]** 中，選擇現有的 Managed 帳戶或建立新的 Managed 帳戶。 此帳戶必須是網域使用者帳戶。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定 **Deploying Office Solutions**]。  
   
 ##  <a name="bkmk_appPool"></a> 建立或變更 Power Pivot 服務應用程式的應用程式集區  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 2.  選取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，但是不要在上面按一下。 按一下應用程式名稱會開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板，但儀表板中並沒有通往指定應用程式集區之屬性頁面的連結。  選取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式時，可以按一下應用程式列上的空白處，或是按一下類型名稱。  
   
 3.  在功能區上按一下 **[屬性]** 。  
   
-4.  選取 **[建立新的應用程式集區]**。 提供應用程式集區的名稱，並指定 Managed 帳戶做為識別。  
+4.  選取 **[建立新的應用程式集區]** 。 提供應用程式集區的名稱，並指定 Managed 帳戶做為識別。  
   
 ##  <a name="requirements"></a> 帳戶的需求和權限  
  在規劃 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署時，您必須規劃下列服務帳戶：  
@@ -101,7 +101,7 @@ ms.locfileid: "52509556"
   
 |需求|描述|  
 |-----------------|-----------------|  
-|提供需求|此帳戶必須在 SQL Server 安裝程式執行期間，使用安裝精靈中的 [Analysis Services - 組態] 頁面 (或是命令列安裝程式中的 **ASSVCACCOUNT** 安裝參數) 加以指定。<br /><br /> 您可以使用管理中心、PowerShell 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，來修改使用者名稱或密碼。 不支援使用其他工具來變更帳戶和密碼。|  
+|提供需求|此帳戶必須在 SQL Server 安裝程式執行期間，使用安裝精靈中的 [Analysis Services - 組態]  頁面 (或是命令列安裝程式中的 **ASSVCACCOUNT** 安裝參數) 加以指定。<br /><br /> 您可以使用管理中心、PowerShell 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，來修改使用者名稱或密碼。 不支援使用其他工具來變更帳戶和密碼。|  
 |網域使用者帳戶需求|此帳戶必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。 只要指定電腦帳戶，SQL Server 安裝程式就會封鎖安裝，以強制滿足網域使用者帳戶需求。|  
 |權限需求|此帳戶必須是成員的 SQLServerMSASUser\<伺服器 > $PowerPivot 安全性群組和 WSS_WPG 安全性群組，在本機電腦上的。 這些權限應該會自動授與。 如需如何檢查或授與權限的詳細資訊，請參閱本主題中的[手動授與 Power Pivot 服務帳戶管理權限](#updatemanually)和[初始組態 (Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
 |向外延展需求|如果您在伺服器陣列中安裝多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器執行個體，則所有 Analysis Services 伺服器執行個體都必須在相同的網域使用者帳戶下執行。 例如，如果您設定第一個 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體，以 Contoso\ssas-srv01 的身分執行，則之後部署於相同伺服器陣列中的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體，都必須以 Contoso\ssas-srv01 (或任何目前帳戶) 的身分執行。<br /><br /> 將所有服務執行個體設定為在相同帳戶下執行時，可讓 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務將查詢處理或資料重新整理作業配置給伺服器陣列中的任何 Analysis Services 服務執行個體。 此外，也可以將管理中心的管理帳戶功能用於 Analysis Services 伺服器執行個體。 當所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體都使用相同的帳戶時，您可以變更帳戶或密碼一次，而所有使用這些認證的服務執行個體都會自動更新。<br /><br /> SQL Server 安裝程式會強制滿足相同帳戶需求。 在已安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體之 SharePoint 伺服器陣列的向外延展部署中，如果指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 帳戶與伺服器陣列中已使用的帳戶不同，則安裝程式會封鎖新的安裝。|  
@@ -118,11 +118,11 @@ ms.locfileid: "52509556"
 ##  <a name="updatemanually"></a> 疑難排解：以手動方式授與管理權限  
  如果更新認證的人員不是電腦上的本機系統管理員，管理權限將無法更新。 如果發生這個情況，您可以手動授與管理權限。 最簡單的方式就是，在管理中心執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態計時器工作。 您可以使用這個方法，在伺服器陣列中重設所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器的權限。 請注意，此方法只有在 SharePoint 計時器工作以伺服陣列管理員或電腦本機系統管理員執行時才有作用。  
   
-1.  在 [監視] 中，按一下 **[檢閱工作定義]**。  
+1.  在 [監視] 中，按一下 **[檢閱工作定義]** 。  
   
-2.  選取 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態計時器工作]。  
+2.  選取 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態計時器工作]  。  
   
-3.  按一下 **[立即執行]**。  
+3.  按一下 **[立即執行]** 。  
   
  最後的手段，您可以確認正確權限授與 Analysis Services 系統管理權限[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式，並特別將服務應用程式識別加入 SQLServerMSASUser\<伺服器名稱 > $PowerPivot Windows 安全性群組。 您必須針對與 SharePoint 伺服陣列整合的每個 Analysis Services 執行個體重複這些步驟。  
   
@@ -130,52 +130,52 @@ ms.locfileid: "52509556"
   
 1.  在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體\<伺服器名稱 > \POWERPIVOT。  
   
-2.  以滑鼠右鍵按一下伺服器名稱，然後選取 **[屬性]**。  
+2.  以滑鼠右鍵按一下伺服器名稱，然後選取 **[屬性]** 。  
   
-3.  按一下 **[安全性]**。  
+3.  按一下 **[安全性]** 。  
   
-4.  按一下 **[加入]**。  
+4.  按一下 **[加入]** 。  
   
-5.  輸入用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式集區之帳戶的名稱，然後按一下 [確定] 。  
+5.  輸入用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式集區之帳戶的名稱，然後按一下 [確定]  。  
   
-6.  在 [系統管理工具] 中，按一下 **[電腦管理]**。  
+6.  在 [系統管理工具] 中，按一下 **[電腦管理]** 。  
   
-7.  開啟 **[本機使用者和群組]**。  
+7.  開啟 **[本機使用者和群組]** 。  
   
-8.  開啟 **[群組]**。  
+8.  開啟 **[群組]** 。  
   
 9. 按兩下 SQLServerMSASUser$\<servername > $PowerPivot。  
   
-10. 按一下 **[加入]**。  
+10. 按一下 **[加入]** 。  
   
-11. 輸入用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式集區之帳戶的名稱，然後按一下 [確定] 。  
+11. 輸入用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式集區之帳戶的名稱，然後按一下 [確定]  。  
   
-##  <a name="expired"></a> 疑難排解：解決因為管理中心或 SharePoint Foundation Web 應用程式服務密碼過期而造成的 HTTP 503 錯誤  
+##  <a name="expired"></a> 疑難排解：解決 HTTP 503 錯誤，因為密碼過期管理中心或 SharePoint Foundation Web 應用程式服務  
  如果管理中心服務或 SharePoint Foundation Web 應用程式服務因為帳戶重設或密碼過期而停止運作，當您嘗試開啟 SharePoint 管理中心或 SharePoint 網站時，將會出現 HTTP 503「服務無法使用」錯誤訊息。 請遵循這些步驟，讓您的伺服器重新回復到線上狀態。 一旦可以使用管理中心之後，您就可以繼續更新過期的帳戶資訊。  
   
-1.  在 [系統管理工具] 中，按一下 **[Internet Information Services Manager]**。  
+1.  在 [系統管理工具] 中，按一下 **[Internet Information Services Manager]** 。  
   
 2.  如果網站或管理中心應用程式集區的識別是密碼過期的網域使用者帳戶，請執行下列操作：  
   
-    1.  以滑鼠右鍵按一下應用程式集區名稱，然後選取 **[進階設定]**。  
+    1.  以滑鼠右鍵按一下應用程式集區名稱，然後選取 **[進階設定]** 。  
   
     2.  選取 **識別**按一下...按鈕，以開啟 應用程式集區識別 對話方塊。  
   
-    3.  按一下 **[設定]**。  
+    3.  按一下 **[設定]** 。  
   
     4.  輸入使用者名稱和密碼。  
   
 3.  執行 IISRESET。 若要這樣做，開啟系統管理員命令提示字元，然後在命令處輸入 **iisreset** 。  
   
-4.  在 [SharePoint 管理中心] 的 [安全性] 區段中，選取 **[設定 Managed 帳戶]**。  
+4.  在 [SharePoint 管理中心] 的 [安全性] 區段中，選取 **[設定 Managed 帳戶]** 。  
   
 5.  按一下 **[編輯]** 來更新密碼已過期之 Managed 帳戶的資訊。  
   
-6.  選取 **[立即變更密碼]**。  
+6.  選取 **[立即變更密碼]** 。  
   
-7.  按一下 **[使用現有的密碼]**。  
+7.  按一下 **[使用現有的密碼]** 。  
   
-8.  輸入密碼，然後按一下 **[確定]**。  
+8.  輸入密碼，然後按一下 **[確定]** 。  
   
  如果已安裝 Reporting Services，請使用 Reporting Services 組態管理員更新報表伺服器的密碼，以及報表伺服器資料庫的連接。 如需詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001462"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
@@ -36,7 +35,7 @@ MemberToStr(Member_Expression)
  這個函數會傳回包含成員 uniquename 的字串。 它通常用來將成員 uniquename 傳遞至外部函數。  
   
 ## <a name="example"></a>範例  
- 下列範例會傳回 [Geography].[Geography].[Country].&[United States] 字串：  
+ 下列範例會傳回 [Geography] 的字串。[Geography]。[國家/地區]。 （& s) [United States]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   

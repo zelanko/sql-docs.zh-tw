@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061285"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting 事件類別
   SQL:StmtStarting 事件類別指出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已啟動。  

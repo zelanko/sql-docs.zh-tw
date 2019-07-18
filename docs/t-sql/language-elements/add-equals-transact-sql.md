@@ -18,16 +18,16 @@ helpviewer_keywords:
 - assignment operators, +=
 - augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 118a97b1c3635c4ccc210e67434b6c3572b2109e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6a9353aaf9ef0ce049d0fcfdbed39617499a36c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65983255"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+= (加法指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

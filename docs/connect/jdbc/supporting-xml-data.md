@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f98ef1cbff732bc969b8eea45ad38ee2f158fa73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f0c1dae13912ea1eda5747e4646d92b803c01cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622056"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798279"
 ---
 # <a name="supporting-xml-data"></a>支援 XML 資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47622056"
  JDBC 驅動程式提供 JDBC 4.0 API 的支援，此 API 引進 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**是 JDBC 4.0 資料類型，則會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**資料型別。 因此，若要在應用程式中使用 SQLXML 資料類型，您必須將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果應用程式在存取 SQLXML 物件及其方法時嘗試使用 sqljdbc3.jar，就會擲回例外狀況。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會先驗證 XML 資料，然後再將它儲存於資料庫資料行中。 應用程式可以使用 **SQLXML** 資料類型，因為 JDBC 驅動程式會自動將它對應至 **xml** 資料類型。 sqljdbc4.jar 提供 **SQLXML** 支援。 請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)如需所支援的 JRE 版本清單[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會先驗證 XML 資料，然後再將它儲存於資料庫資料行中。 應用程式可以使用 **SQLXML** 資料類型，因為 JDBC 驅動程式會自動將它對應至 **xml** 資料類型。 sqljdbc4.jar 提供 **SQLXML** 支援。 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 所支援的 JRE 版本清單，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
  本節中的主題描述 SQLXML 介面以及如何使用 JDBC API 方法來針對 **SQLXML** 資料類型進行程式設計。  
   

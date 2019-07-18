@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.general.f1
@@ -15,12 +14,12 @@ ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054887"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>傳送 SQL Server 物件工作編輯器 (一般頁面)
   使用 **[傳送 SQL Server 物件工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件工作。 如需有關這項工作的詳細資訊，請參閱＜ [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)＞。  

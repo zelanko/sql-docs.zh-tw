@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788126"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
   使用 [加入 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Windows Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
@@ -28,7 +28,7 @@ ms.locfileid: "48095638"
   
      [Security](#Security)  
   
--   **使用下列方法加入複本：**  [加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **使用下列方法加入複本：** [加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果您從未有任何可用性複本加入可用性群組中，請參閱的 < 伺服器執行個體 > 和 < 可用性群組和複本 > 章節中的[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
@@ -65,11 +65,11 @@ ms.locfileid: "48095638"
   
 2.  在登入頁面中，登入您的 Windows Azure 訂用帳戶。 一旦您登入之後，此精靈就會將管理憑證安裝到本機電腦上。 當您再次使用此精靈時，就會自動載入這個管理憑證。 如果您已下載多個管理憑證，可以按一下 **...** 按鈕選取您想要使用的憑證。  
   
-3.  接著，按一下 **[連接]**，連接到您的訂用帳戶。 一旦您連接之後，下拉式清單就會填入您的 Windows Azure 參數，例如 **[虛擬網路]** 和 **[虛擬網路子網路]**。  
+3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連接之後，下拉式清單就會填入您的 Windows Azure 參數，例如 **[虛擬網路]** 和 **[虛擬網路子網路]** 。  
   
 4.  針對將裝載新次要複本的 Windows Azure VM 指定設定：  
   
-     映像  
+     Image  
      要用於 Windows Azure VM 的 SQL Server 映像名稱  
   
      VM 大小  

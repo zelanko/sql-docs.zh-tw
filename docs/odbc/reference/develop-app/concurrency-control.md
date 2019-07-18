@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083266"
 ---
 # <a name="concurrency-control"></a>並行存取控制
 *並行*是兩個交易的能力，在此同時，使用相同的資料和增加的交易隔離通常是並行減少。 這是因為交易隔離通常會實作鎖定的資料列，而且多個資料列被鎖住，因為較少的交易可以完成而不被鎖定的資料列至少要暫時封鎖。 雖然並行減少一般認為需要維護資料庫的完整性較高交易隔離等級的取捨，它具有使用資料指標的高的讀取/寫入活動成為互動式應用程式中的問題。  

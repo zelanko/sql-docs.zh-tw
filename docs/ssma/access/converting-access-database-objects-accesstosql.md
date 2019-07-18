@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006626"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 Access 資料庫物件 (AccessToSQL)
 在您加入 Access 資料庫並連接到後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure、 SSMA 顯示中繼資料存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件。 您可以現在選取 存取的資料庫物件，然後將轉換將結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 結構描述。  
@@ -56,7 +55,7 @@ ms.locfileid: "51666197"
   
 |存取物件|產生的 SQL Server 物件|  
 |-----------------|-------------------------------|  
-|資料表|資料表|  
+|table|table|  
 |column|column|  
 |索引|索引|  
 |外部索引鍵 (foreign key)|外部索引鍵 (foreign key)|  
@@ -111,7 +110,7 @@ ms.locfileid: "51666197"
   
     將游標移出已變更的屬性資料格中。 您可以按一下另一個資料列，或按下 Tab 鍵來這樣做。  
   
-3.  按一下 **[套用]**。  
+3.  按一下 **[套用]** 。  
   
 您現在可以在檢視中的程式碼的變更**SQL**  索引標籤。  
   

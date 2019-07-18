@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 34de230b7e52816d028972d4c29c6ba61308231c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d17bd016470e7b6f6f6b5452ed049168b977e10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938666"
 ---
 # <a name="cubedef-example-vbscript"></a>CubeDef 範例 (VBScript)
 此範例顯示在網頁上的 cube 中繼資料。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ae5f65538c0303a92fdb86f71d75a556ad3f458
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840886"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798253"
 ---
 # <a name="troubleshooting-connectivity"></a>連接性疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

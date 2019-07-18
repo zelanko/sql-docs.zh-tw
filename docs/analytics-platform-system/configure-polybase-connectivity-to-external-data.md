@@ -2,21 +2,20 @@
 title: 設定 PolyBase 連線能力-Analytics Platform System |Microsoft Docs
 description: 說明如何設定連接至外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源的平行處理資料倉儲的 PolyBase。 若要執行查詢來整合資料的多個來源，包括 Hadoop、 Azure blob 儲存體和平行處理資料倉儲使用 PolyBase。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961258"
 ---
-# <a name="what-is-polybase"></a>PolyBase 是什麼？
+# <a name="what-is-polybase"></a>什麼是 PolyBase？
 PolyBase 可讓您的 「 Analytics Platform System (APS) 」，來處理 TRANSACT-SQL 查詢，可以從中讀取資料，並將資料寫入外部資料來源。 存取外部資料的相同查詢也可以包含您 AP 關聯資料表。 這可讓您結合來自外部來源的資料高價值 AP 資料庫中的關聯式資料。
 
 ![PolyBase 邏輯](media/polybase/polybase-logical.png)

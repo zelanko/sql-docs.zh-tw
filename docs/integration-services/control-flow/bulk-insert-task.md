@@ -19,14 +19,18 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728013"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
   
  為了確保高速資料複製，從來源檔案將資料搬移到資料表或檢視時，無法執行資料的轉換。  
@@ -116,15 +120,15 @@ ms.locfileid: "58290704"
 -   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
   
 ## <a name="bulk-insert-task-editor-connection-page"></a>大量插入工作編輯器 (連接頁面)
-  使用 [大量插入工作編輯器] 對話方塊的 [連接] 頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
+  使用 [大量插入工作編輯器]  對話方塊的 [連接]  頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
   
  若要了解如何使用大量插入，請參閱[大量插入工作](../../integration-services/control-flow/bulk-insert-task.md)和[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
 ### <a name="options"></a>選項。  
  **[連接]**  
- 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連接…>] 建立新的連接。  
+ 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連接…>]  建立新的連接。  
   
- **相關主題：**[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相關主題：** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  輸入目的地資料表或檢視的名稱，或在清單中選取資料表或檢視。  
@@ -134,17 +138,17 @@ ms.locfileid: "58290704"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**使用檔案**|選取包含格式規格的檔案。 選取此選項會顯示動態選項 [FormatFile]。|  
-|**指定**|指定格式。 選取此選項會顯示動態選項 [RowDelimiter] 和 [ColumnDelimiter]。|  
+|**使用檔案**|選取包含格式規格的檔案。 選取此選項會顯示動態選項 [FormatFile]  。|  
+|**指定**|指定格式。 選取此選項會顯示動態選項 [RowDelimiter]  和 [ColumnDelimiter]  。|  
   
  **檔案**  
- 在清單中選取檔案或一般檔案連線管理員，或按一下 [\<新增連接...>] 建立新的連接。  
+ 在清單中選取檔案或一般檔案連線管理員，或按一下 [\<新增連接...>]  建立新的連接。  
   
  檔案位置相對於在此工作之連接管理員中指定的 SQL Server Database Engine。 SQL Server Database Engine 必須可以在伺服器上的本機硬碟，或透過 SQL Server 的共用或對應磁碟機，存取文字檔。 SSIS 執行階段無法存取檔案。  
   
  如果您使用一般檔案連接管理員存取來源檔案，則大量插入工作不會使用一般檔案連接管理員中指定的格式。 而「大量插入」工作會使用格式檔案中指定的格式，或工作之 RowDelimiter 和 ColumnDelimiter 屬性的值。  
   
- **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **相關主題：** [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[一般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **重新整理資料表**  
  重新整理資料表和檢視的清單。  
@@ -157,10 +161,10 @@ ms.locfileid: "58290704"
   
 #### <a name="format--specify"></a>格式 = 指定  
  **RowDelimiter**  
- 指定來源檔案中的資料列分隔符號。 預設值是 [{CR}{LF}]。  
+ 指定來源檔案中的資料列分隔符號。 預設值是 [{CR}{LF}]  。  
   
  **ColumnDelimiter**  
- 指定來源檔案中的資料行分隔符號。 預設值是 [定位字元]。  
+ 指定來源檔案中的資料行分隔符號。 預設值是 [定位字元]  。  
   
 ## <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
   使用 **[大量插入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述大量插入工作。  

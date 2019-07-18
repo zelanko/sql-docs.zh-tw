@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 91a19eebfb03019fdbd928a340c139a23d9f27d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62814074"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>將次要複本從可用性群組移除 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本從 AlwaysOn 可用性群組中移除。  
@@ -41,7 +41,7 @@ ms.locfileid: "48208158"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**[移除次要複本之後](#PostBestPractices)  
+-   **後續操作：** [移除次要複本之後](#PostBestPractices)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48208158"
   
     -   若要移除單一複本，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-5.  以滑鼠右鍵按一下選取的一或多個次要複本，然後在命令功能表中選取 [從可用性群組移除]。  
+5.  以滑鼠右鍵按一下選取的一或多個次要複本，然後在命令功能表中選取 [從可用性群組移除]  。  
   
-6.  在 **[從可用性群組移除次要複本]** 對話方塊中，若要移除所有列出的次要複本，按一下 **[確定]**。 如果您不要移除所有列出的複本，請按一下 **[取消]**。  
+6.  在 **[從可用性群組移除次要複本]** 對話方塊中，若要移除所有列出的次要複本，按一下 **[確定]** 。 如果您不要移除所有列出的複本，請按一下 **[取消]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除次要複本**  
@@ -111,13 +111,13 @@ ms.locfileid: "48208158"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a> 追蹤：移除次要複本之後  
+##  <a name="PostBestPractices"></a> 後續操作：移除次要複本之後  
  如果您指定目前無法使用的複本，當複本連線時，將會發現該複本已經遭到移除。  
   
  移除複本會使它停止接收資料。 當次要複本確認它已從全域存放區移除之後，複本會從其資料庫移除可用性群組設定，處於 RECOVERING 狀態時，這些設定仍然存在於本機伺服器執行個體上。  

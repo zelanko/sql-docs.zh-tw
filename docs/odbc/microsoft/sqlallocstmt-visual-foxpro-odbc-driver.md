@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc921f458861da420c4dd34bb672dc8a4f58f361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f21a2b1c7c8573d06f92654f85b4ecaacc1484a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063277"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 一致性： 核心層級  
+ ODBC API 相容性：核心層級  
   
  會配置陳述式控制代碼的記憶體，並關聯所指定的連接中的陳述式控制代碼*hdbc*。 驅動程式管理員會將傳遞這個呼叫來驅動程式時，所配置的記憶體*hstmt*結構。  
   

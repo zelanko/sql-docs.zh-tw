@@ -2,7 +2,7 @@
 title: 專案屬性頁對話方塊 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 f1_keywords:
@@ -10,28 +10,28 @@ f1_keywords:
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578232"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案 功能表按一下 \<報表專案名稱>屬性。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案  功能表按一下 \<報表專案名稱>  屬性  。  
   
- 在您定義組態屬性之後，可以從工具列的 [方案組態] 下拉式清單中選取組態。  
+ 在您定義組態屬性之後，可以從工具列的 [方案組態]  下拉式清單中選取組態。  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>選項。  
  **Configuration**  
- 選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)**。  
+ 選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)** 。  
   
- 若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]**。  
+ 若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]** 。  
   
  若要建立其他組態，請按一下工具列上的 **[組態管理員]** 。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "52712179"
  輸入回報為錯誤之建立問題的嚴重性。 嚴重性層級小於或等於 **ErrorLevel** 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 任何錯誤都會導致建立工作失敗。 有效的嚴重性層級為 0 到 4 (包含)。 預設值為 2。  
   
  **StartItem**  
- 選取當專案發行到報表伺服器之後，要顯示在網頁瀏覽器中的報表；或當專案在本機執行時，要顯示在預覽視窗中的報表。 建置但不部署專案的設定及 [偵錯] 命令 (**F5**) 的使用都需要開始項目。 部署專案的組態需要它。  
+ 選取當專案發行到報表伺服器之後，要顯示在網頁瀏覽器中的報表；或當專案在本機執行時，要顯示在預覽視窗中的報表。 建置但不部署專案的設定及 [偵錯]  命令 (**F5**) 的使用都需要開始項目。 部署專案的組態需要它。  
   
  **OverwriteDataSources**  
  選取 **True** ，即可在發行報表時，以專案中的資料來源覆寫伺服器上的資料來源。 選取 **False** ，即可保留伺服器上現有的資料來源。  
   
  **TargetServerVersion**  
- 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本] 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2017**。  
+ 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本]  自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2017**。  
   
  **TargetDataSourceFolder**  
  用來儲存已發行共用資料來源的資料夾名稱。 如果您未指定資料夾，資料來源就會發行到與報表相同的資料夾。 如果報表伺服器上沒有此資料夾，報表設計師會在發行報表時建立資料夾。  
@@ -78,7 +78,7 @@ ms.locfileid: "52712179"
  發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如： 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
++ 第 1 課：建立 Windows Azure 儲存體物件`http:\\<servername>\<site>\<subsite>`。  
 
 ## <a name="next-steps"></a>後續步驟
 

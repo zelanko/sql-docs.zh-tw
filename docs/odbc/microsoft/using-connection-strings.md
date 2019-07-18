@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77bc54f857e04f31ccb982ca40b3ed6334664870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 496fe10fbf49f4d712127e2e4122c50fa20ba2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044580"
 ---
 # <a name="using-connection-strings"></a>使用連接字串
 您可以使用的連接字串來連接到 Visual FoxPro 資料來源。  

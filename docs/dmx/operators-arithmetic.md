@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008210"
 ---
-# <a name="operators---arithmetic"></a>運算子-算數
+# <a name="operators---arithmetic"></a>運算子 - 算數
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   您可以使用算術運算子在資料採礦延伸模組 (DMX) 中的算術計算[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，包括加法、 減法、 乘法和除法。  
@@ -39,7 +38,7 @@ ms.locfileid: "37989651"
 -   括號中的運算式優先於其他所有運算。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
@@ -48,7 +47,7 @@ ms.locfileid: "37989651"
  [運算式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
- [結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   

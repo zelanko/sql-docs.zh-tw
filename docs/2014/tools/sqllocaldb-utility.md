@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035397"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
   使用`SqlLocalDB`公用程式來建立的執行個體[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**。 `SqlLocalDB`公用程式 (SqlLocalDB.exe) 是簡單的命令列工具，可以讓使用者與開發人員建立和管理的執行個體[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**。 如需有關如何使用資訊**LocalDB**，請參閱[SQL Server 2014 Express Locald](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  

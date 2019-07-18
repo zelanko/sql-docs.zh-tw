@@ -17,22 +17,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63276795"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>檢視篩選資訊 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，在事件類別的資料行上檢視篩選。  
   
 ### <a name="to-view-filter-information"></a>若要檢視篩選資訊  
   
-1.  開啟追蹤檔案、追蹤資料表或 SQL 指令碼，然後在 [檔案] 功能表上按一下 [屬性]。 如果您正在編輯追蹤範本或正在建立新追蹤，請略過此步驟。  
+1.  開啟追蹤檔案、追蹤資料表或 SQL 指令碼，然後在 [檔案]  功能表上按一下 [屬性]  。 如果您正在編輯追蹤範本或正在建立新追蹤，請略過此步驟。  
   
-2.  在 [事件選取範圍] 索引標籤上，以滑鼠右鍵按一下要檢視之篩選的資料行名稱，然後按一下 [編輯資料行篩選]。  
+2.  在 [事件選取範圍]  索引標籤上，以滑鼠右鍵按一下要檢視之篩選的資料行名稱，然後按一下 [編輯資料行篩選]  。  
   
-3.  在 [編輯篩選] 對話方塊中，展開篩選比較運算子，查看所指定條件已指派的值。 對於您要檢視篩選資訊的所有資料行，重複步驟 2 和 3。  
+3.  在 [編輯篩選]  對話方塊中，展開篩選比較運算子，查看所指定條件已指派的值。 對於您要檢視篩選資訊的所有資料行，重複步驟 2 和 3。  
   
 > [!NOTE]  
 >  已指派值的比較運算子會顯示為粗體格式。  

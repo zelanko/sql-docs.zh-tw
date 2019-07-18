@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798200"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922893"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
   使用 SQL Server Agent 在排定的時間執行 SQL Server PowerShell 指令碼。  
   
-1.  **開始之前：**[限制事項](#LimitationsRestrictions)  
+1.  **開始之前：** [限制事項](#LimitationsRestrictions)  
   
-2.  **若要執行 PowerShell，從 SQL Server 代理程式，使用：**[PowerShell 作業步驟](#PShellJob)，[命令提示字元作業步驟](#CmdExecJob)  
+2.  **若要從 SQL Server Agent 執行 PowerShell，請使用：** [PowerShell 作業步驟](#PShellJob)、[命令提示字元作業步驟](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>開始之前  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟有幾種類型。 每一種類型都與實作特定環境的子系統相關，例如複寫代理程式或命令提示字元環境。 您可以編寫 Windows PowerShell 指令碼，然後使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 在排程時間執行的作業內包含這些指令碼，或是用來回應 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。 Windows PowerShell 指令碼可透過使用命令提示字元作業步驟或 PowerShell 作業步驟加以執行。  
@@ -39,13 +39,13 @@ ms.locfileid: "52798200"
 ##  <a name="PShellJob"></a> 建立 PowerShell 作業步驟  
  **建立 PowerShell 作業步驟**  
   
-1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
+1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
   
-2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 3.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-4.  在 **[類型]** 清單中，按一下 **[PowerShell]**。  
+4.  在 **[類型]** 清單中，按一下 **[PowerShell]** 。  
   
 5.  在 **[執行身分]** 清單中，選取具有作業將會使用之認證的 Proxy 帳戶。  
   
@@ -56,13 +56,13 @@ ms.locfileid: "52798200"
 ##  <a name="CmdExecJob"></a> 建立命令提示字元作業步驟  
  **建立 CmdExec 作業步驟**  
   
-1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
+1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
   
-2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
+2.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]** 。  
   
 3.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-4.  在 [類型] 清單中，選擇 [作業系統 (CmdExec)]。  
+4.  在 [類型]  清單中，選擇 [作業系統 (CmdExec)]  。  
   
 5.  在 **[執行身分]** 清單中，選取具有作業將會使用之認證的 Proxy 帳戶。 根據預設，CmdExec 作業步驟會以 SQL Server Agent 服務帳戶的身分執行。  
   

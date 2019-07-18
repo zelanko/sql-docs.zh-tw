@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
@@ -13,12 +12,12 @@ ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4911084929f3ff69657a6d5e51c557f35929b45b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059550"
 ---
 # <a name="destination-database-files"></a>目的地資料庫檔案
   使用 **[目的地資料庫檔案]** 對話方塊，即可檢視或變更目的地伺服器上的資料庫檔案名稱和位置，或是指定傳送資料庫工作的網路檔案位置。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  

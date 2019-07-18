@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480821"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
   此主題描述如何針對 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的定義域建立以詞彙為主的關聯。 以詞彙為主的關聯 (TBR) 可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如，您可以設定某個以詞彙為主的關聯，將 "Inc." 詞彙變更為 "Incorporated"。 每當在定義域中遇到 "Inc." 詞彙時，都會加以變更。 出現 "Contoso, Inc." 的地方將會變更為 "Contoso, Incorporated"，而且這兩個值會被視為完全相符的同義字。  
@@ -90,7 +90,7 @@ ms.locfileid: "56016769"
   
     6.  在 **[尋找]** 文字方塊中輸入一個或多個位數，以尋找關聯資料表中的值。 系統會反白顯示此字串的相符項目。 使用上下箭頭，移到此字串在資料表中的不同出現位置。  
   
-    7.  **拼字檢查**:如果中的值**值**或是**更正為**資料行有波浪式紅色底線，拼字檢查建議此值更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../../2014/data-quality-services/set-domain-properties.md)。  
+    7.  **拼字檢查**：如果 [值] 或 [更正為] 資料行中的某個值有波浪式紅色底線，則表示拼字檢查建議對此值進行更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../../2014/data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[以詞彙為主的關聯]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  

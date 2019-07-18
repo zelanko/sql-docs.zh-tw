@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 208fbad8a728775c8e8d985a6f7f28c7facc865f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 114eaa8b3300f5e0785a3bac389eb00d4d5ee7ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66773725"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.lang.String getString(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getString 方法是由 java.sql.CallableStatement 介面中的 getString 方法指定。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的所有資料行都可以當作字串傳回。 這表示可以傳回所有數字和字元類型的字串表示法以及二進位資料行的十六進位字串表示法，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier。  

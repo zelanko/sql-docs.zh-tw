@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9ad01fb0aa73dc34739c5584a510dbe1bc854da
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004538"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

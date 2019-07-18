@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b523199c6d1af6f7dc29a8ba785b0333400292d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100125"
 ---
 # <a name="new-user-role-management-studio"></a>新增使用者角色 (Management Studio)
   使用此頁面，即可建立項目層級角色定義。 項目層級角色定義是具名的工作集合，其中列舉了與資料夾、報表、模型、資源以及共用資料來源相關，且使用者可以執行的工作。 預先定義的瀏覽者角色，就是項目層級角色定義的範例，這個角色會識別報表使用者在導覽資料夾和檢視報表時，可能需要的動作種類。  

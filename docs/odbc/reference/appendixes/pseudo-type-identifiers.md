@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057223"
 ---
 # <a name="pseudo-type-identifiers"></a>虛擬類型識別碼
 為了方便起見應用程式設計，ODBC 會定義數個虛擬類型識別碼。 這些識別項實際上並未對應到實際的資料類型，但相反地，視情況而定，解決對現有資料類型。  

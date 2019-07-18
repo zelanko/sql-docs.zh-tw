@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: c2f2cf71f30848c60a000eaaeefcc1447f2a5a6d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653059"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,13 +85,13 @@ Database Engine Tuning Advisor 的設計目的為處理下列查詢工作負載�
   
 -   無法分析設定為單一使用者模式的資料庫。  
   
--   若您為微調建議所指定的最大磁碟空間超過實際的可用空間，則 Database Engine Tuning Advisor 會使用您所指定的值。 但是，當您執行建議指令碼來實作此項目時，若未先新增更多磁碟空間，指令碼就會失敗。 最大磁碟空間可透過 **dta** 公用程式的 **-B** 選項來指定，或在 [進階微調選項] 對話方塊中輸入值而加以指定。  
+-   若您為微調建議所指定的最大磁碟空間超過實際的可用空間，則 Database Engine Tuning Advisor 會使用您所指定的值。 但是，當您執行建議指令碼來實作此項目時，若未先新增更多磁碟空間，指令碼就會失敗。 最大磁碟空間可透過 **dta** 公用程式的 **-B** 選項來指定，或在 [進階微調選項]  對話方塊中輸入值而加以指定。  
   
 -   基於安全性考量，Database Engine Tuning Advisor 無法對位於遠端伺服器中的追蹤資料表，微調其中的工作負載。 若要解決此限制，您可以使用追蹤檔案，而非追蹤資料表，或是將追蹤資料表複製至遠端伺服器。  
   
--   當您使用條件約束 (例如您在使用 **-B** 選項或 [進階微調選項] 對話方塊指定微調建議的最大磁碟空間時，所加諸的條件約束) 時，可能會強制 Database Engine Tuning Advisor 卸除某些現有的索引。 在這種情況下，所產生的 Database Engine Tuning Advisor 建議，可能會導致負面的預期改善。  
+-   當您使用條件約束 (例如您在使用 **-B** 選項或 [進階微調選項]  對話方塊指定微調建議的最大磁碟空間時，所加諸的條件約束) 時，可能會強制 Database Engine Tuning Advisor 卸除某些現有的索引。 在這種情況下，所產生的 Database Engine Tuning Advisor 建議，可能會導致負面的預期改善。  
   
--   如果指定條件約束以限制微調時間 (使用 **dta** 公用程式的 **-A** 選項，或勾選 [微調選項] 索引標籤上的 [限制微調時間])，Database Engine Tuning Advisor 可能會超過時間限制，才能產生精確的預期改善，以及針對目前為止所耗用的工作負載部分產生分析報告。  
+-   如果指定條件約束以限制微調時間 (使用 **dta** 公用程式的 **-A** 選項，或勾選 [微調選項]  索引標籤上的 [限制微調時間]  )，Database Engine Tuning Advisor 可能會超過時間限制，才能產生精確的預期改善，以及針對目前為止所耗用的工作負載部分產生分析報告。  
   
 -   Database Engine Tuning Advisor 在下列情況下可能不會進行建議：  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
@@ -16,12 +15,12 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079614"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
   您可以重新命名現有的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用**重新命名執行個體**對話方塊。  
@@ -38,11 +37,11 @@ ms.locfileid: "52401443"
   
 1.  啟動**Instance Rename**工具**asinstancerename.exe**，從 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
   
-2.  在 [重新命名執行個體] 對話方塊的 [要重新命名的執行個體] 清單中，選取您要重新命名的執行個體。  
+2.  在 [重新命名執行個體]  對話方塊的 [要重新命名的執行個體]  清單中，選取您要重新命名的執行個體。  
   
-3.  在 [新執行個體名稱] 方塊中，輸入執行個體的新名稱。  
+3.  在 [新執行個體名稱]  方塊中，輸入執行個體的新名稱。  
   
-4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]。  
+4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]  。  
   
      Analysis Services 執行個體將會停止，並在名稱變更時重新啟動。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "52401443"
   
      現在假設您重新命名為"TAB2"的執行個體。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  執行個體名稱 =\<伺服器 > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   

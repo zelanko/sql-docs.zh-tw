@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
+title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a260e68064b0a9218da07a8a65cf6b584382b4b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056526"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

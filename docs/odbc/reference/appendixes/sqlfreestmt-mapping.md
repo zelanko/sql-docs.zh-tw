@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086083"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 對應
-當應用程式呼叫**SQLFreeStmt**具有*選項*引數到 ODBC 3 SQL_DROP *.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLFreeStmt**具有*選項*透過 ODBC SQL_DROP 引數*3.x*驅動程式，會呼叫  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   

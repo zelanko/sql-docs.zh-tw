@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873584"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>將收集項加入收集組 (Transact-SQL)
   您可以使用資料收集器所提供的預存程序，將收集項加入到現有的收集組中。  
@@ -95,7 +95,7 @@ ms.locfileid: "58534560"
     GO  
     ```  
   
-     收集組及其收集項都會顯示在 [結果] 索引標籤上。  
+     收集組及其收集項都會顯示在 [結果]  索引標籤上。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用一般 T-SQL 查詢收集器型別的自訂收集組 &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)   

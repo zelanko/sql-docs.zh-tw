@@ -11,14 +11,18 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80177e1ba1a16d6f4cb88cf2ce972d8028540057
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: af4f827babe48f9feef07d3572d9758049bb5ee0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717212"
 ---
-# <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
+# <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   從 SSISDB 資料庫中卸除憑證及對稱金鑰。  

@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13ff0172847968439143edfd322ec895f8b0929c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5dd4d113c92e0a2d094aa02d49010a5dd477c6ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109448"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>資料來源屬性對話方塊、認證 (報表產生器)
   選取 **[資料來源屬性]** 對話方塊上的 **[認證]** ，即可顯示和修改要連接到報表中內嵌資料來源的認證。 您所提供的認證會用來存取資料來源，以便預覽報表。 如需認證的詳細資訊，請參閱 [在報表產生器中指定認證](../../2014/reporting-services/specify-credentials-in-report-builder.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用 Windows 驗證 （整合式安全性）**  
  選取此選項即可使用 Windows 驗證。  
   

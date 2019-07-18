@@ -21,16 +21,16 @@ helpviewer_keywords:
 - not equal to operator (<>)
 - <> (not equal to operator)
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0850c14d67ee64c18b8e44a26e74bab4ab45a4fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83db74bab48222acb66567c329acee3002bf8454
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981878"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>不等於 (Transact SQL) - 傳統
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

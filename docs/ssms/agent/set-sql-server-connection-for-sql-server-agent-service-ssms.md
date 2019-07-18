@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Server Agent, connections
 - connections [SQL Server], SQL Server Agent service
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9cde8c26570bc0dec3cefe10dd1c7b2bb1ddb71c
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: e806f74a61e970e4f33e9d2d104aecbffb2416f9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428605"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683114"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>設定 SQL Server Agent 服務的 SQL Server 連線 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,9 +71,9 @@ ms.locfileid: "55428605"
   
 1.  在 **[物件總管]** 中，按一下加號展開要設定與其 SQL Server Agent 服務連接的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性] 對話方塊的 [選取頁面] 底下，按一下 [連線]。  
+3.  在 [SQL Server Agent 屬性]  對話方塊的 [選取頁面]  底下，按一下 [連線]  。  
   
-4.  在 [SQL Server 連接] 底下選取 [使用 Windows 驗證]，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的資料庫需要 Windows 驗證。  
+4.  在 [SQL Server 連接]  底下選取 [使用 Windows 驗證]  ，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的資料庫需要 Windows 驗證。  
   

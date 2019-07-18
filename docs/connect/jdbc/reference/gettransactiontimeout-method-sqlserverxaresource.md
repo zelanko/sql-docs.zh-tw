@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e71469a271050e3a5c9e053ed6446d8d603f5a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71a6a0247cc4de5b5ca610525466abb4d6a41a2c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786185"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>getTransactionTimeout 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

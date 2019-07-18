@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab9eca571a9cf9381e7c6a18207155ddf86ce272
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035958"
 ---
 # <a name="command-prompt-utility-reference-database-engine"></a>命令提示字元公用程式參考 (資料庫引擎)
   命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]隨附的命令提示字元公用程式清單。  
@@ -43,15 +43,15 @@ ms.locfileid: "52823552"
 |[SQLdiag 公用程式](sqldiag-utility.md)|用以收集可供 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶服務與支援部門使用的診斷資訊。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqllogship 應用程式](sqllogship-application.md)|應用程式用來對記錄傳送組態執行備份、複製和還原作業以及相關的清除工作，而無須執行備份、複製和還原作業。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SqlLocalDB 公用程式](sqllocaldb-utility.md)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行模式，專供程式開發人員使用。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
-|[sqlmaint 公用程式](sqlmaint-utility.md)|用來執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。|\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint 公用程式](sqlmaint-utility.md)|用來執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。|\<drive>:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 公用程式](sqlps-utility.md)|用來執行 PowerShell 命令和指令碼。 載入並註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者和 cmdlet。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr 應用程式](sqlservr-application.md)|用來從命令提示字元啟動和停止 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體，以進行疑難排解。|\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr 應用程式](sqlservr-application.md)|用來從命令提示字元啟動和停止 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體，以進行疑難排解。|\<drive>:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
 |[Ssms 公用程式](../ssms/ssms-utility.md)|用來從命令提示字元啟動 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff 公用程式](tablediff-utility.md)|用來比較兩份資料表，以找出非聚合狀況，當進行複寫拓撲的疑難排解時，它尤其有用。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
   
  **存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員的方式 [!INCLUDE[win8](../includes/win8-md.md)]**  
   
- 由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋] 常用鍵的 [應用程式] 下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)])，然後按 **Enter**。  
+ 由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是單獨的程式，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時並不會出現 [!INCLUDE[win8](../includes/win8-md.md)]組態管理員這樣的應用程式。 若要開啟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員，請在 [搜尋]  常用鍵的 [應用程式]  下，輸入 **SQLServerManager12.msc** (適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) 或 **SQLServerManager11.msc** (適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)])，然後按 **Enter**。  
   
 ## <a name="command-prompt-utilities-syntax-conventions"></a>命令提示字元公用程式語法慣例  
   

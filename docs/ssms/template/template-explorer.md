@@ -17,15 +17,15 @@ helpviewer_keywords:
 - templates [Transact-SQL]
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 813196518f7fc3b258e9b9fbe39bdd4b88089241
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0c24a5a86044b47d9c0f886a02178a9841167829
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416125"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687309"
 ---
 # <a name="template-explorer"></a>範本總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52416125"
 ## <a name="benefits-of-templates"></a>範本的優點  
 方案、專案和各類型的程式碼編輯器都可以使用範本。 您可以利用範本來建立資料庫、資料表、檢視、索引、預存程序、觸發程序、統計資料和函數這類物件。 此外，還有一些範本可協助您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的擴充屬性、連結伺服器、登入、角色、使用者和範本來管理伺服器。  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本指令碼包含協助您自訂程式碼的參數。 開啟範本時，請使用 [取代範本參數] 對話方塊，在指令碼中插入值。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本指令碼包含協助您自訂程式碼的參數。 開啟範本時，請使用 [取代範本參數]  對話方塊，在指令碼中插入值。  
   
 請建立您經常執行之工作的自訂範本。 請將您的自訂指令碼組織成現有的資料夾，或建立新的資料夾結構。  
   

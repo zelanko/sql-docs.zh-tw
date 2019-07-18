@@ -9,16 +9,16 @@ ms.technology: t-sql
 ms.topic: language-reference
 dev_langs:
 - TSQL
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9feb899a0a46a04ad52ef15fb801e2eb4866e478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 117e5a08730aae4381f10fc8a8a2ab0ed2fa875f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65945228"
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80226e3e82dec9e3c163ed96106d1b24846fca0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076280"
 ---
 # <a name="create-calculated-members"></a>建立導出成員
   您可以結合 Cube 資料、算術運算子、數字和函數，來建立自訂的量值或維度成員，稱為導出成員。 例如，您可以建立一個名為 Euros 的導出成員，藉由將現有的美金量值乘以轉換比率，來將美金轉換為歐元。 然後可以在另一個資料列或資料行中，向一般使用者顯示歐元。  
@@ -82,6 +81,6 @@ ms.locfileid: "48077678"
 -   如果導出成員是建立在量值維度中，則導出成員可以在該維度中定址。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的計算](calculations-in-multidimensional-models.md)  
+ [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)  
   
   

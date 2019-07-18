@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833106"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
   OData 連接管理員可讓封裝連接到 OData 來源。 OData 來源元件會使用 OData 連接管理員連接到 OData 來源，並取用此服務中的資料。 請參閱[OData 來源](../data-flow/odata-source.md)一節以取得詳細資訊，包括這些元件的安裝指示。  
@@ -23,11 +23,11 @@ ms.locfileid: "58386226"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>將連接管理員加入至 SSIS 封裝  
  您可以使用三種方式，將新的 OData 連接管理員加入至 SSIS 封裝：  
   
--   按一下 [OData 來源編輯器] 中的 [新增...] 按鈕  
+-   按一下 [OData 來源編輯器]  中的 [新增...]  按鈕  
   
--   以滑鼠右鍵按一下**連接管理員**資料夾中的**方案總管**，按一下 **新的連接管理員**。 針對 [連線管理員類型]  選取 [ODATA] 。  
+-   以滑鼠右鍵按一下**連接管理員**資料夾中的**方案總管**，按一下 **新的連接管理員**。 針對 [連線管理員類型]  選取 [ODATA]  。  
   
--   以滑鼠右鍵按一下**連接管理員**] 窗格底部的 [封裝設計工具，然後選取**新增連接...**.針對 [連線管理員類型]  選取 [ODATA] 。  
+-   以滑鼠右鍵按一下**連接管理員**] 窗格底部的 [封裝設計工具，然後選取**新增連接...** .針對 [連線管理員類型]  選取 [ODATA]  。  
   
 ## <a name="connection-manager-authentication"></a>連接管理員驗證  
  OData 連接管理員支援兩種模式的驗證。  

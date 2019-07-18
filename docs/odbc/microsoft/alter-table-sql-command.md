@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901375"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
 以程式設計方式修改資料表的結構。  
@@ -70,7 +69,7 @@ ALTER TABLE TableName1
  ALTER [COLUMN] *FieldName1*  
  指定要修改現有欄位的名稱。  
   
- *FieldType* [( *nFieldWidth* [， *nPrecision*]])  
+ *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
  指定新的或修改欄位的欄位型別、 欄位寬度和欄位的有效位數 （小數位數）。  
   
  *FieldType*表示的欄位是單一字母[資料型別](../../odbc/microsoft/visual-foxpro-field-data-types.md)。 某些欄位資料類型會要求您指定*nFieldWidth*或是*nPrecision*或兩者。  
@@ -145,7 +144,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  設定核取*lExpression3*  
  指定資料表驗證規則。 *lExpression3*必須評估為邏輯運算式，而且可能是使用者定義函數或預存程序。  
   
- 錯誤*cMessageText3*  
+ ERROR *cMessageText3*  
  指定資料表驗證規則會產生錯誤時，會顯示錯誤訊息。 瀏覽 或 編輯 視窗中變更資料時，才會顯示訊息。  
   
  卸除檢查  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f69ea09d42d6080bc811730fc6f2ee0be8f5b8e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eb38392c2982234bcb2f7452c123291b8a4f600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023727"
 ---
 # <a name="replication-related-dynamic-management-views-transact-sql"></a>複寫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

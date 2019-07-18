@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3181cfd46cbb2eaf307a539d0b3f906d611dd19b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108400"
 ---
-# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上加入鑽研動作
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上新增鑽研動作
   將 ReportViewer 控制項加入至網站應用程式後，下一步是要在父報表上加入鑽研動作。  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>若要在父報表上加入鑽研動作  
@@ -29,9 +28,9 @@ ms.locfileid: "56042529"
   
 3.  以滑鼠右鍵按一下 [] 文字方塊中，然後按一下**文字方塊內容**。  
   
-4.  移至 [動作] 索引標籤，然後選取 [移至報表] 選項。  
+4.  移至 [動作]  索引標籤，然後選取 [移至報表]  選項。  
   
-5.  在 [指定報表] 區段中輸入子報表的名稱。  
+5.  在 [指定報表]  區段中輸入子報表的名稱。  
   
 6.  按一下 **新增**下方**使用這些參數執行報表**一節。  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206828"
 ---
 # <a name="using-data-files-and-format-files"></a>使用資料檔案與格式檔案
   最簡單的大量複製程式會執行下列動作：  
@@ -43,7 +43,7 @@ ms.locfileid: "48071928"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可能是會產生結果集的任何陳述式。 系統會建立包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式第一個結果集的資料檔案。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式產生多個結果集，則大量複製會忽略第一個結果集後的任何結果集。  
   
- 若要建立哪一個資料行中資料會儲存在不同的格式比資料表中的資料檔案，請呼叫[bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定資料行數目將會變更，然後呼叫[bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)每個資料行的格式您想要變更。 這完成之後呼叫**bcp_init**但再呼叫**bcp_exec**。 **bcp_colfmt**指定資料行的資料儲存在資料檔中的格式。 來回大量複製時，可以使用它。您也可以使用**bcp_colfmt**來設定資料列和資料行結束字元。 比方說，如果您的資料不包含定位字元，您可以建立 tab 鍵分隔的檔案使用**bcp_colfmt**將定位字元設定為每個資料行的結束字元。  
+ 若要建立哪一個資料行中資料會儲存在不同的格式比資料表中的資料檔案，請呼叫[bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定資料行數目將會變更，然後呼叫[bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)每個資料行的格式您想要變更。 這完成之後呼叫**bcp_init**但再呼叫**bcp_exec**。 **bcp_colfmt**指定資料行的資料儲存在資料檔中的格式。 大量複製縮小或相應放大時可以使用它。您也可以使用**bcp_colfmt**來設定資料列和資料行結束字元。 比方說，如果您的資料不包含定位字元，您可以建立 tab 鍵分隔的檔案使用**bcp_colfmt**將定位字元設定為每個資料行的結束字元。  
   
  當大量複製以及使用**bcp_colfmt**，您可以輕鬆地建立格式檔案描述您所建立之資料檔案[bcp_writefmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)最後一個呼叫之後**bcp_colfmt**.  
   

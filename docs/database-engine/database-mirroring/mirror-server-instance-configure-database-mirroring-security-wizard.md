@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6fe633cf0dbeb64988c041b91b4e55ec3bd532cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee3fcfb29de3f029c8229e0092ee31c8a8faa007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795384"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>鏡像伺服器執行個體 (設定資料庫鏡像安全性精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "47703128"
   
 ## <a name="options"></a>選項。  
  **鏡像伺服器執行個體**  
- 如果已經指定鏡像伺服器執行個體 (在 [資料庫屬性] 對話方塊的 [鏡像] 頁面上)，則會顯示該執行個體；如需詳細資訊，請參閱[資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)。  
+ 如果已經指定鏡像伺服器執行個體 (在 [資料庫屬性]  對話方塊的 [鏡像]  頁面上)，則會顯示該執行個體；如需詳細資訊，請參閱[資料庫屬性 &#40;鏡像頁面&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)。  
   
  否則，請輸入鏡像伺服器執行個體的名稱。 請注意，鏡像伺服器執行個體不可以與主體伺服器執行個體相同。  
   
  **[連接]**  
- 如果未指定鏡像伺服器執行個體，請按一下 [連接]。 這會顯示 **[連接到伺服器]** 對話方塊，您可以在其中指定伺服器執行個體並建立連接。  
+ 如果未指定鏡像伺服器執行個體，請按一下 [連接]  。 這會顯示 **[連接到伺服器]** 對話方塊，您可以在其中指定伺服器執行個體並建立連接。  
   
- 如果已指定執行個體，但精靈缺少具備檢查端點是否存在之權限的連接，請按一下 **[連接]**。 隨即顯示已預先選取伺服器執行個體的 [連接到伺服器] 對話方塊，且無法變更。 指定具備足夠權限的網域帳戶，然後連接到伺服器執行個體。  
+ 如果已指定執行個體，但精靈缺少具備檢查端點是否存在之權限的連接，請按一下 **[連接]** 。 隨即顯示已預先選取伺服器執行個體的 [連接到伺服器]  對話方塊，且無法變更。 指定具備足夠權限的網域帳戶，然後連接到伺服器執行個體。  
   
 > [!NOTE]  
 >  連接到伺服器執行個體時，「設定資料庫鏡像安全性精靈」會使用 **[連接到伺服器]** 對話方塊中提供的認證。 這些認證與鏡像工作階段的認證不同，後者會使用以服務方式執行伺服器執行個體之啟動帳戶的認證。  

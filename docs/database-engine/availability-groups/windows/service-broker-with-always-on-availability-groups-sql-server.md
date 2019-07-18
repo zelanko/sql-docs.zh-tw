@@ -12,24 +12,19 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787838"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題包含將 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Service Broker 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  
   
- **本主題內容：**  
-  
--   [讓可用性群組中之服務接收遠端訊息的需求](#ReceiveRemoteMessages)  
-  
--   [將訊息傳送至可用性群組中之遠端服務的需求](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> 讓可用性群組中之服務接收遠端訊息的需求  
   

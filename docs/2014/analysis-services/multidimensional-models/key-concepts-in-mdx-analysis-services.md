@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
@@ -17,12 +16,12 @@ ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512805"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074854"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
   在您使用多維度運算式 (MDX) 查詢 Cube 中的多維度資料，或在 Cube 中建立 MDX 運算式之前，先了解多維度的概念與詞彙會相當有助益。  
@@ -74,7 +73,7 @@ ms.locfileid: "52512805"
   
  總而言之，所有這些概念都是針對 **屬性階層**的概念而建立。 屬性階層是包含下列層級之屬性成員的樹狀結構：  
   
--   包含每個相異屬性成員的分葉層級，分葉層級的每個成員也稱為 **「分葉成員」**。  
+-   包含每個相異屬性成員的分葉層級，分葉層級的每個成員也稱為 **「分葉成員」** 。  
   
 -   中繼層級，如果屬性階層是父子式階層 (稍後將詳細討論)。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "52512805"
 ## <a name="key-attributes"></a>索引鍵屬性  
  模型是相關物件的集合，且這些相關物件是依賴索引鍵和索引來建立關聯。 Analysis Services 模型也一樣。 每個維度 (請記得它相當於關聯式模型中的資料表) 都有一個索引鍵屬性。 **索引鍵屬性** 用於事實資料表 (量值群組) 的外部索引鍵關聯性。 維度中所有非索引鍵屬性均會連結至 (直接或間接) 索引鍵屬性。  
   
- 一般而言 (但不一定)，索引鍵屬性也是 **資料粒度屬性**。 資料粒度是資料中的詳細資料層級或有效位數層級。 同樣地，我們要使用常見範例作為說明的最快途徑。 請思考日期值：若為每日銷售額，您必須為日期使用特定日期值；若為配額，使用每季可能便已足夠，但您的分析資料若包含體育活動的競賽結果，則資料粒度就很可能要使用毫秒。 您資料中的有效位數層級就是資料粒度。  
+ 一般而言 (但不一定)，索引鍵屬性也是 **資料粒度屬性**。 資料粒度是資料中的詳細資料層級或有效位數層級。 同樣地，我們要使用常見範例作為說明的最快途徑。 請思考日期值：每日銷售額，您需要日期天; 指定的值如需配額，每季可能便已足夠，但您分析資料若包含體育活動的競賽結果，則資料粒度可能會很好要使用毫秒。 您資料中的有效位數層級就是資料粒度。  
   
  是另一個範例是貨幣： 財務應用程式可能會追蹤金額至小數位數，但您當地學校的資金募集者可能只需要最接近之美元的值。 若您想要避免儲存不必要的資料，就很需要了解資料粒度。 刪減時間戳記的毫秒，或是刪減銷售額金額中的幾分美金，都可以在詳細資料層級與您的分析無關時，節省儲存空間和處理時間。  
   

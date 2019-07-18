@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e17ca12e0c8745dcad30a3e5ce2c9689b041e7d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967480"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox 驅動程式)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "47654756"
   
  **SQLDriverConnect**可讓您連接至驅動程式，而不需建立資料來源 (DSN)。  
   
- 所有驅動程式的連接字串中支援下列關鍵字： **DSN**， **DBQ**，並**FIL**。  
+ 中的所有驅動程式的連接字串，可支援下列關鍵字：**DSN**， **DBQ**，以及**FIL**。  
   
  **PWD**也支援關鍵字。 PWD 關鍵字不應包含任何特殊字元 (請參閱中的 SQL_SPECIAL_CHARACTERS **SQLGetInfo**傳回的值)。  
   

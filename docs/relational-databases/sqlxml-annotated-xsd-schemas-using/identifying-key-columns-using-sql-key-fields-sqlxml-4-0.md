@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5cfc4bf5d94e6b1d9820a6ba75c372114ec7eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c88c55a6a846a0907664730b3c185707a30c2600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067063"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "56040439"
   
  **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields 來-欄位**註解，產生的階層是不正確。  
   
- 具有 **sql: key-fields 來-欄位** 上指定 **\<順序 >**、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示其父代。  
+ 具有 **sql: key-fields 來-欄位** 上指定 **\<順序 >** 、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示其父代。  
   
  這是結構描述：  
   
@@ -107,8 +106,10 @@ ms.locfileid: "56040439"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  這是部分結果集：  
   
@@ -128,7 +129,7 @@ ms.locfileid: "56040439"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 在結果中產生適當的巢狀結構  
- 在下列結構描述中，沒有使用指定的階層 **\<sql: relationship >**。 此結構描述仍然需要指定**sql: key-fields 來-欄位**註釋來唯一識別 HumanResources.Employee 資料表中的員工。  
+ 在下列結構描述中，沒有使用指定的階層 **\<sql: relationship >** 。 此結構描述仍然需要指定**sql: key-fields 來-欄位**註釋來唯一識別 HumanResources.Employee 資料表中的員工。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

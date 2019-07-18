@@ -15,14 +15,18 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54dc72a80f2ad6d49353662ded956608d7eadd66
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6da812de105f4afe4b7844057da97af17bc752e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728389"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[加入檔案連接管理員]** 對話方塊來定義一組檔案或資料夾的連接。  
   
  若要深入了解多個檔案連接管理員，請參閱＜ [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md)＞。  
@@ -45,13 +49,13 @@ ms.locfileid: "58282462"
  檢視已經使用如下所述的按鈕加入的檔案或資料夾。  
   
  **[加入]**  
- 使用 [選取檔案] 對話方塊來加入檔案，或使用 [瀏覽資料夾] 對話方塊來加入資料夾。  
+ 使用 [選取檔案]  對話方塊來加入檔案，或使用 [瀏覽資料夾]  對話方塊來加入資料夾。  
   
  **編輯**  
- 選取檔案或資料夾，然後使用 [選取檔案] 或 [瀏覽資料夾] 對話方塊以不同的檔案或資料夾來取代。  
+ 選取檔案或資料夾，然後使用 [選取檔案]  或 [瀏覽資料夾]  對話方塊以不同的檔案或資料夾來取代。  
   
  **移除**  
- 選取檔案或資料夾，然後使用 [移除] 按鈕將它從清單中移除。  
+ 選取檔案或資料夾，然後使用 [移除]  按鈕將它從清單中移除。  
   
  **箭頭按鈕**  
  選取檔案或資料夾，然後使用箭頭按鈕上移或下移來指定存取順序。  

@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48505a7e33d8d691314216846ee054d6625b7cf4
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135218"
 ---
-# <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
+# <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回資料庫中的每個安全性述詞的資料列。  
@@ -39,10 +38,10 @@ ms.locfileid: "58161795"
 |object_id|**int**|包含這個述詞之安全性原則的識別碼。|  
 |security_predicate_id|**int**|這個安全性原則內的述詞識別碼。|  
 |target_object_id|**int**|安全性述詞所繫結之物件的識別碼。|  
-|predicate_definition|**nvarchar(max)**|用來做為安全性述詞之函數的完整名稱，包括引數。 請注意，`schema.function` 名稱可正規化 (即逸出) 以維護一致性，就像是文字中的其他任何項目一樣。 例如：<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|用來做為安全性述詞之函數的完整名稱，包括引數。 請注意，`schema.function` 名稱可正規化 (即逸出) 以維護一致性，就像是文字中的其他任何項目一樣。 例如:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|安全性原則所使用的述詞的類型：<br /><br /> 0 = 篩選器述詞<br /><br /> 1 = 封鎖述詞|  
 |predicate_type_desc|**nvarchar(60)**|安全性原則所使用的述詞的類型：<br /><br /> FILTER<br /><br /> 區塊|  
-|operation (作業)|**int**|指定述詞的作業類型：<br /><br /> NULL = 所有適用的作業<br /><br /> 1 = 插入後<br /><br /> 2 = 更新之後<br /><br /> 3 = 更新之前<br /><br /> 4 = 刪除前|  
+|operation|**int**|指定述詞的作業類型：<br /><br /> NULL = 所有適用的作業<br /><br /> 1 = 插入後<br /><br /> 2 = 更新之後<br /><br /> 3 = 更新之前<br /><br /> 4 = 刪除前|  
 |operation_desc|**nvarchar(60)**|指定述詞的作業類型：<br /><br /> NULL<br /><br /> 插入後<br /><br /> AFTER UPDATE<br /><br /> 更新之前<br /><br /> 刪除前|  
   
 ## <a name="permissions"></a>Permissions  

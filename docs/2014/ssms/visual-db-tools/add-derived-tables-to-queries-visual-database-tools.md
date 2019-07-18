@@ -16,20 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63311943"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>將衍生資料表加入查詢 (Visual Database Tools)
-  衍生資料表是用作查詢中資料表來源的結果集。 您可以加入衍生資料表至 [圖表窗格] 中的查詢。  
+  衍生資料表是用作查詢中資料表來源的結果集。 您可以加入衍生資料表至 [圖表窗格]  中的查詢。  
   
 ### <a name="to-add-a-derived-table-to-a-query"></a>將衍生資料表加入查詢  
   
 1.  開啟現有查詢或建立新查詢。  
   
-2.  以滑鼠右鍵按一下 [圖表窗格]，然後選擇 [新增衍生資料表]。  
+2.  以滑鼠右鍵按一下 [圖表窗格]  ，然後選擇 [新增衍生資料表]  。  
   
      隨即加入名稱為 derivedtbl_*N* 的新資料表，衍生資料表的 SELECT 陳述式也加入查詢的 FROM 子句中。  
   

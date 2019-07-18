@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9301b1582db56eb3140e5e997f07a5b7838b281
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cdfa8cab28d526cc14400f982cf62289d94d888e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610726"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786993"
 ---
 # <a name="updatebyte-method-int-byte"></a>updateByte 方法 (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814786"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912316"
 ---
 # <a name="attention-event-class"></a>Attention 事件類別
   **Attention** 事件類別指出發生了注意事項事件，例如取消、用戶端中斷要求或用戶端連線中斷。 取消作業也可視為實作資料存取驅動程式逾時的一部份。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - deleting registered servers
 - Registered Servers [SQL Server], removing servers
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca56a7b636e1375bf78cdd3e061dff19ff2d4e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e3f780017ca9894e4372b0286dda8856324f977d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683923"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>移除已註冊的伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47658366"
   
 #### <a name="to-remove-a-registered-server"></a>若要移除已註冊的伺服器  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器，然後按一下 [刪除]。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器，然後按一下 [刪除]  。  
   
-2.  在 **[刪除確認]** 對話方塊中按一下 **[是]**。  
+2.  在 **[刪除確認]** 對話方塊中按一下 **[是]** 。  
   
   

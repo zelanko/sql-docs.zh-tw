@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db26351430c6b7e0737273b2107bea242c455a2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253774"
 ---
 # <a name="connecting-using-ipv6"></a>使用 IPv6 連接
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完整支援網際網路通訊協定第 4 版 (IPv4) 與網際網路通訊協定第 6 版 (IPv6)。 當 Windows 是設定為 IPv6 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，元件會自動辨識 IPv6 的存在性。 不需要特殊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態。  

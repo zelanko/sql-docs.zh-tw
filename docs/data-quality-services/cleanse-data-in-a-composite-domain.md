@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 006a32630fbc862a3cfcf711526cec052796e1a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5f771148193eba6fbdbe44f224fc4d30820920f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992416"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理複合定義域中的資料
 
@@ -58,7 +57,7 @@ ms.locfileid: "56013209"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]**，此資料行會顯示正確資料。 在清理資料品質專案時，這個最終跨定義域規則會將資料變更為 100% 信賴，且 [原因] 資料行會顯示下列訊息：由規則 '\<跨定義域規則名稱>' 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)＞。  
+ 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]** ，此資料行會顯示正確資料。 在清理資料品質專案時，這個最終跨定義域規則會將資料變更為 100% 信賴，且 [原因]  資料行會顯示下列訊息：由規則 '\<跨定義域規則名稱>  ' 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)＞。  
   
 > [!NOTE]  
 >  最終跨定義域規則將不適用於附加至參考資料服務的複合定義域。  

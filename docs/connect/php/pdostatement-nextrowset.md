@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 048a6d8f-7fc4-449e-8161-19268c68f41d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6982660f0a10cd4c92bf2b7e4ef7c0102779c58c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: bf7dc463029968225e53bd78f1b7c21d6ef425bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601808"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799143"
 ---
 # <a name="pdostatementnextrowset"></a>PDOStatement::nextRowset
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

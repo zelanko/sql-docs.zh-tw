@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dfa104501e73fd66de993e6adeabb357f8dce092
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9c169f8077664a7579a767cbb1a48eab6368638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911946"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 屬性 (ServerNetworkProtocolIPAddress 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

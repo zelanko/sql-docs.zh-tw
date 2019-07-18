@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a85b645562ce39f19c15191b6b1d3ba4a7fb332
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538817"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670431"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>變更採礦模型中的資料行離散化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52538817"
   
 ### <a name="to-display-the-properties-for-a-mining-model-column"></a>顯示採礦模型資料行的屬性  
   
-1.  在資料採礦設計師的 [採礦模型] 索引標籤上，以滑鼠右鍵按一下包含採礦模型名稱的資料行標頭，或是方格中包含採礦演算法名稱的資料列，然後選取 [屬性]。  
+1.  在資料採礦設計師的 [採礦模型]  索引標籤上，以滑鼠右鍵按一下包含採礦模型名稱的資料行標頭，或是方格中包含採礦演算法名稱的資料列，然後選取 [屬性]  。  
   
      **[屬性]** 視窗會顯示在整體上與採礦模型相關聯的屬性。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52538817"
 2.  在 **屬性**視窗中，按一下 下的一步 文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>，然後選取下列值之一：**自動**， **EqualAreas**，或**叢集**。  
   
     > [!NOTE]  
-    >  如果資料行使用方式是設定為 [忽略]，則資料行的 [屬性] 視窗為空白。  
+    >  如果資料行使用方式是設定為 [忽略]  ，則資料行的 [屬性]  視窗為空白。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   

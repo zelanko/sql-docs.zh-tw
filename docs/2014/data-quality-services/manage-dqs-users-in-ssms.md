@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480341"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>在 SSMS 中管理 DQS 使用者
   此主題描述如何使用 SQL Server Management Studio 在 SQL Server 執行個體中建立其他使用者，並為其授與 DQS_MAIN 資料庫的適當 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
@@ -42,7 +42,7 @@ ms.locfileid: "56027979"
   
 5.  使用者驗證完成後，按一下左窗格中的 **[使用者對應]** 頁面。  
   
-6.  在右窗格中，選取核取方塊底下**地圖**資料行**DQS_MAIN**資料庫，然後再選取**dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_operator**中的核取方塊**資料庫角色成員資格對象：DQS_MAIN**  窗格中，根據使用者所需的存取層級。  
+6.  在右窗格中，從 **DQS_MAIN** 資料庫的 [對應] 資料行底下選取該核取方塊，然後選取 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊，這些核取方塊位於 [資料庫角色成員資格對象: DQS_MAIN] 窗格中，且根據使用者所需的存取層級來選取。  
   
 7.  在 [登入 - 新增] 對話方塊中，按一下 [確定] 套用變更。  
   

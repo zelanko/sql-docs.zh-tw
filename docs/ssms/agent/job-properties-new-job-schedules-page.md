@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.schedules.f1
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33c6b21edd53eb4c362144ed6ae84e8651b9b201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b7cb76d41c20f44c0e05980d435cd5a3d50ae05
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853306"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686880"
 ---
 # <a name="job-properties---new-job-schedules-page"></a>作業屬性 - 新增作業 (排程頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

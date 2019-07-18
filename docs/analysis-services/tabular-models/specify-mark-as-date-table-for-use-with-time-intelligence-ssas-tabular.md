@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 53de714a7db50b653a24fa42662fc7e0aeffa88d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072435"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263404"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定標記為日期資料表以搭配時間智慧
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "53072435"
   
 1.  在模型設計師中，按一下日期資料表。  
   
-2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]**。  
+2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]** 。  
   
 3.  在 **[標記為日期資料表]** 對話方塊的 **[日期]** 清單方塊中，選取要當做唯一識別碼使用的資料行。 這個資料行必須包含唯一值而且應該屬於 Date 資料類型。 例如：  
   
-    |date|  
+    |Date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -52,6 +52,6 @@ ms.locfileid: "53072435"
   
 ## <a name="see-also"></a>另請參閱  
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [時間智慧函數 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [時間智慧函數 (DAX)](/dax/time-intelligence-functions-dax)  
   
   

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771647"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案是部署單位。 每個專案可以包含封裝、參數和環境參考。 專案為安全性物件，且可以定義資料庫主體的權限。 重新部署專案時，可以將舊版專案儲存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中。  
@@ -45,7 +45,7 @@ ms.locfileid: "58394010"
   
 4.  展開包含您要設定其屬性之專案的資料夾。  
   
-5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]。  
+5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]  。  
   
 ##  <a name="general"></a> 設定 [一般] 頁面上的選項  
  使用 [一般] 頁面檢視專案屬性。  
@@ -69,7 +69,7 @@ ms.locfileid: "58394010"
  使用 **[權限]** 頁面檢視並設定專案的明確權限。  
   
  瀏覽  
- 按一下 [瀏覽]，使用 [瀏覽所有主體] 對話方塊選取您要設定其權限的使用者和角色。  
+ 按一下 [瀏覽]  ，使用 [瀏覽所有主體]  對話方塊選取您要設定其權限的使用者和角色。  
   
  **名稱**  
  列出使用者或角色的名稱。  
@@ -84,9 +84,9 @@ ms.locfileid: "58394010"
  列出授與權限的使用者或角色。  
   
  **授與**  
- 選取 [授與] 時，會針對使用者會或角色授與權限。  
+ 選取 [授與]  時，會針對使用者會或角色授與權限。  
   
  **拒絕**  
- 選取 [拒絕] 時，會針對使用者會或角色拒絕權限。  
+ 選取 [拒絕]  時，會針對使用者會或角色拒絕權限。  
   
   

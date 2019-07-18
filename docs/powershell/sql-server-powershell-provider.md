@@ -14,15 +14,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], SMO
 - SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 83afb8016d2887af305ed61089a05a6e85150fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa65edf81bbed5868864d433169e5902a971d6c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855066"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730540"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47855066"
   
 > [!NOTE]
 > 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
+> 舊版 **SqlServer** 模組隨附於  SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
 > 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
 
@@ -45,22 +45,22 @@ ms.locfileid: "47855066"
   
 |資料夾|SQL Server 物件模型命名空間|物件|  
 |------------|---------------------------------------|-------------|  
-|SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|資料庫物件，例如資料表、檢視表和預存程序。|  
-|SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|以原則為基礎的管理物件，例如原則和 Facet。|  
-|SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|已註冊的伺服器物件，例如伺服器群組和已註冊的伺服器。|  
-|SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|公用程式物件，例如， [!INCLUDE[ssDE](../includes/ssde-md.md)]的受管理的執行個體。|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|資料層應用程式物件 (如 DAC 封裝) 與作業 (如部署 DAC)。|  
-|SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|資料收集器物件，例如收集組和組態存放區。|  
-|SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件，例如專案、封裝和環境。|  
-|SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如 Cube、彙總和維度。|  
+|`SQLSERVER:\SQL`|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|資料庫物件，例如資料表、檢視表和預存程序。|  
+|`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|以原則為基礎的管理物件，例如原則和 Facet。|  
+|`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|已註冊的伺服器物件，例如伺服器群組和已註冊的伺服器。|  
+|`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|公用程式物件，例如， [!INCLUDE[ssDE](../includes/ssde-md.md)]的受管理的執行個體。|  
+|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|資料層應用程式物件 (如 DAC 封裝) 與作業 (如部署 DAC)。|  
+|`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|資料收集器物件，例如收集組和組態存放區。|  
+|`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件，例如專案、封裝和環境。|  
+|`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如 Cube、彙總和維度。|  
   
- 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」或「檢視」) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
+ 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」  或「檢視」  ) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
   
  下列範例顯示本機電腦上預設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體中 AdventureWorks2012 資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
   
-```  
+```powershell
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
-```  
+```
   
  如需有關 SMO 物件模型階層的詳細資訊，請參閱 [SMO 物件模型圖表](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)。  
   
@@ -68,8 +68,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 |路徑|SMO 類別|  
 |----------|---------------|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## <a name="sql-server-provider-tasks"></a>SQL Server 提供者工作  
   
@@ -78,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |描述如何使用 Windows PowerShell 指令程式導覽路徑中的節點，而且至少每個節點都會取得該節點的物件清單。|[導覽 SQL Server PowerShell 路徑](navigate-sql-server-powershell-paths.md)|  
 |描述如何使用 SMO 方法和屬性，針對透過路徑中的節點所代表的物件來報告和執行工作。 同時描述如何取得該節點的 SMO 方法和屬性清單。|[使用 SQL Server PowerShell 路徑](work-with-sql-server-powershell-paths.md)|  
 |描述如何將 SMO 統一資源名稱 (URN) 轉換為 SQL Server 提供者路徑。|[將 URN 轉換成 SQL Server 提供者路徑](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
-|描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來開啟 SQL Server 驗證連接。 提供者預設會使用的 Windows 驗證連接是使用執行 Windows PowerShell 工作階段之 Windows 帳戶的認證來進行。|[管理資料庫引擎 PowerShell 中的驗證](manage-authentication-in-database-engine-powershell.md)|  
+|描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來開啟 SQL Server 驗證連接。 提供者預設會使用的 Windows 驗證連接是使用執行 Windows PowerShell 工作階段之 Windows 帳戶的認證來進行。|[管理 Database Engine PowerShell 中的驗證](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)  

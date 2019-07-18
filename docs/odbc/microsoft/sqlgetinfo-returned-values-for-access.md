@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003234"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Access 的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
@@ -30,7 +29,7 @@ ms.locfileid: "47826256"
 > [!NOTE]  
 >  何處**SQLGetInfo**會傳回 32 位元遮罩，垂直列 (&#124;) 代表位元 OR 運算。  
   
-|資訊類型|傳回的值|  
+|InfoType|傳回的值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -112,7 +111,7 @@ ms.locfileid: "47826256"
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'"（反引號）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|「\`"（反引號）|  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -142,7 +141,7 @@ ms.locfileid: "47826256"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多個值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|從 驅動程式管理員|  
 |SQL_OJ_CAPABILITIES|多個值|  
@@ -157,7 +156,7 @@ ms.locfileid: "47826256"
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|「 存取 」|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&\*\_-+=\\}{"\';:?/><,.!\'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  

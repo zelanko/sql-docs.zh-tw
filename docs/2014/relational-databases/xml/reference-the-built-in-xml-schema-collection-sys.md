@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63240774"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>參考內建 XML 結構描述集合 (sys)
   您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的 **sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  

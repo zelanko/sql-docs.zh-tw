@@ -1,5 +1,5 @@
 ---
-title: bcp_moretext |Microsoft Docs
+title: bcp_moretext | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 262280be894eb446d5a097f53f96306e4de410e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6b88e9931ab7575e46f6179680ad721ce40dea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895503"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ RETCODE bcp_moretext (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 此函式可以用於搭配[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)並[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long、 可變長度的資料將值複製到 SQL Server，在幾個較小的區塊。 **bcp_moretext**可以搭配具有下列的 SQL Server 資料類型的資料行：**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，使用者定義型別 (UDT) 和 XML。 **bcp_moretext**不支援資料轉換，提供的資料必須符合目標資料行的資料類型。  
+ 此函式可以用於搭配[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)並[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long、 可變長度的資料將值複製到 SQL Server，在幾個較小的區塊。 **bcp_moretext**可以搭配具有下列的 SQL Server 資料類型的資料行：**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，使用者定義型別 (UDT) 和 XML。 **bcp_moretext**不支援資料轉換，提供的資料必須符合目標資料行的資料類型。  
   
  如果**bcp_bind**呼叫具有非 NULL *pData*所支援的資料型別參數**bcp_moretext**， **bcp_sendrow**傳送整個資料值，而不論長度為何。 如果，不過， **bcp_bind**有 NULL *pData*支援的資料類型的參數**bcp_moretext**可立即在成功傳回時從之後複製資料**bcp_sendrow**指出已經處理的資料存在任何繫結資料行。  
   

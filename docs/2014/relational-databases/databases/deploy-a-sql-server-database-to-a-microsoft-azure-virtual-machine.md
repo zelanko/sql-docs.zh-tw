@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
@@ -43,12 +42,12 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 933a03f2e6192be32eebd84923f4e513bd1716e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054046"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
   使用 **[將 SQL Server 資料庫部署到 Windows Azure VM]** 精靈，將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的資料庫部署到 Windows Azure 虛擬機器 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此精靈會利用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
@@ -91,7 +90,7 @@ ms.locfileid: "53357894"
   
 -   關閉增強式安全性設定：使用 [伺服器管理員 > 本機伺服器]，Internet Explorer 增強式安全性設定 (ESC) 設為**OFF**。  
   
--   啟用 JavaScript：[Internet Explorer] > [網際網路選項] > [安全性] > [自訂等級] > [指令碼處理] > [Active Scripting]：**啟用**。  
+-   啟用 JavaScript:Internet Explorer > 網際網路選項 > 安全性 > 客戶層級 > 指令碼 > 作用中的指令碼：**啟用**。  
   
 ###  <a name="limitations"></a> 限制事項  
  此作業的資料庫大小限制為 1 TB。  
@@ -242,7 +241,7 @@ ms.locfileid: "53357894"
 -   **資料庫**-指定或確認新資料庫的名稱。 如果目的地 SQL Server 執行個體上已經有該資料庫名稱存在，建議您指定另一個修改的資料庫名稱。  
   
 ##  <a name="Summary"></a> 摘要頁面  
- 使用此頁面可檢閱此作業的指定設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束精靈，請按一下 **[取消]**。  
+ 使用此頁面可檢閱此作業的指定設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]** 。 若要取消部署作業並結束精靈，請按一下 **[取消]** 。  
   
  將資料庫詳細資料部署到 Windows Azure VM 上的 SQL Server 資料庫可能需要進行手動步驟。 我們將會詳細說明這些步驟。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.advanced.f1
@@ -15,19 +14,19 @@ ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9e8cddc307b53e640aa9b43a459c062b411cd64b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059490"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>維度處理目的地編輯器 (進階頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[進階]** 頁面，來設定錯誤處理。  
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用預設錯誤組態。**  
  指定是否要使用預設的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 錯誤處理。 依預設，此值為 `True`。  
   
@@ -46,10 +45,10 @@ ms.locfileid: "58389226"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]，則指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]  ，則指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]，則指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]  ，則指定到達錯誤臨界值時要採取的動作。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -93,7 +92,7 @@ ms.locfileid: "58389226"
 |**ReportAndStop**|報告錯誤並停止處理。|  
   
  **錯誤記錄路徑**  
- 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)] 按鈕以選取目的地。  
+ 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)]  按鈕以選取目的地。  
   
  **瀏覽 (...)**  
  選取錯誤記錄的路徑。  

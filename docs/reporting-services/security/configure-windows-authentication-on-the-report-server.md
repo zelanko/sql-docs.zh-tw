@@ -2,21 +2,21 @@
 title: 設定報表伺服器上的 Windows 驗證 | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66499939"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
   依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受可指定交涉驗證或 NTLM 驗證的要求。 如果您的部署包括了使用這些安全性提供者的用戶端應用程式和瀏覽器，您可以使用預設值，而不需要進行額外的組態設定。 如果您想要針對 Windows 整合式安全性使用不同的安全性提供者 (例如，如果您想要直接使用 Kerberos)，或是您修改了預設值而且想要還原原始設定，您可以使用本主題的資訊來指定報表伺服器上的驗證設定。  
@@ -130,7 +130,7 @@ ms.locfileid: "52617798"
   
 -   使用網域使用者帳戶為報表伺服器服務註冊 SPN。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
--   變更服務帳戶，以便在類似網路服務的內建帳戶下執行。 內建帳戶會將 HTTP SPN 對應到主機 SPN (當您將電腦加入網路時會加以定義)。 如需詳細資訊，請參閱[設定服務帳戶 &#40;SSRS 設定管理員&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)。  
+-   變更服務帳戶，以便在類似網路服務的內建帳戶下執行。 內建帳戶會將 HTTP SPN 對應到主機 SPN (當您將電腦加入網路時會加以定義)。 如需詳細資訊，請參閱[設定服務帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。
   
 -   使用 NTLM。 當 Kerberos 驗證失敗時，NTLM 通常會正常運作。 若要使用 NTLM，請從 RSReportServer.config 檔案中移除 **RSWindowsNegotiate** ，並確認只有指定 **RSWindowsNTLM** 。 如果您選擇這個方法，您可以繼續針對報表伺服器服務使用網域使用者帳戶，即使您未針對此帳戶定義 SPN。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "52617798"
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>用戶端上的 LAN 和 Proxy 設定  
  您在 Internet Explorer 中設定的 LAN 和 Proxy 設定可以決定是否優先選擇 NTLM (勝於 Kerberos)。 但是，由於組織之間的 LAN 和 Proxy 設定會有所差異，所以無法精確判斷造成 Kerberos 驗證錯誤的確切設定為何。 例如，您的組織可能會強制 Proxy 設定，這些設定會將 URL 從內部網路 URL 轉換成完整網域名稱 URL (透過網際網路連接來解析)。 如果將不同的驗證提供者用於不同類型的 URL，您可能會發現當您預期某些連接應該會失敗時，這些連接卻成功了。  
   
- 如果您遇到連接錯誤，而您認為這些錯誤是因為驗證失敗而發生，您可以嘗試 LAN 和 Proxy 設定的不同組合來隔離問題。 在 Internet Explorer 中，LAN 和 Proxy 設定位於 [區域網路 (LAN) 設定] 對話方塊上，您可以在 [網際網路選項] 的 [連線] 索引標籤上按一下 [區域網路設定] 來開啟此對話方塊。  
+ 如果您遇到連接錯誤，而您認為這些錯誤是因為驗證失敗而發生，您可以嘗試 LAN 和 Proxy 設定的不同組合來隔離問題。 在 Internet Explorer 中，LAN 和 Proxy 設定位於 [區域網路 (LAN) 設定]  對話方塊上，您可以在 [網際網路選項]  的 [連線]  索引標籤上按一下 [區域網路設定]  來開啟此對話方塊。  
   
 ## <a name="external-resources"></a>外部資源  
   

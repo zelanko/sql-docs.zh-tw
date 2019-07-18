@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011920"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以透過 **-V** 參數使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]bcp [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 匯入原生與字元格式資料。 **-V** 參數會讓 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料類型，而資料檔案格式將會與舊版中的資料檔案格式相同。  
@@ -55,7 +55,7 @@ ms.locfileid: "52531588"
  當您使用大量匯出資料時 **-V80**切換，請`nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，以及像原生模式中的 UDT 資料儲存與 4 位元組前置詞， `text`， `image`，以及`ntext`資料，而不是與 8 位元組前置詞，這是預設值[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本。  
   
 ## <a name="copying-date-values"></a>複製日期值  
- **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
+ **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
   
  **Bcp**命令會將匯出字元格式資料檔中使用的 ODBC 預設格式`datetime`和`smalldatetime`值。 例如，包含日期 `12 Aug 1998` 的 `datetime` 資料行會以字元字串 `1998-08-12 00:00:00.000` 大量複製到資料檔案。  
   

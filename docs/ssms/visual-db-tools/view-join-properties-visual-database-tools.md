@@ -12,15 +12,15 @@ helpviewer_keywords:
 - viewing join properties
 - displaying join properties
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2dddd95b448a3de74506836bda646581679b346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 6f827ee280ab53fa6ea14c62226b974058875311
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839506"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689367"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>檢視聯結屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "47839506"
   
 ### <a name="to-view-join-properties"></a>若要檢視聯結屬性  
   
-1.  以滑鼠右鍵按一下 [圖表] 窗格中的聯結。  
+1.  以滑鼠右鍵按一下 [圖表]  窗格中的聯結。  
   
-2.  從捷徑功能表按一下 [屬性]。  
+2.  從捷徑功能表按一下 [屬性]  。  
   
     在 [屬性] 視窗中會顯示聯結的屬性。  
   

@@ -13,15 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae1ba2efb9fc15e031e3f569f6ee0464f880f1fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4692d2715ec5e2e1203c4aada6f5d1b42775ac58
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829376"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833007"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   Plan Guide Successful 事件類別會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功針對包含計畫指南的查詢或批次產生了執行計畫。 當下列條件成立時，就會引發此事件：  
   
 -   計畫指南定義中的批次或模組符合正在執行的批次或模組。  
@@ -41,7 +42,7 @@ ms.locfileid: "47829376"
 |EventClass|**int**|事件類型 = 214。|27|否|  
 |EventSequence|**int**|要求中之特定事件的順序。|51|否|  
 |HostName|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
-|IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序：1 = 系統，0 = 使用者。|60|是|  
+|IsSystem|**int**|指出事件是發生於系統處理序或使用者處理序：1 = 系統，0 = 使用者。|60|是|  
 |LoginName|**nvarchar**|使用者登入的名稱 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或 DOMAIN [!INCLUDE[msCoName](../../includes/msconame-md.md)] username\\*格式的*Windows 登入認證)。|11|是|  
 |LoginSid|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 或 [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) 目錄檢視中找到此資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  

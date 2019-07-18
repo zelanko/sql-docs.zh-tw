@@ -19,37 +19,36 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026855"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   輸出已刪除一個或多個資料列之已認可交易的目前狀態。 閒置的記憶體回收執行緒會每分鐘喚醒一次，或是在認可的 DML 交易數目超出內部臨界值時喚醒 (從上一次記憶體回收週期之後算起)。 在記憶體回收週期中，它會將已經認可的交易移到與層代有關的一個或多個佇列中。 已經產生過時版本的交易會在 16 個層代中分組在 16 筆交易的單位中，如下所示：  
   
--   層代 0：這會儲存比最舊的作用中交易更早認可的所有交易。 這些交易產生的資料列版本可立即供記憶體回收之用。  
+-   層代 0:這會儲存比最舊的使用中交易更早認可的所有交易。 這些交易產生的資料列版本可立即供記憶體回收之用。  
   
--   層代 1-14：儲存時間戳記大於最舊的作用中交易的交易。 資料列版本無法進行記憶體回收。 每個層代最多可以保存 16 筆交易。 這些層代中一共可以有 224 (14 * 16) 筆交易存在。  
+-   層代 1-14:儲存交易的時間戳記大於最舊的使用中交易。 資料列版本無法進行記憶體回收。 每個層代最多可以保存 16 筆交易。 這些層代中一共可以有 224 (14 * 16) 筆交易存在。  
   
--   層代 15：時間戳記大於最舊的作用中交易的剩餘交易會前往層代 15。 類似於層代 0，層代 15 中沒有交易數的限制。  
+-   層代 15:時間戳記大於最舊的使用中交易的剩餘交易會前往層代 15。 類似於層代 0，層代 15 中沒有交易數的限制。  
   
  當面臨記憶體不足的壓力時，記憶體回收執行緒會積極地更新最舊的作用中交易提示，這樣會強制記憶體回收。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|記憶體回收循環的唯一識別碼。|  
 |ticks_at_cycle_start|**bigint**|循環開始時的時間刻度。|  
 |ticks_at_cycle_end|**bigint**|循環結束時的時間刻度。|  
-|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為 124、 125、 126...139，此值將會是 124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
+|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為 124、 125、 126...139，此值會是 124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
 |xacts_copied_to_local|**bigint**|從交易管線複製到資料庫之層代陣列的交易數目。|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|每一層代 (Generation) 的交易數目。|  
   

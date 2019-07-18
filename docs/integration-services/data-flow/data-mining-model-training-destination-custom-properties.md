@@ -11,14 +11,18 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ccf961ef43f1c1ca5ffc116c4e816fd2edc82ccc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dfad3ec6e575529026aa7aa93468be97cd7955e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277417"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727016"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>資料採礦模型定型目的地自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料採礦模型定型目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料採礦模型定型目的地的自訂屬性。 所有屬性都是可讀寫的。  

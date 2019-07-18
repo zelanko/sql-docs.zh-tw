@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812333"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 提供在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 這讓開發人員更容易建立使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件在不同資料庫間進行通訊的複雜應用程式。 開發人員可以使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 輕鬆地建立可靠的分散式應用程式。  

@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0b15109f261e1d793235593c54a0178b7e76f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005187"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "47805936"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|外部資料來源的物件識別碼。||  
-|NAME|**sysname**|外部資料來源的名稱。||  
+|name|**sysname**|外部資料來源的名稱。||  
 |location|**nvarchar(4000)**|連接字串，其中包括通訊協定、 IP 位址和外部資料來源的連接埠。||  
 |type_desc|**nvarchar(255)**|資料來源類型顯示為字串。|HADOOP，RDBMS，SHARD_MAP_MANAGER RemoteDataArchiveTypeExtDataSource|  
-|型別|**tinyint**|表示為數字顯示的資料來源類型。|0-HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
+|type|**tinyint**|表示為數字顯示的資料來源類型。|0-HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|如需輸入 HADOOP、 IP 和連接埠的 Hadoop 資源管理員位置。 這用來提交 Hadoop 資料來源上的作業。<br /><br /> 其他類型的外部資料來源為 NULL。||  
 |credential_id|**int**|資料庫的物件識別碼範圍用來連接到外部資料來源的認證。||  
 |database_name|**sysname**|類型的 RDBMS 中，遠端資料庫的名稱。 對於類型，SHARD_MAP_MANAGER，分區對應管理員資料庫的名稱。 其他類型的外部資料來源為 NULL。||  

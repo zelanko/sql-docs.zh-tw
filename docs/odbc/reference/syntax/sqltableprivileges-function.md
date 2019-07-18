@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e63677180cc86f022550477bd598eaa61013d694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039518"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53204077"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLTablePrivileges(  
      SQLHSTMT      StatementHandle,  
@@ -114,9 +113,9 @@ SQLRETURN SQLTablePrivileges(
 > [!NOTE]  
 >  如需一般用途、 引數和 ODBC 目錄函數的傳回的資料的詳細資訊，請參閱[目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC *3.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
+|ODBC 2.0 資料行|ODBC *3.x*資料行|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbccdecdb504af75e4130d78c92b6e80673dd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad673ecb2e33d22b8fcc6edc64548b0754ccbac9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981560"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C：在 SELECT 陳述式中使用減法  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C.在 SELECT 陳述式中使用減法  
  下列範例會從 `dimEmployee` 資料表，計算基本稅率最高的員工與稅率最低的員工之間的基本稅率差。  
   
 ```  

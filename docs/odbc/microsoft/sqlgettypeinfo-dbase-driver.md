@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo (dBASE 驅動程式) |Microsoft Docs
+title: SQLGetTypeInfo (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90bfbe29fd011f8b62527854f0ca5a179d8f63cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43319f7f23741a1533321c9369077d42a2484395
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898745"
 ---
 # <a name="sqlgettypeinfo-dbase-driver"></a>SQLGetTypeInfo (dBASE 驅動程式)
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: Broker:Conversation 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39e0ca2394c76d955fa480d17ed5369217ac8f69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f2a1f6e0cd0bc9cdf90f8acd31f61172d7dc85c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66265566"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件類別資料行  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949491"
 ---
 # <a name="member-object-ado-md"></a>Member 物件 (ADO MD)
 代表在 cube 中，層級成員的層級、 成員或成員的資料格集沿著座標軸的位置的子系。  
@@ -29,7 +28,7 @@ ms.locfileid: "47633546"
 ## <a name="remarks"></a>備註  
  屬性**成員**使用的內容而有所不同。 A**成員**的[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)中[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)具有[子系](../../../ado/reference/ado-md-api/children-property-ado-md.md)屬性，傳回**成員**上從目前的階層中的下一步 較低層級**成員**。 針對**成員**的[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)，則**子系**永遠是空的集合。 此外，[型別](../../../ado/reference/ado-md-api/type-property-ado-md.md)屬性僅適用於**成員**的**層級**。  
   
- A**成員**的**位置**有兩個屬性顯示時非常實用[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)和[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 如果在存取這些屬性，會發生錯誤**成員**的**層級**。  
+ A**成員**的**位置**有兩個屬性顯示時非常實用[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md):[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)並[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 如果在存取這些屬性，會發生錯誤**成員**的**層級**。  
   
  使用集合和屬性的**成員**的物件**層級**，您可以執行下列動作：  
   

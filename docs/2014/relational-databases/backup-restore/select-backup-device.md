@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 76cf12be8e5ae29d5f6dfe22d4ef5e7233b8677a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62921244"
 ---
 # <a name="select-backup-device"></a>選取備份裝置
   使用 **[選取備份裝置]** 對話方塊，可選取還原作業的邏輯備份裝置。  

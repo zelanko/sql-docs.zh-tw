@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b40ddaddc652f5b5e37fc23b1330ebd8f92c475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f441cceed84b873b31c7d4691b08a541a0aee06f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030165"
 ---
 # <a name="tracing-and-replaying-events"></a>追蹤及重新執行事件
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

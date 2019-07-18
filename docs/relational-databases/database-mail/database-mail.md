@@ -15,18 +15,20 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c758edb6bd51ce82affccae78c796437d7a688fc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506606"
 ---
 # <a name="database-mail"></a>Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Database Mail 是從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  Database Mail 是從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)傳送電子郵件訊息的企業解決方案。 使用 Database Mail，資料庫應用程式就能夠將電子郵件訊息傳送給使用者。 這類訊息能包含查詢結果，也可以包含來自網路上任何資源的檔案。  
   
-  
+> [!NOTE] 
+> Database Mail 適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)，但不適用 Azure SQL 資料庫的單一與彈性集區。 
+
 ##  <a name="Benefits"></a> 使用 Database Mail 的優點  
  Database Mail 具有可靠性、延展性、安全性及可支援性。  
   
@@ -44,35 +46,35 @@ ms.locfileid: "51559374"
   
 -   背景傳遞：Database Mail 提供背景或非同步傳遞功能。 呼叫 **sp_send_dbmail** 以傳送訊息時，Database Mail 會將要求加入 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列。 此舉會立即傳回預存程序。 外部電子郵件元件就會收到該要求，並傳遞電子郵件。  
   
--   多個設定檔：您可以使用 Database Mail，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立多個設定檔。 選擇性地傳送訊息時，您可以選擇 Database Mail 使用的設定檔。  
+-   多個設定檔：Database Mail 可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內建立多個設定檔。 選擇性地傳送訊息時，您可以選擇 Database Mail 使用的設定檔。  
   
--   多個帳戶：每個設定檔都可以包含多個容錯移轉帳戶。 您可以設定不同的設定檔使用不同的帳戶，在多個電子郵件伺服器散發電子郵件。  
+-   多個帳戶：每個設定檔都可包含多個容錯移轉帳戶。 您可以設定不同的設定檔使用不同的帳戶，在多個電子郵件伺服器散發電子郵件。  
   
--   64 位元相容性： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 64 位元安裝完全支援 Database Mail。  
+-   64 位元相容性：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 64 位元安裝完全支援 Database Mail。  
   
 ### <a name="security"></a>Security  
   
--   預設為關閉狀態：為了要縮小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的介面區，預設會停用 Database Mail 預存程序。  
+-   預設關閉：為了縮小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的介面區，預設會停用 Database Mail 預存程序。  
   
 -   郵件安全性：若要傳送 Database Mail，您必須是 **msdb** 資料庫中 **DatabaseMailUserRole** 資料庫角色的成員。  
   
 -   設定檔安全性：Database Mail 會強制執行郵件設定檔的安全性。 您要選擇擁有 Database Mail 設定檔存取權的 **msdb** 資料庫使用者或群組。 您可以將存取權授與給 **msdb**中的特定使用者或所有使用者。 私人設定檔限制清單上指定的使用者才有存取權。 公用設定檔可供資料庫的所有使用者使用。  
   
--   附件大小管理員：Database Mail 會強制執行附加檔案大小的可設定限制。 您可以使用 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 預存程序來變更這項限制。  
+-   附件大小管理員：Database Mail 會強制設定附件檔案大小的限制。 您可以使用 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 預存程序來變更這項限制。  
   
--   禁止的副檔名：Database Mail 維護一個禁止的副檔名清單。 使用者無法附加副檔名出現在清單中的檔案。 您可以使用 sysmail_configure_sp 來變更此清單。  
+-   禁止的副檔名：Database Mail 會維護一份禁止的副檔名清單。 使用者無法附加副檔名出現在清單中的檔案。 您可以使用 sysmail_configure_sp 來變更此清單。  
   
 -   Database Mail 會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎服務帳戶執行。 若要從資料夾將檔案附加至電子郵件，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎帳戶應具備存取包含該檔案之資料夾的權限。  
   
 ### <a name="supportability"></a>可支援性  
   
--   整合式組態：Database Mail 可維護 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]內電子郵件帳戶的資訊。 毋須在外部用戶端應用程式管理郵件設定檔。 「Database Mail 組態精靈」提供方便的介面，供設定 Database Mail 使用。 您也可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，來建立並維護 Database Mail 組態。  
+-   整合式設定：Database Mail 會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內維護電子郵件帳戶的資訊。 毋須在外部用戶端應用程式管理郵件設定檔。 「Database Mail 組態精靈」提供方便的介面，供設定 Database Mail 使用。 您也可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，來建立並維護 Database Mail 組態。  
   
 -   記錄。 Database Mail 會將電子郵件活動記錄到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Microsoft Windows 應用程式事件記錄檔，以及 **msdb** 資料庫中的資料表。  
   
--   稽核：Database Mail 會在 **msdb** 資料庫中保留所傳送的郵件與附件的複本。 您可以輕鬆稽核 Database Mail 的使用狀況，並檢閱所保留的郵件。  
+-   稽核：Database Mail 會在 **msdb** 資料庫中保留所傳送的郵件與附件副本。 您可以輕鬆稽核 Database Mail 的使用狀況，並檢閱所保留的郵件。  
   
--   支援 HTML：您可以使用 Database Mail 傳送 HTML 格式的電子郵件。  
+-   支援 HTML：Database Mail 可讓您傳送 HTML 格式的電子郵件。  
   
   
 ##  <a name="VisualElement"></a> Database Mail 架構  
@@ -114,7 +116,7 @@ ms.locfileid: "51559374"
 -   排程工作 (如資料庫備份或複寫事件) 成功或失敗。 例如，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail，通知操作員在該月結束時的處理期間，是否發生錯誤。  
   
   
-##  <a name="RelatedContent"></a> Database Mail 元件主題  
+##  <a name="RelatedContent"></a> 另請參閱  
   
 -   [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

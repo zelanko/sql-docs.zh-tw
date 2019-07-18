@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 01758e9dadcb0090a7bd55ec99375ce122633859
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bf93c737a19f890df33c978f3feccfc6bd826105
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139731"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>搭配 WMI 提供者使用 WQL 與指令碼語言
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

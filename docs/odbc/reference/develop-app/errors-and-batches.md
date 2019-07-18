@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051127"
 ---
 # <a name="errors-and-batches"></a>錯誤和批次
 當錯誤發生時執行的 SQL 陳述式的批次時，其中一個下列四個結果是可能的。 （每個可能的結果是資料來源特有的而且甚至可能會取決於包含在批次的陳述式）。  

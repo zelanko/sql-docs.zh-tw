@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 支援對照表 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31c5829322a4c3d2bc6266a6a0ddd3a1f86f505a
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+manager: jroth
+ms.openlocfilehash: f9e68149a567b2ccc7b4477e16e5ff39eedf1f6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781462"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "56154913"
     
  下列 Microsoft JDBC Driver 的支援期限到指定的的結束支援日期為止。  
   
-|驅動程式名稱|驅動程式套件版本|適用於 JAR(s)|結束主要支援|
+|驅動程式名稱|驅動程式套件版本|適用的 JAR|主要支援結束日期|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.1.jre11.jar<br> mssql-jdbc-7.2.1.jre8.jar|2024 年 2 月 11 日|
+|Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|    
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|    
@@ -42,7 +42,7 @@ ms.locfileid: "56154913"
   
  下列 Microsoft JDBC Driver 不再支援。  
  
-|驅動程式名稱|驅動程式套件版本|結束主要支援|  
+|驅動程式名稱|驅動程式套件版本|主要支援結束日期|  
 |-|-|-|
 |Microsoft JDBC Driver 4.0 for SQL Server|4.0|2017 年 3 月 6 日|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015 年 4 月 23 日|  
@@ -54,7 +54,7 @@ ms.locfileid: "56154913"
   
 ## <a name="sql-version-compatibility"></a>SQL 的版本相容性  
   
-|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 受控執行個體 （延伸私人預覽）|  
+|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 受控執行個體 (延伸個人預覽版)|  
 |-|-|-|-|-|-|-|-|-|-|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
@@ -86,9 +86,9 @@ ms.locfileid: "56154913"
   
 |JDBC 驅動程式版本|JRE 版本|JDBC API 版本| 
 |-|-|-|  
-|7.2|1.8、11|4.2、 4.3 （部分）|
-|7.0|1.8、10|4.2、 4.3 （部分）|
-|6.4|1.7、1.8、9|4.1、 4.2、 4.3 （部分）|  
+|7.2|1.8、11|4.2、4.3 (部份)|
+|7.0|1.8、10|4.2、4.3 (部份)|
+|6.4|1.7、1.8、9|4.1、4.2、4.3 (部份)|  
 |6.2|1.7、1.8|4.1、4.2|  
 |6.1|1.7、1.8|4.1、4.2|  
 |6.0|1.7、1.8|4.1、4.2|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - legacy database diagrams
 - diagrams [SQL Server], upgrading
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 748d81df025df8b05a87604adbf5270c5118291e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: a8dfe782b32ce8390330b5e06866631aad52f103
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738068"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689418"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47738068"
   
 2.  在資料庫中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]  。  
   
     這樣將會升級資料庫上預存的圖表。  
   

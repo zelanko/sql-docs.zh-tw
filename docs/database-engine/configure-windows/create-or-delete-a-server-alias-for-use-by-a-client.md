@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3d6e457d6ef07ff5401e2d6fe97241db9ca84cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0f13aaf724ef2b02b6f2ce844e2c6f19cdcd1359
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767615"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>建立或刪除用戶端使用的伺服器別名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

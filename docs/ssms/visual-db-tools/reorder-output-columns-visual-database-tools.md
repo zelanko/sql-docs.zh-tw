@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reordering output columns [SQL Server]
 - output columns [SQL Server]
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68898742ad340c648414614cde8741157f814221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b5e37a69bb0ae6914fdca2c770648a869e4f479b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806007"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679469"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>重新排列輸出資料行順序 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

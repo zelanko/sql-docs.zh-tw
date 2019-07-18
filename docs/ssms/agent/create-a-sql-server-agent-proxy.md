@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], creating
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d1be35274e41f259f0213d866bf91151d820f9d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1b8ae5bf3c9359b2fd114214ea41c3e0e43be770
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415995"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681168"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "52415995"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目建立 SQL Server Agent Proxy：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52415995"
   
 #### <a name="Permissions"></a>Permissions  
   
--   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員才擁有建立、修改或刪除 Proxy 帳戶的權限。 非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，必須加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫中的下列其中一個** Agent 固定資料庫角色，才可使用 Proxy： **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole**。  
+-   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員才擁有建立、修改或刪除 Proxy 帳戶的權限。 非**系統管理員**固定伺服器角色成員的使用者，必須新增至 **msdb** 資料庫中的下列其中一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色，才可使用 Proxy：**SQLAgentUserRole**、**SQLAgentReaderRole** 或 **SQLAgentOperatorRole**。  
   
 -   如果除了 Proxy 之外還要建立認證，需要 **ALTER ANY CREDENTIAL** 權限。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "52415995"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent Proxy 的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [Proxy] 資料夾，然後選取 [新增 Proxy]。  
+3.  以滑鼠右鍵按一下 [Proxy]  資料夾，然後選取 [新增 Proxy]  。  
   
 4.  在 **[新 Proxy 帳戶]** 對話方塊，於 **[一般]** 頁面上的 **[Proxy 名稱]** 方塊中輸入 Proxy 帳戶的名稱。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52415995"
   
 8.  在 **[主體]** 頁面上，加入或移除登入或角色，藉此授與或移除 Proxy 帳戶的存取。  
   
-9. 完成後，請按一下 **[確定]**。  
+9. 完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -95,9 +95,9 @@ ms.locfileid: "52415995"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates credential CatalogApplicationCredential  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
@@ -13,15 +12,15 @@ ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074254"
 ---
 # <a name="user-defined-member-properties-mdx"></a>使用者自訂成員屬性 (MDX)
-  使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 使用者自訂成員屬性無法加入`(All)`層級的階層或階層本身。  
+  使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 階層的 `(All)` 層級或階層本身無法增加使用者自訂成員屬性。  
   
 ## <a name="creating-user-defined-member-properties"></a>建立使用者自訂成員屬性  
  您可以透過使用者介面或以程式設計的方式，將使用者自訂成員屬性增加到伺服器維度或 Cube：  
@@ -38,7 +37,7 @@ ms.locfileid: "48114308"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES`關鍵字會在座標軸規格的集合運算式後面出現。 例如，下列 MDX 查詢`PROPERTIES`關鍵字來擷取`List Price`和`Dealer Price`使用者自訂成員屬性及集合運算式，可識別產品銷售年 1 月之後顯示：  
+ `PROPERTIES` 關鍵字會在座標軸規格的集合運算式後面出現。 例如，以下的 MDX 查詢 `PROPERTIES` 關鍵字會擷取 `List Price` 與 `Dealer Price` 使用者自訂成員屬性，並且在識別 1 月份銷售之產品的集合運算式之後顯示：  
   
 ```  
 SELECT   
@@ -53,7 +52,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>使用 Properties 函數擷取使用者自訂成員屬性  
- 或者，您可以使用 `Properties` 函數來存取自訂成員屬性。 例如，下列 MDX 查詢會使用`WITH`關鍵字來建立導出的成員組成`List Price`成員屬性：  
+ 或者，您可以使用 `Properties` 函數來存取自訂成員屬性。 例如，以下的 MDX 查詢就是使用 `WITH` 關鍵字，建立包含 `List Price` 成員屬性的導出成員：  
   
 ```  
 WITH   
@@ -68,7 +67,7 @@ FROM [Adventure Works]
  如需建立導出成員的詳細資訊，請參閱[在 MDX 中建立導出成員 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用成員屬性&#40;MDX&#41;](mdx-member-properties.md)   
- [屬性&#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [使用成員屬性 &#40;MDX&#41;](mdx-member-properties.md)   
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

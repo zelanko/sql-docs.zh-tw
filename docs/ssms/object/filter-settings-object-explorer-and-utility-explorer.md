@@ -11,19 +11,19 @@ f1_keywords:
 - sql13.swb.common.filtersettings.f1
 - sql13.ag.job.filtersettings.f1
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd99ddf8617cafc55c5437b61868e3559275c8b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2b039dbbfff0f525ff7af7e9438221f2ff83e814
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832486"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690000"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>篩選設定 (物件總管與公用程式總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定] 對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
+使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定]  對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **屬性**  
@@ -62,11 +62,11 @@ ms.locfileid: "47832486"
   
 -   **介於**  
   
-    適用於日期，此篩選會顯示日期介於所提供之兩個日期之間的項目。 選取 [介於] 並按下 TAB 鍵新增另一個資料列，以輸入第二個日期。  
+    適用於日期，此篩選會顯示日期介於所提供之兩個日期之間的項目。 選取 [介於]  並按下 TAB 鍵新增另一個資料列，以輸入第二個日期。  
   
 -   **不介於**  
   
-    適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於] 並按下 TAB 鍵跳離 [運算子] 資料行，即可新增另一個資料列，以輸入第二個日期。  
+    適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於]  並按下 TAB 鍵跳離 [運算子]  資料行，即可新增另一個資料列，以輸入第二個日期。  
   
 **ReplTest1**  
 輸入要和屬性比較的值。 針對日期，按一下向下鍵以顯示用來選取日期的日曆。  

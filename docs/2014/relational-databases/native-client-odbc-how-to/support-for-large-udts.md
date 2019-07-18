@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205548"
 ---
 # <a name="support-for-large-udts"></a>支援大型 UDT
   此範例方案包含兩個專案， 其中一個專案從 C# 原始程式碼建立組件 (DLL)。 這個組件包含 CLR 類型。 將會在資料庫中加入一個資料表。 資料表中的資料行屬於組件中所定義的類型，根據預設，此範例將會使用 master 資料庫。 第二個專案是原生的 C 應用程式，可從資料表讀取資料。  

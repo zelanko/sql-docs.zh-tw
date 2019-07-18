@@ -13,16 +13,16 @@ helpviewer_keywords:
 - text completion [IntelliSense]
 - Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd00b7086b41de938c3c21f9e8ac71285a1560e9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3754085579088126f5feb025cbf2e6e3e27a1fed
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642784"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683806"
 ---
 # <a name="complete-word-intellisense"></a>自動完成文字 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "51642784"
   
  您可以利用四種方式來叫用 [自動完成文字] 功能：  
   
--   在 [編輯] 功能表上，指向 [IntelliSense]，然後按一下 [自動完成文字]。  
+-   在 [編輯]  功能表上，指向 [IntelliSense]  ，然後按一下 [自動完成文字]  。  
   
 -   按 ALT+向右鍵。  
   
--   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]。  
+-   以滑鼠右鍵按一下文字編輯器，再按一下 [自動完成文字]  。  
   
--   在 [文字編輯器] 工具列上，按一下 [自動完成文字] 按鈕。  
+-   在 [文字編輯器]  工具列上，按一下 [自動完成文字]  按鈕。  
   
  如果您已輸入的字元有不只一個可能的相符項目，請叫用 [自動完成文字] 來顯示可能的相符項目清單，之後，您就可以利用它來尋找這個詞彙，將它插入您的程式碼中。  
   

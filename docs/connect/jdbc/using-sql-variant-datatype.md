@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8df6fcee7b79f0c85f1182442195eb2cdf8d7ac9
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: c004bc40ed0c85b82612be9069e1a53041c8095c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798593"
 ---
 # <a name="using-sqlvariant-data-type"></a>使用 Sql_variant 資料類型
 

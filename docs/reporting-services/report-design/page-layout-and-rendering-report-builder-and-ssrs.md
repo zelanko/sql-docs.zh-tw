@@ -2,18 +2,18 @@
 title: 頁面配置和轉譯 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b4d2193730a07ff59ddfc8c74189663f74e804b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8ec929d77b9805e3285b5d5a75940231b09cbd8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576350"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
 請閱讀分頁報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯延伸模組，確定報表就是您要的外觀 (包括頁面配置、分頁符號和頁面大小)。 
@@ -45,7 +45,7 @@ ms.locfileid: "56289466"
  報表可以合併多個頁面，每一個頁面上都有重複的頁首和頁尾。 報表可以包含類似影像和線條的圖形元素，也可以有多種字型、色彩和樣式 (可以根據運算式)。  
   
 ##  <a name="ReportSections"></a> 報表區段  
- 報表是由三個主要區段所組成：選擇性頁首、選擇性頁尾和報表主體。 報表頁首和頁尾不是報表的個別區段，而是由放置於報表主體頂端和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
+ 報表是由三個主要區段所組成：選擇性頁首  、選擇性頁尾  和報表主體。 報表  頁首和頁尾不是報表的個別區段，而是由放置於報表主體頂端和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
   
  您可以在報表項目上設定屬性，即可一開始在頁面上隱藏或顯示這些項目。 您可以在資料列或資料行或是資料區的群組上設定可見性屬性，並提供切換按鈕讓使用者以互動方式顯示或隱藏報表資料。 您可以使用運算式 (包括了根據報表參數的運算式) 來設定可見性或初始可見性。  
   

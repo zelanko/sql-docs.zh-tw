@@ -16,15 +16,16 @@ helpviewer_keywords:
 - sp_grantdbaccess
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+ms.openlocfilehash: 184ebbde266ab21c0fa94ebff0e2be0aca61988b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123797"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將資料庫使用者加入目前資料庫中。  
@@ -37,7 +38,6 @@ ms.locfileid: "58534880"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_grantdbaccess [ @loginame = ] 'login'  
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
@@ -45,7 +45,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="arguments"></a>引數  
 `[ @loginame = ] 'login_ '` 是 Windows 群組，而 Windows 登入的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]對應到新的資料庫使用者的登入。 Windows 群組和 Windows 登入的名稱必須限定在表單中的 Windows 網域名稱*網域*\\*登入*，例如**LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登入*已**sysname**，沒有預設值。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新的資料庫使用者的名稱。 *name_in_db*是資料類型的輸出變數**sysname**，預設值為 NULL。 如果未指定，*登入*用。 如果指定為輸出變數的值是 NULL， **@name_in_db**設定為*登入*。 *name_in_db*必須不存在目前資料庫中。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新的資料庫使用者的名稱。 *name_in_db*是資料類型的輸出變數**sysname**，預設值為 NULL。 如果未指定，*登入*用。 如果指定為輸出變數的值是 NULL， **@name_in_db** 設定為*登入*。 *name_in_db*必須不存在目前資料庫中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -61,7 +61,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="examples"></a>範例  
  下列範例會使用`CREATE USER`加入資料庫使用者的 Windows 登入`Edmonds\LolanSo`為目前的資料庫。 新使用者名叫 `Lolan`。 這是建立資料庫使用者的慣用方法。  
   
-```  
+```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  

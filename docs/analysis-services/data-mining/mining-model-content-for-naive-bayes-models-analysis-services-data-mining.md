@@ -1,5 +1,5 @@
 ---
-title: 貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbfb701bf6c4a90cf285e4643377b38e51121dd3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182693"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>了解貝式機率分類模型的結構  
  貝式機率分類模型擁有代表模型及其中繼資料的單一父節點，而且在該父節點下，則擁有代表所選取之可預測屬性的所有獨立樹狀結構。 除了屬性的樹狀結構，每個模型都包含一個臨界統計資料節點 (NODE_TYPE = 26)，該節點會提供該組定型案例的描述性統計資料。 如需詳細資訊，請參閱 [臨界統計資料節點中的資訊](#bkmk_margstats)。  
@@ -28,12 +28,12 @@ ms.locfileid: "34019405"
 > [!NOTE]  
 >  由於貝式機率分類模型不允許使用連續資料類型，因此會將輸入資料行的所有值都視為離散或離散化的值。 您可以指定將值離散化的方式。 如需詳細資訊，請參閱 [變更採礦模型中的資料行離散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。  
   
- ![貝氏機率分類模型內容結構](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "的貝氏機率分類模型內容結構")  
+ ![貝氏機率分類模型內容的結構](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "的貝氏機率分類模型內容結構")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>貝式機率分類模型的模型內容  
  本節僅針對採礦模型內容中與貝式機率分類模型具有特定相關的資料行，提供詳細資料和範例。  
   
- 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -67,7 +67,7 @@ ms.locfileid: "34019405"
  NODE_TYPE  
  貝式機率分類模型會輸出下列節點類型：  
   
-|節點類型識別碼|說明|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|包含描述模型整組定型案例的統計資料。|  
 |9 (可預測的屬性)|包含可預測屬性的名稱。|  
@@ -184,9 +184,9 @@ ms.locfileid: "34019405"
 |---------------|----------------------------|  
 |模型根 (1)|：一律為 0。|  
 |臨界統計資料節點 (26)|任意的識別碼值。|  
-|可預測的屬性 (9)|開頭為 10000000 的十六進位數字<br /><br /> 例如，100000001、10000000b|  
-|輸入屬性 (10)|兩部分的十六進位數字，其中第一部分永遠為 20000000，而第二部分開頭為相關可預測屬性的十六進位識別碼。<br /><br /> 例如：20000000b00000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
-|輸入屬性狀態 (11)|三部分的十六進位數字，其中第一部分永遠為 30000000，第二部分開頭為相關可預測屬性的十六進位識別碼，而第三部分代表值的識別碼。<br /><br /> 例如：30000000b00000000200000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
+|可預測的屬性 (9)|開頭為 10000000 的十六進位數字<br /><br /> 範例100000001 10000000b|  
+|輸入屬性 (10)|兩部分的十六進位數字，其中第一部分永遠為 20000000，而第二部分開頭為相關可預測屬性的十六進位識別碼。<br /><br /> 範例20000000b00000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
+|輸入屬性狀態 (11)|三部分的十六進位數字，其中第一部分永遠為 30000000，第二部分開頭為相關可預測屬性的十六進位識別碼，而第三部分代表值的識別碼。<br /><br /> 範例30000000b00000000200000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
   
  您可以使用識別碼將輸入屬性和狀態與可預測的屬性產生關聯。 例如，下列查詢會針對代表模型 `TM_NaiveBayes`之輸入屬性與可預測屬性可能組合的節點，傳回名稱和標題。  
   
@@ -252,26 +252,26 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  預期的結果：  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|遺漏|0|0|1|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- 在這些結果中，SUPPORT 資料行的值會顯示購買自行車之客戶的計數，以及指定的婚姻狀況。 PROBABILITY 資料行包含每個屬性值的機率 (僅針對此節點計算)。 如需 NODE_DISTRIBUTION 資料表所用詞彙的一般定義，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 在這些結果中，SUPPORT 資料行的值會顯示購買自行車之客戶的計數，以及指定的婚姻狀況。 PROBABILITY 資料行包含每個屬性值的機率 (僅針對此節點計算)。 如需 NODE_DISTRIBUTION 資料表所用詞彙的一般定義，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_margstats"></a> 臨界統計資料節點中的資訊  
  在貝式機率分類模型中，臨界統計資料節點的巢狀資料表包含整組定型資料的值分佈。 例如，下表包含模型 `TM_NaiveBayes`的巢狀 NODE_DISTRIBUTION 資料表中，統計資料的部分清單：  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|遺漏|0|0|0|1|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
 |Bike Buyer|1|8615|0.492736216|0|4|  
-|Marital Status|遺漏|0|0|0|1|  
+|Marital Status|Missing|0|0|0|1|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
-|Total Children|遺漏|0|0|0|1|  
+|Total Children|Missing|0|0|0|1|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
 |Total Children|1|3406|0.19480668|0|4|  
@@ -283,7 +283,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  **遺漏** 值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出屬性，以代表不在定型資料中的可能值。 您必須仔細區別字串「遺漏」和預設的**遺漏**值。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

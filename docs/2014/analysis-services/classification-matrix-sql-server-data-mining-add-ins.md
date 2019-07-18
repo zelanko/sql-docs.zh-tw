@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -16,12 +15,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087973"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分類矩陣 (SQL Server 資料採礦增益集)
   ![分類矩陣按鈕、 資料採礦功能區](media/dmc-cmatrix.gif "分類矩陣按鈕、 資料採礦功能區")  

@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187150"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
   **Bcp**公用程式大量複製資料的執行個體之間[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和以使用者指定格式資料檔案。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
@@ -99,7 +99,7 @@ ms.locfileid: "57579757"
   
 -   **queryout** 會從查詢中複製資料，而且只有在從查詢複製大量資料時才可指定。  
   
--   **格式**建立格式檔案根據指定的選項 (**-n**， `-c`， `-w`，或 **-N**) 以及資料表或檢視分隔符號。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
+-   **格式**建立格式檔案根據指定的選項 ( **-n**， `-c`， `-w`，或 **-N**) 以及資料表或檢視分隔符號。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
   
  *owner*  
  這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner*，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
@@ -123,10 +123,10 @@ ms.locfileid: "57579757"
  **-b** _batch_size_  
  指定每一批次匯入資料的資料列數。 每一批次會以個別交易的方式 (在認可之前匯入整個批次) 匯入及記錄。 根據預設，資料檔案中的所有資料列是以一個批次匯入。 若要在多個批次之間分散資料列，請指定小於資料檔案之資料列數目的 *batch_size* 。 如果有任何批次的交易失敗，只回復目前批次的插入項。 之後的失敗不會影響已認可的交易所匯入的批次。  
   
- 請勿使用此選項搭配 **-h"** ROWS_PER_BATCH  **= *`bb`*"** 選項。  
+ 請勿使用此選項搭配 **-h"** ROWS_PER_BATCH  **= *`bb`* "** 選項。  
   
  `-c`  
- 利用字元資料類型來執行作業。 此選項不會提示每個欄位;它會使用`char`作為儲存類型，沒有前置詞**\t** （定位字元），做為欄位分隔符號並**\r\n** （新行字元） 做為資料列結束字元。 `-c` 與 `-w` 不相容。  
+ 利用字元資料類型來執行作業。 此選項不會提示每個欄位;它會使用`char`作為儲存類型，沒有前置詞 **\t** （定位字元），做為欄位分隔符號並 **\r\n** （新行字元） 做為資料列結束字元。 `-c` 與 `-w` 不相容。  
   
  如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "57579757"
 |RAW|不會將字碼頁轉換成另一種字碼頁。 這是最快的選項，因為不進行轉換。|  
 |*code_page*|特定字碼頁編號；如 850。<br /><br /> **&#42;&#42;重要&#42; &#42;**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支援字碼頁 65001 （utf-8 編碼）。|  
   
- `-d` *database_name*  
+ `-d` *資料庫名稱*  
  指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果`-d` *database_name*和三部分名稱 (*database_name.schema.table*，當做第一個參數傳遞給 bcp.exe) 指定，則會發生錯誤，因為您無法指定資料庫名稱兩次。如果*database_name*開頭是連字號 （-） 或斜線 （/），請勿加上空格之間`-d`和資料庫名稱。  
   
  **-e** _err_file_  
@@ -163,7 +163,7 @@ ms.locfileid: "57579757"
   
 -   如果 **-f** 與 **format** 選項一起使用，會對指定的資料表或檢視表建立所指定的 *format_file* 。 若要建立 XML 格式檔案，也請指定 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
--   搭配 **in** 或 **out** 選項一起使用時，**-f** 需要現有的格式檔案。  
+-   搭配 **in** 或 **out** 選項一起使用時， **-f** 需要現有的格式檔案。  
   
     > [!NOTE]  
     >  使用格式檔，其中的 **in** 或 **out** 選項為選擇性。 如果沒有 **-f**選項時，如果 **-n**， `-c`， `-w`，或 **-N**未指定，此命令會提示您輸入格式資訊，並可讓您儲存您在格式檔案中 （預設檔案名稱是 Bcp.fmt） 的回應。  
@@ -175,13 +175,13 @@ ms.locfileid: "57579757"
   
  *first_row* 可以是值高達 2^63-1 的正整數。 **-F**_first_row_ 是以 1 為基底。  
   
- **-h"** _hint_[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,** ... *n*] **"**  
  指定將資料大量匯入資料表或檢視表期間，所要使用的一個或多個提示。  
   
- ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
+ ORDER **(** _column_[ASC | DESC] [ **,** ...*n*] **)**  
  資料檔案中之資料的排序順序。 如果匯入資料時是依照資料表的叢集索引來排序，將可提升大量匯入的效能。 如果不是依照叢集索引鍵的順序排序資料檔案，或是資料表沒有叢集索引，便會忽略 ORDER 子句。 提供的資料行名稱必須是目的地資料表中的有效資料行名稱。 根據預設， **bcp** 會假設資料檔案沒有排序。 為了達到最佳的大量匯入效果， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也會驗證匯入的資料是否已排序。  
   
- ROWS_PER_BATCH **=**_bb_  
+ ROWS_PER_BATCH **=** _bb_  
  每一批資料的資料列數目 (如 *bb*)。 在未指定 **-b** 時使用，結果會將整個資料檔案當做單一交易來傳給伺服器。 伺服器根據 *bb*值，將大量載入最佳化。 根據預設，ROWS_PER_BATCH 是未知的。  
   
  KILOBYTES_PER_BATCH **=** _cc_  
@@ -210,7 +210,7 @@ ms.locfileid: "57579757"
  利用 **in** 引數加以指定，任何定義於目的地資料表上的插入觸發程序，都會在大量複製作業期間執行。 如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。 **out**、**queryout** 和 **format** 引數會略過 FIRE_TRIGGERS。  
   
  **-i** _input_file_  
- 指定回應檔，大量複製會使用互動模式執行時，包含每個資料欄位在命令提示字元問題回應的名稱 (**-n**， `-c`， `-w`，或 **-N**未指定)。  
+ 指定回應檔，大量複製會使用互動模式執行時，包含每個資料欄位在命令提示字元問題回應的名稱 ( **-n**， `-c`， `-w`，或 **-N**未指定)。  
   
  如果 *input_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-i** 與 *input_file* 值之間加上空格。  
   
@@ -281,8 +281,8 @@ ms.locfileid: "57579757"
  **-R**  
  指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中。 依預設，會忽略地區設定。  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果未指定任何伺服器， **bcp** 公用程式會連接至本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 透過網路上的遠端電腦或本機具名執行個體執行 **bcp** 指令時，此選項為必要選項。 若要連接到伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，只要指定 *server_name*。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體，請指定 *server_name**_\\_** instance_name*。  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果未指定任何伺服器， **bcp** 公用程式會連接至本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 透過網路上的遠端電腦或本機具名執行個體執行 **bcp** 指令時，此選項為必要選項。 若要連接到伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，只要指定 *server_name*。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體，請指定 *server_name ** _\\_** instance_name*。  
   
  `-t` *field_term*  
  指定欄位結束字元。 預設值是 **\t** (定位字元)。 請利用這個參數來覆寫預設的欄位結束字元。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
@@ -298,7 +298,7 @@ ms.locfileid: "57579757"
  指定用來連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的登入識別碼。  
   
 > [!IMPORTANT]  
->  指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。  
+>  指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」  和「密碼」  的組合。  
   
  **-v**  
  報告 **bcp** 公用程式版本號碼和著作權。  
@@ -319,12 +319,12 @@ ms.locfileid: "57579757"
  如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  `-w`  
- 利用 Unicode 字元執行大量複製作業。 此選項不會提示每個欄位;它會使用`nchar`作為儲存類型，沒有前置詞， **\t** （定位字元），做為欄位分隔符號，以及**\n** （新行字元） 做為資料列結束字元。 `-w` 與 `-c` 不相容。  
+ 利用 Unicode 字元執行大量複製作業。 此選項不會提示每個欄位;它會使用`nchar`作為儲存類型，沒有前置詞， **\t** （定位字元），做為欄位分隔符號，以及 **\n** （新行字元） 做為資料列結束字元。 `-w` 與 `-c` 不相容。  
   
  如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-x**  
- 與 **format** 和 **-f**_format_file_ 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。 匯入或匯出資料時，**-x** 無法運作。 如果沒有與 **format** 和 **-f**_format_file_ 一起使用，即會產生錯誤。  
+ 與 **format** 和 **-f**_format_file_ 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。 匯入或匯出資料時， **-x** 無法運作。 如果沒有與 **format** 和 **-f**_format_file_ 一起使用，即會產生錯誤。  
   
 ## <a name="remarks"></a>備註  
  **Bcp** 12.0 用戶端在您安裝時安裝[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]工具。 如果同時為 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝工具，則根據 PATH 環境變數值的不同，您也可以使用舊版的 **bcp** 用戶端來取代 **bcp** 12.0 用戶端。 這個環境變數定義了 Windows 用來搜尋可執行檔的一組目錄。 若要確定您所使用的版本，請在 Windows 命令提示字元處執行 **bcp /v** 命令。 如需有關如何在 PATH 環境變數中設定命令路徑的詳細資訊，請參閱 Windows 說明。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
@@ -13,19 +12,19 @@ ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077615"
 ---
 # <a name="model-tab-mining-model-viewers"></a>模型索引標籤 (採礦模型檢視器)
-  Microsoft 時間序列檢視器中的 [模型] 索引標籤會將時間序列的表示顯示為圖形中的節點，這與決策樹模型中採用的方式類似。  
+  Microsoft 時間序列檢視器中的 [模型]  索引標籤會將時間序列的表示顯示為圖形中的節點，這與決策樹模型中採用的方式類似。  
   
  使用此時間序列模型檢視可擷取有關時間序列分析的有用資訊，包括圖形的方程式、ARIMA 詞彙和係數。  
   
- **如需詳細資訊，請參閱** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、 [使用 Microsoft 時間序列檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
+ **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)，[瀏覽模型，使用 Microsoft 時間序列檢視器](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -34,8 +33,8 @@ ms.locfileid: "48164168"
  **採礦模型**  
  選擇要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
- 選擇用來瀏覽選取之採礦模型的檢視器。 您可以使用此模型類型的自訂檢視器，或 [Microsoft 一般內容樹狀檢視器]。 還可以使用外掛程式檢視器 (如果有)。  
+ **Viewer**  
+ 選擇用來瀏覽選取之採礦模型的檢視器。 您可以使用此模型類型的自訂檢視器，或 [Microsoft 一般內容樹狀檢視器]  。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
  放大圖表。  
@@ -71,8 +70,8 @@ ms.locfileid: "48164168"
  變更樹狀目錄中顯示的層級數目。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

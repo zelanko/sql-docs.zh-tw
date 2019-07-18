@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135305"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
+# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回資料庫中的每個安全性原則的資料列。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|安全性原則的名稱，它在資料庫中是唯一的。|  
+|name|**sysname**|安全性原則的名稱，它在資料庫中是唯一的。|  
 |object_id|**int**|安全性原則的識別碼。|  
 |principal_id|**int**|註冊到資料庫之安全性原則的擁有者識別碼。 如果擁有者取決於結構描述，則為 NULL。|  
 |schema_id|**int**|物件所在之結構描述的識別碼。|  
 |parent_object_id|**int**|原則所屬之物件的識別碼。 必須是 0。|  
-|型別|**vachar(2)**|必須是**SP**。|  
+|type|**vachar(2)**|必須是**SP**。|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**。|  
 |create_date|**datetime**|建立安全性原則的 UTC 日期。|  
 |modify_date|**datetime**|上次修改安全性原則的 UTC 日期。|  

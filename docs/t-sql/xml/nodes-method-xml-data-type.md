@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145475"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,15 +78,15 @@ T (ProductModelID int, Instructions xml)
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 然後您可以使用 **xml** 資料類型方法來查詢這個資料列集。 下列查詢會針對所產生的每個資料列，擷取其中內容項目的子樹：  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-所傳回的資料列集保留了類型資訊。 您可以將 **xml** 資料類型方法 (例如 **query()**、**value()**、**exist()** 與 **nodes()**) 套用至 **nodes()** 方法的結果。 不過，您不能套用 **modify()** 方法來修改 XML 執行個體。  
+所傳回的資料列集保留了類型資訊。 您可以將 **xml** 資料類型方法 (例如 **query()** 、**value()** 、**exist()** 與 **nodes()** ) 套用至 **nodes()** 方法的結果。 不過，您不能套用 **modify()** 方法來修改 XML 執行個體。  
   
 此外，也不能將資料列集中的內容節點具體化。 意即，您不能將它用於 SELECT 陳述式中。 但是您可以將它用在 IS NULL 及 COUNT(*) 中。  
   
@@ -147,7 +147,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>針對 xml 類型的變數來使用 nodes() 方法  
-在下列範例中，有一個 XML 文件，其中含有一個 <`Root`> 最上層項目及三個 <`row`> 子項目。 此查詢使用 `nodes()` 方法設定個別的內容節點，每個 <`row`> 元素各設定一個內容節點。 `nodes()` 方法會傳回含有三個資料列的資料列集。 每個資料列都有一個原始 XML 的邏輯副本，其中每個內容節點都在原始文件中識別不同的 <`row`> 元素。  
+在下列範例中，有一個 XML 文件，其中含有一個 <`Root`> 最上層項目及三個 <`row`> 子項目。 此查詢使用 `nodes()` 方法設定個別的內容節點，每個 <`row`> 元素各設定一個內容節點。 `nodes()` 方法會傳回含有三個資料列的資料列集。 每個資料列都有一個原始 XML 的邏輯複本，其中每個內容節點都會識別原始文件中不同的 <`row`> 元素。  
   
 接著，查詢會從每個資料列傳回內容節點：  
   
@@ -171,7 +171,7 @@ GO
 <row id="3"/>  
 ```  
   
-將父系存取子套用在內容節點上，會為所有的三個資料列傳回 <`Root`> 元素：  
+將父系存取子套用在內容節點上，會為所有三個資料列傳回 <`Root`> 元素：  
   
 ```sql
 SELECT T.c.query('..') AS result  
@@ -204,7 +204,7 @@ go
   
 在下列範例中，會針對 `ProductModel` 資料表中 **xml** 類型的 `Instructions` 資料行來指定 `nodes()` 方法。  
   
-`nodes()` 方法藉由指定 `/MI:root/MI:Location` 路徑，將 <`Location`> 元素設為內容節點。 結果資料列集包含原始文件的邏輯副本 (文件中的每個 <`Location`> 節點各有一個副本)，且其內容節點設為 <`Location`> 元素。 因此，`nodes()` 函式會提供一組 <`Location`> 內容節點。  
+`nodes()` 方法藉由指定 `/MI:root/MI:Location` 路徑，將 <`Location`> 元素設為內容節點。 結果資料列集包含原始文件的邏輯複本 (文件中的每個 <`Location`> 節點各有一個複本)，且其內容節點會設為 <`Location`> 元素。 因此，`nodes()` 函式會提供一組 <`Location`> 內容節點。  
   
 根據此資料列集的 `query()` 方法會要求 `self::node`，且會傳回每個資料列的 `<Location>` 項目。  
   

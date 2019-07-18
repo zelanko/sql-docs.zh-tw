@@ -21,14 +21,18 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c8203ae3b9b9abf1b45a332ca6c5706a1156125
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bd586c0ca3fa2cca354a2f394d9008761d744d41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725368"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
   
 ## <a name="regular-identifiers"></a>一般識別碼  
@@ -53,7 +57,7 @@ ms.locfileid: "58277176"
  您無法參考運算式中包含方括號的資料行名稱。 例如，資料行名稱 **Column[1]** 不可用於運算式中。 若要在運算式中使用資料行，則必須將它重新命名為不含方括號的名稱。  
   
 ## <a name="lineage-identifiers"></a>歷程識別碼  
- 運算式可以使用歷程識別碼來參考資料行。 當您初次建立封裝時，會自動指派歷程識別碼。 您可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，於 [進階編輯器] 對話方塊的 [資料行屬性] 索引標籤上檢視資料行的歷程識別碼。  
+ 運算式可以使用歷程識別碼來參考資料行。 當您初次建立封裝時，會自動指派歷程識別碼。 您可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，於 [進階編輯器]  對話方塊的 [資料行屬性]  索引標籤上檢視資料行的歷程識別碼。  
   
  如果您使用資料行本身的歷程識別碼參考該資料行，則識別碼前面必須包含井字號 (#) 字元。 例如，歷程識別碼 147 的資料行必須以 #147 的形式參考。  
   

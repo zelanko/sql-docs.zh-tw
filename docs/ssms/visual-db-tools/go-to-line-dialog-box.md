@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 528c18d094a0e4f63f76731380749a95d04da1e7
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 3e4dfbbe1854919e6f8680c749a09774cbfa5e84
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328298"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682327"
 ---
 # <a name="go-to-line-dialog-box"></a>移至行對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-若要移到程式碼編輯器視窗中的某個位置，輸入行號，然後按一下 [確定]。
+若要移到程式碼編輯器視窗中的某個位置，輸入行號，然後按一下 [確定]  。

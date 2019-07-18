@@ -10,34 +10,18 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+manager: jroth
+ms.openlocfilehash: 480975d4bbcf0ec33a51509e2ca10b633cd8aef7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872318"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66782520"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 可用性群組的效能層面，對於維護關鍵任務資料庫的服務等級協定 (SLA) 來說非常重要。 了解可用性群組如何將記錄傳送至次要複本，可協助您 預估可用性實作的復原時間目標 (RTO) 與復原點目標 (RPO)，以及針對效能不佳的可用性群組或複本來識別其中的瓶頸。 本文章會說明同步處理程序，示範如何計算一些關鍵計量，並提供某些常見效能疑難排解案例的連結。  
-  
- 其中涵蓋下列主題：  
-  
--   [資料同步處理程序](#data-synchronization-process)  
-  
--   [流程控制閘道](#flow-control-gates)  
-  
--   [預估容錯移轉時間 (RTO)](#estimating-failover-time-rto)  
-  
--   [預估潛在資料遺失 (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [監視 RTO 和 RPO](#monitoring-for-rto-and-rpo)  
-  
--   [效能疑難排解案例](#BKMK_SCENARIOS)  
-  
--   [實用的擴充事件](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>資料同步處理程序  
  若要預估完整同步處理的時間並找出瓶頸，您需要了解同步處理程序。 效能瓶頸可能會在程序中的任何位置，而找出瓶頸可以協助您挖掘更深入的底層問題。 下圖和下表說明資料同步處理程序：  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872318"
 |**序列**|**步驟描述**|**註解**|**實用的計量**|  
 |1|記錄檔產生|記錄檔資料會排清至磁碟。 此記錄檔必須複寫到次要複本。 記錄檔記錄會進入傳送佇列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|擷取|這會擷取每個資料庫的記錄檔並傳送至對應的夥伴佇列 (每個資料庫複本組一個)。 只要已連接可用性複本且資料移動未因任何原因暫停，此擷取程序就會持續執行，且資料庫複本組會顯示為「同步處理中」或「已同步處理」兩者之一。 如果擷取程序掃描訊息並將它加入佇列的速度不夠快，則會建立記錄檔傳送佇列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，這是針對該可用性複本排入佇列的所有資料庫訊息總和彙總。<br /><br /> 主要複本上為 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
-|3|Send|這會清除每個資料庫複本佇列中的訊息佇列，並跨線路傳送到個別的次要複本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (毫秒)|  
+|3|Send|這會清除每個資料庫複本佇列中的訊息佇列，並跨線路傳送到個別的次要複本。|[SQL Server：可用性複本 > 每秒傳送到傳輸的位元組](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|接收並快取|每個次要複本會接收並快取訊息。|效能計數器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|強行寫入|這會排清次要複本上的記錄檔，以進行強行寫入。 記錄檔排清之後，會將認可傳回到主要複本。<br /><br /> 一旦強行寫入記錄檔，可以避免資料遺失。|效能計數器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等候類型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|取消復原|在次要複本上重做排清的分頁。 頁面等候重做時會保留在重做佇列中。|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 等候類型 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -60,9 +44,9 @@ ms.locfileid: "58872318"
   
 |||||  
 |-|-|-|-|  
-|**層級**|**閘道數目**|**訊息數目**|**實用的計量**|  
+|**Level**|**閘道數目**|**訊息數目**|**實用的計量**|  
 |傳輸|每個可用性複本 1 個|8192|擴充事件 **database_transport_flow_control_action**|  
-|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND ](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
+|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
   
  一旦達到其中一個閘道的訊息閾值，記錄檔訊息便不會再傳送至特定複本，或是針對特定資料庫傳送。 一旦收到傳送訊息的訊息收條，就可以傳送訊息，讓傳送訊息數目低於閾值。  
   
@@ -106,13 +90,13 @@ ms.locfileid: "58872318"
 在 Always On 可用性群組中，會針對次要複本上裝載的資料庫計算和顯示 RTO 和 RPO。 在主要複本的儀表板上，次要複本會將 RTO 和 RPO 群組在一起。 
 
 若要在儀表板內檢視 RTO 和 RPO，請執行下列作業：
-1. 在 SQL Server Management Studio 中，展開 [Always On 高可用性] 節點，並以滑鼠右鍵按一下您的可用性群組名稱，然後選取 [顯示儀表板]。 
-1. 選取 [群組依據] 索引標籤下方的 [新增/移除資料行]。檢查 [預估復原時間 (秒)] [RTO] 和 [估計的資料遺失 (時間)] [RPO]。 
+1. 在 SQL Server Management Studio 中，展開 [Always On 高可用性]  節點，並以滑鼠右鍵按一下您的可用性群組名稱，然後選取 [顯示儀表板]  。 
+1. 選取 [群組依據]  索引標籤下方的 [新增/移除資料行]  。檢查 [預估復原時間 (秒)]  [RTO] 和 [估計的資料遺失 (時間)]  [RPO]。 
 
    ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
 
 ### <a name="calculation-of-secondary-database-rto"></a>計算次要資料庫 RTO 
-復原時間計算可判斷在容錯移轉之後需要多少時間來復原「次要資料庫」。  容錯移轉時間通常簡短且一致。 偵測時間取決於叢集層級設定，而不是個別可用性複本。 
+復原時間計算可判斷在容錯移轉之後需要多少時間來復原「次要資料庫」  。  容錯移轉時間通常簡短且一致。 偵測時間取決於叢集層級設定，而不是個別可用性複本。 
 
 
 針對次要資料庫 (DB_sec)，其 RTO 的計算和顯示會根據其 **redo_queue_size** 和 **redo_rate**：
@@ -135,9 +119,9 @@ ms.locfileid: "58872318"
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO/RPO 公式中使用的效能計數器
 
-- **redo_queue_size** (KB) [用於 RTO]：重做佇列大小是其 **last_received_lsn** 與 **last_redone_lsn** 之間的交易記錄大小。 **last_received_lsn** 是記錄檔區塊識別碼，可識別裝載此次要資料庫的次要複本已經接收所有記錄檔區塊到哪一點。 **last_redone_lsn** 是最後一個記錄檔記錄的記錄序號，而該記錄在次要資料庫上重做。 根據這兩個值，我們可以找出起始記錄區塊 (**last_received_lsn**) 和結尾記錄區塊 (**last_redone_lsn**) 的識別碼。 這兩個記錄區塊之間的空格接著可以代表尚未重做交易記錄區塊數目。 這是以 KB 來測量。
--  **redo_rate** (KB/秒) [用於 RTO]：累加值，在耗用期間，代表次要資料庫上已重做的交易記錄數量 (KB) (以KB/秒為單位)。 
-- **last_commit_time** (Datetime) [用於 RPO]：針對主要資料庫，**last_commit_time** 是認可最新交易的時間。 針對次要資料庫，**last_commit_time** 是主要資料庫上已在次要資料庫上成功強化的交易最新認可時間。 因為次要複本上的這個值應該與主要複本上的相同值同步，所以這兩個值之間的任何差距就是預估資料遺失 (RPO)。  
+- **redo_queue_size** (KB) [用於 RTO]  ：重做佇列大小是其 **last_received_lsn** 與 **last_redone_lsn** 之間的交易記錄大小。 **last_received_lsn** 是記錄檔區塊識別碼，可識別裝載此次要資料庫的次要複本已經接收所有記錄檔區塊到哪一點。 **last_redone_lsn** 是最後一個記錄檔記錄的記錄序號，而該記錄在次要資料庫上重做。 根據這兩個值，我們可以找出起始記錄區塊 (**last_received_lsn**) 和結尾記錄區塊 (**last_redone_lsn**) 的識別碼。 這兩個記錄區塊之間的空格接著可以代表尚未重做交易記錄區塊數目。 這是以 KB 來測量。
+-  **redo_rate** (KB/秒) [用於 RTO]  ：累加值，在耗用期間，代表次要資料庫上已重做的交易記錄數量 (KB) (以KB/秒為單位)。 
+- **last_commit_time** (Datetime) [用於 RPO]  ：針對主要資料庫，**last_commit_time** 是認可最新交易的時間。 針對次要資料庫，**last_commit_time** 是主要資料庫上已在次要資料庫上成功強化的交易最新認可時間。 因為次要複本上的這個值應該與主要複本上的相同值同步，所以這兩個值之間的任何差距就是預估資料遺失 (RPO)。  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>使用 DMV 預估 RTO 和 RPO
 
@@ -349,61 +333,61 @@ ms.locfileid: "58872318"
 
 1.  [啟動 SQL Server Agent 服務](~/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md) (如果尚未啟動)。  
   
-2.  在 SQL Server Management Studio 中，在 [工具] 功能表中，按一下 [選項]。  
+2.  在 SQL Server Management Studio 中，在 [工具]  功能表中，按一下 [選項]  。  
   
-3.  在 [SQL Server Always On] 索引標籤中，選取 [啟用使用者定義 Always On 原則] 並按一下 [確定]。  
+3.  在 [SQL Server Always On]  索引標籤中，選取 [啟用使用者定義 Always On 原則]  並按一下 [確定]  。  
   
      此設定可讓您在 Always On 儀表板中顯示已正確設定的自訂原則。  
   
 4.  使用下列規格建立[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**： `RTO`  
+    -   **名稱**：`RTO`  
   
     -   **Facet**：**資料庫複本狀態**  
   
-    -   **欄位**： `Add(@EstimatedRecoveryTime, 60)`  
+    -   **欄位**：`Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **運算子**：**<=**  
+    -   **運算子**： **<=**  
   
-    -   **值**： `600`  
+    -   **值**：`600`  
   
      當潛在容錯移轉時間超過 10 分鐘 (包括失敗偵測和容錯移轉的 60 秒額外負荷)，此條件會失敗。  
   
 5.  使用下列規格建立第二個[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**： `RPO`  
+    -   **名稱**：`RPO`  
   
     -   **Facet**：**資料庫複本狀態**  
   
-    -   **欄位**： `@EstimatedDataLoss`  
+    -   **欄位**：`@EstimatedDataLoss`  
   
-    -   **運算子**：**<=**  
+    -   **運算子**： **<=**  
   
-    -   **值**： `3600`  
+    -   **值**：`3600`  
   
      當潛在資料遺失超過 1 小時時，此條件會失敗。  
   
 6.  使用下列規格建立第三個[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**： `IsPrimaryReplica`  
+    -   **名稱**：`IsPrimaryReplica`  
   
     -   **Facet**：**可用性群組**  
   
-    -   **欄位**： `@LocalReplicaRole`  
+    -   **欄位**：`@LocalReplicaRole`  
   
-    -   **運算子**：**=**  
+    -   **運算子**： **=**  
   
-    -   **值**： `Primary`  
+    -   **值**：`Primary`  
   
      此條件會檢查給定可用性群組的本機可用性複本是否為主要複本。  
   
 7.  使用下列規格建立[以原則為基礎的管理原則](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)：  
   
-    -   [一般] 頁面：  
+    -   [一般]  頁面：  
   
-        -   **名稱**： `CustomSecondaryDatabaseRTO`  
+        -   **名稱**：`CustomSecondaryDatabaseRTO`  
   
-        -   **檢查條件**： `RTO`  
+        -   **檢查條件**：`RTO`  
   
         -   **針對目標**：**IsPrimaryReplica AvailabilityGroup** 中的**每個 DatabaseReplicaState**  
   
@@ -415,7 +399,7 @@ ms.locfileid: "58872318"
   
         -   **已啟用**：**選取**  
   
-    -   [描述] 頁面：  
+    -   [描述]  頁面：  
   
         -   **類別**：**可用性資料庫警告**  
   
@@ -427,11 +411,11 @@ ms.locfileid: "58872318"
   
 8.  使用下列規格建立第二個[以原則為基礎的管理原則](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)：  
   
-    -   [一般] 頁面：  
+    -   [一般]  頁面：  
   
-        -   **名稱**： `CustomAvailabilityDatabaseRPO`  
+        -   **名稱**：`CustomAvailabilityDatabaseRPO`  
   
-        -   **檢查條件**： `RPO`  
+        -   **檢查條件**：`RPO`  
   
         -   **針對目標**：**IsPrimaryReplica AvailabilityGroup** 中的**每個 DatabaseReplicaState**  
   
@@ -441,7 +425,7 @@ ms.locfileid: "58872318"
   
         -   **已啟用**：**選取**  
   
-    -   [描述] 頁面：  
+    -   [描述]  頁面：  
   
         -   **類別**：**可用性資料庫警告**  
   

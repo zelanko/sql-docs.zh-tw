@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484265"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將 .dqs 檔案中的定義域匯入現有的知識庫中。 .dqs 資料檔的建立方式是從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出定義域或知識庫。 .dqs 資料檔已加密，所以無法檢視。  
@@ -42,16 +42,16 @@ ms.locfileid: "56011470"
   
 3.  按一下 **[從資料檔匯入定義域]** 圖示。  
   
-4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]**。  
+4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]** 。  
   
-5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!NOTE]  
     >  只有當匯入的來源 .dqs 檔案只包含一個單一定義域或是一個複合定義域 (包含多個單一定義域) 時，匯入作業才會成功。  
   
 6.  確認您匯入的定義域顯示在 **[定義域]** 清單中。 如果您匯入複合定義域，請確認此複合定義域以及其中包含的單一定義域全都位於 **[定義域]** 清單中。  
   
-##  <a name="FollowUp"></a> 後續操作：從.dqs 檔案匯入定義域之後  
+##  <a name="FollowUp"></a> 後續操作：從 .dqs 檔案匯入定義域之後  
  當您從 .dqs 檔案匯入定義域之後，您可以將知識加入至定義域，或是在清理或比對專案中使用定義域 (根據定義域的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)、[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)、[資料清理](../../2014/data-quality-services/data-cleansing.md)或[資料比對](../../2014/data-quality-services/data-matching.md)。  
   
   

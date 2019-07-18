@@ -2,7 +2,7 @@
 title: ConfigurationSetting 方法 - GenerateDatabaseCreationScript | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8ee85f780ff9e7473192c2cd5e96a322af55b44c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5bcbcf0fde93dbba2e1d664ef7768232355ba5de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581043"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>ConfigurationSetting 方法 - GenerateDatabaseCreationScript
   產生可用來建立報表伺服器資料庫的 SQL 指令碼。  

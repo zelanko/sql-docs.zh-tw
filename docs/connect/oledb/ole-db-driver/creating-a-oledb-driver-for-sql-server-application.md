@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: fb718e2288b1d5e2aaccc1cbafc0c85037bd8082
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c36ec6878f7ef981e72a64121c98c930e6481104
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769206"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>建立 OLE DB Driver for SQL Server 應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

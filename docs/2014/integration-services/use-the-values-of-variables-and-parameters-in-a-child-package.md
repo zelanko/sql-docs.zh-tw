@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -16,12 +15,12 @@ ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054725"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子封裝中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  
@@ -41,7 +40,7 @@ ms.locfileid: "58374957"
   
 3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，請按一下 [控制流程] 索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
     -   若要將範圍設定為「執行封裝」工作的父容器，請按一下該容器。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "58374957"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，若要將範圍設定為封裝，請按一下 [控制流程] 索引標籤之設計介面上的任意位置。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，若要將範圍設定為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
 4.  加入及設定變數。  
   
@@ -73,34 +72,34 @@ ms.locfileid: "58374957"
   
 1.  如果子封裝尚未開啟，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中開啟它。  
   
-2.  按一下 [控制流程] 索引標籤之設計介面中的任意位置。  
+2.  按一下 [控制流程]  索引標籤之設計介面中的任意位置。  
   
-3.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
+3.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
-4.  在 [封裝組態組合管理] 對話方塊中，選取 [啟用封裝組態]，然後按一下 [加入]。  
+4.  在 [封裝組態組合管理]  對話方塊中，選取 [啟用封裝組態]  ，然後按一下 [加入]  。  
   
-5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]。  
+5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]  。  
   
-6.  在 [選取組態類型] 頁面的 [組態類型] 清單中，選取 [父封裝變數]，然後執行下列其中之一：  
+6.  在 [選取組態類型] 頁面的 [組態類型]  清單中，選取 [父封裝變數]  ，然後執行下列其中之一：  
   
-    -   選取 [直接指定組態設定]，然後在 [父變數] 方塊中，提供組態中所要使用之父封裝的變數名稱。  
+    -   選取 [直接指定組態設定]  ，然後在 [父變數]  方塊中，提供組態中所要使用之父封裝的變數名稱。  
   
         > [!IMPORTANT]  
         >  變數名稱會區分大小寫。  
   
-    -   選取 [組態位置儲存在環境變數中]，然後在 [環境變數清單] 中選取包含變數名稱的環境變數。  
+    -   選取 [組態位置儲存在環境變數中]  ，然後在 [環境變數清單]  中選取包含變數名稱的環境變數。  
   
-7.  按一下 [下一步] 。  
+7.  按一下 [下一步]  。  
   
-8.  在 [選取目標屬性] 頁面上，依序展開 [變數] 節點及要設定之變數的 [屬性] 節點，然後按一下組態所要設定的屬性。  
+8.  在 [選取目標屬性] 頁面上，依序展開 [變數]  節點及要設定之變數的 [屬性]  節點，然後按一下組態所要設定的屬性。  
   
-9. 按一下 [下一步] 。  
+9. 按一下 [下一步]  。  
   
 10. (選擇性) 在 [正在完成精靈] 頁面上，修改組態的預設名稱並檢閱組態資訊。  
   
-11. 按一下 [完成] 以完成精靈，並返回 [封裝組態組合管理] 對話方塊。  
+11. 按一下 [完成]  以完成精靈，並返回 [封裝組態組合管理]  對話方塊。  
   
-12. 在 [封裝組態組合管理] 對話方塊中，[組態] 方塊會列出新的組態。  
+12. 在 [封裝組態組合管理]  對話方塊中，[組態]  方塊會列出新的組態。  
   
 13. 按一下 [ **關閉**]。  
   

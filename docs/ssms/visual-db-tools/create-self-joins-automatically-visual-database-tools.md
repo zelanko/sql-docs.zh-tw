@@ -12,15 +12,15 @@ helpviewer_keywords:
 - self-joins
 - joins [SQL Server], self
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f1d7bdeca1202eb46bf2926d2ddc86855bd5f71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 7958ed99aa26de79893329d57471ead88ea4519b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652507"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680240"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>自動建立自我聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

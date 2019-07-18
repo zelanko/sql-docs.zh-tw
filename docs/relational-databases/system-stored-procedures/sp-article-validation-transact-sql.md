@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4c9d0a82422675c9698d7216b92e1c9401392a79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004828"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] full_or_fast` 方法用來計算資料列計數。 *full_or_fast*已**tinyint**，而且可以是下列值之一。  
   
-|**值**|**說明**|  
+|**值**|**描述**|  
 |---------------|---------------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
 |**1**|執行快速計數**sysindexes.rows**。 計算資料列**sysindexes**速度，比計算實際資料表中的資料列。 不過， **sysindexes**會以延遲的方式，更新和資料列計數可能不正確。|  
@@ -89,9 +88,9 @@ sp_article_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

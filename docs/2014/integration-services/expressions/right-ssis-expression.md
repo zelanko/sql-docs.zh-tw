@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768794"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
   傳回來自給定字元運算式最右邊部分的指定字元數。  

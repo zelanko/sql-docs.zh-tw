@@ -2,18 +2,18 @@
 title: 在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b475b04506e4e21a422d4ca165d6c9a321045df8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a78a71caf85bad0df6d21f22c305a93898c122df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579032"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS)
   當您想要指定要在轉譯報表中顯示的文字來取代沒有資料的資料區時，請為資料表、矩陣或清單資料區域設定 NoRowsMessage 屬性，為圖表資料區設定 NoDataMessage，並為地圖的色階設定 NoDataText。 在執行階段，報表處理器會針對報表中的每一個資料集來執行查詢，而且資料集查詢可能不會產生任何結果集。 如果是繫結至空資料集的資料區，您可以指定要顯示的文字，而不是顯示空的資料區。 執行階段時如果子報表中的資料集都沒有資料，您也可以為子報表設定 NoRowsMessage 屬性。  
@@ -27,7 +27,7 @@ ms.locfileid: "47688156"
   
 2.  在 [屬性] 窗格中，輸入您想要在 **[NoRowsMessage]** 屬性欄位中顯示為訊息的文字。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ### <a name="to-set-the-nodatamessage-property-for-a-chart"></a>為圖表設定 NoDataMessage 屬性  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47688156"
   
 3.  在 **[屬性]** 窗格中，輸入您想要在 **[NoDataMessage]** 屬性欄位中顯示為訊息的文字。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ### <a name="to-set-the-norowsmessage-for-a-subreport"></a>為子報表設定 NoRowsMessage  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47688156"
   
 2.  在 [屬性] 窗格中，輸入您想要在 **[NoRowsMessage]** 屬性欄位中顯示為訊息的文字。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ### <a name="to-set-the-nodatatext-property-for-a-color-scale-for-a-map"></a>若要為地圖的色階設定 NoDataText 屬性  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47688156"
   
 2.  在 [屬性] 窗格的 **[NoDataText]** 中，輸入您要顯示成色彩標籤的文字 (不含資料值)。  
   
-     另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
+     另外，您也可以從下拉式清單按一下 [運算式]  ，開啟 [運算式]  對話方塊，然後建立運算式。  
   
 ## <a name="see-also"></a>另請參閱  
  [子報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   

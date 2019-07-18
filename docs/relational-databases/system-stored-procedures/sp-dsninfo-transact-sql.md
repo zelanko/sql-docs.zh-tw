@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (Transact-SQL) | Microsoft Docs
+title: sp_dsninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124712"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dsn = ] 'dsn'` 是 ODBC DSN 或 OLE DB 連結伺服器的名稱。 *dsn*已**varchar(128)**，沒有預設值。  
+`[ @dsn = ] 'dsn'` 是 ODBC DSN 或 OLE DB 連結伺服器的名稱。 *dsn*已**varchar(128)** ，沒有預設值。  
   
-`[ @infotype = ] 'info_type'` 是要傳回類型。 如果*info_type*未指定或指定 NULL，則會傳回所有資訊類型。 *info_type*已**varchar(128)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @infotype = ] 'info_type'` 是要傳回類型。 如果*info_type*未指定或指定 NULL，則會傳回所有資訊類型。 *info_type*已**varchar(128)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -53,9 +52,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|指定資料庫名稱。|  
 |**SQL_SUBSCRIBER**|指定資料來源可以是訂閱者。|  
   
-`[ @login = ] 'login'` 是資料來源的登入。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *登入*已**varchar(128)**，預設值是 NULL。  
+`[ @login = ] 'login'` 是資料來源的登入。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *登入*已**varchar(128)** ，預設值是 NULL。  
   
-`[ @password = ] 'password'` 這是登入密碼。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *密碼*已**varchar(128)**，預設值是 NULL。  
+`[ @password = ] 'password'` 這是登入密碼。 如果資料來源包括登入，請指定 NULL 或省略這個參數。 *密碼*已**varchar(128)** ，預設值是 NULL。  
   
 `[ @dso_type = ] dso_type` 是資料來源類型。 *dso_type*已**int**，而且可以是下列值之一。  
   
@@ -83,7 +82,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_dsninfo**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [sp_enumdsn &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

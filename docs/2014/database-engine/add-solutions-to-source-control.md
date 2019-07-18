@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815700"
 ---
 # <a name="add-solutions-to-source-control"></a>將方案加入原始檔控制
   當您將方案加入原始檔控制中，您通常會想加入整個方案及其包含的所有專案。 您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，將方案加入原始檔控制中。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f7f10aad960e46b72b981f8546da89cb6712dc9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291893"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105487"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)
   圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖是由一組所謂形狀圖的圖表所組成。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。 如需形狀圖的詳細資訊，請參閱[形狀圖 &#40;報表產生器及 SSRS &#41;](charts-report-builder-and-ssrs.md)。  
@@ -90,7 +89,7 @@ ms.locfileid: "56291893"
  [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

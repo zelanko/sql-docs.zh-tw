@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f8d642f90aa7c4dffa990977d8e0cb84b5337c7f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e944daafdbcfc0bf9fdcec3498a6d2f75342fdc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086807"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>安裝 SSMA for MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) 適用於 MySQL 包含您用來從 mysql 移轉至執行移轉的用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 它也包含支援已移轉的資料庫中的資料移轉以及使用 MySQL 系統函式的延伸模組組件。  
@@ -31,7 +30,7 @@ SQL Server Migration Assistant (SSMA) 適用於 MySQL 包含您用來從 mysql �
   
 |||  
 |-|-|  
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |[安裝 SSMA for MySQL 用戶端&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|提供有關的資訊和指示，安裝 SSMA 用戶端。|  
 |[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|提供的執行個體上安裝的延伸模組組件的指示和資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[移除 SSMA for MySQL 元件&#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|提供解除安裝用戶端程式的指示。|  

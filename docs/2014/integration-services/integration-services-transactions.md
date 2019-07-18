@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767627"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
-  封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供設定交易的三個選項：**NotSupported**，**支援**，以及**需要**。  
+  封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了三種設定交易的選項：**NotSupported**、**Supported** 和 **Required**。  
   
 -   **Required** 指出容器會啟動交易，除非其父容器已經將其啟動。 如果交易已經存在，則容器會聯結交易。 例如，如果未設定為支援交易的封裝包括使用 **Required** 選項的「時序」容器，則「時序」容器會啟動其自己的交易。 如果封裝設定為使用 **Required** 選項，則「時序」容器會聯結封裝交易。  
   

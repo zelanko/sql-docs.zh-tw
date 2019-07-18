@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
@@ -13,12 +12,12 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3759aeb64524386ed0ac522e47e1de3ff99c18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f62b8d690e71c8efdfc33c15966758d10a4412af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063360"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。  
@@ -28,7 +27,7 @@ ms.locfileid: "48179038"
   
 -   在個別的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上設定中斷點。  
   
-     中斷點是指您要暫停執行以便檢查資料的點。 當您啟動偵錯工具時，它會在 [查詢編輯器] 視窗的第一行程式碼上暫停。 若要執行到您已設定的第一個中斷點，可以使用 [繼續] 功能。 您也可以使用 [繼續] 功能，從視窗目前暫停的任何位置執行到下一個中斷點。 您可以編輯中斷點以指定動作，例如中斷點應暫停執行的條件、指向 [輸出] 視窗的資訊，以及變更中斷點的位置。  
+     中斷點是指您要暫停執行以便檢查資料的點。 當您啟動偵錯工具時，它會在 [查詢編輯器] 視窗的第一行程式碼上暫停。 若要執行到您已設定的第一個中斷點，可以使用 [繼續]  功能。 您也可以使用 [繼續]  功能，從視窗目前暫停的任何位置執行到下一個中斷點。 您可以編輯中斷點以指定動作，例如中斷點應暫停執行的條件、指向 [輸出]  視窗的資訊，以及變更中斷點的位置。  
   
 -   逐步執行下一個陳述式。  
   
@@ -45,9 +44,9 @@ ms.locfileid: "48179038"
 ## <a name="viewing-debugger-information"></a>檢視偵錯工具資訊  
  每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用下列偵錯工具視窗來檢視目前的執行狀態：  
   
--   [本機] 和 [監看式]**。** 這些視窗會顯示目前配置的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式是評估成單一純量運算式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援檢視參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數或內建函式 (名稱以 @@ 為開頭) 的運算式。 這些視窗也會顯示目前指派給運算式的資料值。  
+-   [本機]  和 [監看式] **。** 這些視窗會顯示目前配置的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式是評估成單一純量運算式的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援檢視參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數或內建函式 (名稱以 @@ 為開頭) 的運算式。 這些視窗也會顯示目前指派給運算式的資料值。  
   
--   **[快速監看式]。** 這個視窗會顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的值，而且可讓您將該運算式儲存至 [監看式] 視窗。  
+-   **[快速監看式]。** 這個視窗會顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的值，而且可讓您將該運算式儲存至 [監看式]  視窗。  
   
 -   **[中斷點]。** 這個視窗會顯示目前已設定的中斷點，而且可讓您管理它們。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48179038"
   
 -   **[輸出]。** 這個視窗會顯示各種訊息和程式資料，例如偵錯工具的系統訊息。  
   
--   [結果] 和 [訊息]。 [查詢編輯器] 視窗上的這些索引標籤會顯示先前執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的結果。  
+-   [結果]  和 [訊息]  。 [查詢編輯器] 視窗上的這些索引標籤會顯示先前執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的結果。  
   
 ## <a name="transact-sql-debugger-tasks"></a>Transact-SQL 偵錯工具工作  
   

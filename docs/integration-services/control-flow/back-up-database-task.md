@@ -19,14 +19,18 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6340db7748760783b6be642a6f48c93c66622768
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b8e4fee484f3302b72c1cfc3da9f0e4e62cae5a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727979"
 ---
 # <a name="back-up-database-task"></a>備份資料庫工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「備份資料庫」工作會執行不同類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫備份作業。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  使用「備份資料庫」工作，封裝即可備份單一資料庫或多個資料庫。 如果工作僅備份單一資料庫，您可以選擇備份元件：資料庫，或其檔案和檔案群組。  

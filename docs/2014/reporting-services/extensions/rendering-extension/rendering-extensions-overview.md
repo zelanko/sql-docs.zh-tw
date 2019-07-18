@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ed3c66f3b0ee97a25172c912f0337e6f2d71cd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985808"
 ---
 # <a name="rendering-extensions-overview"></a>轉譯延伸模組概觀
   轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、 Excel、 Word、 CSV 或文字、 XML、 影像和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
@@ -34,12 +32,12 @@ ms.locfileid: "56035819"
 |--------------------|-----------------|  
 |`XML`|以 XML 格式轉譯報表。 報表會在瀏覽器中開啟。 套用至此 XML 輸出的其他轉譯，有可能是避免開發自己的轉譯延伸模組之具成本效益的方式。|  
 |`CSV`|以逗號分隔格式來轉譯報表。 在與 CSV 檔案格式相關聯的檢視工具中開啟此報表。|  
-|`IMAGE`|以頁面導向格式轉譯報表。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [TIFF]。|  
-|`PDF`|在 Adobe Acrobat Reader 中轉譯報表。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [Acrobat (PDF) 檔案]。|  
+|`IMAGE`|以頁面導向格式轉譯報表。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [TIFF]  。|  
+|`PDF`|在 Adobe Acrobat Reader 中轉譯報表。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [Acrobat (PDF) 檔案]  。|  
 |`EXCEL`|在 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 中轉譯報表。|  
 |`WORD`|在 [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] 中轉譯報表。|  
 |`HTML 4.0` (HTML 轉譯延伸模組的一部分)|HTML 是用以初始化轉譯報表的格式。 如果瀏覽器支援 HTML 4.0，就會使用此格式。 否則，系統會使用 HTML 3.2。|  
-|`MHTML` (HTML 轉譯延伸模組的一部分)|以 MHTML 格式轉譯報表。 報表就會在 Internet Explorer 中開啟。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [網頁封存]。|  
+|`MHTML` (HTML 轉譯延伸模組的一部分)|以 MHTML 格式轉譯報表。 報表就會在 Internet Explorer 中開啟。 此格式在報表工具列的 [匯出] 下拉式清單中會顯示為 [網頁封存]  。|  
 |`NULL`|不會將報表轉譯為特定格式。 這個轉譯延伸模組對於將報表放在快取中特別有用。 Null 轉譯應該與排程執行或傳遞一起使用。|  
   
  如需建議格式和其使用方法的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../report-builder/export-reports-report-builder-and-ssrs.md)。  

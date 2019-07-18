@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039555"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53207547"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLStatistics(  
      SQLHSTMT        StatementHandle,  
@@ -86,7 +85,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE 要求驅動程式無條件地擷取統計資料。 （只符合 Open Group 標準，而且不支援的 ODBC 延伸模組的驅動程式將無法支援 SQL_ENSURE。）  
   
- SQL_QUICK 要求，此驅動程式擷取的基數和頁面才可以從伺服器提供。 在這個情況下，驅動程式無法確保這些值是否為最新的。 (撰寫 Open Group 標準的應用程式一律會從 ODBC 3 取得 SQL_QUICK 行為 *.x*-相容的驅動程式。)  
+ SQL_QUICK 要求，此驅動程式擷取的基數和頁面才可以從伺服器提供。 在這個情況下，驅動程式無法確保這些值是否為最新的。 (撰寫 Open Group 標準的應用程式一律會從 ODBC 取得 SQL_QUICK 行為*3.x*-相容的驅動程式。)  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -126,9 +125,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  如需一般用途、 引數和 ODBC 目錄函數的傳回的資料的詳細資訊，請參閱[目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC *3.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
+|ODBC 2.0 資料行|ODBC *3.x*資料行|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

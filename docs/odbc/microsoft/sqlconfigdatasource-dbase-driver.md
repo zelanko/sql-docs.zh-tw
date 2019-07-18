@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (dBASE 驅動程式) |Microsoft Docs
+title: SQLConfigDataSource (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054106"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE 驅動程式)
 > [!NOTE]  
@@ -29,9 +28,9 @@ ms.locfileid: "47631646"
   
 |關鍵字|描述|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|欄位會排序順序。<br /><br /> 序列可以是： ASCII （預設值） 或國際。<br /><br /> 這會設定為相同的選項**定序順序**在安裝程式 對話方塊中。|  
+|COLLATINGSEQUENCE|欄位會排序順序。<br /><br /> 序列可以是：ASCII （預設值） 或國際。<br /><br /> 這會設定為相同的選項**定序順序**在安裝程式 對話方塊中。|  
 |DEFAULTDIR|目錄的路徑規格。|  
-|DELETED |DBASE 驅動程式中，指定可以擷取或位於已標示為已刪除的資料列。 如果設為 1，已刪除的資料列不會顯示;如果設為 0，已刪除的資料列會視同未刪除的資料列。<br /><br /> 這會設定為相同的選項**顯示刪除的資料列**在安裝程式 對話方塊中。|  
+|DELETED|DBASE 驅動程式中，指定可以擷取或位於已標示為已刪除的資料列。 如果設為 1，已刪除的資料列不會顯示;如果設為 0，已刪除的資料列會視同未刪除的資料列。<br /><br /> 這會設定為相同的選項**顯示刪除的資料列**在安裝程式 對話方塊中。|  
 |DESCRIPTION|資料來源中資料的說明。<br /><br /> 這會設定為相同的選項**描述**在安裝程式 對話方塊中。|  
 |DRIVER|驅動程式 DLL 的路徑規格。|  
 |DRIVERID|驅動程式的整數識別碼。<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5.0)|  

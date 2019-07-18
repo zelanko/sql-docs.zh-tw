@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1c7a244cdf644bef537f59ce705d14a750700f1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 29d135cffceca65ea81ac6752963732bc2f7b056
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604838"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798333"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 介面
 

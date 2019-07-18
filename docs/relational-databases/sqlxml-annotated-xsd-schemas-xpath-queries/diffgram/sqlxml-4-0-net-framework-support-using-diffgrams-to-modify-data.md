@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2de6fac6cc4a26b1dd232f7ee4bb7b6e5d7b09e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 23ce642bf11aa5efe624159a6b45de8914f1c93a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073382"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 .NET Framework 支援 - 使用 DiffGram 修改資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

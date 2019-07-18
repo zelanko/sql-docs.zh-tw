@@ -13,15 +13,14 @@ helpviewer_keywords:
 - versions [Master Data Services], validating
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b98ef0c4d85385ab683590d128b427636a23331d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102548"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
 
@@ -34,33 +33,33 @@ ms.locfileid: "52822162"
 > [!NOTE]  
 >  所有成員都必須通過驗證之後，才能認可版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   版本的狀態必須是 [開啟] 或 [已鎖定]。  
+-   版本的狀態必須是 [開啟]  或 [已鎖定]  。  
   
--   在 [驗證版本] 頁面上，成員必須存在，且其狀態不得為 [驗證成功]。  
+-   在 [驗證版本]  頁面上，成員必須存在，且其狀態不得為 [驗證成功]  。  
   
 ### <a name="to-validate-a-version"></a>若要驗證版本  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本] 頁面上，按一下功能表列上的 [驗證版本]。  
+2.  在 [管理版本]  頁面上，按一下功能表列上的 [驗證版本]  。  
   
-3.  在 [驗證版本] 頁面上，選取要驗證的模型和版本。  
+3.  在 [驗證版本]  頁面上，選取要驗證的模型和版本。  
   
-4.  按一下 **[驗證]**。  
+4.  按一下 **[驗證]** 。  
   
-5.  在確認對話方塊中按一下 **[確定]**。  
+5.  在確認對話方塊中按一下 **[確定]** 。  
   
     > [!NOTE]  
     >  不再顯示進度指標時，表示版本已完成驗證。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [鎖定版本 &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   

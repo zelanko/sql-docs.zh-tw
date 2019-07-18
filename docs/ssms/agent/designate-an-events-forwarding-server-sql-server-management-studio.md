@@ -12,16 +12,16 @@ helpviewer_keywords:
 - events [SQL Server], forwarding
 - alerts [SQL Server], forwarded events
 ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc60b53841cc44d094d5cea339ba2bd06f492aa6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c89e149af342f6879a3f8e392290d69fa6b0de05
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502444"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680091"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>指定事件轉送伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52502444"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目指定事件轉送伺服器：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   
@@ -54,9 +54,9 @@ ms.locfileid: "52502444"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，從此伺服器轉送事件到另一部伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊的 [選取頁面] 下，選取 [進階]。  
+3.  在 [SQL Server Agent 屬性 - <伺服器名稱>]   對話方塊的 [選取頁面]  下，選取 [進階]  。  
   
 4.  在 **[SQL Server 事件轉送]** 下，選取 **[轉送事件到另一部伺服器]** 核取方塊。  
   
@@ -68,5 +68,5 @@ ms.locfileid: "52502444"
   
 6.  在 **[如果事件的嚴重性等於或高於]** 清單中，按一下會開始將事件轉送至選定伺服器的嚴重性層級。  
   
-7.  完成後，請按一下 **[確定]**。  
+7.  完成後，請按一下 **[確定]** 。  
   

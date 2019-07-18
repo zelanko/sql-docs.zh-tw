@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204589"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查詢類型 (Visual Database Tools)
   [查詢和檢視設計師] 針對某些查詢類型 (選取、插入結果、插入值、更新、刪除和製成資料表) 提供內建功能，同時亦支援 UNION、全文檢索搜尋和 CASE 運算式查詢。  

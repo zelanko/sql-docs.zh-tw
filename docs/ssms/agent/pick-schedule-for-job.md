@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Pick Schedule for Job dialog box
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 38a26cecb2915f992578e49dc48ad6447f8d4223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31b7df7f6c5441f31931aa78ad20a59b0a9840de
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635986"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685481"
 ---
 # <a name="pick-schedule-for-job"></a>作業的挑選排程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47635986"
 列出附加至排程的作業編號。 按一下某個編號以檢視該作業的屬性。  
   
 **屬性**  
-啟動 [作業排程屬性] 對話方塊，您可以在其中檢視排程的相關資訊。  
+啟動 [作業排程屬性]  對話方塊，您可以在其中檢視排程的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

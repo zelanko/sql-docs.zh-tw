@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8cb55701446d9a532cf57cccbba0aa1f11be416a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920351"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 指定的書籤，表示作業應該開始的位置。  

@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8b179d54ff39ffbb67193f88cd192aac6992d7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095480"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client 組態
-  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [Distributed Replay Client 組態] 頁面來指定您想要授與 Distributed Replay Client 服務之管理權限的使用者。  
+  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [Distributed Replay Client 組態]  頁面來指定您想要授與 Distributed Replay Client 服務之管理權限的使用者。  
   
  擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **控制器名稱**  
  這是選擇性參數，而且預設值是\<*空白*>。  
   
@@ -38,11 +37,11 @@ ms.locfileid: "48112788"
  **工作目錄**  
  指定 Distributed Replay Client 服務的工作目錄。  
   
- 預設工作目錄為 \<磁碟機代號>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
+ 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
  **結果目錄**  
  指定 Distributed Replay Client 服務的結果目錄。  
   
- 預設工作目錄為 \<磁碟機代號>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+ 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
   

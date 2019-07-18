@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931565"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 指定的屬性[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  

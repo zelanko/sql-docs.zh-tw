@@ -1,5 +1,5 @@
 ---
-title: SQLRowCount |Microsoft Docs
+title: SQLRowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046603"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   繫結參數值的陣列針對陳述式執行時`SQLRowCount`會傳回 SQL_ERROR，如果任何資料列的參數值在陳述式執行產生錯誤狀況。 會傳回任何值，透過*RowCountPtr*函式的引數。  

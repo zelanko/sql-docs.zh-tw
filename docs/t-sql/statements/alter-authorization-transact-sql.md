@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026089"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a>資料庫的 ALTER AUTHORIZATION  
 **適用對象**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>針對 SQL Server：  
-**新擁有者的需求：**   
+**新擁有者的需求：**    
 新的擁有者主體必須是下列其中一項：  
 
 -   SQL Server 驗證登入。  
@@ -206,7 +206,7 @@ ALTER AUTHORIZATION ON
 若您不是 **sysadmin** 固定伺服器角色的成員，您必須至少擁有資料庫的 TAKE OWNERSHIP 權限，並且必須擁有新擁有者登入的 IMPERSONATE 權限。   
 
 ### <a name="for-azure-sql-database"></a>針對 Azure SQL Database：  
-**新擁有者的需求：**   
+**新擁有者的需求：**    
 新的擁有者主體必須是下列其中一項：  
 
 -   SQL Server 驗證登入。  
@@ -283,7 +283,7 @@ SELECT IS_MEMBER ('db_owner');
 傳回值若為 1 則表示使用者為角色的成員。  
    
     
-## <a name="permissions"></a>[權限]    
+## <a name="permissions"></a>權限    
  需要實體的 TAKE OWNERSHIP 權限。 如果新擁有者不是執行這個陳述式的使用者，而且需要 1) 新擁有者的 IMPERSONATE 權限 (如果它是使用者或登入的話)；或 2) 如果新擁有者是角色，則需要角色中的成員資格，或角色的 ALTER 權限；或 3) 如果新擁有者是應用程式角色，則需要應用程式角色的 ALTER 權限。    
     
 ## <a name="examples"></a>範例    

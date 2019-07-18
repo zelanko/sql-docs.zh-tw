@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62826754"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 屬性 (ClientNetworkProtocol 類別)
   取得布林屬性，指定目前的網路所指定的通訊協定是否[SetOrderValue 方法 （ClientNetworkProtocol 類別）](clientnetworkprotocol-class.md)支援別名。  

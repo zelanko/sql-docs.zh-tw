@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871851"
 ---
 # <a name="database-properties-changetracking-page"></a>資料庫屬性 (變更追蹤頁面)
   使用此分頁檢視或修改選取之資料庫的變更追蹤設定。 如需此頁面可用之選項的詳細資訊，請參閱[啟用和停用變更追蹤 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **變更追蹤**  
  使用此選項啟用或停用資料庫變更追蹤。  
   

@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666817"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259684"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安裝 SSMA for Oracle 用戶端 (OracleToSQL)
 SSMA 用戶端是由執行下列工作的程式檔案所組成：  
@@ -34,7 +34,7 @@ SSMA 用戶端是由執行下列工作的程式檔案所組成：
   
 本主題提供的安裝必要條件和安裝 SSMA 的指示。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 SSMA 設計用於搭配 Oracle 9 或更新版本以及所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 安裝 SSMA 之前，請確定電腦符合下列需求：  
@@ -70,7 +70,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Mig
   
 4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 **[安裝]** 。  
   
 > [!IMPORTANT]  
 > 1.  請安裝新版本之前，解除安裝所有舊版的 SSMA for Oracle。  

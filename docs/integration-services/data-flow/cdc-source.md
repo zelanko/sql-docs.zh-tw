@@ -16,14 +16,18 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727168"
 ---
 # <a name="cdc-source"></a>CDC 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
   
  CDC 來源所讀取的變數資料範圍稱為 CDC 處理範圍，並且由目前資料流程啟動之前執行的 CDC 控制工作所決定。 CDC 處理範圍衍生自維護資料表群組之 CDC 處理狀態的封裝變數值。  
@@ -85,7 +89,7 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> 是在 CDC 狀態變數中顯示為 CE/\<value-from-state-cs>/ 的值 (CE 代表 Current-processing-range-End)。  
   
--   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]、[全部 (含舊值)]、[淨]、[淨 (含更新遮罩)]、[淨 (含合併)]。  
+-   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  、[淨 (含合併)]  。  
   
  此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
   
@@ -111,9 +115,9 @@ use <cdc-enabled-database-name>
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 專案的 [資料流程] 畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]。  
+-   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 專案的 [資料流程]  畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]  。  
   
- 如需可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
+ 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -122,7 +126,7 @@ use <cdc-enabled-database-name>
 -   [使用 CDC 來源擷取變更資料](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>CDC 來源編輯器 (連接管理員頁面)
-  使用 [CDC 來源編輯器] 對話方塊的 [連線管理員] 頁面，即可針對 CDC 來源從中讀取變更資料列的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫 (CDC 資料庫) 選取 ADO.NET 連線管理員。 一旦選取 CDC 資料庫之後，您就必須在資料庫中選取擷取的資料表。  
+  使用 [CDC 來源編輯器]  對話方塊的 [連線管理員]  頁面，即可針對 CDC 來源從中讀取變更資料列的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫 (CDC 資料庫) 選取 ADO.NET 連線管理員。 一旦選取 CDC 資料庫之後，您就必須在資料庫中選取擷取的資料表。  
   
  如需 CDC 來源的詳細資訊，請參閱 [CDC 來源](../../integration-services/data-flow/cdc-source.md)。  
   
@@ -131,16 +135,16 @@ use <cdc-enabled-database-name>
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
+2.  在 [資料流程]  索引標籤中，按兩下 CDC 來源。  
   
-3.  在 [CDC 來源編輯器] 中，按一下 [連線管理員]。  
+3.  在 [CDC 來源編輯器]  中，按一下 [連線管理員]  。  
   
 ### <a name="options"></a>選項。  
  **ADO.NET 連接管理員**  
- 從清單中選取現有的連接管理員，或按一下 [新增] 建立新的連接。 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
+ 從清單中選取現有的連接管理員，或按一下 [新增]  建立新的連接。 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  **新增**  
- 按一下 **[新增]**。 [設定 ADO.NET 連線管理員編輯器] 對話方塊隨即開啟，讓您能夠建立新的連線管理員。  
+ 按一下 **[新增]** 。 [設定 ADO.NET 連線管理員編輯器]  對話方塊隨即開啟，讓您能夠建立新的連線管理員。  
   
  **CDC 資料表**  
  選取 CDC 來源資料表，其中包含您想要讀取並饋送至下游 SSIS 元件進行處理的擷取變更。  
@@ -153,18 +157,18 @@ use <cdc-enabled-database-name>
  **CDC 處理模式**  
  選取可有效處理處理需求的處理模式。 可能的選項包括：  
   
--   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前] 值。  
+-   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前]  值。  
   
--   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+-   **全部 (含舊值)** ：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前]  )。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
 -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   
--   **淨 (含更新遮罩)**：這種模式與一般的淨模式很相似，但還新增了名稱模式為 **__$\<資料行名稱>\__Changed** 的布林資料行，表示目前變更資料列中的變更資料行。  
+-   **淨 (含更新遮罩)** ：這種模式與一般的淨模式很相似，但還新增了名稱模式為 **__$\<資料行名稱>\__Changed** 的布林資料行，表示目前變更資料列中的變更資料行。  
   
--   **淨 (含合併)**：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
+-   **淨 (含合併)** ：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
   
 > [!NOTE]  
->  對於所有淨變更選項而言，來源資料表必須具有主索引鍵或唯一索引。 如果資料表沒有主索引鍵或唯一索引，您就必須使用 [全部] 選項。  
+>  對於所有淨變更選項而言，來源資料表必須具有主索引鍵或唯一索引。 如果資料表沒有主索引鍵或唯一索引，您就必須使用 [全部]  選項。  
   
  **包含 CDC 狀態的變數**  
  選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
@@ -177,16 +181,16 @@ use <cdc-enabled-database-name>
  如需詳細資訊，請參閱 [CDC 來源自訂屬性](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
   
 ## <a name="cdc-source-editor-columns-page"></a>CDC 來源編輯器 (資料行頁面)
-  使用 [CDC 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [CDC 來源編輯器]  對話方塊的 [資料行]  頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
   
 ### <a name="task-list"></a>工作清單  
  **若要開啟 CDC 來源編輯器的資料行頁面**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
+2.  在 [資料流程]  索引標籤中，按兩下 CDC 來源。  
   
-3.  在 **[CDC 來源編輯器]** 中，按一下 **[資料行]**。  
+3.  在 **[CDC 來源編輯器]** 中，按一下 **[資料行]** 。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -199,23 +203,23 @@ use <cdc-enabled-database-name>
  為每個輸出資料行輸入唯一的名稱。 預設值為選取之外部 (來源) 資料行的名稱。不過，您也可以選擇任何唯一的描述性名稱。 輸入的名稱就會顯示在 SSIS 設計師中。  
   
 ## <a name="cdc-source-editor-error-output-page"></a>CDC 來源編輯器 (錯誤輸出頁面)
-  使用 [CDC 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項。  
+  使用 [CDC 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，即可選取錯誤處理選項。  
   
 ### <a name="task-list"></a>工作清單  
  **若要開啟 CDC 來源編輯器的錯誤輸出頁面**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 CDC 來源。  
+2.  在 [資料流程]  索引標籤中，按兩下 CDC 來源。  
   
-3.  在 [CDC 來源編輯器] 中，按一下 [錯誤輸出]。  
+3.  在 [CDC 來源編輯器]  中，按一下 [錯誤輸出]  。  
   
 ### <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [CDC 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [CDC 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  選取 CDC 來源應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。  

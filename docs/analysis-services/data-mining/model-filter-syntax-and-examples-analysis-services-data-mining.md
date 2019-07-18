@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209762"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -120,9 +120,9 @@ ms.locfileid: "52393544"
 -   篩選語法不支援非布林運算子，例如加號或減號。  
   
 ## <a name="examples-of-filters"></a>篩選的範例  
- 下列範例將示範套用至採礦模型之篩選的使用方式。 如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來建立篩選運算式，在 [篩選] 對話方塊的 [屬性] 視窗和 [運算式] 窗格中，您只會看見顯示在 WITH FILTER 關鍵字之後的字串。 在該處加入採礦結構定義的目的是為了讓人更容易了解資料行類型和使用方式。  
+ 下列範例將示範套用至採礦模型之篩選的使用方式。 如果您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來建立篩選運算式，在 [篩選] 對話方塊的 [屬性]  視窗和 [運算式]  窗格中，您只會看見顯示在 WITH FILTER 關鍵字之後的字串。 在該處加入採礦結構定義的目的是為了讓人更容易了解資料行類型和使用方式。  
   
-###  <a name="bkmk_Ex1"></a> 範例 1:一般案例層級的篩選  
+###  <a name="bkmk_Ex1"></a> 範例 1：一般的案例層級篩選  
  這則範例會顯示一個簡易篩選，它可將模型中使用的案例限制為職業是建築師而且年齡超過 30 歲的客戶。  
   
 ```  
@@ -137,7 +137,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
 ```  
   
   
-###  <a name="bkmk_Ex2"></a> 範例 2:使用巢狀資料表屬性的案例層級篩選  
+###  <a name="bkmk_Ex2"></a> 範例 2：使用巢狀資料表屬性的案例層級篩選  
  如果您的採礦結構包含巢狀資料表，就可以篩選巢狀資料表中是否存某個值，或篩選包含特定值的巢狀資料表資料列。 這則範例會將模型所使用的案例限制為年齡超過 30 歲而且至少有一次購買包含牛奶的客戶。  
   
  如此範例所示，篩選僅使用模型中包含的資料行並非必要條件。 巢狀資料表 **Products** 屬於採礦結構的一部分，但是不包含在採礦模型中。 不過，您仍然可以篩選巢狀資料表中的值和屬性。 若要檢視這些案例的詳細資料，您必須啟用鑽研。  
@@ -156,7 +156,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')
 ```  
   
   
-###  <a name="bkmk_Ex3"></a> 範例 3︰多個巢狀資料表屬性的案例層級篩選  
+###  <a name="bkmk_Ex3"></a> 範例 3︰案例層級篩選多個巢狀的資料表屬性  
  此範例顯示三個部分的篩選：第一個條件會套用至案例資料表、第二個條件會套用至巢狀資料表中的屬性，而第三個條件會套用至其中一個巢狀資料表資料行中的特定值。  
   
  篩選中的第一個條件 `Age > 30`會套用至案例資料表中的資料行。 其餘條件則會套用至巢狀資料表。  
@@ -181,7 +181,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AN
 ```  
   
   
-###  <a name="bkmk_Ex4"></a> 範例 4︰巢狀資料表屬性不存在的案例層級篩選  
+###  <a name="bkmk_Ex4"></a> 範例 4︰案例層級巢狀的資料表屬性不存在的篩選  
  這則範例會顯示如何透過篩選巢狀資料表中不存在的屬性，將案例限制為沒有購買特定項目的客戶。 在此範例中，模型是使用年齡超過 30 歲而且從未購買過牛奶的客戶進行培訓。  
   
 ```  
@@ -200,7 +200,7 @@ FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk'
 ```  
   
   
-###  <a name="bkmk_Ex5"></a> 範例 5:多個巢狀資料表值的篩選  
+###  <a name="bkmk_Ex5"></a> 範例 5:篩選多個巢狀的資料表值  
  此範例的目的是要顯示巢狀資料表篩選。 巢狀資料表篩選是在案例篩選之後套用的，而且只會限制巢狀資料表資料列。  
   
  這個模型可能會包含多個具有空白巢狀資料表的案例，因為沒有指定 EXISTS。  
@@ -222,7 +222,7 @@ WITH DRILLTHROUGH
 ```  
   
   
-###  <a name="bkmk_Ex6"></a> 範例 6:巢狀資料表屬性的篩選和 EXISTS  
+###  <a name="bkmk_Ex6"></a> 範例 6:篩選巢狀的資料表屬性和 EXISTS  
  在此範例中，巢狀資料表的篩選會將資料列限制為包含牛奶或瓶裝水的資料列。 然後，系統會使用 **EXISTS** 陳述式來限制模型中的案例。 這樣做可確保巢狀資料表不是空的。  
   
 ```  
@@ -296,7 +296,7 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  請注意，您加入至模型的額外資料行可能會影響結果。 因此，如果您不想要在序列計算中使用資料行，應該只將資料行加入至採礦結構，而不是加入至模型。 您也可以將資料行上的模型旗標設定為 [PredictOnly] 或 [Ignore]。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
+>  請注意，您加入至模型的額外資料行可能會影響結果。 因此，如果您不想要在序列計算中使用資料行，應該只將資料行加入至採礦結構，而不是加入至模型。 您也可以將資料行上的模型旗標設定為 [PredictOnly]  或 [Ignore]  。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
  對於其他模型類型，日期可以當做輸入準則或篩選準則，就如同任何其他資料行一樣。 不過，如果您必須使用 **Continuous** 資料類型不支援的特定資料粒度層級，可以使用運算式擷取要用於篩選和分析的單位，在資料來源中建立衍生值。  
   

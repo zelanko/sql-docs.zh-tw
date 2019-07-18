@@ -15,12 +15,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb922b535966a52ab3395533ef44277b5c382a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18adf5da6b6b04f4153f956fe48759098a46c278
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680286"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581082"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在備份或還原期間啟用或停用備份總和檢查碼 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47680286"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目啟用或停用備份總和檢查碼：**  
   
@@ -60,15 +60,17 @@ ms.locfileid: "47680286"
   
 1.  請依照＜ [建立資料庫備份](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)＞的步驟執行。  
   
-2.  在 **[選項]** 頁面的 **[可靠性]** 區段中，按一下 **[寫入媒體之前執行總和檢查碼]**。  
-  
+2.  在 **[選項]** 頁面的 **[可靠性]** 區段中，按一下 **[寫入媒體之前執行總和檢查碼]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>若要為備份作業啟用或停用備份總和檢查碼  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  若要在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式中啟用備份總和檢查碼，請指定 WITH CHECKSUM 選項。 若要停用備份總和檢查碼，請指定 WITH NO_CHECKSUM 選項。 這是預設行為，但是壓縮備份除外。 下列範例指定應執行總和檢查碼。  
   
@@ -83,7 +85,7 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  若要在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式中啟用備份總和檢查碼，請指定 WITH CHECKSUM 選項。 這是壓縮備份的預設行為。 若要停用備份總和檢查碼，請指定 WITH NO_CHECKSUM 選項。 這是預設行為，但是壓縮備份除外。 下列範例指定應執行備份總和檢查碼。  
   

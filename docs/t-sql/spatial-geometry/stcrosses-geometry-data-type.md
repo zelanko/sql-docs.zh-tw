@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCrosses (geometry Data Type)
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 54f96265aabdbdd491cf2a0b49a0c8a67df999ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7588d3a335785dd80a5b41cd17734b207852faae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65939045"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47741772"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  如果下列兩個條件都成立，則表示這兩個 **geometry** 執行個體相交：  

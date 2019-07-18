@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364100"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284850"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -66,7 +65,7 @@ ms.locfileid: "53364100"
   
  此外，您也可以在 XMLA EXECUTE 命令陳述式的內容中使用 DAX 運算式，將查詢傳送給已在 DirectQuery 模式下部署的表格式模型。  
   
- 如需使用 DAX 查詢表格式模型的範例，請參閱 [DAX 查詢語法參考](https://msdn.microsoft.com/library/ee634217.aspx)。  
+ 如需使用 DAX 中表格式模型上查詢的範例，請參閱 [DAX 查詢語法參考] （/dax/dax 語法-參考
   
 ### <a name="mdx"></a>MDX  
  您可以針對使用記憶體中快取當做慣用查詢方法的表格式模型 (也就是尚未在 DirectQuery 模式下部署的模型) 來使用 MDX 建立查詢。 雖然類似 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的用戶端會使用 DAX 來建立彙總以及以資料來源的形式查詢模型，但是如果您很熟悉 MDX，它就可以成為在 MDX 中建立範例查詢的捷徑，請參閱 [在 MDX 中建立量值](../multidimensional-models/mdx/mdx-building-measures.md)。  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df02cc4a8f3ed35a360ac6d323ce88640c49247e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484032"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>變更明確階層名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更明確階層的名稱。  
@@ -31,15 +31,15 @@ ms.locfileid: "52768130"
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>若要變更明確階層的名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  選取實體的資料列，該實體中包含您想要重新命名的明確階層。  
   
-5.  按一下 **[編輯選取的實體]**。  
+5.  按一下 **[編輯選取的實體]** 。  
   
 6.  在 **編輯實體**頁面上，按一下您想要重新命名的明確階層。  
   

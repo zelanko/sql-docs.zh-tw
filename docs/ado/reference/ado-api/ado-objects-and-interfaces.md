@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920902"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件和介面
 在中表示這些物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -29,9 +28,9 @@ ms.locfileid: "47660646"
 |||  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|用來擷取基礎 OLEDB 命令從 ADOCommand 物件。|  
-|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|建構 ADO**記錄**OLE DB 物件**資料列**C/c + + 應用程式中的物件。|  
-|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|建構 ADO **Recordset** OLE DB 物件**資料列集**C/c + + 應用程式中的物件。|  
-|[ADOStreamConstruction 介面](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|建構 ADO **Stream** OLE DB 物件**IStream** C/c + + 應用程式中的物件。|  
+|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|建構 ADO**記錄**OLE DB 物件**資料列**在 C 中的物件 /C++應用程式。|  
+|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|建構 ADO **Recordset**從 OLE DB 物件**資料列集**在 C 中的物件 /C++應用程式。|  
+|[ADOStreamConstruction 介面](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|建構 ADO **Stream** OLE DB 物件**IStream**在 C 中的物件 /C++應用程式。|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|定義您想要執行對資料來源的特定命令。<br /><br /> **命令**物件不是安全的。|  
 |[[連接]](../../../ado/reference/ado-api/connection-object-ado.md)|表示資料來源的開啟連接。<br /><br /> **連線**物件而言是安全的指令碼。|  
 |[IDSOShapeExtensions 介面](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|SHAPE 提供者取得基礎 OLEDB 資料來源物件。|  
@@ -48,7 +47,7 @@ ms.locfileid: "47660646"
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附錄 B:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附錄 B：ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   

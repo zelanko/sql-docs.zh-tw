@@ -1,5 +1,5 @@
 ---
-title: '連接 （Visual c + + 語法索引與 #import） |Microsoft Docs'
+title: '連接 (VisualC++含 #import 語法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5bafba8f62f5e5120cb593bc7620e74056224271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933511"
 ---
-# <a name="connection-visual-c-syntax-index-with-import"></a>連接 （Visual c + + 語法索引與 #import）
+# <a name="connection-visual-c-syntax-index-with-import"></a>連接 (VisualC++含 #import 語法索引)
 ## <a name="methods"></a>方法  
   
 ```  

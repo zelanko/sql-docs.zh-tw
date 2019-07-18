@@ -10,19 +10,19 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b34b2eba22b30b4c2ff6f88d6791f6cb1c378e89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 4d817ab7986bc12be682c9f2742cba311335985e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804636"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683993"
 ---
 # <a name="options-environment---help---online-page"></a>選項 (環境 - 說明 - 線上頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[選項] 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具] 功能表上，按一下 [選項]、展開 [環境] 資料夾、選取 [說明]，然後按一下 [線上]。 如果 [線上] 頁面未出現在清單中，請在 [選項] 對話方塊中選取 [顯示所有設定] 核取方塊。  
+[選項]  對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具]  功能表上，按一下 [選項]  、展開 [環境]  資料夾、選取 [說明]  ，然後按一下 [線上]  。 如果 [線上]  頁面未出現在清單中，請在 [選項]  對話方塊中選取 [顯示所有設定]  核取方塊。  
   
 **載入說明內容時**  
 設定說明來源在 F1 說明中的使用順序，並指定要使用哪些說明來源。  
@@ -46,7 +46,7 @@ ms.locfileid: "47804636"
 列出可以包含在說明搜尋中的可能的 Codezone 社群網站。  
   
 **詳細資料**  
-顯示 [Codezone 社群] 清單中選取的每一個提供者的簡短描述 (如果有的話)。  
+顯示 [Codezone 社群]  清單中選取的每一個提供者的簡短描述 (如果有的話)。  
   
 **閱讀隱私權聲明**  
 顯示 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 線上使用的隱私權原則。  

@@ -1,5 +1,5 @@
 ---
-title: bcp_control |Microsoft Docs
+title: bcp_control | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62689519"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   針對檔案和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的大量複製，變更各種控制項參數的預設設定。  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  若為 TRUE，表示**datetime**並**smalldatetime** ODBC 時間戳記逸出序列前置詞和後置詞，會使用字元格式儲存的值。 BCPODBC 選項只適用於 BCP_OUT。  
   
- 若為 FALSE， **datetime**代表 1997 年 1 月 1 日的值會轉換成字元字串：1997-01-01 00:00:00.000。 當設定為 TRUE，相同**datetime**值會表示為: {ts ' 1997年-01-01 00:00:00.000'}。  
+ 若為 FALSE， **datetime**代表 1997 年 1 月 1 日的值會轉換成字元字串：1997-01-01 00:00:00.000. 當設定為 TRUE，相同**datetime**值會表示為: {ts ' 1997年-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  傳回受到目前 (或最近) BCP 作業影響的資料列數目。  

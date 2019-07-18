@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3122b3aa2f53da69f88e6ffad508f12c8e10da1c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017066"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 

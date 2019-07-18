@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2c46f694-6dc4-429f-a037-a3bad369a7c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5abb09e3868de54fc924c434359b7af5ae393504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4cdc3c69b3aa7d9675fe3023916c6637685819eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793952"
 ---
 # <a name="setdate-method-int-javasqldate-javautilcalendar"></a>setDate 方法 (int, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public final void setDate(int n,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setDate 方法是由 java.sql.PreparedStatement 介面中的 setDate 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022240"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 發行者的效能微調
   Oracle 發行架構與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行架構相似；因此，微調 Oracle 複寫效能的第一步需要按照 [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md)中的一般微調建議進行。  

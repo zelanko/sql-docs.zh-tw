@@ -11,15 +11,15 @@ helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc04a00d78460915a8509ac01dd8dfd74034250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0fd10482e083616e47665bd9ba2832b3fe4d5d21
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793026"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686162"
 ---
 # <a name="copy-queries-visual-database-tools"></a>複製查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "47793026"
   
 ### <a name="to-copy-a-query"></a>若要複製查詢  
   
-1.  在 [檢視] 功能表上，按一下 [方案總管]。  
+1.  在 [檢視]  功能表上，按一下 [方案總管]。  
   
-2.  在方案總管中，在想要複製的查詢上按一下滑鼠右鍵，從快速鍵功能表選擇 [開啟]。  
+2.  在方案總管中，在想要複製的查詢上按一下滑鼠右鍵，從快速鍵功能表選擇 [開啟]  。  
   
 3.  在 [SQL] 窗格中，複製您要複製的查詢部份。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47793026"
   
 5.  將游標停留在您要加入 SQL 程式碼的位置。  
   
-6.  按一下滑鼠右鍵，然後從快速鍵功能表按一下 [貼上]。  
+6.  按一下滑鼠右鍵，然後從快速鍵功能表按一下 [貼上]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [重新命名查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  

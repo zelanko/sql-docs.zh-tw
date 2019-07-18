@@ -2,18 +2,18 @@
 title: 變更資料格內的項目 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39a09934ba8ec087149a7cd8e35ed57b44bfdfbb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cc13f82453349b16e4c9fc00b8f0f083652daa75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581742"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>變更資料格內的項目 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，只有非容器項目 (例如文字方塊、線條或影像) 才能以新報表項目來取代。 例如，您可以將資料表拖曳到文字方塊，即可以資料表取代文字方塊。  
@@ -30,7 +30,7 @@ ms.locfileid: "56294486"
 -   在 **[插入]** 索引標籤的 **[資料區域]** 或 **[報表項目]** 群組中，按一下您想要加入至報表的項目，然後按一下報表。 如此項目就會加入至報表。  
   
 > [!NOTE]  
->  當您將影像報表項目拖曳至資料格時，[影像屬性] 對話方塊即會開啟，讓您設定屬性；例如，影像新增至資料格前的影像來源。  
+>  當您將影像報表項目拖曳至資料格時，[影像屬性]  對話方塊即會開啟，讓您設定屬性；例如，影像新增至資料格前的影像來源。  
   
 ## <a name="see-also"></a>另請參閱  
  [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   

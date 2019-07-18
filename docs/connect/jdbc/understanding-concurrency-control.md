@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798265"
 ---
 # <a name="understanding-concurrency-control"></a>瞭解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

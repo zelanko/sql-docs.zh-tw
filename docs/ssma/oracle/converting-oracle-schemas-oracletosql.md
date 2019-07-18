@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788506"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266146"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
 您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086973"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>複製及貼上資料 (SSAS 表格式)
   您可以從外部應用程式複製資料表的資料，並將其貼入模型設計師中新的資料表或現有的資料表。 您從 [剪貼簿] 貼入的資料必須是 HTML 格式，例如從 Excel 或 Word 複製的資料。 模型設計師將會自動偵測並套用資料類型至貼上的資料。 您也可以手動修改資料類型或資料行的顯示格式設定。  
@@ -61,7 +60,7 @@ ms.locfileid: "48129298"
     -   按一下 **[貼上取代]** ，以 [剪貼簿] 的內容取代選取的資料表。 所有現有的資料行標頭名稱依然會在資料表中，並且保留關聯性。  
   
 ##  <a name="bkmk_paste_preview"></a> 貼上預覽對話方塊  
- **[貼上預覽]** 對話方塊可讓您查看已複製到設計師視窗之資料的預覽，並確認資料已正確複製。 若要存取此對話方塊，請將以資料表為基礎的 HTML 格式資料複製到剪貼簿，然後在設計師中，按一下 [編輯] 功能表，再按一下 [貼上]、[貼上新增] 或 [貼上取代]。 只有在透過從剪貼簿複製並貼上而建立的資料表中加入或取代資料時，才可以使用 **[貼上新增]** 和 **[取代貼上]** 選項。 您不能使用 **[貼上新增]** 或 **[取代貼上]** ，將資料加入至匯入資料的資料表中。  
+ **[貼上預覽]** 對話方塊可讓您查看已複製到設計師視窗之資料的預覽，並確認資料已正確複製。 若要存取此對話方塊，請將以資料表為基礎的 HTML 格式資料複製到剪貼簿，然後在設計師中，按一下 [編輯]  功能表，再按一下 [貼上]  、[貼上新增]  或 [貼上取代]  。 只有在透過從剪貼簿複製並貼上而建立的資料表中加入或取代資料時，才可以使用 **[貼上新增]** 和 **[取代貼上]** 選項。 您不能使用 **[貼上新增]** 或 **[取代貼上]** ，將資料加入至匯入資料的資料表中。  
   
  根據您是將資料貼入全新的資料表、貼入現有的資料表並以新資料取代現有資料，或附加到現有資料表，此對話方塊的選項都不同。  
   
@@ -87,8 +86,8 @@ ms.locfileid: "48129298"
  顯示剪貼簿內容的範例。 目的地資料表中的現有資料將會遭到刪除，並將新資料列插入資料表中。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
- [支援的資料來源&#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [設定資料行的資料類型&#40;SSAS 表格式&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](import-data-ssas-tabular.md)   
+ [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [設定資料行的資料類型 &#40;SSAS 表格式&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

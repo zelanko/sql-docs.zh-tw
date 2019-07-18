@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ebdc7b55cde31198007e05de1603df7134ed3bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019997"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** ，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
+`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)** ，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -53,11 +52,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  在後**sp_mergecleanupmetadata**執行時，根據預設，所有訂用帳戶在訂閱者端的發行集的中繼資料儲存在**MSmerge_genhistory**， **MSmerge_contents**並**MSmerge_tombstone**會標示為重新初始化，訂閱者的任何暫止的變更都會遺失，和目前的快照集已標記為過時。  
 > 
 > [!NOTE]
->  如果有多個發行集資料庫上，且任何一個發行集都會使用無限期的發行保留期限 (**@retention**=**0**)、 執行**sp_mergecleanupmetadata**就不會清除追蹤資料庫中繼資料的合併式複寫變更。 因此，在使用無限期的發行期限時，一定要特別小心。  
+>  如果有多個發行集資料庫上，且任何一個發行集都會使用無限期的發行保留期限 ( **@retention** =**0**)、 執行**sp_mergecleanupmetadata**就不會清除追蹤資料庫中繼資料的合併式複寫變更。 因此，在使用無限期的發行期限時，一定要特別小心。  
   
- 當執行這個預存程序時，您可以選擇是否要重新初始化訂閱者，藉由設定**@reinitialize_subscriber**參數來**TRUE** （預設值） 或**FALSE**. 如果**sp_mergecleanupmetadata**執行**@reinitialize_subscriber**參數設為**TRUE**，快照集也會重新套用在訂閱者即使訂用帳戶建立沒有初始快照集 （例如，如果快照集資料和結構描述已手動套用，或已存在於訂閱者）。 將參數設定為**FALSE**應小心，因為如果不會重新初始化發行集，您必須確定在發行者和訂閱者的資料會同步處理。  
+ 當執行這個預存程序時，您可以選擇是否要重新初始化訂閱者，藉由設定 **@reinitialize_subscriber** 參數來**TRUE** （預設值） 或**FALSE**. 如果**sp_mergecleanupmetadata**執行 **@reinitialize_subscriber** 參數設為**TRUE**，快照集也會重新套用在訂閱者即使訂用帳戶建立沒有初始快照集 （例如，如果快照集資料和結構描述已手動套用，或已存在於訂閱者）。 將參數設定為**FALSE**應小心，因為如果不會重新初始化發行集，您必須確定在發行者和訂閱者的資料會同步處理。  
   
- 值為何**@reinitialize_subscriber**， **sp_mergecleanupmetadata**失敗，如果有進行中合併正要將變更上傳到 「 發行者 」 或在重新發行訂閱者的程序預存程序會叫用的時間。  
+ 值為何 **@reinitialize_subscriber** ， **sp_mergecleanupmetadata**失敗，如果有進行中合併正要將變更上傳到 「 發行者 」 或在重新發行訂閱者的程序預存程序會叫用的時間。  
   
  **執行與 sp_mergecleanupmetadata @reinitialize_subscriber = TRUE:**  
   
@@ -88,7 +87,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  重新產生所有層級所涉及之所有合併式發行集的快照集檔案。 如果您試圖在尚未重新產生快照集前進行合併，系統會提示您重新產生快照集。  
   
 6.  備份發行集資料庫。 如果沒有完成這個動作，在還原發行集資料庫之後，合併可能會失敗。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **連續模式合併的特殊考量**  
   
  如果您在執行連續模式的合併，您必須執行下列動作之一：  
@@ -117,8 +118,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  若要使用這個預存程序，發行者必須執行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 訂閱者必須執行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2。  
   
 ## <a name="see-also"></a>另請參閱  
- [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

@@ -23,11 +23,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62772274"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供關於 SQL Server 2014 的回函
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 感謝您撥冗協助我們改良 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產品和文件集。 您可以提供有關產品功能和使用者介面的建議與錯誤報告、提交文件集回函，以及選擇將錯誤報告和使用方式資料自動傳送給 [!INCLUDE[msCoName](../includes/msconame-md.md)] 進行分析。 這三個回函選項分述如下。  

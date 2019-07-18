@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188233"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>處理目標郵寄結構中的模型 (基本資料採礦教學課程)
   在您可以瀏覽或使用採礦模型之前，必須先部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案並處理採礦結構和採礦模型。  

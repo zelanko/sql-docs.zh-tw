@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897719"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53206967"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -46,7 +45,7 @@ SQLRETURN SQLGetFunctions(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *FunctionId*  
  [輸入]A **#define**識別感興趣; 的 ODBC 函數的值**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3 *.x*應用程式，以判斷支援的 ODBC 3 *.x*和先前的函式。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2 *.x*應用程式，以判斷支援的 ODBC 2 *.x*和先前的函式。  
@@ -122,7 +121,7 @@ SQLRETURN SQLGetFunctions(
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
-|SQL_API_SQLBULKOPERATIONS [1]|SQL_API_SQLPRIMARYKEYS|  
+|SQL_API_SQLBULKOPERATIONS[1]|SQL_API_SQLPRIMARYKEYS|  
 |SQL_API_SQLCOLUMNPRIVILEGES|SQL_API_SQLPROCEDURECOLUMNS|  
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>程式碼範例  
  下列三個範例顯示如何使用應用程式**SQLGetFunctions**決定了驅動程式是否支援**SQLTables**， **SQLColumns**，和**SQLStatistics**。 如果驅動程式不支援這些函式，應用程式中斷連線的驅動程式。 第一個範例會呼叫**SQLGetFunctions**一次，每個函式。  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +170,7 @@ SQLDisconnect(hdbc);
   
  在第二個範例中，ODBC 3.x 應用程式會呼叫**SQLGetFunctions**並將它在其中傳遞陣列**SQLGetFunctions**傳回所有的 ODBC 的相關資訊 3.x 和先前的函式。  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +192,7 @@ SQLDisconnect(hdbc);
   
  第三個範例是 ODBC 2.x 應用程式呼叫**SQLGetFunctions**並將它在其中傳遞的 100 個元素陣列**SQLGetFunctions**傳回資訊所有 ODBC 2.x 和先前的函式。  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

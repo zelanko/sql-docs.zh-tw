@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663654"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件類別
   **Exchange Spill** 事件類別指出平行查詢計劃中的通訊緩衝區，已暫時寫入 **tempdb** 資料庫。 這種情況並不常見，只有在查詢計畫有多重範圍掃描時才會發生。  

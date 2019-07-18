@@ -8,16 +8,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa887ae052c51b2a79ad1016437c136ad0360457
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 93cf4143c890a15734172fe17033e3cec10c2d25
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642853"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683606"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>啟用、停用以及刪除中斷點
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51642853"
   
  您可以利用下列其中一種方式來開啟 **[中斷點]** 視窗：  
   
--   在 **[偵錯]** 功能表上，按一下 **[視窗]**，然後按一下 **[中斷點]**。  
+-   在 **[偵錯]** 功能表上，按一下 **[視窗]** ，然後按一下 **[中斷點]** 。  
   
 -   在 **[偵錯]** 工具列上，按一下 **[中斷點]** 按鈕。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51642853"
   
  您可以使用下列其中一種方式以停用單一中斷點：  
   
--   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [停用中斷點]。  
+-   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [停用中斷點]  。  
   
 -   在 [中斷點] 視窗中，清除中斷點左側的核取方塊。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "51642853"
   
  您可以使用下列其中一種方式以停用所有中斷點：  
   
--   在 **[偵錯]** 功能表上，按一下 **[停用所有中斷點]**。  
+-   在 **[偵錯]** 功能表上，按一下 **[停用所有中斷點]** 。  
   
 -   在 **[中斷點]** 視窗的工具列上，按一下 **[停用所有中斷點]** 按鈕。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "51642853"
   
  您可以使用下列其中一種方式以啟用單一中斷點：  
   
--   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [啟用中斷點]。  
+-   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [啟用中斷點]  。  
   
 -   在 [中斷點] 視窗中，按一下中斷點左側的方塊。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "51642853"
   
  您可以使用下列其中一種方式以啟用所有中斷點：  
   
--   在 **[偵錯]** 功能表上，按一下 **[啟用所有中斷點]**。  
+-   在 **[偵錯]** 功能表上，按一下 **[啟用所有中斷點]** 。  
   
 -   在 **[中斷點]** 視窗的工具列上，按一下 **[啟用所有中斷點]** 按鈕。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "51642853"
   
  您可以使用下列其中一種方式以刪除單一中斷點：  
   
--   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [刪除中斷點]。  
+-   在 [查詢編輯器] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下 [刪除中斷點]  。  
   
--   在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下捷徑功能表上的 [刪除]。  
+-   在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點，然後按一下捷徑功能表上的 [刪除]  。  
   
 -   在 [中斷點] 視窗中，選取中斷點，然後按下 DELETE。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "51642853"
   
  您可以使用下列其中一種方式以刪除所有中斷點：  
   
--   在 **[偵錯]** 功能表上，按一下 **[刪除所有中斷點]**。  
+-   在 **[偵錯]** 功能表上，按一下 **[刪除所有中斷點]** 。  
   
 -   在 **[中斷點]** 視窗的工具列上，按一下 **[刪除所有中斷點]** 按鈕。  
   

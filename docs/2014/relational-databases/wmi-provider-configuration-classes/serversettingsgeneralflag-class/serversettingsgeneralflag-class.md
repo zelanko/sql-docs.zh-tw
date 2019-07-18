@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 59bfe26d20ed244c6011a6f4d1f37deccf8607c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137285"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 類別
   [ServerSettingsGeneralFlag 類別](serversettingsgeneralflag-class.md)代表的執行個體上的一般旗標設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

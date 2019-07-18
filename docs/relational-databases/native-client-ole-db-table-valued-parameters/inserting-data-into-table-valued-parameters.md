@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52420f4b1b5776119fb5a4827c90cf7cd546cc91
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eb8e32b0008cba846679e7704a3a9ab9cef6e93d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103443"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,11 +55,11 @@ ms.locfileid: "51662917"
   
 -   IRowset::GetNextRows  
   
--   Irowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
 -   IRowset::GetData  
   
--   Irowset:: Releaserows  
+-   IRowset::ReleaseRows  
   
 -   IRowset::RestartPosition  
   

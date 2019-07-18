@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187002"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
   如果**sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
@@ -79,8 +79,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name**_\\_** instance_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name ** _\\_ **instance_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** _login_ID_  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
@@ -120,7 +120,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  當 *sqlmaint* 存取遠端伺服器時，需要 **text_file** 的完整通用命名慣例 (UNC) 檔案名稱。  
   
- **-至** _operator_name_  
+ **-To** _operator_name_  
  指定將接收 SQL Mail 所產生之報表的操作員。  
   
  **-HtmlRpt** _html_file_  
@@ -134,12 +134,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  指定從 **-D**指定的資料庫中移除未使用的空間。 這個選項只適用於定義成自動成長的資料庫。 *Threshold_percent* 會以 MB 為單位來指定大小，一旦資料庫到達此大小之後， **sqlmaint** 便會嘗試移除未使用的資料空間。 在資料庫大小小於 *threshold_percent*時，則不會採取任何動作。 *Free_percent* 會指定必須保留在資料庫中的未使用空間大小，指定的方式是資料庫最終大小的百分比。 例如，如果 200 MB 資料庫包含 100 MB 的資料， *free_percent* 指定 10 會使最終資料庫大小成為 110 MB。 請注意，如果資料庫小於 *free_percent* 加上資料庫中的資料量，就不會擴充資料庫。 例如，如果 108 MB 的資料庫包含 100 MB 的資料， *free_percent* 指定 10 並不會將資料庫擴充成 110 MB；它會保持 108 MB。  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  指定在 **-D**所指定的資料庫中，執行設定了 NOINDEX 選項的 DBCC CHECKDB 陳述式或 DBCC CHECKDB 陳述式。 如需詳細資訊，請參閱 DBCC CHECKDB。  
   
  如果執行 *sqlmaint* 時資料庫正在使用中，就會在 **text_file** 中寫入一則警告。  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  指定在 **-D** 所指定的資料庫中，執行設定了 NOINDEX 選項的 DBCC CHECKALLOC 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)。  
   
  **-CkCat**  
@@ -211,7 +211,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定備份媒體是磁帶。  
   
  **-BkUpOnlyIfClean**  
- 指定只有在任何指定的 **-Ck** 檢查確定資料都沒問題時，才會進行備份。 維護動作會依照它們在命令提示字元下所呈現的順序來執行。 如果您還要指定 **-BkUpOnlyIfClean**，或者不論檢查是否報告問題都要執行備份，可在 **-BkUpDB**-BkUpLog **參數之前指定**-CkDB **、**-CkDBNoIdx **、**-CkAl **、** -CkAlNoIdx **、**/**-CkTxtAl** 或 **-CkCat**參數。  
+ 指定只有在任何指定的 **-Ck** 檢查確定資料都沒問題時，才會進行備份。 維護動作會依照它們在命令提示字元下所呈現的順序來執行。 如果您還要指定 **-BkUpOnlyIfClean**，或者不論檢查是否報告問題都要執行備份，可在 **-BkUpDB**-BkUpLog **參數之前指定**-CkDB **、** -CkDBNoIdx **、** -CkAl **、** -CkAlNoIdx **、** / **-CkTxtAl** 或 **-CkCat**參數。  
   
  **-VrfyBackup**  
  指定在備份完成時執行 RESTORE VERIFYONLY。  

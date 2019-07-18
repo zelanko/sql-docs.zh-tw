@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 38b71bc3f92a8cb6d3c514c4115395cb3bd619ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107542"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  
@@ -34,9 +33,9 @@ ms.locfileid: "56020479"
   
 2.  在 **[主資料夾]** 索引標籤的 **[共用資料集]** 群組中，按一下 [資料集]。 **[資料集屬性]** 對話方塊隨即開啟。  
   
-3.  按一下 **[篩選]**。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
+3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
+4.  按一下 **[加入]** 。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
@@ -54,11 +53,11 @@ ms.locfileid: "56020479"
   
 1.  在報表設計模式下，開啟報表。  
   
-2.  以滑鼠右鍵按一下 [報表資料] 窗格中的資料集，然後按一下 [資料集屬性]。 **[資料集屬性]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下 [報表資料]  窗格中的資料集，然後按一下 [資料集屬性]  。 **[資料集屬性]** 對話方塊隨即開啟。  
   
-3.  按一下 **[篩選]**。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
+3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
+4.  按一下 **[加入]** 。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   

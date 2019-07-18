@@ -1,21 +1,20 @@
 ---
-title: 在 Linux 上設定快照集資料夾共用 SQL Server 複寫 |Microsoft Docs
+title: 在 Linux 上設定快照集資料夾共用 SQL Server 複寫
 description: 本文說明如何在 Linux 上設定的快照集資料夾共用 SQL Server 複寫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37b2aeb0ad03f0762fc593f5d9b4d2a0fec7a6a4
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093122"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>設定透過共用的複寫快照集資料夾
 

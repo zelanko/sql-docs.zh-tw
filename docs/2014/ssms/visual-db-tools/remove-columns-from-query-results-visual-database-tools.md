@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253507"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
   如果在選取查詢中使用資料行，但不要此資料行顯示於結果集 (也就是說，不要它出現在查詢的選取清單)，您可以將它從輸出中移除。 從查詢的輸出移除資料行後，仍可以在搜尋條件中使用它或做為排序欄位。  
@@ -32,7 +32,7 @@ ms.locfileid: "52800450"
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>若要從查詢輸出移除資料行  
   
--   在 [準則] 窗格中，清除要移除的資料行之 [輸出] 資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出] 資料行)。  
+-   在 [準則]  窗格中，清除要移除的資料行之 [輸出]  資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出]  資料行)。  
   
      -或-  
   

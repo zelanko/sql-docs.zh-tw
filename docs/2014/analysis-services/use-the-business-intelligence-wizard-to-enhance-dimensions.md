@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065513"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>使用商業智慧精靈增強維度
   除了直接修改維度和維度物件屬性之外，您也可以使用 [商業智慧精靈] 來設定及增強維度。  
@@ -37,7 +36,7 @@ ms.locfileid: "48173778"
   
 ## <a name="see-also"></a>另請參閱  
  [定義資料庫維度](multidimensional-models/define-database-dimensions.md)   
- [維度屬性 （Property） 參考](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [維度屬性 (attribute) 屬性 (property) 參考](multidimensional-models/dimension-attribute-properties-reference.md)   
  [建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)   
  [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  

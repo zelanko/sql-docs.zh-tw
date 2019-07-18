@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773206"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801953"
 ---
 # <a name="understanding-data-type-differences"></a>了解資料類型差異
 
@@ -32,7 +32,7 @@ JDBC 字元字串資料類型為**CHAR**， **VARCHAR**，並**LONGVARCHAR**。 
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fixed-length    | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Char**並**nchar**資料類型對應到 JDBC 直接**CHAR**並**NCHAR**型別。 這些是當資料行具有 `SET ANSI_PADDING ON` 時，由伺服器提供填補的固定長度類型。 **nchar** 一定會開啟填補；至於 **char**，當伺服器 char 資料行未開啟填補時，JDBC 驅動程式會新增填補。                                                                                                                                                                                                                                                                                                                                                                                      |
 | Variable-length | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Varchar**並**nvarchar**型別會直接對應到 JDBC **VARCHAR**並**NVARCHAR**類型，分別。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| 長整數            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **文字**並**ntext**型別對應到 JDBC **LONGVARCHAR**並**LONGNVARCHAR**類型會分別。 這些是已被取代的類型從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，因此您應該改用大數值類型**varchar （max)** 或是**nvarchar （max)**，改為。<br /><br /> 使用更新版\<數值類型 > 並[updateObject （int，java.lang.Object）](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)方法會針對失敗**文字**並**ntext**伺服器資料行。 不過，支援對 **text** 和 **ntext** 伺服器資料行使用 [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 方法，並搭配指定的字元轉換類型。 |
+| 長整數            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **文字**並**ntext**型別對應到 JDBC **LONGVARCHAR**並**LONGNVARCHAR**類型會分別。 這些是已被取代的類型從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，因此您應該改用大數值類型**varchar （max)** 或是**nvarchar （max)** ，改為。<br /><br /> 使用更新版\<數值類型 > 並[updateObject （int，java.lang.Object）](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)方法會針對失敗**文字**並**ntext**伺服器資料行。 不過，支援對 **text** 和 **ntext** 伺服器資料行使用 [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 方法，並搭配指定的字元轉換類型。 |
   
 ## <a name="binary-string-types"></a>二進位字串類型
 
@@ -42,7 +42,7 @@ JDBC 二進位字串類型為**二進位**， **VARBINARY**，並**LONGVARBINARY
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Fixed-length    | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **二進位**輸入都會直接對應到 JDBC**二進位**型別。 這是當資料行具有 SET ANSI_PADDING ON 時，會由伺服器提供填補的固定長度類型。 當伺服器 char 資料行未開啟填補時，JDBC 驅動程式會加入填補。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **時間戳記**型別是 JDBC**二進位**具有 8 個位元組的固定長度類型。 |
 | Variable-length | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Varbinary**類型會對應到 JDBC **VARBINARY**型別。<br /><br /> **Udt**中輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會對應至為 JDBC **VARBINARY**型別。                                                                                                                                                                                                                                 |
-| 長整數            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **映像**類型會對應到 JDBC **LONGVARBINARY**型別。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，這個類型已淘汰，因此您應該改用大數值類型 **varbinary(max)**。                                                                                                                                                                                           |
+| 長整數            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **映像**類型會對應到 JDBC **LONGVARBINARY**型別。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，這個類型已淘汰，因此您應該改用大數值類型 **varbinary(max)** 。                                                                                                                                                                                           |
   
 ## <a name="exact-numeric-types"></a>精確數值類型
 

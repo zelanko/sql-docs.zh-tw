@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662342"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件類別
   Hash Warning 事件類別可用來監視在雜湊作業期間發生雜湊遞迴或雜湊停止 (Hash Bailout) 的時間。  
@@ -41,10 +41,10 @@ ms.locfileid: "52784390"
  建立或更新資料行 (包含在聯結中) 上的統計資料，是降低發生雜湊遞迴或釋出次數最有效的方法。  
   
 > [!NOTE]  
->  詞彙「寬限雜湊聯結」和「遞迴雜湊聯結」也可用來說明 Hash Bailout。  
+>  詞彙「寬限雜湊聯結」  和「遞迴雜湊聯結」  也可用來說明 Hash Bailout。  
   
 > [!IMPORTANT]  
->  若要決定查詢最佳化工具產生執行計畫時發生 Hash Warning 事件的位置，您也應在追蹤中收集顯示計畫事件類別。 您可選擇任何 Showplan 事件類別，但是不包含不會傳回節點識別碼的 Showplan Text 及 Showplan Text (未編碼) 事件類別。 Showplan 中的節點識別碼會識別查詢最佳化工具在產生查詢執行計畫時所執行的每項作業。 這些作業稱為「運算子」，而 Showplan 中的每個運算子都會有節點識別碼。 Hash Warning 事件的 ObjectID 資料行都會對應到 Showplan 中的節點識別碼，因此您可以判斷造成錯誤的運算子或運算。  
+>  若要決定查詢最佳化工具產生執行計畫時發生 Hash Warning 事件的位置，您也應在追蹤中收集顯示計畫事件類別。 您可選擇任何 Showplan 事件類別，但是不包含不會傳回節點識別碼的 Showplan Text 及 Showplan Text (未編碼) 事件類別。 Showplan 中的節點識別碼會識別查詢最佳化工具在產生查詢執行計畫時所執行的每項作業。 這些作業稱為「運算子」  ，而 Showplan 中的每個運算子都會有節點識別碼。 Hash Warning 事件的 ObjectID 資料行都會對應到 Showplan 中的節點識別碼，因此您可以判斷造成錯誤的運算子或運算。  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Hash Warning Event 事件類別資料行  
   

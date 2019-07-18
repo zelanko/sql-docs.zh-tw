@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815749"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中檢視可用性群組及其可用性複本和資料庫的健全狀況。  
@@ -32,13 +32,13 @@ ms.locfileid: "53350014"
  [AlwaysOn 可用性群組](always-on-availability-groups-sql-server.md)提供資料庫鏡像之企業級替代方案的高可用性和災害復原解決方案。  
   
  可用性群組  
- 一組一起容錯移轉之離散化使用者資料庫 (稱為 *「可用性資料庫」*(Availability Database)) 的容器。  
+ 一組一起容錯移轉之離散化使用者資料庫 (稱為 *「可用性資料庫」* (Availability Database)) 的容器。  
   
  可用性複本  
- 特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* (Primary Replica) 以及一到四個 *「次要複本」*(Secondary Replica)。 針對給定可用性群組裝載可用性複本的伺服器執行個體必須位於單一 Windows Server 容錯移轉叢集 (WSFC) 叢集的不同節點上。  
+ 特定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機副本。 有兩種類型的可用性複本存在：單一 *「主要複本」* (Primary Replica) 以及一到四個 *「次要複本」* (Secondary Replica)。 針對給定可用性群組裝載可用性複本的伺服器執行個體必須位於單一 Windows Server 容錯移轉叢集 (WSFC) 叢集的不同節點上。  
   
  可用性資料庫  
- 屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 (*「主要資料庫」*(Primary Database)) 以及一到四個唯讀複本 (*「次要資料庫」*(Secondary Database))。  
+ 屬於可用性群組的資料庫。 對於每個可用性資料庫而言，可用性群組會維護單一讀寫複本 ( *「主要資料庫」* (Primary Database)) 以及一到四個唯讀複本 ( *「次要資料庫」* (Secondary Database))。  
   
  AlwaysOn 儀表板  
  提供可用性群組健全狀況之摘要檢視的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 儀表板。 如需詳細資訊，請參閱本主題稍後的 [AlwaysOn 儀表板](#Dashboard)。  
@@ -46,7 +46,7 @@ ms.locfileid: "53350014"
 ##  <a name="AlwaysOnPBM"></a> 預先定義的原則和問題  
  下表摘要說明預先定義的原則。  
   
-|原則名稱|問題|類別目錄**<sup>*</sup>**|Facet|  
+|原則名稱|問題|類別目錄 **<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
 |WSFC 叢集狀態|[WSFC 叢集服務離線](wsfc-cluster-service-is-offline.md)。|嚴重|SQL Server 的執行個體|  
 |可用性群組線上狀態|[可用性群組為離線](availability-group-is-offline.md)。|嚴重|可用性群組|  

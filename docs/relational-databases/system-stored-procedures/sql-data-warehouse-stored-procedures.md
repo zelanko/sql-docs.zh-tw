@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8dc5e634086c738399ce76090755466796cf3a69
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 6dbde63f1f9468fc974b36fdd7e8b7af0ddf9da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950386"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 資料倉儲預存程序
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

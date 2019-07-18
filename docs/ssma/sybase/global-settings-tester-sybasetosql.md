@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028989"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全域設定 (測試器) (SybaseToSQL)
 使用軟體測試人員頁面**全域設定**對話方塊來指定設定 SSMA 軟體測試人員。  

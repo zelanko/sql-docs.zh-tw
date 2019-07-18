@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63125961"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>捨棄對圖表所做的變更 (Visual Database Tools)
   您可以捨棄在資料庫圖表中所做且不想儲存到資料庫的變更。  

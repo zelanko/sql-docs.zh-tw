@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feaf57f433b0f21b4bf4bb6600e22010e68d9fef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101322"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>共用資料來源屬性對話方塊、一般
-  使用 [共用資料來源屬性] 對話方塊，即可在報表中顯示和修改共用資料來源的連接資訊。  
+  使用 [共用資料來源屬性]  對話方塊，即可在報表中顯示和修改共用資料來源的連接資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  輸入資料來源的名稱。 資料來源名稱在報表內必須是唯一的。 根據預設，系統會將一般名稱 (例如，DataSource1 或 DataSource2) 指派給資料來源。  
   

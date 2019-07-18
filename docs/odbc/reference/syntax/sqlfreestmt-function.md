@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 83e62430e55a82c904e6cae996538225ac8282b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006226"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53213437"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
      SQLHSTMT       StatementHandle,  
@@ -83,7 +82,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="example"></a>範例  
  它是良好的程式設計作法，以釋放控制代碼。 不過，為了簡單起見，下列範例不包含程式碼，可釋放已配置控制代碼。 如需如何釋放控制代碼的範例，請參閱 < [SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

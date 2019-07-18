@@ -11,19 +11,23 @@ ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 663131afa6741e1e8addc9809080bed1e1fda67c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0fddc9de23354536b7e6ed1956ad903ce559184
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728709"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何檢視 CDC 執行個體屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   這個程序描述如何使用 CDC 設計工具主控台來檢視有關執行個體的資訊，您建立這些資訊是為了管理執行個體的操作。  
   
 ### <a name="to-view-information-about-a-specific-instance"></a>若要檢視有關特定執行個體的資訊  
   
-1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]**。  
+1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]** 。  
   
 2.  在左窗格中展開 **[異動資料擷取]** ，然後展開包含您要檢視之執行個體的服務。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77d1f433732cf710e715418df94eba5184e9a907
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061467"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53210127"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 int SQLGetPrivateProfileString(  
      LPCSTR   lpszSection,  

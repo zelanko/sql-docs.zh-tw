@@ -1,5 +1,5 @@
 ---
-title: '- （除非）(MDX) |Microsoft 文件'
+title: '- （除外）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 618beda530627898cdf55f08be5071fd7568688c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139075"
 ---
 # <a name="except-mdx-operator"></a>Except 運算子 (MDX)
 

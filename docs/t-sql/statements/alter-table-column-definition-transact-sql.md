@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025155"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  要改變、加入或卸除的資料欄名稱。 *column_name* 可由 1 到 128 個字元組成。 如果是以 timestamp 資料類型建立的新資料行，可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  這是加入的資料行之資料類型及它所屬的結構描述。  
   
  *type_name* 可以是：  
@@ -215,7 +215,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
 ALGORITHM  
 **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
-必須為 **'AEAD_AES_256_CBC_HMAC_SHA_256'**。  
+必須為 **'AEAD_AES_256_CBC_HMAC_SHA_256'** 。  
   
  如需詳細資訊 (包括功能條件約束)，請參閱 [Always Encrypted &#40;資料庫引擎&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
   

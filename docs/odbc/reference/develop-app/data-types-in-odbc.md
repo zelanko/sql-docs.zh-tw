@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96e9b93ef3ef52feeab61c9f7a62ce757f682634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077001"
 ---
 # <a name="data-types-in-odbc"></a>ODBC 中的資料類型
-ODBC 會使用兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型會在資料來源，並在應用程式中的 C 程式碼會使用 C 資料類型。  
+ODBC 會使用兩組資料類型：SQL 資料類型和 C 資料類型。 SQL 資料類型會在資料來源，並在應用程式中的 C 程式碼會使用 C 資料類型。  
   
  本章節包含下列主題。  
   

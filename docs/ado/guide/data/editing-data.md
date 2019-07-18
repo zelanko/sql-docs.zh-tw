@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925496"
 ---
 # <a name="editing-data"></a>編輯資料
 我們已說明如何使用 ADO 連接到資料來源執行命令，取得中的結果**Recordset**物件，並瀏覽**資料錄集**。 本節著重於下一個基本的 ADO 作業： 編輯資料。  

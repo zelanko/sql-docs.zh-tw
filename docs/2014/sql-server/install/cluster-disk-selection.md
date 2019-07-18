@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - cluster disk selection
@@ -13,12 +12,12 @@ ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea021ed6e3613d4a39641c582e0b091ebfe1a6f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 156c17d7dae5c4de07033a96f2e936448d8d02ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096499"
 ---
 # <a name="cluster-disk-selection"></a>叢集磁碟選取
   您可以使用 **安裝精靈的** [叢集磁碟選取] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的位置。  
@@ -30,7 +29,7 @@ ms.locfileid: "52519656"
 >   
 >  如果您計畫在這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體上啟用 FILESTREAM，就必須指定共用叢集磁碟。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **共用的磁碟**  
  從清單中選取單一磁碟。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的位置。  
   

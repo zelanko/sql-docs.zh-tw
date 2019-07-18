@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982531"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ FOR UPDATE [OF *column_name* [**,**...*n*]]
   
  您可以在宣告資料指標的 *select_statement* 中使用變數。 在資料指標宣告之後，資料指標變數值便不會改變。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  `DECLARE CURSOR` 的權限預設會授與在資料指標所使用的檢視、資料表和資料行上有 `SELECT` 權限的任何使用者。
  
 ## <a name="limitations-and-restrictions"></a>限制事項

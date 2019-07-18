@@ -1,5 +1,5 @@
 ---
-title: SQLManageDataSources |Microsoft Docs
+title: SQLManageDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018959"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53212422"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLManageDataSources(  
      HWND     hwnd);  
@@ -70,9 +69,9 @@ BOOL SQLManageDataSources(
   
  ![建立新的資料來源 對話方塊](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
   
- 對話方塊會顯示已安裝的驅動程式清單。 如果使用者按兩下驅動程式或驅動程式會選取並按一下 **[確定]**， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 並將它傳遞為 ODBC_ADD_DSN 選項。  
+ 對話方塊會顯示已安裝的驅動程式清單。 如果使用者按兩下驅動程式或驅動程式會選取並按一下 **[確定]** ， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 並將它傳遞為 ODBC_ADD_DSN 選項。  
   
- 如果使用者選取資料來源，然後按一下**移除**， **SQLManageDataSources**詢問使用者是否要刪除資料來源。 如果使用者按一下 **[是]**， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 使用 ODBC_REMOVE_DSN 選項。  
+ 如果使用者選取資料來源，然後按一下**移除**， **SQLManageDataSources**詢問使用者是否要刪除資料來源。 如果使用者按一下 **[是]** ， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL 使用 ODBC_REMOVE_DSN 選項。  
   
  **建立新的資料來源**對話方塊用來加入或刪除使用者資料來源、 系統資料來源或檔案資料來源。  
   
@@ -111,9 +110,9 @@ BOOL SQLManageDataSources(
   
  ![ODBC 資料來源管理員追蹤 索引標籤](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- 如果使用者按一下**立即開始追蹤**，然後按一下 **[確定]**， **SQLManageDataSources**可手動追蹤目前在電腦上執行的所有應用程式。  
+ 如果使用者按一下**立即開始追蹤**，然後按一下 **[確定]** ， **SQLManageDataSources**可手動追蹤目前在電腦上執行的所有應用程式。  
   
- 如果使用者指定的追蹤檔名稱**記錄檔路徑**文字方塊中，然後按一下 **[確定]**， **SQLManageDataSources**設定**TraceFile**指定之名稱的系統資訊 [ODBC] 區段中的關鍵字。  
+ 如果使用者指定的追蹤檔名稱**記錄檔路徑**文字方塊中，然後按一下 **[確定]** ， **SQLManageDataSources**設定**TraceFile**指定之名稱的系統資訊 [ODBC] 區段中的關鍵字。  
   
 > [!IMPORTANT]  
 >  從 Windows 8 （Visual Studio Analyzer 只包含在舊版的 Visual Studio 中）。 開始，已移除 Visual Studio analyzer 的支援。 如需疑難排解機制的替代方法，使用 BID 追蹤。  

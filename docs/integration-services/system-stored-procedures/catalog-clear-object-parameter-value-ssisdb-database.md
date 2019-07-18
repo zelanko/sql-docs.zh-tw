@@ -11,14 +11,18 @@ ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: acf5054c1ec144f4860a85137f3bc30581598cbb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 036fa3398103108cd4b49d1690cd5943cc53ff02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273815"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717052"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   清除現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案或封裝儲存在伺服器上的參數值。  
@@ -35,19 +39,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ \@folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ \@project_name = ] *project_name*  
- 專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ \@object_type = ] *object_type*  
  物件的類型。 有效的值包括 `20` (專案) 和 `30` (封裝)。 *object_type* 是 **smallInt**。  
   
  [ \@ object _name = ] *object _name*  
- 封裝名稱。 *object _name* 是 **nvarchar(260)**。  
+ 封裝名稱。 *object _name* 是 **nvarchar(260)** 。  
   
  [ \@parameter_ name = ] *parameter_name*  
- 參數的名稱。 *parameter_ name* 是 **nvarchar(128)**。  
+ 參數的名稱。 *parameter_ name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

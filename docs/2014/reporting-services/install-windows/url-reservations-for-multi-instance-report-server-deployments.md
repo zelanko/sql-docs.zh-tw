@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 775e7a1bced0e35d191d3e3f613b86836b9b1ddb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108614"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
   如果您在相同電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，您就必須考慮要如何為每一個執行個體定義 URL 保留項目。 在每一個執行個體中，報表伺服器 Web 服務和報表管理員至少每一個都必須有一個 URL 保留項目。 完整的保留項目集合在 HTTP.SYS 中必須是唯一的。  

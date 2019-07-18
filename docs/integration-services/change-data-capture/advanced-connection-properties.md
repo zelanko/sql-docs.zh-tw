@@ -11,21 +11,25 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f131956e913e210c529921e7ed6655c91f890e77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed62b74256b15aa27ca94459963928ae4b2727ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729107"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[進階連接屬性]** 對話方塊可在連接字串中加入其他連接參數。  
   
  其他連接參數可以是您使用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行個體所支援的任何 ODBC 連接參數。  
   
  您使用 **[進階連接屬性]** 對話方塊所加入的參數會加入至 **[連接到 SQL Server]** 對話方塊中所選取的參數。  
   
- 提供之每一個參數的最後一個執行個體都會覆寫該參數之前的任何執行個體。 使用 **[進階連接參數]** 對話方塊加入的參數會遵循及取代 **[SQL Server 連接]** 對話方塊中所提供的參數。 例如，如果 [SQL Server 連接] 對話方塊指定 SERVER1 當做伺服器名稱，而且 [其他連接參數] 頁面包含 ;SERVER=SERVER2，則會對 SERVER2 進行連接。  
+ 提供之每一個參數的最後一個執行個體都會覆寫該參數之前的任何執行個體。 使用 **[進階連接參數]** 對話方塊加入的參數會遵循及取代 **[SQL Server 連接]** 對話方塊中所提供的參數。 例如，如果 [SQL Server 連接]  對話方塊指定 SERVER1 當做伺服器名稱，而且 [其他連接參數]  頁面包含 ;SERVER=SERVER2，則會對 SERVER2 進行連接。  
   
  使用 **[進階連接屬性]** 對話方塊加入的參數會以純文字格式傳遞。  
   

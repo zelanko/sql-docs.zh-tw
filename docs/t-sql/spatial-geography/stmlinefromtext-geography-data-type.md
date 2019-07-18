@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8b4dd80bdc3930f396703db04fb7d4282a9535f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111703695a1ed2452456125ccf872bf31a12d968
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936643"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
  OGC 類型：**MultiLineString**  
   

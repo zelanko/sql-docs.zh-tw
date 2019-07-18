@@ -1,21 +1,22 @@
 ---
 title: 效能計數器 - ReportServer Service 效能物件 | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a7b147862a8a64936636f9171fa2778352af4a8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: aac7ce5685f4f70b98028d481f2da2bf630e3cb0
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418859"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412642"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -23,7 +24,7 @@ ms.locfileid: "52418859"
 > [!NOTE]  
 >  效能物件是用來監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  本主題內容：  
   

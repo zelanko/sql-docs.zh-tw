@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5581144c8a852a4ee0861e71d3446ee90936926a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101433"
 ---
 # <a name="select-the-report-type"></a>選取報表類型
   使用報表精靈的這個頁面，即可選取表格式報表或矩陣報表。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **表格式**  
  建立包含資料表的報表。 資料表是將資料排列成資料行和資料列的資料區域。 資料表有一組靜態的資料行，至於資料表中的資料列數目則是依資料集內的資料而定。  
   

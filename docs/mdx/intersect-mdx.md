@@ -1,5 +1,5 @@
 ---
-title: Intersect (MDX) |Microsoft 文件
+title: Intersect (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b24049cb81982075fa9234c6fa792db273d404db
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105362"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 
@@ -38,7 +37,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
 ## <a name="remarks"></a>備註  
  **Intersect**函式會傳回兩個集合的交集。 根據預設，交叉兩個集合之前，此函數會將兩個集合內的重複項移除。 這兩個指定的集合必須具有相同的維度性。  
   
- 選擇性**所有**旗標會保留重複項。 如果**所有**指定，則**Intersect**函式如往常般相交照常項目，而且也會交叉第二個集合中有相符重複第一個集合中的每個重複項目。 這兩個指定的集合必須具有相同的維度性。  
+ 選擇性**所有**旗標會保留重複項目。 如果**所有**指定，則**Intersect**函式會如往常一樣，與照常的項目，並也會交叉第二個集合中有相符重複第一個集合中的每個重複。 這兩個指定的集合必須具有相同的維度性。  
   
 ## <a name="example"></a>範例  
  下列查詢會傳回同時出現在指定的兩個集合中的成員，即 2003 和 2004 年這兩項：  
@@ -74,6 +73,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

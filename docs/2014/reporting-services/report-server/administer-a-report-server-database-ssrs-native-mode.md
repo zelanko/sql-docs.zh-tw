@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d155437880f1fb93779a2352bd507ea83de16256
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104275"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  
@@ -59,7 +58,7 @@ ms.locfileid: "56041249"
  發生這個錯誤是因為 ReportServerTempdb 名稱是儲存於內部，以供預存程序執行內部作業之用， 如果重新命名此暫存資料庫將會造成預存程序無法正常運作。  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>在報表伺服器資料庫上啟用快照集隔離  
- 您無法在報表伺服器資料庫上啟用快照集隔離。 如果快照隔離已開啟，您將會遇到下列錯誤：「選取的報表還無法檢視。 報表仍在轉譯中，或報表快照集無法使用」。  
+ 您無法在報表伺服器資料庫上啟用快照集隔離。 如果快照隔離已開啟，您將會遇到下列錯誤：「 選取的報表不是就緒可供檢視。 報表仍在轉譯中，或報表快照集無法使用」。  
   
  如果您並未刻意啟用快照集隔離，表示可能有另一個應用程式已經設定此屬性，或者 **model** 資料庫可能啟用了快照集隔離，因而導致所有新資料庫都繼承此設定。  
   
@@ -77,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>關於資料庫版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]表示透過檔案版本資訊出現在記錄檔中，所有的 SOAP 呼叫的標頭中，而且當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往 http://localhost/reportserver)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]表示透過檔案版本資訊出現在記錄檔中，所有的 SOAP 呼叫的標頭中，而且當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往 http://localhost/reportserver) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

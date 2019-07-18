@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900083"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ ms.locfileid: "47794316"
 |**product_version**|**varchar(23)**|產品的版本。 以下列格式呈現：<br /><br /> x.x:x.x|  
 |**debug**|**bit**|1 = 模組是已載入模組的偵錯版本。|  
 |**修正的項目**|**bit**|1 = 模組已修補。|  
-|**發行前版本**|**bit**|1 = 模組是已載入模組的發行前版本。|  
+|**prerelease**|**bit**|1 = 模組是已載入模組的發行前版本。|  
 |**private_build**|**bit**|1 = 模組是已載入模組的私用建置。|  
 |**special_build**|**bit**|1 = 模組是已載入模組的特殊建置。|  
-|**語言**|**int**|模組之版本資訊的語言。|  
+|**language**|**int**|模組之版本資訊的語言。|  
 |**公司**|**nvarchar(256)**|建立模組的公司名稱。|  
 |**description**|**nvarchar(256)**|模組的描述。|  
 |**name**|**nvarchar(255)**|模組的名稱。 包含模組的完整路徑。|  

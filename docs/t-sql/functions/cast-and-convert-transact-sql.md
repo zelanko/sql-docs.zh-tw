@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65942899"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ ms.locfileid: "56801832"
 
 **轉換**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **轉換**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -68,7 +69,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
-**請參閱本主題稍後的[範例](#BKMK_examples)**。 
+**請參閱本主題稍後的[範例](#BKMK_examples)** 。 
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -123,8 +124,8 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** 或 **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss(24h)|  
 |-|**21** 或 **121** (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 標準 (使用毫秒) 預設值|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (無空格)<br /><br /> 注意：針對毫秒 (mmm) 值 0，不會顯示毫秒十進位小數值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
-|-|**127**(<sup>6, 7</sup>)|具有時區 Z 的 ISO8601。|yyyy-mm-ddThh:mi:ss.mmmZ (無空格)<br /><br /> 注意：針對毫秒 (mmm) 值 0，不會顯示毫秒十進位值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
+|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (無空格)<br /><br /> 注意:針對毫秒 (mmm) 值 0，不會顯示毫秒十進位小數值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
+|-|**127**(<sup>6, 7</sup>)|具有時區 Z 的 ISO8601。|yyyy-mm-ddThh:mi:ss.mmmZ (無空格)<br /><br /> 注意:針對毫秒 (mmm) 值 0，不會顯示毫秒十進位值。 例如，'2012-11-07T18:26:20.000' 值會顯示為 '2012-11-07T18:26:20'。|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|回曆 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 在此樣式中，**mon** 代表完整月份名稱的多 Token 回曆 Unicode 表示法。 這個值無法在 SSMS 的預設美國安裝中正確呈現。|  
 |-|**131** (<sup>2</sup>)|回曆 (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
@@ -157,7 +158,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**0** (預設)|最多 6 位數。 在適當時機，供科學記號標記法使用。|  
 |**1**|一律 8 位數。 一律用在科學記號標記法中。|  
 |**2**|一律 16 位數。 一律用在科學記號標記法中。|  
-|**3**|一律 17 位數。 用於不失真的轉換。 透過這個樣式，可保證將每個不同的 float 或 real 值轉換成相異的字元字串。<br /><br /> **適用對象：**[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
+|**3**|一律 17 位數。 用於不失真的轉換。 透過這個樣式，可保證將每個不同的 float 或 real 值轉換成相異的字元字串。<br /><br /> **適用對象：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 |**126、128、129**|基於舊版原因而納入；未來版本可能會取代這些值。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 樣式
@@ -181,7 +182,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**3**|保留無意義的空白字元，並啟用有限的內部 DTD 子集處理。|  
   
 ## <a name="binary-styles"></a>二進位樣式
-針對 **binary(n)**、**char(n)**、**varbinary(n)** 或 **varchar(n)** *expression*，*style* 可以具有下表中所顯示的其中一個值。 此表中未列出的樣式值將傳回錯誤。
+針對 **binary(n)** 、**char(n)** 、**varbinary(n)** 或 **varchar(n)** *expression*，*style* 可以具有下表中所顯示的其中一個值。 此表中未列出的樣式值將傳回錯誤。
   
 |ReplTest1|輸出|  
 |---|---|
@@ -205,7 +206,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="large-value-data-types"></a>大數值資料類型
 大數值資料類型具有與小數值資料類型相同的隱含和明確轉換行為，明確地說，就是 **nvarchar**、**varbinary** 和 **varchar** 資料類型。 不過，請考慮下列指導方針：
 -   從 **image** 轉換成 **varbinary(max)** (反之亦然) 是一種隱含轉換，而 **text** 與 **varchar(max)** 以及 **ntext** 與 **nvarchar(max)** 之間的轉換亦是如此。  
--   從大數值資料類型 (如 **varchar(max)**) 轉換成較小的對應資料類型 (如 **varchar**) 是隱含的轉換，但如果大數值的大小超過較小資料類型的指定長度，則會予以截斷。  
+-   從大數值資料類型 (如 **varchar(max)** ) 轉換成較小的對應資料類型 (如 **varchar**) 是隱含的轉換，但如果大數值的大小超過較小資料類型的指定長度，則會予以截斷。  
 -   從 **nvarchar**、**varbinary** 或 **varchar** 轉換成其對應的大數值資料類型是透過隱含的方式進行。  
 -   從 **sql_variant** 資料類型轉換為大數值資料類型為明確的轉換。  
 -   大數值資料類型無法轉換成 **sql_variant** 資料類型。  

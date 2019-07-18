@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328655"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089849"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>選項 (文字編輯器 - XML - 格式化頁面)
 
-此對話方塊允許您指定 XML 編輯器的格式化設定。 您可以從 [工具] 功能表存取 [選項] 對話方塊。  
+此對話方塊允許您指定 XML 編輯器的格式化設定。 您可以從 [工具]  功能表存取 [選項]  對話方塊。  
   
 > [!NOTE]  
-> 在選取 [文字編輯器] 資料夾、[XML] 資料夾，然後從 [選項] 對話方塊中選取 [格式化] 選項時，均可以使用這些設定。  
+> 在選取 [文字編輯器]  資料夾、[XML]  資料夾，然後從 [選項]  對話方塊中選取 [格式化]  選項時，均可以使用這些設定。  
   
 ## <a name="attributes"></a>屬性  
  **保留手動屬性格式化**  
@@ -61,7 +60,7 @@ ms.locfileid: "53328655"
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</dir >  
+ \</dir>  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 編輯器 &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

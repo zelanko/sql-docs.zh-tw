@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c92421a2c29964683489c93b59e98a398d9262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef81931a39bd6e1cf9d30b465d1bd11541c9d540
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661247"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687600"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   具有記憶體最佳化資料表的資料庫支援分次還原，但受到下列一項限制。 如需分次備份和還原的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 和[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
   
@@ -27,7 +28,7 @@ ms.locfileid: "51661247"
   
 -   如果您備份 (或還原) 主要檔案群組，您必須指定記憶體最佳化的檔案群組。  
   
--   如果您備份 (或還原) 記憶體最佳化的檔案群組，您必須指定主要檔案群組。  
+-   若您備份 (或還原) 記憶體最佳化檔案群組，您必須指定主要檔案群組。  
   
  分次備份和還原的主要狀況包括：  
   
@@ -46,59 +47,107 @@ ms.locfileid: "51661247"
 ## <a name="samples"></a>範例  
  這些範例使用下列結構描述：  
   
-```  
-CREATE DATABASE imoltp  
-ON PRIMARY (name = imoltp_primary1, filename = 'c:\data\imoltp_data1.mdf')  
-LOG ON (name = imoltp_log, filename = 'c:\data\imoltp_log.ldf')  
+```sql
+CREATE DATABASE imoltp
+    ON PRIMARY (
+        name = imoltp_primary1,
+        filename = 'c:\data\imoltp_data1.mdf')
+    LOG ON (
+        name = imoltp_log,
+        filename = 'c:\data\imoltp_log.ldf');
+    GO  
+  
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_primary2,
+        filename = 'c:\data\imoltp_data2.ndf');
 GO  
   
-ALTER DATABASE imoltp ADD FILE (name = imoltp_primary2, filename = 'c:\data\imoltp_data2.ndf')  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_secondary;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_secondary,
+        filename = 'c:\data\imoltp_secondary.ndf')
+            TO FILEGROUP imoltp_secondary;
 GO  
   
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_secondary  
-ALTER DATABASE imoltp ADD FILE (name = imoltp_secondary, filename = 'c:\data\imoltp_secondary.ndf') TO FILEGROUP imoltp_secondary  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod1',
+        filename = 'c:\data\imoltp_mod1')
+            TO FILEGROUP imoltp_mod;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod2',
+        filename = 'c:\data\imoltp_mod2')
+            TO FILEGROUP imoltp_mod;
 GO  
-  
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod2') TO FILEGROUP imoltp_mod   
-GO  
 ```  
   
-### <a name="backup"></a>備份  
- 此範例顯示如何備份主要檔案群組和記憶體最佳化的檔案群組。 您必須同時指定主要檔案群組和記憶體最佳化的檔案群組。  
+### <a name="backup"></a>Backup  
+ 此範例會示範如何備份主要檔案群組和記憶體最佳化的檔案群組。 您必須同時指定主要檔案群組和記憶體最佳化的檔案群組。  
   
-```  
-backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    to disk = 'c:\data\imoltp.dmp'
+    with init;
+```
   
- 下列範例顯示備份主要檔案群組和記憶體最佳化的檔案群組之外的檔案群組，類似於備份不具有記憶體最佳化資料表的資料庫。 下列命令備份次要檔案群組  
+ 下列範例顯示主要檔案群組和記憶體最佳化檔案群組之外的檔案群組備份，其運作方式與沒有記憶體最佳化資料表的資料庫相似。 下列命令會備份次要檔案群組  
   
-```  
-backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'imoltp_secondary'
+    to disk = 'c:\data\imoltp_secondary.dmp'
+    with init;
+```
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>還原  
  下列範例顯示如何同時還原主要檔案群組和記憶體最佳化的檔案群組。  
-  
-```  
-restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
-from disk='c:\data\imoltp.dmp' with partial, norecovery  
-  
---restore the transaction log  
- RESTORE LOG [imoltp] FROM DISK = N'c:\data\imoltp_log.dmp' WITH  FILE = 1,  NOUNLOAD,  STATS = 10  
-GO  
-```  
+
+```sql
+RESTORE database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    from disk = 'c:\data\imoltp.dmp'
+    with
+        partial,
+        norecovery;
+
+-- Restore the transaction log.
+
+RESTORE LOG [imoltp]
+    FROM DISK = N'c:\data\imoltp_log.dmp'
+    WITH
+        FILE = 1,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
   
  下一個範例顯示還原主要檔案群組和記憶體最佳化的檔案群組之外的檔案群組，類似於還原不具有記憶體最佳化資料表的資料庫  
   
-```  
-RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
-FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOAD,  STATS = 10  
-GO  
-```  
-  
+```sql
+RESTORE DATABASE [imoltp]
+    FILE = N'imoltp_secondary'
+    FROM DISK = N'c:\data\imoltp_secondary.dmp'
+    WITH
+        FILE = 1,
+        RECOVERY,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
+
 ## <a name="see-also"></a>另請參閱  
  [備份、還原及復原記憶體最佳化資料表](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
-  
+

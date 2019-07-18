@@ -11,14 +11,18 @@ ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1f9edd63a9855bf87b653c0b4cbbdfffc5b70db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717125"
 ---
-# <a name="catalogadddatatap"></a>catalog.add_data_tap
+# <a name="catalogadddatatap"></a>catalog.add_data_tap 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對執行的執行個體，在封裝資料流程中的元件輸出上，加入資料點選。  

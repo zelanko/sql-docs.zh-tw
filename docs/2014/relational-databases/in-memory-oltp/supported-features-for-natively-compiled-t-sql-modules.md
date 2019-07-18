@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155724"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>原生編譯的預存程序中支援的建構
   本主題包含原生編譯的預存程序的支援功能的清單 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,11 +81,11 @@ ms.locfileid: "58527140"
 ##  <a name="bfncsp"></a> 原生編譯的預存程序中的內建函式  
  記憶體最佳化資料表上的預設條件約束和原生編譯預存程序中，支援下列函數。  
   
--   數學函數：ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE 及 TAN  
+-   數學函數：ACOS、 ASIN、 ATAN、 ATN2、 COS、 COT、 度、 EXP、 記錄、 LOG10、 PI、 POWER、 弧度為單位、 RAND、 SIN、 SQRT、 SQUARE 和 TAN  
   
--   日期函數：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 與 YEAR。  
+-   日期函數：CURRENT_TIMESTAMP、 DATEADD、 DATEDIFF、 DATEFROMPARTS、 DATEPART、 DATETIME2FROMPARTS、 DATETIMEFROMPARTS、 天、 EOMONTH、 GETDATE、 GETUTCDATE、 月、 SMALLDATETIMEFROMPARTS、 SYSDATETIME、 SYSUTCDATETIME 和 YEAR。  
   
--   字串函數：LEN、LTRIM、RTRIM 與 SUBSTRING  
+-   字串函式：LEN、 LTRIM、 RTRIM 和 SUBSTRING  
   
 -   Identity 函數：SCOPE_IDENTITY  
   
@@ -93,9 +93,9 @@ ms.locfileid: "58527140"
   
 -   Uniqueidentifier 函數：NEWID 與 NEWSEQUENTIALID  
   
--   Error 函數：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 與 ERROR_STATE  
+-   錯誤函數：ERROR_LINE、 ERROR_MESSAGE、 ERROR_NUMBER、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE  
   
--   轉換：CAST 與 CONVERT。 不支援 Unicode 和非 Unicode 字元字串 (n(var)char 和 (var)char) 之間的轉換。  
+-   轉換：CAST 和 CONVERT。 不支援 Unicode 和非 Unicode 字元字串 (n(var)char 和 (var)char) 之間的轉換。  
   
 -   系統函式：@@rowcount。 原生編譯預存程序內的陳述式會更新 @@rowcount，您可以在原生編譯預存程序中使用 @@rowcount，來判斷該原生編譯預存程序內最後執行之陳述式所影響的資料列數。 不過，@@rowcount 會在原生編譯預存程序開始及結束執行時重設為 0。  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527140"
 ##  <a name="los"></a> 排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
   
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、 程序*\<程序名稱 >*，行 *\<lineNumber >* 。 TOP 運算子可以傳回 8192 個資料列; 最多*\<數字 >* 要求。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，您會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、 程序 *\<程序名稱 >* ，行 *\<lineNumber >* 。 TOP 運算子可以傳回 8192 個資料列; 最多 *\<數字 >* 要求。**  
   
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
   
  如果您未使用 ORDER BY 子句，則可以使用任何整數值搭配 TOP 運算子。  
   
- 使用 TOP N = 8192 的範例：編譯  
+ 範例使用 TOP N = 8192:編譯  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- 使用 TOP N > 8192 的範例：無法編譯。  
+ 範例使用 TOP N > 8192:無法編譯。  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **傳回的資料列的限制：** 有兩種情況可能會減少 TOP 運算子能夠傳回的資料列數目：  
+ **傳回的資料列的限制：** 有兩種情況下，可能會減少 TOP 運算子可以傳回的資料列數目：  
   
 -   在查詢中使用 JOIN。  JOIN 對限制的影響取決於查詢計劃。  
   

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62889361"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
   使用 SSIS 封裝升級精靈來升級[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]封裝並[!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]目前版本的封裝格式的封裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  

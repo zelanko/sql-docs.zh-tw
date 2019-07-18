@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c98e5cf869b0a4b7e39b640cf4f486ae8f222127
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637748"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>預設包含 NULL 值的資料行
   依預設，資料行中的 Null 值會與缺少的屬性、節點或元素相對應。 此預設行為是可以覆寫的，方法為使用 ELEMENTS 指示詞來要求元素中心的 XML，並指定 XSINIL 來要求為 NULL 值加入元素，如下列查詢所示：  

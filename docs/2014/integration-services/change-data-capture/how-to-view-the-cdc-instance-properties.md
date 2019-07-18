@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835564"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何檢視 CDC 執行個體屬性
   這個程序描述如何使用 CDC 設計工具主控台來檢視有關執行個體的資訊，您建立這些資訊是為了管理執行個體的操作。  
   
 ### <a name="to-view-information-about-a-specific-instance"></a>若要檢視有關特定執行個體的資訊  
   
-1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]**。  
+1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]** 。  
   
 2.  在左窗格中展開 **[異動資料擷取]** ，然後展開包含您要檢視之執行個體的服務。  
   

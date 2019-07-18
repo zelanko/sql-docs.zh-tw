@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117909"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @devtype = ] 'device_type'` 為備份裝置的類型。 *device_type&lt*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
+`[ @devtype = ] 'device_type'` 為備份裝置的類型。 *device_type&lt*已**varchar （20)** ，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` 是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*已**sysname**，沒有預設值，不能是 NULL。  
   
-`[ @physicalname = ] 'physical_name'` 是實體備份裝置的名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*已**nvarchar(260)**，沒有預設值，而且不能是 NULL。  
+`[ @physicalname = ] 'physical_name'` 是實體備份裝置的名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*已**nvarchar(260)** ，沒有預設值，而且不能是 NULL。  
   
  當在遠端網路位置建立備份裝置時，請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的名稱有遠端電腦的適當寫入功能。  
   

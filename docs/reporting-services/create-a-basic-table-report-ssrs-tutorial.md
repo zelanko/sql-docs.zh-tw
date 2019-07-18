@@ -1,6 +1,6 @@
 ---
 title: 建立基本資料表報表 (SSRS 教學課程) | Microsoft Docs
-ms.date: 11/07/2017
+ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,51 +10,57 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2e16d18fd811e60b490842c309ac6260bfc5ad96
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65103308"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 
-在本教學課程中，您將使用 SQL Server Data Tools 中的報表設計師，根據 **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** 建立內含一個資料表的基本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。 您也可以使用報表產生器建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。 
+在本教學課程中，您可以使用 Visual Studio / SQL Server Data Tools (SSDT) 中的 [報表設計師]  工具。 您可以建立 SQL Server Reporting Services (SSRS) 編頁報表。 報表包含查詢資料表，該資料表是從 AdventureWorks2016 資料庫中的資料建立的。
 
-在進行本教學課程的過程中，您將建立報表專案、設定連線資訊、定義查詢、新增資料表資料區域、分組與加總某些欄位，以及預覽報表。  
+當您繼續本教學課程時，您將了解如何：
   
-## <a name="requirements"></a>需求  
-您的系統必須已經安裝下列項目，才能使用這個教學課程：  
+- 建立報表專案。
+- 設定資料連線。
+- 定義查詢。
+- 新增資料表資料區域。
+- 設定報表格式。
+- 群組和總計欄位。
+- 預覽報表。
+- 選擇性地發佈報表。
+
+## <a name="requirements"></a>需求
+
+您的系統上必須安裝下列元件，才能使用本教學課程：
+
+- [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server 資料庫引擎。  
+- SQL Server 2016 Reporting Services 或更新版本 (SSRS)。
+- AdventureWorks2016 資料庫。  如需詳細資訊，請參閱 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。
+- 安裝適用於 Visual Studio 的 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)，以及 Reporting Services 延伸模組可啟用對*報表設計師*的存取。
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server 資料庫引擎。  
-  
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 。  
-  
--   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫。  如需詳細資訊，請參閱 [Adventure Works 2014 Sample Databases](https://github.com/Microsoft/sql-server-samples/releases)(Adventure Works 2014 範例資料庫)。  
-  
- -   已安裝 "SQL Server Reporting Services" 元件的[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) ，以便擁有 [報表設計師]。    
-  
-另外，您也必須擁有從 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫擷取資料的唯讀權限。
+另外，您也必須擁有從 AdventureWorks2016 資料庫擷取資料的唯讀權限。
 
 **完成這個教學課程的估計時間：** 30 分鐘。
-  
-## <a name="tasks"></a>工作  
-[第 1 課：建立報表伺服器專案 &#40;Reporting Services&#41;](../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md)  
-  
-[第 2 課：指定連線資訊 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)  
-  
-[第 3 課：定義資料表報表的資料集 &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
-  
-[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)  
-  
-[第 5 課：格式化報表 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)  
-  
-[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
 
 ## <a name="next-steps"></a>後續步驟
 
-[Reporting Services 教學課程](../reporting-services/reporting-services-tutorials-ssrs.md)  
+[第 1 課：建立報表伺服器專案 &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
+[第 2 課：指定連接資訊 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
+
+[第 3 課：定義資料表報表的資料集 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+
+[第 4 課：將資料表加入至報表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+
+[第 5 課：格式化報表 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
+
+[課程 6：加入群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+
+## <a name="see-also"></a>另請參閱
+
+[Reporting Services 教學課程](reporting-services-tutorials-ssrs.md) 有其他問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

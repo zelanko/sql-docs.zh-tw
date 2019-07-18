@@ -2,21 +2,19 @@
 title: 開始使用 Red Hat Enterprise Linux 上的 SQL Server
 titleSuffix: SQL Server
 description: 本快速入門示範如何在 Red Hat Enterprise Linux 上安裝 SQL Server 2017 或 SQL Server 2019 然後建立並查詢資料庫，以使用 sqlcmd。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910499"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：安裝 SQL Server 和 Red Hat 上建立資料庫
 

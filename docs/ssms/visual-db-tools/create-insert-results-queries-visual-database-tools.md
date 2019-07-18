@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b7b13e67c7c67e96516fd64f0dcd4a9bcddf0488
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845006"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682538"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>建立插入結果查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,17 +76,17 @@ WHERE (pub_id = '0766')
 3.  在 [選擇插入結果的目標資料表對話方塊](../../ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md)中，選取將資料列複製到其中的資料表 (目的資料表)。  
   
     > [!NOTE]  
-    > [查詢和檢視設計師] 無法預先判斷您可以更新哪些資料表和檢視。 因此，[從查詢選擇要插入的資料表] 對話方塊的 [資料表名稱] 清單會顯示正在查詢之資料連接中的所有可用資料表和檢視，甚至包括您無法將資料列複製到其中的資料表和檢視。  
+    > [查詢和檢視設計師] 無法預先判斷您可以更新哪些資料表和檢視。 因此，[從查詢選擇要插入的資料表]  對話方塊的 [資料表名稱]  清單會顯示正在查詢之資料連接中的所有可用資料表和檢視，甚至包括您無法將資料列複製到其中的資料表和檢視。  
   
-4.  在表示資料表或資料表值物件的矩形中，選擇您想複製內容的資料行名稱。 若要複製整個資料列，請選擇 [&#42; (所有資料行)]。  
+4.  在表示資料表或資料表值物件的矩形中，選擇您想複製內容的資料行名稱。 若要複製整個資料列，請選擇 [&#42; (所有資料行)]  。  
   
-    查詢和檢視表設計工具會將您選擇的資料行新增至 [準則] 窗格的 [資料行] 欄位中。  
+    查詢和檢視表設計工具會將您選擇的資料行新增至 [準則] 窗格的 [資料行]  欄位中。  
   
-5.  在 [準則] 窗格的 [附加] 欄位中，在目的資料表中，為您要複製的每個資料行選取目標資料行。 若要複製全部資料列，請選擇 *tablename.&#42;*。 目的資料表的資料行必須與來源資料表的資料行具有相同 (或相容) 的資料類型。  
+5.  在 [準則] 窗格的 [附加]  欄位中，在目的資料表中，為您要複製的每個資料行選取目標資料行。 若要複製全部資料列，請選擇 *tablename.&#42;* 。 目的資料表的資料行必須與來源資料表的資料行具有相同 (或相容) 的資料類型。  
   
 6.  若要以特定次序複製資料列，請指定排序次序。 如需詳細資訊，請參閱[排序及分組查詢結果 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)。  
   
-7.  在 [篩選條件] 欄位中輸入搜尋條件，以指定要複製的資料列。 如需詳細資訊，請參閱[指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
+7.  在 [篩選條件]  欄位中輸入搜尋條件，以指定要複製的資料列。 如需詳細資訊，請參閱[指定搜尋準則 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
     如果沒有指定搜尋條件，便會將來源資料表的所有資料列複製到目的資料表中。  
   

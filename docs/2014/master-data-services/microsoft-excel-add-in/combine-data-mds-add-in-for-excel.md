@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90bd8ad09c4996b4f99261d05944b8ba3539568c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 67bdfd9b3a8377b05448b73bd41addd4796a9538
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478988"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>結合資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您要在發行前比較資料時，可以結合兩個工作表的資料。 在此程序中，將兩個工作表中的資料結合為一個工作表。 然後可以進一步進行比較，並判斷哪些資料 (如果有) 將發行到 MDS 儲存機制。  
@@ -28,7 +28,7 @@ ms.locfileid: "52792920"
   
 ### <a name="to-combine-non-managed-data-into-an-mds-managed-sheet"></a>若要將非管理的資料合併到 MDS 管理的工作表中  
   
-1.  在包含 MDS 管理之資料的工作表上，按一下 **[發行和驗證]** 群組中的 **[結合資料]**。  
+1.  在包含 MDS 管理之資料的工作表上，按一下 **[發行和驗證]** 群組中的 **[結合資料]** 。  
   
 2.  在 **[結合資料]** 對話方塊中，按一下 **[要與 MDS 資料結合的範圍]** 文字方塊旁邊的圖示。 此對話方塊會收縮。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52792920"
   
 6.  對於為 MDS 實體列出的資料行，選取 **[對應資料行]** 底下的資料行。 並不是所有 MDS 資料行都需要對應資料行。  
   
-7.  按一下 **[合併]**。 **SOURCE** 資料行將顯示，表示資料來自 MDS 或外部來源。  
+7.  按一下 **[合併]** 。 **SOURCE** 資料行將顯示，表示資料來自 MDS 或外部來源。  
   
 ## <a name="next-steps"></a>後續步驟  
   

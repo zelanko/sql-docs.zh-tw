@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10010"
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - text-based query designer [Reporting Services]
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 114b73bf2e15c55669dacea6456dfd9666a485d6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dfd6d077d80093821346be030ee0dd9c2af0fc9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100603"
 ---
 # <a name="text-based-query-designer-user-interface"></a>以文字為基礎的查詢設計工具使用者介面
   使用以文字為基礎的查詢設計工具，可透過資料來源支援的查詢語言來指定查詢、執行查詢，並在設計階段檢視結果。 您可以指定多個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、自訂資料處理延伸模組的查詢或命令語法，以及指定為運算式的查詢。 以文字為基礎的查詢設計工具不會前置處理查詢，而且可以容納各種查詢語法，所以這是許多資料來源類型的預設查詢設計工具。  
@@ -41,10 +40,10 @@ ms.locfileid: "56288256"
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![執行查詢](../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢，並將結果集顯示在 [結果] 窗格中。|  
-|**命令類型**|選取 [Text]、[StoredProcedure] 或 [TableDirect]。 如果預存程序含有參數，當您按一下工具列上的 [執行] 時，便會顯示 [定義查詢參數] 對話方塊，您可以依照需要填入值。 請注意是否預存程序傳回一個以上的結果集，第一個結果集用來填入資料集。<br /><br /> 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]。|  
+|**命令類型**|選取 [Text]  、[StoredProcedure]  或 [TableDirect]  。 如果預存程序含有參數，當您按一下工具列上的 [執行]  時，便會顯示 [定義查詢參數]  對話方塊，您可以依照需要填入值。 請注意是否預存程序傳回一個以上的結果集，第一個結果集用來填入資料集。<br /><br /> 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]  。|  
   
 ### <a name="command-type-text"></a>Text 命令類型  
- 當您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料集時，報表設計師預設會顯示圖形化查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯] 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
+ 當您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料集時，報表設計師預設會顯示圖形化查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯]  切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
   
  ![關聯式資料查詢的一般查詢設計工具](../analysis-services/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
   
@@ -53,7 +52,7 @@ ms.locfileid: "56288256"
 |窗格|函數|  
 |----------|--------------|  
 |查詢|顯示 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢文字。 使用此窗格，即可撰寫或編輯 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢。|  
-|結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]，或是按一下工具列上的 [執行] 按鈕。|  
+|結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]  ，或是按一下工具列上的 [執行]  按鈕。|  
   
 #### <a name="example"></a>範例  
  下列查詢會從 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫的 `Contact` 資料表傳回姓氏清單。  
@@ -68,10 +67,10 @@ SELECT LastName FROM Person.Person;
 EXEC uspGetEmployeeManagers 1;  
 ```  
   
- 當您按一下工具列上的 [執行] 時，[查詢] 窗格中的命令便會執行，而且結果會顯示在 [結果] 窗格中。  
+ 當您按一下工具列上的 [執行]  時，[查詢]  窗格中的命令便會執行，而且結果會顯示在 [結果]  窗格中。  
   
 ### <a name="command-type-storedprocedure"></a>StoredProcedure 命令類型  
- 當您選取 [命令類型] [StoredProcedure] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 請在 [查詢] 窗格內輸入預存程序名稱，然後按一下工具列上的 [執行]。 [定義查詢參數] 對話方塊隨即開啟。 為此預存程序輸入參數值。 將會針對每一個預存程序參數建立報表參數。  
+ 當您選取 [命令類型] [StoredProcedure]  時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 請在 [查詢] 窗格內輸入預存程序名稱，然後按一下工具列上的 [執行]  。 [定義查詢參數] 對話方塊隨即開啟。 為此預存程序輸入參數值。 將會針對每一個預存程序參數建立報表參數。  
   
 #### <a name="example"></a>範例  
  下列查詢會呼叫 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 預存程序 `uspGetEmployeeManagers`。 當您執行查詢時，必須為員工識別碼參數輸入值。  
@@ -81,7 +80,7 @@ uspGetEmployeeManagers;
 ```  
   
 ### <a name="command-type-tabledirect"></a>TableDirect 命令類型  
- 當您選取 [命令類型] [TableDirect] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行] 按鈕時，便會傳回該資料表的所有資料行。  
+ 當您選取 [命令類型] [TableDirect]  時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行]  按鈕時，便會傳回該資料表的所有資料行。  
   
 #### <a name="example"></a>範例  
  下列查詢會傳回 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫中所有客戶的結果集。  

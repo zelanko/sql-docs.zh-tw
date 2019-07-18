@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926626"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.scatterplot.f1
@@ -15,17 +14,17 @@ ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 208280aa29edc8671f960ad689cdcaffa8175260
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060683"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>設定資料檢視器 (散佈圖索引標籤)
-  使用 [設定資料檢視器] 對話方塊的 [散佈圖 (x,y)] 索引標籤，即可指定兩個資料行相對繪製成圖形。 散佈圖會將來自兩個數值資料行的資料值相對繪製成圖形。 每一筆資料記錄都變成圖中的一個點。 圖表只會反映一個緩衝區的內容。  
+  使用 [設定資料檢視器]  對話方塊的 [散佈圖 (x,y)]  索引標籤，即可指定兩個資料行相對繪製成圖形。 散佈圖會將來自兩個數值資料行的資料值相對繪製成圖形。 每一筆資料記錄都變成圖中的一個點。 圖表只會反映一個緩衝區的內容。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **X 軸資料行**  
  選取要作為 X 軸的資料行。 每個軸只能選取一個資料行。  
   

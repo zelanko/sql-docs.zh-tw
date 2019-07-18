@@ -2,7 +2,7 @@
 title: 將報表發行至 SharePoint 文件庫 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7043001ee9942ec1e99e329209b56a670274b2ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571042"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>將報表發行到 SharePoint 文件庫
   若要將報表發行至有設定 SharePoint 整合的 SharePoint 網站，您必須在報表設計師中設定專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。 在報表定義中，子報表、鑽研報表和資源 (如網路架構影像) 的所有參考都必須是完整 URLS。  
@@ -28,9 +28,9 @@ ms.locfileid: "52527567"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  在 **[專案]** 功能表按一下 **[屬性]**。 \<專案> [屬性頁] 對話方塊隨即開啟。  
+2.  在 **[專案]** 功能表按一下 **[屬性]** 。 \<專案>  [屬性頁]  對話方塊隨即開啟。  
   
-3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中]\(\<設定>)。  
+3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中]\(\<設定>  )  。  
   
 4.  如果您想要發行專案中的共用資料來源，並覆寫之前發行的共用資料來源，請將 **OverwriteDataSources** 設定為 **True**。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "52527567"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
+9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]  。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
  [專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [將報表發行至報表伺服器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [SharePoint 模式中報表伺服器上已發行報表項目的 URL 範例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint 模式在報表伺服器上已發行報表項目的 URL 範例 &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [搭配報表使用 Office 資料連接 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

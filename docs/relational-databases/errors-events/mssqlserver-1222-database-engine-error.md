@@ -12,12 +12,12 @@ ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7974805b2756ed1b160a254cfda94261a625824c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d94b5b5ba754237c075444ae6fbf8d5c5ce1e594
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721886"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584225"
 ---
 # <a name="mssqlserver1222"></a>MSSQLSERVER_1222
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47721886"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|1222|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -44,6 +44,8 @@ ms.locfileid: "47721886"
 2.  如果交易仍然鎖定資源，請依適當情況結束該交易。  
   
 3.  重新執行查詢。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 如果這項錯誤經常發生，請變更鎖定逾時期限，或請修改造成問題的交易，以縮短這些交易鎖定資源的時間。  
   

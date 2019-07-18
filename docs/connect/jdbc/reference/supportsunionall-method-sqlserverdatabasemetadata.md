@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e537d7928e722f1f89974555d396fac3711468de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fad6422ea4c8b8b6cf9f9b3eeab7c2e483e537e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624966"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797213"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>supportsUnionAll 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

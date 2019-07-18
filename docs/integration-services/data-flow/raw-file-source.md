@@ -19,14 +19,18 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3117d79ebdb77031ff2572027544c51ef844dfd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0420f900a12ee100a8558cacec3c904d7450da68
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289984"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726525"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「原始檔案」來源會從檔案讀取原始資料。 由於資料的表示法對於來源而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」來源可比其他來源更快讀取資料，例如「一般檔案」和 OLE DB 來源。  
   
  「原始檔案」來源是用來擷取之前由「原始檔案」目的地撰寫的原始資料。 您也可以將原始檔案來源指向僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案。 您可以使用原始檔案目的地產生僅中繼資料的檔案，而不必執行封裝。 如需相關資訊，請參閱 [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)。  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumCurves method (geometry)
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 95e18d5d9495959ffab627dbd3e1b0d516453183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447c64b18b690f6bcdcd0f2ffca7e6b674e3200
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938543"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47763496"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  空的一維 **geometry** 執行個體會傳回 0。 當 **geometry** 執行個體不是一維執行個體，或者是未初始化的執行個體時，就會傳回 **NULL**。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eefacc368934d7117891d622d4cdadece40b2e5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f7862151667bd94eba7cbc97301416d05270d1d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801257"
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>isAutoIncrement 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
@@ -13,12 +12,12 @@ ms.assetid: 9a154455-c68f-4403-a3a7-b90f4d35eecb
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4bbde8eb313d432a7a90cfa7f03c54f4c6aeb06f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec72f58aaa0a10d0fa13860bc39e81b717d0ff89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094183"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>偵測到 IP 位址限制 (Upgrade Advisor)
   Upgrade Advisor 在主控報表伺服器或報表管理員虛擬目錄的 IIS 網站上偵測到一個或多個 IP 位址限制。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會提供 IP 位址限制的原生支援。  

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a792b31fc02f5d3df4c339d1a18bbc8ee7aa29f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108643"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
   報表伺服器資料庫為一個或多個報表伺服器執行個體提供了儲存裝置。 由於報表伺服器資料庫結構描述可隨著每個新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本一起變更，所以此資料庫版本必須符合您所使用的報表伺服器執行個體版本。 在大多數情況下，報表伺服器資料庫可以自動升級，而不需要您採取特定的動作。  

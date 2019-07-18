@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26e5c36b41f68627a634714cfa06525c99451450
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947059"
 ---
 # <a name="setup-dll-api-reference"></a>安裝程式 DLL API 參考
 本章節描述驅動程式安裝程式 DLL API，其中包含兩個函式的語法 (**ConfigDriver**並**ConfigDSN**)。 **ConfigDriver**並**ConfigDSN**可以是在驅動程式 DLL，或者在個別安裝程式 DLL。  

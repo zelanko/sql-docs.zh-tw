@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (Transact-SQL) | Microsoft Docs
+title: sp_update_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084889"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,19 +58,19 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="arguments"></a>引數  
 `[ @job_id = ] job_id` 要更新的作業識別碼。 *job_id*已**uniqueidentifier**。  
   
-`[ @job_name = ] 'job_name'` 作業名稱。 *job_name* is **nvarchar(128)**.  
+`[ @job_name = ] 'job_name'` 作業名稱。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 > **注意：** 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
-`[ @new_name = ] 'new_name'` 作業的新名稱。 *new_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+`[ @new_name = ] 'new_name'` 作業的新名稱。 *new_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 `[ @enabled = ] enabled` 指定是否啟用作業 (**1**)，或未啟用 (**0**)。 *已啟用*已**tinyint**。  
   
-`[ @description = ] 'description'` 作業描述。 *描述*已**nvarchar(512)**。  
+`[ @description = ] 'description'` 作業描述。 *描述*已**nvarchar(512)** 。  
   
 `[ @start_step_id = ] step_id` 執行作業的第一個步驟的識別碼。 *step_id*已**int**。  
   
-`[ @category_name = ] 'category'` 作業類別目錄。 *類別目錄*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+`[ @category_name = ] 'category'` 作業類別目錄。 *類別目錄*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 `[ @owner_login_name = ] 'login'` 擁有作業的登入名稱。 *登入*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 只有成員**sysadmin**固定的伺服器角色可以變更作業擁有權。  
   
@@ -90,11 +89,11 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_page = ] page_level` 指定在傳送這項作業完成時的頁面。 *page_level*已**int**。*page_level*使用相同的值為*eventlog_level*。  
   
-`[ @notify_email_operator_name = ] 'operator_name'` 電子郵件時要送往的操作員名稱*email_level*為止。 *email_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+`[ @notify_email_operator_name = ] 'operator_name'` 電子郵件時要送往的操作員名稱*email_level*為止。 *email_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` 網路訊息所要送往之操作員名稱。 *netsend_operator* is **nvarchar(128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` 網路訊息所要送往之操作員名稱。 *netsend_operator*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
-`[ @notify_page_operator_name = ] 'page_operator'` 頁面所要送往之操作員名稱。 *page_operator* is **nvarchar(128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` 頁面所要送往之操作員名稱。 *page_operator*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 `[ @delete_level = ] delete_level` 指定何時刪除作業。 *delete_value*已**int**。*delete_level*使用相同的值為*eventlog_level*。  
   

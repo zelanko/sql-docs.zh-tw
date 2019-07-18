@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865016"
 ---
 # <a name="preparing-commands"></a>準備命令
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援針對單一命令的最佳化多次執行進行命令準備。不過，命令準備會產生負擔，而且取用者不需要準備命令，即可多次執行命令。 一般而言，如果某個命令將執行三次以上，您就應該準備此命令。  

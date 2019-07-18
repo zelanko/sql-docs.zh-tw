@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922978"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)繫結至資料的 SQL Server 資料庫 （在此情況下，DHTML 資料表） 的視覺物件在應用程式的用戶端 HTML 頁面中的物件。 事件驅動的 VBScript 程式邏輯會使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)來：  

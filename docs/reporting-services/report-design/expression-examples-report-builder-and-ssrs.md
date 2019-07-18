@@ -2,7 +2,7 @@
 title: 運算式範例 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 026338642a4fe5be4480a1b83b93a809437ecfa3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 888d46c7c03b9665c64e54ddffed9d29c67afcad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579146"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "56289606"
   
 如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱 [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 如需評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
-如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用許多函式和運算子的運算式，請參閱[教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
+如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用的許多函數和運算子的運算式，請參閱 [教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
 
   
 ## <a name="functions"></a>函數  
@@ -208,7 +208,7 @@ ms.locfileid: "56289606"
   
      如果文字方塊只包含日期或數字，您應該使用文字方塊的 Format 屬性來套用格式，而非使用文字方塊中的 **Format** 函數。  
   
--   **Right**、**Len** 和 **InStr** 函式在傳回子字串時很有用；例如，將 *DOMAIN*\\*使用者名稱*修改成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (*) 字元右邊的字串部分：  
+-   **Right**、**Len** 和 **InStr** 函式在傳回子字串時很有用；例如，將 *DOMAIN*\\*使用者名稱*修改成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (* ) 字元右邊的字串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ebe30c62faed65cddcda78a2095654e5f321d70
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f9acb6ff42ca45a7f58ad1fd62d084487dffc9f2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695446"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680666"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51695446"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目檢視有關警示的資訊：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -58,13 +58,13 @@ ms.locfileid: "51695446"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要檢視警示相關資訊的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]  。  
   
-    如需 [_alert\_name_ 警示屬性] 對話方塊中可用選項的詳細資訊，請參閱：  
+    如需 [_alert\_name_ 警示屬性]  對話方塊中可用選項的詳細資訊，請參閱：  
   
     -   [警示屬性 - 新增警示 &#40;一般頁面&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51695446"
   
     -   [警示屬性 &#40;記錄頁面&#41;](../../ssms/agent/alert-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -82,9 +82,9 @@ ms.locfileid: "51695446"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

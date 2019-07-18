@@ -1,5 +1,5 @@
 ---
-title: ActionEnum |Microsoft Docs
+title: ActionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54c051e50c1973a711782a8e355629e9c7b05c3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928625"
 ---
 # <a name="actionenum"></a>ActionEnum
 指定當執行動作的類型[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)呼叫。  

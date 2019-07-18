@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23520ce686562e7ed2f45e87aa4717135dd1ab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046137"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +34,21 @@ ms.locfileid: "47732896"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## <a name="arguments"></a>引數  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  使用者定義的參數，而且記錄在**user_defined_event_id**稽核記錄的資料行。 *@user_defined_event_id* 是型別**smallint**。  
   
- **@succeeded**  
- 由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 *@succeeded* 已**元**。  
+ `[ @succeeded = ] succeeded`  
+ 由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 `@succeeded` 已**元**。  
   
- **@user_defined_information**  
- 由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 *@user_defined_information* 已**nvarchar(4000)**。  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ 由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 `@user_defined_information` 已**nvarchar(4000)** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0391ea88e192b694d99cd557760cfc588e77f768
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62499939"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料
   
@@ -75,7 +75,7 @@ ms.locfileid: "56286376"
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-在您轉換資料格後，您必須將它們格式化為日期，方法是選取它們或整個資料行 > **操作**功能表 > [儲存格格式] > [類別目錄] 清單中的 [日期]。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
+在您轉換資料格後，您必須將它們格式化為日期，方法是選取它們或整個資料行 > **操作**功能表 > [儲存格格式]   > [類別目錄]  清單中的 [日期]  。 您也可以使用 Excel 資料剖析精靈將文字資料格轉換為正確格式的日期。  
   
 ## <a name="unsupported"></a>不支援  
   

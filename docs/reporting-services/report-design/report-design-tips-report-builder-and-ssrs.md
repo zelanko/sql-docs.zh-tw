@@ -2,18 +2,18 @@
 title: 報表設計提示 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0151fd3fa25a52e8868c17c892878bcc6b04b0e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a40360a1bf00e2fcbe933db74604b93ac20a9a8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576778"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
   請採用下列秘訣協助設計您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表。  
@@ -35,7 +35,7 @@ ms.locfileid: "56284938"
   
 -   為減少報表中混亂的情形，請考慮使用特定報表項目的條件式可見性，並且讓使用者選擇是否要顯示這些項目。 您可以根據參數或文字方塊切換設定可見性。 您可以加入有條件隱藏的文字方塊，以便顯示暫時運算式結果。 當報表顯示非預期的資料時，您就可以顯示這些暫時結果來協助偵錯運算式。  
   
--   在 Tablix 資料格或矩形中使用巢狀項目時，您可以針對容器和包含的項目設定不同的背景色彩。 依預設，背景色彩為 **[無色彩]**。 具有特定背景色彩的項目會穿透背景色彩設定為 **[無色彩]** 的項目而顯示。 這種技巧可協助您選取正確的項目來設定顯示屬性，例如 Tablix 資料格上的框線可見性。  
+-   在 Tablix 資料格或矩形中使用巢狀項目時，您可以針對容器和包含的項目設定不同的背景色彩。 依預設，背景色彩為 **[無色彩]** 。 具有特定背景色彩的項目會穿透背景色彩設定為 **[無色彩]** 的項目而顯示。 這種技巧可協助您選取正確的項目來設定顯示屬性，例如 Tablix 資料格上的框線可見性。  
   
  如需設計報表時應考慮之事項的詳細資訊，請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "56284938"
   
     -   若要使用 Tablix 資料區內的資料列群組和資料行群組，請從 [群組] 窗格選取該群組。  
   
- 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的報表設計師中，您可以從 [屬性] 窗格工具列的下拉式物件清單中選取，也可以從 [文件大綱] 視窗的報表項目階層式檢視中選取。 您可以在這個窗格內選取項目，並查看已在設計介面上選取哪一個項目。 若要開啟 [文件大綱] 視窗，請在 **[檢視]** 功能表中，指向 **[其他視窗]**，然後按一下 **[文件大綱]**。  
+ 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的報表設計師中，您可以從 [屬性] 窗格工具列的下拉式物件清單中選取，也可以從 [文件大綱] 視窗的報表項目階層式檢視中選取。 您可以在這個窗格內選取項目，並查看已在設計介面上選取哪一個項目。 若要開啟 [文件大綱] 視窗，請在 **[檢視]** 功能表中，指向 **[其他視窗]** ，然後按一下 **[文件大綱]** 。  
   
 ##  <a name="ReportItems"></a> 使用特定類型的報表項目  
   
@@ -139,7 +139,7 @@ ms.locfileid: "56284938"
   
     -   容器會擴展以容納子項目的成長。 對於選取的項目而言，在 [屬性] 窗格中，Parent 屬性會識別項目的容器。 您也可以使用 [文件大綱] 窗格來查看報表項目的包含階層。  
   
-    -   **[配置]** 工具列會提供多個按鈕來協助對齊報表項目的邊緣、中央和間距。 若要啟用 **[配置]** 工具列，請在 **[檢視]** 功能表中，指向 **[工具列]**，然後按一下 **[配置]**。  
+    -   **[配置]** 工具列會提供多個按鈕來協助對齊報表項目的邊緣、中央和間距。 若要啟用 **[配置]** 工具列，請在 **[檢視]** 功能表中，指向 **[工具列]** ，然後按一下 **[配置]** 。  
   
 -   如果您打算將報表儲存成 .pdf 檔案，報表寬度必須明確設定為某個值，這個值會在匯出檔案格式中提供您想要的結果。 例如，您可以將報表頁面寬度設定為剛好 7.9375 英吋，而將左邊界和右邊界設定為 0.5 英吋。  
   

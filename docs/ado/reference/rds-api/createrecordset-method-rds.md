@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964519"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的中斷[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,11 +46,11 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant**的定義中的每個資料行的屬性陣列**資料錄集**建立。 每個資料行定義包含四個必要的屬性和一個選擇性屬性的陣列。  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |名稱|資料行標頭的名稱。|  
-|類型|資料類型的整數。|  
-|大小|以字元為單位，無論何種資料類型寬度的整數。|  
+|type|資料類型的整數。|  
+|Size|以字元為單位，無論何種資料類型寬度的整數。|  
 |Null 屬性|布林值。|  
 |小數位數 （選擇性）|這個選擇性屬性定義的小數位數的數字欄位。 如果未指定此值，數值會被截斷為小數位數的三個。 有效位數不受影響，但小數點的數字數目將會被截斷為 3。|  
   

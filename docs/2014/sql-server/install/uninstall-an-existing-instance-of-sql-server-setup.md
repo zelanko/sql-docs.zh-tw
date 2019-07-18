@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990195"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本主題的步驟，也可以讓系統做好準備，以便可以重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -78,13 +78,13 @@ ms.locfileid: "53363820"
   
 ### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]**。  
+1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]** 。  
   
-2.  以滑鼠右鍵按一下**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ，然後選取**解除安裝**。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
+2.  以滑鼠右鍵按一下 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ，然後選取**解除安裝**。 然後按一下 **[移除]** 。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
-     安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續進行，請按 **[下一步]**。  
+     安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續進行，請按 **[下一步]** 。  
   
-3.  在 [選取執行個體] 頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續進行，請按 **[下一步]**。  
+3.  在 [選取執行個體] 頁面上，使用下拉式方塊來指定要移除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或指定僅移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用功能和管理工具的選項。 若要繼續進行，請按 **[下一步]** 。  
   
 4.  在 [選取功能] 頁面上，指定要從指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中移除的功能。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53363820"
   
 5.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
   
-6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]**，下次再開啟 **[程式和功能]** 時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
+6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]** ，下次再開啟 **[程式和功能]** 時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
   
 ### <a name="if-the-uninstallation-fails"></a>如果解除安裝失敗  
   

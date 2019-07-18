@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871707"
 ---
 # <a name="msdb-database"></a>msdb 資料庫
   **msdb** 資料庫供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來設定警示和作業排程，以及供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssSB](../../includes/sssb-md.md)] 和 Database Mail 等其他功能使用。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c511fd82dfdbe8d61faa2b19052c5d9478a4016c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3db903d9d586da5a73356aea1d68b4b6ecbb2b5e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936098"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
- OGC 類型：**Point**  
+ OGC 類型：**點**  
   
 ## <a name="remarks"></a>Remarks  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  

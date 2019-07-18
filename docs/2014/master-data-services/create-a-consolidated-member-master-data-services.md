@@ -11,15 +11,15 @@ helpviewer_keywords:
 - members [Master Data Services], creating consolidated members
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483436"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]當您需要明確階層的父節點時，可以在 中建立合併成員。 合併成員可以有自己的屬性。 它們可用於群組。 如下列範例所示，合併成員可以用於具有帳戶的帳戶群組。  
@@ -39,19 +39,19 @@ ms.locfileid: "52766940"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  從功能表列指向 **[階層]** ，然後按一下要加入合併成員的階層名稱。  
   
 5.  在方格上方，選取 **[合併成員]** 或 **[階層中的所有合併成員]** 選項。  
   
-6.  按一下 **[新增]**。  
+6.  按一下 **[新增]** 。  
   
 7.  填完右邊窗格中的欄位。  
   
 8.  選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52766940"
 ## <a name="see-also"></a>另請參閱  
  [建立明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [建立分葉成員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [載入或更新 Master Data Services 中的成員，使用暫存處理序](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [載入或更新 Master Data Services 中的成員，使用暫存處理序](add-update-and-delete-data-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

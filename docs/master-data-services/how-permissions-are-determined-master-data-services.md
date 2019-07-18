@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a940035172195b86499262bef52ca319ebefd137
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5b028625f1c236c96c39e75f08057f82fa852bd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945189"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何決定權限 (Master Data Services)
 

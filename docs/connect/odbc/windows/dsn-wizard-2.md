@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 7d352b02d118c3de14cd437daf012885d7491c1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2c41b9215979488cbec9ebda89d98bb0f464d11a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639516"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797810"
 ---
 # <a name="data-source-wizard-screen-2"></a>資料來源精靈螢幕 2
 

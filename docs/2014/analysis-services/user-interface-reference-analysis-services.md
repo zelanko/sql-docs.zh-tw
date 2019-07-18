@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065534"
 ---
 # <a name="user-interface-reference-analysis-services"></a>使用者介面參考 (Analysis Services)
-  本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的說明主題。 在使用者介面的環境中按一下 F1 鍵，或在精靈頁面上、設計師和對話方塊中按一下 [說明]，亦可取得這些主題。  
+  本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的說明主題。 在使用者介面的環境中按一下 F1 鍵，或在精靈頁面上、設計師和對話方塊中按一下 [說明]  ，亦可取得這些主題。  
   
 ## <a name="topic-list"></a>主題清單  
   
-|章節|包含|  
+|Section|包含|  
 |-------------|--------------|  
 |[Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)|[[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 精靈] 的說明主題 (多維度)。|  
 |[資料採礦設計工具與對話方塊](data-mining-designers-and-dialog-boxes.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 精靈的說明主題 (資料採礦)。|  

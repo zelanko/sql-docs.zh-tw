@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808744"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>檢視或設定 backup compression default 伺服器組態選項
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視或設定 [備份壓縮預設] 伺服器組態選項。 **backup compression default** 選項決定伺服器執行個體根據預設是否會建立壓縮備份。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時， **ssCurrent** 選項已關閉。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視或設定 [備份壓縮預設]  伺服器組態選項。 **backup compression default** 選項決定伺服器執行個體根據預設是否會建立壓縮備份。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時， **ssCurrent** 選項已關閉。  
   
  **本主題內容**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "58536600"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 backup compression default 選項之後](#FollowUp)  
+-   **後續操作：** [設定 backup compression default 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -64,7 +64,7 @@ ms.locfileid: "58536600"
   
 #### <a name="to-view-or-configure-the-backup-compression-default-option"></a>檢視或設定 backup compression default 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[資料庫設定]** 節點。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "58536600"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會查詢 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目錄檢視以判斷 `backup compression default`的值。 值為 0 表示備份壓縮已關閉，值為 1 表示備份壓縮已啟用。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會查詢 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目錄檢視以判斷 `backup compression default`的值。 值為 0 表示備份壓縮已關閉，值為 1 表示備份壓縮已啟用。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -100,9 +100,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) ，將伺服器執行個體設定為依預設會建立壓縮備份。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) ，將伺服器執行個體設定為依預設會建立壓縮備份。  
   
 ```sql  
 USE AdventureWorks2012;  

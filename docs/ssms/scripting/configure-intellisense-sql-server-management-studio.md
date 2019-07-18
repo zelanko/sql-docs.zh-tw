@@ -12,16 +12,16 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f12e159b75f9d9629de078ec71427eef91097f29
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: abfd104c1ab6b65ef9e72c795d9e8bc3187f78e7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642884"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683717"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>設定 IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,23 +37,23 @@ ms.locfileid: "51642884"
 >
 >
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  展開 [文字編輯器]，展開 [所有語言]、[Transact-SQL] 或 [XML]，然後按一下 [一般]。  
+2.  展開 [文字編輯器]  ，展開 [所有語言]  、[Transact-SQL]  或 [XML]  ，然後按一下 [一般]  。  
   
-3.  清除您不需要之 [陳述式完成] 選項的核取方塊，再按一下 **[確定]**。  
+3.  清除您不需要之 [陳述式完成] 選項的核取方塊，再按一下 **[確定]** 。  
   
 ### <a name="to-modify-transact-sql-intellisense-options"></a>修改 Transact-SQL IntelliSense 選項  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  依序展開 [文字編輯器] 和 [Transact-SQL]，然後按一下 [IntelliSense]。  
+2.  依序展開 [文字編輯器]  和 [Transact-SQL]  ，然後按一下 [IntelliSense]  。  
   
 3.  清除您不需要之 [IntelliSense] 選項的核取方塊。  
   
 4.  若要變更停用 IntelliSense 功能的指令碼大小，請從 **[最大指令碼大小]** 清單中選取大小。  
   
-5.  若要變更套用至完成清單之函數名稱的大小寫，請從 [內建函數名稱的大小寫] 清單中選取大小寫規格。  
+5.  若要變更套用至完成清單之函數名稱的大小寫，請從 [內建函數名稱的大小寫]  清單中選取大小寫規格。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736989"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798601"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 
@@ -77,9 +77,9 @@ ms.locfileid: "55736989"
 - [搭配 SQL Server 使用 Kerberos](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
-> 6.2 版 JDBC 驅動程式的跨領域 Kerberos，正確地使用之前，您就必須明確設定**serverSpn**。
+> 6\.2 版 JDBC 驅動程式的跨領域 Kerberos，正確地使用之前，您就必須明確設定**serverSpn**。
 >
-> 6.2 從版開始，此驅動程式將能夠建置**serverSpn**根據預設，即使是使用跨領域 Kerberos。 雖然您可以使用**serverSpn**明確太。
+> 6\.2 從版開始，此驅動程式將能夠建置**serverSpn**根據預設，即使是使用跨領域 Kerberos。 雖然您可以使用**serverSpn**明確太。
 
 ## <a name="creating-a-login-module-configuration-file"></a>建立登入模組組態檔
 
@@ -195,7 +195,7 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>在相同的網域上使用 Kerberos 驗證，從 Unix 電腦
 
-本指南假設的運作中的 Kerberos 設定已經存在。 使用 Kerberos 驗證，若要確認上述是否為 true 的 Windows 電腦上執行下列程式碼。 程式碼會列印 「 驗證配置：KERBEROS"主控台中，如果成功。 沒有其他的執行階段旗標、 相依性或驅動程式設定所提供的項目之外。 若要確認成功連線的 Linux 上，可以執行同一個程式碼區塊。
+本指南假設的運作中的 Kerberos 設定已經存在。 使用 Kerberos 驗證，若要確認上述是否為 true 的 Windows 電腦上執行下列程式碼。 的程式碼會列印到主控台中，如果成功的 「 驗證配置:: KERBEROS"。 沒有其他的執行階段旗標、 相依性或驅動程式設定所提供的項目之外。 若要確認成功連線的 Linux 上，可以執行同一個程式碼區塊。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

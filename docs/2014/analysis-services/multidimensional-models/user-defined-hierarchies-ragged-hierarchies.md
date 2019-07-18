@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502895"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072516"
 ---
 # <a name="ragged-hierarchies"></a>不完全階層
   不完全階層是所含層級數目不平均的使用者定義階層。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
@@ -53,7 +52,7 @@ ms.locfileid: "52502895"
   
 1.  在 SSDT 中按兩下維度，在維度設計師中加以開啟。 第一個索引標籤 [維度結構] 會在 [階層] 窗格中顯示屬性階層。  
   
-2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
+2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]  。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
   
     |HideMemberIf 設定|描述|  
     |--------------------------|-----------------|  

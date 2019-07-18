@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812582"
 ---
 # <a name="check-in-files"></a>簽入檔案
   若要將您修改過的原始檔控制檔案提供給其他使用者，您必須將這些檔案簽入原始檔控制中。 當您簽入檔案時，您簽入的版本會寫入原始檔控制提供者中，且會成為檔案的最新版本。  
@@ -32,7 +32,7 @@ ms.locfileid: "48096768"
   
 2.  如果**簽入** 對話方塊出現時，請選取適當的選項，然後按一下**確定**。  
   
-     **簽入**  
+     **Check In**  
      簽入所有選取的項目。  
   
      **資料行**  
@@ -53,7 +53,7 @@ ms.locfileid: "48096768"
      **選項。**  
      按一下按鈕右邊的箭頭之後，就會顯示原始檔控制外掛程式特定的簽入選項。  
   
-     **排序**  
+     **Sort**  
      排序顯示資料行的順序。  
   
      **樹狀檢視**  

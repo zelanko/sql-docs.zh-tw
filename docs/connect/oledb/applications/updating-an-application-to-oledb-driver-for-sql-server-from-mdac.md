@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778085"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>將應用程式從 MDAC 更新為適用於 SQL Server 的 OLE DB 驅動程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52524479"
 
 -   當 MDAC 應用程式連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料類型將會以 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 相容的資料類型形式出現，如下表所示。  
 
-    |SQL Server 2005 類型|SQL Server 2000 型別|  
+    |SQL Server 2005 類型|SQL Server 2000 類型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  

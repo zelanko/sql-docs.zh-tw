@@ -2,19 +2,18 @@
 title: 處理和儲存體容量-Analytics Platform System |Microsoft Docs
 description: 您的業務需求決定資料縮放單位，數目以及您需要在您 Analytics Platform System (APS) 的設備中計算節點磁碟的大小。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960239"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System 中的處理和儲存體容量
 您的業務需求決定資料縮放單位，數目以及您需要在您 Analytics Platform System (APS) 的設備中計算節點磁碟的大小。 使用這些處理和儲存體計算來引導您購買和規劃決策的容量。  

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009753"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 使用者定義彙總 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 Common Language Runtime (CLR) 組件中的類型只要實作需要的彙總合約，就可以註冊為使用者定義彙總函式。 此合約所組成**SqlUserDefinedAggregate**屬性和彙總合約方法。 彙總合約包括機制來儲存中繼狀態的彙總，以及累積新值，其中包含四種方法的機制： **Init**， **Accumulate**， **合併**，並**終止**。 當您已符合這些需求時，您將能夠充分利用使用者定義彙總[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主題的下列章節提供關於如何建立和使用使用者定義彙總的其他相關資訊。 如需範例，請參閱[Invoking CLR User-Defined 彙總函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
+  在 Common Language Runtime (CLR) 組件中的類型只要實作需要的彙總合約，就可以註冊為使用者定義彙總函式。 此合約所組成**SqlUserDefinedAggregate**屬性和彙總合約方法。 彙總合約包括機制儲存中繼狀態的彙總，以及累積新值，其中包含四種方法的機制：**Init**，**累積**，**合併**，和**終止**。 當您已符合這些需求時，您將能夠充分利用使用者定義彙總[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主題的下列章節提供關於如何建立和使用使用者定義彙總的其他相關資訊。 如需範例，請參閱[Invoking CLR User-Defined 彙總函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  如需詳細資訊，請參閱 < [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)。  

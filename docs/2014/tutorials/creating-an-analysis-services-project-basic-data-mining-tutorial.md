@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62855189"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>建立 Analysis Services 專案 (基本資料採礦教學課程)
   每個 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案都會在單一 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中定義物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可包含許多不同類型的物件  
@@ -38,11 +38,11 @@ ms.locfileid: "56018899"
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，再選取 **[專案]**。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，再選取 **[專案]** 。  
   
 3.  確認 **[專案類型]** 窗格中已選取 **[商業智慧專案]** 。  
   
-4.  在 **[範本]** 窗格中，選取 **[Analysis Services 多維度和資料採礦專案]**。  
+4.  在 **[範本]** 窗格中，選取 **[Analysis Services 多維度和資料採礦專案]** 。  
   
 5.  在 **名稱**方塊中，將新專案命名`BasicDataMining`。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "56018899"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>變更儲存資料採礦物件所在的執行個體  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 **[專案]** 功能表上，選取 **[屬性]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 **[專案]** 功能表上，選取 **[屬性]** 。  
   
-2.  在 **[屬性頁]** 窗格左邊的 **[組態屬性]** 底下，按一下 **[部署]**。  
+2.  在 **[屬性頁]** 窗格左邊的 **[組態屬性]** 底下，按一下 **[部署]** 。  
   
 3.  在 **[屬性頁]** 窗格右邊的 **[目標]** 底下，確認 **[伺服器]** 名稱是 **localhost**。 如果您要使用不同的執行個體，請輸入執行個體的名稱。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

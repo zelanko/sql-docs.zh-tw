@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4959f9ca27b7177933641c9a59abbcbd68ba088f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c9b450ba41c72c49d902ec7cf039d3967b8b7b8e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642795"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679765"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - 執行 Transact-SQL 指令碼檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51642795"
 ## <a name="create-a-script-file"></a>建立指令碼檔案  
  若要使用 [記事本] 建立簡單的 Transact-SQL 指令碼檔案，請遵循下列步驟：  
   
-1.  按一下 [開始]，依序指向 [所有程式] 和 [附屬應用程式]，然後按一下 [記事本]。  
+1.  按一下 [開始]  ，依序指向 [所有程式]  和 [附屬應用程式]  ，然後按一下 [記事本]  。  
   
 2.  將下列 Transact-SQL 程式碼複製並貼到 [記事本] 中：  
   

@@ -1,5 +1,5 @@
 ---
-title: 項目 (Tuple) (MDX) |Microsoft 文件
+title: 項目 (Tuple) (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105226"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
 
@@ -46,20 +45,20 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  有效的數值運算式，依所要傳回的集合中的位置來指定特定的 Tuple。  
   
 ## <a name="remarks"></a>備註  
- **項目**函式會傳回 tuple，從指定的集合。 有三種方式，來呼叫**項目**函式：  
+ **項目**函數會傳回 tuple，從指定的集合。 有三種方式，來呼叫**項目**函式：  
   
 -   如果指定的單一字串運算式，則**項目**函式會傳回指定的 tuple。 例如，"([2005].Q3, [Store05])"。  
   
--   如果指定多個字串運算式，**項目**函式會傳回指定座標所定義的 tuple。 字串數目必須與座標軸數目相符，而且每個字串必須識別唯一的階層。 例如，"[2005].Q3", "[Store05]"。  
+-   如果指定多個字串運算式，則**項目**函式會傳回指定的座標所定義的 tuple。 字串數目必須與座標軸數目相符，而且每個字串必須識別唯一的階層。 例如，"[2005].Q3", "[Store05]"。  
   
--   如果指定一個整數，則**項目**函式會傳回所指定的以零為起始的位置中的 tuple*索引*。  
+-   如果指定一個整數，則**項目**函式會傳回以零為起始的位置所指定的 tuple *Index*。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 ([1996],Sales)：  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- 下列範例使用層級運算式，並且會傳回 Australia 每個 State-Province 的 Internet Sales Amount，及其佔 Australia 之 Internet Sales Amount 總計的百分比。 這個範例使用 Item 函數所傳回集合中擷取第一個 （也只有 tuple）**祖系**函式。  
+ 下列範例使用層級運算式，並且會傳回 Australia 每個 State-Province 的 Internet Sales Amount，及其佔 Australia 之 Internet Sales Amount 總計的百分比。 此範例使用 Item 函數來擷取所傳回的集合中的第一個 （也只有 tuple）**祖系**函式。  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
@@ -79,6 +78,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7c4c4b9d2e2e07c53f850fe545d803fa411dbbc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267493"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重新執行至資料指標處 (SQL Server Profiler)
   此主題描述如何利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，來重新執行已在到達資料指標時暫停的追蹤檔或資料表。 在資料指標暫停追蹤可以支援偵錯，因為您可以將較長追蹤指令碼的重新執行過程分解為可累加分析的較短片段。  
@@ -32,9 +32,9 @@ ms.locfileid: "52795820"
   
 2.  在追蹤視窗中按一下事件。  
   
-3.  在 [重新執行] 功能表上，按一下 [執行至資料指標處]，然後連接您要重新執行追蹤的伺服器。  
+3.  在 [重新執行]  功能表上，按一下 [執行至資料指標處]  ，然後連接您要重新執行追蹤的伺服器。  
   
-4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
+4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]** 。  
   
      開始重新執行，並在到達第一個資料指標時暫停。  
   

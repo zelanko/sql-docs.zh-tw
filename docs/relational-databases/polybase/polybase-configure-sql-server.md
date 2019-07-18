@@ -1,25 +1,24 @@
 ---
 title: 設定 PolyBase 存取 SQL Server 中的外部資料 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: mikeray
 manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: babfa67f96f9514d748e6d87c0230e154468eff4
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: c42ff3c215d3f252a61371ea560c2ecac7c3cf62
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858593"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730335"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於另一個 SQL Server 執行個體中的外部資料。
 
@@ -27,86 +26,56 @@ ms.locfileid: "51858593"
 
 如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](polybase-installation.md)。 安裝文章說明必要條件。
 
-## <a name="configure-an-external-table"></a>設定外部資料表
+在建立資料庫範圍認證之前，必須建立[主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。 
+
+## <a name="configure-a-sql-server-external-data-source"></a>設定 SQL Server 外部資料來源
 
 若要查詢來自 SQL Server 資料來源的資料，您必須建立外部資料表參考外部資料。 本節提供建立這些外部資料表的範例程式碼。 
  
 如需最佳查詢效能，請在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)。
 
-在本節中，會建立這些物件：
+本節中使用下列 Transact-SQL 命令：
 
-- CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL) 
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. 在資料庫上建立主要金鑰。 加密認證祕密時需要主要金鑰。
+1.  建立資料庫範圍認證以存取 MongoDB 資料來源。
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-     ```
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source.  
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+    WITH IDENTITY = 'username', Secret = 'password';
+    ```
 
-1. 建立資料庫範圍認證。
+1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
-
-1. 使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。 指定 SQL Server 的外部資料來源位置和認證。
-
-     ```sql
+    ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     *  CREDENTIAL: the database scoped credential, created above.
-    */  
+    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
-    LOCATION = 'sqlserver://SqlServer',
+    WITH ( LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = SQLServerCredentials
-    );
+    CREDENTIAL = SQLServerCredentials);
+    ```
 
-     ```
+1. **選擇性：** 在外部資料表上建立統計資料。
 
-1. 建立外部資料結構描述。
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-     ```sql
-     CREATE SCHEMA sqlserver;
-     GO
-     ```
+    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
 
-1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 來建立代表外部 SQL Server 執行個體中所儲存資料的外部資料表。
- 
-     ```sql
-     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE sqlserver.customer(
-     C_CUSTKEY INT NOT NULL,
-     C_NAME VARCHAR(25) NOT NULL,
-     C_ADDRESS VARCHAR(40) NOT NULL,
-     C_NATIONKEY INT NOT NULL,
-     C_PHONE CHAR(15) NOT NULL,
-     C_ACCTBAL DECIMAL(15,2) NOT NULL,
-     C_MKTSEGMENT CHAR(10) NOT NULL,
-     C_COMMENT VARCHAR(117) NOT NULL
-      )
-      WITH (
-      LOCATION='tpch_10.dbo.customer',
-      DATA_SOURCE=SqlServerInstance
-     );
-      ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
+    ```
 
-1. 在外部資料表上建立統計資料。
-
-     ```sql
-      CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+>[!IMPORTANT] 
+>當您建立外部資料來源之後，可以使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 命令透過該來源建立可查詢的資料表。
 
 ## <a name="sql-server-connector-compatible-types"></a>SQL Server 連接器相容類型
 

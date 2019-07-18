@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072395"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263384"
 ---
 # <a name="calculated-columns"></a>導出資料行
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072395"
   
 -   當您重新命名導出資料行時，必須手動更新依賴此資料行的所有公式。 只要您不是處於手動更新模式，公式的結果都會自動更新。 不過，這項作業可能需要花一些時間。  
   
--   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [DAX 語法參考](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)中的＜命名需求＞。  
+-   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [DAX 語法參考](/dax/dax-syntax-reference)中的＜命名需求＞。  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  導出資料行的公式可能會比量值所使用的公式更耗費資源。 其中一個原因是：導出資料行的結果永遠是針對資料表中的每個資料列計算，而量值僅針對報表、樞紐分析表或樞紐分析圖中所用篩選定義的資料格計算。 例如，包含一百萬個資料列的資料表所擁有的導出資料行永遠都會有一百萬個結果，在效能上也會有對應的影響。 但是，樞紐分析表通常會套用資料列和資料行標題來篩選資料，因此，只會針對樞紐分析表內每一個資料格中的資料子集來計算量值。  

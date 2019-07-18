@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 93ad93599b547b2227bba1a2daa49c98fae962e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: ebf86ddf0c9b2e54d2cc27248074263f13a0c860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935118"
 ---
 # <a name="manage-dqs-databases"></a>管理 DQS 資料庫
 
@@ -40,7 +39,7 @@ ms.locfileid: "56038789"
   
 -   DQS 資料庫的預設 **[自動成長]** 大小設定為 10%。  
   
--   DQS 資料庫的預設復原模式設定為 **[簡單]**。 在簡單復原模式中，交易會使用最低限度記錄，而且系統會在交易完成之後自動進行記錄截斷，以便釋出交易記錄 (.ldf 檔案) 中的空間。 如需簡單復原模式的詳細資訊，請參閱[完整資料庫備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)。  
+-   DQS 資料庫的預設復原模式設定為 **[簡單]** 。 在簡單復原模式中，交易會使用最低限度記錄，而且系統會在交易完成之後自動進行記錄截斷，以便釋出交易記錄 (.ldf 檔案) 中的空間。 如需簡單復原模式的詳細資訊，請參閱[完整資料庫備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)。  
   
 > [!IMPORTANT]
 >  -   在簡單復原模式中，當記錄檔記錄有一段很長的時間維持在使用中狀態 (例如，冗長且耗時的交易) 時，記錄截斷可能會延遲，因此可能會導致交易記錄填滿。 此外，記錄截斷不會縮減實體記錄檔 (.ldf 檔案) 的大小。 若要縮減實體記錄檔的大小，您必須壓縮記錄檔。 如需有關疑難排解交易記錄之相關問題的詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 或位於 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446) 的 Microsoft 支援服務文件。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f3fb094b8d3e852a5ffb0cce77e52cdfe47293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abcbeb3cd6abfd1712217ed5577f2fafd4d5b4a3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740372"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582256"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "47740372"
 1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 函數使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 2.  然後應用程式會使用此邏輯路徑以取得檔案或目錄控制代碼，並對物件進行操作。 該路徑可傳遞至任何支援的檔案系統 API 函數，例如 CreateFile() 或 CreateDirectory()，以建立或開啟檔案並取得控制代碼。 控制代碼隨後便可用於以資料流形式處理資料、列舉或組織目錄、取得或設定檔案屬性、刪除檔案或目錄等。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="create"></a> 在 FileTable 中建立檔案和目錄  
  透過呼叫檔案 I/O API (例如 CreateFile 或 CreateDirectory) 在 FileTable 中建立檔案或目錄。  
   
@@ -94,7 +96,7 @@ ms.locfileid: "47740372"
   
 -   這些變更無法回復。  
   
- 但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()**，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
+ 但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()** ，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
   
 ###  <a name="concurrency"></a> 並行存取控制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在檔案系統應用程式之間以及檔案系統應用程式和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 應用程式之間強制執行 FileTable 存取的並行存取控制。 達成此並行存取控制的方式是針對 FileTable 資料列採取適當的鎖定。  

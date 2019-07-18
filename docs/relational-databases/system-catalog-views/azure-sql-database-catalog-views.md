@@ -11,16 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Azure SQL Database catalog views
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: stevestein
+ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a910006616f559c553c28523a2cdc1db32af00df
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e6e84c694cc923d0c363ed7eada284ebeeafe83d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050895"
 ---
 # <a name="azure-sql-database-catalog-views"></a>Azure SQL Database 目錄檢視
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

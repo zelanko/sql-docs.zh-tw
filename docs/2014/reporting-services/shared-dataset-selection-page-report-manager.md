@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101265"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>共用資料集選取頁面 (報表管理員)
   使用 [共用資料集選取] 頁面，即可檢閱及修改目前與報表關聯的共用資料集。  
@@ -32,11 +31,11 @@ ms.locfileid: "56031380"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 4.  選取 **[共用資料集]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **瀏覽**  
  您可以針對報表中的每個共用資料集名稱，檢閱目標共用資料集的目前資料夾路徑與名稱。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "56031380"
   
  按一下 **[確定]** 按鈕以完成選取共用資料集，或按一下 **[取消]** 按鈕以取消瀏覽共用資料集。  
   
- **套用**  
+ **Apply**  
  儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  

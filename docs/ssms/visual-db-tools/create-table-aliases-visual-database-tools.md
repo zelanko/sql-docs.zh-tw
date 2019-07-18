@@ -11,15 +11,15 @@ helpviewer_keywords:
 - table aliases [SQL Server]
 - aliases [SQL Server], tables
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19acf085cfde3c0247e7c3d5d3316a1cc4f853e6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 7b505c949c0e40150f992d024bb790bf06d9724e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528349"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690487"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>建立資料表別名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "52528349"
   
 1.  將資料表或資料表值物件加入到查詢。  
   
-2.  在 [圖表] 窗格中，在想要建立別名的物件按一下滑鼠右鍵，然後從快速鍵功能表中選取 [屬性]。  
+2.  在 [圖表]  窗格中，在想要建立別名的物件按一下滑鼠右鍵，然後從快速鍵功能表中選取 [屬性]  。  
   
-3.  在 [屬性] 視窗中的 [別名] 欄位，輸入別名。  
+3.  在 [屬性]  視窗中的 [別名]  欄位，輸入別名。  
   
 ## <a name="see-also"></a>另請參閱  
 [將資料表新增至查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  

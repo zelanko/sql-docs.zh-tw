@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080056"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
-  Analysis Services 可以安裝在三種伺服器模式的其中一個：多維度和資料採礦 (預設值)、PowerPivot for SharePoint、以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+  Analysis Services 可以安裝在三種伺服器模式之一：多維度和資料的採礦 （預設）、 PowerPivot for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需特定模式下功能可用性的詳細資訊，請參閱[比較表格式和多維度解決方案 &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   

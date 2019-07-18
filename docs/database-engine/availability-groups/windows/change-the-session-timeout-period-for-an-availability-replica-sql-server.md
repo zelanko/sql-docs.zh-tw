@@ -14,46 +14,27 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49c2c6e7f607717ed9639e11d9513f486b5585ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d1cb8408c01dd02528f80cf44b0516e0d12000b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796606"
 ---
 # <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>變更 Always On 可用性群組內複本的工作階段逾時期限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 來設定 AlwaysOn 可用性複本的工作階段逾時期限。 工作階段逾時期限是複本屬性，它會控制可用性複本將連接視為失敗之前等候連接複本發出 Ping 回應的秒數 (以秒為單位)。 根據預設，複本會等候 Ping 回應的時間為 10 秒。 這個複本屬性只適用於可用性群組之給定次要複本與主要複本之間的連接。 如需工作階段逾時期間的詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
--   **開始之前：**  
-  
-     [必要條件](#Prerequisites)  
-  
-     [建議](#Recommendations)  
-  
-     [安全性](#Security)  
-  
--   **若要使用下列項目變更工作階段逾時期限：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Prerequisites"></a> 必要條件  
+   
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
-###  <a name="Recommendations"></a> 建議  
+##  <a name="Recommendations"></a> 建議  
  我們建議您讓逾時期限保持在 10 秒或更久。 將這個值設定為小於 10 秒，可能會使負荷重的系統遺漏 PING 以及宣告假失敗。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+## <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,11 +42,11 @@ ms.locfileid: "53207637"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  按一下您想要設定其可用性複本的可用性群組。  
   
-4.  以滑鼠右鍵按一下要設定的複本，然後按一下 **[屬性]**。  
+4.  以滑鼠右鍵按一下要設定的複本，然後按一下 **[屬性]** 。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，使用 **[工作階段逾時 (秒)]** 欄位來變更此複本之工作階段逾時期限的秒數。  
   

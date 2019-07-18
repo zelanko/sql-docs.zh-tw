@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984543"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) 適用於 MySQL 可讓您快速將 MySQL 資料庫結構描述轉換成 SQL Server 或 Azure SQL DB 結構描述、 將產生的結構描述上傳到 SQL Server 或 Azure SQL DB，並將資料從 MySQL 移轉至 SQL Server 或 Azure SQL DB。  
@@ -38,7 +37,7 @@ SSMA 會安裝並授權之後，您可以使用 SSMA 將 MySQL 資料庫移轉�
   
 若要啟動移轉，您必須：  
   
-1.  建立新專案。  
+1.  建立新的專案。  
   
 2.  連線到 MySQL 資料庫。  
   
@@ -76,7 +75,7 @@ SQL Server 或 Azure SQL DB 中繼資料總管 會顯示 SQL Server 或 Azure SQ
 如需詳細資訊，請參閱[同步處理 (從 mysql 移轉至 SQL Server / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>中繼資料  
-右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在 [MySQL 中繼資料總管] 中選取資料表，會出現九個索引標籤：**表格**， **SQL**，**型別對應**，**資料**， **設定**，**字元集對應**， **SQL 模式**，**屬性**，並**報表**。 **報表** 索引標籤包含的資訊，建立報表之後，就會包含選取的物件。 如果您在 SQL Server 中繼資料總管 中選取資料表，會出現三個索引標籤：**表格**， **SQL**並**資料**。  
+右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在 [MySQL 中繼資料總管] 中選取資料表，就會出現九個索引標籤：**表格**， **SQL**，**類型對應**，**資料**，**設定**，**字元集對應**，**SQL 模式**，**屬性**，並**報表**。 **報表** 索引標籤包含的資訊，建立報表之後，就會包含選取的物件。 如果您在 SQL Server 中繼資料總管 中選取資料表，則會出現三個索引標籤：**表格**， **SQL**並**資料**。  
   
 大部分的中繼資料設定是唯讀的。 不過，您可以變更下列中繼資料：  
   
@@ -97,7 +96,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 |||  
 |-|-|  
-|**按鈕**|**函數**|  
+|**Button**|**函數**|  
 |**建立報表**|將選取的 MySQL 物件轉換成 SQL Server 或 Azure SQL DB 的物件，並接著會建立報表，其中顯示已成功的轉換。<br /><br />此命令會停用，除非在 MySQL 中繼資料總管 中選取的物件。|  
 |**將結構描述轉換**|將選取的 MySQL 物件轉換成 SQL Server 或 Azure SQL DB 的物件。<br /><br />此命令會停用，除非在 MySQL 中繼資料總管 中選取的物件。|  
 |**將資料移轉**|將資料從 MySQL 資料庫移轉至 SQL Server 或 Azure SQL DB。 執行此命令之前，您必須將 MySQL 結構描述轉換成 SQL Server 或 Azure SQL DB 結構描述，並接著將物件載入至 SQL Server 或 Azure SQL DB。<br /><br />此命令會停用，除非在 MySQL 中繼資料總管 中選取的物件。|  
@@ -108,7 +107,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
   
 |||  
 |-|-|  
-|**功能表**|**說明**|  
+|**功能表**|**描述**|  
 |**檔案**|包含用來處理專案、 連接至 MySQL，以及連接到 SQL Server 或 Azure SQL DB 命令。|  
 |**編輯**|包含用來尋找和處理的詳細資料頁面中的文字命令。 若要開啟 **管理書籤**對話方塊中的，在 編輯 功能表上按一下 管理書籤。 在對話方塊中，您會看到一份現有的書籤。 您可以使用對話方塊右側的按鈕，來管理書籤。|  
 |**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 會同步處理 MySQL 中繼資料總管，SQL Server 或 Azure SQL DB 中繼資料總管 之間的物件。 也包含命令，以顯示和隱藏**輸出**並**錯誤清單**窗格和選項**配置**來管理與配置。|  

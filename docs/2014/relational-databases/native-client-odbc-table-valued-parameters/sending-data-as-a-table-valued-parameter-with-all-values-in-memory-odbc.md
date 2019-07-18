@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205457"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
   本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱 <<c0> [ 使用資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)。</c0>  

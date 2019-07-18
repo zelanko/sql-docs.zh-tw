@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097677"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 若要變更給定發行集屬性。 *屬性*已**sysname**，它可以其中一個值列出在下表中。  
   
-`[ @value = ] 'value'` 指定屬性的新值。 *值*已**nvarchar(255)**，它可以其中一個值列出在下表中。  
+`[ @value = ] 'value'` 指定屬性的新值。 *值*已**nvarchar(255)** ，它可以其中一個值列出在下表中。  
   
  下表描述可變更之發行集的屬性及這些屬性值的限制。  
   
@@ -191,7 +190,7 @@ sp_changemergepublication [ @publication= ] 'publication'
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

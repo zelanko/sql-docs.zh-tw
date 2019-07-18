@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryType (geometry Data Type)
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3c91ae4decb540d80e371153504121ee22bf3ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90fc5bc9f86f475d68ce3c07544969e91b46e46
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938896"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47663456"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(4000)**  
   
- CLR 傳回類型：**SqlString**  
+ CLR 傳回型別：**SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  `STGeometryType()` 可傳回的 OGC 類型名稱為 **Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString**和**MultiPolygon**。  

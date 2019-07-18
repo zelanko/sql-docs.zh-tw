@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028657"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 (類型對應) (SybaseToSQL)
 類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 Sybase Adaptive Server Enterprise (ASE) 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
@@ -104,7 +103,7 @@ ms.locfileid: "47708636"
 |**nchar**|**nchar**|  
 |**nchar 不同**|**nvarchar**|  
 |**nchar 不同 [\*...4000]**|**nvarchar[\*]**|  
-|**nchar 不同 [4001...\*]**|**nvarchar(max)**|  
+|**nchar varying[4001..\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -126,7 +125,7 @@ ms.locfileid: "47708636"
 |**unichar**|**nchar**|  
 |**unichar 不同**|**nvarchar**|  
 |**unichar varying[\*..4000]**|**nvarchar[\*]**|  
-|**unichar 不同 [4001...\*]**|**nvarchar(max)**|  
+|**unichar varying[4001..\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  

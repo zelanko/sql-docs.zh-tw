@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9fedb07a1e09f975c1012367a43f3f4d992028
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db7f0cf9b75dce672c2d1c61ad86723c4954372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018172"
 ---
 # <a name="sysallcolumns-transact-sql"></a>sys.all_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47843716"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。|  
-|NAME|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
+|name|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。<br /><br /> 資料行識別碼不一定會循序排列。|  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。|  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。<br /><br /> 若要傳回之型別的名稱，加入[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視這個資料行。|  
-|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行，max_length 值就是 16，或是由 sp_tableoption 'text in row' 所設定的值。|  
+|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行，max_length 值就是 16，或是由 sp_tableoption 'text in row' 所設定的值。|  
 |有效位數|**tinyint**|如果是以數值為基礎，便是資料行的有效位數；否則，便是 0。|  
 |scale|**tinyint**|如果是以數值為基礎，便是資料行的小數位數；否則，便是 0。|  
 |collation_name|**sysname**|如果是以字元為基礎，便是資料行的定序名稱；否則，便是 NULL。|  
@@ -60,7 +59,7 @@ ms.locfileid: "47843716"
 |rule_object_id|**int**|獨立規則的識別碼，這個規則是利用 sys.sp_bindrule 與資料行繫結。<br /><br /> 0 = 沒有獨立規則。<br /><br /> 資料行層級 CHECK 條件約束，請參閱 < [sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
 |is_sparse|bit|1 = 資料行是疏鬆資料行。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|bit|1 = 資料行是資料行集。 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|  
-|將 generated_always_type|**tinyint**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 數字的值，表示資料行的類型：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
+|generated_always_type|**tinyint**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 數字的值，表示資料行的類型：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
 |generated_always_type_desc|**nvarchar(60)**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 文字的描述資料行的類型：<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
   
 ## <a name="permissions"></a>Permissions  
@@ -71,7 +70,7 @@ ms.locfileid: "47843716"
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.system_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
+ [sys.system_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
  [sys.computed_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

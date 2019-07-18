@@ -1,5 +1,5 @@
 ---
-title: 從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件
+title: 連接用戶端應用程式 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62748640"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,22 +34,22 @@ ms.locfileid: "34019585"
   
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授權的存取權的物件和作業 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 連接  
  您可以使用 SSMS 連接至 Analysis Services，以互動方式管理伺服器執行個體和資料庫。 您也可以執行 XMLA 或 MDX 查詢，以執行管理工作或擷取資料。 相較於在傳送查詢時只會載入資料庫的其他工具和應用程式，SSMS 會在您連接到伺服器時載入所有資料庫，前提是您有權檢視資料庫。 這表示，如果您在伺服器上擁有許多表格式資料庫，當您使用 SSMS 連接時，所有資料庫都會載入系統記憶體中。  
   
  您可以使用特定使用者識別來執行 SSMS，然後以該使用者的身分連接至 Analysis Services 來測試權限。  
   
- 按住 Shift 鍵並以滑鼠右鍵按一下 [SQL Server Management Studio] 捷徑，即可存取 [以不同的使用者身分執行] 選項。  
+ 按住 Shift 鍵並以滑鼠右鍵按一下 [SQL Server Management Studio]  捷徑，即可存取 [以不同的使用者身分執行]  選項。  
   
-1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 [連接到伺服器] 對話方塊中，選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器類型。  
+1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在 [連接到伺服器]  對話方塊中，選取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器類型。  
   
 2.  在 [登入] 索引標籤中，輸入伺服器執行所在的電腦名稱來輸入伺服器名稱。 您可以使用其網路名稱或完整網域名稱來指定伺服器。  
   
      如果是具名執行個體，必須使用下列格式指定伺服器名稱：伺服器名稱\執行個體名稱。 這個命名慣例的可能範例如下：ADV-SRV062\Finance 代表網路名稱為 ADV-SRV062 的伺服器，其中 Analysis Services 已安裝為標題為 Finance 的具名執行個體。  
   
-     如果是部署在容錯移轉叢集中的伺服器，請使用 SSAS 叢集的網路名稱連接。 SQL Server 安裝期間會將這個名稱指定為 [SQL Server 網路名稱]。 請注意，如果您在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 SSAS 當做具名執行個體，絕對不要在連接上加入此執行個體名稱。 這對 SSAS 而言是唯一的作法；相反地，叢集關聯式資料庫引擎的具名執行個體有包含此執行個體名稱。 例如，如果您使用 SQL Server 網路名稱 SQL-CLU 安裝 SSAS 和資料庫引擎當做具名執行個體 (Contoso-Accounting)，您會使用 "SQL-CLU" 連接到 SSAS 並且以 "SQL-CLU\Contoso-Accounting" 身分連接到資料庫引擎。 如需詳細資訊和範例，請參閱 [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) (如何將 SQL Server Analysis Services 叢集化)。  
+     如果是部署在容錯移轉叢集中的伺服器，請使用 SSAS 叢集的網路名稱連接。 SQL Server 安裝期間會將這個名稱指定為 [SQL Server 網路名稱]  。 請注意，如果您在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 SSAS 當做具名執行個體，絕對不要在連接上加入此執行個體名稱。 這對 SSAS 而言是唯一的作法；相反地，叢集關聯式資料庫引擎的具名執行個體有包含此執行個體名稱。 例如，如果您使用 SQL Server 網路名稱 SQL-CLU 安裝 SSAS 和資料庫引擎當做具名執行個體 (Contoso-Accounting)，您會使用 "SQL-CLU" 連接到 SSAS 並且以 "SQL-CLU\Contoso-Accounting" 身分連接到資料庫引擎。 如需詳細資訊和範例，請參閱 [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548) (如何將 SQL Server Analysis Services 叢集化)。  
   
      如果是部署在網路負載平衡叢集中的伺服器，則使用 NLB 的虛擬伺服器名稱連接。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "34019585"
   
      為了要讓連接成功，您必須擁有存取伺服器或伺服器上之資料庫的權限。 您要在 Management Studio 中執行的大部分工作都需要管理權限， 因此請確定您所連接的帳戶為伺服器管理員角色的成員。 如需詳細資訊，請參閱 [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
-4.  按一下 [連接屬性] 指定特定的資料庫、設定逾時值或加密選項。 選擇性連接資訊包括只用於目前連接的連接屬性。  
+4.  按一下 [連接屬性]  指定特定的資料庫、設定逾時值或加密選項。 選擇性連接資訊包括只用於目前連接的連接屬性。  
   
-5.  按一下 [其他連接參數] 索引標籤，設定 [連接到伺服器] 對話方塊中無法設定的連接屬性。 例如，您可以在文字方塊中輸入 `Roles=Reader`。  
+5.  按一下 [其他連接參數]  索引標籤，設定 [連接到伺服器] 對話方塊中無法設定的連接屬性。 例如，您可以在文字方塊中輸入 `Roles=Reader`。  
   
      透過擁有較低權限的角色來連接時，如果這個角色已經生效，您就能測試資料庫行為。  
   
@@ -76,15 +76,15 @@ ms.locfileid: "34019585"
   
  您可以使用特定使用者識別啟動 Excel 來測試權限。  
   
- 按住 Shift 鍵並以滑鼠右鍵按一下 [Excel] 捷徑，即可存取 [以不同的使用者身分執行] 選項。  
+ 按住 Shift 鍵並以滑鼠右鍵按一下 [Excel]  捷徑，即可存取 [以不同的使用者身分執行]  選項。  
   
-1.  在 Excel 的 [資料] 索引標籤中按一下 [從其他來源]，然後按一下 [從 Analysis Services]。 輸入伺服器名稱，然後選取要查詢的 Cube 或檢視方塊。  
+1.  在 Excel 的 [資料] 索引標籤中按一下 [從其他來源]  ，然後按一下 [從 Analysis Services]  。 輸入伺服器名稱，然後選取要查詢的 Cube 或檢視方塊。  
   
      如果是部署在負載平衡叢集中的伺服器，請使用指派給叢集的虛擬伺服器名稱。  
   
-2.  當您在 Excel 中設定連接時，您可以在資料連線精靈的最後一頁上指定 Excel Services 的驗證設定。 這些設定是用來設定活頁簿上的屬性，前提是您將活頁簿上傳到擁有 Excel Services 的 SharePoint 伺服器。 這些設定會用於資料重新整理作業。 選項包括 [Windows 驗證]、[Secure Store Service] \(SSS) 和 [無]。  
+2.  當您在 Excel 中設定連接時，您可以在資料連線精靈的最後一頁上指定 Excel Services 的驗證設定。 這些設定是用來設定活頁簿上的屬性，前提是您將活頁簿上傳到擁有 Excel Services 的 SharePoint 伺服器。 這些設定會用於資料重新整理作業。 選項包括 [Windows 驗證]  、[Secure Store Service]  (SSS) 和 [無]  。  
   
-     請避免使用 [無]。 Analysis Services 無法讓您指定連接字串上的使用者名稱和密碼，除非您連接到已經有設定 HTTP 存取的伺服器。 同樣地，除非您已經知道 SSS 目標應用程式識別碼會對應到擁有 Analysis Services 資料庫之使用者存取權的一組 Windows 使用者認證，否則請勿使用 SSS。 在大部分情況下，使用 Windows 驗證的預設選項是來自 Excel 之 Analysis Services 連接的最佳選擇。  
+     請避免使用 [無]  。 Analysis Services 無法讓您指定連接字串上的使用者名稱和密碼，除非您連接到已經有設定 HTTP 存取的伺服器。 同樣地，除非您已經知道 SSS 目標應用程式識別碼會對應到擁有 Analysis Services 資料庫之使用者存取權的一組 Windows 使用者認證，否則請勿使用 SSS。 在大部分情況下，使用 Windows 驗證的預設選項是來自 Excel 之 Analysis Services 連接的最佳選擇。  
   
  如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](http://go.microsoft.com/fwlink/?linkID=215150)＞。  
   
@@ -131,6 +131,6 @@ ms.locfileid: "34019585"
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [模擬](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [建立資料來源 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

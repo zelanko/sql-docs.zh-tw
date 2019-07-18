@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
@@ -14,12 +13,12 @@ ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3847d2cdf4158167a6c05e957183464a846c90f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084536"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
   如果您已經啟用採礦模型的鑽研，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 若要檢視這項資訊，您必須擁有必要的權限，而且結構必須已經經過處理。  
@@ -39,21 +38,21 @@ ms.locfileid: "52512726"
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>針對採礦模型啟用鑽研  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型] 索引標籤上，以滑鼠右鍵按一下您想要啟用鑽研之採礦模型的名稱，然後選取 [屬性]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型]  索引標籤上，以滑鼠右鍵按一下您想要啟用鑽研之採礦模型的名稱，然後選取 [屬性]  。  
   
-2.  在 [屬性] 視窗中，按一下 [AllowDrillThrough]，然後選取 [True]。  
+2.  在 [屬性]  視窗中，按一下 [AllowDrillThrough]  ，然後選取 [True]  。  
   
-3.  在 [採礦模型] 索引標籤中，以滑鼠右鍵按一下模型，然後選取 [處理模型]。  
+3.  在 [採礦模型]  索引標籤中，以滑鼠右鍵按一下模型，然後選取 [處理模型]  。  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>針對採礦結構啟用快取  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦結構] 索引標籤上，以滑鼠右鍵按一下採礦結構的名稱。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦結構]  索引標籤上，以滑鼠右鍵按一下採礦結構的名稱。  
   
-2.  開啟 [屬性] 視窗。  
+2.  開啟 [屬性]  視窗。  
   
-3.  在 [屬性] 視窗中，找出 **CacheMode** 屬性，然後從清單中選取 [KeepTrainingCases]。  
+3.  在 [屬性]  視窗中，找出 **CacheMode** 屬性，然後從清單中選取 [KeepTrainingCases]  。  
   
-4.  在 [資料庫] 功能表中，選取 [處理]。  
+4.  在 [資料庫]  功能表中，選取 [處理]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  

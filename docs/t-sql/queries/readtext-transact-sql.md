@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927585"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ _table_ **.** _column_
 這是要讀取的資料表和資料行名稱。 資料表和資料行名稱必須滿足[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您必須指定資料表和資料行名稱；不過，資料庫名稱和擁有者名稱的指定是選擇性的。  
   
 _text\_ptr_  
-這是一個有效的文字指標。 _text\_ptr_ 必須是 **binary(16)**。  
+這是一個有效的文字指標。 _text\_ptr_ 必須是 **binary(16)** 。  
   
 _offset_  
 是使用 **text** 或 **image** 資料類型時的位元組數目。 它也可以是開始讀取 **text**、**image** 或 **ntext** 資料之前，**ntext** 資料類型用來略過的字元位元組數目。  
@@ -66,7 +66,7 @@ HOLDLOCK
   
 如果 @@TEXTSIZE 函式的值小於為 READTEXT 指定的大小，它就會取代為 READTEXT 指定的大小。 @@TEXTSIZE 函式會指定對 SET TEXTSIZE 陳述式所設定之傳回資料位元組數目的限制。 如需有關如何設定 TEXTSIZE 之工作階段設定的詳細資訊，請參閱 [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 READTEXT 權限預設為授與有指定資料表之 SELECT 權限的使用者。 當傳送 SELECT 權限時，可以傳送權限。  
   
 ## <a name="examples"></a>範例  

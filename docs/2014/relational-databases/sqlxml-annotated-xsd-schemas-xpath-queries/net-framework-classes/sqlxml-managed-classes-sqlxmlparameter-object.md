@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SqlXmlParameter object
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1e99b2959b41528152efc92daccfb793b2e280
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010763"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 物件 (SQLXML Managed 類別)
   SqlXmlParameter 物件支援下列屬性：  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117962"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` 是 「 合併代理程式停止的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元提供給合併代理程式。 *optional_command_line*已**nvarchar(255)**，預設值是 ' '。 它可用來提供其他參數給合併代理程式，例如以下範例將預設查詢逾時值增加到 `600` 秒：  
+`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元提供給合併代理程式。 *optional_command_line*已**nvarchar(255)** ，預設值是 ' '。 它可用來提供其他參數給合併代理程式，例如以下範例將預設查詢逾時值增加到 `600` 秒：  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` 輸出參數為工作識別碼。 *merge_jobid*已**二進位 （16)**，預設值是 NULL。  
+`[ @merge_jobid = ] merge_jobid` 輸出參數為工作識別碼。 *merge_jobid*已**二進位 （16)** ，預設值是 NULL。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否訂用帳戶可以同步處理到 Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否訂用帳戶可以同步處理到 Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)** ，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 `[ @ftp_address = ] 'ftp_address'` 基於回溯相容性。  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` 基於回溯相容性。  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 指定要從中收取快照集檔案的位置。 *alternate_snapshot_folder*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，便會從發行者所指定的預設位置中，收取快照集檔案。  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 指定要從中收取快照集檔案的位置。 *alternate_snapshot_folder*已**nvarchar(255)** ，預設值是 NULL。 如果是 NULL，便會從發行者所指定的預設位置中，收取快照集檔案。  
   
-`[ @working_directory = ] 'working_directory'` 是用來暫時儲存發行集的資料和結構描述檔案，當利用 FTP 來傳送快照集檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)**，預設值是 NULL。  
+`[ @working_directory = ] 'working_directory'` 是用來暫時儲存發行集的資料和結構描述檔案，當利用 FTP 來傳送快照集檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)** ，預設值是 NULL。  
   
-`[ @use_ftp = ] 'use_ftp'` 指定利用 FTP 而不是一般通訊協定來擷取快照集。 *use_ftp*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @use_ftp = ] 'use_ftp'` 指定利用 FTP 而不是一般通訊協定來擷取快照集。 *use_ftp*已**nvarchar(5)** ，預設值是 FALSE。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` 利用互動式解析程式來解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` 利用互動式解析程式來解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)** ，預設值是 FALSE。  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` 是現有的代理程式作業名稱。 *job_name*已**sysname**，預設值是 NULL。 只有在訂閱將利用現有的作業來同步處理，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*並*job_password*當您指定*job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 用為位置的快照集檔案會從讀取如果篩選的資料快照集資料夾的路徑。 *dynamic_snapshot_location*已**nvarchar(260)**，預設值是 NULL。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 用為位置的快照集檔案會從讀取如果篩選的資料快照集資料夾的路徑。 *dynamic_snapshot_location*已**nvarchar(260)** ，預設值是 NULL。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 `[ @use_web_sync = ] use_web_sync` 指出已啟用 Web 同步處理。 *use_web_sync&lt*已**元**，預設值是 0。 **1**指定可以在使用 HTTP 透過網際網路同步處理提取訂閱。  
   
-`[ @internet_url = ] 'internet_url'` 是複寫接聽程式 (REPLISAPI 位置。DLL) 的 Web 同步處理。 *應*已**nvarchar(260)**，預設值是 NULL。 *應*是完整的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
+`[ @internet_url = ] 'internet_url'` 是複寫接聽程式 (REPLISAPI 位置。DLL) 的 Web 同步處理。 *應*已**nvarchar(260)** ，預設值是 NULL。 *應*是完整的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
   
 `[ @internet_login = ] 'internet_login'` 利用 HTTP 基本驗證連接到主控 Web 同步處理的 Web 伺服器時，會使用 「 合併代理程式的登入。 *internet_url*已**sysname**，預設值是 NULL。  
   
-`[ @internet_password = ] 'internet_password'` 「 合併代理程式在連接到主控 Web 同步處理的 Web 伺服器時所用的密碼使用 HTTP 基本驗證。 *internet_login*已**nvarchar(524)**，預設值是 NULL。  
+`[ @internet_password = ] 'internet_password'` 「 合併代理程式在連接到主控 Web 同步處理的 Web 伺服器時所用的密碼使用 HTTP 基本驗證。 *internet_login*已**nvarchar(524)** ，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` 參數化篩選的 WHERE 子句中使用此函式時，會覆寫 host_name （） 的值。 *主機名稱*已**sysname**，預設值是 NULL。  
   
-`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 代理程式連接到訂閱者時，一律使用這個 Windows 帳戶，當利用 Windows 整合式驗證來連接到散發者和發行者時，也一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)** ，沒有預設值。 代理程式連接到訂閱者時，一律使用這個 Windows 帳戶，當利用 Windows 整合式驗證來連接到散發者和發行者時，也一律使用這個 Windows 帳戶。  
   
 `[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   

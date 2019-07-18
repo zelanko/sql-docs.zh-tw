@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fc9cb98837d206d5279d1f14d4a57ce56782759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32b4125d0ecb1f15fab00119a8ef4ed361b6db72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087743"
 ---
 # <a name="unicode-applications"></a>Unicode 應用程式
 您可以重新編譯應用程式成為 Unicode 應用程式中有兩種：  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999604"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53590232"
 ###  <a name="Security"></a> 安全性  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC BACPAC 檔案中，而且沒有密碼。 當您匯入 BACPAC 之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
-#### <a name="permissions"></a>[權限]  
+#### <a name="permissions"></a>權限  
  精靈需要來源資料庫的 DAC 匯出權限。 登入至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
   
  精靈需要目的地執行個體或伺服器的 DAC 匯入權限。 登入必須是 **系統管理員 (sysadmin)** 或 **伺服器管理員 (serveradmin)** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限。 名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的內建** 系統管理員帳戶也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
@@ -69,7 +69,7 @@ ms.locfileid: "53590232"
   
 3.  展開 **[資料庫]** 節點。  
   
-4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]，然後選取 [將資料庫部署到 SQL Azure...]  
+4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]  ，然後選取 [將資料庫部署到 SQL Azure...]   
   
 5.  完成精靈對話方塊：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "53590232"
   
  **本機主機：**  
   
--   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接] 來驗證連接。  
+-   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接]  來驗證連接。  
   
 -   **新資料庫名稱** - 指定新資料庫的名稱。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "53590232"
 -   指定暫存檔 (即 BACPAC 封存檔案) 的本機目錄。 請注意，檔案將在指定的位置上建立，而且作業完成之後，將保留在該位置。  
   
 ##  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束精靈，請按一下 **[取消]**。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]** 。 若要取消部署作業並結束精靈，請按一下 **[取消]** 。  
   
 ##  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ace0ffeea6d268768b4e846bbb2d75d1377fdab4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107106"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 連接類型 (SSRS)
   若要在報表中加入來自 SAP NetWeaver® Business Intelligence 外部資料來源的資料，您必須具有以 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型的建構基礎為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]的資料延伸模組。  
@@ -75,7 +74,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 資料來源支援擴充欄位屬性。 擴充欄位屬性是資料集欄位 `Value` 和 `IsMissing` 以外的屬性，由資料處理延伸模組所定義。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
   
 ### <a name="working-with-field-properties"></a>使用欄位屬性  
- 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，將該屬性的父欄位拖曳至報表，然後將預設屬性從 `Value` 變更為想要使用的屬性。 例如，如果 MDX 查詢設計工具中的 [Calendar Year/Month Level 01] 欄位名稱，是藉著從 [中繼資料] 窗格中將層級拖曳至 [查詢] 窗格所建立，則可以使用下列語法參照運算式中的 **Long Name** 自訂擴充屬性：  
+ 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，將該屬性的父欄位拖曳至報表，然後將預設屬性從 `Value` 變更為想要使用的屬性。 例如，如果 MDX 查詢設計工具中的 [Calendar Year/Month Level 01]  欄位名稱，是藉著從 [中繼資料] 窗格中將層級拖曳至 [查詢] 窗格所建立，則可以使用下列語法參照運算式中的 **Long Name** 自訂擴充屬性：  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
@@ -109,7 +108,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|傳回層級的索引鍵。|  
 |`LevelNumber`|`Integer`|如果是父子式階層，則會傳回層級或維度編號。|  
 |`ParentUniqueName`|`String`|如果是父子式階層，會傳回父層級的完整名稱。|  
-|`UniqueName`|`String`|傳回層級的完整名稱。 例如，`UniqueName`值可能是員工 *[0D_Company]。 [10D_Department]。[11]*.|  
+|`UniqueName`|`String`|傳回層級的完整名稱。 例如，`UniqueName`值可能是員工 *[0D_Company]。 [10D_Department]。[11]* .|  
   
  如需在運算式中使用欄位及欄位屬性的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   

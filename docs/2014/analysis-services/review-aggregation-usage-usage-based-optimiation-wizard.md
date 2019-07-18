@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
@@ -13,17 +12,17 @@ ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a50c241bc70d48577b558827a278d5423ee8344b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070164"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>檢閱彙總使用方式 (基於使用方式的最佳化精靈)
   使用 **[檢閱彙總使用方式]** 頁面，即可設定彙總使用方式設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **預設值**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Default。 透過使用這項設定，設計工具會根據屬性和維度的類型來套用預設規則。  
   

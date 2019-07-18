@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f957283f2d667a9e75c30fae9d9b45401f06c499
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867635"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role 事件類別
   新增登入至固定伺服器角色，或從固定伺服器角色移除登入時，會發生 **Audit Add Login to Server Role** 事件類別。 此事件類別會用於 **sp_addsrvrolemember** 和 **sp_dropsrvrolemember** 預存程序。  

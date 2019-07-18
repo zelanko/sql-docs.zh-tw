@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015919"
 ---
 # <a name="implementing-merge-functionality"></a>實作 MERGE 功能
   根據資料庫中是否已有某個特殊資料列存在而定，資料庫可能需要執行插入或更新。  

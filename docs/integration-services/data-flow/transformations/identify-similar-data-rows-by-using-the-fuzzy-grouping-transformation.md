@@ -16,14 +16,18 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1851f2f8970d05f695b90f2024f44450c437164
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7dfb6976d5a08dabe3341a5b9c8644b57e4a3797
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726066"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊群組轉換來識別相似的資料列
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要加入和設定「模糊群組」轉換，封裝必須至少包含一個「資料流程」工作和一個來源。  
   
 ### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>在資料流程中實作「模糊群組」轉換  

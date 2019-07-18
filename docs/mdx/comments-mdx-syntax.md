@@ -1,5 +1,5 @@
 ---
-title: 註解 （MDX 語法） |Microsoft 文件
+title: 註解 （MDX 語法） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001524"
 ---
 # <a name="comments-mdx-syntax"></a>程式註解 (MDX 語法)
 
@@ -30,13 +29,13 @@ ms.locfileid: "34740757"
  MDX 支援兩種註解字元類型：  
   
  // (雙斜線)  
- 這些註解字元可以跟程式碼放在同一行來執行，或是將註解本身全部放在一行。 從雙斜線到該行結尾之間，全部都是註解的一部份。 對於多行註解而言，雙斜線必須出現在每一行註解的開頭。 如需詳細資訊，請參閱[&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)。  
+ 這些註解字元可以跟程式碼放在同一行來執行，或是將註解本身全部放在一行。 從雙斜線到該行結尾之間，全部都是註解的一部份。 對於多行註解而言，雙斜線必須出現在每一行註解的開頭。 如需詳細資訊，請參閱 < [&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)。  
   
  -- (雙連字號)  
- 這些註解字元可以跟程式碼放在同一行來執行，或是將註解本身全部放在一行。 從雙連字號到該行結尾之間，全部都是註解的一部份。 對於多行註解而言，雙連字號必須出現在每一行註解的開頭。 如需詳細資訊，請參閱[-&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)。  
+ 這些註解字元可以跟程式碼放在同一行來執行，或是將註解本身全部放在一行。 從雙連字號到該行結尾之間，全部都是註解的一部份。 對於多行註解而言，雙連字號必須出現在每一行註解的開頭。 如需詳細資訊，請參閱 < [-&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)。  
   
  /* ...\*/ （正斜線-星號字元配對）  
- 這些註解字元可以跟程式碼放在同一行來執行、也可以將註解本身全部放在一行，或甚至放在可執行的程式碼中。 所有內容都將開啟註解配對 (/\*) 到關閉註解配對 (\*/) 會被視為註解的一部分。 多行註解，開啟註解字元配對 (/\*) 必須開始註解和註解字元配對 (\*/) 必須結束註解。 任一行註解中不能出現其他任何註解字元。 如需詳細資訊，請參閱[/ *...\*/ (Comment)](../mdx/comment-mdx.md).  
+ 這些註解字元可以跟程式碼放在同一行來執行、也可以將註解本身全部放在一行，或甚至放在可執行的程式碼中。 舉凡將開啟註解配對 (/\*) 到關閉註解配對 (\*/) 會被視為註解的一部分。 多行註解，開啟註解字元配對 (/\*) 必須開始註解，並關閉註解字元配對 (\*/) 必須結束註解。 任一行註解中不能出現其他任何註解字元。 如需詳細資訊，請參閱[/ *...\*/ (Comment)](../mdx/comment-mdx.md)。  
   
 ## <a name="example"></a>範例  
  下列查詢顯示註解的所有三種類型：  

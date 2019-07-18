@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e4ad2d32c313919ed4446a5506f22e9048e09288
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119305"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT & Amp;#40;transact-SQL&AMP;#41;
+# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT & Amp;#40;transact-SQL&#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT 所在*capture_instance*是來源資料表的結構描述名稱和來源資料表名稱，格式*schema_table*。 例如，如果資料表**Person.Address**中**AdventureWorks**範例資料庫已啟用異動資料擷取，衍生的變更資料表名稱就是**cdc。Person_Address_CT**。  
@@ -37,16 +36,16 @@ ms.locfileid: "49336247"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|與變更之認可交易相關聯的記錄序號 (LSN)。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的刪除作業會移除兩個資料列，變更資料表將會包含兩個資料列，每個都具有相同 **__ $start_lsn**值。|  
-|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
+|**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
 |**__$seqval**|**binary(10)**|用來排序交易內資料列變更的序列值。|  
 |**__$operation**|**int**|識別與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (舊的值)<br /><br /> 執行更新陳述式之前，資料行資料具有資料列值。<br /><br /> 4 = 更新 (新的值)<br /><br /> 執行更新陳述式之後，資料行資料具有資料列值。|  
 |**__$update_mask**|**varbinary(128)**|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。|  
 |*\<擷取的來源資料表資料行>*|變化|變更資料表中的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有指定任何資料行，這個資料表就會包含來源資料表中的所有資料行。|  
-|**__ $ command_id** |**int** |會追蹤在交易內的作業的順序。 |  
+|**__$command_id** |**int** |會追蹤在交易內的作業的順序。 |  
   
 ## <a name="remarks"></a>備註  
 
-`__$command_id`資料行的累計更新版本 2012 到 2016年中引進了資料行。 版本和下載資訊，請參閱知識庫文章 3030352[修正： 變更資料表排序不正確地更新針對 Microsoft SQL Server 資料庫的資料列之後啟用異動資料擷取](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱 < [CDC 功能可能會中斷之後升級至最新的 CU for SQL Server 2012、 2014年和 2016年](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
+`__$command_id`資料行的累計更新版本 2012 到 2016年中引進了資料行。 版本和下載資訊，請參閱知識庫文章 3030352[修正：變更資料表排序不正確地更新針對 Microsoft SQL Server 資料庫的資料列之後啟用異動資料擷取](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱 < [CDC 功能可能會中斷之後升級至最新的 CU for SQL Server 2012、 2014年和 2016年](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
 
 ## <a name="captured-column-data-types"></a>擷取資料行資料類型  
  包含在這個資料表中的擷取資料行與對應的來源資料行具有相同的資料類型和值，但下列情況除外：  
@@ -58,7 +57,7 @@ ms.locfileid: "49336247"
  不過，這些資料行中的值與來源資料行的值相同。  
   
 ### <a name="large-object-data-types"></a>大型物件資料類型  
- 資料類型的資料行**映像**，**文字**，並**ntext**一律指派**NULL**值 __ $operation = 1 或\_\_$operation = 3。 資料類型的資料行**varbinary （max)**， **varchar （max)**，或**nvarchar （max)** 指派**NULL**值\_\_$operation = 3，除非資料行在更新期間變更。 當\_ \_$operation = 1，這些資料行會在刪除時指定其值。 計算資料行一律包含在擷取執行個體中的值為**NULL**。  
+ 資料類型的資料行**映像**，**文字**，並**ntext**一律指派**NULL**值 __ $operation = 1 或\_\_$operation = 3。 資料類型的資料行**varbinary （max)** ， **varchar （max)** ，或**nvarchar （max)** 指派**NULL**值\_\_$operation = 3，除非資料行在更新期間變更。 當\_ \_$operation = 1，這些資料行會在刪除時指定其值。 計算資料行一律包含在擷取執行個體中的值為**NULL**。  
   
  根據預設，在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中可加入至擷取資料行的大小上限為 65,536 個位元組或 64 KB。 若要增加這個大小以便支援更大的 LOB 資料，請使用[設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)指定較大的大小。 如需詳細資訊，請參閱 [設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   
@@ -74,7 +73,9 @@ ms.locfileid: "49336247"
 2.  在變更資料表中，在對等的資料行上執行相同的更新作業。  
   
 3.  透過指定新的資料類型，更改來源資料表。 然後，資料類型變更就會成功地傳播至變更資料表。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="data-manipulation-language-modifications"></a>資料操作語言修改  
  在啟用異動資料擷取的來源資料表上執行插入、更新和刪除作業時，這些 DML 作業的記錄就會顯示在資料庫交易記錄中。 異動資料擷取程序從交易記錄檔中，擷取這些變更的相關資訊，並將一或兩個資料列加入至變更資料表，以便記錄變更。 雖然變更資料表項目的認可通常必須針對一組變更而非單一項目執行，不過將項目加入至變更資料表的順序會與來源資料表認可這些項目的順序相同。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "49336247"
  若為插入和刪除作業，就會設定更新遮罩中的所有位元。 若為更新作業，就會同時修改更新舊值與更新新值資料列中的更新遮罩，以便反映在更新期間變更的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_enable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

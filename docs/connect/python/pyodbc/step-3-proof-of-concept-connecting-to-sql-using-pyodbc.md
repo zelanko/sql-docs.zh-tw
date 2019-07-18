@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd861c50523e218bc1cf0ed6e538e66eeb3671f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756310"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780365"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步驟 3︰使用 pyodbc 連線到 SQL 的概念證明
 

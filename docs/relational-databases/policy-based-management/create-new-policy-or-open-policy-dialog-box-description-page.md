@@ -12,11 +12,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009083"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>建立新原則或開啟原則對話方塊，描述頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "51512613"
  **說明**  
  輸入原則的描述。  
   
- **其他說明超連結: 要顯示的文字**  
- 在執行原則時，其他說明超連結會顯示在 [結果詳細檢視] 頁面上。 輸入要顯示為超連結的文字。  
+ **其他協助超連結：要顯示的文字**  
+ 在執行原則時，其他說明超連結會顯示在 [結果詳細檢視]  頁面上。 輸入要顯示為超連結的文字。  
   
- **其他說明超連結: 位址**  
- 輸入當使用者按一下 [結果詳細檢視] 頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
+ **其他協助超連結：位址**  
+ 輸入當使用者按一下 [結果詳細檢視]  頁面上所出現的超連結文字時，所要開啟之網頁的超連結。  
   
- **其他說明超連結: 測試連結**  
+ **其他協助超連結：測試連結**  
  按一下此選項可開啟用來測試連結有效性的超連結。  
   
  **建立日期**  

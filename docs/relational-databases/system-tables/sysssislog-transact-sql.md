@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysssislog system table
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 536a4b6c89b3d2c407d234ad0e5821782425b6b4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029615"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

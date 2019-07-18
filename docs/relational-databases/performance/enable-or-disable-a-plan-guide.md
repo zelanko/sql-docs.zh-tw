@@ -15,12 +15,12 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3e102f509d289c4bc0e3a4a4100ec7c091636acd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 0aef47aa00c52bd5adb0069baf0a1d06a6848d43
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143408"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580773"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>啟用或停用計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54143408"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  停用或啟用 OBJECT 計畫指南需要計畫指南所參考之物件 (例如：函數、預存程序) 的 ALTER 權限。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,17 +61,19 @@ ms.locfileid: "54143408"
   
 2.  按一下加號展開 **[計畫指南]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要停用或啟用的計畫指南，然後選取 [停用] 或 [啟用]。  
+3.  以滑鼠右鍵按一下您想要停用或啟用的計畫指南，然後選取 [停用]  或 [啟用]  。  
   
-4.  在 **[停用計畫指南]** 或 **[啟用計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]**。  
-  
+4.  在 **[停用計畫指南]** 或 **[啟用計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>若要停用或啟用資料庫中的所有計畫指南  
   
 1.  按一下加號，展開您要在其中停用或啟用計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [計畫指南] 資料夾，然後選取 [全部啟用] 或 [全部停用]。  
+2.  以滑鼠右鍵按一下 [計畫指南]  資料夾，然後選取 [全部啟用]  或 [全部停用]  。  
   
-3.  在 **[停用所有計畫指南]** 或 **[啟用所有計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]**。  
+3.  在 **[停用所有計畫指南]** 或 **[啟用所有計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +81,9 @@ ms.locfileid: "54143408"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -123,9 +125,9 @@ ms.locfileid: "54143408"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     --Disable all plan guides in the database.  

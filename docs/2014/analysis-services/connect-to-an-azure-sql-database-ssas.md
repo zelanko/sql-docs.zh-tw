@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlazure.f1
@@ -13,15 +12,15 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087144"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>連接到 Azure SQL 資料庫 (SSAS)
-  [資料表匯入精靈] 的這個頁面可讓您連接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  [資料表匯入精靈]  的這個頁面可讓您連接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
 > [!NOTE]  
 >  如果您要連接到 Azure DataMarket 資料集，請參閱[連接到報表或資料摘要 &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)。  

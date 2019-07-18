@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187098"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
   透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能：  

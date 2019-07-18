@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cfa7196c0ad197a3eb7cb1a31fbdb58e74a78968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110820"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'` 是執行代理程式帳戶的登入。 *job_login*已**nvarchar(257)**，預設值是 NULL。 Azure SQL Database 受控執行個體，使用 SQL Server 帳戶。 *無法變更為非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
+`[ @job_login = ] 'job_login'` 是執行代理程式帳戶的登入。 *job_login*已**nvarchar(257)** ，預設值是 NULL。 Azure SQL Database 受控執行個體，使用 SQL Server 帳戶。 *無法變更為非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
   
 `[ @job_password = ] 'job_password'` 是執行代理程式帳戶的密碼。 *job_password*已**sysname**，預設值是 NULL。  
   

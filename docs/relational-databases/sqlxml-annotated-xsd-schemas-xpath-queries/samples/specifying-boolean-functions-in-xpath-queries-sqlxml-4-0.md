@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 414a391591577d554d88b6b5b5aac901834e8509
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95569262bc55da45390705486871a73f0eb5f5ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027116"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56041639"
 ## <a name="examples"></a>範例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布林函數  
- 此查詢會傳回所有**\<客戶 >** 的內容節點的子項目沒有**\<順序 >** 子項目：  
+ 此查詢會傳回所有 **\<客戶 >** 的內容節點的子項目沒有 **\<順序 >** 子項目：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -65,8 +64,10 @@ ms.locfileid: "56041639"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  以下為範本執行的部分結果集：  
   
@@ -80,7 +81,7 @@ ms.locfileid: "56041639"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布林函數  
- 此查詢會傳回所有**\<客戶 >** 項目子系內容節點沒有**\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
+ 此查詢會傳回所有 **\<客戶 >** 項目子系內容節點沒有 **\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
   
 ```  
 /child::Customer[child::Order=false()]  

@@ -15,15 +15,14 @@ helpviewer_keywords:
 - leaf members [Master Data Services], about leaf members
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 967eefb51ed8995bbaf1597b3d867bb0800f0f78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092587"
 ---
 # <a name="members-master-data-services"></a>成員 (Master Data Services)
 

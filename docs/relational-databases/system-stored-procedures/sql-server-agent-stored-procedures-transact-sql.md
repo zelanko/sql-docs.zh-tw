@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e8287e9ac39d0c052b4080ab76ef046f9d35914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950379"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server Agent 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

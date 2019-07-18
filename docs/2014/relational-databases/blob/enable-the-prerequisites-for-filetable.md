@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010172"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
   描述如何啟用建立和使用 FileTable 的必要元件。  
@@ -40,12 +40,12 @@ ms.locfileid: "58538140"
 ##  <a name="BasicsFilestream"></a> 在執行個體層級啟用 FILESTREAM  
  FileTable 會擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之 FILESTREAM 功能的能力。 因此，您必須先在 Windows 層級和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 FILESTREAM 的檔案 I/O 存取，然後才能建立和使用 FileTable。  
   
-###  <a name="HowToFilestream"></a> 操作說明：在執行個體層級啟用 FILESTREAM  
+###  <a name="HowToFilestream"></a> 如何：在執行個體層級啟用 FILESTREAM  
  如需如何啟用 FILESTREAM 的相關資訊，請參閱 [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)。  
   
  當您呼叫 `sp_configure` 在執行個體層級啟用 FILESTREAM 時，必須將 filestream_access_level 選項設定為 2。 如需詳細資訊，請參閱 [Filestream 存取層級伺服器組態選項](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
   
-###  <a name="firewall"></a> 操作說明：允許 FILESTREAM 通過防火牆  
+###  <a name="firewall"></a> 如何：允許 FILESTREAM 通過防火牆  
  如需有關如何允許 FILESTREAM 通過防火牆的詳細資訊，請參閱＜ [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md)＞。  
   
 ##  <a name="filegroup"></a> 在資料庫層級提供 FILESTREAM 檔案群組  
@@ -54,7 +54,7 @@ ms.locfileid: "58538140"
 ##  <a name="BasicsNTAccess"></a> 在資料庫層級啟用非交易式存取  
  FileTable 可讓 Windows 應用程式取得 FILESTREAM 資料的 Windows 檔案控制代碼，而不需要使用交易。 若要允許對儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的檔案進行這種非交易式存取，您必須針對將包含 FileTable 的每個資料庫，指定在資料庫層級啟用非交易式存取的所需層級。  
   
-###  <a name="HowToCheckAccess"></a> 操作說明：檢查是否已在資料庫上啟用非交易式存取  
+###  <a name="HowToCheckAccess"></a> 如何：檢查是否已在資料庫上啟用非交易式存取  
  查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 目錄檢視，並檢查 **non_transacted_access** 和 **non_transacted_access_desc** 資料行。  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> 操作說明：在資料庫層級啟用非交易式存取  
+###  <a name="HowToNTAccess"></a> 如何：在資料庫層級啟用非交易式存取  
  非交易式存取的可用層級是 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非交易式存取的層級**  
@@ -82,14 +82,14 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定非交易式存取的層級**  
- 在 [資料庫屬性] 對話方塊中，您可以透過 [選項] 頁面的 [FILESTREAM 非交易式存取] 欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
+ 在 [資料庫屬性]  對話方塊中，您可以透過 [選項]  頁面的 [FILESTREAM 非交易式存取]  欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
   
 ##  <a name="BasicsDirectory"></a> 在資料庫層級指定 FileTable 的目錄  
  當您在資料庫層級啟用檔案的非交易式存取時，可以選擇性地使用 **DIRECTORY_NAME** 選項，一併提供目錄名稱。 如果您在啟用非交易式存取時沒有提供目錄名稱，則之後必須先提供此名稱，然後才能在資料庫中建立 FileTable。  
   
  在 FileTable 資料夾階層中，這個資料庫層級目錄會成為在執行個體層級中針對 FILESTREAM 指定之共用名稱的子系，以及在資料庫中建立之 FileTable 的父系。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
   
-###  <a name="HowToDirectory"></a> 操作說明：在資料庫層級指定 FileTable 的目錄  
+###  <a name="HowToDirectory"></a> 如何：在資料庫層級指定 FileTable 的目錄  
  跨資料庫層級目錄的執行個體中，指定的名稱必須是唯一的。  
   
  **使用 Transact-SQL 指定 FileTable 的目錄**  
@@ -126,9 +126,9 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定 FileTable 的目錄**  
- 在 [資料庫屬性] 對話方塊中，您可以透過 [選項] 頁面的 [FILESTREAM 目錄名稱] 欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
+ 在 [資料庫屬性]  對話方塊中，您可以透過 [選項]  頁面的 [FILESTREAM 目錄名稱]  欄位，來指定目錄名稱。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../databases/database-properties-options-page.md)。  
   
-###  <a name="viewnames"></a> 操作說明：檢視執行個體的現有目錄名稱  
+###  <a name="viewnames"></a> 如何：檢視執行個體的現有目錄名稱  
  若要檢視執行個體的現有目錄名稱清單，請查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 目錄檢視，並檢查 **filestream_database_directory_name** 資料行。  
   
 ```sql  

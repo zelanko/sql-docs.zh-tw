@@ -1,5 +1,5 @@
 ---
-title: SQLNumResultCols |Microsoft Docs
+title: SQLNumResultCols | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046753"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   對於執行的陳述式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不會造訪伺服器來報告結果集中的資料行數目。 在此情況下，`SQLNumResultCols`不會造成伺服器往返。 像是[SQLDescribeCol](sqldescribecol.md)並[SQLColAttribute](sqlcolattribute.md)，則呼叫`SQLNumResultCols`上備妥但未執行的陳述式會產生伺服器往返。  

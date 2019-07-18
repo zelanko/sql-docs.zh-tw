@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138332"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 (類型對應) (MySQLToSQL)
 型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。  
@@ -60,35 +59,35 @@ ms.locfileid: "47713246"
 |bit|[1] 的二進位檔|  
 |bit[0..8]|[1] 的二進位檔|  
 |bit[17..24]|二進位 [3]|  
-|bit[25..32]|二進位 [4]|  
-|bit[33..40]|二進位 [5]|  
-|bit[41..48]|二進位 [6]|  
+|bit[25..32]|binary[4]|  
+|bit[33..40]|binary[5]|  
+|bit[41..48]|binary[6]|  
 |bit[49..56]|二進位 [7]|  
-|bit[57..64]|二進位 [8]|  
-|bit[9..16]|二進位檔 [2]|  
+|bit[57..64]|binary[8]|  
+|bit[9..16]|binary[2]|  
 |blob|varbinary(max)|  
-|blob[0..1]|varbinary [1]|  
+|blob[0..1]|varbinary[1]|  
 |blob[2..8000]|varbinary[*]|  
 |blob[8001..*]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|nchar [1]|  
+|char|nchar[1]|  
 |char 位元組|[1] 的二進位檔|  
 |char 位元組 [0..1]|[1] 的二進位檔|  
 |char 位元組 [2..255]|binary[*]|  
-|char[0..1]|nchar [1]|  
+|char[0..1]|nchar[1]|  
 |char[2..255]|nchar[*]|  
-|character|nchar [1]|  
-|字元不同 [0..1]|nvarchar [1]|  
+|character|nchar[1]|  
+|字元不同 [0..1]|nvarchar[1]|  
 |字元不同 [2..255]|NVARCHAR|  
-|character[0..1]|nchar [1]|  
+|character[0..1]|nchar[1]|  
 |character[2..255]|nchar[*]|  
-|日期|日期|  
-|DATETIME|datetime2[0]|  
-|dec|Decimal|  
+|date|date|  
+|datetime|datetime2[0]|  
+|dec|decimal|  
 |dec [*..65]|decimal[*][0]|  
 |dec [*..65][\*..30]|decimal[*][\*]|  
-|Decimal|Decimal|  
+|decimal|decimal|  
 |小數 [*..65]|decimal[*][0]|  
 |小數 [*..65][\*..30]|decimal[*][\*]|  
 |double|float [53]|  
@@ -110,32 +109,32 @@ ms.locfileid: "47713246"
 |mediumint|ssNoversion|  
 |mediumint [*..255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
-|national char|nchar [1]|  
-|national char [0..1]|nchar [1]|  
+|national char|nchar[1]|  
+|national char [0..1]|nchar[1]|  
 |national char [2..255]|nchar[*]|  
-|國家字元集|nchar [1]|  
-|不同的國家字元集|nvarchar [1]|  
-|國家字元不同 [0..1]|nvarchar [1]|  
+|國家字元集|nchar[1]|  
+|不同的國家字元集|nvarchar[1]|  
+|國家字元不同 [0..1]|nvarchar[1]|  
 |國家字元不同 [2..4000]|nvarchar[*]|  
 |不同的國家字元集 [4001..*]|nvarchar(max)|  
-|國家字元集 [0..1]|nchar [1]|  
+|國家字元集 [0..1]|nchar[1]|  
 |國家字元集 [2..255]|nchar[*]|  
-|national varchar|nvarchar [1]|  
-|national varchar [0..1]|nvarchar [1]|  
+|national varchar|nvarchar[1]|  
+|national varchar [0..1]|nvarchar[1]|  
 |national varchar [2..4000]|nvarchar[*]|  
 |national varchar [4001..*]|nvarchar(max)|  
-|NCHAR|nchar [1]|  
-|nchar varchar|nvarchar [1]|  
-|nchar varchar [0..1]|nvarchar [1]|  
+|NCHAR|nchar[1]|  
+|nchar varchar|nvarchar[1]|  
+|nchar varchar [0..1]|nvarchar[1]|  
 |nchar varchar [2..4000]|nvarchar[*]|  
 |nchar varchar [4001..*]|nvarchar(max)|  
-|nchar[0..1]|nchar [1]|  
+|nchar[0..1]|nchar[1]|  
 |nchar[2..255]|nchar[*]|  
 |NUMERIC|NUMERIC|  
 |數字 [*..65]|numeric[*][0]|  
 |數字 [*..65][\*..30]|數字 [*][\*]|  
-|NVARCHAR|nvarchar [1]|  
-|nvarchar[0..1]|nvarchar [1]|  
+|NVARCHAR|nvarchar[1]|  
+|nvarchar[0..1]|nvarchar[1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
 |REAL|float [53]|  
@@ -144,21 +143,21 @@ ms.locfileid: "47713246"
 |SMALLINT|SMALLINT|  
 |smallint [*..255]|SMALLINT|  
 |text|nvarchar(max)|  
-|text[0..1]|nvarchar [1]|  
+|text[0..1]|nvarchar[1]|  
 |text[2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  
 |time|time|  
-|TIMESTAMP|DATETIME|  
-|tinyblob|varbinary [255]|  
+|timestamp|datetime|  
+|tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
 |tinyint [*..255]|SMALLINT|  
 |tinytext|nvarchar[255]|  
 |不帶正負號的 bigint|BIGINT|  
 |不帶正負號的 bigint [*..255]|BIGINT|  
-|不帶正負號的 12 月|Decimal|  
+|不帶正負號的 12 月|decimal|  
 |不帶正負號的 dec [*..65]|decimal[*][0]|  
 |不帶正負號的 dec [*..65][\*..30]|decimal[*][\*]|  
-|不帶正負號的十進位|Decimal|  
+|不帶正負號的十進位|decimal|  
 |不帶正負號的十進位 [*..65]|decimal[*][0]|  
 |不帶正負號的十進位 [*..65][\*..30]|decimal[*][\*]|  
 |不帶正負號的雙精度浮點數|float [53]|  
@@ -185,10 +184,10 @@ ms.locfileid: "47713246"
 |不帶正負號的 smallint [*..255]|ssNoversion|  
 |不帶正負號的 tinyint|TINYINT|  
 |不帶正負號的 tinyint [*..255]|TINYINT|  
-|varbinary[0..1]|varbinary [1]|  
+|varbinary[0..1]|varbinary[1]|  
 |varbinary[2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
-|varchar[0..1]|nvarchar [1]|  
+|varchar[0..1]|nvarchar[1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
 |year|SMALLINT|  

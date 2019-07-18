@@ -16,12 +16,12 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: b15ecd732acf373dbc5cee817983305c1d792fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683706"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260238"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Access 資料庫移轉到 SQL Server-Azure SQL DB (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 是一種工具，提供完整的環境，可協助您快速存取資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 使用 SSMA，您可以檢閱存取權並[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件、 評定移轉的 Access 資料庫、 將 Access 資料庫物件的轉換、 載入到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，然後移轉資料。  

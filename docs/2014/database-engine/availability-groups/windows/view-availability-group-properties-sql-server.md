@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62813242"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>檢視可用性群組屬性 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，檢視 AlwaysOn 可用性群組的可用性群組屬性。  
@@ -31,9 +31,9 @@ ms.locfileid: "48126344"
   
 2.  依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。  
   
-3.  以滑鼠右鍵按一下要檢視其屬性的可用性群組，然後選取 [屬性] 命令。  
+3.  以滑鼠右鍵按一下要檢視其屬性的可用性群組，然後選取 [屬性]  命令。  
   
-4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱[可用性群組屬性和新增可用性群組 &#40;一般頁面&#41;](availability-group-properties-new-availability-group-general-page.md) 和[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+4.  在 **[可用性群組屬性]** 對話方塊中，使用 **[一般]** 和 **[備份喜好設定]** 頁面檢視所選可用性群組的屬性，並在某些情況下變更這些屬性。 如需詳細資訊，請參閱 <<c0> [ 可用性群組屬性和新增可用性群組&#40;一般頁面&#41;](availability-group-properties-new-availability-group-general-page.md)並[可用性群組屬性：</c0>新增可用性群組&#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
      使用 **[權限]** 頁面來檢視與可用性群組相關聯的目前登入、角色和明確權限。 如需相關資訊，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   

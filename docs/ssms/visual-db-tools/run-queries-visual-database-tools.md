@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6e8d6912eef4722bb862946f93d00362db0bc0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e8e9dc3df3006d99bc277a62252a6933960e8b35
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526093"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679266"
 ---
 # <a name="run-queries-visual-database-tools"></a>執行查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52526093"
   
 1.  開啟或建立要執行的查詢。  
   
-2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]。  
+2.  在查詢視窗的任何位置上按一下滑鼠右鍵，然後從快速鍵功能表中選取 [執行 SQL]  。  
   
     -或-  
   

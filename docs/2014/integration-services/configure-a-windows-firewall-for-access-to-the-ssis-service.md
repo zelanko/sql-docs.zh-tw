@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
@@ -19,12 +18,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060847"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>針對 SSIS 服務的存取設定 Windows 防火牆
     
@@ -64,26 +63,26 @@ ms.locfileid: "59241897"
   
 #### <a name="to-configure-a-firewall-using-the-windowsfirewall-dialog-box"></a>若要使用 Windows 防火牆對話方塊設定防火牆  
   
-1.  在 [控制台] 中按兩下 [Windows 防火牆]。  
+1.  在 [控制台] 中按兩下 [Windows 防火牆]  。  
   
-2.  在 **[Windows 防火牆]** 對話方塊中，按一下 **[例外狀況]** 索引標籤，然後再按一下 **[加入程式]**。  
+2.  在 **[Windows 防火牆]** 對話方塊中，按一下 **[例外狀況]** 索引標籤，然後再按一下 **[加入程式]** 。  
   
-3.  在 [新增程式] 對話方塊中，按一下 [瀏覽] 巡覽至 Program Files\Microsoft SQL Server\100\DTS\Binn 資料夾，然後按一下 MsDtsSrvr.exe，再按一下 [開啟]。 按一下 **[確定]** 以關閉 **[新增程式]** 對話方塊。  
+3.  在 [新增程式]  對話方塊中，按一下 [瀏覽]  巡覽至 Program Files\Microsoft SQL Server\100\DTS\Binn 資料夾，然後按一下 MsDtsSrvr.exe，再按一下 [開啟]  。 按一下 **[確定]** 以關閉 **[新增程式]** 對話方塊。  
   
-4.  在 **[例外狀況]** 索引標籤上，按一下 **[新增連接埠]**。  
+4.  在 **[例外狀況]** 索引標籤上，按一下 **[新增連接埠]** 。  
   
-5.  在 [新增連接埠] 對話方塊的 [名稱] 方塊中，輸入 **RPC(TCP/135)** 或其他描述性名稱，在 [連接埠編號] 方塊中輸入 **135**，然後選取 [TCP]。  
+5.  在 [新增連接埠]  對話方塊的 [名稱]  方塊中，輸入 **RPC(TCP/135)** 或其他描述性名稱，在 [連接埠編號]  方塊中輸入 **135**，然後選取 [TCP]  。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會一直使用通訊埠 135。 您無法指定不同的通訊埠。  
   
 6.  在 **[新增連接埠]** 對話方塊中，可以選擇性地按一下 **[變更範圍]** 以修改預設範圍。  
   
-7.  在 [變更範圍] 對話方塊中，選取 [只有我的網路 (子網路)] 或輸入自訂清單，然後按一下 [確定]。  
+7.  在 [變更範圍]  對話方塊中，選取 [只有我的網路 (子網路)]  或輸入自訂清單，然後按一下 [確定]  。  
   
-8.  若要關閉 **[新增連接埠]** 對話方塊，請按一下 **[確定]**。  
+8.  若要關閉 **[新增連接埠]** 對話方塊，請按一下 **[確定]** 。  
   
-9. 若要關閉 **[Windows 防火牆]** 對話方塊，請按一下 **[確定]**。  
+9. 若要關閉 **[Windows 防火牆]** 對話方塊，請按一下 **[確定]** 。  
   
     > [!NOTE]  
     >  此程序是使用 [控制台] 中的 **[Windows 防火牆]** 項目設定 Windows 防火牆。 **[Windows 防火牆]** 項目只會針對目前網路位置設定檔來設定防火牆。 但若要設定 Windows 防火牆，您也可以使用 **netsh** 命令列工具或是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) 嵌入式管理單元，名為「具有進階安全性的 Windows 防火牆」。 如需這些工具的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

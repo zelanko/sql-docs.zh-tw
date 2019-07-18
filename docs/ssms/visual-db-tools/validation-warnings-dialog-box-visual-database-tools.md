@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65556
 - vdt.dlgbox.validationwarnings
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d99e77c385fdf29e068371a7b7c6bbdc1e294f53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 7aeade4ad7464ad5ddb25872cb99815ec23cb64a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674966"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689371"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47674966"
 取消儲存動作。  
   
 **儲存為文字檔**  
-顯示 [另存新檔] 對話方塊，您可在此為包含警告清單的文字檔指定一個位置。  
+顯示 [另存新檔]  對話方塊，您可在此為包含警告清單的文字檔指定一個位置。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

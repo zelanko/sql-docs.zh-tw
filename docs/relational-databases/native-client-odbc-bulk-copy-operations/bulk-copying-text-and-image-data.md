@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5032f6d038130fc78405949a171a39a6f0ec1842
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1badbeb3898850627a6a2735d584df25ea344348
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130905"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>大量複製 Text 與 Image 資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

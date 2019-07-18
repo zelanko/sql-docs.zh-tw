@@ -11,26 +11,26 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 039128f4a1e77d6c7777a47b49b2aea47a21b92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ae8839a91f83fa9e84661976643e40dc61d05a88
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831986"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682673"
 ---
 # <a name="options-environment---keyboard-page"></a>選項 (環境 - 鍵盤頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[選項] 對話方塊可以讓您自訂 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的鍵盤配置。 使用此選項以選擇鍵盤配置。 若要存取此頁面，請按一下 [工具] 功能表上的 [選項]，選取 [環境] 資料夾，然後按一下 [鍵盤]。  
+[選項]  對話方塊可以讓您自訂 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的鍵盤配置。 使用此選項以選擇鍵盤配置。 若要存取此頁面，請按一下 [工具]  功能表上的 [選項]  ，選取 [環境]  資料夾，然後按一下 [鍵盤]  。  
   
-[鍵盤配置] 下拉式清單提供可用的快速鍵集合。 若要載入特定配置，請從清單中選取。 準備離開 [選項] 對話方塊時，請按一下 [確定]。 您選取的配置將載入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+[鍵盤配置]  下拉式清單提供可用的快速鍵集合。 若要載入特定配置，請從清單中選取。 準備離開 [選項]  對話方塊時，請按一下 [確定]  。 您選取的配置將載入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 **Standard**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中預設的標準配置，並且與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 的快速鍵十分相似。  
   
-使用 [查詢快速鍵] 方格，使預存程序與鍵盤快速鍵產生關聯。  
+使用 [查詢快速鍵]  方格，使預存程序與鍵盤快速鍵產生關聯。  
   
 **快速鍵**  
 按下鍵盤組合即可執行預存程序。  

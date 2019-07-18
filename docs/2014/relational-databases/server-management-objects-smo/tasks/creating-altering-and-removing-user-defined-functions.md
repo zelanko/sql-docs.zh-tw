@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f5c1cdb80e7965fbc8e9038307f93df6dcec489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226254"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>建立、改變和移除使用者定義函數
   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>物件提供功能，可讓使用者以程式設計方式管理中的使用者定義函數[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 使用者定義函數支援輸入和輸出參數，也支援資料表資料行的直接參考。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092993"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53588972"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -48,7 +47,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Current*  
+ *CursorName*  
  [輸入]資料指標名稱。 有效的處理，資料指標名稱不得包含任何開頭或尾端空格的資料指標名稱，以及如果資料指標名稱包含分隔的識別碼，應為資料指標名稱的第一個字元位於分隔符號。  
   
  *NameLength*  
@@ -85,11 +84,11 @@ SQLRETURN SQLSetCursorName(
  資料指標名稱，設定明確或隱含地將會保持設定直到除與相關聯的陳述式時，使用**SQLFreeHandle**。 **SQLSetCursorName**可以呼叫來重新命名的資料指標陳述式，只要游標處於已配置或已備妥狀態。  
   
 ## <a name="code-example"></a>程式碼範例  
- 在下列範例中，應用程式會使用**SQLSetCursorName**設定陳述式的資料指標名稱。 然後，它會使用該陳述式來擷取 CUSTOMERS 資料表中的結果。 最後，它會執行定位的更新，以變更為 John Smith 的電話號碼。 請注意，應用程式使用不同的陳述式控制代碼，以便**選取 **並**更新**陳述式。  
+ 在下列範例中，應用程式會使用**SQLSetCursorName**設定陳述式的資料指標名稱。 然後，它會使用該陳述式來擷取 CUSTOMERS 資料表中的結果。 最後，它會執行定位的更新，以變更為 John Smith 的電話號碼。 請注意，應用程式使用不同的陳述式控制代碼，以便**選取** 並**更新**陳述式。  
   
  如需其他程式碼範例，請參閱[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

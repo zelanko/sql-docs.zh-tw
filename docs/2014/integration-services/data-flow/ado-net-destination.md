@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52dde5231a3b08bd92cf3b1d88ebfd56ce4d9c6f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832488"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
@@ -28,7 +28,7 @@ ms.locfileid: "58378116"
  您可使用 ADO NET 目的地，連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO NET 目的地疑難排解  
- 您可以記錄 ADO NET 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 ADO NET 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ADO NET 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 ADO NET 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 ADO NET 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ADO NET 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ado-net-destination"></a>設定 ADO NET 目的地  
  此目的地使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員以連接到資料來源，且連接管理員會指定要使用的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者。 如需詳細資訊，請參閱 [ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "58378116"
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可以在 [ADO NET 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可以在 [ADO NET 目的地編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [ADO NET 目的地編輯器 &#40;連線管理員頁面&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   

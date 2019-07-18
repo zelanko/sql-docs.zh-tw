@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,12 +19,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059936"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
   可使用「資料流程」工作容器上提供的屬性運算式，以指定資料流程物件的某些屬性值。  
@@ -34,9 +33,9 @@ ms.locfileid: "59240416"
   
  您可以使用屬性運算式來為封裝之每個部署的執行個體自訂組態。 您也可以使用屬性運算式來指定封裝的執行階段條件約束，其方法是搭配 **dtexec** 命令提示字元公用程式使用 **/set** 選項。 例如，您可以約束「排序」轉換所使用的 `MaximumThreads`，或是「模糊群組」和「模糊查閱」轉換所使用的 `MaxMemoryUsage`。 如果未受到約束，這些轉換可能會在記憶體中快取大量的資料。  
   
- 若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性] 視窗，其方式是在設計工具的 [控制流程] 介面上選取資料流程工作，或是選取設計工具的 [資料流程] 索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式] 屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器] 對話方塊。 下拉 [屬性] 清單來選取屬性，然後在 [運算式] 文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器] 對話方塊。  
+ 若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性]  視窗，其方式是在設計工具的 [控制流程]  介面上選取資料流程工作，或是選取設計工具的 [資料流程]  索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式]  屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器]  對話方塊。 下拉 [屬性]  清單來選取屬性，然後在 [運算式]  文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器]  對話方塊。  
   
- [屬性] 清單只會針對您已經放在設計工具之 [資料流程] 介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性] 清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已經在設計介面上放置 ADO NET 來源**屬性**清單中包含的項目`[ADO NET Source].[SqlCommand]`屬性。 此清單也會顯示資料流程工作本身的許多屬性。  
+ [屬性]  清單只會針對您已經放在設計工具之 [資料流程]  介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性]  清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已經在設計介面上放置 ADO NET 來源**屬性**清單中包含的項目`[ADO NET Source].[SqlCommand]`屬性。 此清單也會顯示資料流程工作本身的許多屬性。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>支援屬性運算式之資料流程物件的屬性  
  可以使用屬性運算式來指定下列清單中的屬性值。  
@@ -76,7 +75,7 @@ ms.locfileid: "59240416"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [加入或變更屬性運算式](expressions/add-or-change-a-property-expression.md)  
+-   [新增或變更屬性運算式](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>相關內容  
  pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  

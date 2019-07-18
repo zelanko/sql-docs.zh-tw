@@ -13,14 +13,18 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0281dfb4471fd28eb08c0900f2a087b731139d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b9ea9d63d2303a66e56ab38774845cee73c125a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728926"
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   當您啟動新增執行個體精靈時，隨即開啟 [建立 CDC 資料庫] 頁面。 使用 [建立 CDC 資料庫] 頁面可提供有關新的 CDC 執行個體及建立新的變更資料庫的資訊。  
   
  當您建立新的 CDC 資料庫時，它會啟用 SQL Server CDC，而這樣的啟用需要屬於 `sysadmin` 固定伺服器角色成員的登入。  
@@ -45,7 +49,7 @@ ms.locfileid: "58280694"
   
 1.  **變更資料庫**：新的變更資料庫的名稱。 此資料庫的名稱與您提供給執行個體的名稱相同。 這個唯讀欄位會顯示資料庫的完整路徑。  
   
-2.  **建立資料庫**：按一下 [建立資料庫]，即可建立資料庫。  
+2.  **建立資料庫**：按一下 [建立資料庫]  ，即可建立資料庫。  
   
      若要建立資料庫，登入必須擁有 `sysasmin` 伺服器角色。 如需詳細資訊，請參閱上述的安全性注意事項。  
   

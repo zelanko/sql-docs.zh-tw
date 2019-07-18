@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103274"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
   ReportingServicesService.exe.config 檔包括設定追蹤的設定。  

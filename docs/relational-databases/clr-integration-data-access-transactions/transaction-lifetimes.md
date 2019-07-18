@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12efdc644c950cecdbd676f53fe582b1d7d20ca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 759af22d445bb3c67db1f39ecf69dbeee1b666fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902480"
 ---
 # <a name="transaction-lifetimes"></a>交易存留期間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

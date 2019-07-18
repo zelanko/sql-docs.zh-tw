@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b0f5877343246a6328e9e709b7f205ef82f0922
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ea275767e2d4c67af1d03011c8db9f7190618b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938658"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>CubeDef 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -33,7 +32,7 @@ ms.locfileid: "47789686"
 ## <a name="methods"></a>方法  
  [GetSchemaObject 方法](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

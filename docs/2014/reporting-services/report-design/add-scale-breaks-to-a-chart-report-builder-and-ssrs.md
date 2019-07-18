@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77ff537ddac854981c79624fef84c4a2918ec7dc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d91c65e49d7afda378fb66d5ce65604b7f9b752e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106525"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>將刻度斷層加入至圖表 (報表產生器及 SSRS)
   刻度斷層是在圖表繪圖區上繪製的一道區域線，代表在值軸高低值之間的延續性有斷層 (通常是垂直軸或 Y 軸)。 使用刻度斷層可在相同的圖表區域中顯示兩個相異的範圍。  
@@ -33,9 +32,9 @@ ms.locfileid: "56285406"
   
 ### <a name="to-enable-scale-breaks-on-the-chart"></a>若要在圖表上啟用刻度斷層  
   
-1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]。 [垂直軸屬性] 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下垂直軸，然後按一下 [軸屬性]  。 [垂直軸屬性]  對話方塊隨即開啟。  
   
-2.  選取 [啟用刻度斷層] 核取方塊。  
+2.  選取 [啟用刻度斷層]  核取方塊。  
   
 ### <a name="to-change-the-style-of-the-scale-break"></a>變更刻度斷層的樣式  
   
@@ -43,7 +42,7 @@ ms.locfileid: "56285406"
   
 2.  以滑鼠右鍵在設計介面上按一下圖表的 Y 軸。 Y 軸物件的屬性 (依預設名為「圖表軸」) 會顯示在 [屬性] 窗格中。  
   
-3.  在 [刻度] 區段中，展開 ScaleBreakStyle 屬性。  
+3.  在 [刻度]  區段中，展開 ScaleBreakStyle 屬性。  
   
 4.  變更 ScaleBreakStyle 屬性的值，例如 BreakLineType 和 Spacing。 如需刻度中斷線屬性的詳細資訊，請參閱[將包含多個資料範圍的數列顯示在圖表上 &#40;報表產生器及 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)。  
   

@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754290"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 (SQL Server)
   傳輸安全性牽涉到驗證，以及對資料庫間交換的訊息進行加密 (選擇性)。 對於資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]而言，驗證與加密是針對資料庫鏡像端點所設定。 如需資料庫鏡像端點的簡介，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48075858"
 ##  <a name="Authentication"></a> 驗證  
  驗證就是確認使用者即為使用者所宣稱身分的程序。 資料庫鏡像端點之間的連接必須進行驗證。 夥伴或見證 (若有的話) 所提出的連接要求，也必須進行驗證。  
   
- 伺服器執行個體用於資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的驗證類型就是資料庫鏡像端點的屬性。 資料庫鏡像端點有兩種可用的傳輸安全性類型：Windows 驗證 (安全性支援提供者介面 (SSPI)) 與憑證型驗證。  
+ 伺服器執行個體用於資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的驗證類型就是資料庫鏡像端點的屬性。 資料庫鏡像端點有兩種可用的傳輸安全性類型：Windows 驗證 (安全性支援提供者介面 (SSPI)) 與憑證式驗證。  
   
 ### <a name="windows-authentication"></a>Windows 驗證  
  在 Windows 驗證下，每個伺服器執行個體會使用執行程序之 Windows 使用者帳戶的 Windows 認證來登入另一端。 Windows 驗證可能需要對登入帳戶進行一些手動設定，如下所示：  
@@ -65,7 +65,7 @@ ms.locfileid: "48075858"
   
 |ALGORITHM 值|描述|  
 |---------------------|-----------------|  
-|RC4|指定端點必須使用 RC4 演算法。 這是預設值。<br /><br /> 注意： 已被取代的 RC4 演算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
+|RC4|指定端點必須使用 RC4 演算法。 這是預設值。<br /><br /> 注意:RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
 |AES|指定端點必須使用 AES 演算法。|  
 |AES RC4|指定這兩個端點必須與這個偏好 AES 演算法的端點針對加密演算法進行交涉。|  
 |RC4 AES|指定這兩個端點必須與這個偏好 RC4 演算法的端點針對加密演算法進行交涉。|  
@@ -73,7 +73,7 @@ ms.locfileid: "48075858"
  如果連接的端點指定這兩種演算法，但指定順序不同，則以接受連接的端點為準。  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
 >   
 >  雖然 RC4 比 AES 快許多，但是 RC4 相對而言是較弱的演算法，而 AES 相對而言則是較強的演算法。 因此，建議您使用 AES 演算法。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a73ec4a842e220a16189f1390df167fe12bbab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114316"
 ---
 # <a name="environment-handles"></a>環境控制代碼
 *環境*是用來存取資料的全域內容，是全球性的本質，例如任何資訊與環境相關聯：  

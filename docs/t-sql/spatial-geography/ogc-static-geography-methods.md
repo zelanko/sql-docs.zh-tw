@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d38c5a2337b44087d8bd8303ae05653545c9369a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e88a49017db5f8a9a7140f31a10a430a45b988ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935864"
 ---
 # <a name="ogc-static-geography-methods"></a>OGC 靜態地理方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52510686"
   
  [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
 ## <a name="in-this-section"></a>本節內容  
   

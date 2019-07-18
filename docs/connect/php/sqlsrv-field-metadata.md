@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata |Microsoft Docs
+title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796080"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,9 +42,9 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>傳回值  
 陣列的 **array** ，或為 **false**。 此陣列包含結果集內各欄位的一個陣列。 每個子陣列都有如下表中所述的索引鍵。 如果擷取欄位中繼資料發生錯誤，則會傳回 **false** 。  
   
-|索引鍵|Description|  
+|索引鍵|描述|  
 |-------|---------------|  
-|[屬性]|欄位所對應的資料行名稱。|  
+|名稱名稱|欄位所對應的資料行名稱。|  
 |類型|對應至 SQL 類型的數值。|  
 |大小|字元類型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) 之欄位的字元數目。 二進位類型 (binary(n)、varbinary(n)、UDT) 之欄位的位元組數目。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |有效位數|變數有效位數 (real、numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的有效位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
@@ -79,7 +79,7 @@ sqlsrv_field_metadata( resource $stmt)
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |TIMESTAMP|SQL_BINARY (-2)|||8 個位元組|  
-|tinyint|SQL_TINYINT (-6)|||1 個位元組|  
+|TINYINT|SQL_TINYINT (-6)|||1 個位元組|  
 |udt|SQL_SS_UDT (-151)|||變數|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  

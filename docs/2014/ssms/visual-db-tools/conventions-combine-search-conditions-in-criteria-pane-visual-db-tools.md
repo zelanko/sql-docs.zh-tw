@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63140401"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
   您可以建立使用任意多個 AND 和 OR 運算子連結，包含任何搜尋條件的查詢。 查詢中如有使用 AND 與 OR 子句組合比較複雜，因此建議能夠先了解這類查詢在您執行時的解譯方式，以及這類查詢在 [[準則窗格]](visual-database-tools.md) 及 [SQL 窗格](sql-pane-visual-database-tools.md)中的表示方式。  
@@ -123,9 +123,9 @@ WHERE
   
  一般而言，這些規則指示了 AND 和 OR 子句在 [準則窗格] 中顯示的方式：  
   
--   所有使用 AND 連結的條件都會顯示在 [篩選] 格線欄或同一個 [或...] 資料欄中。  
+-   所有使用 AND 連結的條件都會顯示在 [篩選]  格線欄或同一個 [或...]  資料欄中。  
   
--   所有使用 OR 連結的條件都會顯示在不同的 [或...] 資料欄中。  
+-   所有使用 OR 連結的條件都會顯示在不同的 [或...]  資料欄中。  
   
 -   如果 AND 和 OR 子句合併的邏輯結果是 AND 分散至數個 OR 子句，[準則窗格] 會以需要的次數重複 AND 子句，以明確表示這一點。  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], items
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 116f191f798d9f6ec2fc7a0d09773cc91b713aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 94b57b25f26b974970d08123042213875aff290c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786996"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688429"
 ---
 # <a name="solution-explorer"></a>方案總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

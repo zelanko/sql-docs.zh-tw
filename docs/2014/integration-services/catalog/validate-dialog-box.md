@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385996"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771646"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
   使用 **[驗證]** 對話方塊檢查 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案或封裝中的常見問題。  
@@ -43,7 +43,7 @@ ms.locfileid: "58385996"
   
 4.  展開包含您要驗證之專案或封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]。  
+5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]  。  
   
 ##  <a name="general"></a> 設定 [一般] 頁面上的選項  
  **環境**  

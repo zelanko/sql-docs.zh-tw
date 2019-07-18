@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94f810fd3c20d76dd689b6f37b3e7c745ea4db97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120477"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781932"
 ---
 # <a name="smo-how-to-topics"></a>SMO 的使用說明主題
   SMO 的如何主題提供了有關如何設定 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 程式設計環境在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 或 C# 中建立程式的資訊。  

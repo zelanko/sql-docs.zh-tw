@@ -2,7 +2,7 @@
   href: sql-server-configuration-manager-help.md
 - name: SQL Server 服務
   href: sql-server-services.md
-- name: Analysis Server <server> (SQL Server 設定管理員)
+- name: Analysis Server <server> (SQL Server 組態管理員)
   href: analysis-server-server-sql-server-configuration-manager.md
   items:
     - name: Analysis Server 屬性 (登入索引標籤)
@@ -20,7 +20,7 @@
       href: ns-service-name-properties-service-tab.md
     - name: NS$<service name> 屬性 (進階索引標籤)
       href: ns-service-name-properties-advanced-tab.md
-- name: 報表伺服器 <server> (SQL Server 設定管理員)
+- name: 報表伺服器 <server> (SQL Server 組態管理員)
   href: report-server-server-sql-server-configuration-manager.md
   items:
     - name: Report Server 屬性 (登入索引標籤)
@@ -29,7 +29,7 @@
       href: report-server-properties-service-tab.md
     - name: Report Server 屬性 (進階索引標籤)
       href: report-server-properties-advanced-tab.md
-- name: SQL Server Agent <server> (SQL Server 設定管理員)
+- name: SQL Server Agent <server> (SQL Server 組態管理員)
   href: sql-server-agent-server-sql-server-configuration-manager.md
   items:
     - name: SQL Server Agent 屬性 (登入索引標籤)
@@ -47,7 +47,7 @@
       href: sql-server-browser-properties-service-tab.md
     - name: SQL Server Browser 屬性 (進階索引標籤)
       href: sql-server-browser-properties-advanced-tab.md
-- name: SQL Server <server> (SQL Server 設定管理員)
+- name: SQL Server <server> (SQL Server 組態管理員)
   href: sql-server-server-sql-server-configuration-manager.md
   items:
     - name: SQL Server 屬性 (登入索引標籤)
@@ -85,7 +85,7 @@
 - name: SQL Server 網路組態
   href: sql-server-network-configuration.md
   items:
-    - name: <server> 的通訊協定(SQL Server 設定管理員)
+    - name: <server> 的通訊協定 (SQL Server 組態管理員)
       href: protocols-for-server-sql-server-configuration-manager.md
     - name: MSSQLSERVER 的通訊協定內容 (旗標索引標籤)
       href: protocols-for-mssqlserver-properties-flags-tab.md

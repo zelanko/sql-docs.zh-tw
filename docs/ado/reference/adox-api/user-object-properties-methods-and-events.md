@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225ec15308a29a2e10a223b1ec3474712d96a652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a7b7f3939ff617ab67589d7566cdbf28719731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964961"
 ---
 # <a name="user-object-properties-methods-and-events"></a>User 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -37,7 +36,7 @@ ms.locfileid: "47827556"
   
  [SetPermissions 方法](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

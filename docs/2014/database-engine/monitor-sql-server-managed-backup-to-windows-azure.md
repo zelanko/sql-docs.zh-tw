@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62844534"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>監視 SQL Server Managed Backup 到 Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]有內建的測量工具，可用於找出備份程序中的問題和錯誤，並在可能時施以更正動作加以矯正。  不過有某些狀況需要使用者介入。 本主題描述可用於判斷備份之整體健康情況的工具，並找出需要處理的所有錯誤。  
   
 ## <a name="overview-of-includesssmartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]內建偵錯概觀  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會定期檢閱排程的備份，並嘗試重新排程所有失敗的備份。 它會定期輪詢儲存體帳戶，找出記錄檔鏈結中，影響資料庫復原能力的中斷點，然後據此排程新的備份。 它也考慮到 Windows Azure 節流原則，並具備可管理多個資料庫備份的機制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用擴充事件追蹤所有的活動。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理程式所使用的擴充事件通道包含管理、作業、分析和偵錯。 屬於管理類別的事件通常和錯誤有關，而且需要使用者的介入，並且預設為啟動。 分析事件也預設為開啟，不過通常和需要使用者介入的錯誤無關。 作業事件通常做為參考用。 例如，作業事件包括排程備份、順利完成備份等等。偵錯是最詳細的，被[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在內部使用偵錯判斷問題，並視需要更正問題。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會定期檢閱排程的備份，並嘗試重新排程所有失敗的備份。 它會定期輪詢儲存體帳戶，找出記錄檔鏈結中，影響資料庫復原能力的中斷點，然後據此排程新的備份。 它也考慮到 Windows Azure 節流原則，並具備可管理多個資料庫備份的機制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會使用擴充事件追蹤所有的活動。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理程式所使用的擴充事件通道包含管理、作業、分析和偵錯。 屬於管理類別的事件通常和錯誤有關，而且需要使用者的介入，並且預設為啟動。 分析事件也預設為開啟，不過通常和需要使用者介入的錯誤無關。 作業事件通常做為參考用。 例如，作業事件包括排程備份、 順利完成備份等等。偵錯是最詳細的資訊，並會在內部使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]判斷問題並視需要加以更正。  
   
 ### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的監視參數  
  **Smart_admin.sp_set_parameter**系統預存程序可讓您指定的監視設定。 下列章節將逐步討論啟用擴充事件的程序，以及啟用錯誤和警告的電子郵件通知。  
@@ -30,9 +30,9 @@ ms.locfileid: "52529964"
   
 1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這樣會傳回擴充事件的現有組態，以及電子郵件通知。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 這樣會傳回擴充事件的現有組態，以及電子郵件通知。  
   
 ```  
 Use msdb  

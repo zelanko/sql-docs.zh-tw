@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bb9338a5951f480baa052aff771f3d149282f18a
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+manager: jroth
+ms.openlocfilehash: d9649b6c969a0b60b6d23ae3e44dc8c76bc37463
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795045"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 中已停止的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,16 @@ ms.locfileid: "51350072"
   
 ## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 是 64 位元應用程式。 即使有些元素是以 32 位元元件的形式執行，32 位元安裝已然中止。  
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 是 64 位元應用程式。 即使有些元素是以 32 位元元件的形式執行，32 位元安裝已然中止。  
   
--   已停止相容性層級 90。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+- 已停止相容性層級 90。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
 
--   ActiveX 子系統已停止。 請改用命令列或 PowerShell 指令碼。
+- ActiveX 子系統已停止。 請改用命令列或 PowerShell 指令碼。
   
 ## <a name="previous-versions"></a>先前版本  
   
--   [SQL Server 2014 中已停止的資料庫引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
--   [SQL Server 2012 中已停止的資料庫引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
--   [SQL Server 2008 中已停止的資料庫引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
+- [SQL Server 2014 中已停止的 Database Engine 功能](http://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 中已被取代的 Database Engine 功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 複寫中已被取代的功能](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  

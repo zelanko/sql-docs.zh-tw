@@ -2,20 +2,20 @@
 title: 篩選方程式範例 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6d63c013c01889941aed1804ebf5ebf2930209ea
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 37fc28cbcdbeaa261550f0490dccaf2a25c51cdf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579071"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>篩選方程式範例 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  

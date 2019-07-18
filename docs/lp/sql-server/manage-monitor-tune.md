@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 5beff15b746c26520c8d95048a9849fe2f710aca
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63265665"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -158,7 +158,7 @@ ms.locfileid: "56319289"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>以原則為基礎的管理</h3>
+                                                    <h3>原則式管理</h3>
                                                     <p>用於管理一或多個 SQL Server 執行個體的原則型系統。</p>
                                                 </div>
                                             </div>
@@ -375,7 +375,7 @@ ms.locfileid: "56319289"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>In-Memory OLTP</h3>
+                                                    <h3>記憶體內部 OLTP</h3>
                                                     <p>將整個資料表留在記憶體中的效能最佳化選項。</p>
                                                 </div>
                                             </div>
@@ -451,7 +451,7 @@ ms.locfileid: "56319289"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Statistics</h3>
+                                                    <h3>統計資料</h3>
                                                     <p>告訴 SQL Server 引擎散發資料的方式，也會用於建立執行計畫。</p>
                                                 </div>
                                             </div>

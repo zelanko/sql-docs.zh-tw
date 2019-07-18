@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.importfailing.f1
 - sql12.dqs.kb.importselect.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f53d25c99da4ae193f3f37ea07748f603b9cf2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484317"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
   本主題描述如何將 Excel 檔案中的值匯入 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的定義域中。 使用 Excel 檔案將定義域值匯入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可簡化知識產生程序，進而節省時間與精力。 此程序可讓在 Excel 檔案或文字檔案中擁有有效資料值清單的人，將這些值匯入定義域中。 透過 Excel 檔案，您可以將定義域值匯入定義域或將定義域匯入知識庫中 (如需將定義域匯入知識庫的詳細資訊，請參閱[在知識探索中匯入 Excel 檔案中的定義域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。)匯出至 Excel 檔案不受支援。  
@@ -70,7 +70,7 @@ ms.locfileid: "56019599"
   
 14. 按一下 **[完成]** ，將值加入至知識庫。  
   
-##  <a name="FollowUp"></a> 後續操作：將值匯入 Excel 檔案中的定義域之後  
+##  <a name="FollowUp"></a> 後續操作：將 Excel 檔案中的值匯入定義域之後  
  將值匯入定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索以將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Synonyms"></a> 匯入同義字  

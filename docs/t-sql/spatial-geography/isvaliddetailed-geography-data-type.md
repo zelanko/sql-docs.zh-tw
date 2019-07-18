@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geography
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f6db4d1090d464a7b2783b3494c0b478060faf7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bbe4c8cf9f6084282f37353aede357d5086ddc6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937685"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

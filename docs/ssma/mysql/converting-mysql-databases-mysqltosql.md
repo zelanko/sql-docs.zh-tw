@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1211a1d5f22758b5c3732aa1b9843fe11ef8b3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103054"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>轉換 MySQL 資料庫 (MySQLToSQL)
 您已經連接到 MySQL 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，並設定專案範本和對應的資料選項，您可以將轉換至 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件。  

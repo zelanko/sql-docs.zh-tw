@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - integrating reports [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - application integration [Reporting Services]
 - reports [Reporting Services], integrating
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 33b628894376a909de5ee39b9de5a6e979a679f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126146"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>將 Reporting Services 整合到應用程式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是開放且可延伸的報表平台，用以提供開發人員一組完整的 API 以開發方案。  

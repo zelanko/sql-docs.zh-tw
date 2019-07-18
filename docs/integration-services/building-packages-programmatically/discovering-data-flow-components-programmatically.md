@@ -20,14 +20,18 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7558f5505674da6f3345514c5ad28d5fcb47dfdb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9191d9a88480f6efd64099f744abc7b311ec7b39
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729282"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>以程式設計方式探索資料流程元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在將資料流程工作加入封裝之後，下一步可能就是要判斷有哪些資料流程元件可供您使用。 您可以使用程式設計方式探索安裝在本機電腦上可供使用的資料流程來源、轉換和目的地。 如需將資料流程工作新增套件的資訊，請參閱[以程式設計方式新增資料流程工作](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)。  
   
 ## <a name="discovering-components"></a>探索元件  

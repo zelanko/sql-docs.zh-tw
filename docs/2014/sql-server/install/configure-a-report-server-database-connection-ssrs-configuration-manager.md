@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -18,12 +17,12 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096185"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
   每個報表伺服器執行個體都必須連接至儲存伺服器所管理之報表、報表模型、共用資料來源、資源和中繼資料的報表伺服器資料庫。 如果您要安裝預設組態，您可以在報表伺服器安裝期間建立初始連接。 在大部分的情況下，您將利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，在安裝程式完成之後設定連接。 您可以隨時修改連接，以變更帳戶類型或重設認證。 如需如何建立資料庫及設定連線的逐步指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
@@ -45,16 +44,16 @@ ms.locfileid: "48202649"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用`System.Data.SqlClient`連接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]主控報表伺服器資料庫。 如果您要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本機執行個體，報表伺服器將會使用共用記憶體建立連接。 如果您要使用報表伺服器資料庫的遠端資料庫伺服器，您可能必須根據您使用的版本來啟用遠端連接。 如果您正在使用 Enterprise Edition，預設會啟用 TCP/IP 的遠端連接。  
   
- 若要確認此執行個體可接受遠端連線，請依序按一下 [開始]、[所有程式]、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
+ 若要確認此執行個體可接受遠端連線，請依序按一下 [開始]  、[所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，再按一下 [SQL Server 組態管理員]  ，然後確認每一個服務都已啟用 TCP/IP 通訊協定。  
   
- 當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]**、 **[所有程式]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]**、 **[SQL Server 組態管理員]**、 **[SQL Server 網路組態]**，再按一下 **[MSSQLSERVER 的通訊協定]**。 如需詳細資訊，請參閱《 [線上叢書》中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 啟用或停用伺服器網路通訊協定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 當您啟用遠端連接時，也會啟用用戶端和伺服器通訊協定。 若要確認通訊協定已啟用，請依序按一下 **[開始]** 、 **[所有程式]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 、 **[SQL Server 組態管理員]** 、 **[SQL Server 網路組態]** ，再按一下 **[MSSQLSERVER 的通訊協定]** 。 如需詳細資訊，請參閱《 [線上叢書》中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 啟用或停用伺服器網路通訊協定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="defining-a-report-server-database-connection"></a>定義報表伺服器資料庫連接  
  若要設定連接，您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或 **rsconfig** 命令列公用程式。 報表伺服器需要下列連接資訊：  
   
 -   主控報表伺服器資料庫之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。  
   
--   報表伺服器資料庫的名稱。 第一次建立連接時，您可以建立新的報表伺服器資料庫或選取現有的資料庫。 如需詳細資訊，請參閱 <<c0> [ 建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)。</c0>  
+-   報表伺服器資料庫的名稱。 第一次建立連接時，您可以建立新的報表伺服器資料庫或選取現有的資料庫。 如需詳細資訊，請參閱《 [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)。  
   
 -   認證類型。 您可以使用服務帳戶、Windows 網域帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48202649"
  您可以設定多個報表伺服器，使用同一個報表伺服器資料庫。 這個部署組態稱為向外延展部署。 如果您想要在伺服器叢集中執行多部報表伺服器，此組態為必要條件。 但是，如果您想要分割服務應用程式，或是測試新報表伺服器執行個體的安裝和設定，將它與現有的報表伺服器安裝做比較，也可以使用這個組態。 如需詳細資訊，請參閱[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

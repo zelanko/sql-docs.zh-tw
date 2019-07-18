@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ffebeccb4b024434edf54990229ea9f001f39704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107047"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>為自訂資料處理延伸模組指定連接
   您可以在報表伺服器中建立或使用協力廠商自訂資料處理延伸模組，以便強化支援之資料來源的資料處理功能，或支援預設 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝未提供的其他資料來源類型。 不同的實作，處理連接的方式也不同。 下列實作適用於資料處理延伸模組：  
@@ -61,7 +60,7 @@ ms.locfileid: "56027649"
   
 1.  設定自動執行帳戶。 若要利用 `IDbConnection` 來進行連接，則必須設定此帳戶。 報表伺服器在進行連接時會模擬該帳戶。  
   
-2.  在報表中設定資料來源屬性來使用 **[無認證]**。  
+2.  在報表中設定資料來源屬性來使用 **[無認證]** 。  
   
 3.  將用於連接到資料來源的認證放在連接字串中。  
   

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97dc32d375c34d0e4993cdd297783f44a0f28d13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945260"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>資料夾和檔案的權限 (Master Data Services)
 
@@ -36,7 +35,7 @@ ms.locfileid: "52760159"
   
 ###### <a name="program-files-default-permissions"></a>Program Files 的預設權限  
   
-|群組或帳戶名稱|[權限]|  
+|群組或帳戶名稱|Permissions|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊權限|  
 |SYSTEM|特殊權限|  
@@ -49,7 +48,7 @@ ms.locfileid: "52760159"
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 的權限  
   
-|群組或帳戶名稱|[權限]|  
+|群組或帳戶名稱|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
 |系統管理員|修改、讀取與執行、列出資料夾內容、讀取、寫入|  
@@ -57,7 +56,7 @@ ms.locfileid: "52760159"
   
 ###### <a name="webconfig-permissions"></a>Web.config 的權限  
   
-|群組或帳戶名稱|[權限]|  
+|群組或帳戶名稱|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|完全控制、修改、讀取與執行、讀取、寫入|  
 |系統管理員|完全控制、修改、讀取與執行、讀取、寫入|  

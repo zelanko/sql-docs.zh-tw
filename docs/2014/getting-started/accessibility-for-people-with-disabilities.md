@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62842749"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>行動不便人士的協助工具
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力於提供每一個人都能夠方便使用的產品與服務。 本主題提供有關下列功能、產品及服務的資訊，讓行動不便人士更容易使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 家族的產品。  
@@ -53,7 +53,7 @@ ms.locfileid: "59242446"
 ## <a name="assistive-technology-products-for-windows"></a>Windows 的輔助技術產品  
  有各式各樣的輔助技術產品可讓電腦更方便行動不便人士使用。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供一份可在 Windows 作業系統上執行之輔助技術產品的可搜尋目錄，該目錄位於 [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67166) (Microsoft 協助工具) 網站。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供在 Windows 作業系統執行的輔助技術產品的可搜尋目錄[Microsoft 協助工具網站](https://go.microsoft.com/fwlink/?LinkID=67166)。  
   
  可使用下列產品類型：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59242446"
  如果您使用輔助技術產品，請在升級前洽詢輔助技術廠商，以確認與您電腦上的產品之相容性。 您的輔助技術廠商也可協助您了解如何調整設定，以最佳化與您的 Windows 或其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品之相容性。  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>其他格式的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文件集  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件可協助我們的客戶與協助工具需求的替代格式。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集還以其他格式提供，以方便需要協助工具的客戶使用。  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文件集  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文件集可在線上取得。 如需詳細資訊，請參閱 <<c0> [ 使用 SQL Server 的產品文件集](../2014-toc/books-online-for-sql-server-2014.md)。  
@@ -82,13 +82,13 @@ ms.locfileid: "59242446"
  您可以取得可存取文件[!INCLUDE[msCoName](../includes/msconame-md.md)]產品[Microsoft 協助工具網站](https://go.microsoft.com/fwlink/?LinkID=67164)。  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic，Inc.  
- 您可以從 Recording for the Blind & Dyslexic, Inc. 取得其他的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 出版品。這些文件會以錄音帶或磁片的方式分送給其分送服務的合格註冊成員。 該集合包含 80,000 種以上的標題，包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 出版的書籍。 如需有關 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集與 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 書籍之適用性和可用性的資訊，請洽：  
+ 您可以取得其他[!INCLUDE[msCoName](../includes/msconame-md.md)]從 Recording for the Blind & Dyslexic，Inc.的發行集這些文件會散發到錄音帶或磁片上發佈服務的已註冊合格成員。 該集合包含 80,000 種以上的標題，包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集，以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 出版的書籍。 如需有關 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品文件集與 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 書籍之適用性和可用性的資訊，請洽：  
   
  Recording for the Blind & Dyslexic，Inc.20 Roszel Road Princeton, NJ 08540  
   
  美國境內電話：(800) 221-4792  
   
- 美國和加拿大以外地區請撥電話：(609) 452-0606  
+ 及加拿大美國電話從：(609) 452-0606  
   
  傳真：(609) 987-8116 web: 
 
@@ -101,7 +101,7 @@ ms.locfileid: "59242446"
  您可以連絡[!INCLUDE[msCoName](../includes/msconame-md.md)]以文字電話的撥號 (800) 892-5234 早上 6 點 30 之間的 Sales Information Center Sales Information Center。 服務時間為週一至週五，例假日除外。  
   
 ### <a name="technical-help"></a>技術協助  
- 如需在美國境內取得技術協助，您可以在早上 6 點到下午 6 點 (美國西岸時間) 之間撥 (800) 892-5234，以文字電話連絡「[!INCLUDE[msCoName](../includes/msconame-md.md)]  和 06:00:00 執行報表， 服務時間為週一至週五，例假日除外。 在加拿大請撥 (905) 568-9641，服務時間為上午 8 點 到下午 8 點 (東部時間)，週一至週五，例假日除外。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援服務依使用服務時各地區的價格、條款及條件而異。  
+ 如需在美國境內取得技術協助，您可以在早上 6 點到下午 6 點 (美國西岸時間) 之間撥 (800) 892-5234，以文字電話連絡「[!INCLUDE[msCoName](../includes/msconame-md.md)] 和 06:00:00 執行報表， 服務時間為週一至週五，例假日除外。 在加拿大請撥 (905) 568-9641，服務時間為上午 8 點 到下午 8 點 (東部時間)，週一至週五，例假日除外。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援服務依使用服務時各地區的價格、條款及條件而異。  
   
 ## <a name="getting-more-accessibility-information"></a>取得更多的協助工具資訊  
  [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287) (Microsoft 協助工具) 網站提供有關可提升行動不便人士生活品質之輔助技術的資訊。  
@@ -111,7 +111,7 @@ ms.locfileid: "59242446"
  另外還提供免費的電子報月刊，讓您取得有關 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品協助工具主題的最新資訊。 若要訂閱，請參閱 [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287)(Microsoft 協助工具) 網站。  
   
 ## <a name="see-also"></a>另請參閱  
- [開始使用 SQL Server 的產品文件集](../2014-toc/books-online-for-sql-server-2014.md)   
+ [開始使用適用於 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)   
  [取得 SQL Server 協助](getting-sql-server-assistance.md)  
   
   

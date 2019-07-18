@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206658"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
   此範例會示範如何從結果集中提取具有大型使用者定義型別的資料列。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。  

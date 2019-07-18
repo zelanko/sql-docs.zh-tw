@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ef41affecd131626da17ec7d608249437abed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62626512"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>已備妥之陳述式的資料表值參數中繼資料
   應用程式可以取得已備妥之程序呼叫透過 SQLNumParams 和 SQLDescribeParam 的中繼資料。 資料表值參數，如*DataTypePtr*設定為 SQL_SS_TABLE。 其他中繼資料可透過 SQL_CA_SS_TYPE_NAME、 SQL_CA_SS_CATALOG_NAME 和 SQL_CA_SS_SCHEMA_NAME 的 SQLGetDescField。  

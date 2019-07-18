@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 007ae07fd58f5f508fd80e17640a3f0e1cb59f1a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b5bb549859bf6177571b080033b09419c5eed90d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66221163"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,17 +78,17 @@ ms.locfileid: "54326589"
  如需詳細資訊，請參閱本主題稍後的[指定使用者或登入名稱](#_user)。  
   
  NO REVERT  
- 指定內容切換不能還原回先前的內容。 **NO REVERT** 選項只能在特定層級使用。  
+ 指定內容切換不能還原回先前的內容。 **NO REVERT** 選項只能在特定層級使用。
   
  如需如何還原到先前內容的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE INTO **@**_varbinary_variable_  
- 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@**_varbinary_variable_ 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@**_varbinary_variable_。 **COOKIE INTO** 選項只能在特定層級使用。  
+ COOKIE INTO **@** _varbinary_variable_  
+ 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@** _varbinary_variable_ 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@** _varbinary_variable_。 **COOKIE INTO** 選項只能在特定層級使用。  
   
- **@** _varbinary_variable_ 是 **varbinary(8000)**。  
+ **@** _varbinary_variable_ 是 **varbinary(8000)** 。  
   
 > [!NOTE]  
->  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)**，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)**。 應用程式應保留 **varbinary(8000)**，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
+>  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)** 。 應用程式應保留 **varbinary(8000)** ，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
   
  CALLER  
  用於模組內部時，指定模組內部的陳述式是在模組呼叫者的內容中執行。  
@@ -126,7 +126,9 @@ ms.locfileid: "54326589"
 >  只要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以解析名稱，EXECUTE AS 陳述式即可順利地運作。 即使 Windows 使用者無權存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，只要網域使用者存在，Windows 或許可以解析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者。 這可能會導致無權存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者順利地登入，但模擬登入只有 public 或 guest 的權限。  
   
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
- 當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。  
+ 當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。   請注意，如果啟用連線共用，`sp_reset_connection` 將會失敗，且連線會中斷。  事件記錄檔中的錯誤訊息將如下：
+ 
+> 此連接已經卸除，因為開啟的主體假設新的安全性內容，然後嘗試在其模擬的安全性內容之下重設連接。 不支援此狀況。 請參閱線上叢書中的＜模擬概觀＞。
   
  指定 WITH NO REVERT COOKIE = @*varbinary_variable* 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variable*。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
@@ -135,7 +137,7 @@ ms.locfileid: "54326589"
 ## <a name="determining-the-original-login"></a>決定原始登入  
  使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函式時，可傳回連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入名稱。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要指定某項登入的 **EXECUTE AS**，呼叫者必須具有指定登入名稱的 **IMPERSONATE** 權限，而且不應拒絕其 **IMPERSONATE ANY LOGIN** 權限。 若要指定資料庫使用者的 **EXECUTE AS** 權限，呼叫者必須具有指定使用者名稱的 **IMPERSONATE** 權限。 指定 **EXECUTE AS CALLER** 時，不需要 **IMPERSONATE** 權限。  
   
 ## <a name="examples"></a>範例  

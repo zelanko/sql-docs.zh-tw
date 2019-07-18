@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -36,12 +35,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091224"
 ---
 # <a name="using-reports"></a>使用報表
   Upgrade Advisor 分析精靈會為伺服器上分析的每個元件和每個執行個體 (如有必要) 產生個別報表。 報表會提供影響升級之已知問題的詳細資料。 報表還會提供解決識別問題之資訊和建議動作的連結。  
@@ -83,10 +82,10 @@ ms.locfileid: "48070898"
  如果您想要與其他人共用這項資訊，可以將 XML 報表傳送給他們。 或者，如果您想要使用其他應用程式，就可以將報表匯出成逗號分隔值檔案，以便用來建立試算表、文字檔或電子郵件訊息。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 檢視 Upgrade Advisor 報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [如何： 匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)   
- [如何： 篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [如何：檢視 Upgrade Advisor 報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [如何：將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [如何：篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

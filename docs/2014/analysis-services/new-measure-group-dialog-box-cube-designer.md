@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuregroupdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072269"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>新增量值群組對話方塊 (Cube 設計工具)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [新增量值群組] 對話方塊，即可將新的量值群組加入 Cube 設計師中的 Cube。 您可以藉由下列方式顯示 [新增量值群組] 對話方塊：  

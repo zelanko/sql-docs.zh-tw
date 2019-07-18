@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 49552e7333d8cac2b55a9ae6e8dd7a41ff4c5955
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094327"
 ---
 # <a name="serializability"></a>可序列化能力
 在理想情況下，交易應該*序列化*。 交易可以說是可序列化，如果同時執行交易的結果相同，則為循序-執行它們的結果也就是一個接著一個。 它並不重要交易第一次，執行僅，結果不會反映任何混合的交易。  

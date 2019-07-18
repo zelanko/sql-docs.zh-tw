@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032046"
 ---
 # <a name="creating-extended-stored-procedures"></a>建立擴充預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec (dllexport) 是 Microsoft 專用的編譯器副檔名。 如果您的編譯器不支援此指示詞，您應該在 DEF 檔案的 EXPORTS 區段下匯出這個函數。  
   
- 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開頭為追蹤旗標-t260 時，或者如果具備系統管理員權限的使用者執行 DBCC TRACEON (260)，而且如果擴充預存程序 DLL 不支援 __getxpversion （），一則警告訊息 (錯誤 8131： 擴充預存程序DLL '%' 並未匯出\__GetXpVersion().) 會列印到錯誤記錄檔。 (請注意， \__GetXpVersion() 開頭為兩個底線。)  
+ 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開頭為追蹤旗標-t260 時，或者如果具備系統管理員權限的使用者執行 DBCC TRACEON (260)，而且如果擴充預存程序 DLL 不支援 __getxpversion （），一則警告訊息 (錯誤 8131:擴充預存程序 DLL '%' 並未匯出\__GetXpVersion().) 會列印到錯誤記錄檔。 (請注意， \__GetXpVersion() 開頭為兩個底線。)  
   
  如果擴充預存程序 DLL 匯出 __GetXpVersion()，但是函數所傳回的版本低於伺服器所需要的版本，敘述函數所傳回之版本以及伺服器所需之版本的警告訊息就會列印到錯誤記錄檔中。 如果您收到此訊息時，您要傳回不正確的值從\__GetXpVersion()，或者您正在編譯之舊版的 srv.h 進行編譯。  
   

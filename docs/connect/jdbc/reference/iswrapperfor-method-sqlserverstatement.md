@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8bd0f84989a24c913ece143710e8f17055fa0171
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 34ead896ef4ba8ae6fc5d8ca57c1623a00aa5165
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796280"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>isWrapperFor 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法是由 JDBC 4.0 中引進的 java.sql.Wrapper 介面所定義。  
+## <a name="remarks"></a>備註  
+ [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法是由 JDBC 4.0 中導入的 java.sql.Wrapper 介面所定義。  
   
- 如果這個方法傳回 true，則搭配相同引數呼叫 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 將會成功。  
+ 如果這個方法傳回 true，則配合相同引數呼叫 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 將會成功。  
   
  如需範例程式碼，請參閱 <<c0> [ 更新大型資料範例](../../../connect/jdbc/updating-large-data-sample.md)。  
   

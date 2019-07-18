@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be115f4a0dad8cd7cfacca89a5ff117734087b28
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a5fb78f4d7ab510f9b7dde3eb8f9d4d43ca157aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134908"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586442"
 ---
 # <a name="sort-columns"></a>排序資料行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,9 @@ ms.locfileid: "54134908"
 1.  在方格的第一個資料列中，從 **[資料行名稱]** 資料行中選取 **[狀態]** ，然後從 **[排序順序]** 資料行中選取值。  
   
 2.  在方格的第二個資料列中，從 **[資料行名稱]** 資料行中選取 **[連接類型]** ，然後從 **[排序順序]** 資料行中選取值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="options"></a>選項。  
  **[狀態]**  
  您想要用來排序的資料行名稱。 您可以針對一或多個資料行進行排序。 不過，您無法針對 **[發行集]** 索引標籤上的 **[目前的平均效能]** 或 **[目前最差效能]** 資料行進行排序，因為這些資料行值的計算方式不同。  

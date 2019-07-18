@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966184"
 ---
 # <a name="groups-collection-adox"></a>Groups 集合 (ADOX)
 包含所有預存[群組](../../../ado/reference/adox-api/group-object-adox.md)目錄或使用者的物件。  

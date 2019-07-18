@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 7a88d7225d574794b4dc50ae30a9205b1cac08e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678902"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264246"
 ---
 # <a name="data-migration-report--oracletosql"></a>資料移轉報告 (OracleToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +27,7 @@ ms.locfileid: "47678902"
 **來源**  
 來源資料表中。  
   
-**若要**  
+**To**  
 目標資料表中。  
   
 **資料列總數**  

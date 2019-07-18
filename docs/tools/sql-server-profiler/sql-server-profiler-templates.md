@@ -15,15 +15,15 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c69319c2962dc8158e1c2565faee65e982812f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a3560f0f70b6fe7b74f4072ce9c719c9241f703
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729743"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "47689526"
  如需有關事件類別的詳細資訊，請參閱 [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 ## <a name="default-template"></a>預設範本  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性] 對話方塊中的 [一般] 索引標籤，選取 [作為所選取伺服器類型的預設範本] 核取方塊。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性]  對話方塊中的 [一般]  索引標籤，選取 [作為所選取伺服器類型的預設範本]  核取方塊。  
   
- 若要巡覽至 [追蹤範本屬性] 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [檔案] 功能表上選擇 [範本]，然後按一下 [新增範本] 或 [編輯範本]。  
+ 若要巡覽至 [追蹤範本屬性]  對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [檔案]  功能表上選擇 [範本]  ，然後按一下 [新增範本]  或 [編輯範本]  。  
   
 > [!NOTE]  
 >  預設範本是特定伺服器類型專用的範本。 變更一種伺服器類型的預設範本，並不會影響其他伺服器類型的預設範本。 如需針對特定伺服器來設定預設範本的詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)。  
@@ -65,6 +65,6 @@ ms.locfileid: "47689526"
  [建立追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [修改追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
- [匯入追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
+ [匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

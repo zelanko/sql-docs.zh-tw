@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754590"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暫停或繼續資料庫鏡像工作階段 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中暫停或繼續資料庫鏡像。  
@@ -38,7 +38,7 @@ ms.locfileid: "48093998"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[暫停或繼續資料庫鏡像之後](#FollowUp)  
+-   **後續操作：** [暫停或繼續資料庫鏡像之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  您可以在任何時候暫停資料庫鏡像工作階段，此工作階段可能會在發生瓶頸時提高效能，而且您可以隨時繼續暫停的工作階段。  
@@ -60,15 +60,15 @@ ms.locfileid: "48093998"
   
 2.  展開 **[資料庫]** 並選取資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]，然後按一下 [鏡像]。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  若要暫停工作階段，請按一下 **[暫停]**。  
+4.  若要暫停工作階段，請按一下 **[暫停]** 。  
   
-     會出現提示字元要求確認；如果您按一下 **[是]**，工作階段將暫停，然後按鈕將變更為 **[繼續]**。  
+     會出現提示字元要求確認；如果您按一下 **[是]** ，工作階段將暫停，然後按鈕將變更為 **[繼續]** 。  
   
      如需暫停工作階段之影響的詳細資訊，請參閱[暫停與繼續資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
   
-5.  若要繼續工作階段，請按一下 **[繼續]**。  
+5.  若要繼續工作階段，請按一下 **[繼續]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48093998"
   
 1.  連接到任一個夥伴的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  發出下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48093998"
   
 1.  連接到任一個夥伴的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  發出下列 Transact-SQL 陳述式：  
   

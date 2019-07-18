@@ -13,15 +13,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9efe4245fd10e8fc0c5dbd0d114ba429ad13d1dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479708"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，刪除您不再需要的成員或集合。 如果您要大量刪除成員，請改用暫存處理序。 如需詳細資訊，請參閱 <<c0> [ 停用或刪除的成員，使用暫存處理序&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。</c0>  
@@ -44,21 +44,21 @@ ms.locfileid: "52758670"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  若要刪除：  
   
-    -   分葉成員，請從功能表列指向 [實體]，然後按一下包含該成員的實體名稱。  
+    -   分葉成員，請從功能表列指向 [實體]  ，然後按一下包含該成員的實體名稱。  
   
-    -   合併成員，請從功能表列指向 [階層]，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
+    -   合併成員，請從功能表列指向 [階層]  ，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
   
-    -   集合，請從功能表列指向 [集合]，然後按一下包含該集合的實體名稱。  
+    -   集合，請從功能表列指向 [集合]  ，然後按一下包含該集合的實體名稱。  
   
 5.  在方格中，按一下要刪除之成員或集合的資料列。  
   
-6.  按一下 [刪除成員]、[刪除] 或 [刪除集合]。  
+6.  按一下 [刪除成員]  、[刪除]  或 [刪除集合]  。  
   
-7.  在確認對話方塊中按一下 **[確定]**。  
+7.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新啟用成員或集合 &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   

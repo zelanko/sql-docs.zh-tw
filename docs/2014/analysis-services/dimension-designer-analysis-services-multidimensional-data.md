@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
@@ -13,12 +12,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528937"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081782"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>維度設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [維度設計師]，即可瀏覽維度所包含的資料，以及修改現有維度的各種屬性 (Property)：屬性 (Attribute)、階層、層級、屬性 (Attribute) 關聯性和翻譯。  
@@ -27,7 +26,7 @@ ms.locfileid: "52528937"
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 **[方案總管]** 中，使用下列其中一個程序：  
   
-    -   以滑鼠右鍵按一下維度，然後按一下 [開啟] 或 [檢視表設計工具]。  
+    -   以滑鼠右鍵按一下維度，然後按一下 [開啟]  或 [檢視表設計工具]  。  
   
          -或-  
   

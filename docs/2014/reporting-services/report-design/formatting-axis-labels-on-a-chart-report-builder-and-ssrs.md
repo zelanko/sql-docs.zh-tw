@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10148"
@@ -25,20 +24,20 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d0ec435926a3b7604aa0d6397b72ef6886da21a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105850"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  
   
- 您可以使用 [軸屬性] 對話方塊或 [屬性] 窗格來設定軸的格式。 以滑鼠右鍵按一下要格式化的軸，然後按一下 [軸屬性]，變更軸文字、數值和日期格式、主要和次要刻度、標籤自動調整以及軸線條的粗細、色彩和樣式等值。 若要變更軸標題的值，以滑鼠右鍵按一下軸標題，然後按一下 [軸標題屬性]。  
+ 您可以使用 [軸屬性]  對話方塊或 [屬性] 窗格來設定軸的格式。 以滑鼠右鍵按一下要格式化的軸，然後按一下 [軸屬性]  ，變更軸文字、數值和日期格式、主要和次要刻度、標籤自動調整以及軸線條的粗細、色彩和樣式等值。 若要變更軸標題的值，以滑鼠右鍵按一下軸標題，然後按一下 [軸標題屬性]  。  
   
  軸標籤會在圖表上識別主要格線間隔。 根據預設，圖表會使用演算法來決定如何將標籤以最佳化的方式放置在軸上，以避免文字重疊。  
   
@@ -108,9 +107,9 @@ ms.locfileid: "56292616"
   
  有兩種方式可以設定純量軸：  
   
--   在 [軸屬性] 對話方塊中，選取 [純量軸] 選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)。  
+-   在 [軸屬性]  對話方塊中，選取 [純量軸]  選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)。  
   
--   在 [數列屬性] 對話方塊中，針對 [類別目錄欄位] 選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
+-   在 [數列屬性]  對話方塊中，針對 [類別目錄欄位]  選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>從類別目錄軸加入或移除側邊界  
  在橫條圖、直條圖和散佈圖類型中，圖表會自動在 X 軸的端點加入側邊界。 您不可以變更邊界的大小。 在所有其他圖表類型中，圖表中都不會加入側邊界。 如需詳細資訊，請參閱 [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 53298412ee41c04b9be1c8497fe07fe3749d67c7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d454f84295d86b373c3b5462580641a719435a17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294043"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104803"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子報表 (報表產生器及 SSRS)
   子報表是一個報表項目，會在主要報表的主體內顯示另一個報表。 報表中子報表的概念類似於網頁中的框架。 它用於在報表中內嵌報表。 任何報表都可以做為子報表。 顯示為子報表的報表儲存在報表伺服器上，通常會與父報表儲存在同一個資料夾中。 您可以設計父報表來傳遞參數給子報表。 子報表可以在資料區域中重複，使用參數在每一個子報表執行個體中篩選資料。  

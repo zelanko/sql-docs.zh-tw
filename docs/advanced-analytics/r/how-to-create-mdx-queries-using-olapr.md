@@ -3,17 +3,16 @@ title: 如何使用 olapR-SQL Server Machine Learning 服務在 R 中建立 MDX 
 description: 使用 olapR 套件程式庫，在 SQL Server 中的 R 語言指令碼中撰寫 MDX 查詢。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 66604e44d714837ec9b974af5d0a29b56396cb45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962642"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,13 +73,13 @@ ms.locfileid: "58510555"
 
 下列的範例以 AdventureWorks 資料超市和 cube 專案，因為該專案已普遍使用，在多個版本中，包括可以輕鬆地還原到 Analysis Services 的備份檔案。 如果您沒有現有的 cube，取得範例 cube 中使用其中一個選項：
 
-+ 建立在這些範例中的 cube 所使用的 Analysis Services 教學課程中的，直到第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 建立在這些範例中的 cube 所使用的 Analysis Services 教學課程中的，直到第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + 下載現有的 cube 作為備份，並將它還原到 Analysis Services 的執行個體。 比方說，這個網站會提供完整處理的 cube，以壓縮格式：[Adventure Works 多維度模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 檔案，然後再將它還原到 SSAS 執行個體。 如需詳細資訊，請參閱 <<c0> [ 備份和還原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.交叉分析篩選器的基本 MDX
 
-這個 MDX 查詢會選取「量值」表示網際網路銷售計數和銷售量的計數和數量，並將它們放在 [資料行] 座標軸上。 它會將 SalesTerritory 維度成員新增為「交叉分析篩選器」 來篩選查詢，僅在計算中使用來自澳洲的銷售量。
+這個 MDX 查詢會選取「量值」  表示網際網路銷售計數和銷售量的計數和數量，並將它們放在 [資料行] 座標軸上。 它會將 SalesTerritory 維度成員新增為「交叉分析篩選器」  來篩選查詢，僅在計算中使用來自澳洲的銷售量。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -97,7 +96,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>使用 olapR 中所提供的函式來建置此查詢
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 qry <- Query()
@@ -113,13 +112,13 @@ result1 <- executeMD(ocs, qry)
 具名的執行個體，請務必逸出任何可能會被視為在 r 中的控制字元的字元 例如，下列連接字串會參考名為 ContosoHQ 的伺服器上的執行個體 OLAP01:
 
 ```R
-cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>執行這個查詢作為預先定義的 MDX 字串
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, {[Product].[Product Line].[Product Line].MEMBERS} ON ROWS FROM [Analysis Services Tutorial] WHERE [Sales Territory].[Sales Territory Country].[Australia]"
@@ -150,7 +149,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 > 最後的結果是**不**cube;TRUE 僅表示中繼資料作業成功。 如果引數無效，則會擲回錯誤。
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
@@ -168,7 +167,7 @@ explore(ocs)
 若要檢視 Cube 或檢視方塊中的所有維度，請指定 Cube 或檢視方塊名稱。
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
@@ -182,11 +181,11 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>傳回所指定維度和階層的所有成員
 
-定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目**->** 代表上一個成員的子系。
+定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目 **->** 代表上一個成員的子系。
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
-ocs \<- OlapConnection(cnnstr)
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
+ocs <- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 

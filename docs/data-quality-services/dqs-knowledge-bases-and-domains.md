@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 67c11167938ba2c76b668a56a879bf39e9b7801a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: d0eb69992a6a22a86eae3038a405eb2dd77bcfc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935319"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -69,7 +68,7 @@ ms.locfileid: "56030209"
 ### <a name="case-insensitivity-in-dqs"></a>DQS 不區分大小寫  
  DQS 中的值不區分大小寫。 也就是說，當 DQS 執行知識探索、定義域管理或比對時，不會以大小寫區分至值。 如果您在值管理中加入只有大小寫不同於其他值的某個值，這兩個值將會被視為相同的值，而非同義字。 如果只有大小寫不同的兩個值在比對程序中進行比較，將會被視為完全相符。  
   
- 不過，您可以控制您在清理結果中匯出之值的大小寫。 您可以透過設定 [設定輸出格式為] 定義域屬性 (請參閱[設定定義域屬性](../data-quality-services/set-domain-properties.md))，並在匯出清理結果時使用 [標準化輸出] 核取方塊 (請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)) 來進行。  
+ 不過，您可以控制您在清理結果中匯出之值的大小寫。 您可以透過設定 [設定輸出格式為]  定義域屬性 (請參閱[設定定義域屬性](../data-quality-services/set-domain-properties.md))，並在匯出清理結果時使用 [標準化輸出]  核取方塊 (請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)) 來進行。  
   
 ##  <a name="Domains"></a> 定義域管理  
  定義域管理可讓資料管理人以互動方式變更及增加電腦輔助的知識探索活動所產生的中繼資料。 您所做的每個變更都可供知識庫定義域使用。 在定義域管理活動中，您可以執行下列操作：  
@@ -124,7 +123,7 @@ ms.locfileid: "56030209"
  在定義域管理中，您可以針對單一定義域指定以詞彙為基礎的關聯，以便指定對單一值的變更。  
   
 ### <a name="composite-domains"></a>複合定義域  
- 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
+ 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家/地區。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
   
  單一定義域有時候並不完全表示欄位資料。 在複合定義域中群組兩個或多個定義域可讓您以有效率的方式表示資料。 以下是使用複合定義域的優點：  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 976992cfe5d68659b95a62cc0b4e839f19f8cdd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017913"
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>資料庫鏡像-sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

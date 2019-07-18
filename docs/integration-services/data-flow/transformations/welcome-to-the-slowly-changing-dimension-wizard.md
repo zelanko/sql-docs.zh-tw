@@ -13,14 +13,18 @@ ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 44fbd6a90140951d77465a53cbda2c6ab3436505
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3f75b32af49fffe2ee871ca2eeb76854d5d8e203
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725697"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>歡迎使用緩時變維度精靈
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)＞。  

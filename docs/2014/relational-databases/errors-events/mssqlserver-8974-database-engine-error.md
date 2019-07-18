@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762165"
 ---
 # <a name="mssqlserver8974"></a>MSSQLSERVER_8974
     
@@ -30,7 +30,7 @@ ms.locfileid: "48192638"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 頁面 P_ID2，位置 S_ID2 以及頁面 P_ID3，位置 P_ID3 指向頁面 P_ID1，位置 S_ID1，文字識別碼 TEXT_ID 的非資料列資料節點。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE）。 頁面 P_ID2，位置 S_ID2 以及頁面 P_ID3，位置 P_ID3 指向頁面 P_ID1，位置 S_ID1，文字識別碼 TEXT_ID 的非資料列資料節點。|  
   
 ## <a name="explanation"></a>說明  
  有兩筆資料或索引記錄將非資料列資料節點列為子節點。 一個節點只能有一個父節點。  

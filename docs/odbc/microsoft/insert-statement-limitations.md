@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26d4be96ca4dabebd93ee96e2888e18d39257412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1676af6216ac703e9a8976951ec2888b9e940b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085517"
 ---
 # <a name="insert-statement-limitations"></a>INSERT 陳述式限制
 如果太長而無法放入資料行，插入的資料會截斷在右側，而不發出警告。  

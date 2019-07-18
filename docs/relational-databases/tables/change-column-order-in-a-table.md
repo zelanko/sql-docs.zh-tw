@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 038075269ccaabfa7c27ef946f1cff2704c164e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520531"
 ---
 # <a name="change-column-order-in-a-table"></a>變更資料表中的資料行順序
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47753743"
   
 #### <a name="to-change-the-column-order"></a>若要變更資料行順序  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下包含要重新排序之資料行的資料表，然後按一下 [設計]。  
+1.  在 [物件總管]  中，以滑鼠右鍵按一下包含要重新排序之資料行的資料表，然後按一下 [設計]  。  
   
 2.  選取要重排順序之資料行名稱左邊的方塊。  
   

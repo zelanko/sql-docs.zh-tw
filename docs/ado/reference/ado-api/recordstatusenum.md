@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931289"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)的批次更新和其他的大量作業的記錄。  

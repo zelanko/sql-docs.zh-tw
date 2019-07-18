@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62875037"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>以覆蓋現有檔案的方式還原檔案與檔案群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中以覆蓋現有檔案的方式還原檔案與檔案群組。  
@@ -65,9 +65,9 @@ ms.locfileid: "58527173"
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>若要以覆蓋現有檔案的方式還原檔案與檔案群組  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
+1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
   
-2.  以滑鼠右鍵按一下所要的資料庫，依序指向 [工作] 與 [還原]，然後按一下 [檔案與檔案群組]。  
+2.  以滑鼠右鍵按一下所要的資料庫，依序指向 [工作]  與 [還原]  ，然後按一下 [檔案與檔案群組]  。  
   
 3.  在 **[一般]** 頁面上的 **[目的地資料庫]** 清單方塊，輸入要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選擇現有的資料庫。 清單包含伺服器上的所有資料庫，排除系統資料庫 **master** 和 **tempdb**。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "58527173"
   
     -   **來源裝置**  
   
-         按一下 [瀏覽] 按鈕。 在 **[指定備份裝置]** 對話方塊中，選取 **[備份媒體類型]** 清單方塊上列出的其中一個裝置類型。 若要選取 **[備份媒體]** 清單方塊的一個或多個裝置，請按一下 **[加入]**。  
+         按一下 [瀏覽] 按鈕。 在 **[指定備份裝置]** 對話方塊中，選取 **[備份媒體類型]** 清單方塊上列出的其中一個裝置類型。 若要選取 **[備份媒體]** 清單方塊的一個或多個裝置，請按一下 **[加入]** 。  
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
@@ -89,8 +89,8 @@ ms.locfileid: "58527173"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
-    |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
+    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
@@ -101,7 +101,7 @@ ms.locfileid: "58527173"
   
 6.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 頁面。  
   
-7.  在 [還原選項] 面板中，選取 [覆寫現有的資料庫 (WITH REPLACE)]。 還原作業會覆寫任何現有的資料庫及其相關檔案，即使已經有另一個資料庫或檔案具有相同名稱也一樣。  
+7.  在 [還原選項]  面板中，選取 [覆寫現有的資料庫 (WITH REPLACE)]  。 還原作業會覆寫任何現有的資料庫及其相關檔案，即使已經有另一個資料庫或檔案具有相同名稱也一樣。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

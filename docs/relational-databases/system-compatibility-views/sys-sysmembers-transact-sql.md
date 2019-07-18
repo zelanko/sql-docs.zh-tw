@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5672c6b027e001e2aaf2a344c2710d2a28e62e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 776c253b85f26e4808da7b3b1990be862546cbfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076563"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

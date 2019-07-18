@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -18,12 +16,12 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702271"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>備份、還原和同步處理資料庫 (XMLA)
   在 XML for Analysis 中，有三個命令分別可用來備份、還原和同步處理資料庫：  
@@ -63,7 +61,7 @@ ms.locfileid: "50146083"
   
 |值|描述|  
 |-----------|-----------------|  
-|*skipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
+|*SkipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在備份檔案中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從備份檔案排除安全性定義。|  
   
@@ -93,7 +91,7 @@ ms.locfileid: "50146083"
   
 |值|描述|  
 |-----------|-----------------|  
-|*skipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*SkipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從資料庫排除安全性定義。|  
   
@@ -131,7 +129,7 @@ ms.locfileid: "50146083"
   
 |值|描述|  
 |-----------|-----------------|  
-|*skipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*SkipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在目的地資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從目的地資料庫排除安全性定義。|  
   

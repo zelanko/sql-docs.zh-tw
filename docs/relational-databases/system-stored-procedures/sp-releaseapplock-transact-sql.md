@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5c980cbc6f8d212cf615469c199f6ccafcd70b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075635"
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*已**nvarchar(255)** 沒有預設值。 *resource_name*是二進位來比較，因此會區分大小寫，不論目前資料庫的定序設定為何。  
   
  [ @LockOwner=] '*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值是**交易**，依預設或明確指定，sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)** 。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值是**交易**，依預設或明確指定，sp_getapplock 必須從交易內執行。  
   
  [ @DbPrincipal=] '*database_principal*'  
  這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函式的呼叫者必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能夠成功呼叫函式。 預設值是 public。  

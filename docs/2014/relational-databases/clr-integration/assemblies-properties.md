@@ -13,16 +13,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103268"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919297"
 ---
 # <a name="assembly-properties-general-page"></a>組件屬性 (一般頁面)
   使用此頁面來檢視或修改組件的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **組件名稱**  
  顯示組件名稱，此名稱永遠符合 CLR 組件的名稱。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48103268"
  鍵入擁有者名稱或結構描述名稱，或者從清單中選取。  
   
  **權限集合**  
- 設定組件的安全性層級。 提供三個安全性層級：**安全**，**外部存取**，並**Unsafe**存取。  
+ 設定組件的安全性層級。 提供三個安全性層級：**安全**，**外部存取**，以及**Unsafe**存取。  
   
  **組件的路徑**  
  鍵入組件檔的路徑。  

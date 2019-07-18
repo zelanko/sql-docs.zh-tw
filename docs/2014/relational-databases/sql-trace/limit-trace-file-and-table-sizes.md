@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63136465"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制追蹤檔案和資料表的大小
   「SQL 追蹤」結果的大小視追蹤所包含的事件類別和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的使用方式而定。 如果您追蹤經常發生的事件類別，可設定檔案大小上限或最大資料列數目，將追蹤收集的資料量降到最低。 透過指定檔案大小上限或最大資料列數目，您就可以確保追蹤檔或資料表不會擴展超過指定的限制。  

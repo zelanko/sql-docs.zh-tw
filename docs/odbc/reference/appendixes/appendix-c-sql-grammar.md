@@ -1,5 +1,5 @@
 ---
-title: 附錄 C:SQL 文法 |Microsoft Docs
+title: 附錄 C：SQL 文法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1de83d96e8116ee1ab9991a0a2fe78bed165c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de088161519c77ce3b53bbdd49d74c2bf206a831
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996207"
 ---
 # <a name="appendix-c-sql-grammar"></a>附錄 C：SQL 文法
 本附錄包含下列主題。  

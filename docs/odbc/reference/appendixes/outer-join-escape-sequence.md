@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100645"
 ---
 # <a name="outer-join-escape-sequence"></a>外部聯結逸出序列
 ODBC 會使用外部聯結逸出序列。 此逸出序列的語法如下所示：  
@@ -40,11 +39,11 @@ ODBC 會使用外部聯結逸出序列。 此逸出序列的語法如下所示�
   
  外部聯結 {*資料表名稱*[*相互關聯名稱*] &#124; *外部聯結*} ON  
   
- *搜尋-*  
+ *search-*  
   
  *條件*  
   
- *相互關聯名稱*:: =*使用者定義名稱*  
+ *correlation-name* ::= *user-defined-name*  
   
  *起始 esc ODBC 端*:: = {  
   

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Server element
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bd8ce2e2460636e7343c0caf6b4ae99e094f41b7
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: d23169aaa5b5ab18c8aecefcb61bdcd56dbff3b8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290671"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733491"
 ---
 # <a name="server-element-dta"></a>Server 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,15 +14,17 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1535618a2f5ed180d679bad982c0b77e05a66f95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513025"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579801"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>使用 XML 資料行進行全文檢索搜尋
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   您可以在 XML 資料行上建立全文檢索索引，以檢索 XML 值的內容，但忽略 XML 標記。 元素標記會當做 Token 界限來使用。 其中會檢索下列項目：  
   
 -   XML 元素的內容。  
@@ -34,11 +36,13 @@ ms.locfileid: "58513025"
 1.  首先，使用 SQL 全文檢索搜尋來篩選出感興趣的 XML 值。  
   
 2.  接著，查詢那些在 XML 資料行上使用 XML 索引的 XML 值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>範例將全文檢索搜尋與 XML 查詢合併  
  在 XML 資料行上建立全文檢索之後，下列查詢會確認 XML 值在書名中有包含 "custom" 這個字：  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -54,7 +58,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## <a name="example-full-text-search-on-xml-values-using-stemming"></a>範例使用詞幹對 XML 值進行全文檢索搜尋  
  在上個範例中執行的 XQuery **contains()** 檢查通常是無法排除的。 請考量這項查詢：  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   

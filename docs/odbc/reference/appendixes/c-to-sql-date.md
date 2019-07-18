@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL： 日期 |Microsoft Docs
+title: C 轉換為 SQL：日期 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019415"
 ---
-# <a name="c-to-sql-date"></a>C 到 SQL：日期
+# <a name="c-to-sql-date"></a>C 轉換為 SQL：Date
 日期的 ODBC C 資料類型的識別項是：  
   
  SQL_C_TYPE_DATE  

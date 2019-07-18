@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo |Microsoft Docs
+title: SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15add88f6a244b81b13bf9f63d4a53381fe091eb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d3703def58bf36d7aaf6fca839658c5fad096254
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131441"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

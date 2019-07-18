@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717563"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 執行 SSIS 套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入門示範如何使用 PowerShell 指令碼，來連線至資料庫伺服器並執行 SSIS 套件。
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -38,11 +42,21 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
+2. 從左側功能表中選取 [SQL 資料庫]  ，然後選取 [SQL 資料庫]  頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]  選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
-5. 按一下 [顯示資料庫連接字串]。
+5. 按一下 [顯示資料庫連接字串]  。
 6. 檢閱完整 **ADO.NET** 連接字串。
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell 提供者
+您可以使用 SSIS PowerShell 提供者來連線至 SSIS 目錄並在其內執行套件。
+
+以下是如何使用 SSIS PowerShell 提供者在套件目錄中執行 SSIS 套件的基本範例。
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>PowerShell 指令碼
 為下列指令碼上方的變數提供適當的值，然後執行指令碼以執行 SSIS 套件。

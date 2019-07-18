@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ec690eb615ed86ea5c99b34a91a11dad4fbd2716
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5118392bff90cc9f58cdda66ace40b0b68f612a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085147"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geography_index`調查**地理**空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**geography_col&lt**在給定的查詢範例**@qs**。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用`sp_help_spatial_geography_index`調查**地理**空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**geography_col&lt**在給定的查詢範例 **@qs** 。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geography  

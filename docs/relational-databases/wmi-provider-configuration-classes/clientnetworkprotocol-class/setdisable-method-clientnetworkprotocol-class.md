@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 38dabb0ce6efe87a360b78693c78fb36240242c3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f85c61369c2b5e8b8ec0bd24607d82a8dcc39cfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040864"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

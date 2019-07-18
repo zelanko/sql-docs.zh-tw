@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050695"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件類別
   SQL:FullTextQuery 事件類別是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行全文檢索查詢時發生。 請將此事件類別加入到監視全文檢索目錄問題的追蹤。  

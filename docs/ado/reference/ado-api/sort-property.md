@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930949"
 ---
 # <a name="sort-property"></a>Sort 屬性
 表示在其上的一或多個欄位名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)已排序，以及每個欄位是否以遞增或遞減順序排序。  

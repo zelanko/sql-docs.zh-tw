@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -13,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 358a82555a2f0b3df8a7635cb3ff39a7b09f2e50
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108000"
 ---
 # <a name="query-builder-report-wizard"></a>查詢產生器 (報表精靈)
   使用查詢產生器，即可指定查詢以擷取使用於報表中的結果集。 您可以在兩種查詢產生器之間進行選擇：  
@@ -39,7 +38,7 @@ ms.locfileid: "56290396"
  在以文字為基礎和圖形化查詢設計工具之間切換 (如果這兩種工具都適用於查詢的話)。  
   
  **匯入**  
- 開啟 [匯入查詢] 對話方塊，然後顯示任何可用報表的 .rdl 和 .sql 檔。 您可以依原狀使用匯入的查詢，也可以在查詢產生器中修改此查詢。  
+ 開啟 [匯入查詢]  對話方塊，然後顯示任何可用報表的 .rdl 和 .sql 檔。 您可以依原狀使用匯入的查詢，也可以在查詢產生器中修改此查詢。  
   
  **\!(Run)**  
  執行查詢，如果查詢有效則傳回結果集。 請注意，如果這是一個運算式，則無法執行查詢。 若要驗證以運算式為基礎的查詢，您必須預覽報表。  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e5f78e6096c2a860e376c72947f149b1cf8ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109567"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

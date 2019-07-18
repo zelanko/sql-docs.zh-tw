@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
@@ -13,15 +12,15 @@ ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089124"
 ---
 # <a name="options-text-editorxmltabs-page"></a>選項 (文字編輯器：XML：定位點頁面)
-  這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]**。  
+  這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]** 。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多個位置設定選項  
  XML 編輯器的選項也可以在 **[所有語言 - 一般]** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 XML 編輯器選項。  
@@ -30,10 +29,10 @@ ms.locfileid: "48050148"
  **無**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
- **區塊**  
+ **Block**  
  如果選取此選項，當您按下 ENTER 鍵時所建立的新行就會自動縮排與上一行相同的距離。  
   
- **智慧**  
+ **Smart**  
  如果選取此選項，當您按下 ENTER 時所建立之新行的位置，就會根據內容而定。 例如，在左大括號 ({) 之後，其中的行會自動增加一個定位點的縮排距離。 對應的右大括號 (}) 則與左大括號重新對齊。  
   
 ## <a name="tabs"></a>定位點  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208226"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>將 Power Pivot 方案部署到 SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "52544270"
   
  本主題包含下列幾節：  
   
- [必要條件：確認 Web 應用程式使用傳統模式驗證](#bkmk_classic)  
+ [先決條件：確認 Web 應用程式使用傳統模式驗證](#bkmk_classic)  
   
- [步驟 1:部署伺服器陣列方案](#bkmk_farm)  
+ [步驟 1：部署伺服器陣列方案](#bkmk_farm)  
   
- [步驟 2:將 Power Pivot Web 應用程式方案部署到管理中心](#deployCA)  
+ [步驟 2：將 Power Pivot Web 應用程式方案部署到管理中心](#deployCA)  
   
- [步驟 3:將 Power Pivot Web 應用程式方案部署到其他 Web 應用程式](#deployUI)  
+ [步驟 3：將 Power Pivot Web 應用程式方案部署到其他 Web 應用程式](#deployUI)  
   
  [重新部署或撤銷方案](#retract)  
   
  [關於 Power Pivot 方案](#intro)  
   
-##  <a name="bkmk_classic"></a> 必要條件：驗證 Web 應用程式是否使用傳統模式驗證  
+##  <a name="bkmk_classic"></a> 必要條件：確認 Web 應用程式使用傳統模式驗證  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用 Windows 傳統模式驗證的 Web 應用程式才支援 SharePoint 適用工具。 若要檢查應用程式是否使用傳統模式，執行下列 PowerShell cmdlet，從**SharePoint 2010 管理命令介面**，並將**http://\<頂層站台名稱 >** 與您的 SharePoint 網站名稱：  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  傳回值應為 **false**。 若為 **true**，即無法使用此 Web 應用程式存取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。  
   
-##  <a name="bkmk_farm"></a> 步驟 1:部署伺服器陣列方案  
+##  <a name="bkmk_farm"></a> 步驟 1：部署伺服器陣列方案  
  本節示範如何使用 PowerShell 部署方案，但是您也可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具完成此工作。 如需詳細資訊，請參閱 [設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  此工作只需要在安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 之後執行一次。  
@@ -68,7 +68,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 步驟 2:將 Power Pivot Web 應用程式方案部署到管理中心  
+##  <a name="deployCA"></a> 步驟 2：將 Power Pivot Web 應用程式方案部署到管理中心  
  部署伺服器陣列方案之後，您必須將 Web 應用程式方案部署到管理中心。 此步驟會將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板加入至管理中心。  
   
 1.  使用 **[以系統管理員身分執行]** 選項，開啟 SharePoint 2010 管理命令介面。  
@@ -95,31 +95,31 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  現在 Web 應用程式方案已部署到管理中心，您可以使用管理中心完成所有其餘組態步驟。  
   
-##  <a name="deployUI"></a> 步驟 3:將 Power Pivot Web 應用程式方案部署到其他 Web 應用程式  
+##  <a name="deployUI"></a> 步驟 3：將 Power Pivot Web 應用程式方案部署到其他 Web 應用程式  
  在上一個工作中，您已經將 Powerpivotwebapp.wsp 部署到管理中心。 在本節中，您會在支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的每個現有 Web 應用程式上部署 powerpivotwebapp.wsp。 如果您之後加入更多 Web 應用程式，務必針對其他 Web 應用程式重複此步驟。  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]** 。  
   
-2.  按一下 **[powerpivotwebapp.wsp]**。  
+2.  按一下 **[powerpivotwebapp.wsp]** 。  
   
-3.  按一下 **[部署方案]**。  
+3.  按一下 **[部署方案]** 。  
   
-4.  在 [部署位置] 中，選取您要加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支援的 SharePoint Web 應用程式。  
+4.  在 [部署位置]  中，選取您要加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支援的 SharePoint Web 應用程式。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
 6.  針對其他也支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
 ##  <a name="retract"></a> 重新部署或撤銷方案  
  雖然 SharePoint 管理中心會提供方案撤銷，但是除非您有系統地排除安裝或修補程式的部署問題，否則不需要撤銷 powerpivotwebapp.wsp 檔。  
   
-1.  在 SharePoint 2010 管理中心的 [系統設定] 中，按一下 **[管理伺服陣列方案]**。  
+1.  在 SharePoint 2010 管理中心的 [系統設定] 中，按一下 **[管理伺服陣列方案]** 。  
   
-2.  按一下 **[Powerpivotwebapp.wsp]**。  
+2.  按一下 **[Powerpivotwebapp.wsp]** 。  
   
-3.  按一下 **[撤銷方案]**。  
+3.  按一下 **[撤銷方案]** 。  
   
- 如果您遇到伺服器部署問題，此問題回溯到伺服器陣列方案，您可以在 **組態工具中執行 [修復]**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 選項來重新部署它。 透過此工具的修復作業是慣用的方式，因為您需要執行的步驟比較少。 如需詳細資訊，請參閱 [設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
+ 如果您遇到伺服器部署問題，此問題回溯到伺服器陣列方案，您可以在 **組態工具中執行 [修復]** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 選項來重新部署它。 透過此工具的修復作業是慣用的方式，因為您需要執行的步驟比較少。 如需詳細資訊，請參閱 [設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  如果您仍然要重新部署所有方案，請務必以下列順序進行：  
   

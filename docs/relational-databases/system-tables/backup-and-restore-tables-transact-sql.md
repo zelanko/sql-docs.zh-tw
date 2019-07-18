@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 021077a7e127f9c93ee752dea7f87aa12e792d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091888"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>備份及還原資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

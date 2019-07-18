@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1929ed08c53d0ec1b979c26ba3a885d9623b4486
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101151"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>將影像指定為量測計的指標 (報表產生器及 SSRS)
   量測計包含三個內建樣式，可用來自訂指標的外觀。 星形量測計的內建的樣式如下：指針、 標記和列。 線性量測計的內建樣式如下：標記、列和溫度計。 如果需要唯一的指標，使用者可以建立並指定可當做完整功能之指標使用的影像。  
@@ -38,7 +37,7 @@ ms.locfileid: "56285706"
   
 2.  （選擇性）如果在量測計上不存在任何指標，以滑鼠右鍵按一下量測計，然後選取**加入指標**。 指標就會加入至量測計。  
   
-3.  按一下 **插入**功能區上索引標籤，然後按兩下影像圖示。 [影像屬性] 對話方塊隨即開啟。  
+3.  按一下 **插入**功能區上索引標籤，然後按兩下影像圖示。 [影像屬性]  對話方塊隨即開啟。  
   
 4.  將影像加入至報表。 如需詳細資訊，請參閱 <<c0> [ 將影像內嵌在報表中&#40;報表產生器及 SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)。</c0>  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f793c940e6c32bfd3455946db4d538546f49f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 3985b9afb8c461f1a74b93ea86111b923f0f86be
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819896"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679296"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>儲存圖表上所選的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47819896"
   
 1.  在資料庫圖表中，選取要儲存的資料表。  
   
-2.  從 [檔案] 功能表中選擇 [儲存選取項目]。  
+2.  從 [檔案]  功能表中選擇 [儲存選取項目]  。  
   
-3.  [儲存] 對話方塊會顯示當您儲存選取項目時資料庫中將更新的資料表清單。  
+3.  [儲存]  對話方塊會顯示當您儲存選取項目時資料庫中將更新的資料表清單。  
   
-    若要在繼續進行之前，在專案目錄中以文字檔案格式儲存資料表清單，請選擇 [儲存為文字檔]。  
+    若要在繼續進行之前，在專案目錄中以文字檔案格式儲存資料表清單，請選擇 [儲存為文字檔]  。  
   
-4.  在 [儲存] 對話方塊中，確認資料表清單，並選擇 [是] 儲存這些資料表。  
+4.  在 [儲存]  對話方塊中，確認資料表清單，並選擇 [是]  儲存這些資料表。  
   
     > [!NOTE]  
     > 資料表清單可能包含選取項目以外的資料表。 例如，若要變更某個資料行的資料類型，而該資料行又與另一個資料表有關聯性，那麼這兩個資料表都會包含在此清單中。  

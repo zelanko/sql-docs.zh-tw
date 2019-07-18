@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62876184"
 ---
 # <a name="differential-backups-sql-server"></a>差異備份 (SQL Server)
   此備份和還原主題與所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關。  

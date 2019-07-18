@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016541"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` 是訂閱資料庫的名稱。 *destination_db*已**sysname**，沒有預設值。  
   
-`[ @property = ] 'property'` 是要變更指定的訂用帳戶的屬性。 *屬性*已**nvarchar(30)**，而且可以是下列其中一個資料表中的值。  
+`[ @property = ] 'property'` 是要變更指定的訂用帳戶的屬性。 *屬性*已**nvarchar(30)** ，而且可以是下列其中一個資料表中的值。  
   
-`[ @value = ] 'value'` 指定的新值*屬性*。 *值*已**nvarchar(4000)**，而且可以是下列其中一個資料表中的值。  
+`[ @value = ] 'value'` 指定的新值*屬性*。 *值*已**nvarchar(4000)** ，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  
@@ -98,7 +97,7 @@ sp_changesubscription [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

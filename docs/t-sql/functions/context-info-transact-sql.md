@@ -19,15 +19,15 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - session context information [SQL Server]
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a45a442eec592d70eb776e68c5bcc7fed50a8683
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 014dee25c2e2237f7c9b72b79f78aa2a0abb4e47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948144"
 ---
 # <a name="contextinfo--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ CONTEXT_INFO()
 ## <a name="remarks"></a>Remarks  
 Multiple Active Result Set (MARS) 可讓應用程式在同一個連線上，同時執行多個批次或要求。 當其中一個 MARS 連線批次執行 SET CONTEXT_INFO 時，當 `CONTEXT_INFO` 函數在與 SET 陳述式相同的批次中執行時，`CONTEXT_INFO` 函數會傳回新的內容值。 如果 `CONTEXT_INFO` 函數在一或多個其他連線批次中執行時，`CONTEXT_FUNCTION` 不會傳回新的值，除非這些批次是在執行 SET 陳述式的批次完成之後才開始執行。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 不需要任何特殊權限。 下列系統檢視表會儲存內容資訊，但直接查詢這些檢視表則需要 SELECT 和 VIEW SERVER STATE 權限：
 - **sys.dm_exec_requests**
 - **sys.dm_exec_sessions**

@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7616ec615e70015abc671740d7a18b7a18e35c74
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fb1768c056fae60e2ee3784306ac7882e123fe9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085679"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>回復成員修訂歷程記錄 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52796211"
 
   每次變更成員時會記錄成員修訂歷程記錄。 您可以將成員修訂歷程記錄回復至舊版。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須具有更新至少一個選取的成員之屬性的權限。 當您復原修訂歷程記錄時，可更新的所有屬性值將會都回復為先前的版本值。  
   
@@ -36,9 +35,9 @@ ms.locfileid: "52796211"
   
 2.  選擇要復原的實體和成員。  
   
-3.  按一下 [檢視歷程記錄]。  
+3.  按一下 [檢視歷程記錄]  。  
   
-4.  選擇要回復的修訂，然後按一下 [回復]。  
+4.  選擇要回復的修訂，然後按一下 [回復]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [成員修訂歷程記錄 &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   

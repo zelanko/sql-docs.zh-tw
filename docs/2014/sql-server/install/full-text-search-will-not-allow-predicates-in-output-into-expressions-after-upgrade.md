@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095013"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>升級之後，全文檢索搜尋將不允許 OUTPUT INTO 運算式中使用述詞
   當資料庫相容性層級設定為 100 或以上時，OUTPUT 子句中不允許使用全文檢索述詞。  

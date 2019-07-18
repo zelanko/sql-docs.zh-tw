@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467872"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>原生編譯的預存程序上支援的建構
   本主題列出原生編譯預存程序所支援的建構。  
@@ -40,7 +40,7 @@ ms.locfileid: "48113208"
 ## <a name="security"></a>安全性  
  支援下列功能：  
   
--   針對程序：EXECUTE AS OWNER、SELF 和使用者。  
+-   如需程序：EXECUTE AS OWNER、 SELF 和使用者。  
   
 -   資料表和程序的 GRANT 和 DENY 權限。  
   

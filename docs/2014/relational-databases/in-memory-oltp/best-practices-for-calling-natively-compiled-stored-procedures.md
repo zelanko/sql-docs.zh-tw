@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63156768"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>呼叫原生編譯預存程序的最佳作法
   原生編譯預存程序：  
@@ -48,7 +48,7 @@ ms.locfileid: "48048528"
   
  透過 XEvent `hekaton_slow_parameter_passing` 與 `reason=named_parameters`，可偵測到 (無效率的) 具名參數與原生編譯預存程序的使用方式。  
   
- 同樣地，您可以在此偵測使用不相符的類型，透過相同的 XEvent `hekaton_slow_parameter_passing`，使用`reason=parameter_conversion`。  
+ 同樣地，您可以透過相同的 XEvent `hekaton_slow_parameter_passing` 與 `reason=parameter_conversion`，偵測到不相符類型的使用方式。  
   
  因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[記憶體最佳化資料表交易的重試邏輯方針](memory-optimized-tables.md)。  
   

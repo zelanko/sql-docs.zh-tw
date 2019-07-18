@@ -1,21 +1,19 @@
 ---
-title: 在 Linux 上安裝 SQL Server 全文檢索搜尋 |Microsoft 文件
-description: 本文說明如何在 Linux 上安裝 SQL Server 全文檢索搜尋。
-author: rothja
-ms.author: jroth
-manager: craigg
+title: 在 Linux 上安裝 SQL Server 全文檢索搜尋
+description: 本文描述如何在 Linux 上安裝 SQL Server 全文檢索搜尋。
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065096"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
@@ -47,7 +45,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用相同的離線安裝步驟，本文所述[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="ubuntu">在 Ubuntu 上安裝</a>
 
@@ -65,7 +63,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用相同的離線安裝步驟，本文所述[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="SLES">在 SLES 上安裝</a>
 
@@ -82,7 +80,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用相同的離線安裝步驟，本文所述[安裝 SQL Server](sql-server-linux-setup.md#offline)。
+如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="supported-languages"></a>支援的語言
 
@@ -148,9 +146,9 @@ sudo zypper update mssql-server-fts
 
 全文檢索搜尋也可以搭配儲存在二進位檔案中的文字。 但在此情況下，已安裝的篩選條件，才能處理檔案。 如需有關篩選的詳細資訊，請參閱[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 
-您可以看到已安裝的篩選器清單，藉由呼叫**sp_help_fulltext_system_components 'filter'**。 SQL Server 會安裝下列的篩選條件︰
+您可以看到已安裝的篩選器清單，藉由呼叫**sp_help_fulltext_system_components 'filter'** 。 SQL Server 會安裝下列的篩選條件︰
 
-| 元件名稱 | 類別識別碼 | 版本 |
+| 元件名稱 | 類別識別碼 | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -235,7 +233,7 @@ sudo zypper update mssql-server-fts
 |.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|索引標籤 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tab | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

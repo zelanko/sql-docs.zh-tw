@@ -1,5 +1,5 @@
 ---
-title: sp_add_agent_parameter (Transact-SQL) | Microsoft Docs
+title: sp_add_agent_parameter & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_parameter
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: a61b85090dc88dddbb28c923f4acdc6e8fa07cb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941803"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` 若要指派給參數的值。 *parameter_value*已**nvarchar(255)**，沒有預設值。  
+`[ @parameter_value = ] 'parameter_value'` 若要指派給參數的值。 *parameter_value*已**nvarchar(255)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -80,7 +79,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  [複寫代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_change_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   

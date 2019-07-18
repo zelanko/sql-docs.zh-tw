@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017380"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52769750"
 
   在 **[版本管理]** 功能區域的 **[驗證版本]** 頁面上，可能會出現下列狀態。  
   
-|[狀態]|Description|  
+|[狀態]|描述|  
 |------------|-----------------|  
 |等候驗證|正在等候驗證的所有新建成員。|  
 |等候重新驗證|正在等候重新驗證的現有成員。|  

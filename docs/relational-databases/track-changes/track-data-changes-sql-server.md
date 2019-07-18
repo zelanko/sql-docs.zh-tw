@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
-ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
+ms.openlocfilehash: 0928eb2cd30ba16466c3c091ab2c810c2f3a17d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725459"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585354"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ ms.locfileid: "57725459"
 1.  確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在鏡像上執行。  
   
 2.  當主體已經容錯移轉至鏡像之後，在鏡像上建立擷取作業和清除作業。 若要建立這些作業，請使用 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) 預存程序。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  如需資料庫鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 #### <a name="transactional-replication"></a>異動複寫  

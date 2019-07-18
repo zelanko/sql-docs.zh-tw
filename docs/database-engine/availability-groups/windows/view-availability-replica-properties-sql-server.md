@@ -11,24 +11,19 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59c7b1d75f8573c2043acf9ec811c56b1f0a2549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2608097cb5b0ca626c8776c6a7312552a181342d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780189"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>檢視可用性複本屬性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，檢視 AlwaysOn 可用性群組的可用性複本屬性。  
   
--   **若要使用下列項目檢視可用性複本屬性：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+ 
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要檢視及變更可用性複本的屬性**  
   

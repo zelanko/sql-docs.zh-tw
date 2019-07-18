@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63277117"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>指定搜尋準則 (Visual Database Tools)
   您可以使用搜尋準則來限制查詢所傳回的資料列數目。  

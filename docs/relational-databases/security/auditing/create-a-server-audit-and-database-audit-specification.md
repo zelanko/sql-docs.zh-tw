@@ -16,18 +16,18 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 455a0f9b8d570adcaa4fadae6f81163e1648a6c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539159"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582017"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立伺服器稽核和資料庫稽核規格。  
   
- *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之伺服器或資料庫層級動作和動作群組的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 「資料庫層級稽核規格」物件屬於稽核。 您可以針對每個稽核的每個 SQL Server 資料庫建立一個資料庫稽核規格。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之伺服器或資料庫層級動作和動作群組的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 「資料庫層級稽核規格」  物件屬於稽核。 您可以針對每個稽核的每個 SQL Server 資料庫建立一個資料庫稽核規格。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主題內容**  
   
@@ -35,11 +35,11 @@ ms.locfileid: "52539159"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目建立伺服器稽核和資料庫稽核規格：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52539159"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 -   具有 ALTER ANY DATABASE AUDIT 權限的使用者可以建立資料庫稽核規格，並將其繫結至任何稽核。  
   
@@ -66,17 +66,19 @@ ms.locfileid: "52539159"
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核]。如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  以滑鼠右鍵按一下 [稽核]  資料夾，然後選取 [新增稽核]  。如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
-3.  當您完成選取選項之後，按一下 **[確定]**。  
-  
+3.  當您完成選取選項之後，按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-database-level-audit-specification"></a>若要建立資料庫層級的稽核規格  
   
 1.  在 [物件總管] 中，展開您要建立稽核規格的資料庫。  
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [資料庫稽核規格] 資料夾，然後選取 [新增資料庫稽核規格]。  
+3.  以滑鼠右鍵按一下 [資料庫稽核規格]  資料夾，然後選取 [新增資料庫稽核規格]  。  
   
      **[建立資料庫稽核規格]** 對話方塊有下列選項。  
   
@@ -90,21 +92,21 @@ ms.locfileid: "52539159"
      指定要擷取之資料庫層級的稽核動作群組和稽核動作。 如需資料庫層級稽核動作群組和稽核動作的清單以及其所包含的事件描述，請參閱 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
      **物件結構描述**  
-     顯示指定之 [物件名稱] 的結構描述。  
+     顯示指定之 [物件名稱]  的結構描述。  
   
      **Object Name**  
      要稽核的物件名稱。 這只適用於稽核動作，不適用於稽核群組。  
   
      **省略符號 (...)**  
-     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[稽核動作類型]**)。  
+     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[稽核動作類型]** )。  
   
      **主體名稱**  
      依據所稽核的物件來篩選稽核的帳戶。  
   
      **省略符號 (...)**  
-     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[物件名稱]**)。  
+     開啟 **[選取物件]** 對話方塊來瀏覽及選取可用的物件 (根據指定的 **[物件名稱]** )。  
   
-4.  當您完成選取選項之後，按一下 **[確定]**。  
+4.  當您完成選取選項之後，按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -112,9 +114,9 @@ ms.locfileid: "52539159"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE master ;  
@@ -133,9 +135,9 @@ ms.locfileid: "52539159"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 範例會針對 `Audit_Pay_Tables` 資料表 (以上方定義的伺服器稽核為基礎)，建立可稽核 `dbo` 使用者所執行 SELECT 和 INSERT 陳述式的資料庫稽核規格，其名稱為 `HumanResources.EmployeePayHistory`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 範例會針對 `Audit_Pay_Tables` 資料表 (以上方定義的伺服器稽核為基礎)，建立可稽核 `dbo` 使用者所執行 SELECT 和 INSERT 陳述式的資料庫稽核規格，其名稱為 `HumanResources.EmployeePayHistory`。  
   
     ```  
     USE AdventureWorks2012 ;   

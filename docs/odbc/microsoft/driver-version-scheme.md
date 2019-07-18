@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071850"
 ---
 # <a name="driver-version-scheme"></a>驅動程式版本配置
 > [!IMPORTANT]  
@@ -28,7 +27,7 @@ ms.locfileid: "47806526"
   
 |驅動程式版本|組建編號|可用性歷程|  
 |--------------------|------------------|--------------------------|  
-|1.0|2.00.6235|Visual c + + 4.2 和 5.0 版，Enterprise Edition 的 Visual Basic|  
+|1.0|2.00.6235|視覺化C++4.2 和 Visual Basic 5.0 版，Enterprise Edition|  
 |2.0|2.73.7269|Visual Studio 97 和 MDAC 1.5a|  
 |更新的 2.0|2.73.7283.01|IIS 4.0|  
 |更新的 2.0|2.73.7283.03|MDAC 1.5b 和 1.5 c|  

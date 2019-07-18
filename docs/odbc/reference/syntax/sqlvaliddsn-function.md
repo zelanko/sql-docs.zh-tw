@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039480"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53201457"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLValidDSN(  
      LPCSTR    lpszDSN);  

@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67c0ff950115a9d9f6f5685804f5e3955a8af4d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0684d9e543a50319c0c7eb30d148d4d63df3fb25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131054"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

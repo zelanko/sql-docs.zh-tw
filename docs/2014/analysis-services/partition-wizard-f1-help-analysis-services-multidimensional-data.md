@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
@@ -13,18 +12,18 @@ ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072126"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>資料分割精靈 F1 說明 (Analysis Services - 多維度資料)
   您可以使用資料分割精靈來定義 Cube 中之量值群組的資料分割。 依預設，會為 Cube 中的每一個量值群組定義單一資料分割。 但是，大型的資料分割會使存取和處理效能降低。 藉由建立多個分割區，每一個分割區包含量值群組的一部份資料，這樣可以增進該量值群組的存取和處理效能。  
   
 > [!CAUTION]  
->  建立的資料分割中，可能會因為 [指定來源資訊] 或 [限制資料列] 頁面中包含了重複的資料列，而含有不正確的資料。  
+>  建立的資料分割中，可能會因為 [指定來源資訊]  或 [限制資料列]  頁面中包含了重複的資料列，而含有不正確的資料。  
   
  分割區精靈會引導您完成下列步驟：  
   
@@ -49,6 +48,6 @@ ms.locfileid: "48198528"
 -   [瀏覽遠端資料夾 對話方塊中的&#40;Analysis Services-多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

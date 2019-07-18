@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c6b2fd8fd64bd8d7df6429a21c3f27266657964e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: b1450dc8304c2e8d3db5a6fa8b2153f951e70bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083606"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
  是選擇性的位元值，如果您想要變更查詢模式，而不需驗證，您可以設定為 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 (成功) 或 >0 (失敗)  
+ 0 （成功） 或 > 0 （失敗）  
   
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 權限。  
@@ -74,7 +73,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
      當您執行[sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新連線到遠端的 Azure 資料庫，這項作業會自動重設查詢模式 LOCAL_AND_REMOTE，這是預設行為的Stretch Database。 也就是說，查詢會傳回結果，從本機和遠端資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_rda_deauthorize_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

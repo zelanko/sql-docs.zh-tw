@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63231281"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
   如 [使用 FOR XML 建構 XML](../xml/for-xml-sql-server.md)主題中所述，RAW 和 AUTO 模式對從查詢結果產生之 XML 形式的控制不大。 但是，EXPLICIT 模式在由查詢結果產生想要的 XML 方面，可提供的彈性最大。  
@@ -155,9 +155,9 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [範例：使用 EXPLICIT 模式建構同層級](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [範例：指定 ID 和 IDREF 指示詞](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [範例：指定識別碼和 IDREF 指示詞](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [範例：指定 ID 和 IDREFS 指示詞](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [範例：指定識別碼和 IDREFS 指示詞](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
 -   [範例：指定 HIDE 指示詞](../xml/example-specifying-the-hide-directive.md)  
   

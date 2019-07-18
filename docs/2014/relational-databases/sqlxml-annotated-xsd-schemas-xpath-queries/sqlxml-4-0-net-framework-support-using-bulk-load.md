@@ -12,15 +12,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014897"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>在 .NET 環境中使用 SQLXML 大量載入
   本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行大量載入的 XML 資料&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  

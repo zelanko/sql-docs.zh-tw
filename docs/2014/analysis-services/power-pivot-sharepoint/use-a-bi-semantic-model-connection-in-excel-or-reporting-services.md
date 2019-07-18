@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070925"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 使用 BI 語意模型連接
   本主題說明如何使用透過其他主題的指示所建立的 BI 語意模型連接。 如果您尚未建立 BI 語意模型，請參閱[建立 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)並[建立 BI 語意模型連接到表格式模型資料庫](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -28,7 +27,7 @@ ms.locfileid: "53366290"
   
  **從 SharePoint 啟動**  
   
--   以滑鼠右鍵按一下文件庫中的 BI 語意模型連接，然後選取 [啟動 Excel]。  
+-   以滑鼠右鍵按一下文件庫中的 BI 語意模型連接，然後選取 [啟動 Excel]  。  
   
  ![螢幕擷取畫面的 BISM 快速啟動命令](../media/ssas-bism-quicklaunch.gif "螢幕擷取畫面的 BISM 快速啟動命令")  
   
@@ -36,15 +35,15 @@ ms.locfileid: "53366290"
   
  **從 Excel 啟動**  
   
-1.  啟動 Excel 並開啟活頁簿。 在 [資料] 索引標籤上，按一下 [取得外部資料] 中的 **[從其他來源]**。  
+1.  啟動 Excel 並開啟活頁簿。 在 [資料] 索引標籤上，按一下 [取得外部資料] 中的 **[從其他來源]** 。  
   
 2.  按一下 **[從 Analysis Services]** ，然後使用 [資料連線精靈] 匯入資料。  
   
-3.  輸入 BI 語意模型連接檔案的 SharePoint URL (例如 **http://mysharepoint/shared /Mydata.bism**)。 接受認證選項 **[使用 Windows 驗證]** 上的預設記錄檔。 按 [下一步] 。  
+3.  輸入 BI 語意模型連接檔案的 SharePoint URL (例如 **http://mysharepoint/shared /Mydata.bism**)。 接受認證選項 **[使用 Windows 驗證]** 上的預設記錄檔。 按一下 [下一步]  。  
   
 4.  在下一個頁面上，再按 **[下一步]** 。 雖然系統會提示您選取資料庫，但是您只能使用在 BI 語意模型連接中指定的資料庫。  
   
-5.  在最後一個頁面上，您可以提供易記名稱和描述。 按一下 **[完成]**，然後按一下 [匯入資料] 對話方塊上的 **[確定]** 來匯入資料。  
+5.  在最後一個頁面上，您可以提供易記名稱和描述。 按一下 **[完成]** ，然後按一下 [匯入資料] 對話方塊上的 **[確定]** 來匯入資料。  
   
  若要讓連接成功，您必須將 Excel 2010 和 MSOLAP.5.dll 安裝在用戶端電腦上。 您可以藉由安裝版本的 PowerPivot for Excel 的目前這一版來取得提供者，或者您可以下載只從 Analysis Services OLE DB 提供者[功能套件下載頁面](https://go.microsoft.com/fwlink/?linkid=214066)。  
   

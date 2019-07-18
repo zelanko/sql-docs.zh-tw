@@ -2,30 +2,30 @@
 title: 安裝 mssqlctl
 titleSuffix: SQL Server big data clusters
 description: 了解如何安裝以安裝和管理 SQL Server 2019 巨量資料叢集 （預覽） mssqlctl 工具。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 03/27/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c306ec99f0bd2aff89116e955283dd585f9d7cce
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 3be1987baed27aeb49b03942ca3c4f07c2b0ce0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958520"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>安裝 mssqlctl 來管理 SQL Server 的巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-這篇文章說明如何安裝**mssqlctl**在 Windows 或 Linux 上的工具。
+這篇文章說明如何安裝**mssqlctl** CTP 3.1 在 Windows 或 Linux 上的工具。
 
 **mssqlctl**是命令列公用程式，可讓叢集系統管理員啟動及管理巨量資料叢集，透過 REST Api 以 Python 所撰寫。 最小所需的 Python 版本為 3.5 版。 您也必須擁有`pip`用來下載並安裝**mssqlctl**工具。 下列指示提供 Windows 和 Ubuntu 的範例。 如需其他平台上安裝 Python，請參閱[Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
 > [!IMPORTANT]
-> 如果您要安裝較新版的巨量資料叢集，您必須備份您的資料，並刪除舊的叢集*之前*升級**mssqlctl**並安裝新的版本。 如需詳細資訊，請參閱 <<c0> [ 升級至新版](deployment-guidance.md#upgrade)。
+> 如果您要安裝較新版的巨量資料叢集，您必須備份您的資料，並刪除舊的叢集*之前*升級**mssqlctl**並安裝新的版本。 如需詳細資訊，請參閱 <<c0> [ 升級至新版](deployment-upgrade.md)。
 
 ## <a id="windows"></a> Windows mssqlctl 安裝
 
@@ -38,22 +38,22 @@ ms.locfileid: "58860659"
 
 1. 如果您有任何舊版**mssqlctl**安裝，請務必要解除安裝**mssqlctl**第一次，然後再安裝最新版本。
 
-   如果您對應至 CTP 版本 2.2 或更低的 unisntalling mssqlctl 執行：
+   如果您要解除安裝**mssqlctl**對應至 CTP 版本 2.2 或更低執行：
 
    ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   CTP2.3 或更高版本的執行 (取代`ctp-2.3`的新版 mssqlctl 您要解除安裝命令中):
+   CTP 2.3 或更新版本，請執行下列命令。 取代`ctp3.0`在命令中使用新版**mssqlctl**您要解除安裝。 在 CTP 3.0 之前版本時，新增以連字號之前的版本號碼 (例如`ctp-2.5`)。
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
 1. 安裝**mssqlctl**使用下列命令：
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl 安裝
@@ -76,22 +76,22 @@ ms.locfileid: "58860659"
 
 1. 如果您有任何舊版**mssqlctl**安裝，請務必要解除安裝**mssqlctl**第一次，然後再安裝最新版本。
 
-   如果您對應至 CTP 版本 2.2 或更低的 unisntalling mssqlctl 執行：
+   如果您要解除安裝**mssqlctl**對應至 CTP 版本 2.2 或更低執行：
 
-   ```bash
+   ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   CTP2.3 或更高版本的執行 (取代`ctp-2.3`的新版 mssqlctl 您要解除安裝命令中):
+   CTP 2.3 或更新版本，請執行下列命令。 取代`ctp3.0`在命令中使用新版**mssqlctl**您要解除安裝。 在 CTP 3.0 之前版本時，新增以連字號之前的版本號碼 (例如`ctp-2.5`)。
 
-   ```bash
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   ```powershell
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
 1. 安裝**mssqlctl**使用下列命令：
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

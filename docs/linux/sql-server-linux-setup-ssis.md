@@ -1,21 +1,19 @@
 ---
-title: 在 Linux 上安裝 SQL Server Integration Services |Microsoft Docs
+title: 在 Linux 上安裝 SQL Server Integration Services
 description: 本文說明如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032432"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -25,7 +23,7 @@ ms.locfileid: "47602496"
 
 安裝適用於您平台的 SQL Server 整合的伺服器：
 
-- [Ubuntu](#ubuntu)
+- [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
 ## <a name="ubuntu"></a> 在 Ubuntu 上安裝 SSIS

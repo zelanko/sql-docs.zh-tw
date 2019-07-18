@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cd24e88bf72ece1a47ce8a7875d852c1cd8bd3e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c14a4b77451ce566e576c597639580f6b404f4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929670"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

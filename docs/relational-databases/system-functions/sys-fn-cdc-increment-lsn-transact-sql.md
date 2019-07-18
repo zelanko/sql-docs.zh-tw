@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046375"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>引數  
  *lsn_value*  
- LSN 值。 *lsn_value*已**binary(10)**。  
+ LSN 值。 *lsn_value*已**binary(10)** 。  
   
 ## <a name="return-type"></a>傳回類型  
  **binary(10)**  

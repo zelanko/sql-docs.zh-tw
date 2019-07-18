@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2052f5614f5a1e810e2f0c50981c391c027073ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022909"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63282421"
 ---
 # <a name="security-considerations-for-extensions"></a>延伸模組的安全性考量
   以 Common Language Runtime (CLR) 為目標的每個應用程式，必須和 CLR 安全性系統互動。 當這樣的應用程式執行時，CLR 會自動評估它並給與一組權限。 視應用程式獲得的權限而定，它會繼續執行或是產生安全性例外狀況。 特定報表伺服器之安全性原則組態檔中的本機安全性設定與原則，會定義組件獲得的程式碼權限。  

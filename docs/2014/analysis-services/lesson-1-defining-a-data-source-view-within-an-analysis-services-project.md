@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365161"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079213"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：定義資料來源檢視中的 Analysis Services 專案
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
   要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中設計商業智慧應用程式，先從在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]專案開始。 在這個專案內，您要定義方案的所有元素，請從資料來源檢視開始。  
   
  這一課包含下列工作：  

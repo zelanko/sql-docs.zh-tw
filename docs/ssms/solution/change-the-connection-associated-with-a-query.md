@@ -13,15 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa1094b16041e038b58a967ee6841e663fcd628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: afdc8b737a5aa5548dac227f19b3316bbf0df113
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605186"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683138"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>變更與查詢相關聯的連接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47605186"
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>變更查詢的相關連接  
   
-1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]，再按一下 [變更連接]。  
+1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]  ，再按一下 [變更連接]  。  
   
-2.  在 [連接到 Database Engine] 對話方塊中，提供新的連接資訊，再按一下 [連接]。  
+2.  在 [連接到 Database Engine]  對話方塊中，提供新的連接資訊，再按一下 [連接]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

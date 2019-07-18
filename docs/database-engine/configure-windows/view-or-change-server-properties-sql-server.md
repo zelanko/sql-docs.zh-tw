@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 65f613ebf1364d7aeaeda77ec244794f983f3fc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775228"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>檢視或變更伺服器屬性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54255373"
   
      [SQL Server 組態管理員](#PowerShellProcedure)  
   
--   **後續操作：**[變更伺服器屬性之後](#FollowUp)  
+-   **後續操作：** [變更伺服器屬性之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54255373"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如需詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
  依預設，所有使用者都會取得不含參數或只含第一個參數之 **sp_configure** 的執行權限。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
@@ -70,7 +70,7 @@ ms.locfileid: "54255373"
   
 #### <a name="to-view-or-change-server-properties"></a>檢視或變更伺服器屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
 2.  在 **[伺服器屬性]** 對話方塊中，按一下頁面以檢視或變更有關該頁面的伺服器資訊。 部分屬性是唯讀的。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "54255373"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會在 [陳述式中使用](../../t-sql/functions/serverproperty-transact-sql.md) SERVERPROPERTY `SELECT` 內建函數傳回目前伺服器的相關資訊。 當 Windows 伺服器安裝了多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，且用戶端必須開啟另一項連接來連到目前連接所用的相同執行個體時，這個狀況非常有用。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會在 [陳述式中使用](../../t-sql/functions/serverproperty-transact-sql.md) SERVERPROPERTY `SELECT` 內建函數傳回目前伺服器的相關資訊。 當 Windows 伺服器安裝了多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，且用戶端必須開啟另一項連接來連到目前連接所用的相同執行個體時，這個狀況非常有用。  
   
     ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
@@ -93,9 +93,9 @@ ms.locfileid: "54255373"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會查詢 [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) 目錄檢視，以傳回目前伺服器的名稱 (`name`) 和識別碼 (`server_id`)，以及用來連接到連結之伺服器的 OLE DB 提供者名稱 (`provider`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會查詢 [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) 目錄檢視，以傳回目前伺服器的名稱 (`name`) 和識別碼 (`server_id`)，以及用來連接到連結之伺服器的 OLE DB 提供者名稱 (`provider`)。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -110,9 +110,9 @@ ms.locfileid: "54255373"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會查詢 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 類別目錄檢視，以傳回目前伺服器上每個伺服器組態選項的相關資訊。 此範例會傳回選項的名稱 (`name`) 和描述 (`description`)，以及選項是否為進階選項 (`is_advanced`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會查詢 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 類別目錄檢視，以傳回目前伺服器上每個伺服器組態選項的相關資訊。 此範例會傳回選項的名稱 (`name`) 和描述 (`description`)，以及選項是否為進階選項 (`is_advanced`)。  
   
     ```wmimof  
     USE AdventureWorks2012;   
@@ -127,9 +127,9 @@ ms.locfileid: "54255373"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 變更伺服器屬性。 此範例會將 `fill factor` 選項的值變更為 `100`。 伺服器必須重新啟動，變更才會生效。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 變更伺服器屬性。 此範例會將 `fill factor` 選項的值變更為 `100`。 伺服器必須重新啟動，變更才會生效。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -151,13 +151,13 @@ GO
   
 #### <a name="to-view-or-change-server-properties"></a>檢視或變更伺服器屬性  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在 **[SQL Server 組態管理員]** 中，按一下 **[SQL Server 服務]**。  
+2.  在 **[SQL Server 組態管理員]** 中，按一下 **[SQL Server 服務]** 。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [屬性]。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]    ，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server (\<執行個體名稱>) 屬性] 對話方塊中，變更 [服務] 索引標籤或 [進階] 索引標籤上的伺服器屬性，然後按一下 [確定]。  
+4.  在 [SQL Server (\<執行個體名稱>) 屬性]    對話方塊中，變更 [服務]  索引標籤或 [進階]  索引標籤上的伺服器屬性，然後按一下 [確定]  。  
   
 ##  <a name="FollowUp"></a> 後續操作：變更伺服器屬性之後  
  對於某些屬性，伺服器可能必須重新啟動，變更才會生效。  

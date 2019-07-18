@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31ac0f9f4a234f26241a98e3d9f52333e19c919d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fecf1dd32e5a7a6532766c920828417e9f18153f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128912"
 ---
 # <a name="managing-text-and-image-columns"></a>管理 Text 和 Image 資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

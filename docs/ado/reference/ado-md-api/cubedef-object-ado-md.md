@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949791"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 物件 (ADO MD)
 表示從多維度的結構描述，其中包含一組相關的維度的 cube。  

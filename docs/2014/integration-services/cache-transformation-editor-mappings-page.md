@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
@@ -13,12 +12,12 @@ ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7d38fa3d3e6631f4284f9572f98a0dac1d05e61
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061180"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>快取轉換編輯器 (對應頁面)
   使用 **[快取轉換編輯器]** 的 **[對應]** 頁面，將 [快取轉換] 轉換中的輸入資料行對應至快取連接管理員中的目的地資料行。  
@@ -34,12 +33,12 @@ ms.locfileid: "58391156"
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將可用的輸入資料行對應到目的地資料行。  
   
- 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]**，使用鍵盤將輸入資料行對應到目的地資料行。  
+ 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]** ，使用鍵盤將輸入資料行對應到目的地資料行。  
   
  **可用的目的地資料行**  
  檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
   
- 您也可以藉由在 **[可用的目的地資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]**，使用鍵盤將輸入資料行對應到目的地資料行。  
+ 您也可以藉由在 **[可用的目的地資料行]** 資料表中反白顯示資料行，按下功能表鍵，然後選取 **[藉由比對名稱來對應項目]** ，使用鍵盤將輸入資料行對應到目的地資料行。  
   
  **輸入資料行**  
  檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045935"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'dbname'` 指定要驗證的資料庫。 *dbname*已**sysname**。  
   
-`[ @autofix = ] 'auto'` 資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸除任何使用者建立的資料庫使用者和非預設權限。 *自動*已**nvarchar(4)**，預設值是 NULL。  
+`[ @autofix = ] 'auto'` 資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸除任何使用者建立的資料庫使用者和非預設權限。 *自動*已**nvarchar(4)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

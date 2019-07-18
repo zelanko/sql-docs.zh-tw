@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: b883883cbe201de32020e86ca2cd38746caf46be
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959111"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 擴充功能 （預覽）
 

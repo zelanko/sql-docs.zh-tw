@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
@@ -13,19 +12,19 @@ ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081663"
 ---
 # <a name="dimension-wizard-f1-help"></a>維度精靈 F1 說明
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈]，即可在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中建立資料庫維度。 建立資料庫維度之後，您就可以使用 [維度設計師] 來修改其屬性。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
  **若要開啟 維度精靈**  
   
--   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
+-   在方案總管  的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度]  資料夾，然後按一下 [新增維度]  。  
   
 ## <a name="in-this-section"></a>本節內容  
   

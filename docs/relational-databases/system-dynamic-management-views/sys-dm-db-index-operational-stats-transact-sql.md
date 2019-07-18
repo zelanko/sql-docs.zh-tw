@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004892"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>引數    
- *database_id* | NULL | 0 | DEFAULT    
+ *database_id* |NULL |0 |預設值    
  資料庫的識別碼。 *database_id*已**smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 NULL *database_id*，您也必須指定，則為 NULL *object_id*， *index_id*，以及*partition_number*。    
@@ -72,7 +71,7 @@ sys.dm_db_index_operational_stats (
     
  請指定 NULL 來傳回基底資料表或檢視表所有索引的快取資訊。 如果您指定 NULL *index_id*，您也必須指定，則為 NULL *partition_number*。    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* |NULL |0 |預設值    
  物件的分割區編號。 *partition_number*已**int**。有效輸入如下*partion_number*索引或堆積中，NULL，0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回索引或堆積之所有分割區的快取資訊。    
@@ -102,11 +101,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|在索引或堆積啟動的範圍和資料表掃描累計計數。|    
 |**singleton_lookup_count**|**bigint**|從索引或堆積擷取單資料列的累計計數。|    
 |**forwarded_fetch_count**|**bigint**|透過轉送記錄提取的資料列計數。<br /><br /> 0 = 索引|    
-|**lob_fetch_in_pages**|**bigint**|從 LOB_DATA 配置單位擷取的大型物件 (LOB) 頁面累加計數。 這些頁面包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**，以及**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|    
+|**lob_fetch_in_pages**|**bigint**|從 LOB_DATA 配置單位擷取的大型物件 (LOB) 頁面累加計數。 這些頁面包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar (max)** ， **varbinary （max)** ，以及**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。|    
 |**lob_fetch_in_bytes**|**bigint**|所擷取的 LOB 資料位元組累計。|    
 |**lob_orphan_create_count**|**bigint**|針對大量作業所建立的孤立 LOB 值累計。<br /><br /> 0 = 非叢集索引|    
 |**lob_orphan_insert_count**|**bigint**|在大量作業時插入的孤立 LOB 值累計計數。<br /><br /> 0 = 非叢集索引|    
-|**row_overflow_fetch_in_pages**|**bigint**|從 ROW_OVERFLOW_DATA 配置單位擷取的資料列溢位資料頁累計計數。<br /><br /> 這些頁面包含類型的資料行中儲存的資料**varchar （n)**， **nvarchar （n)**， **varbinary**，以及**sql_variant**已經從資料列發送。|    
+|**row_overflow_fetch_in_pages**|**bigint**|從 ROW_OVERFLOW_DATA 配置單位擷取的資料列溢位資料頁累計計數。<br /><br /> 這些頁面包含類型的資料行中儲存的資料**varchar （n)** ， **nvarchar （n)** ， **varbinary**，以及**sql_variant**已經從資料列發送。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|所擷取的資料列溢位資料位元組累計計數。|    
 |**column_value_push_off_row_count**|**bigint**|為了讓插入或更新資料列容納在一頁中，而被排除為非資料列的 LOB 資料和資料列溢位資料的資料行值累計計數。|    
 |**column_value_pull_in_row_count**|**bigint**|被納入成為同資料列的 LOB 資料和資料列溢位資料的資料行值累加計數。 這項作業是在更新作業釋出記錄空間，讓您有機會將 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位的一個或多個非資料列值納入 IN_ROW_DATA 配置單位時發生。|    
@@ -156,7 +155,7 @@ sys.dm_db_index_operational_stats (
     
      這些資料行會指出索引或堆積上是否有閂鎖競爭的情形，以及競爭的嚴重程度。    
     
--   **row_lock_count** and **page_lock_count**    
+-   **row_lock_count**和**page_lock_count**    
     
      這些資料行會指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖取得資料列和頁面鎖定的次數。    
     

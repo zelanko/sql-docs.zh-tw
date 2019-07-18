@@ -1,5 +1,5 @@
 ---
-title: SQLParamData |Microsoft Docs
+title: SQLParamData | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da50163b90d4a871c2524e1723797474386be8f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046663"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
   當傳回 SQLParamData *ValuePtrPtr*相關聯的資料表值參數，應用程式應該呼叫與 SQLPutData *Strlen_or_ind&lt*。 如果*Strlen_or_ind&lt*的值大於 0，這表示應用程式可供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]蒐集下一個資料表值參數資料列的參數資料的原生用戶端。 如果*Strlen_or_ind&lt*其值為 0，表示沒有更多資料列的資料表值參數資料。 如需詳細資訊，請參閱 <<c0> [ 繫結和 Data Transfer of Table-Valued 參數和資料行值](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  

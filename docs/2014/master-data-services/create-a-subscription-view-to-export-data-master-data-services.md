@@ -10,15 +10,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479941"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>建立訂閱檢視 (Master Data Services)
   當您想要建立的檢視中的資料，請建立訂閱檢視[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫以供訂閱系統。  
@@ -32,9 +32,9 @@ ms.locfileid: "52747930"
   
 ### <a name="to-create-a-subscription-view"></a>若要建立訂閱檢視  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，按一下 **[整合管理]**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，按一下 **[整合管理]** 。  
   
-2.  按一下功能表列上的 **[建立檢視表]**。  
+2.  按一下功能表列上的 **[建立檢視表]** 。  
   
 3.  在 **訂用帳戶檢視表**頁面上，按一下**新增訂用帳戶檢視**。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52747930"
   
 9. 如果您從 **[格式]** 清單中選擇 **[明確層級]** 或 **[衍生層級]** ，請輸入階層內要加入檢視中的層級數。  
   
-10. 按一下 [儲存] 。  
+10. 按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   

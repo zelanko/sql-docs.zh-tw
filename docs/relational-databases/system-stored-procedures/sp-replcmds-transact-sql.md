@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8aad9f67b155c1f247426053b948cc6dd29e4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006896"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**article id**|**int**|發行項的識別碼。|  
+|**文章識別碼**|**int**|發行項的識別碼。|  
 |**partial_command**|**bit**|指出這是否為部分命令。|  
 |**command**|**varbinary(1024)**|命令值。|  
 |**xactid**|**binary(10)**|交易識別碼。|  

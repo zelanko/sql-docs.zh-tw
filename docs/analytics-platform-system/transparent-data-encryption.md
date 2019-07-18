@@ -2,19 +2,18 @@
 title: 透明資料加密-Parallel Data Warehouse |Microsoft Docs
 description: 透明資料加密 (TDE) Parallel Data Warehouse (PDW) 會執行即時 I/O 加密和解密資料和交易記錄檔和特殊的 PDW 記錄檔。 」
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959989"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 不過，所在實體媒體 （例如磁碟機或備份磁帶） 遭竊的案例中，惡意人士可以只還原或附加資料庫並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -120,9 +119,9 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
   
 |命令或函數|用途|  
 |-----------------------|-----------|  
-|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
-|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
-|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
+|[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
+|[改變資料庫加密金鑰](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
+|[卸除資料庫加密金鑰](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|移除用於加密資料庫的金鑰。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|說明用來啟用 TDE 的 **ALTER DATABASE** 選項。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目錄檢視和動態管理檢視  
@@ -244,7 +243,7 @@ Tempdb 系統資料庫會加密啟用加密時使用[sp_pdw_database_encryption]
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-在升級期間，如果使用者資料庫已加密，而且未提供 DMK 密碼，將會失敗的升級動作。 期間取代，如果未提供正確的密碼則 DMK 存在時，則作業會略過 DMK 復原步驟。 所有其他的步驟會完成取代 VM 動作中，結尾，但此動作會報告失敗結尾，表示不需要額外的步驟。 安裝程式記錄檔中 (位於**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 時間戳記 > \Detail-Setup**)，將會顯示下列警告，即將結束。  
+在升級期間，如果使用者資料庫已加密，而且未提供 DMK 密碼，將會失敗的升級動作。 期間取代，如果未提供正確的密碼則 DMK 存在時，則作業會略過 DMK 復原步驟。 所有其他的步驟會完成取代 VM 動作中，結尾，但此動作會報告失敗結尾，表示不需要額外的步驟。 安裝程式記錄檔中 (位於 **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 時間戳記 > \Detail-Setup**)，將會顯示下列警告，即將結束。  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
@@ -280,7 +279,7 @@ TDE 的效能影響會因為您的資料、 其儲存方式，和 SQL Server PDW
 ## <a name="see-also"></a>另請參閱  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
-[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_info (Transact-SQL) | Microsoft Docs
+title: sp_datatype_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108298"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,8 +54,8 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而二進位不用引號。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 ( **'** ) 用於字元類型，0x 用於二進位。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 ( **'** ) 用於字元類型，而二進位不用引號。|  
 |CREATE_PARAMS|**varchar(** 32 **)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale"， **float**是 NULL，並**varchar**是"max_length"。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  

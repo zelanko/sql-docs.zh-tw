@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 3c9b8bf0da73545a9ec9c582aedf5b8f44980c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064333"
 ---
 # <a name="how-extended-stored-procedures-work"></a>擴充預存程序運作方式
 
@@ -36,3 +35,6 @@ ms.locfileid: "58645460"
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會呼叫要求的擴充預存程序 (以 DLL 內部的函數實作)。  
   
 4.  擴充預存程序會傳遞結果集，並透過擴充預存程序 API 將參數傳回至伺服器。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

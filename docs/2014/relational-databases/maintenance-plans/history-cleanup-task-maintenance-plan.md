@@ -3,25 +3,26 @@ title: 記錄清除工作 (維護計畫) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology: supportability"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.historycleanup.f1
 helpviewer_keywords:
 - History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
+ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0629aa0787b535f0a577c60751665d7a2dd760e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806800"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412700"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
+
   使用 **[記錄清除工作]** 對話方塊，即可從 msdb 資料庫的資料表中捨棄舊的記錄資訊。 這個工作支援備份和還原記錄、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄，以及維護計畫記錄的刪除。  
   
  此陳述式會使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 陳述式。  

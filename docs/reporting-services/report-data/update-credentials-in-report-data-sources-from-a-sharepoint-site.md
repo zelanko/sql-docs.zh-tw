@@ -2,18 +2,18 @@
 title: 從 SharePoint 網站更新報表資料來源的認證 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0c49195b6dc0695899d6eddad0860bcf3e028fce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575438"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>從 SharePoint 網站更新報表資料來源的認證
   本主題描述如何更新內嵌於報表內的資料來源，以及儲存在 SharePoint 文件庫中的共用資料來源。  
@@ -26,31 +26,31 @@ ms.locfileid: "47757586"
   
 1.  移至儲存報表所在的 SharePoint 文件庫。  
   
-2.  按一下報表上用來展開下拉式功能表的圖示，然後按一下 [管理資料來源]。  
+2.  按一下報表上用來展開下拉式功能表的圖示，然後按一下 [管理資料來源]  。  
   
      [管理資料來源] 頁面隨即開啟。  
   
-3.  在 [名稱] 資料行中，按一下資料來源。  
+3.  在 [名稱]  資料行中，按一下資料來源。  
   
-4.  確認已針對 [連線類型] 選取 [自訂資料來源] 選項。  
+4.  確認已針對 [連線類型]  選取 [自訂資料來源]  選項。  
   
      這個選項表示資料來源內嵌於報表中。  
   
-5.  除非您要將報表連接到其他類型的資料來源、其他伺服器或資料存放區，否則讓 [資料來源類型] 和 [連接字串] 選項保持不變。  
+5.  除非您要將報表連接到其他類型的資料來源、其他伺服器或資料存放區，否則讓 [資料來源類型]  和 [連接字串]  選項保持不變。  
   
-6.  針對 [認證] 選取 [預存認證]。 只有在資料來源未接受認證，或是使用一些其他方式傳送認證時，這個選項才有用。  
+6.  針對 [認證]  選取 [預存認證]  。 只有在資料來源未接受認證，或是使用一些其他方式傳送認證時，這個選項才有用。  
   
-     在某些情況下也可以使用 [不需要認證] 選項。  
+     在某些情況下也可以使用 [不需要認證]  選項。  
   
      針對某些資料來源類型，必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 中對應資料來源類型的主題。  
   
 7.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]  。  
   
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]** 。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]** 。  
   
-8.  若要驗證資料來源能夠使用更新的認證連接，請按一下 [測試連線]。  
+8.  若要驗證資料來源能夠使用更新的認證連接，請按一下 [測試連線]  。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -58,25 +58,25 @@ ms.locfileid: "47757586"
   
 1.  移至儲存共用資料來源所在的 SharePoint 文件庫。  
   
-2.  按一下共用資料來源上用來展開下拉式功能表的圖示，然後按一下 [編輯資料來源定義]。  
+2.  按一下共用資料來源上用來展開下拉式功能表的圖示，然後按一下 [編輯資料來源定義]  。  
   
      [資料來源] 頁面隨即開啟。  
   
-3.  除非您要將共用資料來源連線到其他類型的資料來源、其他伺服器或資料存放區，否則讓 [資料來源類型] 和 [連接字串] 選項保持不變。  
+3.  除非您要將共用資料來源連線到其他類型的資料來源、其他伺服器或資料存放區，否則讓 [資料來源類型]  和 [連接字串]  選項保持不變。  
   
-4.  針對 [認證] 選取 [預存認證]。  
+4.  針對 [認證]  選取 [預存認證]  。  
   
-     在某些情況下也可以使用 [不需要認證] 選項。 只有在資料來源未接受認證，或是使用一些其他方式傳送認證時，這個選項才有用。  
+     在某些情況下也可以使用 [不需要認證]  選項。 只有在資料來源未接受認證，或是使用一些其他方式傳送認證時，這個選項才有用。  
   
      針對某些資料來源類型，必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 中對應資料來源類型的主題。  
   
 5.  輸入使用者名稱和密碼。  
   
-    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]。  
+    -   如果帳戶是 Windows 網域使用者帳戶，請使用下列格式來指定它：\<網域>\\<帳戶\>，然後選取 [連線到資料來源時作為 Windows 認證]  。  
   
-    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]**。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]**。  
+    -   如果使用者名稱和密碼是資料庫認證，請勿選取 **[連接到資料來源時做為 Windows 認證]** 。 如果資料庫伺服器支援模擬或委派，您可以選取 **[設定執行內容到這個帳戶]** 。  
   
-6.  若要驗證資料來源能夠使用更新的認證連線，請使用 [測試連接]。  
+6.  若要驗證資料來源能夠使用更新的認證連線，請使用 [測試連接]  。  
   
 7.  驗證是否已選取 [啟用此資料來源]。  
   

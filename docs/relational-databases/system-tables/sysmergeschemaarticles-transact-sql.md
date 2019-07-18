@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029807"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

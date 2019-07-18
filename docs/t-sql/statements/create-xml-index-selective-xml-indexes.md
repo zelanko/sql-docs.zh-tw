@@ -13,12 +13,12 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a50bb8e07966985e467ab595453cb9001fc7f74f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14e48f3e8af059b0055f9747c5fb1b2e2a53ca6a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502812"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ CREATE XML INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <xquery_or_sql_values_path>::=   
 <path_name>   
@@ -96,7 +96,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

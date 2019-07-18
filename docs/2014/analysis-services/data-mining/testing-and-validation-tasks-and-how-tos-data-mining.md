@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082864"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>測試及驗證工作與操作方法 (資料採礦)
   您可以在 **中使用資料採礦設計師的** [採礦精確度圖表] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤，比較採礦結構中之採礦模型的預測精確度。  
@@ -40,7 +39,7 @@ ms.locfileid: "48143288"
   
  前三個圖表會使用 **[輸入選擇]** 索引標籤來定義用於產生圖表的資料。  
   
- 交叉驗證圖表是使用 [交叉驗證] 索引標籤上所提供的其他輸入所建立。如需詳細資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)。  
+ 交叉驗證圖表是使用 [交叉驗證]  索引標籤上所提供的其他輸入所建立。如需詳細資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)。  
   
  如需如何使用採礦精確度圖表的詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   

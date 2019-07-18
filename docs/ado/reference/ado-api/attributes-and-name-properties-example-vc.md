@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddceb73d278dd87849e65cb2904b73c9e535f711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920530"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes 和 Name 屬性範例 （VC + +）
 此範例中顯示的值[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[欄位](../../../ado/reference/ado-api/field-object.md)，以及[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。 它會使用[名稱](../../../ado/reference/ado-api/name-property-ado.md)屬性來顯示每個名稱**欄位**並**屬性**物件。  

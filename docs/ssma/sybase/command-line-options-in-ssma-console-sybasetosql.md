@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083479"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台中的命令列選項 (SybaseToSQL)
 Microsoft 為您提供一組強大的命令列選項來執行，並控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -27,7 +26,7 @@ Microsoft 為您提供一組強大的命令列選項來執行，並控制 SSMA �
   
 本節中，為了 「 選項 」 一詞也稱為 'switch'。  
   
--   選項不區分大小寫和可能的開頭是 '**-**'**/**' 字元。  
+-   選項不區分大小寫和可能的開頭是 ' **-** ' **/** ' 字元。  
   
 -   如果指定了選項，就一定要指定對應的選項參數。  
   

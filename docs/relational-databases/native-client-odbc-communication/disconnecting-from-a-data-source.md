@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a909fcf550a26542612b6cd8fab4dc003bcdbec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f915a802236394cb732959c6fbf898e9d2b2e216
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134182"
 ---
 # <a name="disconnecting-from-a-data-source"></a>從資料來源中斷連接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

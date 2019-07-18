@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a26f748a5dd8e291587b4e35e0f0677d9da415cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f379675a4d7b37b9eab69598f7c04bc57306d46
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092113"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>偵測到 SQL Server 2005 報表伺服器 Web 服務群組 (Upgrade Advisor)
   Upgrade Advisor 偵測到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體相關聯[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]報表伺服器 Web 服務群組。  

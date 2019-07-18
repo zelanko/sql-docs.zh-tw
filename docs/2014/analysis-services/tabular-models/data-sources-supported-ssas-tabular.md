@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067375"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   此主題描述可以搭配表格式模型使用之資料來源的類型。  
@@ -34,7 +33,7 @@ ms.locfileid: "53371310"
   
 |||||  
 |-|-|-|-|  
-|原始程式檔|版本|檔案類型|提供者<sup>1</sup>|  
+|`Source`|版本|檔案類型|提供者<sup>1</sup>|  
 |Access 資料庫|Microsoft Access 2003、 2007、 2010 年。|.accdb 或 .mdb|ACE 14 OLE DB 提供者|  
 |SQL Server 關聯式資料庫|Microsoft SQL server 2005、 2008、 2008 R2SQL Server 2012，Microsoft SQL Azure 資料庫<sup>2</sup>|(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(不適用)|OLE DB Provider for SQL Server PDW|  

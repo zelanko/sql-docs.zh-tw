@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109071"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>一般屬性頁面、共用資料集 (報表管理員)
   使用 [共用資料集] 頁面，即可檢視及管理共用資料集項目的屬性。  
@@ -34,9 +33,9 @@ ms.locfileid: "56032749"
   
 2.  將滑鼠停留在共用資料集上方，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]**， 就會開啟 [一般] 屬性頁面。  
+3.  在下拉式清單中，按一下 **[管理]** ， 就會開啟 [一般] 屬性頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  輸入可用來識別報表伺服器資料夾階層中項目的共用資料集名稱。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "56032749"
  **查詢執行逾時**  
  輸入查詢逾時之前的秒數。如果是 0，則查詢不會逾時。  
   
- **套用**  
+ **Apply**  
  儲存變更。  
   
  **刪除**  

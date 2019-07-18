@@ -1,5 +1,5 @@
 ---
-title: CoalesceEmpty (MDX) |Microsoft 文件
+title: CoalesceEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006299"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -46,7 +45,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  有效的字串運算式，一般是用來替代第一個字串運算式所傳回之 NULL 的指定字串值。  
   
 ## <a name="remarks"></a>備註  
- 如果指定了一個或多個數值運算式， **CoalesceEmpty**函式會傳回第一個數值運算式 （從左到右） 是可解析為非空白值的數值。 如果指定的數值運算式都無法解析成非空白值，那麼此函數會傳回空白資料格的值。 一般說來，第二個數值運算式的值是用來替代第一個數值運算式所傳回之 NULL 的數值。  
+ 如果指定了一個或多個數值運算式， **CoalesceEmpty**函式會傳回第一個數值運算式 （從左到右） 是可解析成非空白值的數值。 如果指定的數值運算式都無法解析成非空白值，那麼此函數會傳回空白資料格的值。 一般說來，第二個數值運算式的值是用來替代第一個數值運算式所傳回之 NULL 的數值。  
   
  如果指定了一個或多個字串運算式，此函數會傳回能解析為非空白值之第一個字串運算式的字串值 (從左到右)。 如果指定的字串運算式都無法解析成非空白值，那麼此函數會傳回空白資料格的值。 一般說來，第二個字串運算式的值是用來替代第一個字串運算式所傳回之 NULL 的字串值。  
   
@@ -55,7 +54,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  如需有關空的資料格的詳細資訊，請參閱 OLE DB 文件集。  
   
 ## <a name="example"></a>範例  
- 下列範例會查詢**Adventure Works** cube。 此範例會傳回每個產品的訂單數量，以及按類別計算的訂單數量百分比。 **CoalesceEmpty**函式以確保格式的導出的成員時，會以零 (0) 表示 null 值。  
+ 下列範例會查詢**Adventure Works** cube。 此範例會傳回每個產品的訂單數量，以及按類別計算的訂單數量百分比。 **CoalesceEmpty**函式可確保格式化的導出的成員時，將 null 值會表示為零 (0)。  
   
 ```  
 WITH   
@@ -79,6 +78,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

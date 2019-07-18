@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207978"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "38979862"
   
 1.  開啟 SharePoint 網站上的清單。  
   
-2.  在 [清單工具] 中，按一下 [清單]。  
+2.  在 [清單工具] 中，按一下 [清單]  。  
   
-3.  在 [連線及匯出] 中，按一下 [匯出為資料摘要]。  
+3.  在 [連線及匯出] 中，按一下 [匯出為資料摘要]  。  
   
     > [!NOTE]  
-    >  [匯出為資料摘要] 按鈕會藉由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 加入 SharePoint。 如果您沒有安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 或您沒有啟動 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能，將無法使用此按鈕。  
+    >  [匯出為資料摘要]  按鈕會藉由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 加入 SharePoint。 如果您沒有安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 或您沒有啟動 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能，將無法使用此按鈕。  
   
-4.  如果 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 安裝在本機上，按一下 [開啟]，或按一下 [儲存]，將 .atomsvc 文件儲存到硬碟，以供稍後的匯入作業使用。  
+4.  如果 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 安裝在本機上，按一下 [開啟]  ，或按一下 [儲存]  ，將 .atomsvc 文件儲存到硬碟，以供稍後的匯入作業使用。  
   
-5.  如果您選擇 [開啟]，使用 [資料表匯入精靈] 將資料摘要匯入工作表中。 資料摘要將會當做新的資料表加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗。  
+5.  如果您選擇 [開啟]  ，使用 [資料表匯入精靈] 將資料摘要匯入工作表中。 資料摘要將會當做新的資料表加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗。  
   
  如果 ADO.NET Data Services 3.5.1 未安裝在 SharePoint 伺服器上，則會發生錯誤。 如需錯誤及如何解決錯誤的詳細資訊，請參閱 [安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
   
@@ -68,25 +68,25 @@ ms.locfileid: "38979862"
 >  若要設定週期性的資料重新整理排程，將報表資料重新匯入已發行至 SharePoint 文件庫的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中，報表伺服器必須設定為與 SharePoint 整合。 如需一起使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 與 Reporting Services 的詳細資訊，請參閱[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
 ##  <a name="dsdoc"></a> 從資料服務文件建立資料摘要  
- 如果您有可以產生 Atom 摘要的自訂資料服務，您可以設定資料服務文件，以便將資料提供給使用者和應用程式使用。 「資料服務文件」(.atomsvc) 檔案會指定一個或多個以 Atom 電傳格式發行資料之線上來源的連接。 資料服務文件可以在「資料摘要庫」中建立，這是一個特殊用途的文件庫，可以提供一般存取點來瀏覽已經發行到 SharePoint 伺服器的資料服務文件。 在資料摘要庫中擁有資料服務文件存取權限的資訊工作者可以參照文件的 SharePoint URL，將資料摘要匯入其活頁簿及應用程式。  
+ 如果您有可以產生 Atom 摘要的自訂資料服務，您可以設定資料服務文件，以便將資料提供給使用者和應用程式使用。 「資料服務文件」  (.atomsvc) 檔案會指定一個或多個以 Atom 電傳格式發行資料之線上來源的連接。 資料服務文件可以在「資料摘要庫」  中建立，這是一個特殊用途的文件庫，可以提供一般存取點來瀏覽已經發行到 SharePoint 伺服器的資料服務文件。 在資料摘要庫中擁有資料服務文件存取權限的資訊工作者可以參照文件的 SharePoint URL，將資料摘要匯入其活頁簿及應用程式。  
   
 1.  開啟網站管理員所建立的資料摘要庫。 如需詳細資訊，請參閱[建立或自訂資料摘要庫 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
   
-2.  在 [文件庫工具] 中，按一下 [文件]。  
+2.  在 [文件庫工具] 中，按一下 [文件]  。  
   
-3.  按一下 [新增文件]。  
+3.  按一下 [新增文件]  。  
   
 4.  請提供檔案名稱和描述。  
   
 5.  指定一個或多個提供摘要的 URL：  
   
-    1.  [基底 URL] 是選擇性的。 如果資料服務文件提供多個摘要，則您應該指定它。 基底 URL 應該指定所有摘要通用的 URL 部分 (例如，伺服器名稱和網站)。 如果您要建立 Reporting Services 報表的資料服務文件，基底 URL 將是報表伺服器 URL 與報表。  
+    1.  [基底 URL]  是選擇性的。 如果資料服務文件提供多個摘要，則您應該指定它。 基底 URL 應該指定所有摘要通用的 URL 部分 (例如，伺服器名稱和網站)。 如果您要建立 Reporting Services 報表的資料服務文件，基底 URL 將是報表伺服器 URL 與報表。  
   
-    2.  [Web 服務 URL] 是必要的。 沒有基底 URL，這個值必須包含`http://`或`https://`的位址。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL，則`http://adventure-works/inventory/today.aspx`，基底 URL 將是`http://adventure-works/inventory`，和 Web 服務 URL 將是 /today.aspx。  
+    2.  [Web 服務 URL]  是必要的。 沒有基底 URL，這個值必須包含`http://`或`https://`的位址。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL，則`http://adventure-works/inventory/today.aspx`，基底 URL 將是`http://adventure-works/inventory`，和 Web 服務 URL 將是 /today.aspx。  
   
          Web 服務 URL 可以包含篩選或選取資料子集的參數。 提供摘要的應用程式或服務必須支援您在 URL 中指定的參數。  
   
-6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，資料表名稱用來命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中，將包含已匯入之資料的資料表。  
+6.  輸入 [資料表名稱]  ，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中，資料表名稱用來命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗中，將包含已匯入之資料的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
  [在管理中心為網站集合啟用 Power Pivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   

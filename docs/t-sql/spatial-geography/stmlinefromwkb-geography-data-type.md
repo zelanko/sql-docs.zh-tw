@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 723e8f173b36b3b62cf7eece71940affc780da9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bd63a65268053f8f494631151bade48c42ef138
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936649"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
  OGC 類型：**MultiLineString**  
   

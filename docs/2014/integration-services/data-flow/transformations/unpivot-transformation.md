@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770174"
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
   「取消樞紐」轉換可以使非正規化的資料集變成較正規化的版本，方法是將單一記錄中多個資料行的值擴充為單一資料行中具有同一值的多個記錄。 例如，列出客戶名稱的資料集對每個客戶都具有一個資料列，同時產品及購買數量會顯示在資料列的資料行中。 當「取消樞紐」轉換將資料集正規化之後，資料集便會對客戶購買的每種產品包含不同的資料列。  
@@ -44,7 +44,7 @@ ms.locfileid: "58385478"
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [取消樞紐轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
+ 如需可在 [取消樞紐轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [取消樞紐轉換編輯器](../../unpivot-transformation-editor.md)  
   

@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721515"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>課程 4-5：測試第 4 課套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在執行階段，損毀的檔案 **Currency_BAD.txt** 無法在 [貨幣索引鍵查閱] 轉換中產生相符的項目。 因為您已將 [貨幣索引鍵查閱] 的錯誤輸出設定成將失敗的資料列重新導向到新的「失敗的資料列」目的地，所以該元件不會失敗，且套件會順利執行。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會將所有失敗的錯誤資料列寫入至 **ErrorOutput.txt**。  
   
@@ -40,9 +44,9 @@ ms.locfileid: "58280952"
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>執行第 4 課教學課程套件  
   
-1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
+1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
   
-2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
+2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>檢視 ErrorOutput.txt 檔案的內容  
   

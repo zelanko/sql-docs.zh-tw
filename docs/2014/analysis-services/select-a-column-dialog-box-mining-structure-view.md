@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addacolumn.f1
@@ -15,17 +14,17 @@ ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069923"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>選取資料行對話方塊 (採礦結構檢視)
   使用 **[選取資料行]** 對話方塊，即可將資料行加入至採礦結構。 此對話方塊包含的選項會因您是使用 OLAP 採礦模型或關聯式採礦模型而不同。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **來源資料表**  
  作為採礦模型基礎的資料表。  
   

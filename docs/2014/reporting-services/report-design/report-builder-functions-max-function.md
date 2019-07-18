@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7bffe55c89f597ee47b9b7117df67da40e6c400
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 91dea7b15b00d9ebc08b97f3dd8e7a8f512ae097
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105184"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Max 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。  

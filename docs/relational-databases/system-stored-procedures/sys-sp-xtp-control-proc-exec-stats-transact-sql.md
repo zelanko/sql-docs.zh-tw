@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ba21eb0bf672f9468e4ba1ae72b1b82c7b6dc78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909218"
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

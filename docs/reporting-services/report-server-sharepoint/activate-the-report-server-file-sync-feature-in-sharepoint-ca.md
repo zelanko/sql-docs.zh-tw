@@ -2,18 +2,18 @@
 title: 在 SharePoint 啟動報表伺服器檔案同步處理功能 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e10a1cd7365825cfdee7d00552092f6d8023c4be
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 3a84c906df921bf4702d47e57400b7ad7b9e127f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021468"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579448"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>在 SharePoint 啟動報表伺服器檔案同步處理功能
 
@@ -36,16 +36,16 @@ ms.locfileid: "50021468"
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>在網站上啟用或停用報表伺服器檔案同步處理功能
   
-1.  從網站的主頁面按一下 **[網站動作]** 功能表，然後按一下 **[網站設定]**。  
+1.  從網站的主頁面按一下 **[網站動作]** 功能表，然後按一下 **[網站設定]** 。  
   
-2.  在 **[網站動作]** 中按一下 **[管理網站功能]**。  
+2.  在 **[網站動作]** 中按一下 **[管理網站功能]** 。  
   
 3.  在清單中找到 **[報表伺服器檔案同步處理]** 。  
   
-4.  按一下 **[啟用]**。  
+4.  按一下 **[啟用]** 。  
 
 > [!NOTE]
-> 若要停用報表伺服器檔案同步處理功能，您可以執行相同的程序，但是請按一下 [停用]。
+> 若要停用報表伺服器檔案同步處理功能，您可以執行相同的程序，但是請按一下 [停用]  。
 
 ## <a name="see-also"></a>另請參閱
 

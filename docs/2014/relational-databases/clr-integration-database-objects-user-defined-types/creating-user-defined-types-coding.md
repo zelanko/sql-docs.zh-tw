@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919939"
 ---
 # <a name="coding-user-defined-types"></a>編碼使用者定義型別
   當您編碼使用者定義型別 (UDT) 定義時，您必須根據您是否將 UDT 實作為類別或結構以及您已選擇的格式和序列化選項來實作各種功能。  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  `Microsoft.SqlServer.Server.SqlMethodAttribute` 類別會提供可用來標示方法定義的自訂屬性，以便針對 Null 呼叫行為指定決定性以及指定方法是否為 mutator。 已假設這些屬性 (Property) 的預設值，而且只有在需要非預設值時才會使用自訂屬性 (Attribute)。  
   
 > [!NOTE]  
->  `SqlMethodAttribute` 類別繼承自 `SqlFunctionAttribute` 類別，因此 `SqlMethodAttribute` 會繼承自 `FillRowMethodName` 而 `TableDefinition` 欄位會繼承自 `SqlFunctionAttribute`。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會進行編譯和組件進行部署，但是發生錯誤的相關`IEnumerable`傳回型別就會引發在執行階段，並出現下列訊息: 「 方法、 屬性或欄位 '\<名稱 >' 中類別\<類別 >' 的組件中'\<組件 >' 有無效的傳回類型。 」  
+>  `SqlMethodAttribute` 類別繼承自 `SqlFunctionAttribute` 類別，因此 `SqlMethodAttribute` 會繼承自 `FillRowMethodName` 而 `TableDefinition` 欄位會繼承自 `SqlFunctionAttribute`。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會進行編譯和組件進行部署，但是發生錯誤的相關`IEnumerable`傳回型別就會引發在執行階段，並出現下列訊息：「 方法、 屬性或欄位 '\<名稱 >' 中類別\<類別 >' 的組件中'\<組件 >' 有無效的傳回類型。 」  
   
  下表說明可在 UDT 方法中使用的部分相關 `Microsoft.SqlServer.Server.SqlMethodAttribute` 屬性，並列出其預設值。  
   

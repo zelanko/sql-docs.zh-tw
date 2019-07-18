@@ -20,15 +20,15 @@ helpviewer_keywords:
 - input operations [SQL Server]
 - time [SQL Server], I/O operations
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0c2691a3333db6bb3aac39aed9dc42518bc708e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b874feb143f72b6cc65a59b8f08eab889ad1927b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944442"
 ---
 # <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,19 +10,19 @@ ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1be11c13f4cad0a4f54321f6c47729b22ccd87bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 95e4e18317ebcad2ad25ef5e17db20fe91f75bff
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745146"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680977"
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您可以選取 [頁面設定] 對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
+您可以選取 [頁面設定]  對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
   
 ## <a name="paper"></a>紙張  
 **大小**  

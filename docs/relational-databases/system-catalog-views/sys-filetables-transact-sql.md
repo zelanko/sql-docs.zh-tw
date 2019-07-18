@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c99033dadd8964c39b95b0ee98a0cf9cc9ffa09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133996"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

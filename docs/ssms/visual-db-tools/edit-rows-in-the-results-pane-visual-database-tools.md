@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3dace5b6f23cdd33b3bd32ffb33b11b8ccc84c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: def3c1bfab6bb4e73b10f584ce2d10556edba19f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595008"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682409"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>編輯結果窗格中的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193303"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**用來擷取結果集資料，而不繫結資料行的值。 **SQLGetData**可以在呼叫相同的資料行，即可擷取大量資料的資料行從**文字**， **ntext**，或**映像**資料型別。  

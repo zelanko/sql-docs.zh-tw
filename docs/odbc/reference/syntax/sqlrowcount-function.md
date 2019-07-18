@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf24afb193742125fda0d6693274acb98d186c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018936"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "52502554"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLRowCount(  
       SQLHSTMT   StatementHandle,  

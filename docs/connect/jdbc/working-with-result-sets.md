@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85bf644f78e2c727681ae293eb144b765079d7d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3efeec0dee1f1bd66e64b3a1449bbaf1bf08722e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713466"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768558"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 

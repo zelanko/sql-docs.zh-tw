@@ -11,30 +11,23 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c5dfd05448d59a26ded4672f27ae4ec8ebbdd926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803427"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 [加入 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Windows Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
   
--   **開始之前：**  
-  
-     [必要條件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **使用下列方法加入複本：**  [加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
-  
+
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果您從未將任何可用性複本加入可用性群組中，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的＜伺服器執行個體＞和＜可用性群組和複本＞二節。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載目前主要複本的伺服器執行個體。  
   
@@ -46,12 +39,12 @@ ms.locfileid: "51602958"
   
 -   **使用完整初始資料同步處理的必要條件** ：您需要指定網路共用，才能讓精靈建立及存取備份。 對於主要複本，用於啟動 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帳戶必須具有網路共用的讀取與寫入檔案系統權限。 如果是次要複本，此帳戶必須有網路共用的讀取權限。  
   
-     如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中建立和設定 AlwaysOn 可用性群組。  
+     如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
-###  <a name="Security"></a> 安全性  
+##  <a name="Permissions"></a> 權限  
+ 需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-####  <a name="Permissions"></a> Permissions  
- 請參閱 [Security](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
+ 如果您想要允許 [將複本加入至可用性群組精靈] 管理資料庫鏡像端點，也需要 CONTROL ON ENDPOINT 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用加入 Azure 複本精靈 (SQL Server Management Studio)  
  您可以從 [指定複本頁面](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)啟動 [加入 Azure 複本精靈]。 存取這個頁面的方式有兩種：  
@@ -62,15 +55,15 @@ ms.locfileid: "51602958"
   
  一旦您啟動 [加入 Azure 複本精靈] 之後，請遵循下列步驟進行：  
   
-1.  首先，下載您的 Windows Azure 訂用帳戶的管理憑證。 按一下 [下載] 開啟登入頁面。  
+1.  首先，下載您的 Windows Azure 訂用帳戶的管理憑證。 按一下 [下載]  開啟登入頁面。  
   
 2.  使用您的 Microsoft 帳戶或您的組織帳戶登入 Microsoft Azure。 您的 Microsoft 或組織帳戶是電子郵件地址格式，例如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 如需 Azure 認證的詳細資訊，請參閱 [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) (組織的 Microsoft 帳戶常見問題集) 和 [疑難排解使用您的組織帳戶登入的問題](https://support.microsoft.com/kb/2756852)。  
   
-3.  接著，按一下 **[連接]**，連接到您的訂用帳戶。 一旦您連接之後，下拉式清單就會填入您的 Windows Azure 參數，例如 **[虛擬網路]** 和 **[虛擬網路子網路]**。  
+3.  接著，按一下 **[連接]** ，連接到您的訂用帳戶。 一旦您連接之後，下拉式清單就會填入您的 Windows Azure 參數，例如 **[虛擬網路]** 和 **[虛擬網路子網路]** 。  
   
 4.  針對將裝載新次要複本的 Windows Azure VM 指定設定：  
   
-     映像  
+     image  
      要用於 Windows Azure VM 的 SQL Server 映像名稱  
   
      VM 大小  

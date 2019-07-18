@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8fd93c1efab0e589fc87ebe74ab5485fcb482caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081348"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ea300436c0be78936fde95f4fa8437185fa044f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 9eacc8a0dc5801ad2642dc7ffec0b31c3de040f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022020"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

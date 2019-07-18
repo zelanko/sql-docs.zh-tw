@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057477"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多個一般檔案連線管理員編輯器 (一般頁面)
   使用 **[多個一般檔案連線管理員編輯器]** 對話方塊的 **[一般]** 頁面，即可選取一組具有相同資料格式的檔案，並指定其資料格式。 多個一般檔案連接，可以讓封裝連接到一組具有相同格式的文字檔。  
   
  若要深入了解多個一般檔案連線管理員，請參閱＜ [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
  提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   

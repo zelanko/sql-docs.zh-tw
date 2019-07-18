@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089268"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788024"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>檢視可用性群組接聽程式屬性 (SQL Server)
   此主題描述如何使用 *中的* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來檢視 AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener) 的屬性。  
@@ -39,7 +39,7 @@ ms.locfileid: "48089268"
   
 3.  展開可用性群組的節點，然後展開 **[可用性群組接聽程式]** 節點。  
   
-4.  以滑鼠右鍵按一下您想要檢視的接聽程式，然後選取 [屬性] 命令。  
+4.  以滑鼠右鍵按一下您想要檢視的接聽程式，然後選取 [屬性]  命令。  
   
 5.  這樣就會開啟 **[可用性群組接聽項屬性]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的 [可用性群組接聽程式屬性 (對話方塊)](#AgListenerPropertiesDialog)。  
   

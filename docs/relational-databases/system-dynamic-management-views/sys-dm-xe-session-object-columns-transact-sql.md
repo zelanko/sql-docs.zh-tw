@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e87e0d981d2ee6f18368394329cf524da7e49a22
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090227"
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53785839"
 |column_name|**nvarchar(256)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
 |column_value|**nvarchar(3072)**|資料行的設定值。 可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。 不可為 Null。 object_type 是其中一個：<br /><br /> event<br /><br /> 目標|  
+|object_type|**nvarchar(60)**|物件的型別。 不可為 Null。 object_type 是其中一個：<br /><br /> event<br /><br /> target|  
 |object_name|**nvarchar(256)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   

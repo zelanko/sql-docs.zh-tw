@@ -21,28 +21,28 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52ca965ad55ede40b3e5dc6daf1864b532604056
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0ca79e92632ab958734ae310bda82a1636ea8021
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682136"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682653"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [屬性] 視窗來檢視所選取元素的屬性。 您也可以使用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
+使用 [屬性]  視窗來檢視所選取元素的屬性。 您也可以使用 [屬性]  視窗來檢視檔案、專案和方案屬性。 按一下 [檢視]  功能表上的 [屬性視窗]  ，就可以使用 [屬性]  視窗。  
   
-視特定屬性的需求而定，[屬性] 視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
+視特定屬性的需求而定，[屬性]  視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
   
 ## <a name="options"></a>選項。  
 **物件名稱**  
 列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。  
   
 **類別目錄**  
-依類別目錄列出已選取物件的全部屬性和屬性值。 您可以摺疊類別目錄，以減少可見屬性的數目。 在展開或摺疊類別目錄時，您可以在類別目錄名稱的左邊看到加號 (**+**) 或減號 (**-**)。 類別目錄依字母順序來排列。  
+依類別目錄列出已選取物件的全部屬性和屬性值。 您可以摺疊類別目錄，以減少可見屬性的數目。 在展開或摺疊類別目錄時，您可以在類別目錄名稱的左邊看到加號 ( **+** ) 或減號 ( **-** )。 類別目錄依字母順序來排列。  
   
 **字母順序**  
 針對已選取物件，依字母順序排序所有設計階段的屬性和事件。  
@@ -51,7 +51,7 @@ ms.locfileid: "47682136"
 顯示物件的屬性。  
   
 **描述窗格**  
-描述窗格會在 [屬性] 視窗的底部顯示，並且會顯示屬性類型以及屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述] 命令，來關閉和開啟屬性的描述。  
+描述窗格會在 [屬性]  視窗的底部顯示，並且會顯示屬性類型以及屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述]  命令，來關閉和開啟屬性的描述。  
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server Management Studio 中的屬性視窗](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  

@@ -7,21 +7,21 @@ ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651969"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>訂閱設定與檔案共用帳戶 (Configuration Manager)
-  使用 **Configuration Manager 的 [訂閱設定]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面，針對原生模式報表伺服器與檔案共用訂閱設定檔案共用帳戶。 檔案共用帳戶可讓您在將報表傳遞至檔案共用的多個訂閱中，使用單一認證組合。 當變更認證時，您可針對檔案共用帳戶設定變更，而無須更新每個個別訂閱。  
+  使用 **Configuration Manager 的 [訂閱設定]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面，針對原生模式報表伺服器與檔案共用訂閱設定檔案共用帳戶。 檔案共用帳戶可讓您在將報表傳遞至檔案共用的多個訂閱中，使用單一認證組合。 當變更認證時，您可針對檔案共用帳戶設定變更，而無須更新每個個別訂閱。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案共用訂閱具有兩個工作流程：  
   
--   您的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 系統管理員可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本的新功能，設定可供一到多個訂閱使用的單一檔案共用帳戶。 設定 [指定檔案共用帳戶] ，然後使用者要在個別的訂閱設定頁面上，選取 [使用檔案共用帳戶] 。  
+-   您的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 系統管理員可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本的新功能，設定可供一到多個訂閱使用的單一檔案共用帳戶。 設定 [指定檔案共用帳戶]  ，然後使用者要在個別的訂閱設定頁面上，選取 [使用檔案共用帳戶]  。  
   
 -   針對目的檔案共用，使用特定認證設定個別訂閱。  
   

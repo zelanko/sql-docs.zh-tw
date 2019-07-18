@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bdcb3a3f5106a3a674ba8247b0315cf5461c3881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 702f7b5ec8ea1fc5eeea7ce95fae84bdcb17418a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075434"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>全域設定 （對話方塊） (MySQLToSQL)
 使用對話方塊頁面**全域設定**對話方塊來指定預設使用者動作和 SSMA 的警告設定。  

@@ -1,21 +1,19 @@
 ---
-title: 管理 Linux 上的 SQL Server |Microsoft Docs
+title: 管理 SQL Server on Linux
 description: 本文提供一般管理工作和工具的連結適用於 SQL Server 在 Linux 上執行。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: sql-linux
-ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000051"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>選擇正確的工具來管理 SQL Server on Linux
 

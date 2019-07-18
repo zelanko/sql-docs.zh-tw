@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812733"
 ---
 # <a name="change-source-control"></a>變更原始檔控制
   建立與管理連接和繫結，連接和繫結會將本機上儲存的方案或專案連結至原始檔控制資料庫資料夾。  
@@ -30,8 +30,8 @@ ms.locfileid: "48092538"
 > [!NOTE]  
 >  在方案總管中以滑鼠右鍵按一下項目，亦可使用此對話方塊。  
   
-## <a name="options"></a>選項。  
- **繫結**  
+## <a name="options"></a>選項  
+ **Bind**  
  建立選取的項目與指定的原始檔控制伺服器位置的關聯。 例如，您可以使用此按鈕，來繫節至最後的已知原始檔控制伺服器和資料庫。 如果找不到最近使用的伺服器資料夾或資料庫，就會提示您指定另一個。  
   
  **瀏覽**  
@@ -67,7 +67,7 @@ ms.locfileid: "48092538"
  **方案/專案**  
  顯示目前選取項目中之每個方案和專案的名稱。  
   
- **排序**  
+ **Sort**  
  排序顯示之資料行的順序。  
   
  **狀態**  

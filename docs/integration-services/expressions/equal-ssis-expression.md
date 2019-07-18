@@ -14,14 +14,18 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 782d0289c90255743774de65f18848b7e9891271
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ce9b5f138929da84e9a007cbabb4b6f36260f95b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270605"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725448"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
  但是，某些資料類型要求運算式先包含明確轉換，才能成功評估運算式。 如需在資料類型間合法轉換的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  

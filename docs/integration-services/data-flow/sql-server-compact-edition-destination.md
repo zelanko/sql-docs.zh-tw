@@ -17,14 +17,18 @@ ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d69637856a3f8057f287944e68b48cd9de99bf0f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e53d934902bb58b2e5d4ba66dc5bb55a8f9c03c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726355"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地會將資料寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫。  
   
 > [!NOTE]  

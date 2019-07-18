@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017990"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>異動資料擷取-sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47698586"
 |**start_time**|**datetime**|工作階段開始的時間。<br /><br /> 當**session_id** = 0 時，彙總的資料收集開始的時間。|  
 |**end_time**|**datetime**|工作階段結束的時間。<br /><br /> NULL = 工作階段使用中。<br /><br /> 當**session_id** = 0 時，最後一個工作階段已結束的時間。|  
 |**duration**|**bigint**|工作階段的持續時間 (以秒為單位)。<br /><br /> 0 = 工作階段不包含異動資料擷取交易。<br /><br /> 當**session_id** = 0 時，使用異動資料擷取交易的所有工作階段的持續時間 （以秒為單位） 的總和。|  
-|**scan_phase**|**nvarchar(200)**|工作階段的目前階段。 以下是可能的值及其描述：<br /><br /> 1： 正在讀取組態<br />2： 第一次掃描，建置雜湊表<br />3： 第二個掃描<br />4： 第二個掃描<br />5： 第二個掃描<br />6： 結構描述版本控制<br />7： 上次掃描<br />8： 完成<br /><br /> 當**session_id** = 0 時，這個值一律為"Aggregate"。|  
+|**scan_phase**|**nvarchar(200)**|工作階段的目前階段。 以下是可能的值及其描述：<br /><br /> 1：正在讀取組態<br />2：第一次掃描，建置雜湊表<br />3：第二個掃描<br />4：第二個掃描<br />5：第二個掃描<br />6:結構描述版本控制<br />7:上次掃描<br />8:完成<br /><br /> 當**session_id** = 0 時，這個值一律為"Aggregate"。|  
 |**error_count**|**int**|發生的錯誤數目。<br /><br /> 當**session_id** = 0 時，所有工作階段中的錯誤總數。|  
 |**start_lsn**|**nvarchar(23)**|工作階段的起始 LSN。<br /><br /> 當**session_id** = 0 時，最後一個工作階段的起始 LSN。|  
 |**current_lsn**|**nvarchar(23)**|目前正在掃描的 LSN。<br /><br /> 當**session_id** = 0 時，目前 LSN 是 0。|  

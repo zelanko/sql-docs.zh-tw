@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061693"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 來源編輯器 (連接管理員頁面)
   使用 [ADO NET 來源編輯器] 對話方塊的 [連線管理員] 頁面，即可選取來源的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  

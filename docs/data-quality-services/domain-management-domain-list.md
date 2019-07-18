@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a58809544a4c4d6db82aedf2eab54841c6c6ec0f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935336"
 ---
 # <a name="domain-management-domain-list"></a>定義域管理：定義域清單
 
@@ -39,13 +38,13 @@ ms.locfileid: "56027430"
  在知識庫中建立新的定義域。 此命令將會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
  **建立選取之定義域的複本**  
- 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「- 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]**，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
+ 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「- 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]** ，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
   
  **從資料檔匯入定義域**  
  從 .dqs 檔案匯入定義域。 這個命令會顯示 **[從資料檔匯入]** 對話方塊，好讓您瀏覽檔案系統，並針對單一定義域或複合定義域選取 .dqs 檔案。 若要使用此命令，請按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [從 .dqs 檔案匯入定義域](../data-quality-services/import-a-domain-from-a-dqs-file.md)。  
   
  **刪除定義域**  
- 從知識庫中刪除選取的定義域。 此命令會顯示 **[SQL Server Data Quality Services]** 對話方塊。 如果您按一下 **[是]**，將永久刪除此定義域及其所有資料。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。  
+ 從知識庫中刪除選取的定義域。 此命令會顯示 **[SQL Server Data Quality Services]** 對話方塊。 如果您按一下 **[是]** ，將永久刪除此定義域及其所有資料。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。  
   
  **建立連結的定義域**  
  建立與選取之定義域連結的定義域。 此命令會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立連結的定義域]** (連結到選取的定義域)。 您所連結的定義域會顯示在 [建立定義域] 對話方塊中。 此命令無法提供給複合定義域使用。 沒有任何命令可用來取消連結兩個定義域；若要這樣做，請刪除連結的定義域。 無法針對連結的定義域建立連結的定義域。 如需相關資訊，請參閱 [建立連結的定義域](../data-quality-services/create-a-linked-domain.md)。  

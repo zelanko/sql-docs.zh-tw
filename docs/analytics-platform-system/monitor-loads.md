@@ -2,19 +2,18 @@
 title: 針對平行處理資料倉儲中監視載入 |Microsoft Docs
 description: 監視作用中和最近的載入藉由分析平台 System (APS) 系統管理員主控台或平行資料倉儲 (PDW) 系統檢視表。 」
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960600"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>監視載入平行處理資料倉儲
 監視作用中和最近[dwloader](dwloader.md)使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 載入[系統檢視表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
@@ -26,7 +25,7 @@ ms.locfileid: "52413515"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 不論用來監視負載的方法，登入必須擁有存取基礎資料來源的權限。 
 
 <!-- MISSING LINKS

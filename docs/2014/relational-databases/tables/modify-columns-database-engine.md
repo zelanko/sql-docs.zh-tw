@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211831"
 ---
 # <a name="modify-columns-database-engine"></a>修改資料行 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改資料行的資料類型。  
@@ -31,7 +31,7 @@ ms.locfileid: "54126088"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來修改資料行的資料類型：**  
   
@@ -50,13 +50,13 @@ ms.locfileid: "54126088"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>若要修改資料行的資料類型  
   
-1.  在 [物件總管] 中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]。  
+1.  在 [物件總管]  中，找到要變更小數位數的資料行，以滑鼠右鍵按一下包含該資料行的資料表，然後按一下 [設計]  。  
   
 2.  選取要修改資料類型的資料行。  
   
-3.  在 [資料行屬性] 索引標籤中，按一下 [資料類型] 屬性的方格資料格，並且從下拉式清單中選擇新的資料類型。  
+3.  在 [資料行屬性]  索引標籤中，按一下 [資料類型]  屬性的方格資料格，並且從下拉式清單中選擇新的資料類型。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
+4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
   
 > [!NOTE]  
 >  在修改資料行的資料類型時，資料表設計工具會套用所選取資料類型的預設長度，即使您已經指定另一個資料類型也是如此。 一定要在指定資料類型之後，設定所需值的資料類型長度。  
@@ -70,9 +70,9 @@ ms.locfileid: "54126088"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  

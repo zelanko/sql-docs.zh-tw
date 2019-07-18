@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080724"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授與預存程序 (Analysis Services) 的權限
-  儲存程序或組件，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所撰寫的外部常式[!INCLUDE[msCoName](../includes/msconame-md.md)]的擴充功能的.NET 程式設計語言， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 組件可讓開發人員利用跨語言整合、例外狀況處理、版本控制支援、部署支援和偵錯支援等優點。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的預存程序 (或組件) 是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 程式語言撰寫的外部常式，用於擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 組件可讓開發人員利用跨語言整合、例外狀況處理、版本控制支援、部署支援和偵錯支援等優點。  
   
  您必須是伺服器管理員，才能註冊組件。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   

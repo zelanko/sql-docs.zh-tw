@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151014"
 ---
 # <a name="xtp-transaction-log"></a>XTP 交易記錄
   XTP 交易記錄效能物件包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中與 XTP 交易記錄相關的計數器。  

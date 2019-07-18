@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 5584984121403b1a70e15fb02e85b7afcc169843
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094983"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式的 Reporting Services 之硬體和軟體需求
 
@@ -68,7 +67,7 @@ ms.locfileid: "54206174"
   
 ##  <a name="bkmk_more_information"></a> 其他資訊
 
- 如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
+ 如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx) 。  
   
  [SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   

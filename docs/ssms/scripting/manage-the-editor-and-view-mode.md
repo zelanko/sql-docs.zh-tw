@@ -17,16 +17,16 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2e9ceaed7efc52ae27d9bae2d03c7a19bdebb24
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5a141abd42c1a3d8c15dc2b96b1637ea2775072f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642848"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680205"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "51642848"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[環境]**。 按一下 **[一般]**。  
+2.  按一下 **[環境]** 。 按一下 **[一般]** 。  
   
-3.  按一下 **[索引標籤文件]** 或 **[MDI 環境]**。  
+3.  按一下 **[索引標籤文件]** 或 **[MDI 環境]** 。  
   
     > [!NOTE]  
     >  您必須重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，變更才會生效。  
@@ -66,11 +66,11 @@ ms.locfileid: "51642848"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[文字編輯器]**。  
+2.  按一下 **[文字編輯器]** 。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]  ，這會影響所有語言)。  
   
-4.  選取 **[自動換行]**。  
+4.  選取 **[自動換行]** 。  
   
 ## <a name="enabling-virtual-space-mode"></a>啟用虛擬空間模式  
  在 **[虛擬空間]** 模式中，編輯器的行為會如同各行尾端之後的空間填滿了無數個空格，可讓各行程式碼延伸到超出可見螢幕區的側邊。  
@@ -79,11 +79,11 @@ ms.locfileid: "51642848"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[文字編輯器]**。  
+2.  按一下 **[文字編輯器]** 。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]  ，這會影響所有語言)。  
   
-4.  選取 **[啟用虛擬空間]**。  
+4.  選取 **[啟用虛擬空間]** 。  
   
  當啟用虛擬空間模式時，游標會從行尾折返到下一行的第一個字元，反之亦然。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "51642848"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[文字編輯器]**。  
+2.  按一下 **[文字編輯器]** 。  
   
-3.  按一下 **[所有語言]**。  
+3.  按一下 **[所有語言]** 。  
   
-4.  按一下 **[一般]**。  
+4.  按一下 **[一般]** 。  
   
-5.  選取 **[行號]**。  
+5.  選取 **[行號]** 。  
   
  如果只要針對某些程式設計語言指定顯示行號的功能，請在適當資料夾中選取 **[行號]** 。  
   

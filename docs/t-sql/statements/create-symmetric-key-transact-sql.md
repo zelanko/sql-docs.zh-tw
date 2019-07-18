@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326499"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836353"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>引數  
  *Key_name*  
- 依據資料庫中已知之對稱金鑰指定唯一的名稱。 暫時金鑰名稱的開頭應該是一個數字符號 (#)。 例如，**#temporaryKey900007**。 您無法建立名稱開頭有多個數字符號 (#) 的對稱金鑰。 您無法使用 EKM 提供者建立暫時對稱金鑰。  
+ 依據資料庫中已知之對稱金鑰指定唯一的名稱。 當 _key_name_ 的開頭是數字 (#) 符號時，會指定暫存金鑰。 例如， **#temporaryKey900007**。 您無法建立名稱開頭有多個數字符號 (#) 的對稱金鑰。 您無法使用 EKM 提供者建立暫時對稱金鑰。  
   
  AUTHORIZATION *owner_name*  
  指定將擁有這個金鑰的資料庫使用者或應用程式角色的名稱。  
@@ -82,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- KEY_SOURCE **='**_pass\_phrase_**'**  
+ KEY_SOURCE **='** _pass\_phrase_ **'**  
  指定要從其衍生金鑰的複雜密碼。  
   
- IDENTITY_VALUE **='**_identity\_phrase_**'**  
+ IDENTITY_VALUE **='** _identity\_phrase_ **'**  
  指定要從中產生 GUID 來標記利用暫時金鑰加密的資料之識別片語。  
   
- PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
+ PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
  指定在可延伸金鑰管理提供者中所參考的名稱。  
   
 > [!NOTE]  
@@ -149,9 +149,9 @@ CREATE SYMMETRIC KEY key_name
  在不同的資料區塊上重複使用相同的 RC4 或 RC4_128 KEY_GUID，結果會是相同的 RC4 金鑰，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動提供 Salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY SYMMETRIC KEY 權限。 如果指定了 AUTHORIZATION，則需要資料庫使用者的 IMPERSONATE 權限或應用程式角色的 ALTER 權限。 如果是利用憑證或非對稱金鑰來加密，則需要憑證或非對稱金鑰的 VIEW DEFINITION 權限。 只有 Windows 登入、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，以及應用程式角色可以擁有對稱金鑰。 群組和角色無法擁有對稱金鑰。  
   
 ## <a name="examples"></a>範例  
@@ -181,7 +181,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可延伸金鑰管理 (EKM) 裝置建立對稱金鑰  
- 下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 `MyEKMProvider` 中，註冊稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的提供者。  
+ 下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，註冊稱為 `MyEKMProvider` 的提供者。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

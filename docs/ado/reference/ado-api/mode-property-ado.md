@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fc2a9dffe5dc22c1dadfa075b91d8a6b26215de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932221"
 ---
 # <a name="mode-property-ado"></a>Mode 屬性 (ADO)
 表示在修改資料的可用權限[連接](../../../ado/reference/ado-api/connection-object-ado.md)，[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

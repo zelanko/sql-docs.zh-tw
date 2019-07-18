@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63131533"
 ---
 # <a name="create-a-job"></a>建立作業
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件 (SMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立 SQL Server Agent 作業。  
@@ -67,9 +67,9 @@ ms.locfileid: "52808880"
   
 1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent 作業的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業...]。  
+3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [新增作業...]  。  
   
 4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業的屬性和新的工作&#40;[一般] 頁&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52808880"
   
 9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;為目標頁面&#41;](job-properties-new-job-targets-page.md)。  
   
-10. 完成後，請按一下 **[確定]**。  
+10. 完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -91,9 +91,9 @@ ms.locfileid: "52808880"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb ;  
@@ -134,7 +134,7 @@ ms.locfileid: "52808880"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 ##  <a name="SMOProcedure"></a> 使用 SQL Server 管理物件  
  **若要建立 SQL Server Agent 作業**  

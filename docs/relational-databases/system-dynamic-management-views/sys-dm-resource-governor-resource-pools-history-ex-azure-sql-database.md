@@ -2,10 +2,10 @@
 title: sys.dm_resource_governor_resource_pools_history_ex (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc5c5d8377b93a3e0101f1160444a207b5881cd
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053301"
 ---
-# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex & Amp;#40;transact-SQL&AMP;#41;
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -102,7 +101,7 @@ ms.locfileid: "58618115"
 
 ## <a name="permissions"></a>Permissions
 
-此檢視需要 VIEW DATABASE STATE 權限。
+此檢視需要 VIEW SERVER STATE 權限。
 
 ## <a name="remarks"></a>備註
 

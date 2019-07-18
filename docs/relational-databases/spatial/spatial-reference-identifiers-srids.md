@@ -15,12 +15,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 149175637ba01a3e03c4a1ddbba5da1af3205a03
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: ebeda52e81bbc3c3aaa8fab446ae74c3169970f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66015203"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空間參考識別碼 (SRID)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

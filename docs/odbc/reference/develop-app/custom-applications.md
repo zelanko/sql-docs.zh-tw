@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067469"
 ---
 # <a name="custom-applications"></a>自訂應用程式
 自訂應用程式通常會執行特定工作的幾個 Dbms。 例如，應用程式可能會擷取單一的 DBMS 資料和產生報表，或它可能會傳送數個 Dbms 之間的資料。 這些應用程式怎麼在一般是這些 Dbms 寫入應用程式之前，先已知，且不太可能會變更應用程式生命週期。  

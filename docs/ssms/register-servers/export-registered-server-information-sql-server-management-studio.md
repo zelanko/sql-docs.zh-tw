@@ -14,15 +14,15 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c7cb82f12c5a69936c3b75986901c29fb7d8a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b737566d1584bc08210ba6df400951cea638e8ee
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635796"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683972"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>匯出已註冊的伺服器資訊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47635796"
   
 #### <a name="to-export-registered-server-information"></a>匯出已註冊的伺服器資訊  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [匯出]。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [匯出]  。  
   
     > [!NOTE]  
     >  您可以匯出個別伺服器、整個已註冊的伺服器樹狀目錄，或已註冊的伺服器樹狀目錄之子集。  
@@ -50,7 +50,7 @@ ms.locfileid: "47635796"
      伺服器群組僅會顯示目前已註冊的伺服器樹狀目錄的伺服器群組。  
   
      **匯出檔案**  
-     在文字方塊中鍵入匯出檔案的名稱，或使用瀏覽按鈕 (**...**) 以找出用戶端電腦上的匯出檔案。 如果您選取現有的檔案，則已註冊的伺服器資訊會附加至該檔案。 使用 .regsrvr 副檔名。 如果您要提供已註冊的伺服器資訊給其他使用者或另一部電腦使用，您可以將檔案儲存在網路上。 其他使用者就可以存取檔案，並匯入部分或全部已註冊的伺服器資訊。 如果您選取現有的檔案作為匯出檔案，則伺服器註冊資訊會覆寫該檔案的內容。  
+     在文字方塊中鍵入匯出檔案的名稱，或使用瀏覽按鈕 ( **...** ) 以找出用戶端電腦上的匯出檔案。 如果您選取現有的檔案，則已註冊的伺服器資訊會附加至該檔案。 使用 .regsrvr 副檔名。 如果您要提供已註冊的伺服器資訊給其他使用者或另一部電腦使用，您可以將檔案儲存在網路上。 其他使用者就可以存取檔案，並匯入部分或全部已註冊的伺服器資訊。 如果您選取現有的檔案作為匯出檔案，則伺服器註冊資訊會覆寫該檔案的內容。  
   
      **不要在匯出檔案中包含使用者名稱與密碼**  
      匯出檔案時排除使用者名稱。  

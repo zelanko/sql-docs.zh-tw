@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721712"
 ---
 # <a name="configure-distribution"></a>設定散發
   「散發者」是包含散發資料庫的伺服器，該資料庫會存儲所有類型之複寫的中繼資料和記錄資料，以及異動複寫的交易。 若要設定複寫，您必須設定「散發者」。 每個「發行者」可以僅指派給一個「散發者」執行個體，但是多個發行者可以共用一個「散發者」。 散發者會使用所在伺服器的下列額外資源：  

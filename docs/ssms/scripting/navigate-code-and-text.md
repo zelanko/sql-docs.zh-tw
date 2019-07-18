@@ -18,16 +18,16 @@ helpviewer_keywords:
 - navigating code
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78f5aa14e5633c50d45592962459a26f136c3de0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2d323f9821587316e013c9eabe37ebdb75e9d1a2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642856"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681139"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51642856"
   
 -   滑鼠和導覽鍵。  
   
--   [移至] 命令。  
+-   [移至]  命令。  
   
 > [!NOTE]  
 >  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
@@ -66,11 +66,11 @@ ms.locfileid: "51642856"
 -   利用 CTRL+向上鍵和 CTRL+向下鍵，在不移動插入點的情況下，捲動檢視。  
   
 ## <a name="go-to-command"></a>[移至] 命令  
- 請使用 [移至] 命令移至特定行號。 若要顯示行號，請在 選項 對話方塊中，依序按一下 文字編輯器所有語言一般，然後選取 行號。  
+ 請使用 [移至]  命令移至特定行號。 若要顯示行號，請在 選項  對話方塊中，依序按一下 文字編輯器  所有語言  一般  ，然後選取 行號  。  
   
  **移至特定行號**  
   
-1.  在 [編輯] 功能表上，按一下 [移至]  
+1.  在 [編輯]  功能表上，按一下 [移至]   
   
 2.  輸入您想檢視的行號  
   

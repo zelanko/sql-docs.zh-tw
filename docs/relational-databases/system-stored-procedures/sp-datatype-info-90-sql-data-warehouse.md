@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108326"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -50,8 +49,8 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而二進位不用引號。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 ( **'** ) 用於字元類型，0x 用於二進位。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 ( **'** ) 用於字元類型，而二進位不用引號。|  
 |CREATE_PARAMS|**varchar(** 32 **)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale"， **float**是 NULL，並**varchar**是"max_length"。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  

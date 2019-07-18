@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2f50c116060f5ef842cf359b958f9e6cedb5c716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919530"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
@@ -86,7 +85,7 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>事件  
+### <a name="events"></a>Events  
  如需有關 ADO/WFC 事件的詳細資訊，請參閱[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
   
 ```  

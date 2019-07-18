@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926799"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概觀的 Microsoft 資料指標服務
 OLE DB 的 Microsoft 資料指標服務來補充資料提供者的資料指標支援函式。 如此一來，使用者察覺到相當一致的功能，從所有資料提供者。
@@ -87,7 +86,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|補充的一種可供資料指標**資料錄集**。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|補充適用於鎖定的類型**資料錄集**。 啟用批次更新。|
-|[排序](../../../ado/reference/ado-api/sort-property.md)|指定一或多個欄位名稱**資料錄集**排序，以及每個欄位以遞增或遞減順序排序。|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|指定一或多個欄位名稱**資料錄集**排序，以及每個欄位以遞增或遞減順序排序。|
 
 ## <a name="method-behavior"></a>方法的行為
  OLE DB 資料指標服務啟用，或會影響的行為[欄位](../../../ado/reference/ado-api/field-object.md)物件的[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，而**資料錄集**物件的[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)， [resync](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[儲存](../../../ado/reference/ado-api/save-method.md)方法。

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - explicit hierarchies, derived hierarchies with explicit caps
 - derived hierarchies, derived hierarchies with explicit caps
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8f3a46e00d034048de09ea99be3a8f29b23c5331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9d62f40807c4e7be3c2e585540dfd79ae85a6228
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084203"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>具有明確頂層的衍生階層 (Master Data Services)
 

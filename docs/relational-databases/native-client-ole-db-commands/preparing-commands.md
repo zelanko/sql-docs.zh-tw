@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 948aacd13348d53e6bfac8c81962d53c48091887
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921b5f4ce929c5a719bcabd09e2f2e7e567a831a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128721"
 ---
 # <a name="preparing-commands"></a>準備命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

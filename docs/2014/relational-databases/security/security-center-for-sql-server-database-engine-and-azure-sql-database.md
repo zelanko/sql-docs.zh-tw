@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1fffca14e9c30c5fd01cff88b7bb90608eb9d30d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63185341"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
   本頁提供的連結可協助您在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]及 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中尋找有關於安全性及保護的資訊。  

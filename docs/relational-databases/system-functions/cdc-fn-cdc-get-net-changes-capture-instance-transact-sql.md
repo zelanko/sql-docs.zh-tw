@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043040"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>引數  
  *from_lsn*  
- LSN，代表要包含在結果集之 LSN 範圍的低端點。 *from_lsn*已**binary(10)**。  
+ LSN，代表要包含在結果集之 LSN 範圍的低端點。 *from_lsn*已**binary(10)** 。  
   
  只有當資料列中[cdc。&#91;擷取執行個體&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表的值大於或等於 __ $start_lsn *from_lsn*都併入結果集中。  
   
  *to_lsn*  
- LSN，代表要包含在結果集之 LSN 範圍的高端點。 *to_lsn*已**binary(10)**。  
+ LSN，代表要包含在結果集之 LSN 範圍的高端點。 *to_lsn*已**binary(10)** 。  
   
  只有當資料列中[cdc。&#91;擷取執行個體&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表的值 __ $start_lsn 中小於或等於*from_lsn*或等於*to_lsn*會包含在結果集中。  
   
@@ -73,7 +72,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  傳回的資料列和套用中繼資料行 __ $start_lsn 中的資料列所需的作業的最終變更的 LSN 以及\_ \_$operation。 此外，當更新作業傳回 (\_\_$operation = 4) 中傳回的值中標示更新中修改的擷取資料行\_ \_$update_mask。  
   
  all with merge  
- 在中繼資料資料行 __$start_lsn 中傳回資料列最終變更的 LSN。 資料行\_ \_$operation 會是兩個值之一： 1 代表刪除，而 5 則表示套用變更所需的作業是插入或更新。 資料行\_ \_$update_mask 一律為 NULL。  
+ 在中繼資料資料行 __$start_lsn 中傳回資料列最終變更的 LSN。 資料行\_ \_$operation 會是兩個值之一：1 代表刪除，而 5 則表示套用變更所需的作業是插入或更新。 資料行\_ \_$update_mask 一律為 NULL。  
   
  由於針對指定變更判斷精確作業的邏輯會增加查詢的複雜性，所以這個選項會設計成在足以表示套用變更所需的作業是插入或更新時改善查詢效能，但是不一定要明確區分這兩者。 在可直接使用合併作業的目標環境 (例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 環境) 中，這個選項最具吸引力。  
   
@@ -129,8 +128,8 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ## <a name="see-also"></a>另請參閱  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

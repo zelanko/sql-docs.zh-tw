@@ -1,5 +1,5 @@
 ---
-title: 工作 4 （選擇性）：結合、 比對及發行新的資料集 |Microsoft Docs
+title: 工作 4 (選擇性)：結合、 比對及發行新的資料集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489275"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 （選擇性）：結合、比對及發行新的資料集
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 (選擇性)：結合、比對及發行新的資料集
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 然後再新增資料，它可用來比較新資料與已在 MDS 中，以確保，您不會加入重複或不正確的資料中受管理的資料。 在適用於 Excel 的 Master Data Services 增益集中，您可以結合兩個工作表中的資料然後比較資料，以識別重複項並加以移除，之後再將資料發行到 MDS。 MDS Excel 增益集的比對功能會使用 DQS 比對功能來識別資料中的相符內容。 在這項工作中，您會將兩個工作表中的資料結合到一個工作表，然後執行比對活動來識別重複項並加以移除，之後再將資料發行到 MDS。 請參閱[資料品質比對 MDS 增益集中適用於 Excel](https://msdn.microsoft.com/library/hh548681.aspx)並[結合資料](https://msdn.microsoft.com/library/hh548680.aspx)主題以取得詳細資料。  
   
 1.  啟動新執行個體**Excel**。 按一下**開始**，指向**執行**，型別**Excel**，然後按一下**確定**。  
@@ -78,7 +78,7 @@ ms.locfileid: "56014273"
   
 22. 將工作表資料行對應至定義域，如下表所示。  
   
-    |工作表資料行|網域|  
+    |工作表資料行|Domain|  
     |----------------------|------------|  
     |Code (您已上傳供應商識別碼當做 MDS 中供應商實體的代碼)|Supplier ID|  
     |Name (您已上傳供應商名稱當做 MDS 中供應商實體的名稱)|Supplier Name|  
@@ -88,13 +88,13 @@ ms.locfileid: "56014273"
   
 24. 輸入**70%** 做為**權數**如**Supplier Name**和**30%** 為**權數**針對**Contact Email**映像所示。  
   
-25. 按一下 [確定] 。  
+25. 按一下 [確定]  。  
   
-26. 比對程序應該識別出具有 **Code:S1**。  
+26. 比對程序應該識別出具有**程式碼：S1**。  
   
      ![Excel-比對結果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel-比對結果")  
   
-27. 選取 **重複的資料列 （橘色）**，按一下滑鼠右鍵，然後按一下**刪除**刪除的資料列。  
+27. 選取 **重複的資料列 （橘色）** ，按一下滑鼠右鍵，然後按一下**刪除**刪除的資料列。  
   
 28. 刪除**CLUSTER_ID**資料行，因為您不再需要它。  
   
@@ -111,6 +111,6 @@ ms.locfileid: "56014273"
 34. 現在，關閉**Book1-Microsoft Excel**視窗，而不用儲存檔案。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5:從 Excel 建立的網域屬性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [工作 5：從 Excel 建立的網域屬性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8913538096fba205f8880f3a89afcbd2d4268a87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 705593e1ed47a1b19538654ab15755facae1e57a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825426"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679988"
 ---
 # <a name="advanced-save-options"></a>進階儲存選項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊即可選取語言編碼配置，以及指定要在每行行尾插入的字元。 若要存取 [進階儲存選項] 對話方塊，請在 [檔案] 功能表上，按一下 [另存 <query name>.sql 為] 開啟 [另存新檔] 對話方塊，按一下 [儲存] 按鈕上的向下箭號，然後再按一下 [使用編碼方式儲存]。  
+使用此對話方塊即可選取語言編碼配置，以及指定要在每行行尾插入的字元。 若要存取 [進階儲存選項]  對話方塊，請在 [檔案]  功能表上，按一下 [另存 <query name>.sql 為]   開啟 [另存新檔]  對話方塊，按一下 [儲存]  按鈕上的向下箭號，然後再按一下 [使用編碼方式儲存]  。  
   
 ## <a name="options"></a>選項。  
 **編碼方式**  

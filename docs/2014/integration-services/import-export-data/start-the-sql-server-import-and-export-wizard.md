@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768025"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>執行 SQL Server 匯入和匯出精靈
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈提供最簡單的方法，讓您在資料來源之間複製資料以及建構基本封裝。 如需有關精靈的詳細資訊，請參閱 < [SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "58384176"
   
      -或-  
   
-     在 [[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]上**專案**功能表上，按一下**SSISImport 和匯出精靈]**。  
+     在 [[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]上**專案**功能表上，按一下**SSISImport 和匯出精靈]** 。  
   
      -或-  
   

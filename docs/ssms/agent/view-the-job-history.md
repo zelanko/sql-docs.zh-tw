@@ -14,16 +14,16 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 - displaying job history
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1618df076a60d75300ea406f80b9974e093f9229
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 67ac560a422dc87ce33f2a15979bd9b203d8f94f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699628"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680558"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "51699628"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目檢視作業記錄：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "51699628"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -56,13 +56,13 @@ ms.locfileid: "51699628"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
+2.  展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]**。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]** 。  
   
 4.  在 [記錄檔檢視器] 中檢視作業記錄。  
   
-5.  若要更新作業記錄，請按一下 **[重新整理]**。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
+5.  若要更新作業記錄，請按一下 **[重新整理]** 。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "51699628"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- lists all job information for the NightlyBackups job.  

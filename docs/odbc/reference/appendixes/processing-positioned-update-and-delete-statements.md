@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d898fcc7d1b35230173afa0443219d59c54720ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028433"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>處理定點更新和刪除陳述式
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ ms.locfileid: "47682742"
   
  定位的 update 和 delete 陳述式會受限於下列限制：  
   
--   定位的 update 和 delete 陳述式只能用於下列情況： 當**選取 **產生的結果集的陳述式; 當**選取**陳述式未包含聯結， **UNION**子句，或有**GROUP BY**子句，且在選取清單中使用的別名或運算式的任何資料行已不繫結與**SQLBindCol**。  
+-   定位的 update 和 delete 陳述式只能用於下列情況： 當**選取** 產生的結果集的陳述式; 當**選取**陳述式未包含聯結， **UNION**子句，或有**GROUP BY**子句，且在選取清單中使用的別名或運算式的任何資料行已不繫結與**SQLBindCol**。  
   
 -   如果應用程式會準備定位的 update 或 delete 陳述式，它必須這樣之後就叫做**SQLFetch**或是**SQLFetchScroll**。 雖然資料指標程式庫提交陳述式，以準備的驅動程式時，會關閉陳述式，並直接在應用程式的呼叫時執行它**SQLExecute**。  
   

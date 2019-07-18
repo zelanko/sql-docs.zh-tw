@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48e169ae33a80eec6d7c40c120713407da1ddb10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779832"
 ---
 # <a name="user-defined-type"></a>使用者定義型別
   這個「使用者定義資料類型」範例會示範如何從 Transact-SQL 以及使用 `System.Data.SqlClient` 的用戶端應用程式建立和使用簡單的使用者定義資料類型。  

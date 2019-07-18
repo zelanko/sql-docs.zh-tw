@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cdff2d0646dcce13257bb10f7f447169fd8c8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018361"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查詢 SQL Server 系統目錄 FAQ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -617,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ20"></a> 如何判斷資料行用於計算資料行運算式？  
- 在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`、`<schema_name.table_name>` 及 `<column_name`>。  
+ 執行下列查詢之前，請取代`<database_name>`， `<schema_name.table_name>`，和`<column_name`> 使用有效的名稱。  
   
 ```  
 USE <database_name>;  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cccbbd4d87c930ac38aadd1ec9f58dab26bcce1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939963"
 ---
 # <a name="axis-object-ado-md"></a>Axis 物件 (ADO MD)
 表示位置或包含一或多個維度的成員可選取的資料格集的篩選座標軸。  

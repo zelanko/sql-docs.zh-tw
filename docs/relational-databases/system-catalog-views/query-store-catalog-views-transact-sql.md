@@ -1,7 +1,7 @@
 ---
 title: 查詢存放區目錄檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 04/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 author: stevestein
 ms.author: sstein
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c033a139a518b0600a40fd26f54e892478fbfd8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 014c9d6f965e62c4651634a92a473a9573642f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018423"
 ---
-# <a name="query-store-catalog-views-transact-sql"></a>查詢存放區目錄檢視 & Amp;#40;transact-SQL&AMP;#41
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="query-store-catalog-views-transact-sql"></a>查詢存放區目錄檢視 (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   此章節包含下列目錄檢視。  
   

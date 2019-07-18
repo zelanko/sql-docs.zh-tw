@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038909"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>布林值的相關函式 - not 函式 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
  本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函數尋找的產品型號目錄描述不包含\<規格 > 項目。  
- 以下查詢會建構 XML，而此 XML 包含其目錄描述不包含 <`Specifications`> 元素的產品型號所屬識別碼。  
+ 下列查詢會建構 XML，其中包含其目錄描述不包含產品型號的產品型號識別碼 <`Specifications`> 項目。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  

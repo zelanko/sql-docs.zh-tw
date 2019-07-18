@@ -17,14 +17,18 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8c4d8e63cb2d721e60741f5df164048a6c0b5c4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1ad3d92ece3a3d625c83232519bf0fdbeb94995d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727439"
 ---
 # <a name="shrink-database-task"></a>壓縮資料庫工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「壓縮資料庫」工作會減少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料和記錄檔的大小。  
   
  藉由使用「壓縮資料庫」工作，封裝可壓縮單一資料庫或多重資料庫的檔案。  

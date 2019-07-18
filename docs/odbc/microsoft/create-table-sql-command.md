@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096605"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 建立資料表，具有指定的欄位。  
@@ -47,7 +46,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>引數  
- 建立資料表&#124;DBF *TableName1*  
+ CREATE TABLE &#124; DBF *TableName1*  
  指定要建立之資料表的名稱。 資料表 和 DBF 選項都相同。  
   
  名稱*LongTableName*  
@@ -58,7 +57,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  FREE  
  指定的資料表不會加入至開啟的資料庫。 如果資料庫尚未開啟，不需要免費。  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [， *nPrecision*])]  
+ *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  請指定欄位名稱、 欄位型別、 欄位寬度和欄位的有效位數 （小數位數），分別。  
   
  *FieldType*指出欄位的是單一字母[資料型別](../../odbc/microsoft/visual-foxpro-field-data-types.md)。 某些欄位資料類型會要求您指定*nFieldWidth*或是*nPrecision*或兩者。  
@@ -121,7 +120,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  資料表可以有多個候選項目索引。  
   
  外部索引鍵*eExpression4*標記*TagName4*[NODUP]  
- 建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵運算式，並*TagName4*指定名稱之外部索引鍵標記的建立 *。* 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立候選項目外部的索引。  
+ 建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵運算式，並*TagName4*指定建立外部索引鍵標記的名稱。 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立候選項目外部的索引。  
   
  您可以建立多個外部索引的索引資料表，但外部索引的索引運算式必須指定資料表中的不同欄位。  
   
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 語法|Visual FoxPro 語法|  
 |-----------------|--------------------------|  
-|CREATE TABLE*基底資料表名稱*<br /><br /> (*資料行識別碼資料型別*<br /><br /> [非 NULL]<br /><br /> [，*資料行識別碼資料型別*<br /><br /> [NOT NULL]...)|建立資料表*TableName1* [名稱*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [， *nPrecision*])]<br /><br /> [不是 NULL])|  
+|CREATE TABLE*基底資料表名稱*<br /><br /> (*資料行識別碼資料型別*<br /><br /> [非 NULL]<br /><br /> [，*資料行識別碼資料型別*<br /><br /> [NOT NULL]...)|建立資料表*TableName1* [名稱*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [不是 NULL])|  
   
  當您建立資料表，使用驅動程式時，驅動程式會以允許其他使用者資料表的存取權的建立後立即關閉資料表。 這不同於 Visual FoxPro，讓資料表保持在開啟以獨佔方式在建立時。 不過，如果您包含 CREATE TABLE 陳述式的資料來源上預存程序執行時，資料表是處於開啟狀態。  
   

@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 32f762de13a844f12144e89f4742409c3afcbab0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961926"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 課：使用 R 和 T-SQL 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "58511965"
 
 ## <a name="about-feature-engineering"></a>關於特徵工程設計
 
-瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」。 此程序，從未經處理的資料建立有意義的功能是建立分析模型的重要步驟。
+瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」  。 此程序，從未經處理的資料建立有意義的功能是建立分析模型的重要步驟。
 
 在此資料集中，距離值會根據報告的計量表距離，並不一定代表地理距離或行車實際距離。 因此，您必須使用來源紐約市計程車資料集中可用的座標，來計算上車和下車點之間的直線距離。 您可以使用自訂 [函數中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 公式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來執行這項運算。
 
@@ -42,9 +41,9 @@ ms.locfileid: "58511965"
 
 此函式_fnCalculateDistance_應該下載並向[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]準備本教學課程的過程。 花點時間檢閱程式碼。
   
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。   
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]  、[函數]  和 [純量值函式]  。   
 
-2. 以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
+2. 以滑鼠右鍵按一下 [fnCalculateDistance]  ，然後選取 [修改]  ，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  

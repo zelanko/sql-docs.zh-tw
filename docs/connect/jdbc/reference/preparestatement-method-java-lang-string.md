@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bec0d56782a7e9cacd236011c79aba2ab2c806a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 11ff6a1b5c919f44bfc9cfd56e1e94ac57b673e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802650"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>prepareStatement 方法 (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 prepareStatement 方法是由 java.sql.Connection 介面中的 prepareStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

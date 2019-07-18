@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_function_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e67a50287e0878a3dcc0779bb4a78dbcbbdd0260
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409735"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259249"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,11 +67,15 @@ ms.locfileid: "52409735"
 |**last_elapsed_time**|**bigint**|經過時間，以百萬分之一秒為單位，最近完成執行此函式中。|  
 |**min_elapsed_time**|**bigint**|耗用時間下限，以百萬分之一秒為單位，任何在完成執行此函式。|  
 |**max_elapsed_time**|**bigint**|耗用時間上限，以百萬分之一秒為單位，任何在完成執行此函式。|  
+|**total_page_server_reads**|**bigint**|編譯以來執行所執行的這個函式的網頁伺服器讀取總數。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|  
+|**last_page_server_reads**|**bigint**|上次執行函式已執行的網頁伺服器讀取的次數。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|  
+|**min_page_server_reads**|**bigint**|所讀取的網頁伺服器的最小次數，在單次執行期間曾執行此函式。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|  
+|**max_page_server_reads**|**bigint**|網頁伺服器的最大數目會讀取在單次執行期間曾執行，此函式。<br /><br /> **適用於：** Azure SQL Database 的超大規模。|
   
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
   
 ## <a name="examples"></a>範例  
  下列範例會傳回平均經過時間所識別的前十個函式的相關資訊。  
@@ -92,6 +95,6 @@ ORDER BY [total_worker_time] DESC;
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
  [sys.dm_exec_trigger_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys.dm_exec_procedure_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a40980ddd8ee29d05fe4278baf512790751ee7d8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106820"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
   當您希望使用者能夠按一下報表中的連結，並開啟瀏覽器指向您所指定的 URL 時，可以將超連結加入到報表項目。 超連結可以是靜態 URL，或是評估為 URL 的運算式。 如果資料庫中有一個包含 URL 的欄位，運算式便能包含這個欄位，結果會在報表中產生超連結的動態清單。 您可以將超連結加入至文字方塊、影像、圖表和量測計。 您必須確定使用者可存取您提供的 URL。  
@@ -35,11 +34,11 @@ ms.locfileid: "56293783"
   
 ### <a name="to-add-a-hyperlink"></a>若要加入超連結  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]**。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下要加入連結的文字方塊、影像或圖表，然後按一下 **[屬性]** 。  
   
-2.  在 [屬性] 對話方塊中，按一下 **[動作]**。  
+2.  在 [屬性] 對話方塊中，按一下 **[動作]** 。  
   
-3.  選取 **[移至 URL]**。 此對話方塊中會出現這個選項的其他區段。  
+3.  選取 **[移至 URL]** 。 此對話方塊中會出現這個選項的其他區段。  
   
 4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。  
   

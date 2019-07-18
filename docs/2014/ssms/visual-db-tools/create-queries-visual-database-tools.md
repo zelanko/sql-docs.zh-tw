@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184317"
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
   查詢可讓您從資料庫的資料表和檢視中擷取資料。 您可以在查詢和檢視表設計工具中建立並使用查詢，這包含四個窗格：[[圖表] 窗格](visual-database-tools.md)、[[SQL] 窗格](sql-pane-visual-database-tools.md)、[[準則] 窗格](criteria-pane-visual-database-tools.md)及 [[結果] 窗格](results-pane-visual-database-tools.md)。  

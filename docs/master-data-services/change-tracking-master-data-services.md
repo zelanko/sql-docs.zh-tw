@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 77b98b635ccc8cd8e04e0c84e402be9409b27cbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052066"
 ---
 # <a name="change-tracking-master-data-services"></a>變更追蹤 (Master Data Services)
 

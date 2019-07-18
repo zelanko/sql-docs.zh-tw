@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f1748df4f01b0648787b3b61f6130acc76b5eeb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 14df0a3e29068b671f9320e90fac624b2aabbddc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963785"
 ---
 # <a name="rds-api-reference"></a>RDS API 參考
 > [!IMPORTANT]

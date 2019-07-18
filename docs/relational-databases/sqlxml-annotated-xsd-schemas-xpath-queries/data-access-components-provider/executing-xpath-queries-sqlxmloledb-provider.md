@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32c641afad155955f5b6aaba890c29a05b6ae3d7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c086c70541cf7a5a8140dfb38795b404e247c466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895135"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>執行 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "56009600"
   
 -   **對應結構描述**  
   
- 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 結構描述有**\<連絡人 >** 項目**ContactID**， **FirstName**，並**LastName**屬性。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
+ 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 結構描述有 **\<連絡人 >** 項目**ContactID**， **FirstName**，並**LastName**屬性。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

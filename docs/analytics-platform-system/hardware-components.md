@@ -2,19 +2,18 @@
 title: 硬體元件-Analytics Platform System |Microsoft Docs
 description: Analytics Platform System (APS) 會使用可擴充的元件，以便您可以根據業務需求購買正確數量的處理和儲存體。 當您訂購 AP 時，您需要這些核心硬體元件的組合。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8cf7fd100f72e14b09ea086a1ebff5140a9068a4
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 0f7f3bd8f4d5500a59675d40ff7f50d1afd9a199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960882"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Analytics Platform System 的硬體元件
 

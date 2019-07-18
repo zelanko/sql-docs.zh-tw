@@ -10,19 +10,19 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db6e43e681adb66d7ccf8895cf57820f80260118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b889f2a3b318862b504101c1fbdb01f582a75078
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747749"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690255"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>選項 (設計工具 - 維護計畫頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [選項] 對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具] 功能表上按一下 [選項]，展開 [設計工具]，然後選取 [維護計畫]。  
+使用 [選項]  對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具]  功能表上按一下 [選項]  ，展開 [設計工具]  ，然後選取 [維護計畫]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **依預設，會將新形狀連接到選取的形狀**  

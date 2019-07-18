@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908804"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>功能表命令和其他快速鍵 (MySQLToSQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於 MySQL 的應用程式。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0576f180809a4432af022d278867d847c8087dd4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5160e0f734f68450f868f3b1c670b1e5647524ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041052"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

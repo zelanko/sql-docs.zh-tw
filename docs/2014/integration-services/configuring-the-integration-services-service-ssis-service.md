@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -16,12 +15,12 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf81aa02bb85ca9d0941b384d6b9959e53bd7d28
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060502"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>設定 Integration Services 服務 (SSIS 服務)
     
@@ -77,7 +76,7 @@ ms.locfileid: "58394076"
  您可以修改組態檔，允許封裝在服務停止時繼續執行、在 [物件總管] 中顯示其他根資料夾，或在檔案系統中指定要由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理的不同資料夾或其他資料夾。 例如，您可以建立屬於 `SqlServerFolder` 類型的其他根資料夾來管理其他 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝。  
   
 > [!NOTE]  
->  某些字元在資料夾名稱中是無效的。 資料夾名稱的有效字元是由 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 類別 **System.IO.Path** 和 [GetInvalidFilenameChars]  欄位所決定。 [GetInvalidFilenameChars] 欄位提供無法在傳遞給 **Path** 類別成員之路徑字串引數中指定的平台特定字元陣列。 有效的字元集可能會因檔案系統而不同。 無效的字元通常包括引號 (")、小於 (<) 字元和縱線 (|) 字元。  
+>  某些字元在資料夾名稱中是無效的。 資料夾名稱的有效字元是由 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 類別 **System.IO.Path** 和 [GetInvalidFilenameChars]  欄位所決定。 [GetInvalidFilenameChars]  欄位提供無法在傳遞給 **Path** 類別成員之路徑字串引數中指定的平台特定字元陣列。 有效的字元集可能會因檔案系統而不同。 無效的字元通常包括引號 (")、小於 (<) 字元和縱線 (|) 字元。  
   
  但是，若要管理儲存在 [!INCLUDE[ssDE](../includes/ssde-md.md)]具名執行個體或遠端執行個體中的封裝，您就必須修改組態檔。 如果您未更新組態檔，就無法使用 **中的** 物件總管 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來檢視儲存在具名執行個體或遠端執行個體之 msdb 資料庫中的封裝。 如果您嘗試使用 **[物件總管]** 來檢視這些封裝，您會收到下列錯誤訊息：  
   

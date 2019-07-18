@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: f9df88d021ffa6aebbc30f3a733ece3b395ac102
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789588"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>可用性群組的 SQL Server 資源 DLL 健全狀況診斷記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

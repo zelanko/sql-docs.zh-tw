@@ -15,14 +15,18 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8602665ef47ec206c1a6c751b9c3e3ffb0aa74e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6015de3f6c300e8a96d16ad6b0a322754d882945
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729432"
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[加入現有封裝的副本]** 對話方塊，即可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統，或 SSIS 封裝存放區中所儲存之封裝的副本，加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 ## <a name="options"></a>選項。  
@@ -42,7 +46,7 @@ ms.locfileid: "58280902"
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
  **封裝路徑**  
- 輸入封裝路徑，或是按一下瀏覽按鈕 ([...])，並找出要複製的封裝。  
+ 輸入封裝路徑，或是按一下瀏覽按鈕 ([...])  ，並找出要複製的封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [儲存封裝的副本](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

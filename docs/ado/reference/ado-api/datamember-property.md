@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919224"
 ---
 # <a name="datamember-property"></a>DataMember 屬性
 表示將會從擷取的資料成員名稱[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)所參考[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)屬性。  
@@ -36,7 +35,7 @@ ms.locfileid: "47603706"
   
  **DataMember**屬性會決定所指定的物件**DataSource**屬性會表示成**資料錄集**物件。 **資料錄集**必須先關閉物件，這個屬性設定。 如果會產生錯誤**DataMember**屬性未設定之前**DataSource**屬性，或如果**DataMember**名稱無法辨識指定的物件**DataSource**屬性。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
   
 ```  
 Dim rs as New ADODB.Recordset  

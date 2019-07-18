@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - properties [Analysis Services], multilevel hierarchy
@@ -16,12 +14,12 @@ ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1dc6f8e30be172089db234ddcc010ced24340de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727313"
 ---
 # <a name="user-hierarchy-properties"></a>使用者階層屬性
   下表描述使用者自訂階層的屬性。  

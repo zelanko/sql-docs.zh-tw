@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming databases
@@ -13,12 +12,12 @@ ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6b27b086e84f173e72a61cf01341d5d01ec7ea9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073144"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重新命名多維度資料庫 (Analysis Services)
   您變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫名稱的方式，需視您連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的方式而定。 若要變更現有資料庫的名稱，您必須以線上模式連接。 若要將資料庫名稱變更為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中要具現化的物件，您必須以專案模式連接。  
@@ -27,7 +26,7 @@ ms.locfileid: "48168218"
   
 1.  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
-2.  在方案總管中，以滑鼠右鍵按一下資料庫，然後按一下 [編輯資料庫]。  
+2.  在方案總管中，以滑鼠右鍵按一下資料庫，然後按一下 [編輯資料庫]  。  
   
 3.  在 **[資料庫名稱]** 文字方塊中，變更資料庫名稱。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48168218"
   
 1.  開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後按一下 [屬性]。  
+2.  在方案總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後按一下 [屬性]  。  
   
 3.  在 **[屬性頁]** 對話方塊中，按一下 **[組態屬性]** 區段中的 **[部署]** 。  
   
@@ -53,8 +52,8 @@ ms.locfileid: "48168218"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 中設定伺服器屬性](../server-properties/server-properties-in-analysis-services.md)   
- [設定多維度資料庫屬性&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
- [設定 Analysis Services 專案屬性&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [部署 Analysis Services 專案&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [設定多維度資料庫屬性 &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 676f9fb526996e96b27bb758a7343c86afaac460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053647"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "52517408"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLPutData(  
       SQLHSTMT     StatementHandle,  
@@ -51,7 +50,7 @@ SQLRETURN SQLPutData(
  *DataPtr*  
  [輸入]包含參數或資料行的實際資料之緩衝區的指標。 資料必須在中指定的 C 資料類型*ValueType*引數**SQLBindParameter** （適用於參數的資料） 或*TargetType*引數**SQLBindCol** （適用於資料行的資料）。  
   
- *Strlen_or_ind&lt*  
+ *StrLen_or_Ind*  
  [輸入]長度\* *DataPtr*。 指定的呼叫中傳送的資料量**SQLPutData**。 資料量可能會隨給定的參數或資料行的每個呼叫。 *Strlen_or_ind&lt*會被忽略，除非它符合下列條件的其中一項：  
   
 -   *Strlen_or_ind&lt*是 SQL_NTS、 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM。  
@@ -114,11 +113,11 @@ SQLRETURN SQLPutData(
 ## <a name="example"></a>範例  
  下列範例假設名為 Test 的資料來源名稱。 相關聯的資料庫都應該有的資料表，您可以建立、，如下所示：  
   
-```  
+```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
-```  
+```cpp  
 // SQLPutData.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <stdio.h>  

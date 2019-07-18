@@ -11,14 +11,18 @@ ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85ece835f73fa89f876b3bad9777e436cbffa8df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 12605ed268a5d37ffc8c78dafe7a0e41cd0ca1f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723622"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>安裝 Microsoft Connector for SAP BW
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   適用於 SQL Server 2016 的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 是 SQL Server 2016 Feature Pack 的元件。 若要安裝 Connector for SAP BW 及其文件，請從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載並執行安裝程式。  
 
 > [!IMPORTANT]

@@ -1,5 +1,5 @@
 ---
-title: sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs
+title: sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045966"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @backup_file_name = ] 'backup_file_name'` 是備份檔案的名稱。 *backup_file_name* is **nvarchar(128)**.  
+`[ @backup_file_name = ] 'backup_file_name'` 是備份檔案的名稱。 *backup_file_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 `[ @database_name = ] 'database_name'` 是資料庫的名稱。 *database_name* 為 **sysname**。  
   

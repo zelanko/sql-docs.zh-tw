@@ -3,17 +3,16 @@ title: 安裝 SQL Server Machine Learning 服務 （資料庫） 上 Windows-SQL
 description: SQL Server 或 SQL Server 2017 Machine Learning 服務在 Windows 上的 SQL Server 安裝步驟上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 73272310b25cfd42250142864e3e6f0999a4f853
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962889"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 
@@ -25,7 +24,7 @@ ms.locfileid: "58510805"
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 
-+ 如果您想要使用 R、 Python 或 Java 語言支援安裝 Machine Learning 服務需要 SQL Server 2017 （或更新版本） 安裝程式。 如果相反地，您有 SQL Server 2016 安裝媒體，您可以安裝[SQL Server 2016 R Services （資料庫）](sql-r-services-windows-install.md)取得 R 語言支援。
++ 如果您想要使用 R 或 Python 語言支援安裝 Machine Learning 服務需要 SQL Server 2017 （或更新版本） 安裝程式。 如果相反地，您有 SQL Server 2016 安裝媒體，您可以安裝[SQL Server 2016 R Services （資料庫）](sql-r-services-windows-install.md)取得 R 語言支援。
 
 + 需要資料庫引擎執行個體。 您無法安裝只是 R 或 Python 功能，雖然您可以將它們以累加方式加入現有的執行個體。
 
@@ -53,7 +52,7 @@ ms.locfileid: "58510805"
 
 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。
 
-1. 啟動 SQL Server 2017 的安裝精靈。 您可以下載 
+1. 啟動 SQL Server 2017 的安裝精靈。 
   
 2. 在 **安裝**索引標籤上，選取**新的 SQL Server 獨立安裝或將功能加入到現有安裝**。
 
@@ -81,7 +80,7 @@ ms.locfileid: "58510805"
 
         > [!NOTE]
         > 
-        > 未選取的選項**Machine Learning Server （獨立式）**。 安裝 Machine Learning Server 下的選項**共用功能**適用於一部電腦上。
+        > 未選取的選項**Machine Learning Server （獨立式）** 。 安裝 Machine Learning Server 下的選項**共用功能**適用於一部電腦上。
 
 4. 在 **同意安裝 R**頁面上，選取**接受**。 此授權合約涵蓋 Microsoft R Open，其中包含開放原始碼 R 基底套件和工具，以及增強型的 R 套件和 Microsoft 開發小組的連線提供者的散發套件。
 
@@ -126,13 +125,13 @@ ms.locfileid: "58510805"
     > [!TIP]
     > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > 您也可以試試預覽版[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
+    > 您也可以使用[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
   
 2. 連接到您安裝 Machine Learning 服務的執行個體，請按一下**新的查詢**開啟查詢視窗中，並執行下列命令：
 
-   ```sql
-   sp_configure
-   ```
+    ```sql
+    sp_configure
+    ```
 
     屬性 `external scripts enabled` 的值目前應該為 **0**。 這是因為預設關閉的功能。 您可以執行 R 或 Python 指令碼之前，此功能，必須明確啟用由系統管理員。
     
@@ -252,6 +251,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [啟用額外的網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [建立登入 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [管理磁碟配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免執行耗盡磁碟空間的工作的外部指令碼
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 

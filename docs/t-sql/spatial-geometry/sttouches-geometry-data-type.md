@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STTouches (geometry Data Type)
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d04746833ce8077261cf9b5b624e17556ee4a093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18ea5efe0a0bc0ef4e84a5fa9d773a47f5eb99a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935654"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47665136"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  如果兩個 **geometry** 執行個體的點組相交，但是其內部未相交，即表示這兩個執行個體有接觸。  

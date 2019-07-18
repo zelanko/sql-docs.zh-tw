@@ -12,15 +12,15 @@ helpviewer_keywords:
 - joins [SQL Server], removing
 - deleting joins
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 125da46c853c66d79abc7a28efa5000223711f50
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: f2962f2182d26a9a54ae59c127e6ececafc4b84e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532823"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679508"
 ---
 # <a name="remove-joins-visual-database-tools"></a>移除聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

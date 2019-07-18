@@ -12,15 +12,15 @@ helpviewer_keywords:
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96acb5b28a1043bf6a3229c0f072011e5ef1d7a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e70027ed162cfbe9108bfdf38c67299cb6d77ef9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700756"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679503"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>從資料庫圖表移除資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51700756"
   
 1.  在資料庫圖表中，選取要移除的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]。  
+2.  以滑鼠右鍵按一下資料表，然後從快速鍵功能表選擇 [從圖表中移除資料表]  。  
   
     -或-  
   
@@ -42,5 +42,5 @@ ms.locfileid: "51700756"
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[如何：從資料庫刪除資料表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[操作說明：從資料庫刪除資料表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

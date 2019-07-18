@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946219"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的類型轉換規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 下列查詢會傳回靜態錯誤，因為您不知道在文件執行個體中有多少最上層的 <`root`> 元素。  
+ 下列查詢會傳回靜態錯誤，因為您不知道幾個最上層 <`root`> 項目位於文件執行個體。  
   
 ```  
 declare @x xml(myCollection)  
@@ -106,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 在運算式中指定單一 <`root`> 元素，查詢就會成功。 查詢將可傳回 xs:string 類型的簡單類型值序列。  
+ 指定單一 <`root`> 運算式中的項目，查詢會成功。 查詢將可傳回 xs:string 類型的簡單類型值序列。  
   
 ```  
 declare @x xml(myCollection)  
@@ -116,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 在下列範例中，xml 類型的變數包含指定 XML 結構描述集合的文件關鍵字。 這指出 XML 執行個體必須是包含單一最上層元素的文件。 如果您在 XML 執行個體中建立兩個 <`root`> 元素，它將會傳回錯誤。  
+ 在下列範例中，xml 類型的變數包含指定 XML 結構描述集合的文件關鍵字。 這指出 XML 執行個體必須是包含單一最上層元素的文件。 如果您建立兩個 <`root`> XML 執行個體中的項目，它會傳回錯誤。  
   
 ```  
 declare @x xml(document myCollection)  

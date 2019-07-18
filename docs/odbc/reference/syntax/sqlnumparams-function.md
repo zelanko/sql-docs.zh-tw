@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7df49e572b910bee5627b8cb2d14f067c314a3f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e88439d537d8b115d656fbe5389253efb3ea5580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138774"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53205297"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumParams(  
      SQLHSTMT        StatementHandle,  

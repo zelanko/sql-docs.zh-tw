@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 224df75c15acf560c7eadc70fe91fbbc2b0396d9
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207875"
 ---
 # <a name="add-a-table"></a>新增資料表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,18 +22,18 @@ ms.locfileid: "53072285"
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>若要從現有的資料來源加入資料表  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後再按一下 **[現有連接]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後再按一下 **[現有連接]** 。  
   
-2.  在 [現有連接] 頁面上，選取具有您想要加入之資料表的資料來源連接，然後按一下 [開啟]。  
+2.  在 [現有連接]  頁面上，選取具有您想要加入之資料表的資料來源連接，然後按一下 [開啟]  。  
   
-3.  在 [選取資料表和檢視表] 頁面上，選取您想要從資料來源加入至模型的資料表。  
+3.  在 [選取資料表和檢視表]  頁面上，選取您想要從資料來源加入至模型的資料表。  
   
     > [!NOTE]  
-    >  [選取資料表和檢視表] 頁面不會將顯示先前匯入的資料表顯示成已核取。  如果您選取了先前使用此連接來匯入的資料表，而且沒有為資料表提供不同的易記名稱，系統就會將 1 附加至易記名稱。 您不需要重新選取先前使用此連接來匯入的任何資料表。  
+    >  [選取資料表和檢視表]  頁面不會將顯示先前匯入的資料表顯示成已核取。  如果您選取了先前使用此連接來匯入的資料表，而且沒有為資料表提供不同的易記名稱，系統就會將 1 附加至易記名稱。 您不需要重新選取先前使用此連接來匯入的任何資料表。  
   
-4.  必要時，請使用 [預覽和篩選] 來單獨選取特定資料行或將篩選套用至要匯入的資料。  
+4.  必要時，請使用 [預覽和篩選]  來單獨選取特定資料行或將篩選套用至要匯入的資料。  
   
-5.  按一下 [完成] 已匯入新的資料表。  
+5.  按一下 [完成]  已匯入新的資料表。  
   
 > [!NOTE]  
 >  同時從單一資料來源匯入多個資料表時，系統將自動在模型中建立這些位於來源之資料表之間的任何關聯性。 不過，之後加入資料表時，您可能必須在模型中手動建立新加入資料表與先前匯入資料表之間的關聯性。  

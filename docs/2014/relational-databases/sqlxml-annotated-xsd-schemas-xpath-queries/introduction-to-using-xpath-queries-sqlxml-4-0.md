@@ -11,15 +11,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012704"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
   您可以將 XML 路徑語言 (XPath) 查詢指定成 URL 的一部分或在範本中指定此查詢。 對應結構描述會決定這個產生片段的結構，而且系統會從資料庫中擷取值。 這個程序在概念上類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對它們撰寫 SQL 查詢。  
@@ -47,9 +47,9 @@ ms.locfileid: "52753370"
   
  本文件中， **\<客戶 >** 是元素節點， **cid**是屬性節點，和 **"Important"** 是文字節點。  
   
- XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >** 節點，XPath 可以選取所有**\<順序 >** 節點**日期**屬性值 **"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
+ XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組 **\<客戶>** 節點，XPath 可以選取所有 **\<順序>** 節點 **日期** 屬性值 **"7/14/1999"** 。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
- 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  下面是 W3C XPath 實作與 SQLXML 4.0 實作之間的重要差異。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52753370"
   
  當您在範本中指定 XPath 查詢時，請注意下列行為：  
   
--   XPath 可以包含在 XML 中具有特殊意義的 < 或 & 等字元 (而且範本是 XML 文件)。 您必須使用 XML & 編碼來逸出這些字元，或在 URL 中指定 XPath。  
+-   XPath 可以包含字元，例如 < 或 & XML 中具有特殊意義 （和範本是 XML 文件）。 您必須逸出這些字元使用 XML （& s)-編碼，或在 URL 中指定的 XPath。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQLXML 4.0 中使用 XPath 查詢](using-xpath-queries-in-sqlxml-4-0.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2bada86266a9dfd0282ffe7760aef4d963237a87
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104717"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
   Tablix 資料區具有四個包含 Tablix 資料格的區域：邊角、資料列群組區域、資料行群組區域和主體。 每個區域中的資料格都有一個不同的函數。 您可以將資料格加入至 Tablix 主體區域，以便顯示詳細資料和分組資料。 當您建立群組以顯示群組執行個體值時，報表產生器和報表設計師會將資料格加入至資料列群組或資料行群組區域。 當資料列群組和資料行群組都存在時，報表產生器和報表設計師會建立 Tablix 邊角資料格。  

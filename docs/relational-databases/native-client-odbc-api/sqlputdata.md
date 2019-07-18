@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f5b813a2e411d1b8b4dcf1069f656ed844f4e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131216"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "51664217"
   
  *DataPtr*參數會被忽略，但必須設定為非 NULL 值。 如需詳細資訊，請參閱節變數 TVP 資料列中的繫結[繫結和 Data Transfer of Table-Valued 參數和資料行值](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 如果*Strlen_or_ind&lt* SQL_DEFAULT_PARAM 或介於 0 和 SQL_PARAMSET_SIZE 以外的任何值 (亦即*ColumnSize* SQLBindParameter 參數)，就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR：SQLSTATE=HY090，表示「無效的字串或緩衝區長度」。  
+ 如果*Strlen_or_ind&lt* SQL_DEFAULT_PARAM 或介於 0 和 SQL_PARAMSET_SIZE 以外的任何值 (亦即*ColumnSize* SQLBindParameter 參數)，就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR:SQLSTATE = HY090 以及 「 無效的字串或緩衝區長度 」。  
   
  如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   

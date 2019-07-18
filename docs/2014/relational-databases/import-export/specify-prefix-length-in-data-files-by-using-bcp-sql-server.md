@@ -12,21 +12,21 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011760"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定資料檔的前置長度 (SQL Server)
-  為了讓原生格式的資料大量匯出至資料檔時，能夠有最精簡的檔案儲存方式， **bcp** 命令會在每個欄位前面都加上一個或多個字元，指出欄位的長度。 這些字元稱作 *「長度前置字元」*(Length prefix characters)。  
+  為了讓原生格式的資料大量匯出至資料檔時，能夠有最精簡的檔案儲存方式， **bcp** 命令會在每個欄位前面都加上一個或多個字元，指出欄位的長度。 這些字元稱作 *「長度前置字元」* (Length prefix characters)。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>前置長度的 bcp 提示字元  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、 **-c**、 **-w**或 **-N**)，此命令就會提示您輸入每個資料欄位的前置長度，如下所示：  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w**或 **-N**)，此命令就會提示您輸入每個資料欄位的前置長度，如下所示：  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48058758"
 >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="overview-of-prefix-length"></a>前置長度的概觀  
- 若要儲存欄位的前置長度，您需要有足夠的位元組來表示欄位的最大長度。 所需的位元組數目取決於檔案儲存類型、資料行的 Null 屬性，以及資料是以原生或字元格式儲存於資料檔中。 例如，`text`或是`image`資料類型需要四個前置字元來儲存欄位長度，但`varchar`資料類型則需要兩個字元。 在資料檔中，這些長度前置字元會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的內部二進位資料格式儲存。  
+ 若要儲存欄位的前置長度，您需要有足夠的位元組來表示欄位的最大長度。 所需的位元組數目取決於檔案儲存類型、資料行的 Null 屬性，以及資料是以原生或字元格式儲存於資料檔中。 例如，`text` 或 `image` 資料類型需要四個前置字元來儲存欄位長度，但是 `varchar` 資料類型則需要兩個字元。 在資料檔中，這些長度前置字元會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的內部二進位資料格式儲存。  
   
 > [!IMPORTANT]  
 >  在使用原生格式時，請使用長度前置詞，而不是欄位的結束字元。 原生格式資料可能會和結束字元有衝突，因為原生格式的資料檔是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部二進位資料格式儲存。  
@@ -81,7 +81,7 @@ ms.locfileid: "48058758"
 |UDT (使用者定義資料類型)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> `ntext`， `text`，以及`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 使用`nvarchar(max)`， `varchar(max)`，和`varbinary(max)`改。  
+ <sup>1</sup> `ntext`， `text`，以及`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)`。  
   
 ##  <a name="PrefixLengthsImport"></a> 大量匯入的前置長度  
  大量匯入資料時，前置長度就是原先建立資料檔時即指定的值。 如果資料檔案不是由 **bcp** 命令所建立，則長度前置字元可能不存在。 在此狀況下，可指定 0 做為前置長度。  

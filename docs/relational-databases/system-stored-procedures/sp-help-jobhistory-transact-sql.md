@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054935"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +88,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @oldest_first = ] oldest_first` 是指是否先提供最舊作業的輸出。 *oldest_first*已**int**，預設值是**0**，表示先提供最新的作業。 **1**先提供最舊的作業。  
   
-`[ @server = ] 'server'` 執行作業的伺服器名稱。 *伺服器*已**nvarchar(30)**，預設值是 NULL。  
+`[ @server = ] 'server'` 執行作業的伺服器名稱。 *伺服器*已**nvarchar(30)** ，預設值是 NULL。  
   
-`[ @mode = ] 'mode'` 是 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*已**varchar(7)**，預設值是**摘要**。  
+`[ @mode = ] 'mode'` 是 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*已**varchar(7)** ，預設值是**摘要**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

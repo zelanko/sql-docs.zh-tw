@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10404"
@@ -17,15 +16,15 @@ f1_keywords:
 - "10292"
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e82dbeda2c76e77eb9d35fed39a679c57e09f24d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106400"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>報表和群組變數集合參考 (報表產生器及 SSRS)
   當您要進行的複雜計算是在報表的運算式中使用一次以上時，建議您建立一個變數。 您可以建立報表變數或群組變數。 變數名稱在報表中必須是唯一的。  
@@ -36,7 +35,7 @@ ms.locfileid: "56290876"
 ## <a name="report-variables"></a>報表變數  
  報表變數可用來保存與時間相依之計算的值，例如貨幣匯率或時間戳記，或多次參考之複雜計算的值。 根據預設，報表變數只要計算一次，就可以供整份報表的運算式使用。 報表變數預設是唯讀的。 您可以變更預設值，將報表變數啟用為讀寫。 報表變數中的值會在整個工作階段中保留，直到再次處理報表。  
   
- 若要新增報表變數，請開啟 [報表屬性] 對話方塊、按一下 [變數]，然後提供名稱及值。 名稱是區分大小寫、以字母為開頭而且沒有任何空格的字串。 名稱可以包含字母、數字或底線 (_)。  
+ 若要新增報表變數，請開啟 [報表屬性]  對話方塊、按一下 [變數]  ，然後提供名稱及值。 名稱是區分大小寫、以字母為開頭而且沒有任何空格的字串。 名稱可以包含字母、數字或底線 (_)。  
   
  若要參考運算式中的變數，請使用全域集合語法，例如 `=Variables!CustomTimeStamp.Value`。 此值會在設計介面的文字方塊中顯示為 `<<Expr>>`。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "56290876"
   
 -   **唯讀使用** ：設定一次某個值，以建立報表工作階段的常數，例如，用來建立時間戳記。  
   
-     文字方塊中的運算式會在使用者逐頁檢視報表時視需要進行評估；因此，動態值 (例如，包含 `Now()` 函式的運算式，此函式會傳回當日時間) 可能會在您向後一頁之後，使用 [上一頁] 按鈕返回時傳回不同的值。 您可藉由將報表變數的值設定為運算式 `=Now()`，然後將該變數加入至您的運算式，來確保在整個報表處理時都會使用相同的值。  
+     文字方塊中的運算式會在使用者逐頁檢視報表時視需要進行評估；因此，動態值 (例如，包含 `Now()` 函式的運算式，此函式會傳回當日時間) 可能會在您向後一頁之後，使用 [上一頁]  按鈕返回時傳回不同的值。 您可藉由將報表變數的值設定為運算式 `=Now()`，然後將該變數加入至您的運算式，來確保在整個報表處理時都會使用相同的值。  
   
 -   **讀寫使用** ：設定一次某個值，然後在報表工作階段中序列化該值。 變數的讀寫選項會比在報表定義的程式碼區塊中使用靜態變數提供更好的替代方案。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56290876"
   
      該文字方塊會使用 Food 稅率顯示 Beverages 和 Bread 的總稅額，而使用 Clothing 稅率顯示 Shirts 和 Hats 的總稅額。  
   
- 若要加入群組變數，請開啟 **[Tablix 群組屬性]** 對話方塊，按一下 **[變數]**，然後提供名稱及值。 群組變數會針對每個唯一的群組值計算一次。  
+ 若要加入群組變數，請開啟 **[Tablix 群組屬性]** 對話方塊，按一下 **[變數]** ，然後提供名稱及值。 群組變數會針對每個唯一的群組值計算一次。  
   
  若要參考運算式中的變數，請使用全域集合語法，例如 `=Variables!GroupDescription.Value`。 此值會在設計介面的文字方塊中顯示為 `<<Expr>>`。  
   

@@ -14,14 +14,18 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6122dd956c6e3e106e7fc6a450d9505c8fe7414
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86100d0a94030cc7db8f7a5b9574c22cec58903e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726594"
 ---
 # <a name="parsing-data"></a>剖析資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="two-types-of-parsing"></a>兩種剖析類型  
@@ -41,7 +45,7 @@ ms.locfileid: "58282522"
   
  如果封裝中的資料流程需要區分地區設定的剖析，則建議使用標準剖析來代替快速剖析。 例如，快速剖析不會識別區分地區設定的資料，包括十進位符號 (例如逗號)、非年-月-日格式的日期格式以及貨幣符號。  
   
- 快速剖析不會識別隱含一或多個日期部分 (例如紀元、年或月) 的截斷表示法。 例如，快速剖析無法識別以隱含紀元方式指定年份和月份的 '**-YYMM**' 格式，也無法識別以隱含年份方式指定月份的 '**--MM**' 格式。 不過，可以識別已降低有效位數的某些表示法。 例如，快速剖析可識別僅指出小時和分鐘的「hhmm;」格式，以及僅指出年份的「**YYYY**」格式。  
+ 快速剖析不會識別隱含一或多個日期部分 (例如紀元、年或月) 的截斷表示法。 例如，快速剖析無法識別以隱含紀元方式指定年份和月份的 ' **-YYMM**' 格式，也無法識別以隱含年份方式指定月份的 ' **--MM**' 格式。 不過，可以識別已降低有效位數的某些表示法。 例如，快速剖析可識別僅指出小時和分鐘的「hhmm;」格式，以及僅指出年份的「**YYYY**」格式。  
   
  快速剖析在資料行層級指定。 在「一般檔案」來源和「資料轉換」轉換中，可以在輸出資料行上指定「快速剖析」。 輸入和輸出均可包含區分地區設定和不區分地區設定的資料行。  
  
@@ -188,7 +192,7 @@ ms.locfileid: "58282522"
 ## <a name="enable-fast-parse"></a>啟用快速剖析
 使用快速剖析的來源或轉換，其每一個資料行都必須設定快速剖析屬性。 若要設定屬性，請使用「一般檔案」來源或「資料轉換」的進階編輯器。  
   
-1.  以滑鼠右鍵按一下 [一般檔案] 來源或 [資料轉換]，然後按一下 [顯示進階編輯器]。  
+1.  以滑鼠右鍵按一下 [一般檔案] 來源或 [資料轉換]，然後按一下 [顯示進階編輯器]  。  
   
 2.  按一下 **[進階編輯器]** 對話方塊中的 **[輸入與輸出屬性]** 索引標籤。  
   
@@ -196,7 +200,7 @@ ms.locfileid: "58282522"
   
 4.  在 [屬性] 視窗中，展開 **[自訂屬性]** 節點，然後將 **FastParse** 屬性設為 **True**。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
 
 ## <a name="standard-parse"></a>Standard Parse
 標準剖析是一組區分地區設定的剖析常式，它支援 Oleaut32.dll 和 Ole2dsip.dll 中可用的 Automation 資料類型轉換 API 所提供的所有資料類型轉換。 標準剖析相當於 OLE DB 剖析 API。  

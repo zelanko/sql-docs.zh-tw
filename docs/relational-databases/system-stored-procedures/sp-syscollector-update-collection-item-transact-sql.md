@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010554"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +46,21 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  這是識別收集項的唯一識別碼。 *collection_item_id*已**int**預設值是 NULL。 *collection_item_id*必須有值，如果*名稱*是 NULL。  
   
- [ @name =] '*名稱*'  
+ [ @name = ] '*name*'  
  這是收集項目的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_item_id*是 NULL。  
   
- [ @new_name =] '*new_name*'  
+ [ @new_name = ] '*new_name*'  
  這是收集項的新名稱。 *new_name*已**sysname**，而且如果，不能是空字串。  
   
  *new_name*必須是唯一的。 如需目前的收集項名稱清單，請查詢 syscollector_collection_items 系統檢視表。  
   
- [ @frequency =]*頻率*  
+ [ @frequency = ] *frequency*  
  這是此收集項收集資料的頻率 (以秒為單位)。 *頻率*已**int**，預設值是 5，您可以指定的最小值。  
   
- [ @parameters =] '*參數*'  
+ [ @parameters = ] '*parameters*'  
  收集項的輸入參數。 *參數*已**xml**預設值是 NULL。 *參數*結構描述必須符合收集器型別的參數結構描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  

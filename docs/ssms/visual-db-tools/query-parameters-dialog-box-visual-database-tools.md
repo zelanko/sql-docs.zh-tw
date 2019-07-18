@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:69645
 - vdt.dlgbox.definequeryparameters
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1f530954b2449e3a85822ad04d87cd553ae26a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ebc464ea13bf7b5e81deda03e2b2764cf98652d3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674168"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687531"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>查詢參數對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47674168"
 列出針對正在執行之查詢所定義的參數。 如果查詢包含具名參數，名稱會出現在清單中。 如果查詢包含未命名的參數，則查詢中會針對每個參數列出系統定義的參數名稱。  
   
 **ReplTest1**  
-請輸入 [Name] 下方列出的每個參數值。 最近使用的值將顯示為預設參數值。  
+請輸入 [Name]  下方列出的每個參數值。 最近使用的值將顯示為預設參數值。  
   
 ## <a name="example"></a>範例  
 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中執行下列 [SQL 窗格] 中的查詢時，會開啟 [查詢參數] 對話方塊。  

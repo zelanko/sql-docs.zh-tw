@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63298596"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
   在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
@@ -30,7 +28,7 @@ ms.locfileid: "56040049"
   
  下表描述的屬性`Extension`轉譯延伸模組的項目：  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**名稱**|延伸模組的唯一名稱。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extensions** 元素的所有項目中，必須是唯一的。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
 |**型別**|以逗號分隔的清單，包括完整的命名空間以及組件的名稱。|  

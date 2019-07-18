@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205459"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
   這是類似[全都放在記憶體](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)程序，但使用資料表值參數資料在執行。  

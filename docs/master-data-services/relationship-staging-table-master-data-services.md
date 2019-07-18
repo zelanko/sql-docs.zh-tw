@@ -11,15 +11,14 @@ helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 20720a3050fd8f45ff93268f118c9eb74fdbcf76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 77d4bd0bfab8b2c1a7337cae1f5d96300b7f3625
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909998"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>關聯性暫存資料表 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52752010"
 ##  <a name="TableColumns"></a> 資料表資料行  
  下表說明關聯性暫存資料表中各欄位的用途。  
   
-|資料行名稱|Description|ReplTest1|  
+|資料行名稱|描述|值|  
 |-----------------|-----------------|-----------|  
 |**ID**|自動指派的識別碼。|請勿在此欄位中輸入值。 如果尚未處理批次，這個欄位是空白。|  
 |**RelationshipType**|必要項<br /><br /> 所設定的關聯性類型。|可能的值為：<br /><br /> **1**：父系<br /><br /> **2**:同層級 (在相同層級)|  

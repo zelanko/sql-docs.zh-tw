@@ -11,14 +11,18 @@ ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 498c21f148a82e8e03b97e3fe3877986b43269ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86752adeb2770d2c89b616ac2ba42f2aeb2215d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714813"
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   只顯示已明確指派給使用者的權限。  

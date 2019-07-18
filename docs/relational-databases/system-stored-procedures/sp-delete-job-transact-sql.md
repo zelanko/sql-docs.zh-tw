@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (Transact-SQL) | Microsoft Docs
+title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085334"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>備註  
- **@originating_server**引數保留供內部使用。  
+ **@originating_server** 引數保留供內部使用。  
   
- **@delete_unused_schedule**引數會提供回溯相容性的先前版本的 SQL Server 會自動移除未附加至任何作業的排程。 請注意，這個參數預設相容於舊版的行為。 若要保留未附加至作業的排程，您必須提供值**0**作為**@delete_unused_schedule**引數。  
+ **@delete_unused_schedule** 引數會提供回溯相容性的先前版本的 SQL Server 會自動移除未附加至任何作業的排程。 請注意，這個參數預設相容於舊版的行為。 若要保留未附加至作業的排程，您必須提供值**0**作為 **@delete_unused_schedule** 引數。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   

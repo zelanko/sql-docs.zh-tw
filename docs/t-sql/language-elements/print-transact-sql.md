@@ -20,16 +20,16 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b713866cc1300f86ed3cdf0786991739e9b002a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65980419"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ PRINT msg_str | @local_variable | string_expr
  這是一個字元字串或 Unicode 字串常數。 如需詳細資訊，請參閱[常數 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)。  
   
  **@** *local_variable*  
- 這是任何有效字元資料類型的變數。 **@**_local\_variable_ 必須是 **char**、**nchar**、**varchar** 或 **nvarchar**，或者必須能夠隱含轉換為那些資料類型。  
+ 這是任何有效字元資料類型的變數。 **@** _local\_variable_ 必須是 **char**、**nchar**、**varchar** 或 **nvarchar**，或者必須能夠隱含轉換為那些資料類型。  
   
  *string_expr*  
  這是傳回字串的運算式。 它可以包括串連的常值、函數和變數。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  

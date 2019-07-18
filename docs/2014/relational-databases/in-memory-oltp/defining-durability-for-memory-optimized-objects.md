@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63161998"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>為記憶體最佳化的物件定義持久性
   記憶體中 OLTP 可保證完整的不可部分完成性、一致性、隔離性與完全持久性 (ACID) 屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境和記憶體最佳化的資料表中的持久性會提供下列保證：  
@@ -34,7 +34,7 @@ ms.locfileid: "48169548"
  記憶體最佳化的資料表有兩個持久性選項：  
   
  SCHEMA_ONLY (非持久性資料表)  
- 此選項可確保資料表結構描述的持久性，包括索引在內。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動時，非持久性資料表會重新建立，但是一開始沒有資料  (這不同於 tempdb 中的資料表，後者的資料表及資料表資料都會在重新啟動之後遺失)。建立非持久性資料表的典型案例為儲存暫時性資料，例如 ETL 處理序的暫存資料表。 SCHEMA_ONLY 持久性會避免交易記錄和檢查點，這樣可大幅減少 I/O 作業。  
+ 此選項可確保資料表結構描述的持久性，包括索引在內。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動時，非持久性資料表會重新建立，但是一開始沒有資料 (這不同於 tempdb 中的資料表，後者的資料表及資料表資料都會在重新啟動之後遺失)。建立非持久性資料表的典型案例為儲存暫時性資料，例如 ETL 處理序的暫存資料表。 SCHEMA_ONLY 持久性會避免交易記錄和檢查點，這樣可大幅減少 I/O 作業。  
   
  SCHEMA_AND_DATA (持久性資料表)  
  此選項提供結構描述和資料的持久性。 資料持久性層級取決於您是否將交易認可為完全持久或具有延遲持久性。 完全持久交易提供與資料和結構描述相同的持久性保證，類似以磁碟為基礎的資料表。 延遲持久性可增進效能，但是在伺服器當機或容錯移轉的情況下可能會導致資料損失。 (如需延遲持久性的詳細資訊，請參閱[控制交易持久性](../logs/control-transaction-durability.md)。)  

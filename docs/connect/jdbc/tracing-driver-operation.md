@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605778"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798256"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "51605778"
 |TDS.Channel|這個類別目錄會追蹤與 SQL Server 進行 TCP 通訊通道的動作。 記錄的訊息包括通訊端開啟和關閉，以及讀取和寫入。 此外，它也會追蹤有關與 SQL Server 建立安全通訊端層 (SSL) 連接的訊息。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINE、FINER 或 FINEST 而啟用。|  
 |TDS.Writer|這個類別目錄會追蹤 TDS 通道的寫入作業。 請注意，系統只會追蹤寫入的長度，而非內容。 當注意訊號傳送至伺服器以取消陳述式的執行時，這個類別目錄也會追蹤問題。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
 |TDS.Reader|這個類別目錄會在 FINEST 層級中追蹤來自 TDS 通道的特定讀取作業。 在 FINEST 層級中，追蹤可能會很詳細。 在 WARNING 和 SEVERE 層級中，這個類別目錄會追蹤此驅動程式關閉連接之前，從 SQL Server 收到無效 TDS 通訊協定的時間。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINER 和 FINEST 而啟用。|  
-|TDS.Command|這個類別目錄會追蹤低層級的狀態轉換以及與執行 TDS 命令相關聯的其他資訊，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行、ResultSet 資料指標擷取、認可等等。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
+|TDS.Command|這個類別目錄會追蹤低層級的狀態轉換以及與執行 TDS 命令建立關聯的其他資訊，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行、ResultSet 資料指標擷取、認可等等。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
 |TDS.TOKEN|這個類別目錄只會記錄 TDS 封包中的 Token，跟 TDS.DATA 類別目錄比起來較不詳細。 它只能透過將記錄層級設定為 FINEST 而啟用。<br /><br /> 在 FINEST 層級中，這個類別目錄會在回應中處理 TDS Token 時追蹤它們。 在 SEVERE 層級中，這個類別目錄會追蹤遇到無效 TDS Token 的時間。|  
 |SQLServerDatabaseMetaData|記錄 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE。|  
 |SQLServerResultSetMetaData|記錄 [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE。|  

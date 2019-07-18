@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e40947dc4dbad0830444870ea7e2d0c663490b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913578"
 ---
 # <a name="fixed-length-bookmarks"></a>固定長度書籤
-如果 ODBC 3 *.x*驅動程式應該使用 ODBC 2。*x*應用程式會使用固定長度書籤，驅動程式必須支援下列：  
+如果 ODBC *3.x*驅動程式應該使用 ODBC *2.x*應用程式會使用固定長度書籤，驅動程式必須支援下列：  
   
--   SQL_UB_ON 為 SQL_USE_BOOKMARKS 陳述式選項的值。 (在 ODBC 3 已被取代 SQL_UB_ON *.x*。)  
+-   SQL_UB_ON 為 SQL_USE_BOOKMARKS 陳述式選項的值。 (在 ODBC 中已被取代 SQL_UB_ON *3.x*。)  
   
 -   SQL_GET_BOOKMARK 陳述式選項中。

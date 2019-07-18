@@ -1,5 +1,5 @@
 ---
-title: 資料採礦模型檢視器 |Microsoft 文件
+title: 資料採礦模型檢視器 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7db05fc43c7054e36d38eebe1047fe5c22802dab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017945"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183723"
 ---
 # <a name="data-mining-model-viewers"></a>資料採礦模型檢視器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,37 +44,37 @@ ms.locfileid: "34017945"
   
  雖然自訂檢視器的設計目的是要了瀏覽及了解模型，但是當您已經了解此模型而且想要從特定節點擷取統計資料或規則時，一般檢視器會更為實用。 例如，當您想要檢視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在分析期間擷取之有關模式與統計資料的詳細資訊 (例如節點的機率或迴歸公式) 時，您會使用一般檢視器。  
   
- 您也可以使用 DMX 撰寫 *「內容查詢」* (Content Query)，以取得在此檢視器中呈現的所有資訊。 如需詳細資訊，請參閱[內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)。  
+ 您也可以使用 DMX 撰寫 *「內容查詢」* (Content Query)，以取得在此檢視器中呈現的所有資訊。 如需詳細資訊，請參閱 [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  下列主題會更詳細描述每一個檢視器以及如何解譯其中的資訊。  
   
- [瀏覽模型，使用 Microsoft 樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [使用 Microsoft 樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 樹狀檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法建立的採礦模型。  
   
- [瀏覽模型，使用 Microsoft 叢集檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [使用 Microsoft 叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法建立的採礦模型。  
   
- [瀏覽模型，使用 Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [使用 Microsoft 時間序列檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法建立的採礦模型。  
   
- [瀏覽模型，使用 Microsoft 貝氏機率分類檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [使用 Microsoft 貝氏機率分類檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法建立的採礦模型。  
   
- [瀏覽模型，使用 Microsoft 時序群集檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [使用 Microsoft 時序叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。  
   
- [瀏覽模型，使用 Microsoft 關聯規則檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [使用 Microsoft 關聯規則檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法建立的採礦模型。  
   
- [瀏覽模型，使用 Microsoft 類神經網路檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ [使用 Microsoft 類神經網路檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
  描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器。 這個檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型，包括使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法的模型。  
   
- [瀏覽模型，使用 Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
+ [使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  描述一般檢視器中可用於所有資料採礦模型的詳細資訊，並提供範例說明如何解譯每種演算法的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [資料採礦設計工具](../../analysis-services/data-mining/data-mining-designer.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)  
   
   

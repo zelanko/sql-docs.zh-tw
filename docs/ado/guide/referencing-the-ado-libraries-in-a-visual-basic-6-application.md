@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8e37459c5e48fe817a3bdbb6a824550cf977f66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923054"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>在 Visual Basic 6 應用程式中參考 ADO 程式庫
 ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visual Basic 專案中設定的參考。  
@@ -33,11 +32,11 @@ ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visu
   
 2.  按一下 [**專案**功能表項目，然後選取**參考...** 從下拉式選單] 面板。  
   
-3.  從**可用的參考**，核取方塊**Microsoft ActiveX Data Objects *n.n*文件庫**，其中***n.n***代表最新版本號碼。 **位置**下方的欄位應該識別為自選 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目錄路徑的 ADO 程式庫已安裝。  
+3.  從 **可用的參考** ，核取方塊 **Microsoft ActiveX Data Objects *n.n* 文件庫** ，其中 ***n.n*** 代表最新版本號碼。 **位置**下方的欄位應該識別為自選 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目錄路徑的 ADO 程式庫已安裝。  
   
 4.  如果您想要使用 ADO MD，重複步驟 3 選取 **（多維度） 的 Microsoft ActiveX Data Objects *n.n*程式庫**。 **位置**欄位應該識別這項選擇作為 *$installDir\msadomd.dll*。  
   
-5.  如果您想要使用 ADOX，重複步驟 3 選取**Microsoft ADO 分機*n.n* DDL 和安全性**。 **位置**欄位應該識別這項選擇作為 *$installDir\msadox.dll*。  
+5.  如果您想要使用 ADOX，重複步驟 3 選取 **Microsoft ADO 分機 *n.n* DDL 和安全性** 。 **位置**欄位應該識別這項選擇作為 *$installDir\msadox.dll*。  
   
 6.  按一下 **確定**完成設定的參考。  
   

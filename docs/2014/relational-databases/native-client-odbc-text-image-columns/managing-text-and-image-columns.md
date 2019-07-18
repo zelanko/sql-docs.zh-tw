@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195323"
 ---
 # <a name="managing-text-and-image-columns"></a>管理 Text 和 Image 資料行
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **文字**， **ntext**，以及**映像**資料 （也稱為 long 資料） 是字元或二進位字串資料類型，可保留資料值太大而無法放入**char**， **varchar**，**二進位**，或**varbinary**資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **文字**資料類型會對應到 ODBC SQL_LONGVARCHAR 資料類型;**ntext**對應到 SQL_WLONGVARCHAR; 並**映像**對應到 SQL_LONGVARBINARY。 某些資料項目 (例如長篇的文件或大型的點陣圖) 可能太大，而無法適當地儲存到記憶體中。 若要擷取 long 資料，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]循序分批[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式可讓應用程式呼叫[SQLGetData](../native-client-odbc-api/sqlgetdata.md)。 若要傳送循序部分的 long 資料，應用程式可以呼叫[SQLPutData](../native-client-odbc-api/sqlputdata.md)。 在執行時間傳送資料所使用的參數就是所謂的資料執行中參數。  

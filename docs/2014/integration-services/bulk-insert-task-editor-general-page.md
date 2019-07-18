@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061134"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
   使用 **[大量插入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述大量插入工作。  

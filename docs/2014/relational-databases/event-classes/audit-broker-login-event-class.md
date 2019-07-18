@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912103"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Login** 事件，以報告與 Service Broker 傳輸安全性相關的稽核訊息。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075752"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @type = ] 'type'` 要登錄自訂預存程序或指令碼的型別。 *型別*已**varchar(16)**，沒有預設值，它可以是下列值之一。  
+`[ @type = ] 'type'` 要登錄自訂預存程序或指令碼的型別。 *型別*已**varchar(16)** ，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|註冊的自訂預存程序是在複寫 DELETE 陳述式時執行。|  
 |**custom_script**|指令碼是在資料定義語言 (DDL) 觸發程序結尾執行。|  
   
-`[ @value = ] 'value'` 預存程序或名稱和完整路徑名稱[!INCLUDE[tsql](../../includes/tsql-md.md)]所註冊的指令碼檔案。 *值*已**nvarchar(1024)**，沒有預設值。  
+`[ @value = ] 'value'` 預存程序或名稱和完整路徑名稱[!INCLUDE[tsql](../../includes/tsql-md.md)]所註冊的指令碼檔案。 *值*已**nvarchar(1024)** ，沒有預設值。  
   
 > [!NOTE]  
 >  指定針對 NULL*值*參數將會取消註冊先前註冊的指令碼，也就是執行相同[sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)。  
@@ -73,6 +72,6 @@ sp_register_custom_scripting [ @type  = ] 'type'
  只有成員**sysadmin**固定伺服器角色**db_owner**固定資料庫角色，或有**db_ddladmin**固定的資料庫角色可以執行**sp_register_custom_scripting**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [sp_unregister_custom_scripting &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

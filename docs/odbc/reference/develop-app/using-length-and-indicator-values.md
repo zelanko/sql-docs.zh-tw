@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902474"
 ---
 # <a name="using-length-and-indicator-values"></a>使用長度與指標值
 長度/指標緩衝區用來傳遞資料緩衝區或例如 SQL_NULL_DATA 表示資料為 NULL 的特殊指標中資料的位元組長度。 根據函式中使用，是 SQLINTEGER 或 SQLSMALLINT 定義長度/指標緩衝區。 因此，需要單一引數，才能加以描述。 如果 nondeferred 的輸入的緩衝區的資料緩衝區，這個引數會包含資料本身的位元組長度或指標值。 它通常會命名為*Strlen_or_ind&lt*或其他類似的名稱。 例如，下列程式碼會呼叫**SQLPutData**傳遞緩衝區完整的資料; 的位元組長度 (*ValueLen*) 因為直接傳遞的資料緩衝區 (*ValuePtr*) 是輸入的緩衝區。  
@@ -57,13 +56,13 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   0.  
   
--   SQL_NTS。 傳送至對應的資料緩衝區中的驅動程式的字串是以 null 終止;這是便利的方式，為 C 程式設計人員將不用來計算其位元組長度的字串。 此值在應用程式會將資料傳送至驅動程式時，才是合法的。 當驅動程式會回到應用程式中的資料時，它一律會傳回資料的實際位元組長度。  
+-   SQL_NTS. 傳送至對應的資料緩衝區中的驅動程式的字串是以 null 終止;這是便利的方式，為 C 程式設計人員將不用來計算其位元組長度的字串。 此值在應用程式會將資料傳送至驅動程式時，才是合法的。 當驅動程式會回到應用程式中的資料時，它一律會傳回資料的實際位元組長度。  
   
  下列是有效值做為長度/指標值。 SQL_NULL_DATA 會儲存在 SQL_DESC_INDICATOR_PTR 描述項欄位;所有其他值會儲存在 SQL_DESC_OCTET_LENGTH_PTR 描述項欄位。  
   
--   SQL_NULL_DATA。 資料為 NULL 的資料值，並會忽略對應的資料緩衝區中的值。 這個值是合法的只能針對 SQL 資料傳送至或擷取來自驅動程式。  
+-   SQL_NULL_DATA. 資料為 NULL 的資料值，並會忽略對應的資料緩衝區中的值。 這個值是合法的只能針對 SQL 資料傳送至或擷取來自驅動程式。  
   
--   SQL_DATA_AT_EXEC。 資料緩衝區不包含任何資料。 相反地，您會將資料傳送與**SQLPutData**陳述式執行時，或當**SQLBulkOperations**或是**SQLSetPos**呼叫。 這個值是合法的只能針對 SQL 資料傳送至驅動程式。 如需詳細資訊，請參閱 < [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)， [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，並[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+-   SQL_DATA_AT_EXEC. 資料緩衝區不包含任何資料。 相反地，您會將資料傳送與**SQLPutData**陳述式執行時，或當**SQLBulkOperations**或是**SQLSetPos**呼叫。 這個值是合法的只能針對 SQL 資料傳送至驅動程式。 如需詳細資訊，請參閱 < [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)， [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，並[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
 -   結果的 SQL_LEN_DATA_AT_EXEC (*長度*) 巨集。 這個值是類似於 SQL_DATA_AT_EXEC。 如需詳細資訊，請參閱 <<c0> [ 傳送長資料](../../../odbc/reference/develop-app/sending-long-data.md)。  
   

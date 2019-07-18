@@ -1,5 +1,5 @@
 ---
-title: 如何：安裝和管理擴充功能 | Microsoft Docs
+title: 如何：安裝和管理功能延伸模組 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 04/26/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65099681"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>如何：安裝和管理擴充功能
+# <a name="how-to-install-and-manage-feature-extensions"></a>如何：安裝及管理延伸模組
 您可以新增規則，以分析資料庫程式碼、資料庫單元測試的條件，以及建置/部署參與者，來增加 Visual Studio 版本 (包括 SQL Server Data Tools) 提供的功能。 不過，無論您已建立擴充功能或已安裝其他人建立的擴充功能，都必須先安裝擴充功能，才能使用它。  
   
 安裝擴充功能的位置視擴充功能類型，以及您打算從哪裡使用它而定。 在最新版的 Visual Studio 中，部分元件的安裝位置已從 SQL Server 安裝目錄移至 Visual Studio 目錄內。 此設定可讓不同版本的軟體更容易並列執行，但其表示，如果您想要在不同版本的 SQL Server Data Tools 中，以及從命令列中使用擴充功能，則可能需要在多個位置中安裝它。  
@@ -37,7 +37,7 @@ ms.locfileid: "47613226"
 |擴充功能類型|命令列服務|安裝資料夾|  
 |------------------|------------------------|------------------|  
 |SQL Server 單元測試的自訂測試條件|MSBuild / MSTest 可以用來從 Visual Studio 2013 開發人員命令提示字元和類似命令列工具執行單元測試。|與在 Visual Studio 內執行時相同。|  
-|建置參與者<br /><br />部署參與者|[SqlPackage.exe](../tools/sqlpackage.md)，或在建置資料庫專案時使用 MSBuild 部署或發行目標。|MSBuild：與在 Visual Studio 內執行時相同。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md)：如果位於 Visual Studio 目錄中，則與先前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLL 位於該目錄外，則擴充功能應該放置在相同目錄，或放置在 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
+|建置參與者<br /><br />部署參與者|[SqlPackage.exe](../tools/sqlpackage.md)，或在建置資料庫專案時使用 MSBuild 部署或發行目標。|MSBuild：與在 Visual Studio 內執行時相同。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md)：若位於 Visual Studio 目錄中，則與先前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLL 位於該目錄外，則擴充功能應該放置在相同目錄，或放置在 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
 |靜態程式碼分析規則|MSBuild 可以用來建置專案，並執行靜態程式碼分析。<br /><br />此外，您也可以從自己的應用程式使用 CodeAnalysisService API 來執行程式碼分析。 在此情況下，擴充功能查閱規則的運作方式與使用 SqlPackage.exe 的方式相同。|對建置參與者和部署參與者皆相同|  
   
 > [!NOTE]  

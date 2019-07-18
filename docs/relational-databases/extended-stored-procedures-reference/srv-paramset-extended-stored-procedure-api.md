@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f068bbf1196f655f9afd12a5f13fe4d032a862d8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f2b4864ac13d431c3507930abc1e774b4ac6adaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119716"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,14 +75,14 @@ len
   
 |新的資料類型|傳回資料長度|  
 |--------------------|------------------------|  
-|**BITN**|**NULL：**_len_ = 0、data = IG、RET = 0<br /><br /> **ZERO：** 不適用<br /><br /> **>=255：** 不適用<br /><br /> **<255：** 不適用|  
-|**BIGVARCHAR**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
-|**BIGCHAR**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
-|**BIGBINARY**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
-|**BIGVARBINARY**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
-|NCHAR|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
-|NVARCHAR|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
-|**NTEXT**|**NULL：**_len_ = IG、data = IG、RET = 0<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = IG、data = IG、RET = 0<br /><br /> **\<255：**_len_ = IG、data = IG、RET = 0|  
+|**BITN**|**NULL：** _len_ = 0、data = IG、RET = 0<br /><br /> **ZERO：** 不適用<br /><br /> **>=255：** 不適用<br /><br /> **<255：** 不適用|  
+|**BIGVARCHAR**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**BIGCHAR**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**BIGBINARY**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**BIGVARBINARY**|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|NCHAR|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|NVARCHAR|**NULL：** _len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = max8k、data = valid、RET = 0<br /><br /> **<255：** _len_ = <8k、data = valid、RET = 1|  
+|**NTEXT**|**NULL：** _len_ = IG、data = IG、RET = 0<br /><br /> **ZERO：** _len_ = IG、data = IG、RET = 0<br /><br /> **>=255：** _len_ = IG、data = IG、RET = 0<br /><br /> **\<255：** _len_ = IG、data = IG、RET = 0|  
 |RET = srv_paramset 的傳回值||  
 |IG = 值將會被略過||  
 |valid = 資料的任何有效指標||  

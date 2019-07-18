@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080103"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
   Analysis Services 會為伺服器和資料存取提供三個資料提供者。 所有連接到 Analysis Services 的應用程式都會使用其中一個提供者來進行存取。 其中兩個提供者 ADOMD.NET 和 Analysis Services 管理物件 (AMO) 為 Managed 資料提供者。 Analysis Services OLE DB 提供者 (MSOLAP DLL) 是原生資料提供者。  
@@ -63,7 +62,7 @@ ms.locfileid: "53368510"
   
 1.  移至 C:\Windows\Assembly。  
   
-2.  以滑鼠右鍵按一下 Microsoft.AnalysisServices.AdomdClient，再按一下 [內容]。 按一下 **[版本]**。  
+2.  以滑鼠右鍵按一下 Microsoft.AnalysisServices.AdomdClient，再按一下 [內容]  。 按一下 **[版本]** 。  
   
      針對 AMO，以滑鼠右鍵按一下 Microsoft.AnalysisServices。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "53368510"
   
 1.  移至 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkID=296473)。  
   
-2.  展開 **[安裝指示]**。  
+2.  展開 **[安裝指示]** 。  
   
 3.  向下捲動至包含 Analysis Services 元件的段落。 ADOMD.NET、OLE DB 提供者和 AMO 分別為清單中的第二項、第三項和第四項。 每一套程式庫都有 32 位元或 64 位元版本可選。 執行 64 位元作業系統的伺服器和新型工作站需要 64 位元版本。  
   

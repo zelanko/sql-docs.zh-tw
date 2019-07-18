@@ -11,15 +11,15 @@ helpviewer_keywords:
 - columns [SQL Server], aliases
 - aliases [SQL Server], columns
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63646779d3b36c389623705a1ba3205a53ef4fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: db485284b23c56a13f55d94f609a6c482669b61c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596618"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686075"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>建立資料行別名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "47596618"
   
 ### <a name="to-create-a-column-alias"></a>若要建立資料行別名  
   
-1.  在 [準則窗格] 中，找出包含您想要建立別名之資料行的資料列，並且視輸出需要標示該資料列。 如果資料行不在方格中，將其加入。  
+1.  在 [準則窗格]  中，找出包含您想要建立別名之資料行的資料列，並且視輸出需要標示該資料列。 如果資料行不在方格中，將其加入。  
   
-2.  在該資料列的 [別名] 資料行中，輸入別名。 別名必須遵循所有 SQL 的命名慣例。 如果所輸入的別名包含空白字元，[查詢和檢視設計師] 會自動在別名前後加入分隔符號。  
+2.  在該資料列的 [別名]  資料行中，輸入別名。 別名必須遵循所有 SQL 的命名慣例。 如果所輸入的別名包含空白字元，[查詢和檢視設計師] 會自動在別名前後加入分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  
 [將資料行新增至查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  

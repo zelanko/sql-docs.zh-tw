@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020857"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>使用者介面參考 (SybaseToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Sybase。  

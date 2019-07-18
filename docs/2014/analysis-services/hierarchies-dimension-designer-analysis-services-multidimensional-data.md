@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
@@ -13,19 +12,19 @@ ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080793"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>階層 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
-  使用 [階層] 窗格，即可管理目前選取之維度的階層和層級。 如需詳細資訊，請參閱[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  
+  使用 [階層]  窗格，即可管理目前選取之維度的階層和層級。 如需詳細資訊，請參閱[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  
   
  您可以使用 [階層] 窗格來執行下列程序：  
   
--   將屬性從 [屬性] 窗格拖曳到 [階層] 窗格，藉以建立新的階層。  
+-   將屬性從 [屬性]  窗格拖曳到 [階層]  窗格，藉以建立新的階層。  
   
 -   按一下階層名稱旁邊的箭號，藉以顯示或隱藏階層中所有層級的成員屬性。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48133988"
   
 2.  如果沒有選取，請按一下 **[維度結構]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **階層**  
  顯示目前建立的階層。 在每個階層中，具有組成階層各層級的屬性。 屬性關聯性也會顯示出來，但是這些關聯性是唯讀的。  
   

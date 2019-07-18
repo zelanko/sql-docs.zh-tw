@@ -1,5 +1,5 @@
 ---
-title: 範例指定 XMLTEXT 指示詞 |Microsoft Docs
+title: 範例指定 XMLTEXT 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537350"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597551"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例指定 XMLTEXT 指示詞
   此範例說明如何在使用 EXPLICIT 模式的 `SELECT` 陳述式中，使用 `XMLTEXT` 指示詞將溢位資料行中的資料定址。  
@@ -35,7 +35,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
+ 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」  會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- 如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
+ 如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 針對指定的名稱*AttributeName*成為子元素的名稱。  
   
- 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：  
+ 在此查詢中， *AttributeName*，<`overflow`>，並搭配指定`xmltext`指示詞：  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

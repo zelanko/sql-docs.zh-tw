@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, modifying
 - target servers [SQL Server], job changes
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 225f3405ff8e3fbff969ed14b7dbef9663cd8e3c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 22538a3a8a5bef241a27ec68b8dbd56f2fee8595
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696464"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685899"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整個企業的作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

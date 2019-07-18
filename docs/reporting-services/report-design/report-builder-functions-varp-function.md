@@ -2,18 +2,18 @@
 title: VarP 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 062544e43b95a6e0e6143f5d44c89bda302900da
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2712a66e020324ab529fe0dc1759957fbc53f4e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576741"
 ---
 # <a name="report-builder-functions---varp-function"></a>報表產生器函式 - VarP 函式
   傳回運算式指定的所有非 Null 數值的母體擴展變異數 (在給定範圍的內容中評估)。  

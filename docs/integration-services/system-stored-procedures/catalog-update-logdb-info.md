@@ -11,14 +11,18 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2df4819b14c1dec7aa1203d0a4c3416b59f292e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e62cecbb3b0d041ea1408b5bd992664e00d11aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715574"
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 記錄資訊。
@@ -42,7 +46,7 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ## <a name="result-sets"></a>結果集  
  None  
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
    
 -   **ssis_admin** 資料庫角色的成員資格  

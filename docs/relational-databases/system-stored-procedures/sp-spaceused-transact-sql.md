@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032873"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,11 +50,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
    
  這是要求的空間使用方式資訊所屬之資料表、索引檢視或佇列的完整或非完整名稱。 只有在指定完整物件名稱時，才會需要引號。 如果提供完整物件名稱 (包括資料庫名稱)，資料庫名稱就必須是目前資料庫的名稱。  
 如果*objname*未指定，整個資料庫會傳回結果。  
-*objname*已**nvarchar(776)**，預設值是 NULL。  
+*objname*已**nvarchar(776)** ，預設值是 NULL。  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]僅支援資料庫和資料表的物件。
   
-`[ @updateusage = ] 'updateusage'` 指出應該執行 DBCC UPDATEUSAGE 來更新空間使用方式資訊。 當*objname*是未指定，整個資料庫上執行此陳述式; 此陳述式上的執行，否則為*objname*。 值可以是**真**或是**false**。 *updateusage*已**varchar(5)**，預設值是**false**。  
+`[ @updateusage = ] 'updateusage'` 指出應該執行 DBCC UPDATEUSAGE 來更新空間使用方式資訊。 當*objname*是未指定，整個資料庫上執行此陳述式; 此陳述式上的執行，否則為*objname*。 值可以是**真**或是**false**。 *updateusage*已**varchar(5)** ，預設值是**false**。  
   
 `[ @mode = ] 'mode'` 表示結果的範圍。 延展的資料表或資料庫，如*模式*參數可讓您包含或排除物件中的遠端的一部分。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
@@ -67,14 +66,14 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|傳回儲存體的統計資料的本機部分的物件或資料庫。 如果物件或資料庫不是已啟用延展功能，會傳回相同的統計資料時一樣，因此@mode= ALL。|  
 |REMOTE_ONLY|傳回遠端部份的物件或資料庫的儲存體統計資料。 當下列條件之一成立時，此選項就會引發錯誤：<br /><br /> 未啟用 Stretch 的資料表。<br /><br /> 資料表已啟用延展功能，但您永遠不會啟用資料移轉。 在此情況下，遠端資料表還沒有結構描述。<br /><br /> 使用者已手動卸除遠端資料表。<br /><br /> 遠端資料封存的佈建傳回的狀態為成功，但事實上它失敗。|  
   
- *模式*已**varchar(11)**，預設值是**N'ALL'**。  
+ *模式*已**varchar(11)** ，預設值是**N'ALL'** 。  
   
 `[ @oneresultset = ] oneresultset` 指出是否要傳回單一結果集。 *Oneresultset*引數可以是下列值：  
   
 |值|描述|  
 |-----------|-----------------|  
-|0|當*@objname*為 null 或未指定，會傳回兩個結果集。 兩個結果集是預設行為。|  
-|1|當*@objname* = null 或未指定，會傳回單一結果集。|  
+|0|當 *@objname* 為 null 或未指定，會傳回兩個結果集。 兩個結果集是預設行為。|  
+|1|當 *@objname* = null 或未指定，會傳回單一結果集。|  
   
  *oneresultset*已**位元**，預設值是**0**。  
 
@@ -97,7 +96,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
@@ -109,7 +108,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
 |**database_size**|**varchar(18)**|目前資料庫的大小 (以 MB 為單位)。 **database_size**包含資料和記錄檔。|  
 |**未配置的空間**|**varchar(18)**|資料庫中尚未保留給資料庫物件的空間。|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
@@ -120,7 +119,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|要求的空間使用方式資訊所屬的物件名稱。<br /><br /> 不會傳回物件的結構描述名稱。 如果需要的結構描述名稱，使用[sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或是[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動態管理檢視來取得對等的大小資訊。|  
 |**rows**|**char(20)**|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
-|**reserved**|**varchar(18)**|保留空間的總量*objname*。|  
+|**保留**|**varchar(18)**|保留空間的總量*objname*。|  
 |**data**|**varchar(18)**|中的資料所使用的空間總量*objname*。|  
 |**index_size**|**varchar(18)**|中的索引所使用的空間總量*objname*。|  
 |**未使用**|**varchar(18)**|為保留的空間總量*objname*但尚未使用。|  
@@ -137,7 +136,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
@@ -157,7 +156,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
 |**database_size**|**varchar(18)**|目前資料庫的大小 (以 MB 為單位)。 **database_size**包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包括檔案群組中的所有檢查點檔案的磁碟大小總計。|
 |**未配置的空間**|**varchar(18)**|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包括檔案群組中的狀態預先建立的檢查點檔案的磁碟大小總計。|  
-|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
@@ -203,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 顯示遠端資料表的空間使用狀況資訊相關聯的已啟用 Stretch 的資料表  
- 下列範例會摘要說明使用已啟用 Stretch 的資料表與關聯之遠端資料表所用的空間**@mode**引數來指定遠端目標。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+ 下列範例會摘要說明使用已啟用 Stretch 的資料表與關聯之遠端資料表所用的空間 **@mode** 引數來指定遠端目標。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
 ```sql  
 USE StretchedAdventureWorks2016  

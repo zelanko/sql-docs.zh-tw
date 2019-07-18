@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250633"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
   Microsoft **中的** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器，可監視整體的伺服器記憶體使用狀況。 監視整體的伺服器記憶體使用狀況以估計使用者活動和資源使用狀況，可協助您找出效能瓶頸。 監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的記憶體，有助於判定：  

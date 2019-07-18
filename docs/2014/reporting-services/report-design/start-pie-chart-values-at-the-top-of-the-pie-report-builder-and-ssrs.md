@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 74eb4008ad9de17c8da8ced5f70d9eba4b0a85a9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2610534159be781e2719034b41276be5f0d7d473
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104819"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>從圓形圖頂端開始繪製圓形圖值 (報表產生器及 SSRS)
   根據預設，在圓形圖中，資料集的第一個值是從 90 度開始 (從圓形圖頂端算起)。 您可能希望第一個值是從頂端開始繪製。  
@@ -28,11 +27,11 @@ ms.locfileid: "56291546"
   
 1.  按一下圓形圖本身。  
   
-2.  如果 [屬性] 窗格沒有開啟，請按一下 [檢視] 索引標籤上的 [屬性]。  
+2.  如果 [屬性]  窗格沒有開啟，請按一下 [檢視]  索引標籤上的 [屬性]  。  
   
-3.  在 [屬性] 窗格的 [自訂屬性] 底下，將 [PieStartAngle] 從 **0** 變更為 **270**。  
+3.  在 [屬性]  窗格的 [自訂屬性]  底下，將 [PieStartAngle]  從 **0** 變更為 **270**。  
   
-4.  按一下 [執行] 以預覽報表。  
+4.  按一下 [執行]  以預覽報表。  
   
  第一個值現在從圓形圖的頂端開始繪製。  
   

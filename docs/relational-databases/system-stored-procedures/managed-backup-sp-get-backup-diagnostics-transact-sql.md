@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942049"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 引數  
  @xevent_channel  
- 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱或子字串，例如：**'Admin'**， **'Analytic'**， **'Operational'**，和 **'Debug'**。 @event_channel已**VARCHAR (255)**。  
+ 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'** ， **'Analytic'** ， **'Operational'** ，和 **'Debug'** 。 @event_channel已**VARCHAR (255)** 。  
   
  若要取得事件類型目前已啟用使用一份**managed_backup.fn_get_current_xevent_settings**函式。  
   
@@ -62,8 +61,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |-|-|-|  
 |資料行名稱|資料類型|描述|  
 |event_type|NVARCHAR(512)|擴充事件類型。|  
-|事件|NVARCHAR(512)|事件記錄的摘要。|  
-|時間戳記|timestamp|顯示事件引發時間的事件時間戳記。|  
+|Event - 事件|NVARCHAR(512)|事件記錄的摘要。|  
+|時間戳記|TIMESTAMP|顯示事件引發時間的事件時間戳記。|  
   
 ## <a name="security"></a>安全性  
   

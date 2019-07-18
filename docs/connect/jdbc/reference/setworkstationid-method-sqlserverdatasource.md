@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a29243c0b3b8922a2b6c743855080aa9e58abe87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3b9b4dd4ce34dcc39148a2346fd729a8dfb6b87f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771006"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773232"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setWorkstationID(java.lang.String workstationID)
 #### <a name="parameters"></a>參數  
  *workstationID*  
   
- **String**，包含用戶端電腦名稱。  
+ **String**，其中包含用戶端電腦名稱。  
   
 ## <a name="remarks"></a>Remarks  
  workstationID 是用戶端電腦或工作站的名稱。 如果未設定 workstationID 屬性，預設值是藉由呼叫 InetAddress.getLocalHost().getHostName() 方法建構。 如果 getHostName 傳回空白值時，會呼叫 getHostAddress().toString() 方法。  

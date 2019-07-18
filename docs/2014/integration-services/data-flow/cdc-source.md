@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241786"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828122"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -81,14 +81,14 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> 是在 CDC 狀態變數中顯示為 CE/\<value-from-state-cs>/ 的值 (CE 代表 Current-processing-range-End)。  
   
--   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]、[全部 (含舊值)]、[淨]、[淨 (含更新遮罩)]、[淨 (含合併)]。  
+-   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  、[淨 (含合併)]  。  
   
  此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 錯誤訊息  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會傳回下列訊息：  
   
- **提供給程序或函數 cdc.fn_cdc_get_net_changes_ 的引數數量不足\<...>。**  
+ **提供給程序或函式 cdc.fn_cdc_get_net_changes_\<..>** 的引數數量不足。  
   
  此錯誤並不表示缺少引數。 它表示 CDC 狀態變數中的開始或結束 LSN 值無效。  
   
@@ -107,9 +107,9 @@ use <cdc-enabled-database-name>
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 專案的 [資料流程] 畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]。  
+-   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 專案的 [資料流程]  畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]  。  
   
- 如需可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](cdc-source-custom-properties.md)。  
+ 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](cdc-source-custom-properties.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

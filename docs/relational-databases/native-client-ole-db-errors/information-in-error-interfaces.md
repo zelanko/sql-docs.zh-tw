@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c304659dd88b376bf540d893ef83531f648c808b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29cdabcbf61bda237c810356d0d1ef8d271df882
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106891"
 ---
 # <a name="information-in-error-interfaces"></a>錯誤介面中的資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

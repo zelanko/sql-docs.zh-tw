@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091259"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  

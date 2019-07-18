@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66009876"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
   描述在 FileTable 中儲存檔案的目錄結構。  
   
-##  <a name="HowToDirectories"></a> 操作說明：使用 FileTables 中的目錄與路徑  
+##  <a name="HowToDirectories"></a> 如何：使用 FileTables 中的目錄與路徑  
  您可使用下列三項函數在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目錄：  
   
 |為得到此結果|使用此函數|  
@@ -31,7 +31,7 @@ ms.locfileid: "58536500"
 |取得 FileTable 中檔案或目錄的絕對路徑或相對 UNC 路徑。|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |經由提供路徑的方法，取得 FileTable 中指定之檔案或目錄的路徑定位器識別碼值。|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 操作說明：使用可攜式程式碼的相對路徑  
+##  <a name="BestPracticeRelativePaths"></a> 如何：使用可攜式程式碼的相對路徑  
  若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，同時使用 [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函數，以取得檔案在執行階段的完整路徑，如下列範例所示。 根據預設，`GetFileNamespacePath` 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```sql  

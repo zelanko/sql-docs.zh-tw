@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
@@ -17,12 +16,12 @@ ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070863"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>預測計算器 (適用於 Excel 的資料表分析工具)
   ![預測計算器工具](media/tat-predcal.gif "預測計算器 工具")  
@@ -49,13 +48,13 @@ ms.locfileid: "48060018"
   
 5.  按一下 **選擇要用於分析的資料行**。  
   
-6.  在 [**進階資料行選取**] 對話方塊中，選取包含有用的資訊的資料行。 移除與分析不相關的任何資料行。 按一下 [確定] 。  
+6.  在 [**進階資料行選取**] 對話方塊中，選取包含有用的資訊的資料行。 移除與分析不相關的任何資料行。 按一下 [確定]  。  
   
      為防止扭曲結果，您也應該移除具有重複資訊的資料行。 例如，如果您的 [Income] 資料行包含數值資料，而 [Income Group] 資料行包含 [高]、[中] 與 [低] 標籤，則您不得在相同的模型中包含這兩個資料行， 但是您可以針對每個資料行建立一個個別的模型。  
   
 7.  在 **輸出選項**區段中，選取**操作的計算器**建立的分析和 Excel 活頁簿的計分卡。 選取 **印表機可用計算器**來建立分析，也會產生可以列印並用於人工計分的報表。  
   
-8.  按一下 **[執行]**。  
+8.  按一下 **[執行]** 。  
   
      此工具會建立包含報表與計分卡的新工作表。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48060018"
 -   本節描述每個報表中的資訊，以及如何使用各種報表選項。  
   
 ### <a name="prediction-report-with-graphs"></a>包含圖形的預測報表  
- 第一個預測報表稱為**預測計算器報表\<目標狀態 > 的\<目標屬性 >**。 其中包含從分析衍生出來的因數資料表，以及可協助您評估特定分析之財務影響的工具。  
+ 第一個預測報表稱為**預測計算器報表\<目標狀態 > 的\<目標屬性 >** 。 其中包含從分析衍生出來的因數資料表，以及可協助您評估特定分析之財務影響的工具。  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>指定成本與收益的資料表  
  此報表中的第一個工具在報表左上方的資料表，您可以在其中指定與正確和不正確預測值相關聯的成本與收益。  計算器需要這些成本與收益，才能計算最佳分數臨界值。  
@@ -98,7 +97,7 @@ ms.locfileid: "48060018"
   
  中的值**相對影響**資料行是以百分比表示的機率。 加上陰影的資料格則是以視覺方式表示這個值對於結果的影響。  
   
-|attribute|值|相對影響|  
+|屬性|值|相對影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
@@ -121,18 +120,18 @@ ms.locfileid: "48060018"
  例如，雖然第一個圖表建議鎖定模型預測的前 500 個客戶是達到最高收益的方式，但是您在查看過這個圖表後判定錯誤鎖定客戶的成本太大，而可能決定改為在前 400 個客戶後中斷行銷活動。  
   
 ### <a name="interactive-prediction-calculator"></a>互動式預測計算器  
- 預測計算器 工具所建立的第二個工作表稱為**的預測計算器\<目標狀態 > 的\<目標屬性 >**。 這是一個您可以用於計算個別分數的互動式工作表。 這個工作表使用存放在模型中的模式與統計資料，因此您可以試驗不同的值，並查看這些值如何影響預測的分數。 此報表也包含兩個區段：一個是互動式的區段，而另一個則為參考。  
+ 預測計算器 工具所建立的第二個工作表稱為**的預測計算器\<目標狀態 > 的\<目標屬性 >** 。 這是一個您可以用於計算個別分數的互動式工作表。 這個工作表使用存放在模型中的模式與統計資料，因此您可以試驗不同的值，並查看這些值如何影響預測的分數。 此報表也包含兩個區段：一個是互動式的區段，而另一個則為參考。  
   
 #### <a name="first-table"></a>第一個資料表  
  您可以選取或輸入新的值，在**值**資料表，以查看變更的值如何影響分數資料行。  
   
  例如，如果報表包含下列值，您可能會將 [Cars] 的值減少為 1，然後再減少為 0，就可以查看該值如何影響客戶的購買行為。 當您變更的值**汽車**為 0，底部預測會變更為 TRUE。  
   
-|attribute|值|相對影響|  
+|屬性|值|相對影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Gender|Male|0|  
-|Income|39050-71062|117|  
+|Income|39050 - 71062|117|  
 |Children|0|157|  
 |Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
@@ -140,7 +139,7 @@ ms.locfileid: "48060018"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37-46|5|  
+|Age|37 - 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48060018"
  此資料表針對輸入資料行的每個可能狀態顯示個別的分數，以及該分數對於結果的相對影響。 此資料表是靜態的，而且僅供參考。  
   
 ### <a name="printable-prediction-calculator"></a>可列印預測計算器  
- 預測計算器 工具所建立的第三個工作表稱為**PrintablePrediction 計算機\<目標狀態 > 的\<目標屬性 >**。 這個計分卡可以列印出來，讓您在不使用電腦時，能夠手動計算分數。  
+ 預測計算器 工具所建立的第三個工作表稱為**PrintablePrediction 計算機\<目標狀態 > 的\<目標屬性 >** 。 這個計分卡可以列印出來，讓您在不使用電腦時，能夠手動計算分數。  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>列印與使用預測計算器產生的計分報表  
   
-1.  按一下標題為 [] 索引標籤**的可列印預測計算器\<屬性 >**。  
+1.  按一下標題為 [] 索引標籤**的可列印預測計算器\<屬性 >** 。  
   
 2.  在 [Excel 檔案] 功能表中，選取**預覽列印**。  
   

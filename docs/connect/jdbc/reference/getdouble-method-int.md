@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d85d1b8bd9b9a7e1a6000a6610197a6b65d8097e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a16f5b70eeeb762f222c3bc1d7248e99a7f207d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768500"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768941"
 ---
 # <a name="getdouble-method-int"></a>getDouble 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

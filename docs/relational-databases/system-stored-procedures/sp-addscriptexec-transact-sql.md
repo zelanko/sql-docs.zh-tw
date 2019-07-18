@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022455"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
-`[ @scriptfile = ] 'scriptfile'` 是 SQL 指令碼檔案的完整路徑。 *scriptfile*已**nvarchar(4000)**，沒有預設值。  
+`[ @scriptfile = ] 'scriptfile'` 是 SQL 指令碼檔案的完整路徑。 *scriptfile*已**nvarchar(4000)** ，沒有預設值。  
   
 `[ @skiperror = ] 'skiperror'` 表示指令碼處理期間發生錯誤時的散發代理程式 」 或 「 合併代理程式是否應該停止。 *SkipError*已**元**，預設值是 0。  
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920780"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
-**ADOStreamConstruction**介面用來建構 ADO **Stream**的 OLE DB 物件**IStream** C/c + + 應用程式中的物件。  
+**ADOStreamConstruction**介面用來建構 ADO **Stream**的 OLE DB 物件**IStream** C 中的物件 /C++應用程式。  
   
 ## <a name="properties"></a>屬性  
   
@@ -35,7 +34,7 @@ ms.locfileid: "47828742"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="remarks"></a>備註  

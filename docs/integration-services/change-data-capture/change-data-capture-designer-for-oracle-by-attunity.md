@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729056"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 設計工具主控台是用來開發及維護 Oracle CDC 執行個體。 CDC 設計工具主控台是包含以下元素的 Microsoft Management Console 嵌入式管理單元：  
   
 -   新增執行個體精靈：此精靈會建立新的 Oracle CDC 執行個體。 如需有關使用新增執行個體精靈的詳細資訊，請參閱＜ [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)＞。  
@@ -29,7 +33,7 @@ ms.locfileid: "58280852"
   
 -   CDC 執行個體屬性編輯器：此對話方塊是用來編輯任何現有的 Oracle CDC 服務執行個體。 如需有關編輯 CDC 執行個體屬性的詳細資訊，請參閱＜ [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)＞。  
   
- Microsoft® Change Data Capture 設計工具及 Service for Oracle by Attunity for Microsoft SQL Server® 2016 屬於 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 是 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
   
 ## <a name="in-this-documentation"></a>在此文件集中  
   

@@ -1,5 +1,5 @@
 ---
-title: 相依性網路中尋找特定節點 |Microsoft 文件
+title: 相依性網路中尋找特定節點 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183242"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "34014465"
   
      節點清單經過篩選，只顯示包含搜尋路徑之一部份的那些節點。  
   
-3.  從清單中選取正確的節點，然後按一下 **[確定]**。  
+3.  從清單中選取正確的節點，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和操作說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

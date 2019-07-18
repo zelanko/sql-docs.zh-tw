@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.partitions.partitionmgr.imbi.f1
@@ -13,12 +12,12 @@ ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066391"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>表格式模型資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 模型撰寫期間，在已部署的模型中有重複定義的模型資料分割。 在部署之後，即可使用 **的** [資料分割] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊或指令碼，管理這些資料分割及建立新的資料分割。 本主題提供的資訊說明部署的表格式模型資料庫中的資料分割。 如需在模型撰寫期間建立和管理資料分割的詳細資訊，請參閱 [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md) (資料分割 (SSAS 表格式))。  

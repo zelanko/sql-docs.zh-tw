@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924510"
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件、 其來源可以是已開啟的目前資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或開啟搭配的相對 URL[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  
@@ -56,7 +55,7 @@ ms.locfileid: "52538037"
 ## <a name="resource-recordset-columns"></a>資源資料錄集資料行  
  A*資源的資料錄集*下列資料行所組成。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|唯讀。 表示資源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|唯讀。 表示父記錄的絕對 URL。|  
@@ -73,7 +72,7 @@ ms.locfileid: "52538037"
 |RESOURCE_ISCOLLECTION|adBoolean|唯讀。 如果資源是集合，例如目錄，則為 true。 如果資源是簡單的檔案，則為 false。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|如果資源是結構化文件，則為 true。 如果資源不是結構化文件，則為 false。 可能是簡單的檔案或集合。|  
 |DEFAULT_DOCUMENT|AdVarWChar|唯讀。 表示此資源包含資料夾的預設簡單文件或結構化文件的 URL。 預設資料流所要求資源時使用。 這個屬性是空白的簡單的檔案。|  
-|CHAPTERED_CHILDREN|adChapter|唯讀。 選擇性。 表示資料列集包含資源的子系的章節。 ( *OLE DB Provider for Internet Publishing*不會使用此資料行。)|  
+|CHAPTERED_CHILDREN|AdChapter|唯讀。 選擇性。 表示資料列集包含資源的子系的章節。 ( *OLE DB Provider for Internet Publishing*不會使用此資料行。)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|唯讀。 表示資源的顯示名稱。|  
 |RESOURCE_ISROOT|adBoolean|唯讀。 如果資源是集合或結構化文件的根目錄，則為 true。|  
   

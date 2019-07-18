@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130047"
 ---
 # <a name="decimal-digits"></a>小數位數
 *十進位數字*的 decimal 與 numeric 資料類型會定義為小數點右邊或資料的小數位數的數字的數目上限。 近似浮點數的數字資料行或參數，因為不固定的小數點右邊的位數，未定義小數位數。 包含秒元件的日期時間或間隔的資料，小數位數被指資料的秒數元件之小數點右邊的位數。  

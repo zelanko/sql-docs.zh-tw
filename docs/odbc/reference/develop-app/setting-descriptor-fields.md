@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14724a5cc863074344cfbb02615f0ccff228f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094249"
 ---
 # <a name="setting-descriptor-fields"></a>設定描述項欄位
 若要修改的欄位描述元，應用程式可以呼叫**SQLSetDescField**。 某些欄位是唯讀的而且無法設定。 (請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式描述。)  

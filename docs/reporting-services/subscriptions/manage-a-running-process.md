@@ -2,7 +2,7 @@
 title: 管理執行中的處理序 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579008"
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會監視在報表伺服器上執行之作業的狀態。 報表伺服器會以固定間隔執行進行中作業的掃描，並將狀態資訊寫入報表伺服器資料庫或服務應用程式資料庫 (如果是 SharePoint 模式)。 如果下列任一個處理序進行中，作業就是進行中：在遠端或本機資料庫伺服器上的查詢執行、報表處理，以及報表轉譯。  
@@ -77,7 +77,7 @@ ms.locfileid: "50021952"
   
 2.  開啟 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下報表，然後按一下 [取消作業]。  
+3.  以滑鼠右鍵按一下報表，然後按一下 [取消作業]  。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>如何取消資料驅動訂閱  
   
@@ -89,7 +89,7 @@ ms.locfileid: "50021952"
   
 4.  儲存檔案。  
   
-5.  在報表管理員中，從報表的 [訂閱] 索引標籤或 [我的訂閱] 中刪除資料驅動訂閱。  
+5.  在報表管理員中，從報表的 [訂閱] 索引標籤或 [我的訂閱]  中刪除資料驅動訂閱。  
   
 6.  刪除訂閱之後，請在 RSReportServer.config 檔中，尋找 **IsNotificationService** ，然後將它設為 **True**。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "50021952"
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>若要管理 SharePoint 模式下的作業  
   
-1.  在 SharePoint 管理中心中，按一下 **[管理服務應用程式]**。  
+1.  在 SharePoint 管理中心中，按一下 **[管理服務應用程式]** 。  
   
 2.  找出並按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，以開啟 [管理應用程式] 頁面。  
   

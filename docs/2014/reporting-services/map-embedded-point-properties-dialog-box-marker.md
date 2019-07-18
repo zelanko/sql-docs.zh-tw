@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 891d1a6e94e5e496e39c5fc8bb5c774976bd537a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108327"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>地圖內嵌點屬性對話方塊、標記
   選取 **[內嵌點屬性]** 對話方塊上的 **[標記]** 來變更下列地圖元素的標記類型和標記大小選項：  

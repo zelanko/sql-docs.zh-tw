@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907134"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>功能表命令和其他快速鍵 (AccessToSQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於存取應用程式。  

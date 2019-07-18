@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - DMX [Analysis Services], user interface
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b84ac73991124ea9f90c5fe60c11e2b93154dc2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 09a251ad3aaa288c13e4ded43ff1985bdfb10b7c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107495"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源的資料採礦運算式 (DMX) 查詢和多維度運算式 (MDX) 查詢。 此主題即描述 DMX 查詢設計工具。 如需 MDX 查詢設計工具的詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](analysis-services-mdx-query-designer-user-interface.md)。  
@@ -43,7 +42,7 @@ ms.locfileid: "56034679"
 |![刪除](../../analysis-services/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|  
 |![[查詢參數] 對話方塊圖示](../../analysis-services/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示")|顯示 **[查詢參數]** 對話方塊。 當您指派預設值給變數時，就會在您切換到 [報表設計師] 中的 [配置] 檢視時建立對應的報表參數。|  
 |![執行查詢](../../analysis-services/media/rsqdicon-run.gif "執行查詢")|準備查詢。|  
-|![切換到設計模式](../../analysis-services/media/rsqdicon-designmode.gif "切換到設計模式")|在「設計」模式與「查詢」模式之間切換。 若要變更為結果檢視，請以滑鼠右鍵按一下 [設計] 窗格並選擇 [結果]。|  
+|![切換到設計模式](../../analysis-services/media/rsqdicon-designmode.gif "切換到設計模式")|在「設計」模式與「查詢」模式之間切換。 若要變更為結果檢視，請以滑鼠右鍵按一下 [設計] 窗格並選擇 [結果]  。|  
   
 ## <a name="graphical-dmx-query-designer-in-design-mode"></a>設計模式中的圖形化 DMX 查詢設計工具  
  當您編輯的資料集所使用的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源沒有有效的 Cube，但是具有有效的採礦模型時，圖形化查詢設計工具會在 [設計] 模式下開啟。 下圖會標示出設計模式的窗格。  
@@ -54,13 +53,13 @@ ms.locfileid: "56034679"
   
 |窗格|函數|  
 |----------|--------------|  
-|[查詢設計] 窗格|使用 [採礦模型] 及 [選取輸入資料表] 對話方塊建立 DMX 查詢。|  
-|[方格] 窗格|針對方格中的每一個資料列，使用 [來源] 下拉式清單選取函式或運算式，並選擇要在 DMX 查詢中使用的欄位、群組和準則或引數。 若要查看依據選取項目所產生的 DMX 查詢文字，請按一下工具列上的 [設計模式] 按鈕。|  
+|[查詢設計] 窗格|使用 [採礦模型]  及 [選取輸入資料表]  對話方塊建立 DMX 查詢。|  
+|[方格] 窗格|針對方格中的每一個資料列，使用 [來源]  下拉式清單選取函式或運算式，並選擇要在 DMX 查詢中使用的欄位、群組和準則或引數。 若要查看依據選取項目所產生的 DMX 查詢文字，請按一下工具列上的 [設計模式]  按鈕。|  
   
- 若要執行 DMX 查詢並將結果顯示在 [結果] 窗格中，請以滑鼠右鍵按一下 [查詢設計] 窗格並選取 [結果]。  
+ 若要執行 DMX 查詢並將結果顯示在 [結果] 窗格中，請以滑鼠右鍵按一下 [查詢設計] 窗格並選取 [結果]  。  
   
 ## <a name="graphical-dmx-query-designer-in-query-mode"></a>查詢模式中的圖形化 DMX 查詢設計工具  
- 若要將圖形化查詢設計工具變更為「查詢」模式，請按一下工具列上的 [設計模式] 按鈕，或是以滑鼠右鍵按一下查詢設計介面並從捷徑功能表中選擇 [查詢]。 使用這種模式可直接在 [查詢] 窗格中輸入 DMX 文字。  
+ 若要將圖形化查詢設計工具變更為「查詢」模式，請按一下工具列上的 [設計模式]  按鈕，或是以滑鼠右鍵按一下查詢設計介面並從捷徑功能表中選擇 [查詢]  。 使用這種模式可直接在 [查詢] 窗格中輸入 DMX 文字。  
   
  下圖會標示出「查詢」模式中的窗格。  
   
@@ -70,19 +69,19 @@ ms.locfileid: "56034679"
   
 |窗格|函數|  
 |----------|--------------|  
-|[查詢設計] 窗格|使用 [採礦模型] 及 [選取輸入資料表] 對話方塊建立 DMX 查詢。|  
-|[查詢] 窗格|直接在窗格中檢視或編輯 DMX 查詢文字。 如果變回 [設計] 模式，則無法保存 DMX 查詢文字的變更。|  
+|[查詢設計] 窗格|使用 [採礦模型]  及 [選取輸入資料表]  對話方塊建立 DMX 查詢。|  
+|[查詢] 窗格|直接在窗格中檢視或編輯 DMX 查詢文字。 如果變回 [設計]  模式，則無法保存 DMX 查詢文字的變更。|  
   
- 若要執行 DMX 查詢並將結果顯示在 [結果] 窗格中，請以滑鼠右鍵按一下 [查詢設計] 窗格並選取 [結果]。  
+ 若要執行 DMX 查詢並將結果顯示在 [結果] 窗格中，請以滑鼠右鍵按一下 [查詢設計] 窗格並選取 [結果]  。  
   
 ## <a name="graphical-dmx-query-designer-in-result-mode"></a>結果模式中的圖形化 DMX 查詢設計工具  
- 若要顯示「結果」模式，請以滑鼠右鍵按一下查詢設計介面，然後從捷徑功能表中選擇 [結果]。 當您切換到「結果」模式時，DMX 查詢便會自動執行。  
+ 若要顯示「結果」模式，請以滑鼠右鍵按一下查詢設計介面，然後從捷徑功能表中選擇 [結果]  。 當您切換到「結果」模式時，DMX 查詢便會自動執行。  
   
  下圖會顯示「結果」模式中的查詢設計工具。  
   
  ![Analysis Services DMX 查詢設計工具，結果檢視](../media/rsqd-dsawas-dmx-resultmode.gif "Analysis Services DMX 查詢設計工具，結果檢視")  
   
- 若要切換回「設計」模式或「查詢」模式，請以滑鼠右鍵按一下 [結果] 窗格並選取 [設計] 或 [查詢]。  
+ 若要切換回「設計」模式或「查詢」模式，請以滑鼠右鍵按一下 [結果] 窗格並選取 [設計]  或 [查詢]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   

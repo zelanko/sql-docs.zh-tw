@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24f33cb80947497c6a9f7d44cd898516496aded4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 01548f5d9a2e54607ff0b260a39724591de4380e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823076"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783402"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>setTypeMap 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

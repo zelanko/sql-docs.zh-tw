@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
@@ -18,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072712"
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
   結構描述產生精靈會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]裡的維度和量值群組，產生主題領域資料庫反正規化關聯式結構描述。 此精靈會針對每一個維度產生關聯式資料表 (稱為維度資料表)，以便儲存維度資料，也會針對每一個量值群組產生關聯式資料表 (稱為事實資料表)，以便儲存事實資料。 精靈產生這些關聯式資料表時，會忽略連結維度、連結量值群組和伺服器時間維度。  
@@ -45,7 +44,7 @@ ms.locfileid: "48133428"
  針對每個維度，結構描述產生精靈會產生要包含在主題領域資料庫裡的維度資料表。 維度資料表的結構，取決於設計資料表所依據之維度時的選擇。  
   
  [資料行]  
- 精靈會產生一個資料行中的維度資料表依據的維度，例如的繫結每個屬性的相關聯繫結`KeyColumns`， `NameColumn`， `ValueColumn`， `CustomRollupColumn`， `CustomRollupPropertiesColumn`，和`UnaryOperatorColumn`的每個屬性的屬性。  
+ 針對做為維度資料表基礎之維度中每個屬性的相關聯繫結 (例如每個屬性 (Attribute) 之 `KeyColumns`、`NameColumn`、`ValueColumn`、`CustomRollupColumn`、`CustomRollupPropertiesColumn` 和 `UnaryOperatorColumn` 屬性 (Property) 的繫結)，精靈會產生一個資料行。  
   
  關聯性  
  針對每個父屬性的資料行和維度資料表的主索引鍵，精靈會產生兩者之間的關聯性。  
@@ -65,7 +64,7 @@ ms.locfileid: "48133428"
  針對 Cube 中的每個量值群組，結構描述產生精靈會產生要包含在主題領域資料庫裡的一個事實資料表。 事實資料表的結構，取決於設計資料表所依據之量值群組時的選擇，以及在量值群組與任何內含維度之間建立的關聯性。  
   
  [資料行]  
- 精靈會產生一個資料行，請在每個量值，但使用的量值除外`Count`彙總函式。 這些量值在事實資料表中不需要有對應的資料行。  
+ 精靈會為每個量值產生一個資料行，不過使用 `Count` 彙總函式的量值除外。 這些量值在事實資料表中不需要有對應的資料行。  
   
  精靈也會在量值群組上，針對每個一般維度關聯性的每個資料粒度屬性資料行，產生一個資料行；也會針對與此資料表做為基礎的量值群組，有事實維度關聯性的維度之每個屬性的相關聯繫結，產生一或多個資料行 (如果適用的話)。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48133428"
  針對量值群組中需要翻譯資料行的任何屬性，精靈會產生另一個資料表來保存已翻譯值。 精靈也會為每一種必要的語言，建立個別資料行。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>資料類型轉換和預設長度  
- 結構描述產生精靈會忽略資料類型，在所有情況下使用的資料行除外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`資料型別。 `wchar`的資料大小會直接轉譯成`nvarchar`資料型別。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
+ 結構描述產生精靈會忽略資料類型，在所有情況下使用的資料行除外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`資料型別。 `wchar` 資料大小會直接翻譯成 `nvarchar` 資料類型。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
   
  如果資料項目 (例如屬性的繫結) 沒有指定的長度，則會針對資料行使用下表中所列的預設長度。  
   

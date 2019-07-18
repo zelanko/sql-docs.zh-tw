@@ -12,16 +12,16 @@ helpviewer_keywords:
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04d73a9a17b3ec8c99aa5c97db98913b6009700b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a05175b8ce58f7fcfe66ccdb26341369592ee3e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855756"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688021"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47855756"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目定義 Transact-SQL 作業步驟選項** ：  
   
@@ -46,17 +46,17 @@ ms.locfileid: "47855756"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-define-transact-sql-job-step-options"></a>若要定義 Transact-SQL 作業步驟選項  
   
-1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
+1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
   
-2.  按一下 **[步驟]** 頁面，再按一下作業步驟，然後按一下 **[編輯]**。  
+2.  按一下 **[步驟]** 頁面，再按一下作業步驟，然後按一下 **[編輯]** 。  
   
-3.  在 **[作業步驟屬性]** 對話方塊中，確認作業類型是 **Transact-SQL script (TSQL)**，然後選取 **[進階]** 頁面。  
+3.  在 **[作業步驟屬性]** 對話方塊中，確認作業類型是 **Transact-SQL script (TSQL)** ，然後選取 **[進階]** 頁面。  
   
 4.  從 **[成功時的動作]** 清單中，指定當作業成功時要採取的動作。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "47855756"
   
 8.  如果作業是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，您可以從下列選項中選擇：  
   
-    -   輸入 **[輸出檔案]** 的名稱。 根據預設，每次執行作業步驟時都會覆寫此檔案。 如果您不想要覆寫輸出檔，請選取 **[將輸出附加至現有檔案]**。 此選項僅適用於 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 請注意， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允許使用者檢視檔案系統上的任意檔案，所以您不能使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來檢視已寫入檔案系統的作業步驟記錄檔。  
+    -   輸入 **[輸出檔案]** 的名稱。 根據預設，每次執行作業步驟時都會覆寫此檔案。 如果您不想要覆寫輸出檔，請選取 **[將輸出附加至現有檔案]** 。 此選項僅適用於 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 請注意， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允許使用者檢視檔案系統上的任意檔案，所以您不能使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來檢視已寫入檔案系統的作業步驟記錄檔。  
   
-    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]**。 作業步驟執行之後，您可以按一下 **[檢視]** 以檢視這個資料表的內容。  
+    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]** 。 作業步驟執行之後，您可以按一下 **[檢視]** 以檢視這個資料表的內容。  
   
     -   如果您希望步驟的記錄中包含輸出，請選取 **[包含步驟輸出於記錄中]** 。 只有無錯誤時，才會顯示輸出。 另外，輸出可能被截斷。  
   

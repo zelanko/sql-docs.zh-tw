@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
@@ -13,12 +12,12 @@ ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069950"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>結構描述產生精靈 F1 說明 (Analysis Services - 多維度資料)
   使用結構描述產生精靈，為依據現有 Cube 和維度的主題領域資料庫自動產生關聯式結構描述。 此外，您可以擴展精靈為時間維度所產生的資料表，以及管理主題領域資料庫的命名慣例和選項。  

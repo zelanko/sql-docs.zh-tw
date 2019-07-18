@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e998245ecb72f889af3fb2c699d6f1e961d8874e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012457"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 事件類別
   **Audit Server Object Management** 事件類別會在 CREATE、ALTER 或 DROP 伺服器物件時發生。  

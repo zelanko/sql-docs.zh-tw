@@ -13,15 +13,15 @@ helpviewer_keywords:
 - renaming database diagrams
 - database diagrams [SQL Server], renaming
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a5169dd6237b53223db41754e708969e7059473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 13f06b9e0c0a1eeaceb0f4320082502b2abf2bdd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833256"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679483"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>重新命名資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "47833256"
   
 ### <a name="to-rename-a-database-diagram"></a>若要為資料庫圖表重新命名  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  在準備重新命名的資料庫圖表上，按一下滑鼠右鍵。  
   
-3.  在快速鍵功能表上選擇 [重新命名]。  
+3.  在快速鍵功能表上選擇 [重新命名]  。  
   
     在 [物件總管] 的圖表名稱四週，會開啟某個編輯方塊。  
   

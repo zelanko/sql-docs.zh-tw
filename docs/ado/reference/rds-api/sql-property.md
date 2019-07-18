@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b3222c39515bad505d24b10e31b36a9c1c61965
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963344"
 ---
 # <a name="sql-property"></a>SQL 屬性
 表示用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

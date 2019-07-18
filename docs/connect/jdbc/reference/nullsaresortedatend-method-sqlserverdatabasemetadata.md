@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 871f7896f0f0053e8b45bd93dedd5153a58b8b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 248d28b199dfbdd92f84cca200735b8b3a66e8fc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673276"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802545"
 ---
 # <a name="nullsaresortedatend-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtEnd 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

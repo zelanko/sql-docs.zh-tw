@@ -20,17 +20,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922042"
 ---
 # <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
   完整資料庫備份會備份整個資料庫。 這包括交易記錄的部分，讓完整資料庫得以在還原完整資料庫備份之後復原。 完整資料庫備份代表備份完成時的資料庫。  
   
 > [!TIP]  
->  資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」*(Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
+>  資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」* (Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
   
 > [!IMPORTANT]  
 >  資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
@@ -50,7 +50,7 @@ ms.locfileid: "53205377"
   
  ![顯示資料庫備份之間的工作損失風險](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "顯示資料庫備份之間的工作損失風險")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  如需如何建立記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)。  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。 然後，此範例會接著備份交易記錄。 在實際的情況下，您必須執行一連串的定期記錄備份。 就此範例而言， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
   
 ```  

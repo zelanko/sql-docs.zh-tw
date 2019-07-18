@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c11459a9ec28f6f32b14590c2a85148920280a54
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: dfd957470610b632259156fa1f469a8a4651f759
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099299"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688483"
 ---
 # <a name="projects-sql-server-management-studio"></a>專案 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50099299"
 專案也可以整合為一個原始程式碼控制系統。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>從指令碼專案連接到 SQL Server 的執行個體  
-指令碼專案可包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接。 按一下該連接，就可以連接到專案中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此時會開啟一個 [SQL 指令碼] 視窗，這個視窗會連接到您選取的連接所定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果您利用採取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的連接來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 指令碼，在啟動編輯器及載入指令碼之後，系統會利用 [連接到 SQL Server] 對話方塊來提示您輸入密碼。  
+指令碼專案可包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接。 按一下該連接，就可以連接到專案中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此時會開啟一個 [SQL 指令碼] 視窗，這個視窗會連接到您選取的連接所定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果您利用採取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的連接來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 指令碼，在啟動編輯器及載入指令碼之後，系統會利用 [連接到 SQL Server]  對話方塊來提示您輸入密碼。  
   
 對應視窗關閉之後，連接也會關閉。  
   

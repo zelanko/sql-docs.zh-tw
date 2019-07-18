@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65106225"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本文討論如何監視原生編譯預存程序和其他原生編譯 T-SQL 模組的效能。  
   
@@ -29,7 +30,9 @@ ms.locfileid: "52711509"
  **line_number**連同擴充事件中的 **object_id** 皆可用來調查查詢。 使用下列查詢即可擷取程序定義。 行號可用來識別定義內的查詢：  
   
 ```sql  
-select [definition] from sys.sql_modules where object_id=object_id  
+SELECT [definition]
+    from sys.sql_modules
+    where object_id=object_id;
 ```  
   
   
@@ -38,28 +41,32 @@ select [definition] from sys.sql_modules where object_id=object_id
 
 執行統計資料會反映在系統檢視表 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)，也會反映在[查詢存放區](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。
 
-### <a name="enabling-procedure-level-execution-statistics-collection"></a>啟用程序層級的執行統計資料收集
+## <a name="procedure-level-execution-statistics"></a>程序層級執行統計資料
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用和停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用或停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來啟用或停用原生編譯預存程序的程序層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來在程序層級啟用或停用原生編譯預存程序的統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
-### <a name="enabling-query-level-execution-statistics-collection"></a>啟用查詢層級的執行統計資料收集
+## <a name="query-level-execution-statistics"></a>查詢層級執行統計資料
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 在查詢層級啟用和停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的查詢層級執行統計資料收集：
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 啟用或停用原生編譯預存程序的陳述式層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 在陳述式層級啟用或停用原生編譯預存程序的統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="sample-queries"></a>範例查詢
@@ -68,49 +75,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
  
   
  下列查詢會在收集統計資料之後傳回目前資料庫中原生編譯預存程序的程序名稱和執行統計資料：  
-  
-```sql  
-select object_id,  
-       object_name(object_id) as 'object name',  
-       cached_time,  
-       last_execution_time,  
-       execution_count,  
-       total_worker_time,  
-       last_worker_time,  
-       min_worker_time,  
-       max_worker_time,  
-       total_elapsed_time,  
-       last_elapsed_time,  
-       min_elapsed_time,  
-       max_elapsed_time   
-from sys.dm_exec_procedure_stats  
-where database_id=db_id() and object_id in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by total_worker_time desc  
-```  
-  
- 下列查詢會傳回目前資料庫中已收集統計資料的原生編譯預存程序內，所有查詢的查詢文字和執行統計資料，依工作者時間總計以遞減順序排序：  
-  
-```sql  
-select st.objectid,   
-       object_name(st.objectid) as 'object name',   
-       SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
-       qs.creation_time,  
-       qs.last_execution_time,  
-       qs.execution_count,  
-       qs.total_worker_time,  
-       qs.last_worker_time,  
-       qs.min_worker_time,  
-       qs.max_worker_time,  
-       qs.total_elapsed_time,  
-       qs.last_elapsed_time,  
-       qs.min_elapsed_time,  
-       qs.max_elapsed_time  
-from sys.dm_exec_query_stats qs cross apply sys.dm_exec_sql_text(sql_handle) st  
-where  st.dbid=db_id() and st.objectid in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by qs.total_worker_time desc  
-```  
+
+```sql
+SELECT
+        object_id,
+        object_name(object_id) as 'object name',
+        cached_time,
+        last_execution_time,  execution_count,
+        total_worker_time,    last_worker_time,
+        min_worker_time,      max_worker_time,
+        total_elapsed_time,   last_elapsed_time,
+        min_elapsed_time,     max_elapsed_time
+    from
+        sys.dm_exec_procedure_stats
+    where
+        database_id = db_id()
+        and
+        object_id in
+            (
+            SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    order by
+        total_worker_time desc;
+```
+
+下列查詢會傳回目前資料庫中已收集統計資料的原生編譯預存程序內，所有查詢的查詢文字和執行統計資料，依工作者時間總計以遞減順序排序：  
+
+```sql
+SELECT
+        st.objectid,
+        object_name(st.objectid) as 'object name',
+        SUBSTRING()
+            st.text,
+            (qs.statement_start_offset/2) + 1,
+            ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1
+            ) as 'query text',
+        qs.creation_time,
+        qs.last_execution_time,   qs.execution_count,
+        qs.total_worker_time,     qs.last_worker_time,
+        qs.min_worker_time,       qs.max_worker_time,
+        qs.total_elapsed_time,    qs.last_elapsed_time,
+        qs.min_elapsed_time,      qs.max_elapsed_time
+    FROM
+                    sys.dm_exec_query_stats qs
+        cross apply sys.dm_exec_sql_text(sql_handle) st
+    WHERE
+        st.dbid = db_id()
+        and
+        st.objectid in
+            (SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    ORDER BY
+        qs.total_worker_time desc;
+```
 
 ## <a name="query-execution-plans"></a>查詢執行計畫
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], database objects
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd9f8912ff167e70caf601d4816d2d92f1af04c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010094"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、函數、預存程序及檢視
   列出已加入或變更以支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中 FileTable 功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
@@ -40,7 +40,7 @@ ms.locfileid: "48154334"
   
 |Object|[狀態]|[詳細資訊]|  
 |------------|------------|----------------------|  
-|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**已加入**|[使用 FileTable 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
+|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**已加入**|[使用 FileTables 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**已加入**|[使用 FileTable 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
 |[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**已加入**|[使用 FileTables 中的目錄與路徑](work-with-directories-and-paths-in-filetables.md)|  
   

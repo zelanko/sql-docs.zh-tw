@@ -11,14 +11,18 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c1ee4bf54117a9b2b29aa2e892186d61b44683c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfd70ba37cff4b7516170a4a5ab3191892d78933
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724915"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回包含以分隔符號分隔之 Token 的字串中的 Token 數。  
   
 ## <a name="syntax"></a>語法  

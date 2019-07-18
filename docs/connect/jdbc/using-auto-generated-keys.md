@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d50968acff5370bade29886af8d4a52dff3cf016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4d45e8966ffb57ba10ac96967cfbc87d820e7085
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757786"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790019"
 ---
 # <a name="using-auto-generated-keys"></a>使用自動產生的金鑰
 

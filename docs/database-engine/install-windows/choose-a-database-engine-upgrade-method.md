@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795002"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "58872258"
   
  **下載**  
   
--   若要下載 [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**。  
+-   若要下載 [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** 。  
   
--   有 Azure 帳戶嗎？  接著前往**[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** 加速已安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition 的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** 加速已安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition 的虛擬機器。  
   
 > [!NOTE]  
 >  您也可以考慮在升級計畫中升級 Azure SQL Database，或將您的 SQL Server 環境虛擬化。 本文未涵蓋這些文章，如有需要請參閱以下連結：
@@ -45,7 +45,11 @@ ms.locfileid: "58872258"
 -   沒有高可用性 (HA) 組態的開發環境。  
   
 -   可容許停機時間，並執行於最新硬體及軟體的非任務關鍵性生產環境。 停機時間取決於您的資料庫大小，以及 I/O 子系統的速度。 在記憶體最佳化資料表使用中時升級 SQL Server 2014 將會花費額外時間。 如需詳細資訊，請參閱 [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
-  
+
+> [!NOTE]
+> 如需 Microsoft 如何使用此策略的範例，請參閱下列部落格文章：[升級或不升級](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/)。 
+
+
 > [!WARNING]  
 >  執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會因為執行升級前檢查而停止並重新啟動。  
   
@@ -109,5 +113,5 @@ ms.locfileid: "58872258"
 -   SQL Server Reporting Services 向外延展環境：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>後續步驟
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [完成資料庫引擎升級](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

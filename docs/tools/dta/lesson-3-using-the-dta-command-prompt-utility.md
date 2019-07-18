@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 67b9d537a3c274e156bf8b4c6450a622b6ef6593
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5a207ebd14880519a20ea504a45e541e6d360175
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657667"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727601"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "51657667"
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>存取 DTA 命令提示字元公用程式說明 功能表
   
   
-1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]，再按一下 [命令提示字元]。  
+1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  ，再按一下 [命令提示字元]  。  
   
 2.  在命令提示字元之下，輸入下列字串，再按 ENTER 鍵：  
   

@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04f701dacfd5a61dcec8f1d2ca12dad80258bcd8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cae4a0894b864e0ef6dc28488a8151c431a72e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133572"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 的使用說明主題
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: sys.internal_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca65e1a4e7af69bc1259b856a76c729b5210cc4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122635"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,6 +38,7 @@ ms.locfileid: "52537899"
 |rows|**bigint**|這個資料分割中的近似資料列數。|  
 |data_compression|**tinyint**|壓縮的資料列集的狀態：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|每個資料分割的壓縮狀態。 資料列存放區資料表的可能值為 NONE、ROW 和 PAGE。 資料行存放區資料表的可能值為 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
+|optimize_for_sequential_key|**bit**|1 = 資料分割有啟用的最後一頁插入最佳化。<br><br>0 = 預設值。 資料分割已停用的最後一頁插入最佳化。|
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

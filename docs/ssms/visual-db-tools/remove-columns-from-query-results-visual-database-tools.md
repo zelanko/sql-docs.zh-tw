@@ -15,15 +15,15 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e403f86116522f582253ad6c75556db09b0e270e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 848b9026774b914707c415dc39cb030269bb963e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774916"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688315"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47774916"
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>若要從查詢輸出移除資料行  
   
--   在 [準則] 窗格中，清除要移除的資料行之 [輸出] 資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出] 資料行)。  
+-   在 [準則]  窗格中，清除要移除的資料行之 [輸出]  資料行欄位的核取方塊。 (若要將資料行再次新增回查詢輸出中，請再次核取 [輸出]  資料行)。  
   
     -或-  
   

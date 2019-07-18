@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80b02e10fa148924e78159024969bad077392d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744826"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264366"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>將測試案例初始化 (OracleToSQL)
 在此步驟中，您指定新的測試案例的初始資訊。  

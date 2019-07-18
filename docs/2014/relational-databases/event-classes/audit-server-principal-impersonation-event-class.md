@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012766"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 事件類別
-  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>，就會發生 **Audit Server Principal Impersonation** 事件類別。  
+  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>  ，就會發生 **Audit Server Principal Impersonation** 事件類別。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation 事件類別資料行  
   

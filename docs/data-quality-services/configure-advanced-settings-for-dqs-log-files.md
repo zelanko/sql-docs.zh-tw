@@ -11,15 +11,14 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3017b7898c9bc14abd0319e5c90d4ab1dc2d8c46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 4e01be5f013beeaed58b5f851063524950c338c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935599"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
 
@@ -34,7 +33,7 @@ ms.locfileid: "56036399"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能修改 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定。  
   
@@ -51,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]** 。  
   
 3.  在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式：  
   

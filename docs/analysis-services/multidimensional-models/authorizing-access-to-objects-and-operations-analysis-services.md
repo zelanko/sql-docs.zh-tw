@@ -1,5 +1,5 @@
 ---
-title: 授與物件和作業 (Analysis Services) 存取權 |Microsoft 文件
+title: 授權存取物件和作業 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62717575"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>物件和作業的存取權授權 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34024035"
 ## <a name="list-roles-defined-for-your-database"></a>列出為您的資料庫定義的角色  
  系統管理員可以在 SQL Server Management Studio 中執行簡單的 DMV 查詢，以取得伺服器上定義的所有角色清單。  
   
-1.  在 SSMS 中，以滑鼠右鍵按一下資料庫，然後選取**新查詢** | **MDX**。  
+1.  在 SSMS 中，以滑鼠右鍵按一下資料庫，然後選取**新的查詢** | **MDX**。  
   
 2.  輸入下列查詢並按 F5 來執行：  
   
@@ -41,24 +41,24 @@ ms.locfileid: "34024035"
 ## <a name="top-down-overview-of-analysis-services-authorization"></a>由上而下的 Analysis Services 授權概觀  
  本節涵蓋設定權限的基本工作流程。  
   
- **步驟 1︰伺服器管理**  
+ **步驟 1：伺服器管理**  
   
  第一個步驟是決定誰具有伺服器層級的系統管理員權限。 在安裝期間，安裝 SQL Server 的本機管理員需要指定一或多個 Windows 帳戶做為 Analysis Services 伺服器管理員。 伺服器管理員擁有伺服器上所有可能的權限，包含檢視、修改及刪除伺服器上的任何物件，或檢視相關聯資料的權限。 安裝完成後，伺服器管理員可以新增或移除帳戶來變更這個角色的成員資格。 如需此權限等級的詳細資訊，請參閱 [將伺服器管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 。  
   
- **步驟 2︰資料庫管理**  
+ **步驟 2：資料庫管理**  
   
  接著，在表格式或多維度方案建立後，就會將它部署到伺服器做為資料庫。 伺服器管理員可以透過為有問題的資料庫定義擁有完整控制權限的角色，來委派資料庫管理工作。 這個角色的成員可以處理或查詢資料庫中的物件，也可以建立其他角色來存取資料庫本身內的 Cube、維度和其他物件。 如需詳細資訊，請參閱[授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)。  
   
- **步驟 3︰啟用查詢和處理工作負載的 Cube 或模型存取權**  
+ **步驟 3：啟用查詢和處理工作負載的 cube 或模型存取**  
   
- 根據預設，只有伺服器和資料庫系統管理員可以存取 Cube 或表格式模型。 讓組織中的其他人員可以使用這些資料結構，需要其他角色指派來將 Windows 使用者和群組帳戶對應到 Cube 或模型，以及指定 [讀取] 權限 (Privilege) 的權限 (Permission)。 如需詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+ 根據預設，只有伺服器和資料庫系統管理員可以存取 Cube 或表格式模型。 讓組織中的其他人員可以使用這些資料結構，需要其他角色指派來將 Windows 使用者和群組帳戶對應到 Cube 或模型，以及指定 [讀取]  權限 (Privilege) 的權限 (Permission)。 如需詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  處理工作可以和其他系統管理功能分開進行，因此，伺服器和資料庫系統管理員可將此工作委派給他人，或透過指定執行排程軟體的服務帳戶設定自動處理。 如需詳細資訊，請參閱[授與處理權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)。  
   
 > [!NOTE]  
 >  使用者不需要對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於載入資料之基礎關聯式資料庫中的關聯式資料表具有任何權限，也不需要對執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之執行個體的電腦具有任何檔案層級權限。  
   
- **步驟 4 (選擇性)︰允許或拒絕對內部 Cube 物件的存取**  
+ **步驟 4 （選擇性）：允許或拒絕對內部 cube 物件的存取**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供在個別物件 (包括資料模型內的維度成員和資料格) 設定權限的安全性設定。 如需詳細資訊，請參閱[授與維度資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 和[授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)。  
   

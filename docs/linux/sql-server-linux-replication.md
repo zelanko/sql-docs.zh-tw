@@ -1,22 +1,21 @@
 ---
-title: 在 Linux 上的 SQL Server 複寫 |Microsoft Docs
+title: 在 Linux 上的 SQL Server 複寫
 description: 本文說明在 Linux 上的 SQL Server 複寫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ccba701efd1b74076c0eccb083a66382e8ac74b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065188"
 ---
 # <a name="sql-server-replication-on-linux"></a>在 Linux 上的 SQL Server 複寫
 

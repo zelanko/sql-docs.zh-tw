@@ -33,11 +33,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187965"
 ---
 # <a name="password-policy"></a>密碼原則
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows 密碼原則機制。 密碼原則適用於使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，以及適用於具有密碼的自主資料庫使用者。  
@@ -75,7 +75,7 @@ ms.locfileid: "48049979"
   
     -   密碼記錄會使用目前密碼雜湊的值來初始化。  
   
-    -   [帳戶鎖定期間]、[帳戶鎖定閾值] 和 [重設帳戶鎖定計數器的時間] 也會啟用。  
+    -   [帳戶鎖定期間]  、[帳戶鎖定閾值]  和 [重設帳戶鎖定計數器的時間]  也會啟用。  
   
 -   當 CHECK_POLICY 改為 OFF 時，會發生下列行為：  
   

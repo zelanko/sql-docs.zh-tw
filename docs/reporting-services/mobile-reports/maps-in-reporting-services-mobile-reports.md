@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294776"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683727"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的地圖
 地圖是將地理資料視覺化的最佳方式。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三種不同類型的地圖視覺效果，以及針對各大洲和一些個別國家/地區內建的地圖。 您也可以 [上傳和使用自訂的地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -58,7 +58,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 2. 選取 [Add Dat] (新增資料)，然後選取 [本機 Excel] 或 [SSRS 伺服器]。  
   
-   > **提示**：請確定[資料格式適用於行動報表](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
+   > **提示**︰請確定 [資料為適用於行動報表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 選取所需的工作表，然後選取 [匯入]。  
    您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看見您的資料。  

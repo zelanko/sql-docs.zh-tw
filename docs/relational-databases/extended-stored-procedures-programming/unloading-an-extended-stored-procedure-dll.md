@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7f05ad92e5e5264801302f2f1e64c76478141d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 159be22fcaba28183c8b6cc5089906c19bf2b765
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064263"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>卸載擴充預存程序 DLL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

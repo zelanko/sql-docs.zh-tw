@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6cbbe9f2ba24773ef2b55444e65ce946b0763a41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079850"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>將 PowerPivot 移轉至 SharePoint 2013
   
@@ -62,9 +61,9 @@ ms.locfileid: "53368370"
 ##  <a name="bkmk_backup_restore"></a> 2) 備份、複製和還原資料庫  
  「 SharePoint 資料庫附加升級 」 程序是一系列步驟，來備份、 複製和還原 PowerPivot 相關內容和服務應用程式資料庫至 SharePoint 2013 伺服器陣列。  
   
-1.  **將資料庫設定成唯讀：** 在  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，以滑鼠右鍵按一下資料庫名稱，然後按一下**屬性**。 在 [選項] 頁面上，將 [資料庫唯讀] 屬性設定為 [True]。  
+1.  **將資料庫設定成唯讀：** 在  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，以滑鼠右鍵按一下資料庫名稱，然後按一下**屬性**。 在 [選項]  頁面上，將 [資料庫唯讀]  屬性設定為 [True]  。  
   
-2.  **備份：** 備份每個內容資料庫和您想要移轉至 SharePoint 2013 伺服器陣列的服務應用程式資料庫。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，按一下 [工作]，然後按一下 [備份]。  
+2.  **備份：** 備份每個內容資料庫和您想要移轉至 SharePoint 2013 伺服器陣列的服務應用程式資料庫。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，按一下 [工作]  ，然後按一下 [備份]  。  
   
 3.  將資料庫備份檔案 (.bak) 複製到所需的目的地伺服器。  
   
@@ -73,21 +72,21 @@ ms.locfileid: "53368370"
 5.  **將資料庫設定為讀寫：** 設定**資料庫唯讀**要**False**。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) 準備 Web 應用程式和掛接內容資料庫  
- 如下列程序的更詳細說明，請參閱[將資料庫從 SharePoint 2010 升級至 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+ 如下列程序的更詳細說明，請參閱[將資料庫從 SharePoint 2010 升級至 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 。  
   
 1.  **讓資料庫離線：**  
   
      使用 SharePoint 管理中心，讓每個 SharePoint 2013 內容資料庫離線。 您所複製的資料庫會取代這些內容資料庫。 請針對您的環境考量最佳順序。 您可以考慮分別讓每個資料庫離線並且掛接其相關的取代資料庫，然後再讓下一個內容資料庫離線。 另一個選項是以群組的方式，讓所有內容資料庫離線。  
   
-    1.  在 SharePoint 管理中心內，按一下 **[應用程式管理]**。  
+    1.  在 SharePoint 管理中心內，按一下 **[應用程式管理]** 。  
   
-    2.  按一下 **[管理內容資料庫]**。  
+    2.  按一下 **[管理內容資料庫]** 。  
   
     3.  按一下資料庫的名稱。  
   
-    4.  在 **[管理內容資料庫設定]** 上，將 **[資料庫狀態]** 設定為 **[離線]**。  
+    4.  在 **[管理內容資料庫設定]** 上，將 **[資料庫狀態]** 設定為 **[離線]** 。  
   
-    5.  選取 **[移除內容資料庫]**。 請注意，此時會顯示一則警告，表示儲存在內容資料庫中的網站將無法再存取。  
+    5.  選取 **[移除內容資料庫]** 。 請注意，此時會顯示一則警告，表示儲存在內容資料庫中的網站將無法再存取。  
   
 -   **掛接內容資料庫：**  
   
@@ -97,7 +96,7 @@ ms.locfileid: "53368370"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     如需詳細資訊，請參閱 <<c0> [ 附加或卸離內容資料庫 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx)。  
+     如需詳細資訊，請參閱 <<c0> [ 附加或卸離內容資料庫 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx) 。  
   
      **當完成此步驟之後的狀態：** 掛接作業完成時，使用者可以看見原本位於舊內容資料庫中的檔案。 因此，使用者可以查看和開啟文件庫中的活頁簿。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "53368370"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>疑難排解嘗試掛接資料庫時所發生的問題  
  本節將摘要說明掛接資料庫時可能會遇到的問題。  
   
-1.  **驗證錯誤：** 如果您看見與驗證有關的錯誤，請檢閱來源 Web 應用程式所使用的驗證模式。 此錯誤可能是由於 SharePoint 2013 Web 應用程式與 SharePoint 2010 Web 應用程式之間的驗證不符所造成。 如需詳細資訊，請參閱＜ [1) 準備 SharePoint 2013 伺服器陣列](#bkmk_prepare_sharepoint2013) ＞。  
+1.  **驗證錯誤：** 如果您看到與驗證相關的錯誤，請檢閱來源 web 應用程式所使用的驗證模式。 此錯誤可能是由於 SharePoint 2013 Web 應用程式與 SharePoint 2010 Web 應用程式之間的驗證不符所造成。 如需詳細資訊，請參閱＜ [1) 準備 SharePoint 2013 伺服器陣列](#bkmk_prepare_sharepoint2013) ＞。  
   
 2.  **遺漏 PowerPivot.Files:** 如果您看見與遺漏 PowerPivot.dll 有關的錯誤**spPowerPivot.msi**尚未安裝或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]尚未使用組態工具來設定 PowerPivot。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "53368370"
   
  在 SharePoint 管理中心內，將 PowerPivot 服務應用程式設定為使用您所複製的舊服務應用程式資料庫。 PowerPivot 服務會將服務應用程式資料庫升級為新的結構描述。  
   
-1.  在 SharePoint 管理中心內，按一下 **[管理服務應用程式]**。  
+1.  在 SharePoint 管理中心內，按一下 **[管理服務應用程式]** 。  
   
 2.  尋找 PowerPivot 服務應用程式，例如 「 預設 PowerPivot 服務應用程式 」，按一下服務應用程式的名稱，然後按一下**屬性**SharePoint 功能區中。  
   
@@ -151,15 +150,15 @@ ms.locfileid: "53368370"
   
     1.  另一個移轉排程的選項是針對每個活頁簿啟用排程重新整理。 導覽到包含活頁簿的文件庫。  
   
-    2.  開啟操作功能表，然後按一下 **[管理 PowerPivot 資料重新整理]**。  
+    2.  開啟操作功能表，然後按一下 **[管理 PowerPivot 資料重新整理]** 。  
   
-    3.  在 **[排程重新整理]** 區段中，按一下 **[啟用]**。  
+    3.  在 **[排程重新整理]** 區段中，按一下 **[啟用]** 。  
   
-    4.  您可以選取 **[並且盡快重新整理]**。 一旦您按一下 [確定] 之後，這個選項就會將一個重新整理執行個體加入至佇列。 定期重新整理排程仍然會在適當的時間觸發。  
+    4.  您可以選取 **[並且盡快重新整理]** 。 一旦您按一下 [確定] 之後，這個選項就會將一個重新整理執行個體加入至佇列。 定期重新整理排程仍然會在適當的時間觸發。  
   
-    5.  按一下 **[確定]**。 重新整理記錄現在會顯示在重新整理頁面中，而且排程會在一般時間引發。  
+    5.  按一下 **[確定]** 。 重新整理記錄現在會顯示在重新整理頁面中，而且排程會在一般時間引發。  
   
- **SQL Server 2008 R2 PowerPivot 活頁簿**  
+ **SQL Server 2008 R2 PowerPivot workbooks**  
   
 -   在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會自動升級。 當您移轉包含 2008 R2 活頁簿的內容資料庫之後，就可以使用這些活頁簿，但是排程不會升級。  
   
@@ -172,10 +171,10 @@ ms.locfileid: "53368370"
   
 -   [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
--   [SharePoint 2013 升級程序的概觀](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [SharePoint 2013 升級程序的概觀](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688) 。  
   
--   [清除準備工作，再升級為 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清除準備工作，再升級為 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689) 。  
   
--   [將資料庫從 SharePoint 2010 升級至 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [將資料庫從 SharePoint 2010 升級至 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 。  
   
   

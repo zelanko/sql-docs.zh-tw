@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79720c8e4e966c7f0129371dd6a22be4217f356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942501"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "47788526"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**sys.indexes**|**bit**|CHECK 條件約束已停用。|  
+|**is_disabled**|**bit**|CHECK 條件約束已停用。|  
 |**is_not_for_replication**|**bit**|CHECK 條件約束是利用 NOT FOR REPLICATION 選項來建立的。|  
-|**sys.check_constraints**|**bit**|不是所有資料列的 CHECK 條件約束都經過系統驗證過了。|  
+|**is_not_trusted**|**bit**|不是所有資料列的 CHECK 條件約束都經過系統驗證過了。|  
 |**parent_column_id**|**int**|0 表示資料表層級 CHECK 條件約束。<br /><br /> 非零值則表示這是在具有指定識別碼值之資料行定義的資料行層級 CHECK 條件約束。|  
 |**定義**|**nvarchar(max)**|定義這個 CHECK 條件約束的 SQL 運算式。|  
 |**uses_database_collation**|**bit**|1 = 條件約束定義須依據資料庫的預設定序進行正確評估；否則為 0。 這種相依性可以防止資料庫預設定序變更。|  

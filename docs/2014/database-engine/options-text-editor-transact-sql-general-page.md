@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
@@ -15,15 +14,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089164"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>選項 （文字編輯器-Transact SQL 一般頁面）
-  使用 **[一般]** 選項對話方塊可以變更 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的一般編輯行為，這個編輯器會用來編輯 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [Transact-SQL] 子資料夾，然後按一下 [一般]。  
+  使用 **[一般]** 選項對話方塊可以變更 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的一般編輯行為，這個編輯器會用來編輯 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請在 [工具]  功能表上按一下 [選項]  ，展開 [Transact-SQL]  子資料夾，然後按一下 [一般]  。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多個位置設定選項  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的選項也可以在 **[所有語言 - 一般]** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器選項。  
@@ -51,11 +50,11 @@ ms.locfileid: "48155198"
  **沒有選取項目時，套用剪下/複製命令至空白行**  
  當您在空白行上放置插入點、不選取任何內容，然後按一下 **[複製]** 或 **[剪下]** 時，此核取方塊就會設定編輯器的行為。  
   
- 如果選取此核取方塊，就會複製或剪下空白行。 接著，如果您按一下 **[貼上]**，就會插入一個新的空白行。  
+ 如果選取此核取方塊，就會複製或剪下空白行。 接著，如果您按一下 **[貼上]** ，就會插入一個新的空白行。  
   
- 如果清除此核取方塊，就不會複製或剪下任何內容。 接著，您按一下 **[貼上]**，就會貼上最近複製的內容。 如果先前沒有進行複製，就不會有貼上動作。  
+ 如果清除此核取方塊，就不會複製或剪下任何內容。 接著，您按一下 **[貼上]** ，就會貼上最近複製的內容。 如果先前沒有進行複製，就不會有貼上動作。  
   
- 當行不是空白時，此設定對 **[複製]** 或 **[剪下]** 沒有影響。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]**，就會貼上整行的文字與其結束字元。  
+ 當行不是空白時，此設定對 **[複製]** 或 **[剪下]** 沒有影響。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]** ，就會貼上整行的文字與其結束字元。  
   
 ## <a name="display"></a>顯示器  
  **行號**  

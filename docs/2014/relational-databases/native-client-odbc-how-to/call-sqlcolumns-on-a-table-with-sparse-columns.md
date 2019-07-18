@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6db2f6550d252e9ede6ddfbf39f460af563f2b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126201"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>在具有疏鬆資料行的資料表上呼叫 SQLColumns
   此範例會示範如何在已使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中之 ODBC 定義疏鬆資料行的資料表上呼叫 SQLColumns。  

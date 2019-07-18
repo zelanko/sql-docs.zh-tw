@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 348b2876e4293ad912383859ace47e462da31bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967288"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法 (ADOX Procedures)
 加入新[程序](../../../ado/reference/adox-api/procedure-object-adox.md)物件[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  
@@ -35,7 +34,7 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  A**字串**值，指定要建立並附加的程序的名稱。  
   
  *Command*  

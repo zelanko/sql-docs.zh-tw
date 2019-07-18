@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046250"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援處理密碼逾期，以程式設計方式透過兩[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，以及透過變更**SQL Server 登入**對話方塊。  
@@ -55,12 +55,12 @@ ms.locfileid: "53370490"
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 使用者介面密碼逾期  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援透過所做的變更密碼逾期**SQL Server 登入**對話方塊。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
   
- 如果 DBPROP_INIT_PROMPT 已設定為其他任何值，不管密碼是否到期，使用者都會看到 [SQL Server 登入] 對話方塊。 使用者可以按一下 [選項] 按鈕，然後核取 [變更密碼] 來變更密碼。  
+ 如果 DBPROP_INIT_PROMPT 已設定為其他任何值，不管密碼是否到期，使用者都會看到 [SQL Server 登入]  對話方塊。 使用者可以按一下 [選項]  按鈕，然後核取 [變更密碼]  來變更密碼。  
   
- 如果使用者按一下 [確定]，而且密碼已到期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會使用 [變更 SQL Server 密碼] 對話方塊提示使用者輸入並確認新密碼。  
+ 如果使用者按一下 [確定]，而且密碼已到期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會使用 [變更 SQL Server 密碼]  對話方塊提示使用者輸入並確認新密碼。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入] 對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼] 對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入]  對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼]  對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  
@@ -96,12 +96,12 @@ ms.locfileid: "53370490"
   
  如果[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)呼叫，而**DriverCompletion**如果密碼已過期，則設定為 sql_driver_noprompt 時，初始連接嘗試就會失敗。 後續呼叫所傳回的 SQLSTATE 值 28000 與原生錯誤碼值 18487 **SQLError**或是**SQLGetDiagRec**。  
   
- 如果**DriverCompletion**已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下 [選項] 按鈕，然後核取 [變更密碼] 來變更密碼。  
+ 如果**DriverCompletion**已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下 [選項]  按鈕，然後核取 [變更密碼]  來變更密碼。  
   
  如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]提示輸入並確認新的密碼使用**變更 SQL Server 密碼**對話方塊。  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入] 對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼] 對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入]  對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼]  對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>ODBC 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  

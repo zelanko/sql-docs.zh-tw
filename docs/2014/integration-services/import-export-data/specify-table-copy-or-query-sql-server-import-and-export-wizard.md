@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892640"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
   使用**指定資料表複製或查詢**頁面，即可指定如何將資料複製。 您可以使用圖形介面來選取要複製的現有資料庫物件，或使用 Transact-SQL 來建立更複雜的查詢。  

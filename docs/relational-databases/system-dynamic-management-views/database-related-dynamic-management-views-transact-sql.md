@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab683edafe8f31b8d829ddb1811ed0e38e267376
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090884"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e328dc12005a7f46702094fc33446d9f8768f6b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b58d7b9d449a6fe9ab3e5de8a7e369d57d13d70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095952"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>SQL Server Standard 和 Enterprise 之 CPU 和記憶體限制的變更 (Upgrade Advisor)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard 和 Enterprise 最多可支援 64 GB 的系統記憶體。  

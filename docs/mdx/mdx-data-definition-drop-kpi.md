@@ -1,5 +1,5 @@
 ---
-title: DROP KPI 陳述式 (MDX) |Microsoft 文件
+title: DROP KPI 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 336eebbc8bcc98ec684faaaa1092b511cf95f100
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: b673f87ffd04a1cf89b063cc129c769c258791ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038231"
 ---
-# <a name="mdx-data-definition---drop-kpi"></a>MDX 資料定義 DROP KPI
+# <a name="mdx-data-definition---drop-kpi"></a>MDX 資料定義 - DROP KPI
 
 
   從指定的 Cube 卸除指定的關鍵效能指標 (KPI)。  

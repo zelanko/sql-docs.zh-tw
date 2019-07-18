@@ -11,14 +11,18 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2710243c72f9e245100c3fdd30a9147c89b7d4d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cf3917aec1bfed9a02a684b5a86b48ffe7dc5e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716833"
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄建立環境。  
@@ -33,13 +37,13 @@ catalog.create_environment [@folder_name =] folder_name
   
 ## <a name="arguments"></a>引數  
  [@folder_name =] *folder_name*  
- 包含環境的資料夾名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含環境的資料夾名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [@environment_name =] *environment_name*  
- 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [@environment_description=] *environment_description*  
- 環境的選擇性描述。 *environment_description* 是 **nvarchar(1024)**。  
+ 環境的選擇性描述。 *environment_description* 是 **nvarchar(1024)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

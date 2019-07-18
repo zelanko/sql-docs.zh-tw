@@ -11,14 +11,18 @@ ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f9f4b912a8d57a2c6f2b11f710e414edfadfb94
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277557"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715852"
 ---
-# <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
+# <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中執行的執行個體設定屬性值。  
@@ -37,16 +41,16 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  執行之執行個體的唯一識別碼。 *execution_id* 是 **bigint**。  
   
  [ @property_path = ] *property_path*  
- 封裝中之屬性的路徑。 *property_path* 是 **nvarchar(4000)**。  
+ 封裝中之屬性的路徑。 *property_path* 是 **nvarchar(4000)** 。  
   
  [ @property_value = ] *property_value*  
- 要指派給屬性的覆寫值。 *property_value* 是 **nvarchar(max)**。  
+ 要指派給屬性的覆寫值。 *property_value* 是 **nvarchar(max)** 。  
   
  [ @sensitive = ] *sensitive*  
  當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。 *sensitive* 引數是 **bit**。  
   
 ## <a name="remarks"></a>Remarks  
- 這個程序會與 [執行封裝] 對話方塊之 [進階] 索引標籤中的 [屬性覆寫] 區段執行相同的功能。 屬性的路徑衍生自封裝工作的 [封裝路徑] 屬性。  
+ 這個程序會與 [執行封裝]  對話方塊之 [進階]  索引標籤中的 [屬性覆寫]  區段執行相同的功能。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d726e1e79b1a3e24aea074c0821e1f8773b233c5
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809328"
 ---
 # <a name="server-properties-misc-server-settings-page"></a>伺服器屬性 (其他伺服器設定頁面)
   使用此頁面來檢視或修改伺服器設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用者的預設語言**  
  指定所有新建立之登入的預設語言。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055228"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +42,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 了解哪種要求之資訊的類別。 *類別*已**varchar(8)**，預設值是**作業**。 *類別*可以是下列值之一。  
+`[ @class = ] 'class'` 了解哪種要求之資訊的類別。 *類別*已**varchar(8)** ，預設值是**作業**。 *類別*可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**JOB**|提供作業類別目錄的相關資訊。|  
-|**ALERT**|提供警示類別目錄的相關資訊。|  
+|**警示**|提供警示類別目錄的相關資訊。|  
 |**運算子**|提供操作員類別目錄的相關資訊。|  
   
-`[ @type = ] 'type'` 要求資訊的類別目錄的類型。 *型別*已**varchar(12)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @type = ] 'type'` 要求資訊的類別目錄的類型。 *型別*已**varchar(12)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -67,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當**@suffix**是**0**， **sp_help_category**會傳回下列結果集：  
+ 當 **@suffix** 是**0**， **sp_help_category**會傳回下列結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -75,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = 本機<br /><br /> **2** = 多伺服器<br /><br /> **3** = 無|  
 |**name**|**sysname**|類別目錄名稱|  
   
- 當**@suffix**是**1**， **sp_help_category**會傳回下列結果集：  
+ 當 **@suffix** 是**1**， **sp_help_category**會傳回下列結果集：  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -129,7 +128,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_update_category &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

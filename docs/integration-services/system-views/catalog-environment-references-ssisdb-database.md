@@ -11,14 +11,18 @@ ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a4b51e0de9d36e68e4985e5953dd15919b5d734
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e1f2bb65c000cc2e355a21b11596dad65b0f8b3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272848"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715328"
 ---
 # <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 **SSISDB** 目錄中的所有專案顯示環境參考。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ecdbeaaacd10f5534aea88d8578ee90a9b37925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 263e60e087a47218f195aaec3a3b3ff43cef76bd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681316"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690321"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "47681316"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案] 功能表中按一下 [關閉]。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]  功能表中按一下 [關閉]  。  
   
-2.  在 [Microsoft SQL Server Management Studio] 對話方塊中，按一下 [否]。  
+2.  在 [Microsoft SQL Server Management Studio]  對話方塊中，按一下 [否]  。  
   
     查詢定義會回復為上次儲存時的狀態。  
   

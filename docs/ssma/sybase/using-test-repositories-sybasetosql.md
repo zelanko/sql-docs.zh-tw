@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020842"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用測試存放庫 (SybaseToSQL)
 SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供稍後使用。 儲存機制資料會儲存在 SQL Server 資料表**TestCaseRepository**並**RunTestCaseResultRepository**結構描述中**ssma_sybase_utilities** 的**ssmatesterdb_syb**資料庫。  

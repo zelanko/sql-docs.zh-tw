@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919111"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete 方法範例 (VBScript)
 這個範例會使用[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法，移除指定的記錄，從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

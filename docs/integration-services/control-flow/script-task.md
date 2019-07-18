@@ -19,14 +19,18 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c1b29acddc7dc110d66e59f7829c822f10e23ac5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04124a936e333c4821f0e84dcbdae3d1658addc4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727522"
 ---
 # <a name="script-task"></a>指令碼工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指令碼工作提供程式碼，用來執行無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的內建工作和轉換中使用的函數。 指令碼工作亦可在一個指令碼中結合函數，而不使用多項工作和轉換。 您可以使用指令碼工作處理必須在封裝中執行一次 (或是每個列舉物件一次) 的工作，而非每個資料列執行一次的工作。  
   
  您可將指令碼工作用於下列用途：  
@@ -46,7 +50,7 @@ ms.locfileid: "58280552"
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>撰寫並執行工作使用的指令碼  
  指令碼工作使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當做撰寫指令碼以及執行這些指令碼之引擎的環境。  
   
- VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和 [物件總管]。 VSTA 也使用其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 開發工作使用的相同偵錯工具。 指令碼中的中斷點能與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作和容器上的中斷點合作無間。 VSTA 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 程式語言。  
+ VSTA 提供 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境的所有標準功能，例如色彩編碼的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 編輯器、IntelliSense 和 [物件總管]  。 VSTA 也使用其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 開發工作使用的相同偵錯工具。 指令碼中的中斷點能與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作和容器上的中斷點合作無間。 VSTA 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 程式語言。  
   
  若要執行指令碼，必須在封裝執行的電腦上安裝 VSTA。 當封裝執行時，工作會載入指令碼引擎並執行指令碼。 您可以在專案中將參考加入至組件，藉此在指令碼中存取外部 .NET 組件。  
   
@@ -67,7 +71,7 @@ ms.locfileid: "58280552"
  您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計的方式來設定這些屬性。  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>在設計師中設定指令碼工作  
- 下表描述可以針對指令碼工作所記錄的 **ScriptTaskLogEntry** 事件。 系統會在 [設定 SSIS 記錄] 對話方塊的 [詳細資料] 索引標籤上，選取要記錄的 **ScriptTaskLogEntry** 事件。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表描述可以針對指令碼工作所記錄的 **ScriptTaskLogEntry** 事件。 系統會在 [設定 SSIS 記錄]  對話方塊的 [詳細資料]  索引標籤上，選取要記錄的 **ScriptTaskLogEntry** 事件。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -127,13 +131,13 @@ ms.locfileid: "58280552"
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 **[EntryPoint]** 屬性的值。  
   
  **ReadOnlyVariables**  
- 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 ( **...** ) 按鈕，並在 [選取變數]  對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
   
  **ReadWriteVariables**  
- 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 ( **...** ) 按鈕，並在 [選取變數]  對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  

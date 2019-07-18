@@ -1,8 +1,8 @@
 ---
 title: SQL Server 的報表產生器 | Microsoft Docs
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290296"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688518"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是製作分頁報表的工具，適用於喜歡在獨立環境中工作的商務使用者，而非使用 Visual Studio 報表設計師。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中預覽報表。 然後，您可在原生模式或 SharePoint 整合模式 (2016 或更舊版本) 發佈至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 您也可以將編頁報表發佈至 Power BI 服務。 深入了解 [Power BI Premium 中的編頁報表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (預覽)。
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 工具可用於製作分頁報表，適合不想使用 Visual Studio / SSDT 報表設計工具，而喜歡在獨立環境中工作的商務使用者。  當您設計分頁報表時，會建立報表定義指定要擷取的資料、資料的擷取位置，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中預覽報表。 然後，您可在原生模式或 SharePoint 整合模式 (2016 或更舊版本) 發佈至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 
+
+您也可以將編頁報表發佈至 Power BI 服務。 深入了解 [Power BI Premium 中的編頁報表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (預覽)。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -46,7 +49,6 @@ ms.locfileid: "56290296"
 -   **修改現有的報表。** 使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您可以自訂及更新在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]報表設計師中建立的報表。  
   
 -   透過篩選、分組和排序資料，或是加入公式和運算式，**修改您的資料** 。  
-  
 -   **加入圖表、量測計、走勢圖和指標** ，以視覺化格式摘要列出資料，並且一次展示大量的彙總資訊。  
   
 -   **加入互動式功能** ，例如文件引導模式、顯示/隱藏按鈕，以及子報表和鑽研報表的鑽研連結。 您可以使用參數和篩選來篩選自訂檢視表的資料。  
@@ -79,7 +81,7 @@ ms.locfileid: "56290296"
  [規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  提供有關開始建立報表之前應該考量之事項的資訊。  
   
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)  
  定義整個 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 文件集中使用的重要概念。  
   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985767"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
   資料列層級安全性可讓客戶能夠控制存取的使用者執行查詢 (例如，群組成員資格或執行內容) 的特性為基礎的資料庫資料表中的資料列。 目前資料列層級安全性在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 中已可供使用。 如需這項功能的目前描述，請參閱目前文件中的 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  

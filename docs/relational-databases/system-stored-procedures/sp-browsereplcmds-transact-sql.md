@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045996"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定的最低值確實序號來傳回。 *xact_seqno_start&lt*已**nchar(22)**，預設值是 0x00000000000000000000。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定的最低值確實序號來傳回。 *xact_seqno_start&lt*已**nchar(22)** ，預設值是 0x00000000000000000000。  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定的最高確實序號來傳回。 *xact_seqno_end&lt*已**nchar(22)**，預設值是 0xFFFFFFFFFFFFFFFFFFFF。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定的最高確實序號來傳回。 *xact_seqno_end&lt*已**nchar(22)** ，預設值是 0xFFFFFFFFFFFFFFFFFFFF。  
   
 `[ @originator_id = ] 'originator_id'` 指定如果具有指定的命令*originator_id*會傳回。 *originator_id*已**int**，預設值是 NULL。  
   
@@ -91,7 +90,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="see-also"></a>另請參閱  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

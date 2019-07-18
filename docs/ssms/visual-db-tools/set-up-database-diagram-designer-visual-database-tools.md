@@ -14,15 +14,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5275b35b7a6b8af51e677523afa3bc612e3ea4f1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: bc13c7cc5f02de7942121c0a2cd40e7dd563d3d5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681126"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>設定資料庫圖表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51700416"
   
 2.  在資料庫連接中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]  。  
   
     > [!NOTE]  
     > 這會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立資料庫圖表資料表、系統預存程序和系統函數。  

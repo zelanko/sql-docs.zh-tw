@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63130680"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 物件模型圖表
   此圖表顯示 SMO 物件階層及物件類型之間的關聯性。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件是最上層的物件。  

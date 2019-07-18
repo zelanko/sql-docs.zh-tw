@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085648"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
 
@@ -41,13 +40,13 @@ ms.locfileid: "52797130"
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- 在上面的螢幕擷取畫面中，注意 **Employee** 實體作為中間唯一的層級顯示在 [目前層級]  之下。 右邊的衍生階層 [預覽]  只會顯示 **Employee** 實體的所有成員清單。 左邊的 [可用層級] 區段會顯示哪些層級可能會新增至目前最上層的上方 (**Employee**)。 大多數為 **Employee** 實體上以網域為基礎的屬性 (DBA)，包括 **Department** DBA。  
+ 在上面的螢幕擷取畫面中，注意 **Employee** 實體作為中間唯一的層級顯示在 [目前層級]  之下。 右邊的衍生階層 [預覽]  只會顯示 **Employee** 實體的所有成員清單。 左邊的 [可用層級]  區段會顯示哪些層級可能會新增至目前最上層的上方 (**Employee**)。 大多數為 **Employee** 實體上以網域為基礎的屬性 (DBA)，包括 **Department** DBA。  
   
- 自 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 開始，有新類型的層級可將 M2M 關聯性模型化，例如：**Class (mapped via ClassRegistration.Student)**。 層級名稱會比其他項目具備更多詳細資訊，以反映所需的額外資訊，進而明確地描述對應的關聯性。 將此層級拖放至 [目前層級]  區段中的 **Employee** 層級︰  
+ 自 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 開始，有新類型的層級可將 M2M 關聯性模型化，例如：**Class (mapped via ClassRegistration.Student)** 。 層級名稱會比其他項目具備更多詳細資訊，以反映所需的額外資訊，進而明確地描述對應的關聯性。 將此層級拖放至 [目前層級]  區段中的 **Employee** 層級︰  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- 現在預覽會顯示依其所註冊的培訓課程所分組的員工。 由於這是 M2M 關聯性，每個子成員皆可以有多個父系。 在上述範例中，員工 **6 {Hillman, Reinout N}** 在兩堂課程中註冊為學生，分別為 **1 {Master Data Services 101}** 和 **4 {Career-Limiting Moves}**。  
+ 現在預覽會顯示依其所註冊的培訓課程所分組的員工。 由於這是 M2M 關聯性，每個子成員皆可以有多個父系。 在上述範例中，員工 **6 {Hillman, Reinout N}** 在兩堂課程中註冊為學生，分別為 **1 {Master Data Services 101}** 和 **4 {Career-Limiting Moves}** 。  
   
  此對應關聯性也可反轉顯示，將課程依據學生分組︰  
   
@@ -57,11 +56,11 @@ ms.locfileid: "52797130"
   
  對應實體 **ClassRegistration** 的成員不會在衍生階層內的任何位置出現。 其僅用來定義階層中父系和子系成員之間的關聯性。  
   
- 您可以透過修改對應的實體成員來編輯 M2M 關聯性，方法是執行下列其中一項。 M2M 關聯性在 [衍生階層總管] 頁面中為唯讀。  
+ 您可以透過修改對應的實體成員來編輯 M2M 關聯性，方法是執行下列其中一項。 M2M 關聯性在 [衍生階層總管]  頁面中為唯讀。  
   
--   修改 [實體總管] 頁面中的對應實體成員，方法是使用適用於 Excel 的 Master Data Services 增益集，或使用資料暫存。  
+-   修改 [實體總管]  頁面中的對應實體成員，方法是使用適用於 Excel 的 Master Data Services 增益集，或使用資料暫存。  
   
--   拖放 [衍生階層探索] 頁面中父代之間的子節點。  
+-   拖放 [衍生階層探索]  頁面中父代之間的子節點。  
   
      這個方法會在允許的情況下修改現有的成員，並視需要新增新成員。 不會刪除現有的成員。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "52797130"
 ### <a name="M2MSample"></a> 範例模型中的 M2M 關聯性  
 如需 M2M 關聯性的示範，請檢視 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]隨附之 Customer 範例模型中的 Region Climate 衍生階層。   
   
-如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 相關聯。  
+如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)** 。 ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 相關聯。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -92,7 +91,7 @@ ms.locfileid: "52797130"
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> 成員安全性  
- 可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如：  
+ 可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如:  
   
 -   遞迴衍生階層 (RDH)，其未錨點 null 遞迴 (遞迴層級的每個成員皆會出現在 ROOT 與其遞迴父系之下)。  
   

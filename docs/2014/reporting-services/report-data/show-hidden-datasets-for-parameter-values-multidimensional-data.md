@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 649fdfce5968af63ada22f6e9a2715bdca9866ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107061"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS)
   您的報表可能包含自動產生的資料集 (也稱為隱藏的資料集)，而這些資料集預設不會顯示在 [報表資料] 窗格中。 這些資料集是以下列方式建立的：  
@@ -34,7 +33,7 @@ ms.locfileid: "56024779"
   
 ### <a name="to-display-hidden-datasets"></a>顯示隱藏的資料集  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [顯示隱藏資料集]。  
+-   在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [顯示隱藏資料集]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   

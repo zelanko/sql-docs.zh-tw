@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63072366"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
   在 交易效能收集器[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]可協助您評估記憶體中 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
@@ -85,7 +85,7 @@ ms.locfileid: "53377490"
   
  您收集資料所在的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體版本 (設定檔) 應該與設定管理資料倉儲的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本相同或更舊。  
   
-1.  在物件總管中，展開 [管理]。  
+1.  在物件總管中，展開 [管理]  。  
   
 2.  以滑鼠右鍵按一下**資料收集**，然後選取**工作**，然後**設定管理資料倉儲**。 **設定管理資料倉儲精靈**開始。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "53377490"
   
  可以在 SQL Server 2012 或更新版本的設定資料收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[How to:建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
+ 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[如何：建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
   
  若要設定資料收集，以便上傳至不同執行個體上的管理資料倉儲資料庫：  
   

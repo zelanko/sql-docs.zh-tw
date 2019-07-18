@@ -1,7 +1,7 @@
 ---
 title: 管理 Service Broker |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
-manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5f300776f7dfdaa09eaae6bda301d707816155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2832e4cf0578599d63c449bec4c97b24172b6446
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111400"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   在 SMO 中，[!INCLUDE[ssSB](../../../includes/sssb-md.md)]物件中找到**Microsoft.SqlServer.Management.Smo.Broker**命名空間需要參考 Microsoft.SqlServer.Smo.dll。 支援類別資訊也需要參考 Microsoft.SqlServer.ServiceBrokerEnum.dll。  
   

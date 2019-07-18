@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951671"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "51664867"
   
  **SqlContext**可讓您存取下列元件：  
   
--   **SqlPipe**: **SqlPipe**物件都代表 「 管道 」 透過結果藉以流向用戶端。 如需詳細資訊**SqlPipe**物件，請參閱[SqlPipe 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)。  
+-   **SqlPipe**:**SqlPipe**物件都代表 「 管道 」 透過結果藉以流向用戶端。 如需詳細資訊**SqlPipe**物件，請參閱[SqlPipe 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)。  
   
--   **SqlTriggerContext**: **SqlTriggerContext**物件只可從擷取 CLR 觸發程序內。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需詳細資訊**SqlTriggerContext**物件，請參閱[SqlTriggerContext 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)。  
+-   **SqlTriggerContext**:**SqlTriggerContext**物件只可從擷取 CLR 觸發程序內。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需詳細資訊**SqlTriggerContext**物件，請參閱[SqlTriggerContext 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)。  
   
--   **IsAvailable**: **IsAvailable**屬性用來判斷內容可用性。  
+-   **IsAvailable**:**IsAvailable**屬性用來判斷內容可用性。  
   
--   **WindowsIdentity**: **WindowsIdentity**屬性用來擷取呼叫端的 Windows 識別。  
+-   **WindowsIdentity**:**WindowsIdentity**屬性用來擷取呼叫端的 Windows 識別。  
   
 ## <a name="determining-context-availability"></a>決定內容可用性  
  查詢**SqlContext**類別，以查看同處理序時，是否要執行的目前執行的程式碼。 若要這樣做，請**IsAvailable**屬性**SqlContext**物件。 **IsAvailable**屬性是唯讀的並且傳回 **，則為 True**如果呼叫程式碼執行內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果有其他**SqlContext**成員可以存取。 如果**IsAvailable**屬性會傳回**False**，所有其他**SqlContext**成員會擲回**InvalidOperationException**，如果使用. 如果**IsAvailable**會傳回**False**，任何嘗試開啟連接物件的 「 內容連接 = true"的連接字串中就會失敗。  

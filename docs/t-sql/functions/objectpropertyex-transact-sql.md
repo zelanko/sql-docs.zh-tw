@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bad16e6907cc256dbc3312cca33267a04c7714c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28581b5468557c19b44381a2527b76830f04216b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948948"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ OBJECTPROPERTYEX ( id , property )
  這是代表目前資料庫中之物件識別碼的運算式。 *id* 是 **int**，假設為目前資料庫內容中的結構描述範圍物件。  
   
  *property*  
- 這是包含為識別碼指定之物件所傳回資訊的運算式。傳回型別為 **sql_variant**。 下表顯示了每一屬性值的基底資料型別。  
+ 這是包含由識別碼指定之物件傳回資訊的運算式。傳回型別為 **sql_variant**。 下表顯示了每一屬性值的基底資料型別。  
   
 > [!NOTE]  
 >  除非另有說明，否則，當 *property* 不是有效屬性的名稱、*id* 不是有效的物件識別碼、*id* 對於指定的 *property* 是不支援的物件類型，或呼叫者無權檢視物件中繼資料時，便會傳回 NULL。  
@@ -158,7 +158,7 @@ OBJECTPROPERTYEX ( id , property )
 |TableIsMemoryOptimized|Table|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是記憶體最佳化的<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**<br /><br /> 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。|  
 |TableIsPinned|Table|資料表固定保留在資料快取中。<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本中不支援這項功能。|  
 |TableTextInRowLimit|Table|資料表有 text in row 選項集。<br /><br /> > 0 = text in row 所允許的最大位元組數目。<br /><br /> 0 = 未設定 text in row 選項。<br /><br /> 基底資料類型：**int**|  
-|TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 含指定類型的第一個觸發程序的識別碼。<br /><br /> 基底資料類型：**int**|  
+|TableUpdateTrigger|Table|資料表有 UPDATE 觸發程序。<br /><br /> >1 = 含指定類型之第一個觸發程序的識別碼。<br /><br /> 基底資料類型：**int**|  
 |TableUpdateTriggerCount|Table|資料表有指定數目的 UPDATE 觸發程序。<br /><br /> >0 = UPDATE 觸發程序的數目。<br /><br /> 基底資料類型：**int**|  
 |UserDataAccess|函數、檢視表|表示物件存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體中的使用者資料及使用者資料表。<br /><br /> 1 = 讀取<br /><br /> 0 = 無<br /><br /> 基底資料類型：**int**|  
 |TableHasColumnSet|Table|資料表有資料行集。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|  
@@ -238,7 +238,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>D：找出物件的基底類型  
+### <a name="d-finding-the-base-type-of-an-object"></a>D.找出物件的基底類型  
  下列範例會傳回 `dbo.DimReseller` 物件的基底類型。  
   
 ```  

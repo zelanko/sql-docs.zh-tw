@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01c30422e6f0a1beb65c5f72259fce2aa8f80806
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375259"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771154"
 ---
 # <a name="look-up-process-chain"></a>查閱 ProcessChain
   使用 **[查閱 ProcessChain]** 對話方塊可以查閱 SAP Netweaver BW 系統中定義的處理序鏈結。 出現可用的處理序鏈結清單時，請選取您要的鏈結，然後來源就會將必要的值填入相關聯的選項。  
@@ -29,13 +29,13 @@ ms.locfileid: "58375259"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 4.  在 **[處理序鏈結]** 群組方塊中，按一下 **[查閱]** 顯示 **[查閱 ProcessChain]** 對話方塊。  
   
-     只有當 [執行模式] 的值是 [P - 觸發處理鏈結] 時，才會出現 [處理序鏈結] 群組方塊。  
+     只有當 [執行模式]  的值是 [P - 觸發處理鏈結]  時，才會出現 [處理序鏈結]  群組方塊。  
   
 ## <a name="lookup-options"></a>查閱選項  
  在查閱欄位中，您可以使用星號萬用字元 (*) 或結合星號萬用字元使用部分字串來篩選結果。 不過，如果您將查閱欄位保留空白，查閱作業就只會比對該欄位中的空白字串。  

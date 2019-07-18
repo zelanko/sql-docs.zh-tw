@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479474"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除不再需要的訂閱檢視。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中刪除訂閱檢視會從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中移除該檢視。  
@@ -32,15 +32,15 @@ ms.locfileid: "52796802"
   
 ### <a name="to-delete-a-subscription-view"></a>若要刪除訂閱檢視  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，按一下 **[整合管理]**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，按一下 **[整合管理]** 。  
   
-2.  按一下功能表列上的 **[建立檢視表]**。  
+2.  按一下功能表列上的 **[建立檢視表]** 。  
   
 3.  在 **[訂閱檢視]** 頁面中，選取您要刪除之檢視表的資料列。  
   
 4.  按一下 **刪除訂用帳戶檢視**。  
   
-5.  在確認對話方塊中按一下 **[確定]**。  
+5.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立訂閱檢視&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   

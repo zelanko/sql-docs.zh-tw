@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 153e8014ca2f64f4c7981aec717ca3e7763b6cd4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4de444422d267bd58a4aa11edbfe9af2899cf3cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079557"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>在 SQLXML 4.0 中使用 XPath 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

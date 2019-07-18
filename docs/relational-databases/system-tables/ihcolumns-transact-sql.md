@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5d05f2667b6f7196338b182f2b9cca1a84e7b6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990394"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

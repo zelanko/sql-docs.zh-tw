@@ -2,7 +2,7 @@
 title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 9538e66180fa401059135a5f8714ea39dd4e3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058815"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -30,22 +29,24 @@ ms.locfileid: "58618175"
 
 - 指定工具電腦將會起始 DMA 您網路上。 請確定此電腦已連線到您的 SQL Server 目標。
 - 下載並安裝：
-    - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 3.6 版或更新版本。
-    - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更新版本。
-    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更新版本。
-    - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
-    - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
-    - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 3.6 版或更新版本。
+  - [PowerShell](https://aka.ms/wmf5download) 5.0 版或更新版本。
+  - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更新版本。
+  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
+  - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+  - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
-    - [DMA 報表 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
-    - [LoadWarehouse 指令碼](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
+  - [DMA 報表 Power BI 範本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
+  - [LoadWarehouse 指令碼](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>正在載入 PowerShell 模組
+
 儲存到 PowerShell 模組目錄的 PowerShell 模組，可讓您呼叫的模組，而不需要明確載入它們，才能使用。
 
 若要載入的模組，請執行下列步驟：
+
 1. 瀏覽至 C:\Program Files\WindowsPowerShell\Modules，然後建立名為資料夾**DataMigrationAssistant**。
-2. 開啟[PowerShell 模組](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip)，然後將它們儲存到您所建立的資料夾。
+2. 開啟[PowerShell 模組](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)，然後將它們儲存到您所建立的資料夾。
 
       ![PowerShell 模組](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -64,26 +65,33 @@ ms.locfileid: "58618175"
     PowerShell 應該現在這些模組自動載入新的 PowerShell 工作階段啟動時。
 
 ## <a name="create-inventory"></a> 建立 SQL 伺服器的清查
+
 之前執行的 PowerShell 指令碼，來評估您的 SQL Server，您必須建置您想要評估 SQL 伺服器的清查。
 
 此清查可以處於兩種形式之一：
+
 - Excel CSV 檔案
 - SQL Server 資料表
 
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
+
 > [!IMPORTANT]
->
 > 請確定清查檔案會儲存為逗號分隔 (CSV) 檔案。
 >
 > 針對預設執行個體，設定執行個體名稱為 MSSQLServer。
->
+
 
 當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料-**執行個體名稱**並**資料庫名稱**，且資料行沒有標頭資料列。
- 
+
  ![csv 檔案內容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>如果使用 SQL Server 資料表
+### <a name="if-using-a-sql-server-table"></a>如果使用 SQL Server 資料表
+
+> [!IMPORTANT]
+> 針對預設執行個體，設定執行個體名稱為 MSSQLServer。
+
 建立名為的資料庫**EstateInventory**和名**DatabaseInventory**。 包含這個清查資料的資料表可以有任意數目的資料行，只要有下列四個資料行：
+
 - ServerName
 - InstanceName
 - DatabaseName
@@ -98,6 +106,7 @@ ms.locfileid: "58618175"
 請記住，根據物件和其複雜性的數目，評估可能需要更長的時間 （小時 +，） 區隔成易於管理的區塊評估容錯度加倍，因此。
 
 ## <a name="running-a-scaled-assessment"></a>執行縮放的評定
+
 載入的模組目錄中的 PowerShell 模組，並建立詳細目錄之後，您需要開啟 PowerShell 並執行 dmaDataCollector 函式執行縮放的評估。
  
   ![dmaDataCollector 函式清單](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
@@ -140,6 +149,7 @@ ms.locfileid: "58618175"
 DmaProcessor 函式應該只需要幾秒鐘的時間處理單一檔案。
 
 ## <a name="loading-the-data-warehouse"></a>正在載入資料倉儲
+
 DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting 資料庫 ReportData 資料表中。 此時，您需要載入資料倉儲。
 
 1. 您可以使用 LoadWarehouse 指令碼來填入維度中的任何遺漏值。
@@ -151,6 +161,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
       ![載入的 LoadWarehouse 內容](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>設定您的資料庫擁有者
+
 雖然並非必要項目，以取得最大價值的報表，建議您設定資料庫擁有者**dimDBOwner**維度，然後再更新**DBOwnerKey**在**FactAssessment**資料表。  遵循此程序，可讓配量和篩選特定的資料庫擁有者為基礎的 Power BI 報表。
 
 您也可以使用 LoadWarehouse 指令碼，以提供基本的 TSQL 陳述式，為您設定資料庫擁有者。
@@ -161,8 +172,8 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
 1. 在 Power BI Desktop 中開啟 DMA 報表 Power BI 的範本。
 2. 輸入伺服器的詳細資料，以指向您**DMAWarehouse**資料庫，然後按**負載**。
-   
-      ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    已重新整理報表中的資料之後**DMAWarehouse**資料庫中，將會看到類似下列的報表。
 
@@ -172,7 +183,9 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
    > 如果看不到您所預期的資料，請嘗試變更作用中的書籤。  如需詳細資訊，請參閱下一節中的詳細資料。
 
 ## <a name="working-with-dma-reports"></a>使用 DMA 報表
+
 若要使用 DMA 報告，使用書籤和交叉分析篩選器來篩選：
+
 - 評估類型 （Azure SQL DB、 Azure SQL MI、 SQL 內部部署） 
 - 執行個體名稱
 - 資料庫名稱
@@ -182,11 +195,12 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
 ![DMA 報告書籤和篩選器](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
 
-這可讓下列刀鋒視窗：
+選取篩選書籤可讓下列刀鋒視窗：
 
 ![DMA 報表檢視 刀鋒視窗](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
 
 您可以使用書籤報表之間切換內容：
+
 - Azure SQL DB 雲端評量
 - Azure SQL MI 雲端評量
 - 在內部部署環境評量
@@ -197,10 +211,11 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
 ![DMA 報告檢視的上一頁按鈕](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
 
-若要顯示在下列其中一項是否目前套用篩選報表頁面的左下角沒有提示：
-* FactAssessment-InstanceName
-* FactAssessment – DatabaseName
-* dimDBOwner-DBOwner
+沒有顯示任何下列的項目是否目前套用篩選報表頁面的左下方的提示：
+
+- FactAssessment-InstanceName
+- FactAssessment-DatabaseName
+- dimDBOwner-DBOwner
 
 ![提示字元中套用的篩選器](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
@@ -208,6 +223,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 > 如果您只會執行 Azure SQL Database 評量，會填入僅雲端報告。 相反地，如果您只會執行內部評量，就會填入僅在內部部署報表。 不過，如果您執行 Azure 和內部評估，然後載入您的倉儲中的兩個評量，您可以切換報表雲端及內部 CTRL 按一下關聯的圖示。
 
 ## <a name="reports-visuals"></a>報表視覺效果
+
 下列各節會顯示在 Power BI 報表中顯示的詳細資料。
 
 ### <a name="readiness-"></a>整備 %
@@ -227,6 +243,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
   ![DMA 整備貯體](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
 此視覺效果會顯示資料庫的下列整備貯體的明細：
+
 - 100%已準備好
 - 75 99%已準備好
 - 50 到 75%已準備好
@@ -236,13 +253,14 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
  
   ![DMA 問題 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-此視覺效果中選取項目內容顯示目前內發生的問題 (所有項目，執行個體，資料庫 [的倍數])。 越大這個字出現在畫面上，較大者該類別中的問題數目。 將滑鼠指標暫留文字會顯示該類別中所發生的問題數目。
+此視覺效果中選取項目內容顯示目前內發生的問題 (所有項目，執行個體，資料庫 [的倍數])。 愈大這個字出現在螢幕上，該類別中的問題數目愈大。 將滑鼠指標暫留文字會顯示該類別中所發生的問題數目。
 
 ### <a name="database-readiness"></a>資料庫的整備程度
 
   ![DMA 資料庫整備報表](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
 本節是報告，其中會顯示執行個體資料庫的完備性的主要部分。 此報表包含向下鑽研的階層：
+
 - InstanceDatabase
 - ChangeCategory
 - 標題
@@ -266,4 +284,5 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
   ![DMA 補救計劃的報表篩選選項](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>指令碼免責聲明
+
 *在本文中提供的範例指令碼不受任何 Microsoft 標準支援計畫或服務。所有的指令碼是現狀提供，不含任何種類的擔保。Microsoft 同時否認所有默示的擔保，包括但不限於任何默示之瑕疵擔保適售性或適合某特定用途。因使用或展示的範例指令碼和文件的風險由使用者承擔。在任何情況 Microsoft、 其作者或任何其他參與建立、 生產環境或傳遞的指令碼的人應該對於任何損害賠償責任運作 （包括但不限於，商業利潤、 營業中斷、 損失的損害嗎商務資訊或其他金錢損失） 因使用或無法使用的範例指令碼或文件，即使 Microsoft 已獲知該等損害之可能性。搜尋權限，才能在其他站台/存放庫/部落格上，這些指令碼會重新張貼。*

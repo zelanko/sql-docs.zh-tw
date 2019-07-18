@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036212"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 
@@ -41,7 +40,8 @@ ms.locfileid: "57683638"
   
 ## <a name="syntax"></a>語法  
   
-```cpp  
+```cpp
+  
 SQLRETURN SQLBindParameter(  
       SQLHSTMT        StatementHandle,  
       SQLUSMALLINT    ParameterNumber,  
@@ -134,13 +134,13 @@ SQLRETURN SQLBindParameter(
   
  *了*引數可以是下列值之一：  
   
--   SQL_PARAM_INPUT. 參數標記，例如不會呼叫程序中，SQL 陳述式中的參數**插入**陳述式，或將標記中的程序的輸入的參數。 例如，在參數**INSERT INTO 員工 VALUES (？，？，？)** 是輸入的參數，而在參數 **{呼叫 AddEmp (？，？，？)}** 可以但不一定，輸入的參數。  
+-   SQL_PARAM_INPUT。 參數標記，例如不會呼叫程序中，SQL 陳述式中的參數**插入**陳述式，或將標記中的程序的輸入的參數。 例如，在參數**INSERT INTO 員工 VALUES (？，？，？)** 是輸入的參數，而在參數 **{呼叫 AddEmp (？，？，？)}** 可以但不一定，輸入的參數。  
   
      當執行陳述式時，驅動程式會將參數的資料傳送至資料來源\* *ParameterValuePtr*緩衝區必須包含有效的輸入的值，或 **StrLen_or_IndPtr*緩衝區必須包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT 的結果_EXEC 巨集。  
   
      如果應用程式無法判斷程序呼叫中參數的型別，它會設定*了*至 SQL_PARAM_INPUT; 如果資料來源傳回參數值，驅動程式會捨棄它。  
   
--   SQL_PARAM_INPUT_OUTPUT. 參數標記的程序中的輸入/輸出參數。 例如，在參數 **{呼叫 GetEmpDept(?)}** 是接受員工的名稱，並傳回該員工的部門名稱的輸入/輸出參數。  
+-   SQL_PARAM_INPUT_OUTPUT。 參數標記的程序中的輸入/輸出參數。 例如，在參數 **{呼叫 GetEmpDept(?)}** 是接受員工的名稱，並傳回該員工的部門名稱的輸入/輸出參數。  
   
      當執行陳述式時，驅動程式會將參數的資料傳送至資料來源\* *ParameterValuePtr*緩衝區必須包含有效的輸入的值，或有\* *StrLen_or_IndPtr*緩衝區必須包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或結果SQL_LEN_DATA_AT_EXEC 巨集。 執行陳述式之後，驅動程式會傳回至應用程式，參數的資料如果資料來源不會傳回輸入/輸出參數的值，驅動程式會將 **StrLen_or_IndPtr*緩衝區為 SQL_NULL_DATA。  
   
@@ -153,7 +153,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_INPUT_OUTPUT_STREAM. 指出應該串流處理輸入/輸出參數。 **SQLGetData**可以讀取組件中的參數值。 *BufferLength*因為緩衝區長度將決定在呼叫的所以會忽略**SQLGetData**。 值*StrLen_or_IndPtr*緩衝區必須包含 SQL_NULL_DATA、 SQL_DEFAULT_PARAM，SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果。 參數必須繫結來做為輸入的資料在執行 (DAE) 參數，如果將輸出資料流。 *ParameterValuePtr*可以是任何非 null 指標值，就會傳回**SQLParamData**使用者定義權杖的值，傳遞了*ParameterValuePtr*這兩個輸入和輸出。 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
--   SQL_PARAM_OUTPUT_STREAM. SQL_PARAM_INPUT_OUTPUT_STREAM，輸出參數相同。 **StrLen_or_IndPtr*輸入會被忽略。  
+-   SQL_PARAM_OUTPUT_STREAM。 SQL_PARAM_INPUT_OUTPUT_STREAM，輸出參數相同。 **StrLen_or_IndPtr*輸入會被忽略。  
   
  下表列出不同的組合*了*和 **StrLen_or_IndPtr*:  
   
@@ -252,7 +252,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_NULL_DATA. 參數值是 NULL。  
   
--   SQL_DEFAULT_PARAM. 程序是參數的使用預設值，而不是參數的從應用程式擷取值。 這個值是在 ODBC 標準語法，在呼叫的程序中才有效，然後才*了*引數是 SQL_PARAM_INPUT、 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT_STREAM。 當\* *StrLen_or_IndPtr*是 SQL_DEFAULT_PARAM， *ValueType*， *ParameterType*， *ColumnSize*， *DecimalDigits*， *Columnsize*，以及*ParameterValuePtr*引數會被忽略的輸入參數，並只會用來定義輸入的輸出參數值 /輸出參數。  
+-   SQL_DEFAULT_PARAM。 程序是參數的使用預設值，而不是參數的從應用程式擷取值。 這個值是在 ODBC 標準語法，在呼叫的程序中才有效，然後才*了*引數是 SQL_PARAM_INPUT、 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT_STREAM。 當\* *StrLen_or_IndPtr*是 SQL_DEFAULT_PARAM， *ValueType*， *ParameterType*， *ColumnSize*， *DecimalDigits*， *Columnsize*，以及*ParameterValuePtr*引數會被忽略的輸入參數，並只會用來定義輸入的輸出參數值 /輸出參數。  
   
 -   結果的 SQL_LEN_DATA_AT_EXEC (*長度*) 巨集。 參數的資料將會傳送具有**SQLPutData**。 如果*ParameterType*引數是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或長時間，資料來源特有的資料類型，而且驅動程式會傳回"Y"表示 SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**，*長度*是要傳送的參數; 的資料的位元組數目，否則為*長度*必須為非負數的值並忽略。 如需詳細資訊，請參閱 < 傳遞參數值 > 本節稍後的。  
   
@@ -334,7 +334,7 @@ SQLRETURN SQLBindParameter(
 
  在 資料行取向的繫結，應用程式繫結不同的參數和長度/指標陣列至每個參數。  
   
- 若要使用資料行取向的繫結，應用程式首先會將 SQL_PARAM_BIND_BY_COLUMN 設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 (這是預設值。)每個資料行繫結，應用程式會執行下列步驟：  
+ 若要使用資料行取向的繫結，應用程式首先會將 SQL_PARAM_BIND_BY_COLUMN 設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 （這是預設值）。每個資料行繫結，應用程式會執行下列步驟：  
   
 1.  配置參數緩衝區陣列。  
   

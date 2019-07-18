@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144482"
 ---
 # <a name="open-log-file-viewer"></a>開啟記錄檔檢視器
   您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用記錄檔檢視器，以存取下列記錄中所擷取之錯誤和事件的相關資訊：  
@@ -52,51 +52,51 @@ ms.locfileid: "52818091"
   
 ##### <a name="to-view-logs-that-are-related-to-general-sql-server-activity"></a>若要檢視與一般 SQL Server 活動相關的記錄檔  
   
-1.  在物件總管中，展開 [管理]。  
+1.  在物件總管中，展開 [管理]  。  
   
 2.  執行下列任一步驟：  
   
-    -   以滑鼠右鍵按一下 [SQL Server 記錄檔]，指向 [檢視]，然後按一下 [SQL Server 記錄檔] 或 [SQL Server 與 Windows 記錄檔]。  
+    -   以滑鼠右鍵按一下 [SQL Server 記錄檔]  ，指向 [檢視]  ，然後按一下 [SQL Server 記錄檔]  或 [SQL Server 與 Windows 記錄檔]  。  
   
-    -   展開 [SQL Server 記錄檔]，以滑鼠右鍵按一下任何記錄檔，然後按一下 [檢視 SQL Server 記錄檔]。 您也可以按兩下任何記錄檔。  
+    -   展開 [SQL Server 記錄檔]  ，以滑鼠右鍵按一下任何記錄檔，然後按一下 [檢視 SQL Server 記錄檔]  。 您也可以按兩下任何記錄檔。  
   
-     這些記錄檔包含 [Database Mail]、[SQL Server]、[SQL Server Agent] 和 [Windows NT]。  
+     這些記錄檔包含 [Database Mail]  、[SQL Server]  、[SQL Server Agent]  和 [Windows NT]  。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>若要檢視與作業相關的記錄檔  
   
--   在物件總管中，展開 [SQL Server Agent]，以滑鼠右鍵按一下 [作業]，然後按一下 [檢視記錄]。  
+-   在物件總管中，展開 [SQL Server Agent]  ，以滑鼠右鍵按一下 [作業]  ，然後按一下 [檢視記錄]  。  
   
-     這些記錄檔包含 [Database Mail]、[作業記錄] 和 [SQL Server Agent]。  
+     這些記錄檔包含 [Database Mail]  、[作業記錄]  和 [SQL Server Agent]  。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>若要檢視與維護計畫相關的記錄檔  
   
--   在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
+-   在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [維護計畫]  ，然後按一下 [檢視記錄]  。  
   
-     這些記錄檔包含 [Database Mail]、[作業記錄]、[維護計畫]、[遠端維護計畫] 和 [SQL Server Agent]。  
+     這些記錄檔包含 [Database Mail]  、[作業記錄]  、[維護計畫]  、[遠端維護計畫]  和 [SQL Server Agent]  。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>若要檢視與資料收集相關的記錄檔  
   
--   在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [資料收集]，然後按一下 [檢視記錄]。  
+-   在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [資料收集]  ，然後按一下 [檢視記錄]  。  
   
-     這些記錄檔包含 [資料收集]、[作業記錄] 和 [SQL Server Agent]。  
+     這些記錄檔包含 [資料收集]  、[作業記錄]  和 [SQL Server Agent]  。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>若要檢視與 Database Mail 相關的記錄檔  
   
--   在物件總管中，展開 [管理]，以滑鼠右鍵按一下 [Database Mail]，然後按一下 [檢視 Database Mail 記錄]。  
+-   在物件總管中，展開 [管理]  ，以滑鼠右鍵按一下 [Database Mail]  ，然後按一下 [檢視 Database Mail 記錄]  。  
   
-     這些記錄檔包含 [Database Mail]、[作業記錄]、[維護計畫]、[遠端維護計畫]、[SQL Server]、[SQL Server Agent] 和 [Windows NT]。  
-  
-##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>若要檢視與稽核收集相關的記錄檔  
-  
--   在物件總管中，依序展開 [安全性] 和 [稽核]，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]。  
-  
-     這些記錄檔包含 [稽核收集] 和 [Windows NT]。  
+     這些記錄檔包含 [Database Mail]、[作業記錄]  、[維護計畫]  、[遠端維護計畫]  、[SQL Server]  、[SQL Server Agent]  和 [Windows NT]  。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>若要檢視與稽核收集相關的記錄檔  
   
--   在物件總管中，依序展開 [安全性] 和 [稽核]，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]。  
+-   在物件總管中，依序展開 [安全性]  和 [稽核]  ，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]  。  
   
-     這些記錄檔包含 [稽核收集] 和 [Windows NT]。  
+     這些記錄檔包含 [稽核收集]  和 [Windows NT]  。  
+  
+##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>若要檢視與稽核收集相關的記錄檔  
+  
+-   在物件總管中，依序展開 [安全性]  和 [稽核]  ，以滑鼠右鍵按一下稽核，然後按一下 [檢視稽核記錄]  。  
+  
+     這些記錄檔包含 [稽核收集]  和 [Windows NT]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [記錄檔檢視器](log-file-viewer.md)   

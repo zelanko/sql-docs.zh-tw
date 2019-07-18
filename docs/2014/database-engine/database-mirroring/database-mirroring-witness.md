@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807619"
 ---
 # <a name="database-mirroring-witness"></a>資料庫鏡像見證
-  若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
+  若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」  。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
 > [!NOTE]  
 >  在高效能模式中，見證可能會對可用性有負面影響。 如果見證是設定供資料庫鏡像工作階段使用，則主體伺服器必須至少連接到一個其他伺服器執行個體、鏡像伺服器或見證，或者兩者都連接。 否則，資料庫會變得無法使用，而又不可能強制服務 (可能會有資料遺失)。 因此，對於高效能模式，強烈建議您永遠將見證設定為 OFF。 如需見證對高效能模式影響的相關資訊，請參閱 [資料庫鏡像作業模式](database-mirroring-operating-modes.md)。  
@@ -62,14 +62,14 @@ ms.locfileid: "48183828"
   
 -   如果鏡像伺服器與見證中斷連接，而且也與主體伺服器中斷連接，則不管主體伺服器的狀態如何，都不可能進行自動容錯移轉。  
   
- 至少連接兩個伺服器執行個體的需求，即所謂的 *「仲裁」*。 仲裁確保資料庫一次只能由一個夥伴提供服務。 如需仲裁如何運作及如何影響工作階段的相關資訊，請參閱 [仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 至少連接兩個伺服器執行個體的需求，即所謂的 *「仲裁」* 。 仲裁確保資料庫一次只能由一個夥伴提供服務。 如需仲裁運作方式及其對工作階段影響的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ##  <a name="AddRemoveWitness"></a> 加入或移除見證  
  **加入見證**  
   
 -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [使用 Windows 驗證新增資料庫鏡像見證 &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
  **移除見證**  
   

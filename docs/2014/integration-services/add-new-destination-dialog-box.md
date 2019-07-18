@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.destinationassistant.f1
@@ -14,12 +13,12 @@ ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d0764d865988d197d266ec143fce55478436194
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061854"
 ---
 # <a name="add-new-destination-dialog-box"></a>加入新目的地對話方塊
   下表列出可以在 [加入新目的地] 對話方塊中使用的選項。  
@@ -27,7 +26,7 @@ ms.locfileid: "58377156"
 |選項|描述|  
 |------------|-----------------|  
 |類型|選取您要連接的目的地類型。|  
-|連接管理員|選取現有的連線管理員，或按一下 [\<新增>] 以建立新的連線管理員。|  
+|連接管理員|選取現有的連線管理員，或按一下 [\<新增>]  以建立新的連線管理員。|  
 |僅顯示已安裝|指定是否只要檢視已安裝的目的地。|  
 |[確定]|按一下以儲存您的變更，並開啟任何後續的對話方塊設定其他選項。|  
   

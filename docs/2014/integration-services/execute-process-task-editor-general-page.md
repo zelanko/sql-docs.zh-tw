@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.general.f1
@@ -15,15 +14,15 @@ ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b482fcd6f03a3a5b20a1b1825cc9a045b891224
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059069"
 ---
 # <a name="execute-process-task-editor-general-page"></a>執行處理工作編輯器 (一般頁面)
-  使用 [執行處理工作編輯器] 對話方塊的 [一般] 頁面，來命名和描述執行處理工作。  
+  使用 [執行處理工作編輯器]  對話方塊的 [一般]  頁面，來命名和描述執行處理工作。  
   
  若要了解這個工作，請參閱＜ [Execute Process Task](control-flow/execute-process-task.md)＞。  
   

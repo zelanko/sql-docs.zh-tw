@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 797f572a6a9d847422981483c4bfe7938cd47e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a95e1798758aa044df5196f621c6afa14958c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996284"
 ---
 # <a name="odbc-test"></a>ODBC 測試
 Microsoft® ODBC 測試是 ODBC 的應用程式可供您測試 ODBC 驅動程式和 ODBC 驅動程式管理員。 ODBC 3.51 包含 ANSI 和 Unicode 相容的 ODBC 測試的版本。 對應的檔案如下所示：  

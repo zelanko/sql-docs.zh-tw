@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
@@ -42,12 +41,12 @@ ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076611"
 ---
 # <a name="configure-measure-properties"></a>設定量值屬性
   量值有一些屬性可讓您定義量值的運作方式以及控制量值讓使用者看到的樣子。  

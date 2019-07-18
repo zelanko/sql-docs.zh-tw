@@ -21,12 +21,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c11e3fe3388cfb39445e1f4ad2feffd57d035c6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da86b20dba26536626010d14c1f81a1bbd852156
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65620375"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 複寫 [發行集屬性] 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54125443"
  發行集的類型 (唯讀)。  
   
  **訂閱過期**  
- 選取其中一個訂閱過期選項：[訂閱永遠不會過期] 或 [訂閱會過期]，並提供明確的時間週期 (**間隔**)。  
+ 選取其中一個訂閱過期選項：[訂閱永遠不會過期]  或 [訂閱會過期]  ，並提供明確的時間週期 (**間隔**)。  
   
  針對快照式發行集和交易式發行集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱永遠不會過期]** 設定。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54125443"
  當您在發行集的資料表發行項中加入篩選時，這些篩選就會擴展到窗格中。 含有資料列篩選的資料表，會顯示為窗格中的最上層節點。 若為合併式發行集，則透過聯結篩選而擴充篩選的資料表，就會顯示為子節點。  
   
  **[加入]**  
- 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 [加入] 會顯示三個選項：[加入篩選]、[加入聯結以擴充選取的篩選]，以及 [自動產生篩選]。  
+ 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 [加入]  會顯示三個選項：[加入篩選]  、[加入聯結以擴充選取的篩選]  ，以及 [自動產生篩選]  。  
   
 -   選取 **[加入篩選]** 即可啟動 **[加入篩選]** 對話方塊。 這個對話方塊可以讓您套用資料列篩選至資料表發行項。 例如，在 **[加入篩選]** 對話方塊中，您可以指定含有客戶資料的資料表在複寫到訂閱者時，只能包含法國客戶的資料。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54125443"
  **尋找資料表**  
  僅合併式發行集。 按一下 **[尋找資料表]** ，即可在複雜篩選樹中尋找資料表。 在含有複雜關聯性的資料庫中，因為資料表可以聯結到多個資料表，所以資料表可能重複出現在篩選樹的多個位置。  
   
- 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭頭標示，展開該節點會顯示這段文字：按一下 [尋找資料表]，以檢視 \<資料表名稱> 的資料表。  
+ 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭頭標示，展開該節點會顯示這段文字：按一下 [尋找資料表]，以檢視 \<資料表名稱> 的資料表  。  
   
  在窗格中選取捷徑節點，然後按一下 **[尋找資料表]** ，窗格就會展開並反白該資料表。 如果您按一下 **[尋找資料表]** 但未選取捷徑節點，則會啟動 **[尋找資料表]** 對話方塊。  
   
@@ -140,12 +140,12 @@ ms.locfileid: "54125443"
   
 ### <a name="options"></a>選項。  
  **透過 FTP 存取快照集檔案**  
- 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]**，並指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]** 和 **[密碼]**，即可讓訂閱者使用 FTP 傳遞快照集。  
+ 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]** ，並指定 **[FTP 伺服器名稱]** 、 **[通訊埠編號]** 、 **[FTP 根資料夾的路徑]** 、 **[登入]** 和 **[密碼]** ，即可讓訂閱者使用 FTP 傳遞快照集。  
   
  此選項可以讓訂閱者使用 FTP 擷取快照集檔案，但這並不是必要的。 如果您選取此選項，新增訂閱精靈就會預設讓訂閱者經由 FTP 擷取快照集檔案。 若要變更此設定，請使用 **[訂閱屬性]** 對話方塊。 如果您讓訂閱者經由 FTP 存取快照集檔案，請在 **[快照集屬性]** 對話方塊的 **[快照集]** 頁面上，指定 FTP 資料夾作為快照集檔案的位置。 這樣做會在新的快照集產生時，讓快照集代理程式自動更新 FTP 資料夾中的檔案。 如果位置沒有設定到 FTP 資料夾，當新的快照集產生時，您就必須手動更新檔案。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
  **Web 同步處理**  
- 僅限合併式複寫。 選取 **[允許訂閱者連接到 Web 伺服器進行同步處理]**，並指定 Web 伺服器位址讓合併式訂閱者使用 Web 同步處理。 Web 伺服器必須使用安全通訊端層 (SSL)，且網址必須完整，例如 `https://server.domain.com/synchronize`。 如需詳細資訊，請參閱 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。  
+ 僅限合併式複寫。 選取 **[允許訂閱者連接到 Web 伺服器進行同步處理]** ，並指定 Web 伺服器位址讓合併式訂閱者使用 Web 同步處理。 Web 伺服器必須使用安全通訊端層 (SSL)，且網址必須完整，例如 `https://server.domain.com/synchronize`。 如需詳細資訊，請參閱 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。  
 
 
 ## <a name="agent-security"></a>代理程式安全性
@@ -164,7 +164,8 @@ ms.locfileid: "54125443"
  如果已建立代理程式作業，請按一下 **[安全性設定]** 來存取對話方塊，即可讓您變更代理程式的安全性設定。 如果尚未建立代理程式作業，請按一下 **[建立代理程式]** ，即可建立代理程式並指定安全性設定。  
 
 ## <a name="data-partitions"></a>分割區
-分割區 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+分割區  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   **[發行集屬性]** 對話方塊的 **[資料分割]** 頁面，可讓您定義使用參數化篩選之合併式發行集的資料分割。 定義資料分割之後，您可以為這些資料分割產生快照集，依據訂閱者的連接屬性 (登入及/或電腦名稱)，為不同的訂閱者提供不同的初始資料集。 如果訂閱者在第一次同步處理資料分割時沒有可用的快照集，您也可以選取來允許訂閱者要求快照集傳遞和產生。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ### <a name="options"></a>選項。  
@@ -187,7 +188,8 @@ ms.locfileid: "54125443"
  如果您要允許訂閱者要求快照集產生和應用程式，請選取此選項。 如果訂閱者在第一次同步處理資料分割時沒有可用的快照集，則可能需要此選項。  
 
 ## <a name="snapshot"></a>快照式
-快照集 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+快照式  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   **[發行集屬性]** 對話方塊的 **[快照集]** 頁面，可以讓您設定快照集格式、快照集資料夾位置以及在快照集的應用程式之前和之後執行的指令碼。 快照集資料夾必須指定為共用，而且會讀取和寫入檔案到資料夾的代理程式需要有足夠的權限。 如需適當地保護資料夾的詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 > [!NOTE]  
@@ -206,7 +208,7 @@ ms.locfileid: "54125443"
 -   選取 **[將檔案放在下列資料夾中]** ，以指定取代預設位置的替代位置，或除了預設位置以外的替代位置。 在文字方塊中輸入路徑，或按一下 **[瀏覽]** 並瀏覽到適當位置。 選取 **[壓縮此資料夾中的快照集檔案]** ，以壓縮在替代快照集位置中的檔案。 替代位置可以位於其他伺服器、網路磁碟機或抽取式媒體 (例如 CD-ROM 或抽取式磁碟) 上。 如需詳細資訊，請參閱[修改快照集屬性](../../relational-databases/replication/snapshot-options.md)。  
   
  **執行其他指令碼**  
- 指定在訂閱者端套用快照集之前和之後要執行的指令碼。 如果 **[快照集格式]** 是 **[字元]**，則無法指定指令碼。  
+ 指定在訂閱者端套用快照集之前和之後要執行的指令碼。 如果 **[快照集格式]** 是 **[字元]** ，則無法指定指令碼。  
   
  指令碼是選擇性的，但可提供便於執行命令以及在訂閱者端套用管理變更的方式。 如需執行指令碼的詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   

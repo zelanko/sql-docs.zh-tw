@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e8c6d2cc2803a222e831a32a3f3e803a0433068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914345"
 ---
 # <a name="mssqlserver2592"></a>MSSQLSERVER_2592
     
@@ -30,7 +30,7 @@ ms.locfileid: "48058058"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_REPAIR_INDEX_REBUILT|  
-|訊息文字|修復: 已成功重建資料庫 'DATABASE' 中物件 OBJECT 的 INDEX_TYPE 索引。|  
+|訊息文字|修復:已成功重建資料庫 'DATABASE' 中物件 OBJECT 的 INDEX_TYPE 索引。|  
   
 ## <a name="explanation"></a>說明  
  REPAIR 指出已經重建索引。  

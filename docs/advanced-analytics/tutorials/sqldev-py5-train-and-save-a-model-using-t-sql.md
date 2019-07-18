@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961856"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>訓練及儲存使用 T-SQL Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,9 +113,9 @@ ms.locfileid: "58511245"
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    資料處理和模型調整可能需要幾分鐘。 會使用管線傳送至 Python 的訊息**stdout**串流會顯示在**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
+    資料處理和模型調整可能需要幾分鐘。 會使用管線傳送至 Python 的訊息**stdout**串流會顯示在**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如:
 
-    *來自外部指令碼的 STDOUT 訊息︰*
+    *來自外部指令碼的 STDOUT 訊息︰* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. 開啟資料表*nyc\_taxi_models*。 您可以看到當中已新增一個新的資料列，其 _model_資料行中包含序列化的模型。
@@ -178,9 +177,9 @@ ms.locfileid: "58511245"
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    資料處理和模型調整可能需要一段時間。 會使用管線傳送至 Python 的訊息**stdout**串流會顯示在**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
+    資料處理和模型調整可能需要一段時間。 會使用管線傳送至 Python 的訊息**stdout**串流會顯示在**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如:
 
-    *來自外部指令碼的 STDOUT 訊息︰*
+    *來自外部指令碼的 STDOUT 訊息︰* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. 開啟 *nyc_taxi_models*資料表。 您可以看到當中已新增一個新的資料列，其 _model_資料行中包含序列化的模型。

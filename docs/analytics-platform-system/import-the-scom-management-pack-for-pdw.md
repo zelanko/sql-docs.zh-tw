@@ -2,19 +2,18 @@
 title: 匯入 SCOM 管理組件-Analytics Platform System |Microsoft Docs
 description: 請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件的 Analytics Platform System (APS)。 監視從 SCOM 的平行處理資料倉儲時，所需的管理組件。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 070e7b73614f6884e45a5c91603d6086613d15ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960851"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理組件-Analytics Platform System
 請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件的 Analytics Platform System (APS)。 監視從 SCOM 的平行處理資料倉儲時，所需的管理組件。 
@@ -36,7 +35,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![按一下 匯入管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  在管理組件清單中，選取您想要匯入，請按一下 管理組件**選取 **，然後按一下**新增**。  
+4.  在管理組件清單中，選取您想要匯入，請按一下 管理組件**選取** ，然後按一下**新增**。  
   
     ![管理組件清單](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -48,7 +47,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![選取這兩個管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
-7.  按一下 **[安裝]**。  
+7.  按一下 **[安裝]** 。  
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
@@ -68,7 +67,7 @@ System Center Operations Manager 2007 R2 必須已安裝且正在執行。
   
     ![選取管理組件](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
-4.  按一下 **[安裝]**。  
+4.  按一下 **[安裝]** 。  
   
     ![按一下 [安裝]](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   

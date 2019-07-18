@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249375"
 ---
 # <a name="subscription-type"></a>訂閱類型
   合併式複寫提供兩種訂閱類型：主訂閱與客訂閱 (對照舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分別為全域與本機)。 擁有主訂閱的訂閱者可以：  
@@ -33,12 +33,12 @@ ms.locfileid: "52799690"
 > [!NOTE]  
 >  建立訂閱之後，就無法變更訂閱類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **訂閱屬性**  
  針對每個訂閱者，請從 **[訂閱類型]** 資料行的下拉式清單方塊中選取 **[客訂閱]** 或 **[主訂閱]** 。 針對擁有主訂閱的訂閱者，請在 **[衝突解決的優先權]** 資料行中輸入介於 0 和 99.99 之間的數字 (數字愈高，訂閱者的優先權就愈高)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [訂閱發行集](subscribe-to-publications.md)  
   

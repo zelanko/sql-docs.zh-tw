@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26c09cca4f63f80cdbbb80386304ed7c4cdceda9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 56fc766c22751ea0a1465f9d1a447653b096b8f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787466"
 ---
 # <a name="getobject-method-javalangstring"></a>getObject 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.lang.Object getObject(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getObject 方法是由 java.sql.CallableStatement 介面中的 getObject 方法指定。  
   
  這個方法將傳回給定資料行的值來當做 Java 物件。 此 Java 物件將會是預設的 Java 物件類型，此種類型會對應到資料行的 SQL 類型，並且會對應於 JDBC 規格中所指定的內建類型。 如果該值為 SQL NULL，則驅動程式會傳回 Java null。  

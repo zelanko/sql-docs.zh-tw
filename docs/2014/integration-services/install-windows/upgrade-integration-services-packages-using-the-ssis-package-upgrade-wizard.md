@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767883"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
   您可以升級以舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所建立的封裝，至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 協助完成此程序。 因為您可以將精靈設定成備份原始封裝，所以如果您遇到升級問題，就可以繼續使用原始封裝。  
@@ -39,14 +39,14 @@ ms.locfileid: "58384826"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，建立或開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝] 節點，然後按一下 [升級所有封裝]，即可升級這個節點底下的所有封裝。  
+2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]  節點，然後按一下 [升級所有封裝]  ，即可升級這個節點底下的所有封裝。  
   
     > [!NOTE]  
     >  當您開啟包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 封裝的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 專案時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動開啟 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈。  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>從 SQL Server Management Studio 執行此精靈  
   
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，展開 [存放的封裝] 節點，以滑鼠右鍵按一下 [檔案系統] 或 [MSDB] 節點，然後按一下 [升級封裝]。  
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，展開 [存放的封裝]  節點，以滑鼠右鍵按一下 [檔案系統]  或 [MSDB]  節點，然後按一下 [升級封裝]  。  
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>在命令提示字元中執行此精靈  
   
@@ -59,7 +59,7 @@ ms.locfileid: "58384826"
   
 -   當您從 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 或在命令提示字元中執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 封裝升級精靈時，就可以針對原始和升級封裝指定不同的儲存位置。 若要備份原始封裝，請務必指定原始封裝和升級封裝都存放在檔案系統的相同資料夾中。 如果您指定任何其他儲存選項，此精靈將無法備份原始封裝。  
   
- 當此精靈備份原始封裝時，它會將原始封裝的複本存放在 [SSISBackupFolder] 資料夾中。 此精靈會將這個 [SSISBackupFolder] 資料夾建立為包含原始封裝和升級封裝之資料夾的子資料夾。  
+ 當此精靈備份原始封裝時，它會將原始封裝的複本存放在 [SSISBackupFolder]  資料夾中。 此精靈會將這個 [SSISBackupFolder]  資料夾建立為包含原始封裝和升級封裝之資料夾的子資料夾。  
   
 #### <a name="to-back-up-the-original-packages-in-sql-server-management-studio-or-at-the-command-prompt"></a>在 SQL Server Management Studio 或命令提示字元中備份原始封裝  
   
@@ -70,20 +70,20 @@ ms.locfileid: "58384826"
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示字元中，執行 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈]。  
   
-3.  在此精靈的 [選取來源位置] 頁面上，將 [封裝來源] 屬性設定為 [檔案系統]。  
+3.  在此精靈的 [選取來源位置]  頁面上，將 [封裝來源]  屬性設定為 [檔案系統]  。  
   
-4.  在此精靈的 [選取目的地位置] 頁面上，選取 [儲存至來源位置]，即可將升級封裝儲存至與原始封裝相同的位置。  
+4.  在此精靈的 [選取目的地位置]  頁面上，選取 [儲存至來源位置]  ，即可將升級封裝儲存至與原始封裝相同的位置。  
   
     > [!NOTE]  
     >  只有當升級封裝與原始封裝都存放在相同的資料夾時，您才能使用此精靈的備份選項。  
   
-5.  在此精靈的 [選取封裝管理選項] 頁面上，選取 [備份原始封裝] 選項。  
+5.  在此精靈的 [選取封裝管理選項]  頁面上，選取 [備份原始封裝]  選項。  
   
 #### <a name="to-back-up-the-original-packages-in-sql-server-data-tools"></a>若要在 SQL Server 資料工具中備份原始封裝  
   
 1.  將原始封裝儲存到檔案系統上的位置。  
   
-2.  在此精靈的 [選取封裝管理選項] 頁面上，選取 [備份原始封裝] 選項。  
+2.  在此精靈的 [選取封裝管理選項]  頁面上，選取 [備份原始封裝]  選項。  
   
     > [!WARNING]  
     >  **備份原始封裝**當您開啟時，不會顯示選項[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或是[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，而是會自動啟動精靈。  

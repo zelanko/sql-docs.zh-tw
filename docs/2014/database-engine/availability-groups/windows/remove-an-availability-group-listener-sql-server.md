@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5c1ee253c6fedde6b0954f36eb115253f876d0b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789470"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>移除可用性群組接聽程式 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，從 AlwaysOn 可用性群組中移除可用性群組接聽程式。  
@@ -72,7 +72,7 @@ ms.locfileid: "52408490"
  要移除的接聽程式名稱。  
   
  **結果**  
- 顯示連結 ( **[成功]** 或 **[錯誤]**)，而且按一下即可取得詳細資訊。  
+ 顯示連結 ( **[成功]** 或 **[錯誤]** )，而且按一下即可取得詳細資訊。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除可用性群組接聽程式**  
@@ -81,7 +81,7 @@ ms.locfileid: "52408490"
   
 2.  使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 陳述式，如下所示：  
   
-     ALTER AVAILABILITY GROUP *group_name*移除接聽程式 **'*`dns_name`*'**  
+     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **' *`dns_name`* '**  
   
      *group_name* 是可用性群組的名稱， *dns_name* 是可用性群組接聽程式的 DNS 名稱。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "52408490"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011675"
 ---
 # <a name="application-roles"></a>應用程式角色
   應用程式角色是資料庫主體，可以讓應用程式以其自有、類似使用者的權限來執行。 利用應用程式角色，您可以只允許透過特定應用程式來連接的使用者存取特定的資料。 不像資料庫角色，應用程式角色不包含任何成員，且依預設是非使用中狀態。 應用程式角色可與這兩種驗證模式搭配運作。 應用程式角色是使用 **sp_setapprole**(需要有密碼) 予以啟用。 因為應用程式角色是資料庫層級主體，所以它們只可以透過那些資料庫中授與 **guest**的權限來存取其他資料庫。 因此，其他資料庫中的應用程式角色將無法存取任何已停用 **guest** 的資料庫。  
@@ -50,7 +50,7 @@ ms.locfileid: "48224128"
  在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，使用者在啟動應用程式角色後要重新取得其原始安全性內容的唯一方式，就是中斷連接並重新連接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， **sp_setapprole** 就有一個選項可建立 Cookie。 此 Cookie 包含在啟用應用程式角色之前的內容資訊。 **sp_unsetapprole** 可使用此 Cookie 將工作階段還原為其原始內容。 如需有關這個新選項與範例的詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)的權限來存取其他資料庫。  
   
 > [!IMPORTANT]  
->  **SqlClient** 不支援 ODBC [加密] 選項。 當您透過網路傳輸機密資訊時，請使用安全通訊端層 (SSL) 或 IPsec 來加密該通道。 如果您必須將認證保存在用戶端應用程式中，請使用 Cypto API 函數來加密認證。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新的版本中， *password* 參數儲存為單向雜湊。  
+>  **SqlClient** 不支援 ODBC [加密]  選項。 當您透過網路傳輸機密資訊時，請使用安全通訊端層 (SSL) 或 IPsec 來加密該通道。 如果您必須將認證保存在用戶端應用程式中，請使用 Cypto API 函數來加密認證。 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新的版本中， *password* 參數儲存為單向雜湊。  
   
 ## <a name="related-tasks"></a>相關工作  
   

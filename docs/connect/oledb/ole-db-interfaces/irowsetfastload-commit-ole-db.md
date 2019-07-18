@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Commit method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f4f4ff01e34dff092f87b3dc1f972a5ab31ca6c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 1c1ac06ce8fe0d76858e10506d4ff6c054517f68
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031425"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761510"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ HRESULT Commit(
  E_UNEXPECTED  
  這個方法是在先前已藉由 **IRowsetFastLoad::Commit** 方法設為無效之大量複製資料列集上呼叫。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  OLE DB Driver for SQL Server 大量複製資料列集行為會如同延遲更新模式的資料列集。 因為使用者會透過資料列集插入資料列的資料，所以插入的資料列會以相同的方式被視為支援 **IRowsetUpdate** 之資料列集上的暫止插入。  
   
  取用者必須針對大量複製資料列集呼叫 **Commit** 方法，才能將插入的資料列寫入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中，其方式就如同使用 **IRowsetUpdate::Update** 方法，將暫止資料列提交給 SQL Server 執行個體。  

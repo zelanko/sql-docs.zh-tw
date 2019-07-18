@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 394bd37e587a0e42316a402aaec2e33691897244
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101135"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在報表產生器中指定認證
   認證會驗證嘗試從資料來源擷取資料的使用者。 資料來源的擁有者可決定必須使用的認證類型。 例如，資料庫管理員可能會指定使用者必須提供 Windows 使用者名稱和密碼。  

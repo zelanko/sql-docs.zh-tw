@@ -11,19 +11,23 @@ ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2ed03eb751b0b048fee4737d312f381f655b72b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e1d4761db172138eb86e3cf511b904c5b86b90c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713746"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 這些檔案中的資訊可協助您針對套件執行問題進行疑難排解。  
   
 > **注意！** 偵錯傾印檔案可能會包含敏感性資訊。 若要保護敏感性資訊，您可以使用存取控制清單 (ACL) 來限制這些檔案的存取權，或將這些檔案複製到具有存取限制的資料夾。 例如，將偵錯檔案傳送給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援服務之前，我們建議您移除任何敏感性或機密資訊。  
   
- 當您將某個專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，可以建立傾印檔案，這些檔案會提供有關專案中包含之封裝執行的資訊。 當 ISServerExec.exe 程序結束時，會建立傾印檔案。 您可以指定在封裝執行期間發生錯誤時建立傾印檔案，方法是選取 [執行封裝] 對話方塊中的 [在發生錯誤時傾印] 選項。 您也可以使用下列預存程序：  
+ 當您將某個專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器時，可以建立傾印檔案，這些檔案會提供有關專案中包含之封裝執行的資訊。 當 ISServerExec.exe 程序結束時，會建立傾印檔案。 您可以指定在封裝執行期間發生錯誤時建立傾印檔案，方法是選取 [執行封裝]  對話方塊中的 [在發生錯誤時傾印]  選項。 您也可以使用下列預存程序：  
   
 -   [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
@@ -42,7 +46,7 @@ ms.locfileid: "58273235"
   
 -   .tmp 偵錯傾印檔案。 這是文字格式的檔案。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會將這些檔案儲存至 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會將這些檔案儲存至 \<磁碟機>:  \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾。  
   
  下表僅描述 .tmp 檔案中的特定區段。 .tmp 檔案還包含此表未列出的其他資料。  
   

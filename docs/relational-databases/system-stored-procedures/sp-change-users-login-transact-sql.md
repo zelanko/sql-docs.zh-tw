@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120234"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +44,8 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @Action=] '*動作*'  
- 描述此程序所要執行的動作。 *動作*已**varchar(10)**。 *動作*可以有下列值之一。  
+ [ @Action= ] '*action*'  
+ 描述此程序所要執行的動作。 *動作*已**varchar(10)** 。 *動作*可以有下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

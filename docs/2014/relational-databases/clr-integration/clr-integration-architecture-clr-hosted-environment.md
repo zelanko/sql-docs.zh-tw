@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922562"
 ---
 # <a name="clr-hosted-environment"></a>CLR 主控環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) 是一個執行許多新式程式語言的環境，包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++。 CLR 具備記憶體回收的記憶體、先佔式執行緒、中繼資料服務 (類型反映)、程式碼可驗證性以及程式碼存取安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
@@ -100,7 +100,7 @@ ms.locfileid: "48129151"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server 和 CLR 如何一起運作  
  本節討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如何整合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 的執行緒、排程、同步處理以及記憶體管理模型。 特別是，本節會按照延展性、可靠性以及安全性目標來檢查整合效果。 當 CLR 裝載到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 實質上會當做它的作業系統。 CLR 會針對執行緒、排程、同步處理與記憶體管理，呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所實作的低階常式。 這些是其餘 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎所使用的相同原始物件。 此方法提供數個延展性、可靠性與安全性優勢。  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>延展性：一般執行緒、排程與同步處理  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>延展性：一般執行緒、 排程和同步處理  
  CLR 會呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] API 來建立執行緒，以便同時用於執行中的使用者程式碼和自己的內部用途。 若要在多個執行緒之間同步處理，CLR 會呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同步處理物件。 當執行緒正在等待同步處理物件時，這可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排程器來排程其他工作。 例如，當 CLR 起始記憶體回收時，其所有執行緒都會等待記憶體回收完成。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排程器知道它們所等待的 CLR 執行緒與同步處理物件，因此，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以排程正在執行與 CLR 無關之其他資料庫工作的執行緒。 這也可以讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 偵測到包含 CLR 同步處理物件所採用之鎖定的死結，並採用傳統的技術來移除死結。  
   
  Managed 程式在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中會以先佔式執行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排程器可以偵測和停止需要大量時間產生的執行緒。 能夠將 CLR 執行緒攔截到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行緒意味著 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排程器可以在 CLR 中識別「失控的」執行緒，並管理其優先順序。 這種失控的執行緒會暫停，並放回到佇列中。 系統不允許重複識別為失控執行緒的執行緒在給定的期間內執行，讓其他執行中的工作者得以執行。  
@@ -111,13 +111,13 @@ ms.locfileid: "48129151"
 ###### <a name="scalability-common-memory-management"></a>延展性：一般記憶體管理  
  CLR 會呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原始物件來配置與取消配置其記憶體。 在系統的記憶體總使用量中包含 CLR 所使用的記憶體，因此，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以維持在其設定的記憶體限制內，而且可以確保 CLR 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會爭用彼此的記憶體。 當系統記憶體受到限制時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也可以拒絕 CLR 記憶體要求，而且在其他工作需要記憶體時，可以要求 CLR 減少其記憶體的使用量。  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>可靠性：應用程式網域和無法復原的例外狀況  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>可靠性：應用程式定義域和無法復原的例外狀況  
  當 .NET Framework API 中的 Managed 程式碼遇到嚴重的例外狀況 (例如，記憶體不足或堆疊溢位) 時，不一定能夠從這類的失敗復原，也不一定能夠確保其實作的一致且正確的語意。 這些 API 會引發執行緒中止的例外狀況來回應這些失敗。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中主控時，此類執行緒中止的處理方式如下：CLR 會在執行緒中止發生所在的應用程式網域中偵測任何共用狀態。 CLR 會透過檢查同步處理物件是否存在來進行。 如果在應用程式網域中有共用狀態，則會卸載應用程式網域本身。 卸載應用程式網域時，會停止目前正在該應用程式網域中執行的資料庫交易。 因為共用狀態的存在可能會擴大此類嚴重例外狀況對於使用者工作階段的影響，而非觸發例外狀況的影響，因此，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 已經採取步驟來降低共用狀態的可能性。 如需詳細資訊，請參閱 .NET Framework 文件集。  
   
 ###### <a name="security-permission-sets"></a>安全性：權限集合  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可讓使用者針對資料庫中部署的程式碼指定可靠性和安全性需求。 當組件上傳到資料庫中時，組件的作者可以為該組件指定以下三個使用權限集合當中的一個：SAFE、EXTERNAL_ACCESS 和 UNSAFE。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可讓使用者針對資料庫中部署的程式碼指定可靠性和安全性需求。 當組件上傳至資料庫時，組件作者可以指定三個權限集合的其中一個該組件：SAFE、 EXTERNAL_ACCESS 和 UNSAFE。  
   
 |||||  
 |-|-|-|-|  

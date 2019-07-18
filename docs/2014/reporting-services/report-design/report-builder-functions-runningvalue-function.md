@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 02e670fd13f249e1278675b02097f4921dd41ebe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105156"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。  

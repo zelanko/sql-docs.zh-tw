@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e1a60abec14bea9b563c0c3f193c363ec0cb3d3e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 76c3960801e4a6677f6db2df74b207b45061c839
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091877"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>PropertyValueType 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

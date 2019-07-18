@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083476"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>連線到 Azure SQL DB (SybaseToSQL)
 使用 [連線到 Azure SQL DB] 對話方塊中，連接到您想要移轉的 Azure SQL DB 資料庫。  

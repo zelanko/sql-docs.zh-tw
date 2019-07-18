@@ -14,15 +14,15 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c4b2d41165dc6630990bc6300c7371b6a03288e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 32ffcd1ebe35ad2045774ec2ee19a06bede9dc92
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640876"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683916"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "47640876"
   
 #### <a name="to-remove-a-server-group"></a>若要移除伺服器群組  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [刪除]。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [刪除]  。  
   
-2.  在 **[刪除確認]** 對話方塊中按一下 **[是]**。  
+2.  在 **[刪除確認]** 對話方塊中按一下 **[是]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [移動已註冊的伺服器或已註冊的伺服器群組 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  

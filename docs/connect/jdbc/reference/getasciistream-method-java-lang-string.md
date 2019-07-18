@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ff964eebb92eb6b4642b2dde7d7f19cdbaf742b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 01cf9fcfcf888054edc7faf350eb27957bcc971a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618716"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800011"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

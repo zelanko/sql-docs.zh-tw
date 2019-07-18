@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1fd8e84a443c87846b4c40c45152b1225e2bc7b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d0ba22c75e36cc927fbd923af25aad48b3d02801
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119245"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

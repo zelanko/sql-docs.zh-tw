@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061479"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 函式
 **合規性**  
- 版本導入： ODBC 3.81 標準相容性： ODBC  
+ 導入的版本：ODBC 3.81 標準合規性：ODBC  
   
  **摘要**  
  **SQLGetPoolID**擷取集區識別碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
+  
 SQLRETURN  SQLGetPoolID (  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 POOLID *              pPoolID );  

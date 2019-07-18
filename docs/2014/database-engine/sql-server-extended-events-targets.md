@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
@@ -14,12 +13,12 @@ ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088873"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 擴充的事件目標是事件取用者。 目標可以寫入至檔案、在記憶體緩衝區中儲存事件資料，或彙總事件資料。 目標也能夠同步或非同步處理資料。  

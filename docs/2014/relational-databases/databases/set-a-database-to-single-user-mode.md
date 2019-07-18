@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871228"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>將資料庫設定為單一使用者模式
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將使用者定義資料庫設定為單一使用者模式。 單一使用者模式指定一次只可有一位使用者存取資料庫，且一般是用於維護動作。  
@@ -61,13 +61,13 @@ ms.locfileid: "52749030"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下要變更的資料庫，然後按一下 [屬性]  。  
   
 3.  在 [資料庫屬性]  對話方塊中按一下 [選項]  頁面。  
   
-4.  從 **[限制存取]** 選項中，選取 **[單一]**。  
+4.  從 **[限制存取]** 選項中，選取 **[單一]** 。  
   
-5.  如果其他使用者已連接到資料庫，則會出現 **[開啟連接]** 訊息。 若要變更屬性並關閉其他所有連接，請按一下 **[是]**。  
+5.  如果其他使用者已連接到資料庫，則會出現 **[開啟連接]** 訊息。 若要變更屬性並關閉其他所有連接，請按一下 **[是]** 。  
   
  您也可使用這個程序，將資料庫設定為多個或限制存取。 如需限制存取選項的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](database-properties-options-page.md)。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "52749030"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會將資料庫設成 `SINGLE_USER` 模式來取得獨佔存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。終止選項 `WITH ROLLBACK IMMEDIATE` 是在第一個 `ALTER DATABASE` 陳述式中指定。 這會導致所有未完成的交易都會回復，而且 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的任何其他連接都會立即中斷。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將資料庫設成 `SINGLE_USER` 模式來取得獨佔存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。終止選項 `WITH ROLLBACK IMMEDIATE` 是在第一個 `ALTER DATABASE` 陳述式中指定。 這會導致所有未完成的交易都會回復，而且 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的任何其他連接都會立即中斷。  
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase8)]  
   

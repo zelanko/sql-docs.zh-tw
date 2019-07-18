@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 分類器 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -21,14 +21,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b925917c7d8ef55d687372e0854b136d365de0ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0cb7587cd88dd2d6c3915482f0741cf048dfda06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66428888"
 ---
-# <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD 分類器 (Transact-SQL) (預覽)
+# <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -101,4 +101,4 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 目錄檢視 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)</br>
 目錄檢視 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
-[SQL 資料倉儲分類](/azure/sql-data-warehouse/classification)
+[SQL 資料倉儲分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

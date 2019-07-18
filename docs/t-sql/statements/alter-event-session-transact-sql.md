@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66270146"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,9 +123,9 @@ ON SERVER
 |*event_session_name*|這是現有事件工作階段的名稱。|  
 |STATE = START &#124; STOP|啟動或停止事件工作階段。 只有當 ALTER EVENT SESSION 套用到事件工作階段物件時，這個引數才有效。|  
 |ADD EVENT \<event_specifier>|為 \<> 所指定的事件與事件工作階段建立關聯。|
-|[*event_module_guid*]*.event_package_name.event_name*|為事件封裝中的事件名稱，其中：<br /><br /> -   *event_module_guid* 是包含此事件之模組的 GUID。<br />-   *event_package_name* 是包含此動作物件的套件。<br />-   *event_name* 是事件物件。<br /><br /> 事件會出現在 sys.dm_xe_objects 檢視表中當做 object_type 'event'。|  
+|[*event_module_guid*] *.event_package_name.event_name*|為事件封裝中的事件名稱，其中：<br /><br /> -   *event_module_guid* 是包含此事件之模組的 GUID。<br />-   *event_package_name* 是包含此動作物件的套件。<br />-   *event_name* 是事件物件。<br /><br /> 事件會出現在 sys.dm_xe_objects 檢視表中當做 object_type 'event'。|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|指定事件的可自訂屬性。 可自訂的屬性會出現在 sys.dm_xe_object_columns 檢視中當作 column_type 'customizable ' 和 object_name = *event_name*。|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|要關聯至事件工作階段的動作，其中：<br /><br /> -   *event_module_guid* 是包含此事件之模組的 GUID。<br />-   *event_package_name* 是包含此動作物件的套件。<br />-   *action_name* 是動作物件。<br /><br /> 動作會出現在 sys.dm_xe_objects 檢視表中當做 object_type 'action'。|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|要關聯至事件工作階段的動作，其中：<br /><br /> -   *event_module_guid* 是包含此事件之模組的 GUID。<br />-   *event_package_name* 是包含此動作物件的套件。<br />-   *action_name* 是動作物件。<br /><br /> 動作會出現在 sys.dm_xe_objects 檢視表中當做 object_type 'action'。|  
 |WHERE \<predicate_expression>|指定用來判斷是否應該處理事件的述詞運算式。 如果 \<predicate_expression> 為 true，則工作階段的動作和目標會進一步處理此事件。 如果 \<predicate_expression> 為 false，則此事件會先由工作階段卸除，再由工作階段的動作和目標進行處理。 述詞運算式限制為 3000 個字元，這會限制字串引數。|
 |*event_field_name*|這是識別述詞來源之事件欄位的名稱。|  
 |[event_module_guid].event_package_name.predicate_source_name|為全域述詞來源的名稱，其中：<br /><br /> -   *event_module_guid* 是包含此事件之模組的 GUID。<br />-   *event_package_name* 是包含此述詞物件的套件。<br />-   *predicate_source_name* 會在 sys.dm_xe_objects 檢視中定義為 object_type 'pred_source'。|  
@@ -145,7 +145,7 @@ ON SERVER
 ## <a name="remarks"></a>Remarks  
  不可在同一個陳述式內同時使用 `ADD` 和 `DROP` 引數。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 `ALTER ANY EVENT SESSION` 權限。  
   
 ## <a name="examples"></a>範例  

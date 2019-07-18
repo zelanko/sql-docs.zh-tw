@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65090242"
 ---
 # <a name="how-to-fix-errors"></a>如何：修正錯誤
 [錯誤清單] 窗格會顯示任何的部署或建置錯誤。 編輯資料庫實體及其定義時，Transact\-SQL 編輯器或資料表設計工具中的編輯所造成的語法或語意錯誤也會顯示在這個清單中。 當您跨不同索引標籤編輯指令碼時，[錯誤清單] 會以動態方式更新。 然後，您可以追蹤識別的錯誤以進行進一步疑難排解。  
@@ -26,15 +26,15 @@ ms.locfileid: "47664016"
   
 ### <a name="to-fix-errors"></a>若要修正錯誤  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [Product] 資料表 (Product.sql)，再選取 [檢視表設計工具]。  
+1.  以滑鼠右鍵按一下 [方案總管]  中的 [Product]  資料表 (Product.sql)，再選取 [檢視表設計工具]  。  
   
-2.  在設計工具的資料行格線中，以滑鼠右鍵按一下 [ShelflLife] 資料行，再選取 [刪除] 從資料表刪除這個資料行。  
+2.  在設計工具的資料行格線中，以滑鼠右鍵按一下 [ShelflLife]  資料行，再選取 [刪除]  從資料表刪除這個資料行。  
   
-3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單] 中。  
+3.  請注意，與下列訊息類似的警告與錯誤會立即顯示在畫面底部的 [錯誤清單]  中。  
   
-**警告 SQL71502: 函數: [dbo].[GetProductsBySupplier] 包含物件無法解析的參考。可能是物件不存在，或是該參考因為參考到下列任一個物件而模稜兩可: [dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。錯誤 SQL71501: 檢查條件約束: [dbo].[CK_Product_ShelfLife] 有參考到物件 [dbo].[Product].[ShelfLife] 的無法解析參考。**  
+**警告 SQL71502：函式：[dbo].[GetProductsBySupplier] 包含物件無法解析的參考。物件不存在或參考不明確，因為它可以參考下列任一個物件：[dbo].[Product].[p]::[ShelfLife] 或 [dbo].[Product].[ShelfLife]。錯誤 SQL71501：檢查限制：[dbo].[CK_Product_ShelfLife] 具有物件 [dbo].[Product].[ShelfLife] 無法解析的參考。**  
   
-4.  您可以用滑鼠右鍵按一下 [錯誤清單]，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
+4.  您可以用滑鼠右鍵按一下 [錯誤清單]  ，然後使用關聯式功能表排序結果，篩選要顯示的項目和每個項目要顯示的資訊欄。  
   
     按兩下第一個識別的警告，並跟著它找出產生警告的指令碼。 有問題的代碼區段會以反白顯示。 以我們所舉的例子來說，這是因為先前建立的資料表值函式中 `RETURN` 和 `SELECT` 陳述式都使用了 `ShelfLife` 資料行。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47664016"
   
 6.  移除檢查條件約束，以類似的方式修正第二個錯誤。  
   
-7.  請注意，在問題修正後，警告與錯誤隨即從 [錯誤清單] 中消失。  
+7.  請注意，在問題修正後，警告與錯誤隨即從 [錯誤清單]  中消失。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用 Transact-SQL 編輯器，編輯及執行指令碼](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows application logs [Reporting Services]
 - logs [Reporting Services], Windows application logs
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103031"
 ---
 # <a name="windows-application-log"></a>Windows 應用程式記錄檔
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將事件訊息寫入 Windows 應用程式記錄。 您可以利用寫入應用程式記錄檔的訊息資訊，來了解在本機系統上執行的報表伺服器應用程式所產生的事件。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67d07d2ea4bd1656ed8f24458410f5812ed22e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104403"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引數  
- **@server = '** *伺服器* **'**  
+ **@server = '** *server* **'**  
  這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 中的一個資料列**sys.servers**必須有使用此*server*。 *server* 是 **sysname**，沒有預設值。  
   
  **@netname ='** *network_name* **'**  
@@ -91,7 +90,7 @@ EXEC Win_1.master.dbo.sp_who;
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

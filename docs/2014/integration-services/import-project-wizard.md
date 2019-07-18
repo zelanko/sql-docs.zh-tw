@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
@@ -13,25 +12,25 @@ ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33e6400c9076d96cbe9999cc4110b0e3bd5f0902
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058053"
 ---
 # <a name="import-project-wizard"></a>匯入專案精靈
   使用 [ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 匯入專案精靈] 即可根據現有的 Integration Services 專案建立新的專案。 您可以匯入已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄的專案，或從專案部署檔案 (副檔名為 .ispac) 匯入專案。  
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>若要根據 .ispac 檔案或目錄中的專案建立專案  
   
-1.  按一下 **[檔案]**、指向 **[新增]**，然後按一下 [專案]。  
+1.  按一下 **[檔案]** 、指向 **[新增]** ，然後按一下 [專案]。  
   
-2.  展開 **[商業智慧]**，然後按一下 **[Integration Services]**。  
+2.  展開 **[商業智慧]** ，然後按一下 **[Integration Services]** 。  
   
-3.  選取中間窗格的 **[Integration Services 匯入精靈]** 、輸入方案和專案的 **[名稱]** 、指定專案的 **[資料夾]** ，然後按一下 **[確定]**。  
+3.  選取中間窗格的 **[Integration Services 匯入精靈]** 、輸入方案和專案的 **[名稱]** 、指定專案的 **[資料夾]** ，然後按一下 **[確定]** 。  
   
-     此時，您應該會看見 **[Integration Services 匯入專案精靈]**。 這個精靈會根據現有的 Integration Services 專案建立新的專案。  
+     此時，您應該會看見 **[Integration Services 匯入專案精靈]** 。 這個精靈會根據現有的 Integration Services 專案建立新的專案。  
   
 4.  在 **[簡介]** 頁面上，按 **[下一步]** 即可看見 **[選取來源]** 頁面。  
   

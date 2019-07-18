@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining model columns
@@ -19,12 +18,12 @@ ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083710"
 ---
 # <a name="mining-model-columns"></a>採礦模型資料行
   資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 與採礦結構相同，採礦模型也會包含資料行。 採礦模型包含在採礦結構內，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。  
@@ -33,7 +32,7 @@ ms.locfileid: "48167988"
   
 -   **使用方式** 是定義模型如何使用資料行的屬性。 資料行可以做為輸入資料行、索引鍵資料行或可預測資料行使用。  
   
--   **模型旗標**為演算法提供額外的資訊，說明案例資料表中所定義的資料，使演算法可以建立更精確的模型。 您可以使用資料採礦延伸模組 (DMX) 語言以程式設計方式定義模型旗標，或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料採礦設計師] 中定義。  
+-   **模型旗標**為演算法提供額外的資訊，說明案例資料表中所定義的資料，使演算法可以建立更精確的模型。 您可以使用資料採礦延伸模組 (DMX) 語言以程式設計方式定義模型旗標，或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料採礦設計師]  中定義。  
   
  下列清單描述您在採礦模型資料行上可以定義的模型旗標。  
   
@@ -46,8 +45,8 @@ ms.locfileid: "48167988"
  如需使用 DMX 以程式設計方式設定 Usage 屬性以及定義模型旗標的詳細資訊，請參閱 [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx)。 如需在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 Usage 屬性以及定義模型旗標的詳細資訊，請參閱[移動資料採礦物件](moving-data-mining-objects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
  [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)   
  [從採礦模型排除資料行](exclude-a-column-from-a-mining-model.md)   
  [採礦結構資料行](mining-structure-columns.md)  

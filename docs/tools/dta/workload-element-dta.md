@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 063a15a8278fa10e5c72326c7757ad4946b067f7
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: ac0cc638403f6870da24b948fa57a58196dbc582
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290724"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731735"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

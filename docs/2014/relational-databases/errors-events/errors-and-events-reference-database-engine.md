@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870900"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>錯誤和事件參考 (Database Engine)
 
@@ -35,7 +35,7 @@ ms.locfileid: "58493500"
   
  下表會連結到這些資源並提供說明。  
   
-|資源|描述|  
+|Resource|描述|  
 |--------------|-----------------|  
 |[SQL Server 社群](https://go.microsoft.com/fwlink/?LinkId=42455)|這個網站包含由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群所監控之新聞群組和論壇的連結。 它還會列出社群資訊來源，例如網誌或網站。 雖然不保證一定有答案，不過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群對於解答問題有很大的幫助。|  
 |[SQL Server 程式開發人員中心社群](https://go.microsoft.com/fwlink/?LinkId=42456)|此網站著重在新聞群組、論壇及其他社群資源，這些資訊對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員很有用。|  

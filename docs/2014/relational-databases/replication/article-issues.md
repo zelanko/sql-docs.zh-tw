@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9093ac313f0b72671e647461318793c21f476c75
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032022"
 ---
 # <a name="article-issues"></a>發行項的問題
   **[發行項的問題]** 頁面會列出已經發現的發行項狀況，以及這些狀況之結果所需的任何變更。 下表列出可能的問題與確保複寫和現有的應用程式正常運作所需的動作。  

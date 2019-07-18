@@ -1,5 +1,5 @@
 ---
-title: 資料採礦預存程序 (Analysis Services-資料採礦) |Microsoft 文件
+title: 資料採礦預存程序 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c8db1cbcd5cd0ebfd1f629a7ecd7ac14ce67806f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2984927575e6dcd3c8d6c530a94061b1dc0b6c17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016175"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65449938"
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>資料採礦預存程序 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34016175"
   
  如需呼叫 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序的詳細資訊，請參閱 [呼叫預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md)。  
   
- 如需可程式性的一般資訊，請參閱[資料採礦程式設計](../../analysis-services/data-mining-programming.md)。  
+ 如需可程式性的一般資訊，請參閱[資料採礦程式設計](../../analysis-services/data-mining/data-mining-programming.md)。  
   
  如需如何撰寫資料採礦物件之程式的其他資訊，請參閱 MSDN Library 中的文件[SQL Server Data Mining Programmability](http://go.microsoft.com/fwlink/?LinkId=93735)(SQL Server 資料採礦可程式性)。  
   
@@ -33,15 +33,15 @@ ms.locfileid: "34016175"
   
 -   [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
 -   [SystemGetAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)   
- [交叉驗證索引標籤&#40;採礦精確度圖表檢視&#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
+ [交叉驗證索引標籤 &#40;採礦精確度圖表檢視&#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
  [呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
   

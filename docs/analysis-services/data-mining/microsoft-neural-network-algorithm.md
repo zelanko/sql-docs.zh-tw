@@ -1,5 +1,5 @@
 ---
-title: Microsoft 類神經網路演算法 |Microsoft 文件
+title: Microsoft 類神經網路演算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724969"
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft 類神經網路演算法
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法是機器學習服務之熱門且可調整的類神經網路架構實作。  此演算法的運作方式是，針對可預測屬性的每種可能狀態測試輸入屬性的每種可能狀態，並根據定型資料計算每種組合的機率。 您可以使用這些機率來進行分類或迴歸工作，依據一些輸入屬性預測結果。 類神經網路也可以用於關聯分析。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "34015537"
 -   任何分析許多輸入以及較少輸出之間複雜關聯性的預測模型  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層節點 (有時稱為「神經」) 所組成的網路。 這三層分別是「輸入層」、「隱藏層」和「輸出層」。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法會建立最多由三層節點 (有時稱為「神經」  ) 所組成的網路。 這三層分別是「輸入層」  、「隱藏層」  和「輸出層」  。  
   
- **輸入層**：輸入節點會定義資料採礦模型的所有輸入屬性值及其機率。  
+ **輸入的層：** 輸入的節點定義資料採礦模型及其機率的所有輸入的屬性的值。  
   
- **隱藏層** ：隱藏節點會接收來自輸入節點的輸入，並提供輸出給輸出節點。 隱藏層是為輸入的各種機率指派加權之處。 加權會對隱藏節點描述特定輸入的相關性或重要性。 指派給輸入的加權越大，該輸入之值的重要性就越大。 加權可以是負數，這表示輸入可以禁止而非喜好特定結果。  
+ **隱藏的層：** 隱藏的節點會接收來自輸入節點的輸入，並提供輸出給輸出節點。 隱藏層是為輸入的各種機率指派加權之處。 加權會對隱藏節點描述特定輸入的相關性或重要性。 指派給輸入的加權越大，該輸入之值的重要性就越大。 加權可以是負數，這表示輸入可以禁止而非喜好特定結果。  
   
- **輸出層** ：輸出節點代表資料採礦模型的可預測屬性值。  
+ **輸出層：** 輸出節點代表資料採礦模型的可預測的屬性值。  
   
  如需輸入、隱藏和輸出層之建構和計分方式的詳細說明，請參閱 [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)。  
   

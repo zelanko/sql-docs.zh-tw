@@ -1,5 +1,5 @@
 ---
-title: 加入巢狀的資料表至採礦結構 |Microsoft 文件
+title: 加入巢狀的資料表至採礦結構 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c65762dc69ee1a5f84a22984995fac5e909629c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184454"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>將巢狀資料表加入至採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "34014675"
   
 2.  以滑鼠右鍵按一下您要加入資料表資料行的採礦結構。  
   
-3.  選取 [加入巢狀資料表]。  
+3.  選取 [加入巢狀資料表]  。  
   
-     這時會開啟 [選取巢狀資料表索引鍵資料行] 對話方塊。  
+     這時會開啟 [選取巢狀資料表索引鍵資料行]  對話方塊。  
   
-4.  在 [巢狀資料表] 之下，選取您要在採礦結構中建立的巢狀資料表。  
+4.  在 [巢狀資料表]  之下，選取您要在採礦結構中建立的巢狀資料表。  
   
-5.  在 [來源資料行] 之下，選取巢狀資料表的索引鍵資料行。  
+5.  在 [來源資料行]  之下，選取巢狀資料表的索引鍵資料行。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定 **Deploying Office Solutions**]。  
   
      包含索引鍵資料行的新資料表資料行，就會加入至採礦結構。 如需如何加入其他資料行的相關資訊，請參閱 [將資料行加入至採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

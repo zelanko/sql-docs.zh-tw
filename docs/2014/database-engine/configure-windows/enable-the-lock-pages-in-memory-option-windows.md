@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62782276"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
   此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。  
@@ -29,21 +29,21 @@ ms.locfileid: "52640660"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>若要啟用鎖定記憶體分頁選項  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。 在 **開放**方塊中，輸入`gpedit.msc`。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。 在 **開放**方塊中，輸入`gpedit.msc`。  
   
-2.  在 [本機群組原則編輯器] 主控台中，依序展開 [電腦設定] 和 [Windows 設定]。  
+2.  在 [本機群組原則編輯器]  主控台中，依序展開 [電腦設定]  和 [Windows 設定]  。  
   
-3.  展開 [安全性設定]，然後展開 [本機原則]。  
+3.  展開 [安全性設定]  ，然後展開 [本機原則]  。  
   
-4.  選取 [使用者權限指派] 資料夾。  
+4.  選取 [使用者權限指派]  資料夾。  
   
      這些原則會顯示在詳細資料窗格中。  
   
-5.  在窗格中按兩下 [鎖定記憶體中的分頁]。  
+5.  在窗格中按兩下 [鎖定記憶體中的分頁]  。  
   
-6.  在 [本機安全性設定 - 鎖定記憶體中的分頁] 對話方塊中，按一下 [新增使用者或群組]。  
+6.  在 [本機安全性設定 - 鎖定記憶體中的分頁]  對話方塊中，按一下 [新增使用者或群組]  。  
   
-7.  在 [選取使用者、服務帳戶或群組] 對話方塊中，加入具有執行 sqlservr.exe 權限的帳戶。  
+7.  在 [選取使用者、服務帳戶或群組]  對話方塊中，加入具有執行 sqlservr.exe 權限的帳戶。  
   
 8.  登出後再重新登入以使這項變更生效。  
   

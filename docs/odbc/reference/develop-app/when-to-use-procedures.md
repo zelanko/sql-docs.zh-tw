@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f25b629372bbe089489cccdbfa0258dafef3dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078976"
 ---
 # <a name="when-to-use-procedures"></a>程序的使用時機
 有許多優點，使用程序，所有基礎是以使用程序移動 SQL 陳述式從資料來源的應用程式。 剩下的應用程式中是互通的程序呼叫。 這些優點包括：  

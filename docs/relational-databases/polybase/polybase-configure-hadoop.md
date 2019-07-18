@@ -1,20 +1,20 @@
 ---
 title: 設定 PolyBase 存取 Hadoop 中的外部資料 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: ddda39841588be870f25046e2d85de51c1e18993
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265245"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730422"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -61,6 +61,8 @@ ms.locfileid: "56265245"
 
 2. 您必須使用 **services.msc** 重新啟動 SQL Server。 重新啟動 SQL Server 時，會重新啟動下列服務︰  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
   
@@ -73,14 +75,14 @@ ms.locfileid: "56265245"
 1. 在 SQL Server 的安裝路徑中，尋找 **yarn-site.xml** 檔案。 通常其路徑如下：  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf\  
    ```  
 
 1. 在 Hadoop 電腦上，尋找 Hadoop 組態目錄中的類比檔案。 在檔案中，尋找並複製組態機碼 yarn.application.classpath 的值。  
   
-1. 在 SQL Server 電腦上，尋找 **yarn.site.xml** 檔案中的 **yarn.application.classpath** 屬性。 將 Hadoop 電腦的值貼到 value 元素中。  
+1. 在 SQL Server 電腦上，尋找 **yarn-site.xml** 檔案中的 **yarn.application.classpath** 屬性。 將 Hadoop 電腦的值貼到 value 元素中。  
   
-1. 針對所有 CDH 5.X 版本，您需要將 mapreduce.application.classpath 組態參數新增至 yarn.site.xml 檔案結尾或 mapred-site.xml 檔案。 HortonWorks 會將這些組態包含在 yarn.application.classpath 組態內。 如需範例，請參閱 [PolyBase 組態](../../relational-databases/polybase/polybase-configuration.md)。
+1. 針對所有 CDH 5.X 版本，您需要將 mapreduce.application.classpath 設定參數新增至 yarn-site.xml 檔案結尾或 mapred-site.xml 檔案。 HortonWorks 會將這些組態包含在 yarn.application.classpath 組態內。 如需範例，請參閱 [PolyBase 組態](../../relational-databases/polybase/polybase-configuration.md)。
 
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
@@ -225,7 +227,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>在 SSMS 中檢視 PolyBase 物件  
 
-在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表] 中。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
+在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表]  中。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
   
 ![SSMS 中的 PolyBase 物件](media/polybase-management.png)  
 

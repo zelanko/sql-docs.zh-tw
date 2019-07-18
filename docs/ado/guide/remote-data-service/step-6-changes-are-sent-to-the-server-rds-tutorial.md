@@ -1,5 +1,5 @@
 ---
-title: 步驟 6： 變更傳送到伺服器 （RDS 教學課程） |Microsoft Docs
+title: 步驟 6：變更傳送到伺服器 （RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922048"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6：將變更傳送到伺服器 (RDS 教學課程)
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6：步驟 6：變更會傳送到伺服器 (RDS 教學課程)
 如果**資料錄集**編輯物件時，任何變更 （也就是資料列會加入、 變更或刪除） 傳回給伺服器。  
   
 > [!NOTE]

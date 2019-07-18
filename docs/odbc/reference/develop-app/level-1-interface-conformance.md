@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135007"
 ---
 # <a name="level-1-interface-conformance"></a>層級 1 介面一致性
 層級 1 介面一致性層級包含核心介面一致性層級功能，加上額外的功能，例如，通常可在 OLTP 關聯式 DBMS 中的交易。 層級 1 介面符合標準驅動程式可讓應用程式執行下列作業，除了核心介面一致性層級中的功能：  

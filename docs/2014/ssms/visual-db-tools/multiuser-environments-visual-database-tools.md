@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 382aca19452d5cf21a4b1112d872b12afe38782d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63305995"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多使用者環境 (Visual Database Tools)
   在多使用者環境中，其他使用者可以連接並變更您正在使用的相同資料庫。 因此數個使用者可同時使用同一個資料庫物件。 也就是說，當您在多使用者環境中進行變更時，其他使用者所做的變更可能會影響資料庫，反之亦然。  

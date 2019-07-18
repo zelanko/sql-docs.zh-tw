@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.editor.f1
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de14af686d5a8539c326fdba979c85de13076464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac1f7434dd03fc7839a5b541432836590d315ef
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684326"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685312"
 ---
 # <a name="proxy-editor---add-principal"></a>Proxy 編輯器 - 新增主體
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47684326"
 列出所選類型的主體。  
   
 **名稱**  
-選取要授與存取權給該主體的主體名稱，或選取 [名稱] 將存取權授與清單中的所有主體。  
+選取要授與存取權給該主體的主體名稱，或選取 [名稱]  將存取權授與清單中的所有主體。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)  

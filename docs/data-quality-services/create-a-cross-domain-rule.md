@@ -11,15 +11,14 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 45222a4ae99578c40ce14870433fb929c1127f51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992327"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
 
@@ -42,14 +41,14 @@ ms.locfileid: "56014220"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能建立跨定義域規則。  
   
 ##  <a name="Create"></a> 建立跨定義域規則  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]** 。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
@@ -58,7 +57,7 @@ ms.locfileid: "56014220"
   
 4.  按一下 **[CD 規則]** 索引標籤。  
   
-5.  按一下 **[加入新的定義域規則]**，然後輸入規則的名稱和描述。  
+5.  按一下 **[加入新的定義域規則]** ，然後輸入規則的名稱和描述。  
   
 6.  選取 **[使用中]** 指定將要執行此規則 (預設值)，或取消選取以防止執行此規則。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "56014220"
   
     3.  如果條件需要值，請在與條件相關聯的文字方塊中輸入值。  
   
-    4.  如果 If 子句需要另一個條件，請按一下 **[將新條件加入選取的子句]**。 必要時，請選取運算子、選取條件，然後輸入條件的值。  
+    4.  如果 If 子句需要另一個條件，請按一下 **[將新條件加入選取的子句]** 。 必要時，請選取運算子、選取條件，然後輸入條件的值。  
   
     5.  若要變更條件的順序，請按一下條件的左側加以選取，然後按一下向上或向下箭號。  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c90192e8dc652f28d70298dd7d24215c7ee869f6
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523966"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263289"
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用原生查詢匯入資料
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "52523966"
 
 
 ## <a name="see-also"></a>另請參閱  
- [Value.NativeQuery](https://msdn.microsoft.com/library/mt736917.aspx)   
+ [Value.NativeQuery](/powerquery-m/value-nativequery)   
  [模擬](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 
   

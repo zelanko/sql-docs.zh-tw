@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47b3e48e612e0ee5595ada33127f016ee6b986f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918920"
 ---
 # <a name="eos-property"></a>EOS 屬性
 表示目前位置是否在結尾[資料流](../../../ado/reference/ado-api/stream-object-ado.md)。  

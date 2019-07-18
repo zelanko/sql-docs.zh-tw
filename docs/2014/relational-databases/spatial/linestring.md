@@ -9,15 +9,15 @@ helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 543e248f19e76b0d2caca3ee595778fe430334ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014196"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是代表一連串的點及連接這些點之線段的一維度物件。  

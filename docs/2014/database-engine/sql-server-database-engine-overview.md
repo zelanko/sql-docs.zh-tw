@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843779"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server Database Engine
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供控制的存取和快速交易處理，可滿足您企業內部最嚴苛的資料取用應用程式需求。  

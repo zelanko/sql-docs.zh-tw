@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
@@ -13,15 +12,15 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079444"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 表單編輯器 (KPI 索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
-  在 Cube 設計師的 [KPI] 索引標籤上，使用 [KPI 表單編輯器] 窗格來建立或修改選取的關鍵效能指標 (KPI)。  
+  在 Cube 設計師的 [KPI]  索引標籤上，使用 [KPI 表單編輯器]  窗格來建立或修改選取的關鍵效能指標 (KPI)。  
   
 > [!NOTE]  
 >  此窗格只會以表單檢視方式顯示。  
@@ -48,7 +47,7 @@ ms.locfileid: "52523469"
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
  **狀態**  
- 展開即可編輯 [狀態圖形] 和 [狀態運算式] 選項。  
+ 展開即可編輯 [狀態圖形]  和 [狀態運算式]  選項。  
   
  **狀態圖形**  
  選取用戶端應用程式在圖形表單中用來代表狀態值的圖形。  
@@ -67,7 +66,7 @@ ms.locfileid: "52523469"
 >  值-1 和高於 1 可能會但可能不正確地解譯協力廠商用戶端應用程式。  
   
  **趨勢**  
- 展開即可編輯 [趨勢圖形] 和 [趨勢運算式] 選項。  
+ 展開即可編輯 [趨勢圖形]  和 [趨勢運算式]  選項。  
   
  **趨勢圖形**  
  選取用戶端應用程式在圖形表單中用來代表趨勢值的圖形。  
@@ -86,7 +85,7 @@ ms.locfileid: "52523469"
 >  值-1 和高於 1 可能會但可能不正確地解譯協力廠商用戶端應用程式。  
   
  **其他屬性**  
- 展開即可檢視 [顯示資料夾]、[父 KPI]、[目前時間成員]、[加權] 和 [描述] 選項。  
+ 展開即可檢視 [顯示資料夾]  、[父 KPI]  、[目前時間成員]  、[加權]  和 [描述]  選項。  
   
  **顯示資料夾**  
  鍵入用戶端應用程式用於顯示用途所使用的 KPI 分類。  
@@ -97,7 +96,7 @@ ms.locfileid: "52523469"
  選取現有的 KPI，在其下分類供用戶端應用程式使用的 KPI。  
   
 > [!NOTE]  
->  如果此選項設定為現有的 KPI，則會忽略 [顯示資料夾]。  
+>  如果此選項設定為現有的 KPI，則會忽略 [顯示資料夾]  。  
   
  **目前時間成員**  
  鍵入會傳回成員的 MDX 運算式，該成員用來識別 KPI 的暫時內容。  
@@ -105,7 +104,7 @@ ms.locfileid: "52523469"
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
 > [!IMPORTANT]  
->  MDX 計算式必須傳回成員的唯一名稱，該成員在時間維度內與 [相關聯的量值群組] 中所指定的量值群組相關聯。  
+>  MDX 計算式必須傳回成員的唯一名稱，該成員在時間維度內與 [相關聯的量值群組]  中所指定的量值群組相關聯。  
   
  **Weight**  
  展開即可檢視或編輯 KPI 加權因數的 MDX 運算式。  

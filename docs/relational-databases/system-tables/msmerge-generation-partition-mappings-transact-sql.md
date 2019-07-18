@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33a7a340edfc4dc19e4a7a88a79f76abc49df210
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5998348b599ceaad73790f581cde56763ab0ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101376"
 ---
 # <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52791650"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|識別合併式發行集|  
-|**產生**|**bigint**|層代 (Generation) 值。|  
+|**generation**|**bigint**|層代 (Generation) 值。|  
 |**partition_id**|**int**|識別資料分割。|  
 |**changecount**|**int**|變更資料分割的次數。|  
   

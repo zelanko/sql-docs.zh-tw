@@ -17,16 +17,16 @@ helpviewer_keywords:
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: c96654d1e16a3b730aa3f2a09f14da4c91971b9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145502"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,8 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 `CHECKSUM` 值取決於定序。 以不同定序儲存的相同值，將會傳回不同的 `CHECKSUM` 值。
   
+`CHECKSUM ()` 不保證結果是唯一的。
+
 ## <a name="examples"></a>範例  
 這些範例示範如何使用 `CHECKSUM` 建置雜湊索引。
   

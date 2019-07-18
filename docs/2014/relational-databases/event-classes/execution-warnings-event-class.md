@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662411"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件類別
   Execution Warnings 事件類別指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間發生的記憶體授與警告。 可監視此事件類別以判定繼續進行之前，查詢是否需等待可供使用的記憶體，或者取得記憶體的初始嘗試是否失敗。 有關查詢等候期間的資訊可協助發現系統中會影響效能的競爭問題。  

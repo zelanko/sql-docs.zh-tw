@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196742"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
   主索引鍵和外部索引鍵是兩種類型的條件約束，可用以強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd6afc441b66225bdf1696020916f701b6041db6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044163"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started 事件類別
   啟動資料表或索引掃描時，會發生 Scan:Started 事件類別。  

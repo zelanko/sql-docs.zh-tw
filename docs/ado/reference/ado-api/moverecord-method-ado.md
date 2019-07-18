@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918068"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 移動所代表之實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  
@@ -47,10 +46,10 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *密碼*  
  選擇性。 A**字串**，其中包含的密碼，如有需要請確認*UserName*。  
   
- *選項*  
+ *選項。*  
  選擇性。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值，其預設值是**adMoveUnspecified**。 指定此方法的行為。  
   
- *非同步處理*  
+ *Async*  
  選擇性。 A**布林**值，當 **，則為 True**，指定此作業應該為非同步。  
   
 ## <a name="return-value"></a>傳回值  

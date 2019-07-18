@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cadebd87f664f603a94532531432446c015039d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f6a51569d83e1ac0c8e6be6d756b70ac85ece51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966853"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns 和 Tables Append 方法、Name 屬性範例 (VC++)
 下列程式碼示範如何建立新的資料表。  

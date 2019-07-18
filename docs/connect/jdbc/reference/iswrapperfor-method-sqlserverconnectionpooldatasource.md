@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 09ed10eb-6e46-437b-a7c0-3c55574aad38
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a23a99a640c858758742dfbd0ca909d4694e295
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9d85327897da4e4c677eaf036ea067ccb9c549b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796268"
 ---
 # <a name="iswrapperfor-method-sqlserverconnectionpooldatasource"></a>isWrapperFor 方法 (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) 方法是由已自 JDBC 4.0 規格中導入的 java.sql.Wrapper 介面所定義。  
   
  如果這個方法傳回 true，則配合相同引數呼叫 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) 將會成功。  

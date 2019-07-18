@@ -11,14 +11,18 @@ ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e29d6f3619d8bfe728d9270899b3dc72b20bb12c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 807cefcb077fd5cf2d11d6ccae9800157395cfc1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724607"
 ---
 # <a name="extending-packages-with-custom-objects"></a>使用自訂物件擴充封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果發現 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中提供的元件不符合需求，可以編寫自己的延伸模組，擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 您有兩個完全不同的選項可擴充封裝：其一是在指令碼工作與指令碼元件所提供的強大包裝函數中撰寫程式碼；其二則是可以從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型提供的基底類別衍生，從頭建立自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 延伸模組。  
   
  本章節探索兩個選項當中更進階的部分：以自訂物件擴充封裝。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922800"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
 處理常式的預設行為是拒絕所有連線。 **連線**區段會指定該行為的例外狀況。 例如，如果要將所有**連線**區段已不存在或空的則預設無法建立任何連線。  
@@ -57,7 +56,7 @@ connectionString
 |部分|描述|  
 |----------|-----------------|  
 |**[連接]**|常值字串，表示這是連接字串項目。|  
-|**_ConnectionString_**|字串，取代整個用戶端連接字串。|  
+|**_connectionString_**|字串，取代整個用戶端連接字串。|  
 |**存取**|常值字串，表示這是存取項目。|  
 |**_accessRight_**|其中一個下列的存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取的資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入至資料來源。|  
   

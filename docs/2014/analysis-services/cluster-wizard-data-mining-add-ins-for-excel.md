@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [data mining]
@@ -13,12 +12,12 @@ ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7803b5a5a2fccd3381b827eb15a19e036ffa017e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087813"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>叢集精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的叢集精靈](media/dmc-cluster.gif "資料採礦功能區中的叢集精靈")  
@@ -29,7 +28,7 @@ ms.locfileid: "48164608"
   
 ## <a name="using-the-cluster-wizard"></a>使用叢集精靈  
   
-1.  在 [資料採礦功能區中，按一下**叢集**，然後按一下**下一步]**。  
+1.  在 [資料採礦功能區中，按一下**叢集**，然後按一下**下一步]** 。  
   
 2.  在 **選取來源資料**頁面上，選取 Excel 資料表或範圍。 或指定外部資料來源。  
   

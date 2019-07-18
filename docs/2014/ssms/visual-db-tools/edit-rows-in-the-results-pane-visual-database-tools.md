@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028350"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>編輯結果窗格中的資料列 (Visual Database Tools)
   在大多數的狀況下，您都可以編輯 [結果窗格](visual-database-tools.md)中的資料。 如需變更資料的詳細資訊，請參閱 [更新結果的規則 &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) 和 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)中的資料。  

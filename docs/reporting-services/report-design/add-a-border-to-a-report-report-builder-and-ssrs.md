@@ -2,18 +2,18 @@
 title: 將框線新增至報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d392c1242f9e075571a2ccc11a8668ad101146f0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c319bf967cb11c775456c2b596424d8b7df515b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574874"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>在報表中加入框線 (報表產生器及 SSRS)
   您可以藉由將框線加入頁首、頁尾和報表主體本身來在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中加入框線，而不必加入線條或矩形。    
@@ -22,14 +22,14 @@ ms.locfileid: "56294826"
     
 ## <a name="to-add-a-border-to-a-report"></a>在報表中加入框線    
     
-1.  在頁首內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁首屬性]。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、上框線和右框線。    
+1.  在頁首內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁首屬性]  。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、上框線和右框線。    
     
     > [!NOTE]    
-    >  如果您不要在報表中使用頁首，可以將框線放在報表主體的周圍，或是從 [插入] 索引標籤加入頁首。    
+    >  如果您不要在報表中使用頁首，可以將框線放在報表主體的周圍，或是從 [插入]  索引標籤加入頁首。    
     
-2.  在設計介面上以滑鼠右鍵按一下主體內任何項目的外部，然後按一下 [主體屬性]。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線和右框線。    
+2.  在設計介面上以滑鼠右鍵按一下主體內任何項目的外部，然後按一下 [主體屬性]  。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線和右框線。    
     
-3.  在頁尾內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁尾屬性]。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、下框線和右框線。    
+3.  在頁尾內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁尾屬性]  。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、下框線和右框線。    
     
 ## <a name="see-also"></a>另請參閱    
  [矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fb066b2d75efd1ea1d5974c92ea5c524165f2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925792"
 ---
 # <a name="connecting-to-data-sources"></a>連接到資料來源
 ADO**連線**物件都代表資料來源，包括 DBMS、 為檔案存放區中或以逗號分隔的文字檔案的唯一工作階段。 如果用戶端/伺服器資料庫系統，是 ADO 連接可以是實際的網路連線到伺服器。  

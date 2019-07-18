@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22cbe0cd66c3f22249a8171115a3c11c59a30ee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765917"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件之目前資料列中所指定資料行索引的值來作為 Unicode 字元資料流。  
+  從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 Unicode 字元資料流。  
   
 > [!NOTE]  
 >  JDBC 規格中已經取代這個方法，呼叫此方法將會擲回「未實作」例外狀況。 您應該改用 [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法。  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d138d5ef09c4de32b0fb279287898a4933eb4e84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfefde49bb86833025fc14c2ea84782e8caa84a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107094"
 ---
 # <a name="conversions-ole-db"></a>轉換 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47612557"
   
 -   格式**datetime**並**datetimeoffset**字串是：  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [常见*hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   **time** 字串的格式為：  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47612557"
 > [!NOTE]  
 >  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更新版本所執行的某些轉換與 OLE DB 規格不同。  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱中的 「 資料格式： 字串和常值 」 一節[OLE DB 日期和時間改善的資料型別支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱 「 資料格式：中的字串和常值 」 一節[OLE DB 日期和時間改善的資料型別支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
  下面是一般轉換規則：  
   

@@ -1,5 +1,5 @@
 ---
-title: 從採礦模型鑽研到案例資料 |Microsoft 文件
+title: 從採礦模型鑽研到案例資料 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015125"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210052"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34015125"
   
 |檢視器名稱|窗格或索引標籤名稱|選取節點|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft 樹狀檢視器**|**決策樹** 索引標籤|按一下樹狀節點。<br /><br /> **注意**：請避免在 [全部] 節點上使用鑽研，因為它可能需要很長的時間才能傳回結果。|  
+|**Microsoft 樹狀檢視器**|**決策樹** 索引標籤|按一下樹狀節點。<br /><br /> **注意**：請避免在 [全部]  節點上使用鑽研，因為它可能需要很長的時間才能傳回結果。|  
 |**Microsoft 叢集檢視器**|**群集圖表**|按一下叢集節點。|  
 |**Microsoft 叢集檢視器**|**叢集設定檔**|按一下群集資料行中的任何位置。|  
 |**Microsoft 關聯檢視器**|**規則** 索引標籤|按一下包含一組規則的資料列。|  
@@ -38,7 +38,7 @@ ms.locfileid: "34015125"
 |**Microsoft 時序群集檢視器**|**項目集** 索引標籤|按一下包含項目集的資料列。|  
   
 > [!NOTE]  
->  有些模型無法使用鑽研。 使用鑽研的能力取決於建立模型所使用的演算法。 如需支援鑽研之採礦模型類型的清單，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+>  有些模型無法使用鑽研。 使用鑽研的能力取決於建立模型所使用的演算法。 如需支援鑽研之採礦模型類型的清單，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)來加入鑽研現有採礦模型的功能。  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>若要檢視採礦模型中的鑽研資料  
   
@@ -46,15 +46,15 @@ ms.locfileid: "34015125"
   
 2.  在資料採礦設計師中，按一下 **[採礦模型檢視器]** 索引標籤。  
   
-3.  從 [採礦模型] 下拉式清單中選取模型。  
+3.  從 [採礦模型]  下拉式清單中選取模型。  
   
-4.  從 [檢視器] 下拉式清單中選取一個檢視器，然後以滑鼠右鍵按一下特定的節點。  
+4.  從 [檢視器]  下拉式清單中選取一個檢視器，然後以滑鼠右鍵按一下特定的節點。  
   
-5.  選取 [鑽研]，然後選取 [僅模型資料行] 或 [模型和結構資料行]，即可開啟 [鑽研] 視窗。  
+5.  選取 [鑽研]  ，然後選取 [僅模型資料行]  或 [模型和結構資料行]  ，即可開啟 [鑽研]  視窗。  
   
-6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
+6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

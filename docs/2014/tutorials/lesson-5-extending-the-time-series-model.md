@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62822060"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 課：擴充時間序列模型
   在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 中，您可以將新的資料加入至時間序列模型，並自動將新的資料併入此模型中。 您可以使用下列兩種方式的其中一種，將新的資料加入至時間序列採礦模型：  

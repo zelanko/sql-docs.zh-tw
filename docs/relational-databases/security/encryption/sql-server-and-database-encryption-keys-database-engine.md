@@ -12,27 +12,33 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462678"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」*(Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」金鑰)，並使用另一個密碼來解密資料 (稱為「私密」金鑰)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」* (Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」  金鑰)，並使用另一個密碼來解密資料 (稱為「私密」  金鑰)。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 當您初次啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時，會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化期間建立對稱金鑰。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用此金鑰來加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內所儲存的敏感性資料。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存資料庫中之敏感性資料的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，建立一組公開金鑰和私密金鑰。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 和資料庫金鑰的套用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對於金鑰有兩個主要的應用：針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體產生「服務主要金鑰」(SMK)，並將「資料庫主要金鑰」(DMK) 用於資料庫。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對於金鑰有兩個主要的應用：針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體產生「服務主要金鑰」  (SMK)，並將「資料庫主要金鑰」  (DMK) 用於資料庫。
+
+### <a name="service-master-key"></a>服務主要金鑰
   
- SMK 會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體第一次啟動時自動產生，並用來加密連結伺服器密碼、認證和資料庫主要金鑰。 SMK 的加密方式，是使用透過 Windows Data Protection API (DPAPI) 的本機電腦金鑰。 DPAPI 會使用一個衍生自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶和電腦認證之 Windows 認證的金鑰。 服務主要金鑰只能由建立它時所使用的服務帳戶解密，或是只能由可以存取電腦認證的主體解密。  
+ 服務主要金鑰是 SQL Server 加密階層的根。 SMK 會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體第一次啟動時自動產生，並用來加密連結伺服器密碼、認證和資料庫主要金鑰。 SMK 是以本機電腦金鑰或 Windows 資料保護 API (DPAPI) 加密。 DPAPI 會使用一個衍生自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶和電腦認證之 Windows 認證的金鑰。 服務主要金鑰只能由建立它時所使用的服務帳戶解密，或是只能由可以存取電腦認證的主體解密。
+
+服務主要金鑰只能由建立此金鑰的 Windows 服務帳戶來開啟，或是由可存取服務帳戶名稱及其密碼的主體來開啟。
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 SMK 的詳細資訊，請參閱 [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md)。
+
+### <a name="database-master-key"></a>資料庫主要金鑰
   
- 資料庫主要金鑰是一個用來保護資料庫中憑證之私密金鑰和非對稱金鑰的對稱金鑰。 它也可以用來加密資料，但是有長度上的限制，因此與對稱金鑰相較之下，它用於資料時比較不實用。  
-  
- 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密主要金鑰。 若要啟用主要金鑰的自動解密，就要使用 SMK 來加密此金鑰的複本。 這個複本會同時存放在使用它的資料庫和 **master** 系統資料庫中。  
+ 資料庫主要金鑰是一個用來保護資料庫中憑證之私密金鑰和非對稱金鑰的對稱金鑰。 它也可以用來加密資料，但是有長度上的限制，因此與對稱金鑰相較之下，它用於資料時比較不實用。 若要啟用資料庫主要金鑰的自動解密，則需使用 SMK 來加密此金鑰的複本。 這個複本會同時存放在使用它的資料庫和 **master** 系統資料庫中。  
   
  每當 DMK 變更時，也會以無訊息模式更新儲存於 **master** 系統資料庫中的 DMK 複本。 但是，此預設值可以使用 **DROP ENCRYPTION BY SERVICE MASTER KEY** 陳述式的 **ALTER MASTER KEY** 選項來加以變更。 未以服務主要金鑰加密的 DMK 必須使用 **OPEN MASTER KEY** 陳述式和密碼來開啟。  
   

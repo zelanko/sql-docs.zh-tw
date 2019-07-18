@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
@@ -13,22 +12,22 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a38f52a4d5031e2b70f11263cd73d2015abbee73
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 68a9d73139154ffd3d1343fb54a33ce103d6d7ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100934"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   資料驅動訂閱是查詢式訂閱，會在執行階段取得用於處理訂閱的資料值。 觸發訂閱時，會處理查詢以取得有關收件者、報表傳遞選項、轉譯格式，以及參數設定的最新資訊。 查詢結果會與訂閱定義結合，以建立動態訂閱，該動態訂閱會使用您已在員工資料庫、客戶資料庫，或包含可做為訂閱者資料之資訊的其他任何資料庫中維護的資料。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; SharePoint 模式|  
   
  **本主題內容：**  
   
@@ -47,7 +46,7 @@ ms.locfileid: "56037876"
   
 #### <a name="to-create-a-data-driven-subscription-native-mode"></a>若要建立資料驅動訂閱 (原生模式)  
   
-1.  在報表管理員中，導覽到包含報表的資料夾，將滑鼠停留在報表上方，接著開啟 [選項] 功能表，然後按一下 **[管理]**。  
+1.  在報表管理員中，導覽到包含報表的資料夾，將滑鼠停留在報表上方，接著開啟 [選項] 功能表，然後按一下 **[管理]** 。  
   
 2.  按一下 **[訂閱]** 索引標籤。  
   
@@ -55,21 +54,21 @@ ms.locfileid: "56037876"
   
 #### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>若要建立資料驅動訂閱 (SharePoint 模式)  
   
-1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
+1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]** 。  
   
-2.  按一下 **[加入資料驅動訂閱]**。  
+2.  按一下 **[加入資料驅動訂閱]** 。  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>若要修改現有的資料驅動訂閱 (原生模式)  
   
-1.  在報表管理員中，導覽到包含報表的資料夾，將滑鼠停留在報表上方，接著開啟 [選項] 功能表，然後按一下 **[管理]**。  
+1.  在報表管理員中，導覽到包含報表的資料夾，將滑鼠停留在報表上方，接著開啟 [選項] 功能表，然後按一下 **[管理]** 。  
   
-2.  按一下 **[訂閱]** 索引標籤。或者，按一下報表管理員頂端的 [我的訂閱] 連結。  
+2.  按一下 **[訂閱]** 索引標籤。或者，按一下報表管理員頂端的 [我的訂閱]  連結。  
   
 3.  選取您要修改的訂閱。 下列圖示代表資料驅動訂閱：![資料驅動訂閱圖示](../media/hlp-16subscriptiondd.gif "資料驅動訂閱圖示")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>若要修改現有的資料驅動訂閱 (SharePoint 模式)  
   
-1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
+1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]** 。  
   
 2.  選取您要修改的訂閱。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "56037876"
 ##  <a name="bkmk_manage_and_delete"></a> 管理和刪除資料驅動訂用帳戶  
  您無法透過報表管理員的 [管理作業] 頁面，停止或刪除正在進行中的資料驅動訂閱。 因此，建議您使用共用排程來觸發資料驅動訂閱。 這樣一來，如果您想要暫時防止訂閱處理，就可以暫停觸發訂閱的排程。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../create-manage-subscriptions-native-mode-report-servers.md)。  
   
- 若要刪除資料驅動訂閱，請從報表的 [我的訂閱] 頁面或 [訂閱] 頁面選取該訂閱，然後按一下 **[刪除]**。  
+ 若要刪除資料驅動訂閱，請從報表的 [我的訂閱] 頁面或 [訂閱] 頁面選取該訂閱，然後按一下 **[刪除]** 。  
   
  如需如何取消資料驅動訂閱的指示，請參閱 [管理執行中的處理序](manage-a-running-process.md)。  
   

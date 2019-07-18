@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466895"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "50146263"
 >  標題和限定詞都具有翻譯，而且對於給定的語言而言，可能會存在其中一個。 這表示，如果限定詞與名稱或限定詞與標題已串連，則字串可能使用兩種不同的語言。  
   
 ## <a name="additions-to-support-multidimensional-models"></a>支援多維度模型的新增功能  
- CSDLBI 1.0 版註解僅支援表格式模型。 1.1 版中已加入使用傳統 BI 開發工具所建立之多維度模型 (OLAP Cube) 的支援。 因此，現在您可以對多維度模型發出 XML 要求，並且接收模型的 CSDLBI 定義，以便於報表中使用。  
+ CSDLBI 1.0 版註解僅支援表格式模型。 1\.1 版中已加入使用傳統 BI 開發工具所建立之多維度模型 (OLAP Cube) 的支援。 因此，現在您可以對多維度模型發出 XML 要求，並且接收模型的 CSDLBI 定義，以便於報表中使用。  
   
  **Cube:** SQL Server[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格式資料庫只能包含一個模式。 相反地，每個多維度資料庫都可包含多個 Cube，且每個資料庫會與預設 Cube 產生關聯。 因此，對多維度伺服器發出 XML 要求時，必須指定 Cube，否則將會傳回預設 Cube 的 XML。  
   
@@ -131,13 +131,13 @@ ms.locfileid: "50146263"
   
  **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
- **階層：** 支援且以 CSDLBI 表示為一組層級的階層。  
+ **階層：** 階層所支援，並以 CSDLBI 表示為一組層級。  
   
- **成員：** 的支援已新增的預設成員，預設值會自動加入 CSDLBI 輸出。  
+ **成員：** 已新增支援的預設成員，預設值會自動加入 CSDLBI 輸出。  
   
- **導出成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
+ **導出的成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
   
- **維度屬性：** CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
+ **維度屬性：** 在 CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
   
  **Kpi:** CSDLBI 1.1 版中支援 Kpi，但表示法已變更。 KPI 之前是量值的屬性。 在 1.1 版中，KPI 元素可以加入至量值  
   

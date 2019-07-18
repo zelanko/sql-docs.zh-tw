@@ -16,15 +16,16 @@ helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124666"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 存取子系統的權限。  
@@ -34,7 +35,6 @@ ms.locfileid: "58534920"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_enum_proxy_for_subsystem  
     [ @proxy_id = ] proxy_id,  
     [ @proxy_name = ] 'proxy_name',  
@@ -62,6 +62,7 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|子系統的名稱。|  
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>備註  
  當未不提供任何參數時， **sp_enum_proxy_for_subsystem**列出每個子系統執行個體中的所有 proxy 的相關資訊。  
@@ -80,7 +81,7 @@ sp_enum_proxy_for_subsystem
 ### <a name="a-listing-all-associations"></a>A. 列出所有關聯  
  下列範例會列出在目前執行個體的 Proxy 和子系統之間所建立的所有權限。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -91,7 +92,7 @@ GO
 ### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. 判斷 Proxy 是否有權存取特定子系統  
  如果 `Catalog application proxy` Proxy 有權存取 `ActiveScripting` 子系統，下列範例會傳回一個資料列。 否則，這個範例會傳回空的結果集。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -102,6 +103,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

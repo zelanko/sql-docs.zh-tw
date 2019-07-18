@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3717aa3ec95c92500d66c968446f7711a6cd4e74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918028"
 ---
 # <a name="name-property-ado"></a>Name 屬性 (ADO)
 表示物件的名稱。  

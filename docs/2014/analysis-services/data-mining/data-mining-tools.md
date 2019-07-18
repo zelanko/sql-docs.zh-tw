@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084831"
 ---
 # <a name="data-mining-tools"></a>資料採礦工具。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會提供您可用來建立資料採礦方案的以下工具：  
@@ -43,7 +42,7 @@ ms.locfileid: "48171548"
 ## <a name="data-mining-wizard"></a>資料採礦精靈  
  使用資料採礦精靈開始建立資料採礦方案。 此精靈非常快速且容易使用，可引導您建立資料採礦結構和初始相關之採礦模型的程序，並包含選取演算法類型和資料來源以及定義案例資料進行分析的工作。  
   
- **如需詳細資訊︰**[Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md) (資料採礦精靈 (Analysis Services - 資料採礦))。  
+ **如需詳細資訊：**[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>[資料採礦設計師]  
  在您使用資料採礦精靈建立採礦結構和採礦模型之後，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用資料採礦設計師來處理現有的模型與結構。  
@@ -62,7 +61,7 @@ ms.locfileid: "48171548"
   
 -   針對現有的採礦模型建立預測和內容查詢。 建立一次性查詢，或是設定查詢來針對外部資料的整個資料表產生預測。  
   
- **如需詳細資訊：** [資料採礦設計師](data-mining-designer.md)  
+ **如需詳細資訊：**[資料採礦設計師](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  在您建立並將採礦模型部署到伺服器之後，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您也可以繼續執行使用此模型的工作，例如瀏覽模型、處理新的資料和建立預測。  
@@ -88,10 +87,10 @@ ms.locfileid: "48171548"
   
 -   使用羅吉斯迴歸，根據風險區隔送入的客戶。  
   
- **如需詳細資訊：**[Related Projects for Data Mining Solutions](data-mining-solutions.md) (資料採礦方案的相關專案)  
+ **如需詳細資訊：**[資料採礦方案的相關專案](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)   
  [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
  [資料採礦方案](data-mining-solutions.md)  

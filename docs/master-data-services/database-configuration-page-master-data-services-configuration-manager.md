@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e588c32a8fce8cd33f096cc22ebb2e2b9e5d0d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: efb7aac674872e723c051ecb8bf4b54430b30483
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906490"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>資料庫組態頁面 (Master Data Services 組態管理員)
 
@@ -29,7 +28,7 @@ ms.locfileid: "52817880"
 ## <a name="current-database"></a>目前的資料庫  
  選取現有的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫或建立您要編輯系統設定的新資料庫。 建立新的資料庫之後將會選取它。  
   
-|控制項名稱|Description|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**SQL Server 執行個體**|顯示選取的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  
 |**Master Data Services 資料庫**|顯示選取之 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的名稱。 在您連接到執行個體然後選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之前，這會是空白的。|  

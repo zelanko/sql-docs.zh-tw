@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
@@ -13,17 +12,17 @@ ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051098"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087554"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>正在完成精靈 (基於使用方式的最佳化精靈)
-  使用 [正在完成精靈] 頁面，即可儲存彙總設計並將它指派給選取的資料分割。 在基於使用方式的最佳化精靈完成設計和儲存彙總之後，您也可以選擇性地處理選取的資料分割。  
+  使用 [正在完成精靈]  頁面，即可儲存彙總設計並將它指派給選取的資料分割。 在基於使用方式的最佳化精靈完成設計和儲存彙總之後，您也可以選擇性地處理選取的資料分割。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **建立新的彙總設計**  
  選取此選項，即可建立新的彙總設計，然後針對新的彙總設計輸入名稱。  
   

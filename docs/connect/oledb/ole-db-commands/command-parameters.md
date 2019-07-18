@@ -16,13 +16,13 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 429fb9be40b519b30b5359295e72b5144220a5f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8a317472b2d68b82ca51496553b1b6861739f33
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794106"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795772"
 ---
 # <a name="command-parameters"></a>命令參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

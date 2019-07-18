@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9fb16415d3422035f67722f36c05cca10d1a3248
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351251"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62735901"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 方法 (ServerSettings 類別)
   從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中移除目前的安全性憑證。  

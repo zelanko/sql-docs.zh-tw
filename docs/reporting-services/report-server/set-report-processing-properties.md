@@ -1,8 +1,8 @@
 ---
 title: 設定報表處理屬性 | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140402"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
   
- 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 您也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
+ 若要設定報表執行屬性，瀏覽至入口網站中的報表，以滑鼠右鍵按一下報表，然後選取**管理**從下拉式清單。
   
 ## <a name="report-execution-modes"></a>報表執行模式  
  您可以視需要或以快照集的形式執行報表。 下一節描述每一種方法。  
   
-### <a name="running-reports-on-demand"></a>視需要執行報表  
+### <a name="running-reports-on-demand"></a>視需要執行報表 
  您可以指定每次使用者執行報表時，報表便查詢資料來源，產生包含最新資料的視需要執行報表。 針對開啟或要求報表的每個使用者，會建立報表的一個新執行個體；每個新執行個體均包含一個新查詢的結果。 使用此方法時，如果十位使用者同時開啟報表，則會傳送十個查詢至資料來源進行處理。  
   
-### <a name="running-reports-on-demand-from-cache"></a>從快取視需要執行報表  
+### <a name="running-reports-on-demand-from-cache"></a>從快取視需要執行報表 
  若要增強效能，您可以指定當使用者執行報表時，暫時快取報表 (與資料)。 快取副本後續可供其他存取相同報表的使用者使用。 使用此方法，如果有十個使用者開啟報表，則只有第一個要求會產生報表處理。 然後報表會快取，其餘九個使用者則檢視快取的報表。  
   
  快取報表會按照您定義的間隔，從快取移除。 間隔可以指定為分鐘，或者您可以安排特定的日期和時間來清空快取。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
@@ -55,9 +55,7 @@ ms.locfileid: "50031767"
   
 ## <a name="see-also"></a>另請參閱  
  [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [設定報表的執行屬性 &#40;報表管理員&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [如何：將快照集加入報表記錄](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [建立、修改及刪除報表記錄中的快照集](create-modify-and-delete-snapshots-in-report-history.md)   
  [指定報表資料來源的認證及連線資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
   

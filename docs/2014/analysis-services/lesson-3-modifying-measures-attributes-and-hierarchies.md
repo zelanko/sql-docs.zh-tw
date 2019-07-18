@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078774"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 課：修改量值、 屬性和階層
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 課：修改量值、屬性和階層
   定義初始 Cube 之後，您就可以開始改善 Cube 的效益與易懂性。 方法是，在各種層級加入支援導覽和彙總的階層、將格式套用至特定量值，以及定義計算和關聯性。  
   
 > [!NOTE]  

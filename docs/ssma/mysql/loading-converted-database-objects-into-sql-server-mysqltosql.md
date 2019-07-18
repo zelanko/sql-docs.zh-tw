@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b2e58eb534088482493e6f36c3841f36644183af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6966209300e6959e7ba9cb1afa11eb42b855d82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909009"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>將轉換的資料庫物件載入 SQL Server (MySQLToSQL)
 轉換 MySQL 資料庫之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫。  
@@ -33,7 +32,7 @@ ms.locfileid: "47732168"
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>若要同步處理的物件，與 SQL Server 或 SQL Azure  
   
-1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管，展開最上方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 節點中，然後展開**資料庫**。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管，展開最上方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 節點中，然後展開**資料庫**。  
   
 2.  選取要處理的物件：  
   

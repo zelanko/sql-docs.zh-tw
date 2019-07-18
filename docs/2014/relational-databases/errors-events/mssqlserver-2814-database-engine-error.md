@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b896aa1221f3da636d6754e829f00f0b4b5c24fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046777"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
     
@@ -71,7 +71,7 @@ ms.locfileid: "53357430"
   
      AND qs.plan_handle = *plan_handle*;  
   
-2.  為了避免重新編譯，請根據原因代碼的說明，修改陳述式、批次或程序。 例如，一個預存程序可能會包含一個或多個 SET 陳述式。 您應該從此程序中移除這些陳述式。 如需重新編譯原因和解決方案的其他範例，請參閱 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175)(SQL Server 2005 中的批次編譯、重新編譯及計畫快取問題)。  
+2.  為了避免重新編譯，請根據原因代碼的說明，修改陳述式、批次或程序。 例如，一個預存程序可能會包含一個或多個 SET 陳述式。 您應該從此程序中移除這些陳述式。 如需重新編譯原因和解決方案的其他範例，請參閱 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc966425(v=technet.10))(SQL Server 2005 中的批次編譯、重新編譯及計畫快取問題)。  
   
 3.  如果持續發生問題，請連絡 Microsoft 客戶支援服務。  
   

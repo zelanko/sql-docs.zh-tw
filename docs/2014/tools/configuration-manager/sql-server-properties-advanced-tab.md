@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028821"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
   下列屬性預設會出現在 **[進階]** 索引標籤。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
@@ -34,7 +34,7 @@ ms.locfileid: "52788130"
  顯示在發生錯誤時放置記憶體傾印的位置。  
   
  **錯誤報告**  
- 若設定為 [是]，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。 若要變更此值，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，在伺服器上按一下滑鼠右鍵，然後依序按一下 [屬性] **和 [其他伺服器設定]** 頁面。 這個選項會出現在 **[資訊報告]** 區域中。  
+ 若設定為 [是]  ，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。 若要變更此值，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，在伺服器上按一下滑鼠右鍵，然後依序按一下 [屬性]  **和 [其他伺服器設定]** 頁面。 這個選項會出現在 **[資訊報告]** 區域中。  
   
  **檔案版本**  
  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的版本。  

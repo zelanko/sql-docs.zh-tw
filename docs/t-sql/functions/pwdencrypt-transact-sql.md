@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - PWDENCRYPT function [Transact-SQL]
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: aca4425147998df6679c503436b90e208e22ea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 024d7c4a043dbc4801d5eb39fe7b05d27ef7c2b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943222"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ PWDENCRYPT ( 'password' )
 ## <a name="return-types"></a>傳回類型  
  **varbinary(128)**  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  PWDENCRYPT 可以公開使用。  
   
 ## <a name="see-also"></a>另請參閱  

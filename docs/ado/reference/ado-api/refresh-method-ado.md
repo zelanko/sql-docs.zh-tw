@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcba9515535e32557470b75267a0e99976a18595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931257"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新物件來反映，從可用的物件的集合以及特定給提供者。  

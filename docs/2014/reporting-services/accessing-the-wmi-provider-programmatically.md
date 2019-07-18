@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b35b22e4eb80ba4b391cbac6c854248db3f9553c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63232420"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以程式設計方式存取 WMI 提供者
   本主題尚在建構中。  

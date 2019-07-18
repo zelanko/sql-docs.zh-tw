@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023492"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel 事件類別
   **Lock:Cancel** 事件類別指出已取消在資源上取得鎖定，例如，由於取消查詢所導致。  

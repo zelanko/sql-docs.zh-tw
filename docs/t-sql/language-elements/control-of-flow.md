@@ -13,15 +13,15 @@ helpviewer_keywords:
 - keywords [SQL Server], control-of-flow language
 - control-of-flow language [SQL Server], keywords listed
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee162d248d6a05077002ee31e8a28413ff2f36d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f75219bca3f7fe6f359d5850709078a693e28039
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982516"
 ---
 # <a name="control-of-flow"></a>流程控制
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

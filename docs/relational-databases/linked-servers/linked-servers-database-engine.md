@@ -1,7 +1,7 @@
 ---
 title: 連結的伺服器 (Database Engine) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -20,16 +20,25 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f9e1a278e51c2ace53932fcc48ef3759baa307d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512723"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556927"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  設定連結的伺服器，可讓 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體外部的 OLE DB 資料來源執行命令。 一般會將連結的伺服器設定為可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，而此陳述式包含另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的資料表或另一個資料庫產品 (例如 Oracle) 中的資料表。 多種 OLE DB 資料來源類型可設定為連結的伺服器，包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 和 Excel。 連結伺服器可提供以下優點：  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  連結的伺服器會啟用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)，以從遠端資料來源讀取資料，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體外部的遠端資料庫伺服器 (例如 OLE DB 資料來源) 執行命令。 一般會將連結的伺服器設定為可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，而此陳述式包含另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的資料表或另一個資料庫產品 (例如 Oracle) 中的資料表。 多種 OLE DB 資料來源類型可設定為連結的伺服器，包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 及 Azure CosmosDB。
+
+> [!NOTE]
+> 連結的伺服器適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 Azure SQL Database 受控執行個體。 它們不會在 Azure SQL 資料庫的單一與彈性集區中啟用。 有一些[受控執行個體中的條件約束可以在這裡找到](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers) \(部分機器翻譯\)。 
+
+## <a name="when-to-use-linked-servers"></a>何時使用連結的伺服器？
+
+  連結的伺服器可讓您實作分散式資料庫，其可擷取及更新其他資料庫中的資料。 它們在下列情況中是很好的解決方案：您需要實作資料庫分區化，而不需建立自訂應用程式程式碼或從遠端資料來源直接載入。 連結伺服器可提供以下優點：  
   
 -   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部存取資料的能力。  
   
@@ -46,9 +55,9 @@ ms.locfileid: "51512723"
   
 -   OLE DB 資料來源  
   
-「OLE DB 提供者」是一種 DLL，可管理特定資料來源並與其互動。 「OLE DB 資料來源」則識別可透過 OLE DB 存取的特定資料庫。 雖然透過連結伺服器定義來查詢的資料來源通常都是資料庫，不過，各種檔案及檔案格式都有 OLE DB 提供者的存在。 其中包括文字檔、工作表資料，以及全文檢索內容搜尋的結果。  
+「OLE DB 提供者」  是一種 DLL，可管理特定資料來源並與其互動。 「OLE DB 資料來源」  則識別可透過 OLE DB 存取的特定資料庫。 雖然透過連結伺服器定義來查詢的資料來源通常都是資料庫，不過，各種檔案及檔案格式都有 OLE DB 提供者的存在。 其中包括文字檔、工作表資料，以及全文檢索內容搜尋的結果。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (PROGID：SQLNCLI11) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的正式 OLE DB 提供者。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (PROGID：SQLNCLI11) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供者。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散式查詢是專為處理任何實作必要 OLE DB 介面的 OLE DB 提供者而設計； 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native OLE DB 提供者以及某些其他提供者測試過。  
@@ -80,9 +89,9 @@ ms.locfileid: "51512723"
   
 -   藉由執行 **sp_dropserver**來刪除連結伺服器的定義。 您也可以使用這個預存程序來移除遠端伺服器。  
   
-您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來定義連結伺服器。 在物件總管中，以滑鼠右鍵按一下 [伺服器物件]，選取 [新增]，然後選取 [連結伺服器]。 您可以用滑鼠右鍵按一下連結伺服器名稱，並選取 [刪除]，以刪除連結伺服器定義。  
+您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來定義連結伺服器。 在物件總管中，以滑鼠右鍵按一下 [伺服器物件]  ，選取 [新增]  ，然後選取 [連結伺服器]  。 您可以用滑鼠右鍵按一下連結伺服器名稱，並選取 [刪除]  ，以刪除連結伺服器定義。  
   
- 當您對連結伺服器執行分散式查詢時，所要查詢的每個資料來源均需包含完整的四部分資料表名稱。 這個四部分名稱格式應該為 _linked\_server\_name.catalog_**.**_schema_**.**_object\_name_。  
+ 當您對連結伺服器執行分散式查詢時，所要查詢的每個資料來源均需包含完整的四部分資料表名稱。 這個四部分名稱格式應該為 _linked\_server\_name.catalog_ **.** _schema_ **.** _object\_name_。  
   
 > [!NOTE]  
 > 連結的伺服器可以定義為指回 (回送，Loopback) 到定義它們的伺服器上。 回送伺服器最適合用於測試針對單一伺服器網路使用分散式查詢的應用程式。 回送連結的伺服器主要用於測試，而且不支援許多作業，例如分散式交易。  

@@ -2,7 +2,7 @@
 title: rskeymgmt 公用程式 (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8d6d83624fc47a12387e2edf02381faa3cfaedcf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571481"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
-  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
+  擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」  是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -73,17 +73,17 @@ rskeymgmt {-?}
  **-j**  
  設定遠端報表伺服器執行個體來共用本機報表伺服器執行個體所用的報表伺服器資料庫。  
   
- **-r**  <安裝識別碼>  
- 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼> 是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
+ **-r**  <安裝識別碼>   
+ 移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼>  是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
   
- **-f**  <檔案>  
+ **-f**  <檔案>   
  指定儲存了對稱金鑰備份副本之檔案的完整路徑。  
   
  若為 **rskeymgmt -e**，對稱金鑰會寫入您指定的檔案中。  
   
  若為 **rskeymgmt -a**，便會將檔案中所儲存的對稱金鑰值套用在報表伺服器執行個體上。  
   
- **-p** <密碼>  
+ **-p** <密碼>   
  ( **-f**需要這個引數) 指定用來備份或套用對稱金鑰的密碼。 這個值不能空白。  
   
  **-i**  
@@ -95,16 +95,16 @@ rskeymgmt {-?}
  **-n**  
  指定遠端電腦中之報表伺服器執行個體的名稱。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-n** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，則需要 **-n**。  
   
- **-u**  <使用者帳戶>  
+ **-u**  <使用者帳戶>   
  指定要聯結至向外延展部署中之遠端電腦的管理員帳戶。 如果未指定帳戶，就會使用目前使用者的認證。  
   
- **-v**  <密碼>  
+ **-v**  <密碼>   
  ( **-u**需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
- **-t**  <追蹤>  
+ **-t**  <追蹤>   
  在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  您必須是執行這套工具的本機管理員，且您必須在主控報表伺服器之電腦的本機環境中執行它。 rskeymgmt 公用程式會使用本機報表伺服器 Windows 執行個體 (這個公用程式無法連接報表伺服器 Windows 服務的遠端執行個體，因此，您無法利用它來管理遠端報表伺服器執行個體的加密金鑰)。  
   
 > [!NOTE]  

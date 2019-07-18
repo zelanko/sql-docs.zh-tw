@@ -13,32 +13,32 @@ helpviewer_keywords:
 - dropping tables
 - queries [SQL Server], tables
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d0304757cb8b724a93ce02d03a889bb27e453a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 6e7546f57fa03e75dcd09cc90db4c1b656f7e018
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532796"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679495"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 您可以從查詢移除資料表或任何資料表值物件。  
   
 > [!NOTE]  
-> 移除資料表或資料表值物件並不會從資料庫刪除任何東西，只是從目前的查詢中移除。 如需從資料庫移除資料表的詳細資訊，請參閱 [如何：從資料庫刪除資料表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)。  
+> 移除資料表或資料表值物件並不會從資料庫刪除任何東西，只是從目前的查詢中移除。 如需從資料庫移除資料表的詳細資料，請參閱[如何：從資料庫刪除資料表 (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>若要移除資料表或表格化物件  
   
--   在 [圖表] 窗格中，選取資料表、檢視、使用者定義函數、同義資料表或查詢，然後按下 DELETE，或是在物件上按一下滑鼠右鍵，然後在出現的對話方塊中選擇 [移除]。 您可以一次選取並移除多個物件。  
+-   在 [圖表]  窗格中，選取資料表、檢視、使用者定義函數、同義資料表或查詢，然後按下 DELETE，或是在物件上按一下滑鼠右鍵，然後在出現的對話方塊中選擇 [移除]  。 您可以一次選取並移除多個物件。  
   
     -或-  
   
--   在 [SQL] 窗格中移除物件的所有參考。  
+-   在 [SQL]  窗格中移除物件的所有參考。  
   
-當您移除資料表或資料表值物件時，查詢和檢視表設計工具會自動移除涉及資料表或資料表值物件的聯結，並且移除與 [SQL] 窗格及 [條件] 窗格中物件資料行的參考。 但是，如果查詢包含牽涉到物件的複雜運算式，除非此物件的所有參考已經移除，否則物件將不會自動移除。  
+當您移除資料表或資料表值物件時，查詢和檢視表設計工具會自動移除涉及資料表或資料表值物件的聯結，並且移除與 [SQL]  窗格及 [條件]  窗格中物件資料行的參考。 但是，如果查詢包含牽涉到物件的複雜運算式，除非此物件的所有參考已經移除，否則物件將不會自動移除。  
   
 ## <a name="see-also"></a>另請參閱  
 [將資料表加入查詢 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  

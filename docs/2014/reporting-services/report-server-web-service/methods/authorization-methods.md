@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - tasks [Reporting Services]
 - roles [Reporting Services], methods
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 372b1de39a5d3f2032cc0eaa07403c68c8b09fba
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: daf96fad259166d64d9716064eaae4cc922d9d4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63255252"
 ---
 # <a name="authorization-methods"></a>授權方法
   您可以使用這些方法在報表伺服器上管理工作、角色和原則。  

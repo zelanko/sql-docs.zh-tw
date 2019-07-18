@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e75ebba2f48d0e2ec15ea871fe8d70a4b49e7318
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014426"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -62,10 +62,14 @@ ms.locfileid: "58493049"
 
 下列範例傳回的資料表，其中列出的資料表名稱、 資料行名稱、 標籤，標籤識別碼、 資訊類型，每個已分類資料行在資料庫中的資訊類型識別碼。
 
+> [!NOTE]
+> 標籤是 Azure SQL 資料倉儲的關鍵字。
+
 ```sql
 SELECT
-    sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    Label, Label_ID, Information_Type, Information_Type_ID
+    SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
+    sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

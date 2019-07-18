@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 09c3ffe6897107d2b3db0f53b0fdc895ee437efd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.reviewer: mathoma
+ms.openlocfilehash: 53534d9d269803a4bce0902c1f22349dfe6c57e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058888"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>重新執行追蹤，以在資料庫測試助理
 
@@ -45,14 +44,14 @@ ms.locfileid: "56987704"
 1. 依序展開**Microsoft.biztalk.deployment.deployercomponent** > **電腦** > **我的電腦** > **DCOM 設定** >  **DReplayController**。
 1. 以滑鼠右鍵按一下**DReplayController**，然後選取**屬性**。
 1. 在 **安全性**索引標籤上，選取**編輯**來新增使用者帳戶。
-1. 選取 [確定]。
+1. 選取 [確定]  。
 
 ### <a name="verify-setup"></a>確認設定
 
 1.  **SQL Server 安裝路徑**:若要安裝 SQL Server 中輸入的路徑。 例如，c:\\Program Files (x86)\\Microsoft SQL Server\\120。
 1.  **控制器電腦名稱**:輸入已為控制器設定機器的名稱。 這部電腦執行名為 SQL Server Distributed Replay controller 的 Windows 服務。 Distributed Replay controller 會協調 Distributed Replay client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。
 1.  **用戶端的電腦名稱**:輸入每個用戶端電腦，並以逗號分隔的名稱。 範例： client1，client2。 您可以有最多五個用戶端控制站。 用戶端會將一或多個機器，不論是實體或虛擬的執行名為 SQL Server Distributed Replay 用戶端的 Windows 服務。 Distributed Replay Client 會共同運作以模擬 SQL Server 執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。
-1.  選取 **[下一步]**。
+1.  選取 [下一步]  。
 
 ### <a name="select-a-trace"></a>選取 [追蹤]
 
@@ -60,15 +59,15 @@ ms.locfileid: "56987704"
 1.  **路徑來儲存重新執行前置處理輸出**:  
     \- 如果您還沒有 IRF 檔案，請輸入您想要用來儲存 IRF 檔案的位置的路徑和其他前置處理輸出。  
     \- 如果您已經有 IRF 檔案中，輸入 IRF 檔案的路徑。
-1. 選取 **[下一步]**。
+1. 選取 [下一步]  。
 
 ### <a name="replay-a-trace"></a>重新執行追蹤
 
 1.  **追蹤檔案名稱**:輸入追蹤檔案名稱。
-1.  **最大檔案大小 (MB)**:輸入追蹤檔案換用大小值。 預設值為 200 MB。 您可以輸入自訂值。
+1.  **最大檔案大小 (MB)** :輸入追蹤檔案換用大小值。 預設值為 200 MB。 您可以輸入自訂值。
 1.  **路徑來儲存重新執行追蹤輸出**:輸入輸出.trc 檔案的路徑。
 1.  **SQL Server 執行個體名稱**:輸入用來重新執行追蹤的 SQL Server 執行個體的名稱。
-1.  選取 [開始]。
+1.  選取 [開始]  。
 
 如果您輸入的資訊是有效的會啟動 Distributed Replay 程序。 否則，有不正確的資訊文字 boses 會反白顯示紅色。 請確定您輸入的值都正確無誤，然後選取**啟動**。
 
@@ -114,7 +113,7 @@ SQL Server 是一個可設定狀態的關聯式資料庫管理系統。 若要�
 
 ### <a name="what-trace-events-does-dea-collect-during-replay"></a>在重新執行期間將 DEA 收集在哪些追蹤事件？
 
-DEA 擷取包含與效能相關資訊的追蹤事件。 擷取組態是 StartReplayCaptureTrace.sql 指令碼中。 這些事件是一般的 SQL Server 追蹤事件中所列[sp_trace_setevent & Amp;#40;transact-SQL&AMP;#41; 參考文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)。
+DEA 擷取包含與效能相關資訊的追蹤事件。 擷取組態是 StartReplayCaptureTrace.sql 指令碼中。 這些事件是一般的 SQL Server 追蹤事件中所列[sp_trace_setevent &#40;transact-SQL&#41; 參考文件](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)。
 
 ## <a name="troubleshoot-trace-replay"></a>疑難排解 重新執行追蹤
 

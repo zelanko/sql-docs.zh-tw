@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c457676daa5870e90964ea4d3d25d0397797cd2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963480"
 ---
 # <a name="server-property-example-vbscript"></a>Server 屬性範例 (VBScript)
 > [!IMPORTANT]

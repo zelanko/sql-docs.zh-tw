@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900013"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]** 之頁面的 F1 說明。 下表描述此章節的主題。  

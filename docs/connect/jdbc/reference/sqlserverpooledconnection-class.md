@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfd5588e199ddf2036c60022dc1c0d915203b804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5cb094f135bb5e1bb25c3f7afb94517169035266
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691704"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791645"
 ---
 # <a name="sqlserverpooledconnection-class"></a>SQLServerPooledConnection 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

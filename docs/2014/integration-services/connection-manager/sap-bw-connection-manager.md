@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b3ee629cd7701d8b06351e8932daac57637b195e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833669"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
   SAP BW 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的連接管理員元件。 因此，SAP BW 連接管理員會提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 來源和目的地元件所需之 SAP Netweaver BW 版本 7 系統的連接 (使用 SAP BW 連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件只有屬於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Connector 1.1 for SAP BW 封裝一部分的 SAP BW 來源和目的地)。  
@@ -34,7 +34,7 @@ ms.locfileid: "58393096"
   
 -   提供單一應用程式伺服器的主機和系統編號，或提供負載平衡伺服器群組的訊息伺服器、群組和 SID。  
   
--   針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用 RFC 函數呼叫的自訂記錄 (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。若要啟用 RFC 函數呼叫的記錄，您必須指定一個目錄，用以儲存每個 RFC 函數呼叫前後建立的記錄檔  (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。如果您沒有選取記錄目錄，就不會啟用記錄功能。  
+-   針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用 RFC 函數呼叫的自訂記錄 (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。若要啟用 RFC 函數呼叫的記錄，您必須指定一個目錄，用以儲存每個 RFC 函數呼叫前後建立的記錄檔 (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。如果您沒有選取記錄目錄，就不會啟用記錄功能。  
   
     > [!IMPORTANT]  
     >  如果傳輸的資料包含機密資訊，這些記錄檔也會包含該項機密資訊。  

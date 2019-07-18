@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832449"
 ---
 # <a name="data-flow-task"></a>資料流程工作
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  
@@ -86,7 +86,7 @@ ms.locfileid: "58392099"
   
  許多記錄事件會寫入多個項目，並且有些記錄項目的訊息包含複雜的資料。 若要更容易了解和溝通複雜訊息的內容，您可以剖析訊息文字。 視記錄的位置而定，您可以使用 Transact-SQL 陳述式或指令碼元件，將複雜的文字區分成資料行或其他更有用的格式。  
   
- 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185 :OLE DB 來源輸出：1180 :排序：1181 :排序輸入：76 」 剖析成資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
+ 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185 :OLE DB 來源輸出 :1180 :排序 :1181 :排序輸入 :76"，剖析為資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
   
 |「資料行」|描述|值|  
 |------------|-----------------|-----------|  
@@ -99,9 +99,9 @@ ms.locfileid: "58392099"
 |**RowsSent**|已傳送至「排序」轉換之輸入的資料列數目。|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>資料流程工作的組態  
- 您可以在 [屬性] 視窗中或以程式設計方式設定屬性。  
+ 您可以在 [屬性]  視窗中或以程式設計方式設定屬性。  
   
- 如需如何在 [屬性] 視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
+ 如需如何在 [屬性]  視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
   
 -   [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084600"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
-  「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
+  「鑽研」  表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
   

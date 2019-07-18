@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62729066"
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
   您可以使用[Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)命令，在 XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令會以資料列集傳回追蹤的結果。  
@@ -39,9 +37,9 @@ ms.locfileid: "50146463"
 |------------|---------------|-----------------|  
 |EventClass|Integer|追蹤所收到的事件類別。|  
 |EventSubclass|長整數|追蹤所收到的事件子類別。|  
-|CurrentTime|DATETIME|事件啟動的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|StartTime|DATETIME|事件啟動的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|EndTime|DATETIME|事件的結束時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。<br /><br /> 這個資料行不會為描述處理序或動作之開始的事件類別而擴展。|  
+|CurrentTime|Datetime|事件啟動的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|StartTime|Datetime|事件啟動的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
+|EndTime|Datetime|事件的結束時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。<br /><br /> 這個資料行不會為描述處理序或動作之開始的事件類別而擴展。|  
 |Duration|長整數|事件所經歷的總時間 (以毫秒為單位)。|  
 |CPUTime|長整數|事件所經歷的處理器時間 (以毫秒為單位)。|  
 |JobID|長整數|處理序的作業識別碼。|  
@@ -56,7 +54,7 @@ ms.locfileid: "50146463"
 |ObjectReference|String|以 XML 表示法呈現 ObjectName 中指定之物件的物件參考。|  
 |NestLevel|Integer|發生事件的交易等級。|  
 |NumSegments|長整數|發生事件的命令所影響或是存取的資料區段數目。|  
-|Severity|Integer|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> 值： 0 = 成功<br /><br /> 值： 1 = 資訊<br /><br /> 值： 2 = 警告<br /><br /> Value: 3 = 錯誤|  
+|Severity|Integer|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> 值：0 = 成功<br /><br /> 值：1 = 資訊<br /><br /> 值：2 = 警告<br /><br /> 值：3 = 錯誤|  
 |成功|布林|指出命令是成功或失敗。|  
 |錯誤|長整數|事件的錯誤號碼 (如果適用的話)。|  
 |ConnectionID|String|發生事件的連接識別碼。|  

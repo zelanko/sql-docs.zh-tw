@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124075"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引數  
  '*query_text*'  
- 這是要產生參數化版本的查詢。 '*query_text*' 必須括在單引號中，且前面必須有 N Unicode 規範。 N'*query_text*' 的值指派給@querytext參數。 這屬於類型**nvarchar （max)**。  
+ 這是要產生參數化版本的查詢。 '*query_text*' 必須括在單引號中，且前面必須有 N Unicode 規範。 N'*query_text*' 的值指派給@querytext參數。 這屬於類型**nvarchar （max)** 。  
   
  @templatetext  
  是輸出參數的型別**nvarchar （max)** 指示，以接收的參數化的格式提供*query_text*字串常值。  

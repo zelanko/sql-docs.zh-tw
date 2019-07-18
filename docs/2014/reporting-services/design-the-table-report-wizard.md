@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: afde237bf423d5b59af2d94e27ada9d641557fb9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109275"
 ---
 # <a name="design-the-table-report-wizard"></a>設計資料表 (報表精靈)
   使用報表精靈的這個頁面，即可選取要放入報表的欄位。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的欄位**  
- 選擇顯示在資料表上方頁面上的欄位，在資料表群組中或在資料表詳細資料中。 若要將欄位從 [可用的欄位] 移至 [頁面]、[群組] 或 [詳細資料]，請選取該欄位，然後按一下 [頁面]、[群組] 或 [詳細資料]。 或者，您可以將欄位拖曳至適當的方塊。  
+ 選擇顯示在資料表上方頁面上的欄位，在資料表群組中或在資料表詳細資料中。 若要將欄位從 [可用的欄位]  移至 [頁面]  、[群組]  或 [詳細資料]  ，請選取該欄位，然後按一下 [頁面]  、[群組]  或 [詳細資料]  。 或者，您可以將欄位拖曳至適當的方塊。  
   
  **顯示的欄位**  
  顯示已經指派至頁面、群組或詳細資料的欄位。 按一下 **[移除]** ，即可從清單中刪除欄位。  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b6f3960b47c647d51543344b3a8e694fec575336
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 348a8c1fa8ccdb4ade5b2ee3d39d6ecacf6e5a03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63317091"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>將參數加入行動報表中 | Reporting Services
 您可以使用參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，讓您和您報表的讀者可以篩選報表。 使用參數的報表也可以是[從來源報表鑽研](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)的目標。 
@@ -22,15 +22,15 @@ ms.locfileid: "56287846"
 
 將參數加入行動報表之後，您可以建立 URL 以 [使用查詢字串參數開啟報表](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)。 
 
-1. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] Web 入口網站的頂端列中，選取 [新增] > [行動報表]。  
+1. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] Web 入口網站的頂端列中，選取 [新增]   > [行動報表]  。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 選取 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 左上角的 [資料] 索引標籤。   
+2. 選取 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 左上角的 [資料]  索引標籤。   
   
-3. 選取右上角的 [新增資料]。  
+3. 選取右上角的 [新增資料]  。  
   
-4. 選取 [報表伺服器]，然後選取伺服器。  
+4. 選取 [報表伺服器]  ，然後選取伺服器。  
   
 5. 瀏覽至伺服器上的共用資料集，然後選取具有參數的伺服器。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56287846"
      
    ![SSMRP_PforParam](../../reporting-services/mobile-reports/media/ssmrp-pforparam.png)  
   
-6. 選取索引標籤上的齒輪，然後選取 **Param {}**。  
+6. 選取索引標籤上的齒輪，然後選取 **Param {}** 。  
   
    ![SSMRP_ParamWheel](../../reporting-services/mobile-reports/media/ssmrp-paramwheel.png)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "56287846"
   
    ![SSMRP_SetParam](../../reporting-services/mobile-reports/media/ssmrp-setparam.png)  
      
-8. 選取 [預覽] 查看報表的外觀。 在此報表中，選擇清單使用類別目錄參數。
+8. 選取 [預覽]  查看報表的外觀。 在此報表中，選擇清單使用類別目錄參數。
 
    ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    

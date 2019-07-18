@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97887c5e67fe71708d0f8aee24340d93e4ce2cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6455b582fe89fc12d32b52a2c4c1edfc323bdd73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695916"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766786"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

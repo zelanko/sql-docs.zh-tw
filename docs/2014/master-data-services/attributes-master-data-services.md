@@ -14,15 +14,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480150"
 ---
 # <a name="attributes-master-data-services"></a>屬性 (Master Data Services)
   屬性是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 實體中包含的物件。 屬性值描述實體的成員。 屬性可用來描述分葉成員、合併成員或集合。  
@@ -58,7 +58,7 @@ ms.locfileid: "52748060"
 -   如果牽涉到浮點數，值可能無法 *「往返」* (Roundtrip)。 如果運算將原始浮點數轉換成另一個形式，反運算將轉換的形式轉換回浮點數，而最終浮點數等於原始浮點數，值稱為往返。 往返可能因為轉換中遺漏或變更一個或多個最低有效位數而失敗。  
   
 ## <a name="attribute-examples"></a>屬性範例  
- 在下列範例中，實體具有屬性：名稱、 程式碼、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
+ 在下列範例中，實體具有屬性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
  ![自行車產品實體資料表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   

@@ -1,5 +1,5 @@
 ---
-title: 串連運算子 |Microsoft 文件
+title: 串連運算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8eacfc08fdeb0f92874758d0f95e5cde3e6b295a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915865"
 ---
 # <a name="concatenation-operators"></a>串連運算子
 

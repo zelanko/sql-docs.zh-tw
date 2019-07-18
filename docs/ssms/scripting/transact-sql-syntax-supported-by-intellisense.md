@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9c5ecf06050931a8bb94c6946e97b15a312ef09
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c38ed37a3cdf0febed98be98b397847ee689e04f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642800"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684760"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -132,6 +132,6 @@ GO
 SELECT   
 ```  
   
- 在您輸入 `SELECT`之後，IntelliSense 就會列出 **[PrimaryKeyCol]**、 **[FirstNameCol]** 和 **[LastNameCol]** 當做選取清單中的可能元素，即使該指令碼尚未執行而且 `MyTable` 尚未存在 `MyTestDB`中也一樣。  
+ 在您輸入 `SELECT`之後，IntelliSense 就會列出 **[PrimaryKeyCol]** 、 **[FirstNameCol]** 和 **[LastNameCol]** 當做選取清單中的可能元素，即使該指令碼尚未執行而且 `MyTable` 尚未存在 `MyTestDB`中也一樣。  
   
   

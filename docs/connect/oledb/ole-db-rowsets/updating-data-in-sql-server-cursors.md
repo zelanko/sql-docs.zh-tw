@@ -17,13 +17,13 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: ef4f863e4aca24cff654469f6447c02814008089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5cb6c20746746d3261593e13978be022af8938a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706106"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803815"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

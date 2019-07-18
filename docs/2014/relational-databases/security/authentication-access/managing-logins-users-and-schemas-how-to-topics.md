@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011493"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登入、使用者與結構描述的使用說明主題
   本頁面提供的主題連結，將會為您示範如何管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、資料庫使用者和資料庫結構描述，以及如何加入角色和將權限授與主體。  

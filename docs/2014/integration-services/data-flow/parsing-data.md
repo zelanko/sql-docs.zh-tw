@@ -14,17 +14,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd52b851d4ff35fe1fc9a3a9fed05be0b8098fa9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900987"
 ---
 # <a name="parsing-data"></a>剖析資料
   封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](integration-services-data-types.md)。  
   
 ## <a name="types-of-parsing"></a>剖析的類型  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩種用於轉換資料剖析類型：快速剖析和標準剖析。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩種用於轉換資料的剖析類型：快速剖析和標準剖析。  
   
 -   快速剖析是一組快速而簡單的剖析常式，它不支援地區設定特定的資料類型轉換，僅支援最常用的日期和時間格式。 如需相關資訊，請參閱 [Fast Parse](../fast-parse.md)。  
   

@@ -14,14 +14,18 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0e129306c256106da59c890d32a96c9b1d81abd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 865a3c4eab996e41c08477b275b44250d43eb993
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716031"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的安全性實體物件授與權限。  
@@ -37,7 +41,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引數  
  [ @object_type = ] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint**_。_  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
  安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  

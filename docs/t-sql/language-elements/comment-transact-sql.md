@@ -19,16 +19,16 @@ helpviewer_keywords:
 - -- (comment character)
 - comments [SQL Server]
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c563386c120ee898868aefdef6004b1b4776a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bfe7d296aece6b62df151bd7880ed474a56200c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613946"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982707"
 ---
 # <a name="---comment-transact-sql"></a>-- (註解) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

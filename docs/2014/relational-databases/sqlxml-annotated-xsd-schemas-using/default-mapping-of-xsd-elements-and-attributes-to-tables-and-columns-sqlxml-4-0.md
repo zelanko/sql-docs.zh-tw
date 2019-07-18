@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 673e96509061f3d4fdc808b4165ff56991baa8ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013875"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
   根據預設，XSD 註解式結構描述中的複雜類型元素會對應到指定之資料庫中具有相同名稱的資料表 (檢視表)，而簡單類型的元素或屬性會對應到資料表中具有相同名稱的資料行。  
@@ -40,7 +40,7 @@ ms.locfileid: "52793680"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定預設對應  
- 在這個範例的 XDR 結構描述中不會指定任何註解。  **\<Person.Contact >** 元素屬於複雜類型，因此，對應至 AdventureWorks 資料庫中的 Person.Contact 資料表的預設值。 所有屬性 (ContactID，FirstName，LastName) 的 **\<Person.Contact >** 項目都屬於簡單類型，而且對應到 Person.Contact 資料表中相同名稱的資料行的預設值。  
+ 在這個範例的 XDR 結構描述中不會指定任何註解。 **\<Person.Contact >** 元素屬於複雜類型，因此，對應至 AdventureWorks 資料庫中的 Person.Contact 資料表的預設值。 所有屬性 (ContactID，FirstName，LastName) 的 **\<Person.Contact >** 項目都屬於簡單類型，而且對應到 Person.Contact 資料表中相同名稱的資料行的預設值。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +91,7 @@ ms.locfileid: "52793680"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 將 XML 元素對應至資料庫資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。  **\<Person.Contact >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 項目 **\<FirstName >** 並 **\<LastName >** 而**EmployeeID**屬性都屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Person.Contact >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 項目 **\<FirstName >** 並 **\<LastName >** 而**EmployeeID**屬性都屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +145,7 @@ ms.locfileid: "52793680"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 將 XML 元素對應至 XML 資料類型資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。  **\<Production.ProductModel >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於**\<指示 >** 項目對應至使用的資料行`xml`使用的資料型別`xsd:anyType`型別。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於 **\<指示 >** 項目對應至使用的資料行`xml`使用的資料型別`xsd:anyType`型別。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

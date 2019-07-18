@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944650"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 SSMA for MySQL 可在不同的 SQL 模式中操作，而且可以不同的用戶端以不同的方式套用這些模式。  

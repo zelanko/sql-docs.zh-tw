@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078997"
 ---
 # <a name="quoted-identifiers"></a>引號識別碼
 SQL 陳述式中包含特殊字元或多個相符項目關鍵字的識別項必須括住*識別項的引號字元*; 這類字元括住的識別項稱為*引號識別項*(也稱為*分隔識別碼*以 SQL-92)。 例如，Accounts Payable 識別碼已加上引號下列**選取**陳述式：  

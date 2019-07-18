@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376676"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060765"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>設定檢查點以重新啟動失敗的封裝
   您可以藉由設定套用到檢查點的屬性，來設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，使之從失敗點重新啟動，而不必重新執行整個封裝。  
@@ -33,7 +32,7 @@ ms.locfileid: "58376676"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
 5.  將 SaveCheckpoints 屬性設定為`True`。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "58376676"
   
 8.  設定封裝可重新啟動的工作和容器。  
   
-    -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]。  
+    -   以滑鼠右鍵按一下工作或容器，然後按一下 [屬性]  。  
   
     -   FailPackageOnFailure 屬性設為`True`每個所選工作和容器。  
   

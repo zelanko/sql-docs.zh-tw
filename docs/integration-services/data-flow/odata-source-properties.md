@@ -11,15 +11,19 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1eacda4e9c37c861b323b306865f829a240610
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6a7bc11692944f5da349760e3b1e12f473fb15b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726677"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
-當您以滑鼠右鍵按一下資料流程中的 [OData 來源] 並按一下 [屬性] 時，您會看到 [OData 來源] 元件的屬性出現在 [屬性] 視窗中。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+當您以滑鼠右鍵按一下資料流程中的 [OData 來源]  並按一下 [屬性]  時，您會看到 [OData 來源]  元件的屬性出現在 [屬性]  視窗中。  
 
 ## <a name="properties"></a>屬性 
 

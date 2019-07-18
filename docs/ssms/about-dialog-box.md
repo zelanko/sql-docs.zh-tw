@@ -11,19 +11,19 @@ helpviewer_keywords:
 - status information [SQL Server Management Studio]
 - About dialog box
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3544d981d9d8a206d026b4157aef6336a70f94e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fc0c392851ebd91690654ba328eff71712d61c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65089422"
 ---
 # <a name="about-dialog-box"></a>關於對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-[關於] 對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明] 功能表存取此對話方塊。  
+[關於]  對話方塊提供產品資訊，並可讓您存取產品所在之機器的相關資訊。 若為評估版，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 項目會列出安裝到期前的剩餘天數。 您可以從 [說明]  功能表存取此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **元件名稱**  

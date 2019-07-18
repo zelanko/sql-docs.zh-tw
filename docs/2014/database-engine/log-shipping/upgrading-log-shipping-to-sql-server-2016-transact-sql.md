@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042427"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775393"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
   當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，可保留記錄傳送組態。 本主題描述升級記錄傳送組態的替代案例和最佳做法。  
@@ -128,7 +128,7 @@ ms.locfileid: "59042427"
   
     4.  將用戶端從原始主要伺服器 (伺服器 A) 重新導向線上次要伺服器 (伺服器 B) 來容錯移轉資料庫。  
   
-    5.  請注意，當資料庫在線上時，次要資料庫的交易記錄並不會填滿。 若要避免交易記錄被填滿，您可能需要加以備份。 如果是這種情況，我們建議您將它備份到共用位置 ( *「備份共用」*(Backup Share))，讓備份可在其他伺服器執行個體上用來還原。  
+    5.  請注意，當資料庫在線上時，次要資料庫的交易記錄並不會填滿。 若要避免交易記錄被填滿，您可能需要加以備份。 如果是這種情況，我們建議您將它備份到共用位置 ( *「備份共用」* (Backup Share))，讓備份可在其他伺服器執行個體上用來還原。  
   
 #####  <a name="Procedure2"></a> 程序 2:原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在您將原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫仍然會在離線狀態而且採用格式。  
@@ -193,7 +193,7 @@ ms.locfileid: "59042427"
 > [!IMPORTANT]  
 >  在升級主要伺服器之前，請務必先升級所有次要伺服器執行個體。  
   
- **若要使用容錯移轉升級然後切換回原始的主要伺服器**  
+ **若要升級使用容錯移轉，然後再切換回原始主要伺服器**  
   
 1.  升級所有必要的伺服器執行個體 (伺服器 B 和 C)。  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042427"
 ## <a name="see-also"></a>另請參閱  
  [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)  

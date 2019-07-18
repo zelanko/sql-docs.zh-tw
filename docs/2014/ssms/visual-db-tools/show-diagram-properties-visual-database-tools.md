@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b26b05f41b23d1626fe3d9f7704d334bfe650098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070961"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>顯示圖表屬性 (Visual Database Tools)
   您可以在 [屬性] 視窗中顯示資料庫圖表的屬性。  

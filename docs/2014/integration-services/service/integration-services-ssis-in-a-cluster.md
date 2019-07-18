@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62889298"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
   不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 338d0161a18c31510f6be0b637f888fafbd99255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088783"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 受控類別 - SqlXmlParameter 物件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

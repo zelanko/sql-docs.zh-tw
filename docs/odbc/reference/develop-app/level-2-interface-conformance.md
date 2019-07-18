@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50e74eaed2d651158834a241563d10b3b2e90d5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915577"
 ---
 # <a name="level-2-interface-conformance"></a>層級 2 介面一致性
 層級 2 介面一致性層級包含層級 1 介面一致性層級功能以及下列功能：  

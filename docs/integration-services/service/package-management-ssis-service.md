@@ -28,14 +28,18 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00ed915265b9b3c19e7bafdcf7d6c41208e8319a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805263"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   套件管理包含監視、管理、匯入和匯出套件。  
  
  ## <a name="package-store"></a>封裝存放區  
@@ -55,16 +59,16 @@ ms.locfileid: "58280462"
   
  **[Running Packages]** 資料夾不包含子資料夾，且不可延伸。  
   
- 依預設，[Stored Packages] 資料夾包含兩個資料夾：[File System] 和 [MSDB]。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
+ 依預設，[Stored Packages]  資料夾包含兩個資料夾：[File System]  和 [MSDB]  。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
   
  若要檢視封裝存放區中的封裝清單，您必須開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
 ## <a name="monitor-running-packages"></a>監視執行中套件  
- [Running Packages] 資料夾會列出目前正在執行的套件。 若要在 **的** [摘要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]頁面上檢視有關目前封裝的資訊，請按一下 **Running Packages** 資料夾。 **[摘要]** 頁面上會列出諸如正在執行封裝的執行持續時間等資訊。 選擇性地重新整理資料夾以顯示最新的資訊。  
+ [Running Packages]  資料夾會列出目前正在執行的套件。 若要在 **的** [摘要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]頁面上檢視有關目前封裝的資訊，請按一下 **Running Packages** 資料夾。 **[摘要]** 頁面上會列出諸如正在執行封裝的執行持續時間等資訊。 選擇性地重新整理資料夾以顯示最新的資訊。  
   
  若要在 **[摘要]** 頁面上檢視有關單一正在執行封裝的資訊，請按一下該封裝。 **[摘要]** 頁面會顯示諸如封裝的版本和描述等資訊。  
   
-在 [Running Packages] 資料夾中以滑鼠右鍵按一下套件，然後按一下 [停止]，以停止執行中套件。  
+在 [Running Packages]  資料夾中以滑鼠右鍵按一下套件，然後按一下 [停止]  ，以停止執行中套件。  
   
 ## <a name="view-packages-in-ssms"></a>檢視 SSMS 中的套件
     
@@ -72,12 +76,12 @@ ms.locfileid: "58280462"
   
 ### <a name="to-connect-to-integration-services"></a>連接到 Integration Services  
   
-1.  按一下 **[開始]**，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Management Studio]**。  
+1.  按一下 **[開始]** ，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server Management Studio]** 。  
   
-2.  在 [連接到伺服器] 對話方塊中，選取 [伺服器類型] 清單中的 [Integration Services]，在 [伺服器名稱] 方塊中提供伺服器名稱，然後按一下 [連接]。  
+2.  在 [連接到伺服器]  對話方塊中，選取 [伺服器類型]  清單中的 [Integration Services]  ，在 [伺服器名稱]  方塊中提供伺服器名稱，然後按一下 [連接]  。  
   
     > [!IMPORTANT]  
-    >  如果您無法連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]**，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。 在左窗格中，按一下 **[SQL Server 服務]**。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
+    >  如果您無法連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]** ，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。 在左窗格中，按一下 **[SQL Server 服務]** 。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 隨即開啟。 依預設，[物件總管] 視窗會在 Studio 左下角開啟並定位。 如果 [物件總管] 未開啟，請按一下 **[檢視]** 功能表上的 **[物件總管]** 。  
   
@@ -121,73 +125,73 @@ ms.locfileid: "58280462"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯入封裝  
   
-1.  按一下 [開始]、指向 [Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]，然後按一下 [SQL Server Management Studio]。  
+1.  按一下 [開始]  、指向 [Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  ，然後按一下 [SQL Server Management Studio]  。  
   
-2.  在 [連接到伺服器] 對話方塊上，設定下列選項：  
+2.  在 [連接到伺服器]  對話方塊上，設定下列選項：  
   
-    -   在 [伺服器類型] 方塊中，選取 [Integration Services]。  
+    -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]  ，並尋找要使用的伺服器。  
   
-3.  如果物件總管尚未開啟，請在 [檢視] 功能表上，按一下物件總管。  
+3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   
-4.  在物件總管中，展開 [存放的封裝] 資料夾。  
+4.  在物件總管中，展開 [存放的封裝]  資料夾。  
   
 5.  展開子資料夾以尋找您要匯入封裝的資料夾。  
   
-6.  以滑鼠右鍵按一下資料夾，然後按一下 [匯入封裝]。 然後執行下列其中之一：  
+6.  以滑鼠右鍵按一下資料夾，然後按一下 [匯入封裝]  。 然後執行下列其中之一：  
   
-    -   若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體匯入，請選取 [SQL Server] 選項，然後指定伺服器並選取驗證模式。 如果選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱和密碼。  
+    -   若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體匯入，請選取 [SQL Server]  選項，然後指定伺服器並選取驗證模式。 如果選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱和密碼。  
   
-         按一下瀏覽按鈕 ([...])，選取要匯入的封裝，然後按一下 [確定]。  
+         按一下瀏覽按鈕 ([...])  ，選取要匯入的封裝，然後按一下 [確定]  。  
   
-    -   若要從檔案系統匯入，請選取 [檔案系統] 選項。  
+    -   若要從檔案系統匯入，請選取 [檔案系統]  選項。  
   
-         按一下瀏覽按鈕 ([...])，選取要匯入的封裝，然後按一下 [開啟]。  
+         按一下瀏覽按鈕 ([...])  ，選取要匯入的封裝，然後按一下 [開啟]  。  
   
-    -   若要從 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區匯入，請選取 [SSIS 封裝存放區] 選項並指定伺服器。  
+    -   若要從 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區匯入，請選取 [SSIS 封裝存放區]  選項並指定伺服器。  
   
-         按一下瀏覽按鈕 ([...])，選取要匯入的封裝，然後按一下 [確定]。  
+         按一下瀏覽按鈕 ([...])  ，選取要匯入的封裝，然後按一下 [確定]  。  
   
 7.  (選擇性) 更新封裝名稱。  
   
-8.  若要更新封裝的保護等級，請按一下瀏覽按鈕 ([...])，並使用 [封裝保護等級] 對話方塊選擇其他保護等級。 如果選取 [機密資料以密碼加密] 或 [所有資料以密碼加密] 選項，請鍵入並確認密碼。  
+8.  若要更新封裝的保護等級，請按一下瀏覽按鈕 ([...])  ，並使用 [封裝保護等級]  對話方塊選擇其他保護等級。 如果選取 [機密資料以密碼加密]  或 [所有資料以密碼加密]  選項，請鍵入並確認密碼。  
   
-9. 按一下 [確定] 以完成匯入。  
+9. 按一下 [確定]  以完成匯入。  
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯出封裝  
   
-1.  按一下 [開始]、指向 [Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]，然後按一下 [SQL Server Management Studio]。  
+1.  按一下 [開始]  、指向 [Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  ，然後按一下 [SQL Server Management Studio]  。  
   
-2.  在 [連接到伺服器] 對話方塊上，設定下列選項：  
+2.  在 [連接到伺服器]  對話方塊上，設定下列選項：  
   
-    -   在 [伺服器類型] 方塊中，選取 [Integration Services]。  
+    -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱] 方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]  ，並尋找要使用的伺服器。  
   
-3.  如果物件總管尚未開啟，請在 [檢視] 功能表上，按一下物件總管。  
+3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   
-4.  在物件總管中，展開 [存放的封裝] 資料夾。  
+4.  在物件總管中，展開 [存放的封裝]  資料夾。  
   
 5.  展開子資料夾，以找出您要匯出的封裝。  
   
-6.  以滑鼠右鍵按一下封裝，再按一下 [匯出]，然後執行下列其中之一：  
+6.  以滑鼠右鍵按一下封裝，再按一下 [匯出]  ，然後執行下列其中之一：  
   
-    -   若要匯出至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請選取 [SQL Server] 選項，然後指定伺服器並選取驗證模式。 如果選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱和密碼。  
+    -   若要匯出至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請選取 [SQL Server]  選項，然後指定伺服器並選取驗證模式。 如果選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱和密碼。  
   
-         按一下瀏覽按鈕 ([...]) 並展開 [SSIS 封裝] 資料夾，以找出您要儲存封裝的資料夾。 (選擇性) 更新封裝的預設名稱並按一下 [確定]。  
+         按一下瀏覽按鈕 ([...])  並展開 [SSIS 封裝]  資料夾，以找出您要儲存封裝的資料夾。 (選擇性) 更新封裝的預設名稱並按一下 [確定]  。  
   
-    -   若要匯出至檔案系統，請選取 [檔案系統] 選項。  
+    -   若要匯出至檔案系統，請選取 [檔案系統]  選項。  
   
-         按一下瀏覽按鈕 ([...]) 找出您要匯出封裝的目標資料夾、輸入封裝檔案的名稱，然後按一下 [儲存]。  
+         按一下瀏覽按鈕 ([...])  找出您要匯出封裝的目標資料夾、輸入封裝檔案的名稱，然後按一下 [儲存]  。  
   
-    -   若要匯出至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區，請選取 [SSIS 封裝存放區] 選項，並指定伺服器。  
+    -   若要匯出至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區，請選取 [SSIS 封裝存放區]  選項，並指定伺服器。  
   
-         按一下瀏覽按鈕 ([...])，展開 [SSIS 封裝] 資料夾，並選取您要儲存封裝的資料夾。 (選擇性) 在 [封裝名稱] 文字方塊中輸入封裝的新名稱。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         按一下瀏覽按鈕 ([...])  ，展開 [SSIS 封裝]  資料夾，並選取您要儲存封裝的資料夾。 (選擇性) 在 [封裝名稱]  文字方塊中輸入封裝的新名稱。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  若要更新封裝的保護等級，請按一下瀏覽按鈕 ([...])，並使用 [封裝保護等級] 對話方塊選擇其他保護等級。 如果選取 [機密資料以密碼加密] 或 [所有資料以密碼加密] 選項，請鍵入並確認密碼。  
+7.  若要更新封裝的保護等級，請按一下瀏覽按鈕 ([...])  ，並使用 [封裝保護等級]  對話方塊選擇其他保護等級。 如果選取 [機密資料以密碼加密]  或 [所有資料以密碼加密]  選項，請鍵入並確認密碼。  
   
-8.  按一下 [確定] 以完成匯出。  
+8.  按一下 [確定]  以完成匯出。  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>匯入封裝對話方塊 UI 參考
   使用 **[匯入封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]存取)，即可匯入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，並設定或修改封裝的保護等級。  
@@ -221,13 +225,13 @@ ms.locfileid: "58280462"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
  **封裝路徑**  
- 輸入封裝路徑，或按一下瀏覽按鈕 ([...])，然後找出封裝。  
+ 輸入封裝路徑，或按一下瀏覽按鈕 ([...])  ，然後找出封裝。  
   
  **封裝名稱**  
  選擇性地重新命名封裝。 預設名稱是要匯入的封裝名稱。  
   
  **保護等級**  
- 按一下瀏覽按鈕 ([...]) 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 按一下瀏覽按鈕 ([...])  並更新 [封裝保護等級]  對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
@@ -261,10 +265,10 @@ ms.locfileid: "58280462"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
  **封裝路徑**  
- 輸入封裝路徑，或按一下瀏覽按鈕 ([...])，並找出要儲存封裝的資料夾。  
+ 輸入封裝路徑，或按一下瀏覽按鈕 ([...])  ，並找出要儲存封裝的資料夾。  
   
  **保護等級**  
- 按一下瀏覽按鈕 ([...]) 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
+ 按一下瀏覽按鈕 ([...])  並更新 [封裝保護等級]  對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)。  
 
 ## <a name="back-up-and-restore-packages"></a>備份和還原套件
   

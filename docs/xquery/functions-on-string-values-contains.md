@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899023"
 ---
 # <a name="functions-on-string-values---contains"></a>字串值的相關函式 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  本主題會提供 XQuery 範例，針對 AdventureWorks 資料庫中的各種 xml 類型資料行中儲存的 XML 執行個體。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. 使用 contains() XQuery 函式來搜尋特定的字元字串  
- 下列查詢會尋找產品摘要描述中有包含 Aerodynamic 一詞的產品。 此查詢會傳回這類產品的 ProductID 及 <`Summary`> 元素。  
+ 下列查詢會尋找產品摘要描述中有包含 Aerodynamic 一詞的產品。 此查詢會傳回 ProductID 及 <`Summary`> 這類產品的項目。  
   
 ```  
 --The product model description document uses  

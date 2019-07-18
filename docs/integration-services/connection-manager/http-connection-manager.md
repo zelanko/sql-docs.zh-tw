@@ -20,14 +20,18 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bde008098dee9b48004b6ee036df4832d83f3ff2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6076c2e0cf877a150a2b66a5b9f4728e2cdd25c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728226"
 ---
 # <a name="http-connection-manager"></a>HTTP 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的「Web 服務」工作便使用此連接管理員。  
   
  當您將 HTTP 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，用來在執行階段解析為 HTTP 連接、設定連線管理員屬性，以及將連線管理員加入封裝的 **Connections** 集合。  

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5776fc96789eeb66f5bc7c4373b86a829f409bb9
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290756"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826508"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
   地圖精靈與地圖圖層精靈會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -45,7 +44,7 @@ ms.locfileid: "56290756"
   
 -   當您第一次開啟報表產生器時，請在設計介面的中央按一下 **[地圖]** 精靈圖示。  
   
--   在 **[插入]** 索引標籤上，按一下 **[地圖]**，然後按一下 **[地圖精靈]**。  
+-   在 **[插入]** 索引標籤上，按一下 **[地圖]** ，然後按一下 **[地圖精靈]** 。  
   
  若要開啟「地圖圖層精靈」，請進行下列動作：  
   
@@ -53,7 +52,7 @@ ms.locfileid: "56290756"
   
  針對對應的說明內容，按一下精靈頁面的標題。 您看到的頁面會根據您選擇的地圖類型、空間資料來源及分析資料來源而有所不同。  
   
-1.  [選擇空間資料的來源](#SpatialDataSource)。 空間資料可能來自地圖庫、環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 形狀檔，或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關聯式資料庫中的空間資料。  
+1.  [選擇空間資料的來源](#SpatialDataSource)。 空間資料可能來自地圖庫、 Environmental Systems Research Institute，Inc.或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關聯式資料庫中的空間資料。  
   
     -   [何謂空間資料？](#SpatialData)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "56290756"
   
  在您加入地圖或地圖圖層並預覽報表之後，可以變更您在精靈中設定的地圖和地圖圖層選項。 如需詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 若要將地圖加入至報表的逐步指示，請參閱[教學課程：地圖報表&#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
+ 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 如需將地圖新增至報表的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -117,7 +116,7 @@ ms.locfileid: "56290756"
  您可以在每個圖層上使用空間資料的相同來源或不同來源，但是您必須指定每次您加入圖層時的來源。 當空間資料來自地圖庫或 ESRI 形狀檔時，空間資料來源不是個別的報表項目， 因此不會出現在 [報表資料] 窗格中。  
   
 ###  <a name="SpatialData"></a> 何謂空間資料？  
- 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」*(Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
+ 空間資料包含可定義地理或幾何元素的座標軸。 在地圖中，空間資料會定義 *「地圖元素」* (Map Element)：定義區域或形狀的多邊形、定義路線或路徑的線條，以及定義標記或圖釘的點。 空間資料會以二進位格式儲存在資料來源中，並指定為座標位置組。 例如，點是 X 和 Y 座標 (X Y)、線條是兩組座標位置 ((X1 Y1), (X2 Y2))、多邊形是四組以上的座標位置，其中第一組和最後一組座標位置相同 ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1))。  
   
  如需詳細資訊，請參閱您使用之空間資料類型的文件集。  
   
@@ -125,12 +124,12 @@ ms.locfileid: "56290756"
  地圖庫包含的地圖來自報表撰寫環境之地圖庫資料夾中的報表。 地圖庫中的地圖可讓您快速開始將地圖加入至報表中。 地圖庫中預先定義的地圖是由地圖提供者所提供。  
   
 > [!NOTE]  
->  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局所免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國人口普查局的註冊商標。  
+>  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局免費提供。 若要取得 TIGER/Line 形狀檔的詳細資料，請移至 [TIGER/Line 形狀檔和 TIGER/Line 檔案技術文件](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 與 TIGER/Line 是美國人口普查局的註冊商標。  
   
  若要擴充地圖庫，您可以從地圖庫目錄加入或移除報表，也可以加入資料夾來組織地圖。 如需詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>.shp 檔案以及支援檔案 \<檔名>。  
+ ESRI 形狀檔是一組檔案，其中包含符合 Environmental Systems Research Institute, Inc. (ESRI) 形狀檔空間資料格式的資料。 這組檔案通常包括內含空間資料的 \<檔名>  .shp 檔案以及支援檔案 \<檔名>  。  
   
  當您將形狀檔指定為您本機電腦上的空間資料來源時，會將空間資料自動內嵌至報表中。 若要以動態方式使用 ESRI 檔案中的空間資料，您必須執行下列操作：  
   
@@ -198,7 +197,7 @@ ms.locfileid: "56290756"
   
  如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](https://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)及 < 規劃地圖 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
+ 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[針對報表進行疑難排解：將報表對應&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)及 < 規劃地圖 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
   
  如需自訂圖格圖層之其他方式的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

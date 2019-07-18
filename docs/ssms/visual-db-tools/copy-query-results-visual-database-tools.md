@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 91ce35907cf75e723eb2fa92416b300223a1d144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 1dc8c9a82efc52845eb12eb62ce42220d459624f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686139"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>複製查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您可以從 [結果] 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
+您可以從 [結果]  窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>若要從 [結果] 窗格複製結果集文字  
   
 1.  執行含有您要複製之資料的查詢或檢視。  
   
-2.  若要選取整個結果集，請在 [結果] 窗格中按一下左上方空白的資料格。  
+2.  若要選取整個結果集，請在 [結果]  窗格中按一下左上方空白的資料格。  
   
 3.  若要選取資料列：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47745366"
   
     選取的資料格將會反白顯示。  
   
-5.  按一下滑鼠右鍵，再選擇 [複製]。  
+5.  按一下滑鼠右鍵，再選擇 [複製]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

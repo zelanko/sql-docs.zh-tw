@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 494734b52784ac5969555f78daeb19db59fa07b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea20dbe9d4c2f08fa0bfd2b25cde351bb0f92f94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129180"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC 資料表值參數 API 摘要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

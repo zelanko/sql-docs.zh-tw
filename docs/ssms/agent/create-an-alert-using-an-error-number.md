@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], error numbers
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8663e9976dfa48d02b6b874f5d53692300cfbf0a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 07f3d289595f4d7e3623e879d1d092cf78bc6bc9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699138"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682804"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用錯誤號碼建立警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51699138"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目，使用錯誤號碼建立警示：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -64,23 +64,23 @@ ms.locfileid: "51699138"
   
 1.  在 **[物件總管]** 中，按一下加號，以展開您要使用錯誤號碼建立警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 **[警示]** ，然後選取 **[新增警示]**。  
+3.  以滑鼠右鍵按一下 **[警示]** ，然後選取 **[新增警示]** 。  
   
 4.  在 **[新增警示]** 對話方塊中的 **[名稱]** 方塊，輸入此警示的名稱。  
   
 5.  選取 **[啟用]** 核取方塊以讓警示得以執行。 根據預設，會選取 **[啟用]** 。  
   
-6.  在 **[類型]** 清單中，選取 **[SQL Server 事件警示]**。  
+6.  在 **[類型]** 清單中，選取 **[SQL Server 事件警示]** 。  
   
 7.  在 **[事件警示定義]** 下，從 **[資料庫名稱]** 清單中選取資料庫，將警示限制在特定資料庫。  
   
-8.  在 **[將根據下列條件引發警示]** 下，按一下 **[錯誤號碼]**，然後為警示輸入有效的錯誤號碼。 或者，按一下 **[嚴重性]** ，然後選取將會引發警示的特定嚴重性。  
+8.  在 **[將根據下列條件引發警示]** 下，按一下 **[錯誤號碼]** ，然後為警示輸入有效的錯誤號碼。 或者，按一下 **[嚴重性]** ，然後選取將會引發警示的特定嚴重性。  
   
 9. 核取對應到 **[訊息包含下列內容時引發警示]** 核取方塊，將警示限制在特定字元順序，然後在 **[訊息文字]** 中輸入關鍵字或字元字串。 最大字元數為 100。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -88,9 +88,9 @@ ms.locfileid: "51699138"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- adds an alert (Test Alert) that runs the Back up

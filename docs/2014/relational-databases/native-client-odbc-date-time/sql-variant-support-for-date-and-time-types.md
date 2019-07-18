@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63215967"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>日期和時間類型的 sql_variant 支援
   本主題描述 `sql_variant` 資料類型如何支援強化的日期和時間功能。  
@@ -26,7 +26,7 @@ ms.locfileid: "48150820"
   
  SQLColAttribute 可以設定 SQL_SS_TIME2 和 sql_ss_timestampoffset 這些新的類型。 SQLGetDescField 可以傳回 SQL_CA_SS_VARIANT_SQL_TYPE。  
   
- 若為結果資料行，驅動程式會從變數轉換成日期/時間類型。 如需詳細資訊，請參閱 <<c0> [ 從 SQL 轉換成 C](datetime-data-type-conversions-from-sql-to-c.md)。繫結至 SQL_C_BINARY 時，緩衝區長度必須夠大，足以接收對應至 SQL 類型的結構。  
+ 若為結果資料行，驅動程式會從變數轉換成日期/時間類型。 如需詳細資訊，請參閱 <<c0> [ 從 SQL 轉換成 C](datetime-data-type-conversions-from-sql-to-c.md)。當繫結至 SQL_C_BINARY 時，緩衝區長度必須夠大，無法接收對應至 SQL 類型的結構。  
   
  若為 SQL_SS_TIME2 和 SQL_SS_TIMESTAMPOFFSET 參數，驅動程式會將 C 值轉換成 `sql_variant` 值，如下表所述。 如果某個參數繫結成 SQL_C_BINARY 而且伺服器類型為 SQL_SS_VARIANT，除非應用程式已經將 SQL_CA_SS_VARIANT_SQL_TYPE 設定為其他 SQL 類型，否則它就會被視為二進位值。 在此情況下，系統會優先使用 SQL_CA_SS_VARIANT_SQL_TYPE。也就是說，如果已設定 SQL_CA_SS_VARIANT_SQL_TYPE，它就會覆寫從 C 類型推算出變數 SQL 類型的預設行為。  
   

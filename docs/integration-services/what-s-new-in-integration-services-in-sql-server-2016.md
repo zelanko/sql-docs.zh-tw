@@ -15,15 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a747f7dea48d8c8d733e256473609f37764850a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713873"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本主題描述 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中已新增或更新的功能。 它也包含 [Azure Feature Pack for Integration Services & #40;SSIS & #41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) 在SQL Server 2016 期間新增或更新的功能。  
 
@@ -229,7 +232,7 @@ ms.locfileid: "58290634"
 >  (在 RC0 中，這個方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面。 如需詳細資訊，請參閱 [New IDTSComponentMetaData130 interface in the API](#CMD130)(API 中新的 IDTSComponentMetaData130 介面)。  
 
 ####  <a name="ServerLogLevel"></a> 支援全伺服器的預設記錄層級  
- 在 SQL Server 的 [伺服器屬性] 中，您現在可以在 [Server logging level (伺服器記錄層次)]  屬性下方，選取預設的全伺服器記錄層次。 您可以挑選其中一個內建的記錄層級 (基本、無、詳細資訊、效能或執行階段歷程)，或者可挑選現有的自訂記錄層級。 選取的記錄層級會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
+ 在 SQL Server 的 [伺服器屬性]  中，您現在可以在 [Server logging level (伺服器記錄層次)]  屬性下方，選取預設的全伺服器記錄層次。 您可以挑選其中一個內建的記錄層級 (基本、無、詳細資訊、效能或執行階段歷程)，或者可挑選現有的自訂記錄層級。 選取的記錄層級會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
 
 ####  <a name="CMD130"></a> API 中新的 IDTSComponentMetaData130 介面  
  SSIS 目錄中新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面會在 SQL Server 2016 中將新功能加入現有 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面中，尤其是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。 ( **GetIdentificationStringByID** 方法會從 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面移至新的介面)。另外還有新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> (已擴大錯誤資料行名稱的支援) 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> 介面，這兩種介面都提供 **LineageIdentificationString** 屬性。 如需詳細資訊，請參閱＜ [資料流程中適用於錯誤的資料行名稱](#ErrorColumn)＞。  
@@ -240,7 +243,7 @@ ms.locfileid: "58290634"
  當您將 SSIS 專案從舊版升級到目前的版本時，專案層級的連線管理員會繼續如預期般運作，並保留封裝配置和註解。  
 
 ####  <a name="BufferSize"></a> AutoAdjustBufferSize 屬性會自動計算資料流程的緩衝區大小  
- 當您將新的 **AutoAdjustBufferSize** 屬性值設為 [true] 時，資料流程引擎會自動計算資料流程的緩衝區大小。 如需詳細資訊，請參閱＜ [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)＞。  
+ 當您將新的 **AutoAdjustBufferSize** 屬性值設為 [true]  時，資料流程引擎會自動計算資料流程的緩衝區大小。 如需詳細資訊，請參閱＜ [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md)＞。  
 
 ####  <a name="Templates"></a> 可重複使用的控制流程範本  
  將常用的控制流程工作或容器儲存到獨立的範本檔案，並使用控制流程範本，在專案的一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。 如需詳細資訊，請參閱 [使用控制流程封裝組件在封裝之間重複使用控制流程](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)。  
@@ -285,7 +288,7 @@ ms.locfileid: "58290634"
  Excel 連線管理員、Excel 來源和 Excel 目的地現在明確支援 Excel 2016 資料來源。  
 
 ####  <a name="SAPBW"></a> 已發行 Connector for SAP BW for SQL Server 2016  
- 適用於 Microsoft SQL Server® 2016 的 Microsoft® Connector for SAP BW 已發行為 SQL Server 2016 Feature Pack 的一部分。 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Connector for SAP BW 已作為 SQL Server 2016 Feature Pack 的一部分發行。 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。
  
 #### <a name="oracleteradata"></a> 已發行 Connectors v4.0 for Oracle and Teradata
 已發行 Microsoft Connectors v4.0 for Oracle and Teradata。 若要下載連接器，請參閱 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -322,7 +325,7 @@ ms.locfileid: "58290634"
 ####  <a name="OneDesigner"></a> SSIS 設計師中的多目標和多個版本支援  
  您現在可以在適用於 Visual Studio 2015 的 SQL Server Data Tools &#40;SSDT&#41; 中使用 SSIS 設計師，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
- 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般] 索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般]  索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
  ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
 
@@ -346,7 +349,7 @@ ms.locfileid: "58290634"
  [SQL Server 匯入和匯出精靈] 現在可以從 Azure Blob 儲存體匯入資料，並將資料儲存至其中。 如需詳細資訊，請參閱[選擇資料來源 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) 和[選擇目的地 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="CDCOracle"></a> 已發行 Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016  
- Attunity 所提供之適用於 Microsoft SQL Server® 2016 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle 已發行為 SQL Server 2016 Feature Pack 的一部分。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。  
+ 適用於 Microsoft SQL ServerÂ® 2016 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 已作為 SQL Server 2016 Feature Pack 的一部分發行。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。  
   
 ####  <a name="cdc2016"></a> 已針對 SQL Server 2016 更新 CDC 元件  
  CDC (異動資料擷取) 控制工作、來源和分隔器轉換元件已更新，可與 SQL Server 2016 完全相容。 沒有任何新功能，也沒有任何行為變更。  
@@ -367,10 +370,10 @@ ms.locfileid: "58290634"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 在 **Service Pack 2 中引進** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 屬性。 這項新的屬性目前尚未經過宣布或記載。 **和** 中也提供 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ValidationDetails [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]屬性。   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2016 的版本及支援功能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

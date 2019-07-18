@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1b83702dafcd2085acc49f679f844ed1cd9d4416
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: e071e632015bc86e2743f3935ee92d5e1da9c611
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802944"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "51601008"
   
  提供者特定的屬性 SSPROP_FASTLOADOPTIONS、SSPROP_FASTLOADKEEPNULLS 和 SSPROP_FASTLOADKEEPIDENTITY 可控制 OLE DB Driver for SQL Server 大量複製資料列集的行為。 這些屬性是指定於 *rgPropertySets* **IOpenRowset** 參數成員的 *rgProperties* 成員中。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：維護取用者所提供的識別值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中識別資料行的值是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產生。 OLE DB 驅動程式會忽略任何繫結資料行的值，適用於 SQL Server。<br /><br /> VARIANT_TRUE：取用者會繫結為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別資料行提供值的存取子。 在接受 NULL 的資料行上不提供識別屬性，所以取用者會在每個 **IRowsetFastLoad::Insert** 呼叫上提供唯一值。|  
 |SSPROP_FASTLOADKEEPNULLS|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：針對具有 DEFAULT 條件約束的資料行維護 NULL。 只對接受 NULL 且套用 DEFAULT 條件約束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行造成影響。<br /><br /> VARIANT_FALSE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入資料行的預設值。<br /><br /> VARIANT_TRUE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入 NULL 作為資料行值。|  

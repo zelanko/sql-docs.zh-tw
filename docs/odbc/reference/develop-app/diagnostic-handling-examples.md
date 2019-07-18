@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8da271ace5dd8a55e6d5c444de7cff334ed60b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c713da543883ac4a5c4aaa0aad0631ae47be30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039956"
 ---
 # <a name="diagnostic-handling-examples"></a>診斷處理範例
 下列範例顯示的 ODBC 連接中的各種元件可能會產生診斷訊息和不同的驅動程式可能會傳回與應用程式診斷**SQLGetDiagRec**。  

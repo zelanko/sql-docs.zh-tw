@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c2286ec6a8995d6fe707690629cbcce0dede127
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 69fa6500439e51705e9dfd3ee838c2f7e1b4eddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105000"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>設定同步處理範圍 (報表產生器及 SSRS)
   指標會在指定的範圍內，跨指標值的範圍進行同步處理，藉以傳達資料值。 根據預設，此範圍是指標的父容器，例如，包含指標的資料表或矩陣。 您可以根據報表的版面配置來變更指標的同步處理。 例如，如果某個資料表之類的資料區有資料列群組，您可以將群組指定為指標範圍。 指標也可以省略同步處理。  
@@ -30,15 +29,15 @@ ms.locfileid: "56293386"
   
 ### <a name="to-change-the-synchronization-scope-of-an-indicator"></a>若要變更指標的同步處理範圍  
   
-1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 **[指標屬性]**。  
+1.  以滑鼠右鍵按一下您要變更的指標，然後按一下 **[指標屬性]** 。  
   
 2.  按一下左窗格中的 **[值和狀態]** 。  
   
 3.  在 **[同步處理範圍]** 清單中，按一下您要套用的範圍。  
   
-     [(無)] 選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
+     [(無)]  選項 (會從指標移除同步處理範圍) 永遠可以使用。 其他選項則取決於您報表的版面配置。  
   
-     或者，按一下 [運算式]\(*fx*) 按鈕來編輯設定範圍的運算式。  
+     或者，按一下 [運算式]  \(*fx*) 按鈕來編輯設定範圍的運算式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

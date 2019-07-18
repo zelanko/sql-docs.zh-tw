@@ -11,16 +11,16 @@ helpviewer_keywords:
 - aliases [SQL Server], creating
 - SQL Server Agent, aliases
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29de1d807a300e8c33bf9437b1756a37fd9187ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bea8ea9662064a9ef360fc86833643e5f0e63d66
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815449"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685002"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47815449"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   [若要使用 SQL Server Management Studio，為 SQL Server Agent 服務設定 SQL Server 別名](#SSMSProcedure)  
   
@@ -69,11 +69,11 @@ ms.locfileid: "47815449"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 _server\_name_] 對話方塊的 [選取頁面] 底下，選取 [連線]，然後  
+3.  在 [SQL Server Agent 屬性 _server\_name_]  對話方塊的 [選取頁面]  底下，選取 [連線]  ，然後  
   
 4.  在 **[別名本機主機伺服器]** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要連接之伺服器的別名。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   

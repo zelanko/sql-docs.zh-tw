@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833063"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>建議資料行類型對話方塊 UI 參考
-  使用 [建議資料行類型] 對話方塊，根據檔案內容的取樣來識別一般檔案連線管理員中之資料行的資料類型與長度。  
+  使用 [建議資料行類型]  對話方塊，根據檔案內容的取樣來識別一般檔案連線管理員中之資料行的資料類型與長度。  
   
  若要深入了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的資料類型，請參閱 [Integration Services 資料類型](../data-flow/integration-services-data-types.md)。  
   

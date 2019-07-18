@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -14,12 +13,12 @@ ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080758"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>反白顯示例外狀況 (適用於 Excel 的資料表分析工具)
   ![反白顯示功能區中的 [例外] 按鈕](media/tat-highlightex.gif "功能區中的反白顯示例外狀況按鈕")  
@@ -38,7 +37,7 @@ ms.locfileid: "48149218"
   
 2.  指定要分析的資料行。  
   
-3.  按一下 **[執行]**。  
+3.  按一下 **[執行]** 。  
   
 4.  開啟標題為的工作表\<資料表名稱 > 極端值，以檢視找到的極端值摘要。  
   

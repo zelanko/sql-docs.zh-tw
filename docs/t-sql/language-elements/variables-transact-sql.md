@@ -10,16 +10,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63ca67092d534377278e19936b92cb1f8493e9d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0a3bff6159d098ce8a53631e4f4da49f81fba9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65980149"
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,7 +92,7 @@ DECLARE @MyCounter int;
 ```
 若要宣告一個以上的本機變數，請在第一個定義的本機變數後加上逗號，再指定下一個本機變數名稱與資料類型。
 
-例如，以下的 **DECLARE** 陳述式建立三個名為 **\@LastName**、**\@FirstName** 和 **\@StateProvince** 的區域變數，均初始化為 NULL：  
+例如，以下的 **DECLARE** 陳述式建立三個名為 **\@LastName**、 **\@FirstName** 和 **\@StateProvince** 的區域變數，均初始化為 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -162,7 +162,7 @@ GO
 > [!WARNING]
 > 如果在單一 SELECT 陳述式中有多個指派子句，SQL Server 則無法保證運算式評估的次序。 請注意，只有當指派中有一些參考時，才能看到產生的效果。
 
-如果 SELECT 陳述式傳回一個以上的資料列，且變數參考非純量運算式，則會將變數設定為結果集的最後一筆資料列中，針對運算式傳回的值。 例如，在以下批次中，**\@EmpIDVariable** 被設定成最後一個資料列傳回的 **BusinessEntityID** 值，也就是 1：  
+如果 SELECT 陳述式傳回一個以上的資料列，且變數參考非純量運算式，則會將變數設定為結果集的最後一筆資料列中，針對運算式傳回的值。 例如，在以下批次中， **\@EmpIDVariable** 被設定成最後一個資料列傳回的 **BusinessEntityID** 值，也就是 1：  
 
 ```sql
 USE AdventureWorks2014;

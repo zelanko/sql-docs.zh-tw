@@ -1,24 +1,28 @@
 ---
-title: 逐步解說：設定 SQL Server Integration Services 相應放大 | Microsoft Docs
-description: 本文將引導您完成 SSIS Scale Out 的安裝和設定
+title: 逐步解說：設定 SQL Server Integration Services Scale Out | Microsoft Docs
+description: 此文章將引導您完成 SSIS Scale Out 的安裝和設定
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001172611503dbff0275448833d05b06aa22512e
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620566"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826632"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說︰設定 Integration Services (SSIS) Scale Out
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 完成下列工作，以設定 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out。 
 
 > [!TIP]
@@ -30,7 +34,7 @@ ms.locfileid: "47620566"
 
 * [安裝相應放大背景工作用戶端憑證](#InstallCert)
 
-* [開啟防火牆通訊埠](#Firewall)
+* [開啟防火牆連接埠](#Firewall)
 
 * [啟動 SQL Server 相應放大主機和背景工作服務](#Start)
 
@@ -47,25 +51,25 @@ ms.locfileid: "47620566"
 如需設定 Database Engine 和 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 的資訊，請參閱[安裝 SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md) 和[安裝 Integration Services](../install-windows/install-integration-services.md)。
 
 > [!NOTE]
-> 若要使用預設 SQL Server 驗證帳戶進行 Scale Out 記錄，請在資料庫引擎安裝期間，於 [資料庫引擎設定] 頁面上選取 [混合模式] 作為驗證模式。 如需詳細資訊，請參閱[變更相應放大記錄的帳戶](change-logdb-account.md)。
+> 若要使用預設 SQL Server 驗證帳戶進行 Scale Out 記錄，請在資料庫引擎安裝期間，於 [資料庫引擎設定]  頁面上選取 [混合模式] 作為驗證模式。 如需詳細資訊，請參閱[變更相應放大記錄的帳戶](change-logdb-account.md)。
 
 若要安裝 Scale Out Master 功能，請使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元。
 
 ### <a name="install-scale-out-master-with-the-sql-server-installation-wizard"></a>使用 SQL Server 安裝精靈安裝 Scale Out Master
-1.  在 [特徵選取] 頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [相應放大主機]。   
+1.  在 [特徵選取]  頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [相應放大主機]  。   
   
     ![特徵選取主要](media/feature-select-master.PNG)
   
-2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大主機服務]  的帳戶，然後選取 [啟動類型] 。  
+2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大主機服務]  的帳戶，然後選取 [啟動類型]  。  
     ![伺服器組態](media/server-config.PNG)
 
-3.  在 [Integration Services 相應放大主機組態]  頁面上，指定相應放大主機用來與相應放大背景工作通訊的通訊埠編號。 預設通訊埠編號是 8391。  
+3.  在 [Integration Services 相應放大主機組態]  頁面上，指定相應放大主機用來與相應放大背景工作通訊的連接埠編號。 預設連接埠編號是 8391。  
 
     ![Master 設定](media/master-config.PNG "Master 設定")
 
 4.  執行下列其中一項，以指定用來保護相應放大主機與相應放大背景工作間之通訊的 SSL 憑證。
-    * 按一下 [建立新的 SSL 憑證]，讓安裝程序建立預設自我簽署 SSL 憑證。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以在此憑證中指定 CN。 主要端點的主機名稱應該併入 CN 中。 預設會包含 Master 節點的電腦名稱和 IP。
-    * 按一下 [使用現有的 SSL 憑證]，然後按一下 [瀏覽] 選取憑證，以選取本機電腦上的現有 SSL 憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
+    * 按一下 [建立新的 SSL 憑證]  ，讓安裝程序建立預設自我簽署 SSL 憑證。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以在此憑證中指定 CN。 主要端點的主機名稱應該併入 CN 中。 預設會包含 Master 節點的電腦名稱和 IP。
+    * 按一下 [使用現有的 SSL 憑證]  ，然後按一下 [瀏覽]  選取憑證，以選取本機電腦上的現有 SSL 憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
 
     ![Master 設定 2](media/master-config-2.PNG "Master 設定 2")
   
@@ -73,7 +77,7 @@ ms.locfileid: "47620566"
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>從命令提示字元安裝 Scale Out Master
 
-請遵循[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的指示進行。 執行下列動作，以設定 Scale Out Master 的參數：
+請遵循 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的指示進行。 執行下列動作，以設定 Scale Out Master 的參數：
  
 1.  將 `IS_Master` 新增至參數 `/FEATURES`
 
@@ -96,11 +100,11 @@ ms.locfileid: "47620566"
 
 ### <a name="install-scale-out-worker-with-the-sql-server-installation-wizard"></a>使用 SQL Server 安裝精靈安裝 Scale Out Worker
 
-1.  在 [特徵選取] 頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [相應放大背景工作]。
+1.  在 [特徵選取]  頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [相應放大背景工作]  。
 
     ![特徵選取背景工作](media/feature-select-worker.PNG)
 
-2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大背景工作服務]  的帳戶，然後選取 [啟動類型] 。
+2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大背景工作服務]  的帳戶，然後選取 [啟動類型]  。
 
     ![伺服器設定 2](media/server-config-2.PNG "伺服器設定 2")
 
@@ -122,13 +126,13 @@ ms.locfileid: "47620566"
     ![背景工作設定 2](media/worker-config-2.PNG "背景工作設定 2")
 
     > [!NOTE]
-    > 自我簽署 Scale Out Master 所使用的 SSL 憑證時，需要在具有 Scale Out Worker 的電腦上安裝對應的用戶端 SSL 憑證。 如果您在 [Integration Services 相應放大背景工作設定] 頁面上提供用戶端 SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 
+    > 自我簽署 Scale Out Master 所使用的 SSL 憑證時，需要在具有 Scale Out Worker 的電腦上安裝對應的用戶端 SSL 憑證。 如果您在 [Integration Services 相應放大背景工作設定]  頁面上提供用戶端 SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 
      
 5. 完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈。
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>從命令提示字元安裝 Scale Out Worker
 
-請遵循[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的指示進行。 執行下列動作，以設定 Scale Out Worker 的參數：
+請遵循 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)中的指示進行。 執行下列動作，以設定 Scale Out Worker 的參數：
 
 1.  將 IS_Worker 新增至 `/FEATURES` 參數。
 
@@ -143,9 +147,9 @@ ms.locfileid: "47620566"
 
 在安裝 Scale Out Worker 期間，將會在電腦上自動建立和安裝背景工作憑證。 同時，會在 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 下方安裝對應的用戶端憑證 SSISScaleOutWorker.cer。 若要讓 Scale Out Master 驗證 Scale Out Worker，您必須將此用戶端憑證新增至具有 Scale Out Master 之本機電腦的根存放區。
   
-若要將用戶端憑證新增至根存放區，請按兩下 .cer 檔案，然後按一下 [憑證] 對話方塊中的 [安裝憑證]。 隨即開啟 [憑證匯入精靈]。  
+若要將用戶端憑證新增至根存放區，請按兩下 .cer 檔案，然後按一下 [憑證] 對話方塊中的 [安裝憑證]  。 隨即開啟 [憑證匯入精靈]  。  
 
-## <a name="Firewall"></a> 開啟防火牆通訊埠
+## <a name="Firewall"></a> 開啟防火牆連接埠
 
 在 Scale Out Master 電腦上，於 Windows 防火牆中，開啟在 Scale Out Master 安裝期間所指定的連接埠以及 SQL Server 的連接埠 (預設為 1433)。
 
@@ -154,15 +158,15 @@ ms.locfileid: "47620566"
     
 ## <a name="Start"></a> 啟動 SQL Server 相應放大主機和背景工作服務
 
-如果您未在安裝期間將服務的啟動類型設定為 [自動]，請啟動下列服務：
+如果您未在安裝期間將服務的啟動類型設定為 [自動]  ，請啟動下列服務：
 
--   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140S
+-   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140)
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
 ## <a name="EnableMaster"></a> 啟用相應放大主機
 
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中建立 SSISDB 目錄時，請選取 [建立目錄] 對話方塊中的 [啟用此伺服器作為 SSIS 相應放大主機]。
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中建立 SSISDB 目錄時，請選取 [建立目錄]  對話方塊中的 [啟用此伺服器作為 SSIS 相應放大主機]  。
 
 建立目錄之後，您可以使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 來啟用 Scale Out Master。
 

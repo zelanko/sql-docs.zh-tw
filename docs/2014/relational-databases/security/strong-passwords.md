@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62470355"
 ---
 # <a name="strong-passwords"></a>增強式密碼
   密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  

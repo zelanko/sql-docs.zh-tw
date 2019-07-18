@@ -2,7 +2,7 @@
 title: 在圖表上格式化圖例 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -23,14 +23,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73655089cb46213ccd50c8cf78adb29df06eed6b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3306bc4f093a3f05c3caf37d212a8e585ac201c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581662"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>圖表圖例 - 格式化 (報表產生器)
   圖表圖例包含圖表中每一個類別目錄的描述。 圖例一定會包含一或多個圖例項目，其中每一個圖例項目都是由代表數列的彩色方塊及描述此數列的文字字串所組成，如下圖所示。  
@@ -39,7 +39,7 @@ ms.locfileid: "56290196"
   
  圖例項目會連接到報表上的個別數列，但是形狀圖表例外 (其圖例會連接到個別資料點)。 此圖表會根據從資料產生的數列，將項目加入到圖例中。  
   
- 您可以使用 **[圖例屬性]** 對話方塊或 [屬性] 窗格來設定圖例的格式。 請以滑鼠右鍵按一下此圖例，然後按一下 **[圖例屬性]** ，為圖例文字、背景色彩、框線和 3D 效果變更值。 若要變更圖例標題的，請選取此圖例，然後以滑鼠右鍵按一下圖例標題，再按一下 **[圖例標題屬性]**。  
+ 您可以使用 **[圖例屬性]** 對話方塊或 [屬性] 窗格來設定圖例的格式。 請以滑鼠右鍵按一下此圖例，然後按一下 **[圖例屬性]** ，為圖例文字、背景色彩、框線和 3D 效果變更值。 若要變更圖例標題的，請選取此圖例，然後以滑鼠右鍵按一下圖例標題，再按一下 **[圖例標題屬性]** 。  
   
  您無法將影像、額外資料行或其他補充項目加入至圖例。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "56290196"
 ## <a name="displaying-legend-items-horizontally"></a>水平顯示圖例項目  
  根據預設，圖例會格式化成一或多個資料列的清單，其中每一個資料列包含一個圖例項目。 圖例區域會展開，以容納這個數目的圖例項目。 如果此圖例無法展開，就會顯示省略符號 (...)。 根據指定的圖例樣式而定，此圖例可垂直或水平展開。 您可以在 **[圖例屬性]** 對話方塊上變更配置樣式，或是變更用來顯示所有圖例項目的配置空間。  
   
- 若要水平顯示此圖例，請將此圖例停駐於圖表的上方或底部。 這樣會水平展開此圖例。 您也可以將 Layout 屬性設定為 [資料列] 或 [寬型資料表]。 在 [屬性] 窗格中設定 MaxAutoSize 屬性可在圖例停駐於圖表區域的上方或底部時，控制配置給此圖例的垂直空間。  
+ 若要水平顯示此圖例，請將此圖例停駐於圖表的上方或底部。 這樣會水平展開此圖例。 您也可以將 Layout 屬性設定為 [資料列]  或 [寬型資料表]  。 在 [屬性] 窗格中設定 MaxAutoSize 屬性可在圖例停駐於圖表區域的上方或底部時，控制配置給此圖例的垂直空間。  
   
 ## <a name="formatting-the-legend-text"></a>格式化圖例文字  
  您可以在 **[圖例屬性]** 對話方塊的 **[字型]** 頁面上變更圖例文字的字型、大小、樣式和色彩。  
   
- 依預設，圖例文字不會最佳化來配合圖例區域的大小。 若要讓圖例文字自動配合配置空間的大小，請將 AutoFitTextDisabled 屬性設定為 [False]，並將 MinFontSize 屬性的最小字型大小設定為您認為可呈現，而且仍然允許圖例最佳化的最小字型大小。  
+ 依預設，圖例文字不會最佳化來配合圖例區域的大小。 若要讓圖例文字自動配合配置空間的大小，請將 AutoFitTextDisabled 屬性設定為 [False]  ，並將 MinFontSize 屬性的最小字型大小設定為您認為可呈現，而且仍然允許圖例最佳化的最小字型大小。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖例屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   

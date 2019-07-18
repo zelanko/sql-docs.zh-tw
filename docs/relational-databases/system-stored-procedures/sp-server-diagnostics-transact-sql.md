@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056305"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,14 +77,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **事件**:收集資料和預存程序的介面上的錯誤和伺服器，包括有關信號緩衝區例外狀況，有關記憶體 broker、 記憶體、 排程器監視器、 緩衝集區、 單一執行緒存取鎖，超出的信號緩衝區事件詳細資料所記錄的感興趣的事件安全性和連線能力。 事件永遠會顯示狀態 0。  
   
--   **\<可用性群組的名稱 >**:會收集指定的可用性群組的資料 (如果 component_type ="Alwayson 上： AvailabilityGroup")。  
+-   **\<可用性群組的名稱 >** :會收集指定的可用性群組的資料 (如果 component_type ="Alwayson 上： AvailabilityGroup")。  
   
 ## <a name="remarks"></a>備註  
 從失敗觀點來看，系統、資源和 query_processing 元件將會用於失敗偵測，而 io_subsystem 和事件元件只供診斷之用。  
   
 下表將元件對應到其相關聯的健全狀態。  
   
-|元件|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0) |  
+|元件|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |系統|x|x|x||  
 |resource|x|x|x||  

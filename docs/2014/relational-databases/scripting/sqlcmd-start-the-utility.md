@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec1ec91705dfb9194f42c079cb7b3d5100c9d396
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090112"
 ---
 # <a name="start-the-sqlcmd-utility"></a>啟動 sqlcmd 公用程式
   若要開始使用 `sqlcmd`，您必須先啟動該公用程式並連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 您可以連接到預設或具名執行個體。 啟動 `sqlcmd` 公用程式是第一個步驟。  
@@ -31,9 +30,9 @@ ms.locfileid: "48228348"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>啟動 sqlcmd 公用程式和連接 SQL Server 的預設執行個體  
   
-1.  在 [開始] 功能表上，按一下 [執行]。 在 [開啟] 方塊中，輸入 **cmd**，然後按一下 [確定] 開啟 [命令提示字元] 視窗。  
+1.  在 [開始]  功能表上，按一下 [執行]  。 在 [開啟]  方塊中，輸入 **cmd**，然後按一下 [確定]  開啟 [命令提示字元] 視窗。  
   
-2.  在命令提示字元中，輸入`sqlcmd`。  
+2.  在命令提示字元中，輸入 `sqlcmd`。  
   
 3.  按 ENTER 鍵。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48228348"
   
 2.  按 ENTER 鍵。  
   
-     `sqlcmd` 提示字元 (1>) 表示您已連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定執行個體。  
+     `sqlcmd`提示字元 (1 >) 指出您已連線到指定的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     > [!NOTE]  
     >  輸入的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會儲存在緩衝區。 當遇到 GO 命令時，這些陳述式會當做批次來執行。  

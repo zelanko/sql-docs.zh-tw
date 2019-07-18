@@ -16,20 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62955809"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>變更與查詢相關聯的連接
   您可以變更查詢所用的連接，以針對若干不同的伺服器或資料庫來執行查詢。  
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>變更查詢的相關連接  
   
-1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]，再按一下 [變更連接]。  
+1.  在查詢編輯器中，以滑鼠右鍵按一下查詢編輯器的空白區域，指向 [連接]  ，再按一下 [變更連接]  。  
   
-2.  在 [連接到 Database Engine] 對話方塊中，提供新的連接資訊，再按一下 [連接]。  
+2.  在 [連接到 Database Engine]  對話方塊中，提供新的連接資訊，再按一下 [連接]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

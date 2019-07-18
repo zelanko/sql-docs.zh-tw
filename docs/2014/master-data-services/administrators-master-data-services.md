@@ -11,15 +11,15 @@ helpviewer_keywords:
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480011"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，有兩種管理員類型：模型管理員及 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員。  
@@ -27,7 +27,7 @@ ms.locfileid: "52778240"
 ## <a name="model-administrators"></a>模型管理員  
  在 [ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，模型管理員是具有的使用者**更新**上指派的最上層模型物件權限**模型物件**] 索引標籤上，而且沒有其他指派權限。  
   
--   如果使用者可以存取總管 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
+-   如果使用者可以存取總管  功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
 -   如果使用者可以存取其他功能區域，即可執行該功能區域中的所有管理工作。  
   

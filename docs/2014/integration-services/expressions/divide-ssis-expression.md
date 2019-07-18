@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769325"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS 運算式)
   將第一個數值運算式除以第二個數值運算式。  

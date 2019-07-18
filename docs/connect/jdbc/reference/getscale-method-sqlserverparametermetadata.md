@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3de84426a1c15f45cebe5438e1ac877f32dc154e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2526d43416382f5cf46cb9b0be1d745487a67848
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718026"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762422"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

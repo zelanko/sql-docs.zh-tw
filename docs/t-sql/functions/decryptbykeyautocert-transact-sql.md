@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ba9ea786496a427f02993ca1bfa9354eb3c32de7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6a0d07bfa9946697c18bcdd4be7186d17f612ccc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948931"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOCERT` 會結合 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在單一作業中，它會先將對稱金鑰解密，再使用該金鑰將加密文字解密。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要對稱金鑰的 `VIEW DEFINITION` 權限和憑證的 `CONTROL` 權限。   
   
 ## <a name="examples"></a>範例  

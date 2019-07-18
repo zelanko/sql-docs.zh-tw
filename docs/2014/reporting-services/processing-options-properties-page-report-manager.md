@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108037"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>處理選項屬性頁面 (報表管理員)
   使用 [處理選項] 屬性頁面可以設定目前選取之報表的報表執行屬性。 這些選項會決定何時進行報表的資料處理。 您可以設定這些選項，以便在離峰時段擷取報表資料。 如果您的報表經常被存取，當多位使用者彼此會在短時間內存取相同的報表時，您就可以暫時快取副本，以避免等待時間。  
@@ -33,17 +32,17 @@ ms.locfileid: "56013099"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 4.  選取 **[處理選項]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **永遠使用最新的資料執行此報表**  
  如果您要在使用者選取報表時擷取報表資料，請使用此選項。 當使用者選取報表時，如果報表有快取副本，則傳回給使用者，否則會執行資料擷取和轉譯。  
   
  選取 **[不要快取此報表的暫存副本]** 就會永遠以最新的資料來執行報表。 開啟報表的每一位使用者都會觸發對資料來源的查詢，這些資料來源包含報表中使用的資料。  
   
- 選取 ，即可在使用者首先開啟報表時，將報表的暫存副本放入快取中。 在快取期間內執行此報表的後續使用者都會收到快取的報表副本。 快取通常會改善效能，因為報表是從快取傳回，而非再次處理。  
+ 選取  ，即可在使用者首先開啟報表時，將報表的暫存副本放入快取中。 在快取期間內執行此報表的後續使用者都會收到快取的報表副本。 快取通常會改善效能，因為報表是從快取傳回，而非再次處理。  
   
  快取的報表最後一定會過期。 請指定要儲存快取之報表副本的分鐘數。 一旦暫存副本過期，系統就不會再從快取中傳回報表。 使用者下次開啟報表時，報表伺服器會重新處理報表，並將重新整理過的報表副本存到快取中。  
   

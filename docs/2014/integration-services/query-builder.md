@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
@@ -15,12 +14,12 @@ ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e09e41535ad878a3f20ae74df07ace7bda6fa7e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056636"
 ---
 # <a name="query-builder"></a>查詢產生器
   使用 **[查詢產生器]** 對話方塊，即可建立要在執行 SQL 工作中使用的查詢、OLE DB 來源和 OLE DB 目的地，以及查閱轉換。  
@@ -43,7 +42,7 @@ ms.locfileid: "58384107"
   
  「查閱」和「模糊」查閱轉換也可以使用具有參數和傳回碼的變數。 OLE DB 來源的相關資訊也適用於這兩個轉換。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   

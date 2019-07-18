@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - development security [Reporting Services]
 - security [Reporting Services], development
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2e6e4ea444a243baf06b96448621d4f189d5efa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ba284b9013c5da6b03cce06ec72deccb045cfad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62987932"
 ---
 # <a name="secure-development-reporting-services"></a>安全開發 (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了強固的安全性系統，可在嚴格控制、管理員定義的安全性環境中執行程式碼。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性系統，也稱為程式碼存取安全性 (或是證據型安全性)。 在程式碼存取安全性之下，系統會信任使用者存取資源，但是如果使用者執行的程式碼未獲得信任，該資源的存取將會遭到拒絕。  

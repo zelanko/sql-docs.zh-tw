@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10139"
@@ -13,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Columns dialog box
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 211d5020c85c5295f195389904385981db46d315
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109335"
 ---
 # <a name="delete-columns-dialog-box"></a>刪除資料行對話方塊
   使用 **[刪除資料行]** 對話方塊，即可從資料表、矩陣或清單資料區域中刪除資料行。 對於與群組關聯的資料行，您也可以刪除群組定義。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **刪除資料行和相關的群組**  
  選擇此選項來刪除資料行和關聯的群組定義。  
   

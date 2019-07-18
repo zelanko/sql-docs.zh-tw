@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073724"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>視覺化總計和非視覺化總計
   視覺化總計是在資料行或資料列結尾加總該資料行或資料列中之所有可見項目的總計。 這是大部分資料表顯示時的預設行為。 不過，有時候使用者只想要顯示資料表中的某些資料行，但保持整個資料列的總計，包括未顯示的資料行。 這些稱為「非視覺化總計」(`Non Visual Totals`)，因為總計來自可見和不可見的值。  
@@ -98,12 +97,12 @@ ms.locfileid: "48197048"
  與前一個結果相比，您可以發現 [All Resellers] 資料列現在只總計 [Value Added Reseller] 和 [Warehouse] 的顯示值，但 [All Products] 資料行顯示所有產品 (包括未顯示產品) 的總計值。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [「 自動存在 」](autoexists.md)   
- [使用成員、 Tuple 和集合&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [基本 MDX 查詢&#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [利用查詢與 Slicer 軸限制查詢&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [建立查詢中的 Cube 內容&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [自動存在](autoexists.md)   
+ [使用成員、Tuple 和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)   
+ [利用查詢與 Slicer 軸限制查詢 &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [建立查詢中的 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

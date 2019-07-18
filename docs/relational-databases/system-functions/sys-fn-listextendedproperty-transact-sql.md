@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98cde3ea4c7150afd3eb2b547e73cf1b7f88e613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082703"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ fn_listextendedproperty (
  屬性的名稱。 *property_name*已**sysname**。 有效的輸入是預設值、NULL 或屬性名稱。  
   
  {預設 |'*level0_object_type&lt*' |NULL}  
- 使用者或使用者定義類型。 *level0_object_type&lt*已**varchar(128)**，預設值是 NULL。 有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
+ 使用者或使用者定義類型。 *level0_object_type&lt*已**varchar(128)** ，預設值是 NULL。 有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
   
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，會移除層級 0 類型的 USER 和 TYPE。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。 請改用 SCHEMA 來當做層級 0 類型，而不是使用 USER。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
@@ -92,7 +91,7 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|NAME|**sysname**|  
+|name|**sysname**|  
 |value|**sql_variant**|  
   
  如果傳回的資料表是空的，可能是物件沒有擴充屬性，也可能是使用者沒有列出物件擴充屬性的權限。 傳回資料庫本身的擴充屬性時，objtype 和 objname 資料行將為 NULL。  
@@ -179,8 +178,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   

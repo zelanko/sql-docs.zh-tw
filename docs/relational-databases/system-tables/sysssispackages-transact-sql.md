@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackages system table
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 942adf588cce7b4a0b46a1f0534a99354236cba5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029637"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

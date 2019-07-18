@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bc775f7f857bffb5a7840d99de00fc546e71d03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2a5b158a33bf678cd285bcd408379a3f0abb907
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098010"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何：在 Visual Studio .NET 中建立 Visual C# SMO 專案
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "47717986"
   
 1. 啟動 Visual Studio
   
-2. 在 **檔案**功能表上，按一下**新增**，然後**專案**。  [新增專案]  對話方塊隨即出現。   
+2. 在 **檔案**功能表上，按一下**新增**，然後**專案**。  [ **新增專案** ] 對話方塊隨即出現。   
   
-3. 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]**已安裝** 窗格中，瀏覽至**範本**\\**Visual C#**\\**Windows**選取**主控台應用程式**。  
+3. 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]**已安裝** 窗格中，瀏覽至**範本**\\**Visual C#** \\**Windows**選取**主控台應用程式**。  
   
 4. （選擇性）在 **名稱**文字中，輸入新的應用程式的名稱。  
 
@@ -42,7 +41,7 @@ ms.locfileid: "47717986"
 
 6. 遵循上的指示[Smo&lt](installing-smo.md)安裝適用於您的專案參考的套件。
   
-7. 在 [檢視] 功能表中，按一下 [程式碼]。
+7. 在 [檢視]  功能表中，按一下 [程式碼]  。
     
 8. 在程式碼的命名空間陳述式之前，輸入下列命令**使用**陳述式來限定 SMO 命名空間中的類型：
   
@@ -54,5 +53,6 @@ ms.locfileid: "47717986"
 15. SMO 在 Microsoft.SqlServer.Management.Smo 之下具有多個命名空間，例如 Microsoft.SqlServer.Management.Smo.Agent。 需要時才新增命名空間。  
   
 16. 您現在可以加入您的 SMO 程式碼。  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

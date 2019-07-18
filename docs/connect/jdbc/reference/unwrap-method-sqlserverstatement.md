@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a6823a9f6f57e1ebf1348f35d4a1478100962bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cadd692cb6fe3cdedcad04f462dc46e6a8070b94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789994"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法是由 JDBC 4.0 規格中引進的 java.sql.Wrapper 介面所定義。  
   
  應用程式可能必須存取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的 JDBC API 延伸模組。 在類別公開供應商延伸模組的情況下，unwrap 方法支援解除包裝為這個物件可擴充的公用類別。  

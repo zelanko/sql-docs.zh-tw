@@ -15,14 +15,18 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 146d9be6b10acf2fbe27db2ef540ebd0dae3beea
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 719869587b9c30c4c8ad14b2d0364b90fb7e1b48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725522"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在日期的指定之日期部分加上代表日期或時間間隔的數字之後，傳回新的 DT_DBTIMESTAMP 值。 number 參數必須評估為整數，date 參數必須評估為有效的日期。  
   
 ## <a name="syntax"></a>語法  

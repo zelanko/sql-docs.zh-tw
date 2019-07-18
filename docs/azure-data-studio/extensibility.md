@@ -2,21 +2,20 @@
 title: 新增額外的功能，透過擴充性
 titleSuffix: Azure Data Studio
 description: 了解的擴充性模型和金鑰的擴充性方面的擴充功能的 Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959592"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充性
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a29180fdaf90d7c9c43441f897820be69a9c009a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d88977844c415c43baa7b4b8669b7d8e13793fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920249"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 屬性範例 (VB)
 這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性以顯示作業的效能差異執行，而 30 記錄快取。  

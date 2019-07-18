@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4afc42162754c63d5280e7962960800e47b7059
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0f2731a89364dcf51f617c5490c0e46a16977ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099755"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
   本主題包括並描述範例 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS 指令碼，該指令碼會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
@@ -95,16 +94,16 @@ ms.locfileid: "56012050"
 |記錄|**否**|**否**||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |[排程]|是|是|若要移轉排程，則必須在目標伺服器上執行 SQL Server Agent。 如果 SQL Server Agent 未在目標上執行，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|角色和系統原則|是|是|根據預設，指令碼不會在伺服器之間複製自訂的權限結構描述。 預設行為是，項目會 coied 到目的地伺服器 '繼承父權限 」 旗標設為 TRUE。 如果您希望指令碼複製個別項目的權限，請使用 SECURITY 參數。<br /><br /> 如果來源和目標伺服器 **不屬於相同的報表伺服器模式**，例如從原生模式到 SharePoint 模式，而且您使用 SECURITY 參數，則指令碼將會根據下列主題中的比較嘗試對應預設角色和群組：＜ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞。 自訂角色和群組不會複製到目的地伺服器。<br /><br /> 當指令碼在 **屬於相同模式**的伺服器之間進行複製，而且您使用 SECURITY 參數時，指令碼將會在目的地伺服器上建立新的角色 (原生模式) 或群組 (SharePoint 模式)。<br /><br /> 如果角色已出現在目的地伺服器上，指令碼將會建立類似下面的「失敗」訊息，並繼續移轉其他項目。 指令碼完成後，請確認目的地伺服器上的角色是否根據您的需求設定。 移轉角色:找到 8 個項目。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../security/grant-user-access-to-a-report-server.md)<br /><br /> **注意：** 如果來源伺服器上的使用者不存在於目的地伺服器上，指令碼就無法在目的地伺服器上套用角色指派，而且即使已使用 SECURITY 參數，也無法套用角色指派。|  
+|角色和系統原則|是|是|根據預設，指令碼不會在伺服器之間複製自訂的權限結構描述。 預設行為是，項目會 coied 到目的地伺服器 '繼承父權限 」 旗標設為 TRUE。 如果您希望指令碼複製個別項目的權限，請使用 SECURITY 參數。<br /><br /> 如果來源和目標伺服器 **不屬於相同的報表伺服器模式**，例如從原生模式到 SharePoint 模式，而且您使用 SECURITY 參數，則指令碼將會根據下列主題中的比較嘗試對應預設角色和群組：＜ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞。 自訂角色和群組不會複製到目的地伺服器。<br /><br /> 當指令碼在 **屬於相同模式**的伺服器之間進行複製，而且您使用 SECURITY 參數時，指令碼將會在目的地伺服器上建立新的角色 (原生模式) 或群組 (SharePoint 模式)。<br /><br /> 如果角色已出現在目的地伺服器上，指令碼將會建立類似下面的「失敗」訊息，並繼續移轉其他項目。 指令碼完成後，請確認目的地伺服器上的角色是否根據您的需求設定。 移轉角色：找到 8 個項目。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../security/grant-user-access-to-a-report-server.md)<br /><br /> **注意：** 如果來源伺服器上的使用者不存在於目的地伺服器上，指令碼就無法在目的地伺服器上套用角色指派，而且即使已使用 SECURITY 參數，也無法套用角色指派。|  
 |共用資料來源|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 認證 **不** 會複製作為資料來源的一部分。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。|  
 |共用資料集|是|是||  
 |資料夾|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |報表|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |參數|是|是||  
-|訂閱|是|是||  
+|Subscriptions|是|是||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |處理選項|是|是||  
-|快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的訂閱:找到 1 個項目。<br /><br /> 移轉訂用帳戶儲存在\\\server\public\savedreports 為 titleonly 的訂閱...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的記錄設定 …SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的處理選項 …找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理選項 …SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理計劃:找到 1 個項目。<br /><br /> 移轉快取重新整理計劃 titleonly_refresh735amM2F ...SUCCESS|  
+|快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的訂閱：找到 1 個項目。<br /><br /> 移轉訂用帳戶儲存在\\\server\public\savedreports 為 titleonly 的訂閱...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的記錄設定...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的處理選項...找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理選項...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理計畫：找到 1 個項目。<br /><br /> 移轉的快取重新整理計劃 titleonly_refresh735amM2F...SUCCESS|  
 |快取重新整理計劃|是|是||  
 |影像|是|是||  
 |報表組件|是|是||  
@@ -112,11 +111,11 @@ ms.locfileid: "56012050"
 ##  <a name="bkmk_required_permissions"></a> 必要權限  
  指令碼中用來讀取或寫入項目和資源之所有方法所需的權限不盡相同。 下表摘要列出每個項目或資源使用的方式，以及相關內容的連結。 請導覽至個別主題，查看必要的權限。 例如，ListChildren 方法主題說明下列操作的必要權限：  
   
--   **原生模式的必要權限：** 項目的 ReadProperties  
+-   **原生模式的必要權限：** 目的 ReadProperties  
   
 -   **SharePoint 模式的必要權限：** ViewListItems  
   
-|項目或資源|原始程式檔|目標|  
+|項目或資源|`Source`|目標|  
 |----------------------|------------|------------|  
 |目錄項目|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
 |角色|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
@@ -336,18 +335,18 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  **SharePoint 模式：**  
   
-1.  瀏覽至 **[網站設定]**。  
+1.  瀏覽至 **[網站設定]** 。  
   
-2.  在 **[Reporting Services]** 群組中，按一下 **[管理共用排程]**。  
+2.  在 **[Reporting Services]** 群組中，按一下 **[管理共用排程]** 。  
   
 ### <a name="roles-and-groups"></a>角色和群組  
  **Native Mode**  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至您的原生模式報表伺服器。  
   
-2.  在 **[物件總管]** 中按一下 **[安全性]**。  
+2.  在 **[物件總管]** 中按一下 **[安全性]** 。  
   
-3.  按一下 **[角色]**。  
+3.  按一下 **[角色]** 。  
   
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解  
  使用追蹤旗標 **-t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  

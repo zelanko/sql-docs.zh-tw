@@ -2,29 +2,33 @@
 title: 升級報表伺服器資料庫 | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03b999b35cf9b308d683c8888980d7e60a24fb36
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575234"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
 
 報表伺服器資料庫為一個或多個報表伺服器執行個體提供了儲存裝置。 由於報表伺服器資料庫結構描述可隨著每個新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本一起變更，所以此資料庫版本必須符合您所使用的報表伺服器執行個體版本。 在大多數情況下，報表伺服器資料庫可以自動升級，而不需要您採取特定的動作。  
   
  **原生模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中，報表伺服器資料庫實際上是由預設名稱為 ReportServer 和 ReportServerTempDB 的兩個資料庫所組成。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint 模式：** 在 SQL Server 2016 Reporting Services SharePoint 模式中，報表伺服器資料庫實際上是為每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式執行個體而建立的資料庫集合。  
+
+::: moniker-end
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>升級原生模式報表伺服器資料庫的方法
 

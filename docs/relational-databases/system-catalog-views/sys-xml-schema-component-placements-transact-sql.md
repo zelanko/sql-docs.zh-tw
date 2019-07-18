@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_component_placements catalog view
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 78403dd04dc4fb1e531032c9f80639134f58b6ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: 0bab2cda409d5715e1f6b5519e1b760eb1cad9c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103375"
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

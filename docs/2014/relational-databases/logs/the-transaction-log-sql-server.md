@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144614"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都擁有交易記錄檔來記錄所有交易，以及交易在資料庫中所作的修改。 必須定期截斷交易記錄，以免被填滿。 但是，某些因素會影響記錄的截斷，所以監控記錄大小非常重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
@@ -41,7 +41,7 @@ ms.locfileid: "52807010"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 優點：交易記錄檔所支援的作業  
+##  <a name="Benefits"></a> 優點：交易記錄所支援的作業  
  交易記錄檔支援下列作業：  
   
 -   復原個別的交易。  
@@ -93,10 +93,10 @@ ms.locfileid: "52807010"
 |12|-|僅供內部使用|  
 |13|OLDEST_PAGE|如果將資料庫設定為使用間接檢查點，資料庫中最舊的頁面可能會比檢查點 LSN 更舊。 在此情況下，最舊的頁面可能會延遲記錄截斷。 (所有復原模式)<br /><br /> 如需間接檢查點的相關資訊，請參閱 [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
-|16|XTP_CHECKPOINT|當資料庫具有記憶體最佳化的檔案群組時，交易記錄檔可能會等到自動 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 檢查點觸發 (當記錄大小每成長 512 MB 時執行) 時，才會截斷記錄。<br /><br /> 注意：若要在達到 512 MB 之前，先截斷交易記錄，請手動對有問題的資料發出 Checkpoint 命令。|  
+|16|XTP_CHECKPOINT|當資料庫具有記憶體最佳化的檔案群組時，交易記錄檔可能會等到自動 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 檢查點觸發 (當記錄大小每成長 512 MB 時執行) 時，才會截斷記錄。<br /><br /> 注意:若要截斷交易記錄，512 MB 的大小之前，資料發出 Checkpoint 命令手動對有問題。|  
   
 ##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
- 「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄復原模式下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+ 「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄復原模式下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]  
 >  記憶體最佳化資料表不支援最低限度記錄。  

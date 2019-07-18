@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62921951"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
   本主題描述如何使用 **或** 管理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]資料表。 **suspect_pages** 資料表用於維護可疑頁面的相關資訊，有助於決定是否有必要進行還原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料表位於 [msdb 資料庫](../databases/msdb-database.md)中。  
@@ -124,11 +124,11 @@ ms.locfileid: "48053498"
   
 #### <a name="to-manage-the-suspectpages-table"></a>若要管理 suspect_pages 資料表  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
+1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
   
-2.  依序展開 [系統資料庫] 、[msdb] 、[資料表] 和 [系統資料表] 。  
+2.  依序展開 [系統資料庫]  、[msdb]  、[資料表]  和 [系統資料表]  。  
   
-3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列] 。  
+3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列]  。  
   
 4.  在查詢視窗中，編輯、更新或刪除所要的資料列。  
   
@@ -138,9 +138,9 @@ ms.locfileid: "48053498"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會刪除 `suspect_pages` 資料表中的部分資料列。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 這個範例會刪除 `suspect_pages` 資料表中的部分資料列。  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  
@@ -166,7 +166,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [還原頁面 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

@@ -13,18 +13,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899835"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>歡迎使用緩時變維度精靈
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **不要再顯示此頁面**  
  下次開啟精靈時略過歡迎頁面。  
   

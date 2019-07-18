@@ -15,23 +15,23 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e957b45415f42f469166831cf68058d276c9cd33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65980409"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
   
- 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 SQL 資料倉儲的保留關鍵字。  
+ 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL 資料倉儲的保留關鍵字。  
   
 ||||  
 |-|-|-|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853566"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-下表列出專屬於 **SQL 資料倉儲**的保留關鍵字，。
+下表列出 **Azure SQL 資料倉儲**專屬的保留關鍵字。
 
 |||
 |-|-|
-|**標籤**||
+|**LABEL**||
   
  另外，ISO 標準也定義了一份保留關鍵字的清單。 請避免在物件名稱和識別碼上使用 ISO 保留關鍵字。 下表所顯示的 ODBC 保留關鍵字清單與 ISO 保留關鍵字清單相同。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47853566"
 |BLOB|LAST|SESSION|  
 |BOOLEAN|LATERAL|SETS|  
 |BOTH|LEADING|SIMILAR|  
-|BREADTH|LESS|SIZE |  
+|BREADTH|LESS|SIZE|  
 |CALL|LEVEL|SMALLINT|  
 |CALLED|LIKE_REGEX|SPACE|  
 |CARDINALITY|LIMIT|SPECIFIC|  

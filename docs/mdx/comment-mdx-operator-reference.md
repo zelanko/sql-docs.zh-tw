@@ -1,5 +1,5 @@
 ---
-title: -（註解） (MDX) |Microsoft 文件
+title: -（註解） (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006279"
 ---
 # <a name="comment---mdx-operator-reference"></a>註解-MDX 運算子參考
 

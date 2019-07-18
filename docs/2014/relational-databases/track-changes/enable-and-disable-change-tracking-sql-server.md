@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db1a34a93c740aac5e24734f0a5f07c2d6719b73
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670597"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>啟用和停用變更追蹤 (SQL Server)
   此主題描述如何針對資料庫和資料表啟用及停用變更追蹤。  

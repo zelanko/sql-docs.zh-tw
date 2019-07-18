@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatcher.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1273e282dab772b2bd59177de6bd24ad1d3e6d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054344"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 事件監看員工作編輯器 (一般頁面)
   使用 [WMI 事件監看員工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述 WMI 事件監看員工作。  
   
  若要了解這項工作，請參閱 [WMI 事件監看員工作](control-flow/wmi-event-watcher-task.md)。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  為「WMI 事件監看員」工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

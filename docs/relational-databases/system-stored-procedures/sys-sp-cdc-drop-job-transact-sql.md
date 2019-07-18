@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e40326bca324b72d71ba72c68242c0af2b0b59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0318322442aae5a72b25b2eb011e03a82fe84525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066767"
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.cdc_jobs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_disable_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   

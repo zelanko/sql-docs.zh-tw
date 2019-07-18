@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218028"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757781"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 介面
   IMDEmbedded 介面是用來管理內嵌 PowerPivot 資料庫或表格式模型資料庫的公用介面。 此介面繼承自 `IPersistStream` 介面， 允許下列作業：  
@@ -40,10 +38,10 @@ ms.locfileid: "48218028"
   
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自 `IPersistStream`。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  下列參考記載`IMDEmbedded`介面中所示**msmd.h**標頭檔。  
   
-### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  
+### <a name="source-file-pxoembeddeddataidl"></a>原始程式檔：PXOEmbeddedData.idl  
   
 ```  
 [  
@@ -111,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|目前應用程式包含內嵌資料庫|  
 |DBPROPVAL_EMBED_LINKED|0x02|內嵌資料庫裝載於遠端應用程式 (即 SharePoint Server)|  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -141,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  設定容器 URL 時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -171,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  設定旗標時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -201,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  設定路徑時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -231,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  取消內嵌作業時發生錯誤。  
   
-#### <a name="source"></a>來源  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   

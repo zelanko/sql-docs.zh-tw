@@ -13,12 +13,12 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6aee718961b0e9afb12de09651346d1686821adc
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d7ac4da02b259779ef1027ad771f529ee918d12c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512199"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584915"
 ---
 # <a name="export-a-policy-based-management-policy"></a>匯出原則式管理原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,17 +28,17 @@ ms.locfileid: "51512199"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來匯出原則：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,14 +49,15 @@ ms.locfileid: "51512199"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要匯出的原則，然後選取 [匯出原則]。  
+5.  以滑鼠右鍵按一下您想要匯出的原則，然後選取 [匯出原則]  。  
   
 6.  在 **[匯出原則]** 對話方塊的位址列中，輸入檔案的路徑和名稱。 或者，在對話方塊的導覽窗格中尋找適當的檔案位置，然後在 **[檔案名稱]** 方塊中輸入 XML 檔案的名稱。  
   
-7.  完成後，請按一下 **[儲存]**。  
-  
-  
+7.  完成後，請按一下 **[儲存]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

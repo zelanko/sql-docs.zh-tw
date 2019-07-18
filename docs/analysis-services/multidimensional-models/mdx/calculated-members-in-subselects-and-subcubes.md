@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806069"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

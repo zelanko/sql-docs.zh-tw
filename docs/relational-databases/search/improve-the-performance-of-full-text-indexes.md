@@ -18,18 +18,18 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973577"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652816"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題描述全文檢索索引和查詢效能降低的一些常見原因。 它也會提供一些建議，以減少這些問題的發生並改善效能。
+此主題說明全文檢索索引和查詢效能降低的一些常見原因。 它也會提供一些建議，以減少這些問題的發生並改善效能。
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="causes"></a> 效能問題的常見原因
 ### <a name="hardware-resource-issues"></a>硬體資源問題
 全文檢索索引與全文檢索查詢的效能受到硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
 
@@ -52,7 +52,7 @@ ms.locfileid: "57973577"
 -   篩選背景程式可以取用這些批次的速度。  
 
 ### <a name="full-text-index-population-issues"></a>全文檢索索引母體擴展問題
--   **母體擴展的類型**. 與完整母體擴展不同，累加、手動和自動變更追蹤母體擴展並非設計來最大化硬體資源以達到更快的速度。 因此，本主題中的微調建議可能無法在全文檢索索引使用累加、手動或自動變更追蹤母體擴展時增強其效能。  
+-   **母體擴展的類型**. 與完整母體擴展不同，累加、手動和自動變更追蹤母體擴展並非設計來最大化硬體資源以達到更快的速度。 因此，此主題中的微調建議可能無法在全文檢索索引使用累加、手動或自動變更追蹤母體擴展時增強其效能。  
   
 -   **主要合併**. 完成母體擴展後會觸發最後的合併程序，將索引片段合併成一個主要的全文檢索索引。 如此可提升查詢的效能，因為只需要查詢一個主索引而不需查詢數個索引片段，而且可使用較佳的計分系統來排定關聯順序。 不過，主要合併過程可能需要密集的磁碟 I/O，因為合併索引片段時必須讀寫大量的資料，但是不會阻止傳入的查詢。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "57973577"
   
 -   請使用 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式來更新基底資料表的統計資料。 更重要的是，請更新叢集索引上的統計資料或完整母體擴展的全文檢索索引鍵。 這有助於多重範圍母體擴展在資料表上產生良好的資料分割。  
   
--   在大型的多重 CPU 電腦上執行完整母體擴展之前，建議您設定 [最大伺服器記憶體] 值來暫時限制緩衝集區的大小，以便保留足夠的記憶體供 fdhost.exe 處理序和作業系統使用。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。
+-   在大型的多重 CPU 電腦上執行完整母體擴展之前，建議您設定 [最大伺服器記憶體]  值來暫時限制緩衝集區的大小，以便保留足夠的記憶體供 fdhost.exe 處理序和作業系統使用。 如需詳細資訊，請參閱此主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。
 
--   如果您使用根據時間戳記資料行的累加母體擴展，請在 [時間戳記] 資料行上建置次要索引以改善累加母體擴展的效能。  
+-   如果您使用根據時間戳記資料行的累加母體擴展，請在 [時間戳記]  資料行上建置次要索引以改善累加母體擴展的效能。  
   
 ##  <a name="full"></a> 為完整母體擴展的效能進行疑難排解  
 ### <a name="review-the-full-text-crawl-logs"></a>檢閱全文檢索編目記錄檔
@@ -98,9 +98,9 @@ ms.locfileid: "57973577"
   
 -   **記憶體不足**。 如果完整母體擴展期間可用的實體記憶體數量為零，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區可能耗用系統上的大部分實體記憶體。  
   
-     sqlservr.exe 處理序嘗試擷取緩衝集區的所有可用記憶體，最多至已設定的最大伺服器記憶體。 如果 [最大伺服器記憶體] 配置太大，fdhost.exe 處理序可能會發生記憶體不足以及無法配置共用記憶體的狀況。  
+     sqlservr.exe 處理序嘗試擷取緩衝集區的所有可用記憶體，最多至已設定的最大伺服器記憶體。 如果 [最大伺服器記憶體]  配置太大，fdhost.exe 處理序可能會發生記憶體不足以及無法配置共用記憶體的狀況。  
   
-     您可以透過適當設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區的 [最大伺服器記憶體] 來解決此問題。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
+     您可以透過適當設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區的 [最大伺服器記憶體]  來解決此問題。 如需詳細資訊，請參閱此主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
 
 -   **記憶體競爭**。 在多重 CPU 電腦上進行全文檢索母體擴展期間，fdhost.exe 或 sqlservr.exe 之間可能會發生競爭緩衝集區記憶體的情況。 所產生的共用記憶體不足會導致批次重試、記憶體壓力以及 fdhost.exe 處理序的傾印。  
 
@@ -127,17 +127,17 @@ ms.locfileid: "57973577"
   
 -   *T*，這是系統上可用的實體記憶體總計 (以 MB 為單位)。  
   
--   *M*，這是最佳 [最大伺服器記憶體] 設定。  
+-   *M*，這是最佳 [最大伺服器記憶體]  設定。  
   
 如需下列公式的基本資訊，請參閱資料表後面的附註。  
   
 |平台|以 MB 為單位估計 fdhost.exe 記憶體需求-*F*^1|計算最大伺服器記憶體的公式-*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *編目範圍數目* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *編目範圍數目* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *搜耙範圍數目* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *搜耙範圍數目* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **公式的附註**
-1.  如果有多個完整母體擴展正在進行中，請個別計算每個母體擴展的 fdhost.exe 記憶體需求，例如 *F1*、*F2* 等。 然後將 *M* 計算為 _T_**-** sigma **(**_F_i **)**。  
+1.  如果有多個完整母體擴展正在進行中，請個別計算每個母體擴展的 fdhost.exe 記憶體需求，例如 *F1*、*F2* 等。 然後將 *M* 計算為 _T_ **-** sigma **(** _F_i **)** 。  
 2.  500 MB 是系統中其他處理序所需記憶體的估計值。 如果系統正在進行其他工作，請據此增加這個值。  
 3.  。*ism_size* 在 x64 平台假設為 8 MB。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "57973577"
   
  #### <a name="example-setting-max-server-memory"></a>範例設定最大伺服器記憶體  
   
- 此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體] 設為上述範例中計算的 *M* 值，即 `7052`：  
+ 此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體]  設為上述範例中計算的 *M* 值，即 `7052`：  
   
 ```  
 USE master;  
@@ -179,7 +179,7 @@ GO
   
      下表將說明在此重要的等候類型。  
   
-    |等候類型|Description|可能的解決方案|  
+    |等候類型|描述|可能的解決方案|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX 或 _UP)|這可能表示 IO 瓶頸，而在此情況下，您通常也會看見很高的平均磁碟佇列長度。|將全文檢索索引移至不同磁碟上的不同檔案群組可能有助於減少 IO 瓶頸。|  
     |PAGELATCH_EX (或 _UP)|這可能表示嘗試寫入相同資料庫檔案的執行緒之間存在大量競爭的情況。|將檔案加入至全文檢索索引所在的檔案群組可能有助於減少這類競爭的情況。|  

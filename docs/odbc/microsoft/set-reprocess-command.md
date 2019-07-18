@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41877986d5d0e8afdfb30841860df360efd26da0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063626"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS 命令
 指定多少時間，或如何鎖定的嘗試失敗後的檔案或記錄長時間。  

@@ -15,23 +15,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62830245"
 ---
 # <a name="select-a-package"></a>選取封裝
   使用 **[選取封裝]** 對話方塊，即可指定訊息佇列工作可以接收訊息的來源封裝。  
   
 ## <a name="static-options"></a>靜態選項  
- **位置**  
+ **Location**  
  指定封裝的位置。 這個屬性具有下表中所列的選項。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]**、 **[使用 Windows 驗證]**、 **[使用 SQL Server 驗證]**、 **[使用者名稱]** 和 **[密碼]**。|  
-|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]**。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]** 、 **[使用 Windows 驗證]** 、 **[使用 SQL Server 驗證]** 、 **[使用者名稱]** 和 **[密碼]** 。|  
+|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]** 。|  
   
 ## <a name="location-dynamic-options"></a>位置動態選項  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58388296"
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 檔案  
  **檔案名稱**  
- 提供封裝的路徑，或按一下瀏覽按鈕 ([...]) 並尋找封裝。  
+ 提供封裝的路徑，或按一下瀏覽按鈕 ([...])  並尋找封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](message-queue-task.md)  

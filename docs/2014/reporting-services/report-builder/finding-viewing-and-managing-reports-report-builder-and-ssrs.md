@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e02d6bb985d7b18c7e1401882ad9bd926168c6a1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107830"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
   在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找報表、共用資料來源、模型，以及其他相關的報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  
@@ -122,7 +121,7 @@ ms.locfileid: "56040809"
  ![rs_SharePointRunReport](../media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>透過動作管理項目  
- 下拉式功能表上的動作可支援每個項目的管理工作。 根據您的權限，每個項目都具有通用的動作，對於儲存在 SharePoint 程式庫中的項目而言，這些都是標準動作。 **[檢視屬性]** 和 **[編輯屬性]** 是通用動作的範例。 自訂動作可提供項目特定的管理功能。 下列影像顯示報表定義的動作。 報表定義的自訂動作範例包括 **[管理訂閱]** 和 **[管理處理選項]**：  
+ 下拉式功能表上的動作可支援每個項目的管理工作。 根據您的權限，每個項目都具有通用的動作，對於儲存在 SharePoint 程式庫中的項目而言，這些都是標準動作。 **[檢視屬性]** 和 **[編輯屬性]** 是通用動作的範例。 自訂動作可提供項目特定的管理功能。 下列影像顯示報表定義的動作。 報表定義的自訂動作範例包括 **[管理訂閱]** 和 **[管理處理選項]** ：  
   
  ![報表伺服器項目的功能表命令](../media/rs-ecbforrsitems.gif "報表伺服器項目的功能表命令")  
   

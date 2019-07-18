@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966439"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 (ADOX Collections)
 從集合移除的物件。  
@@ -49,7 +48,7 @@ Collection.Delete Name
 ```  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  A **Variant**指定之名稱或序數位置 （索引），要刪除的物件。  
   
 ## <a name="remarks"></a>備註  

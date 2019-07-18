@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8692091715592e1c0b821339c805679940fb2972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949582"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 屬性 (ADO MD)
 表示層級的名稱[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  

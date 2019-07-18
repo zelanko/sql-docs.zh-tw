@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086358"
 ---
 # <a name="multiple-results"></a>多個結果
 A*結果*項目所傳回的資料來源之後執行的陳述式。 ODBC 有兩種類型的結果： 結果集和資料列計數。 *資料列計數*所刪除的更新時，受影響的資料列數目，或 insert 陳述式。 批次中所述[批次的 SQL 陳述式](../../../odbc/reference/develop-app/batches-of-sql-statements.md)，可以產生多個結果。  
@@ -31,8 +30,8 @@ A*結果*項目所傳回的資料來源之後執行的陳述式。 ODBC 有兩�
   
 |批次類型|資料列計數|結果集|  
 |----------------|----------------|-----------------|  
-|明確的批次|[A] SQL_BATCH_ROW_COUNT|-[b]。|  
-|程序|[A] SQL_BATCH_ROW_COUNT|-[b]。|  
+|明確的批次|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|程序|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |參數陣列|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  不支援產生計數的批次中的陳述式可能會受到支援，[a] 資料列，但傳回的資料列計數。 中的 SQL_BATCH_SUPPORT 選項**SQLGetInfo**指出是否資料列計數產生允許陳述式批次; SQL_BATCH_ROW_COUNTS 選項可讓您指出應用程式是否會傳回這些資料列計數。  

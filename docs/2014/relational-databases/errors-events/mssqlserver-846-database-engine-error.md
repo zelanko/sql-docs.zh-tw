@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913184"
 ---
 # <a name="mssqlserver846"></a>MSSQLSERVER_846
     
@@ -29,7 +29,7 @@ ms.locfileid: "48181568"
 |事件識別碼|846|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
-|符號名稱|不適用|  
+|符號名稱|N/A|  
 |訊息文字|等候緩衝閂時發生逾時 -- 類型 %d，bp %p，頁面 %d:%d，狀態 %#x，資料庫識別碼: %d，配置單位識別碼: %I64d%ls，工作 0x%p : %d，等候時間 %d，旗標 0x%I64x，主控工作 0x%p。 不繼續等候。|  
   
 ## <a name="explanation"></a>說明  

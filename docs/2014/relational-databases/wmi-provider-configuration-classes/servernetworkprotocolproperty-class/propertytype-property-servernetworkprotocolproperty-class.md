@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1f0c3536f8196a1ff0b31134f3818d3578b72635
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643731"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>PropertyType 屬性 (ServerNetworkProtocolProperty 類別)
   取得屬性的類型。  

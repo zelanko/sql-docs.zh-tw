@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103869"
 ---
 # <a name="behavioral-changes"></a>行為變更
 行為變更會讓這些變更*語法*介面的維持不變，但*語意*已變更。 如需這些變更，ODBC 2 中所使用的功能。*x*行為不同於相同的功能，在 ODBC 3 行為。*x*。  
   
  不論應用程式表現 ODBC 2。*x*行為或 ODBC 3。*x*行為取決於 SQL_ATTR_ODBC_VERSION 環境屬性。 這個 32 位元值是設 SQL_OV_ODBC2 展現 ODBC 2。*x*行為，以及展現 ODBC 3 SQL_OV_ODBC3。*x*行為。  
   
- 藉由呼叫設定了 SQL_ATTR_ODBC_VERSION 環境屬性**SQLSetEnvAttr**。 應用程式呼叫後**SQLAllocHandle**配置環境控制代碼，它必須呼叫**SQLSetEnvAttr**立即將它所表現的行為。 （如此一來，沒有新環境的狀態來描述環境控制代碼中配置，但 versionless，狀態）。如需詳細資訊，請參閱 <<c0> [ 附錄 b: ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 藉由呼叫設定了 SQL_ATTR_ODBC_VERSION 環境屬性**SQLSetEnvAttr**。 應用程式呼叫後**SQLAllocHandle**配置環境控制代碼，它必須呼叫**SQLSetEnvAttr**立即將它所表現的行為。 （如此一來，沒有新環境的狀態來描述環境控制代碼中配置，但 versionless，狀態）。如需詳細資訊，請參閱[附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  應用程式狀態以及它所表現的 SQL_ATTR_ODBC_VERSION [環境] 屬性，但該屬性的行為有 ODBC 2 應用程式的連接上沒有作用。*x*或 ODBC 3。*x*驅動程式。 ODBC 3。*x*應用程式可以連接至 ODBC 2。*x*或 3。*x*驅動程式，無論環境屬性的設定為何。  
   

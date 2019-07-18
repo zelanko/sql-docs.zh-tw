@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b6060a38e6cfa5fa826ac255d05a1f5e72018e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5526e77b8b8090b08e7b3b2a29ec561808721621
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063592"
 ---
 # <a name="toggle-a-breakpoint"></a>切換中斷點
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上設定中斷點的動作稱為切換中斷點。  

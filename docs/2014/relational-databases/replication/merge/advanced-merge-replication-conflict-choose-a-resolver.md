@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62931621"
 ---
 # <a name="choose-a-resolver"></a>選擇解析程式
   選擇解決器時，請考慮應用程式中衝突解決的重要性，並考慮是否可使用預設的優先權式衝突解決器還是需要使用發行項解決器。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036416"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>長資料和 SQLSetPos 與 SQLBulkOperations
 更新資料列時，在此情況下，使用 SQL 陳述式中的參數，可以傳送長資料**SQLBulkOperations**或是**SQLSetPos**或插入資料列時**SQLBulkOperations**. 資料會使用多個呼叫的組件，以傳送**SQLPutData**。 為其資料會在執行階段傳送的資料行稱為*資料在執行中資料行*。  
@@ -46,4 +45,4 @@ ms.locfileid: "47658426"
   
 6.  呼叫**SQLParamData**以表示它已傳送所有資料行的資料。 如果有為其資料尚未傳送任何資料執行資料行，驅動程式會傳回 SQL_NEED_DATA 和下一步 的資料在執行資料行; 的唯一值應用程式會返回步驟 5。 如果資料已傳送的所有資料在執行資料行，資料列的資料會傳送至資料來源。 **SQLParamData**則會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，而且可以傳回任何 SQLSTATE 所**SQLBulkOperations**或是**SQLSetPos**可以傳回。  
   
- 在後**SQLBulkOperations**或是**SQLSetPos**會傳回 SQL_NEED_DATA 且資料已完全傳送最後一個資料在執行中資料行之前，陳述式中需要的資料狀態。 在此狀態下，應用程式可以只呼叫**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式，並傳回其先前的狀態。 如需詳細資訊，請參閱 <<c0> [ 附錄 b: ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
+ 在後**SQLBulkOperations**或是**SQLSetPos**會傳回 SQL_NEED_DATA 且資料已完全傳送最後一個資料在執行中資料行之前，陳述式中需要的資料狀態。 在此狀態下，應用程式可以只呼叫**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式，並傳回其先前的狀態。 如需詳細資訊，請參閱[附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。

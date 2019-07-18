@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b064436dae6cb2f3d5f37fa02ab57a1e4a3f015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944831"
 ---
 # <a name="odbc-overview"></a>ODBC 概觀
 開放式資料庫連接 (ODBC) 是資料庫存取廣為接受的應用程式開發介面 (API)。 它以資料庫 Api 從 Open Group 和 ISO/IEC 的呼叫層級介面 (CLI) 規格為基礎，並使用做為其資料庫存取語言的結構化查詢語言 (SQL)。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109092"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>一般屬性頁面、報表組件 (報表管理員)
   使用 [屬性] 頁面來檢視及管理報表組件的一般屬性。  
@@ -32,7 +31,7 @@ ms.locfileid: "56040479"
   
 2.  將滑鼠停留在該報表組件上方，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]**， 就會開啟 [一般] 屬性頁面。  
+3.  在下拉式清單中，按一下 **[管理]** ， 就會開啟 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **修改的日期**  
@@ -62,7 +61,7 @@ ms.locfileid: "56040479"
  **型別**  
  報表組件的類型。 唯讀。  
   
- **套用**  
+ **Apply**  
  儲存變更。  
   
  **刪除**  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528170"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918438"
 ---
 # <a name="start-or-stop-a-collection-set"></a>啟動或停止收集組
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟動或停止收集組。  
@@ -66,17 +66,17 @@ ms.locfileid: "58528170"
   
 #### <a name="to-start-a-collection-set"></a>若要啟動收集組  
   
-1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]**。  
+1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
-2.  以滑鼠右鍵按一下您要啟動的收集組，然後按一下 [啟動資料收集組]。  
+2.  以滑鼠右鍵按一下您要啟動的收集組，然後按一下 [啟動資料收集組]  。  
   
      訊息方塊會顯示此動作的結果，而此收集組圖示上的綠色箭頭會指示此收集組已經啟動。  
   
 #### <a name="to-stop-a-collection-set"></a>若要停止收集組  
   
-1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]**。  
+1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]** 。  
   
-2.  以滑鼠右鍵按一下您要停止的收集組，然後按一下 [停止資料收集組]。  
+2.  以滑鼠右鍵按一下您要停止的收集組，然後按一下 [停止資料收集組]  。  
   
      訊息方塊會顯示此動作的結果，而此收集組圖示上的紅色圓圈會指示此收集組已經停止。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "58528170"
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例使用 [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) 啟動識別碼為 `1`的收集組。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例使用 [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) 啟動識別碼為 `1`的收集組。  
   
 ```sql  
 USE msdb;  
@@ -100,9 +100,9 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例使用 [sp_syscollector_stop_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) 停止識別碼為 `1`的收集組。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例使用 [sp_syscollector_stop_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) 停止識別碼為 `1`的收集組。  
   
 ```sql  
 USE msdb;  

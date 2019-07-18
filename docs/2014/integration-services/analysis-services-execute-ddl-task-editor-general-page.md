@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b7a01a2b49900653fb3acba85517315aa32579b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061548"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [一般] 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
+  使用 [Analysis Services 執行 DDL 工作編輯器]  對話方塊的 [一般]  頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
   
  若要了解這個工作，請參閱＜ [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

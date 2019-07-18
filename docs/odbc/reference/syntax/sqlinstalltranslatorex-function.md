@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019000"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函式
 **合規性**  
@@ -38,7 +37,7 @@ ms.locfileid: "53212527"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLInstallTranslatorEx(  
      LPCSTR    lpszTranslator,  
@@ -70,7 +69,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [輸出]傳回在可用的位元組總數*lpszPathOut*。 傳回可用的位元組數目是否大於或等於*cbPathOutMax*中的輸出路徑*lpszPathOut*會被截斷成*pcbPathOutMax*減號null 結束字元。 *PcbPathOut*引數可以是 null 指標。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*必須包含下列值之一：  
   
  ODBC_INSTALL_INQUIRY:詢問有關轉譯器安裝。  

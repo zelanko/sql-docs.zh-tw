@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 49758d367f5ec22ffe3893896ab607917f28bf31
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.reviewer: mathoma
+ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050453"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>檢視分析報告，在 資料庫測試助理
 
@@ -28,7 +27,7 @@ ms.locfileid: "56987764"
 
 在 DEA，選取 [功能表] 圖示。 在展開的功能表中，選取**分析報表**檢查清單圖示，以開啟分析報告 視窗旁邊。
 
-底下**分析報表**，輸入執行分析的資料庫的 SQL Server 的電腦名稱。 選取 [連接]。 
+底下**分析報表**，輸入執行分析的資料庫的 SQL Server 的電腦名稱。 選取 [連接]  。 
 
 ![連接到現有的報表](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 

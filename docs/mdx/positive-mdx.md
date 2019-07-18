@@ -1,5 +1,5 @@
 ---
-title: + （正）(MDX) |Microsoft 文件
+title: + （正）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 30162cbc63d64f9c5224fd2d030e1dbc50f5dae1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 7b97ebb64b5287249c39797629ff32a221380858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055607"
 ---
 # <a name="-positive-mdx"></a>+ (正) (MDX)
 

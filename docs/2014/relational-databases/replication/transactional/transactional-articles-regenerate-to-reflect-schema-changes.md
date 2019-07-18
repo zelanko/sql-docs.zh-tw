@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655503"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>重新產生自訂交易程序以反映結構描述變更
   依預設，異動複寫可透過預存程序在「訂閱者」上進行所有資料變更，該預存程序由發行集中每個資料表發行項的內部程序所產生。 將插入、更新或刪除複寫至「訂閱者」時，會將三個程序 (插入、更新和刪除各一個) 複製給「訂閱者」並執行。 在對「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者」上的資料表進行結構描述變更時，複寫將透過呼叫相同的內部指令碼程序組以自動重新產生這些程序，以便新程序與新的結構描述相符 (「Oracle 發行者」不支援結構描述變更複寫)。  
@@ -38,7 +38,7 @@ ms.locfileid: "52815670"
   
     1.  在執行 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 時，將 **@schema_option** 0x02 位元設定為 **false**，這樣複寫便不會在「訂閱者」端自動產生自訂程序。  
   
-    2.  在變更每個結構描述之前，會建立新的指令碼檔案並透過執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 使用複寫註冊指令碼。 為參數 **@type** 指定 'custom_script' 的值，並為參數 **@value**。  
+    2.  在變更每個結構描述之前，會建立新的指令碼檔案並透過執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 使用複寫註冊指令碼。 為參數 **@type** 指定 'custom_script' 的值，並為參數 **@value** 。  
   
      在下次變更相關結構描述時，此指令碼在相同交易中於每個「訂閱者」上做為 DDL 命令執行。 在變更結構描述後，指令碼將取消註冊。 您必須重新註冊指令碼，以便在隨後變更結構描述後執行該指令碼。  
   

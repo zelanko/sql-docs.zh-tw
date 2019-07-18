@@ -1,5 +1,5 @@
 ---
-title: 批次處理 (Analysis Services) |Microsoft 文件
+title: 批次處理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6d2f72dd0c7b380391a7b500d494d5aac83c4c6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62717685"
 ---
 # <a name="batch-processing-analysis-services"></a>批次處理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,19 +41,19 @@ ms.locfileid: "34023645"
   
 4.  按住 Ctrl 鍵，並按一下 **[維度]** 資料夾中列出的每個維度。  
   
-5.  以滑鼠右鍵按一下選取的維度，然後按一下 [處理]。  
+5.  以滑鼠右鍵按一下選取的維度，然後按一下 [處理]  。  
   
 6.  按住 Ctrl 鍵，並按一下 **[物件清單]** 中列出的每個維度。  
   
-7.  以滑鼠右鍵按一下選取的維度，然後選取 [完整處理]。  
+7.  以滑鼠右鍵按一下選取的維度，然後選取 [完整處理]  。  
   
-8.  若要自訂批次處理作業，請按一下 **[變更設定]**。  
+8.  若要自訂批次處理作業，請按一下 **[變更設定]** 。  
   
 9. 在 **[處理選項]** 下標示下列設定：  
   
-    -   將 **[處理順序]** 設定為 **[循序]**，並將 **[交易模式]** 設定為 **[一筆交易]**。  
+    -   將 **[處理順序]** 設定為 **[循序]** ，並將 **[交易模式]** 設定為 **[一筆交易]** 。  
   
-    -   將 **[回寫資料表選項]** 設定為 **[使用現有的]**。  
+    -   將 **[回寫資料表選項]** 設定為 **[使用現有的]** 。  
   
     -   在 **[受影響的物件]** 下，選取 **[處理受影響的物件]** 核取方塊。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "34023645"
   
 12. 在 **[處理物件]** 畫面中按一下 **[執行]** ，以啟動處理作業。  
   
-13. 當 **[狀態]** 方塊顯示 **[處理成功]** 時，按一下 **[關閉]**。  
+13. 當 **[狀態]** 方塊顯示 **[處理成功]** 時，按一下 **[關閉]** 。  
   
 14. 按一下 **[處理物件]** 畫面上的 **[關閉]** 。  
   

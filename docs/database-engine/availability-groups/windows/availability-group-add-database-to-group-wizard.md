@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140643"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>使用 [可用性群組精靈] 將資料庫新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,30 +50,34 @@ ms.locfileid: "53211567"
      如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="use-the-new-availability-group-wizard"></a>使用 [新增可用性群組精靈]
   
 1.  在 [物件總管] 中，連接到裝載可用性群組之主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
-3.  以滑鼠右鍵按一下您要加入資料庫的可用性群組，並選取 [加入資料庫] 命令。 這個命令會啟動 [將資料庫加入至可用性群組] 精靈。  
+3.  以滑鼠右鍵按一下您要加入資料庫的可用性群組，並選取 [加入資料庫]  命令。 這個命令會啟動 [將資料庫加入至可用性群組] 精靈。  
   
 4.  在 **[選取資料庫]** 頁面上，選取一個或多個資料庫。 如需詳細資訊，請參閱 [Select Databases Page &#40;New Availability Group Wizard and Add Database Wizard&#41;](../../../database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md) (選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈))。  
   
-     如果資料庫含有資料庫主要金鑰，請在 [密碼] 資料行輸入資料庫主要金鑰的密碼。  
+     如果資料庫含有資料庫主要金鑰，請在 [密碼]  資料行輸入資料庫主要金鑰的密碼。  
   
 5.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
+
+    - **自動植入**
+      
+      選取此選項以使用自動植入。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 這會還原次要複本上的資料庫備份，您不需要手動執行。 如需自動植入的詳細資訊，請參閱[自動植入](automatic-seeding-secondary-replicas.md)。
   
     -   **Full**  
   
          只有在您的環境符合自動啟動初始資料同步處理的需求時，才選取此選項 (如需詳細資訊，請參閱本主題稍早的 [必要條件、限制和建議](#Prerequisites))。  
   
-         如果您選取 **[完整]**，在建立可用性群組之後，精靈會嘗試將每個主要資料庫及其交易記錄備份至網路共用，並在裝載次要複本的每個伺服器執行個體上還原這些備份。 然後精靈會將每個次要資料庫聯結至可用性群組。  
+         如果您選取 **[完整]** ，在建立可用性群組之後，精靈會嘗試將每個主要資料庫及其交易記錄備份至網路共用，並在裝載次要複本的每個伺服器執行個體上還原這些備份。 然後精靈會將每個次要資料庫聯結至可用性群組。  
   
-         在 [指定所有複本可存取的共用網路位置:] 欄位中，指定裝載複本的所有伺服器執行個體都有讀寫存取的備份共用。 記錄備份將是記錄備份鏈結的一部分。 請適當地儲存記錄備份檔案。  
+         在 [指定所有複本可存取的共用網路位置:]  欄位中，指定裝載複本的所有伺服器執行個體都有讀寫存取的備份共用。 記錄備份將是記錄備份鏈結的一部分。 請適當地儲存記錄備份檔案。  
   
         > [!IMPORTANT]  
         >  如需檔案系統必要權限的資訊，請參閱本主題稍早的 [必要條件](#Prerequisites)。  
@@ -88,11 +92,11 @@ ms.locfileid: "53211567"
   
      如需詳細資訊，請參閱[選取初始資料同步頁面 &#40;Always On 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)。  
   
-6.  在 **[連接到現有次要複本]** 頁面上，如果裝載此可用性群組之可用性複本的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體都是在相同使用者帳戶下以服務方式執行，請按一下 **[全部連接]**。 如果有任何伺服器執行個體是在不同的帳戶下以服務方式執行，請按一下每個伺服器執行個體名稱右邊的個別 **[連接]** 按鈕。  
+6.  在 **[連接到現有次要複本]** 頁面上，如果裝載此可用性群組之可用性複本的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體都是在相同使用者帳戶下以服務方式執行，請按一下 **[全部連接]** 。 如果有任何伺服器執行個體是在不同的帳戶下以服務方式執行，請按一下每個伺服器執行個體名稱右邊的個別 **[連接]** 按鈕。  
   
      如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;新增複本精靈：新增資料庫精靈 &#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
-7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 [下一步] 返回 [驗證] 頁面，再按一下 [重新執行驗證]。  
+7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 [下一步]  返回 [驗證]  頁面，再按一下 [重新執行驗證]  。  
   
      如需詳細資訊，請參閱[驗證頁面 &#40;AlwaysOn 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md)。  
   
@@ -100,9 +104,9 @@ ms.locfileid: "53211567"
   
      如需詳細資訊，請參閱[摘要頁面 &#40;AlwaysOn 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards.md)。  
   
-     如果您對所做的選擇感到滿意時，可以選擇按一下 [指令碼]，建立精靈將執行之步驟的指令碼。 然後，若要建立及設定新的可用性群組，請按一下 **[完成]**。  
+     如果您對所做的選擇感到滿意時，可以選擇按一下 [指令碼]，建立精靈將執行之步驟的指令碼。 然後，若要建立及設定新的可用性群組，請按一下 **[完成]** 。  
   
-9. [進度] 頁面會顯示建立可用性群組之步驟的進度 (設定端點、建立可用性群組，並將次要複本加入群組中)。  
+9. [進度]  頁面會顯示建立可用性群組之步驟的進度 (設定端點、建立可用性群組，並將次要複本加入群組中)。  
   
      如需詳細資訊，請參閱[進度頁面 &#40;AlwaysOn 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md)。  
   

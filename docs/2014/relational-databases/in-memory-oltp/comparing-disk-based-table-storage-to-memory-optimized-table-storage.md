@@ -11,16 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: be224cdd8c3221f1e7796e15c9c0132aeb99bcd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990666"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體
   
   
-|類別|以磁碟為基礎的資料表|持久性記憶體最佳化的資料表|  
+|Categories|以磁碟為基礎的資料表|持久性記憶體最佳化的資料表|  
 |----------------|-----------------------|-------------------------------------|  
 |DDL|中繼資料資訊會儲存在資料庫的主要檔案群組中的系統資料表內，而且可透過目錄檢視加以存取。|中繼資料資訊會儲存在資料庫的主要檔案群組中的系統資料表內，而且可透過目錄檢視加以存取。|  
 |結構|資料列會儲存在 8 千個頁面中。 頁面只會儲存來自相同資料表的資料列。|資料列會儲存為個別的資料列。 沒有頁面結構。 資料檔案中的兩個連續資料列可屬於不同的記憶體最佳化的資料表。|  

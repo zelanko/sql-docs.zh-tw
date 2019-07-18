@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0e1942b81a95c9813af077cf06524a6877c7f3d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: f55cb64c052978bd6ef36edecd7354f4d012e5b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098183"
 ---
 # <a name="working-with-data-types"></a>使用資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

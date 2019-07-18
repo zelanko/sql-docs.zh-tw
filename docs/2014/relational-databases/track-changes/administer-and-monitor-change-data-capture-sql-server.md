@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672140"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
   此主題描述如何管理及監視異動資料擷取。  
@@ -75,7 +75,7 @@ ms.locfileid: "52788900"
  執行清除時，所有擷取執行個體的下限標準一開始是在單一交易中更新。 然後，它會嘗試從變更資料表和 cdc.lsn_time_mapping 資料表中移除已過時的項目。 可設定的臨界值會限制在任何單一陳述式中刪除的項目數。 如果無法針對任何個別的資料表執行刪除，將無法防止針對其餘資料表嘗試進行此作業。  
   
 ### <a name="cleanup-job-customization"></a>清除作業自訂  
- 對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序會根據`lsn`而不是時間，可以使用任何數目的策略來判斷最小`lsn`保留在變更資料表中。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同`lsn`來清除所有資料庫的變更資料表，基礎的清除程序，也可以呼叫在擷取執行個體層級進行清除。  
+ 對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序是以 `lsn` 而非時間為基礎，所以您可以使用任何數目之策略來決定要保留在變更資料表中的最小 `lsn`。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同 `lsn` 來清除所有資料庫的變更資料表，但是您也可以呼叫基礎清除程序，以便在擷取執行個體層級進行清除。  
   
 ##  <a name="Monitor"></a> 監視異動資料擷取程序  
  監視異動資料擷取程序可讓您判斷變更是否正確地並且以合理的延遲寫入變更資料表。 監視也可以協助您識別可能發生的任何錯誤。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩個動態管理檢視，可協助您監視異動資料擷取： [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) 和 [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)。  

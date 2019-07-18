@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989753"
 ---
 # <a name="data-migration-report-db2tosql"></a>資料移轉報告 (DB2ToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +26,7 @@ ms.locfileid: "47827046"
 **來源**  
 來源資料表中。  
   
-**若要**  
+**To**  
 目標資料表中。  
   
 **資料列總數**  

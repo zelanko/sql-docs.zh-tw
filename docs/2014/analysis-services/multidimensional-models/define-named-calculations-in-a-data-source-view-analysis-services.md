@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
@@ -15,12 +14,12 @@ ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146178"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075570"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名計算 (Analysis Services)
   具名計算是以導出資料行表示的 SQL 運算式。 此運算式的顯示和行為如同資料表中的資料行一樣。 具名計算可讓您在資料來源檢視中擴充現有資料表或檢視表的關聯式結構描述，而不必修改基礎資料來源中的資料表或檢視表。 請考量下列範例：  
@@ -50,7 +49,7 @@ FROM
   
  在運算式中所參考的資料行不應該限定，或只能由資料表名稱加以限定。 例如，若要參考資料表中的 SaleAmount 資料行， `SaleAmount` 或 `Sales.SaleAmount` 為有效，但 `dbo.Sales.SaleAmount` 會產生錯誤。  
   
- 運算式不會自動用括號括住。 因此，如果運算式 (例如 SELECT 陳述式) 需要括號，您必須在 [運算式] 方塊中輸入括號。 例如，唯有輸入括號，下列運算式才有效。  
+ 運算式不會自動用括號括住。 因此，如果運算式 (例如 SELECT 陳述式) 需要括號，您必須在 [運算式]  方塊中輸入括號。 例如，唯有輸入括號，下列運算式才有效。  
   
 ```  
 (SELECT Description FROM Categories WHERE Categories.CategoryID = CategoryID)  
@@ -60,24 +59,24 @@ FROM
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中定義具名計算之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
   
-3.  在 [資料表] 或 [圖表] 窗格中，以滑鼠右鍵按一下您想要在其中定義具名計算的資料表，然後按一下 [新增具名計算]。 請務必在資料表名稱上按一下滑鼠右鍵，而不是在屬性上。 功能表應該如下所示：  
+3.  在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下您想要在其中定義具名計算的資料表，然後按一下 [新增具名計算]  。 請務必在資料表名稱上按一下滑鼠右鍵，而不是在屬性上。 功能表應該如下所示：  
   
      ![螢幕擷取畫面的圖表工作區中，以滑鼠右鍵按一下功能表](../media/ssas-olapdsv-diagram.gif "螢幕擷取畫面的圖表工作區中，以滑鼠右鍵按一下功能表")  
   
     > [!NOTE]  
-    >  若要尋找資料表或檢視表，您可以按一下 [資料來源檢視] 功能表，或是以滑鼠右鍵按一下 [資料表] 或 [圖表] 窗格的開放區域，即可使用 [尋找資料表] 選項。  
+    >  若要尋找資料表或檢視表，您可以按一下 [資料來源檢視]  功能表，或是以滑鼠右鍵按一下 [資料表]  或 [圖表]  窗格的開放區域，即可使用 [尋找資料表]  選項。  
   
-4.  在 [建立具名計算] 對話方塊中，執行下列步驟：  
+4.  在 [建立具名計算]  對話方塊中，執行下列步驟：  
   
-    -   在 [資料行名稱] 文字方塊中，輸入新資料行的名稱。  
+    -   在 [資料行名稱]  文字方塊中，輸入新資料行的名稱。  
   
-    -   在 [描述] 文字方塊中，輸入新資料行的描述。  
+    -   在 [描述]  文字方塊中，輸入新資料行的描述。  
   
-    -   在 [運算式] 文字方塊中，輸入會使用適合資料提供者的 SQL 用語來產生新資料行內容的運算式。  
+    -   在 [運算式]  文字方塊中，輸入會使用適合資料提供者的 SQL 用語來產生新資料行內容的運算式。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
      具名計算資料行會顯示為資料來源檢視資料表中的最後一個資料行。 計算機符號表示資料行包含具名計算。  
   
@@ -85,6 +84,6 @@ FROM
  當您嘗試刪除具名計算時，會出現一個提示，此提示會列出將會因為此刪除動作而變成無效之專案或資料庫中定義的物件清單。 仔細檢閱清單，再刪除計算。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名查詢 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26bf17596dbd3279498df2edcee7636db95ae139
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cde0158e72d1e24c112c8e7955f0d6b317bd729
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987857"
 ---
 # <a name="select-statement-limitations"></a>SELECT 陳述式限制
 彙總函式資料行不能混合具有非彙總資料行的 SELECT 陳述式。  

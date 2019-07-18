@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
@@ -19,12 +18,12 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1458e1e7fa43b69d771bfcadcc1c0fa039a97c09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 441a2ebc1f147e71a0bfa3bce20daf9fd67d09f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090094"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>使用 sqlcmd 連接至 Database Engine
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 TCP/IP 網路通訊協定 (預設值) 和具名管道通訊協定，來進行用戶端通訊。 如果用戶端是連接到同一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，也可以使用共用記憶體通訊協定。 選取通訊協定有三種常見的方法。 **sqlcmd** 公用程式所使用的通訊協定是以下列順序決定：  

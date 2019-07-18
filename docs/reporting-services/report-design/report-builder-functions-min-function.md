@@ -2,18 +2,18 @@
 title: Min 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 19c8b6a2f5f2e6468844d9ad5a2ad11b94f16b7a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d4df9f6bb3996c06ea3b6907ab0687e4e8b4a266
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577142"
 ---
 # <a name="report-builder-functions---min-function"></a>報表產生器函式 - Min 函式
   傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。  

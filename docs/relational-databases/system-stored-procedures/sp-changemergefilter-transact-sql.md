@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124887"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 是要變更名稱。 *屬性*已**sysname**，沒有預設值。  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)**，沒有預設值。  
+`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)** ，沒有預設值。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
@@ -85,7 +84,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_changemergefilter**用於合併式複寫中。  
   
- 如果快照集存在的話，變更合併發行項的篩選需要重新建立快照集。 這藉由設定**@force_invalidate_snapshot**要**1**。 另外，如果有這個發行項的訂閱，也必須重新初始化訂閱。 這是藉由設定**@force_reinit_subscription**要**1**。  
+ 如果快照集存在的話，變更合併發行項的篩選需要重新建立快照集。 這藉由設定 **@force_invalidate_snapshot** 要**1**。 另外，如果有這個發行項的訂閱，也必須重新初始化訂閱。 這是藉由設定 **@force_reinit_subscription** 要**1**。  
   
  若要使用邏輯記錄，發行集和發行項必須符合許多需求。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
@@ -96,7 +95,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

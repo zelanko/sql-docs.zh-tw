@@ -1,5 +1,5 @@
 ---
-title: 工作 1:建立知識庫和定義域 |Microsoft Docs
+title: 工作 1：建立知識庫和定義域 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481238"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1:建立知識庫和定義域
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1：建立知識庫和定義域
   在這個工作中，您會建立**供應商**知識庫，並建立用來清理資料和比對資料以移除重複項的網域。  
   
 1.  啟動**Data Quality Client**。 按一下 **開始**，指向**所有程式**，按一下  **Microsoft SQL Server 2012**，按一下  **Data Quality Services**，然後按一下**Data Quality Client**。  
@@ -46,7 +46,7 @@ ms.locfileid: "56011099"
   
      ![建立定義域 對話方塊](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "建立定義域 對話方塊")  
   
-9. 重複上述步驟來建立以下包含所有預設值的定義域。 若要簡化本教學課程，您設定**資料型別**做為所有的網域**字串**。 其他允許的資料類型包括：整數、十進位值和日期。 當**使用前置值**選項是選取 （預設值），所有同義字會都取代在輸出中同義字群組的前置值。 設定**將字串標準化**選項 （預設值） 會移除定義域值中的任何特殊字元。 **輸出格式為**選項可讓您選取的網域中的資料值為輸出時所套用的格式。 選取 **啟用拼字檢查**擴展定義域時，針對所有字串值執行拼字檢查 （預設值）。 **語言**設定會指定哪一個語言版本**拼字檢查**您想要套用。 選取 **停用語法錯誤演算法**來擴展定義域，而不檢查字串值的語法錯誤。 請參閱[建立網域](https://msdn.microsoft.com/library/hh510401.aspx)如需詳細資訊的 MSDN library 中的主題。  
+9. 重複上述步驟來建立以下包含所有預設值的定義域。 若要簡化本教學課程，您設定**資料型別**做為所有的網域**字串**。 其他允許的資料類型包括：整數、 小數和日期。 當**使用前置值**選項是選取 （預設值），所有同義字會都取代在輸出中同義字群組的前置值。 設定**將字串標準化**選項 （預設值） 會移除定義域值中的任何特殊字元。 **輸出格式為**選項可讓您選取的網域中的資料值為輸出時所套用的格式。 選取 **啟用拼字檢查**擴展定義域時，針對所有字串值執行拼字檢查 （預設值）。 **語言**設定會指定哪一個語言版本**拼字檢查**您想要套用。 選取 **停用語法錯誤演算法**來擴展定義域，而不檢查字串值的語法錯誤。 請參閱[建立網域](https://msdn.microsoft.com/library/hh510401.aspx)如需詳細資訊的 MSDN library 中的主題。  
   
     -   Supplier Name  
   
@@ -63,6 +63,6 @@ ms.locfileid: "56011099"
     -   [郵遞區號]  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 2:手動加入定義域值](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [工作 2：手動加入定義域值](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

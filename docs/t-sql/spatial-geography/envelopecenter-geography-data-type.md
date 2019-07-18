@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeCenter method
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 03187cc9deebd78a87638a9ce7bb7c7e8f9b296f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937849"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ EnvelopeCenter( )
 ## <a name="return-types"></a>傳回類型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-CLR 傳回類型：**SqlGeography**  
+CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
 這個方法會傳回 **point**。 搭配 `EnvelopeAngle()` 使用時，`EnvelopeCenter()` 會傳回 **geography** 執行個體的週框圓形。  

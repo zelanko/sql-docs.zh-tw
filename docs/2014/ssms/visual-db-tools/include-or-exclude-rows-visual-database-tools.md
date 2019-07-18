@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3785a777571ef7659b1ae21a693e6754659a80e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63298584"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除資料列 (Visual Database Tools)
   若要限制 SELECT 查詢傳回的資料列數目，您可以建立搜尋條件或篩選條件。 在 SQL 中，搜尋條件出現在陳述式中的 WHERE 子句，或如果您要建立彙總查詢，查詢條件則位於 HAVING 子句中。  

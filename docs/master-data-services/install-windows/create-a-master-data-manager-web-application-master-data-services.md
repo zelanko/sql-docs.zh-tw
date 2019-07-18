@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 21a9d96d54f1a5afcce2d5e2671b30460350cd76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 3fa6834a853a82067418a2ea5270e59ebdaa7dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945030"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
 
@@ -34,7 +33,7 @@ ms.locfileid: "47694541"
   
  建立 Web 應用程式之後，將它與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   如需主控此 Web 應用程式之電腦需求的資訊，請參閱 [Web 應用程式需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)。  
   
@@ -50,13 +49,13 @@ ms.locfileid: "47694541"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]**。  
+2.  按一下左窗格中的 **[Web 組態]** 。  
   
-3.  在 **[Web 組態]** 頁面上的網站清單中，選取 **[建立新網站]**。  
+3.  在 **[Web 組態]** 頁面上的網站清單中，選取 **[建立新網站]** 。  
   
 4.  在 **[建立網站]** 對話方塊中，指定新網站的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立網站對話方塊 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
  當您在現有網站上建立 Web 應用程式時，可以選擇 Web 應用程式的虛擬路徑及別名。 此 Web 應用程式會加入至新的應用程式集區。  
@@ -65,17 +64,17 @@ ms.locfileid: "47694541"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]**。  
+2.  按一下左窗格中的 **[Web 組態]** 。  
   
 3.  在 **[Web 組態]** 頁面的 **[網站]** 清單中，選取建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式所在的網站。  
   
-4.  按一下 **[建立應用程式]**。  
+4.  按一下 **[建立應用程式]** 。  
   
 5.  在 **[建立 Web 應用程式]** 對話方塊中，指定新 Web 應用程式的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立 Web 應用程式對話方塊 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定 **Deploying Office Solutions**]。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   將此 Web 應用程式關聯至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱 [將 Master Data Services 資料庫與 Web 應用程式產生關聯](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
   

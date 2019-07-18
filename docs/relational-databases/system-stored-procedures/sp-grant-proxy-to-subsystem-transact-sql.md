@@ -15,16 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
+author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123815"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   授與子系統的 Proxy 存取權。  
@@ -34,7 +35,6 @@ ms.locfileid: "58528130"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_grant_proxy_to_subsystem  
      { [ @proxy_id = ] proxy_id | [ @proxy_name = ] 'proxy_name' },  
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
@@ -60,6 +60,7 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services 命令|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行|  
 |**12**|PowerShell 指令碼|  
+| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'` 要授與存取權的子系統名稱。 **Subsystem_name**是**sysname**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
@@ -76,6 +77,7 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services 命令|  
 |**Dts**|SSIS 封裝執行|  
 |**PowerShell**|PowerShell 指令碼|  
+| &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>備註  
  授與對子系統的 Proxy 存取權，並不會變更 Proxy 所指定之主體的權限。  
@@ -88,7 +90,7 @@ sp_grant_proxy_to_subsystem
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. 依識別碼授與子系統的存取權  
  下列範例會授與 `Catalog application proxy` 這個 Proxy 之 ActiveX Scripting 子系統存取權。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -101,7 +103,7 @@ GO
 ### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 依名稱授與子系統的存取權  
  下列範例會授與 `Catalog application proxy` 這個 Proxy 的 SSIS 封裝執行子系統存取權。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -113,7 +115,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_revoke_proxy_from_subsystem &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_update_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  

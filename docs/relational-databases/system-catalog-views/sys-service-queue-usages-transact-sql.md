@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ddeccbf7b70f399569083a05366bc803fd1b1c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b1cd1c1688922404b882069d9e100504dfbcb14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078710"
 ---
 # <a name="sysservicequeueusages-transact-sql"></a>sys.service_queue_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

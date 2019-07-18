@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ed1522560922fb25f072f2d7f01a5e48f97509e3
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: cfd81188f0e751fb57c2d4a29ce61d574cfe3486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119616"
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

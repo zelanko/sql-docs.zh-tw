@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ae64c33cc55d45ff28257b9d0b6b6c4c972e370
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7603fca90995053da7aef12283e5666efaa85d85
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205677"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586411"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,23 +50,25 @@ ms.locfileid: "53205677"
   
 3.  展開您要同步處理其訂閱的發行集。  
   
-4.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]**。  
+4.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>] 對話方塊中，按一下 [啟動]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [ **關閉**]。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>需要時在 Management Studio 上同步處理發送訂閱 (訂閱者端)  
   
 1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的訂閱者，然後展開伺服器節點。  
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]**。  
+3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-4.  接著會顯示有關建立連接到「散發者」的訊息。 按一下 [確定] 。  
+4.  接著會顯示有關建立連接到「散發者」的訊息。 按一下 [確定]  。  
   
-5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>] 對話方塊中，按一下 [啟動]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [ **關閉**]。  
   
@@ -76,9 +78,9 @@ ms.locfileid: "53205677"
   
 2.  按一下 **[所有訂閱]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下您要同步處理的訂閱，再按一下 **[啟動同步處理]**。  
+3.  以滑鼠右鍵按一下您要同步處理的訂閱，再按一下 **[啟動同步處理]** 。  
   
-4.  若要檢視同步處理的進度，以滑鼠右鍵按一下該訂閱，再按一下 **[檢視詳細資料]**。  
+4.  若要檢視同步處理的進度，以滑鼠右鍵按一下該訂閱，再按一下 **[檢視詳細資料]** 。  
   
 ##  <a name="ReplProg"></a> 使用複寫代理程式  
  發送訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於發送訂閱所屬的發行集類型。  

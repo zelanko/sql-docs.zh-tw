@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 3675362cefae97ce453e80dccd5ed79113a257a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66413539"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ipv4_address', 'ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
@@ -172,7 +172,7 @@ ALTER AVAILABILITY GROUP group_name
  指定備份一定要在主要複本上進行。 如果當您在次要複本上執行備份時，需要不支援的備份功能 (例如建立差異備份)，這個選項會很實用。  
   
 > [!IMPORTANT]  
->  如果您計畫要使用記錄傳送來準備可用性群組的任何次要資料庫，請將自動備份喜好設定設為 [主要]，直到所有次要資料庫都已經準備完成並且聯結至可用性群組為止。  
+>  如果您計畫要使用記錄傳送來準備可用性群組的任何次要資料庫，請將自動備份喜好設定設為 [主要]  ，直到所有次要資料庫都已經準備完成並且聯結至可用性群組為止。  
   
  SECONDARY_ONLY  
  指定絕對不能在主要複本上執行備份。 如果主要複本是唯一的線上複本，不應該進行備份。  
@@ -207,7 +207,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體對用戶端要求缺少回應與可用性群組無關。  
   
- FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值會針對給定群組定義「彈性容錯移轉原則」。 這個具彈性的容錯移轉原則讓您能夠更精確控制哪些條件必須造成自動容錯移轉。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
+ FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值會針對給定群組定義「彈性容錯移轉原則」  。 這個具彈性的容錯移轉原則讓您能夠更精確控制哪些條件必須造成自動容錯移轉。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT **=** *毫秒*  
  指定在 WSFC 叢集假設伺服器執行個體很慢或無回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健康情況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
@@ -279,7 +279,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  ENDPOINT_URL 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。  如需詳細資訊，請參閱 [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)設定伺服器執行個體時常見的問題。  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  指定 URL 以指定端點 URL 或唯讀的路由 URL。 URL 參數如下所示：  
   
  *system-address*  
@@ -321,7 +321,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
 >  SQL Server 容錯移轉叢集執行個體 (FCI) 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
   
  MANUAL  
- 允許資料庫管理員手動容錯移轉或強制手動容錯移轉 (「強制容錯移轉」)。  
+ 允許資料庫管理員手動容錯移轉或強制手動容錯移轉 (「強制容錯移轉」  )。  
   
  FAILOVER_MODE 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。 有兩種手動容錯移轉類型存在，也就是不遺失資料的手動容錯移轉以及強制容錯移轉 (可能遺失資料)，不同情況下會支援不同類型。  如需詳細資訊，請參閱本主題稍後的 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
@@ -337,7 +337,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  MANUAL  
  指定手動植入 (預設值)。 此方法要求您必須在主要複本上建立資料庫的備份，並在次要複本上手動還原該備份。  
   
- BACKUP_PRIORITY **=**_n_  
+ BACKUP_PRIORITY **=** _n_  
  指定在這個複本上執行備份的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。 這些值具有以下意義：  
   
 -   1..100 表示可以選擇可用性複本來執行備份。 1 表示最低優先權，100 表示最高優先權。 如果 BACKUP_PRIORITY = 1，則只有當目前沒有更高優先權的可用性複本可用時，才會選擇此可用性複本來執行備份。  
@@ -365,10 +365,10 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  指定向此可用性複本路由傳送讀取意圖連接要求所使用的 URL。 這是 SQL Server Database Engine 接聽的 URL。 SQL Server Database Engine 的預設執行個體通常會接聽 TCP 通訊埠 1433。  
   
- 針對具名執行個體，您可以查詢 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動態管理檢視的 **port** 和 **type_desc** 資料行來取得連接埠號碼。 伺服器執行個體會使用 Transact-SQL 接聽程式 (**type_desc='TSQL'**)。  
+ 針對具名執行個體，您可以查詢 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動態管理檢視的 **port** 和 **type_desc** 資料行來取得連接埠號碼。 伺服器執行個體會使用 Transact-SQL 接聽程式 (**type_desc='TSQL'** )。  
   
  如需計算可用性複本之唯讀路由 URL 的詳細資訊，請參閱[計算 Always On 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)。  
   
@@ -389,7 +389,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  主要複本的資料庫允許所有連接。 這是預設行為。  
   
- READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
  針對這個可用性群組，指定裝載可用性複本之伺服器執行個體的逗號分隔清單，以次要角色執行時，這些可用性複本會符合下列需求：  
   
 -   設定為允許所有連接或唯讀連接 (請參閱 SECONDARY_ROLE 選項的 ALLOW_CONNECTIONS 引數，如上所示)。  
@@ -408,7 +408,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  無  
  指定當此可用性複本是主要複本時，將不支援唯讀路由。 這是預設行為。 搭配 MODIFY REPLICA ON 使用時，此值會停用現有的清單 (如果有的話)。  
   
- SESSION_TIMEOUT **=**_seconds_  
+ SESSION_TIMEOUT **=** _seconds_  
  指定工作階段逾時期限 (以秒為單位)。 如果您沒有指定這個選項，依預設，這個期間是 10 秒。 最小值是 5 秒。  
   
 > [!IMPORTANT]  
@@ -437,7 +437,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
  FAILOVER  
-起始可用性群組的手動容錯移轉，而不會讓連接的次要複本遺失資料。 將裝載主要複本的複本是「容錯移轉目標」。  容錯移轉目標將會接管主要角色，並復原每個資料庫的副本，然後讓這兩個資料庫連線，做為新的主要資料庫。 之前的主要複本會同時轉換到次要角色，且其資料庫會變成次要資料庫，並立即遭到暫停。 您可能可以透過一連串的失敗，來回切換這些角色。  
+起始可用性群組的手動容錯移轉，而不會讓連接的次要複本遺失資料。 將裝載主要複本的複本是「容錯移轉目標」  。  容錯移轉目標將會接管主要角色，並復原每個資料庫的副本，然後讓這兩個資料庫連線，做為新的主要資料庫。 之前的主要複本會同時轉換到次要角色，且其資料庫會變成次要資料庫，並立即遭到暫停。 您可能可以透過一連串的失敗，來回切換這些角色。  
   
  只有在目前與主要複本同步處理的同步認可次要複本上支援。 請注意，次要複本也必須與主要複本同步處理，才能在同步認可模式下執行。  
   
@@ -459,7 +459,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  如需強制容錯移轉的限制、先決條件與建議，以及強制容錯移轉對可用性群組中先前主要資料庫之影響的詳細資訊，請參閱[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
+ ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
  為這個可用性群組定義新的可用性群組接聽程式。 只有主要複本上才支援。  
   
 > [!IMPORTANT]
@@ -486,12 +486,12 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  \<ag_name>  
  指定組成半組分散式可用性群組的可用性群組名稱。  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  指定與可用性群組相關聯之接聽程式的 URL 路徑。  
   
  LISTENER 子句是必要的。  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  指定與可用性群組相關聯之接聽程式的 URL。 URL 參數如下所示：  
   
  *system-address*  
@@ -515,11 +515,11 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  指定分散式可用性群組的容錯移轉模式。  
   
  MANUAL  
- 可讓資料庫管理員啟用已規劃的手動容錯移轉或強制手動容錯移轉 (通常稱為「強制容錯移轉」)。  
+ 可讓資料庫管理員啟用已規劃的手動容錯移轉或強制手動容錯移轉 (通常稱為「強制容錯移轉」  )。  
   
  不支援自動容錯移轉至次要可用性群組。  
   
- SEEDING_MODE**=** { AUTOMATIC | MANUAL }  
+ SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
  指定一開始如何植入次要可用性群組。  
   
  AUTOMATIC  
@@ -543,7 +543,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  \<add_listener_option>  
  ADD LISTENER 可接受下列其中一個選項：  
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  指定可用性群組接聽程式將會使用動態主機設定通訊協定 (DHCP)。  或者，使用 ON 子句以識別將建立此接聽程式的網路。 DHCP 受限於單一子網路，這個子網路用於可用性群組中主控可用性複本的每個伺服器執行個體。  
   
 > [!IMPORTANT]  
@@ -553,17 +553,17 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  指定可用性群組接聽程式將使用一個或多個靜態 IP 位址，而不使用 DHCP。 若要建立跨多個子網路的可用性群組，接聽程式組態中每個子網路都需要一個靜態 IP 位址。 對於給定的子網路，靜態 IP 位址可以是 IPv4 位址或 IPv6 位址。 請與網路系統管理員連絡以取得將主控新可用性群組的可用性複本之每個子網路的靜態 IP 位址。  
   
  例如：  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ipv4_address*  
  指定可用性群組接聽程式的 IPv4 四部分位址。 例如， `10.120.19.155`。  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  指定可用性群組接聽程式的 IPv4 四部分遮罩。 例如， `255.255.254.0`。  
   
  *ipv6_address*  
@@ -576,22 +576,22 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
  修改這個可用性群組的現有可用性群組接聽程式。 只有主要複本上才支援。  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER 可接受下列其中一個選項：  
   
- ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
+ ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
  將所指定 IP 位址新增至由 *dns\_name* 所指定的可用性群組接聽程式。  
   
  PORT **=** *listener_port*  
  請參閱本節稍早有關這個引數的描述。  
   
- RESTART LISTENER **'**_dns\_name_**'**  
+ RESTART LISTENER **'** _dns\_name_ **'**  
  重新啟動與指定的 DNS 名稱關聯的接聽程式。 只有主要複本上才支援。  
   
- REMOVE LISTENER **'**_dns\_name_**'**  
+ REMOVE LISTENER **'** _dns\_name_ **'**  
  移除與指定的 DNS 名稱關聯的接聽程式。 只有主要複本上才支援。  
   
  OFFLINE  
@@ -608,7 +608,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  也需要 ALTER ANY DATABASE 權限。   
   
 ## <a name="examples"></a>範例  

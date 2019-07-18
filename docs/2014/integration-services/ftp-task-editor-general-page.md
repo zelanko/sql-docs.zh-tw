@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058425"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
@@ -29,7 +28,7 @@ ms.locfileid: "58388736"
   
 ## <a name="options"></a>選項。  
  **FtpConnection**  
- 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
+ 選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>]  建立連線管理員。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  

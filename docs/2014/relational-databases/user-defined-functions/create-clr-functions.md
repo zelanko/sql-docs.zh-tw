@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524058"
 ---
 # <a name="create-clr-functions"></a>建立 CLR 函數
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內部建立資料庫物件，這個物件是透過使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 建立的組件來撰寫。 可以利用 Common Language Runtime 所提供的豐富程式設計模型的資料庫物件，包含彙總函式、函數、預存程序、觸發程序以及類型。  

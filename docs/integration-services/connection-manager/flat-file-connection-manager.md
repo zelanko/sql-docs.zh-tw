@@ -23,14 +23,18 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7d7dfb72ade1121151feddaeaded0fa9f06fe5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728275"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「一般檔案」連接管理員可讓封裝存取一般檔案中的資料。 例如，「一般檔案」來源與目的地可以使用「一般檔案」連接管理員來擷取並載入資料。  
   
  「一般檔案」連接管理員僅可存取一個檔案。 若要參考多個檔案，請使用「多個一般檔案」連接管理員，而非「一般檔案」連接管理員。 如需詳細資訊，請參閱 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
@@ -43,11 +47,11 @@ ms.locfileid: "58274375"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>設定一般檔案連接管理員  
  當您將「一般檔案」連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連接管理員 (在執行階段解析為「一般檔案」連接)、設定「一般檔案」連接屬性，並將「一般檔案」連接管理員加入封裝的 **Connections** 集合。  
   
- 連接管理員的 **ConnectionManagerType** 屬性會設為 [FLATFILE] 。  
+ 連接管理員的 **ConnectionManagerType** 屬性會設為 [FLATFILE]  。  
   
  根據預設，「一般檔案」連接管理員一律會檢查未加引號之資料中的資料列分隔符號，並在找到資料列分隔符號時開始一個新資料列。 這可讓連接管理員正確地剖析資料列缺少資料行欄位的檔案。  
   
- 在某些情況下，停用此功能可能會提升封裝效能。 您可以將「一般檔案」連接管理員屬性 **AlwaysCheckForRowDelimiters**設定為 [False] ，以停用此功能。  
+ 在某些情況下，停用此功能可能會提升封裝效能。 您可以將「一般檔案」連接管理員屬性 **AlwaysCheckForRowDelimiters**設定為 [False]  ，以停用此功能。  
   
  您可以利用下列方式設定「一般檔案」連接管理員：  
   
@@ -67,9 +71,9 @@ ms.locfileid: "58274375"
   
  您可以針對一般檔案連接管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 為避免驗證錯誤，請執行下列操作。  
   
--   當您使用運算式指定檔案時，請在 [一般檔案連接管理員編輯器]  的 [檔案名稱] 方塊中加入檔案路徑。  
+-   當您使用運算式指定檔案時，請在 [一般檔案連接管理員編輯器]  的 [檔案名稱]  方塊中加入檔案路徑。  
   
--   在「一般檔案」連接管理員上將 **DelayValidation** 屬性設定為 [True] 。  
+-   在「一般檔案」連接管理員上將 **DelayValidation** 屬性設定為 [True]  。  
   
  您可以透過具有「一般檔案」目的地的「一般檔案」連接管理員，使用運算式在執行階段建立檔案名稱。  
   
@@ -117,7 +121,7 @@ ms.locfileid: "58274375"
  指定要使用的文字限定詞。 例如，您可以指定文字欄位加上引號。  
   
 > [!NOTE]  
->  選取文字限定詞之後，就無法重新選取 [無] 選項。 輸入 **None** 即可取消選取文字限定詞。  
+>  選取文字限定詞之後，就無法重新選取 [無]  選項。 輸入 **None** 即可取消選取文字限定詞。  
   
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
@@ -182,13 +186,13 @@ ms.locfileid: "58274375"
 |**分隔號 {&#124;}**|資料行是以分隔號分隔。|  
   
  **[重新整理]**  
- 按一下 [重新整理]，即可檢視變更要略過之分隔符號的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
+ 按一下 [重新整理]  ，即可檢視變更要略過之分隔符號的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
   
  **預覽資料列**  
  檢視一般檔案中的範例資料，使用選取的選項將資料分為資料行和資料列。  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 #### <a name="format--fixed-width"></a>格式 = 固定寬度  
  **字型**  
@@ -201,7 +205,7 @@ ms.locfileid: "58274375"
  為個別資料行加入分隔符號之前，請先指定資料列的長度。 或者，在預覽視窗中拖曳垂直紅線來標示資料列結尾。 資料列寬度值會自動更新。  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
   
 #### <a name="format--ragged-right"></a>格式 = 不齊右  
   
@@ -229,11 +233,11 @@ ms.locfileid: "58274375"
 |**分隔號 {&#124;}**|資料列是以分隔號分隔。|  
   
  **重設資料行**  
- 按一下 [重設資料行]，即可將原始資料行以外的資料行全部移除。  
+ 按一下 [重設資料行]  ，即可將原始資料行以外的資料行全部移除。  
 ## <a name="flat-file-connection-manager-editor-advanced-page"></a>一般檔案連接管理員編輯器 (進階頁面)
-  您可以使用 [一般檔案連線管理員編輯器] 對話方塊的 [進階] 頁面設定屬性，以指定 Integration Services 讀取及寫入一般檔案的方式。 您可以變更一般檔案中的資料行名稱，並設定屬性以包含檔案中每個資料行的資料類型和分隔符號。  
+  您可以使用 [一般檔案連線管理員編輯器]  對話方塊的 [進階]  頁面設定屬性，以指定 Integration Services 讀取及寫入一般檔案的方式。 您可以變更一般檔案中的資料行名稱，並設定屬性以包含檔案中每個資料行的資料類型和分隔符號。  
   
- 字串資料行的長度預設為 50 個字元。 您可以調整這些資料行的長度，以避免截斷資料或資料行寬度過大。 您也可更新其他中繼資料，以啟用與目的地資料行的相容性。 例如，您可能會將只包含整數資料之資料行的資料類型變更成數值資料類型 (例如 DT_I2)。 您可以手動進行這些修改，也可以按一下 [選取類型] 按鈕，使用 [建議資料行類型] 對話方塊評估範例資料，並自動為您進行其中某些變更。  
+ 字串資料行的長度預設為 50 個字元。 您可以調整這些資料行的長度，以避免截斷資料或資料行寬度過大。 您也可更新其他中繼資料，以啟用與目的地資料行的相容性。 例如，您可能會將只包含整數資料之資料行的資料類型變更成數值資料類型 (例如 DT_I2)。 您可以手動進行這些修改，也可以按一下 [選取類型]  按鈕，使用 [建議資料行類型]  對話方塊評估範例資料，並自動為您進行其中某些變更。  
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -252,15 +256,15 @@ ms.locfileid: "58274375"
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。|  
 |**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。 在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**DataType**|從可用的資料類型清單中選取。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中的文字資料是限定的。 False：一般檔案中的文字資料是「非」限定的。|  
+|**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中文字資料是限定的。 False：一般檔案中的文字資料是「非」限定的。|  
 |**名稱**|提供描述性資料行名稱。 如果未輸入名稱， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|  
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**. 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|  
+|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}** ： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}** ： 資料行是以歸位字元分隔。<br /><br /> **{LF}** ： 資料行是以換行字元分隔。<br /><br /> **分號 {;}** ： 資料行是以分號分隔。<br /><br /> **冒號 {:}** ： 資料行是以冒號分隔。<br /><br /> **逗號 {,}** . 資料行是以逗號分隔。<br /><br /> **定位字元 {t}** ： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}** ： 資料行是以分隔號分隔。|  
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|  
   
  **新增**  
- 按一下 [新增] 來加入新的資料行。 依預設，[新增] 按鈕會在清單結尾加入新的資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
+ 按一下 [新增]  來加入新的資料行。 依預設，[新增]  按鈕會在清單結尾加入新的資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -269,12 +273,12 @@ ms.locfileid: "58274375"
 |**插在後面**|在選取的資料行之後插入新資料行。|  
   
  **刪除**  
- 選取資料行，然後按一下 [刪除] 將其移除。  
+ 選取資料行，然後按一下 [刪除]  將其移除。  
   
  **建議類型**  
- 使用 [建議資料行類型] 對話方塊，評估檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱 [建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用 [建議資料行類型]  對話方塊，評估檔案中的範例資料，並取得對每個資料行之資料類型和長度的建議。 如需詳細資訊，請參閱 [建議資料行類型對話方塊 UI 參考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
 ## <a name="flat-file-connection-manager-editor-preview-page"></a>一般檔案連接管理員編輯器 (預覽頁面)
-  使用 [一般檔案連線管理員編輯器] 對話方塊的 [預覽] 節點，即可以表格式格式來檢視來源檔案的內容。  
+  使用 [一般檔案連線管理員編輯器]  對話方塊的 [預覽]  節點，即可以表格式格式來檢視來源檔案的內容。  
   
  若要深入了解一般檔案連接管理員，請參閱＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -289,7 +293,7 @@ ms.locfileid: "58274375"
  指定在一般檔案開頭要略過的資料列數。  
   
  **[重新整理]**  
- 按一下 [重新整理]，即可檢視變更要略過之資料列數的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
+ 按一下 [重新整理]  ，即可檢視變更要略過之資料列數的影響。 僅在您已變更其他連接選項之後，才會看見此按鈕。  
   
  **預覽資料列**  
  檢視一般檔案中的範例資料，根據您選取的選項將資料分為資料行和資料列。  

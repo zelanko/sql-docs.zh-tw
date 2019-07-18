@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42c6f97e23ea36e606047f683c7fc118b1726a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9fdf581ef443df97c26f927b5f66089efddbdfdb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093519"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 安裝
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種伺服器元件的集合，針對發行至 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿提供查詢處理和管理控制。 服務包括 Analysis Services 引擎和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務。  

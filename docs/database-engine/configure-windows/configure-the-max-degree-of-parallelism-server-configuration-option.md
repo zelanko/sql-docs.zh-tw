@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0ef7132e61a646cd0c622a3f15a647cf2430d95c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606418"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351677"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [平行處理原則的最大程度 (MAXDOP)] 伺服器組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的最佳程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 **max degree of parallelism** 選項來限制要用於平行計畫執行的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮進行平行執行計畫。
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [平行處理原則的最大程度 (MAXDOP)]  伺服器組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的最佳程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 **max degree of parallelism** 選項來限制要用於平行計畫執行的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
 
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,25 +48,40 @@ ms.locfileid: "51606418"
 -   除了查詢作業和索引作業外，此選項也會控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的平行處理原則。 您可以使用追蹤旗標 2528 來停用這些陳述式的平行執行計畫。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ###  <a name="Guidelines"></a> 指導方針  
-當您設定 **max degree of parallelism** 伺服器組態值時，請使用下列指導方針：
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在服務啟動期間偵測到啟動時每個 NUMA 節點或通訊端有超過八個實體核心，則會根據預設自動建立軟體式 NUMA 節點。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會將來自相同實體核心的邏輯處理器放入不同軟體式 NUMA 節點。 下表中建議事項目標是使所有平行查詢的背景工作執行緒保持在相同軟體式 NUMA 節點內。 這會改善查詢效能及工作負載 NUMA 節點中的背景工作執行緒分佈。 如需詳細資訊，請參閱[軟體式 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
+
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：
 
 ||||
 |----------------|-----------------|-----------------|
-|具有單一 NUMA 節點的伺服器|少於 8 個邏輯處理器|MAXDOP 保持在或低於 # 個邏輯處理器數目|
+|具有單一 NUMA 節點的伺服器|小於或等於 8 個邏輯處理器|MAXDOP 保持在或低於 # 個邏輯處理器數目|
 |具有單一 NUMA 節點的伺服器|多於 8 個邏輯處理器|MAXDOP 保持在 8|
-|具有多個 NUMA 節點的伺服器|每個 NUMA 節點少於 8 個邏輯處理器|每個 NUMA 節點的 MAXDOP 保持在或低於 # 個邏輯處理器數目|
+|具有多個 NUMA 節點的伺服器|每個 NUMA 節點小於或等於 16 個邏輯處理器|每個 NUMA 節點的 MAXDOP 保持在或低於 # 個邏輯處理器數目|
+|具有多個 NUMA 節點的伺服器|每個 NUMA 節點多於 16 個邏輯處理器|將 MAXDOP 保持在最大 (MAX) 值為每個 NUMA 節點 16 個邏輯伺服器數量的一半|
+  
+> [!NOTE]
+> 上表中的 NUMA 節點指的是由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自動建立的軟體式 NUMA 節點，若已停用軟體式 NUMA，則為硬體式 NUMA 節點。   
+>  請在您為 Resource Governor 工作負載群組設定平行處理最大程度的選項時，使用這些相同的方針。 如需詳細資訊，請參閱 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
+  
+從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，請在您設定**最大平行處理程度**伺服器設定值時，使用下列方針：
+
+||||
+|----------------|-----------------|-----------------|
+|具有單一 NUMA 節點的伺服器|小於或等於 8 個邏輯處理器|MAXDOP 保持在或低於 # 個邏輯處理器數目|
+|具有單一 NUMA 節點的伺服器|多於 8 個邏輯處理器|MAXDOP 保持在 8|
+|具有多個 NUMA 節點的伺服器|每個 NUMA 節點小於或等於 8 個邏輯處理器|每個 NUMA 節點的 MAXDOP 保持在或低於 # 個邏輯處理器數目|
 |具有多個 NUMA 節點的伺服器|每個 NUMA 節點多於 8 個邏輯處理器|MAXDOP 保持在 8|
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>設定 max degree of parallelism 選項  
   
-1.  在 **[物件總管]** 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]**。  
+1.  在 **[物件總管]** 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]** 。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -78,9 +93,9 @@ ms.locfileid: "51606418"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max degree of parallelism` 選項設定為 `8`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max degree of parallelism` 選項設定為 `8`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -89,15 +104,15 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
 ```  
   
- 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 max degree of parallelism 選項之後  
+##  <a name="FollowUp"></a> 後續操作：在您設定完最大平行處理程度的選項後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

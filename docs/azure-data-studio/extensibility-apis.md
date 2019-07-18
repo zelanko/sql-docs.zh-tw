@@ -2,21 +2,20 @@
 title: 擴充性 API
 titleSuffix: Azure Data Studio
 description: 了解擴充性 Api 適用於 Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959620"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 Api
 
@@ -65,7 +64,7 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>最上層函式
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得對應至給定的連接和路徑的物件總管 節點。 如果未不指定任何路徑，則它會傳回所指定連接的最上層節點。 如果並沒有節點在指定的路徑，它會傳回`undefined`。 注意：`nodePath`物件由 SQL 工具服務後端所產生，而且很難以手動方式建構。 未來的 API 增強功能可讓您能夠根據您提供相關的節點，例如名稱、 類型和結構描述的中繼資料的節點。
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得對應至給定的連接和路徑的物件總管 節點。 如果未不指定任何路徑，則它會傳回所指定連接的最上層節點。 如果並沒有節點在指定的路徑，它會傳回`undefined`。 注意:`nodePath`物件由 SQL 工具服務後端所產生，而且很難以手動方式建構。 未來的 API 增強功能可讓您能夠根據您提供相關的節點，例如名稱、 類型和結構描述的中繼資料的節點。
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得所有作用中的物件總管 連接節點。
 

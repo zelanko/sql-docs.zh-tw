@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 849346f33a3118029a46241644d7f1cce6dc7481
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061106"
 ---
 # <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
   使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
@@ -40,11 +39,11 @@ ms.locfileid: "58374466"
   
 2.  連接 Microsoft SQL Server Database Engine。  
   
-3.  在物件總管中，展開 [Integration Services] 節點，並以滑鼠右鍵按一下 [SSISDB]，然後按一下 [屬性]。  
+3.  在物件總管中，展開 [Integration Services]  節點，並以滑鼠右鍵按一下 [SSISDB]  ，然後按一下 [屬性]  。  
   
 ##  <a name="options"></a> 設定選項  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  下表描述對話方塊中的特定屬性，以及 catalog.catalog_property 檢視表中的對應屬性。  
   
 |屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|描述|  

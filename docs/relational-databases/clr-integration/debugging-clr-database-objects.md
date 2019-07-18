@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 815c36297a6de0fcb263fc2f74b23c186dba5ee9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8dfd76558b4cf6c476849c4f2a41bfdb1f6d28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118556"
 ---
 # <a name="debugging-clr-database-objects"></a>偵錯 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8662339e7f3b0d77b48ad480317bc7558d0801e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e93b254e42b117f97ea6bc2d71afe5487f6a5197
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65357408"
 ---
 # <a name="configure-measure-properties"></a>設定量值屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "50147493"
   
 ## <a name="see-also"></a>另請參閱  
  [設定量值群組屬性](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
- [修改量值](../../analysis-services/lesson-3-1-modifying-measures.md)  
+ [修改量值](../multidimensional-tutorial/lesson-3-1-modifying-measures.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805852"
 ---
 # <a name="error-messages"></a>錯誤訊息
   所傳回的訊息文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會置於*MessageText*參數**SQLGetDiagRec**。 錯誤的來源會由訊息的標頭指出：  
@@ -34,7 +34,7 @@ ms.locfileid: "48069888"
  [Microsoft][SQL Server Native Client]  
  這些錯誤所引發[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。 如果沒有具有 Net-Library 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名稱的任何其他節點，則驅動程式會發生錯誤。  
   
- [Microsoft][SQL Server Native Client][*Net-transportname*]  
+ [Microsoft][SQL Server Native Client][*Net-Transportname*]  
  這些錯誤所引發[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網路程式庫，其中*Net-transportname*顯示名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（比方說，具名管道、 共用記憶體、 TCP/IP 通訊端或 VIA） 的用戶端的網路傳輸。 錯誤訊息的其餘部份則包含呼叫的 Net-Library 函數，以及由 TDS 函數在基礎網路 API 中所呼叫的函數。 *PfNative*傳回這些錯誤的錯誤程式碼為基礎的網路通訊協定堆疊的錯誤程式碼。  
   
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  

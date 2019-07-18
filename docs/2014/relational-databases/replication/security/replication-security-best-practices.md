@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63268667"
 ---
 # <a name="replication-security-best-practices"></a>複寫安全性最佳做法
   複寫會移動分散式環境中的資料，範圍從單一網域上的企業內部網路，乃至於存取未受信任網域之間以及網際網路上資料的應用程式。 因此，了解在這些不同環境下保護複寫連接安全的最佳方法相當重要。  

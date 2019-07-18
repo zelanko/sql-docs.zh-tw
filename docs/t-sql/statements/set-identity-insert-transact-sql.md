@@ -23,15 +23,16 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c4f054e6690f6b836864a69b27a22a0bb3edf07
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: 2ba70fdf917fba3a8dbd730db7e8d9b89cd1b094
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65949014"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 允許將明確的值插入資料表的識別欄位中。  
 
@@ -61,7 +62,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
   
  SET IDENTITY_INSERT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  使用者必須擁有資料表，或對資料表擁有 ALTER 權限。  
   
 ## <a name="examples"></a>範例  
@@ -94,7 +95,8 @@ FROM dbo.Tool;
 GO  
   
 -- Try to insert an explicit ID value of 3;  
--- should return a warning.  
+-- should return an error:
+-- An explicit value for the identity column in table 'AdventureWorks2012.dbo.Tool' can only be specified when a column list is used and IDENTITY_INSERT is ON.
 INSERT INTO dbo.Tool (ID, Name) VALUES (3, 'Garden shovel');  
 GO  
 -- SET IDENTITY_INSERT to ON.  

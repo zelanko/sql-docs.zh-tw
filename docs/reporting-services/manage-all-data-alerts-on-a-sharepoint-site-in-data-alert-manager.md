@@ -2,22 +2,22 @@
 title: 在資料警示管理員中管理 SharePoint 網站上的所有資料警示 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 146c860a0618c4d8caf6b8485599fc01515b2a3b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 9702ca84fab0da2024db6f6f5e0f510822dcd29e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579803"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在資料警示管理員中管理 SharePoint 網站上的所有資料警示
 
@@ -34,21 +34,21 @@ SharePoint 警示系統管理員可以檢視任何網站使用者建立之資料
   
 1.  移至儲存資料警示定義的 SharePoint 網站。  
   
-2.  在首頁上，按一下 [網站動作]。  
+2.  在首頁上，按一下 [網站動作]  。  
   
-3.  捲動到清單底部，然後按一下 [網站設定]。  
+3.  捲動到清單底部，然後按一下 [網站設定]  。  
   
-4.  在 [Reporting Services] 底下，按一下 [管理資料警示]。  
+4.  在 [Reporting Services]  底下，按一下 [管理資料警示]  。  
   
-5.  按一下 [檢視使用者的警示] 清單旁邊的向下箭號，然後選取您要檢視其警示的使用者。  
+5.  按一下 [檢視使用者的警示]  清單旁邊的向下箭號，然後選取您要檢視其警示的使用者。  
   
-6.  按一下 [檢視報表的警示] 清單旁邊的向下箭號，然後選取要檢視的特定警示，或是按一下 [全部顯示]，列出所選取使用者建立的所有警示。  
+6.  按一下 [檢視報表的警示]  清單旁邊的向下箭號，然後選取要檢視的特定警示，或是按一下 [全部顯示]  ，列出所選取使用者建立的所有警示。  
   
      資料表會列出名稱、報表名稱、資料警示建立者的名稱、傳送資料警示的次數、上一次修改資料警示定義的時間，以及資料警示的狀態。 如果資料警示無法產生或是傳送，狀態資料行就會包含有關錯誤的資訊並協助您疑難排解問題。  
   
 ## <a name="delete-an-alert-definition"></a>刪除警示定義  
   
--   以滑鼠右鍵按一下您想要刪除的資料警示，然後按一下 [刪除]。  
+-   以滑鼠右鍵按一下您想要刪除的資料警示，然後按一下 [刪除]  。  
   
     > [!NOTE]  
     >  您刪除警示之後，就不會再傳送任何警示訊息。 不過，如果您查詢警示資料庫，可能會發現警示定義仍然存在。 警示服務會依照排程執行清除，而警示定義會在下一次清除時永久刪除。 預設的清除間隔是 20 分鐘。 此清除間隔和其他清除間隔都可以加以設定。 如需詳細資訊，請參閱 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)。  

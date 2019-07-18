@@ -11,14 +11,18 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 58bd2e2dfa541dd4d4200f3b7518b1f6c2d4ad0b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a1a41df41528d3b9e76fd55404ae8ab544646a5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715894"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中執行的執行個體設定參數值。  
@@ -62,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* 是 **smallint**。  
   
  [ @parameter_name = ] *parameter_name*  
- 參數的名稱。 *parameter_name* 是 **nvarchar(128)**。  
+ 參數的名稱。 *parameter_name* 是 **nvarchar(128)** 。  
   
  [ @parameter_value = ] *parameter_value*  
  參數的值。 *parameter_value* 是 **sql_variant**。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011735"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
   資料檔中包含的欄位順序可以與資料表中對應資料行的順序不同。 此主題呈現非 XML 與 XML 格式檔案，這些檔案已經過修改，以配合欄位順序與資料表資料行不同的資料檔。 已修改的格式檔案可將資料欄位對應到與它們對應的資料表資料行。  

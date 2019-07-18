@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b613fa7adf8d4a149924101f92a8b3dc87e6916a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8a0c38487f58a6db6e80d48c2b39b09e3ed93106
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107273"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源的資料，您必須具有以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]類型之報表資料來源為基礎的資料集。 這種內建資料來源類型的建構基礎是 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的資料延伸模組，而這個延伸模組可以讓您從 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源擷取多維度資料。  
@@ -77,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>預先定義的欄位屬性  
- 預先定義的欄位屬性一般是由多個資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中。 例如，MDX 維度屬性 MEMBER_UNIQUE_NAME 會對應到預先定義的報表資料集欄位屬性 `UniqueName`。 若要在文字方塊中包含唯一的名稱值，請使用運算式 `=Fields!`\<欄位名稱>`.UniqueName`。  
+ 預先定義的欄位屬性一般是由多個資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中。 例如，MDX 維度屬性 MEMBER_UNIQUE_NAME 會對應到預先定義的報表資料集欄位屬性 `UniqueName`。 若要在文字方塊中包含唯一的名稱值，請使用運算式 `=Fields!`\<欄位名稱>  `.UniqueName`。  
   
  下表提供可用在 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源之預先定義的欄位屬性清單。  
   
@@ -94,7 +93,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>自訂屬性  
- 自訂欄位屬性是由資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中，但不會出現在報表的 [資料集] 窗格中，當做該資料集下的欄位。 例如， **[Long Names]** 是一個針對維度層級而定義的成員屬性。 若要在文字方塊中包含值，您可以使用運算式 `=Fields!`\<欄位名稱>`("Long Names")`。 運算式中的欄位名稱會區分大小寫。  
+ 自訂欄位屬性是由資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中，但不會出現在報表的 [資料集] 窗格中，當做該資料集下的欄位。 例如， **[Long Names]** 是一個針對維度層級而定義的成員屬性。 若要在文字方塊中包含值，您可以使用運算式 `=Fields!`\<欄位名稱>  `("Long Names")`。 運算式中的欄位名稱會區分大小寫。  
   
  請使用下列語法來參考運算式中自訂的擴充屬性：  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208651"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "57579438"
   
  物件上指定的某些屬性會針對子物件或下階物件上的相同屬性提供預設值。 例如， **Cube.StorageMode**提供的預設值**Partition.StorageMode**。 若是繼承的預設值，ASSL 會針對繼承的預設值套用這些規則：  
   
--   當子物件的屬性在 XML 中為 null 持，此屬性的值會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 Null 值。  
+-   當子物件的屬性在 XML 中為 null 持，此屬性的值會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 null 值。  
   
 -   您無法以程式設計方式判斷出子物件的屬性是直接在子物件上設定的，還是繼承而來。  
   
@@ -86,19 +86,19 @@ ms.locfileid: "57579438"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99 之間|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- 定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：**[彙總及彙總設計](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+ 定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：** [彙總及彙總設計](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>對應量值、屬性和階層  
  範例 Cube 的量值、屬性和階層都是衍生自 Cube 事實和維度資料表的下列資料行。  
   
-|量值或屬性 (層級)|成員|來源資料表|來源資料行|範例資料行值|  
+|量值或屬性 (層級)|Members|來源資料表|來源資料行|範例資料行值|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |封裝量值|不適用|ImportsFactTable|Packages|12|  
 |最新的量值|不適用|ImportsFactTable|最後一個|May-03-99|  
 |Route 維度中的 Route 類別層級|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Route 維度的 Route 屬性|air,sea,road,rail|RouteDimensionTable|路由|Sea|  
 |Source 維度的 Hemisphere 屬性|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N.  America,S.  America|SourceDimensionTable|Continent|Europe|  
+|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europe|  
 |Time 維度的 Half 屬性|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Time 維度的 Quarter 屬性|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57579438"
   
  上表中，每個資料列都有相同的值**RouteKey**， **SourceKey**，並**TimeKey**資料行，表示這些資料列會參與相同的 cube 資料格。  
   
- 此處所顯示的範例代表極簡單的 Cube，而在該範例中，Cube 含有單一量值群組，且所有維度資料表都是以星狀結構描述來聯結至事實資料表。 另一個通用結構描述是雪花式結構描述，其中一或多份維度資料表會聯結至另一份維度資料表，而不是直接聯結至事實資料表。 **相關的主題：**[維度&#40;Analysis Services-多維度資料&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
+ 此處所顯示的範例代表極簡單的 Cube，而在該範例中，Cube 含有單一量值群組，且所有維度資料表都是以星狀結構描述來聯結至事實資料表。 另一個通用結構描述是雪花式結構描述，其中一或多份維度資料表會聯結至另一份維度資料表，而不是直接聯結至事實資料表。 **相關的主題：** [維度&#40;Analysis Services-多維度資料&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   
- 此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：**[維度關聯性](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
+ 此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：** [維度關聯性](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型資料庫](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

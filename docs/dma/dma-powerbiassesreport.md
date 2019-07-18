@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054680"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析 Data Migration Assistant 有了 Power BI 所建立的彙總的評估報告
 
@@ -60,7 +59,7 @@ ms.locfileid: "58872069"
 
    ![編輯查詢 功能表、 資料來源設定](../dma/media/DataSourceSettings.png)
 
-1. 選取**變更來源...**，然後輸入伺服器和資料庫的值。
+1. 選取**變更來源...** ，然後輸入伺服器和資料庫的值。
 
    ![變更來源、 伺服器和資料庫](../dma/media/ChangeSource.png)
 
@@ -84,7 +83,7 @@ ms.locfileid: "58872069"
 
 ![視覺效果時，橫條圖的軸](../dma/media/VisualizationsAxis.png)
 
-當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取**SQL01**若要檢視的所有物件，使移轉 （重大變更）。
+當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取 **SQL01** 若要檢視的所有物件，使移轉 （重大變更）。
 
 ![HR 資料庫的重大變更](../dma/media/BreakingChanges.png)
 
@@ -104,7 +103,7 @@ ms.locfileid: "58872069"
 
 您可以使用此報告來反白顯示可用的目標 SQL Server 版本中的資料庫的新功能。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間**選取功能，且資料表會列出可能會受益於這項功能。
+當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間** 選取功能，且資料表會列出可能會受益於這項功能。
 
 ![Stretch Database 的功能建議](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -120,7 +119,7 @@ ms.locfileid: "58872069"
 
 使用此報告來反白顯示*執行個體層級的功能*，不支援的 Azure SQL Database V12。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，已選取這項功能：**Alwayson 可用性群組組態不支援 Azure SQL Database 中**。  
+當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，已選取這項功能：**Alwayson 可用性群組組態不支援 Azure SQL Database 中** 。  
 
 ![Alwayson 可用性群組功能](../dma/media/Feature_AlwaysOnAvailability.png)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.preview.f1
@@ -15,21 +14,21 @@ ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057491"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多個一般檔案連接管理員編輯器 (預覽頁面)
-  使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [預覽] 頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
+  使用 [多個一般檔案連線管理員編輯器]  對話方塊的 [預覽]  頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  
   
  若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員名稱**  
- 提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [連線管理員] 區域內。  
+ 提供唯一的名稱給工作流程中的多個一般檔案連接。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [連線管理員]  區域內。  
   
  **說明**  
  描述連接。 最佳作法是以其用途描述連接，使封裝可以自我記錄並易於維護。  

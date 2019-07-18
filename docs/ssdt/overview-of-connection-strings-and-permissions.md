@@ -8,21 +8,21 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a61361460513e546e459aa6183b8081f510d8ed7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65102025"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>連接字串和權限概觀
-若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態] 對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  
+若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態]  對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  
   
 ## <a name="connection-strings"></a>連接字串  
-您可以在 [SQL Server 測試組態] 對話方塊中，為以下的每一個帳戶指定連接字串。  
+您可以在 [SQL Server 測試組態]  對話方塊中，為以下的每一個帳戶指定連接字串。  
   
 > [!NOTE]  
 > 只有當您使用 SQL Server 驗證時，執行內容和授權的內容才會不同。 如果您是使用 Windows 驗證，兩個連接字串會使用相同的認證。  
@@ -40,7 +40,7 @@ ms.locfileid: "47646866"
 ## <a name="windows-authentication-versus-sql-server-authentication"></a>Windows 驗證和 SQL Server 驗證  
 在指定連接字串時，您必須在使用 Windows 驗證和 SQL 驗證之間做出選擇。 選擇 Windows 驗證的其中一個理由是此驗證方式對小組使用測試的支援優於 SQL Server 驗證。 如果您選擇 SQL Server 驗證，則會根據使用者認證將連接字串加密 (使用資料保護 API (DPAPI))。 這表示，此測試專案中的測試將只為您執行，如果是在您簽入它們之後透過原始檔控制系統取得測試的團隊成員就無法執行。 若要執行此測試專案中的測試，您團隊上的其他成員將必須使用自己的認證，來重新設定測試專案。 若要這樣做，他們會編輯他們自己的 app.config 檔案複本，或是使用專案組態對話方塊。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 測試指令碼會在執行內容權限等級執行，也就是在一般使用情況下，於資料庫執行的使用者命令有效的相同權限等級。 測試前動作、測試後動作、TestInitialize 和 TestCleanup 指令碼都會在授權的內容權限等級執行。  
   
 由於用於測試後動作指令碼之較高權限連接的緣故，所以您可以在其中執行驗證。 在此指令碼中，您也可以執行指令碼命令來測試權限。 如需有關權限的詳細資訊，請參閱 [SQL Server Data Tools 的必要權限](../ssdt/required-permissions-for-sql-server-data-tools.md)的 SQL Server 單元測試一節。  

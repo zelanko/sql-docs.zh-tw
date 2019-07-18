@@ -2,18 +2,18 @@
 title: OLE DB 連線類型 (SSRS) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8d489b9d01d4d381294f387e1602e6edbfe23481
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6682aeeaf5daedee04757381131464bcaf379f50
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030429"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499567"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 連接類型 (SSRS)
   若要加入來自 OLE DB 資料提供者的資料，您必須具有以 OLE DB 類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 資料處理延伸模組為基礎。  
@@ -31,7 +31,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  您使用的連接字串是依據您要連接的外部資料來源而定。 若要設定資料提供者所特有的連接字串屬性，請在 **[資料來源屬性]** 對話方塊的 **[一般]** 頁面上，按一下 **[建立]** 按鈕，以便開啟 **[連接屬性]** 對話方塊。 透過 **[資料連結屬性]** 對話方塊，設定延伸資料來源屬性。  
   
- 如需更多連接字串的範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需更多連接字串的範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Credentials"></a> 認證  
@@ -39,7 +39,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源及連接字串&#40;報表產生器及 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或是[指定的認證及連接資訊，為報表資料來源](specify-credential-and-connection-information-for-report-data-sources.md).</c0>  
   
 ###### <a name="special-characters-in-a-password"></a>密碼中的特殊字元  
  如果您設定 OLE DB 資料來源來提示輸入密碼或是將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (如標點符號) 的密碼時，某些基礎資料來源驅動程式將無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。  
@@ -82,7 +82,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

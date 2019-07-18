@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754240"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
   您必須在建立記憶體最佳化資料表時，指定 `BUCKET_COUNT` 參數的值。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  
@@ -137,11 +137,11 @@ GO
   
  請考慮此資料表上的三個雜湊索引：  
   
--   IX_Status：有 50% 的貯體是空的，這是理想的狀況。 不過，平均鏈結長度非常高 (65,536)。 這表示有大量重複的值。 因此，這種情況不適合使用非叢集雜湊索引。 應該改用非叢集索引。  
+-   IX_Status:50%的貯體是空的這是很好。 不過，平均鏈結長度非常高 (65,536)。 這表示有大量重複的值。 因此，這種情況不適合使用非叢集雜湊索引。 應該改用非叢集索引。  
   
--   IX_OrderSequence：有 0% 的貯體是空的，這個數字過低。 此外，平均鏈結長度為 8。 由於這個索引中的值是唯一的，因此這表示平均有 8 個值對應到每個貯體。 值區計數應該增加。 由於索引鍵擁有 262,144 個唯一值，因此值區計數至少應該為 262,144。 如果預期未來會有所成長，則這個數字應該更高。  
+-   IX_OrderSequence:0%的貯體是空的這是過低。 此外，平均鏈結長度為 8。 由於這個索引中的值是唯一的，因此這表示平均有 8 個值對應到每個貯體。 值區計數應該增加。 由於索引鍵擁有 262,144 個唯一值，因此值區計數至少應該為 262,144。 如果預期未來會有所成長，則這個數字應該更高。  
   
--   主索引鍵索引 (PK__SalesOrder...):有 36% 的貯體是空的，這是理想的狀況。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
+-   主索引鍵索引 (PK__SalesOrder...):有 36%的貯體是空的這是很好。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
   
  如需對記憶體最佳化雜湊索引的問題進行疑難排解的詳細資訊，請參閱＜ [針對記憶體最佳化雜湊索引常見效能問題進行疑難排解](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)＞。  
   

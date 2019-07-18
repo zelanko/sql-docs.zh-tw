@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067501"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>建立及管理階層 (SSAS 表格式)
-  您可以在 [圖表檢視] 中，透過模型設計師建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [模型] 功能表，然後指向 [模型檢視]，再按一下 [圖表檢視]。  
+  您可以在 [圖表檢視] 中，透過模型設計師建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [模型]  功能表，然後指向 [模型檢視]  ，再按一下 [圖表檢視]  。  
   
  本主題也包括下列工作：  
   
@@ -34,9 +33,9 @@ ms.locfileid: "52404883"
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>從內容功能表建立階層  
   
-1.  在模型設計師 ([圖表檢視]) 的資料表視窗中，以滑鼠右鍵按一下資料行，然後按一下 [建立階層]。  
+1.  在模型設計師 ([圖表檢視]) 的資料表視窗中，以滑鼠右鍵按一下資料行，然後按一下 [建立階層]  。  
   
-     若要選取多個資料行，請按一下每個資料行，然後按一下滑鼠右鍵開啟內容功能表，再按一下 [建立階層]。  
+     若要選取多個資料行，請按一下每個資料行，然後按一下滑鼠右鍵開啟內容功能表，再按一下 [建立階層]  。  
   
      資料表視窗底部會建立父階層層級，並將所選的資料行複製到階層下做為子層級。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "52404883"
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>若要變更階層或子層級的名稱  
   
-1.  以滑鼠右鍵按一下階層父層級或子層級，然後按一下 [重新命名]。  
+1.  以滑鼠右鍵按一下階層父層級或子層級，然後按一下 [重新命名]  。  
   
 2.  輸入新的名稱或編輯現有的名稱。  
   
@@ -68,23 +67,23 @@ ms.locfileid: "52404883"
   
 -   按一下並將資料行拖曳至父層級或階層的特定位置。 資料行會複製為階層的子層級。  
   
--   或以滑鼠右鍵按一下資料行，然後指向 [加入至階層]，再按一下階層。  
+-   或以滑鼠右鍵按一下資料行，然後指向 [加入至階層]  ，再按一下階層。  
   
 > [!NOTE]  
 >  您可以加入隱藏的資料行 (報表中不顯示的資料行) 做為階層中的子層級。 子層級不是隱藏的。  
   
 #### <a name="to-remove-a-child-level-from-a-hierarchy"></a>若要從階層中移除子層級  
   
--   以滑鼠右鍵按一下子層級，然後按一下 [從階層移除]。  
+-   以滑鼠右鍵按一下子層級，然後按一下 [從階層移除]  。  
   
 -   或按一下子層級，然後按 **Delete** 鍵。  
   
 > [!NOTE]  
->  如果重新命名階層子層級，則不會再與其複製來源資料行共用相同名稱。 使用 [顯示來源名稱] 命令查看其複製來源資料行。  
+>  如果重新命名階層子層級，則不會再與其複製來源資料行共用相同名稱。 使用 [顯示來源名稱]  命令查看其複製來源資料行。  
   
 #### <a name="to-show-a-source-name"></a>顯示來源名稱  
   
--   以滑鼠右鍵按一下階層子層級，然後按一下 [顯示來源名稱]。 即會顯示其複製來源資料行的名稱。  
+-   以滑鼠右鍵按一下階層子層級，然後按一下 [顯示來源名稱]  。 即會顯示其複製來源資料行的名稱。  
   
 ##  <a name="bkmk_delete"></a> 刪除階層  
   

@@ -2,18 +2,18 @@
 title: 安全性 (報表產生器) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd51af5b1fe70d73d37f1bbefb07ada68d56cd4a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500527"
 ---
 # <a name="security-report-builder"></a>安全性 (報表產生器)
   報表產生器是一種報表撰寫用戶端應用程式，專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
@@ -94,7 +94,7 @@ ms.locfileid: "56290806"
   
 -   [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- 如需資料來源的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需資料來源的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Models"></a> 了解模型與安全性篩選  
@@ -114,7 +114,7 @@ ms.locfileid: "56290806"
   
   
 ## <a name="see-also"></a>另請參閱  
- [安裝和解除安裝報表產生器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [安裝報表產生器](../install-windows/install-report-builder.md)  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

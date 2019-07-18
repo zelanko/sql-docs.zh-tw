@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897742"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驅動程式中開發連線集區覺察
 本主題討論開發 ODBC 驅動程式，其中包含此驅動程式應該如何提供連線共用服務的相關資訊的詳細資料。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49f586249657b2f10a166c975608fd2b539d67ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e7554c761d35c6683802cfb4e5428221f697089c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769588"
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>getURL 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.net.URL getURL(java.lang.String sColumn)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getURL 方法是由 java.sql.ResultSet 介面中的 getURL 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096017"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>引數  
 `[ @eventid = ] event_id` 是要開啟的事件識別碼。 *event_id*已**int**，沒有預設值。 識別碼必須是從 82 到 91，為資料集代表使用者定義事件的事件編號[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
-`[ @userinfo = ] 'user_info'` 選擇性的使用者定義字串，識別事件的原因。 *user_info*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
+`[ @userinfo = ] 'user_info'` 選擇性的使用者定義字串，識別事件的原因。 *user_info*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。  
   
-`[ @userdata = ] user_data` 是事件的選擇性使用者自訂資料。 *user_data*已**varbinary(8000)**，預設值是 NULL。  
+`[ @userdata = ] user_data` 是事件的選擇性使用者自訂資料。 *user_data*已**varbinary(8000)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d0d0fdda8512167111b03c72f4c64e067493adb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896890"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
 
@@ -28,7 +27,7 @@ ms.locfileid: "52759210"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立網域屬性，以使用實體成員來擴展屬性值。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -42,12 +41,12 @@ ms.locfileid: "52759210"
 ## <a name="attribute-information"></a>屬性資訊  
  針對每個建立的屬性，會將含有七個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|「資料行」|Description|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |[狀態]|屬性狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
-|[屬性]|屬性名稱。|  
+|名稱|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
-|Description|屬性描述。|  
+|描述|屬性描述。|  
 |顯示像素寬度|屬性的寬度。|  
 |類型和屬性|屬性的類型和資料類型資訊。|  
 |啟用變更追蹤|指定屬性是否已啟用變更追蹤，並在括弧中顯示群組編號。|  
@@ -64,15 +63,15 @@ ms.locfileid: "52759210"
   
 ### <a name="to-create-a-domain-based-attribute"></a>若要建立網域屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型] 頁面上，依序按一下模型與 [實體]。  
+2.  在 [管理模型]  頁面上，依序按一下模型與 [實體]  。  
   
-3.  在 [管理實體] 頁面上，選取您要為其建立屬性之實體的資料列。  
+3.  在 [管理實體]  頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]**。  
+4.  按一下 **[屬性]** 。  
   
-5.  在 [管理屬性]  頁面上，執行下列其中一項動作，然後按一下 [加入] 。  
+5.  在 [管理屬性]  頁面上，執行下列其中一項動作，然後按一下 [加入]  。  
   
     -   如果是分葉成員的屬性，請選取 [成員類型]  清單方塊的 [分葉]  。  
   
@@ -82,13 +81,13 @@ ms.locfileid: "52759210"
   
 6.  在 **[名稱]** 方塊中，輸入屬性的名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)。  
   
-7.  (選擇性) 輸入顯示名稱，然後在 [描述] 方塊中輸入描述。  
+7.  (選擇性) 輸入顯示名稱，然後在 [描述]  方塊中輸入描述。  
   
 8.  在 **[顯示像素寬度]** 方塊中，輸入要在 **[總管]** 方格中顯示的屬性資料行寬度。  
   
-9. 從 [屬性類型] 清單中，選取 [網域]。  
+9. 從 [屬性類型]  清單中，選取 [網域]  。  
   
-10. 從 [網域實體] 清單中，選擇要用來擴展屬性值的實體。 
+10. 從 [網域實體]  清單中，選擇要用來擴展屬性值的實體。 
   
 11. **(選擇性) 適用於分葉成員的網域屬性。** 選取篩選父屬性，以用來限制允許的網域屬性值。  
   
@@ -96,9 +95,9 @@ ms.locfileid: "52759210"
   
      如需限制允許的值的資訊，請參閱 Master Data Services 部落格上的 [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(如何篩選網域屬性下拉式清單)。  
   
-12. **選擇性。** 選取 [啟用變更追蹤] 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
+12. **選擇性。** 選取 [啟用變更追蹤]  以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 按一下 **[儲存]**。  
+13. 按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   

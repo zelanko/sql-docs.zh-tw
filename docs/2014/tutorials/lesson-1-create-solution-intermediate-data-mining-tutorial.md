@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678475"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>第 1 課：建立中繼資料採礦方案 （中繼資料採礦教學課程）
   在基本資料採礦教學課程中，您已建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案，其中包含以新的 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫為根據的簡單資料採礦方案。  

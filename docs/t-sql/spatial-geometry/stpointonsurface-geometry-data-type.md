@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointOnSurface (geometry Data Type)
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cb68991bddc792fa487a9c5ad380d9b029b6186a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 116b321fd2be08cf1a432507f53f2a50da21e45a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938325"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47823666"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- 開放地理空間協會 (OGC) 類型：**Point**  
+ 開放式地理空間協會 (OGC) 類型：**點**  
   
 ## <a name="remarks"></a>Remarks  
  如果此例項是空的，這個方法會傳回 Null。  

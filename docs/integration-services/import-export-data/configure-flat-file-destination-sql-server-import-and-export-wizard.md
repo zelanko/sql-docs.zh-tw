@@ -12,18 +12,22 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e8e7090865428be5da4e917b9894c940ef5975b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723963"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
-  若已選取一般檔案目的地，則在指定要複製整個資料表或提供查詢之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入及匯出精靈] 會顯示 [設定一般檔案目的地]。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (選擇性) 您可以檢閱個別資料行的對應，並預覽範例資料。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  若已選取一般檔案目的地，則在指定要複製整個資料表或提供查詢之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入及匯出精靈] 會顯示 [設定一般檔案目的地]  。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (選擇性) 您可以檢閱個別資料行的對應，並預覽範例資料。  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>[設定一般檔案目的地] 頁面的螢幕擷取畫面  
- 下列螢幕擷取畫面顯示精靈的 [設定一般檔案目的地] 頁面。
+ 下列螢幕擷取畫面顯示精靈的 [設定一般檔案目的地]  頁面。
  
  在此範例中，用者指定了下列選項，以建立一般的 CSV (逗號分隔值) 檔案。
 -   **資料列分隔符號**。 每個輸出的資料列結尾都會有一組歸位換行與換行字元組合。
@@ -68,17 +72,17 @@ ms.locfileid: "58222032"
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>您可以選擇檢查資料行對應及預覽資料
 
 **編輯對應**   
-選擇性地按一下 [編輯對應]，顯示所選取資料表的 [資料行對應] 對話方塊。 使用 [資料行對應]  對話方塊即可執行下列動作。
+選擇性地按一下 [編輯對應]  ，顯示所選取資料表的 [資料行對應]  對話方塊。 使用 [資料行對應]  對話方塊即可執行下列動作。
 -   檢閱個別資料行在來源與目的地之間的對應。
 -   您可以針對不想要複製的資料行選取 [忽略]  ，只複製資料行的子集。
 
 如需詳細資訊，請參閱 [資料行對應](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。  
 
 **預覽**  
-在 [預覽資料] 對話方塊中，選擇性地按一下 [預覽] 預覽最多 200 個取樣資料列。 這會確認精靈即將複製您想要複製的資料。 如需詳細資訊，請參閱 [預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。  
+在 [預覽資料]  對話方塊中，選擇性地按一下 [預覽]  預覽最多 200 個取樣資料列。 這會確認精靈即將複製您想要複製的資料。 如需詳細資訊，請參閱 [預覽資料](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)。  
   
 在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要進行這些變更，請返回 [設定一般檔案目的地]  頁面，然後按一下 [上一步]  返回先前的頁面，如此您就可以在其中變更選取項目。  
 
 ## <a name="whats-next"></a>下一步  
- 指定目的地一般檔案的格式化選項之後，下一個頁面是 [Save and Execute Package (儲存和執行封裝)] 。 在此頁面上，您可以指定是否要立即執行作業。 根據您的設定，也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件進行自訂並在稍後重複使用。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
+ 指定目的地一般檔案的格式化選項之後，下一個頁面是 [Save and Execute Package (儲存和執行封裝)]  。 在此頁面上，您可以指定是否要立即執行作業。 根據您的設定，也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件進行自訂並在稍後重複使用。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
 

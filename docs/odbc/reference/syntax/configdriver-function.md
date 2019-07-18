@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016751"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 函式
 **合規性**  
- 版本導入： ODBC 2.5  
+ 導入的版本：ODBC 2.5  
   
  **摘要**  
  **ConfigDriver**可讓安裝程式來執行安裝和解除安裝而不需要程式呼叫的函式**ConfigDSN**。 此函式會執行驅動程式特有的功能，例如建立驅動程式特定的系統資訊和在安裝期間，執行資料來源名稱的轉換，以及在解除安裝期間，清除 系統資訊修改。 此函式公開驅動程式安裝 DLL 或個別的安裝程式 DLL。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL ConfigDriver(  
       HWND    hwndParent,  
@@ -52,12 +51,12 @@ BOOL ConfigDriver(
  *hwndParent*  
  [輸入]父視窗控制代碼。 如果控制代碼為 null，函式不會顯示任何對話方塊。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
- ODBC_INSTALL_DRIVER： 安裝新的驅動程式。  
+ ODBC_INSTALL_DRIVER:安裝新的驅動程式。  
   
- ODBC_REMOVE_DRIVER： 移除驅動程式。  
+ ODBC_REMOVE_DRIVER:移除驅動程式。  
   
  此選項也可以是特定驅動程式，在此情況下*常見*第一個選項的引數必須開始從 ODBC_CONFIG_DRIVER_MAX + 1。 *常見*從大於 ODBC_CONFIG_DRIVER_MAX + 1 的值也必須啟動任何其他選項的引數。  
   

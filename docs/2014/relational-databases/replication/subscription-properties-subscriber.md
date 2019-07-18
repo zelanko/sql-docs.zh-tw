@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250264"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 複寫訂閱屬性 
 此章節提供的資訊**訂用帳戶屬性** 對話方塊。 
@@ -39,7 +39,7 @@ ms.locfileid: "54134978"
   
 ### <a name="options-for-all-subscriptions"></a>所有訂閱的選項。  
  **Security**  
- 按一下 **[代理程式處理帳戶]** 資料列，然後按一下屬性 (**...**) 按鈕，即可變更散發代理程式或合併代理程式在散發者端用以執行的帳戶。 若要變更散發代理程式或合併代理程式連接到訂閱者時所用的帳戶，請按一下 **[訂閱者連接]**，然後按一下屬性按鈕 (**...**)。  
+ 按一下 **[代理程式處理帳戶]** 資料列，然後按一下屬性 ( **...** ) 按鈕，即可變更散發代理程式或合併代理程式在散發者端用以執行的帳戶。 若要變更散發代理程式或合併代理程式連接到訂閱者時所用的帳戶，請按一下 **[訂閱者連接]** ，然後按一下屬性按鈕 ( **...** )。  
   
  如需有關每個代理程式所需之權限的詳細資訊，請參閱＜ [Replication Agent Security Model](security/replication-agent-security-model.md)＞。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54134978"
   
 ### <a name="options-for-merge-subscriptions"></a>合併訂閱的選項  
  **資料分割定義 (HOST_NAME)**  
- 對於使用參數化的篩選的發行集，合併式複寫會評估兩個系統函式 （或兩者如果篩選參考兩個函式） 的其中一個來判斷訂閱者應接收的資料同步處理期間：**SUSER_SNAME**或是**host_name （)**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 針對使用參數化篩選的發行集，合併式複寫會在同步處理時，評估兩個系統函數其中之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定「訂閱者」應接收的資料：**SUSER_SNAME()** 或 **HOST_NAME()** 。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **[訂閱類型]** 和 **[優先權]**  
  顯示訂閱是客訂閱或主訂閱 (建立了訂閱之後就無法再變更)。 主訂閱可以將資料重新發行至其他訂閱者，並且可以指派衝突解決的優先權。  
@@ -60,7 +60,7 @@ ms.locfileid: "54134978"
  如果您在新增訂閱精靈中選取伺服器的訂閱類型，就會為訂閱者指定在衝突解決過程中使用的優先權。  
   
  **以互動方式解決衝突**  
- 決定在合併同步處理過程中，是否使用互動解析程式使用者介面來解決衝突。 這需要 **[使用 Windows Synchronization Manager]** 的值為 **[啟用]**。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
+ 決定在合併同步處理過程中，是否使用互動解析程式使用者介面來解決衝突。 這需要 **[使用 Windows Synchronization Manager]** 的值為 **[啟用]** 。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
 
 
 ## <a name="subscriber-properties"></a>訂閱者屬性
@@ -84,10 +84,10 @@ ms.locfileid: "54134978"
  **快照集位置**  
  決定初始化或重新初始化期間存取快照集檔案的位置。 此位置可以是下列其中一個值：  
   
--   **[預設位置]**：設定散發者時所定義的預設位置。 如需詳細資訊，請參閱 <<c0> [ 指定 the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations)。    
--   **[替代資料夾]**：可在 **[發行集屬性]** 對話方塊中指定的替代位置。 如需相關資訊，請參閱 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。    
--   **[動態快照集資料夾]**：使用參數化資料列篩選器之合併式發行集的快照集位置。 如需相關資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)。  
--   **[FTP 資料夾]**：可讓檔案傳輸通訊協定 (FTP) 伺服器存取的資料夾。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](transfer-snapshots-through-ftp.md)。  
+-   **[預設位置]** ：設定散發者時所定義的預設位置。 如需詳細資訊，請參閱 <<c0> [ 指定 the Default Snapshot Location](snapshot-options.md#snapshot-folder-locations)。    
+-   **[替代資料夾]** ：可在 **[發行集屬性]** 對話方塊中指定的替代位置。 如需相關資訊，請參閱 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。    
+-   **[動態快照集資料夾]** ：使用參數化資料列篩選器之合併式發行集的快照集位置。 如需相關資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)。  
+-   **[FTP 資料夾]** ：可讓檔案傳輸通訊協定 (FTP) 伺服器存取的資料夾。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](transfer-snapshots-through-ftp.md)。  
   
  **快照集資料夾**  
  如果您針對 **[快照集位置]** 選項選取 **[預設位置]** 以外的任何值，都必須指定快照集資料夾的路徑。  
@@ -96,11 +96,11 @@ ms.locfileid: "54134978"
  決定是否可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager 來同步處理此訂閱。  
   
  **Security**  
- 按一下 **[代理程式處理帳戶]** 資料列，然後按一下屬性按鈕 (**...**)，即可變更在訂閱者端執行散發代理程式或合併代理程式的帳戶。 與連接相關的安全性選項會視訂閱的類型而定：  
+ 按一下 **[代理程式處理帳戶]** 資料列，然後按一下屬性按鈕 ( **...** )，即可變更在訂閱者端執行散發代理程式或合併代理程式的帳戶。 與連接相關的安全性選項會視訂閱的類型而定：  
   
--   針對交易式發行集的訂閱：若要變更散發代理程式連接到散發者所使用的帳戶，請按一下 **[散發者連接]**，然後按一下屬性按鈕 (**...**)。    
--   針對立即更新交易式發行集的訂閱：除了上述的散發者連接之外，您可以變更用來從訂閱者傳播變更至發行者的方法：按一下 **[發行者連接]**，然後按一下屬性按鈕 (**...**)。  
--   針對合併式發行集的訂閱，請按一下 **[發行者連接]**，然後按一下屬性按鈕 (**...**)。  
+-   針對交易式發行集的訂閱：若要變更散發代理程式連接到散發者所使用的帳戶，請按一下 **[散發者連接]** ，然後按一下屬性按鈕 ( **...** )。    
+-   針對立即更新交易式發行集的訂閱：除了上述的散發者連接之外，您可以變更用來從訂閱者傳播變更至發行者的方法：按一下 **[發行者連接]** ，然後按一下屬性按鈕 ( **...** )。  
+-   針對合併式發行集的訂閱，請按一下 **[發行者連接]** ，然後按一下屬性按鈕 ( **...** )。  
   
  如需有關每個代理程式所需之權限的詳細資訊，請參閱＜ [Replication Agent Security Model](security/replication-agent-security-model.md)＞。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54134978"
   
 ### <a name="options-for-merge-subscriptions"></a>合併訂閱的選項  
  **資料分割定義 (HOST_NAME)**  
- 對於使用參數化的篩選的發行集，合併式複寫會評估兩個系統函式 （或兩者如果篩選參考兩個函式） 的其中一個來判斷訂閱者應接收的資料同步處理期間：**SUSER_SNAME**或是**host_name （)**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 針對使用參數化篩選的發行集，合併式複寫會在同步處理時，評估兩個系統函數其中之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定「訂閱者」應接收的資料：**SUSER_SNAME()** 或 **HOST_NAME()** 。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **[訂閱類型]** 和 **[優先權]**  
  顯示訂閱是客訂閱或主訂閱 (建立了訂閱之後就無法再變更)。 主訂閱可以將資料重新發行至其他訂閱者，並且可以指派衝突解決的優先權。  
@@ -118,15 +118,15 @@ ms.locfileid: "54134978"
  如果您在新增訂閱精靈中選取伺服器的訂閱類型，就會為訂閱者指定在衝突解決過程中使用的優先權  
   
  **以互動方式解決衝突**  
- 決定在合併同步處理過程中，是否使用互動解析程式使用者介面來解決衝突。 這需要 **[使用 Windows Synchronization Manager]** 的值為 **[啟用]**。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
+ 決定在合併同步處理過程中，是否使用互動解析程式使用者介面來解決衝突。 這需要 **[使用 Windows Synchronization Manager]** 的值為 **[啟用]** 。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
  **Web 同步處理**  
  **[使用 Web 同步處理]** 決定是否連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 伺服器來同步處理訂閱。 只有啟用 Web 同步處理的發行集時，才能使用此選項。 如需詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)＞。  
   
- 如果針對 **[使用 Web 同步處理]** 選取 **[True]**：  
+ 如果針對 **[使用 Web 同步處理]** 選取 **[True]** ：  
   
 -   在 **[Web 伺服器位址]** 中輸入 IIS 伺服器的完整位址。   
--   按一下 **[Web 伺服器連接]** 資料列，然後按一下屬性按鈕 (**...**)，即可設定或變更訂閱者連接到 IIS 伺服器的帳戶。   
+-   按一下 **[Web 伺服器連接]** 資料列，然後按一下屬性按鈕 ( **...** )，即可設定或變更訂閱者連接到 IIS 伺服器的帳戶。   
 -   必要時變更 **[Web 伺服器逾時]** 。 逾時是 Web 同步處理要求過期之前的時間長度 (以秒為單位)。  
   
  如需有關組態的詳細資訊，請參閱＜ [Configure Web Synchronization](configure-web-synchronization.md)＞。  

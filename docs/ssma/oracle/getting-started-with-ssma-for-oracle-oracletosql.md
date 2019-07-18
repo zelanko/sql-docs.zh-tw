@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782066"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264451"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>開始使用 SSMA for Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for Oracle 可讓您快速轉換至 Oracle 資料庫結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -28,7 +28,7 @@ ms.locfileid: "47782066"
 ## <a name="installing-ssma"></a>安裝 SSMA  
 若要使用 SSMA，您必須先安裝 SSMA 用戶端程式可以存取來源 Oracle 資料庫和目標執行個體的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 接著必須安裝的延伸模組組件，以及至少其中一個 Oracle 提供者 (OLE DB 或[!INCLUDE[vstecado](../../includes/vstecado_md.md)]) 正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些元件支援的資料移轉和 Oracle 系統函數的模擬。 如需安裝指示，請參閱[安裝 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)。  
   
-若要啟動 SSMA，按一下**啟動**，指向**所有程式**，指向**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle**，然後按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle**。  
+若要啟動 SSMA，按一下**啟動**，指向 **所有程式** ，指向 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle** ，然後按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手，Oracle**。  
   
 ## <a name="ssma-for-oracle-user-interface"></a>SSMA for Oracle 使用者介面  
 安裝 SSMA 之後，您可以將 Oracle 資料庫移轉至使用 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 最好先熟悉 SSMA 使用者介面在開始之前。 下圖顯示的 SSMA，包括中繼資料瀏覽器、 中繼資料、 工具列、 輸出 窗格中，以及錯誤清單 窗格中的使用者介面：  
@@ -65,7 +65,7 @@ Oracle 中繼資料總管 會顯示 Oracle 結構描述的相關資訊。 藉由
 如需詳細資訊，請參閱 <<c0> [ 載入轉換的資料庫物件載入 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)。</c0>  
   
 ### <a name="metadata"></a>中繼資料  
-右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在 Oracle 中繼資料總管 中選取資料表，會出現六個索引標籤：**表格**， **SQL**，**類型對應、 報告**，**屬性**，並**資料**。 **報表** 索引標籤包含的資訊，建立報表之後，就會包含選取的物件。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會顯示：**表格**， **SQL**，和**資料**。  
+右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在 Oracle 中繼資料總管 中選取資料表，就會出現六個索引標籤：**表格**， **SQL**，**輸入對應時，報表**，**屬性**，並**資料**。 **報表** 索引標籤包含的資訊，建立報表之後，就會包含選取的物件。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會出現：**表格**， **SQL**，以及**資料**。  
   
 大部分的中繼資料設定是唯讀的。 不過，您可以變更下列中繼資料：  
   

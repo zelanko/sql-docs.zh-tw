@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947740"
 ---
 # <a name="cell-object-ado-md"></a>Cell 物件 (ADO MD)
 表示資料格集中所包含的軸座標交集處的資料。  

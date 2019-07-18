@@ -13,16 +13,16 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b6add721ab292799b0de72aff3dc4e8d0cd218f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64946610"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,10 +55,10 @@ ms.locfileid: "52504308"
  **UDT 表示使用者定義類型。  
   
 ## <a name="exporting-using--v-80"></a>使用 -V 80 匯出  
- 當您使用 **-V80** 參數大量匯出資料時，處於原生模式的 **nvarchar(max)**、**varchar(max)**、**varbinary(max)**、XML 和 UDT 資料會與 4 位元組前置詞一起儲存，如同 **text**、**image** 和 **ntext** 資料，而不是與 8 位元組前置詞一起儲存 (這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的預設)。  
+ 當您使用 **-V80** 參數大量匯出資料時，處於原生模式的 **nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、XML 和 UDT 資料會與 4 位元組前置詞一起儲存，如同 **text**、**image** 和 **ntext** 資料，而不是與 8 位元組前置詞一起儲存 (這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的預設)。  
   
 ## <a name="copying-date-values"></a>複製日期值  
- **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
+ **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
   
  **bcp** 命令會針對 **datetime** 和 **smalldatetime** 值使用 ODBC 預設格式來匯出字元格式資料檔案。 例如，包含日期 **的** datetime `12 Aug 1998` 資料行會以字元字串 `1998-08-12 00:00:00.000`大量複製到資料檔案。  
   

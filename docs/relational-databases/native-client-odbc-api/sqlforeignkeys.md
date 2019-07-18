@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d59eb895b735771a94fa04745b492fc68eb2ea74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4294bf407494976e383e534b2519d02c6aacea8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910845"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51674545"
   
  **SQLForeignKeys**可以在靜態伺服器資料指標上執行。 嘗試執行**SQLForeignKeys**可更新的 （動態或索引鍵集） 資料指標會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*FKCatalogName*並*PKCatalogName*參數： *Linked_Server_Name.Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*FKCatalogName*並*PKCatalogName*參數：*Linked_Server_Name.Catalog_Name*。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLForeignKeys 函數](https://go.microsoft.com/fwlink/?LinkId=59344)   

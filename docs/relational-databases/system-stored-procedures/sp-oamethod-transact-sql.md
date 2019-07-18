@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7dbc0d6ccf753f8f11baee2f5c1c479895d0687
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107920"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_OAMethod objecttoken , methodname
   
  如果此方法會傳回單一值，指定區域變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，就會傳回方法會傳回給用戶端的值，做為單一資料行、 單一資料列結果集。  
   
- 如果方法傳回值是一個 OLE 物件， *returnvalue*必須是資料類型的區域變數**int**。物件 Token 儲存在本機變數中，這個物件 Token 可以搭配其他 OLE Automation 預存程序來使用。  
+ 如果方法傳回值是一個 OLE 物件， *returnvalue*必須是資料類型的區域變數**int**。物件 token 儲存在本機變數中，與這個物件 token 可以搭配其他 OLE Automation 預存程序。  
   
  當此方法傳回值是陣列，如果*returnvalue*指定時，它會設定為 NULL。  
   
@@ -69,7 +68,7 @@ sp_OAMethod objecttoken , methodname
   
  若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數並**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，所有傳回的輸出參數的值會被忽略。  
   
- 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意， **@**_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。 At 符號 (**@**) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意， **@** _parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。 At 符號 ( **@** ) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  
@@ -93,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  當資料行中的所有資料值都共用相同的資料類型時，整個資料行都會使用這個資料類型。 當資料行中的資料值是不同資料類型時，便會根據下表來選擇整個資料行的資料類型。  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -106,7 +105,7 @@ sp_OAMethod objecttoken , methodname
  您也可以使用**sp_OAMethod**取得屬性值。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
   
 ## <a name="examples"></a>範例  
   

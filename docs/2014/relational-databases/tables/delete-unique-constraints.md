@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761147"
 ---
 # <a name="delete-unique-constraints"></a>刪除唯一的條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除唯一條件約束。 刪除唯一條件約束會移除條件約束運算式所包含之資料行或資料行組合中輸入值的唯一性要求，並且刪除對應的唯一索引。  
@@ -49,23 +49,23 @@ ms.locfileid: "54132428"
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>若要使用物件總管來刪除唯一條件約束  
   
-1.  在 [物件總管] 中，展開包含唯一條件約束的資料表，然後展開 **[條件約束]**。  
+1.  在 [物件總管] 中，展開包含唯一條件約束的資料表，然後展開 **[條件約束]** 。  
   
-2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]。  
+2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]  。  
   
-3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]**。  
+3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]** 。  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>若要使用資料表設計工具來刪除唯一條件約束  
   
-1.  在物件總管中，以滑鼠右鍵按一下含有唯一條件約束的資料表，然後按一下 [設計]。  
+1.  在物件總管  中，以滑鼠右鍵按一下含有唯一條件約束的資料表，然後按一下 [設計]  。  
   
-2.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+2.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
-3.  在 [索引/索引鍵] 對話方塊中，從 [選取的主/唯一索引鍵和索引] 清單中選取唯一索引鍵。  
+3.  在 [索引/索引鍵]  對話方塊中，從 [選取的主/唯一索引鍵和索引]  清單中選取唯一索引鍵。  
   
-4.  按一下 **[刪除]**。  
+4.  按一下 **[刪除]** 。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,9 +73,9 @@ ms.locfileid: "54132428"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Return the name of unique constraint.  

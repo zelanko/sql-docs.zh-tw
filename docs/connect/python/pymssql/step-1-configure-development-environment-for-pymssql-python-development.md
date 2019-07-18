@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 623b4bf9a88031cf891e88f75c30b06716bb27ff
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 9d74e3ce2f7db91aca295dcb7507431a82e49c8c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605018"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803872"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1︰設定 pymssql Python 開發的開發環境
 您必須設定您的開發環境的先決條件，才能開發使用 Python Driver for SQL Server 的應用程式。    

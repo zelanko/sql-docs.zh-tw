@@ -13,21 +13,21 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011834"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
   欄位長度會指出以字元格式表現資料所需的最大字元數。 如果是以原生格式儲存資料的話，欄位長度眾所皆知；例如，`int` 資料類型會佔用 4 個位元組。 如果指出前置長度為 0 **bcp**命令會提示您輸入欄位長度、 預設的欄位長度，以及欄位長度對包含的資料檔案中的資料儲存體的影響`char`資料。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示輸入欄位長度  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、**-c**、**-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   

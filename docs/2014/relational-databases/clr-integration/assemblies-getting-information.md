@@ -15,18 +15,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919299"
 ---
 # <a name="getting-information-about-assemblies"></a>取得組件的相關資訊
   您可以查詢下列的目錄檢視及函數，以取得組件的相關中繼資料。  
   
  **若要取得個別的組件的相關資訊**  
   
--   [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](/sql/t-sql/functions/assemblyproperty-transact-sql)  
+-   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/assemblyproperty-transact-sql)  
   
  **若要取得資料庫中的所有組件的相關資訊**  
   

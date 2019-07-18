@@ -16,14 +16,18 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273425"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726626"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
   
  ODBC 目的地包含輸入資料行與目的地資料來源中資料行之間的對應。 您不一定要將輸入資料行對應到所有目的地資料行，但因目的地資料行屬性的不同，如果輸入資料行未對應到目的地資料行，則可能發生錯誤。 例如，如果目的地資料行不允許 Null 值，則輸入資料行必須對應到該資料行。 此外，雖然可對應不同類型的資料行，但是如果輸入資料與目的地資料行類型不相容，在執行階段會發生錯誤。 根據錯誤行為設定，錯誤會被忽略，導致失敗，或者資料列會傳送至錯誤輸出。  
@@ -33,7 +37,7 @@ ms.locfileid: "58273425"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 載入選項  
  ODBC 目的地可以使用兩種存取載入模組其中之一。 您會在 [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md) 設定模式。 兩種模式為：  
   
--   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
+-   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
 -   **逐列**：在此模式中，ODBC 目的地會準備含有參數的 INSERT 陳述式，然後使用 **SQL Execute**，一次插入一個資料列。  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58273425"
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 ODBC 目的地，然後選取 **[顯示進階編輯器]**。  
+-   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 ODBC 目的地，然後選取 **[顯示進階編輯器]** 。  
   
  如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱＜ [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)＞。  
   
@@ -92,9 +96,9 @@ ms.locfileid: "58273425"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 目的地的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤中，按兩下 ODBC 目的地。  
+-   在 [資料流程]  索引標籤中，按兩下 ODBC 目的地。  
   
--   在 **[ODBC 目的地編輯器]** 中，按一下 **[連接管理員]**。  
+-   在 **[ODBC 目的地編輯器]** 中，按一下 **[連接管理員]** 。  
   
 ### <a name="options"></a>選項。  
   
@@ -102,7 +106,7 @@ ms.locfileid: "58273425"
  從清單中選取現有的 ODBC 連接管理員，或按一下 [新增] 建立新的連接。 此連接可以指向任何 ODBC 支援的資料庫。  
   
 #### <a name="new"></a>新增  
- 按一下 **[新增]**。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的連接管理員。  
+ 按一下 **[新增]** 。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的連接管理員。  
   
 #### <a name="data-access-mode"></a>資料存取模式  
  選取將資料載入目的地的方法。 下表將顯示這些選項：  
@@ -118,7 +122,7 @@ ms.locfileid: "58273425"
  按一下 **[預覽]** ，最多可檢視您所選取之資料表的 200 個資料列。  
   
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
-  使用 [ODBC 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
+  使用 [ODBC 目的地編輯器]  對話方塊的 [對應]  頁面，即可將輸入資料行對應至目的地資料行。  
   
 ### <a name="options"></a>選項。  
   
@@ -129,7 +133,7 @@ ms.locfileid: "58273425"
  可用目的地資料行的清單。 將目的地資料行拖放至可用的輸入資料行，即可對應資料行。  
   
 #### <a name="input-column"></a>輸入資料行  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [\<忽略>]  移除對應，排除輸出的資料行。  
   
 #### <a name="destination-column"></a>目的地資料行  
  檢視所有可用的目的地資料行，包括對應和取消對應的資料行。  
@@ -143,9 +147,9 @@ ms.locfileid: "58273425"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 目的地的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤中，按兩下 ODBC 目的地。  
+-   在 [資料流程]  索引標籤中，按兩下 ODBC 目的地。  
   
--   在 **[ODBC 目的地編輯器]** 中，按一下 **[錯誤輸出]**。  
+-   在 **[ODBC 目的地編輯器]** 中，按一下 **[錯誤輸出]** 。  
   
 ### <a name="options"></a>選項。  
   

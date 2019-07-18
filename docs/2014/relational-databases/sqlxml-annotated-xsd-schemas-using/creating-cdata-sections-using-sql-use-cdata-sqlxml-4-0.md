@@ -16,15 +16,15 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca93ec5a3ef85cfef1b20f1266c00700cd027352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014005"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)
   在 XML 中，CDATA 區段可用來逸出包含字元的文字區塊，否則這些字元會被辨識為標記字元。  
@@ -41,7 +41,7 @@ ms.locfileid: "52823282"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在下列結構描述中，`sql:use-cdata`設為 1 (True)，如 **\<AddressLine1 >** 內**\<位址 >** 項目。 因此，資料會在 CDATA 區段內傳回。  
+ 在下列結構描述中，`sql:use-cdata`設為 1 (True)，如 **\<AddressLine1 >** 內 **\<位址 >** 項目。 因此，資料會在 CDATA 區段內傳回。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

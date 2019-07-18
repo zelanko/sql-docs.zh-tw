@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f4b7101718ea8372c9635a064dc81e1d8f6c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023389"
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 *開放式並行存取*是它的名稱衍生自樂觀的假設，很少會發生交易之間的衝突; 已在更新或刪除的資料，它唯讀的時間之間的資料列的另一個交易時所發生所謂的衝突目前的交易和時間所更新或刪除。 它是相對於*封閉式並行存取，* 鎖定，或在其應用程式開發人員認為這類衝突是老生常談。  

@@ -2,18 +2,18 @@
 title: 開始使用 ReportViewer 2016 控制項 | Microsoft Docs
 ms.date: 09/18/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b85c71ca4dd8e6634474205346bce358969dd3b0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503912"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用報表檢視器控制項整合 Reporting Services - 入門
 
@@ -232,11 +232,11 @@ ms.locfileid: "54254313"
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 以滑鼠右鍵按一下工具箱的任何位置，然後選取 [選擇項目...]。
+3. 以滑鼠右鍵按一下工具箱的任何位置，然後選取 [選擇項目...]  。
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
-4. 在 [.NET Framework 元件] 中選取 [瀏覽]。
+4. 在 [.NET Framework 元件]  中選取 [瀏覽]  。
 
     ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 

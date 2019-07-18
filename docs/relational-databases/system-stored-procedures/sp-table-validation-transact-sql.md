@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42d2535dedb1161a78362f17a1ad7c79ca49bb87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096117"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +71,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` 如果 「 散發代理程式在執行**sp_table_validation**，指定是否 「 散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，就會引發錯誤 20578 和複寫代理程式收到關閉信號。 會忽略這個參數時**sp_table_validation**直接由使用者執行。  
   
-`[ @table_name = ] table_name` 是輸出訊息所用之檢視的資料表名稱。 *table_name*已**sysname**，預設值是**@table**。  
+`[ @table_name = ] table_name` 是輸出訊息所用之檢視的資料表名稱。 *table_name*已**sysname**，預設值是 **@table** 。  
   
-`[ @column_list = ] 'column_list'` 是應該使用總和檢查碼函式中的資料行清單。 *column_list*已**nvarchar(4000)**，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
+`[ @column_list = ] 'column_list'` 是應該使用總和檢查碼函式中的資料行清單。 *column_list*已**nvarchar(4000)** ，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  如果執行總和檢查碼驗證及預期的總和檢查碼等於資料表中的總和檢查碼**sp_table_validation**傳回資料表通過總和檢查碼驗證的訊息。 否則，它會傳回一則訊息來說明資料表可能不會同步處理，且會報告預期資料列數和實際資料列數的差異。  
@@ -94,10 +93,10 @@ sp_table_validation [ @table = ] 'table'
  若要執行**sp_table_validation**，您必須在驗證之資料表上的 SELECT 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [總和檢查碼&#40;Transact SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

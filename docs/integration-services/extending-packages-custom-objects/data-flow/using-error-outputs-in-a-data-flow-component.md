@@ -24,14 +24,18 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53a05f64b2d6051c30cfde9972f5347418a76361
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d852aef3321878ba01c535c9e0d8f696dc7d4e0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724605"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>使用資料流程元件中的錯誤輸出
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以將呼叫錯誤輸出的特殊 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 物件加入元件，讓元件將無法在執行期間處理的資料列重新導向。 元件可能遇到的問題通常會歸類為錯誤或是截斷，而且是每個元件特有的。 提供錯誤輸出的元件透過從結果集篩選出錯誤資料列、當問題發生時讓元件失敗，以及忽略錯誤並繼續，讓元件的使用者有處理錯誤狀況的彈性。  
   
  若要在元件中實作和支援錯誤輸出，您必須先將元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> 屬性設定為 **true**。 接著您必須將輸出新增至其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 屬性設定為 **true** 的元件。 最後，元件必須包含錯誤或截斷發生時會將資料列導向錯誤輸出的程式碼。 本主題涵蓋這三個步驟並說明同步與非同步錯誤輸出之間的差異。  

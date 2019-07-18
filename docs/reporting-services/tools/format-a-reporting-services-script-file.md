@@ -2,21 +2,21 @@
 title: 格式化 Reporting Services 指令碼檔案 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9b3606fe93d988d878f98d21124fbb5820cd0ee2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577792"
 ---
 # <a name="format-a-reporting-services-script-file"></a>格式化 Reporting Services 指令碼檔案
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼是針對 Web Service Description Language (WSDL) 內建 Proxy 撰寫的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 程式碼檔案，其中會定義 Reporting Services SOAP API。 指令碼檔案會儲存為 Unicode 或 UTF-8 文字檔，且其副檔名為 .rss。  

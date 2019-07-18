@@ -12,15 +12,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], deleting
 - deleting solutions
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33936535d8fe5284b147a9163d8c2c617a4e4dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 51b50528d939c9f422e178e3da87aab7cc382d21
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652438"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689879"
 ---
 # <a name="delete-a-solution"></a>刪除方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47652438"
   
 3.  在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 的 [檔案總管] 中，尋找和選取您要刪除之方案的相關檔案。  
   
-4.  在 [檔案] 功能表上，按一下 [刪除]。  
+4.  在 [檔案]  功能表上，按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

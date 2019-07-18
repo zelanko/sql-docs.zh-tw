@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006562"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出 Access 清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以匯出專案中的所有存取資料庫的詳細目錄。 您可以檢閱，然後查詢庫存中繼資料，以判斷哪一個資料庫和那些要移轉的資料庫內的物件。 此清查可讓您快速尋找解答，如下所示：  
@@ -56,9 +55,9 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
 1.  開啟 SSMA for Access。  
   
-2.  在 [檔案] 功能表上，選取 [新增專案]。  
+2.  在 [檔案]  功能表上，選取 [新增專案]  。  
   
-    [新增專案]  對話方塊隨即出現。  
+    [ **新增專案** ] 對話方塊隨即出現。  
   
 3.  在 **名稱**方塊中，輸入您專案的名稱。  
   
@@ -91,7 +90,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
     您可以使用**全選**並**全部清除**来選取或清除所有資料庫的清單頂端的按鈕。 您也可以按住 CTRL 鍵以選取多個資料列，或按住 SHIFT 鍵，向下選取的資料列範圍。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步]  。  
   
 8.  在 確認 頁面中，按一下 **完成**。  
   
@@ -103,11 +102,11 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
 2.  在 [連線] 對話方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
-    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如： MyServer\MyInstance。  
+    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如: MyServer\MyInstance。  
   
 3.  在 **資料庫**方塊中，輸入匯出的中繼資料的目標資料庫的名稱。  
   

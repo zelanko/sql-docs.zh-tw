@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917567"
 ---
 # <a name="contained-databases"></a>自主資料庫
   *「自主資料庫」* (Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體隔離的資料庫。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以四種方式協助使用者將其資料庫與執行個體隔離。  
@@ -86,14 +86,14 @@ ms.locfileid: "52822512"
 >  若啟用部分自主資料庫，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取控制權委派給資料庫擁有者。 如需詳細資訊，請參閱 [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md)。  
   
  資料庫界限  
- 因為部分自主資料庫會分隔資料庫功能與執行個體功能，所以兩個元素之間有一條明確定義的線，稱為 *「資料庫界限」*(Database Boundary)。  
+ 因為部分自主資料庫會分隔資料庫功能與執行個體功能，所以兩個元素之間有一條明確定義的線，稱為 *「資料庫界限」* (Database Boundary)。  
   
- *「資料庫模型」*(Database Model) 位於資料庫界限內部，其中進行資料庫的開發和管理作業。 位於資料庫內部的實體範例包括 **sys.tables**等系統資料表、具有密碼之自主資料庫使用者，以及目前資料庫中由兩部分名稱所參考的使用者資料表。  
+ *「資料庫模型」* (Database Model) 位於資料庫界限內部，其中進行資料庫的開發和管理作業。 位於資料庫內部的實體範例包括 **sys.tables**等系統資料表、具有密碼之自主資料庫使用者，以及目前資料庫中由兩部分名稱所參考的使用者資料表。  
   
- *「管理模型」*(Management Model) 位於資料庫界限外部，它與執行個體層級功能和管理有關。 位於資料庫界限外部的實體範例包括 **sys.endpoints**等系統資料表、對應至登入的使用者，以及另一個資料庫中由三部分名稱所參考的使用者資料表。  
+ *「管理模型」* (Management Model) 位於資料庫界限外部，它與執行個體層級功能和管理有關。 位於資料庫界限外部的實體範例包括 **sys.endpoints**等系統資料表、對應至登入的使用者，以及另一個資料庫中由三部分名稱所參考的使用者資料表。  
   
 ##  <a name="containment"></a> 內含項目  
- 完全位於資料庫內部的使用者實體會被視為 *「自主」*(Contained)。 位於資料庫外部或仰賴與資料庫外部之功能互動的任何實體會被視為 *「非內含性」*(Uncontained)。  
+ 完全位於資料庫內部的使用者實體會被視為 *「自主」* (Contained)。 位於資料庫外部或仰賴與資料庫外部之功能互動的任何實體會被視為 *「非內含性」* (Uncontained)。  
   
  一般而言，使用者實體可分為下列內含項目類別：  
   

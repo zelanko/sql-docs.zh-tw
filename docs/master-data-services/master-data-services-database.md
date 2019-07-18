@@ -11,15 +11,14 @@ helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a49361846ffcb309c39e816d5f7a62418db87d6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062746"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
 

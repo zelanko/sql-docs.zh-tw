@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Create element (DTA)
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c8f645884e28d93bf25032aa6cf89ae3d5dd6774
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd566edd70ae2b7cd5fd5175a64b6a09c793194d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671208"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730960"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

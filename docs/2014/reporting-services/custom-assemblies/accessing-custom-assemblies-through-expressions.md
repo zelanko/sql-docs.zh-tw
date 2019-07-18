@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e7f513cc737e50b6ad8276b550df30b8fd05be8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009691"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792806"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>透過運算式存取自訂組件
   一旦您建立自訂組件，請將它提供給報表設計師或是報表伺服器、加入適當的安全性原則，以及將參考加入報表定義中的自訂組件，這樣您就可以使用報表運算式來存取組件中的類別成員。 若要在運算式中參考自訂程式碼，您必須在組件中呼叫類別的成員。 該如何完成，取決於此方法為靜態或以執行個體為基礎。  
@@ -43,9 +41,9 @@ ms.locfileid: "56009691"
  目前，會在相同的應用程式網域中執行所有的報表。 這表示含有使用者特定的靜態資料會向相同報表的其他執行個體公開此資料。 這個情況可能會使一個使用者的靜態資料，可供目前執行特定報表的所有使用者使用。 基於這個理由，強烈建議您不要在自訂組件或是在 **Code** 元素中使用靜態欄位或是屬性；請改在報表中用執行個體欄位或是屬性。 靜態方法仍然可以使用，因為它們不會儲存狀態或是資料。  
   
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>呼叫報表定義檔案中的執行個體成員  
- 如果您的自訂組件包含需要在報表定義中存取的執行個體成員，則必須將類別的執行個體名稱加入報表。 您可以使用 [報表屬性] 對話方塊的 [程式碼] 索引標籤，來為類別新增執行個體名稱。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 如果您的自訂組件包含需要在報表定義中存取的執行個體成員，則必須將類別的執行個體名稱加入報表。 您可以使用 [報表屬性]  對話方塊的 [程式碼]  索引標籤，來為類別新增執行個體名稱。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
- 若要呼叫靜態成員，您需要以運算式的形式加以參考，其格式為 =Code *.InstanceName.Method*。  
+ 若要呼叫靜態成員，您需要參考運算式，其格式為 = Code *.Instancename.method*。  
   
 #### <a name="to-call-instance-members"></a>呼叫執行個體成員  
   

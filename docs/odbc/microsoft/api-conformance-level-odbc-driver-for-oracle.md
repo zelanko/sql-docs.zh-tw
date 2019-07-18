@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d96e8ff-a310-44d7-ae3f-7d2851b3d8ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fbacb3f2e217d5fff95c59027e17e1caf67b43bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 046469263866206fa3c4d04de3184cd0baaf7944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138202"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API 一致性層級 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -28,28 +27,28 @@ ms.locfileid: "47654896"
   
  ODBC Driver for Oracle 支援[核心層級 API 函式](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)並[層級 1 API 函式](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)。 此驅動程式也支援下列[層級 2 API 函式](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md):  
   
--   [SQLBrowseConnect （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLBrowseConnect( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLDataSources （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLDataSources( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLDescribeParam （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLDescribeParam( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLExtendedFetch （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLExtendedFetch( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLForeignKeys （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLForeignKeys( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLMoreResults （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLMoreResults( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLNativeSql （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLNativeSql( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLNumParams （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLNumParams( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLPrimaryKeys （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLPrimaryKeys( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLProcedureColumns （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLProcedureColumns( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLProcedures （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLProcedures( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLSetPos （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLSetPos( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLSetScrollOptions （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)
+-   [SQLSetScrollOptions( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)

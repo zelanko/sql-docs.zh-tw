@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2f6ee8724454a8871f6642f5d812584ccffd9385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918023"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 屬性 (ADO)
 指出提供者特有的錯誤程式碼給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

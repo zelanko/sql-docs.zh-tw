@@ -13,14 +13,18 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ed254b6dd9b9bca5216962f769a55db99823dff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6f96e795b44e936c4088e4ded571e76c33d4863
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724799"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建置和部署組件，並將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，這樣才能在套件中使用，並對其進行測試和偵錯。  
   
 ##  <a name="top"></a> 針對 Integration Services 建置、部署和偵錯自訂物件的步驟  
@@ -57,12 +61,12 @@ ms.locfileid: "58271334"
   
 -   使用強式名稱簽署組件  
   
- 您可以在建立時期使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的強式名稱輕鬆地簽署組件。 在 [專案屬性] 對話方塊中，選取 [簽署] 索引標籤。選取 [簽署組件] 的選項，然後提供金鑰 (.snk) 檔案的路徑。  
+ 您可以在建立時期使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的強式名稱輕鬆地簽署組件。 在 [專案屬性]  對話方塊中，選取 [簽署]  索引標籤。選取 [簽署組件]  的選項，然後提供金鑰 (.snk) 檔案的路徑。  
   
 ##  <a name="building"></a> 建置組件  
- 在簽署專案之後，您必須使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [建置] 功能表上可用的命令，以建置或重建專案或是解決方案。 您的方案可能包含自訂使用者介面的個別專案，它也必須以強式名稱簽署，而且可以同時建立。  
+ 在簽署專案之後，您必須使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [建置]  功能表上可用的命令，以建置或重建專案或是解決方案。 您的方案可能包含自訂使用者介面的個別專案，它也必須以強式名稱簽署，而且可以同時建立。  
   
- 執行接下來兩個步驟 (部署組件以及在全域組件快取中加以安裝) 的最方便方法，就是在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中將這些步驟撰寫成建置後事件。 建置事件可從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 專案上 [專案屬性] 的 [編譯] 頁面取得，以及從 C# 專案的 [建置事件] 頁面取得。 **gacutil.exe** 這類的命令提示字元公用程式需要完整路徑。 凡包含空格的路徑，以及會使用到包含空格之路徑的巨集 (例如 $(TargetPath))，皆必須括以引號。  
+ 執行接下來兩個步驟 (部署組件以及在全域組件快取中加以安裝) 的最方便方法，就是在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中將這些步驟撰寫成建置後事件。 建置事件可從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 專案上 [專案屬性] 的 [編譯]  頁面取得，以及從 C# 專案的 [建置事件]  頁面取得。 **gacutil.exe** 這類的命令提示字元公用程式需要完整路徑。 凡包含空格的路徑，以及會使用到包含空格之路徑的巨集 (例如 $(TargetPath))，皆必須括以引號。  
   
  以下是自訂記錄提供者的建置後事件命令列範例：  
   
@@ -80,7 +84,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  您可以透過下列兩種方式將組件放入資料夾中：  
   
--   在建立編譯的組件之後，將它移動或複製到適當的資料夾  (為了方便起見，您可以在建置後事件中包括複製命令)。  
+-   在建立編譯的組件之後，將它移動或複製到適當的資料夾 (為了方便起見，您可以在建置後事件中包括複製命令)。  
   
 -   直接在適當的資料夾中建置組件。  
   
@@ -108,7 +112,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
  如需全域組件快取的詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 工具中的全域組件快取工具 (Gactutil.exe)。  
   
 ##  <a name="troubleshooting"></a> 針對部署進行疑難排解  
- 如果您的自訂物件出現在 [工具箱] 或可用物件清單中，但您無法將它新增至套件，請嘗試下列動作：  
+ 如果您的自訂物件出現在 [工具箱]  或可用物件清單中，但您無法將它新增至套件，請嘗試下列動作：  
   
 1.  查詢全域組件快取，以取得元件的多個版本。 如果在全域組件快取中有多個版本的元件，設計師可能無法載入您的元件。 從全域組件快取中刪除此組件的所有執行個體，然後重新加入該組件。  
   
@@ -129,9 +133,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 1.  在偵錯組態中簽署和建立專案，然後加以部署，並將它安裝在全域組件快取中，如本主題所述。  
   
-2.  在 [專案屬性] 的 [偵錯] 索引標籤上，選取 [啟動外部程式] 作為 [起始動作]，並找到預設安裝在 C:\Program Files\Microsoft SQL Server\130\DTS\Binn 中的 **dtexec.exe**。  
+2.  在 [專案屬性]  的 [偵錯]  索引標籤上，選取 [啟動外部程式]  作為 [起始動作]  ，並找到預設安裝在 C:\Program Files\Microsoft SQL Server\130\DTS\Binn 中的 **dtexec.exe**。  
   
-3.  在 [命令列選項] 文字方塊的 [起始選項] 之下，輸入執行可使用您的元件之套件所需的命令列引數。 通常命令列引數是由 /F[ILE] 參數以及緊接在後面之 .dtsx 檔案的路徑與檔案名稱所組成。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
+3.  在 [命令列選項]  文字方塊的 [起始選項]  之下，輸入執行可使用您的元件之套件所需的命令列引數。 通常命令列引數是由 /F[ILE] 參數以及緊接在後面之 .dtsx 檔案的路徑與檔案名稱所組成。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
 4.  在原始程式碼中設定中斷點，設定之處必須適合元件的執行階段方法。  
   
@@ -145,7 +149,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  開啟第二個 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行個體，並載入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，該專案包含使用自訂物件的封裝。  
   
-4.  從第一個 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行個體的 [偵錯] 功能表中，選取 [附加至處理序] 載入套件，以從第一個執行個體附加到第二個 **devenv.exe** 執行個體。  
+4.  從第一個 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行個體的 [偵錯]  功能表中，選取 [附加至處理序]  載入套件，以從第一個執行個體附加到第二個 **devenv.exe** 執行個體。  
   
 5.  從第二個 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行個體執行封裝。  
   
@@ -153,9 +157,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 1.  完成前一個程序所列的步驟之後，請強制暫停套件的執行，以附加到 **DtsDebugHost.exe**。 如果要強制執行此暫停動作，可以將中斷點新增至 **OnPreExecute** 事件，或將指令碼工作新增至專案，並輸入可顯示強制回應訊息方塊的指令碼。  
   
-2.  執行封裝。 暫停發生時，請切換至已開啟程式碼專案的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行個體，然後從 [偵錯] 功能表中選取 [附加至處理序]。 請務必附加至 [類型] 資料行中列為 **Managed, x86** 的 **DtsDebugHost.exe** 執行個體，而不只是附加至列為 **x86** 的執行個體。  
+2.  執行封裝。 暫停發生時，請切換至已開啟程式碼專案的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行個體，然後從 [偵錯]  功能表中選取 [附加至處理序]  。 請務必附加至 [類型]  資料行中列為 **Managed, x86** 的 **DtsDebugHost.exe** 執行個體，而不只是附加至列為 **x86** 的執行個體。  
   
-3.  返回暫停的套件並繼續略過中斷點，或是按一下 [確定] 以解除指令碼工作所引發的訊息方塊，然後繼續套件執行和偵錯。  
+3.  返回暫停的套件並繼續略過中斷點，或是按一下 [確定]  以解除指令碼工作所引發的訊息方塊，然後繼續套件執行和偵錯。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 Integration Services 的自訂物件](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   

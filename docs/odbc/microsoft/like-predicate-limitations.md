@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119713"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 述詞限制
 如果資料行中的長度超過 255 個字元，LIKE 比較將只會依前 255 個字元。  

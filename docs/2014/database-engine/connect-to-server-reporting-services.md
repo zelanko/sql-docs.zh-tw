@@ -13,18 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808675"
 ---
 # <a name="connect-to-server-reporting-services"></a>連接到伺服器 (Reporting Services)
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，使用此對話方塊來檢視或指定選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器類型**  
- 從物件總管註冊伺服器時，選取要連接的伺服器類型：[!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../includes/ssde-md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
+ 從物件總管  註冊伺服器時，選取要連接的伺服器類型：[!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器]  註冊伺服器時，[伺服器類型]  方塊是唯讀的，且會與 [已註冊的伺服器]  元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器]  工具列中選取 [[!INCLUDE[ssDE](../includes/ssde-md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
   
  **伺服器名稱**  
  您要連接之報表伺服器執行個體的伺服器模式會決定您必須輸入的值。  
@@ -40,10 +40,10 @@ ms.locfileid: "48054188"
  使用您的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認證連接到報表伺服器執行個體。  
   
  **基本驗證**  
- 如果您的 Reporting Services 安裝設定為使用基本驗證，請使用 [基本驗證] 來連接。  
+ 如果您的 Reporting Services 安裝設定為使用基本驗證，請使用 [基本驗證]  來連接。  
   
  **表單驗證**  
- 如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證] 來連接。  
+ 如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證]  來連接。  
   
  **使用者名稱**  
  請輸入連接將使用的登入名稱。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
@@ -58,7 +58,7 @@ ms.locfileid: "48054188"
  按一下即可顯示其他伺服器連接選項，例如，註冊伺服器與記住密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [連接至 Management Studio 中的報表伺服器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [報表伺服器的驗證](../reporting-services/security/authentication-with-the-report-server.md)  
   

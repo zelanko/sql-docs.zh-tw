@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871135"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
   「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
@@ -228,7 +228,7 @@ ms.locfileid: "52759110"
      **資料夾位置**  
      指定檔案系統上之來源資料庫檔案的位置。  
   
-     例如：C:\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\DATA  
+     例如：C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **來源伺服器上的檔案共用**  
      將來源資料庫檔案的位置指定為檔案共用的路徑。  

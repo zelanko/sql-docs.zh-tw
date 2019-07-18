@@ -15,11 +15,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195840"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示
   使用 WMI 事件提供者的常見方式為建立回應特定事件的 SQL Server Agent 警示。 下列範例顯示一個簡單的警示，可將 XML 死結圖形事件儲存在資料表中，以便稍後進行分析。 SQL Server Agent 會提交 WQL 要求、接收 WMI 事件，以及執行工作來回應事件。 請注意，雖然在處理通知訊息時包含數個 Service Broker 物件，但是 WMI 事件提供者會處理建立與管理這些物件的詳細資料。  
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在另一個查詢索引標籤中執行下列指令碼。此指令碼會產生一個結果集，然後封鎖，等待取得 `Production.Product` 上的鎖定。  
+ 第二個 [查詢] 索引標籤中，執行下列指令碼。此指令碼會產生一個結果集，然後封鎖，等待取得的鎖定上`Production.Product`。  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第一個查詢索引標籤中執行下列指令碼。此指令碼會封鎖，等待取得 `Production.Location` 上的鎖定。 短暫的逾時之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會選擇此指令碼或範例中的指令碼，做為死結的犧牲者，然後結束交易。  
+ 在第一個查詢索引標籤中，執行下列指令碼。此指令碼區塊，等候上取得鎖定`Production.Location`。 短暫的逾時之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會選擇此指令碼或範例中的指令碼，做為死結的犧牲者，然後結束交易。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

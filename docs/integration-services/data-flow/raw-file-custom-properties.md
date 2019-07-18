@@ -11,14 +11,18 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1124d4f7f0d5adfe7836b27d2331bda32a8284d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f036866a41376b2ee37076ac311b7dbe3f3d56e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726538"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **來源自訂屬性**  
   
  原始檔案來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -27,7 +31,7 @@ ms.locfileid: "58281392"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱] (0) 和 [來自變數的檔案名稱] (1)。 預設值是 [檔案名稱] (0)。|  
+|AccessMode|整數 (列舉)|用來存取原始資料的模式。 可能的值為 [檔案名稱]  (0) 和 [來自變數的檔案名稱]  (1)。 預設值是 [檔案名稱]  (0)。|  
 |FileName|String|來源檔案的路徑和檔案名稱。|  
   
  原始檔案來源的輸出和輸出資料行沒有任何自訂屬性。  
@@ -42,9 +46,9 @@ ms.locfileid: "58281392"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱] (0) 和 [來自變數的檔案名稱] (1)。|  
+|AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 選項為 [檔案名稱]  (0) 和 [來自變數的檔案名稱]  (1)。|  
 |FileName|String|原始檔案目的地寫入的檔案名稱。|  
-|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立] (0)、[建立一次] (1)、[截斷與附加] (3) 和 [附加] (2)。 此屬性的預設值為 [永遠建立] (0)。|  
+|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項為 [永遠建立]  (0)、[建立一次]  (1)、[截斷與附加]  (3) 和 [附加]  (2)。 此屬性的預設值為 [永遠建立]  (0)。|  
   
 > [!NOTE]  
 >  附加作業要求已附加資料的中繼資料與檔案中已有資料的中繼資料相符。  

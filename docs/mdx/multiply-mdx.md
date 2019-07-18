@@ -1,5 +1,5 @@
 ---
-title: '* （乘）(MDX) |Microsoft 文件'
+title: '* （乘）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f752aec0a2e1b49fbf1145129876d2f8c5901ed
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 396dded86adfe8faa6b6ad58b5eb8174d4323726
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088419"
 ---
 # <a name="-multiply-mdx"></a>* (乘) (MDX)
 

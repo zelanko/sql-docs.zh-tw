@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
@@ -13,15 +12,15 @@ ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218178"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067913"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>資料表匯入精靈的參考 (SSAS)
-  本節提供 **[資料表匯入精靈]** 的說明。 此精靈可讓您從各種不同的資料來源匯入資料。 若要從模型設計師存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  本節提供 **[資料表匯入精靈]** 的說明。 此精靈可讓您從各種不同的資料來源匯入資料。 若要從模型設計師存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
 ## <a name="pages"></a>頁面  
   
@@ -86,6 +85,6 @@ ms.locfileid: "48218178"
 -   [指定 SQL 或 MDX 查詢&#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](import-data-ssas-tabular.md)  
   
   

@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2ec66ffa7f8f5894d5ec09e217f343e34cd7d98
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108103"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>預留位置屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[預留位置屬性]** 對話方塊可變更文字方塊內某個預留位置的值、工具提示和標記選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Label**  
  輸入預留位置的標籤。 此標籤只會在設計介面上顯示。  
   

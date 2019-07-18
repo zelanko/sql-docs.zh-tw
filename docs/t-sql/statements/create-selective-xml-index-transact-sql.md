@@ -13,12 +13,12 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a63af515ccbca170c480bc2df2dfa0a84387dda7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503212"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ CREATE SELECTIVE XML INDEX index_name
     [WITH (<index_options>)]  
   
 <table_object> ::=  
- { [database_name. [schema_name ] . | schema_name. ] table_name }  
+ { database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <promoted_node_path_list> ::=   
 <named_promoted_node_path_item> [, <promoted_node_path_list>]  
@@ -112,9 +112,9 @@ identifier
  *xml_column_name*  
  這是包含要索引之路徑的 XML 資料行名稱。  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] 是要索引之路徑使用的命名空間清單。 如需有關 WITH XMLNAMESPACES 子句語法的相關資訊，請參閱 [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)。  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] 是要索引之路徑使用的命名空間清單。 如需有關 WITH XMLNAMESPACES 子句語法的相關資訊，請參閱 [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- FOR **(**\<promoted_node_path_list>**)** 是要索引之路徑的清單，包含選用的最佳化提示。 如需有關可以在 CREATE 或 ALTER 陳述式中指定之路徑的資訊和最佳化提示，請參閱[指定選擇性 XML 索引的路徑和最佳化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+ FOR **(** \<promoted_node_path_list> **)** 是要索引之路徑的清單，包含選用的最佳化提示。 如需有關可以在 CREATE 或 ALTER 陳述式中指定之路徑的資訊和最佳化提示，請參閱[指定選擇性 XML 索引的路徑和最佳化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
  WITH *\<index_options>* 如需索引選項的相關資訊，請參閱 [CREATE XML INDEX &#40;選擇性 XML 索引&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
@@ -130,7 +130,7 @@ identifier
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

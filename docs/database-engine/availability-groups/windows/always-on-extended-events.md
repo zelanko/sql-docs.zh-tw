@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860629"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789650"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860629"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health 工作階段](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [用於偵錯的擴充事件](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Always On 可用性群組擴充事件參考](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health 工作階段  
  Alwayson_health 擴充事件工作階段是在您建立可用性群組時自動建立，會擷取可用性群組相關事件的子集。 此工作階段已預先設定為實用且方便的工具，可協助您對可用性群組進行疑難排解時快速開始。 「建立可用性群組精靈」會自動在精靈中設定的每個參與可用性複本上啟動工作階段。  
   
@@ -40,9 +34,9 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  檢視 alwayson_health 工作階段的定義：  
   
-1.  在 [物件總管] 中，依序展開 [管理]、[擴充事件] 和 [工作階段]。  
+1.  在 [物件總管]  中，依序展開 [管理]  、[擴充事件]  和 [工作階段]  。  
   
-2.  以滑鼠右鍵按一下 [Alwayson_health]，然後指向 [編寫工作階段的指令碼為]，然後指向 [CREATE 至]，然後按一下 [新增查詢編輯器視窗]。  
+2.  以滑鼠右鍵按一下 [Alwayson_health]  ，然後指向 [編寫工作階段的指令碼為]  ，然後指向 [CREATE 至]  ，然後按一下 [新增查詢編輯器視窗]  。  
 
 如需 alwayson_health 所涵蓋部分事件的資訊，請參閱[擴充事件參考](always-on-extended-events.md#BKMK_Reference)。  
 
@@ -50,19 +44,19 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 ##  <a name="BKMK_Debugging"></a> 偵錯的擴充事件  
  除了 Alwayson_health 工作階段涵蓋的擴充事件，SQL Server 也為可用性群組定義一組廣泛的偵錯事件。 若要在工作階段中利用這些額外的擴充事件，請遵循下列程序：  
   
-1.  在 [物件總管] 中，依序展開 [管理]、[擴充事件] 和 [工作階段]。  
+1.  在 [物件總管]  中，依序展開 [管理]  、[擴充事件]  和 [工作階段]  。  
   
-2.  以滑鼠右鍵按一下 [工作階段]，然後選取 [新增工作階段]。 或者，以滑鼠右鍵按一下 [Alwayson_health]，選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [工作階段]  ，然後選取 [新增工作階段]  。 或者，以滑鼠右鍵按一下 [Alwayson_health]  ，選取 [屬性]  。  
   
-3.  在 [選取頁面] 窗格中，按一下 [事件]。  
+3.  在 [選取頁面]  窗格中，按一下 [事件]  。  
   
-4.  在事件程式庫的 [類別目錄] 欄中，選取 [alwayson] 並清除所有其他類別目錄。  
+4.  在事件程式庫的 [類別目錄]  欄中，選取 [alwayson]  並清除所有其他類別目錄。  
   
-5.  在 [通道] 欄中，選取 [偵錯]。 尚未選取的所有可用性群組相關事件現在會顯示在事件程式庫中。  
+5.  在 [通道]  欄中，選取 [偵錯]  。 尚未選取的所有可用性群組相關事件現在會顯示在事件程式庫中。  
   
-6.  反白顯示事件程式庫中的某個事件，然後按一下 [**>**] 按鈕為工作階段選取事件。  
+6.  反白顯示事件程式庫中的某個事件，然後按一下 [ **>** ] 按鈕為工作階段選取事件。  
   
-7.  完成該工作階段之後，請按一下 [確定] 關閉。 請確定工作階段已啟動，才能擷取您所選取的事件。  
+7.  完成該工作階段之後，請按一下 [確定]  關閉。 請確定工作階段已啟動，才能擷取您所選取的事件。  
   
 ##  <a name="BKMK_Reference"></a> Always On 可用性群組擴充事件參考  
  本節描述一些可用來監視可用性群組的擴充事件。  
@@ -91,7 +85,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|availability_replica_state_change|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -122,7 +116,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|availability_group_lease_expired|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -150,7 +144,7 @@ GO
 |[屬性]|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -250,7 +244,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|data_movement_suspend_resume|  
-|類別目錄|Alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -293,7 +287,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|alwayson_ddl_execution|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|分析|  
   
 #### <a name="event-fields"></a>事件欄位  
@@ -326,7 +320,7 @@ GO
 |「資料行」|Description|  
 |------------|-----------------|  
 |[屬性]|availability_replica_manager_state_change|  
-|類別目錄|alwayson|  
+|類別目錄|永遠開啟|  
 |通路|作業|  
   
 #### <a name="event-fields"></a>事件欄位  

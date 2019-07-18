@@ -11,23 +11,22 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b53cff2104d5f510db446095a3a65c6be27be77d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 988d57ab3d0f86c3da1e45109a6ad818cecb894e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906568"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>建立屬性群組 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當您想要在總管方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
+  當您想要在總管  方格的個別索引標籤上顯示屬性時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立屬性群組。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -38,37 +37,37 @@ ms.locfileid: "52813300"
   
 ### <a name="to-create-an-attribute-group"></a>若要建立屬性群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
-3.  在 [管理實體] 頁面上，從方格中選取含有您想要為其建立屬性群組之實體的資料列。  
+3.  在 [管理實體]  頁面上，從方格中選取含有您想要為其建立屬性群組之實體的資料列。  
   
-4.  按一下 [屬性群組]。  
+4.  按一下 [屬性群組]  。  
   
-5.  在 [管理屬性群組] 頁面上，執行下列其中一項動作，然後按一下 [加入]。  
+5.  在 [管理屬性群組] 頁面上，執行下列其中一項動作，然後按一下 [加入]  。  
   
-     如果是分葉成員的屬性群組，請從頁面頂端的 [成員類型] 下拉式清單中選取 [分頁]。  
+     如果是分葉成員的屬性群組，請從頁面頂端的 [成員類型]  下拉式清單中選取 [分頁]  。  
   
-     如果是合併成員的屬性群組，請從 [成員類型] 下拉式清單中選取 [合併]。  
+     如果是合併成員的屬性群組，請從 [成員類型]  下拉式清單中選取 [合併]  。  
   
-     如果是集合的屬性群組，請從 [成員類型] 下拉式清單中選取 [集合]。  
+     如果是集合的屬性群組，請從 [成員類型]  下拉式清單中選取 [集合]  。  
   
-6.  按一下 [分葉群組]、[合併群組] 或 [集合群組]，分別為分葉成員、合併成員或集合建立屬性群組。  
+6.  按一下 [分葉群組]  、[合併群組]  或 [集合群組]  ，分別為分葉成員、合併成員或集合建立屬性群組。  
   
-7.  在 [名稱] 方塊中，輸入屬性群組的名稱。 這是在總管的索引標籤上所顯示的名稱。  
+7.  在 [名稱]  方塊中，輸入屬性群組的名稱。 這是在總管  的索引標籤上所顯示的名稱。  
   
-8.  若要加入屬性，請按一下 [可用的屬性] 方塊，然後按一下 [加入] 箭號。 若要加入所有屬性，請按一下 [全部加入] 箭號。  
+8.  若要加入屬性，請按一下 [可用的屬性]  方塊，然後按一下 [加入] 箭號  。 若要加入所有屬性，請按一下 [全部加入]  箭號。  
   
-9. 按一下 [向上] 或 [向下] 箭號，變更屬性由左至右的順序。  
+9. 按一下 [向上]  或 [向下]  箭號，變更屬性由左至右的順序。  
   
-10. 按一下 [可用使用者] 方塊中的使用者，然後按一下 [加入] 箭號。 若要加入全部的使用者，請按一下 [全部加入] 箭號。  
+10. 按一下 [可用使用者]  方塊中的使用者，然後按一下 [加入]  箭號。 若要加入全部的使用者，請按一下 [全部加入]  箭號。  
   
-11. 按一下 [可用群組] 方塊中的群組，然後按一下 [加入] 箭號。 若要加入全部的群組，請按一下 [全部加入] 箭號。  
+11. 按一下 [可用群組]  方塊中的群組，然後按一下 [加入]  箭號。 若要加入全部的群組，請按一下 [全部加入]  箭號。  
   
-12. 按一下 **[儲存]**。  
+12. 按一下 [儲存]  。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [讓使用者看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   

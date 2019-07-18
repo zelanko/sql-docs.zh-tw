@@ -4,27 +4,27 @@ ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
 ms.technology: data-movement
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217816"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585893"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > 如需 [匯入及匯出精靈] 的相關內容，請參閱 [SQL Server 匯入及匯出精靈](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 
-[匯入一般檔案精靈] 是一個簡單的方法可將一般檔案 (.csv、.txt) 的資料複製到目的地。 本概觀將說明使用此精靈的理由、如何找到此精靈，並提供簡單的範例供您參考。
+[匯入一般檔案精靈] 是一個簡單的方法，可將一般檔案 (.csv、.txt) 的資料複製到您資料庫中的新資料表。 本概觀將說明使用此精靈的理由、如何找到此精靈，並提供簡單的範例供您參考。
 
 ## <a name="why-would-i-use-this-wizard"></a>為什麼要使用此精靈？
 建立此精靈的目的在於改善目前的匯入體驗，運用稱之為 Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) 的智慧型架構。 對於缺乏專業網域知識的使用者來說，匯入資料往往是件複雜、容易出錯且沉悶的工作。 此精靈簡化了匯入程序，只要選取輸入檔與唯一的資料表名稱，PROSE 架構就會為您處理其餘的部分。
@@ -41,9 +41,11 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 ## <a id="started"></a>使用者入門
 若要存取 [匯入一般檔案精靈]，請遵循這些步驟進行：
 
-1. 開啟 [SQL Server Management Studio]。
+1. 開啟 [SQL Server Management Studio]  。
 2. 連線至 SQL Server 資料庫引擎或 localhost 的執行個體。
-3. 展開 [資料庫]，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 [工作]，然後按一下 [匯入資料] 上方的 [匯入一般檔案]。
+3. 展開 [資料庫]  ，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 [工作]  ，然後按一下 [匯入資料] 上方的 [匯入一般檔案]  。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![精靈功能表](media/import-flat-file-wizard/importffmenu.png)
 
@@ -54,14 +56,14 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 ![精靈 Excel](media/import-flat-file-wizard/importffexample.png)
 
-### <a name="step-1-access-wizard-and-intro-page"></a>步驟 1：存取精靈及簡介頁面
+### <a name="step-1-access-wizard-and-intro-page"></a>步驟 1:存取精靈及簡介頁面
 遵循[此處](#started)的說明存取精靈。
 
-精靈的第一頁是歡迎頁面。 若不想再看到此頁面，可按一下 [不要再顯示此開始頁面]。
+精靈的第一頁是歡迎頁面。 若不想再看到此頁面，可按一下 [不要再顯示此開始頁面]  。
 
 ![精靈簡介](media/import-flat-file-wizard/importffintro.png)
 
-### <a name="step-2-specify-input-file"></a>步驟 2：指定輸入檔
+### <a name="step-2-specify-input-file"></a>步驟 2:指定輸入檔
 按一下 [瀏覽] 以選取輸入檔。 依預設，該精靈會搜尋 .csv 與 .txt 檔案。 
 
 新的資料表名稱應為唯一，若名稱重複，精靈不會允許您前往下一步。

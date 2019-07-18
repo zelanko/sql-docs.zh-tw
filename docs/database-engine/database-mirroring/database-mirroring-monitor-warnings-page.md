@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5324e48c091f7bc4f999795f28f19f943217f7d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 01a523c57399bb5d4a2ebf5a5d866bac3cb39e1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795531"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>資料庫鏡像監視器 (警告頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54126128"
 |警告|閾值|  
 |-------------|---------------|  
 |**如果未傳送的記錄超過臨界值，即發出警告**|指定會在主體伺服器執行個體上產生警告之未傳送記錄的 KB 數。 這個警告有助於依據 KB 數來測量資料遺失的可能性，與高效能模式特別有關係。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|  
-|**如果未還原的記錄超過臨界值，即發出警告**|指定會在鏡像伺服器執行個體上產生警告之未還原記錄的 KB 數。 這個警告對於依據 KB 數來測量容錯移轉時間很有用。 *容錯移轉時間* 主要包含先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄所需的時間，再加上一段很短的額外時間。<br /><br /> 注意：如果是自動容錯移轉，則系統發現錯誤的時間與容錯移轉時間無關。<br /><br /> 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。|  
+|**如果未還原的記錄超過臨界值，即發出警告**|指定會在鏡像伺服器執行個體上產生警告之未還原記錄的 KB 數。 這個警告對於依據 KB 數來測量容錯移轉時間很有用。 *容錯移轉時間* 主要包含先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄所需的時間，再加上一段很短的額外時間。<br /><br /> 注意:如果是自動容錯移轉，則系統發現錯誤的時間與容錯移轉時間無關。<br /><br /> 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。|  
 |**如果最舊未傳送交易的時間超過臨界值，即發出警告**|指定在主體伺服器執行個體上產生警告之前，傳送佇列中可以累積的交易分鐘數。 這個警告有助於從時間方面來測量資料遺失的可能性，與高效能模式特別有關係。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|  
 |**如果鏡像認可負擔超過臨界值，即發出警告**|指定在主體伺服器上產生警告之前，所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|  
   
@@ -50,9 +50,9 @@ ms.locfileid: "54126128"
  如需詳細資訊，請參閱此主題稍後的「備註」。  
   
 ## <a name="remarks"></a>Remarks  
- 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連接到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連接至 _<SYSTEM_NAME>_] 或 [未連接至 _<SYSTEM_NAME>_**\\**_<instance_name>_]。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 [正在等候資料...]。  
+ 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連接到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連接至 _<SYSTEM_NAME>_ ]  或 [未連接至 _<SYSTEM_NAME>_ **\\** _<instance_name>_ ]  。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 [正在等候資料...]  。  
   
- 當資訊可以使用時，每個警告的資料格會顯示指定的臨界值 (和度量單位) 或 [未啟用]。  
+ 當資訊可以使用時，每個警告的資料格會顯示指定的臨界值 (和度量單位) 或 [未啟用]  。  
   
  如果在重新整理狀態資料表時超過臨界值，在記錄狀態資料列時，就會在 Windows 事件記錄檔中記錄一個事件。 依預設，如果監視器不在執行中，則會每分鐘記錄一次狀態資料列。 您可以使用 SQL Server Agent 或如 Microsoft Management Operations Manager (MOM) 之類的其他程式，針對每種類型的記錄事件設定警示。  
   
@@ -70,10 +70,10 @@ ms.locfileid: "54126128"
 |**如果最舊未傳送交易的時間超過臨界值，即發出警告**|最舊尚未傳送的交易|32044|  
 |**如果鏡像認可負擔超過臨界值，即發出警告**|鏡像認可負擔|32045|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  如需完整存取權，需要 **sysadmin** 固定伺服器角色中的成員資格。 只有 **sysadmin** 的成員可以設定並檢視關鍵效能標準的警告臨界值。  
   
- **dbm_monitor** 角色中的成員資格可讓您僅檢視 [警告] 頁面上的最新狀態資料列。  
+ **dbm_monitor** 角色中的成員資格可讓您僅檢視 [警告]  頁面上的最新狀態資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   

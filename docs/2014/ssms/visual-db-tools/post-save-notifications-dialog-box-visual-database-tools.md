@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033470"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>儲存後告知對話方塊 (Visual Database Tools)
   這個對話方塊會在嘗試儲存變更至資料表但發生錯誤時出現。 此對話方塊列出資料庫中成功儲存的物件、未儲存的物件，以及發生的錯誤。  

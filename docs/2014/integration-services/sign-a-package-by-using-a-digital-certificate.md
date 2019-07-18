@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055619"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用數位憑證來簽署封裝
   此主題描述如何使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 您可以使用數位簽章搭配其他設定，防止無效的封裝載入並執行。  
@@ -51,13 +50,13 @@ ms.locfileid: "58378967"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]**。  
+3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]** 。  
   
-4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]**。  
+4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]** 。  
   
 5.  在 **[選取憑證]** 對話方塊中，選取憑證。  
   
-6.  (選擇性) 按一下 [檢視憑證] 檢視憑證資訊。  
+6.  (選擇性) 按一下 [檢視憑證]  檢視憑證資訊。  
   
 7.  按一下 **[確定]** 關閉 **[選取憑證]** 對話方塊。  
   

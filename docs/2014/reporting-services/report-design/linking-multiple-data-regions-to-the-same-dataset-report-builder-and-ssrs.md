@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b12b925f0059224cf016c6987845535311e5eb0d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d282636b58352f0ffad1083077bdab9769bd6fdc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105607"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>將多個資料區連結至相同的資料集 (報表產生器及 SSRS)
   您可以將多個資料區域加入到報表中，以便從相同的報表資料集提供資料的不同檢視。 例如，您可能想要在資料表中顯示資料，也要以視覺方式顯示在圖表中。 若要這樣做，您必須將相同的運算式和範圍用於適當的篩選運算式、排序運算式與群組運算式。  

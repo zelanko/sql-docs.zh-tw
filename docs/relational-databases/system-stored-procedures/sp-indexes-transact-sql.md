@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139923"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +44,22 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @table_server=] '*table_server&lt*'  
+ [ @table_server= ] '*table_server*'  
  這是連結的伺服器名稱，此伺服器執行所要求之資料表資訊所屬的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [ @table_name=] '*table_name*'  
+ [ @table_name= ] '*table_name*'  
  這是要為其提供索引資訊的遠端資料表名稱。 *table_name*已**sysname**，預設值是 NULL。 如果是 NULL，便會傳回指定資料庫中的所有資料表。  
   
- [ @table_schema=] '*table_schema*'  
+ [ @table_schema= ] '*table_schema*'  
  指定資料表結構描述。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料表擁有者。 *table_schema*已**sysname**，預設值是 NULL。  
   
- [ @table_catalog=] '*table_db*'  
+ [ @table_catalog= ] '*table_db*'  
  在其中的資料庫名稱*table_name*所在。 *table_db*已**sysname**，預設值是 NULL。 如果是 NULL， *table_db*預設值為**主要**。  
   
- [ @index_name=] '*index_name*'  
+ [ @index_name= ] '*index_name*'  
  這是要求之資訊所屬的索引名稱。 *索引*已**sysname**，預設值是 NULL。  
   
- [ @is_unique=] '*is_unique*'  
+ [ @is_unique= ] '*is_unique*'  
  這是要傳回資訊的索引類型。 *is_unique*已**元**，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
@@ -85,7 +84,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|這是定序所用的順序：<br /><br /> A = 遞增<br /><br /> D = 遞減<br /><br /> NULL = 不適用<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律傳回 A。|  
 |CARDINALITY|**int**|這是資料表中的資料列數，或索引中的唯一值數目。|  
 |PAGES|**int**|這是用來儲存索引或資料表的頁數。|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回值。|  
   
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 SELECT 權限。  

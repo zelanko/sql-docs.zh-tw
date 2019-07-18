@@ -3,24 +3,23 @@ title: SQL Server 2019 擴充功能 （預覽）
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959210"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
-SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和工具支援的出貨[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 這包括提供的預覽支援[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)，整合[notebook 體驗](../big-data-cluster/notebooks-guidance.md)，和 PolyBase [Create External Table 精靈](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)。
+SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和工具支援的出貨[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 這包括提供的預覽支援[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)，整合[notebook 體驗](../big-data-cluster/notebooks-guidance.md)，和 PolyBase [Create External Table 精靈](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安裝 SQL Server 2019 擴充功能 （預覽）
 
@@ -30,9 +29,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
    |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
-   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 年 3 月 18日日 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 年 3 月 18日日 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 年 3 月 18日日 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25日日 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25日日 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25日日 |0.14.1
 
 1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 
@@ -44,12 +43,30 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
 1. 在相依性後面完成安裝，關閉再重新開啟 Azure Data Studio。 **巨量資料的 SQL Server 叢集**連接類型不可以使用，直到您重新啟動 Azure Data Studio。
 
+## <a name="changes-in-release-0141"></a>版本 0.14.1 中的變更
+* CTP 3.1 的資料來源支援的支援
+
+## <a name="changes-in-release-0121"></a>版本 0.12.1 中的變更
+
+* **巨量資料的 SQL Server 叢集**連接類型已在此版本中移除。 從 SQL Server 的巨量資料叢集連接先前提供的所有功能都位於 SQL Server 連接。
+* HDFS 瀏覽您可以找到**Data Services**資料夾
+* Notebook 的 PySpark 和其他巨量資料的核心，可在連接至 SQL Server 巨量資料叢集 SQL Server 主要執行個體時。
+* 建立外部資料表精靈：
+  * 建立使用現有的外部資料來源的外部資料表的支援。
+  * 在精靈的效能改進。
+  * 改進處理含有特殊字元的物件名稱。 在某些情況下，這些使精靈失敗
+  * 物件對應 頁面的可靠性改進。
+  * 已移除的系統資料庫-': DWConfiguration'、 'DWDiagnostics'、 'DWQueue'-從資料庫下拉式清單。
+  * 設定外部檔案格式物件的名稱的支援**從 CSV 檔案建立外部資料表**精靈。
+  * 重新整理 按鈕加入的第一頁**從 CSV 檔案建立外部資料表**精靈。
+
 ## <a name="release-notes-v0110"></a>版本資訊 (v0.11.0)
-  * Jupyter Notebook 支援，特別是支援的 Python3 和 Spark 核心，已移至 Azure Data Studio。 此延伸模組已不再需要為了使用 Notebook。
-  * 在外部資料精靈中的多個錯誤修正：
-    * Oracle 型別對應已更新以符合隨附於 SQL Server 2019 CTP 2.3 的變更。
-    * 已修正的問題，已遺失輸入資料表的對應控制項的新結構描述。
-    * 已修正的問題，檢查 [資料庫] 節點中的資料表對應不會造成所有的資料表和檢視表正在檢查。
+
+* Jupyter Notebook 支援，特別是支援的 Python3 和 Spark 核心，已移至 Azure Data Studio。 此延伸模組已不再需要為了使用 Notebook。
+* 在外部資料精靈中的多個錯誤修正：
+  * Oracle 型別對應已更新以符合隨附於 SQL Server 2019 CTP 2.3 的變更。
+  * 已修正的問題，已遺失輸入資料表的對應控制項的新結構描述。
+  * 已修正的問題，檢查 [資料庫] 節點中的資料表對應不會造成所有的資料表和檢視表正在檢查。
 
 
 ## <a name="release-notes-v0102"></a>版本資訊 (v0.10.2)

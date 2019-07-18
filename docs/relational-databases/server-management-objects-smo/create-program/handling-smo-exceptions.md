@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a764a077f1be87f6c846589b9a1fb1e989a8e93a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b533291a9cc7a04efe0f3f2de0b39bc3fc544f83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098283"
 ---
 # <a name="handling-smo-exceptions"></a>處理 SMO 例外狀況
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

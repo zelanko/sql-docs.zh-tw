@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873317"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。 這個程序可以分成兩個部分：  
@@ -34,61 +34,61 @@ ms.locfileid: "52798690"
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>建立和匯出 SQL Server Profiler 追蹤  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  (在 [工具] 功能表上，按一下 [SQL Server Profiler])。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (在 [工具]  功能表上，按一下 [SQL Server Profiler]  )。  
   
-2.  在 [連接到伺服器] 對話方塊中，按一下 [取消]。  
+2.  在 [連接到伺服器]  對話方塊中，按一下 [取消]  。  
   
 3.  在這個狀況中，請確定持續時間值設定為以毫秒顯示 (預設值)。 若要這樣做，請遵循下列步驟：  
   
-    1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+    1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-    2.  在 [顯示選項] 區域中，請確定已清除 [顯示 [持續時間] 資料行中的值 (以百萬分之一秒為單位)] 核取方塊。  
+    2.  在 [顯示選項]  區域中，請確定已清除 [顯示 [持續時間] 資料行中的值 (以百萬分之一秒為單位)] 核取方塊。  
   
-    3.  按一下 [確定] 關閉 [一般選項] 對話方塊。  
+    3.  按一下 [確定]  關閉 [一般選項]  對話方塊。  
   
-4.  在 [檔案] 功能表上，按一下 [新增追蹤]。  
+4.  在 [檔案]  功能表上，按一下 [新增追蹤]  。  
   
-5.  在 [連接到伺服器] 對話方塊中，選取您想要連接的伺服器，然後按一下 [連接]。  
+5.  在 [連接到伺服器]  對話方塊中，選取您想要連接的伺服器，然後按一下 [連接]  。  
   
      會出現 [追蹤屬性]  對話方塊。  
   
-6.  在 [一般] 索引標籤上，執行下列動作：  
+6.  在 [一般]  索引標籤上，執行下列動作：  
   
-    1.  在 [追蹤名稱] 方塊中，輸入您想要用於追蹤的名稱。 在這則範例中，追蹤名稱為 `SPgt80`。  
+    1.  在 [追蹤名稱]  方塊中，輸入您想要用於追蹤的名稱。 在這則範例中，追蹤名稱為 `SPgt80`。  
   
-    2.  在 [使用範本] 清單中，選取要用於追蹤的範本。 在這則範例中，請按一下 [TSQL_SPs]。  
+    2.  在 [使用範本]  清單中，選取要用於追蹤的範本。 在這則範例中，請按一下 [TSQL_SPs]  。  
   
-7.  在 [事件選取範圍] 索引標籤上，執行下列動作：  
+7.  在 [事件選取範圍]  索引標籤上，執行下列動作：  
   
-    1.  識別要用於追蹤的事件。 在這則範例中，請清除 [事件] 資料行中的所有核取方塊，但 [ExistingConnection] 和 [SP:Completed] 除外。  
+    1.  識別要用於追蹤的事件。 在這則範例中，請清除 [事件]  資料行中的所有核取方塊，但 [ExistingConnection]  和 [SP:Completed]  除外。  
   
-    2.  在右下角中，選取 [顯示所有資料行] 核取方塊。  
+    2.  在右下角中，選取 [顯示所有資料行]  核取方塊。  
   
-    3.  按一下 [SP:Completed] 資料列。  
+    3.  按一下 [SP:Completed]  資料列。  
   
-    4.  在資料列中捲動至 [持續時間] 資料行，然後選取 [持續時間] 核取方塊。  
+    4.  在資料列中捲動至 [持續時間]  資料行，然後選取 [持續時間]  核取方塊。  
   
-8.  在右下角中，按一下 [資料行篩選] 開啟 [編輯篩選] 對話方塊。 在 [編輯篩選] 對話方塊中，執行下列步驟：  
+8.  在右下角中，按一下 [資料行篩選]  開啟 [編輯篩選]  對話方塊。 在 [編輯篩選]  對話方塊中，執行下列步驟：  
   
-    1.  在篩選清單中，按一下 [持續時間]。  
+    1.  在篩選清單中，按一下 [持續時間]  。  
   
     2.  在布林運算子視窗中，依序展開**Greater than 或 equal**節點、 輸入`80`當做值，然後按一下**確定**。  
   
 9. 按一下 **[執行]** 啟動追蹤。  
   
-10. 在工具列上，按一下 [停止選取的追蹤] 或 [暫停選取的追蹤]。  
+10. 在工具列上，按一下 [停止選取的追蹤]  或 [暫停選取的追蹤]  。  
   
-11. 在 [檔案] 功能表上，依序指向 [匯出] 和 [指令碼追蹤定義]，然後按一下 [對於 SQL 追蹤收集組]。  
+11. 在 [檔案]  功能表上，依序指向 [匯出]  和 [指令碼追蹤定義]  ，然後按一下 [對於 SQL 追蹤收集組]  。  
   
-12. 在 [另存新檔] 對話方塊的 [檔案名稱] 方塊中，輸入您想要用於追蹤定義的名稱，然後將它儲存在所需的位置。 在這則範例中，檔案名稱與追蹤名稱 (SPgt80) 相同。  
+12. 在 [另存新檔]  對話方塊的 [檔案名稱]  方塊中，輸入您想要用於追蹤定義的名稱，然後將它儲存在所需的位置。 在這則範例中，檔案名稱與追蹤名稱 (SPgt80) 相同。  
   
-13. 當您收到檔案儲存成功的訊息時，請按一下 [確定]，然後關閉 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+13. 當您收到檔案儲存成功的訊息時，請按一下 [確定]  ，然後關閉 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
   
 ### <a name="script-a-new-collection-set-from-a-sql-server-profiler-trace"></a>根據 SQL Server Profiler 追蹤編寫新收集組的指令碼  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上，指向 [開啟]，然後按一下 [檔案]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  功能表上，指向 [開啟]  ，然後按一下 [檔案]  。  
   
-2.  在 [開啟檔案] 對話方塊中，找出並開啟您在上一個程序中建立的檔案 (SPgt80)。  
+2.  在 [開啟檔案]  對話方塊中，找出並開啟您在上一個程序中建立的檔案 (SPgt80)。  
   
      您所儲存的追蹤資訊會在 [查詢] 視窗中開啟，並且合併至您可以執行以建立新收集組的指令碼中。  
   
@@ -98,13 +98,13 @@ ms.locfileid: "52798690"
   
     -   將 **SQLTrace Collection Item Name Here** 取代成您想要針對收集項使用的名稱。 針對此範例，請將收集項命名為 `SPROC_Collection_Item`。  
   
-4.  按一下 [執行] 執行查詢並建立收集組。  
+4.  按一下 [執行]  執行查詢並建立收集組。  
   
 5.  在 [物件總管] 中，確認已建立收集組。 若要這樣做，請遵循下列步驟：  
   
-    1.  以滑鼠右鍵按一下 [管理]，然後按一下 [重新整理]。  
+    1.  以滑鼠右鍵按一下 [管理]  ，然後按一下 [重新整理]  。  
   
-    2.  展開 [管理]，然後展開 [資料收集]。  
+    2.  展開 [管理]  ，然後展開 [資料收集]  。  
   
      `SPROC_CollectionSet`收集組會出現在相同的層級**系統資料收集組**節點。 根據預設，此收集組是停用的。  
   

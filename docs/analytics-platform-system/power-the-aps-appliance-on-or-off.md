@@ -2,19 +2,18 @@
 title: 電源或關閉-Analytics Platform System appliance |Microsoft Docs
 description: Analytics Platform System 的電源設備開啟或關閉
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d24f808365a8a04fdc6b469a8eaac98c208c19e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960249"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System 的電源設備開啟或關閉
 本主題描述如何開啟或關閉您的分析平台 Systemappliance 電源的電源在執行平行處理資料倉儲。 使用本主題當 Analytics Platform System appliance 移動時，或電源設備上嚴重的電源中斷後。  
@@ -39,7 +38,7 @@ SQL Server PDW 節點的連線，您可以使用指派給節點，或從 IP 位�
 > [!WARNING]  
 > 必須執行所有步驟中所列的正確順序，每個步驟之前必須完成下一個步驟會都執行，除非另有說明。 執行順序，或等待每個步驟，才能完成的步驟可能會導致錯誤時於稍後開啟該設備。  
   
-1.  連接至 PDW 控制節點 (**_PDW_region_-CTL01** ) 並使用 Analytics Platform System appliance 網域系統管理員帳戶登入。  
+1.  連接至 PDW 控制節點 ( **_PDW_region_-CTL01** ) 並使用 Analytics Platform System appliance 網域系統管理員帳戶登入。  
   
 2.  執行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`以開啟**Configuration Manager**。  
   

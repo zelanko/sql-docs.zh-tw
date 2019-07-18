@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63288265"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT 查詢會將結果以資料列集的形式傳回。 在查詢中指定 FOR XML 子句，您就可選擇以 XML 格式擷取 SQL 查詢的正式結果。 FOR XML 子句可以使用在最上層的查詢與子查詢中。 最上層的 FOR XML 子句只能用在 SELECT 陳述式中。 在子查詢中，FOR XML 可以在 INSERT、UPDATE 與 DELETE 陳述式中使用。 它也可用在指派陳述式中。  

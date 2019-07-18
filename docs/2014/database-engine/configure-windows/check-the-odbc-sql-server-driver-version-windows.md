@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dbb275d8ced2855b1842bba9a1c11e5543d6a838
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786648"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>檢查 ODBC SQL Server 驅動程式版本 (Windows)
   您的電腦可能包含來自 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和其他公司的各種 ODBC 驅動程式。 此主題描述如何使用 Windows 的 **[ODBC 資料來源管理員]** 來檢查所安裝的 ODBC 驅動程式版本。  

@@ -1,5 +1,5 @@
 ---
-title: + （聯集）(MDX) |Microsoft 文件
+title: + （聯集）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097349"
 ---
-# <a name="union---mdx-operator-reference"></a>等位-MDX 運算子參考
+# <a name="union---mdx-operator-reference"></a>聯集-MDX 運算子參考
 
 
   執行集合運算，傳回兩個集合的聯集、移除重複的成員。  
@@ -36,7 +35,7 @@ Set_Expression + Set_Expression
  一個集合包含了兩個指定集合的成員。  
   
 ## <a name="remarks"></a>備註  
- **+ （聯集）** 運算子在功能上等於[Union &#40;MDX&#41; ](../mdx/union-mdx.md)函式。  
+ **+ （聯集）** 運算子在功能上等於[聯集&#40;MDX&#41; ](../mdx/union-mdx.md)函式。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

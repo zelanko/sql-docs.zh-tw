@@ -19,14 +19,18 @@ ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9229ee947a770c9b587a6c4fc5b679c3ab2af90
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70dd29f6a9a5cea1046b3e62612492469d967d98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272655"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724732"
 ---
 # <a name="developing-a-custom-connection-manager"></a>開發自訂連接管理員
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會使用連接管理員封裝連接至外部資料來源所需的資訊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各種連接管理員，可以連接到最常使用的資料來源，包括企業資料庫、文字檔案與 Excel 工作表等。 如果 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支援的連接管理員和外部資料來源無法完全符合您的需求，可以建立自訂連接管理員。  
   
  若要建立自訂連接管理員，您必須建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基底類別的類別、將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 屬性 (Attribute) 套用至新類別，以及覆寫基底類別的重要方法與屬性 (Property)，包括 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> 屬性 (Property) 與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法。  

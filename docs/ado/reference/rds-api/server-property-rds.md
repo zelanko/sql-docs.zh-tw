@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963477"
 ---
 # <a name="server-property-rds"></a>Server 屬性 (RDS)
 指出 Internet Information Services (IIS) 名稱和通訊的通訊協定。  

@@ -12,11 +12,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63299325"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server 中記憶體內部 OLTP 的硬體考量
 

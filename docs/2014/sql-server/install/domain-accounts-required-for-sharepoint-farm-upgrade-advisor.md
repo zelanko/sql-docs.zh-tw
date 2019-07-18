@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 983e01046fd90fbaf8d9ff680492f1b385435f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e6d9802eafeea7babdcf23a3e8ea0f6b732e308
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095506"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 伺服陣列所需的網域帳戶 (Upgrade Advisor)
   針對伺服陣列環境設定的 SharePoint 產品需要使用網域帳戶。  
@@ -48,7 +47,7 @@ ms.locfileid: "48222265"
   
 4.  選取 **使用另一個帳戶**，然後輸入網域帳戶的認證。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

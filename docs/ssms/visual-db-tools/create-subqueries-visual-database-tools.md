@@ -12,15 +12,15 @@ helpviewer_keywords:
 - nested queries
 - subqueries [SQL Server], SQL pane
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab0ade3d8d811f4fafcf46212e6f8eb11358e5a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 02a3181b4787d2659deb37f1e91bf6f719dce46b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635226"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690490"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>建立子查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "47635226"
   
 1.  建立主查詢。  
   
-2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製] 將查詢移至 [剪貼簿]。  
+2.  在 [SQL] 窗格中選取 SQL 陳述式，然後使用 [複製]  將查詢移至 [剪貼簿]。  
   
-3.  起始新的查詢，然後使用 [貼上] 將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
+3.  起始新的查詢，然後使用 [貼上]  將第一個查詢移至新查詢的 WHERE 或 FROM 子句。  
   
     例如，假設您有兩個資料表 `products` 和 `suppliers`，並且想建立顯示 Sweden 供應商的所有產品的查詢。 請先在 `suppliers` 資料表建立第一個查詢，以找出所有的 Swedish 供應商：  
   

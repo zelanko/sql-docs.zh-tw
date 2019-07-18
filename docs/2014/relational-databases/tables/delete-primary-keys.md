@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761521"
 ---
 # <a name="delete-primary-keys"></a>刪除主索引鍵
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 主索引鍵。 刪除主索引鍵時，系統會刪除對應的索引。  
@@ -47,22 +47,22 @@ ms.locfileid: "52814530"
   
 #### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>若要使用物件總管來刪除主索引鍵條件約束  
   
-1.  在 [物件總管] 中，展開包含主索引鍵的資料表，然後展開 **[索引鍵]**。  
+1.  在 [物件總管] 中，展開包含主索引鍵的資料表，然後展開 **[索引鍵]** 。  
   
-2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]。  
+2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]  。  
   
-3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]**。  
+3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]** 。  
   
 #### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>若要使用資料表設計工具來刪除主索引鍵條件約束  
   
-1.  在物件總管中，以滑鼠右鍵按一下含有主索引鍵的資料表，然後按一下 [設計]。  
+1.  在物件總管中，以滑鼠右鍵按一下含有主索引鍵的資料表，然後按一下 [設計]  。  
   
-2.  在資料表方格中，以滑鼠右鍵按一下包含主索引鍵的資料列，然後選擇 [移除主索引鍵] 關閉設定。  
+2.  在資料表方格中，以滑鼠右鍵按一下包含主索引鍵的資料列，然後選擇 [移除主索引鍵]  關閉設定。  
   
     > [!NOTE]  
     >  若要恢復此一動作，可將資料表關閉而不儲存變更。 如果恢復刪除主索引鍵的動作，將會遺失所有對資料表進行的其他變更。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
+3.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "52814530"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會先識別主索引鍵條件約束的名稱，然後再刪除條件約束。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會先識別主索引鍵條件約束的名稱，然後再刪除條件約束。  
   
     ```  
     USE AdventureWorks2012;  

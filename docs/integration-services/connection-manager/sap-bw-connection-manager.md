@@ -13,14 +13,18 @@ f1_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9724c56811d2a905a21011e06e1594572e32b186
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 967d46ad2bf63324db45906688a5486b47fd04e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728152"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP BW 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的連接管理員元件。 因此，SAP BW 連接管理員會提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 來源和目的地元件所需之 SAP Netweaver BW 版本 7 系統的連接 (使用 SAP BW 連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件只有屬於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Connector 1.1 for SAP BW 封裝一部分的 SAP BW 來源和目的地)。  
   
 > [!IMPORTANT]  
@@ -37,7 +41,7 @@ ms.locfileid: "58282032"
   
 -   提供單一應用程式伺服器的主機和系統編號，或提供負載平衡伺服器群組的訊息伺服器、群組和 SID。  
   
--   針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用 RFC 函數呼叫的自訂記錄 (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。若要啟用 RFC 函數呼叫的記錄，您必須指定一個目錄，用以儲存每個 RFC 函數呼叫前後建立的記錄檔  (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。如果您沒有選取記錄目錄，就不會啟用記錄功能。  
+-   針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用 RFC 函數呼叫的自訂記錄 (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。若要啟用 RFC 函數呼叫的記錄，您必須指定一個目錄，用以儲存每個 RFC 函數呼叫前後建立的記錄檔 (這項記錄功能會使用 XML 格式來建立許多記錄檔。 因為這些記錄檔也包含所有傳輸的資料列，所以這些記錄檔可能會耗用大量磁碟空間)。如果您沒有選取記錄目錄，就不會啟用記錄功能。  
   
     > [!IMPORTANT]  
     >  如果傳輸的資料包含機密資訊，這些記錄檔也會包含該項機密資訊。  
@@ -54,7 +58,7 @@ ms.locfileid: "58282032"
 -   [SAP BW 連線管理員編輯器](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
 ## <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
-  使用 [SAP BW 連線管理員編輯器] 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
+  使用 [SAP BW 連線管理員編輯器]  可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
   
  SAP BW 連接管理員會提供 SAP Netweaver BW 7 系統的連接，供 SAP BW 來源或目的地使用。 若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 之 SAP BW 連線管理員的詳細資訊，請參閱 [SAP BW 連線管理員](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
   
@@ -65,13 +69,13 @@ ms.locfileid: "58282032"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 連線管理員的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [控制流程] 索引標籤上的 [連線管理員] 區域中，執行下列其中一個步驟：  
+2.  在 [控制流程]  索引標籤上的 [連線管理員] 區域中，執行下列其中一個步驟：  
   
     -   按兩下 SAP BW 連接管理員。  
   
          -或-  
   
-    -   以滑鼠右鍵按一下 SAP BW 連線管理員，然後選取 [編輯]。  
+    -   以滑鼠右鍵按一下 SAP BW 連線管理員，然後選取 [編輯]  。  
   
 ### <a name="options"></a>選項。  
   
@@ -82,7 +86,7 @@ ms.locfileid: "58282032"
  指定系統的用戶端編號。  
   
  **語言**  
- 指定系統所使用的語言。 例如，指定 [EN] 代表英文。  
+ 指定系統所使用的語言。 例如，指定 [EN]  代表英文。  
   
  **User name**  
  指定將用來連接到系統的使用者名稱。  
@@ -93,42 +97,42 @@ ms.locfileid: "58282032"
  **使用單一應用程式伺服器**  
  連接到單一應用程式伺服器。  
   
- 若要連接到負載平衡的伺服器群組，請改用 [使用負載平衡] 選項。  
+ 若要連接到負載平衡的伺服器群組，請改用 [使用負載平衡]  選項。  
   
  **主控件**  
  如果要連接到單一應用程式伺服器，請指定主機名稱。  
   
 > [!NOTE]  
->  只有當您已選取 [使用單一應用程式伺服器] 選項時，才能使用此選項。  
+>  只有當您已選取 [使用單一應用程式伺服器]  選項時，才能使用此選項。  
   
  **系統編號**  
  如果要連接到單一應用程式伺服器，請指定系統編號。  
   
 > [!NOTE]  
->  只有當您已選取 [使用單一應用程式伺服器] 選項時，才能使用此選項。  
+>  只有當您已選取 [使用單一應用程式伺服器]  選項時，才能使用此選項。  
   
  **使用負載平衡**  
  連接到負載平衡的伺服器群組。  
   
- 若要連接到單一應用程式伺服器，請改用 [使用單一應用程式伺服器] 選項。  
+ 若要連接到單一應用程式伺服器，請改用 [使用單一應用程式伺服器]  選項。  
   
  **訊息伺服器**  
  如果要連接到負載平衡的伺服器群組，請指定訊息伺服器的名稱。  
   
 > [!NOTE]  
->  只有當您已選取 [使用負載平衡] 選項時，才能使用此選項。  
+>  只有當您已選取 [使用負載平衡]  選項時，才能使用此選項。  
   
  **群組**  
  如果要連接到負載平衡的伺服器群組，請指定伺服器群組的名稱。  
   
 > [!NOTE]  
->  只有當您已選取 [使用負載平衡] 選項時，才能使用此選項。  
+>  只有當您已選取 [使用負載平衡]  選項時，才能使用此選項。  
   
  **SID**  
  如果要連接到負載平衡的伺服器群組，請指定連接的系統識別碼。  
   
 > [!NOTE]  
->  只有當您已選取 [使用負載平衡] 選項時，才能使用此選項。  
+>  只有當您已選取 [使用負載平衡]  選項時，才能使用此選項。  
   
  **記錄目錄**  
  針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的元件啟用記錄。  
@@ -138,7 +142,7 @@ ms.locfileid: "58282032"
 > [!IMPORTANT]  
 >  如果傳輸的資料包含機密資訊，這些記錄檔也會包含該項機密資訊。  
   
- 若要指定記錄目錄，您可以手動輸入目錄路徑，也可以按一下 [瀏覽] 並瀏覽到記錄目錄。  
+ 若要指定記錄目錄，您可以手動輸入目錄路徑，也可以按一下 [瀏覽]  並瀏覽到記錄目錄。  
   
  如果您沒有選取記錄目錄，就不會啟用記錄功能。  
   
@@ -146,7 +150,7 @@ ms.locfileid: "58282032"
  瀏覽並選取資料夾做為記錄目錄。  
   
  **測試連接**  
- 使用您已提供的值來測試連接。 按一下 [測試連接] 之後，就會出現一個訊息方塊，指出連接成功或失敗。  
+ 使用您已提供的值來測試連接。 按一下 [測試連接]  之後，就會出現一個訊息方塊，指出連接成功或失敗。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft Connector for SAP BW 元件](../../integration-services/microsoft-connector-for-sap-bw-components.md)  

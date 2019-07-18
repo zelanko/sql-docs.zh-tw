@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, nested
@@ -15,12 +14,12 @@ ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 826961aef9133c001c643c1ee7058d01438fe868
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0675c412d753a1ce60fa41c7ced40528b3c58f75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093833"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>即使觸發程序巢狀結構是 OFF，也會引發巢狀 AFTER 觸發程序
   Upgrade Advisor 偵測到在一個或多個資料表上所定義的 INSTEAD OF 觸發程序內，有巢狀的 AFTER 觸發程序。 即使 `nested triggers` 伺服器組態選項設定為 0，巢狀 AFTER 觸發程序仍可能引發。  
@@ -36,6 +35,6 @@ ms.locfileid: "48098418"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

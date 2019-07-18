@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
@@ -14,15 +13,15 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6367e846f3b542101db5c4328cd99e1a16f0416
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059423"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 清理轉換編輯器對話方塊
-  使用 [DQS 清理轉換編輯器] 對話方塊，即可更正使用 Data Quality Services (DQS) 的資料。 如需詳細資訊，請參閱 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
+  使用 [DQS 清理轉換編輯器]  對話方塊，即可更正使用 Data Quality Services (DQS) 的資料。 如需詳細資訊，請參閱 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
   
  若要了解有關轉換的詳細資訊，請參閱＜ [DQS Cleansing Transformation](data-flow/transformations/dqs-cleansing-transformation.md)＞。  
   
@@ -42,14 +41,14 @@ ms.locfileid: "58385566"
   
 1.  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，將 DQS 清理轉換加入至 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
 ##  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **資料品質連接管理員**  
- 從清單中選取現有的 DQS 連線管理員，或按一下 [新增] 建立新的連線。  
+ 從清單中選取現有的 DQS 連線管理員，或按一下 [新增]  建立新的連線。  
   
  **新增**  
- 使用 [DQS 清理連線管理員] 對話方塊來建立新的連線管理員。 請參閱 [設定 DQS 清理連線管理員對話方塊中的選項](#manager)  
+ 使用 [DQS 清理連線管理員]  對話方塊來建立新的連線管理員。 請參閱 [設定 DQS 清理連線管理員對話方塊中的選項](#manager)  
   
  **資料品質知識庫**  
  針對連接的資料來源選取現有的 DQS 知識庫。 如需有關 DQS 知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
@@ -69,9 +68,9 @@ ms.locfileid: "58385566"
   
  有效的值如下：  
   
--   **[失敗元件]**，指出轉換失敗，且輸入資料未插入 Data Quality Services 資料庫中。 這是預設值。  
+-   **[失敗元件]** ，指出轉換失敗，且輸入資料未插入 Data Quality Services 資料庫中。 這是預設值。  
   
--   **[重新導向資料列]**，指出輸入資料未插入 Data Quality Services 資料庫，並會重新導向至錯誤輸出。  
+-   **[重新導向資料列]** ，指出輸入資料未插入 Data Quality Services 資料庫，並會重新導向至錯誤輸出。  
   
 ##  <a name="mapping"></a> 設定對應索引標籤上的選項  
  如需有關如何將資料行對應至複合定義域的詳細資訊，請參閱＜ [Map Columns to Composite Domains](data-flow/transformations/map-columns-to-composite-domains.md)＞。  
@@ -80,7 +79,7 @@ ms.locfileid: "58385566"
  從連接的資料來源列出資料行。 選取一個或多個包含您想要更正之資料的資料行。  
   
  **輸入資料行**  
- 列出您在 [可用的輸入資料行] 區域中選取的輸入資料行。  
+ 列出您在 [可用的輸入資料行]  區域中選取的輸入資料行。  
   
  **網域**  
  選取要對應至輸入資料行的定義域。  
@@ -91,7 +90,7 @@ ms.locfileid: "58385566"
  按一下欄位以修改資料行名稱。  
   
  **輸出別名**  
- 列出 [DQS 清理轉換] 所輸出的資料行。 此資料行包含原始資料行值或更正的值。  
+ 列出 [DQS 清理轉換]  所輸出的資料行。 此資料行包含原始資料行值或更正的值。  
   
  按一下欄位以修改資料行名稱。  
   
@@ -125,9 +124,9 @@ ms.locfileid: "58385566"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟現有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，或建立新的專案。  
   
-2.  以滑鼠右鍵按一下連接區域、按一下 [新增連接]，然後按一下 [DQS]。  
+2.  以滑鼠右鍵按一下連接區域、按一下 [新增連接]  ，然後按一下 [DQS]  。  
   
-3.  按一下 **[加入]**。  
+3.  按一下 **[加入]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料品質規則套用至資料來源](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  

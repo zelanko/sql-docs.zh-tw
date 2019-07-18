@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, columns
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8f9bd51d59316fe4a8a67cd03938ee75310a7644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5c7df54441d2777a7799660f8e28c9248ae2620b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711446"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766231"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>從 SQL Server 資料表中移除資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

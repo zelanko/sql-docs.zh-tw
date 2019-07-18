@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183744"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
   若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，取用者必須先建立資料來源物件的執行個體藉由呼叫**CoCreateInstance**方法。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，類別識別項為 CLSID_SQLNCLI10。 您也可以使用符號 sqlncli_clsid 符號將會解析為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用您所參考之 sqlncli.h 中的 Native Client OLE DB 提供者。  

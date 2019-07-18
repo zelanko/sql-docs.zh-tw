@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812592"
 ---
 # <a name="compare-files"></a>比較檔案
   您可以比較檔案來判斷檔案如何進入目前的狀態。 例如，如果您在簽入特定來源檔案版本之後，在程式碼專案的某項建置中偵測到錯誤，您可以比較目前的檔案版本和先前的版本。 這可以協助您找出引起錯誤的程式碼。  

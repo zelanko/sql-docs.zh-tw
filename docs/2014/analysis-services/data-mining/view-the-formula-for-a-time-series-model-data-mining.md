@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
@@ -18,12 +17,12 @@ ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082603"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>檢視時間序列模型的公式 (資料採礦)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列檢視器 inData 採礦設計師提供最簡單的方式，來檢視時間序列模型中使用之迴歸方程式的詳細資料。  
@@ -36,51 +35,51 @@ ms.locfileid: "48163998"
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>檢視時間序列模式的 ARTXP 迴歸公式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取您要檢視的時間序列模型，然後按一下 [瀏覽]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取您要檢視的時間序列模型，然後按一下 [瀏覽]  。  
   
      -或-  
   
-     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，選取時間序列模型，然後按一下 [採礦模型檢視器] 索引標籤。  
+     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，選取時間序列模型，然後按一下 [採礦模型檢視器]  索引標籤。  
   
-2.  按一下 [模型] 索引標籤。  
+2.  按一下 [模型]  索引標籤。  
   
-3.  如果模型包含多個樹狀結構，請從 [樹狀結構] 下拉式清單中選取一個單一樹狀結構。  
+3.  如果模型包含多個樹狀結構，請從 [樹狀結構]  下拉式清單中選取一個單一樹狀結構。  
   
     > [!NOTE]  
-    >  如果您擁有一個以上的資料數列，模型將永遠包含多個樹狀結構。 不過，您在時間序列檢視器中看到的樹狀結構數目，會比 [Microsoft 一般內容樹狀檢視器](../microsoft-generic-content-tree-viewer-data-mining.md)中的少。 這是因為時間序列檢視器會將每個資料數列的 ARIMA 和 ARTXP 資訊結合為單一表示法。  
+    >  如果您擁有一個以上的資料數列，模型將永遠包含多個樹狀結構。 不過，您在時間序列檢視器  中看到的樹狀結構數目，會比 [Microsoft 一般內容樹狀檢視器](../microsoft-generic-content-tree-viewer-data-mining.md)中的少。 這是因為時間序列檢視器會將每個資料數列的 ARIMA 和 ARTXP 資訊結合為單一表示法。  
   
 4.  按一下樹狀結構中的任何分葉節點。  
   
-     標示為 [資料數列] 的節點永遠是分葉節點，而且可以包含一個方程式。 如果 **(All)** 節點沒有子節點，它也可以包含一個方程式。  
+     標示為 [資料數列]  的節點永遠是分葉節點，而且可以包含一個方程式。 如果 **(All)** 節點沒有子節點，它也可以包含一個方程式。  
   
-5.  如果沒有可用的 [採礦圖例]，以滑鼠右鍵按一下節點，然後選取 [顯示圖例]。  
+5.  如果沒有可用的 [採礦圖例]  ，以滑鼠右鍵按一下節點，然後選取 [顯示圖例]  。  
   
-     ARTXP 公式會顯示在 [採礦圖例] 的前半部，當作 [樹狀節點方程式]。  
+     ARTXP 公式會顯示在 [採礦圖例]  的前半部，當作 [樹狀節點方程式]  。  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>檢視時間序列模式的 ARIMA 公式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取您要檢視的時間序列模型，然後按一下 [瀏覽]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取您要檢視的時間序列模型，然後按一下 [瀏覽]  。  
   
      -或-  
   
-     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，選取時間序列模型，然後按一下 [採礦模型檢視器] 索引標籤。  
+     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，選取時間序列模型，然後按一下 [採礦模型檢視器]  索引標籤。  
   
-2.  按一下 [模型] 索引標籤。  
+2.  按一下 [模型]  索引標籤。  
   
-3.  如果模型包含多個樹狀結構，請從 [樹狀結構] 下拉式清單中選取一個單一樹狀結構。  
+3.  如果模型包含多個樹狀結構，請從 [樹狀結構]  下拉式清單中選取一個單一樹狀結構。  
   
     > [!NOTE]  
     >  如果您加入一個以上的資料數列，此模型將永遠有多個樹狀結構。  
   
 4.  按一下樹狀結構中的任何節點。  
   
-     ARIMA 公式會顯示在 [採礦圖例] 的後半部，當作 [ARIMA 方程式]。  
+     ARIMA 公式會顯示在 [採礦圖例]  的後半部，當作 [ARIMA 方程式]  。  
   
-5.  如果沒有可用的 [採礦圖例]，以滑鼠右鍵按一下節點，然後選取 [顯示圖例]。  
+5.  如果沒有可用的 [採礦圖例]  ，以滑鼠右鍵按一下節點，然後選取 [顯示圖例]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [瀏覽模型，使用 Microsoft 時間序列檢視器](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [使用 Microsoft 時間序列檢視器瀏覽模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [時間序列模型查詢範例](time-series-model-query-examples.md)  
   
   

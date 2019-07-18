@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 199a9fb8587cb1c024ac5dd5c09c1264a1226191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006592"
 ---
 # <a name="data-migration-report-accesstosql"></a>資料移轉報告 (AccessToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +26,7 @@ ms.locfileid: "47769714"
 **來源**  
 來源資料表中。  
   
-**若要**  
+**To**  
 目標資料表中。  
   
 **資料列總數**  

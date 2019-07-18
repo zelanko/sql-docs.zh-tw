@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644582"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ DENY permission [ ,...n ]
  指定可拒絕的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  USER ::*database_user*  
- 指定拒絕其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定拒絕其權限之使用者的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  ROLE ::*database_role*  
- 指定拒絕其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定拒絕其權限之角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  CASCADE  
  指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
@@ -144,7 +144,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要指定主體的 CONTROL 權限，或需要隱含 CONTROL 權限的更高權限。  
   
  資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員) 可以拒絕資料庫中任何安全性實體的任何權限。  

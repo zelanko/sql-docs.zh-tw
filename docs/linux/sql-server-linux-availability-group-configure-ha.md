@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 深入了解在 Linux 上建立 SQL Server Alwayson 上可用性群組 (AG) 的高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027251"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Always On 可用性群組在 Linux 上的高可用性
 

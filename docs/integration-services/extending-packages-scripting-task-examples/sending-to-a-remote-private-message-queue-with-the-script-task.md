@@ -17,14 +17,18 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf9d5d32fa3772656c28ce7ddc4c242dca6fdf6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13d62d72764060ef924d02ef735ff277d14ca4ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724276"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>以指令碼工作傳送至遠端私用訊息佇列
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   訊息佇列 (又稱為 MSMQ) 能夠讓開發人員容易藉由傳送和接收訊息來與應用程式快速且確實地通訊。 訊息佇列有可能位於本機電腦或是遠端電腦上，而且可能是公用或私用的。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，MSMQ 連接管理員與訊息佇列工作不支援傳送到遠端電腦上的私用佇列。 不過，透過使用指令碼工作，就可以很輕鬆地將訊息傳送到遠端私用佇列。  
   
 > [!NOTE]  
@@ -43,9 +47,9 @@ ms.locfileid: "58290814"
   
 2.  建立類型為 **String** 且名為 **MessageText** 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數，以將訊息文字傳遞至指令碼中。 輸入預設訊息做為變數值。  
   
-3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器] 的 [指令碼] 索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
+3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
   
-4.  按一下 [編輯指令碼] 以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 指令碼編輯器。  
+4.  按一下 [編輯指令碼]  以開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 指令碼編輯器。  
   
 5.  在指令碼專案中，加入 **System.Messaging** 命名空間的參考。  
   

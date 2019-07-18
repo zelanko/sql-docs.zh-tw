@@ -1,5 +1,5 @@
 ---
-title: 分類資料行 （資料採礦） |Microsoft 文件
+title: 已分類資料行 （資料採礦） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b014f82376b15d9d29834103d8827bf31231ef90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019945"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724823"
 ---
 # <a name="classified-columns-data-mining"></a>分類資料行 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "34019945"
  資料行中的值是關聯值的加權或案例複寫因數。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [資料類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [資料類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762731"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205317"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "52762731"
 ### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>所有版本共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  所有已安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的所有執行個體會共用某些元件。 當您在同一部電腦上並存安裝不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，這些元件會自動升級到最新的版本。 當解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最後一個執行個體時，通常會自動解除安裝這類元件。  
   
- 範例:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 寫入器。  
+ 範例:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。  
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>在相同主要版本的所有執行個體之間共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有相同主要版本的版本會在所有執行個體之間共用某些元件。 如果在升級期間選取共用元件，現有的元件都會升級到最新的版本。  
@@ -68,7 +68,7 @@ ms.locfileid: "52762731"
 ### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本無關的元件  
  某些元件會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間安裝，但是與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本無關。 這些元件可能會在主要版本之間共用，或是由所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本共用。  
   
- 範例:Microsoft Sync Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
+ 範例:Microsoft Sync Framework、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
   
  如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 安裝，請參閱 <<c2> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。</c2> 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   

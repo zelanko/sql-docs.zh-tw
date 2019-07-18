@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110884"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。|  
 |NULL (預設值)|所有可用*屬性*值會列印。|  
   
-`[ @value = ] 'value'` 為指定的散發者屬性的值。 *值*已**varchar(255)**，預設值是 NULL。  
+`[ @value = ] 'value'` 為指定的散發者屬性的值。 *值*已**varchar(255)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -62,8 +61,8 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

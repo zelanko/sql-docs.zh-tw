@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938787"
 ---
 # <a name="value-property-example-vb"></a>Value 屬性範例 (VB)
 此範例示範[值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)並[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件顯示欄位和屬性值的***員工***資料表。  

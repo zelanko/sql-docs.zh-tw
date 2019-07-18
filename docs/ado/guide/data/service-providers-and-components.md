@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 050d1c9ec8aa5a158d5c08fb77d3743e55567699
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924249"
 ---
 # <a name="service-providers-and-components"></a>服務提供者和元件
 服務提供者是藉由實作擴充原生不支援資料存放區的介面中擴充的資料提供者功能的元件。  
@@ -29,4 +28,4 @@ ms.locfileid: "51602238"
   
  例如，資料指標引擎，例如[OLE DB 的資料指標服務](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)，是可從連續的順向的資料存放區來產生可捲動的資料使用資料的服務元件。 包含其他服務提供者，通常由 ADO [Microsoft OLE DB 持續性提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) （適用於將資料儲存至檔案）， [Microsoft Data Shaping Service 的 OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (如階層**資料錄集**)，而[Microsoft OLE DB 遠端服務提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) （適用於叫用遠端電腦上的資料提供者）。  
   
- 如需有關服務和資料提供者的詳細資訊，請參閱[附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。
+ 如需有關服務和資料提供者的詳細資訊，請參閱[附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。

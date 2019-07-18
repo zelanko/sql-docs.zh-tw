@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044349"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>管理方案和專案的檔案
   此主題描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]專用的檔案類型。 依預設，所有方案及其專案都建立在 \My Documents\SQL Server Management Studio Projects 中。  

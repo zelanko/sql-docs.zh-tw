@@ -1,5 +1,5 @@
 ---
-title: 彙總 (MDX) |Microsoft 文件
+title: 彙總 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017176"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -38,11 +37,11 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>備註  
  如果已指定空的 Tuple 集合或空的集合，此函數會傳回空白值。  
   
- 下表描述如何**彙總**函式的行為與不同的彙總函式。  
+ 下表描述如何**彙總**函式使用不同的彙總函式的行為。  
   
 |彙總運算子|結果|  
 |--------------------------|------------|  
-|SUM|傳回集合上的值總和。|  
+|Sum|傳回集合上的值總和。|  
 |Count|傳回集合上的值計數。|  
 |Max|傳回集合上的最大值。|  
 |Min|傳回集合上的最小值。|  
@@ -56,7 +55,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |指派|指派是根據量值彙總函式進行彙總。 如果量值彙總函式是相異計數，則指派是加總的。|  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的 sum`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中所包含的彙總`Date`維度中，從**Adventure Works** cube。  
+ 下列範例會傳回的總和`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中包含在彙總`Date`維度中，從**Adventure Works** cube。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -94,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 下列範例會根據使用彙總函式評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 **Hierarchize**和**DrillDownLevel**函式用來傳回 Product 維度中產品類別目錄的衰退銷售值。  
+ 下列範例會根據使用彙總函式評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 **Hierarchize**並**DrillDownLevel**函式用來傳回的衰退銷售 [產品] 維度中產品類別目錄值。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -124,14 +123,14 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>另請參閱  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [子系&#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [計數&#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [篩選&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Count &#40;集合&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [屬性&#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

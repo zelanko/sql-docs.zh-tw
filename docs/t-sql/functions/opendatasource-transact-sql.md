@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944885"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  這是登錄為 OLE DB 提供者之 PROGID 的名稱，以用來存取資料來源。 *provider_name* 為沒有預設值的 **char** 資料類型。  
   
  *init_string*  
- 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵值組為基礎，例如：**'**_keyword1_=_value_ **;** _keyword2_=_value_**'**。  
+ 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵值組為基礎，例如： **'** _keyword1_=_value_ **;** _keyword2_=_value_ **'** 。  
   
  如需在提供者上支援的特定關鍵字-值配對，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 這份文件集定義基本語法。 下表列出 *init_string* 引數最常使用的關鍵字。  
   
@@ -79,7 +79,7 @@ OPENDATASOURCE ( provider_name, init_string )
   
  FROM 子句中 OPENDATASOURCE、OPENQUERY 或 OPENROWSET 的任何呼叫都會與當做更新目標使用之這些函數的任何呼叫進行個別且獨立的評估，即使完全相同的引數套用至這兩種呼叫也一樣。 尤其，針對其中一個呼叫結果所套用的篩選或聯結條件對於另一個呼叫的結果沒有作用。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  任何使用者都可以執行 OPENDATASOURCE。 您可以從連接字串判斷用來連接到遠端伺服器的權限。  
   
 ## <a name="examples"></a>範例  

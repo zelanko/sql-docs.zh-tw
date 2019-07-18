@@ -11,15 +11,14 @@ helpviewer_keywords:
 - applying business rules [Master Data Services]
 - business rules [Master Data Services], applying to select members
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0b8a0fc320410adcdbd20f4f4e2c8a373453c359
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 867f56234801e7eb659128ebeb35c38dddd2742e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085573"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>根據商務規則驗證特定成員 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52817740"
 > [!NOTE]  
 >  如果您想要將商務規則套用至某版本模型中的所有成員，請參閱 [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -39,15 +38,15 @@ ms.locfileid: "52817740"
   
 ### <a name="to-apply-business-rules-selectively"></a>若要選擇性地套用商務規則  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 下拉式清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型]  下拉式清單中的模型。  
   
-2.  從 [版本]下拉式清單中，選取版本。  
+2.  從 [版本]  下拉式清單中，選取版本。  
   
 3.  按一下 [總管]  索引標籤。  
   
 4.  從功能表列指向 **[實體]** ，然後按一下包含要套用規則之成員的實體名稱。  
   
-5.  按一下 [套用規則] 。 商務規則只套用至方格中顯示的成員。  
+5.  按一下 [套用規則]  。 商務規則只套用至方格中顯示的成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [根據商務規則驗證版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   

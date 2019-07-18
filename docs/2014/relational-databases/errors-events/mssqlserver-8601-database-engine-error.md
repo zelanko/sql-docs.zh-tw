@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1803850e770b42a411a0e6e7a62096afc9b8d3f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762679"
 ---
 # <a name="mssqlserver8601"></a>MSSQLSERVER_8601
     
@@ -30,7 +30,7 @@ ms.locfileid: "48176418"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|INVALID_INTERFACE_ERR|  
-|訊息文字|內部查詢處理器錯誤: 查詢處理器無法取得到所需介面的存取。|  
+|訊息文字|內部查詢處理器錯誤:查詢處理器無法取得到所需介面的存取。|  
   
 ## <a name="explanation"></a>說明  
  內部處理錯誤，無法取得所需介面的存取權。  

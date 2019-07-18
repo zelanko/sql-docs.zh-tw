@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: da99b63c986029a1791793fbbd33910bb95d4b7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086798"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用測試存放庫 (OracleToSQL)
 SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供稍後使用。 儲存機制資料會儲存在 SQL Server 資料表**TestCaseRepository**並**RunTestCaseResultRepository**結構描述中**ssma_oracle_utilities** 的**ssmatesterdb**資料庫。  

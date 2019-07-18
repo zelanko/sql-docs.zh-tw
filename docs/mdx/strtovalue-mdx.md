@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c327dc55420cc89f5e76b6fae7822fad3a4e95f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cad8fec605a56a60cfcc7024739225e474fd42f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036695"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 

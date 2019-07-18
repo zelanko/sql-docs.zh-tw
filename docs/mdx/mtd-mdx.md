@@ -1,5 +1,5 @@
 ---
-title: Mtd (MDX) |Microsoft 文件
+title: Mtd (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 74c8748ae02df8747be5670f09ec11c7dfa8e882
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088446"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
 
@@ -33,9 +32,9 @@ Mtd( [ Member_Expression ] )
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果未指定成員運算式，預設值是類型層級之第一個階層的目前成員*月*類型的第一個維度*時間*量值群組中。  
+ 如果未指定成員運算式，預設值是第一個階層的目前成員的型別層級*個月*類型的第一個維度*時間*量值群組中。  
   
- **Mtd**函式是的捷徑函數[PeriodsToDate](../mdx/periodstodate-mdx.md)函式時所依據的層級的屬性階層的 Type 屬性設定為*月*。 也就是說，`Mtd(Member_Expression)` 相當於 `PeriodsToDate(Month_Level_Expression,Member_Expression)`。  
+ **Mtd**功能的捷徑函數[PeriodsToDate](../mdx/periodstodate-mdx.md)函式時所依據的層級的屬性階層的 Type 屬性設定為*月*。 也就是說，`Mtd(Member_Expression)` 相當於 `PeriodsToDate(Month_Level_Expression,Member_Expression)`。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 2002 年 7 月初至 7 月 20 日當月網際網路銷售的月運費成本總和。  
@@ -52,6 +51,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [Sum &#40;MDX&#41;](../mdx/sum-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

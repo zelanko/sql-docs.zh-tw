@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a32b4b17974dfbd761ee56a16ec7f8f74e7d4b76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62698497"
 ---
 # <a name="implement-ddl-triggers"></a>實作 DDL 觸發程序
   本主題提供資訊以協助您建立 DDL 觸發程式、修改 DDL 觸發程式並停用或卸除 DDL 觸發程式。  

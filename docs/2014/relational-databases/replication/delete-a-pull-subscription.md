@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721465"
 ---
 # <a name="delete-a-pull-subscription"></a>刪除提取訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的提取訂閱。  
@@ -46,7 +46,7 @@ ms.locfileid: "52785110"
   
 3.  展開與您要刪除的訂閱相關聯的發行集。  
   
-4.  以滑鼠右鍵按一下訂閱，然後按一下 **[刪除]**。  
+4.  以滑鼠右鍵按一下訂閱，然後按一下 **[刪除]** 。  
   
 5.  在確認對話方塊中，選取是否要連接訂閱者以刪除訂閱資訊。 如果清除 **[連接到訂閱者]** 核取方塊，則應在稍後連接到「訂閱者」以刪除資訊。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52785110"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要刪除的訂閱，然後按一下 **[刪除]**。  
+3.  以滑鼠右鍵按一下您要刪除的訂閱，然後按一下 **[刪除]** 。  
   
 4.  在確認對話方塊中，選取是否要連接發行者以刪除訂閱資訊。 若您清除 **[連接到發行者]** 核取方塊，應於稍後連接到發行者以便刪除資訊。  
   
@@ -65,15 +65,15 @@ ms.locfileid: "52785110"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>刪除快照式或交易式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@publisher**和 **@publisher_db**資料夾中可用。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql)。 指定 **@publication** 或 Replication Management Objects (RMO) 來重新初始化 **@publisher** 和 **@publisher_db** 資料夾中可用。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)。 指定 **@publication** 和 **@subscriber**。 為 **@article** 指定 **@article**。 (選擇性) 如果無法存取散發者，請為 **@ignore_distributor** 指定 **@ignore_distributor** 的值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+2.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)。 指定 **@publication** 和 **@subscriber** 。 為 **@article** 指定 **@article** 。 (選擇性) 如果無法存取散發者，請為 **@ignore_distributor** 指定 **@ignore_distributor** 的值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>刪除合併式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來刪除 **@publisher**和 **@publisher_db**。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql)。 指定 **@publication** 或 Replication Management Objects (RMO) 來刪除 **@publisher** 和 **@publisher_db** 。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@subscriber**和 **@subscriber_db**資料夾中可用。 為 **@subscription_type** 指定 **@subscription_type**。 (選擇性) 如果無法存取散發者，請為 **@ignore_distributor** 指定 **@ignore_distributor** 的值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql)。 指定 **@publication** 或 Replication Management Objects (RMO) 來重新初始化 **@subscriber** 和 **@subscriber_db** 資料夾中可用。 為 **@subscription_type** 指定 **@subscription_type** 。 (選擇性) 如果無法存取散發者，請為 **@ignore_distributor** 指定 **@ignore_distributor** 的值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會刪除交易式發行集的提取訂閱。 第一批次是在「訂閱者」上執行，而第二批次是在「發行者」上執行。  

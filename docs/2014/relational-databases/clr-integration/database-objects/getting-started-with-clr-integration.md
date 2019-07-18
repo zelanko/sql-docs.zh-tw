@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874125"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 整合使用者入門
   本主題提供的命名空間和編譯資料庫物件所需的程式庫概觀[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]與.NET Framework common language runtime (CLR) 整合。 此外，本主題還會為您示範如何撰寫、編譯及執行以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 所撰寫的簡單 CLR 預存程序。  

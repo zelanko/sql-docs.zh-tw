@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361648"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166376"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,8 @@ DENY
  表示已對指定主體和對被主體授與權限的所有其他主體拒絕權限。 當主體具有 GRANT OPTION 的權限時，這是必要的。  
   
  AS *principal*  
-  您可使用 AS principal 子句，來表示記錄為權限拒絕者的主體應為陳述式執行人員以外的主體。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 執行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`。現在，即使實際執行陳述式的是使用者 13 (Mary)，sys.database_permissions 資料表仍會指出 deny 陳述式的 grantor_prinicpal_id 是 15 (Raul)。
+ 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。
+您可使用 AS principal 子句，來表示記錄為權限拒絕者的主體應為陳述式執行人員以外的主體。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 執行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`。現在，即使實際執行陳述式的是使用者 13 (Mary)，sys.database_permissions 資料表仍會指出 deny 陳述式的 grantor_prinicpal_id 是 15 (Raul)。
   
 在此陳述式中使用 AS 不代表能模擬其他使用者。  
   
@@ -148,7 +149,7 @@ DENY
 > [!CAUTION]  
 >  拒絕 CONTROL SERVER 權限隱含著拒絕伺服器的 CONNECT SQL 權限。 被拒絕伺服器 CONTROL SERVER 權限的主體將無法連接至該伺服器。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  呼叫端 (或指定了 AS 選項的主體) 必須具有安全性實體的 CONTROL 權限，或是具有隱含安全性實體 CONTROL 權限的更高權限。 如果使用 AS 選項，指定的主體必須擁有要拒絕其權限的類型。  
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以拒絕伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以拒絕資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以拒絕結構描述中任何物件的任何權限。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的類型。  

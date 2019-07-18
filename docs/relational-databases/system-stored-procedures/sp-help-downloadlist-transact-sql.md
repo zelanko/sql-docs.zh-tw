@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055187"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
-`[ @operation = ] 'operation'` 指定作業有效的作業。 *作業*已**varchar(64)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @operation = ] 'operation'` 指定作業有效的作業。 *作業*已**varchar(64)** ，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -63,16 +62,16 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**INSERT**|插入整項作業或重新整理現有作業的作業動作。 適當的話，這個動作包括所有作業步驟和排程。|  
 |**RE-ENLIST**|使目標伺服器將編列資訊 (包括輪詢間隔和時區) 重新傳送到多伺服器網域的伺服器作業。 目標伺服器也會重新下載**MSXOperator**詳細資料。|  
 |**SET-POLL**|設定目標伺服器輪詢多伺服器網域的間隔 (以秒為單位) 之伺服器作業。 如果指定，*值*會解譯為必要的間隔值，而且可以是介於**10**來**28,800**。|  
-|**START**|要求開始執行作業的作業動作。|  
+|**啟動**|要求開始執行作業的作業動作。|  
 |**停止**|要求停止執行作業的作業動作。|  
 |**SYNC-TIME**|使目標伺服器將它的系統時鐘和多伺服器網域同步化的伺服器作業。 由於這項作業成本很高，因此，請盡量不要太常執行這項作業。|  
 |**UPDATE**|只更新作業**sysjobs**作業，而非從作業步驟或排程的資訊。 會自動呼叫**sp_update_job**。|  
   
-`[ @object_type = ] 'object_type'` 指定作業的物件型別。 *object_type*已**varchar(64)**，預設值是 NULL。 *object_type*可以是 JOB 或 SERVER。 如需有關有效*object_type*值，請參閱[sp_add_category &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
+`[ @object_type = ] 'object_type'` 指定作業的物件型別。 *object_type*已**varchar(64)** ，預設值是 NULL。 *object_type*可以是 JOB 或 SERVER。 如需有關有效*object_type*值，請參閱[sp_add_category &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
 `[ @object_name = ] 'object_name'` 物件的名稱。 *object_name*已**sysname**，預設值是 NULL。 如果*object_type*的工作，是*object_name*是作業名稱。 如果*object_type*是伺服器，請*object_name*是伺服器名稱。  
   
-`[ @target_server = ] 'target_server'` 目標伺服器的名稱。 *target_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
+`[ @target_server = ] 'target_server'` 目標伺服器的名稱。 *target_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。  
   
 `[ @has_error = ] has_error` 是工作是否應該認可錯誤。 *has_error*已**tinyint**，預設值是 NULL，表示應該認可任何錯誤。 **1**指出，應該認可所有錯誤。  
   
@@ -93,7 +92,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|指示所影響的物件。|  
 |**object_id**|**uniqueidentifier**|指示所影響之物件的識別碼 (**job_id**的工作物件，或是 0x00 代表伺服器物件) 或特定資料值**operation_code**。|  
 |**target_server**|**nvarchar(30)**|將下載這個指示的目標伺服器。|  
-|**error_message**|**nvarchar(1024)**|當目標伺服器在處理這個指示發生問題時，所發出的錯誤訊息 (如果有的話)。<br /><br /> 注意:任何錯誤訊息都會封鎖目標伺服器所有進一步的下載動作。|  
+|**error_message**|**nvarchar(1024)**|當目標伺服器在處理這個指示發生問題時，所發出的錯誤訊息 (如果有的話)。<br /><br /> 注意:任何錯誤訊息都會封鎖所有進一步的下載動作的目標伺服器。|  
 |**date_posted**|**datetime**|將指示公佈到資料表中的日期。|  
 |**date_downloaded**|**datetime**|目標伺服器下載指示的日期。|  
 |**status**|**tinyint**|作業的狀態：<br /><br /> **0** = 尚未下載<br /><br /> **1** = 下載成功。|  

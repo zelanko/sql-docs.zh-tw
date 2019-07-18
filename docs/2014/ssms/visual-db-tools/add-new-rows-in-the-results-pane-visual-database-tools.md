@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63460011"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
   您可以利用輸入或是從其他諸如「記事本」或 Excel 程式貼上的方式，加入新的資料。 要貼上資料列必須要有與貼入的資料表完全相同的資料行數目和類型。 多重資料列可一併貼上至 [結果] 窗格。  
@@ -43,7 +43,7 @@ ms.locfileid: "52801590"
     > [!NOTE]  
     >  如果所貼上的一或多個資料列無法為資料庫認可，您將會收到通知哪些資料列不被認可的訊息。  
   
-3.  輸入新資料列的資料。 若要貼上，請從 [編輯] 功能表選擇 [貼上]。  
+3.  輸入新資料列的資料。 若要貼上，請從 [編輯]  功能表選擇 [貼上]  。  
   
 4.  離開該資料列，讓資料庫對其進行認可。  
   

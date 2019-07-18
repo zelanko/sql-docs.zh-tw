@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867962"
 ---
 # <a name="mssqlserver5229"></a>MSSQLSERVER_5229
     
@@ -30,7 +30,7 @@ ms.locfileid: "48219168"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 包含反物質資料行，但不是非叢集索引。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE） 包含反物質資料行，但不是一個非叢集索引。|  
   
 ## <a name="explanation"></a>說明  
  堆積或叢集索引包含不應該有的反物質資料行。  

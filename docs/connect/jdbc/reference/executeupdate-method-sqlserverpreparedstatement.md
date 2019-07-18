@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 677b0907-316e-40f2-a0d9-d4d0872c7f52
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f739bbf3a433647c23b262ba3f50f439a401be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: db7d44384e097888d0ab63fdd27d2228ecd37bda
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672616"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804142"
 ---
 # <a name="executeupdate-method-sqlserverpreparedstatement"></a>executeUpdate 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

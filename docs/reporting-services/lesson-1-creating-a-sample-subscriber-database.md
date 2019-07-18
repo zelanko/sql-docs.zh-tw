@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513160"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
 
@@ -25,12 +25,12 @@ ms.locfileid: "50028307"
   
 1.  啟動 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然後開啟 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]執行個體的連接。  
   
-2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]。  
+2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]  。  
   
-3.  在 [新增資料庫] 對話方塊的 [資料庫名稱] 中，鍵入*訂閱者*。 
+3.  在 [新增資料庫] 對話方塊的 [資料庫名稱]  中，鍵入*訂閱者*。 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  按一下工具列上的 [新增查詢] 按鈕。  
+5.  按一下工具列上的 [新增查詢]  按鈕。  
   
 6.  將下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式複製到空的查詢中：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "50028307"
     GO  
     ```  
   
-7.  按一下工具列上的 **[執行]**。  
+7.  按一下工具列上的 **[執行]** 。  
   
 8.  利用 SELECT 陳述式來確認您已有三個資料列。 例如： `select * from OrderInfo`  
   

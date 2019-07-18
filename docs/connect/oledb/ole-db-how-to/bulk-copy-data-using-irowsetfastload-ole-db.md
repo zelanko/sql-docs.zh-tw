@@ -15,13 +15,13 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f9599b4e35cf54a14c04bf4675b61f962e9d0fb9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211097"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786003"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

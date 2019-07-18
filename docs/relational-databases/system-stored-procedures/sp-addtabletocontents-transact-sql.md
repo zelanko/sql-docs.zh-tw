@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e9d5e0e22f5dcca3611923782786a83ada1672ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117941"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` 為資料表的擁有者的名稱。 *owner_name*已**sysname**，預設值是 NULL。  
   
-`[ @filter_clause = ] 'filter_clause'` 指定一個篩選子句來控制哪些新載入的資料的資料列應該加入合併追蹤資料表。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。 如果*filter_clause*是**null**，所有的大量載入的資料列會加入。  
+`[ @filter_clause = ] 'filter_clause'` 指定一個篩選子句來控制哪些新載入的資料的資料列應該加入合併追蹤資料表。 *filter_clause*已**nvarchar(4000)** ，預設值是 NULL。 如果*filter_clause*是**null**，所有的大量載入的資料列會加入。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -1,5 +1,5 @@
 ---
-title: （除法）(MDX) |Microsoft 文件
+title: （除法）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049320"
 ---
 # <a name="divide---mdx-operator-reference"></a>除以-MDX 運算子參考
 
@@ -41,7 +40,7 @@ Dividend / Divisor
 ## <a name="remarks"></a>備註  
  所傳回的實際值 **/ （除法）** 運算子代表第一個運算式除以第二個運算式的商數。  
   
- 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果*除數*評估為 null 的值，則運算子會引發錯誤。 如果兩個*除數*和*被除數*評估為 null 的值，則運算子會傳回 null 值。  
+ 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果*除數*評估為 null 的值，運算子會引發錯誤。 如果兩個*除數*並*被除數*評估為 null 的值，則運算子會傳回 null 值。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

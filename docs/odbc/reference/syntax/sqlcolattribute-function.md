@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118696"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函數
 **合規性**  
@@ -39,7 +38,7 @@ ms.locfileid: "52542171"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  下表列出所傳回的描述元類型**SQLColAttribute**。 型別*NumericAttributePtr*的值是**SQLLEN \*** 。  
   
-|*FieldIdentifier*|[資訊]<br /><br /> 傳回|描述|  
+|*FieldIdentifier*|Information<br /><br /> 傳回|描述|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 資料行是否自動遞增資料行。<br /><br /> 如果資料行不是自動遞增資料行，或不是數字，SQL_FALSE。<br /><br /> 這個欄位是適用於數值資料類型資料行。 應用程式可以將值插入含有自動遞增資料行的資料列，但通常不能更新資料行中的值。<br /><br /> 自動遞增資料行進行插入時，唯一的值會插入資料行在插入時。 增量未定義，但資料來源特有。 應用程式不應該假設任何特定值的自動遞增資料行開始在任何特定點或遞增。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|基底的資料行名稱的結果集資料行。 如果基底的資料行名稱不存在 （如所示的是運算式的資料行的情況下），則此變數包含空字串。<br /><br /> 這項資訊是從 SQL_DESC_BASE_COLUMN_NAME 記錄欄位傳回的 IRD，也就是唯讀的欄位。|  
@@ -162,7 +161,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|此 VARCHAR(128) 記錄欄位包含驅動程式會辨識為此資料類型的常值的前置詞的字元。 此欄位包含不適用的常值的前置詞的資料類型的空字串。 如需詳細資訊，請參閱 <<c0> [ 常值前置詞和後置詞](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|此 VARCHAR(128) 記錄欄位包含驅動程式會辨識為此資料類型的常值後置詞的字元。 此欄位包含不適用常值後置詞的資料類型的空字串。 如需詳細資訊，請參閱 <<c0> [ 常值前置詞和後置詞](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|此 VARCHAR(128) 記錄欄位會包含任何當地語系化 （原生語言） 的名稱可能不同於一般的資料型別名稱的資料類型。 如果沒有當地語系化的名稱，則會傳回空字串。 這個欄位是僅供顯示。 字串的字元集是地區設定相關，而通常是伺服器的預設字元集。|  
-|與 SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|如果它適用於資料行別名。 如果不適用資料行別名，則會傳回資料行名稱。 在任一情況下，將 SQL_DESC_UNNAMED 設為 SQL_NAMED。 如果沒有任何資料行名稱或資料行別名，則傳回空的字串，並將 SQL_DESC_UNNAMED 設 sql_unnamed 時。<br /><br /> 這項資訊會從 IRD 的與 SQL_DESC_NAME 記錄欄位傳回。|  
+|SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|如果它適用於資料行別名。 如果不適用資料行別名，則會傳回資料行名稱。 在任一情況下，將 SQL_DESC_UNNAMED 設為 SQL_NAMED。 如果沒有任何資料行名稱或資料行別名，則傳回空的字串，並將 SQL_DESC_UNNAMED 設 sql_unnamed 時。<br /><br /> 這項資訊會從 IRD 的與 SQL_DESC_NAME 記錄欄位傳回。|  
 |SQL_DESC_NULLABLE (ODBC 3.0)|*NumericAttributePtr*|SQL_ 可為 NULL 的資料行可以有 NULL 值; 如果如果資料行不具有 NULL 值;，SQL_NO_NULLS或 SQL_NULLABLE_UNKNOWN 如果不知道資料行是否接受 NULL 值。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_NULLABLE 記錄欄位傳回。|  
 |SQL_DESC_NUM_PREC_RADIX (ODBC 3.0)|*NumericAttributePtr*|如果 SQL_DESC_TYPE 欄位中的資料類型是近似的數值資料類型，此 SQLINTEGER 欄位會包含值為 2，因為 SQL_DESC_PRECISION 欄位包含的位元數。 如果 SQL_DESC_TYPE 欄位中的資料類型是精確數值資料類型，此欄位會包含值為 10，因為 SQL_DESC_PRECISION 欄位包含的小數位數。 此欄位設為 0 表示所有非數值資料類型。|  
 |SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|字元字串或二進位資料類型的長度，以位元組為單位。 固定長度的字元或二進位類型，這是以位元組為單位的實際長度。 可變長度的字元或二進位類型，這是以位元組為單位的最大長度。 此值不包括 null 結束字元。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_OCTET_LENGTH 記錄欄位傳回。<br /><br /> 如需長度的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
@@ -173,7 +172,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|包含資料行之資料表的名稱。 傳回的值是由實作定義的資料行是運算式或資料行是檢視的一部分。<br /><br /> 如果無法判斷資料表名稱，則會傳回空字串。|  
 |SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|數值，指定 SQL 資料類型。<br /><br /> 當*ColumnNumber*等於 0，SQL_BINARY 會傳回可變長度的書籤並 SQL_INTEGER 會傳回固定長度書籤。<br /><br /> 日期時間和間隔資料類型，此欄位會傳回的詳細資訊的資料類型：如果是 SQL_DATETIME 或 SQL_INTERVAL。 (如需詳細資訊，請參閱 <<c0> [ 資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)附錄 d:資料類型。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_TYPE 記錄欄位傳回。 **注意：** 處理 ODBC 2。*x*驅動程式，改為使用 SQL_DESC_CONCISE_TYPE。|  
 |SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|資料來源相關的資料型別名稱;比方說，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA"。<br /><br /> 如果類型是未知，則會傳回空字串。|  
-|將 SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED 或 sql_unnamed 時。 如果與 SQL_DESC_NAME 欄位 IRD 的包含資料行別名或資料行名稱，則會傳回 SQL_NAMED。 如果沒有任何資料行名稱或資料行別名，則會傳回 sql_unnamed 時。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_UNNAMED 記錄欄位傳回。|  
+|SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED 或 sql_unnamed 時。 如果與 SQL_DESC_NAME 欄位 IRD 的包含資料行別名或資料行名稱，則會傳回 SQL_NAMED。 如果沒有任何資料行名稱或資料行別名，則會傳回 sql_unnamed 時。<br /><br /> 這項資訊會從 IRD 的 SQL_DESC_UNNAMED 記錄欄位傳回。|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 如果資料行是不帶正負號 （或不是數字）。<br /><br /> 如果資料行簽章，SQL_FALSE。|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|資料行會描述所定義的常數的值：<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE 描述結果集中資料行中，不是基底資料表中的資料行的可更新性。 基底結果集資料行所依據的資料行的可更新性可能不同於此欄位中的值。 資料行是否可更新可以根據資料類型、 使用者權限，以及結果集本身的定義。 如果是不明確的資料行是否可更新，應該會傳回 SQL_ATTR_READWRITE_UNKNOWN。|  
   
@@ -192,7 +191,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="example"></a>範例  
  下列範例程式碼不會釋放控制代碼和連線。 請參閱[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)， [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)，並[SQLFreeStmt 函式](../../../odbc/reference/syntax/sqlfreestmt-function.md)來釋放控制代碼和陳述式的程式碼範例。  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   
@@ -212,11 +211,12 @@ struct DataBinding {
 void printStatementResult(SQLHSTMT hstmt) {  
    int bufferSize = 1024, i;  
    SQLRETURN retCode;  
-   SQLSMALLINT numColumn = 0, bufferLenUsed;  
+   SQLSMALLINT numColumn = 0, bufferLenUsed;
+   
+   retCode = SQLNumResultCols(hstmt, &numColumn);  
+   
    SQLPOINTER* columnLabels = (SQLPOINTER *)malloc( numColumn * sizeof(SQLPOINTER*) );  
    struct DataBinding* columnData = (struct DataBinding*)malloc( numColumn * sizeof(struct DataBinding) );  
-  
-   retCode = SQLNumResultCols(hstmt, &numColumn);  
   
    printf( "Columns from that table:\n" );  
    for ( i = 0 ; i < numColumn ; i++ ) {  

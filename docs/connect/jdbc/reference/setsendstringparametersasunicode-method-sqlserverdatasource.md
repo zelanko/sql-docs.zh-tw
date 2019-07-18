@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b630f2bbe44f4484364aa1b99ea987c8888554c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 56d6fb5c6c9b7ac8224d8d7f42c379110520c557
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637816"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791742"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setSendStringParametersAsUnicode(boolean sendStringParametersAsUnico
 #### <a name="parameters"></a>參數  
  *sendStringParametersAsUnicode*  
   
- 如果以 UNICODE 格式將字串參數傳送到伺服器，則為 **true**。 否則為 **false**。  
+ 如果以 UNICODE 格式將字串參數傳送至伺服器，則為 **true**； 否則為 **false**。  
   
 ## <a name="remarks"></a>Remarks  
  如果 sendStringParametersAsUnicode 屬性設定為預設的 **true** 值，則字串參數就會以 UNICODE 格式傳送至伺服器。 如果 sendStringParametersAsUnicode 設定為 **false**，則字串參數就會以 ASCII/MBCS 格式而非 UNICODE 格式傳送至伺服器。 如果 sendStringParametersAsUnicode 未設定，[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md) 就會傳回預設值 **true**。  

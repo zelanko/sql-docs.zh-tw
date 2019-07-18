@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66454604"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安裝、解除安裝和報表產生器支援
   報表產生器是一項報表撰寫工具，可用來建立、更新和共用報表、報表組件和共用資料集。 報表產生器有提供兩個版本：單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]。 單機版是由您或系統管理員安裝在電腦上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本是隨 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自動安裝，而且從報表管理員或與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站下載到電腦。  
@@ -64,7 +63,7 @@ ms.locfileid: "59241716"
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器位於報表伺服器上，當您按一下報表管理員中的 **[報表產生器]** 按鈕，或是在 SharePoint 文件庫中按一下 **[新增文件]** 功能表上的 **[報表產生器報表]** 選項時，就會安裝在您的電腦上。  
   
 > [!NOTE]  
->  如果 **[新增文件]** 功能表未列出 **[報表產生器報表]**、 **[報表產生器模型]** 和 **[報表資料來源]** 選項，則必須將其內容類型加入至 SharePoint 文件庫。   
+>  如果 **[新增文件]** 功能表未列出 **[報表產生器報表]** 、 **[報表產生器模型]** 和 **[報表資料來源]** 選項，則必須將其內容類型加入至 SharePoint 文件庫。   
   
  您可以從報表管理員或 SharePoint 文件庫開啟報表產生器。 如需有關如何開啟報表產生器的詳細資訊，請參閱 <<c0> [ 啟動報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)。</c0>  
   
@@ -153,7 +152,7 @@ ms.locfileid: "59241716"
   
  不過，透過額外的設定，您可以將報表伺服器提供給報表產生器的使用者使用。 您可以將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 加入至信任的網站。 根據預設，Windows Vista、Windows Server 2008 和 Windows 7 上的 Internet Explorer 7.0 或更新版本會在「受保護模式」下執行。 「受保護模式」功能會封鎖瀏覽器要求，使其無法到達相同電腦上執行的高層級處理序。 您可以為報表伺服器應用程式停用受保護模式，只要將這些應用程式加入為信任的網站即可。 您必須具有管理員權限才能進行此變更。  
   
- 如需設定的詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱 < [Reporting Services 組態管理員&#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com 上。  
+ 如需設定的詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱 < [Reporting Services 組態管理員&#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com 上。  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server 範例資料庫  

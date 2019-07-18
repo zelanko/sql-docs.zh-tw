@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 101a20a85484076b7a1a71344818b9265ef2453d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e50d9ae91ef6e21f01c585cedc6fe32a1e22ad8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105355"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>轉譯資料 (報表產生器及 SSRS)
   使用配置轉譯器 (例如 HTML、MHTML、Word、Excel、PDF 或影像) 時，資料及其組織會保持不變。 使用資料轉譯器格式 (例如，逗號分隔值 (CSV) 或 XML) 匯出時，不會轉譯任何視覺化配置元素。 轉譯報表時，CSV 和 XML 會將某些規則套用到報表主體及其內容。 這些規則決定了如何以這些格式轉譯資料。  
@@ -34,7 +33,7 @@ ms.locfileid: "56296906"
   
 -   資料交換/EDI。 這是一種外部程序，可以要求報表進行 CSV 或 XML 轉譯，並取用該資料。  
   
- 資料轉譯器格式是由一組不同於配置轉譯器的屬性來控制。 下列是在 [屬性] 窗格中設定的屬性清單，這些屬性僅適用於資料轉譯器：  
+ 資料轉譯器格式是由一組不同於配置轉譯器的屬性來控制。 下列是在 [屬性]  窗格中設定的屬性清單，這些屬性僅適用於資料轉譯器：  
   
 -   DataElementOutput 屬性控制匯出時是否要在資料中顯示特定的項目。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9943e6f3d43ff1b543a86425b2644ee4c46a105c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081507"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>備註  
  **sp_dropdistributor**用於所有類型的複寫。  
   
- 如果在伺服器上的其他發行者或散發物件存在**sp_dropdistributor**會失敗，除非**@no_checks**設為**1**。  
+ 如果在伺服器上的其他發行者或散發物件存在**sp_dropdistributor**會失敗，除非 **@no_checks** 設為**1**。  
   
  藉由執行卸除散發資料庫之後，就必須執行這個預存程序**sp_dropdistributiondb**。  
   
@@ -69,8 +68,8 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 篩選器 (MDX) |Microsoft 文件
+title: Filter (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132685"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -36,9 +35,9 @@ Filter(Set_Expression, Logical_Expression )
  評估為 true 或 false 的有效多維度運算式 (MDX) 邏輯運算式。  
   
 ## <a name="remarks"></a>備註  
- **篩選**函式會評估指定的邏輯運算式，對每個 tuple 中指定的集合。 此函數會傳回邏輯運算式評估為指定集合中的每個 tuple 所組成的一組**true**。 如果沒有 tuple 評估為**true**，會傳回空集合。  
+ **篩選**函式會評估指定的邏輯運算式，對指定集合中每個 tuple。 此函數會傳回一組所組成的邏輯運算式評估為指定集合中的每個 tuple **，則為 true**。 如果沒有 tuple 評估為 **，則為 true**，會傳回空集合。  
   
- **篩選**函式運作方式類似於[IIf](../mdx/iif-mdx.md)函式。 **IIf**函式會傳回兩個選項的其中之一依據 MDX 邏輯運算式的評估結果，而**篩選**函式會傳回符合指定的搜尋條件的 tuple 集合。 實際上，**篩選**函式會執行`IIf(Logical_Expression, Set_Expression.Current, NULL)`上每個 tuple 集合，並傳回結果集。  
+ **篩選條件**函式的工作方式類似於[IIf](../mdx/iif-mdx.md)函式。 **IIf**函式會傳回兩個選項的其中之一為基礎的 MDX 邏輯運算式評估，而**篩選**函式會傳回符合指定的搜尋條件的 tuple 集合。 實際上**篩選條件**函式會執行`IIf(Logical_Expression, Set_Expression.Current, NULL)`上每個 tuple 集合，並傳回結果集。  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何在查詢的資料列軸上使用 Filter 函數，以便只傳回 Internet Sales Amount 大於 $10000 的日期：  
@@ -57,7 +56,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- Filter 函數也可以在導出成員定義內使用。 下列範例會傳回的 sum`Measures.[Order Quantity]`成員進行彙總前 9 個月中含括之 2003年`Date`維度中，從**Adventure Works** cube。 **PeriodsToDate**函式的集合中定義 tuple**彙總**函式運作。 **篩選**函式限制為具有較低的值 Reseller Sales Amount 量值傳回的上一個時間週期的 tuple。  
+ Filter 函數也可以在導出成員定義內使用。 下列範例會傳回的總和`Measures.[Order Quantity]`成員，在中含括之 2003 年的第九個月彙總`Date`維度中，從**Adventure Works** cube。 **PeriodsToDate**函式的集合中定義 tuple**彙總**函式運作。 **篩選**函式會限制為上一個時間週期為具有較低的值 Reseller Sales Amount 量值所傳回的 tuple。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,6 +84,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

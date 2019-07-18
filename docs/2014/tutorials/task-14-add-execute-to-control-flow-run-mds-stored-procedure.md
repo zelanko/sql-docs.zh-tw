@@ -1,5 +1,5 @@
 ---
-title: 工作 14:將執行 SQL 工作，為 MDS 執行預存程序的控制流程 |Microsoft Docs
+title: 工作 14：將執行 SQL 工作，為 MDS 執行預存程序的控制流程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027969"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65477077"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>工作 14:將執行 SQL 工作加入到控制流程，為 MDS 執行預存程序
-  將資料載入 MDS 的暫存資料表之後，您會執行與該資料表有關的預存程序，將暫存中的資料載入 MDS 資料庫中的適當資料表。 這個預存程序具有您必須傳遞的兩個必要參數：LogFlag 和 VersionName。 LogFlag 會指定暫存處理序期間所記錄的交易，而 VersionName 則代表模型的版本。 請參閱[暫存預存程序](https://msdn.microsoft.com/library/hh231028.aspx)如需詳細資訊。  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>工作 14：將執行 SQL 工作新增至控制流程，為 MDS 執行預存程序
+  將資料載入 MDS 的暫存資料表之後，您會執行與該資料表有關的預存程序，將暫存中的資料載入 MDS 資料庫中的適當資料表。 這個預存程序具有您要傳遞的兩個必要的參數：LogFlag 和 VersionName。 LogFlag 會指定暫存處理序期間所記錄的交易，而 VersionName 則代表模型的版本。 請參閱[暫存預存程序](https://msdn.microsoft.com/library/hh231028.aspx)如需詳細資訊。  
   
  在這項工作中，您會將「執行 SQL 工作」加入至控制流程來叫用預存程序，以便將暫存資料載入至適當的 MDS 資料表。  
   

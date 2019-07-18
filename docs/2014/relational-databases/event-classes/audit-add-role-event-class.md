@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867332"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 事件類別
   將資料庫角色加入資料庫或從資料庫移除資料庫角色時，就會發生 **Audit Add Role** 事件類別。 此事件類別會由 **sp_addrole** 和 **sp_droprole** 預存程序所使用。  

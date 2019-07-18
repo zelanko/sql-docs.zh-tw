@@ -1,21 +1,19 @@
 ---
-title: 如何使用分散式的交易和在 Docker 上的 SQL Server |Microsoft Docs
+title: 如何使用 Docker 上的 SQL Server 的分散式的交易
 description: 這篇文章說明如何使用 Linux 上設定 MSDTC 的 Dprovides 逐步解說。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f031323cf862840ef775875e1de1b868288256a9
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: fab3934a86994b3c4a0d7d7ecfc7768f65660023
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077685"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何使用 Docker 上的 SQL Server 的分散式的交易
 
@@ -41,7 +39,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 > [!IMPORTANT]

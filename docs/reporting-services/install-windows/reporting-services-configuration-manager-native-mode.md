@@ -9,14 +9,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503632"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50029017"
 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。
 
 > [!NOTE]
-> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並非設計成管理 SharePoint 模式的報表伺服器。 SharePoint 模式是使用 SharePoint 管理中心和 PowerShell 指令碼來管理並設定。  
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並非設計成管理 SharePoint 模式的報表伺服器。 SharePoint 模式是使用 SharePoint 管理中心和 PowerShell 指令碼來管理並設定。  
   
 ##  <a name="bkmk_scenarios"></a> 使用 Reporting Services 組態管理員的案例  
  您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員執行下列工作：  
@@ -70,21 +70,21 @@ ms.locfileid: "50029017"
 
     - 在 Windows 的 [開始] 畫面上，輸入 **Reporting** ，然後從搜尋結果中選取 **[Reporting Services 組態管理員]** 。
 
-    - 選取 [開始]，然後依序指向 [所有程式] 和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]。
+    - 選取 [開始]  ，然後依序指向 [所有程式]  和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]  。
 
          如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向 [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] 而不是 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ]，以開啟 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 伺服器元件的組態工具。
 
-         選取 [Reporting Services 組態管理員]。
+         選取 [Reporting Services 組態管理員]  。
 
-2. **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 選取 [連接]。
+2. **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 選取 [連接]  。
 
 3. 在 **[伺服器名稱]** 中，指定安裝報表伺服器執行個體的電腦名稱。 預設會出現本機電腦的名稱，但是如果您想要連接到遠端電腦上所安裝的報表伺服器，也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。
 
-4. 如果您指定遠端電腦，請選取 [尋找] 來建立連線。
+4. 如果您指定遠端電腦，請選取 [尋找]  來建立連線。
 
 5. 在 **Report Server 在stance**中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
-6. 選取 [連接]。
+6. 選取 [連接]  。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925630"
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 當更新已結束但發生錯誤時，解決錯誤的方式而定的本質和 錯誤嚴重性以及您的應用程式的邏輯。 不過，如果資料庫與其他使用者共用，常見的錯誤將會有其他人修改的欄位，然後才執行。 此類錯誤稱為 「 衝突 」。 ADO 會偵測這種情況，並回報錯誤。  

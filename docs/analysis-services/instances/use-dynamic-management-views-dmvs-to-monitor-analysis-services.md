@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209416"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV) 
 
@@ -24,7 +24,7 @@ Analysis Services 動態管理檢視 (DMV) 會傳回模型物件、 伺服器作
 
 DMV 查詢是執行 XML/A Discover 命令的替代方法。 對於大部分的系統管理員，撰寫 DMV 查詢比較簡單，因為語法以 SQL 為基礎。 此外，可以更輕鬆地讀取和複製以資料表格式傳回結果。 
   
-大多數 DMV 查詢會使用**選取 **陳述式並 **$System**結構描述搭配 XML/A 結構描述資料列集的範例：  
+大多數 DMV 查詢會使用 **選取** 陳述式並 **$System** 結構描述搭配 XML/A 結構描述資料列集的範例：  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -58,7 +58,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
 
 ## <a name="examples-and-scenarios"></a>範例和案例
 
-DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 例如：
+DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 例如:
   
  `Select * from $System.discover_object_activity`  
 自上次啟動服務後，此查詢會報告的物件活動。 
@@ -153,7 +153,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|針對特定的資料來源，傳回 XMLA 所支援之列舉值 (Enumerator) 的名稱、資料類型和列舉 (Enumeration) 值的清單。|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|描述伺服器上的執行個體。|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|提供在伺服器上執行之作用中作業的相關資訊。 作業是代表該命令執行特定工作之命令的一部分。|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|傳回 XMLA 伺服器所保留的關鍵字相關資訊。|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|傳回 XMLA 伺服器所保留的關鍵字相關資訊。|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|傳回伺服器所支援的常值的相關資訊。|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|傳回備份檔案的內容資訊。 |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|提供有關伺服器上目前永久性鎖定的資訊。|  

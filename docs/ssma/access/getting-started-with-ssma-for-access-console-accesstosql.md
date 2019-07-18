@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68222227"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>開始使用 SSMA for Access 主控台 (AccessToSQL)
 本章節描述的程序啟動並開始使用存取主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -53,11 +52,11 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|描述|  
+|色彩|描述|  
 |---------|---------------|  
 |紅色|在執行期間的嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
-|白色|指令碼檔案的命令、 訊息類型|  
+|白皮書|指令碼檔案的命令、 訊息類型|  
 |黃色|警告|  
 |綠色|提示使用者輸入|  
 |11：青色|開始]、 [完成] 和 [作業的結果。|  

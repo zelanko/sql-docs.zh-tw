@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0b065c878217f52f2cffaff05b4e6a9f28312dd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5c45d59fbdeaeeb8a2fe37800d81a63051770924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047730"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>核准或拒絕變更集 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52759130"
 
   變更集是對主要資料所做的暫止變更集合。 如果實體變更需要系統管理員核准，而且已提交變更集進行核准，您可以檢閱，然後再核准或拒絕變更集。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -38,17 +37,17 @@ ms.locfileid: "52759130"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>核准或拒絕變更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [總管]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [總管]  。  
   
 2.  按一下 [實體]  功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要核准或拒絕的變更集。  
+3.  在右窗格中，選取 [變更集]  ，然後按兩下您要核准或拒絕的變更集。  
   
-4.  按一下 [套用] 套用變更集，並檢閱暫止的變更。  
+4.  按一下 [套用]  套用變更集，並檢閱暫止的變更。  
   
-5.  按一下 [拒絕] 拒絕變更集，並將其送回給擁有者。  
+5.  按一下 [拒絕]  拒絕變更集，並將其送回給擁有者。  
   
-6.  按一下 [核准] 核准變更集。 系統會自動認可變更集。  
+6.  按一下 [核准]  核准變更集。 系統會自動認可變更集。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立變更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   

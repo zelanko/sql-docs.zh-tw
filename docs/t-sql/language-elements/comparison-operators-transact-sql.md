@@ -18,15 +18,15 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32310359f0ecd72349a5ebf3a4f0abcc1a72f5bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49b8dbf08dc6611666f90d4127260e49761b7fdb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982615"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47653386"
 |[\!> (不大於)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大於 (不是 ISO 標準)|  
   
 ## <a name="boolean-data-type"></a>布林資料類型  
- 比較運算子的結果具有 **Boolean** 資料類型。 它有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  
+ 比較運算子的結果具有 **Boolean** 資料類型。 這有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  
   
  **Boolean** 資料類型和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  
   

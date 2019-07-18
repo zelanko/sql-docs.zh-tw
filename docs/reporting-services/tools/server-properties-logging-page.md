@@ -2,20 +2,20 @@
 title: 伺服器屬性 (記錄頁面) | Microsoft Docs
 ms.date: 06/10/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.logging.f1
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a30f1087e30665287d37c26c5c36a2557b634669
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571391"
 ---
 # <a name="server-properties-logging-page"></a>伺服器屬性 (記錄頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的這個 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 頁面，即可對報表伺服器所收集的報表執行資料設定限制。 執行資料會儲存在報表伺服器資料庫內部。 您可以針對以原生模式或 SharePoint 整合模式執行的報表伺服器追蹤報表活動。 如果報表伺服器屬於向外延展部署的一部分，報表執行記錄就會在單一記錄檔中維護整個部署之所有報表活動的記錄。  
@@ -23,7 +23,7 @@ ms.locfileid: "47827014"
  開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 連接到報表伺服器。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。 
+ 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。 
  4) 按一下 **[記錄]** ，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。  

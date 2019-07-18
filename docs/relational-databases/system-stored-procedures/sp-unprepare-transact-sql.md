@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54d615eb59fe3fd696cd125b3df15f29286d969d
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027663"
 ---
 # <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

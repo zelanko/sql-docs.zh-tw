@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5956e4872695f796ac0367ad45f90cbc20a91e1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c959282cef7d6ba4055b18ee7c10d3826e623f9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732146"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733383"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重新執行至資料指標處 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47732146"
   
 2.  在追蹤視窗中按一下事件。  
   
-3.  在 [重新執行] 功能表上，按一下 [執行至資料指標處]，然後連接您要重新執行追蹤的伺服器。  
+3.  在 [重新執行]  功能表上，按一下 [執行至資料指標處]  ，然後連接您要重新執行追蹤的伺服器。  
   
-4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]**。  
+4.  在 **[重新執行組態]** 對話方塊中確認設定，然後按一下 **[確定]** 。  
   
      開始重新執行，並在到達第一個資料指標時暫停。  
   

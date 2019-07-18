@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0a22ed752241dce298ab90e683605d13aa7cde43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3487e885882d98f56d22c347a7ca25b15594afb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909061"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

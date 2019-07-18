@@ -2,7 +2,7 @@
 title: RS.exe 公用程式 (SSRS) | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e923092cbd81bcee6bee7c76f956bae2ede45c35
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581290"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -90,14 +90,14 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全域變數會使用給定的名稱來建立並設定為所提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 會產生名為 **a** 的變數，其值為 "**1**"，以及名為 **b** 的變數，其值為 "**2**"。  
+ 全域變數會使用給定的名稱來建立並設定為所提供的值。 例如， **-v a=** "**1**" **-v b=** "**2**" 會產生名為 **a** 的變數，其值為 "**1**"，以及名為 **b** 的變數，其值為 "**2**"。  
   
- 指令碼中的任何函數均可使用全域變數。 反斜線和引號 (**\\"**) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+ 指令碼中的任何函數均可使用全域變數。 反斜線和引號 ( **\\"** ) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **-t**  
  (選擇性) 追蹤記錄的輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 權限  
  若要執行工具，您必須有足夠的權限，可以連接到要對其執行指令碼的報表伺服器執行個體。 您可以執行指令碼在本機電腦或遠端電腦執行變更。 若要對安裝在遠端電腦上的報表伺服器執行變更，請在 **-s** 引數中指定遠端電腦。  
   
 ##  <a name="bkmk_examples"></a> 範例  

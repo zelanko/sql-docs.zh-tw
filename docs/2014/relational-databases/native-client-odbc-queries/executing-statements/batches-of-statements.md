@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206768"
 ---
 # <a name="batches-of-statements"></a>陳述式的批次
-  批次[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式包含兩個或多個陳述式，並以分號 （;），單一字串傳遞至內建**SQLExecDirect**或是[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)。 例如：  
+  批次[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式包含兩個或多個陳述式，並以分號 （;），單一字串傳遞至內建**SQLExecDirect**或是[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)。 例如:  
   
 ```  
 SQLExecDirect(hstmt,   

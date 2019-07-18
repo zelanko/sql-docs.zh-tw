@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207112"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>補充課程 - 不完全階層
 
@@ -27,7 +27,7 @@ ms.locfileid: "57685395"
 
 在 1400年相容性層級的表格式模型具有額外**隱藏成員**階層的屬性。 **預設**設定假設任何層級沒有空白的成員。 **隱藏空白成員**設定加入至樞紐分析表或報表時，從階層中排除空白成員。  
   
-完成本課程的估計時間：**20 分鐘的時間**  
+估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
 本文補充課程是表格式模型教學課程的一部分。 執行工作之前在此補充課程中，您應已完成所有先前的課程或已完成的 Adventure Works Internet Sales 範例模型專案。 

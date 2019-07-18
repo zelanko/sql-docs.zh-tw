@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18e1db56b747f5932a5fd6ee727cd99864517682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca55227cadb8516accf623bf18e7f40ebdf14e74
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762016"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584381"
 ---
 # <a name="view-the-table-definition"></a>檢視資料表定義
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47762016"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來顯示資料表屬性：**  
   
@@ -54,17 +54,19 @@ ms.locfileid: "47762016"
   
 1.  在 [物件總管] 中，選取您想要顯示屬性的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從捷徑功能表中選擇 [屬性]。 如需詳細資訊，請參閱 [資料表屬性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
-  
+2.  以滑鼠右鍵按一下資料表，然後從捷徑功能表中選擇 [屬性]  。 如需詳細資訊，請參閱 [資料表屬性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-show-table-properties"></a>若要顯示資料表屬性  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會從指定之物件的 `sys.tables` 目錄檢視傳回所有資料行。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會從指定之物件的 `sys.tables` 目錄檢視傳回所有資料行。  
   
     ```  
     SELECT * FROM sys.tables  

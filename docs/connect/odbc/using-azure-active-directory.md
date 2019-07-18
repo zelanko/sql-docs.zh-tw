@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801731"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -32,9 +32,9 @@ Microsoft ODBC Driver for SQL Server 使用 13.1 版或更新可讓 ODBC 應用�
 
 `Authentication`關鍵字可用於使用 DSN 或連接字串進行連接時控制的驗證模式。 設定連接字串中的值覆寫 DSN 中如果有提供。 _屬性值的預先_的`Authentication`設定是從連接字串和資料來源名稱值所計算的值。
 
-|[屬性]|值|預設|描述|
+|名稱|值|預設|描述|
 |-|-|-|-|
-|`Authentication`|（未設定），（空字串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`， `ActiveDirectoryMsi` |(未設定)|控制驗證模式。<table><tr><th>ReplTest1<th>描述<tr><td>(未設定)<td>驗證模式取決於其他關鍵字 （現有舊版連線選項）。<tr><td>(空字串)<td>連接字串說明覆寫並取消設定`Authentication`DSN 中的設定值。<tr><td>`SqlPassword`<td>直接驗證使用者名稱和密碼的 SQL Server 執行個體。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 身分識別的使用者名稱和密碼進行驗證。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驅動程式只_。 使用 Azure Active Directory 身分識別使用整合式的驗證進行驗證。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驅動程式只_。 使用 Azure Active Directory 身分識別使用互動式驗證進行驗證。<tr><td>`ActiveDirectoryMsi`<td>使用 使用受控的服務身分識別驗證的 Azure Active Directory 身分識別進行驗證。 指派給使用者的身分識別，UID 會設定為使用者識別的物件識別碼。</table>|
+|`Authentication`|（未設定），（空字串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`， `ActiveDirectoryMsi` |(未設定)|控制驗證模式。<table><tr><th>ReplTest1<th>描述<tr><td>(未設定)<td>驗證模式取決於其他關鍵字 （現有舊版連線選項）。<tr><td>(空字串)<td>連接字串覆寫並取消設定`Authentication`DSN 中的設定值。<tr><td>`SqlPassword`<td>直接驗證使用者名稱和密碼的 SQL Server 執行個體。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 身分識別的使用者名稱和密碼進行驗證。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驅動程式只_。 使用 Azure Active Directory 身分識別使用整合式的驗證進行驗證。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驅動程式只_。 使用 Azure Active Directory 身分識別使用互動式驗證進行驗證。<tr><td>`ActiveDirectoryMsi`<td>使用 使用受控的服務身分識別驗證的 Azure Active Directory 身分識別進行驗證。 針對使用者指派的身分識別，UID 會設為使用者身分識別的物件識別碼。</table>|
 |`Encrypt`|(未設定)、`Yes`、`No`|（請參閱描述）|控制連接的加密。 如果前的屬性值`Authentication`未設定_無_DSN 或連接字串中，預設值是`Yes`。 否則預設為 `No`。 如果屬性`SQL_COPT_SS_AUTHENTICATION`前的屬性值會覆寫`Authentication`，明確地設定 DSN 或連接字串或連接屬性中的加密值。 加密前的屬性值是`Yes`值設定為如果`Yes`DSN 或連接字串中。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>新增和/或修改連接屬性
@@ -105,14 +105,14 @@ DSN 設定和連接 Ui 的驅動程式已增強，以使用與 Azure AD 的驗�
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. 系統指派的 AAD 管理服務身分識別的驗證會使用或指派給使用者的身分識別進行驗證，若要設定連線。 指派給使用者的身分識別，UID 設的使用者身分識別的物件識別碼。<br>
+8. 系統指派的 AAD 管理服務身分識別的驗證會使用或指派給使用者的身分識別進行驗證，若要設定連線。 針對使用者指派的識別，UID 設成使用者身分識別的物件識別碼。<br>
 針對系統指派的身分識別，<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 指派給使用者的身分識別與物件 ID 等於 myObjectId，<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 
 > [!NOTE] 
->- 當新的 Active Directory 選項配合 Windows ODBC 驅動程式，請確認[適用於 SQL Server 的 Active Directory Authentication Library](https://go.microsoft.com/fwlink/?LinkID=513072)已安裝。 當使用 Linux 和 macOS 的驅動程式，請確定`libcurl`已安裝。 17.2 和更新版本的驅動程式版本，這是不明確的相依性因為不需要其他驗證方法或 ODBC 作業。
+>- 當新的 Active Directory 選項配合 Windows ODBC 驅動程式，請確認[適用於 SQL Server 的 Active Directory Authentication Library](https://go.microsoft.com/fwlink/?LinkID=513072)已安裝。 當使用 Linux 和 macOS 的驅動程式，請確定`libcurl`已安裝。 17\.2 和更新版本的驅動程式版本，這是不明確的相依性因為不需要其他驗證方法或 ODBC 作業。
 >- 若要使用的 SQL Server 帳戶的使用者名稱和密碼進行連接，您現在可以使用新`SqlPassword`選項，建議使用，特別是針對 SQL Azure 因為這個選項會啟用更安全連線的預設值。
 >- 若要使用的 Azure Active Directory 帳戶的使用者名稱和密碼進行連接，指定`Authentication=ActiveDirectoryPassword`連接字串中，`UID`和`PWD`關鍵字的使用者名稱和密碼，分別。
 >- 若要使用 Windows 整合式 」 或 「 Active Directory 整合式 （僅 Windows 驅動程式） 驗證連線，請指定`Authentication=ActiveDirectoryIntegrated`連接字串中。 驅動程式會自動選擇正確的驗證模式。 `UID` 和`PWD`不得指定。
@@ -168,7 +168,7 @@ typedef struct AccessToken
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-以下是搭配 Azure Active Directory 受控服務身分識別驗證的範例連接字串。 請注意，UID 設為使用者指派身分識別的使用者身分識別的物件識別碼。
+以下是搭配 Azure Active Directory 受控服務身分識別驗證的範例連接字串。 請注意，針對使用者指派的身分識別，UID 會設為使用者身分識別的物件識別碼。
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"

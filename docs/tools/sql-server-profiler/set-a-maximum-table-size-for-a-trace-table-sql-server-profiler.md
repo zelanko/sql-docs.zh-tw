@@ -11,15 +11,15 @@ helpviewer_keywords:
 - size [SQL Server], trace tables
 - maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a9237726570f35d913f27b24c69eebb1e58f8e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f4afa1f6f7070b041b20078c6a627f6debb00ad
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737202"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729900"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,28 +27,28 @@ ms.locfileid: "47737202"
   
 ### <a name="to-set-a-maximum-table-size-for-a-trace-table"></a>若要設定追蹤資料表的大小上限  
   
-1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]**，然後連接到 SQL Server 的執行個體。  
+1.  在 **[檔案]** 功能表上按一下 **[新增追蹤]** ，然後連接到 SQL Server 的執行個體。  
   
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
-3.  在 [範本名稱] 清單中，選取追蹤範本。  
+3.  在 [範本名稱]  清單中，選取追蹤範本。  
   
-4.  選取 [儲存至資料表] 核取方塊。  
+4.  選取 [儲存至資料表]  核取方塊。  
   
 5.  連接到您要儲存追蹤的伺服器。  
   
-     畫面上出現 [目的地資料表] 對話方塊。  
+     畫面上出現 [目的地資料表]  對話方塊。  
   
-6.  從 [資料庫] 清單中選取追蹤的資料庫。  
+6.  從 [資料庫]  清單中選取追蹤的資料庫。  
   
-7.  在 [資料表] 方塊中，輸入或選取資料表名稱。  
+7.  在 [資料表]  方塊中，輸入或選取資料表名稱。  
   
-8.  選取 [設定最大資料列數] 核取方塊，並指定追蹤資料表的最大資料列數。  
+8.  選取 [設定最大資料列數]  核取方塊，並指定追蹤資料表的最大資料列數。  
   
     > [!NOTE]  
     >  當資料表的資料列數超過您所指定的最大值時，就不會再記錄追蹤事件。 不過，仍會繼續追蹤。  

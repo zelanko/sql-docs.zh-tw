@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba54809cb8f0c1578d67a114e133850b3e5c7292
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 98ca574736da7d57f0c82f8bc447a9d4df7be33e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577938"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788968"
 ---
 # <a name="sqlserverexception-members"></a>SQLServerException 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207951"
 ---
 # <a name="network-properties"></a>網路屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "53072355"
  **EnableCompression**  
  此為布林值屬性，指定是否針對要求啟用壓縮。  
   
-## <a name="responses"></a>回應  
+## <a name="responses"></a>Responses  
  **CompressionLevel**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   

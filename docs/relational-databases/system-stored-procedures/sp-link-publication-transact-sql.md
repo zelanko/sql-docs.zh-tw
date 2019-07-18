@@ -1,5 +1,5 @@
 ---
-title: sp_link_publication (Transact-SQL) | Microsoft Docs
+title: sp_link_publication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139902"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意:在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個選項用來指定動態遠端程序呼叫 (RPC)。|  
-|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意:這個帳戶也必須存在於發行者端，且具有足夠的權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
+|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意:在舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此選項用來指定動態遠端程序呼叫 (RPC)。|  
+|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意:此帳戶也必須存在於發行者端具有足夠權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
 |**2**|使用現有使用者定義連結的伺服器登入以建立**sp_link_publication**。|  
   
 `[ @login = ] 'login'` 是登入。 *login* 是預設值為 NULL 的 **sysname**。 這個參數必須是指定何時*security_mode*是**0**。  
@@ -89,9 +88,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_link_publication**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_droppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

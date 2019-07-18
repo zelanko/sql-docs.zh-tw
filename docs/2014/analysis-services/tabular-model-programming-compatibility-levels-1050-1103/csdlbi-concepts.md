@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757942"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   具有 BI 註解的概念結構定義語言 (CSDLBI) 是以實體資料架構為基礎，這是一種用於表示資料摘要，以便用程式設計方式存取、查詢或匯出不同的資料集。 CSDLBI 可用來表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料模型，因為它支援豐富的資料驅動報表和應用程式。  
@@ -123,7 +121,7 @@ ms.locfileid: "53377000"
 >  標題和限定詞都具有翻譯，而且對於給定的語言而言，可能會存在其中一個。 這表示，如果限定詞與名稱或限定詞與標題已串連，則字串可能使用兩種不同的語言。  
   
 ## <a name="additions-to-support-multidimensional-models"></a>支援多維度模型的新增功能  
- CSDLBI 1.0 版註解僅支援表格式模型。 1.1 版中已加入使用傳統 BI 開發工具所建立之多維度模型 (OLAP Cube) 的支援。 因此，現在您可以對多維度模型發出 XML 要求，並且接收模型的 CSDLBI 定義，以便於報表中使用。  
+ CSDLBI 1.0 版註解僅支援表格式模型。 1\.1 版中已加入使用傳統 BI 開發工具所建立之多維度模型 (OLAP Cube) 的支援。 因此，現在您可以對多維度模型發出 XML 要求，並且接收模型的 CSDLBI 定義，以便於報表中使用。  
   
  **Cube:** SQL Server[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格式資料庫只能包含一個模式。 相反地，每個多維度資料庫都可包含多個 Cube，且每個資料庫會與預設 Cube 產生關聯。 因此，對多維度伺服器發出 XML 要求時，必須指定 Cube，否則將會傳回預設 Cube 的 XML。  
   

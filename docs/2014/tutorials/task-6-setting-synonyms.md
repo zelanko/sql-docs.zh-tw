@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489088"
 ---
 # <a name="task-6-setting-synonyms"></a>工作 6：設定同義字
   在這個工作中，您可以設定兩個定義域值，**美國**並**美國**的**國家/地區**同義字的網域**美國**為前置值。 由於**使用前置值**建立時，已選取選項**國家/地區**網域中，任何**USA**值**國家/地區**網域將會輸出為**美國**（因為 United States 是前置值）。 請參閱[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)如需詳細資訊。  

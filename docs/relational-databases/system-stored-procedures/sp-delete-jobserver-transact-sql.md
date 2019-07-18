@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobserver (Transact-SQL) | Microsoft Docs
+title: sp_delete_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130643"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定; 不能同時指定這兩者。  
   
-`[ @server_name = ] 'server'` 若要從指定的作業中移除目標伺服器的名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。 *伺服器*可以是 **(LOCAL)** 或遠端目標伺服器的名稱。  
+`[ @server_name = ] 'server'` 若要從指定的作業中移除目標伺服器的名稱。 *伺服器*已**nvarchar(30)** ，沒有預設值。 *伺服器*可以是 **(LOCAL)** 或遠端目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

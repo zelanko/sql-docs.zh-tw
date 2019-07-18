@@ -1,38 +1,37 @@
 ---
 title: 升級和移轉 Reporting Services | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 95bf8da81caa71b3f095e7143292cd60e807b585
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108628"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  本主題是升級和移轉選項的概觀[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的一般方式有兩種：  
+
+本主題是升級和移轉選項的概觀[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的一般方式有兩種：  
   
--   **升級：** 您可以在目前安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱稍後這份文件和相關的主題的 < 原生至 SharePoint 移轉 > 一節[Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+-   **升級：** 您升級[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的伺服器和目前安裝所在的執行個體上的元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱稍後這份文件和相關的主題的 < 原生至 SharePoint 移轉 > 一節[Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
--   **移轉**:安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境，以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
+-   **移轉**:您會安裝和設定新的 SharePoint 環境中，將您的報表項目和資源複製到新環境，並設定新環境，以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
 ##  <a name="bkmk_top"></a> 本主題內容：  
   
@@ -113,7 +112,7 @@ ms.locfileid: "56017179"
   
 -   備份在 IIS 中對現有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虛擬目錄所進行的任何自訂。  
   
--   移除無效的 SSL 憑證。  這包括已過期而且您不打算要在升級 Reporting Services 之前更新的憑證。  無效的憑證會導致升級失敗，並將類似下列的錯誤訊息寫入 Reporting Services 記錄檔：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:在網站上未設定安全通訊端層 (SSL) 憑證**。  
+-   移除無效的 SSL 憑證。  這包括已過期而且您不打算要在升級 Reporting Services 之前更新的憑證。  無效的憑證會導致升級失敗，並將類似下列的錯誤訊息寫入 Reporting Services 記錄檔：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:在網站上未設定安全通訊端層 (SSL) 憑證。** .  
   
  在升級實際執行環境之前，請務必在與實際執行環境具有相同組態的實際執行前環境中執行測試升級。  
   
@@ -135,7 +134,7 @@ ms.locfileid: "56017179"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> 原生模式升級和移轉狀況  
- **升級：** 原生模式的就地升級對於每個稍早在本主題中列出的支援版本而言，是相同的程序。 執行 SQL Server 安裝精靈或命令列安裝。 在安裝之後，報表伺服器資料庫將自動升級至新的報表伺服器資料庫結構描述。 如需詳細資訊，請參閱本主題中的＜ [In-place upgrade](#bkmk_inplace_upgrade) ＞一節。  
+ **升級：** 原生模式的就地升級是每個稍早在本主題中列出的支援版本的相同程序。 執行 SQL Server 安裝精靈或命令列安裝。 在安裝之後，報表伺服器資料庫將自動升級至新的報表伺服器資料庫結構描述。 如需詳細資訊，請參閱本主題中的＜ [In-place upgrade](#bkmk_inplace_upgrade) ＞一節。  
   
  當您選取要升級的現有報表伺服器執行個體時，升級程序就會開始。  
   
@@ -155,7 +154,7 @@ ms.locfileid: "56017179"
   
     3.  其他用戶端工具 (例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和線上叢書) 不會升級。 若要取得這些工具的新版本，可以在執行安裝程式時將其加入。 舊版將可與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本並存。 如果您安裝了範例，舊版將會保留下來。 安裝程式不支援 SQL Server 範例的升級。  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是不同的下載。 如需詳細資訊，請參閱 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512)。  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是不同的下載。 如需詳細資訊，請參閱 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)。  
   
 6.  安裝程式會在 Service Control Manager 中重複使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Server 服務的服務項目。 這個服務項目包含 Report Server Windows 服務帳戶。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "56017179"
   
 9. 安裝程式會合併組態檔中的設定。 使用目前安裝中的組態檔當做基礎，加入新的項目。 已過時的項目不會移除，但是報表伺服器在升級完成之後不會再讀取這些項目。 升級將不會刪除舊的記錄檔、過時的 RSWebApplication.config 檔，或是 IIS 中的虛擬目錄設定。 升級也不會移除 SQL Server 2005 報表設計師、Management Studio 或其他用戶端工具。 如果您不再需要這些項目，請務必在升級完成之後移除這些檔案和工具。  
   
- **移轉：** 將舊版的原生模式安裝移轉至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於所有稍早在本主題中列出的支援版本而言是相同的步驟。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **移轉：** 舊版的原生模式安裝移轉[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是相同的步驟，對於所有稍早在本主題中所列支援版本。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
@@ -204,7 +203,7 @@ ms.locfileid: "56017179"
   
  **結束環境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，SharePoint 2010 或 SharePoint 2013。  
   
--   **SharePoint 2010：** 支援就地升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但是此升級案例需要將 SharePoint 環境停機。  
+-   **SharePoint 2010：** 就地升級[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援，但此升級案例需要將 SharePoint 環境停機。  
   
      如果您也想要讓結束環境執行 SharePoint 2013，則必須完成 SharePoint 2010 到 SharePoint 2013 的資料庫附加升級。  
   
@@ -213,9 +212,9 @@ ms.locfileid: "56017179"
      如果您擁有與 SharePoint 2010 整合的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝，就無法就地升級 SharePoint 伺服器。 不過，您可以將內容資料庫和伺服器應用程式資料庫從 SharePoint 2010 伺服器陣列移轉至 SharePoint 2013 伺服器陣列。  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **起始環境：** SQL Server 2008 R2、SharePoint 2010。  
+ **起始環境：** SQL Server 2008 R2, SharePoint 2010.  
   
- **結束環境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
+ **結束環境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
 -   不支援就地升級，而且 SharePoint 環境沒有停機。  
   
@@ -228,9 +227,9 @@ ms.locfileid: "56017179"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 升級為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **起始環境：**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2，SharePoint 2007。  
+ **起始環境：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2，SharePoint 2007。  
   
- **結束環境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
+ **結束環境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
 -   這個就地升級狀況不需要將 SharePoint 環境停機，因為 SharePoint 和 SQL Server 技術都需要升級。 您可能要考慮完成移轉，而不是就地升級。  
   
@@ -247,10 +246,10 @@ ms.locfileid: "56017179"
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
-### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SQL Server 2005 SP2 升級為   
+### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SQL Server 2005 SP2 升級為  
  **起始環境：** SQL Server 2005 SP2，SharePoint 2007。  
   
- **結束環境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
+ **結束環境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
 -   這個就地升級狀況不需要將 SharePoint 環境停機，因為 SharePoint 和 SQL Server 技術都需要升級。 您可能要考慮完成移轉，而不是就地升級。  
   
@@ -305,11 +304,11 @@ ms.locfileid: "56017179"
 > [!NOTE]  
 >  如需有關 SharePoint 資料庫附加升級的詳細資訊，請參閱下列主題：  
   
--   [SharePoint 2013 升級程序的概觀](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [SharePoint 2013 升級程序的概觀](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688) 。  
   
--   [清除準備工作，再升級為 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清除準備工作，再升級為 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689) 。  
   
--   [將資料庫從 SharePoint 2010 升級至 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [將資料庫從 SharePoint 2010 升級至 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   

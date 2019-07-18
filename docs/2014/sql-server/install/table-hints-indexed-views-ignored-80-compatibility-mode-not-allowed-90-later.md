@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
@@ -14,15 +13,15 @@ ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf4f8e5c3ea23b1ab52199c884c2980bf52bc983
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69a6bae06b1cb5d7a727ff2582f10bccf1e21ca8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091811"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>在 80 相容性模式中，將忽略索引檢視定義中的資料表提示，而在 90 或之後的模式中則不允許
-  在 90 或之後的相容性模式中，不允許在索引檢視的定義中使用資料表提示。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的下列主題：＜設計索引檢視＞、＜建立索引檢視＞和＜查詢提示 ([!INCLUDE[tsql](../../includes/tsql-md.md)])＞。  
+  在 90 或之後的相容性模式中，不允許在索引檢視的定義中使用資料表提示。 如需詳細資訊，請參閱中的下列主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》:< 設計索引的檢視 」，「 建立索引檢視 」 和 「 查詢提示 ([!INCLUDE[tsql](../../includes/tsql-md.md)])。 」  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -32,6 +31,6 @@ ms.locfileid: "48160048"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

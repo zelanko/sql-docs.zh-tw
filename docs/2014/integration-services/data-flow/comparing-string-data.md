@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828142"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
   字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  
@@ -78,7 +78,7 @@ ms.locfileid: "58394126"
   
  「排序」、「彙總」「模糊群組」和「模糊查閱」轉換包含這些用於比較資料的選項。  
   
- 「模糊群組」和「模糊查閱」轉換的 [進階編輯器] 對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive] 比較旗標表示會套用所有的比較選項。  
+ 「模糊群組」和「模糊查閱」轉換的 [進階編輯器]  對話方塊中會顯示 **FullySensitive** 比較旗標。 選取 [FullySensitive]  比較旗標表示會套用所有的比較選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 資料類型](integration-services-data-types.md)   

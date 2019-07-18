@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64774844"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果您有資料行存放區索引，請參閱 [使用克隆數據庫上的Columnstore索引調優查詢時的注意事項](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) (在複製資料庫上使用資料行存放區索引調整查詢時的考量) 更新資料行存放區索引統計資料，再執行 **DBCC CLONEDATABASE** 命令。  從 SQL Server 2019 開始，將不再需要上述文章中所述的手動步驟，因為 **DBCC CLONEDATABASE** 命令會自動收集此資訊。
+> 如果您有資料行存放區索引，請參閱 [使用克隆數據庫上的Columnstore索引調優查詢時的注意事項](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294) (在複製資料庫上使用資料行存放區索引調整查詢時的考量) 更新資料行存放區索引統計資料，再執行 **DBCC CLONEDATABASE** 命令。  從 SQL Server 2019 開始，將不再需要上述文章中所述的手動步驟，因為 **DBCC CLONEDATABASE** 命令會自動收集此資訊。
 
-如需複製資料庫上資料安全性的相關資訊，請參閱 [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/) (了解複製資料庫中的資料安全性)。
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>資料行存放區索引的統計資料 Blob
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 `DBCC CLONEDATABASE` 會自動擷取資料行存放區索引的統計資料 Blob，因此不需要任何手動步驟。`DBCC CLONEDATABASE` 建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有元素，而不需複製資料。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。
+
+如需複製資料庫上資料安全性的相關資訊，請參閱 [Understanding data security in cloned databases](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287) (了解複製資料庫中的資料安全性)。
 
 ## <a name="internal-database-snapshot"></a>內部資料庫快照集
 DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得執行複製所需的交易一致性。 使用此快照集可以防止在執行這些命令時，發生封鎖和並行問題。 如果無法建立快照集，DBCC CLONEDATABASE 將會失敗。 
@@ -176,7 +182,7 @@ DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得�
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。
 
 ## <a name="error-log-messages"></a>錯誤記錄檔訊息

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 6131551a793257e201809dff469ee0980b8ece61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639446"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256648"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適用於 Oracle 的移轉小幫手 (SSMA) 版本現在已可透過在命令列主控台應用程式。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式中，SSMA 啟用指令碼層級互動可減少移轉週期，並調整的移轉工作。  
@@ -26,7 +26,7 @@ ms.locfileid: "47639446"
   
 |||  
 |-|-|  
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |[開始使用 SSMA for Oracle 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|說明執行主控台應用程式的程序。|  
 |[SSMA 主控台中的命令列選項&#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|描述操作 SSMA 主控台應用程式的命令列選項和參數。|  
 |[建立指令碼檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|說明如何建立指令碼檔案。|  

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 12f2005627d98a526df4f99fab3750dd40429500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bfc66f9a271525fdcea7b6c6a21a5a1448ad0ff
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730120"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([登入] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

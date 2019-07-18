@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: a1b25ea57ef34ebe8dd0c098695a0b59b6f87472
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789634"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性群組疑難排解和監視指南
  本指南將協助您開始監視 Always On 可用性群組，並且對可用性群組中的某些常見的問題進行疑難排解。 本指南將提供在其他位置已發佈的有用資訊的原始內容和登陸頁面。 雖然本指南無法完整討論在可用性群組大範圍中發生的所有問題，但是可以為您指出根本原因分析和問題解決的正確方向。 

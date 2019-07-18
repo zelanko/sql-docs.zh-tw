@@ -18,12 +18,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c7abfc8f9ae7837ad1a89214c2e956ed5ff63a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9bc4038e2f0b683668530298eb7a9a0418831cd0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520916"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583110"
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,10 @@ ms.locfileid: "52520916"
      索引作業期間支援來源和目標結構所需的總磁碟空間是 816 MB (363 + 453)。 在索引作業認可之後，將會重新配置目前對來源結構配置的空間。  
   
 3.  決定額外的暫存磁碟空間以供排序。  
-  
-     會顯示在 **tempdb** 排序 (SORT_IN_TEMPDB 設為 ON) 和在目標位置排序 (SORT_IN_TEMPDB 設為 OFF) 的空間需求。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
   
     1.  當 SORT_IN_TEMPDB 設為 ON 時， **tempdb** 必須有足夠的磁碟空間，才能保留最大的索引 (1 百萬 * 200 位元組 ~ 200 MB)。 在排序作業中不考慮填滿因數。  
   
@@ -116,7 +118,7 @@ ms.locfileid: "52520916"
 |線上索引作業，SORT_IN_TEMPDB = ON|作業期間的總空間：1058 MB<br /><br /> -現有的資料表和索引：363 MB\*<br /><br /> -<br />                    **tempdb** (包含對應索引)：242 MB*<br /><br /> -新的索引：453 MB<br /><br /> 作業之後所需的總空間：453 MB|  
 |線上索引作業，SORT_IN_TEMPDB = OFF|作業期間的總空間：856 MB<br /><br /> -現有的資料表和索引：363 MB*<br /><br /> -暫存對應索引：40 MB\*<br /><br /> -新的索引：453 MB<br /><br /> 作業之後所需的總空間：453 MB|  
   
- * 此空間在索引作業認可之後會重新配置。  
+ \* 此空間在索引作業認可之後會重新配置。  
   
  此範例不考慮任何 **tempdb** 中，並行使用者更新及刪除作業建立的版本記錄所需的額外暫存磁碟空間。  
   

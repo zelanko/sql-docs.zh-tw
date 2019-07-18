@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - trace flags [SQL Server], behavior changes
@@ -13,12 +12,12 @@ ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe5d7e5580fb59616dbde50244bf1b45e94d2dfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096614"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>追蹤旗標之行為的變更
   工作階段所設定的全域追蹤旗標會立即在其他工作階段中生效。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的某些追蹤旗標不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。  
@@ -35,6 +34,6 @@ ms.locfileid: "48104528"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CovarianceN (MDX) |Microsoft 文件
+title: CovarianceN (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 054acaaca417ca7d3fa5303fb31b5ea027bfcd72
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 796dc37127eba984477aef628e4ae9161db4637e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047178"
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
 
@@ -41,12 +40,12 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 ## <a name="remarks"></a>備註  
  **CovarianceN**函式評估指定的集合，針對第一個數值運算式，以取得 y 軸的值。 此函數接著會針對第二個數值運算式 (如果已指定) 來評估指定的集合，以取得 X 軸的值集合。 如果沒有指定第二個數值運算式，此函數會使用指定集合中的資料格目前內容，做為 X 軸的值。  
   
- **CovarianceN**函式會使用非偏誤的母體公式。 這是相對於[共變數](../mdx/covariance-mdx.md)函式，會使用偏誤的母體公式 （除以 x-y 配對數）。  
+ **CovarianceN**函式會使用非偏誤的母體公式。 這是相對於[共變性](../mdx/covariance-mdx.md)函式，會使用偏誤的母體公式 （除以 x-y 配對數）。  
   
 > [!NOTE]  
->  **CovarianceN**函式會忽略空白資料格包含文字或邏輯值。 不過，此函數包括值為零的資料格。  
+>  **CovarianceN**函式會忽略空資料格或包含文字或邏輯值的資料格。 不過，此函數包括值為零的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

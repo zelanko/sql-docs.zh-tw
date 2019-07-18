@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109729"
 ---
 # <a name="contents-page-report-manager"></a>內容頁面 (報表管理員)
   使用 [內容] 頁面來檢視目前資料夾的內容、選取要檢視的項目或導覽到其他資料夾。 此頁面會在您選取資料夾時開啟。 它也是報表管理員的首頁。  
   
  [內容] 頁面顯示您有權檢視的項目。 依據您擁有的權限，也可以移動、刪除和加入項目。 您必須按一下 **[詳細資料檢視]** ，才能存取 **[刪除]** 和 **[移動]** 按鈕。 如果無法看到任何項目，請洽詢您的報表伺服器管理員。 這可能是因為您尚未被指派至可提供報表伺服器內容或作業之存取權的角色。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新增資料夾**  
  按一下即可開啟 [新增資料夾] 頁面，可在目前資料夾之下建立資料夾。  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b43a31ca221a150418f02c3bfd4f7bba58d1d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fa643d527d2b6456e196df35c4b1af72c5f2bf5c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634146"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796496"
 ---
 # <a name="isnamed-method-sqlserversavepoint"></a>isNamed 方法 (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

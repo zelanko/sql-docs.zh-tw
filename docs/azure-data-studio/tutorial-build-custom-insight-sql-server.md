@@ -2,21 +2,20 @@
 title: 教學課程：建置自訂的深入解析小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何建置自訂的深入解析小工具，並將它們新增至 Azure Data Studio 中的資料庫和伺服器儀表板。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959092"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>教學課程：建置自訂的深入解析小工具
 
@@ -31,7 +30,7 @@ ms.locfileid: "53030032"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)

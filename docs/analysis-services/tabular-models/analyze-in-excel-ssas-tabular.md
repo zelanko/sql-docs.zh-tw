@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: abd910573f512e32ee58c6c3afabac17664f4b24
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207763"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52983869"
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |---------------|---------------------|  
 |[在 Excel 中分析表格式模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|本文說明如何使用 Excel 功能，在模型設計師中的分析，來開啟 Excel、 建立模型工作空間資料庫中，資料來源連接以及將樞紐分析表加入工作表。|  
   

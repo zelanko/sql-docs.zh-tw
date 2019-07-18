@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053388"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "47719716"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一語言識別碼。|  
 |dateformat|**nchar(3)**|日期的順序，例如 DMY。|  
-|datefirst|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
-|升級|**int**|保留供系統使用。|  
-|NAME|**sysname**|官方語言名稱，例如 Fran&#xE7;ais。|  
+|datefirst|**tinyint**|一週的第一天：1 代表星期一，2 代表星期二，以此類推至 7 代表星期日。|  
+|upgrade|**int**|保留供系統使用。|  
+|name|**sysname**|官方語言名稱，例如 Fran&#xE7;ais。|  
 |alias|**sysname**|替代語言名稱，例如 French。|  
 |months|**nvarchar(372)**|以逗號分隔的清單，依一月至十二月的順序列出完整長度的月份名稱，每個名稱最多可有 20 個字元。|  
 |shortmonths|**nvarchar(132)**|以逗號分隔的清單，依一月至十二月的順序列出簡短的月份名稱，每個名稱最多可有 9 個字元。|  

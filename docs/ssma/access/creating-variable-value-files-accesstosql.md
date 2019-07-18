@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006600"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL)
 變數的值，檔案是 XML 檔案包含經常變更整個伺服器的移轉命令 （例如來源或目的地伺服器名稱） 的參數值。 大量的資料庫移轉發生時，建立和主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的價值 **-v**在命令列切換。 此行為有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  
   
 > [!NOTE]  
 > -  變數名稱會做為前置詞和後置字元為 $ （美元） 符號。 如果變數未指派的變數值檔案中的值，在指令碼檔案的剖析期間會發生錯誤，導致懸置在主控台執行程序。  
-> -  逸出字元**$** 是**$$**。 如果變數或靜態值的參數值包含**$** （貨幣） 符號，然後**$$** 必須指定將它視為一個字元，而不是變數。  
+> -  逸出字元 **$** 是 **$$** 。 如果變數或靜態值的參數值包含 **$** （貨幣） 符號，然後 **$$** 必須指定將它視為一個字元，而不是變數。  
 > -  基於可維護性，變數可以宣告內`'variable-group'`使用者定義變數的邏輯分隔的項目。  這個元素的使用方式不是必要的。  
   
 **範例：**  

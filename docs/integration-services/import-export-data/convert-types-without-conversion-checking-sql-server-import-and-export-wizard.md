@@ -12,15 +12,19 @@ ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5e0afe01fea1855dde6e174a12d6a9971e78b83
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e98140e69ce5ba617f1ee048648e73dbc54437b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723839"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
-  選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 可能會顯示 [轉換類型但不檢查轉換] 。 當精靈找不到對應來源和目的地間資料類型所需的一或多個資料類型轉換和對應檔時，就會顯示此頁面。 此頁面包含可協助您了解遺漏項目的資訊。
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 可能會顯示 [轉換類型但不檢查轉換]  。 當精靈找不到對應來源和目的地間資料類型所需的一或多個資料類型轉換和對應檔時，就會顯示此頁面。 此頁面包含可協助您了解遺漏項目的資訊。
   
  按一下 [下一步]  繼續進行而不知道資料類型轉換是否會成功。 否則，按一下 [上一步]  變更您的選擇，或是按一下 [取消]  以結束精靈。
 
@@ -35,7 +39,7 @@ ms.locfileid: "58222162"
 本頁資訊不包含遺漏之對應檔的名稱。 因為精靈不知道指定的資料提供者是否有檔案，所以它無法提供遺漏檔案的名稱。
 
 ## <a name="whats-next"></a>下一步  
- 按一下 [下一步]  同意繼續進行而不知道資料類型轉換是否會成功之後，下一頁是 [儲存並執行封裝] 。 在此頁面上，您可以指定是否要立即執行複製作業。 根據組態，您也可以儲存精靈所建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便在稍後進行自訂並重複使用。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
+ 按一下 [下一步]  同意繼續進行而不知道資料類型轉換是否會成功之後，下一頁是 [儲存並執行封裝]  。 在此頁面上，您可以指定是否要立即執行複製作業。 根據組態，您也可以儲存精靈所建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便在稍後進行自訂並重複使用。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 匯入及匯出精靈的資料類型對應](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

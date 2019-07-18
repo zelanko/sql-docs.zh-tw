@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039040"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ go
 -- result = 1  
 ```  
   
- 在下列範例中，查詢會指定針對具型別**xml**資料行。 `if` 運算式會檢查 <`ROOT`> 元素的具類型布林值，並據此傳回建構的 XML。 本範例將執行下列動作：  
+ 在下列範例中，查詢會指定針對具型別**xml**資料行。 `if`運算式會檢查具類型布林值 <`ROOT`> 項目，並據此傳回建構的 XML。 本範例將執行下列動作：  
   
--   建立 XML 結構描述集合，在其中定義 xs:boolean 類型的 <`ROOT`> 元素。  
+-   建立 XML 結構描述集合定義 <`ROOT`> xs: boolean 類型的項目。  
   
 -   建立含有具類型的資料表**xml**使用 XML 結構描述集合的資料行。  
   

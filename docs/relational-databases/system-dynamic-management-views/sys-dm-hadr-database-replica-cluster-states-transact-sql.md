@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900672"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回包含資訊的資料列的目的是為了讓您深入了解 Always On 可用性群組中每個 Always On 可用性群組中 Windows Server 容錯移轉叢集 (WSFC) 叢集上的可用性資料庫健全狀況。 查詢**sys.dm_hadr_database_replica_states**來回答下列問題：  
+  傳回包含資訊的資料列，該資訊的目的是為了提供您 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個 Always On 可用性群組內 AlwaysOn 可用性群組的可用性資料庫健康情況見解。 查詢**sys.dm_hadr_database_replica_states**來回答下列問題：  
   
 -   可用性群組中的所有資料庫都已準備好可進行容錯移轉嗎？  
   
@@ -39,7 +38,7 @@ ms.locfileid: "47636676"
   
 -   如果主要複本目前無法使用，哪一個次要複本會在成為主要複本時允許最少的資料遺失？  
   
--   當 windows 7 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc**資料行是"AVAILABILITY_REPLICA"，可用性群組中的哪一個次要複本阻止給定主要資料庫上的記錄截斷?     
+-   當 windows 7 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc**資料行是"AVAILABILITY_REPLICA"，可用性群組中的哪一個次要複本阻止給定主要資料庫上的記錄截斷?  
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

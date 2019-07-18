@@ -11,14 +11,18 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275431"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726689"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  您可以在執行階段修改 OData 來源查詢，修改的方式是將「運算式」加入資料流程工作的 **[OData Source].[Query]** 屬性。  
   
  傳回的資料行必須是設計階段所傳回的相同資料行，否則會在執行封裝時收到錯誤。 在使用 $select 查詢選項時，請務必指定相同的資料行 (以相同順序)。 使用 $select 選項有一個更安全的替代方法，也就是直接從來源元件 UI 取消選取您不想要的資料行。  

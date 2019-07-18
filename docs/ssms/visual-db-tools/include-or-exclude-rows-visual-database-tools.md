@@ -19,15 +19,15 @@ helpviewer_keywords:
 - row included in search [SQL Server]
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d14822bd344179f2673588baa21439966d9ee2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2fc070db04e6d64b1e7901acff4178d44cb7b878
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819276"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682256"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

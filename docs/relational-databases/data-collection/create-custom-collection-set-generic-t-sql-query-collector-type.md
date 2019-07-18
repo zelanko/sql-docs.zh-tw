@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7184a6d2e3f10889233f6ed4b2057755dc9bdd72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653435"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>建立自訂收集組 - 一般 T-SQL 查詢收集器類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47610436"
     GO  
     ```  
   
-     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中進行目視檢查。 在物件總管中，展開 [管理] 節點，然後展開 [資料收集]。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
+     您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中進行目視檢查。 在物件總管中，展開 [管理]  節點，然後展開 [資料收集]  。 將會顯示新的收集組。 收集組的紅色圓圈圖示是表示此收集組已經停止。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會結合上述步驟所列的範例。 請注意，這時針對收集項所設定的收集頻率 (5 秒) 將會遭到忽略，因為收集組的收集模式設定為 0，而這是快取模式。 如需相關資訊，請參閱 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  

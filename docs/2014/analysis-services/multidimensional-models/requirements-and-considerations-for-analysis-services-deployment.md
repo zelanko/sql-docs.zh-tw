@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073166"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的需求和考量
   方案的效能和可用性取決於許多因素，包括基礎硬體的功能、伺服器部署的拓撲、方案的特性 (例如，具有跨多部伺服器分散的資料分割，或使用需要直接存取關聯式引擎的 ROLAP 儲存)、伺服器等級協定，以及資料模型的複雜性。  

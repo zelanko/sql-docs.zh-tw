@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66749130"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55044385"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。
 
 ### <a name="functional"></a>功能
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引不支援保存的資料行。您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引中不支援保存的計算資料行。 您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 會加入索引鍵增強功能，以改善資料行存放區索引的效能和彈性。 這些改善會強化資料倉儲案例，並進行即時作業分析。  

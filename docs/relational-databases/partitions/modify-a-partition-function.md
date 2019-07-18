@@ -11,12 +11,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: bd863e5869e820d07e67baf6094fe00a5b9b4a56
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414143"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580794"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53414143"
   
 -   ALTER PARTITION FUNCTION 只能用來將一個資料分割拆解成兩個，或將兩個資料分割合併為一個。 若要變更資料表或索引的資料分割方式 (例如，從 10 個資料分割變更成 5 個)，您可以使用下列任何一個選項：  
   
-    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [管理資料分割精靈]，將舊資料表中的資料插入新資料表中。  
+    -   使用所需的資料分割函數來建立新的資料分割資料表，然後再使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [管理資料分割精靈]  ，將舊資料表中的資料插入新資料表中。  
   
     -   建立堆積的資料分割叢集索引。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53414143"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  下列中的任何權限都可用來執行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -82,19 +82,21 @@ ms.locfileid: "53414143"
   
 2.  展開 **[資料分割函數]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]。  
+3.  以滑鼠右鍵按一下您想要刪除的資料分割函數，然後選取 [刪除]  。  
   
-4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]**。  
-  
+4.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割函數，然後按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>若要將單一資料分割拆解成兩個資料分割  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
@@ -117,9 +119,9 @@ ms.locfileid: "53414143"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966700"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close 方法、Table Type 屬性範例 (VB)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性設**Nothing**應該關閉目錄的連線。 相關聯的集合是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 任何已快取這些物件的屬性仍然可以使用，但嘗試讀取屬性需要呼叫提供者將會失敗。  

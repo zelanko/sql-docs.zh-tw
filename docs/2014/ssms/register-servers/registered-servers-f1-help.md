@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc15477759c7039533250cf98323729334cf5b80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049304"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
   此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [已註冊的伺服器] 元件的 F1 說明主題。  

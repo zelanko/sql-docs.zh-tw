@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50292ea6232a4234cd01e54867ab0ef97c254c6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 87f1b0b5b0c6005af03e7abb56006bf0a6b476de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106735"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>變更 SQL Server 驗證使用者密碼 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081914"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX 陳述式
 CREATE INDEX 陳述式的語法是：  
   
  建立 [UNIQUE] 的索引*的索引名稱*ON*資料表名稱*(*資料行識別碼*[ASC] [DESC] [，*資料行識別碼*[ASC][DESC]...])具有\<*索引選項清單*>  
   
- 何處\<*索引的選項清單*> 可以是： 主要&#124;不允許 NULL&#124;忽略 NULL  
+ 何處\<*的索引選項清單*> 可以是：主要&#124;不允許 NULL&#124;忽略 NULL  
   
  Microsoft Access 驅動程式會使用不允許 NULL] 和 [略過空值的索引選項。 DBASE 和 Paradox 驅動程式接受的語法，但忽略的其中一個選項存在。  
   

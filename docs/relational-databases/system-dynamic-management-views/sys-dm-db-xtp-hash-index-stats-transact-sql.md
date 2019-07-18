@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 683adbb172802d3709250c3cac46efdbed6cc544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026837"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   這些統計資料有助於了解及調整值區計數。 另外還可用於偵測索引鍵擁有太多重複項目的情況。  
   
- 大型平均鏈結長度代表有許多資料列會雜湊處理至相同貯體內。 發生這種情況可能是因為：  
+ 平均鏈結長度較大時，表示有許多資料列經過雜湊處理進入相同貯體內。 發生這種情況可能是因為：  
   
 -   如果空貯體的數目較低或平均和最大鏈結長度類似，總值區計數就可能過低。 這樣會導致將許多不同的索引鍵雜湊處理至相同貯體。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47766127"
   
 如需詳細資訊，請參閱 <<c0> [ 記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父資料表的物件識別碼。|  
 |xtp_object_id|**bigint**|記憶體最佳化資料表的識別碼。|  

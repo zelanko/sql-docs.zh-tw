@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61a3e4f7632c5251eb0404a2e4c8a4c0820c1f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100230"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新增共用排程 (Management Studio)
   您可以使用這個頁面來建立共用排程，以便執行已發行的報表和訂閱。 共用排程可以用來取代報表特定或訂閱特定的排程。 集中式排程資訊以及暫停和繼續排程作業的能力是區別共用排程與項目特有排程的兩個重要功能。  
@@ -27,12 +26,12 @@ ms.locfileid: "56017249"
   
  排程處理是以主控和處理排程之報表伺服器的本機時間為基礎。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連線至報表伺服器、以滑鼠右鍵按一下 [共用排程]，然後選取 [新增排程]。 若要儲存排程，SQL Server Agent 服務必須正在執行。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連線至報表伺服器、以滑鼠右鍵按一下 [共用排程]  ，然後選取 [新增排程]  。 若要儲存排程，SQL Server Agent 服務必須正在執行。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  鍵入共用排程的名稱。 當使用者針對報表和訂閱選取共用排程時，這個名稱會顯示在下拉式清單中。 請務必提供可輕易地容納在清單中而且可輕易地區別共用排程的描述性名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   

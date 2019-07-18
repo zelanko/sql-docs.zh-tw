@@ -26,16 +26,16 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ad284fdb121900e3c6eff89f38213c09cf0331b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510915"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582309"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  您可以建立 **XML** 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 **XML** 類型的變數、參數和資料行建立關聯。 在此情況下，此 **XML** 資料類型的執行個體即稱為「具類型」。 非此種情況下的 XML 執行個體則稱為「不具類型」。  
+  您可以建立 **XML** 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 **XML** 類型的變數、參數和資料行建立關聯。 在此情況下，此 **XML** 資料類型的執行個體即稱為「具類型」  。 非此種情況下的 XML 執行個體則稱為「不具類型」  。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正確的 XML 和 xml 資料類型  
  **XML** 資料類型會實作 ISO 標準 **XML** 資料類型。 因此，它可以在不具類型的 XML 資料行中儲存格式良好的 XML 1.0 版文件，也可以儲存含有文字節點和任意數量之最上層元素的所謂 XML 內容片段。 系統會確認資料的格式良好、不需要將資料行繫結到 XML 結構描述，並拒絕在某種程度上格式不良的資料。 對於不具類型的 XML 變數和參數而言，也是如此。  
@@ -154,7 +154,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  在下列情況下，任何小於 1 年 1 月 1 日的 **xs:date** 或 **xs:dateTime** 值都會導致發生執行階段錯誤：當重建索引時，或是針對包含該值的 XML 資料類型執行 XQuery 或 XML-DML 陳述式時。  
   
 2.  **xs:date** 或 **xs:dateTime** Facet 中的任何負數年份或是 XML 結構描述集合中的預設值，將會自動更新為基底 **xs:date** 或 **xs:dateTime** 類型所允許的最小值 (例如 **xs:dateTime**的 0001-01-01T00:00:00.0000000Z)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  請注意，您仍然可以使用簡單 SQL SELECT 陳述式來擷取整個 XML 資料類型，即使它包含負數年份。 建議您使用新支援範圍中的年份來取代負數年份，或是將元素或屬性的類型變更為 **xs:string**。  
   
 ## <a name="see-also"></a>另請參閱  

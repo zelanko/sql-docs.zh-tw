@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918621"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)針對符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合準則時，目前的資料列位置會設定上所找到的記錄;否則，位置會設定為結尾 （或起始） 的**資料錄集**。  
@@ -39,10 +38,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字串**包含在搜尋中指定要使用的資料行名稱、 比較運算子和值的陳述式的值。  
   
  *SkipRows*  
- 選擇性 *。* A**長**值，其預設值為零，指出目前資料列的資料列位移或*開始*書籤，以便開始搜尋。 根據預設，搜尋會開始對目前資料列。  
+ 選擇性。 A**長**值，其預設值為零，指出目前資料列的資料列位移或*開始*書籤，以便開始搜尋。 根據預設，搜尋會開始對目前資料列。  
   
  *SearchDirection*  
- 選擇性 *。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該在目前的資料列或下一個可用的資料列的方向搜尋開始搜尋。 不成功的搜尋便會停止在結尾**Recordset**的值是否**adSearchForward**。 不成功的搜尋便會停止在開頭**Recordset**的值是否**adSearchBackward**。  
+ 選擇性。 A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該在目前的資料列或下一個可用的資料列的方向搜尋開始搜尋。 不成功的搜尋便會停止在結尾**Recordset**的值是否**adSearchForward**。 不成功的搜尋便會停止在開頭**Recordset**的值是否**adSearchBackward**。  
   
  *啟動*  
  選擇性。 A **Variant**做為搜尋的起始位置的書籤。  
@@ -50,7 +49,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>備註  
  只能在單一資料行名稱可以指定以*準則*。 這個方法不支援多重資料行搜尋。  
   
- 中的比較運算子*準則*可能是"**>**」 （大於）、 「**\<**"（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、 「 <>"（不等於） 或"like"（模式比對）。  
+ 中的比較運算子*準則*可能是" **>** 」 （大於）、 「 **\<** "（小於）、"="（等於）、"> ="（大於或等於）"< ="（小於或等於）、 「 <>"（不等於） 或"like"（模式比對）。  
   
  中的值*準則*可能是字串、 浮點數或日期。 字串值是以單引號或"#"（數字符號） 標記分隔 (比方說，」 狀態 = 'WA' 」 或 「 狀態 = #WA #")。 日期值會以"#"（數字符號） 標記 (例如，"start_date > #7/22/97 #")。 這些值可以包含小時、 分鐘和秒，表示時間戳記，但不是應包含毫秒，或將會發生錯誤。  
   

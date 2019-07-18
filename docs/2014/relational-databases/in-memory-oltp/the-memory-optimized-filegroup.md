@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155571"
 ---
 # <a name="the-memory-optimized-filegroup"></a>記憶體最佳化檔案群組
   若要建立記憶體最佳化資料表，您必須先建立記憶體最佳化檔案群組。 記憶體最佳化檔案群組會保存一個或多個容器。 每個容器都包含資料檔案及/或差異檔案。  

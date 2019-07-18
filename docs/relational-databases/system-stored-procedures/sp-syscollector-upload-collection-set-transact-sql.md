@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d246e2817c34449ab6d4dd5d3def62feba92b196
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010527"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

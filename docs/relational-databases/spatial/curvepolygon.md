@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: fae2897f84ad6784742b4210344c6bbd7809e901
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980154"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585545"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,11 @@ ms.locfileid: "53980154"
 2.  至少具有四個點。  
   
 3.  開始和結束點都具有相同的 X 和 Y 座標。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    > 已忽略 Z 和 M 值。  
+    > Z and M values are ignored.  
   
 下列範例會顯示已接受的 **CurvePolygon** 執行個體。  
   

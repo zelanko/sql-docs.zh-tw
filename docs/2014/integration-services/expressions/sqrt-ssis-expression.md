@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373943"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768764"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
   傳回數值運算式的平方根。  

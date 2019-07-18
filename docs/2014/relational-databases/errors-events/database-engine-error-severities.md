@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870956"
 ---
 # <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
   當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]產生錯誤時，錯誤的嚴重性會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所發生的問題類型。  

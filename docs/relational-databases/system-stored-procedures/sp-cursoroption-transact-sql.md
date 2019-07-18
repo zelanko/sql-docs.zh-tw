@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108450"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|在後續的提取上，針對某些 text 或 image 資料行傳回實際資料，而不是文字指標 (也就是說，這樣會復原 TEXTPTR_ONLY 的作用)。<br /><br /> 如果針對特定的資料行啟用 TEXTDATA，將會重新提取或重新整理資料列，而且可以設定回 TEXTPTR_ONLY。 如果是 TEXTPTR_ONLY，值參數是一個指定資料行編號的整數，以及傳回所有 text 或 image 資料行的零值。|  
 |0x0004|SCROLLOPT|捲動選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
 |0x0005|CCOPT|並行控制選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
-|0x0006|ROWCOUNT|目前結果集中的資料列數目。<br /><br /> 注意：如果正在使用非同步擴展，自從 sp_cursoropen 傳回值之後 ROWCOUNT 可能已經變更。 如果資料列數目是未知，則傳回-1 的值。|  
+|0x0006|ROWCOUNT|目前結果集中的資料列數目。<br /><br /> 注意:ROWCOUNT 可能已經變更，因為如果正在使用非同步擴展，sp_cursoropen 傳回值。 如果資料列數目是未知，則傳回-1 的值。|  
   
  *value*  
  指定所傳回的值*程式碼*。 *值*是必要的參數呼叫 0x0001，0x0002 或 0x0003*程式碼*輸入值。  

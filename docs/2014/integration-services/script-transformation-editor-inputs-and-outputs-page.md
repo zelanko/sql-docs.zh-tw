@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056069"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>指令碼轉換編輯器 (輸入及輸出頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[輸入及輸出]** 頁面，即可加入、移除和設定指令碼轉換的輸入及輸出。  
@@ -42,13 +41,13 @@ ms.locfileid: "58392086"
  將其他輸出加入到清單中。  
   
  **加入資料行**  
- 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行] 將其加入。  
+ 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行]  將其加入。  
   
  **移除輸出**  
- 選取輸出，然後按一下 [移除輸出] 將它移除。  
+ 選取輸出，然後按一下 [移除輸出]  將它移除。  
   
  **移除資料行**  
- 選取資料行，然後按一下 [移除資料行] 將它移除。  
+ 選取資料行，然後按一下 [移除資料行]  將它移除。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes [CLR integration]
@@ -18,12 +16,12 @@ ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dbc881f565d48510c55af8f9887bdb05cbef7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781103"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 整合自訂屬性的概觀
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 Common Language Runtime (CLR) 允許使用描述性的關鍵字 (稱為屬性)。 這些屬性會針對許多元素 (如方法和類別) 提供其他資訊。 屬性會隨著物件的中繼資料儲存在組件中，而且可用來將程式碼描述給其他開發工具知道，或是影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內的執行階段行為。  

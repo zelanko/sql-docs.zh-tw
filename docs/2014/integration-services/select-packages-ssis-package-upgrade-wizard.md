@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
@@ -13,12 +12,12 @@ ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056014"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>選取封裝 (SSIS 封裝升級精靈)
   使用 **[選取封裝]** 頁面，選取要升級的封裝。 這個頁面會列出精靈的 **[選取來源位置]** 頁面上指定之位置內所儲存的封裝。  
@@ -27,7 +26,7 @@ ms.locfileid: "58387206"
   
 -   [使用 SSIS 套件升級精靈來升級 Integration Services 套件](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **現有套件名稱**  
  選取一或多個要升級的封裝。  
   

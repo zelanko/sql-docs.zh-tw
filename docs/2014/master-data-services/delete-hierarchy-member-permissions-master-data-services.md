@@ -11,15 +11,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting permissions
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8698d910ad74181a04a851334bddd4d112bbbd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 853bc9ce4b2f0432f74e3876f9a6234042fe5b5e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479508"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
@@ -33,15 +33,15 @@ ms.locfileid: "52755530"
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>若要刪除階層成員權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [階層成員] 索引標籤。  
+4.  按一下 [階層成員]  索引標籤。  
   
-5.  從 [模型] 清單中選取模型。  
+5.  從 [模型]  清單中選取模型。  
   
 6.  從 **[版本]** 清單中選取版本。  
   

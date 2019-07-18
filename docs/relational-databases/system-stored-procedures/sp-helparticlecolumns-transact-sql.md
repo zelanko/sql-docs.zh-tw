@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084957"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**資料行識別碼**|**int**|資料行的識別碼。|  
 |**column**|**sysname**|資料行的名稱。|  
-|**published**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**發行**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**發行者類型**|**sysname**|在發行者端之資料行的資料類型。|  
 |**訂閱者類型**|**sysname**|在訂閱者端之資料行的資料類型。|  
   

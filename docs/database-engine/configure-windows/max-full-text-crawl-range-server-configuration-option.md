@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c6c02313a49b401634cae43d89dd8bb457f7a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f7056c3e04648c55b0665d32c0097cc81a699196
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775886"
 ---
 # <a name="max-full-text-crawl-range-server-configuration-option"></a>全文檢索搜耙最大範圍伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

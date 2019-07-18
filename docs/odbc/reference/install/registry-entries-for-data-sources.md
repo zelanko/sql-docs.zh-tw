@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b9d101395a3276f92f3ccf49e36effc65420f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093884"
 ---
 # <a name="registry-entries-for-data-sources"></a>資料來源的登錄項目
 > [!NOTE]  

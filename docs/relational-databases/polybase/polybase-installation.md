@@ -1,22 +1,22 @@
 ---
 title: 在 Windows 上安裝 PolyBase | Microsoft Docs
-ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 52655a320b7f31f012c0820d7d3875b5c4866fe7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872298"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730301"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -40,15 +40,16 @@ ms.locfileid: "58872298"
    
 - 必須啟用 TCP/IP，PolyBase 才能正常運作。 預設會在 SQL Server Developer 和 Express 版本以外的所有 SQL Server 版本上啟用 TCP/IP。 若要讓 PolyBase 在 Developer 和 Express 版本上正常運作，您必須啟用 TCP/IP 連線。 請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
-- MSVC++ 2012。 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > 每部電腦只能在一個 SQL Server 執行個體上安裝 PolyBase。
-> 
-> [!IMPORTANT]
-> 
-> 若要針對 Hadoop 使用計算下推功能，目標 Hadoop 叢集必須具有 HDFS、YARN 和 MapReduce 的核心元件，並已啟用作業記錄伺服器。 PolyBase 透過 MapReduce 來提交下推查詢，並從作業記錄伺服器提取狀態。 如果沒有其中一個元件，則查詢會失敗。
+
+
+>[!NOTE]
+>若要使用 PolyBase，您必須在資料庫上具有系統管理員或 CONTROL SERVER 層級權限。
+
+>[!IMPORTANT]
+>若要針對 Hadoop 使用計算下推功能，目標 Hadoop 叢集必須具有 HDFS、YARN 和 MapReduce 的核心元件，並已啟用作業記錄伺服器。 PolyBase 透過 MapReduce 來提交下推查詢，並從作業記錄伺服器提取狀態。 如果沒有其中一個元件，則查詢會失敗。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>單一節點或 PolyBase 向外延展群組
 
@@ -67,18 +68,17 @@ ms.locfileid: "58872298"
    
 1. 執行 SQL Server setup.exe。   
    
-2. 選取 [安裝]，然後選取 [新的獨立 SQL Server 安裝或新增功能]。  
+2. 選取 [安裝]  ，然後選取 [新的獨立 SQL Server 安裝或新增功能]  。  
    
-3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。  
+3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。  
 
    ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
    
-4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務] 和 [SQL Server PolyBase 資料移動服務] 設定為在同一個網域帳戶下執行。  
-   
-   > [!IMPORTANT] 
-   >
+4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務]  和 [SQL Server PolyBase 資料移動服務]  設定為在同一個網域帳戶下執行。  
+
+   >[!IMPORTANT]
    >在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。 請參閱 [PolyBase 向外延展群組](#enable)。
-   
+
 5. 在 [PolyBase 設定] 頁面上，選取兩個選項的其中一個。 如需詳細資訊，請參閱 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
    
    - 使用 SQL Server 執行個體作為已啟用 PolyBase 的獨立執行個體。  
@@ -91,8 +91,9 @@ ms.locfileid: "58872298"
    
 6. 在 [PolyBase 設定] 頁面上，指定至少具有六個連接埠的連接埠範圍。 SQL Server 安裝程式會配置該範圍內前六個可用的連接埠。  
 
-   > [!IMPORTANT]
-   >
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+   >[!IMPORTANT]
    > 安裝完成後，您必須[啟用 PolyBase 功能](#enable)。
 
 
@@ -106,7 +107,7 @@ ms.locfileid: "58872298"
 |SQL Server 元件|參數和值|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安裝程式控制|**必要項**<br /><br /> /FEATURES=PolyBase|選取 PolyBase 功能。|  
-|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
+|SQL Server PolyBase 引擎|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCACCOUNT|指定資料移動服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
@@ -121,7 +122,7 @@ ms.locfileid: "58872298"
 
 |SQL Server 元件|參數和值|Description|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server 安裝程式控制|**必要項**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 會安裝所有 PolyBase 功能的支援，除了 Hadoop 連線能力以外。 PolyBaseJava 可啟用 Hadoop 連線能力。 PolyBase 兩種都會安裝。 |  
+|SQL Server 安裝程式控制|**必要**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 會安裝所有 PolyBase 功能的支援，除了 Hadoop 連線能力以外。 PolyBaseJava 可啟用 Hadoop 連線能力。 PolyBase 兩種都會安裝。 |  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
@@ -190,13 +191,13 @@ SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則：
    
 #### <a name="to-enable-the-firewall-rules"></a>啟用防火牆規則  
 
-1. 開啟 [控制台]。  
+1. 開啟 [控制台]  。  
 
-2. 選取 [系統及安全性]，然後選取 [Windows 防火牆]。  
+2. 選取 [系統及安全性]  ，然後選取 [Windows 防火牆]  。  
    
-3. 選取 [進階設定]，然後選取 [輸入規則]。  
+3. 選取 [進階設定]  ，然後選取 [輸入規則]  。  
    
-4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]。  
+4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]  。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase 服務帳戶
 

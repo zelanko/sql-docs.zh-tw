@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
@@ -18,15 +17,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84a4d723a545ebe6fb849d3b5b78f2f2e8e99908
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106252"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
   當您想要以視覺格式摘要列出資料時，請使用圖表資料區。 圖表能讓您一次就能展示大量的彙總資訊。 在建立圖表之前，務必仔細準備及了解資料，因為這樣將協助您快速有效地設計圖表。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要立即開始使用圖表，請參閱列、 資料行、 走勢圖和圓形圖教學課程[教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)或列和圓形圖教學課程[Reporting Services 教學課程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
@@ -152,8 +151,8 @@ ms.locfileid: "56295386"
  [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [教學課程：將直條圖新增至您的報表&#40;報表產生器&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [教學課程：將圓形圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [教學課程：橫條圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [教學課程：將直條圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教學課程：將橫條圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

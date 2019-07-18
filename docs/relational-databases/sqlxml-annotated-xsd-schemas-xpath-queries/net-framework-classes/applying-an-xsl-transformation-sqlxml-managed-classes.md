@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934306"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +110,9 @@ class Test
      這樣會建立可執行檔 (DocSample.exe)。  
   
 4.  在命令提示字元中，執行 DocSample.exe。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>在 .NET Framework 中套用 XSL 轉換  
  您可以在用戶端上套用 XSL 轉換 (在 .NET Framework 中)，而不是如前述在中間層套用 XSL 轉換。 以下修訂的 C# 程式碼示範如何在 .NET Framework 中套用 XSL 轉換。  
   

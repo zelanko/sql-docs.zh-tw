@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825156"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262696"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +74,7 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
 
 ## <a name="remarks"></a>備註  
  **sys.dm_tran_active_snapshot_database_transactions**報告指派交易序號 (XSN) 的交易。 交易會在第一次存取版本存放區時指派 XSN。 在已啟用快照集隔離或使用資料列版本設定之讀取認可隔離的資料庫中，這些範例顯示將 XSN 指派給交易的時間：  
@@ -146,13 +145,13 @@ elapsed_time_seconds
   
  下列資訊會評估的結果**sys.dm_tran_active_snapshot_database_transactions**:  
   
--   Xsn-57： 因為這筆交易不在快照集隔離下執行，所以`is_snapshot`值和`first_snapshot_sequence_num`是`0`。 `transaction_sequence_num` 顯示此筆交易已經指派了交易序號，因為 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 其中一個或兩個資料庫選項為 ON。  
+-   XSN-57:因為這筆交易不在快照集隔離下執行，所以`is_snapshot`值和`first_snapshot_sequence_num`是`0`。 `transaction_sequence_num` 顯示此筆交易已經指派了交易序號，因為 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 其中一個或兩個資料庫選項為 ON。  
   
--   XSN-58：這筆交易不是在快照集隔離下執行，而且 XSN-57 的相同資訊也適用。  
+-   XSN-58:這筆交易不在快照集隔離下執行，適用於 XSN-57 的相同資訊。  
   
--   XSN-59：這是在快照集隔離之下執行的第一筆使用中交易。 這筆交易將依照 `first_snapshot_sequence_num` 的指示，讀取已在 XSN-57 之前認可的資料。 此筆交易的輸出也顯示對資料列往返的最大版本鏈結是 `1`，每一個存取的資料列平均往返 `1` 個版本。 這表示 XSN-57、XSN-58 和 XSN-60 等交易並未修改資料列且已認可。  
+-   XSN-59:這是在快照隔離下執行的第一個作用中交易。 這筆交易將依照 `first_snapshot_sequence_num` 的指示，讀取已在 XSN-57 之前認可的資料。 此筆交易的輸出也顯示對資料列往返的最大版本鏈結是 `1`，每一個存取的資料列平均往返 `1` 個版本。 這表示 XSN-57、XSN-58 和 XSN-60 等交易並未修改資料列且已認可。  
   
--   XSN-60：這是在快照集隔離下執行的第二筆交易。 其輸出顯示的資訊與 XSN-59 相同。  
+-   XSN-60:這是在快照隔離下執行的第二個筆交易。 其輸出顯示的資訊與 XSN-59 相同。  
   
 ## <a name="see-also"></a>另請參閱  
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

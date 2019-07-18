@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
@@ -17,12 +16,12 @@ ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083506"
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
   採礦模型具有以下種類的屬性：  
@@ -33,7 +32,7 @@ ms.locfileid: "48171378"
   
 -   在模型上定義篩選的屬性，可用來定型模型。  
   
- 採礦模型的屬性一開始是在您建立模型時所定義；但是，您之後可以更改大多數的屬性，包括演算法參數、篩選以及資料行使用方式屬性。 您可藉由使用資料採礦設計師的 [採礦模型] 索引標籤或使用 AMO 或 XMLA 來變更屬性。  
+ 採礦模型的屬性一開始是在您建立模型時所定義；但是，您之後可以更改大多數的屬性，包括演算法參數、篩選以及資料行使用方式屬性。 您可藉由使用資料採礦設計師的 [採礦模型]  索引標籤或使用 AMO 或 XMLA 來變更屬性。  
   
  每當您變更模型的任何屬性時，您都必須重新處理模型，才能在模型中反映變更。 即使變更只牽涉到中繼資料 (例如資料行別名或描述)，也需要重新處理。  
   
@@ -61,10 +60,10 @@ ms.locfileid: "48171378"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型資料行](mining-model-columns.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)   
- [資料採礦工具](data-mining-tools.md)   
+ [資料採礦工具。](data-mining-tools.md)   
  [建立關聯式採礦結構](create-a-relational-mining-structure.md)   
  [建立模型資料行的別名](create-an-alias-for-a-model-column.md)  
   

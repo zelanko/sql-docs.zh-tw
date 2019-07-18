@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676883"
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
   **[加入篩選]** 和 **[編輯篩選]** 對話方塊可讓您加入和編輯靜態資料列篩選與參數化資料列篩選器。  

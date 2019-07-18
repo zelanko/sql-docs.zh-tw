@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ba526abcafb8d8bd046cbb1624b778bab52090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c85332cb1c26f81cdbbaa7bffa5410cf29e711e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904554"
 ---
 # <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

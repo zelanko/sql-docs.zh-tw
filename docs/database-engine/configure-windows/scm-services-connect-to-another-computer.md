@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 889067a9b4691e2b6d7ad03ab3ee3b7a503d425b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775768"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服務 - 連接至另一台電腦
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

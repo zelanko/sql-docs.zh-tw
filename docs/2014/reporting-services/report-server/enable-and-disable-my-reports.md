@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21b24350f3ab377170a51333716b710b4a3f44ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103853"
 ---
 # <a name="enable-and-disable-my-reports"></a>啟用與停用我的報表
   [我的報表] 功能會配置報表伺服器資料庫中的個人儲存區，讓使用者能夠將自己的報表儲存在私人資料夾內。 身為報表伺服器管理員，您可以啟用或停用此功能，或修改安全性設定 (此設定會控制使用者可以在其工作空間執行哪些動作) 來變更此功能的運作方式。  
@@ -34,7 +33,7 @@ ms.locfileid: "56020129"
   
  [我的報表] 所使用的角色定義會決定 [我的報表] 工作空間所支援的動作。 例如，如果「我的報表」角色排除「建立連結報表」，則使用者無法在 [我的報表] 資料夾中建立連結報表。 如需詳細資訊，請參閱 [保護我的報表](../security/secure-my-reports.md)。  
   
- 若要停用 [我的報表]，清除 **[為每個使用者啟用 [我的報表] 資料夾]**。 停用「我的報表」之後，將會移除所有與 [我的報表] 資料夾相關的可見項目。 停用此功能之後，必須手動移除實際用於儲存的資料夾 (亦即 [使用者資料夾] 中的子資料夾)。  
+ 若要停用 [我的報表]，清除 **[為每個使用者啟用 [我的報表] 資料夾]** 。 停用「我的報表」之後，將會移除所有與 [我的報表] 資料夾相關的可見項目。 停用此功能之後，必須手動移除實際用於儲存的資料夾 (亦即 [使用者資料夾] 中的子資料夾)。  
   
 ### <a name="when-my-reports-is-activated"></a>當啟動 [我的報表] 時  
  當此功能啟動時，使用者可以在根資料夾 (主資料夾) 中看到 [我的報表] 資料夾。 除了 [我的報表] 資料夾以外，報表伺服器管理員也可以看到包含每位使用者子資料夾的 [使用者資料夾] 資料夾。  

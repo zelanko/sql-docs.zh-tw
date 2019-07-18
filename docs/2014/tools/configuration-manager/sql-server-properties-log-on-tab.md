@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126992"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
   您可以使用 **[SQL Server 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用的帳戶、變更帳戶的密碼，以及啟動和停止該服務。 帳戶密碼的變更會立即生效。  
@@ -25,7 +25,7 @@ ms.locfileid: "53364970"
 >   
 >  如需有關選取帳戶以執行服務的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜設定 Windows 服務帳戶＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **內建帳戶**  
  **本機系統**  
  -   指定本機系統帳戶。 這個帳戶不需要密碼。 但是，根據授與帳戶的權限，本機系統帳戶可能會禁止服務與其他伺服器互動。  

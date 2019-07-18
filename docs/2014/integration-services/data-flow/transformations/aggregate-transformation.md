@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770634"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
@@ -65,9 +65,9 @@ ms.locfileid: "58384862"
 ## <a name="performance-considerations"></a>效能考量  
  「彙總」轉換包含一組屬性，可讓您用來增強轉換的效能。  
   
--   當執行 [群組依據] 作業時，請設定元件的 Keys 或 KeysScale 屬性和元件輸出。 您可以使用 Keys，指定轉換預期要處理的確切索引鍵數目。 (在此內容中，Keys 會參考預期要從 [群組依據] 作業產生的群組數)。您可以使用 KeysScale，指定索引鍵的近似數目。 當您為 Keys 或 KeyScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
+-   當執行 [群組依據]  作業時，請設定元件的 Keys 或 KeysScale 屬性和元件輸出。 您可以使用 Keys，指定轉換預期要處理的確切索引鍵數目。 (在此內容中，Keys 會參考預期要從 [群組依據]  作業產生的群組數)。您可以使用 KeysScale，指定索引鍵的近似數目。 當您為 Keys 或 KeyScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
   
--   當執行 [相異計數] 作業時，請設定元件的 CountDistinctKeys 或 CountDistinctScale 屬性。 您可以使用 CountDistinctKeys，為相異計數作業指定轉換預期要處理的確切索引鍵數目。 (在此內容中，CountDistinctKeys 會參考預期要從 [相異計數] 作業產生的相異值數目)。您可以使用 CountDistinctScale，為相異計數作業指定索引鍵的近似數目。 當您為 CountDistinctKeys 或 CountDistinctScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
+-   當執行 [相異計數]  作業時，請設定元件的 CountDistinctKeys 或 CountDistinctScale 屬性。 您可以使用 CountDistinctKeys，為相異計數作業指定轉換預期要處理的確切索引鍵數目。 (在此內容中，CountDistinctKeys 會參考預期要從 [相異計數]  作業產生的相異值數目)。您可以使用 CountDistinctScale，為相異計數作業指定索引鍵的近似數目。 當您為 CountDistinctKeys 或 CountDistinctScale 指定適當值時，您將會提高效能，因為轉換能夠針對轉換所快取的資料來配置足夠的記憶體。  
   
 ## <a name="aggregate-transformation-configuration"></a>彙總轉換組態  
  您可以在轉換、輸出和資料行層級設定「彙總」轉換。  
@@ -100,7 +100,7 @@ ms.locfileid: "58384862"
   
  「彙總」轉換是非同步的，這表示它不會以逐列的方式取用和發行資料， 而是會取用整個資料列集、執行其群組和彙總，然後發行結果。  
   
- 這個轉換不會通過任何資料行，但是會在資料流程中為其所發行的資料建立新的資料行。 只有套用彙總函式的輸入資料行，或是轉換用於群組的輸入資料行，才會複製到轉換輸出。 比方說，「 彙總 」 轉換輸入可能有三個資料行：**CountryRegion**，**城市**，以及**母體擴展**。 轉換會依 **CountryRegion** 資料行來分組，並將 Sum 函數套用至 **Population** 資料行。 因此，輸出不會包含 **City** 資料行。  
+ 這個轉換不會通過任何資料行，但是會在資料流程中為其所發行的資料建立新的資料行。 只有套用彙總函式的輸入資料行，或是轉換用於群組的輸入資料行，才會複製到轉換輸出。 例如，「彙總」轉換輸入可能有三個資料行：**CountryRegion**、**City** 和 **Population**。 轉換會依 **CountryRegion** 資料行來分組，並將 Sum 函數套用至 **Population** 資料行。 因此，輸出不會包含 **City** 資料行。  
   
  您也可以將多個輸出加入「彙總」轉換，並將每個彙總導向不同的輸出。 例如，如果「彙總」轉換套用 Sum 和 Average 函數，則每個彙總可以導向至不同的輸出。  
   

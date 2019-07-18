@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028375"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 追蹤事件資料行
   Object Type 追蹤事件資料行會用於各種追蹤事件。 此主題描述此資料行和其相關聯定義的可能值。  
@@ -95,7 +95,7 @@ ms.locfileid: "52803750"
 |21577|內部資料表 (例如，XML 節點資料表、佇列資料表。)|  
 |21581|Service Broker 訊息類型|  
 |21586|Service Broker 路由|  
-|21587|Statistics|  
+|21587|統計資料|  
 |21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|使用者|  
 |22099|Service Broker 服務|  
 |22601|索引|  

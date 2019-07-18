@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DatabaseLogonAccount
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097887"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定連接至報表伺服器資料庫時報表伺服器所使用的登入帳戶。 唯讀。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922793"
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案 Logs 區段
 **記錄檔**一節包含記錄檔項目，指定的作業期間會將錯誤記錄檔的名稱**DataFactory**。  

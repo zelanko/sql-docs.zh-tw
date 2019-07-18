@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63165042"
 ---
 # <a name="migrating-computed-columns"></a>移轉計算資料行
   記憶體最佳化資料表中不支援計算資料行。 但是，您可以模擬計算資料行。  

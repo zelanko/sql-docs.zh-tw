@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046034"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @rulename = ] 'rule'` 是 CREATE RULE 陳述式所建立之規則的名稱。 *規則*已**nvarchar(776)**，沒有預設值。  
+`[ @rulename = ] 'rule'` 是 CREATE RULE 陳述式所建立之規則的名稱。 *規則*已**nvarchar(776)** ，沒有預設值。  
   
-`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型的規則是繫結。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
+`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型的規則是繫結。 規則無法繫結到 **text**、 **ntext** **image**、**varchar (max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
  *object_name*已**nvarchar(776)** 沒有預設值。 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*規則*除非規則有直接繫結資料行。  
   

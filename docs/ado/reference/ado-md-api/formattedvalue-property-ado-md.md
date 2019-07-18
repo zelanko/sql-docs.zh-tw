@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49c5772404e212629a97c89bf23475ab893bd069
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2c48630a8d8cafc96f192e07d41a6245f86e60c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938421"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue 屬性 (ADO MD)
 表示格式化的顯示[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)值。  

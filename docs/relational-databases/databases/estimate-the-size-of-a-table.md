@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7e8e39f5bf3eb0464907a480e33223ec6d9885c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8397cee022f51649c8a63efd853710184891a537
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558565"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585305"
 ---
 # <a name="estimate-the-size-of-a-table"></a>估計資料表的大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "51558565"
 2.  對於每個非叢集索引，請遵循 [估計非叢集索引的大小](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)中的指示，來計算其所需的空間。  
   
 3.  新增步驟 1 和 2 中計算的值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>另請參閱  
  [估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)   
  [估計堆積的大小](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   

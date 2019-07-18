@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
@@ -13,15 +12,15 @@ ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078096"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>增益圖索引標籤 (採礦精確度圖表檢視)
-  使用 [增益圖] 窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  
+  使用 [增益圖]  窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  
   
  如果模型預測離散的屬性，則此窗格可以顯示增益圖或收益圖。 如需增益圖的資訊，請參閱[增益圖 &#40;Analysis Services - 資料採礦&#41;](data-mining/lift-chart-analysis-services-data-mining.md)。  
   
@@ -33,19 +32,19 @@ ms.locfileid: "48168128"
   
 ## <a name="options"></a>選項。  
  **圖表類型**  
- 設定要在檢視器中顯示之圖表的類型。 您可以選取 [增益圖] 或是 [收益圖]。  
+ 設定要在檢視器中顯示之圖表的類型。 您可以選取 [增益圖]  或是 [收益圖]  。  
   
  **設定**  
- 開啟 [收益圖設定] 對話方塊，且您可以使用它設定收益圖。  
+ 開啟 [收益圖設定]  對話方塊，且您可以使用它設定收益圖。  
   
- 如果在 [資料行對應] 索引標籤中選取連續的可預測資料行，就無法使用收益圖。  
+ 如果在 [資料行對應]  索引標籤中選取連續的可預測資料行，就無法使用收益圖。  
   
- **複製**  
+ **[複製]**  
  將圖表複製到剪貼簿。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

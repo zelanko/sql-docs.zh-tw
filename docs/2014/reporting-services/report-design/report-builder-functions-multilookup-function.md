@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb175df8d775150bb8ec7ffbbaf26866b1c07629
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105206"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  

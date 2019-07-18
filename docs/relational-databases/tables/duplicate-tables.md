@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 68c611986bba308dc06476a7fd61328353c9075d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589522"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580585"
 ---
 # <a name="duplicate-tables"></a>複製資料表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53589522"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要目的地資料庫中的 CREATE TABLE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -57,32 +57,34 @@ ms.locfileid: "53589522"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]，再按一下 [新增資料表]。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]  ，再按一下 [新增資料表]  。  
   
-3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]。  
+3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]  。  
   
-4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]**。  
+4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]** 。  
   
 5.  切換回新的資料表，並選取第一列。  
   
-6.  從 **[編輯]** 功能表中，按一下 **[貼上]**。  
+6.  從 **[編輯]** 功能表中，按一下 **[貼上]** 。  
   
-7.  從 [檔案]  功能表中，按一下 [儲存] _table name_。  
+7.  從 [檔案]  功能表中，按一下 [儲存]  _table name_。  
   
-8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]**。  
-  
+8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>若要在查詢編輯器中複製資料表  
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為] 和 [CREATE 至]，然後選取 [新增查詢編輯器視窗]。  
+2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為]  和 [CREATE 至]  ，然後選取 [新增查詢編輯器視窗]  。  
   
 3.  變更資料表的名稱。  
   
 4.  移除新資料表不需要的任何資料行。  
   
-5.  按一下 [執行] 。  
+5.  按一下 [執行]  。  
   
   

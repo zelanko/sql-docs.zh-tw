@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393011"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62635947"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "52393011"
   
 1.  從 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio 啟動 **Instance Rename** 工具 **asinstancerename.exe**。  
   
-2.  在 [重新命名執行個體] 對話方塊的 [要重新命名的執行個體] 清單中，選取您要重新命名的執行個體。  
+2.  在 [重新命名執行個體]  對話方塊的 [要重新命名的執行個體]  清單中，選取您要重新命名的執行個體。  
   
-3.  在 [新執行個體名稱] 方塊中，輸入執行個體的新名稱。  
+3.  在 [新執行個體名稱]  方塊中，輸入執行個體的新名稱。  
   
-4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]。  
+4.  確認使用者名稱和密碼正確，然後按一下 [重新命名]  。  
   
      Analysis Services 執行個體將會停止，並在名稱變更時重新啟動。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52393011"
   
      現在假設您重新命名為"TAB2"的執行個體。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  執行個體名稱 =\<伺服器 > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   

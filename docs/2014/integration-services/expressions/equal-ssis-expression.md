@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769264"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
   執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
@@ -52,7 +52,7 @@ expression1 == expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、 時間或日期/時間**兩者*expression1*並*expression2*必須評估為下列資料類型的其中一個：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -81,7 +81,7 @@ expression1 == expression2
   
 -   **二進位** ： *expression1* 和 *expression2* 都必須評估為 DT_BYTES 資料類型。  
   
--   **BLOB**兩者*expression1*並*expression2*必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB** *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../data-flow/integration-services-data-types.md)＞。  
   

@@ -1,7 +1,7 @@
 ---
 title: 有名稱的資料行 | Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,16 +13,18 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb286cf87f2e0534a1e7df9d988e001fec8a5ee2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bb5e1789416ee134ce59fbc3ef107f1165ce76ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66175694"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  以下是具有名稱的資料列集資料行，以區分大小寫的方式對應至產生之 XML 的特定條件：  
+
+以下是具有名稱的資料列集資料行，以區分大小寫的方式對應至產生之 XML 的特定條件：  
   
 -   此資料行名稱以 \@ 符號開頭。  
   
@@ -37,20 +39,17 @@ ms.locfileid: "58510015"
 ## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱以 \@ 符號開頭  
  如果資料行名稱是以 \@ 符號開頭且不包含斜線 (/)，就會建立具有對應資料行值的 `row` 元素之屬性。 例如，以下查詢會傳回兩個資料行 (\@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會新增至對應的 `row` 項目，並會將 ProductModelID 值指派給該項目。  
   
-```  
-  
+```sql
 SELECT ProductModelID as "@PmId",  
        Name  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
-  
+FOR XML PATH;
 ```  
   
  以下是結果：  
   
-```  
+```xml
 <row PmId="7">  
   <Name>HL Touring Frame</Name>  
 </row>  
@@ -58,13 +57,12 @@ go
   
  請注意在相同的層級中，屬性必須在任何其他節點類型的前面，例如元素節點與文字節點。 下列查詢將傳回錯誤：  
   
-```  
+```sql
 SELECT Name,  
        ProductModelID as "@PmId"  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是以 \@ 符號開頭  
@@ -72,14 +70,14 @@ go
   
  下列查詢指定資料行名稱，也就是結果。 因此，`result` 子項目會新增至 `row` 項目。  
   
-```  
+```sql
 SELECT 2+2 as result  
-for xml PATH  
+for xml PATH;
 ```  
   
  以下是結果：  
   
-```  
+```xml
 <row>  
   <result>4</result>  
 </row>  
@@ -87,22 +85,22 @@ for xml PATH
   
  下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，`ManuWorkCenterInformation` 項目會新增為 `row` 項目的子項目。  
   
-```  
-SELECT   
-       ProductModelID,  
-       Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ') as ManuWorkCenterInformation  
+```sql
+SELECT
+  ProductModelID,  
+  Name,  
+  Instructions.query(
+    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+     /MI:root/MI:Location
+    ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
  以下是結果：  
   
-```  
+```xml
 <row>  
   <ProductModelID>7</ProductModelID>  
   <Name>HL Touring Frame</Name>  
@@ -119,20 +117,20 @@ go
   
  例如，下列查詢將會傳回員工識別碼與姓名，它們是以複雜的元素 EmpName 所代表，該元素包含姓名的 First、Middle 及 Last。  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH;
 ```  
   
  該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭，因此會將 **EmpID** 屬性新增至 `row` 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 `row` 項目底下將有 `EmpName` 子項目，而且 `EmpName` 子項目將有 `First`、`Middle` 和 `Last` 子項目。  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -143,21 +141,21 @@ FOR XML PATH
   
  員工中間名字為 Null，Null 值預設與缺少的元素或屬性相對應。 如果您要為 NULL 值產生元素，您可以指定具有 XSINL 的 ELEMENTS 指示詞，如下列查詢所示。  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  以下是結果：  
   
-```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+```xml
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -171,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  除了識別碼與名稱之外，下列查詢還會擷取員工地址。 根據地址資料行之資料行名稱中的路徑，會將 `Address` 子項目新增至 `row` 項目，而地址詳細資料則會新增為 `Address` 項目的子項目。  
   
-```  
+```sql
 SELECT EmployeeID   "@EmpID",   
        FirstName    "EmpName/First",   
        MiddleName   "EmpName/Middle",   
@@ -179,16 +177,18 @@ SELECT EmployeeID   "@EmpID",
        AddressLine1 "Address/AddrLine1",  
        AddressLine2 "Address/AddrLIne2",  
        City         "Address/City"  
-FROM   HumanResources.Employee E, Person.Contact C, Person.Address A  
+FROM   HumanResources.Employee E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  以下是結果：  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -207,7 +207,7 @@ FOR XML PATH
 ## <a name="one-column-has-a-different-name"></a>一個資料行具有不同的名稱  
  如果具有不同名稱的資料行出現在其間，它將會拆散群組，如下列修改的查詢所示。 查詢會在 FirstName 與 MiddleName 資料行之間加入地址資料行，以拆散上述查詢所指定的 FirstName、MiddleName 及 LastName 的群組。  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName "EmpName/First",   
        AddressLine1 "Address/AddrLine1",  
@@ -215,18 +215,20 @@ SELECT EmployeeID "@EmpID",
        City "Address/City",  
        MiddleName "EmpName/Middle",   
        LastName "EmpName/Last"  
-FROM   HumanResources.EmployeeAddress E, Person.Contact C, Person.Address A  
+FROM   HumanResources.EmployeeAddress E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  因此，此查詢會建立兩個 `EmpName` 項目。 第一個 `EmpName` 項目具有 `FirstName` 子項目，而第二個 `EmpName` 項目則具有 `MiddleName` 及 `LastName` 子項目。  
   
  以下是結果：  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

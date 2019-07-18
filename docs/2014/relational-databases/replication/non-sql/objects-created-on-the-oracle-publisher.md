@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022143"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫會在 Oracle 發行者端安裝資料庫物件，以啟用變更追蹤和轉送 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會在 Oracle 發行者端安裝任何二進位檔案)。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  

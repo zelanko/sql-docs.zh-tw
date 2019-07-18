@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811342"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>設定 media retention 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **media retention** 選項指定每個備份組的保留時間。 此選項協助保護備份，在指定的天數經過之前不被覆寫。 在設定 **media retention** 選項之後，每次執行備份時不需指定保留系統備份的時間長度。 預設值是 0 天，最大值是 365 天。  
@@ -40,7 +40,7 @@ ms.locfileid: "58532760"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 media retention 選項之後](#FollowUp)  
+-   **後續操作：**[設定媒體保留選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -95,7 +95,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 media retention 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定媒體保留選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

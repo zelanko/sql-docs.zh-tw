@@ -1,5 +1,5 @@
 ---
-title: 'TM: Begin Tran Completed 事件類別 | Microsoft 文件'
+title: TM：Begin Tran Completed 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a8a198358a6c84e128340516938fb8b85c6c9f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661290"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed 事件類別
+# <a name="tm-begin-tran-completed-event-class"></a>TM：Begin Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM: Begin Tran Completed 事件類別表示 BEGIN TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
+  TM：Begin Tran Completed 事件類別指出 BEGIN TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
-## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran Completed 事件類別資料行  
+## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM：Begin Tran Completed 事件類別資料行  
   
 |資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

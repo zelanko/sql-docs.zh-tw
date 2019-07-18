@@ -20,16 +20,16 @@ helpviewer_keywords:
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf81273605c1b2cac7c7564626a1d54b06282b3d
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ccad340088f83dc4b5c38445506c74c9aa7e70f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981755"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b5218305eadfc78588e8c1439ce97817a760cdad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48772a8870945c6c069e285985905e4c2e8c3542
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795093"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>檢視鏡像資料庫的狀態 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47636816"
     |\<空白>|資料庫鏡像工作階段不存在，並且在 [鏡像] 頁面上沒有可以報告的活動。|  
     |已暫停|主體資料庫正在執行中，但沒有傳送任何記錄到鏡像伺服器。 無法使用資料庫的鏡像副本。|  
     |沒有連接|主體伺服器執行個體無法連接到其夥伴或見證伺服器執行個體 (若有的話)。|  
-    |正在同步處理|鏡像資料庫內容延遲在主體資料庫的內容之後。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段的開始時，鏡像和主體資料庫處於同步狀態。|  
+    |正在同步處理|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段的開始時，鏡像和主體資料庫處於同步狀態。|  
     |容錯移轉|在主體伺服器執行個體上，手動容錯移轉 (角色交換) 已經開始，但鏡像尚未接受。|  
     |已同步處理|鏡像資料庫和主體資料庫包含相同的資料。 只有在已同步處理狀態中，才可能執行手動與自動容錯移轉。|  
   

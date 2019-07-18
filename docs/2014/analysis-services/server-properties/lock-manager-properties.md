@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - lock manager properties [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068935"
 ---
 # <a name="lock-manager-properties"></a>鎖定管理員屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的鎖定管理員伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  

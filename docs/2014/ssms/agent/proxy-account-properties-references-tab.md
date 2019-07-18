@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714558"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxy 帳戶屬性 (參考索引標籤)
   此唯讀頁面會列出參考 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的作業步驟。  

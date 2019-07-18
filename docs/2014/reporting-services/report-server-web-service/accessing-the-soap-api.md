@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89f4b042f00ed139c16a8225a5b47bc949c9edae
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012250"
 ---
 # <a name="accessing-the-soap-api"></a>存取 SOAP API
   報表伺服器 Web 服務透過 HTTP 使用簡易物件存取通訊協定 (SOAP)，並在用戶端程式與報表伺服器之間當做通訊介面。 Web 服務提供兩個端點 (一個用於報表執行，一個用於報表管理)，並且含有方法以及一組您可用以存取完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之複雜類型的物件。 若要呼叫服務，您必須參考 Reporting Services Web 服務描述語言 (WSDL)。  
@@ -59,7 +57,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|包含 XML Web 服務的資料夾。 這是在安裝期間設定的。|  
 |*\<端點名稱>.asmx*|Web 服務端點的名稱。|  
   
- 如需有關 WSDL 格式的詳細資訊，請參閱全球資訊網協會 (W3C) WSDL 規格，網址為 http://www.w3.org/TR/wsdl。  
+ 如需有關 WSDL 格式的詳細資訊，請參閱全球資訊網協會 (W3C) WSDL 規格，網址為 http://www.w3.org/TR/wsdl 。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Web 服務和 .NET Framework 建置應用程式](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

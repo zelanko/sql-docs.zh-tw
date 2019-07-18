@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 91c7333f47306da90d634e45f50df44d1b6ae0f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cdcbd34978738d64d52b3c70a280507b6cb0c391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052372"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51675327"
   
 -   用戶端連接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會接聽替代具名管道。  
   
- **注意︰** [SqlServerAlias 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)繼承**放**從 Provider 類別的方法。 不過，它不會傳回任何結果所示**Provider::Put**方法。 如需詳細資訊，請參閱 WMI 文件集。  
+ **注意：** [SqlServerAlias 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)繼承**放**從 Provider 類別的方法。 不過，它不會傳回任何結果所示**Provider::Put**方法。 如需詳細資訊，請參閱 WMI 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002456"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新的專案 (SSMA) (AccessToSQL)
 使用**新的專案**對話方塊，即可建立新的 SSMA 專案。 若要存取**新的專案**對話方塊的 **檔案**功能表上，按一下 **新專案**。  
@@ -27,7 +26,7 @@ ms.locfileid: "52413455"
   
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  
   
-**位置**  
+**Location**  
   
 輸入或瀏覽至資料夾或網路位置，以儲存專案。  
   

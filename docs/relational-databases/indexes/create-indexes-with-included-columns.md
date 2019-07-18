@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b515cbf3da95ffdab82ad609937b7a1738684678
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539716"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492880"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,12 @@ ms.locfileid: "52539716"
   此主題描述如何使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
   
 -   與索引鍵資料行一樣，它們可以是不允許的資料類型。  
-  
 -   計算索引鍵資料行數或索引鍵大小時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會考慮它們。  
   
  查詢中所有的資料行在索引中當做索引鍵或非索引鍵資料行時，非索引鍵資料行的索引可以大幅改進查詢效能。 因為查詢最佳化工具可以在索引中找到所有資料行值，所以可以提高效能；不存取資料表或叢集索引資料，導致磁碟 I/O 作業變少。  
   
 > [!NOTE]  
-> 索引包含查詢參考的所有資料行時，通常就是指「涵蓋查詢」。  
+> 索引包含查詢參考的所有資料行時，通常就是指「涵蓋查詢」  。  
    
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -71,7 +70,7 @@ ms.locfileid: "52539716"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -84,23 +83,23 @@ ms.locfileid: "52539716"
   
 3.  按一下加號展開要建立非索引鍵資料行之索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
+4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行] 索引標籤底下的 [加入...]。  
+6.  按一下 [索引鍵資料行]  索引標籤底下的 [加入...]  。  
   
-7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
+7.  在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 按一下 [包含的資料行] 索引標籤底下的 [加入...]。  
+9. 按一下 [包含的資料行]  索引標籤底下的 [加入...]  。  
   
-10. 在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
+10. 在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
-12. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
+12. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -108,9 +107,9 @@ ms.locfileid: "52539716"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql  
     USE AdventureWorks2012;  

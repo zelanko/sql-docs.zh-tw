@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - BackupEncryptionKey method
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 268d57207280689bb1c9b2df25013d6eca435f4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098610"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>BackupEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
   備份指定之報表伺服器執行個體的加密金鑰。 此加密金鑰會以密碼加密的方式儲存。  

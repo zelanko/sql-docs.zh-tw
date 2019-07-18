@@ -19,15 +19,15 @@ helpviewer_keywords:
 - ORIGINAL_LOGIN function
 - names [SQL Server], logins
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.openlocfilehash: d8f2ae773e431e52519409313601175e6f005a56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944752"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

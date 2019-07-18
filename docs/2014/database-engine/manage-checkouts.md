@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774532"
 ---
 # <a name="manage-checkouts"></a>管理簽出
   檔案加入原始檔控制之後，您必須先簽出檔案，才能修改它。 當您將檔案從原始檔控制中簽出時，原始檔控制提供者會在您的本機磁碟中建立最新版本的本機副本，且會移除檔案的唯讀屬性。 在某些情況下，您可能需要在未簽出檔案的情況下編輯檔案。 如需有關如何在未簽出檔案的情況下編輯檔案的詳細資訊，請參閱[編輯 Checked-In 檔案](../../2014/database-engine/edit-checked-in-files.md)。  

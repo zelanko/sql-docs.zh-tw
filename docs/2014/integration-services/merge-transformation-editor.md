@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetransformation.f1
@@ -15,22 +14,22 @@ ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c8de19a7497a1caa8322f25632e22b875e4cbad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057675"
 ---
 # <a name="merge-transformation-editor"></a>合併轉換編輯器
-  使用 [合併轉換編輯器]，即可指定來自兩個已排序資料集的資料行，以進行合併。  
+  使用 [合併轉換編輯器]  ，即可指定來自兩個已排序資料集的資料行，以進行合併。  
   
 > [!IMPORTANT]  
 >  合併轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
   
  若要深入了解合併轉換，請參閱 [合併轉換](data-flow/transformations/merge-transformation.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸出資料行名稱**  
  指定輸出資料行的名稱。  
   

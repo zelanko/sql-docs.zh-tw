@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105823"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
   資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)。  
@@ -44,7 +43,7 @@ ms.locfileid: "56296876"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在圖表上放置資料點標籤  
  針對所有圖表類型，當您以滑鼠右鍵按一下圖表，然後選取 **[顯示資料標籤]** 時，可以顯示資料點標籤。 資料點標籤的位置會根據圖表類型而指定：  
   
--   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能的位置：Outside、 Left、 Center 與 Right。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
+-   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能位置：外側、左側、中間與右側。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
   
 -   在圓形圖上，您可以使用 **PieLabelStyle** 自訂屬性重新放置資料點標籤的位置。 在圓形圖周圍放置資料點標籤時有許多考量，包括圓形圖的大小、圓形圖及其對應圖例間的可用空間以及標籤的大小。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "56296876"
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>在圖表中以多個資料點增加可讀性  
  如果您在圖表上有多個數列，可能會降低圖表資料點的可讀性。 將多個數列加入到圖表時，請考慮使用可區別如何在圖表中有效讀取及了解每個數列的技術。 如需詳細資訊，請參閱 [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)：  
   
- 為了簡化的目的，當您使用形狀圖時，請考慮僅加入一個資料欄位和一個類別目錄欄位。 如需詳細資訊，請參閱[形狀圖 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。 如果您的圖表需要一個以上的資料欄位和類別目錄欄位，請考慮變更圖表類型。 您可以用滑鼠右鍵按一下此數列，並選取 **[變更圖表類型]**。  
+ 為了簡化的目的，當您使用形狀圖時，請考慮僅加入一個資料欄位和一個類別目錄欄位。 如需詳細資訊，請參閱[形狀圖 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。 如果您的圖表需要一個以上的資料欄位和類別目錄欄位，請考慮變更圖表類型。 您可以用滑鼠右鍵按一下此數列，並選取 **[變更圖表類型]** 。  
   
 ## <a name="inserting-data-point-markers"></a>插入資料點標記  
  資料點標記是一種視覺指標，用於吸引使用者注意數列中的每個資料點。 在散佈圖上，標記用於決定個別資料點的形狀與大小。 標記的大小會根據圖表類型而指定。 您可以變更標記的大小、色彩或樣式。 標記不適用於範圍和形狀圖表類型，也不適用於任何堆疊子類型。  
@@ -101,7 +100,7 @@ ms.locfileid: "56296876"
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

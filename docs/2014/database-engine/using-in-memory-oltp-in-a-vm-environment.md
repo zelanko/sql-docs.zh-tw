@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843055"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>在 VM 環境使用記憶體中的 OLTP
   伺服器虛擬化技術可協助您降低 IT 資本和作業成本，並透過改善的應用程式佈建、維護、可用性和備份/復原程序，達到更高的 IT 效率。 隨著最近的技術進步，可以更輕易地運用虛擬化技術，將複雜的資料庫工作負載合併。 本主題包括在虛擬化環境中使用 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 的最佳作法。  

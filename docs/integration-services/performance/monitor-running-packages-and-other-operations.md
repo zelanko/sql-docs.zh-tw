@@ -14,14 +14,18 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3c188f7ba04162b3cd385606789c94e9c08354e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805243"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
   
 -   記錄檔  
@@ -63,7 +67,7 @@ ms.locfileid: "58271213"
   
 2.  連接 Microsoft SQL Server Database Engine  
   
-3.  在 [物件總管] 中，展開 **[Integration Services]** 節點，再以滑鼠右鍵按一下 **[SSISDB]**，然後按一下 **[作用中的作業]**。  
+3.  在 [物件總管] 中，展開 **[Integration Services]** 節點，再以滑鼠右鍵按一下 **[SSISDB]** ，然後按一下 **[作用中的作業]** 。  
   
 ### <a name="configure-the-options"></a>設定選項  
   
@@ -114,7 +118,7 @@ ms.locfileid: "58271213"
  請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>檢視已執行封裝的記錄  
- 若要檢視已在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行] 報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](#reports) (Integration Services 伺服器的報表)。  
+ 若要檢視已在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行]  報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](#reports) (Integration Services 伺服器的報表)。  
   
  如需有關可用來檢視執行中封裝記錄之其他方法的詳細資訊，請參閱下列主題。  
   
@@ -132,7 +136,7 @@ ms.locfileid: "58271213"
  如需如何將套件部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="integration-services-dashboard"></a>Integration Services 儀表板  
- [Integration Services 儀表板] 報表提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有封裝執行的概觀。 對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。  
+ [Integration Services 儀表板]  報表提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有封裝執行的概觀。 對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。  
   
  此報表會顯示下列資訊區段。  
   
@@ -141,12 +145,12 @@ ms.locfileid: "58271213"
 |**執行資訊**|顯示在過去 24 小時內，處於不同狀態 (失敗、執行中、成功、其他) 的執行數目。|  
 |**封裝資訊**|顯示在過去 24 小時內已經執行之封裝的總數。|  
 |**連接資訊**|顯示在過去 24 小時內已經用於失敗執行的連接。|  
-|**封裝詳細資訊**|顯示在過去 24 小時內所發生已完成執行的詳細資料。 例如，此區段會顯示失敗的執行數與執行總數、執行期間 (以秒為單位) 及過去三個月的平均值行期間的比較。<br /><br /> 您可以按一下 [概觀]、[所有訊息] 和 [執行效能]，檢視封裝的其他資訊。<br /><br /> [執行效能] 報表會顯示上一個執行個體的持續時間，以及開始和結束時間與套用的環境。<br /><br /> [執行效能] 報表中包含的圖表和相關資料表會顯示過去 10 次成功執行封裝的期間。 此資料表也會顯示過去三個月的平均執行期間。 在執行階段可能會對這 10 次成功的封裝執行套用不同的環境與不同的常值。<br /><br /> 最後，[執行效能] 報表會顯示封裝資料流程元件的 [啟用時間] 和 [總時間]。 [啟用時間] 是指元件在所有階段中執行所耗費的總時間，而 [總時間] 是指元件歷經的總時間。 報表只會在最後一個封裝執行作業的記錄層次設定為 [Performance] 或 [Verbose] 時，顯示封裝元件的這項資訊。<br /><br /> [概觀] 報表會顯示封裝工作的狀態。 [訊息] 報表會顯示封裝和工作的事件訊息和錯誤訊息，例如，回報開始和結束時間，以及寫入的資料列數目。<br /><br /> 您也可以按一下 [概觀] 報表中的 [檢視訊息]，導覽至 [訊息] 報表。 您同樣可以按一下 [訊息] 報表中的 [檢視概觀]，導覽至 [概觀] 報表。|  
+|**封裝詳細資訊**|顯示在過去 24 小時內所發生已完成執行的詳細資料。 例如，此區段會顯示失敗的執行數與執行總數、執行期間 (以秒為單位) 及過去三個月的平均值行期間的比較。<br /><br /> 您可以按一下 [概觀]  、[所有訊息]  和 [執行效能]  ，檢視封裝的其他資訊。<br /><br /> [執行效能]  報表會顯示上一個執行個體的持續時間，以及開始和結束時間與套用的環境。<br /><br /> [執行效能]  報表中包含的圖表和相關資料表會顯示過去 10 次成功執行封裝的期間。 此資料表也會顯示過去三個月的平均執行期間。 在執行階段可能會對這 10 次成功的封裝執行套用不同的環境與不同的常值。<br /><br /> 最後，[執行效能]  報表會顯示封裝資料流程元件的 [啟用時間] 和 [總時間]。 [啟用時間] 是指元件在所有階段中執行所耗費的總時間，而 [總時間] 是指元件歷經的總時間。 報表只會在最後一個封裝執行作業的記錄層次設定為 [Performance] 或 [Verbose] 時，顯示封裝元件的這項資訊。<br /><br /> [概觀]  報表會顯示封裝工作的狀態。 [訊息]  報表會顯示封裝和工作的事件訊息和錯誤訊息，例如，回報開始和結束時間，以及寫入的資料列數目。<br /><br /> 您也可以按一下 [概觀]  報表中的 [檢視訊息]  ，導覽至 [訊息]  報表。 您同樣可以按一下 [訊息]  報表中的 [檢視概觀]  ，導覽至 [概觀]  報表。|  
   
- 您可以按一下 [篩選]，然後選取 [篩選設定] 對話方塊中的準則，篩選任何頁面上顯示的資料表。 可用的篩選準則取決於顯示的資料。 您可以在 [篩選設定] 對話方塊中按一下排序圖示，以變更報表的排序次序。  
+ 您可以按一下 [篩選]  ，然後選取 [篩選設定]  對話方塊中的準則，篩選任何頁面上顯示的資料表。 可用的篩選準則取決於顯示的資料。 您可以在 [篩選設定]  對話方塊中按一下排序圖示，以變更報表的排序次序。  
   
 ### <a name="all-executions-report"></a>所有執行報表  
- [所有執行] 報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行的摘要。 範例封裝可能會有多個執行。 與 [Integration Services 儀表板] 報表不同的是，您可以設定 [所有執行] 報表以顯示某個日期範圍內開始的執行。 日期可以跨多天、數個月或數年。  
+ [所有執行]  報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行的摘要。 範例封裝可能會有多個執行。 與 [Integration Services 儀表板]  報表不同的是，您可以設定 [所有執行]  報表以顯示某個日期範圍內開始的執行。 日期可以跨多天、數個月或數年。  
   
  此報表會顯示下列資訊區段。  
   
@@ -160,26 +164,26 @@ ms.locfileid: "58271213"
  如需參數的詳細資訊，請參閱 [Integration Services (SSIS) 封裝和專案參數](../../integration-services/integration-services-ssis-package-and-project-parameters.md)。  
   
 ### <a name="all-connections"></a>所有連接  
- [所有連接] 報表會針對失敗的連接，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上發生的執行提供下列資訊。  
+ [所有連接]  報表會針對失敗的連接，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上發生的執行提供下列資訊。  
   
  此報表會顯示下列資訊區段。  
   
 |章節|Description|  
 |-------------|-----------------|  
-|篩選|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間] 範圍的連接。<br /><br /> 設定 [上次失敗時間] 範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
+|篩選|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間]  範圍的連接。<br /><br /> 設定 [上次失敗時間]  範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
 |詳細資料|顯示連接字串、發生連接失敗的執行數目，以及上一次連接失敗的日期。|  
   
 ### <a name="all-operations-report"></a>所有作業報表  
- [所有作業] 報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業的摘要，包括封裝部署、驗證和執行，以及其他管理作業。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
+ [所有作業]  報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業的摘要，包括封裝部署、驗證和執行，以及其他管理作業。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ### <a name="all-validations-report"></a>所有驗證報表  
- [所有驗證] 報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證的摘要。 此摘要會顯示每個驗證的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含一個指向驗證期間產生之訊息的連結。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
+ [所有驗證]  報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證的摘要。 此摘要會顯示每個驗證的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含一個指向驗證期間產生之訊息的連結。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ### <a name="custom-reports"></a>自訂報表  
- 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄] 節點底下的 [SSISDB] 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
+ 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]  節點底下的 [SSISDB]  目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
   
 > [!NOTE]  
->  當您將自訂報表加入 [資料庫] 節點底下的 [SSISDB] 節點時，不需要使用 SSISDB 前置詞。  
+>  當您將自訂報表加入 [資料庫]  節點底下的 [SSISDB]  節點時，不需要使用 SSISDB 前置詞。  
   
  如需如何建立和加入自訂報表的指示，請參閱 [將自訂報表加入 Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
 
@@ -188,9 +192,9 @@ ms.locfileid: "58271213"
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>若要檢視 Integration Services 伺服器的報表  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於物件總管中展開 [Integration Services 目錄] 節點。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於物件總管中展開 [Integration Services 目錄]  節點。  
   
-2.  以滑鼠右鍵按一下 [SSISDB]，按一下 [報表]，然後按一下 [標準報表]。  
+2.  以滑鼠右鍵按一下 [SSISDB]  ，按一下 [報表]  ，然後按一下 [標準報表]  。  
   
 3.  按一下下列其中一項或多項，以檢視報表。  
   

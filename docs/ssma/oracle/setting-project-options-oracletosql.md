@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753926"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266535"
 ---
 # <a name="setting-project-options-oracletosql"></a>設定專案選項 (OracleToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認組態選項都適用於專案。  

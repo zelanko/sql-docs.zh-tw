@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4dfdb60f9a394fa4d11e9b66ffb1f4b205881293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921668"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 屬性 (ADO)
 指出[命令](../../../ado/reference/ado-api/command-object-ado.md)物件建立關聯[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

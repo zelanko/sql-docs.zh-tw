@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e01c63fd0961755eefc0afb0493005d3b5c1c6c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027075"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "56030699"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
  **Number （)** 函式會將引數轉換為數字。  
   
- 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
+ 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有 **\<員工>** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -82,7 +81,7 @@ ms.locfileid: "56030699"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
  **String （)** 函式會將引數轉換為字串。  
   
- 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID** "4"的字串值：  
+ 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有 **\<員工>** 的內容節點的項目子系**ContactID** "4"的字串值：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

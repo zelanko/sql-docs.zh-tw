@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 412816085232be63f1ba73c6c83839172b978827
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9052245314a5faae2e6b3c331082bd1ee30f84f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044281"
 ---
 # <a name="cinstance-class"></a>CInstance 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

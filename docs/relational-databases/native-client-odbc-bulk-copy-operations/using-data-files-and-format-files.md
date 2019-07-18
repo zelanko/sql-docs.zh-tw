@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fae3c62d923d2e52fd454493b7d1218608b233e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134247"
 ---
 # <a name="using-data-files-and-format-files"></a>使用資料檔案與格式檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +44,12 @@ ms.locfileid: "47831396"
 2.  呼叫[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)具有*eOption*設定為 BCPHINTS 並*iValue*設為包含 TRANSACT-SQL 陳述式之 SQLTCHAR 字串的指標。  
   
 3.  呼叫**bcp_exec**以便執行大量複製作業。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可能是會產生結果集的任何陳述式。 系統會建立包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式第一個結果集的資料檔案。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式產生多個結果集，則大量複製會忽略第一個結果集後的任何結果集。  
   
- 若要建立哪一個資料行中資料會儲存在不同的格式比資料表中的資料檔案，請呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定資料行數目將會變更，然後呼叫[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)每個資料行的格式您想要變更。 這完成之後呼叫**bcp_init**但再呼叫**bcp_exec**。 **bcp_colfmt**指定資料行的資料儲存在資料檔中的格式。 來回大量複製時，可以使用它。您也可以使用**bcp_colfmt**來設定資料列和資料行結束字元。 比方說，如果您的資料不包含定位字元，您可以建立 tab 鍵分隔的檔案使用**bcp_colfmt**將定位字元設定為每個資料行的結束字元。  
+ 若要建立哪一個資料行中資料會儲存在不同的格式比資料表中的資料檔案，請呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定資料行數目將會變更，然後呼叫[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)每個資料行的格式您想要變更。 這完成之後呼叫**bcp_init**但再呼叫**bcp_exec**。 **bcp_colfmt**指定資料行的資料儲存在資料檔中的格式。 大量複製縮小或相應放大時可以使用它。您也可以使用**bcp_colfmt**來設定資料列和資料行結束字元。 比方說，如果您的資料不包含定位字元，您可以建立 tab 鍵分隔的檔案使用**bcp_colfmt**將定位字元設定為每個資料行的結束字元。  
   
  當大量複製以及使用**bcp_colfmt**，您可以輕鬆地建立格式檔案描述您所建立之資料檔案[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)最後一個呼叫之後**bcp_colfmt**.  
   

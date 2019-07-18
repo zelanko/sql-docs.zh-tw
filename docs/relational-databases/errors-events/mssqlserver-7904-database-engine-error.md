@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fae8f6de4479ae2f4d2675ab92c75e030304fd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694713"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47846106"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7904|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_FILE|  
-|訊息文字|資料表錯誤: 在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中找不到資料行識別碼 C_ID，ROWGUID RG_ID 的 filestream 檔案。|  
+|訊息文字|資料表錯誤：在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中找不到資料行識別碼 C_ID，ROWGUID RG_ID 的 filestream 檔案。|  
   
 ## <a name="explanation"></a>說明  
 分割區的資料行值在對應的 FILESTREAM 資料行目錄中沒有相符的 FILESTREAM 檔案。  

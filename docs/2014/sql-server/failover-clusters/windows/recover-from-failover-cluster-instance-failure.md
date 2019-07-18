@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050009"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況復原
   此主題描述在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]發生容錯移轉之後，如何使用容錯移轉叢集管理員嵌入式管理單元，從叢集失敗中復原。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  
@@ -34,7 +34,7 @@ ms.locfileid: "48154118"
   
 1.  在節點 1 失敗之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 會容錯移轉至節點 2。  
   
-2.  從 FCI 中收回節點 1。 作法是從節點 2 開啟容錯移轉叢集管理員嵌入式管理單元，並以滑鼠右鍵按一下 [節點 1]，按一下 [移動動作]，然後按一下 [收回節點]。  
+2.  從 FCI 中收回節點 1。 作法是從節點 2 開啟容錯移轉叢集管理員嵌入式管理單元，並以滑鼠右鍵按一下 [節點 1]，按一下 [移動動作]  ，然後按一下 [收回節點]  。  
   
 3.  確認節點 1 已從叢集定義中移出。  
   

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92261bc69590bcc338bf18aa9d406964bfe42fcd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489757"
 ---
-# <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 課：使用 SSIS 自動化清理和比對
-  在第 1 課方法，您可以建置供應商知識庫，並使用它來清理資料，在第 2 課和比對資料使用工具第 3 課**DQS 用戶端**。 在真實世界案例中，您可能要從來源 DQS 不支援，或者您想要自動化清理和比對程序中提取資料，而不需要使用**DQS 用戶端**工具。 SQL Server Integration Services (SSIS) 有可供您整合各種異質來源的資料的元件和 **[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)** 叫用清理元件DQS 所公開的功能。 目前，DQS 不會公開比對功能給 SSIS 使用，但您可以使用**[模糊群組轉換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 來識別資料中的重複項。  
+# <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 課：使用 SSIS 將清理和比對自動化
+  在第 1 課方法，您可以建置供應商知識庫，並使用它來清理資料，在第 2 課和比對資料使用工具第 3 課**DQS 用戶端**。 在真實世界案例中，您可能要從來源 DQS 不支援，或者您想要自動化清理和比對程序中提取資料，而不需要使用**DQS 用戶端**工具。 SQL Server Integration Services (SSIS) 有可供您整合各種異質來源的資料的元件和 **[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)** 叫用清理元件DQS 所公開的功能。 目前，DQS 不會公開比對功能給 SSIS 使用，但您可以使用 **[模糊群組轉換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 來識別資料中的重複項。  
   
  您可以使用資料上傳至 MDS**實體式暫存功能**。 當您在 MDS 中建立實體時，將會自動建立對應的暫存資料表和預存程序。 例如，當您建立 Supplier 實體時， **stg.supplier_Leaf**資料表並**stg.udp_Supplier_Leaf**自動建立預存程序。 您會使用暫存資料表和程序來建立、更新及刪除實體成員。 在這一課，您會建立 Supplier 實體的新實體成員。 為了將資料載入 MDS 伺服器，SSIS 封裝會先將資料載入暫存資料表 stg.supplier_Leaf，然後觸發相關的預存程序 stg.udp_Supplier_Leaf。 請參閱[匯入資料](../master-data-services/overview-importing-data-from-tables-master-data-services.md)如需詳細資訊。  
   

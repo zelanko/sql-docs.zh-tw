@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75708c6b714806e54afc5802f8084c9635958acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045119"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access 驅動程式的程式設計考量
 此章節包含下列主題。  

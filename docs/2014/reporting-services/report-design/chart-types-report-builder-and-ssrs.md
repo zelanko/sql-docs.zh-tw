@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6c53e1e3fff9309ec46529abd382864e91db43
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106271"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
   針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這可以決定以圖表形式放入資料時可以解譯資料的程度。 例如，如果您的資料集包含多個相對於圖表大小的資料點，最好使用區域、線條或散佈圖呈現。 如需如何根據選取的圖表類型準備資料的相關討論，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  

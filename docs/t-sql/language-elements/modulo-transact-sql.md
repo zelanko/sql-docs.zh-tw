@@ -22,16 +22,16 @@ helpviewer_keywords:
 - modulo operator (%)
 - modulus operator (%)
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06e940fa535bbe75165d36edf3342e32f32b221e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a344f3c892bf8aca2670d7774813b5ab2af7c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981971"
 ---
 # <a name="-modulus-transact-sql"></a>% (模數) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C：簡單範例  
+### <a name="c-simple-example"></a>C.簡單範例  
  下列範例示範 3 除以 2 時，`%` 運算子所傳回的結果。  
   
 ```  

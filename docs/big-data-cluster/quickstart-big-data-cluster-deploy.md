@@ -1,36 +1,35 @@
 ---
-title: 部署快速入門
+title: 部署指令碼
 titleSuffix: SQL Server big data clusters
 description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽） 在 Azure Kubernetes Service (AKS)。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 03/27/2018
-ms.topic: quickstart
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 05/22/2019
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 1688725e8944b4099623688f92931c261b7fdcb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958279"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-在本快速入門中，您可以使用範例部署指令碼部署 SQL Server 2019 巨量資料叢集 （預覽） Azure Kubernetes Service (AKS)。 
+在本教學課程中，您可以使用範例部署指令碼部署 SQL Server 2019 巨量資料叢集 （預覽） Azure Kubernetes Service (AKS)。 
 
 > [!TIP]
 > AKS 會為您的巨量資料叢集裝載 Kubernetes 的只有一個選項。 若要瞭解其他部署選項，如何以自訂部署選項，請參閱[如何部署 SQL Server 的巨量資料叢集的 Kubernetes 上](deployment-guidance.md)。
 
-這裡使用預設的巨量資料叢集部署是由 SQL Master 執行個體、 一個計算集區執行個體、 兩個資料集區執行個體和兩個儲存體集區執行個體所組成。 資料會保存使用使用 AKS 預設儲存體類別的 Kubernetes 永續性磁碟區。 在本快速入門使用的預設組態是適用於開發/測試環境。
+這裡使用預設的巨量資料叢集部署是由 SQL Master 執行個體、 一個計算集區執行個體、 兩個資料集區執行個體和兩個儲存體集區執行個體所組成。 資料會保存使用使用 AKS 預設儲存體類別的 Kubernetes 永續性磁碟區。 在本教學課程使用的預設組態是適用於開發/測試環境。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Azure 訂用帳戶。
 - [巨量資料工具](deploy-big-data-tools.md):
@@ -50,7 +49,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>下載部署指令碼
 
-本快速入門中會自動建立巨量資料叢集上使用 python 指令碼的 AKS**部署-sql-巨量的資料-aks.py**。 如果您已安裝適用於 python **mssqlctl**，您應該能夠成功地執行指令碼，在本快速入門。 
+本教學課程中會自動建立巨量資料叢集上使用 python 指令碼的 AKS**部署-sql-巨量的資料-aks.py**。 如果您已安裝適用於 python **mssqlctl**，您應該能夠成功地執行指令碼，在本教學課程。 
 
 在 Windows PowerShell 或 Linux bash 提示字元中，執行下列命令，以從 GitHub 下載的部署指令碼。
 
@@ -60,7 +59,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>執行部署指令碼
 
-您可以使用下列步驟來執行部署指令碼。 此指令碼會在 Azure 中建立的 AKS 服務，並接著將 SQL Server 2019 巨量資料叢集部署至 AKS。 您也可以修改與其他指令碼[環境變數](deployment-guidance.md#env)來建立自訂的部署。
+您可以使用下列步驟來執行部署指令碼。 此指令碼會在 Azure 中建立的 AKS 服務，並接著將 SQL Server 2019 巨量資料叢集部署至 AKS。 您也可以修改與其他指令碼[環境變數](deployment-guidance.md#configfile)來建立自訂的部署。
 
 1. 執行指令碼使用下列命令：
 
@@ -82,12 +81,12 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure 區域** | 新的 AKS 叢集的 Azure 區域 (預設值**westus**)。 |
    | **機器大小** | [機器大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)用於 AKS 叢集中的節點 (預設**Standard_L8s**)。 |
    | **背景工作角色節點** | 在 AKS 叢集中的背景工作節點數目 (預設值**1**)。 |
-   | **叢集名稱** | AKS 叢集與巨量資料叢集的名稱。 只有大小寫英數字元，而且沒有空格，必須是叢集的名稱。 (預設值**sqlbigdata**)。 |
-   | **[密碼]** | 控制器、 HDFS/Spark 閘道和主要執行個體的密碼 (預設值**MySQLBigData2019**)。 |
+   | **叢集名稱** | AKS 叢集與巨量資料叢集的名稱。 只有大小寫英數字元，而且沒有空格，必須是您的巨量資料叢集的名稱。 (預設值**sqlbigdata**)。 |
+   | **密碼** | 控制器、 HDFS/Spark 閘道和主要執行個體的密碼 (預設值**MySQLBigData2019**)。 |
    | **控制器的使用者** | 控制器的使用者的使用者名稱 (預設值： **admin**)。 |
 
    > [!IMPORTANT]
-   > 預設值**Standard_L8s**機器大小可能無法使用每個 Azure 區域中。 如果您選取不同的機器大小，請確定磁碟可連接到叢集中的節點總數大於或等於 24。 在叢集中的每個永續性磁碟區宣告需要連接的磁碟。 目前，巨量資料叢集需要 24 的永續性磁碟區宣告。 例如， [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)機器大小支援 32 個附加的磁碟，因此您能夠評估此機器大小的單一節點的巨量資料叢集。
+   > 預設值**Standard_L8s**機器大小可能無法使用每個 Azure 區域中。 如果您選取不同的機器大小，請確定磁碟可連接到叢集中的節點總數大於或等於 24。 在叢集中的每個永續性磁碟區宣告需要連接的磁碟。 目前，巨量資料叢集需要 24 的永續性磁碟區宣告。 例如， [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series)機器大小支援 32 個附加的磁碟，因此您能夠評估此機器大小的單一節點的巨量資料叢集。
 
    > [!NOTE]
    > `sa`帳戶是在安裝期間建立的 SQL Server 主要執行個體上的系統管理員。 建立部署之後,`MSSQL_SA_PASSWORD`環境變數是可探索執行`echo $MSSQL_SA_PASSWORD`主要執行個體的容器中。 基於安全考量，變更您`sa`在部署後的主要執行個體上的密碼。 如需詳細資訊，請參閱 <<c0> [ 變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
@@ -114,11 +113,11 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> 整個部署可能需要很長的時間，因為下載的巨量資料叢集元件的容器映像所需的時間。 不過，它應該不需要數小時。 如果您遇到部署問題，請參閱[部署疑難排解](deployment-guidance.md#troubleshoot)的部署指引文件的區段。
+> 整個部署可能需要很長的時間，因為下載的巨量資料叢集元件的容器映像所需的時間。 不過，它應該不需要數小時。 如果您遇到部署問題，請參閱[監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
 
 ## <a name="inspect-the-cluster"></a>檢查叢集
 
-隨時都在部署期間，您可以使用 kubectl 或叢集的系統管理入口網站來檢查 狀態 和 執行巨量資料叢集的相關詳細資料。
+隨時都在部署期間，您可以使用**kubectl**或是**mssqlctl**檢查 狀態 和 執行巨量資料叢集的相關詳細資料。
 
 ### <a name="use-kubectl"></a>使用 kubectl
 
@@ -127,42 +126,32 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 1. 執行下列命令，以取得整個叢集的狀態摘要：
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 如果您未變更的巨量資料叢集名稱，指令碼會預設為**sqlbigdata**。
 
 1. 檢查 kubernetes 服務，以及其內部和外部端點，以下列**kubectl**命令：
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. 您也可以檢查狀態的 kubernetes pod，使用下列命令：
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. 找出特定的 pod，使用下列命令的詳細資訊：
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
-> 如需有關如何監視和疑難排解部署的詳細資訊，請參閱 <<c0> [ 部署疑難排解](deployment-guidance.md#troubleshoot)的部署指引文件的區段。
-
-### <a name="use-the-cluster-administration-portal"></a>使用叢集系統管理入口網站
-
-當控制器 pod 執行時，您也可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`endpoint-service-proxy`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 用來登入入口網站的認證比對的值**Controller 使用者**並**密碼**您在部署指令碼中指定。
-
-您可以取得的 IP 位址**端點服務 proxy**服務中的 bash 或 cmd 視窗執行下列命令：
-
-```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
-```
-
-> [!NOTE]
-> 在 CTP 2.4，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。
+> 如需有關如何監視和疑難排解部署的詳細資訊，請參閱 <<c0> [ 監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
 
 ## <a name="connect-to-the-cluster"></a>連線到叢集
 

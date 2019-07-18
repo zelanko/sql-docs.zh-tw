@@ -20,14 +20,18 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 785f7f0af9a41052a870edc8feaf566585a45e89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277737"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725975"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   合併聯結轉換提供藉由使用 FULL、LEFT 或 INNER 聯結，來聯結兩個已排序資料集所產生的輸出。 例如，您可以使用 LEFT 聯結來聯結包含產品資訊的資料表，以及列出製造產品的國家/地區的資料表。 此結果為列出所有產品及其原產國家/地區的資料表。  
   
  您可以利用下列方式設定「合併聯結」轉換：  
@@ -64,7 +68,7 @@ ms.locfileid: "58277737"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-join-transformation-editor"></a>合併聯結轉換編輯器
-  使用 [合併聯結轉換編輯器] 對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
+  使用 [合併聯結轉換編輯器]  對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
   
 > [!IMPORTANT]  
 >  合併聯結轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
@@ -74,7 +78,7 @@ ms.locfileid: "58277737"
  指定要使用內部聯結、左方外部聯結或完整聯結。  
   
  **交換輸入**  
- 使用 [交換輸入] 按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
+ 使用 [交換輸入]  按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
   
  **輸入**  
  針對您要放入合併輸出中的每個資料行，首先從可用的輸入清單中選取。  

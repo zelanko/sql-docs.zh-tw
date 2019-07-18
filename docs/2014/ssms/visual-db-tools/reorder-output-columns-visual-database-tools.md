@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63063064"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>重新排列輸出資料行順序 (Visual Database Tools)
   資料行加入選取查詢中的順序，決定資料行出現在結果中的順序。 第一個加入的資料行會出現在結果的最左側，接著是第二個資料行，依此類推。  

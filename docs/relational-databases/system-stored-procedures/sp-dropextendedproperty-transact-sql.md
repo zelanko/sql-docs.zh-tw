@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e01b14407198ed88654527bd247a116c200fb1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934016"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropextendedproperty
  這是要卸除的屬性名稱。 *property_name*已**sysname**不能是 NULL。  
   
  [ @level0type=] {'*level0_object_type&lt*'}  
- 這是所指定之層級 0 物件類型的名稱。 *level0_object_type&lt*已**varchar(128)**，預設值是 NULL。  
+ 這是所指定之層級 0 物件類型的名稱。 *level0_object_type&lt*已**varchar(128)** ，預設值是 NULL。  
   
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
   
@@ -81,7 +80,7 @@ sp_dropextendedproperty
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 為了指定擴充屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件會分類成 3 個層級 (0、1 和 2)。 層級 0 是最高層級，定義為資料庫範圍所包含的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。 參考一個層級中的物件時，必須以所有較高層級物件的類型和名稱來限定。  
+ 為了指定擴充的屬性，在物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫分為三個層級：0、 1 和 2。 層級 0 是最高層級，定義為資料庫範圍所包含的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。 參考一個層級中的物件時，必須以所有較高層級物件的類型和名稱來限定。  
   
  指定的有效*property_name*，如果所有物件類型和名稱都是 null，且有屬性存在於目前的資料庫，會刪除此屬性。 請參閱本主題稍後的範例 B。  
   
@@ -135,7 +134,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   

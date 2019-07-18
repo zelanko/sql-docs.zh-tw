@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050934"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件類別
   Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
@@ -13,12 +12,12 @@ ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084952"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>資料採礦查詢工作和使用說明
   建立查詢的功能對於使用資料採礦模型十分重要。 本節提供一些範例連結，這些範例示範如何透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中提供的工具針對資料採礦模型建立查詢。 如果您需要有關資料採礦查詢的作用或者可建立之不同查詢類型的詳細資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "48189638"
   
 -   [手動編輯預測查詢](manually-edit-a-prediction-query.md)  
   
--   [將預測函式套用至模型](apply-prediction-functions-to-a-model.md)  
+-   [將預測函數套用至模型](apply-prediction-functions-to-a-model.md)  
   
 -   [為預測查詢選擇和對應輸入資料](choose-and-map-input-data-for-a-prediction-query.md)  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48189638"
  描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 XMLA 範本，針對採礦模型內容建立查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢及運算式語言參考&#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [資料採礦預存程序&#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [查詢及運算式語言參考 &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [資料採礦預存程序 &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: 可用性群組的管理參考
-description: 連結參考頁面，可將您連結至 Always On 可用性群組的管理基本概念，例如改變屬性、新增或移除複本、新增或移除資料庫、容錯移轉、設定接聽程式等。
+description: 此參考頁面可將您連結至 Always On 可用性群組的管理基本概念，例如改變屬性、新增或移除複本、新增或移除資料庫、容錯移轉、設定接聽程式等。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3190fba7fd3e09e19236340659e4a43bf252f4ab
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: f1626c21649d276e6e6cb3e51207aaede006b566
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973057"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681082"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性群組的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理現有的 AlwaysOn 可用性群組包括下列一或多個工作：  
   
--   改變現有可用性副本的屬性 (例如，變更用戶端連接存取 (以設定可讀取的次要副本))；變更其容錯移轉模式、可用性模式或工作階段逾時設定。    
--   加入或移除次要副本。    
+-   改變現有可用性複本的屬性 (例如，變更用戶端連接存取 (以設定可讀取的次要複本))；變更其容錯移轉模式、可用性模式或工作階段逾時設定。    
+-   加入或移除次要複本。    
 -   加入或移除資料庫。    
 -   暫停或恢復資料庫。   
--   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」*(Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」*(Forced Failover))。    
+-   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」* (Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」* (Forced Failover))。    
 -   建立或設定可用性群組接聽程式。    
 -   管理給定可用性群組之 [可讀取的次要複本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 。 這項作業包括以次要角色執行時，將一個或多個複本設定為唯讀存取，以及設定唯讀路由。    
 -   管理給定可用性群組之 [次要複本上的備份](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 。 這項作業包括設定您希望執行備份作業的位置，然後編寫備份作業的指令碼以實作您的備份喜好設定。 您必須為裝載可用性複本的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上之可用性群組中的每一個資料庫，編寫備份作業的指令碼。    

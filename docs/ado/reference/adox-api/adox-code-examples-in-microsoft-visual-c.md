@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual c + + 中的 ADOX 程式碼範例 |Microsoft Docs
+title: Microsoft 的視覺效果中的 ADOX 程式碼範例C++|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952122"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 程式碼範例
-這些主題提供可協助您了解如何使用 ADOX 程式碼範例。 使用 Microsoft Visual c + + 撰寫所有程式碼範例。  
+這些主題提供可協助您了解如何使用 ADOX 程式碼範例。 使用 Microsoft Visual 撰寫所有程式碼範例C++。  
   
 > [!NOTE]
 >  貼上整個程式碼範例中，從開頭至結尾，您的程式碼編輯器中。 如果您使用部分的範例，或遺失段落格式時，此範例可能無法正確執行。  

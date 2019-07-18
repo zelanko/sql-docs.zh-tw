@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3df492cbc85c1c98ab920d63b6694bdc4de859
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68a9e46232246c5f3a088765f77f44a9bc018269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079373"
 ---
 # <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

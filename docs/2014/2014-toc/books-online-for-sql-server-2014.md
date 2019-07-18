@@ -4,7 +4,7 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.f1
 helpviewer_keywords:
@@ -19,19 +19,21 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 62d8f6199be3cf3fdef1b5f986267b42723f0efd
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578669"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412631"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 的線上叢書
 
   歡迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 線上叢書》。 《線上叢書》包含工作描述和參考文件集，描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行資料管理及商業智慧工作。  
-  
+
+SQL Server 2016 和更新版本中，記載[此處](https://docs.microsoft.com/sql/sql-server/index)。 SQL Server 2012 和較舊版本，都記載[此處](#previous-versions-gm2014)。 <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **現在就試試看：**  
- ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
+ ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往 **[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## <a name="sql-server-technologies"></a>SQL Server 技術  
 
@@ -55,7 +57,7 @@ ms.locfileid: "57578669"
   
 -   [Microsoft.com 上的 SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server 資源中心](https://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server 資源中心](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
 -   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
@@ -64,7 +66,11 @@ ms.locfileid: "57578669"
 -   [資料平台開發人員中心](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005、 2008、 2012、 2016年 +
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>另請參閱  
 
  [SQL Server 組態管理員說明](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

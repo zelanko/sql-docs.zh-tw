@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 871887e2896f2594dddda18d2ab342d4c222612a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778053"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>搭配使用 ADO 與 OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47711196"
 
 -   `DataTypeCompatibility=80`  
 
- 如需有關 ADO 連接字串關鍵字支援 OLE DB Driver for SQL Server，請參閱[OLE DB Driver for SQL Server 搭配使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 如需 OLE DB Driver for SQL Server 中支援之 ADO 連接字串關鍵字的詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
  下列範例會建立完全啟用成可使用 OLE DB Driver for SQL Server 的 ADO 連接字串，包括啟用 MARS 功能：  
 

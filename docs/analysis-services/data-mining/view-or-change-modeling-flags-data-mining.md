@@ -1,5 +1,5 @@
 ---
-title: 檢視或變更模型旗標 （資料採礦） |Microsoft 文件
+title: 檢視或變更模型旗標 （資料採礦） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e587be4fe975ee35752e668f9a5d49e0afdf4488
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182271"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>檢視或變更模型旗標 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "34015465"
   
 1.  在 SQL Server Design Studio 中開啟 [方案總管]，然後按兩下採礦結構。  
   
-2.  若要設定 NOT NULL 模型旗標，按一下 **[採礦結構]** 索引標籤。若要設定 REGRESSOR 或 MODEL_EXISTENCE_ONLY 旗標，請按一下 [採礦模型] 索引標籤。  
+2.  若要設定 NOT NULL 模型旗標，按一下 **[採礦結構]** 索引標籤。若要設定 REGRESSOR 或 MODEL_EXISTENCE_ONLY 旗標，請按一下 [採礦模型]  索引標籤。  
   
-3.  以滑鼠右鍵按一下要檢視或變更的資料行，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下要檢視或變更的資料行，然後選取 [屬性]  。  
   
 4.  若要新增模型旗標，按一下 **[ModelingFlags]** 屬性，然後選取要使用之模型旗標的核取方塊。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34015465"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

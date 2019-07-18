@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097750"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52418619"
 |step_index|**int**|這個背景工作正在執行要求。|請參閱*step_index*中[sys.dm_exec_requests &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |dms_step_index|**int**|這個背景工作正在執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
 |compute_node_id|**int**|背景工作角色節點上正在執行。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|型別|**nvarchar(60)**|外部的工作類型。|' File 分割 '|  
+|type|**nvarchar(60)**|外部的工作類型。|' File 分割 '|  
 |work_id|**int**|實際分割的識別碼。|大於或等於 0。|  
 |input_name|**nvarchar(4000)**|要讀取輸入的名稱|使用 Hadoop 時的檔案名稱。|  
 |read_location|**bigint**|讀取位置或位移。|要讀取之檔案的位移。|  

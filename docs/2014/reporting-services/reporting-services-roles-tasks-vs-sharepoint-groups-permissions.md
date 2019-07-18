@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102805"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較
   本主題會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  
@@ -42,9 +41,9 @@ ms.locfileid: "59241556"
 -   [比較原生模式工作和 SharePoint 權限](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 比較權限工具和詞彙  
- **原生模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式權限物件 (角色和工作) 是在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中建立，並為報表管理員的個別使用者設定。  
+ **原生模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中建立原生模式權限物件 （角色和工作）[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和的個別使用者在報表管理員中設定。  
   
- **SharePoint 模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式會利用 SharePoint 權限功能。 SharePoint 群組和權限是從 **[站台設定]** 頁面管理。  
+ **SharePoint 模式：** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式會利用 SharePoint 權限功能。 SharePoint 群組和權限是從 **[站台設定]** 頁面管理。  
   
  下表比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式和 SharePoint 之間的權限相關物件及概念。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "59241556"
 ##  <a name="bkmk_compare_roles_groups"></a> 比較原生模式角色和 SharePoint 群組  
  下表會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式中的預先定義角色定義與標準 SharePoint 群組。 如果 SharePoint 群組不符合您所需要的特定角色，您可以在 SharePoint 中建立自訂群組，並指派權限等級。  
   
- **注意**:可用的預設 SharePoint 群組取決於用來建立 SharePoint 網站的網站範本。  
+ **注意**：可用的預設 SharePoint 群組取決於用來建立 SharePoint 網站的網站範本。  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 角色|SharePoint 群組|  
 |--------------------------------------|-----------------------|  
@@ -68,7 +67,7 @@ ms.locfileid: "59241556"
 |**我的報表**|沒有對等的群組。  以 SharePoint 模式執行的報表伺服器不支援 [我的報表]。 如果您想要使用對等的功能，可以使用 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 中的「我的網站」功能。|  
 |**發行者**<br /><br /> 加入、更新、檢視和刪除報表、報表模型、共用資料來源和資源。|使用「 **成員** 」群組可授與權限，在 SharePoint 網站上加入項目、編輯項目和更新相依項目的參考。 「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、加入和更新項目以及提交變更核准。|  
 |**報表產生器**<br /><br /> 在報表產生器中檢視報表、自我管理個別訂閱和開啟報表。|在預先定義的現成權限等級或 SharePoint 群組中，沒有相當於報表產生器報表定義的項目。 依預設，凡是屬於「 **成員** 」群組或「 **擁有者** 」群組的使用者，都有權限可以使用報表產生器。 如果您要讓更多使用者可以使用報表產生器，您應該建立自訂安全性設定，以提供類似報表產生器角色所提供的權限等級。 如需詳細資訊，請參閱 [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)＞。|  
-|-| 使用 [檢視者] 群組可授與檢視已轉譯之報表的權限。 「 **檢視者** 」群組無法下載或檢視報表項目的內容。<br /><br /> **注意：** 從 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 開始，[檢視者] 群組沒有建立訂閱的權限。|  
+|-| 使用 [檢視者] 群組可授與檢視已轉譯之報表的權限。 「 **檢視者** 」群組無法下載或檢視報表項目的內容。<br /><br /> **注意：** 從 SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 開始，[檢視者]  群組沒有建立訂閱的權限。|  
 |**系統使用者** 和 **系統管理員**|這些角色不是以 SharePoint 模式執行報表伺服器時必要的角色。  [系統使用者]  和 [系統管理員] 對應到 SharePoint 伺服陣列或 Web 應用程式層級權限。 報表伺服器不提供必須於該層級授權的任何功能。|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> 比較原生模式工作和 SharePoint 權限  
@@ -105,9 +104,9 @@ ms.locfileid: "59241556"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [設定 SharePoint Web 應用程式中報表伺服器作業的權限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定義](security/role-definitions.md)   
- [Predefined Roles](security/role-definitions-predefined-roles.md)  
+ [預先定義的角色](security/role-definitions-predefined-roles.md)  
   
   

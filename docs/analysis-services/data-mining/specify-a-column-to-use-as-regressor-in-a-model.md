@@ -1,5 +1,5 @@
 ---
-title: 指定要使用的資料行做為模型中的迴歸輸入變數 |Microsoft 文件
+title: 指定要使用的資料行做為模型中的迴歸輸入變數 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cfbe8f17c14518b2acf41bdb9ecf64b1679ffb2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182349"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定當做迴歸輸入變數使用的資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,15 +26,15 @@ ms.locfileid: "34016545"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>如何建立簡單的線性迴歸模型  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的**方案總管**中，展開 [採礦結構]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的**方案總管**中，展開 [採礦結構]  。  
   
 2.  在設計師中按兩下 Call Center.dmm 將其開啟。  
   
-3.  從 [採礦模型] 功能表選取 [新增採礦模型]。  
+3.  從 [採礦模型]  功能表選取 [新增採礦模型]  。  
   
-4.  針對演算法選取 [Microsoft 線性迴歸]。 輸入「撥接中心迴歸」當作名稱。  
+4.  針對演算法選取 [Microsoft 線性迴歸]  。 輸入「撥接中心迴歸」  當作名稱。  
   
-5.  按照下列指示，在 [採礦模型] 索引標籤中變更資料行的使用方式。 未列於下列清單的所有資料行都應該設定為 [忽略] \(若尚未設定)。  
+5.  按照下列指示，在 [採礦模型]  索引標籤中變更資料行的使用方式。 未列於下列清單的所有資料行都應該設定為 [忽略]  (若尚未設定)。  
   
      FactCallCenterID**Key**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "34016545"
   
      AverageTimePerIssue**Input**  
   
-6.  從 [採礦模型] 功能表選取 [Set Model Parameters (設定模型參數)]。  
+6.  從 [採礦模型]  功能表選取 [Set Model Parameters (設定模型參數)]  。  
   
-7.  針對 FORCE_REGRESSOR 參數，在 [值] 資料行中輸入資料行名稱 (將名稱放入方括弧並以逗號分隔)，如下所示：  
+7.  針對 FORCE_REGRESSOR 參數，在 [值]  資料行中輸入資料行名稱 (將名稱放入方括弧並以逗號分隔)，如下所示：  
   
     ```  
     [Average Time Per Issue],[Total Operators]  
@@ -55,14 +55,14 @@ ms.locfileid: "34016545"
     > [!NOTE]  
     >  演算法將會自動偵測可做為最佳迴歸輸入變數的資料行。 當您想要確定最終公式中是否包含了某資料行時，只需強制使用迴歸輸入變數即可。  
   
-8.  從 [採礦模型] 功能表選取 [處理模型]。  
+8.  從 [採礦模型]  功能表選取 [處理模型]  。  
   
-     在檢視器中，模型會以包含迴歸公式的單一節點來表示。 您可以在 [採礦圖例] 中檢視公式，或者也可以藉由使用查詢來擷取公式的係數。  
+     在檢視器中，模型會以包含迴歸公式的單一節點來表示。 您可以在 [採礦圖例]  中檢視公式，或者也可以藉由使用查詢來擷取公式的係數。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [線性迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

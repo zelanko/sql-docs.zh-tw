@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670435"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>資料採礦結構描述資料列集 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>範例 3：列出所有資料列集  
+### <a name="example-3-list-all-rowsets"></a>範例 3︰列出所有的資料列集  
  下列範例會傳回目前伺服器所提供之資料列集的完整清單：  
   
 ```  

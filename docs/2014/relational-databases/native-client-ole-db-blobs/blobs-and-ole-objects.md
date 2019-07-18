@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180318"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195223"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，以及 xml 資料類型當做二進位大型物件 (Blob). **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，以及 xml 資料類型當做二進位大型物件 (Blob). **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
  如需示範這項功能的範例，請參閱 <<c0> [ 大型資料集&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)。</c0>  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48180318"
   
  對於大數值資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查型別中的大小假設**IRowset**和 DDL 介面。 資料行**varchar**， **nvarchar**，並**varbinary**會透過結構描述資料列和介面以 ISLONG 表示資料型別，且設定為無限制的大小上限傳回資料行資料類型。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**varchar （max)**， **varbinary （max)** 並**nvarchar （max)** 為 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_ 類型WSTR 分別。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**varchar （max)** ， **varbinary （max)** 並**nvarchar （max)** 為 DBTYPE_STR、 DBTYPE_BYTES 和 DBTYPE_ 類型WSTR 分別。  
   
  為了使用這些類型，應用程式具有下列選項：  
   

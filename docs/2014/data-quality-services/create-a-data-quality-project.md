@@ -12,15 +12,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f341d13995cd7a13a06e0ad7b9b380ebd0184f7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480957"
 ---
 # <a name="create-a-data-quality-project"></a>建立資料品質專案
   本主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來建立資料品質專案。 資料品質專案是用來在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行清理或比對活動。  
@@ -51,9 +51,9 @@ ms.locfileid: "56020169"
   
     4.  在 **[選取活動]** 區域中，按一下您想要使用此資料品質專案來執行的活動：  
   
-        -   **清理**:選取這個活動來清理來源資料。  
+        -   **清理**：若要清理來源資料，請選取此活動。  
   
-        -   **比對**:選取要執行比對此活動。 只有當您針對資料品質專案所選取的知識庫包含比對原則時，才能使用此活動。  
+        -   **比對**：若要執行比對，請選取此活動。 只有當您針對資料品質專案所選取的知識庫包含比對原則時，才能使用此活動。  
   
 4.  按一下 **[建立]** ，建立資料品質專案。  
   

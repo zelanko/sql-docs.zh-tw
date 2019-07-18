@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224632"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
   仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
   
--   **在開始之前：**[必要條件](#Prerequisites)，[安全性](#Security)  
+-   **開始之前：**[必要條件](#Prerequisites)、[安全性](#Security)  
   
 -   **透過強制仲裁程序執行 WSFC 災害復原** [透過強制仲裁程序執行 WSFC 災害復原](#Main)  
   

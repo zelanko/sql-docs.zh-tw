@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928558"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值只是單純的建議，，而且可能會從一個版本 ADOX 變更到另一個。 名稱，而非實際的值，列舉常數時，應該僅相依於您的程式碼。  

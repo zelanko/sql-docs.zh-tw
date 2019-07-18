@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7388c5c768c9ffe6865a46f4513090cc1716c59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fa7c613c98b01ecda5e535928c7e381beef8aa6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775722"
 ---
 # <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47837432"
     |[預設追蹤已啟用](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[不允許來自觸發程序的結果](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[啟用外部指令碼](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|1|0|  
+    |[啟用外部指令碼](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (SC)<br /><br /> **需要重新啟動**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)，請參閱 [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -114,7 +114,7 @@ ms.locfileid: "47837432"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。 **注意：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|0<br /><br /> 零表示根據處理器數目來自動設定最大背景工作執行緒數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256 + (\<處理器> -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 (512 + (*\<處理器>* - 4) * 8)。 **注意：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|0<br /><br /> 零表示根據處理器數目來自動設定最大背景工作執行緒數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256 + (\<處理器>  -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 (512 + ( *\<處理器>* - 4) * 8)。 **注意：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 是 32 位元作業系統上可用的最後一個版本。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  

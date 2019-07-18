@@ -14,14 +14,18 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40788522c8aedccffe91058bda5ffdd51215e7a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 961feeb5714ae007d13517887b2fb6edb794b2be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725506"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回跨越兩個指定日期的日期和時間界線數目。 *datepart* 參數會識別要比較的日期和時間界線。  
   
 ## <a name="syntax"></a>語法  

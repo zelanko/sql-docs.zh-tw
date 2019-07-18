@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099166"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47615758"
 |**login_state**|**smallint**|這個連接的登入處理序狀態。 可能的值如下：<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = 線上<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|遠端電腦登入的目前狀態。 可能的值如下：<br /><br /> 正在初始化連接交握。<br /><br /> 連接交握正在等候登入交涉訊息。<br /><br /> 連接交握已初始化並傳送用於驗證的安全性內容。<br /><br /> 連接交握已收到並接受用於驗證的安全性內容。<br /><br /> 連接交握已初始化並傳送用於驗證的安全性內容。 沒有可用來驗證對等的選擇性機制。<br /><br /> 連接交握已收到並傳送用於驗證的已接受安全性內容。 沒有可用來驗證對等的選擇性機制。<br /><br /> 連接交握正在等候初始化安全性內容確認訊息。<br /><br /> 連接交握正在等候接受安全性內容確認訊息。<br /><br /> 連接交握正在等待驗證失敗的 SSPI 拒絕訊息。<br /><br /> 連接交握正在等候預備主密碼訊息。<br /><br /> 連接交握正在等候驗證訊息。<br /><br /> 連接交握正在等候仲裁訊息。<br /><br /> 連接交握已完成並上線 (就緒)，可進行訊息交換。<br /><br /> 連線發生錯誤。|  
 |**peer_certificate_id**|**int**|驗證遠端執行個體所用之憑證的本機物件識別碼。 這個憑證的擁有者必須對 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點具備 CONNECT 權限。 NULLABLE。|  
-|**encryption_algorithm**|**smallint**|這個連接所用的加密演算法。 NULLABLE。 可能的值如下：<br /><br /> **值&#124;描述&#124;對應的 DDL 選項**<br /><br /> 0 &#124; none&#124;已停用<br /><br /> 1&AMP;#124;只簽署<br /><br /> 2 &#124; aes、rc4&#124;需要&#124;必要的演算法 RC4}<br /><br /> 3 &#124; AES&#124;必要的演算法 AES<br /><br /> **注意：** RC4 演算法僅支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。|  
+|**encryption_algorithm**|**smallint**|這個連接所用的加密演算法。 NULLABLE。 可能的值如下：<br /><br /> **值&#124;描述&#124;對應的 DDL 選項**<br /><br /> 0 &#124; none&#124;已停用<br /><br /> 1&#124;只簽署<br /><br /> 2 &#124; aes、rc4&#124;需要&#124;必要的演算法 RC4}<br /><br /> 3 &#124; AES&#124;必要的演算法 AES<br /><br /> **注意：** 只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|加密演算法的文字表示法。 NULLABLE。 可能的值如下：<br /><br /> **描述&#124;對應的 DDL 選項**<br /><br /> 無&#124;已停用<br /><br /> RC4 &#124; {需要&#124;必要的演算法 RC4}<br /><br /> AES&#124;所需的演算法 AES<br /><br /> NONE、RC4 &#124; {支援&#124;支援的演算法 RC4}<br /><br /> NONE、 AES&#124;支援的演算法 RC4<br /><br /> RC4、 AES&#124;必要的演算法 RC4 AES<br /><br /> Aes、rc4&#124;必要的演算法 AES RC4<br /><br /> 無、 RC4 AES&#124;支援的演算法 RC4 AES<br /><br /> NONE、 AES RC4&#124;支援的演算法 AES RC4|  
 |**receives_posted**|**smallint**|這個連接尚未完成的非同步網路接收數目。 NULLABLE。|  
 |**is_receive_flow_controlled**|**bit**|是否已因流程控制的緣故 (因為網路忙碌) 而延後網路接收。 NULLABLE。<br /><br /> 1 = True|  

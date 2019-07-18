@@ -21,16 +21,16 @@ helpviewer_keywords:
 - 0 (zero)
 - negative values
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ddba2215d6298baa750b6975fd3873a1d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a18a7ce3fabd036adeab48ff83efe437e7a44e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65942721"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917569"
 ---
 # <a name="properties-collection-ado"></a>Properties 集合 (ADO)
 包含所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的特定執行個體的物件。  

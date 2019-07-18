@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
@@ -13,18 +12,18 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145583"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068370"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>指定維度類型 (維度精靈)
   使用 **[指定維度類型]** 頁面來定義維度類型，並將與所選取之維度類型相關聯的特殊屬性類型加入至維度。  
   
 > [!NOTE]  
->  只有當您在 [選取維度類型] 頁面上選取 [標準維度] 時，才會顯示此頁面。  
+>  只有當您在 [選取維度類型]  頁面上選取 [標準維度]  時，才會顯示此頁面。  
   
 ## <a name="options"></a>選項。  
  **維度類型**  
@@ -53,14 +52,14 @@ ms.locfileid: "50145583"
 > [!NOTE]  
 >  只有當選取的 **[維度類型]** 有與其相關聯的特殊屬性類型時，才可以使用此章節中的選項。 並非所有的維度類型都有與其相關聯的特殊屬性類型。  
   
- **包含**  
+ **Include**  
  選取即可將屬性類型包含在維度中。  
   
  **屬性類型**  
- 顯示與 [維度類型] 中所選取之維度類型相關聯的屬性類型。 如需屬性類型的詳細資訊，請參閱 [Type 元素 &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
+ 顯示與 [維度類型]  中所選取之維度類型相關聯的屬性類型。 如需屬性類型的詳細資訊，請參閱 [Type 元素 &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
   
  **維度屬性**  
- 選取維度屬性，維度精靈會將顯示在 [屬性類型] 中的特殊屬性類型指派給該維度屬性。  
+ 選取維度屬性，維度精靈會將顯示在 [屬性類型]  中的特殊屬性類型指派給該維度屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [維度精靈 F1 說明](dimension-wizard-f1-help.md)   

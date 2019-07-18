@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5d9f97f58747ecde143a1c2244a68d8bdaf7d91c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3fac1e0c639bbe49e0c837f6de0a5abd9d2139d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102560"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
 

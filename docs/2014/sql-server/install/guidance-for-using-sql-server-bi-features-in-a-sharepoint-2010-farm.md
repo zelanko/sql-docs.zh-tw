@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094999"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引
   本主題摘要說明根據您使用之軟體版本的功能可用性， 也說明使用特定 SQL Server 功能的 SharePoint 2010 安裝需求。 如需有關 SharePoint 2013 的資訊，請參閱[在 SharePoint 中的 SQL Server BI 功能的部署拓撲](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
@@ -66,9 +65,9 @@ ms.locfileid: "53374840"
 > [!NOTE]  
 >  在現有的伺服器陣列，您必須使用下列其中一種**其他**步驟來完成 SharePoint SP1 升級。 如需詳細資訊，請參閱 <<c0> [ 當您安裝 Office 2010 SP1 和 SharePoint 2010 SP1 的已知問題](https://support.microsoft.com/kb/2532126)並[描述的 SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
--   **SharePoint 產品組態精靈:** 執行精靈以完成 SP1 升級和設定。  
+-   **SharePoint 產品組態精靈:** 執行精靈，以完成 SP1 升級和設定。  
   
--   **完成升級使用 psconfig:** 執行命令 `psconfig -upgrade` 以完成 SP1 升級  
+-   **完成升級使用 psconfig:** 執行命令`psconfig -upgrade`以完成 SP1 升級  
   
  如需詳細資訊，請參閱的 < 升級 > 一節[(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx)和[資源中心：適用於 SharePoint 2010 產品的更新](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   

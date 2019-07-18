@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f1d7e78a63d992cd483df1865594661c3388d46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: be710df7b54fa7019b5700a7789885ee10519d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067196"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.locfileid: "56034739"
   
 |XSD 資料類型|SQL Server 轉換|  
 |-------------------|---------------------------|  
-|布林|CONVERT(bit, COLUMN)|  
-|date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|Decimal|CONVERT(money, COLUMN)|  
+|Boolean|CONVERT(bit, COLUMN)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
@@ -59,7 +58,7 @@ ms.locfileid: "56034739"
   
 |SQL Server 資料類型|XSD 資料類型|  
 |--------------------------|-------------------|  
-|**bigint**|**long**|  
+|**bigint**|**長**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**string**|  
@@ -89,7 +88,7 @@ ms.locfileid: "56034739"
 ## <a name="sqldatatype-annotation"></a>sql:datatype 註解  
  **Sql: datatype**註解用來指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，而且此註解時，必須指定：  
   
--   您是大量載入到**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行，從 XSD **dateTime**，**日期**，或**時間**型別。 在此情況下，您必須找出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的資料行資料類型**sql: datatype ="dateTime"**。 這項規則也套用於 Updategram。  
+-   您是大量載入到**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料行，從 XSD **dateTime**，**日期**，或**時間**型別。 在此情況下，您必須找出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的資料行資料類型**sql: datatype ="dateTime"** 。 這項規則也套用於 Updategram。  
   
 -   您要大量載入的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**型別，而且 XSD 值是 GUID，包含大括號 （{和}）。 當您指定**sql: datatype ="uniqueidentifier"** 之前它會插入資料行中,，將會移除值的大括號。 如果**sql: datatype**未指定，則傳送值大括號，與在 insert 或 update 將失敗。  
   
@@ -147,8 +146,10 @@ ms.locfileid: "56034739"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  部分結果集如下：  
   

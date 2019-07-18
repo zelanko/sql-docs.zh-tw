@@ -11,14 +11,18 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b5d03128cadec2ea746578b87adf5fbc94499f94
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 51be58cd1c486a139486839e39a9ac820d7818b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716817"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中建立執行執行個體。  
@@ -40,13 +44,13 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>引數  
  [@folder_name =] *folder_name*  
- 包含所要執行之封裝的資料夾名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含所要執行之封裝的資料夾名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [@project_name =] *project_name*  
- 包含所要執行之封裝的專案名稱。 *project_name* 是 **nvarchar(128)**。  
+ 包含所要執行之封裝的專案名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [@package_name =] *package_name*  
- 要執行之封裝的名稱。 *package_name* 是 **nvarchar(260)**。  
+ 要執行之封裝的名稱。 *package_name* 是 **nvarchar(260)** 。  
   
  [@reference_id =] *reference_id*  
  環境參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  

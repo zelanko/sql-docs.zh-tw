@@ -12,15 +12,19 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05b5e0867d9bbe5ab4ea5e583db40a21aaafe76c
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8feee241eb883cc889dc1888c95a9bbe3c58babb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723755"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在執行作業 (SQL Server 匯入和匯出精靈)
-檢閱您在精靈中所做的選擇，並在 [完成精靈]  頁面上按一下 [完成]  之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [正在執行作業] 。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 您不需要在此頁面上採取任何動作。
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+檢閱您在精靈中所做的選擇，並在 [完成精靈]  頁面上按一下 [完成]  之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [正在執行作業]  。 在此頁面上，您會看到在前幾頁設定之作業的進度和結果。 您不需要在此頁面上採取任何動作。
 
 ## <a name="screen-shot---operation-in-progress"></a>螢幕擷取畫面 - 作業進行中 
  下列螢幕擷取畫面顯示當作業仍在進行中時，精靈的 [正在執行作業]  頁面。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4676f1d0a9d96779303898631164101bbdc4201d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921424"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 屬性 (ADO)
 表示欄位的值，以位元組為單位的實際長度。  

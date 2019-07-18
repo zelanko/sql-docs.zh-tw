@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDimension (geometry Data Type)
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e1815200bd64ce225ce9100b66efc1340f877174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f84bd8cd53f68bd45cf91307968b45923e53280
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938987"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47710826"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型：**SqlInt32**  
+ CLR 傳回型別：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體是空的，`STDimension()` 會傳回 -1。  

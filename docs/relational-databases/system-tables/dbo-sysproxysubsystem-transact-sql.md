@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6fa0ff8c90f4532d87191f827e0815de8636033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097023"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

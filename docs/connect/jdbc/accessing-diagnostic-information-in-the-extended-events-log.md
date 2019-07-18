@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef5c7aee0daef073ff22494162d8024201b2f97c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770522"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

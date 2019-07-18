@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205841"
 ---
 # <a name="delete-a-resource-pool"></a>刪除資源集區
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除資源集區。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要刪除資源集區，請使用：**[SQL Server Management Studio](#DelRPSSMS)， [Transact SQL](#DelRPTSQL)  
+-   **若要刪除資源集區，請使用下列方式：** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果資源集區包含工作負載群組，您就無法刪除該資源集區。  
@@ -39,11 +39,11 @@ ms.locfileid: "52800188"
 ##  <a name="DelRPSSMS"></a> 使用物件總管刪除資源集區  
  **若要使用 SQL Server Management Studio 刪除資源集區**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]  。  
   
-3.  在 **[刪除物件]** 視窗中，資源集區列於 **[要刪除的物件]** 清單內。 若要刪除資源集區，請按一下 **[確定]**。  
+3.  在 **[刪除物件]** 視窗中，資源集區列於 **[要刪除的物件]** 清單內。 若要刪除資源集區，請按一下 **[確定]** 。  
   
     > [!NOTE]  
     >  如果您嘗試刪除的資源集區包含工作負載群組，這項動作將會失敗。  

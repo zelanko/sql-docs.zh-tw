@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812270"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>設定 priority boost 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 使用 **priority boost** 選項，指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否應以高於同一部電腦上其他處理序的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 排程優先權執行。 如果將此選項設定為 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 2008 或 Windows Server 2008 R2 排程器中會以優先權基底 13 執行。 預設值是 0，也就是優先權基底 7。  
@@ -39,7 +39,7 @@ ms.locfileid: "58531210"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 priority boost 選項之後](#FollowUp)  
+-   **後續操作：** [設定優先權提升選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58531210"
   
 #### <a name="to-configure-the-priority-boost-option"></a>若要設定 priority boost 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[處理器]** 節點。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "58531210"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `priority boost` 選項的值設定為 `1`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `priority boost` 選項的值設定為 `1`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -90,7 +90,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 priority boost 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定優先權提升選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

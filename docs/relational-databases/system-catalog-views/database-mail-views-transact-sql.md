@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c0cb27818d6da703a36bb673372e4d79dcec4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033107"
 ---
 # <a name="database-mail-views-transact-sql"></a>Database Mail 檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097846"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|保留這個資料指標的工作階段識別碼。|  
 |**cursor_id**|**int**|資料指標物件的識別碼。|  
 |**name**|**nvarchar(256)**|由使用者自訂的資料指標名稱。|  
-|**屬性**|**nvarchar(256)**|指定資料指標的屬性。 下列屬性的值會串連來形成這個資料行的值：<br />宣告介面<br />資料指標類型 <br />資料指標並行<br />資料指標範圍<br />資料指標巢狀層級<br /><br /> 比方說，這個資料行中傳回的值可能是"TSQL&#124;動態&#124;開放式&#124;Global (0)"。|  
+|**properties**|**nvarchar(256)**|指定資料指標的屬性。 下列屬性的值會串連來形成這個資料行的值：<br />宣告介面<br />資料指標類型 <br />資料指標並行<br />資料指標範圍<br />資料指標巢狀層級<br /><br /> 比方說，這個資料行中傳回的值可能是"TSQL&#124;動態&#124;開放式&#124;Global (0)"。|  
 |**sql_handle**|**varbinary(64)**|宣告資料指標的批次文字控制代碼。|  
 |**statement_start_offset**|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即從該處開始。 可以搭配**sql_handle**，則**statement_end_offset**，而[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動態管理函數來擷取目前執行要求的陳述式。|  
 |**statement_end_offset**|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即在該處結束。 可以搭配**sql_handle**，則**statement_start_offset**，而**sys.dm_exec_sql_text**動態管理函數來擷取目前執行要求的陳述式。|  
@@ -82,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供有關資料指標類型的資訊，並包括屬性資料行的可能值。  
   
-|類型|描述|  
+|type|描述|  
 |----------|-----------------|  
 |索引鍵集|資料指標宣告為索引鍵集。|  
 |動態|資料指標宣告為動態。|  
@@ -99,7 +98,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供有關資料指標範圍的資訊，並包括屬性資料行的可能值。  
   
-|範圍。|描述|  
+|`Scope`|描述|  
 |-----------|-----------------|  
 |本機|指定已建立資料指標的批次、預存程序或觸發程序，其資料指標的範圍為本機範圍。|  
 |全域|指定連接的資料指標範圍為全域。|  

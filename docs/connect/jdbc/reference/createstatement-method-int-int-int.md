@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d07029a2f076c4342c715ac6c9fac38325d1a9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 99d01841ca24cc1a7e34864b42018dac51fa1861
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768228"
 ---
 # <a name="createstatement-method-int-int-int"></a>createStatement 方法 (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +56,7 @@ public java.sql.Statement createStatement(int nType,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個的 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

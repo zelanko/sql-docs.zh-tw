@@ -1,5 +1,5 @@
 ---
-title: 匯出和匯入資料採礦物件 |Microsoft 文件
+title: 匯出和匯入資料採礦物件 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb1726006db1693e94e12326617436bdff7ae73e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018935"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210019"
 ---
 # <a name="export-and-import-data-mining-objects"></a>匯出及匯入資料採礦物件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63162361"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)＞。  
@@ -120,7 +120,7 @@ ms.locfileid: "54127228"
   
 11. 在方格的 [(一般)] 底下，選取 [是唯一的]，然後從清單中選擇 [是]。  
   
-12. 選擇性:在主要方格中，在**資料表設計工具**，選取**忽略重複的索引鍵**，然後選擇**是**從清單中。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
+12. 選擇性：在主要方格中，在**資料表設計工具**，選取**忽略重複的索引鍵**，然後選擇**是**從清單中。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
   
 13. 按一下 [ **關閉**]。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "54127228"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE AdventureWorks2012;  

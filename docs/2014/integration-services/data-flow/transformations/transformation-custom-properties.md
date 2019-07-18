@@ -42,11 +42,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770705"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
   除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特有的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
@@ -70,7 +70,7 @@ ms.locfileid: "58387646"
 |[衍生的資料行](#derived)|[樞紐](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>不含自訂屬性的轉換  
- 下列轉換沒有任何自訂的屬性，在元件、 輸入或輸出層級：[合併轉換](merge-transformation.md)，[多點傳送的轉換](multicast-transformation.md)，以及[聯集全部 」 轉換](union-all-transformation.md)。 它們只會使用所有資料流程元件通用的屬性。  
+ 下列轉換在元件、輸入或輸出層級沒有自訂屬性︰[合併轉換](merge-transformation.md)、[多點傳送轉換](multicast-transformation.md)和[全部聯集轉換](union-all-transformation.md)。 它們只會使用所有資料流程元件通用的屬性。  
   
 ##  <a name="aggregate"></a> 彙總轉換自訂屬性  
  彙總轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -99,8 +99,8 @@ ms.locfileid: "58387646"
 |AggregationColumnId|Integer|參與 GROUP BY 或彙總函式之資料行的 `LineageID`。|  
 |AggregationComparisonFlags|Integer|一個值，指定彙總轉換如何比較資料行中的字串資料。 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。|  
 |AggregationType|整數 (列舉)|一個值，指定要在資料行上執行的彙總作業。 此屬性可以有下列其中一個值：<br /><br /> **計數** (1)<br /><br /> **全部計數** (2)<br /><br /> **相異計數** (3)<br /><br /> **總和** (4)<br /><br /> **平均** (5)<br /><br /> **最大值** (7)<br /><br /> **最小值** (6)<br /><br /> **群組依據** (0)|  
-|CountDistinctKeys|Integer|當彙總類型為 [相異計數] 時，就是指定彙總可寫入之索引鍵確切數目的值。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
-|CountDistinctScale|整數 (列舉)|當彙總類型為 [相異計數] 時，就是描述彙總可寫入之索引鍵值近似數目的值。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值，<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值，<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 CountDistinctScale 值。|  
+|CountDistinctKeys|Integer|當彙總類型為 [相異計數]  時，就是指定彙總可寫入之索引鍵確切數目的值。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
+|CountDistinctScale|整數 (列舉)|當彙總類型為 [相異計數]  時，就是描述彙總可寫入之索引鍵值近似數目的值。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值，<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值，<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 CountDistinctScale 值。|  
 |IsBig|布林|一個值，指出資料行包含大於 40 億的值，或有效位數超過雙精確度浮點數值的值。 此值可能是 0 或 1。 0 表示 IsBig 為`False`且資料行不包含大數值或精確值。 這個屬性的預設值為 1。|  
   
  彙總轉換的輸入和輸入資料行沒有任何自訂屬性。  
@@ -131,7 +131,7 @@ ms.locfileid: "58387646"
 |ValidateExternalMetadata|布林|指出快取轉換是否在設計階段使用外部資料來源進行驗證。 如果此屬性設定為 `False`，就會在執行階段根據外部資料來源進行驗證。<br /><br /> 預設值為 `True`。|  
 |AvailableInputColumns|String|可用輸入資料行的清單。|  
 |InputColumns|String|選取之輸入資料行的清單。|  
-|CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器之 [資料行] 頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../cache-connection-manager-editor.md)|  
+|CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器  之 [資料行]  頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../cache-connection-manager-editor.md)|  
   
 ##  <a name="charmap"></a> 字元對應轉換自訂屬性  
  字元對應轉換只有元件層級上所有資料流程元件通用的屬性。  
@@ -183,7 +183,7 @@ ms.locfileid: "58387646"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|FastParse|布林|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 `False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 .<br /><br /> 注意：這個屬性不適用於**資料轉換編輯器**，但可以透過設定**進階編輯器**。|  
+|FastParse|布林|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 此屬性的預設值為 `False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 .<br /><br /> 注意:雖然您無法在 [資料轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |SourceInputColumnLineageId|Integer|屬於輸出資料行來源之輸入資料行的 `LineageID`。|  
   
  資料轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
@@ -261,15 +261,15 @@ ms.locfileid: "58387646"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |Delimiters|String|轉換所使用的 Token 分隔符號。 預設分隔符號包括下列字元：空格 ( )、逗號 (,)、句號 (.)、分號 (;)、冒號 (:)、連字號 (-)、雙引號 (")、單引號 (')、& 符號、正斜線 (/)、反斜線 (\\)、@ 符號、驚嘆號 (!)、問號 (?)、左括弧 (()、右括弧 ())、小於 (\<)、大於 (>)、左方括弧 ([)、右方括弧 (])、左大括弧 ({)、右大括弧 (})、縱線字元 (&#124;)、數字符號 (#)、星號 (*)、插入號 (^) 和百分比 (%)。|  
-|Exhaustive|布林|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意：這個屬性不適用於**模糊群組轉換編輯器**，但可以透過設定**進階編輯器**。|  
-|MaxMemoryUsage|Integer|可供轉換使用的記憶體數量上限。 此屬性的預設值為 **0**，表示啟用動態記憶體使用量。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意：這個屬性不適用於**模糊群組轉換編輯器**，但可以透過設定**進階編輯器**。|  
+|Exhaustive|布林|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意:雖然您無法在 [模糊群組轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|MaxMemoryUsage|Integer|可供轉換使用的記憶體數量上限。 此屬性的預設值為 **0**，表示啟用動態記憶體使用量。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意:雖然您無法在 [模糊群組轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |MinSimilarity|Double|轉換用來識別重複項目的相似度臨界值，表示成介於 0 與 1 之間的值。  這個屬性的預設值為 0.8。|  
   
  下表描述的是模糊群組轉換之輸入資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|ExactFuzzy|整數 (列舉)|一個值，指定轉換會執行模糊比對或完全比對。 有效值為 [Exact] 和 [Fuzzy]。 這個屬性的預設值為 [Fuzzy]。|  
+|ExactFuzzy|整數 (列舉)|一個值，指定轉換會執行模糊比對或完全比對。 有效值為 [Exact]  和 [Fuzzy]  。 這個屬性的預設值為 [Fuzzy]  。|  
 |FuzzyComparisonFlags|整數 (列舉)|一個值，指定轉換如何比較資料行中的字串資料。 此屬性可以有下列其中一個值：<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。|  
 |LeadingTrailingNumeralsSignificant|整數 (列舉)|一個值，指定數字的重要性。 此屬性可以有下列其中一個值：<br /><br /> **LeadingNumeralsSignificant** (1) - 開頭數字很重要時使用。<br /><br /> **TrailingNumeralsSignificant** (2) - 尾端數字很重要時使用。<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) - 開頭和尾端數字都很重要時使用。<br /><br /> **NumeralsNotSpecial** (0) - 數字不重要時使用。|  
 |MinSimilarity|Double|用於資料行之聯結的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
@@ -296,11 +296,11 @@ ms.locfileid: "58387646"
 |CopyReferenceTable|布林|指定是否應該針對模糊查閱索引建構和後續的查閱建立參考資料表的副本。 此屬性的預設值為 `True`。|  
 |Delimiters|String|轉換用來 Token 化資料行值的分隔符號。 預設分隔符號包括下列字元：空格 ( )、逗號 (,)、句號 (.)、分號 (;)、冒號 (:)、連字號 (-)、雙引號 (")、單引號 (')、& 符號、正斜線 (/)、反斜線 (\\)、@ 符號、驚嘆號 (!)、問號 (?)、左括弧 (()、右括弧 ())、小於 (\<)、大於 (>)、左方括弧 ([)、右方括弧 (])、左大括弧 ({)、右大括弧 (})、縱線字元 (&#124;)。 數字符號 (#)、星號 (*)、插入號 (^) 及百分比 (%)。|  
 |DropExistingMatchIndex|布林|值，指定是否要在 MatchIndexOptions 未設定為 ReuseExistingIndex 時，刪除 MatchIndexName 中指定的比對索引。 這個屬性的預設值為 `True`。|  
-|Exhaustive|布林|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意：這個屬性不適用於**模糊查閱轉換編輯器**，但可以透過設定**進階編輯器**。|  
+|Exhaustive|布林|一個值，指定每個輸入資料錄是否會與其他每個輸入資料錄比較。 `True` 的值大部分用於偵錯目的。 此屬性的預設值為 `False`。<br /><br /> 注意:雖然您無法在 [模糊查閱轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
 |MatchIndexName|String|相符索引的名稱。 相符索引是轉換用以建立並儲存它所使用之索引的資料表。 若重複使用相符索引，MatchIndexName 會指定要重複使用的索引。 MatchIndexName 必須是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別碼名稱。 例如，如果名稱包含空格，此名稱就必須以方括號括住。|  
 |MatchIndexOptions|整數 (列舉)|一個值，指定轉換如何管理相符索引。 此屬性可以有下列其中一個值：<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|查閱資料表的快取大小上限。 此屬性的預設值為 **0**，表示快取大小沒有任何限制。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意：這個屬性不適用於**模糊查閱轉換編輯器**，但可以透過設定**進階編輯器**。|  
-|MaxOutputMatchesPerInput|Integer|轉換可以針對每個輸入資料列傳回的相符項目數上限。 這個屬性的預設值為 **1**。<br /><br /> 注意：大於 100 的類型只能使用指定的值**進階編輯器**。|  
+|MaxMemoryUsage|Integer|查閱資料表的快取大小上限。 此屬性的預設值為 **0**，表示快取大小沒有任何限制。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 注意:雖然您無法在 [模糊查閱轉換編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  
+|MaxOutputMatchesPerInput|Integer|轉換可以針對每個輸入資料列傳回的相符項目數上限。 這個屬性的預設值為 **1**。<br /><br /> 注意:您只能使用 [進階編輯器]  來指定大於 100 的值。|  
 |MinSimilarity|Integer|轉換在元件層級使用的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|查閱資料表的名稱。 此名稱必須是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別碼名稱。 例如，如果名稱包含空格，此名稱就必須以方括號括住。|  
@@ -313,7 +313,7 @@ ms.locfileid: "58387646"
 |FuzzyComparisonFlags|Integer|一個值，指定轉換如何比較資料行中的字串資料。 如需詳細資訊，請參閱 [Comparing String Data](../comparing-string-data.md)。|  
 |FuzzyComparisonFlagsEx|整數 (列舉)|一個值，指定轉換所使用的擴充比較旗標。 這些值可包括 **MapExpandLigatures、MapFoldCZone**、 **MapFoldDigits**、 **MapPrecomposed**和 **NoMapping**。 **NoMapping** 無法與其他旗標搭配使用。|  
 |JoinToReferenceColumn|String|一個值，指定此資料行在參考資料表中所聯結的資料行名稱。|  
-|JoinType|Integer|一個值，指定轉換會執行模糊比對或完全比對。 這個屬性的預設值為 [Fuzzy]。 代表完全聯結類型的整數值為 **1**，而代表模糊聯結類型的整數值為 **2**。|  
+|JoinType|Integer|一個值，指定轉換會執行模糊比對或完全比對。 這個屬性的預設值為 [Fuzzy]  。 代表完全聯結類型的整數值為 **1**，而代表模糊聯結類型的整數值為 **2**。|  
 |MinSimilarity|Double|轉換在資料行層級使用的相似度臨界值，指定成介於 0 與 1 之間的值。 只有大於臨界值的資料列會判定為相符項目。|  
   
  下表描述的是模糊查閱轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -342,7 +342,7 @@ ms.locfileid: "58387646"
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的預設字碼頁。|  
 |MaxMemoryUsage|Integer|查閱資料表的快取大小上限。 此屬性的預設值為 **25**，表示快取大小沒有任何限制。|  
 |MaxMemoryUsage64|Integer|在 64 位元電腦上，查閱資料表的快取大小上限。|  
-|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 `Treat rows with no matching entries as errors` (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器] 對話方塊的 [錯誤輸出] 頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。<br /><br /> 當此屬性設定為 `Send rows with no matching entries to the no match output` (1) 時，資料列就不會被視為錯誤。<br /><br /> 預設值為 `Treat rows with no matching entries as errors` (0)。|  
+|NoMatchBehavior|整數 (列舉)|一個值，指定在參考資料集中沒有相符項目的資料列是否會被視為錯誤。<br /><br /> 當此屬性設定為 `Treat rows with no matching entries as errors` (0) 時，沒有相符項目的資料列就會被視為錯誤。 您可以使用 [查閱轉換編輯器]  對話方塊的 [錯誤輸出]  頁面來指定發生這種錯誤類型時要採取的動作。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。<br /><br /> 當此屬性設定為 `Send rows with no matching entries to the no match output` (1) 時，資料列就不會被視為錯誤。<br /><br /> 預設值為 `Treat rows with no matching entries as errors` (0)。|  
 |ParameterMap|String|歷程識別碼的分號分隔清單，而這些歷程識別碼會對應至 `SqlCommand` 陳述式中使用的參數。|  
 |ReferenceMetadataXML|String|轉換從查閱資料表中複製到輸出之資料行的中繼資料。|  
 |SqlCommand|String|填入查閱資料表的 SELECT 陳述式。|  
@@ -523,7 +523,7 @@ ms.locfileid: "58387646"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|ColumnType|整數 (列舉)|資料行的更新類型。 這些值為：**變更屬性**(2)、**固定屬性**(4)，**歷程記錄屬性**(3)，**金鑰**(1)，並**其他**(0)。|  
+|ColumnType|整數 (列舉)|資料行的更新類型。 這些值為：**變更屬性** (2)、**固定屬性** (4)、**歷程記錄屬性** (3)、**索引鍵** (1) 和**其他** (0)。|  
   
  緩時變維度轉換的輸入、輸出和輸出資料行沒有任何自訂屬性。  
   
@@ -569,7 +569,7 @@ ms.locfileid: "58387646"
 |NeedRefenceData|布林|一個值，指定轉換是否會使用儲存在參考資料表中的排除詞彙清單。 此屬性的預設值為 `False`。|  
 |OutTermColumn|String|包含排除詞彙之資料行的名稱。|  
 |OutTermTable|String|包含具有排除詞彙之資料行的資料表名稱。|  
-|ScoreType|Integer|一個值，指定要與詞彙產生關聯的分數類型。 有效的值為 0 (表示頻率) 和 1 (表示 TFIDF 分數)。 TFIDF 分數是詞彙頻率 」 和 「 反向文件頻率，定義為乘積：詞彙 T 的 TFIDF = （T 的頻率） \* log ((輸入中的 #rows) / （#rows T）)。 這個屬性的預設值為 **0**。|  
+|ScoreType|Integer|一個值，指定要與詞彙產生關聯的分數類型。 有效的值為 0 (表示頻率) 和 1 (表示 TFIDF 分數)。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為：詞彙 T 的 TFIDF = (T 的頻率) \* log( (輸入中的資料列數目) / (有 T 的資料列數目) )。 這個屬性的預設值為 **0**。|  
 |WordOrPhrase|Integer|指定詞彙類型的值。 有效的值包括 0 (表示只有字詞)、1 (表示只有名詞片語) 和 2 (表示同時有字詞和名詞片語)。 這個屬性的預設值為 **0**。|  
   
  詞彙擷取轉換的輸入、輸入資料行、輸出和輸出資料行沒有任何自訂屬性。  
@@ -614,7 +614,7 @@ ms.locfileid: "58387646"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|輸入資料行所對應之輸出資料行的 `LineageID`。 值為 -1 表示輸入資料行不會對應至輸出資料行。|  
-|PivotKeyValue|String|複製到轉換輸出資料行的值。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 在[取消樞紐轉換](unpivot-transformation.md)所描述的取消樞紐狀況中，樞紐值包括 Ham、Coke、Milk、Beer 和 Chips 等文字值。 這些值會在 [樞紐索引鍵值資料行名稱] 選項所指定的新 Product 資料行中顯示成文字值。|  
+|PivotKeyValue|String|複製到轉換輸出資料行的值。<br /><br /> 此屬性的值可以使用屬性運算式指定。<br /><br /> 在[取消樞紐轉換](unpivot-transformation.md)所描述的取消樞紐狀況中，樞紐值包括 Ham、Coke、Milk、Beer 和 Chips 等文字值。 這些值會在 [樞紐索引鍵值資料行名稱]  選項所指定的新 Product 資料行中顯示成文字值。|  
   
  下表描述的是取消樞紐轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   

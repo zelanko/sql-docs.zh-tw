@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d0b40b947bc9a19839005cfc81c9ed3446b318
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fd30e00cc489da89836bb0646b1b8c10385346af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945100"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>從資料表匯入資料 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52759970"
   
 -   您必須具備權限，才能執行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的 stg.udp_\<名稱>_Leaf、stg.udp\_\<名稱>_Consolidated 或 stg.udp\_\<名稱>_Relationship 預存程序。  
   
--   模型的狀態不得為 [已認可] 。  
+-   模型的狀態不得為 [已認可]  。  
   
  **在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中加入、更新及刪除資料**  
   
@@ -64,11 +63,11 @@ ms.locfileid: "52759970"
   
     -   使用主資料管理的 **整合管理** 功能。  
   
-         在 [暫存批次]  頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次] 。 批次處理的狀態會顯示在 [狀態]  欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
+         在 [暫存批次]  頁面上，從下拉式清單中，選取要接收您所加入之資料的模型，然後按一下 [啟動批次]  。 批次處理的狀態會顯示在 [狀態]  欄位中。 如需狀態的詳細資訊，請參閱[匯入狀態 &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md)。  
   
          ![主資料管理員中的暫存批次頁面](../master-data-services/media/mds-stagingbatchespage.png "主資料管理員中的暫存批次頁面")  
   
-         暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+         暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔]  設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 5.  檢視暫存期間發生的錯誤。 如需詳細資訊，請參閱[檢視暫存期間發生的錯誤 &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md) 和[暫存處理序錯誤 &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)。  
   

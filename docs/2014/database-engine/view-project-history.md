@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773494"
 ---
 # <a name="view-project-history"></a>檢視專案記錄
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) 專案記錄包括一份在每個專案檔上所採用的完整動作清單，其中包括建立、新增、刪除和復原檔案。  

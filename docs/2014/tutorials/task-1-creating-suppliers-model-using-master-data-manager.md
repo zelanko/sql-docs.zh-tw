@@ -1,5 +1,5 @@
 ---
-title: 工作 1:建立使用主資料管理員的供應商模型 |Microsoft Docs
+title: 工作 1：建立使用主資料管理員的供應商模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481338"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>工作 1:使用主資料管理員建立供應商模型
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>工作 1：使用主資料管理員建立供應商模型
   在這個工作中，您會建立名為的模型**供應商**在 MDS 中使用**主資料管理員**。  
   
 1.  瀏覽至[ http://localhost/mds ](http://localhost/mds)以啟動**主資料管理員**。 如果您已經使用不同的名稱或在不同網站上設定 Web 應用程式，請替換此 URL。  
@@ -41,6 +41,6 @@ ms.locfileid: "56035479"
 6.  按一下 **儲存模型**工具列上的按鈕。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 2:供應商資料上傳至 MDS 使用適用於 Excel 的 MDS 增益集](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [工作 2：供應商資料上傳至 MDS 使用適用於 Excel 的 MDS 增益集](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

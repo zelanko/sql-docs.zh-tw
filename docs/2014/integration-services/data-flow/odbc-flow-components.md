@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901428"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
   此主題描述使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899446"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
   文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
@@ -51,7 +51,7 @@ ms.locfileid: "58375246"
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  如需詳細資訊，請參閱 [Integration Services 封裝所記錄的事件](performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|描述|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指出封裝已經啟動。|  
 |SQLISPackage_12289|指出封裝已順利地完成執行。|  
@@ -65,7 +65,7 @@ ms.locfileid: "58375246"
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  如需詳細資訊，請參閱 [Integration Services 服務所記錄的事件](service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|描述|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |SQLISService_256|指出服務即將啟動。|  
 |SQLISService_257|指出服務已經啟動。|  

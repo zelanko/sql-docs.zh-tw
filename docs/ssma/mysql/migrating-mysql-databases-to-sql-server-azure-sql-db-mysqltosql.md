@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: badfb3afaeba92f366e62fce8dfcb3ec7dae9f29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908791"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB (MySQLToSql)
 SQL Server Migration Assistant (SSMA) for MySQL 是完整的環境，可協助您快速將 MySQL 資料庫移轉至 SQL Server 或 SQL Azure。 使用 SSMA for MySQL，您可以檢閱資料庫物件和資料、 評估要移轉的資料庫、 將資料庫物件移轉至 SQL Server 或 SQL Azure，然後將資料移轉到 SQL Server 或 SQL Azure。  

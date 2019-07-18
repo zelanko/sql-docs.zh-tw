@@ -2,7 +2,6 @@
 title: Analytics Platform System 中的通用子運算式說明 |Microsoft Docs
 description: Analytics Platform System CU7.3 中引進的顯示範例查詢改進
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2dd02bed55f3d3781428eae3ec4bc2d0655819ab
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961318"
 ---
 # <a name="common-subexpression-elimination-explained"></a>說明的通用子運算式刪除
 

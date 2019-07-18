@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787865"
 ---
 # <a name="browse-for-servers-local-servers"></a>瀏覽伺服器 (本機伺服器)
-  當您連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件時，若不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的確實名稱，可在 [伺服器名稱] 中按一下 [瀏覽其他]，以開啟 [瀏覽伺服器] 對話方塊。  
+  當您連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件時，若不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的確實名稱，可在 [伺服器名稱]  中按一下 [瀏覽其他]  ，以開啟 [瀏覽伺服器]  對話方塊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取要連接的伺服器**  
- 按一下樹狀結構中所顯示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，以指定您想要連接到的伺服器。 您可以顯示或隱藏部分樹狀檢視中標示的節點上按一下**+** 或是**-** 符號。  
+ 按一下樹狀結構中所顯示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，以指定您想要連接到的伺服器。 您可以顯示或隱藏部分樹狀檢視中標示的節點上按一下 **+** 或是 **-** 符號。  
   
   

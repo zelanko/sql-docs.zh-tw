@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 812863395c2980f341ed2419eee1d9d661f19dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949150"
 ---
 # <a name="state-property-ado-md"></a>State 屬性 (ADO MD)
 表示資料格集的目前狀態。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 39006e3625da17e8a0c5101aa1f4258eaf14f847
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484108"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
   參考資料指的是一組精確且完整的相關或已分類的全域資料 (在企業界限範圍之外)，這些資料是在可靠的公用網域或是由優質商業內容提供者所提供。  
@@ -35,7 +35,7 @@ ms.locfileid: "59241756"
   
  服務商場與 DQS 之間的順暢整合會簡化與探索、瀏覽及取得 DQS 內的資料品質專案資訊相關的步驟。 這些資料是從 DQS 取用，而且有助於 DQS 使用者以創新方式將 DQS、服務商場和參考資料服務提供者結合在一起，以達成高資料品質。  
   
- 若要針對清理活動在 DQS 中使用服務商場的參考資料，您必須擁有服務商場帳號金鑰。 建立服務商場帳號金鑰是免費的，只有當您訂閱付費的資料集時才需要付費。 訂閱及使用免費的資料集不需要支付任何費用。 如需有關建立市集帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936)。  
+ 若要針對清理活動在 DQS 中使用服務商場的參考資料，您必須擁有服務商場帳號金鑰。 建立服務商場帳號金鑰是免費的，只有當您訂閱付費的資料集時才需要付費。 訂閱及使用免費的資料集不需要支付任何費用。 如需有關建立市集帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) 。  
   
  此外，您可以從 DQS 執行下列服務商場活動：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59241756"
   
 2.  **將知識庫中的定義域/複合定義域對應至參考資料服務**：將定義域/複合定義域對應至步驟 1 所訂閱/新增的適當參考資料服務。  
   
-3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 [清理] 活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
+3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 [清理]  活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
   
 ## <a name="related-tasks"></a>相關工作  
   

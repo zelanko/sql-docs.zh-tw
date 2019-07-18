@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744558"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388112"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,14 +71,16 @@ Windows Server 2016 引進以「已中斷連結 Active Directory 的叢集」為
 10. 系統會提示您重新啟動。 如果您不想要立即重新啟動，請按一下 [稍後重新啟動]，否則按一下 [立即重新啟動]。
 11. 重新啟動伺服器之後，請重新查看 [系統] 來確認已設定一般 DNS 尾碼。
 
-
 ![成功設定 DNS 尾碼][4]
+
+  > [!NOTE]
+  > 如果您使用多個子網路，且具有靜態 DNS，即必須採用程序才能更新與接聽程式相關聯的 DNS 記錄，再執行容錯移轉，否則網路名稱無法上線。
 
 ## <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 
 目前使用 SQL Server Management Studio 無法完整建立「網域獨立的可用性群組」。 雖然建立「網域獨立的可用性群組」基本上與建立一般可用性群組相同，但是某些方面 (例如建立憑證) 只有使用 Transact-SQL 才能達成。 下列範例假設可用性群組組態包含兩個複本：一個主要複本，一個次要複本。 
 
-1. [使用本連結的指示](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)，部署 Workgroup 叢集以包含所有要參與可用性群組的伺服器。 設定 Workgroup 叢集之前，請確定已設定一般 DNS 尾碼。
+1. [使用本連結的指示](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)，部署 Workgroup 叢集以包含所有要參與可用性群組的伺服器。 設定 Workgroup 叢集之前，請確定已設定一般 DNS 尾碼。
 2. 在要參與可用性群組的每個執行個體上[啟用 AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)功能。 這需要重新啟動每個 SQL Server 執行個體。
 3. 將裝載主要複本的每個執行個體都需要資料庫主要金鑰。 如果還沒有主索引鍵，請執行下列命令：
 

@@ -11,14 +11,18 @@ ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 497c82ffc7a9bf0b6715a4d005145c73a19f7b78
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dab606451fc99c70b28999f2d2d8be93d1513a20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716042"
 ---
-# <a name="catalogremovedatatap"></a>catalog.remove_data_tap
+# <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   從執行中的元件輸出移除資料點選。 資料點選的唯一識別碼與執行的執行個體相關聯。  
@@ -45,7 +49,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  None  
   
 ## <a name="remarks"></a>Remarks  
- 若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態] 資料行中的值為 1)。  
+ 若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態]  資料行中的值為 1)。  
   
 ## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  

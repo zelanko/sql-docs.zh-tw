@@ -11,14 +11,18 @@ ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f95f6e017e38460a049900b6001136d693f600a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e5b1070586ea1ed4e47bd803cdcaad3f2800d22e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729048"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本節描述如何在 Attunity Oracle Change Data Capture (CDC) 設計工具中執行工作。  
   
 ## <a name="learn-how-to-use-the-oracle-cdc-designer-console"></a>了解如何使用 Oracle CDC 設計工具主控台  

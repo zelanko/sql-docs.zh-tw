@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915547"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 函式
 **合規性**  
- 版本導入： ODBC 3.8  
+ 導入的版本：ODBC 3.8  
   
- 標準相容性： 無  
+ 標準的合規性：None  
   
  **摘要**  
  **SQLAsyncNotificationCallback**可讓驅動程式管理員時驅動程式傳回 SQL_STILL_EXECUTING 之後會有一些進度，目前的非同步作業呼叫的驅動程式。 **SQLAsyncNotificationCallback**只能由驅動程式呼叫。  

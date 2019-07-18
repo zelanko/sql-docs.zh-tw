@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670688"
 ---
 # <a name="dta-utility"></a>dta 公用程式
   **dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  指定微調輸入所用的工作負載檔案之路徑與名稱。 檔案必須是下列格式之一：.trc (SQL Server Profiler 追蹤檔)、.sql (SQL 檔) 或 .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤檔)。 您必須指定一個工作負載檔案或一份工作負載資料表。  
   
  **-it** _workload_trace_table_name_  
- 指定包含微調工作負載追蹤的資料表名稱。 請使用下列格式來指定名稱：[*database_name*]**.**[*owner_name*]**.**_table_name_。  
+ 指定包含微調工作負載追蹤的資料表名稱。 請使用下列格式來指定名稱：[*database_name*] **.** [*owner_name*] **.** _table_name_。  
   
  下表顯示各項目的預設值：  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- 這個引數是在命令提示字元中輸入資料表清單的另一種方法 (**-Tl**)。 如果您使用 **-Tl**，請勿使用資料表清單檔案 ( **-Tf**)。 如果同時使用這兩個引數， **dta** 會失敗並傳回錯誤。  
+ 這個引數是在命令提示字元中輸入資料表清單的另一種方法 ( **-Tl**)。 如果您使用 **-Tl**，請勿使用資料表清單檔案 ( **-Tf**)。 如果同時使用這兩個引數， **dta** 會失敗並傳回錯誤。  
   
  如果省略了 **-Tf** 和 **-Tl** 引數，則會將指定資料庫中的所有使用者資料表視為要進行微調。  
   
  **-Tl** _table_list_  
  在命令提示字元之下，指定要微調的資料表清單。 請在資料表名稱之間加上逗號，將它們分開。 如果使用 **-D** 引數只指定一個資料庫，就不需要使用資料庫名稱限定資料表的名稱。 否則，每份資料表都需要完整的名稱格式： *database_name.schema_name.table_name* 。  
   
- 這個引數是使用資料表清單檔案的另一種方法 (**-Tf**)。 如果同時使用 **-Tl** 和 **-Tf** ， **dta** 會失敗並傳回錯誤。  
+ 這個引數是使用資料表清單檔案的另一種方法 ( **-Tf**)。 如果同時使用 **-Tl** 和 **-Tf** ， **dta** 會失敗並傳回錯誤。  
   
  **-U** _login_id_  
  指定用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入識別碼。  

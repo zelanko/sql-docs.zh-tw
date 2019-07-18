@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c63eb8c02b80927e38cbbe7f32fcee493b66a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917934"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 和 Close 方法範例 (VC++)
 這個範例會使用**開啟**並[關閉](../../../ado/reference/ado-api/close-method-ado.md)方法兩者[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和[連接](../../../ado/reference/ado-api/connection-object-ado.md)已開啟的物件。  

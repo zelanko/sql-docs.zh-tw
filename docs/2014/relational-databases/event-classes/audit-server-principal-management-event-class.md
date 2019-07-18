@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 392cd07148516c4c61ed39cba4b34d81bcf4c5c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012428"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 事件類別
   在建立、改變或卸除伺服器主體時，會發生 **Audit Server Principal Management** 事件類別。  

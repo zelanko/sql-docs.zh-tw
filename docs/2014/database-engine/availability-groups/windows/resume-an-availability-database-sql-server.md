@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788715"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中繼續暫停的可用性資料庫。 繼續暫停的資料庫會使資料庫處於 SYNCHRONIZING 狀態。 繼續主要資料庫也會繼續因為暫停主要資料庫而暫停的任何次要資料庫。 如果在本機 (從裝載次要複本的伺服器執行個體) 暫停任何次要資料庫，該次要資料庫必須在本機繼續。 給定的次要資料庫與對應的主要資料庫都處於 SYNCHRONIZING 狀態之後，資料同步處理就會在次要資料庫上繼續。  
@@ -77,9 +77,9 @@ ms.locfileid: "48051048"
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫] 節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]。  
+4.  展開 [可用性資料庫]  節點、以滑鼠右鍵按一下資料庫，然後按一下 [繼續進行資料移動]  。  
   
-5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[繼續進行資料移動]** 對話方塊中，按一下 **[確定]** 。  
   
 > [!NOTE]  
 >  若要繼續此複本位置的其他資料庫，請針對每個資料庫重複步驟 4 和 5。  
@@ -96,7 +96,7 @@ ms.locfileid: "48051048"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要繼續次要資料庫**  
   
-1.  將目錄變更 (`cd`) 來裝載您想要繼續其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
+1.  將目錄 (`cd`) 變更為裝載您要繼續其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
   
 2.  使用 **Resume-SqlAvailabilityDatabase** Cmdlet 繼續可用性群組。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48051048"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   

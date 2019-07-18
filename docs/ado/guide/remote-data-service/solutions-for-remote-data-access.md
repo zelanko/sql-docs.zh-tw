@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922171"
 ---
 # <a name="solutions-for-remote-data-access"></a>遠端資料存取的解決方案
 ## <a name="the-issue"></a>此問題  

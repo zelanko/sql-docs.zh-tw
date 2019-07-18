@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f83b8ce83c1433ce7e20f00580100b65be84961
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030595"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函數
 **合規性**  
@@ -39,7 +38,7 @@ ms.locfileid: "53209247"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetTypeInfo(  
      SQLHSTMT      StatementHandle,  

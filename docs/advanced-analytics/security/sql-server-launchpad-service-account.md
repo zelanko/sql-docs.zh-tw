@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ad6377e73633d34b322e5f455f0dd08143c53529
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962331"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服務組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "53596372"
 
 如果您的組織要求定期變更密碼，您可能需要強制 Launchpad 服務重新產生為其工作者帳戶維護的加密密碼。
 
-若要啟用此設定並強制密碼重新整理，請在 SQL Server 組態管理員中開啟 Launchpad 服務的 [屬性] 窗格，按一下 [進階]，然後將 [重設外部使用者密碼] 變更為 [是]。 當您套用此變更時，系統會立即針對所有使用者帳戶重新產生密碼。 若要執行外部指令碼，這項變更之後，您必須重新啟動 Launchpad 服務，此時它會讀取新產生的密碼。
+若要啟用此設定並強制密碼重新整理，請在 SQL Server 組態管理員中開啟 Launchpad 服務的 [屬性]  窗格，按一下 [進階]  ，然後將 [重設外部使用者密碼]  變更為 [是]  。 當您套用此變更時，系統會立即針對所有使用者帳戶重新產生密碼。 若要執行外部指令碼，這項變更之後，您必須重新啟動 Launchpad 服務，此時它會讀取新產生的密碼。
 
 若要定期重設密碼，您可以手動設定此旗標，或使用指令碼。
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 6048eddfa941971ff7bdff7b7956ef2791f43c2c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537305"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689420"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,9 +61,9 @@ HAVING AVG(price) > 10
   
 2.  如果沒有出現在 [準則] 窗格中，加入您想要組成 WHERE 條件的資料行。  
   
-3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出] 資料行。  
+3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出]  資料行。  
   
-4.  在 [篩選條件] 資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
+4.  在 [篩選條件]  資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
   
     > [!NOTE]  
     > 在這個程序中所顯示的查詢範例聯結了兩個資料表， `titles` 和 `publishers`。  
@@ -78,7 +78,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  在 [群組依據] 資料行中，從群組和摘要選項清單中選擇 [Where]。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
+5.  在 [群組依據]  資料行中，從群組和摘要選項清單中選擇 [Where]  。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
   
     SQL 陳述式變更為包含了 WHERE 子句：  
   

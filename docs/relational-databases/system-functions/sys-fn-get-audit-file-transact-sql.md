@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046280"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>引數  
  *file_pattern*  
- 針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 型別是**nvarchar(260)**。 
+ 針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 型別是**nvarchar(260)** 。 
  
  - **SQL Server**：
     
-    這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 單一星號 （*） 可用來收集多個檔案從稽核檔案集合。 例如：  
+    這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 單一星號 （*） 可用來收集多個檔案從稽核檔案集合。 例如:  
   
     -   **\<路徑 >\\ \***  -收集的所有稽核檔案中指定的位置。  
   
@@ -60,7 +59,7 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL Database**:
  
-    這個引數用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，您可以使用的部分檔案 (blob) 名稱的前置詞 （而不是完整的 blob 名稱） 來收集多個檔案 (blob) 開頭為此前置詞。 例如：
+    這個引數用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，您可以使用的部分檔案 (blob) 名稱的前置詞 （而不是完整的 blob 名稱） 來收集多個檔案 (blob) 開頭為此前置詞。 例如:
  
       - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> /**  -收集所有稽核檔案 (blob) 的特定資料庫。    
       
@@ -70,7 +69,7 @@ fn_get_audit_file ( file_pattern,
 >  如果傳遞路徑而沒有包含檔案名稱模式，則會產生錯誤。  
   
  *initial_file_name*  
- 指定稽核檔案集合中要開始讀取稽核記錄之特定檔案的路徑和名稱。 型別是**nvarchar(260)**。  
+ 指定稽核檔案集合中要開始讀取稽核記錄之特定檔案的路徑和名稱。 型別是**nvarchar(260)** 。  
   
 > [!NOTE]  
 >  *Initial_file_name*引數必須包含有效的項目，或必須包含預設 |NULL 值。  
@@ -84,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  
   
-| 資料行名稱 | 類型 | 描述 |  
+| 資料行名稱 | type | 描述 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
 | additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會剖析為逸出無效的 xml 字元，例如`'\<'`， `'>'`， `'/'`， `'_x'`。 它們會逸出為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |

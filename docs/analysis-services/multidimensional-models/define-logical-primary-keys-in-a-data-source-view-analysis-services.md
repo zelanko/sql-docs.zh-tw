@@ -1,5 +1,5 @@
 ---
-title: 資料來源檢視 (Analysis Services) 中定義邏輯主索引鍵 |Microsoft 文件
+title: 定義邏輯主索引鍵中的資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90684f55414fa9e3f0d68a8ec90884fdae4d2c0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178741"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯主索引鍵 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "34021058"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中設定邏輯主索引鍵之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
   
-     若要尋找資料表或檢視表，您可以按一下 [資料來源檢視] 功能表，或是以滑鼠右鍵按一下 [資料表] 或 [圖表] 窗格的開放區域，即可使用 [尋找資料表] 選項。  
+     若要尋找資料表或檢視表，您可以按一下 [資料來源檢視]  功能表，或是以滑鼠右鍵按一下 [資料表]  或 [圖表]  窗格的開放區域，即可使用 [尋找資料表]  選項。  
   
-3.  在 [資料表] 或 [圖表] 窗格中，以滑鼠右鍵按一下您要用來定義邏輯主索引鍵的一或多個資料行，然後按一下 [設定邏輯主索引鍵]。  
+3.  在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下您要用來定義邏輯主索引鍵的一或多個資料行，然後按一下 [設定邏輯主索引鍵]  。  
   
      設定邏輯主索引鍵的選項只提供給沒有主索引鍵的資料表使用。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "34021058"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視 & #40; 中定義具名的計算Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

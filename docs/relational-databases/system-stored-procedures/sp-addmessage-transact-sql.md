@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage (Transact-SQL) | Microsoft Docs
+title: sp_addmessage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061842"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
-`[ \@replace = ] 'replace'` 如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*已**varchar(7)** 預設值是 NULL。 必須指定此選項，如果*msg_id*已經存在。 如果您取代 U.S. English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
+`[ \@replace = ] 'replace'` 如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*已**varchar(7)** 預設值是 NULL。 必須指定此選項，如果*msg_id*已經存在。 如果您取代 U.S.English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -65,7 +64,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  None  
   
 ## <a name="remarks"></a>備註  
- 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非英文版本，訊息的 U.S. English 版本必須已存在，之後才能利用其他語言來加入訊息。 兩個版本的訊息，嚴重性必須相符。  
+ 對於非英文版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，美國訊息可以使用另一種語言加入之前，必須已經存在之訊息的英文版。 兩個版本的訊息，嚴重性必須相符。  
   
  當您將包含參數的訊息當地語系化時，請使用對應於原始訊息中之參數的參數號碼。 請在每個參數號碼之後，插入驚歎號 (!)。  
   
@@ -93,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-message-in-two-languages"></a>B. 加入兩種語言的訊息  
- 下列範例會先加入 U.S. English 的訊息，再加入法文的相同訊息。`.`  
+ 下列範例首先會將訊息加入美國再加入法文的相同的訊息`.`  
   
 ```  
 USE master;  
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. 變更參數的順序  
- 下列範例會先加入 U.S. English 的訊息，再加入已變更參數順序的當地語系化訊息。  
+ 下列範例首先會將訊息加入美國英文、，然後將加入當地語系化的訊息中的參數順序會變更。  
   
 ```  
 USE master;  
@@ -159,7 +158,7 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>另請參閱  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

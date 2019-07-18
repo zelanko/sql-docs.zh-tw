@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067509"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>儲存圖表上所選的資料表 (Visual Database Tools)
   如果不要儲存對資料庫圖表所做的所有變更，可以儲存特定的資料表或一組資料表。  

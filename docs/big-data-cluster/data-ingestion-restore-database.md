@@ -2,20 +2,19 @@
 title: 還原資料庫
 titleSuffix: SQL Server big data clusters
 description: 這篇文章會示範如何將資料庫還原到 SQL Server 2019 巨量資料叢集 （預覽） 的主要執行個體。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 12/06/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: cc1fddfd7aa2e3400dda3d005eb365cde7364dd4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958629"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 巨量資料叢集主要執行個體
 
@@ -37,7 +36,7 @@ ms.locfileid: "58860310"
 將備份檔案複製到 SQL Server 容器的 Kubernetes 叢集的主要執行個體 pod 中。
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your cluster>
+kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 範例
@@ -49,7 +48,7 @@ kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c ms
 然後，確認備份檔案已複製到 pod 容器。
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-server -- bin/bash
+kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
@@ -99,18 +98,12 @@ GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
   CREATE EXTERNAL DATA SOURCE SqlDataPool
-  WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+  WITH (LOCATION = 'sqldatapool://controller-svc/default');
 
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-BEGIN
-  IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-  ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-END
+   CREATE EXTERNAL DATA SOURCE SqlStoragePool
+   WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 GO
 ```
 

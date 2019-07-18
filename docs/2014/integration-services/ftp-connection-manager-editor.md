@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftpconnectionmanager.f1
@@ -15,15 +14,15 @@ ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b363d622d82a2829e25e21bcf7d8cf21fe0962d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058492"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
-  使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
+  使用 [FTP 連線管理員編輯器]  對話方塊來指定連接到 FTP 伺服器的屬性。  
   
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -56,7 +55,7 @@ ms.locfileid: "58374816"
  提供以 KB 為單位的傳輸資料區塊大小。  
   
  **測試連接**  
- 設定 FTP 連線管理員之後，請按一下 [測試連接] 以確認連接是可行的。  
+ 設定 FTP 連線管理員之後，請按一下 [測試連接]  以確認連接是可行的。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)  

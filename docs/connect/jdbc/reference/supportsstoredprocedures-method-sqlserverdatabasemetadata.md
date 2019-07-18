@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50ba69affebe38302f1440f5c053e19b81c016b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c1fec9c817e8671dd5d48f8c9d9fe13d611f864b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669966"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797313"
 ---
 # <a name="supportsstoredprocedures-method-sqlserverdatabasemetadata"></a>supportsStoredProcedures 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

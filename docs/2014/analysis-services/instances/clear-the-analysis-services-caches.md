@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350654"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080295"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 快取
   Analysis Services 會快取資料以提高查詢效能。 此主題提供有關如何使用 XMLA ClearCache 命令，清除回應 MDX 查詢時所建立之快取的建議。 根據您使用的是表格式或多維度模型，執行 ClearCache 的影響有所不同。  
@@ -47,15 +46,15 @@ ms.locfileid: "53350654"
   
  清除快取需要您在 XMLA 查詢中的 `ClearCache` 陳述式提供物件識別碼。 本主題中的第一個步驟解釋如何取得物件識別碼。  
   
-#### <a name="step-1-get-the-object-identifier"></a>步驟 1：取得物件識別碼  
+#### <a name="step-1-get-the-object-identifier"></a>步驟 1:取得物件識別碼  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件，並選取 [屬性]，然後將 ID 屬性的值複製到 [屬性] 窗格。 這種方法適用於資料庫、Cube、維度或資料表。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下物件，並選取 [屬性]  ，然後將 ID 屬性的值複製到 [屬性]  窗格。 這種方法適用於資料庫、Cube、維度或資料表。  
   
-2.  若要取得量值群組識別碼，以滑鼠右鍵按一下該量值群組並選取 [編寫量值群組的指令碼為]。 選擇 [建立] 或 [改變]，並將查詢傳送至視窗。 量值群組識別碼會在物件定義中顯示。 複製物件定義的識別碼。  
+2.  若要取得量值群組識別碼，以滑鼠右鍵按一下該量值群組並選取 [編寫量值群組的指令碼為]  。 選擇 [建立]  或 [改變]  ，並將查詢傳送至視窗。 量值群組識別碼會在物件定義中顯示。 複製物件定義的識別碼。  
   
-#### <a name="step-2-run-the-query"></a>步驟 2：執行查詢  
+#### <a name="step-2-run-the-query"></a>步驟 2:執行查詢  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下資料庫，並指向 [新增查詢]，然後選取 [XMLA]。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下資料庫，並指向 [新增查詢]  ，然後選取 [XMLA]  。  
   
 2.  將下列程式碼範例複製到 XMLA 查詢視窗。 將 `DatabaseID` 變更為目前連接上的資料庫識別碼。  
   

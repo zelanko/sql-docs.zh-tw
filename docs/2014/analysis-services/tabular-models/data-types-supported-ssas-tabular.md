@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405473"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284932"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支援的資料類型 (SSAS 表格式)
   本文描述可用於表格式模型中的資料類型，並討論在 Data Analysis Expressions (DAX) 公式中計算或使用資料時，隱含的資料類型轉換。  
@@ -42,9 +41,9 @@ ms.locfileid: "52405473"
 |整數|64 位元 (八位元組) 整數值 <sup>1、2</sup>|沒有小數位數的數字。 整數可以是正數或負數，但必須是 -9,223,372,036,854,775,808 (-2^63) 到 9,223,372,036,854,775,807 (2^63-1) 之間的整數。|  
 |十進位數字|64 位元 (八位元組) 實數 <sup>1、2</sup>|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
-|文字|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
-|date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|Text|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
+|Date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|Currency|Currency|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  <sup>1</sup> DAX 公式不支援小於資料表中所列的資料類型。  
@@ -69,7 +68,7 @@ ms.locfileid: "52405473"
 >  您不能從字串長度超過 131,072 個字元的 **varchar(max)** 資料行匯入。  
   
 ### <a name="table-data-type"></a>資料表資料類型  
- 此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 此外，DAX 還使用 *「資料表」* (Table) 資料類型。 DAX 會在許多函數中使用這個資料類型，例如彙總與時間智慧計算。 有些函數需要使用資料表的參考；有些函數則會傳回之後可當做其他函數輸入使用的資料表。 在需要資料表當做輸入的部分函數中，您可以指定評估為資料表的運算式；對於某些函數，則需要基底資料表的參考。 如需特定函數需求的相關資訊，請參閱 [DAX 函數參考](/dax/dax-function-reference)。  
   
 ##  <a name="bkmk_implicit"></a> DAX 公式中隱含與明確的資料類型轉換  
  每個 DAX 函數對於當做輸入與輸出使用之資料的類型都有特定需求。 例如，某些函數需要整數做為部分引數並需要日期做為其他引數；其他函數則需要文字或資料表。  
@@ -189,7 +188,7 @@ ms.locfileid: "52405473"
 |BLANK OR BLANK|BLANK|錯誤|  
 |BLANK AND BLANK|BLANK|錯誤|  
   
- 如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](https://msdn.microsoft.com/library/ee634396.aspx)一節中，每個 DAX 函數的個別主題。  
+ 如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](/dax/dax-function-reference)一節中，每個 DAX 函數的個別主題。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源 (SSAS 表格式)](../data-sources-ssas-tabular.md)   

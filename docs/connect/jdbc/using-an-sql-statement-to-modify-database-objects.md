@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f78ff2b8419bd2728ddb3c207e137371d5f3b7d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 257dba1d93b2a22838cf7c3c631f65a29d517157
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687776"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790252"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>使用 SQL 陳述式修改資料庫物件
 

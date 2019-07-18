@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917028"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
 將儲存的二進位內容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)至檔案。  

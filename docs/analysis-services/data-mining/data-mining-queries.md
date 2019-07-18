@@ -1,5 +1,5 @@
 ---
-title: 資料採礦查詢 |Microsoft 文件
+title: 資料採礦查詢 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 072ffe2e41aa75d3fe62875685b0a4aa0d9a5138
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183554"
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34018395"
 ##  <a name="bkmk_Understand"></a> 了解資料採礦查詢  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦支援以下類型的查詢：  
   
--   [預測查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      根據模型中的模式並從輸入資料進行推斷的查詢。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34018395"
   
      傳回中繼資料、統計資料，以及有關模型本身之其他資訊的查詢。  
   
--   [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      可以針對模型擷取基礎案例資料，或甚至擷取模型中未使用之結構中之資料的查詢。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "34018395"
   
 -   使用針對每種演算法類型所提供的自訂資料採礦檢視器，瀏覽及探索每一個模型類型。 如需詳細資訊，請參閱[採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)。  
   
--   使用 Microsoft 一般內容樹狀檢視器來檢閱每一種模型類型的模型內容。 若要解譯此資訊，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+-   使用 Microsoft 一般內容樹狀檢視器  來檢閱每一種模型類型的模型內容。 若要解譯此資訊，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ##  <a name="bkmk_Interfaces"></a> 查詢工具和介面  
  您可以使用 SQL Server 提供的其中一種查詢工具，以互動方式建立資料採礦查詢。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都會提供圖形化預測查詢產生器。 如果您之前未使用過預測查詢產生器，建議您按照＜ [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) ＞中的步驟執行操作來了解介面。 如需步驟的快速概觀，請參閱 [使用預測查詢產生器來建立預測查詢](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)。  
   
  預測查詢產生器對於啟動您之後將要自訂的查詢很有幫助。 您可以輕鬆加入資料來源，並將其對應到資料行，然後切換到 DMX 檢視，並加入 WHERE 子句或其他函數來自訂查詢。  
   
- 一旦您熟悉資料採礦模型以及如何建立查詢之後，您也可以使用資料採礦延伸模組 (DMX) 直接撰寫查詢。 DMX 是一種類似於 Transact-SQL 的查詢語言，您可以從許多不同的用戶端來使用它。 DMX 是用來建立自訂預測和複雜查詢的工具選擇。 如需 DMX 的簡介，請參閱[使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0)。  
+ 一旦您熟悉資料採礦模型以及如何建立查詢之後，您也可以使用資料採礦延伸模組 (DMX) 直接撰寫查詢。 DMX 是一種類似於 Transact-SQL 的查詢語言，您可以從許多不同的用戶端來使用它。 DMX 是用來建立自訂預測和複雜查詢的工具選擇。 如需 dmx 的簡介，請參閱[建立及查詢資料採礦模型使用 DMX:教學課程&#40;Analysis Services-資料採礦&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0)。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供 DMX 編輯器。 您也可以使用預測查詢產生器開始查詢，然後將檢視變更為文字編輯器，並將 DMX 陳述式複製到另一個用戶端。 如需詳細資訊，請參閱 [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
@@ -89,12 +89,12 @@ ms.locfileid: "34018395"
   
  下列清單提供您可以在查詢中使用之函數的摘要：  
   
--   **一般預測函數：****Predict** 函數是多型的，這表示它適用於所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](../../dmx/predict-dmx.md)。  
+-   **一般預測函數：** **Predict**函式是多型的這表示它適用於所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](../../dmx/predict-dmx.md)。  
   
     > [!WARNING]  
     >  並非所有模型都會用來做預測。 例如，您可以建立沒有可預測屬性的叢集模型。 但是，即使模型沒有可預測屬性，您也可以建立預測查詢來傳回模型中其他類型的實用資訊。  
   
--   **自訂預測函數：** 每一個模型類型都會提供一組預測函數，這些函數是設計來處理該演算法所建立的模式。  
+-   **自訂預測函數：** 每個模型類型都會提供一組預測函數是設計來處理該演算法所建立的模式。  
   
      例如， **Lag** 函數是針對時間序列模型所提供，可讓您檢視模型所使用的歷程記錄資料。 對於叢集模型而言，類似 **ClusterDistance** 的函數更有意義。  
   
@@ -110,17 +110,17 @@ ms.locfileid: "34018395"
   
      您也可以呼叫 VBA 函數，或是建立您自己的函數。 如需詳細資訊，請參閱[函數 &#40;DMX&#41](../../dmx/functions-dmx.md)。  
   
--   **一般統計資料：** 有許多函數幾乎可以搭配任何模型類型使用，以便傳回一組標準的描述性統計資料，例如標準差。  
+-   **一般統計資料：** 有數個函數可以搭配任何模型類型，傳回一組標準的描述性統計資料，例如標準差。  
   
      例如， **PredictHistogram** 函數會傳回一個資料表，列出指定之資料行的所有狀態。  
   
      如需詳細資訊，請參閱[一般預測函數 &#40;DMX&#41](../../dmx/general-prediction-functions-dmx.md)。  
   
--   **自訂統計資料：** 為每種模型類型提供其他支援函數，以便產生與特定分析工作有關的統計資料。  
+-   **自訂統計資料：** 每個模型類型，以便產生與特定分析工作有關的統計資料提供額外的支援函數。  
   
      例如，當您使用叢集模型時，您可以使用 **PredictCaseLikelihood**函數傳回與特定案例和叢集相關的可能性分數。 但是，如果您建立了線性迴歸模型，您對於擷取係數和攔截會更感興趣 (您可以使用內容查詢來擷取)。  
   
--   **模型內容函數：** 所有模型的「內容」都以標準化格式表示，好讓您使用簡單查詢擷取資訊。 可以使用 DMX 來針對模型內容建立查詢。 您也可以使用資料採礦結構描述資料列集來取得某個類型的模型內容。  
+-   **模型內容函數：** *內容*之所有模型以標準化格式表示，可讓您使用簡單查詢擷取資訊。 可以使用 DMX 來針對模型內容建立查詢。 您也可以使用資料採礦結構描述資料列集來取得某個類型的模型內容。  
   
      在模型內容中，傳回之資料表的每一個資料列或節點意義會因為用來建立模型的演算法類型以及資料行的資料類型而不同。 如需詳細資訊，請參閱 [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)。  
   
@@ -136,13 +136,13 @@ ms.locfileid: "34018395"
 ## <a name="in-this-section"></a>本節內容  
  本節的主題會詳細介紹每一種類型的資料採礦查詢，並提供如何針對資料採礦模型建立查詢之詳細範例的連結。  
   
- [預測查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [資料定義查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [資料定義查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -151,17 +151,17 @@ ms.locfileid: "34018395"
   
 |工作|連結|  
 |-----------|-----------|  
-|檢視有關資料採礦查詢的教學課程和逐步解說|[第 6 課：建立及處理預測 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [時間序列預測 DMX 教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
-|使用 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中建立 DMX 查詢](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用預測查詢產生器來建立預測查詢](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [套用至模型的預測函數](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動編輯預測查詢](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
-|使用預測查詢中所用的外部資料|[選擇和對應輸入的資料的預測查詢](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [選擇和對應輸入的資料的預測查詢](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
+|檢視有關資料採礦查詢的教學課程和逐步解說|[第 6 課：建立及處理預測&#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [時間序列預測 DMX 教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
+|使用 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中建立 DMX 查詢](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用預測查詢產生器來建立預測查詢](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [將預測函式套用至模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手動編輯預測查詢](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|使用預測查詢中所用的外部資料|[為預測查詢選擇和對應輸入資料](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [為預測查詢選擇和對應輸入資料](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |使用查詢的結果|[檢視及儲存預測查詢的結果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|使用 Management Studio 中提供的 DMX 和 XMLA 查詢範本|[從範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [使用 XMLA 建立資料採礦查詢](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|了解內容查詢及參閱範例的詳細資訊|[採礦模型上建立內容查詢](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [查詢用於建立採礦模型的參數](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
-|設定查詢選項，以及疑難排解查詢權限和問題|[變更資料採礦查詢的逾時值](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
+|使用 Management Studio 中提供的 DMX 和 XMLA 查詢範本|[根據範本建立單一預測查詢](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [使用 XMLA 建立資料採礦查詢](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [在 SQL Server Management Studio 中使用 Analysis Services 範本](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|了解內容查詢及參閱範例的詳細資訊|[建立採礦模型內容查詢](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [查詢用於建立採礦模型的參數](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
+|設定查詢選項，以及疑難排解查詢權限和問題|[針對資料採礦查詢變更逾時值](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |在 Integration Services 中使用資料採礦元件|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

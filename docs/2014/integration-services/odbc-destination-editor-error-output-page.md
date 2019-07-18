@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
@@ -13,12 +12,12 @@ ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf651979dcf1cf651fecb6c9f385396a7dcb801d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057194"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目的地編輯器 (錯誤輸出頁面)
   使用 **[ODBC 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可選取錯誤處理選項。  
@@ -31,9 +30,9 @@ ms.locfileid: "58389006"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 目的地的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤中，按兩下 ODBC 目的地。  
+-   在 [資料流程]  索引標籤中，按兩下 ODBC 目的地。  
   
--   在 **[ODBC 目的地編輯器]** 中，按一下 **[錯誤輸出]**。  
+-   在 **[ODBC 目的地編輯器]** 中，按一下 **[錯誤輸出]** 。  
   
 ## <a name="options"></a>選項。  
   

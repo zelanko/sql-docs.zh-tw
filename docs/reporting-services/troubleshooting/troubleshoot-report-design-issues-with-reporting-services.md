@@ -2,18 +2,18 @@
 title: 針對 Reporting Services 的報表設計問題進行疑難排解 | Microsoft Docs
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52fec67c4e07012896e7191803d90020d3988b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573846"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>疑難排解 Reporting Services 的報表設計問題
 當您在報表撰寫應用程式中，以 [設計] 檢視建立報表配置時，可能會發生報表設計問題。 您可以使用本主題來協助疑難排解這些問題。   
@@ -26,7 +26,7 @@ ms.locfileid: "47698496"
   
 直接加到設計介面的文字方塊，只能顯示為資料集的彙總值。  
   
-若要確認文字方塊的父容器，請選取該文字方塊，然後在 [屬性] 窗格中捲動至 **[Parent]**。   
+若要確認文字方塊的父容器，請選取該文字方塊，然後在 [屬性] 窗格中捲動至 **[Parent]** 。   
   
 如果您需要文字方塊顯示資料集中的每一個值，請使用資料表或矩陣之類的資料區。 依預設，資料表或矩陣中的每個資料格都包含一個文字方塊。 將資料集欄位拖曳至各資料格。   
   
@@ -38,7 +38,7 @@ PageNumber 和 TotalPages 只在頁首和頁尾有效。
   
 內建欄位 [&PageNumber] 和 [&TotalPages] 只在頁首和頁尾有效。   
   
-若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱 [新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱[新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 > 在頁首或頁尾中包含 [&TotalPages]，會對報表處理產生一些影響。 如需詳細資訊，請參閱「報表疑難排解：將報表匯出為特定檔案格式」。  

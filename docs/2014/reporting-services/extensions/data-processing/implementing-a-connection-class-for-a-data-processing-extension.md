@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - connections [Reporting Services], data processing extensions
 - Connection class
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 01050446f67cd06ef743270e32222a16537e9f0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fbd293c156f373de0cdad53b4419633ded15af8a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164139"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 Connection 類別
   **Connection** 物件代表資料庫連結或是類似的資源，而且是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之使用者的起點。 它代表資料庫伺服器的連接，不過任何具有類似行為的實體都可以公開成 **Connection**。  
@@ -43,7 +41,7 @@ ms.locfileid: "56029939"
   
  當未卸載其餘的資料處理延伸模組類別時，實作 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 的類別不會從記憶體卸載。 因此，您可以使用 **Extension** 類別來儲存跨連線的狀態資訊，或是儲存可以在記憶體中快取的資料。 只要報表伺服器正在執行，您的 **Extension** 類別仍然會在記憶體中。  
   
- 您可以透過實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 來擴充 **Connection** 類別，以包含對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中認證的支援。 當您實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 介面的 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> 屬性時，可以啟用 [整合式安全性] 核取方塊，以及在報表設計師 [資料來源] 對話方塊的 [使用者名稱] 與 [密碼] 文字方塊。 這允許報表設計師儲存和擷取支援驗證的資料來源之認證。 會將認證安全地儲存並在預覽模式中轉譯報表時使用。  
+ 您可以透過實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 來擴充 **Connection** 類別，以包含對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中認證的支援。 當您實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 介面的 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> 屬性時，可以啟用 [整合式安全性]  核取方塊，以及在報表設計師 [資料來源]  對話方塊的 [使用者名稱]  與 [密碼]  文字方塊。 這允許報表設計師儲存和擷取支援驗證的資料來源之認證。 會將認證安全地儲存並在預覽模式中轉譯報表時使用。  
   
 > [!NOTE]  
 >  若要隱含實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>，您必須實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 與 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 介面的成員。  

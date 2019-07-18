@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f362d725f8b734ab9ecdbdc79c268af08a495b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 086c5381f1801baf919508525c17faab93746ca0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003363"
 ---
 # <a name="sqlgetdata-desktop-database-drivers"></a>SQLGetData (桌面資料庫驅動程式)
 此函式可以從任何資料行，擷取資料，不論是否有繫結資料行之後，也不論在其中擷取資料行的順序。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
@@ -14,12 +13,12 @@ ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: efb8341b4e7124e244b5994aa2f83c664348b865
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062215"
 ---
 # <a name="active-operations-dialog-box"></a>作用中的作業對話方塊
   使用 **[作用中的作業]** 對話方塊檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上目前執行中之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 作業 (例如，部署、驗證及封裝執行) 的狀態。 此資料儲存在 SSISDB 目錄中。  

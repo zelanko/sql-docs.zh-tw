@@ -2,18 +2,18 @@
 title: 運算式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 09/06/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579113"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 
@@ -40,11 +40,11 @@ ms.locfileid: "56285986"
   
  您可以使用運算式來指定許多報表項目屬性的值。 最常見的屬性為文字方塊與預留位置文字的值。 如果文字方塊只包含一個運算式，該運算式通常就是文字方塊屬性的值。 如果文字方塊包含多個運算式，每個運算式都是文字方塊中的預留位置文字值。  
   
- 根據預設，運算式在報表設計介面上會顯示成「簡單運算式」或「複雜運算式」。  
+ 根據預設，運算式在報表設計介面上會顯示成「簡單運算式」  或「複雜運算式」  。  
   
 -   **簡單** ：簡單運算式包含內建集合中單一項目的參考，例如資料集欄位、參數或內建欄位。 在設計介面上，簡單運算式會以方括號的形式出現。 例如， `[FieldName]` 相當於基礎運算式 `=Fields!FieldName.Value`。 當您建立報表配置，並將項目從 [報表資料] 窗格拖曳到設計介面時，系統會為您自動建立簡單運算式。 如需代表不同內建集合之符號的詳細資訊，請參閱 [了解簡單運算式中的字首符號](#DisplayText)。  
   
--   **複雜** ：複雜運算式包含多個內建參考、運算子和函數呼叫的參考。 當運算式值包含多個簡單參考時，複雜運算式會以 <\<Expr>> 的形式出現。 若要檢視運算式，請將滑鼠指標停留在該運算式上，然後使用工具提示。 若要編輯運算式，在 [運算式] 對話方塊中開啟該運算式。  
+-   **複雜** ：複雜運算式包含多個內建參考、運算子和函數呼叫的參考。 當運算式值包含多個簡單參考時，複雜運算式會以 <\<Expr>> 的形式出現。 若要檢視運算式，請將滑鼠指標停留在該運算式上，然後使用工具提示。 若要編輯運算式，在 [運算式]  對話方塊中開啟該運算式。  
   
  下圖同時針對文字方塊和預留位置文字顯示一般的簡單運算式和複雜運算式。  
   
@@ -56,13 +56,9 @@ ms.locfileid: "56285986"
   
  如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
-### <a name="report-model-formulas"></a>報表模型公式  
- 當您針對使用報表模型當作資料來源的資料集設計查詢時，您可以建立「公式」。 公式是針對報表中的值所執行的計算，這些值是以報表模型中的資料為根據。  
-  
- 如需詳細資訊，請參閱[報表模型查詢中的公式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md)。  
-   
-##  <a name="DisplayText"></a> 了解簡單運算式中的字首符號  
- 簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
+## <a name="DisplayText"></a> 了解簡單運算式中的字首符號  
+
+簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
   
 |項目|顯示文字範例|運算式文字範例|  
 |----------|--------------------------|-----------------------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
@@ -15,12 +14,12 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5471720cbd3084c661dec93d9c7f4f680e066b86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414605"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070396"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>重定標籤 (SQL Server 資料採礦增益集)
   ![重定標籤工具的 office 13 圖示](media/dm13-relabel.gif "重定標籤工具的 Office 13 圖示")  

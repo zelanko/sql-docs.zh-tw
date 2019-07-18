@@ -16,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7470367bd827faf4c2468ee7187a05c766256dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900960"
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回索引的文件中的關鍵字的位置資訊。  

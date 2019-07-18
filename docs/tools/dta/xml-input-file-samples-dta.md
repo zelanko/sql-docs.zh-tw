@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d78f5e333fc1b494410e382146df54b214c09883
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 101dab519eb3c2fb60eda526772a2715ccfc2302
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292847"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731671"
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 輸入檔範例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

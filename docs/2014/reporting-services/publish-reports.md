@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108033"
 ---
 # <a name="publish-reports"></a>發行報表
   您可以從[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]部署專案，將報表伺服器專案中的所有報表與共用資料來源發行至報表伺服器，或者發行單一報表。 在可以發行報表之前，您必須指定目標報表伺服器的 URL。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)。  
@@ -28,14 +27,14 @@ ms.locfileid: "56032399"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>若要發行專案中的所有報表  
   
--   在 [組建] 功能表上，按一下 [部署 \<報表專案名稱>]。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
+-   在 [組建]  功能表上，按一下 [部署 \<報表專案名稱>]  。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]  。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
     > [!NOTE]  
     >  當您部署報表伺服器專案時，也會部署報表專案中的共用資料來源。  
   
 ### <a name="to-publish-a-single-report"></a>若要發行單一報表  
   
--   在 [方案總管] 中，以滑鼠右鍵按一下報表，然後按一下 **[部署]**。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
+-   在 [方案總管] 中，以滑鼠右鍵按一下報表，然後按一下 **[部署]** 。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
     > [!NOTE]  
     >  當您發行報表時，也必須部署該報表所使用的共用資料來源。  

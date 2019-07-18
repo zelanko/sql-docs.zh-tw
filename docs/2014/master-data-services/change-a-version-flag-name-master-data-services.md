@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], changing name
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab922142698101c276f59c9ca0d398f297eedee4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484038"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>變更版本旗標名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更版本旗標的名稱。  
@@ -31,13 +31,13 @@ ms.locfileid: "52814330"
   
 ### <a name="to-change-a-version-flag-name"></a>若要變更版本旗標名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 **[管理版本]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[旗標]**。  
+2.  在 **[管理版本]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[旗標]** 。  
   
-3.  在 [管理版本旗標] 頁面上，選取 [模型] 欄位中的模型。  
+3.  在 [管理版本旗標]  頁面上，選取 [模型]  欄位中的模型。  
   
-4.  在方格中，按兩下旗標名稱的資料列中的 [名稱] 欄位。  
+4.  在方格中，按兩下旗標名稱的資料列中的 [名稱]  欄位。  
   
 5.  輸入旗標的新名稱。  
   

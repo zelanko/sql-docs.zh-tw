@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e507d9fa5b57fe63c1540f4490a7b04d878199f0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288936"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109266"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>內嵌和共用資料連接或資料來源 (報表產生器及 SSRS)
   查詢執行或處理報表時，報表會使用資料連接擷取報表的資料。 您可以從內建的資料連接類型清單，選擇連接到關聯式資料庫、多維度資料庫、Web 服務或其他資料來源的類型。 下列項目可在描述資料連接時使用。  
@@ -33,7 +32,7 @@ ms.locfileid: "56288936"
   
 -   **共用資料來源。** 報表伺服器或 SharePoint 網站上提供的資料來源，可供多個報表使用。  
   
--   **內嵌資料來源。** 也稱為 *「報表特定資料來源」*(report-specific data source)。 在報表中定義而且僅供該報表使用的資料來源。  
+-   **內嵌資料來源。** 也稱為 *「報表特定資料來源」* (report-specific data source)。 在報表中定義而且僅供該報表使用的資料來源。  
   
 -   **認證。** 認證是驗證資訊，您必須提供這項資訊才能存取外部資料。  
   

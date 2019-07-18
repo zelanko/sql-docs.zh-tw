@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 04ea83b2-db5e-4b46-b016-9e496363827e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6eb67fd95f4f6383d30c8aed79d374adaccb5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6e22d23168933a018da3e02122b654d0babce973
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762198"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791634"
 ---
 # <a name="settime-method-sqlservercallablestatement"></a>setTime 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

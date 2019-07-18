@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62876107"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在備份和還原期間可能的媒體錯誤 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 可讓您選擇復原資料庫，而不理會偵測到的錯誤。 有一項重要的新錯誤偵測機制，就是可以選擇建立備份總和檢查碼，這是由備份作業所建立，並可使用還原作業來加以驗證。 您可以控制作業是否要檢查錯誤，以及在發生錯誤時，是要停止作業，還是要繼續進行。 如果備份包含備份總和檢查碼，RESTORE 和 RESTORE VERIFYONLY 陳述式就可以檢查錯誤。  

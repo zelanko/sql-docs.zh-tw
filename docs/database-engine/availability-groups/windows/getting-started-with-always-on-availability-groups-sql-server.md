@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c99d04b216a4e8255c4e03b7cb30906ca15661b8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 834a12c24195da635782f00e1bc3c7c4e7b6cc57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800791"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>開始使用 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本主題介紹設定 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 建立、管理及監視可用性群組的步驟。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="RecommendedReading"></a> 建議閱讀資料  
+##  <a name="RecommendedReading"></a> 建議閱讀資料  
  在您建立第一個可用性群組之前，建議您先閱讀下列主題：  
   
 -   [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
@@ -47,9 +46,9 @@ ms.locfileid: "53213467"
 ||步驟|連結|  
 |------|----------|-----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**建立可用性群組。** 在裝載要加入可用性群組之資料庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，建立可用性群組。<br /><br /> 至少在您建立可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，建立初始主要複本。 您可以指定一到四個次要複本。 如需可用性群組和複本屬性的資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)。<br /><br /> 強烈建議您建立 [可用性群組接聽程式](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。<br /><br /> **必要條件：** 裝載給定可用性群組之可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，必須位於單一 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。<br /><br /> 如需其他必要條件的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|若要建立可用性群組，您可以使用下列任何一個工具：<br /><br /> [新增可用性群組精靈](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**將次要複本聯結至可用性群組。** 連接至裝載次要複本的每個 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體，然後將本機次要複本聯結至可用性群組。|[將次要複本聯結至可用性群組](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果您使用 [新增可用性群組精靈]，這個步驟會自動化。|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**準備次要資料庫。** 在裝載次要複本的每一個伺服器執行個體上，使用 RESTORE WITH NORECOVERY 還原主要資料庫的備份。|[手動準備次要資料庫](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> 提示：[新增可用性群組精靈] 可以為您準備次要資料庫。 如需詳細資訊，請參閱[選取初始資料同步處理頁面 &#40;AlwaysOn 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) 中的＜使用完整初始資料同步處理的必要條件＞。|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**將次要資料庫聯結至可用性群組。** 在裝載次要複本的每一個伺服器執行個體上，將每個本機次要資料庫聯結至可用性群組。 聯結可用性群組時，給定的次要資料庫會起始與對應主要資料庫的資料同步處理。|[將次要資料庫聯結至可用性群組](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果每一個次要複本上存在每一個次要資料庫，[新增可用性群組精靈] 會執行這個步驟。|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**將次要複本聯結至可用性群組。** 連接至裝載次要複本的每個 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體，然後將本機次要複本聯結至可用性群組。|[將次要複本聯結至可用性群組](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果您使用 [新增可用性群組精靈]，則會自動化這個步驟。|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**準備次要資料庫。** 在裝載次要複本的每一個伺服器執行個體上，使用 RESTORE WITH NORECOVERY 還原主要資料庫的備份。|[手動準備次要資料庫](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> 提示：[新增可用性群組精靈] 可為您準備次要資料庫。 如需詳細資訊，請參閱[選取初始資料同步處理頁面 &#40;AlwaysOn 可用性群組精靈&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) 中的＜使用完整初始資料同步處理的必要條件＞。|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**將次要資料庫聯結至可用性群組。** 在裝載次要複本的每一個伺服器執行個體上，將每個本機次要資料庫聯結至可用性群組。 聯結可用性群組時，給定的次要資料庫會起始與對應主要資料庫的資料同步處理。|[將次要資料庫聯結至可用性群組](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果每一個次要資料庫都有一個次要複本，則 [新增可用性群組精靈] 會執行這個步驟。|  
 ||**建立可用性群組接聽程式。**  除非您在建立可用性群組時已經建立可用性群組接聽程式，否則需要進行這個步驟。|[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**將接聽程式的 DNS 主機名稱提供給應用程式開發人員。**  開發人員需要在連接字串中指定這個 DNS 名稱，以便將連線要求導向可用性群組接聽程式。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。|「後續操作：建立可用性群組接聽程式之後＞(位於[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) 中)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**設定執行備份作業的位置。**  如果您要在次要資料庫上執行備份，則必須建立備份作業指令碼，以便將自動備份喜好設定納入考量。 在裝載可用性群組之可用性複本的每一個伺服器執行個體上，為可用性群組中的每個資料庫建立指令碼。|「後續操作：設定次要複本的備份之後＞(位於[設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) 中)|  
@@ -84,7 +83,7 @@ ms.locfileid: "53213467"
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**[物件總管詳細資料]** 窗格會顯示您所連接之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上裝載的可用性群組基本資訊。<br /><br /> 提示：使用此窗格選取多個可用性群組、複本或資料庫，並針對所選物件執行例行的系統管理工作，例如，從可用性群組移除多個可用性複本或資料庫。|[使用物件總管詳細資料監視可用性群組](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|**[屬性]** 對話方塊可讓您檢視可用性群組、複本或接聽程式的屬性，並在某些情況下變更其值。|[可用性群組屬性](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)<br /><br /> [可用性複本屬性](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)<br /><br /> [可用性群組接聽程式屬性](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)|  
 |系統監視器|**SQLServer:Availability Replica** 效能物件含有效能計數器，可報告可用性複本的相關資訊。|[SQL Server、可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列計數器與監視可用性資料庫上的交易記錄活動特別有關聯：**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。|[SQL Server 的 Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server、Databases 物件](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列計數器與監視可用性資料庫上的交易記錄活動特別相關：**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。|[SQL Server 的 Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server、Databases 物件](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   

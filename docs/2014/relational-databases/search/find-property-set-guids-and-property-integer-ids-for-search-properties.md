@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011329"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
   本主題將討論如何取得將屬性加入至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
@@ -69,7 +69,7 @@ ms.locfileid: "53372180"
 ##  <a name="propdesc"></a> 從 Windows 屬性描述尋找搜尋屬性的值  
  若為已知的 Windows 搜尋屬性 (Property)，您可以從屬性 (Property) 描述 (`formatID`) 的 `propID` 和 `propertyDescription` 屬性 (Attribute) 取得您需要的這項資訊。  
   
- 下列範例將顯示一般 Microsoft 屬性描述的相關部分 (以 `System.Author` 屬性為例)。 `formatID` 屬性 (Attribute) 會指定屬性 (Property) 集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，而 `propID` 屬性 (Attribute) 會指定屬性 (Property) 整數識別碼 `4.` 。請注意， `name` 屬性 (Attribute) 會指定 Windows 正式屬性 (Property) 名稱 `System.Author`  (這個範例省略了屬性描述中不相關的部分)。  
+ 下列範例將顯示一般 Microsoft 屬性描述的相關部分 (以 `System.Author` 屬性為例)。 `formatID` 屬性 (Attribute) 會指定屬性 (Property) 集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，而 `propID` 屬性 (Attribute) 會指定屬性 (Property) 整數識別碼 `4.` 。請注意， `name` 屬性 (Attribute) 會指定 Windows 正式屬性 (Property) 名稱 `System.Author` (這個範例省略了屬性描述中不相關的部分)。  
   
 ```  
 .  

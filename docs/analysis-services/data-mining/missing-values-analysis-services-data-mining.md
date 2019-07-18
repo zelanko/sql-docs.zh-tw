@@ -1,5 +1,5 @@
 ---
-title: 遺漏值 (Analysis Services-資料採礦) |Microsoft 文件
+title: 遺漏值 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 662fdd55fc5929fe56734b9894bf971962ff2a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182600"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34017645"
   
  例如，下表顯示針對 Bike Buyer 教學課程所建立的決策樹模型中 (All) 節點的值散發。 在範例案例中，[Bike Buyer] 資料行是可預測的屬性，其中 1 代表「是」，而 0 代表「否」。  
   
-|Value|案例|  
+|值|案例|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -49,7 +49,7 @@ ms.locfileid: "34017645"
   
  此散發顯示大約一半的客戶已購買腳踏車，另一半則沒有。 這個特定資料集非常清楚，因此每個案例在 [Bike Buyer] 資料行中都有一個值，而 **Missing** 值為 0。 不過，如果任何案例在 [Bike Buyer] 欄位中有一個 Null 值，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將該資料行計為具有 **Missing** 值的案例。  
   
- 如果輸入是連續的資料行，則模型會將屬性的兩個可能狀態製為表格： **Existing** 和 **Missing**。 換言之，資料行會包含某個數值類型的值或不包含任何值。 對於擁有值的案例，模型會計算平均標準差以及其他有用的統計資料。 對於沒有值的案例，模型則會提供 **Missing** 值的計數並據此調整預測。 調整預測的方法會根據演算法而異，相關說明請見下一章節。  
+ 如果輸入是連續的資料行，模型會製為表格屬性的兩個可能狀態：**現有**並**遺漏**。 換言之，資料行會包含某個數值類型的值或不包含任何值。 對於擁有值的案例，模型會計算平均標準差以及其他有用的統計資料。 對於沒有值的案例，模型則會提供 **Missing** 值的計數並據此調整預測。 調整預測的方法會根據演算法而異，相關說明請見下一章節。  
   
 > [!NOTE]  
 >  對於巢狀資料表中的屬性而言，遺漏值沒有很高的資訊價值。 例如，如果客戶尚未購買產品，則巢狀的 **Products** 資料表就不會有對應該產品的資料列，採礦模型也不會為遺漏的產品建立屬性。 不過，如果您對尚未購買特定產品的客戶感興趣，可以藉由在模型篩選中使用 NOT EXISTS 陳述式，建立會針對巢狀資料表中不存在的產品進行篩選的模型。 如需詳細資訊，請參閱 [將篩選套用至採礦模型](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "34017645"
 ## <a name="adjusting-probability-for-missing-states"></a>調整遺漏狀態的機率  
  除了計算值以外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以計算整個資料集中任何值的機率。 **Missing** 值的情況也是如此。 例如，下列資料表顯示前述範例中案例的機率：  
   
-|Value|案例|機率|  
+|值|案例|機率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -101,13 +101,13 @@ ms.locfileid: "34017645"
   
 |工作|連結|  
 |-----------|-----------|  
-|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |設定採礦模型的屬性以控制遺漏值的處理|[變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定模型旗標|[模型旗標 & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
+|了解如何在 DMX 中指定模型旗標|[模型旗標 &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
 |改變採礦結構處理遺漏值的方式|[變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

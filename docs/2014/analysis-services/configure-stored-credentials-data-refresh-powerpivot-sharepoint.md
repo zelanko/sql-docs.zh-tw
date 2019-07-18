@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087463"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>設定 PowerPivot 資料重新整理的預存認證 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中建立目標應用程式來儲存想要使用的認證，PowerPivot 資料重新整理作業就可以在任何 Windows 使用者帳戶之下執行。 同樣地，若想要提供的資料庫登入不同於最初用於匯入 PowerPivot for Excel 資料的登入，可以將這些認證對應至 Secure Store Service 目標應用程式，然後在資料重新整理排程中指定該目標應用程式。  
@@ -55,9 +54,9 @@ ms.locfileid: "53365080"
   
 -   驗證當您在資料重新整理排程中指定此目標應用程式時，資料重新整理可否運作。  
   
-### <a name="step-1-create-a-target-application"></a>步驟 1：建立目標應用程式  
+### <a name="step-1-create-a-target-application"></a>步驟 1:建立目標應用程式  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下  **Secure Store Service**。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "53365080"
   
 8.  略過目標應用程式的網頁 URL。 PowerPivot 資料重新整理不會使用它。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步]  。  
   
 10. 在 **指定您的安全存放目標應用程式的認證欄位**頁面上，接受預設值。 欄位名稱和類型應該是 Windows 使用者名稱和 Windows 密碼。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "53365080"
   
     3.  加入將在資料重新整理排程中輸入此目標應用程式的 Windows 使用者和群組帳戶。  
   
-14. 按一下 [確定] 。  
+14. 按一下 [確定]  。  
   
 15. 選取您剛才建立的目標應用程式中，按一下向下箭號，然後選取**設定認證。**  
   
@@ -100,16 +99,16 @@ ms.locfileid: "53365080"
   
      在 [Windows 使用者名稱] 及 [Windows 密碼] 中，輸入要用於執行資料重新整理之 Windows 使用者帳戶的認證。  
   
-17. 按一下 [確定] 。  
+17. 按一下 [確定]  。  
   
-###  <a name="bkmk_grant"></a> 步驟 2:授與帳戶的 「 參與 」 權限  
+###  <a name="bkmk_grant"></a> 步驟 2：授與帳戶的 「 參與 」 權限  
  帳戶必須先獲指派其所應用之任何 PowerPivot 活頁簿的「參與」權限，您才可使用預存認證。 您需要這個權限等級才能從文件庫開啟活頁簿，然後在重新整理資料之後，將其存回文件庫。  
   
  指派權限是由網站集合管理員所執行的步驟。 您可以在根網站集合或根網站集合底下的任何層級 (包括個別文件和項目) 指派 SharePoint 權限。 設定權限的方式將隨著細緻程度而有所不同。 下列步驟示範授與權限的其中一個方法。  
   
 1.  在 SharePoint 網站，在 網站動作上按一下**網站的權限**。  
   
-2.  按一下 **[授與權限]**。  
+2.  按一下 **[授與權限]** 。  
   
 3.  在 [選取使用者] 中，輸入您在目標應用程式中所指定之 Windows 網域使用者帳戶的名稱。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "53365080"
   
 5.  選取 **參與**，然後按一下**確定**。  
   
-###  <a name="bkmk_dbread"></a> 步驟 3:授與讀取權限來存取外部資料來源用於資料重新整理  
+###  <a name="bkmk_dbread"></a> 步驟 3：授與讀取權限來存取外部資料來源用於資料重新整理  
  當資料匯入至 PowerPivot 活頁簿時，外部資料連接通常是以信任連接或是以使用目前使用者身分連接至資料來源的模擬連接為基礎。 這些類型的連接只能在目前使用者有讀取所匯入之資料的權限時使用。  
   
  在資料重新整理案例中，用來匯入資料的相同連接字串現在會重複使用來重新整理資料。 假使連接字串採行目前使用者 (例如字串中包含 Integrated_Security=SSPI) 的作法，PowerPivot 系統服務在傳遞目前使用者時，即會將目標應用程式中所指定的使用者識別視為目前使用者。 帳戶必須具備外部資料來源的讀取權限，此連接才會成功。  
@@ -147,7 +146,7 @@ ms.locfileid: "53365080"
   
  連接字串中必須包含使用者名稱及密碼，此步驟才能運作。 請注意，在連接字串中包含認證十分罕見，因此您在使用此選項時也會有所限制。 在大多數的情況下，您若是使用資料庫驗證來連接資料來源，則連接字串中將只會包含使用者識別碼及密碼。 如需如何檢查連接字串是否包含使用者識別碼和密碼的詳細資訊，請參閱中的 「 授與建立排程及存取外部資料的權限 」 一節[PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下  **Secure Store Service**。  
   
@@ -163,7 +162,7 @@ ms.locfileid: "53365080"
   
 8.  略過目標應用程式的網頁 URL。 PowerPivot 資料重新整理不會使用它。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步]  。  
   
 10. 在 **指定您的安全存放目標應用程式的認證欄位**頁面上，接受預設值，只有當資料來源使用 Windows 驗證。 否則，請選擇適用於資料來源的欄位類型，然後編輯欄位名稱以符合此類型。  
   
@@ -181,13 +180,13 @@ ms.locfileid: "53365080"
   
     3.  加入將在資料重新整理排程頁面之資料來源區段中輸入此目標應用程式的 Windows 使用者和群組帳戶。  
   
-14. 按一下 [確定] 。  
+14. 按一下 [確定]  。  
   
 15. 選取您剛才建立的目標應用程式中，按一下向下箭號，然後選取**設定認證。**  
   
 16. 輸入要用於連接資料來源的認證 (例如 SQL Server 登入的使用者名稱及密碼)。  
   
-17. 按一下 [確定] 。  
+17. 按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [排程資料重新整理&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   

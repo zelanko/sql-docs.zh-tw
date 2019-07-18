@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65101883"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 單元測試中的指令碼
 每個 SQL Server 單元測試都包含單一測試前動作、測試動作和測試後動作。 其中每個動作又包含下列項目：  

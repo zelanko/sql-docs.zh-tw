@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063374"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 相容性
 ODBC 桌面資料庫驅動程式和基礎的 Microsoft Jet 引擎並非 SQL-92 相容。 它們支援 SQL-92 中已定義的許多功能。 驅動程式支援某些功能不支援以 SQL-92。 如需詳細資訊，請參閱 < *Microsoft Jet Database Engine 程式設計人員指南*。 兩者之間的主要差異如下：  

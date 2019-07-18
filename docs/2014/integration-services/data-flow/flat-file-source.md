@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62902435"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
   「一般檔案」來源會從文字檔讀取資料。 文字檔可以是使用分隔符號、固定寬度或混合的格式。  

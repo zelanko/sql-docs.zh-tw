@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
@@ -13,12 +12,12 @@ ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 38c18c948ea8c30817bdeb49b00a2334b2fd3d4a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 813319309e489943cfdd94e13f300990b72e94be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092717"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>未設定報表伺服器資料庫 (Upgrade Advisor)
   由於報表伺服器組態不完整，因此系統封鎖了升級。 未設定報表伺服器資料庫。  

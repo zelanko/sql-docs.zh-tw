@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4118adb0b6d23a57926f5ca8c4c933dd3ef3b78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949256"
 ---
 # <a name="position-object-ado-md"></a>Position 物件 (ADO MD)
 代表一組一個或多個不同的維度成員會定義沿著某個軸點。  

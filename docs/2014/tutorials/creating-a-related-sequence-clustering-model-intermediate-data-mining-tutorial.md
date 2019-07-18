@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62855871"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>建立相關的時序群集採礦模型 (中繼資料採礦教學課程)
   探索時序群集模型之後，您了解到 Region 或 Income 等其他屬性對於模型也有很大的影響。因此，若要進一步了解時序，您需要建立相關的時序群集模型，並移除與客戶人口統計有關的屬性。  
@@ -34,7 +34,7 @@ ms.locfileid: "56035109"
   
      本教學課程中，輸入 名稱`Sequence Clustering`。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>若要從採礦模型移除資料行  
   

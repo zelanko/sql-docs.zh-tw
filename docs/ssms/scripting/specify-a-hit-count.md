@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa195eb188c35d3ac3b6ed23e874495676d1d74b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5c6adc27241ca7668a353b9b5b74d75c18e0e4ac
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642948"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679856"
 ---
 # <a name="specify-a-hit-count"></a>指定叫用計數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "51642948"
   
 #### <a name="to-specify-a-hit-count"></a>若要指定叫用次數  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]  。  
   
      -或-  
   
-     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]  。  
   
 2.  在 **[中斷點叫用次數]** 對話方塊的 **[當叫用中斷點時]** 方塊中，選取所要的行為。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "51642948"
   
 #### <a name="to-view-or-reset-the-current-hit-count"></a>若要檢視或重設目前叫用次數  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]  。  
   
      -或-  
   
-     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用次數]  。  
   
 2.  在 **[中斷點叫用次數]** 對話方塊中， **[目前叫用次數:]** 就會顯示在 **[重設]** 按鈕的正上方。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096988"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47674376"
 |**enabled**|**int**|作業排程的狀態：<br /><br /> **0** = 未啟用。<br /><br /> **1** = 啟用。<br /><br /> 如果未啟用排程，便不會依據這份排程來執行任何作業。|  
 |**freq_type**|**int**|針對這份排程來執行作業的頻率。<br /><br /> **1** = 只一次<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = SQL Server Agent 服務啟動時執行<br /><br /> **128** = 時電腦閒置時執行|  
 |**freq_interval**|**int**|執行作業的天數。 值而定**freq_type**。 預設值是**0**，這表示**freq_interval**未使用。 請參閱下表針對可能的值和其效果。|  
-|**freq_subday_type**|**int**|單位**freq_subday_interval**。 以下是可能的值和它們的描述。<br /><br /> <br /><br /> **1** ： 在指定的時間<br /><br /> **2** ： 秒<br /><br /> **4** ： 分鐘<br /><br /> **8** ： 時數|  
+|**freq_subday_type**|**int**|單位**freq_subday_interval**。 以下是可能的值和它們的描述。<br /><br /> <br /><br /> **1** :在指定的時間<br /><br /> **2** :秒<br /><br /> **4** :Minutes<br /><br /> **8** :小時|  
 |**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。|  
 |**freq_relative_interval**|**int**|當**freq_interval**就會發生在每個月中，如果**freq_interval**會**32** （每月相對）。 可為下列其中一個值：<br /><br /> **0** = **freq_relative_interval**未使用<br /><br /> **1** = 第一個<br /><br /> **2** = 第二個<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後一個|  
 |**freq_recurrence_**<br /><br /> **factor**|**int**|作業的排程執行之間的週數或月數。 **freq_type**才會使用**freq_type**是**8**， **16**，或**32**。 如果此資料行包含**0**， **freq_type**未使用。|  

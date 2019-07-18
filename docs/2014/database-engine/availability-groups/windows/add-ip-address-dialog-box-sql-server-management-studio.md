@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791912"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
   此 F1 說明主題描述 **[加入 IP 位址]** 對話方塊的選項。 可從 **[新增可用性群組接聽程式]** 對話方塊以及   或 **的** [指定複本] [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 頁面的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [接聽程式] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]索引標籤存取此對話方塊。  
@@ -50,7 +50,7 @@ ms.locfileid: "48164668"
 >  **[加入 IP 位址]** 對話方塊不會驗證 IP 位址。 此對話方塊也不會阻止您為已加入至可用性群組接聽程式的子網路加入第二個子網路位址。  
   
  **取消**  
- 按一下以取消選取，並返回 [新增可用性群組接聽程式] 對話方塊或 [接聽程式] 索引標籤，而不加入任何子網路的靜態 IP 位址。  
+ 按一下以取消選取，並返回 [新增可用性群組接聽程式]  對話方塊或 [接聽程式]  索引標籤，而不加入任何子網路的靜態 IP 位址。  
   
   
 ##  <a name="RelatedTasks"></a> 相關工作  

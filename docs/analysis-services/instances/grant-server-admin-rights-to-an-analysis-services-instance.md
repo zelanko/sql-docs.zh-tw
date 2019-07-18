@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e437507d139959c21f723f8a674ca4879570339f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181564"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>將伺服器系統管理員權限授與 Analysis Services 執行個體
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50145673"
   
 ## <a name="modify-server-role-membership"></a>修改伺服器角色成員資格  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，然後以滑鼠右鍵按一下物件總管中的執行個體名稱，再按一下 [屬性]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，然後以滑鼠右鍵按一下物件總管中的執行個體名稱，再按一下 [屬性]  。  
   
 2.  按一下 **[選取頁面]** 窗格中的 **[安全性]** ，然後按一下頁面底部的 **[加入]** ，以將一個或多個 Windows 使用者或群組加入至伺服器角色。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "50145673"
 ### <a name="add-computer-accounts"></a>新增電腦帳戶  
  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將電腦帳戶設為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators 群組的成員。  
   
-1.  在 [選取使用者或群組]  對話方塊中，按一下 [位置] 。  
+1.  在 [選取使用者或群組]  對話方塊中，按一下 [位置]  。  
   
-2.  選取您想要新增之電腦所屬的網域，或選取 [整個目錄]  ，然後按一下 [確定] 。  
+2.  選取您想要新增之電腦所屬的網域，或選取 [整個目錄]  ，然後按一下 [確定]  。  
   
-3.  按一下 **[物件類型]**。  
+3.  按一下 **[物件類型]** 。  
   
-4.  選取 [電腦]  ，然後按一下 [確定] 。  
+4.  選取 [電腦]  ，然後按一下 [確定]  。  
   
      ![將電腦帳戶新增為 ssas administrators](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "ssas 系統管理員的身分新增電腦帳戶")  
   

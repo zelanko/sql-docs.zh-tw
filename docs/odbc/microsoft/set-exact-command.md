@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997723"
 ---
 # <a name="set-exact-command"></a>SET EXACT 命令
 指定的規則來比較兩個字串的長度不同。  
@@ -63,8 +62,8 @@ SET EXACT ON | OFF
 |"ab"=""|相符項目|沒有相符項目|沒有相符項目|  
 |"__" = ""|相符項目|相符項目|沒有相符項目|  
 |"" = "___"|沒有相符項目|相符項目|沒有相符項目|  
-|TRIM("___") =""|相符項目|相符項目|相符項目|  
-|「"= TRIM("___")|相符項目|相符項目|相符項目|  
+|TRIM("___") = ""|相符項目|相符項目|相符項目|  
+|"" = TRIM("___")|相符項目|相符項目|相符項目|  
   
 ## <a name="see-also"></a>另請參閱  
  [SET ANSI 命令](../../odbc/microsoft/set-ansi-command.md)

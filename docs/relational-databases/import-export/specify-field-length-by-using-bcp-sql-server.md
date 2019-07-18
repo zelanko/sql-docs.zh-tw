@@ -14,23 +14,23 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd8995c954d88a90b5e1c5cd8802f69d96b33186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64946146"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   欄位長度會指出以字元格式表現資料所需的最大字元數。 如果資料是以原生格式儲存，則欄位長度為已知；例如， **int** 資料類型會佔用 4 個位元組。 如果指出前置長度為 0， **bcp** 命令就會提示您輸入欄位長度 (預設的欄位長度)，以及欄位長度對包含 **char** 資料之資料檔案的資料儲存有何影響。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示輸入欄位長度  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 (**-f**) 或資料格式參數 (**-n**、**-c**、**-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的欄位長度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
   

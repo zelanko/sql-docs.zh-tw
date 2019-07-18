@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028759"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>專案設定 (轉換) (SybaseToSQL)
 [轉換] 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換 Sybase Adaptive Server Enterprise (ASE) 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的語法。  
@@ -148,7 +147,7 @@ ms.locfileid: "53215295"
   
 -   若要使用 PRINT 和 RAISERROR 函式的字串常值，請選取**建立新的字串**。  
   
-    在此模式中，如果 PRINT 或 RAISERROR 陳述式不會使用預留位置和本機變數、 陳述式不變。 雙百分比字元 （%） 會變更為單一的百分比字元 %列印字串常值中。  
+    在此模式中，如果 PRINT 或 RAISERROR 陳述式不會使用預留位置和本機變數、 陳述式不變。 雙百分比字元 （%）會變更為單一的百分比字元 %列印字串常值中。  
   
     如果 PRINT 或 RAISERROR 陳述式會使用預留位置和一個或多個本機變數，如下列範例所示：  
   
@@ -183,7 +182,7 @@ ms.locfileid: "53215295"
   
 -   若要建置新的變數，每個 PRINT 和 RAISERROR 陳述式，並再將該變數用於字串值的 SSMA，請選取**建立新的變數**。  
   
-    在此模式中，如果 PRINT 或 RAISERROR 陳述式不會使用預留位置和區域變數，SSMA 會取代所有雙百分比字元 （%） 單一的百分比字元，以符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的語法。  
+    在此模式中，如果 PRINT 或 RAISERROR 陳述式不會使用預留位置和區域變數，SSMA 會取代所有雙百分比字元 （%）使用單一的百分比字元來遵守[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 的語法。  
   
     如果 PRINT 或 RAISERROR 陳述式會使用預留位置和一個或多個本機變數，如下列範例所示：  
   

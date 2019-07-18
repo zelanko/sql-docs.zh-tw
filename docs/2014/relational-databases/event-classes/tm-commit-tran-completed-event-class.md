@@ -1,5 +1,5 @@
 ---
-title: TM:Commit Tran Completed 事件類別 |Microsoft Docs
+title: TM：Commit Tran Completed 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061289"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>TM:Commit Tran Completed 事件類別
+# <a name="tm-commit-tran-completed-event-class"></a>TM：Commit Tran Completed 事件類別
   TM:Commit Tran Completed 事件類別指出 COMMIT TRANSACTION 要求完成。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM:Commit Tran Completed 事件類別資料行  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM：Commit Tran Completed 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|是|  
 |----------------------|---------------|-----------------|---------------|---------|  

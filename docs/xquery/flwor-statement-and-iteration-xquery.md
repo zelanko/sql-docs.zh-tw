@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038899"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 陳述式與反覆運算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "51858663"
   
 -   `return` 運算式。 在 `return` 子句中的運算式可建構 FLWOR 陳述式的結果。  
   
- 例如，下列查詢會在第一個製造位置反覆運算 <`Step`> 元素，並傳回 <`Step`> 節點的字串值：  
+ 例如，下列查詢會逐一查看 <`Step`> 元素的第一個製造位置，並傳回的字串值 <`Step`> 節點：  
   
 ```sql
 declare @x xml  
@@ -80,7 +79,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- 下列查詢與上一個查詢相似，除了它是針對 ProductModel 資料表的 Instructions 資料行 (具類型的 xml 資料行) 所指定之外。 查詢會在特定產品的第一個工作中心位置反覆運算所有的製造步驟 <`step`> 元素。  
+ 下列查詢與上一個查詢相似，除了它是針對 ProductModel 資料表的 Instructions 資料行 (具類型的 xml 資料行) 所指定之外。 查詢會逐一查看所有的製造步驟 <`step`> 項目，在特定產品的第一個工作中心位置。  
   
 ```sql
 SELECT Instructions.query('  
@@ -97,11 +96,11 @@ where ProductModelID=7
   
 -   `$Step` 是 Iterator 變數。  
   
--   [路徑運算式](../xquery/path-expressions-xquery.md)， `//AWMI:root/AWMI:Location[1]/AWMI:step`，產生輸入的時序。 此時序是第一個 <`Location`> 元素節點的 <`step`> 元素節點子系之時序。  
+-   [路徑運算式](../xquery/path-expressions-xquery.md)， `//AWMI:root/AWMI:Location[1]/AWMI:step`，產生輸入的時序。 此序列是一連串 <`step`> 元素節點子系的第一個 <`Location`> 項目節點。  
   
 -   未使用選擇性述詞子句 `where`。  
   
--   `return` 運算式可傳回 <`step`> 元素的字串值。  
+-   `return`運算式會傳回的字串值 <`step`> 項目。  
   
  [字串函數 (XQuery)](../xquery/data-accessor-functions-string-xquery.md)用來擷取的字串值 <`step`> 節點。  
   
@@ -156,7 +155,7 @@ SELECT @x.query('
 ...  
 ```  
   
- 下列查詢建構新 XML，它包含 <`Location`> 元素以及以子元素傳回的工作中心位置屬性：  
+ 下列查詢會建構新的 XML 具有 <`Location`> 項目與工作中心以子元素傳回的位置屬性：  
   
 ```xml
 <Location>  
@@ -188,7 +187,7 @@ where ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   FLWOR 陳述式可擷取特定產品的 <`Location`> 元素序列。  
+-   FLWOR 陳述式所擷取的序列 <`Location`> 特定產品的項目。  
   
 -   [Data 函數 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)會用來擷取每個屬性的值，因此它們會以文字節點，而不是做為屬性新增至產生的 XML。  
   
@@ -229,7 +228,7 @@ where ProductModelID=7
 ## <a name="using-the-where-clause"></a>使用 where 子句  
  您可以使用`where`子句篩選反覆運算的結果。 下一個範例會加以說明。  
   
- 在製造腳踏車時，製造程序將經過一系列的工作中心位置。 每個工作中心位置都會定義一系列的製造步驟。 下列查詢只會擷取那些製造腳踏車型號以及少於三個製造步驟的工作中心位置。 也就是，它們少於三個 <`step`> 元素。  
+ 在製造腳踏車時，製造程序將經過一系列的工作中心位置。 每個工作中心位置都會定義一系列的製造步驟。 下列查詢只會擷取那些製造腳踏車型號以及少於三個製造步驟的工作中心位置。 這就是它們具有少於三個 <`step`> 項目。  
   
 ```sql
 SELECT Instructions.query('  
@@ -268,7 +267,7 @@ where ProductModelID=7
 4.  否則，就會引發靜態錯誤。  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>在 FLWOR 中繫結多個變數  
- 您可以在單一 FLWOR 運算式中，將多個變數繫結至輸入時序。 在下列範例中，查詢是針對不具類型的 xml 變數所指定。 FLOWR 運算式會傳回每個 <`Location`> 元素的第一個 <`Step`> 元素子系。  
+ 您可以在單一 FLWOR 運算式中，將多個變數繫結至輸入時序。 在下列範例中，查詢是針對不具類型的 xml 變數所指定。 FLOWR 運算式會傳回第一個 <`Step`> 元素子系，在每個 <`Location`> 項目。  
   
 ```sql
 declare @x xml  
@@ -298,7 +297,7 @@ SELECT @x.query('
   
 -   `two` 運算式 `/ManuInstructions/Location` 及 `$FirstStep in $Loc/Step[1]`，與 `$FirstStep` 值相依的 `$Loc` 值相互關聯。  
   
--   與 `$Loc` 關聯的運算式會產生 <`Location`> 元素的序列。 對於每個 <`Location`> 元素而言，`$FirstStep` 會產生一個 <`Step`> 元素之序列，即單一。  
+-   與相關聯的運算式`$Loc`產生的序列 <`Location`> 項目。 每個 <`Location`> 項目，`$FirstStep`會產生一連串的其中一個 <`Step`> 項目，即單一。  
   
 -   在運算式中指定的 `$Loc` 與 `$FirstStep` 變數關聯。  
   
@@ -407,7 +406,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 您也可以依屬性值進行排序。 例如，下列查詢會擷取新建立的 <`Location`> 元素，它包含依 LaborHours 屬性的遞減順序排序的 LocationID 與 LaborHours 屬性。 因此，會先傳回包含工時最大值的工作中心位置。  
+ 您也可以依屬性值進行排序。 例如，下列查詢會擷取新建立 <`Location`> 依 LaborHours 屬性的遞減順序排序的 LocationID 與 LaborHours 屬性的項目。 因此，會先傳回包含工時最大值的工作中心位置。  
   
 ```sql
 SELECT Instructions.query('  
@@ -435,7 +434,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- 在下列查詢中，會依元素名稱排序結果。 該查詢會從產品目錄擷取特定產品的規格。 這些規格是 <`Specifications`> 元素的子系。  
+ 在下列查詢中，會依元素名稱排序結果。 該查詢會從產品目錄擷取特定產品的規格。 規格是子系 <`Specifications`> 項目。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -451,7 +450,7 @@ where ProductModelID=19;
   
  請注意下列項目是從上一個查詢而來：  
   
--   `/p1:ProductDescription/p1:Specifications/*` 運算式會傳回 <`Specifications`> 的元素子系。  
+-   `/p1:ProductDescription/p1:Specifications/*`運算式會傳回的項目子系 <`Specifications`>。  
   
 -   `order by (local-name($a))` 運算式會依元素名稱的本機部份排序。  
   
@@ -490,7 +489,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- 您可以指定多個排序條件，如下列範例所示。 在此範例中的查詢會先依 Title 然後再依 Administrator 屬性值排序 <`Employee`> 元素。  
+ 您可以指定多個排序條件，如下列範例所示。 在此範例查詢會排序 <`Employee`> 項目先依 Title 然後再依 Administrator 屬性值。  
   
 ```sql
 declare @x xml  

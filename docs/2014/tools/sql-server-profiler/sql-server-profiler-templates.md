@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186150"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
   您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 建立範本，用來定義追蹤中要包含的事件類別和資料行。 定義並儲存範本之後，即可執行追蹤，記錄您選取的每一個事件類別的資料。 您可將範本用在許多追蹤上；範本本身並不會執行。  
@@ -52,9 +52,9 @@ ms.locfileid: "52779590"
  如需有關事件類別的詳細資訊，請參閱 [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 ## <a name="default-template"></a>預設範本  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性] 對話方塊中的 [一般] 索引標籤，選取 [作為所選取伺服器類型的預設範本] 核取方塊。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會自動指定 **標準** 範本作為新追蹤套用的預設範本。 不過，您可以將預設範本變更為其他任何預先定義的或使用者自訂的範本。 若要變更預設範本，請在您建立或編輯範本時，使用 [追蹤範本屬性]  對話方塊中的 [一般]  索引標籤，選取 [作為所選取伺服器類型的預設範本]  核取方塊。  
   
- 若要巡覽至 [追蹤範本屬性] 對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [檔案] 功能表上選擇 [範本]，然後按一下 [新增範本] 或 [編輯範本]。  
+ 若要巡覽至 [追蹤範本屬性]  對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [檔案]  功能表上選擇 [範本]  ，然後按一下 [新增範本]  或 [編輯範本]  。  
   
 > [!NOTE]  
 >  預設範本是特定伺服器類型專用的範本。 變更一種伺服器類型的預設範本，並不會影響其他伺服器類型的預設範本。 如需針對特定伺服器來設定預設範本的詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)。  

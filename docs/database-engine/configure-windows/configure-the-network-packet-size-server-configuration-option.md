@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46de327bcc6a08d27291622fd190812919444873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90cef82fd04294022e6ab41ec07526deb8c438cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802478"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [網路封包大小] 選項會設定用於整個網路的封包大小 (以位元組為單位)。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 [網路封包大小]  選項會設定用於整個網路的封包大小 (以位元組為單位)。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
   
 > [!NOTE]  
 >  除非確信有助於提升效能，否則請勿變更封包大小。 對於大部分應用程式而言，預設封包大小是最適當的大小。  
@@ -39,7 +39,7 @@ ms.locfileid: "47613576"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 network packet size 選項：**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47613576"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 network packet size 選項之後](#FollowUp)  
+-   **後續操作：** [設定網路封包大小 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47613576"
   
 #### <a name="to-configure-the-network-packet-size-option"></a>設定 network packet size 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "47613576"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `network packet size` 選項的值設定為 `6500` 個位元組。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `network packet size` 選項的值設定為 `6500` 個位元組。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -108,7 +108,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 network packet size 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定網路封包大小選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

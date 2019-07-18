@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a2953852ebc54099fa815af4399614a5c66825b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3fdd5667d0125eca7fb774340fcdf163def9a59b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941070"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>認可或提交變更集 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52821792"
 
   變更集是對主要資料所做的暫止變更集合。 如果實體變更不需要系統管理員核准，您就可以認可變更集。 如果實體變更需要系統管理員核准，您可以提交變更集進行核准。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
@@ -35,26 +34,26 @@ ms.locfileid: "52821792"
 ## <a name="to-commit-a-local-changeset"></a>認可本機變更集  
  認可選項只適用於實體系統管理員尚未啟用需要核准之實體上的本機變更集。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管  。  
   
 2.  按一下 [實體]  功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要認可的變更集。  
+3.  在右窗格中，選取 [變更集]  ，然後按兩下您要認可的變更集。  
   
-4.  按一下 [認可]。  
+4.  按一下 [認可]  。  
   
 ## <a name="to-submit-a-changeset"></a>提交本機變更集  
  提交選項只適用於實體系統管理員已啟用需要核准之實體上的變更集。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下總管  。  
   
 2.  按一下 [實體]  功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]，然後按兩下您要提交的變更集。  
+3.  在右窗格中，選取 [變更集]  ，然後按兩下您要提交的變更集。  
   
-4.  按一下 [提交]。  
+4.  按一下 [提交]  。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  [核准或拒絕變更集 &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  

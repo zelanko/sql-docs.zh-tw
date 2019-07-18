@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922946"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全或不受限制模式設定 DataFactory
 > [!IMPORTANT]
@@ -36,7 +35,7 @@ ms.locfileid: "51559905"
   
  已提供登錄檔案 handsafe.reg 設定安全的組態處理常式登錄項目。 若要在安全模式中執行，執行 handsafe.reg。  
   
- 執行 handsafe.reg 之後，您必須停止並重新啟動 World Wide Web Publishing 服務，在 Web 伺服器上的命令提示字元視窗中輸入下列命令:"NET 停止 W3SVC"和"NET 啟動 W3SVC"。  
+ 執行 handsafe.reg 之後, 您必須停止並重新啟動 World Wide Web Publishing 服務，在 Web 伺服器上的命令提示字元視窗中輸入下列命令："NET STOP W3SVC"和"NET 啟動 W3SVC"。  
   
 ## <a name="see-also"></a>另請參閱  
  [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   

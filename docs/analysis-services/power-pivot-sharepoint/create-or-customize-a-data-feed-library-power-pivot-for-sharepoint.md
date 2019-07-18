@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472323"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>建立或自訂資料摘要庫 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *「資料摘要庫」* (Data Feed Library) 是一種特殊用途的 SharePoint 文件庫，可讓您註冊與共用 Atom 資料服務文件 (.atomsvc)。 這些文件會提供 XML 資料摘要給支援 Atom 資料摘要格式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或其他用戶端應用程式。 資料摘要庫與其他 SharePoint 文件庫不同，因為它讓您能夠：  
   
--   建立或編輯 *「資料服務文件」*(Data service document)，用來指定特定摘要的 HTTP 連接。  
+-   建立或編輯 *「資料服務文件」* (Data service document)，用來指定特定摘要的 HTTP 連接。  
   
 -   在中央位置共用及管理資料服務文件。  
   
@@ -44,17 +44,17 @@ ms.locfileid: "52519102"
 ##  <a name="createlib"></a> 建立新的資料摘要庫  
  建立資料摘要庫是為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿啟用資料摘要的第一個步驟。 資料摘要庫會提供資料服務文件的應用程式和管理頁面，因此您必須先將此摘要庫準備就緒，才能建立新文件。  
   
- 資料摘要庫的根據是內建範本與預先設定的 *「資料服務文件內容類型」*(Data service document content type)，此類型定義資料服務文件的屬性和行為。  
+ 資料摘要庫的根據是內建範本與預先設定的 *「資料服務文件內容類型」* (Data service document content type)，此類型定義資料服務文件的屬性和行為。  
   
-1.  按一下頁面左上角的 [網站動作]。  
+1.  按一下頁面左上角的 [網站動作]  。  
   
 2.  按一下 **更多選項**...  
   
-3.  按一下文件庫之下的 [資料摘要庫]。  
+3.  按一下文件庫之下的 [資料摘要庫]  。  
   
 4.  輸入名稱、描述、啟動及版本喜好設定。 加入描述性資訊，以協助使用者將這個文件庫識別為資料服務文件的儲存位置。  
   
-5.  按一下 [建立] 。  
+5.  按一下 [建立]  。  
   
  資料摘要庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。  
   
@@ -67,33 +67,33 @@ ms.locfileid: "52519102"
   
  您必須為要建立或編輯資料摘要註冊文件的每個文件庫重複執行下列步驟。  
   
-#### <a name="step-1-enable-content-type-management"></a>步驟 1：啟用內容類型管理  
+#### <a name="step-1-enable-content-type-management"></a>步驟 1:啟用內容類型管理  
   
 1.  開啟要啟用多個內容類型的文件庫。  
   
-2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]**。  
+2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]** 。  
   
-3.  按一下 [設定]。  
+3.  按一下 [設定]  。  
   
-4.  按一下 **[文件庫設定]**。  
+4.  按一下 **[文件庫設定]** 。  
   
-5.  按一下 [一般設定] 中的 **[進階設定]**。  
+5.  按一下 [一般設定] 中的 **[進階設定]** 。  
   
-6.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]**。  
+6.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]** 。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件的內容類型  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2:加入資料服務文件的內容類型  
   
-1.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]**。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]**。  
+1.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]** 。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]** 。  
   
-2.  在 [內容類型] 中，按一下 **[從現有的網站內容類型新增]**。  
+2.  在 [內容類型] 中，按一下 **[從現有的網站內容類型新增]** 。  
   
-3.  在 [從下列位置選取網站內容類型:] 中，選取 **[商業智慧]**。  
+3.  在 [從下列位置選取網站內容類型:] 中，選取 **[商業智慧]** 。  
   
-4.  在 [可用的網站內容類型] 中，按一下 [資料服務文件]，然後按一下 [加入]，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
+4.  在 [可用的網站內容類型] 中，按一下 [資料服務文件]  ，然後按一下 [加入]  ，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>步驟 3：確認資料服務文件設定  
   
@@ -101,9 +101,9 @@ ms.locfileid: "52519102"
   
 2.  開啟文件庫。  
   
-3.  在 SharePoint 功能區上，按一下 [文件]。  
+3.  在 SharePoint 功能區上，按一下 [文件]  。  
   
-4.  按一下 [新文件] 上的向下箭號，然後選取 [資料服務文件]。 [新資料服務文件] 頁面應該會出現。  
+4.  按一下 [新文件] 上的向下箭號，然後選取 [資料服務文件]  。 [新資料服務文件] 頁面應該會出現。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609479"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264556"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>功能表命令和其他快速鍵 (Oracle 到 SQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於 Oracle 應用程式。  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06b6b0f982b5c8d864e5024c8544f1f8e9af75ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091700"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 對應
-當應用程式呼叫**SQLSetScrollOptions**透過 ODBC 3 *.x*驅動程式和驅動程式不支援**SQLSetScrollOptions**，呼叫  
+當應用程式呼叫**SQLSetScrollOptions**透過 ODBC *3.x*驅動程式和驅動程式不支援**SQLSetScrollOptions**，呼叫  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -100,4 +99,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      具有 *\*ValuePtr*設定為*RowsetSize*中的引數**SQLSetScrollOptions**。  
   
     > [!NOTE]  
-    >  當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC 3 *.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不是 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*中的引數**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**呼叫擷取多個資料列時無法由應用程式**SQLFetch**或是**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，才**SQLExtendedFetch**。
+    >  當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC *3.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不是 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*中的引數**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**呼叫擷取多個資料列時無法由應用程式**SQLFetch**或是**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，才**SQLExtendedFetch**。

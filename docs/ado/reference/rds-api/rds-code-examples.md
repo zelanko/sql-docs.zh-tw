@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23302543e43ca3f378e2d7915007490186ce6ec0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 07cf393fc46ca9cfe96cb116886f37ab8abd1b1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963702"
 ---
 # <a name="rds-code-examples"></a>RDS 程式碼範例
 > [!IMPORTANT]
@@ -32,4 +31,4 @@ ms.locfileid: "51604218"
   
 -   [在 Microsoft Visual Basic Scripting Edition 的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
--   [Microsoft Visual c + + 中的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [在 Microsoft 的視覺效果的 RDS 程式碼範例C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478814"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行資料時，會進行下列兩種驗證類型：  
@@ -48,7 +48,7 @@ ms.locfileid: "52799100"
 |錯誤|資料列中一或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
 |新資料列|資料列中的值尚未發行到 MDS 儲存機制。|  
 |唯讀|登入的使用者有資料列中一個或多個值的唯讀權限，而且值無法更新。|  
-|未變更|工作表中尚未變更資料列中的任何值。 這不表示儲存機制中的值尚未變更；若要取得工作表中最新的資料，請在 [連接和載入] 群組中，請按一下 [載入或重新整理]。<br /><br /> 這是每個資料列的預設值。|  
+|未變更|工作表中尚未變更資料列中的任何值。 這不表示儲存機制中的值尚未變更；若要取得工作表中最新的資料，請在 [連接和載入]  群組中，請按一下 [載入或重新整理]  。<br /><br /> 這是每個資料列的預設值。|  
   
 ## <a name="related-tasks"></a>相關工作  
   

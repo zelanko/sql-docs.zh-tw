@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
@@ -13,12 +12,12 @@ ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066641"
 ---
 # <a name="restore-from-powerpivot"></a>從 PowerPivot 還原
   您可以在 SQL Server Management Studio 中使用 [從 PowerPivot 還原] 功能，於 Analysis Services 執行個體上建立新的表格式模型資料庫 (以表格式模式執行)，或是從 PowerPivot 活頁簿 (.xlsx) 還原到現有的資料庫。  
@@ -42,14 +41,14 @@ ms.locfileid: "48146648"
   
 2.  在**從 PowerPivot 還原**對話方塊中，於**還原來源**，請在**備份檔案**，按一下 **瀏覽**，然後選取 .abf 或.xslx若要從還原的檔案。  
   
-3.  在 [還原目標] 的 [還原資料庫] 中，輸入新資料庫或現有資料庫的名稱。 如果您沒有指定名稱，就會使用活頁簿的名稱。  
+3.  在 [還原目標]  的 [還原資料庫]  中，輸入新資料庫或現有資料庫的名稱。 如果您沒有指定名稱，就會使用活頁簿的名稱。  
   
-4.  按一下 [儲存位置] 中的 [瀏覽]，然後選取要儲存資料庫的位置。  
+4.  按一下 [儲存位置]  中的 [瀏覽]  ，然後選取要儲存資料庫的位置。  
   
-5.  在 [選項] 中，保持核取 [包含安全性資訊]。 從 PowerPivot 活頁簿還原時，這項設定並不適用。  
+5.  在 [選項]  中，保持核取 [包含安全性資訊]  。 從 PowerPivot 活頁簿還原時，這項設定並不適用。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型資料庫&#40;SSAS 表格式&#41;](tabular-model-databases-ssas-tabular.md)   
+ [表格式模型資料庫 &#40;SSAS 表格式&#41;](tabular-model-databases-ssas-tabular.md)   
  [從 PowerPivot 匯入&#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

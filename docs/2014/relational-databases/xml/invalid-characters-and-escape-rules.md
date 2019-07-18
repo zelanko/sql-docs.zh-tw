@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63241202"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無效的字元和逸出規則
   此主題描述 FOR XML 子句如何處理無效的 XML 字元，並列出 XML 名稱中無效字元的逸出規則。  

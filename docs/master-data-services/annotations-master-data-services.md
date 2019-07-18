@@ -11,15 +11,14 @@ helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4cb2992ca4ede1076d45286b4d6a2713ea84ef01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d9b6416383e332819e45bec6e6cbe42ece163edb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047769"
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
 
@@ -29,9 +28,9 @@ ms.locfileid: "52796358"
   
  您可以為交易加上註解，以便提供有關為何採取某項動作的原因。 您必須選取一個交易來加入相關的註解。 註解會與交易一起顯示在：  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的總管功能區域。  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的總管  功能區域。  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 [版本管理] 功能區域。  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 [版本管理]  功能區域。  
   
 -   MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]。  
   

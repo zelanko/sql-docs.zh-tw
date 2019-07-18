@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e15ad7915b33c67e09325a38b7975430c5c8ce85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e982071f1d975b74f1c0c1cab1d6113293773d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761735"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>設定 default language 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47784456"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 default language 選項：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47784456"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 default language 選項之後](#FollowUp)  
+-   **後續操作：** [設定預設語言選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47784456"
   
 #### <a name="to-configure-the-default-language-option"></a>設定 default language 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
-2.  按一下 [進階] 索引標籤。  
+2.  按一下 [進階]  索引標籤。  
   
-3.  在 [預設語言] 方塊中，選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該以哪種語言顯示系統訊息。  
+3.  在 [預設語言]  方塊中，選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該以哪種語言顯示系統訊息。  
   
      預設語言為英文。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "47784456"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `default language` 選項設定為法文 (`2`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `default language` 選項設定為法文 (`2`)。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -85,7 +85,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 default language 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定預設語言選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

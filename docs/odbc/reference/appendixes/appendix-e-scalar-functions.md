@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bb5f16485312979e9fb2ad6b3a95dacb79b695d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996177"
 ---
 # <a name="appendix-e-scalar-functions"></a>附錄 E：純量函數
 ODBC 會指定下列類型的純量函式的每個對應的章節，此附錄中提供這些函式類型的詳細資訊。 函式描述會包含相關聯的語法。  

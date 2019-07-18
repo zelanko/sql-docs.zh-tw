@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b84d3ab70f466859da6898bcb7c226544df30978
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 22af830a8dda47bfe4533668d90f1cac473d4bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002710"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178515"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署公用程式的部署模型方案
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> 模式  
  可以使用下表列出的模式來執行這個公用程式。  
   
-|[模式]|描述|  
+|模式|描述|  
 |----------|-----------------|  
 |無訊息模式|不顯示任何使用者介面，部署所需要的所有資訊都由輸入檔提供。 在無訊息模式下，此公用程式不會顯示任何進度。 相反地，您可以利用選擇性的記錄檔來擷取進度和錯誤資訊，以便稍後進行檢閱。|  
 |回應模式|這個模式會顯示部署精靈使用者介面，使用者回應會儲存在指定的輸入檔中，以便稍後進行部署。 回應模式下不會進行部署。 回應模式的唯一用途是擷取使用者回應。|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101154"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>快照集選項屬性頁面 (報表管理員)
   使用 [快照集選項] 屬性頁面可以排程要加入至報表記錄的報表快照集，以及設定報表記錄中儲存之報表快照集的數目限制。  
@@ -33,11 +32,11 @@ ms.locfileid: "56042349"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
 4.  選取 **[快照集選項]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **允許手動建立報表記錄**  
  選取此核取方塊，即可視需要將快照集加入報表記錄中。 選取此核取方塊會使 **[新增快照集]** 按鈕出現在 [記錄] 頁面上。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "56042349"
   
  報表記錄會儲存在報表伺服器資料庫中。 如果您有想要保留記錄的大型報表或許多報表，請考慮限制報表記錄的數量，以便協助管理報表伺服器資料庫的磁碟空間需求。  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  

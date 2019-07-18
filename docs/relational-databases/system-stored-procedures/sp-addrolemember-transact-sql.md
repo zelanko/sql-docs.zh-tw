@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030897"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>引數  
- [ @rolename= ] '*role*'  
+ [ @rolename=] '*角色*'  
  這是目前資料庫中的資料庫角色名稱。 *角色*已**sysname**，沒有預設值。  
   
  [ @membername= ] '*security_account*'  
@@ -58,7 +57,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  角色不能包含它自己作為成員。 這類「循環」定義是無效的，即使成員資格只是由一個或多個中繼成員資格間接隱含也一樣。  
   
- sp_addrolemember 不能將固定的資料庫角色、 固定的伺服器角色或 dbo 加入角色。 sp_addrolemember 無法在使用者自訂交易內執行。  
+ sp_addrolemember 不能將固定的資料庫角色、 固定的伺服器角色或 dbo 加入角色。
   
  您只能使用 sp_addrolemember 將成員加入資料庫角色中。 若要新增至伺服器角色的成員，請使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
@@ -121,7 +120,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)  

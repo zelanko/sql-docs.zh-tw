@@ -1,5 +1,5 @@
 ---
-title: 導出資料行表示法 （表格式） |Microsoft 文件
+title: 導出資料行表示法 （表格式） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63019260"
 ---
-# <a name="tables---calculated-column-representation"></a>資料表的導出資料行表示法
+# <a name="tables---calculated-column-representation"></a>資料表 - 計算結果欄表示法
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   導出資料行是在資料表中建立新資料行並將其取得的值儲存於資料表的 DAX 運算式。 每次處理資料表時都將評估導出資料行運算式。  
   

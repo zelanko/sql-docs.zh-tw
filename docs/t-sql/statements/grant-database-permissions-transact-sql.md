@@ -1,7 +1,7 @@
 ---
 title: GRANT 資料庫權限 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e9827672947572d05bfea4ed09c1712e7b079d
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65993479"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 
@@ -104,7 +104,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> 在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
+> 在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表 ALTER 權限和函式 REFERENCE 權限的使用者，可以透過函式建立並執行計算資料行。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
 
 資料庫是由伺服器所包含的安全性實體，而該伺服器是其權限階層中的父系。 下表所列的是可以授與之最特定和最有限的資料庫權限，並列出利用隱含方式來併入這些權限的較通用權限。
 
@@ -175,6 +175,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 |Delete|CONTROL|CONTROL SERVER|
 |執行 CREATE 陳述式之前，請先執行|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。|CONTROL|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **適用於**： [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)]。|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |Insert|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
@@ -189,7 +190,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。
 

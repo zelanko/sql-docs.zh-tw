@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361347"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815401"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」  會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  
   
  僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53361347"
   
 2.  使用 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) 陳述式的 SET HADR CLUSTER CONTEXT 子句，如下所示：  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'*`windows_cluster`*'** |本機}  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **' *`windows_cluster`* '** |本機}  
   
      其中  
   

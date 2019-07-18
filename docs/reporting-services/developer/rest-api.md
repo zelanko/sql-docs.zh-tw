@@ -1,21 +1,21 @@
 ---
 title: 使用 Reporting Services 的 REST API 進行開發 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502736"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -36,7 +36,7 @@ REST API 要求/回應配對可分成五個元件：
     * URI 配置：表示用來傳輸要求的通訊協定。 例如，`http` 或 `https`。
     * URI 主機：指定裝載 REST 服務端點之伺服器的網域名稱或 IP 位址，例如 `myserver.contoso.com`。
     * 資源路徑：指定資源或資源集合，其中可能包含服務用來判斷這些資源選取的多個區段。 例如：`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` 可用來取得 CatalogItem 的指定屬性。
-    * 查詢字串 (選擇性)：提供其他簡單參數，例如 API 版本或資源選取準則。
+    * 查詢字串 (選用)：提供其他簡單參數，例如 API 版本或資源選取準則。
 
 * HTTP 要求訊息標頭欄位：
 
@@ -56,7 +56,7 @@ REST API 要求/回應配對可分成五個元件：
 
 ## <a name="api-documentation"></a>API 文件
 
-新式 REST API 需要新式 API 文件。 REST API 是以 OpenAPI 規格 (也稱為 swagger 規格) 為建置基礎，相關文件可從 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) 上取得。 除了記載 API 之外，SwaggerHub 還有助於以 JavaScript、TypeScript、C#、Java、Python、Ruby 等所選擇的語言來產生用戶端程式庫。
+新式 REST API 需要新式 API 文件。 REST API 會以 OpenAPI 規格 (也稱為 Swagger 規格) 來建置，且可於 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) \(英文\) 上取得文件。 除了記載 API 之外，SwaggerHub 還有助於以 JavaScript、TypeScript、C#、Java、Python、Ruby 等所選擇的語言來產生用戶端程式庫。
 
 ## <a name="testing-api-calls"></a>測試 API 呼叫
 

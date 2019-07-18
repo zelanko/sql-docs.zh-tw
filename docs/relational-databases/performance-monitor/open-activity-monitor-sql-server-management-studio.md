@@ -16,12 +16,12 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7f867024e3dbfa005fdf04e7052c4993fa9ce2c3
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: b3afa266112b29f75b7a26a0e5cb9093d2776276
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379770"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583987"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,21 +44,23 @@ ms.locfileid: "53379770"
 
 ### <a name="toolbar"></a>工具列
 
-從標準工具列，按一下 [活動監視器]。 它位於正中間，就在 [復原/取消復原] 按鈕的右邊。
+從標準工具列，按一下 [活動監視器]  。 它位於正中間，就在 [復原/取消復原] 按鈕的右邊。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
-如果您尚未連接到所要監視的 SQL Server 執行個體，請完成 [連接到伺服器] 對話方塊。
+如果您尚未連接到所要監視的 SQL Server 執行個體，請完成 [連接到伺服器]  對話方塊。
   
 ## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>在啟動時啟動活動監視器和物件總管
   
-1.  在 **[工具]** 功能表中，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表中，按一下 **[選項]** 。  
   
-2.  在 [選項] 對話方塊中，展開 [環境]，然後選取 [啟動]。  
+2.  在 [選項]  對話方塊中，展開 [環境]  ，然後選取 [啟動]  。  
   
-3.  從 [啟動時] 下拉式清單，選取 [開啟物件總管和活動監視器]。  
+3.  從 [啟動時]  下拉式清單，選取 [開啟物件總管和活動監視器]  。  
 
-4.  按一下 [確定] 。
-  
+4.  按一下 [確定]  。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   
@@ -66,6 +68,6 @@ ms.locfileid: "53379770"
   
 1.   開啟 [活動監視器]。  
   
-2.   以滑鼠右鍵按一下 [概觀]，選取 [重新整理間隔]，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
+2.   以滑鼠右鍵按一下 [概觀]  ，選取 [重新整理間隔]  ，然後選取活動監視器應該用來取得新執行個體資訊的間隔。  
   
   

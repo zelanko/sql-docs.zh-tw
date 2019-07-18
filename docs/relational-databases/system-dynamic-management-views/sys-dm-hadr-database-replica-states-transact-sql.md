@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 94c9258ff71454134c5ff2023e174a0811d7afe6
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 3a9395b27aa7ddf6d6fd85734da5d66a870eb634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900606"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +41,8 @@ ms.locfileid: "52159086"
 |**replica_id**|**uniqueidentifier**|可用性群組中可用性複本的識別碼。|  
 |**group_database_id**|**uniqueidentifier**|可用性群組中資料庫的識別碼。 這個識別碼在此資料庫聯結的每個複本上都相同。|  
 |**is_local**|**bit**|可用性資料庫是否為本機，下列其中一個值：<br /><br /> 0 = 資料庫不在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的本機。<br /><br /> 1 = 資料庫在伺服器執行個體的本機。|  
-|**is_primary_replica**|**bit**|如果複本是主要，則會傳回 1，或者如果它是次要複本，則會傳回 0。<br /><br />**適用於：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**synchronization_state**|**tinyint**|資料移動狀態，下列值之一。<br /><br /> 0 = 未同步處理。 如果是主要資料庫，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。 如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。<br /><br /> 1 = 正在同步處理。 如果是主要資料庫，表示此資料庫準備好接受次要資料庫的掃描要求。 如果是次要資料庫，表示資料庫正在進行資料移動作業。<br /><br /> 2 = 已同步處理。 主要資料庫會顯示 SYNCHRONIZED 而非 SYNCHRONIZING。 當本機快取表示資料庫已做好容錯移轉的準備而且正在同步處理時，同步認可次要資料庫就會顯示已同步處理。<br /><br /> 3 = 還原。 表示當次要資料庫積極取得主要資料庫的頁面時，復原程序中的階段。<br />**注意：** 當次要複本上的資料庫處於 REVERTING 狀態時，強制容錯移轉至次要複本會將資料庫保留在無法當做主要資料庫啟動的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。<br /><br /> 4 = 正在初始化。 表示次要資料庫跟上復原 LSN 所需的交易記錄正在傳送而且在次要複本上強行寫入時的復原階段。<br />**注意：** 當次要複本上的資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。|  
+|**is_primary_replica**|**bit**|如果複本是主要，則會傳回 1，或者如果它是次要複本，則會傳回 0。<br /><br />**適用於：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**synchronization_state**|**tinyint**|資料移動狀態，下列值之一。<br /><br /> 0 = 未同步處理。 如果是主要資料庫，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。 如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。<br /><br /> 1 = 正在同步處理。 如果是主要資料庫，表示此資料庫準備好接受次要資料庫的掃描要求。 如果是次要資料庫，表示資料庫正在進行資料移動作業。<br /><br /> 2 = 已同步處理。 主要資料庫會顯示 SYNCHRONIZED 而非 SYNCHRONIZING。 當本機快取表示資料庫已做好容錯移轉的準備而且正在同步處理時，同步認可次要資料庫就會顯示已同步處理。<br /><br /> 3 = 還原。 表示當次要資料庫積極取得主要資料庫的頁面時，復原程序中的階段。<br />**注意：** 當次要複本上的資料庫處於 REVERTING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。<br /><br /> 4 = 正在初始化。 表示次要資料庫跟上復原 LSN 所需的交易記錄正在傳送而且在次要複本上強行寫入時的復原階段。<br />**注意：** 當次要複本上的資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。|  
 |**synchronization_state_desc**|**nvarchar(60)**|資料移動狀態的描述，下列其中一個值：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 未根據此資料庫同步處理交易認可。<br /><br /> 1 = 根據此資料庫同步處理交易認可。<br /><br /> 如果是非同步認可可用性複本上的資料庫，這個值一定是 0。<br /><br /> 如果是同步認可可用性複本上的資料庫，這個值僅在主要資料庫上才正確。|  
 |**synchronization_health**|**tinyint**|反映聯結至可用性群組的可用性複本上資料庫的同步處理狀態和可用性複本 （同步認可或非同步認可模式） 的其中一個的可用性模式的交集下列的值。<br /><br /> 0 = 狀況不好。 **Synchronization_state**資料庫是 0 (NOT SYNCHRONIZING)。<br /><br /> 1 = 部分狀況良好。 同步認可可用性複本上的資料庫會被視為部分狀況良好如果**synchronization_state**為 1 (SYNCHRONIZING)。<br /><br /> 2 = 狀況良好。 同步認可可用性複本上的資料庫會被視為狀況良好如果**synchronization_state**為 2 (SYNCHRONIZED)，而非同步認可可用性複本上的資料庫會被視為狀況良好如果**synchronization_state**為 1 (SYNCHRONIZING)。|  
@@ -72,12 +71,12 @@ ms.locfileid: "52159086"
 |**last_commit_lsn**|**Numeric(25,0)**|實際記錄序號，對應到交易記錄中的上一個認可記錄。<br /><br /> 在主要資料庫上，這會對應到上一次處理的認可記錄。 次要資料庫的資料列會顯示次要複本傳送至主要複本的記錄序號。<br /><br /> 在次要複本上，這是上一次重做的認可記錄。|  
 |**last_commit_time**|**datetime**|對應到上一個認可記錄的時間。<br /><br /> 在次要資料庫上，此時間與主要資料庫上的時間相同。<br /><br /> 在主要複本上，每一個次要資料庫資料列都會顯示裝載該次要資料庫的次要複本回報給主要複本的時間。 在時間內主要資料庫的資料列與給定的次要資料庫資料列之間的差異表示大約的復原點目標 (RPO)，假設重做程序趕上和，進度已回報給主要複本次要複本。|  
 |**low_water_mark_for_ghosts**|**bigint**|資料庫的一個單純遞增的數字，表示主要資料庫上的準刪除清除所使用的下限標準。 如果這個數字不會隨著時間而遞增，則表示可能不會進行準刪除清除作業。 為了決定所要清除的準刪除資料列，主要複本會針對所有可用性複本 (包括主要複本) 中的這個資料庫，使用這個資料行的最小值。|  
-|**secondary_lag_seconds**|**bigint**|次要複本位於主要複本同步處理期間的秒數。<br /><br />**適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**secondary_lag_seconds**|**bigint**|次要複本位於主要複本同步處理期間的秒數。<br /><br />**適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
 ##  <a name="LSNcolumns"></a> 了解 LSN 資料行值  
  值**end_of_log_lsn**， **last_hardened_lsn**， **last_received_lsn**， **last_sent_lsn**，**復原_lsn**，並**truncation_lsn**資料行不是實際記錄序號 (Lsn)。 每一個值都會反映填滿零的記錄檔區塊識別碼。  
   
- **end_of_log_lsn**， **last_hardened_lsn**，以及**recovery_lsn**為排清 Lsn。 例如， **last_hardened_lsn**表示超過已在磁碟之區塊的下一個區塊的開頭。  因此任何 LSN < 值**last_hardened_lsn**磁碟上。  大於等於這個值的 LSN 則不會排清。  
+ **end_of_log_lsn**， **last_hardened_lsn**，以及**recovery_lsn**為排清 Lsn。 例如， **last_hardened_lsn**表示超過已在磁碟之區塊的下一個區塊的開頭。  因此任何 LSN < 值**last_hardened_lsn**磁碟上。  LSN > 等於這個值則不會清除。  
   
  所傳回的 LSN 值**sys.dm_hadr_database_replica_states**，則僅**last_redone_lsn**是真正的 LSN。  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4668afcd31c7eb97e398772587866636ff155459
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cef68db4bc688aafae6f6c106063ff61fa7ad015
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65449971"
 ---
 # <a name="data-mining-solutions"></a>資料採礦方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52543019"
 ##  <a name="bkmk_Deploy"></a> 部署資料採礦方案  
  部署解決方案的目標 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體必須在支援多維度物件和資料採礦物件的模式下執行；也就是說，您不能將資料採礦物件部署到裝載表格式模型或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的執行個體。  
   
- 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案] 範本。  
+ 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案]  範本。  
   
  當您部署方案時，用於資料採礦的物件會在指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中建立 (位於與方案檔同名的資料庫中)。  
   
@@ -82,6 +82,6 @@ ms.locfileid: "52543019"
 |更新和管理資料採礦方案。|Link TBD|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦教學課程 &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [資料採礦教學課程 &#40;Analysis Services&#41;](../../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
   
   

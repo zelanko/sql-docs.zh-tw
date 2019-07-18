@@ -2,20 +2,19 @@
 title: 執行範例 notebook |Microsoft Docs
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範您可以載入的方式執行的 SQL Server 2019 巨量資料叢集 （預覽） 上的 Spark notebook 範例。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957736"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：SQL Server 的巨量資料叢集上執行 notebook 範例
 
@@ -45,14 +44,14 @@ ms.locfileid: "58860179"
 1. 執行下列**curl**命令，以從 GitHub 下載 notebook 檔案：
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark-sql.ipynb' -o spark-sql.ipynb
+   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>開啟 notebook
 
 下列步驟示範如何在 Azure 資料 Studio 中開啟筆記本檔案：
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 HDFS/Spark 閘道。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](connect-to-big-data-cluster.md#hdfs)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連線至巨量資料叢集](connect-to-big-data-cluster.md)。
 
 1. 在 HDFS/Spark 閘道連按兩下**伺服器**視窗。 然後選取**開啟 Notebook**。
 
@@ -71,7 +70,7 @@ ms.locfileid: "58860179"
 執行連續範例 notebook 中的每個資料格。 如需 SQL Server 的巨量資料叢集搭配使用 notebook 的詳細資訊，請參閱下列資源：
 
 - [如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)
-- [如何管理 Azure Data Studio 中的 notebook](notebooks-how-to-manage.md)
+- [如何管理 Azure Data Studio 中的 Notebook](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>後續步驟
 

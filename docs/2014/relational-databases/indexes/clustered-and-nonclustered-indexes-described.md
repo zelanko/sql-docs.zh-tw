@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63156374"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
   索引是一種與資料表或檢視有關的磁碟內存結構，它會加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 這些索引鍵儲存在結構中 (B 型樹狀目錄)，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地找到與索引鍵值相關的一或多個資料列。  

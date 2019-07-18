@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100302"
 ---
 # <a name="design-view"></a>設計檢視
   使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  
@@ -32,7 +31,7 @@ ms.locfileid: "56010414"
  [工具箱] 會列出適用於您報表的資料區域和其他報表項目。 若要從 [工具箱] 加入報表項目，按兩下該項目，或將其拖曳到設計介面上。 接著，您可以使用物件控點來變更形狀和大小。  
   
 ## <a name="report-data-pane"></a>報表資料窗格  
- 若要檢視 [報表資料] 窗格，請按一下 **[檢視]** 功能表上的 **[報表資料]**。 使用此窗格可定義參數、影像、資料來源和資料集，也可參考內建欄位 (例如 ReportName)。 若要加入新項目，按一下 **[新增]** 功能表，然後選取一個項目。 若要將導出欄位加入到現有的資料集，按一下 **[資料集]**，然後在 **[資料集屬性]** 對話方塊中選取 **[欄位]**。 選取一個項目，然後按一下 **[編輯]** 來開啟 **[屬性]** 對話方塊。 您也可以在 [報表資料] 窗格中，以滑鼠右鍵按一下項目來加入項目或更新其屬性。  
+ 若要檢視 [報表資料] 窗格，請按一下 **[檢視]** 功能表上的 **[報表資料]** 。 使用此窗格可定義參數、影像、資料來源和資料集，也可參考內建欄位 (例如 ReportName)。 若要加入新項目，按一下 **[新增]** 功能表，然後選取一個項目。 若要將導出欄位加入到現有的資料集，按一下 **[資料集]** ，然後在 **[資料集屬性]** 對話方塊中選取 **[欄位]** 。 選取一個項目，然後按一下 **[編輯]** 來開啟 **[屬性]** 對話方塊。 您也可以在 [報表資料] 窗格中，以滑鼠右鍵按一下項目來加入項目或更新其屬性。  
   
  將項目從 [報表資料] 窗格拖曳至設計介面上的資料區域和文字方塊，以便將資料和影像加入到報表中。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "56010414"
  頁首和頁尾可以分別沿著每個頁面的頂端和底部執行。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩，以及背景影像。 若要將報表項目加入到頁首或頁尾，以滑鼠右鍵按一下設計介面，然後選取 [頁首] 或 [頁尾]。 頁首和頁尾區段就會出現在設計介面上。  
   
 ## <a name="properties-pane"></a>屬性窗格  
- 使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]，為此報表項目或群組開啟對應的 [屬性] 對話方塊。  
+ 使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]  ，為此報表項目或群組開啟對應的 [屬性]  對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

@@ -2,20 +2,20 @@
 title: Reporting Services 登入對話方塊 (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 81a93008e887148b14f1ff6d4b4cf5b06570a1df
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 25d2741a8449875852c733aa763322011834a6b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581272"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 登入對話方塊 (SSRS)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。  

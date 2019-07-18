@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cf71491623cdac031632cfba2a3cc0b8860dde2c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2594fd6343d597c6eb9b623fe6f9e4a4ee6011b1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701926"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688690"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51701926"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目清除作業記錄：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "51701926"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -58,17 +58,17 @@ ms.locfileid: "51701926"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
+2.  展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
   
-3.  以滑鼠右鍵按一下某個作業，然後按一下 **[檢視記錄]**。  
+3.  以滑鼠右鍵按一下某個作業，然後按一下 **[檢視記錄]** 。  
   
 4.  在 **[記錄檔檢視器]** 中，選取您要清除其記錄的作業，然後執行下列其中一項：  
   
-    -   按一下 **[刪除]**，然後按一下 **[刪除記錄]** 對話方塊中的 **[刪除所有的記錄]** 。 您可以刪除所有的作業記錄，也可以只刪除某個特定日期之前的記錄。 如果您要移除所有的作業記錄，請按一下 **[刪除所有的記錄]**。 如果您只要移除舊的作業記錄，請按一下 **[刪除在這之前的記錄]**，然後指定日期。  
+    -   按一下 **[刪除]** ，然後按一下 **[刪除記錄]** 對話方塊中的 **[刪除所有的記錄]** 。 您可以刪除所有的作業記錄，也可以只刪除某個特定日期之前的記錄。 如果您要移除所有的作業記錄，請按一下 **[刪除所有的記錄]** 。 如果您只要移除舊的作業記錄，請按一下 **[刪除在這之前的記錄]** ，然後指定日期。  
   
-    -   如果您要清除多重伺服器作業的記錄，請按一下 **[作業狀態]** 。 按一下 **[作業]**，按一下作業名稱，然後按一下 **[檢視遠端作業記錄]**。  
+    -   如果您要清除多重伺服器作業的記錄，請按一下 **[作業狀態]** 。 按一下 **[作業]** ，按一下作業名稱，然後按一下 **[檢視遠端作業記錄]** 。  
   
-5.  按一下 **[刪除]**。  
+5.  按一下 **[刪除]** 。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -76,9 +76,9 @@ ms.locfileid: "51701926"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- example removes the history for a job named NightlyBackups.  

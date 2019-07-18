@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050964"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件類別
   SP:Completed 事件類別指出預存程序已完成執行。  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5343ecb97f631e7e9dd3dbf5e2600008dc0f8fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771914"
 ---
 # <a name="connecting-tasks-programmatically"></a>以程式設計方式連接工作
   在物件模型中由 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 類別表示的優先順序條件約束會建立 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 物件在封裝內執行的順序。 此優先順序條件約束可允許根據上一個工作或容器的執行結果來執行封裝中的容器和工作。 優先順序條件約束會在 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 物件配對之間建立，其方式是在容器物件上呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 方法。 當您在兩個可執行物件之間建立條件約束時，您會設定 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 屬性，以建立用來執行此條件約束內定義之第二個可執行物件的準則。  

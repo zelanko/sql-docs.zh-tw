@@ -18,16 +18,16 @@ helpviewer_keywords:
 - row distribution [SQL Server]
 - NTILE function
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd2d7735bfb19d400edd278a36e8ab3dac81c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f2597386a3beac94ff1cc5d067299f308a255e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944069"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

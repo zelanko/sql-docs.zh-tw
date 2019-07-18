@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59799119920170db3dcab21619c01b52e7dda8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028060"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>主機保護屬性和 CLR 整合程式設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47800766"
   
 -   **ExternalProcessMgmt**，指出 API 是否會公開控制主機處理序的方式。  
   
- 當提供了這些屬性時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指定 HPA 的清單，這些 HPA 是透過程式碼存取安全性 (CAS) 的主控環境內所不允許的。 CAS 需求由三個的其中一個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]權限集合：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**。 這三個安全性層級的其中一個指定的伺服器上，註冊組件時使用**CREATE ASSEMBLY**陳述式。 執行內的程式碼**安全**或是**EXTERNAL_ACCESS**權限集合必須避免特定類型或成員具有**System.Security.Permissions.HostProtectionAttribute**套用的屬性。 如需詳細資訊，請參閱 <<c0> [ 建立組件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)並[CLR Integration Programming Model Restrictions&lt](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
+ 當提供了這些屬性時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指定 HPA 的清單，這些 HPA 是透過程式碼存取安全性 (CAS) 的主控環境內所不允許的。 CAS 需求由一個包含三個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]權限集合：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**。 這三個安全性層級的其中一個指定的伺服器上，註冊組件時使用**CREATE ASSEMBLY**陳述式。 執行內的程式碼**安全**或是**EXTERNAL_ACCESS**權限集合必須避免特定類型或成員具有**System.Security.Permissions.HostProtectionAttribute**套用的屬性。 如需詳細資訊，請參閱 <<c0> [ 建立組件](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)並[CLR Integration Programming Model Restrictions&lt](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
   
  **HostProtectionAttribute**不是安全性權限一樣來改善可靠性，它會識別特定的程式碼建構，類型或方法時，主機可能不允許。 善用**HostProtectionAttribute**會強制執行，可協助保護主機穩定性的程式設計模型。  
   

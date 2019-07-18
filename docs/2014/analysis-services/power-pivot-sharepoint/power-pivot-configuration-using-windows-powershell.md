@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1b57ea1f69933d4d2c73ec12cc4cc18ff86d112d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071296"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 PowerPivot 組態
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint 指令程式和 PowerPivot for SharePoint 指令程式。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需有關這些工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  
@@ -32,7 +31,7 @@ ms.locfileid: "52530658"
   
  使用 PowerShell 檢視 PowerPivot 指令程式的清單：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  輸入下列命令：  
   
@@ -63,7 +62,7 @@ ms.locfileid: "52530658"
 ## <a name="enable-powerpivot-cmdlets-on-a-server"></a>在伺服器上啟用 PowerPivot 指令程式  
  在您安裝 PowerPivot for SharePoint 並部署伺服器陣列方案之後，可以使用 PowerPivot 指令程式。 這些方案會在您執行 PowerPivot 組態工具時部署。 請依照下列步驟啟用指令程式：  
   
-1.  使用 [以系統管理員身分執行] 選項，開啟 SharePoint 管理命令介面。  
+1.  使用 [以系統管理員身分執行]  選項，開啟 SharePoint 管理命令介面。  
   
 2.  執行第一個 Cmdlet：  
   
@@ -79,7 +78,7 @@ ms.locfileid: "52530658"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  關閉視窗。 再次使用 [以系統管理員身分執行] 選項重新開啟該視窗。  
+4.  關閉視窗。 再次使用 [以系統管理員身分執行]  選項重新開啟該視窗。  
   
 ## <a name="related-content"></a>相關內容  
  [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  

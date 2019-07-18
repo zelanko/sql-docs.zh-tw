@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109044"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
@@ -41,12 +40,12 @@ ms.locfileid: "56015978"
 |使用這個圖示或控制項||若要|  
 |------------------------------|-|--------|  
 |![頁面導覽控制項](media/htmlviewer-pagenav.gif "頁面導覽控制項")|**頁面導覽控制項**|開啟報表的第一頁或最後一頁、逐頁捲動報表和開啟報表中的特定頁面。 若要檢視特定頁面，請輸入頁碼然後按 ENTER。|  
-|![頁面顯示控制項](media/htmlviewer-pagesize.gif "頁面顯示控制項")|**頁面顯示控制項**|放大或縮小報表頁面的尺寸。 除了百分比架構的變更之外，您還可以選取 [頁寬] 使其符合瀏覽器視窗中報表頁面的水平長度，或選取 [整頁] 使其符合瀏覽器視窗中報表的垂直長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 和更新的版本可以支援 [顯示比例] 選項。|  
-|![搜尋欄位](media/htmlviewer-search.gif "搜尋欄位")|**搜尋欄位**|輸入想要尋找的單字或片語 (最大長度為 256 個字元)，即可搜尋報表中的內容。 搜尋不區分大小寫，從目前所選取的頁面或區段開始。 只有可見的內容會包含在搜尋作業中。 若要搜尋相同值的下一個出現位置，請按 **[下一個]**。|  
-|![匯出格式](media/htmlviewer-export.GIF "匯出格式")|**匯出格式**|開啟新的瀏覽器視窗，並以選取的格式來轉譯報表。 可用的格式會由報表伺服器上安裝的轉譯延伸模組決定。 建議使用 TIFF 來列印。 按一下 [匯出] 就能夠以所選取格式檢視報表。|  
+|![頁面顯示控制項](media/htmlviewer-pagesize.gif "頁面顯示控制項")|**頁面顯示控制項**|放大或縮小報表頁面的尺寸。 除了百分比架構的變更之外，您還可以選取 [頁寬]  使其符合瀏覽器視窗中報表頁面的水平長度，或選取 [整頁]  使其符合瀏覽器視窗中報表的垂直長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 和更新的版本可以支援 [顯示比例]  選項。|  
+|![搜尋欄位](media/htmlviewer-search.gif "搜尋欄位")|**搜尋欄位**|輸入想要尋找的單字或片語 (最大長度為 256 個字元)，即可搜尋報表中的內容。 搜尋不區分大小寫，從目前所選取的頁面或區段開始。 只有可見的內容會包含在搜尋作業中。 若要搜尋相同值的下一個出現位置，請按 **[下一個]** 。|  
+|![匯出格式](media/htmlviewer-export.GIF "匯出格式")|**匯出格式**|開啟新的瀏覽器視窗，並以選取的格式來轉譯報表。 可用的格式會由報表伺服器上安裝的轉譯延伸模組決定。 建議使用 TIFF 來列印。 按一下 [匯出]  就能夠以所選取格式檢視報表。|  
 |![文件引導模式圖示](media/htmlviewer-docmap.GIF "文件引導模式圖示")|**文件引導模式圖示**|在含有文件引導模式的報表中，顯示或隱藏文件引導模式。 文件引導模式是一種報表瀏覽控制項，類似於網站的導覽窗格。 按一下文件引導模式中的項目，即可導覽至特定群組、頁面或子報表。|  
 |![印表機圖示](media/printer-icon.gif "印表機圖示")|**印表機圖示**|開啟 [列印] 對話方塊，使您可以指定列印選項和列印報表。 首次使用時，按一下此圖示會提示您下載列印控制項。|  
-||**顯示與隱藏圖示**|顯示或隱藏包含參數之報表中的參數值欄位和 [檢視報表] 按鈕。|  
+||**顯示與隱藏圖示**|顯示或隱藏包含參數之報表中的參數值欄位和 [檢視報表]  按鈕。|  
 |![報表工具列上的瀏覽器重新整理按鈕](media/htmlviewer-refresh.GIF "報表工具列上的瀏覽器重新整理按鈕")|**報表重新整理圖示**|重新整理報表。 會重新整理使用中報表的資料。 會從儲存快取報表的位置重新載入報表。|  
 |![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**資料摘要圖示**|從報表產生資料摘要。|  
   
@@ -65,12 +64,12 @@ ms.locfileid: "56015978"
 |TIFF 檔案|以預設的 TIFF 檢視器檢視報表。 對於某些 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 用戶端來說，這會是 Windows 圖片和傳真檢視器。 選取此格式就能夠以頁面導向的配置來檢視報表。|  
   
 ## <a name="parameters"></a>參數  
- 參數是用來選取特定資料的值 (亦即，它們是用來完成選取報表資料或篩選結果集的查詢)。 報表中常用的參數包括日期、名稱和 ID。 指定參數的值時，報表只會包含符合該值的資料；例如，以「員工識別碼」參數為基礎的員工資料。 參數會對應至報表的欄位。 指定參數之後，請按一下 [檢視報表] 以取得資料。  
+ 參數是用來選取特定資料的值 (亦即，它們是用來完成選取報表資料或篩選結果集的查詢)。 報表中常用的參數包括日期、名稱和 ID。 指定參數的值時，報表只會包含符合該值的資料；例如，以「員工識別碼」參數為基礎的員工資料。 參數會對應至報表的欄位。 指定參數之後，請按一下 [檢視報表]  以取得資料。  
   
  報表作者會定義每一份報表的有效參數值。 報表管理員也可以設定參數值。 若要找出報表的有效參數值，請洽詢報表設計師或管理員。  
   
 ## <a name="credentials"></a>認證  
- 認證是授權存取資料來源的使用者名稱和密碼值。 指定認證之後，請按一下 [檢視報表] 以取得資料。 如果報表要求您登入，則您獲准查看的資料可能會與另一位使用者所見的資料不同。 因此，兩位使用者可以執行相同報表而取得不同結果。 此外，有些報表會包含隱藏的區域，顯示與否將根據使用者登入認證或在報表中所做的選擇而定。 報表中的隱藏區域會排除在搜尋作業之外，與報表各部分都可見時得到不同的搜尋結果。  
+ 認證是授權存取資料來源的使用者名稱和密碼值。 指定認證之後，請按一下 [檢視報表]  以取得資料。 如果報表要求您登入，則您獲准查看的資料可能會與另一位使用者所見的資料不同。 因此，兩位使用者可以執行相同報表而取得不同結果。 此外，有些報表會包含隱藏的區域，顯示與否將根據使用者登入認證或在報表中所做的選擇而定。 報表中的隱藏區域會排除在搜尋作業之外，與報表各部分都可見時得到不同的搜尋結果。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

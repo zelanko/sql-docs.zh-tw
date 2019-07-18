@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f94fbfc6a41baf4431369ee856de50a826e93a29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 3be1b71a037b5607748424d348dca44d660cdd03
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699558"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690249"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  
+此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具]  功能表上的 [選項]  時，可用之對話方塊的 F1 說明。  
   
 [選項 &#40;設計工具 - Analysis Services 設計工具 - 一般&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

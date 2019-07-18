@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 2ce13298c61595d5e5641cb89bffb28fd277e0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853356"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259737"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安裝 SSMA 元件 (OracleToSQL)
 除了安裝 SSMA，您必須也安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些元件包括 SSMA 延伸模組套件，可支援資料移轉和 Oracle 提供者，以啟用伺服器對伺服器連線。  
@@ -66,7 +66,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb**，�
   
 7.  在 [準備安裝] 頁面上，按一下**安裝**。  
   
-8.  在 [已完成安裝的第一個步驟] 頁面上，按一下 [**下一步]**。  
+8.  在 [已完成安裝的第一個步驟] 頁面上，按一下 [**下一步]** 。  
   
     新的對話方塊隨即出現，您可以在其中選取執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]延伸模組套件安裝。  
   
@@ -74,7 +74,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb**，�
   
     預設執行個體具有相同名稱的電腦。 具名執行個體將加上反斜線與執行個體名稱。  
   
-10. 在 [連接] 頁面中，選取驗證方法，然後按一下 [**下一步]**。  
+10. 在 [連接] 頁面中，選取驗證方法，然後按一下 [**下一步]** 。  
   
     Windows 驗證將用來嘗試登入的執行個體的 Windows 認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱和密碼。  
   
@@ -84,7 +84,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb**，�
   
     如果**安裝的軟體測試人員資料庫**選項會檢查軟體測試人員**ssmatesterdb**就會建立資料庫。  
   
-12. 若要安裝的另一個執行個體的公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取 **[是]**，然後按一下**下一步**。 或者，若要結束精靈，請按一下**No**。  
+12. 若要安裝的另一個執行個體的公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取 **[是]** ，然後按一下**下一步**。 或者，若要結束精靈，請按一下**No**。  
   
 13. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或藉由使用 sqlcmd 公用程式，執行下列指令碼，若要啟用 CLR:  
   
@@ -101,7 +101,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb**，�
 ### <a name="sql-server-database-objects"></a>SQL Server 資料庫物件  
 安裝延伸模組組件之後，您將會，請參閱**ssma_oracle.bcp_migration_packages**資料表**ssma_oracle.db_storage**資料表，和**ssma_oracle.db_error_list**資料表中**sysdb**資料庫。 您也會看到許多預存程序和使用者定義函數**ssma_oracle**結構描述。  
   
-每當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業。 這些工作會命名為**ssma_oracle 資料移轉套件 {GUID}**，而且會出現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 資料夾中。  
+每當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業。 這些工作會命名為**ssma_oracle 資料移轉套件 {GUID}** ，而且會出現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 資料夾中。  
   
 ## <a name="see-also"></a>另請參閱  
 [安裝 SSMA for Oracle 用戶端&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

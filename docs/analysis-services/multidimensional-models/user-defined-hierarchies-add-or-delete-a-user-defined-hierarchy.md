@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89f92c07753462fc26cb6de7447395f02e571e7a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578709"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164901"
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>使用者定義階層 - 新增或刪除使用者定義階層
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  您會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，維度設計師的 [維度結構] 索引標籤上，從維度中加入或移除使用者自訂階層。  
+  您會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，維度設計師的 [維度結構]  索引標籤上，從維度中加入或移除使用者自訂階層。  
   
  當您加入使用者自訂階層時，要等到在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中具現化使用者自訂階層，而且處理維度之後，才可以提供此階層給使用者使用。 如需詳細資訊，請參閱 <<c0> [ 多維度模型資料庫](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)並[處理多維度模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。</c0>  
   
@@ -26,9 +26,9 @@ ms.locfileid: "57578709"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，然後開啟您想要使用的維度。  
   
-     此維度會在 [維度設計師] 的 [維度結構] 索引標籤上開啟。  
+     此維度會在 [維度設計師] 的 [維度結構]  索引標籤上開啟。  
   
-2.  從 [屬性] 窗格中，將您要在使用者自訂階層中使用的屬性拖曳到 [階層] 窗格。  
+2.  從 [屬性]  窗格中，將您要在使用者自訂階層中使用的屬性拖曳到 [階層]  窗格。  
   
 3.  拖曳其他屬性，以便在使用者自訂階層中形成層級。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "57578709"
   
 ### <a name="to-remove-a-user-defined-hierarchy-from-a-dimension"></a>從維度中移除使用者自訂階層  
   
--   在 [維度結構] 索引標籤上，按一下要在 [階層] 窗格中移除的使用者自訂階層。 在工具列上，按一下 [刪除]。  
+-   在 [維度結構]  索引標籤上，按一下要在 [階層]  窗格中移除的使用者自訂階層。 在工具列上，按一下 [刪除]  。  
   
      - 或 -  
   
--   在 [階層] 窗格中以滑鼠右鍵按一下要移除的使用者定義階層，然後按一下 [刪除]。  
+-   在 [階層]  窗格中以滑鼠右鍵按一下要移除的使用者定義階層，然後按一下 [刪除]  。  
   
      - 或 -  
   

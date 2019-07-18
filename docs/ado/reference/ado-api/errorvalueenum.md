@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932878"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 執行階段錯誤的類型。  
@@ -32,28 +31,28 @@ ms.locfileid: "52542605"
   
 -   負完整的錯誤數字的小數點十進位轉譯。  
   
--   完整的錯誤號碼的十六進位的十六進位表示法。 Windows 設備碼是第四個位數。 ADO 錯誤號碼的設施程式碼*A*。例如：0x800***A***0E7B。  
+-   完整的錯誤號碼的十六進位的十六進位表示法。 Windows 設備碼是第四個位數。 ADO 錯誤號碼的設施程式碼*A*。例如: 0x800***A***0E7B。  
   
 > [!NOTE]
 >  OLE DB 錯誤可傳遞至 ADO 應用程式。 一般而言，識別這些 Windows 功能的程式碼的所*4*。 比方說，0x800***4***。  
   
 |常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|無法變更**ActiveConnection**屬性**資料錄集**物件，其**命令**做為其來源的物件。|  
+|**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|無法變更**ActiveConnection**屬性**資料錄集**物件，其**命令**做為其來源的物件。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|伺服器無法完成作業。|  
-|**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|連線被拒。 您所要求的新連接有不同的特性與已在使用中。|  
+|**adErrCantChangeConnection**|3748 -2146824540 0x800A0EA4|連線被拒。 您所要求的新連接有不同的特性與已在使用中。|  
 |**adErrCantChangeProvider**|3220 -2146825068 0X800A0C94|提供的提供者不同於已在使用中。|  
 |**adErrCantConvertvalue**|3724 -2146824564 0x800A0E8C|由於符號不符或資料溢位以外的原因，無法轉換資料值。 例如，轉換會有截斷的資料。|  
-|**adErrCantCreate**|3725-2146824563 0x800A0E8D|無法設定或擷取欄位資料類型是未知，或提供者有資源不足，無法執行作業，因為資料值。|  
+|**adErrCantCreate**|3725 -2146824563 0x800A0E8D|無法設定或擷取欄位資料類型是未知，或提供者有資源不足，無法執行作業，因為資料值。|  
 |**adErrCatalogNotSet**|3747 -2146824541 0x800A0EA3|作業需要有效**ParentCatalog**。|  
-|**adErrColumnNotOnThisRow**|3726-2146824562 0x800A0E8E|記錄不包含此欄位。|  
+|**adErrColumnNotOnThisRow**|3726 -2146824562 0x800A0E8E|記錄不包含此欄位。|  
 |**adErrDataConversion**|3421 -2146824867 0x800A0D5D|應用程式會使用目前的操作錯誤類型的值。|  
 |**adErrDataOverflow**|3721 -2146824567 0x800A0E89|資料值太大而無法欄位資料型別所表示。|  
 |**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|要刪除之物件的 URL 是記錄的在目前範圍之外。|  
-|**adErrDenyNotSupported**|3750-2146824538 0x800A0EA6|提供者不支援共用的限制。|  
-|**adErrDenyTypeNotSupported**|3751-2146824537 0x800A0EA7|提供者不支援共用限制的要求的的類型。|  
+|**adErrDenyNotSupported**|3750 -2146824538 0x800A0EA6|提供者不支援共用的限制。|  
+|**adErrDenyTypeNotSupported**|3751 -2146824537 0x800A0EA7|提供者不支援共用限制的要求的的類型。|  
 |**adErrFeatureNotAvailable**|3251 -2146825037 0x800A0CB3|物件或提供者不能執行要求的作業。|  
-|**adErrFieldsUpdateFailed**|3749-2146824539 0x800A0EA5|欄位更新失敗。 如需詳細資訊，請檢查**狀態**個別欄位物件的屬性。|  
+|**adErrFieldsUpdateFailed**|3749 -2146824539 0x800A0EA5|欄位更新失敗。 如需詳細資訊，請檢查**狀態**個別欄位物件的屬性。|  
 |**adErrIllegalOperation**|3219 -2146825069 0x800A0C93|在此內容中不允許作業。|  
 |**adErrIntegrityViolation**|3719 -2146824569 0x800A0E87|資料值欄位的完整性條件約束的衝突。|  
 |**adErrInTransaction**|3246 -2146825042 0x800A0CAE|**連接**物件無法在交易中明確地關閉。|  
@@ -65,28 +64,28 @@ ms.locfileid: "52542605"
 |**adErrItemNotFound**|3265 -2146825023 0x800A0CC1|對應到要求的名稱或序數之集合中找不到項目。|  
 |**adErrNoCurrentRecord**|3021 -2146825267 0x800A0BCD|任一**BOF**或是**EOF**為 True，或已刪除目前的記錄。 要求的作業需要目前的記錄。|  
 |**adErrNotExecuting**|3715 -2146824573 0x800A0E83|未執行時，無法執行作業。|  
-|**adErrNotReentrant**|3710-2146824578 0x800A0E7E|在處理事件時，無法執行作業。|  
+|**adErrNotReentrant**|3710 -2146824578 0x800A0E7E|在處理事件時，無法執行作業。|  
 |**adErrObjectClosed**|3704 -2146824584 0x800A0E78|當物件已關閉時，不允許作業。|  
 |**adErrObjectInCollection**|3367 -2146824921 0x800A0D27|物件已經在集合中。 無法附加。|  
-|**adErrObjectNotSet**|3420-2146824868 0x800A0D5C|物件不再有效。|  
-|**adErrObjectOpen**|容量 3705-2146824583 0x800A0E79|開啟物件時，不允許作業。|  
-|**adErrOpeningFile**|3002-2146825286 0x800A0BBA|無法開啟檔案。|  
+|**adErrObjectNotSet**|3420 -2146824868 0x800A0D5C|物件不再有效。|  
+|**adErrObjectOpen**|3705 -2146824583 0x800A0E79|開啟物件時，不允許作業。|  
+|**adErrOpeningFile**|3002 -2146825286 0x800A0BBA|無法開啟檔案。|  
 |**adErrOperationCancelled**|3712 -2146824576 0x800A0E80|已由使用者取消作業。|  
 |**adErrOutOfSpace**|3734 -2146824554 0x800A0E96|無法執行作業。 提供者無法取得足夠的儲存空間。|  
 |**adErrPermissionDenied**|3720 -2146824568 0x800A0E88|沒有足夠的權限可防止寫入至欄位。|  
 |**adErrProviderFailed**|3000 -2146825288 0x800A0BB8|提供者並未執行要求的作業。|  
-|**adErrProviderNotFound**|3706-2146824582 0x800A0E7A|找不到提供者。 它可能未正確安裝。|  
+|**adErrProviderNotFound**|3706 -2146824582 0x800A0E7A|找不到提供者。 它可能未正確安裝。|  
 |**adErrReadFile**|3003 -2146825285 0x800A0BBB|無法讀取檔案。|  
 |**adErrResourceExists**|3731 -2146824557 0x800A0E93|無法執行複製作業。 物件名稱的目的地 URL 已經存在。 指定**adCopyOverwrite**來取代物件。|  
 |**adErrResourceLocked**|3730 -2146824558 0x800A0E92|所指定的 URL 表示的物件已鎖定的一或多個其他處理序。 等候完成此程序，並再次嘗試操作。|  
-|**adErrResourceOutOfScope**|3735-2146824553 0x800A0E97|來源或目的地的 URL 是記錄的在目前範圍之外。|  
-|**adErrSchemaViolation**|3722-2146824566 0x800A0E8A|資料值和資料型別或欄位的條件約束的衝突。|  
-|**adErrSignMismatch**|3723-2146824565 0x800A0E8B|轉換失敗，因為資料值已簽署，且提供者所使用的欄位資料類型不帶正負號。|  
+|**adErrResourceOutOfScope**|3735 -2146824553 0x800A0E97|來源或目的地的 URL 是記錄的在目前範圍之外。|  
+|**adErrSchemaViolation**|3722 -2146824566 0x800A0E8A|資料值和資料型別或欄位的條件約束的衝突。|  
+|**adErrSignMismatch**|3723 -2146824565 0x800A0E8B|轉換失敗，因為資料值已簽署，且提供者所使用的欄位資料類型不帶正負號。|  
 |**adErrStillConnecting**|3713 -2146824575 0x800A0E81|以非同步方式連線時，無法執行作業。|  
 |**adErrStillExecuting**|3711 -2146824577 0x800A0E7F|以非同步方式執行時，無法執行作業。|  
 |**adErrTreePermissionDenied**|3728 -2146824560 0x800A0E90|權限還不足以存取樹狀目錄或樹狀子目錄。|  
 |**adErrUnavailable**|3736 -2146824552 0x800A0E98|作業未完成，且狀態為無法使用。 這個欄位可能是無法使用或未嘗試此作業。|  
-|**adErrUnsafeOperation**|3716-2146824572 0x800A0E84|在這部電腦上的安全性設定可防止存取另一個網域上的資料來源。|  
+|**adErrUnsafeOperation**|3716 -2146824572 0x800A0E84|在這部電腦上的安全性設定可防止存取另一個網域上的資料來源。|  
 |**adErrURLDoesNotExist**|3727 -2146824561 0x800A0E8F|來源 URL 或父項目的 URL 不存在。|  
 |**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|此 URL 命名的記錄不存在。|  
 |**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|提供者找不到由 URL 的存放裝置。 請確定輸入的 URL 正確。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 877fa31954cb0bf7255d831475c875fb43d002b8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044445"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

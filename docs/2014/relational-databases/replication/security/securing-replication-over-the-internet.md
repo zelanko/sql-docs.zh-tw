@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960032"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
   網際網路複寫可以提供彈性，特別是對於行動訂閱者，但是您必須正確設定網際網路複寫以保證充分的安全性。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議使用下列兩個透過網際網路安全共用資訊的技術之一：  

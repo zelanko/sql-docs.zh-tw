@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990329"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "52802780"
 |**centralized_conflicts**|**bit**|指定是否將衝突記錄儲存在發行者端：<br /><br /> **0** = 將衝突記錄儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 將衝突記錄儲存在 「 發行者 」。<br /><br /> *不支援非 SQL 發行者。*|  
 |**conflict_retention**|**int**|指定衝突保留週期 (以天為單位)。 *不支援非 SQL 發行者。*|  
 |**conflict_policy**|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 造訪發行者為優先的衝突。<br /><br /> **2** = 訂閱者優先衝突。<br /><br /> **3** = 重新初始化訂閱。<br /><br /> *不支援非 SQL 發行者。*|  
-|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，利用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **2** = sql，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 此資料行不是由非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。<br /><br /> 注意：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 已被取代，不再受到支援。<br /><br /> *此資料行不支援非 SQL 發行者。*|  
+|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，利用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **2** = sql，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 此資料行不是由非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。<br /><br /> 注意:使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 已被取代，不再支援。<br /><br /> *此資料行不支援非 SQL 發行者。*|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼 (GUID) 指定發行集在發行[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 中，GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。 *不支援非 SQL 發行者。*|  
 |**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *不支援非 SQL 發行者。*|  
 |**description**|**nvarchar(255)**|發行集的描述項目。|  
@@ -66,7 +65,7 @@ ms.locfileid: "52802780"
 |**immediate_sync**|**bit**|指出是否建立或重新建立快照集代理程式執行時，每次同步處理檔案位置**1**表示每次執行代理程式所建立。|  
 |**allow_push**|**bit**|指出是否允許發送訂閱發行集，其中**1**允許它們的表示。|  
 |**allow_pull**|**bit**|指出是否允許提取訂閱發行集，其中**1**允許它們的表示。|  
-|**保留期**|**int**|給定發行集的變更儲存量 (以小時為單位)。|  
+|**retention**|**int**|給定發行集的變更儲存量 (以小時為單位)。|  
 |**allow_subscription_copy**|**bit**|指定是否已啟用複製訂閱這個發行集之訂閱資料庫的能力。 **1**表示允許複製。|  
 |**allow_initialize_from_backup**|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示，從備份初始化訂閱並**0**表示無法。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。 *不支援非 SQL 發行者。*|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

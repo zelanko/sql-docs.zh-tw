@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202657"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579889"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "53202657"
 ## <a name="security-principals"></a>安全性主體  
  安全性主體是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 且可獲指派權限採取動作之身分識別的正式名稱。 這些身分識別通常為人員或人員群組，但亦可為偽裝成人員的其他實體。 您可使用列示的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或是使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，建立和管理安全性主體。  
   
- 登入  
+##### <a name="logins"></a>登入  
  登入係指用於登入 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的個別使用者帳戶。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 支援根據 Windows 驗證的登入，以及根據 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的登入。 如需有關兩種登入類型的資訊，請參閱 [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)。  
   
- 固定伺服器角色  
+##### <a name="fixed-server-roles"></a>固定伺服器角色  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，固定伺服器角色係指一組預先設定的角色，其提供方便的伺服器等級權限群組。 您可使用 `ALTER SERVER ROLE ... ADD MEMBER` 陳述式將登入新增至角色。 如需詳細資訊，請參閱 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支援固定伺服器角色，但在 master 資料庫中具有兩個可做為伺服器角色運作的角色 (`dbmanager` 和 `loginmanager`)。  
   
- 使用者定義伺服器角色  
+##### <a name="user-defined-server-roles"></a>使用者定義伺服器角色  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您可建立專屬的伺服器角色並為其指派伺服器等級權限。 您可使用 `ALTER SERVER ROLE ... ADD MEMBER` 陳述式將登入新增至伺服器角色。 如需詳細資訊，請參閱 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支援使用者定義伺服器角色。  
   
- 資料庫使用者  
+##### <a name="database-users"></a>資料庫使用者  
  在資料庫中建立資料庫使用者，並將該資料庫使用者對應至登入，以針對登入授與資料庫存取權。 資料庫使用者名稱通常會與登入名稱相同，但這兩種名稱不一定非得相同。 每個資料庫使用者皆會對應至單一登入。 登入僅可對應至一個資料庫中的單一使用者，但其可對應做為數個不同資料庫中的資料庫使用者。  
   
- 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 您亦可建立未具備對應登入的資料庫使用者。 這些使用者稱為「自主資料庫使用者」  。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用自主資料庫使用者，原因在於其可更輕鬆地將資料庫移至不同的伺服器。 自主資料庫與登入相似，可使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  共有 12 個類型的使用者，其僅在驗證方式與顯示對象方面略有差異。 若要查看使用者清單，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)。  
   
- 固定資料庫角色  
+##### <a name="fixed-database-roles"></a>固定資料庫角色  
  固定伺服器角色係指一組預先設定的角色，其提供方便的資料庫等級權限群組。 您可使用 `ALTER ROLE ... ADD MEMBER` 陳述式，將資料庫使用者與使用者定義資料庫角色新增至固定資料庫角色。 如需詳細資訊，請參閱 [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)。  
   
- 使用者定義資料庫角色  
+##### <a name="user-defined-database-roles"></a>使用者定義資料庫角色  
  具有 `CREATE ROLE` 權限的使用者可建立新的使用者定義資料庫角色，以代表具有通用權限的使用者群組。 通常會針對整個角色授與或拒絕權限，以精簡權限管理與監視作業。 您可使用 `ALTER ROLE ... ADD MEMBER` 陳述式，將資料庫使用者新增至資料庫角色。 如需詳細資訊，請參閱 [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)。  
   
- 其他主體  
+##### <a name="other-principals"></a>其他主體  
  此處不討論其他安全性主體，包括應用程式角色，以及根據憑證或非對稱式索引鍵的登入和使用者。  
   
  如需顯示 Windows 使用者、Windows 群組、登入和資料庫使用者之間關係的說明圖，請參閱 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
@@ -66,7 +66,9 @@ ms.locfileid: "53202657"
 2.  建立代表工作單位與工作職務的 Windows 群組。  
   
 3.  將 Windows 使用者新增至 Windows 群組。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>若連接的人員將會連接至眾多資料庫  
   
 1.  針對 Windows 群組建立登入。 (若使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，請略過 Active Directory 步驟，並在此處建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入。)  
@@ -126,7 +128,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   若系統管理員未正確執行 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` ，則 Ted 「銷售」角色成員的 `SELECT` 權限將會遭到拒絕，這是因為「銷售」的 `DENY` 會覆寫其個別的  `GRANT`。  
   
 > [!NOTE]  
->  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
+>  您可使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]來設定權限。 在 [物件總管] 中找到安全性實體，以滑鼠右鍵按一下安全性實體，然後按一下 [屬性]  。 選取 [權限]  頁面。 如需使用權限頁面的說明，請參閱 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
 ## <a name="permission-hierarchy"></a>權限階層  
  權限具有父子式階層。 也就是說，若您在資料庫上授與 `SELECT` 權限，則該權限在資料庫中會包含所有 (子系) 結構描述的 `SELECT` 權限。 若您在結構描述上授與 `SELECT` 權限，則其在結構描述中會包含所有 (子系) 資料表的 `SELECT` 權限。 權限可轉移；亦即若您在資料庫上授與 `SELECT` 權限，則其會包含所有 (子系) 結構描述以及所有 (孫系) 資料表與檢視上的 `SELECT` 權限。  
@@ -229,7 +231,9 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  如需更多關於快速入門的主題資訊，請參閱：  
   
--   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [建立資料庫 &#40;教學課程&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [教學課程：資料庫引擎使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [建立資料庫 &#40;教學課程&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [教學課程：SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23e80a2bf02ee6b97449ea3acff38a3937d37000
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046732"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>第 2 課： 在容器上建立原則並產生共用存取簽章 (SAS) 金鑰
   在這一課，您將學習如何在 Blob 容器上建立原則以及產生 SAS 金鑰。  
@@ -25,9 +24,9 @@ ms.locfileid: "48124078"
   
  您可以使用下列其中一種方法建立原則和共用存取簽章：  
   
--   Windows Azure REST API 作業： [建立容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)、 [設定容器 ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)和 [取得容器 ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)。  
+-   Windows Azure REST API 作業：[建立容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)，[設定容器 ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)，以及[取得容器 ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)。  
   
--   Windows Azure SDK 的[CloudBlobContainer.GetSharedAccessSignature 方法](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) 。  
+-   Windows Azure SDK 的[CloudBlobContainer.GetSharedAccessSignature 方法](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) 。  
   
     ```  
   

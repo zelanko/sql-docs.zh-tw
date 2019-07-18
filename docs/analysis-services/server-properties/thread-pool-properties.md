@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207925"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "55087867"
   
  屬性是依照字母順序列出。  
   
-|名稱|類型|描述|預設|指引|  
+|名稱|type|描述|預設|指引|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。<br /><br /> 僅適用於多維度模型。|  
 |**IOProcess** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定 IOProcess 執行緒集區中的執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。<br /><br /> 僅適用於多維度模型。|  
@@ -231,11 +231,11 @@ ms.locfileid: "55087867"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- 請注意，設定 **MinThread** 和 **MaxThread** 的演算法會合併系統組態，特別是處理器數目。 下列部落格文章深入探討值的計算方式：[Analysis Services 2012 組態設定 （Wordpress 部落格）](http://go.microsoft.com/fwlink/?LinkId=330387)。 請注意，後續版本可能會調整這些設定和行為。  
+ 請注意，設定 **MinThread** 和 **MaxThread** 的演算法會合併系統組態，特別是處理器數目。 下列部落格文章提供深入了解如何計算值：[Analysis Services 2012 組態設定 （Wordpress 部落格）](http://go.microsoft.com/fwlink/?LinkId=330387)。 請注意，後續版本可能會調整這些設定和行為。  
   
  下列清單會針對不同處理器組合顯示其他相似性遮罩設定的範例：  
   
--   8 核心系統上處理器 3-2-1-0 的相似性會產生此位元遮罩：00001111 和十六進位值：0xF  
+-   8 核心系統上的處理器 3-2-1-0 的相似性會產生這個位元遮罩：00001111 和十六進位值：0xF  
   
 -   8 核心系統上的處理器 7-6-5-4 的相似性會產生這個位元遮罩：11110000 和十六進位值：0xF0  
   

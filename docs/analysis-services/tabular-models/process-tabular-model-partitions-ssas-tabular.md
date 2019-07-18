@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f4b4cb7307c30d03b80ef800d6808f5ce85deaa5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207503"
 ---
 # <a name="process-tabular-model-partitions"></a>處理表格式模型資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 此主題中的工作描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [處理資料分割] 對話方塊，處理模型資料庫中的資料分割。  
+  分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 此主題中的工作描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [處理資料分割]  對話方塊，處理模型資料庫中的資料分割。  
   
 ###  <a name="bkmk_create_new"></a> 處理資料分割  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下含有您要處理之資料分割的資料表，然後按一下 [資料分割]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下含有您要處理之資料分割的資料表，然後按一下 [資料分割]  。  
   
-2.  在 [資料分割] 對話方塊的 [資料分割] 中，按一下 [處理] 按鈕。  
+2.  在 [資料分割]  對話方塊的 [資料分割]  中，按一下 [處理] 按鈕。  
   
 3.  在 **處理資料分割**對話方塊中，於**模式**清單方塊中，選取其中一個程序模式如下：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "53072015"
     |**處理清除**|移除資料分割中的所有資料。|  
     |**處理加入**|以新資料累加地更新資料分割。|  
   
-4.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]**。  
+4.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型資料分割](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   

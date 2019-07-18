@@ -2,19 +2,18 @@
 title: 設定 WSUS-Analytics Platform System |Microsoft Docs
 description: 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 組態精靈設定 WSUS Analytics Platform System 的步驟。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961129"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System 中設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 組態精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定，才能將軟體更新套用至應用裝置。 VMM 虛擬機器的應用裝置上已安裝 WSUS。  
@@ -55,7 +54,7 @@ ms.locfileid: "54124708"
   
     1.  在 **伺服器管理員儀表板**上**工具**功能表上，按一下  **Windows Server Update Services**。  
   
-    2.  在左窗格中**Update Services**視窗中，按一下以展開虛擬機器管理節點伺服器 (**_appliance_domain_VMM**)，然後按一下  **選項**。  
+    2.  在左窗格中**Update Services**視窗中，按一下以展開虛擬機器管理節點伺服器 ( **_appliance_domain_VMM**)，然後按一下  **選項**。  
   
     3.  在 **選項** 窗格中，按一下**WSUS 伺服器設定精靈**啟動組態精靈。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "54124708"
   
         ![WSUS 開始之前](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
   
-    6.  在 [**參加 Microsoft Update 改進方案**頁面上，選取**是，我想要參加 Microsoft Update 改進方案**，然後按一下**下一步]**。  
+    6.  在 [**參加 Microsoft Update 改進方案**頁面上，選取**是，我想要參加 Microsoft Update 改進方案**，然後按一下**下一步]** 。  
   
         ![WSUS 改進計畫](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
@@ -83,7 +82,7 @@ ms.locfileid: "54124708"
   
     #### <a name="to-update-by-using-microsoft-update"></a>使用 Microsoft Update 來更新  
   
-    1.  如果您選擇與 Microsoft Update 同步處理，您不需要進行任何變更**選擇上游伺服器**頁面。 按 [下一步] 。  
+    1.  如果您選擇與 Microsoft Update 同步處理，您不需要進行任何變更**選擇上游伺服器**頁面。 按一下 [下一步]  。  
   
         ![WSUS 上游伺服器同步處理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -131,7 +130,7 @@ ms.locfileid: "54124708"
   
     選取 **僅以這些語言下載更新**。  
   
-    選取 [**英文**，然後按一下**下一步]**。  
+    選取 [**英文**，然後按一下**下一步]** 。  
   
     ![選擇語言](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
@@ -142,7 +141,7 @@ ms.locfileid: "54124708"
   
     取消選取所有選取的更新。  
   
-    選取 [ **Windows Server 2012 R2**，並**System Center 2012 R2-Virtual Machine Manager**，然後按一下**下一步]**。  
+    選取 [ **Windows Server 2012 R2**，並**System Center 2012 R2-Virtual Machine Manager**，然後按一下**下一步]** 。  
   
 9. 選擇 [分類]。  
   
@@ -151,23 +150,23 @@ ms.locfileid: "54124708"
   
     取消選取所有先前選取的更新。  
   
-    選取 [**重大更新**並**安全性更新**之更新的 Analytics Platform System 設備，將會同步處理，然後按一下**下一步]**。  
+    選取 [**重大更新**並**安全性更新**之更新的 Analytics Platform System 設備，將會同步處理，然後按一下**下一步]** 。  
   
     ![選擇分類](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. 設定同步處理排程。  
   
-    選取 [**手動同步處理**，然後按一下**下一步]**。  
+    選取 [**手動同步處理**，然後按一下**下一步]** 。  
   
     ![設定同步處理排程](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. 開始初始同步處理。  
   
-    選取 [**開始初始同步處理**，然後按一下**下一步]**。  
+    選取 [**開始初始同步處理**，然後按一下**下一步]** 。  
   
 12. 完成。  
   
-    按一下 **[完成]**。  
+    按一下 [ **完成**]。  
   
 ## <a name="bkmk_WSUSGroup"></a>群組在 WSUS 中的應用裝置伺服器  
 之後您可以設定 WSUS 的 Analytics Platform System 下, 一個步驟是設備伺服器分組。 將所有的設備伺服器新增至群組，WSUS 都將能夠將軟體更新套用至應用裝置中的所有伺服器。  

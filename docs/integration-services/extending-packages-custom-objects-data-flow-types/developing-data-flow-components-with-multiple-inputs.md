@@ -11,14 +11,18 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16bb157e9917d2538542df525b2ad523c88bfc01
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5e93f8c6933769fcce7426df58f67a53113ff6f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724777"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果具有多個輸入的資料流程元件其多個輸入會以不平均的速率產生資料，可能會耗用過多的記憶體。 當您開發支援兩個或多個輸入的自訂資料流程元件時，可以使用 Microsoft.SqlServer.Dts.Pipeline 命名空間中的下列成員來管理記憶體壓力：  
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 屬性。 如果您想要實作為了讓自訂資料流程元件管理速率不平均之資料所需的程式碼，請將這個屬性的值設定為 **true**。  
@@ -55,7 +59,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  您的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 方法實作不應該呼叫基底類別中實作。 基底類別中這個方法的預設實作只會引發 **NotImplementedException**。  
   
- 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態  (輸入是由它們在 *inputIDs* 陣列中的識別碼值所識別)。當您針對某個輸入將 *canProcess* 陣列中的項目值設定為 **true** 時，資料流程引擎會呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，並且為指定的輸入提供更多資料。  
+ 實作這個方法時，您會針對每個元件的輸入設定布林值 *canProcess* 陣列中的元素狀態 (輸入是由它們在 *inputIDs* 陣列中的識別碼值所識別)。當您針對某個輸入將 *canProcess* 陣列中的項目值設定為 **true** 時，資料流程引擎會呼叫元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，並且為指定的輸入提供更多資料。  
   
  有更多的上游資料可供使用時，至少一個輸入的 *canProcess* 陣列項目值必須一律是 **true**，否則處理就會停止。  
   

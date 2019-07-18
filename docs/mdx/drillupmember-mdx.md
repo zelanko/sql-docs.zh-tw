@@ -1,5 +1,5 @@
 ---
-title: DrillupMember (MDX) |Microsoft 文件
+title: DrillupMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049196"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -36,12 +35,12 @@ DrillupMember(Set_Expression1, Set_Expression2)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **DrillupMember**函式會傳回一組根據指定第一個集合中第二個集合中成員的子成員的成員。 第一個集合可以是任何維度，但第二個集合只能包含一維集合。 會保留第一個集合中原始成員的順序。 此函數只會包含屬於第一個集合並且也是第二個集合中成員之直接下階的那些成員，來建構集合。 如果第一個集合中成員的直接上階沒有出現在第二個集合，則第一個集合中的該成員會包含在此函數傳回的集合中。 屬於第一個集合並且是在第二個集合中上階成員之前的下階，也會包含在此集合中。  
+ **DrillupMember**函式會傳回一組的第一個集合中指定子系的第二個集合中成員的成員為基礎的成員。 第一個集合可以是任何維度，但第二個集合只能包含一維集合。 會保留第一個集合中原始成員的順序。 此函數只會包含屬於第一個集合並且也是第二個集合中成員之直接下階的那些成員，來建構集合。 如果第一個集合中成員的直接上階沒有出現在第二個集合，則第一個集合中的該成員會包含在此函數傳回的集合中。 屬於第一個集合並且是在第二個集合中上階成員之前的下階，也會包含在此集合中。  
   
  第一個集合可以包含 Tuple，而非成員。 Tuple 向下鑽研是 OLE DB 的延伸模組，而且會傳回 Tuple 集合而不是傳回成員。  
   
 > [!IMPORTANT]  
->  只有在成員是子系或下階的直接上階時，才能向上鑽研。 集合中成員的順序很重要，這兩個向下鑽研\*和 Drillup\*系列的函式。 請考慮使用**Hierarchize**成適當的順序的第一組成員函式。  
+>  只有在成員是子系或下階的直接上階時，才能向上鑽研。 集合中成員的順序很重要，這兩種向下切入\*和向上切入\*系列的函式。 請考慮使用**Hierarchize**成適當的順序的第一個集合的成員函式。  
   
 ## <a name="example"></a>範例  
  下列三個範例中，只有第二個集合不相同。 在第一個範例中，第二個集合是 United States。 因此，Colorado 會從結果集中排除。 Colorado 是 United States 的子代。  
@@ -59,7 +58,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- 範例二示範成員順序的重要性。 因為**DrillupMember**只會向上鑽研其後緊接第一個集合中的下階的那些成員，所以不會向上鑽研 Canada 成員。 Canada 與其下階被 United States 及 Colorado 所分隔。 若您重新排序成員，讓 Canada 直接位於 Alberta 之上，則 Alberta 與 Brunswick 都會從資料列集中排除。  
+ 範例二示範成員順序的重要性。 由於**DrillupMember**只會向上鑽研其後緊接第一個集合中的下階成員，所以不會向上鑽研 Canada 成員。 Canada 與其下階被 United States 及 Colorado 所分隔。 若您重新排序成員，讓 Canada 直接位於 Alberta 之上，則 Alberta 與 Brunswick 都會從資料列集中排除。  
   
 ```  
 SELECT DrillUpMember (   
@@ -75,7 +74,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 範例三顯示如何使用**Hierarchize**可以緩和成員順序及向上鑽研 Canada 成員。  
+ 範例三顯示如何使用**Hierarchize**可減緩成員順序及向上鑽研 Canada 成員。  
   
 ```  
 SELECT DrillUpMember (   
@@ -95,6 +94,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

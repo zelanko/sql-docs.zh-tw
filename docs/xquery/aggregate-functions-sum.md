@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985748"
 ---
 # <a name="aggregate-functions---sum"></a>彙總函式 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

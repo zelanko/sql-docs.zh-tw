@@ -10,26 +10,26 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e0420481b54fe906c54110060248c80905ddc57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 16693cb053d0747802d9ea7d69fdac0f1c43fbfa
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744284"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682282"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>索引資料行對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用這個對話方塊，即可選取索引的資料行，並設定其排序順序。 索引可以使用一個或多個資料行，而且每個資料行都可以用遞增或遞減順序排序。 若要存取這個對話方塊，請在 [索引/索引鍵] 對話方塊中，按一下 [一般] 區段中的 [資料行] 省略符號按鈕。  
+使用這個對話方塊，即可選取索引的資料行，並設定其排序順序。 索引可以使用一個或多個資料行，而且每個資料行都可以用遞增或遞減順序排序。 若要存取這個對話方塊，請在 [索引/索引鍵]  對話方塊中，按一下 [一般]  區段中的 [資料行]  省略符號按鈕。  
   
 ## <a name="options"></a>選項。  
 **資料行名稱**  
 選擇參與此索引的資料行。 選取 **<None>** ，從索引移除該資料行。  
   
 **排序次序**  
-為指定的資料行選取排序順序。 可用的選項有 [遞增] 或 [遞減]。  
+為指定的資料行選取排序順序。 可用的選項有 [遞增]  或 [遞減]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立叢集索引](../../relational-databases/indexes/create-clustered-indexes.md)  

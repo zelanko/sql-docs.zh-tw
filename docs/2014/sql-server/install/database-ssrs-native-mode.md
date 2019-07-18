@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
@@ -13,15 +12,15 @@ ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095723"
 ---
 # <a name="database-ssrs-native-mode"></a>資料庫 (SSRS 原生模式)
-  使用 [資料庫] 頁面，即可建立和設定報表伺服器資料庫，以便提供一個或多個報表伺服器執行個體的內部儲存位置。 如果您要設定報表伺服器使用遠端報表伺服器資料庫，您必須使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 來建立資料庫。  
+  使用 [資料庫] 頁面，即可建立和設定報表伺服器資料庫，以便提供一個或多個報表伺服器執行個體的內部儲存位置。 如果您要設定報表伺服器使用遠端報表伺服器資料庫，您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員建立此資料庫。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
@@ -29,11 +28,11 @@ ms.locfileid: "48102488"
   
  報表伺服器資料庫必須支援特定的伺服器模式。 預設的模式為原生模式，但如果您是在較大的 SharePoint 產品或技術部署中執行報表伺服器，也可以建立使用 SharePoint 整合模式的報表伺服器資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員，並按一下**資料庫**瀏覽窗格中。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並按一下導覽窗格中的 **[資料庫]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server 名稱**  
- 目前的報表伺服器資料庫中**SQL Server 名稱**指定的名稱[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]執行報表伺服器資料庫。 也可以在本機或遠端電腦上使用預設或具名的執行個體。  
+ 在目前的報表伺服器資料庫中， **[SQL Server 名稱]** 會指定執行報表伺服器資料庫的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 名稱。 也可以在本機或遠端電腦上使用預設或具名的執行個體。  
   
  **Database Name**  
  指定儲存伺服器資料之報表伺服器資料庫的名稱。  
@@ -45,10 +44,10 @@ ms.locfileid: "48102488"
  啟動精靈，此精靈會引導您建立或選取報表伺服器資料庫所需的所有步驟。  
   
  **認證類型**  
- 指定報表伺服器用來連接到報表伺服器資料庫的認證。 您可以指定的認證類型包括服務帳戶、 Windows 網域使用者、 Windows 本機使用者，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫登入。 如需有關選取認證的詳細資訊，請參閱 <<c0> [ 設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。</c0>  
+ 指定報表伺服器用來連接到報表伺服器資料庫的認證。 您可以指定的認證類型包括服務帳戶、Windows 網域使用者、Windows 本機使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。 如需有關選取認證的詳細資訊，請參閱 <<c0> [ 設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。</c0>  
   
  **使用者名稱**  
- 如果您要使用 Windows 認證，或是指定網域使用者帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果您使用的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認證。 如果您要使用 Windows 認證，會將它們指定格式如下： *\<網域 >\\< 帳戶\>*。  
+ 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您要使用 Windows 認證，會將它們指定格式如下： *\<網域 >\\< 帳戶\>* 。  
   
  **密碼**  
  指定帳戶的密碼。  
@@ -60,6 +59,6 @@ ms.locfileid: "48102488"
  [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

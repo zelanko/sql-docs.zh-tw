@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206758"
 ---
 # <a name="effects-of-iso-options"></a>ISO 選項的作用
   ODBC 標準與 ISO 標準相當接近，而且 ODBC 應用程式應該是來自 ODBC 驅動程式的標準行為。 若要讓它更為符合的行為中所定義的 ODBC 標準中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一律會使用所連接的 SQL Server 版本中提供的任何 ISO 選項。  

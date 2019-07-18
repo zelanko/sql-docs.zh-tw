@@ -7,18 +7,17 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: b672ce067d5d1f10754f346c77967b4e3fbe34ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963161"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>小數位數的同時執行的 SQL Server Machine Learning 服務中的外部指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 安裝程序中，會建立新的 Windows「使用者帳戶集區」，以支援 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務的執行作業。 這些工作者帳戶的目的是要隔離並行執行由不同的 SQL 使用者的外部指令碼。
+在 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 安裝程序中，會建立新的 Windows「使用者帳戶集區」  ，以支援 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務的執行作業。 這些工作者帳戶的目的是要隔離並行執行由不同的 SQL 使用者的外部指令碼。
 
 這篇文章描述的預設組態和容量的背景工作帳戶，以及如何變更預設組態，以在 SQL Server Machine Learning 服務來調整的同時執行外部指令碼的數目。
 
@@ -47,11 +46,11 @@ Windows 帳戶群組由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 每個使用者帳戶相關聯的密碼都是隨機產生的，但您可以在帳戶建立之後變更密碼。
 
-1. 開啟 [SQL Server 組態管理員]，並選取 [SQL Server 服務]。
+1. 開啟 [SQL Server 組態管理員]，並選取 [SQL Server 服務]  。
 2. 按兩下 SQL Server Launchpad 服務，如果服務正在執行請將它停止。
-3.  在 [服務] 索引標籤上，請確定 [啟動模式] 設為 [自動]。 Launchpad 未執行時，無法啟動外部指令碼。
-4.  按一下 [進階] 索引標籤，並視需要編輯 [外部使用者計數] 的值。 此設定控制多少不同的 SQL 使用者可以執行外部指令碼同時工作階段。 預設為 20 個帳戶。 使用者數目上限為 100。
-5. 如果您的組織要求定期變更密碼，您可以選擇將 [重設外部使用者密碼] 選項設為 [是]。 如此會重新產生 Launchpad 為使用者帳戶維護的加密密碼。 如需詳細資訊，請參閱[強制密碼原則](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)。
+3.  在 [服務]  索引標籤上，請確定 [啟動模式] 設為 [自動]。 Launchpad 未執行時，無法啟動外部指令碼。
+4.  按一下 [進階]  索引標籤，並視需要編輯 [外部使用者計數]  的值。 此設定控制多少不同的 SQL 使用者可以執行外部指令碼同時工作階段。 預設為 20 個帳戶。 使用者數目上限為 100。
+5. 如果您的組織要求定期變更密碼，您可以選擇將 [重設外部使用者密碼]  選項設為 [是]  。 如此會重新產生 Launchpad 為使用者帳戶維護的加密密碼。 如需詳細資訊，請參閱[強制密碼原則](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)。
 6.  重新啟動 Launchpad 服務。
 
 ## <a name="managing-workloads"></a>管理工作負載

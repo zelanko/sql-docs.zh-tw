@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 209914c7b8b5b67f5b9d3129bf09f2b222b7bf4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936900"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,6 +89,7 @@ ms.locfileid: "52535195"
 |authenticating_database_id|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 驗證主體之資料庫的識別碼。 如果是登入，此值會是 0。 如果是自主資料庫使用者，此值會是自主資料庫的資料庫識別碼。|  
 |open_transaction_count|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 每個工作階段的開啟交易數目。|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
+|page_server_reads|**bigint**|**適用於**：Azure SQL Database 的超大規模<br /><br /> 執行網頁伺服器讀取數中此工作階段期間，此工作階段要求。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
 每個人都可以看到自己的工作階段資訊。  

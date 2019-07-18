@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad6aa7b55906e68dba6615140ef2c6afcc3efaa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668931"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 支援 (OLE DB)
   開頭[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0，OLE DB 支援增強型的 FILESTREAM 功能。 如需這項功能的詳細資訊，請參閱[FILESTREAM 支援](../features/filestream-support.md)。 如需範例，請參閱[Filestream 和 OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)。  

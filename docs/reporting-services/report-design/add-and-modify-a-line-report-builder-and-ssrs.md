@@ -2,18 +2,18 @@
 title: 新增和修改線條 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb679941710f145d5a35aeaecc60996eaf69c607
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b58cb9cd7b4fcb13454b1a8d7cebcf380987fcbd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582098"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>加入和修改線條 (報表產生器及 SSRS)
   當您想要使用圖形元素來區隔報表的區段時，可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中加入線條。 您可以編輯線條屬性 (例如色彩或樣式) 來自訂線條的外觀。 例如，您可能要將公司的色彩納入報表中。    
@@ -23,7 +23,7 @@ ms.locfileid: "56296886"
     
 ## <a name="to-add-a-line"></a>加入線條    
     
-1.  在 **[插入]** 索引標籤上，按一下 **[線條]**。    
+1.  在 **[插入]** 索引標籤上，按一下 **[線條]** 。    
     
 2.  在設計介面中，在要放置線條端點的位置上按一下，然後再按一下要放置另一端的位置。    
     
@@ -32,7 +32,7 @@ ms.locfileid: "56296886"
 3.  若要變更線條屬性，請在設計介面上選取線條，然後在 **[主資料夾]** 索引標籤的 **[框線]** 區段中編輯其屬性。    
     
     > [!NOTE]    
-    >  如果將線條樣式設定為 [雙線] 而線條的寬度為 1 1/2 pt 或更窄，當您在報表產生器、報表設計師或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站中執行報表時，線條可能不會出現雙線。 當您將報表匯出為其他格式 (例如 Microsoft Word 和 Acrobat PDF) 時，會出現雙線。    
+    >  如果將線條樣式設定為 [雙線]  而線條的寬度為 1 1/2 pt 或更窄，當您在報表產生器、報表設計師或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站中執行報表時，線條可能不會出現雙線。 當您將報表匯出為其他格式 (例如 Microsoft Word 和 Acrobat PDF) 時，會出現雙線。    
     
 ## <a name="see-also"></a>另請參閱    
  [矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    

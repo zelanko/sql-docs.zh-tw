@@ -14,41 +14,26 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f710800d3ee7cbbb7a1fadef330289c26afe0d56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793746"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定彈性的自動容錯移轉原則
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 來設定 AlwaysOn 可用性群組的彈性容錯移轉原則。 彈性容錯移轉原則可讓您更精確地控制造成可用性群組之自動容錯移轉的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
-  
--   **開始之前：**  
-  
-     [自動容錯移轉的限制](#Limitations)  
-  
-     [必要條件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **要設定彈性容錯移轉原則，可使用：**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+ 
     > [!NOTE]  
-    >  您無法使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]來設定可用性群組的彈性容錯移轉原則。  
+    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Limitations"></a> 自動容錯移轉的限制  
+ 
+## <a name="Limitations"></a> 自動容錯移轉的限制  
   
 -   若要進行自動容錯移轉，目前的主要複本和一個次要複本必須設定為具有自動容錯移轉的同步認可可用性模式，而且次要複本必須與主要複本同步處理。  
   
@@ -56,15 +41,13 @@ ms.locfileid: "54126578"
   
 -   如果可用性群組超過其 WSFC 失敗臨界值，WSFC 叢集將不會嘗試進行可用性群組的自動容錯移轉。 此外，可用性群組的 WSFC 資源群組會維持失敗狀態，直到叢集管理員手動讓失敗的資源群組上線，或者資料庫管理員執行可用性群組的手動容錯移轉為止。 *「WSFC 失敗臨界值」* (WSFC Failure Threshold) 定義為可用性群組在給定的時間週期內支援的失敗次數上限。 預設的時間週期為六小時，而且在這段時間內失敗次數上限的預設值為 *n*-1，其中 *n* 是 WSFC 節點的數目。 若要變更給定可用性群組得失敗臨界值，請使用 WSFC 容錯移轉管理員主控台。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
+   
+##  <a name="Permissions"></a> 權限  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
-  
-|工作|[權限]|  
+|工作|權限|  
 |----------|-----------------|  
 |若要設定新可用性群組的彈性容錯移轉原則|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改現有可用性群組的原則|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  

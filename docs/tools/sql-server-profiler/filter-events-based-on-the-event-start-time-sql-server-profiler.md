@@ -13,15 +13,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d9156414506dadb0bf70dfeca237046c5bc7e1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa61ce726ce3e0610a3c1db8337c36054dc1b9e7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670106"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729952"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>依據事件開始時間篩選事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "47670106"
   
 ### <a name="to-filter-an-event-based-on-the-event-start-time"></a>若要依據事件開始時間篩選事件  
   
-1.  在 [檔案] 功能表上，按一下 [新增追蹤]，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+1.  在 [檔案]  功能表上，按一下 [新增追蹤]  ，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
-3.  在 [使用範本] 名稱清單中，選取追蹤範本。  
+3.  在 [使用範本]  名稱清單中，選取追蹤範本。  
   
 4.  選擇性地指定追蹤結果的目的地。  
   
-5.  在 [事件選取範圍] 索引標籤上，按一下 [開始時間] 資料行標題。 您也可以用滑鼠右鍵按一下資料行標題，然後按一下 [編輯資料行篩選] 以啟動 [編輯篩選] 對話方塊。  
+5.  在 [事件選取範圍]  索引標籤上，按一下 [開始時間]  資料行標題。 您也可以用滑鼠右鍵按一下資料行標題，然後按一下 [編輯資料行篩選]  以啟動 [編輯篩選]  對話方塊。  
   
-6.  展開 [大於] 或 [小於]，然後在比較運算子下出現的欄位中輸入 <日期時間> 值。  
+6.  展開 [大於]  或 [小於]  ，然後在比較運算子下出現的欄位中輸入 <日期時間>  值。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

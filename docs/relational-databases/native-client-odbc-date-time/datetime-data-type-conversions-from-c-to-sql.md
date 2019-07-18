@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030436"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417219"
 
   本主題列出問題需要考量當您從 C 類型轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間類型。  
   
- 下表描述的轉換會套用到用戶端上進行的轉換。 在其中用戶端指定的參數不同於伺服器上定義的小數秒有效位數的情況下，用戶端轉換可能會成功，但是伺服器會傳回錯誤時**SQLExecute**或**SQLExecuteDirect**呼叫。 特別是，ODBC 會將任何截斷的小數秒視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為是要捨入，例如四捨五入時，就會從**datetime2(6)** 到**datetime2(2)**. Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
+ 下表描述的轉換會套用到用戶端上進行的轉換。 在其中用戶端指定的參數不同於伺服器上定義的小數秒有效位數的情況下，用戶端轉換可能會成功，但是伺服器會傳回錯誤時**SQLExecute**或**SQLExecuteDirect**呼叫。 特別是，ODBC 會將任何截斷的小數秒視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為是要捨入，例如四捨五入時，就會從**datetime2(6)** 到**datetime2(2)** . Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417219"
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
--   **-**:不支援轉換。 產生含有 SQLSTATE 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
+-   **-** ：不支援轉換。 產生含有 SQLSTATE 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
   
 -   **1**:如果提供的資料無效，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的診斷記錄。  
   
@@ -57,11 +56,11 @@ ms.locfileid: "52417219"
   
 -   **3**:小數秒數必須為零，否則會產生含有 SQLSTATE 22008 和訊息「小數截略」的診斷記錄。  
   
--   **4**:忽略日期元件。  
+-   **4**：忽略日期元件。  
   
--   **5**:時區會設定為用戶端的時區設定。  
+-   **5**：時區會設定為用戶端的時區設定。  
   
--   **6**:時間會設定為零。  
+-   **6**：時間會設定為零。  
   
 -   **7**:日期會設定為目前的日期。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417219"
   
     ||||  
     |-|-|-|  
-    |類型|隱含的小數位數<br /><br /> 0|隱含的小數位數<br /><br /> 1..9|  
+    |type|隱含的小數位數<br /><br /> 0|隱含的小數位數<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      不過對於 SQL_C_TYPE_TIMESTAMP，如果可以用三位數代表小數秒而不會造成資料遺失，而且資料行大小為 23 以上，則會產生完整的三位數小數秒。 此行為可確保使用舊版 ODBC 驅動程式所開發之應用程式的回溯相容性。  

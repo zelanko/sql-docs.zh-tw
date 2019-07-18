@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1b74505591b2f883b6cc7541a89c485435d5bab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1811d46bb99b7cdb38bf6508d709826167f787f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925609"
 ---
 # <a name="data-shaping"></a>資料成形
 此章節包含下列主題。  

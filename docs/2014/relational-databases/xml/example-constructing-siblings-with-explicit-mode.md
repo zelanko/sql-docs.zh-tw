@@ -1,5 +1,5 @@
 ---
-title: 範例使用 EXPLICIT 模式建構同層級 |Microsoft Docs
+title: 範例使用 EXPLICIT 模式建構同層級 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704731"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>範例使用 EXPLICIT 模式建構同層級
   假設您想要建構提供銷售訂單資訊的 XML。 請注意，<`SalesPerson`> 與 <`OrderDetail`> 元素為同層級。 每個 Order 都有一個 <`OrderHeader`> 元素、一個 <`SalesPerson`> 元素，以及一或多個 <`OrderDetail`> 元素。  

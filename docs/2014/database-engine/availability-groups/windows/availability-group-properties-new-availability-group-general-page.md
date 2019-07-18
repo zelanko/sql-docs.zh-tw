@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815651"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性群組屬性和新增可用性群組 (一般頁面)
-  本主題適用於 [新增可用性群組] 對話方塊和 [可用性群組屬性] 對話方塊的 [一般] 索引標籤。  [新增可用性群組] 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性] 對話方塊可讓您檢視和改變現有可用性群組的組態。  
+  本主題適用於 [新增可用性群組]  對話方塊和 [可用性群組屬性]  對話方塊的 [一般]  索引標籤。  [新增可用性群組]  對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性]  對話方塊可讓您檢視和改變現有可用性群組的組態。  
   
  **若要檢視可用性群組屬性**  
   

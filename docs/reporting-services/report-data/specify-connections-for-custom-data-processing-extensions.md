@@ -2,7 +2,7 @@
 title: 為自訂資料處理延伸模組指定連線 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d55a57a1730abafa2f389c252be7c25681dbe89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f346427ee41f8049caa050aa49eda393dd304566
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575486"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>為自訂資料處理延伸模組指定連接
   您可以在報表伺服器中建立或使用協力廠商自訂資料處理延伸模組，以便強化支援之資料來源的資料處理功能，或支援預設 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝未提供的其他資料來源類型。 不同的實作，處理連接的方式也不同。 下列實作適用於資料處理延伸模組：  
@@ -58,7 +58,7 @@ ms.locfileid: "47664636"
   
 1.  設定自動執行帳戶。 若要利用 **IDbConnection**來進行連接，則必須設定此帳戶。 報表伺服器在進行連接時會模擬該帳戶。  
   
-2.  在報表中設定資料來源屬性來使用 **[無認證]**。  
+2.  在報表中設定資料來源屬性來使用 **[無認證]** 。  
   
 3.  將用於連接到資料來源的認證放在連接字串中。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47664636"
 ## <a name="see-also"></a>另請參閱  
  [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [設定報表的資料來源屬性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

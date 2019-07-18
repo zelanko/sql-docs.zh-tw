@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822378"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>使用已註冊的伺服器執行指定評估
+
   您可以使用已註冊的伺服器，針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個或多個執行個體執行最佳作法原則的指定評估。 您可以使用本機伺服器群組或中央管理伺服器。  
   
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "56030789"
   
 ### <a name="to-evaluate-best-practices-policies-against-a-server-group"></a>若要針對伺服器群組評估最佳做法原則  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]** 。  
   
 2.  依序展開**Database Engine**，然後展開**本機伺服器群組**，或**中央管理伺服器**，取決於您的設定。  
   
@@ -47,13 +48,13 @@ ms.locfileid: "56030789"
   
     -   若要評估的原則針對特定伺服器或伺服器群組，依序展開**本機伺服器群組**或中央管理伺服器名稱，以滑鼠右鍵按一下伺服器或您想要評估原則，然後按一下 伺服器群組**評估原則**。  
   
-4.  在 [**評估原則**] 對話方塊中的 [下一步**來源**方塊中，按一下省略符號 (**...**)] 按鈕。  
+4.  在 [**評估原則**] 對話方塊中的 [下一步**來源**方塊中，按一下省略符號 ( **...** )] 按鈕。  
   
 5.  在 [**選取來源**] 對話方塊中，您可以選取**檔案**或**Server**做為評估之原則檔案的來源。 如果您按一下**Server**，您可以執行任何先前已匯入至本機或遠端伺服器上的原則式管理的最佳作法原則的視需要評估。 在本教學課程中，您不需要按**檔案**，然後選取您想要評估的個別原則檔案。 若要這樣做，請遵循下列步驟：  
   
     1.  按一下 **檔案**。  
   
-    2.  旁**檔案**，按一下省略符號 (**...**) 按鈕。  
+    2.  旁**檔案**，按一下省略符號 ( **...** ) 按鈕。  
   
     3.  選取一或多個.xml 原則檔案來評估，然後按一下**開啟**。  
   

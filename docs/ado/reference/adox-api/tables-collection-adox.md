@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b9ae2422e9d0d3a776bf786f77be5c8c5025d21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965137"
 ---
 # <a name="tables-collection-adox"></a>Tables 集合 (ADOX)
 包含所有[資料表](../../../ado/reference/adox-api/table-object-adox.md)的目錄物件。  

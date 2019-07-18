@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759406"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790086"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 
@@ -51,10 +51,10 @@ ms.locfileid: "47759406"
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
-| timestamp          | BINARY                                             | byte[]                       |
+| TIMESTAMP          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
 | UNIQUEIDENTIFIER   | CHAR                                               | String                       |
@@ -81,7 +81,7 @@ ms.locfileid: "47759406"
   
 ## <a name="retrieving-data-by-data-type"></a>依資料類型擷取資料
 
-如果您必須從資料來源擷取資料，且您知道正在擷取的資料類型，請使用 SQLServerResultSet 類別的其中一個 get\<Type> 方法，也稱為「getter 方法」。 您可使用資料行名稱或資料行索引搭配 get\<Type> 方法，如下所示：  
+如果您必須從資料來源擷取資料，且您知道正在擷取的資料類型，請使用 SQLServerResultSet 類別的其中一個 get\<Type> 方法，也稱為「getter 方法」  。 您可使用資料行名稱或資料行索引搭配 get\<Type> 方法，如下所示：  
   
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47759406"
   
 ## <a name="updating-data-by-parameterized-query"></a>依參數化查詢更新資料
 
-如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」)，來設定參數的資料類型。 在下列範例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
+如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」  )，來設定參數的資料類型。 在下列範例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

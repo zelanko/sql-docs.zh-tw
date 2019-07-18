@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773294"
 ---
 # <a name="view-file-history"></a>檢視檔案記錄
   您可以使用**歷程記錄**命令來檢視原始檔控制檔案的版本記錄。 這個記錄包括檔案加入或簽入原始檔控制中的日期和時間。  

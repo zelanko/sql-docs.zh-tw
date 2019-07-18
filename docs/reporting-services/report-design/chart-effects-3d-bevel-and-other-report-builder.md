@@ -2,27 +2,27 @@
 title: 圖表中的 3D、斜面和其他效果 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8b1c5bc212be33c352110694b4bc9c12f715b33c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3d6f854eff07947e16a929acec1c20011dcf0b4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581701"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>圖表效果 - 3D、斜面和其他 (報表產生器)
   三維 (3D) 效果可用來針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中的圖表提供深度及增加視覺效果。 例如，若要強調分裂式圓形圖的特殊扇區，則可以旋轉及變更圖表的檢視方塊，讓使用者能首先注意該扇區。 將 3D 效果套用至圖表時，所有的漸層色彩和影線樣式都會停用。  
   
  您可以將三維效果套用至個別的圖表，也可以同時在相同報表上顯示二維和三維圖表。  
   
- 您可以針對所有的圖表類型選取 [圖表區域屬性] 對話方塊中的 [啟用 3D]，以對圖表區域新增三維效果。 如需詳細資訊，請參閱 [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)。  
+ 您可以針對所有的圖表類型選取 [圖表區域屬性]  對話方塊中的 [啟用 3D]  ，以對圖表區域新增三維效果。 如需詳細資訊，請參閱 [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)。  
   
  另一種對圖表加入視覺效果的方式是在直條圖、橫條圖、圓形圖及環圈圖中加入按鈕形、浮凸和材質樣式。 如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   

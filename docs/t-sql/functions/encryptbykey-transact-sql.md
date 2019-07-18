@@ -18,15 +18,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: e0883513725000588fe53ee31939f331902ba147
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948878"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密函數與 ANSI_PADDING OFF 設定一起使用，可能會因為隱含轉換而造成資料遺失。 如需 ANSI_PADDING 的詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例所示範的功能，必須仰賴＜[如何：加密資料行](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)。  
+ 下列範例所示範的功能，仰賴此文中建立的金鑰和憑證：[如何：加密資料行](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)。  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 使用對稱金鑰加密字串  
  下列範例會在 `Employee` 資料表加入一個資料行，並將資料行 `NationalIDNumber` 中所儲存的社會保險號碼值加密。  

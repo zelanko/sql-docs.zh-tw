@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
@@ -15,12 +14,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffa8ddeeb208be956fc072d45f10edacf97b52be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075183"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多維度模型中的維度
   資料庫維度是相關物件的集合 (稱為屬性)，可用來提供與一或多個 Cube 中的事實資料有關的資訊。 例如，產品維度中的典型屬性可能是產品名稱、產品類別目錄、產品線、產品尺寸和產品價格； 這些物件會繫結到資料來源檢視中一或多個資料表內的一或多個資料行， 依預設，這些屬性可以顯示為屬性階層，而且可用來了解 Cube 中的事實資料。 屬性可以組成使用者自訂階層，在使用者瀏覽 Cube 中的資料時，提供導覽路徑來協助使用者。  

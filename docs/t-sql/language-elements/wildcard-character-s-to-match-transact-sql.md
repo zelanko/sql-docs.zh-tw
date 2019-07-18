@@ -18,16 +18,16 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 4f9dd3de156ee0c3c8f916a7282fae4d8a5d7da3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982498"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (萬用字元 - 相符的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

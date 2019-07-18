@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126397"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +39,19 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publisher** =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  名稱的非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，沒有預設值。  
   
- [**@schema** =] **'***結構描述***'**  
+ [ **@schema** =] **'***結構描述***'**  
  這是結構描述的名稱。 *結構描述*已**sysname**，預設值是 NULL。  
   
- [**@operation** =] **'***作業***'**  
- 這是在此結構描述上所要採取的動作。 *作業*已**nvarchar(4)**，而且可以是下列值之一。  
+ [ **@operation** =] **'***作業***'**  
+ 這是在此結構描述上所要採取的動作。 *作業*已**nvarchar(4)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**add**|將指定的結構描述加入不適合發行的結構描述清單中。|  
-|**卸除**|從不適合發行的結構描述清單中，卸除指定的結構描述。|  
+|**drop**|從不適合發行的結構描述清單中，卸除指定的結構描述。|  
 |**說明**|傳回不適合發行的結構描述清單。|  
   
 ## <a name="result-sets"></a>結果集  

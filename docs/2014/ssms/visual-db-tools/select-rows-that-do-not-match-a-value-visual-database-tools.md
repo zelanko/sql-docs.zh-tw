@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067534"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>選取不符合某值的資料列 (Visual Database Tools)
   若要尋找不符合某值的資料列，請使用 NOT 運算子。  
@@ -29,7 +29,7 @@ ms.locfileid: "52808030"
   
 1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式新增至[準則窗格](visual-database-tools.md)中。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件] 方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]  方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
   
  例如，若要尋找 `products` 資料表中產品代碼資料行不是以 "A," 為開頭的所有資料列，則可以輸入如下所示的搜尋條件：  
   

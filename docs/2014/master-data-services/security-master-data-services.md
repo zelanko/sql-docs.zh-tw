@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ee6fd4fbf047ecb29dae4f35fe3bbbf5a3f9da61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 80be0aea6705ed98fd12ea3481af59e289b94604
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482579"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全性可確保使用者具有執行工作所需之特定主要資料的存取權，並避免使用者存取不應使用的資料。  
@@ -31,7 +31,7 @@ ms.locfileid: "52778380"
   
 -    在 [總管] 功能區域中存取資料的使用者。  
   
--   可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)。  
+-    可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何設定安全性  
  若要提供存取 MDS 之資料或功能的使用者或群組權限，您必須指派：  
@@ -40,7 +40,7 @@ ms.locfileid: "52778380"
   
 -   [模型物件權限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，決定使用者可以存取的屬性，以及使用者對這些屬性的存取權類型 (讀取或更新)。  
   
--   [](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(選擇性) 階層成員權限，決定使用者可以存取的成員，以及使用者對這些成員的存取權類型 (讀取或更新)。  
+-   [階層成員權限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(選擇性) ，決定使用者可以存取的成員，以及使用者對這些成員的存取權類型 (讀取或更新)。  
   
  將權限指派給屬性和成員時，權限會交集，此時規則會決定優先使用的權限。 如需詳細資訊，請參閱 [如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)。  
   

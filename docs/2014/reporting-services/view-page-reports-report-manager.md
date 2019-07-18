@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031629"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098733"
 ---
 # <a name="view-page-reports-report-manager"></a>檢視頁面，報表 (報表管理員)
   使用報表的 [檢視] 頁面來檢視報表。 當您在「報表管理員」中第一次開啟報表時，它的格式為 HTML。 HTML 報表包含報表工具列，會顯示在報表的最上方，讓您能用來導覽報表頁面、在報表內進行搜尋，或是將報表匯出成不同的格式。 下列圖表顯示報表工具列。  

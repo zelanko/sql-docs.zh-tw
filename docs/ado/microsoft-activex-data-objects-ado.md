@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921874"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
-ADO 用於 c + + 程式中，以連接到 SQL Server。 當然，它也可以連接到 Azure SQL Database 在雲端中。
+ADO 會在C++程式來連線到 SQL Server。 當然，它也可以連接到 Azure SQL Database 在雲端中。
 
 這篇文章中的每個區段描述 ADO 的元件。
 
@@ -34,7 +33,7 @@ ADO 用於 c + + 程式中，以連接到 SQL Server。 當然，它也可以連
  Microsoft ActiveX Data Objects (ADO) 可讓用戶端應用程式存取和處理來自各種來源透過 OLE DB 提供者的資料。 其主要優點是方便使用、 高速、 低記憶體額外負荷，以及較小的磁碟使用量。 ADO 支援建置用戶端/伺服器和 Web 為基礎的應用程式的主要功能。  
   
 ## <a name="ado-md"></a>ADO MD  
- Microsoft ActiveX Data Objects （多維度） (ADO MD) 多維度資料可輕鬆存取，從 Microsoft Visual Basic 和 Microsoft Visual c + + 等語言。 ADO MD 擴充 Microsoft ActiveX Data Objects (ADO) 來包含專屬於多維度資料，例如 CubeDef 和資料格集物件的物件。 使用 ADO MD 中，您可以瀏覽多維度的結構描述、 查詢 cube，並擷取結果。  
+ Microsoft ActiveX Data Objects （多維度） (ADO MD) 讓您輕鬆存取多維度資料從語言，例如 Microsoft Visual Basic 和 Microsoft Visual C++。 ADO MD 擴充 Microsoft ActiveX Data Objects (ADO) 來包含專屬於多維度資料，例如 CubeDef 和資料格集物件的物件。 使用 ADO MD 中，您可以瀏覽多維度的結構描述、 查詢 cube，並擷取結果。  
   
  ADO 中，例如 ADO MD 使用基礎的 OLE DB 提供者來存取資料。 若要使用 ADO MD，OLE DB for OLAP 規格所定義的提供者時，必須為多維度資料提供者 (MDP)。 MDPs 表格式檢視中，該有的資料將呈現多維度的檢視，而不是表格式資料提供者 (TDPs) 中的資料。 請參閱您的特定語法和行為，您的提供者所支援的詳細資訊的 OLAP OLE DB 提供者的文件。  
   

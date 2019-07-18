@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7dbadd4bbca881c663d673eeb2e9a81309ae4f87
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 38925e2bd1355b9061de9c1ad5b68a61026cfff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072564"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue 方法 (ClientNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ object.SetStringValue(StrValue)
   
 |參數|描述|  
 |---------------|-----------------|  
-|*strValue*|指定目前屬性之新值的字串值。|  
+|*StrValue*|指定目前屬性之新值的字串值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  

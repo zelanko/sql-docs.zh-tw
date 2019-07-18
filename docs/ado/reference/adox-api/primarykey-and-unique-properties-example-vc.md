@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7d8943249f6780de448e4eb22dcd3088dbc55bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b81ad98725bb48fe03e472cdf5cfdbbf047aaef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965533"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 和 Unique 屬性範例 (VC++)
 此範例示範[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)並[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的資料表，兩個資料行。 **PrimaryKey**並**Unique**屬性用來讓一個資料行不允許重複的值是主索引鍵。  

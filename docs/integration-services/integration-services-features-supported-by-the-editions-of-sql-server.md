@@ -11,14 +11,18 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d1b99431f48d9bbf9b53bb57f1b0bcf2291a6c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5207da1170eea9cfbd90d9461776131f738cd3d9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723613"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  本主題提供不同 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]版本所支援之 SQL Server Integration Services (SSIS) 功能的詳細資訊。  
 
 如需 Evaluation 和 Developer Edition 所支援的功能，請參閱下列各表中針對 Enterprise Edition 所列的功能。

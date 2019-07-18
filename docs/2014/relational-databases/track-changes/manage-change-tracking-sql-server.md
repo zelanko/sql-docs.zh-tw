@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670839"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
   本主題描述如何管理變更追蹤。 此外，本主題也會描述如何設定安全性，以及判斷使用變更追蹤對儲存和效能產生的影響。  

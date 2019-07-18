@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a333aa44d0424c0fe612b7790ce77cabe6fca585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48e9c526f4045a4657d7942f3fabcace349cc3ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951780"
 ---
 # <a name="what39s-new-in-odbc-38"></a>什麼&#39;ODBC 3.8 的新功能
 Windows 8 包含 ODBC 3.8 的更新的版本。 Windows 8 中的 ODBC 3.8 包含下列功能：  

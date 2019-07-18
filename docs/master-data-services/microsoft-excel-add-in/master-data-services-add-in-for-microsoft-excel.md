@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074593"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
 
@@ -31,6 +30,7 @@ ms.locfileid: "52617598"
 ## <a name="downloads"></a>下載 
 >*  從[此 Microsoft 下載中心頁面](https://www.microsoft.com/download/details.aspx?id=56838)下載適用於 Excel 的 SQL Server 2016 SP2 Master Data Services 增益集。 
 >* 從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836867)下載適用於 SQL Server 2017 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。
+>*  Master Data Services 增益集下載適用於 Excel 的 SQL Server 2019 ctp[這個 Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=2086948)。 
  
   
 ## <a name="terms"></a>詞彙  
@@ -44,7 +44,7 @@ ms.locfileid: "52617598"
   
 -   *entity* 是指資料的清單。 您可以將實體視為資料庫中的資料表。  例如，Color 實體可能會包含色彩的清單。 如需詳細資訊，請參閱[實體 &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)。  
   
--   「成員」是指資料列 (記錄)。 每個實體都包含成員。 **Blue**是成員的範例。 如需詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
+-   「成員」  是指資料列 (記錄)。 每個實體都包含成員。 **Blue**是成員的範例。 如需詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
   
 -   *attribute* 是指資料行。 每個成員都具有屬性。 例如，**Blue** 成員的 **Code** 屬性是 **B**。如需屬性的詳細資訊，請參閱[屬性 &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52617598"
   
 -   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [驗證資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

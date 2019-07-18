@@ -15,14 +15,18 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18d4e70daf68267675678803134b3f04c0c48f24
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea9c422f19554c1e88852eaad1cfa91c00db5f5c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65718102"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會將各種訊息記錄至 Windows 應用程式事件記錄檔。 當服務啟動、停止以及發生特定問題時，此服務就會記錄這些訊息。  
   
  本主題會提供服務記錄至應用程式事件記錄檔之常見事件訊息的相關資訊。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會記錄這個主題所描述而且事件來源為 SQLISService 的所有訊息。  

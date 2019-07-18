@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63055248"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>設定 PowerPivot 及部署方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52400012"
   
  請以安裝 SharePoint 的帳戶登入或將安裝帳戶設定為 SharePoint 管理中心網站的主要管理員。  
   
-1.  在 [開始] 功能表上，依序選取 [所有程式]、[[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、[組態工具] 和 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2016 組態]。 只有在本機伺服器上安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 時，才會列出這些工具。  
+1.  在 [開始]  功能表上，依序選取 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、[組態工具]  和 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2016 組態]  。 只有在本機伺服器上安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 時，才會列出這些工具。  
   
-2.  選取 [設定或修復 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint]，然後選取 [確定]。  
+2.  選取 [設定或修復 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint]  ，然後選取 [確定]  。  
   
-3.  此工具會執行驗證，以確認 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的目前狀態，而且需要哪些步驟來完成組態。 將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
+3.  此工具會執行驗證，以確認 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 的目前狀態，而且需要哪些步驟來完成組態。 將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]** 、 **[執行]** 和 **[結束]** 命令。  
   
 4.  在 **[參數]** 索引標籤上：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52400012"
   
 5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每一項的詳細資訊，請參閱下節 「 輸入值用來設定中的伺服器[Configure or Repair Power Pivot for SharePoint 2010 （Power Pivot 組態工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)本主題中。  
   
-6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請選取 [設定 Secure Store Service] ，然後清除 [在工作清單中包含這個動作] 核取方塊。  
+6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請選取 [設定 Secure Store Service]  ，然後清除 [在工作清單中包含這個動作]  核取方塊。  
   
 7.  選取 [驗證]  ，檢查此工具是否有足夠的資訊來處理清單中的動作。 如果您看到驗證錯誤，請按一下左窗格中的警告，查看驗證錯誤的詳細資料。 更正任何驗證錯誤，然後再選取 [驗證]  。  
   
@@ -64,15 +64,15 @@ ms.locfileid: "52400012"
 ##  <a name="bkmk_verify_powerpivot"></a> 驗證 PowerPivot 組態  
  **服務：**  
   
-1.  在管理中心的 [系統設定] 中，選取 [管理伺服器上的服務] 。  
+1.  在管理中心的 [系統設定] 中，選取 [管理伺服器上的服務]  。  
   
-2.  確認已啟動 [SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系統服務]。  
+2.  確認已啟動 [SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系統服務]  。  
   
  **伺服器陣列功能：**  
   
-1.  在管理中心的 [系統設定] 中，選取 [管理伺服器陣列功能] 。  
+1.  在管理中心的 [系統設定] 中，選取 [管理伺服器陣列功能]  。  
   
-2.  確認 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 整合功能] 為 [使用中]。  
+2.  確認 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 整合功能]  為 [使用中]  。  
   
  **網站集合功能：**  
   
@@ -80,15 +80,15 @@ ms.locfileid: "52400012"
   
      選取 **設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下**站台設定**。  
   
-     選取 [網站集合功能] 。  
+     選取 [網站集合功能]  。  
   
-2.  確認 [網站集合的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能整合] 為 [使用中]。  
+2.  確認 [網站集合的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能整合]  為 [使用中]  。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式：**  
   
-1.  在管理中心的 [應用程式管理] 中，選取 [管理服務應用程式] 。  
+1.  在管理中心的 [應用程式管理]  中，選取 [管理服務應用程式]  。  
   
-2.  確認服務應用程式狀態為 **[已啟動]**。 預設名稱是 [預設的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式]。  
+2.  確認服務應用程式狀態為 **[已啟動]** 。 預設名稱是 [預設的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式]  。  
   
      選取服務應用程式的名稱，即可針對已開啟的服務應用程式開啟 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板。 在第一次使用時，需要數分鐘才能載入儀表板。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "52400012"
 ##  <a name="bkmk_troubleshoot_issues"></a> 疑難排解問題  
  為了協助疑難排解問題，建議您最好先確認診斷記錄是否已啟用。  
   
-1.  在 SharePoint 管理中心內，按一下 [監視]  ，然後選取 [設定 Usage and Health Data Collection] 。  
+1.  在 SharePoint 管理中心內，按一下 [監視]  ，然後選取 [設定 Usage and Health Data Collection]  。  
   
 2.  確認已選取 **[啟用使用狀況資料收集]** 。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "52400012"
   
 4.  確認已選取 **[啟用健康情況資料收集]** 。  
   
-5.  選取 [確定]。  
+5.  選取 [確定]  。  
   
- 如需有關疑難排解資料重新整理的詳細資訊，請參閱 < [Power Pivot 資料重新整理疑難排解](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 如需有關疑難排解資料重新整理的詳細資訊，請參閱 < [Power Pivot 資料重新整理疑難排解](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 。  
   
  如需組態工具的詳細資訊，請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

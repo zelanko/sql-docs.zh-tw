@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.precedenceconstraint.f1
@@ -15,22 +14,22 @@ ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056691"
 ---
 # <a name="precedence-constraint-editor"></a>優先順序條件約束編輯器
   使用 **[優先順序條件約束編輯器]** 對話方塊，即可設定優先順序條件約束。  
   
 ## <a name="options"></a>選項。  
  **評估作業**  
- 指定優先順序條件約束所使用的評估作業。 作業為：**條件約束**，**運算式**，**運算式與條件約束**，和**運算式或條件約束**。  
+ 指定優先順序條件約束所使用的評估作業。 這些作業有：[條件約束]、[運算式]、[運算式與條件約束]，以及 [運算式或條件約束]。  
   
  **值**  
- 指定的條件約束值：**成功**，**失敗**，或**完成**。  
+ 指定條件約束值：[成功]、[失敗] 或 [完成]。  
   
 > [!NOTE]  
 >  優先順序條件約束線條若是綠色代表 [成功]，反白顯示代表 [失敗]，而藍色代表 [完成]。  

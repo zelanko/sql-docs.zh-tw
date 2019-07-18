@@ -12,15 +12,15 @@ helpviewer_keywords:
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1d6c5b9f013fb9ff2fb7114df0bd306d9c1e2b44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 43bcfa304979b918d9588c8bdd8bd07f9296fa5f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651996"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682166"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自動聯結資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

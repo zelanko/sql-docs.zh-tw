@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcbeb69fee36b3b38ec07de338e2624d3695c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 916a3c318cf96fa5114b7e0e6bc1a3caae815d4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840776"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800547"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47840776"
   
  **套件：** com.microsoft.sqlserver.jdbc  
   
- **實作：**[ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)、DataSource、java.io.Serializable、javax.naming.Referenceable  
+ **實作：** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)、DataSource、java.io.Serializable、javax.naming.Referenceable  
   
 ## <a name="syntax"></a>語法  
   

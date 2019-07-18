@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 41ff4c51d3dc357f253a42689565849f07235ff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685565"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162143"
 ---
 # <a name="mark-as-date-table"></a>標記為日期資料表
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685565"
 
 您將標記日期資料表和日期資料行之前，它是進行一些內部管理，讓您的模型更容易了解的好時機。 請注意 DimDate 資料表中的資料行**FullDateAlternateKey**。 此資料行包含一個資料列加入資料表中每個日曆年度中每一天。 您使用此資料行很多量值公式和報告中。 但是，FullDateAlternateKey 並不是此資料行的理想識別項。 您將它重新命名**日期**，讓您更輕鬆地識別和納入公式中。 可能的話，它是個不錯的主意，若要重新命名物件，例如資料表和資料行，以便於識別無法在 SSDT 和用戶端報表應用程式。 
   
-完成本課程的估計時間：**3 分鐘**  
+估計的時間才能完成這一課：**3 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -44,11 +44,11 @@ ms.locfileid: "57685565"
   
 ### <a name="to-set-mark-as-date-table"></a>設定標記為日期資料表  
   
-1.  選取 [日期] 資料行，然後在 [屬性] 視窗的 [資料類型] 下方，確定已選取 [日期]。  
+1.  選取 [日期]  資料行，然後在 [屬性]  視窗的 [資料類型]  下方，確定已選取 [日期]  。  
   
-2.  依序按一下 [資料表] 功能表、[日期] 和 [標記為日期資料表]。  
+2.  依序按一下 [資料表]  功能表、[日期]  和 [標記為日期資料表]  。  
   
-3.  在 [標記為日期資料表] 對話方塊的 [日期] 清單方塊中，選取 [日期] 資料行當作唯一識別碼。 它通常會選取預設值。 按一下 [確定] 。 
+3.  在 [標記為日期資料表]  對話方塊的 [日期]  清單方塊中，選取 [日期]  資料行當作唯一識別碼。 它通常會選取預設值。 按一下 [確定 **Deploying Office Solutions**]。 
 
     ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   

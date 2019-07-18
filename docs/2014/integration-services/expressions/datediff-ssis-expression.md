@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898083"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
   傳回跨越兩個指定日期的日期和時間界線數目。 *datepart* 參數會識別要比較的日期和時間界線。  

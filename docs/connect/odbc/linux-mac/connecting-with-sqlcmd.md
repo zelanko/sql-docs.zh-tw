@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789886"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -65,7 +65,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k 移除或取代控制字元。  
   
 - **-K**_應用程式\_意圖_  
-宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，`sqlcmd` 即不支援對 AlwaysOn 可用性群組中的次要複本進行連線。 如需詳細資訊，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，`sqlcmd` 即不支援對 AlwaysOn 可用性群組中的次要複本進行連線。 如需詳細資訊，請參閱 [Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > CTP for SUSE Linux 不支援 **-K** 。 不過，您可以在傳遞至 `sqlcmd` 的 DSN 檔案中指定 **ApplicationIntent=ReadOnly** 關鍵字。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  

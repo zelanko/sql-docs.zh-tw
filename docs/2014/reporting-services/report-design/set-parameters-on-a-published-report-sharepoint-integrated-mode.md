@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6a863eb3ce1fe549664a864aebacb756eeea87c9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105020"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>在已發行的報表上設定參數 (SharePoint 整合模式中的 Reporting Services)
   參數化報表是指可接受輸入值的報表，而這些輸入值會在您執行報表時用來篩選資料。 參數是在報表建立時定義的。 根據報表參數在報表定義中的定義方式，它可能會接受單一值、多個值或動態值，而這些值會變更以便回應之前的選取項目 (例如，當您選取產品類別目錄時，下一個選取項目可能是來自該類別目錄的特定產品)。 參數可能會有預設值，而且此值可用來自動執行已篩選的報表版本或可能由不同的值取代。  
@@ -46,11 +45,11 @@ ms.locfileid: "56294736"
   
     3.  如果 [參數] 區域已隱藏，您就無法指定值。  
   
-4.  在 [參數] 區域底部按一下 [套用] 以執行報表。  
+4.  在 [參數] 區域底部按一下 [套用]  以執行報表。  
   
      有時候，指定了值的組合可能也無法提供您所預期的結果。 如果您沒有取得所需的資訊，可能就需要由報表作者修改報表。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ### <a name="to-set-parameter-properties"></a>設定參數屬性  
   
@@ -58,29 +57,29 @@ ms.locfileid: "56294736"
   
 2.  指向報表，然後按一下向下箭號。  
   
-3.  按一下 [管理參數]。 如果報表包含參數，每個參數都會列在頁面上。 此清單會顯示參數名稱、資料類型、預設使用的資料值，以及開啟報表時它是否會顯示在參數區域中。  
+3.  按一下 [管理參數]  。 如果報表包含參數，每個參數都會列在頁面上。 此清單會顯示參數名稱、資料類型、預設使用的資料值，以及開啟報表時它是否會顯示在參數區域中。  
   
 4.  按一下清單中的參數，即可修改其設定。  
   
 5.  在 [預設值] 中，輸入參數的值。 由於此值將不會進行驗證，因此請確定您提供了適用於報表的值。  
   
-    1.  如果您要使用建立報表時所定義的預設值，請選擇 [使用報表定義中指定的值運算式]。 如果報表定義不提供預設值，將無法使用此選項。  
+    1.  如果您要使用建立報表時所定義的預設值，請選擇 [使用報表定義中指定的值運算式]  。 如果報表定義不提供預設值，將無法使用此選項。  
   
-    2.  如果您要為報表定義預設值指定一個取代值，請選擇 [覆寫報表預設值]。 對於接受 Null 值的報表參數，您可以根據該參數，選擇性地選取 [Null] 核取方塊以防止篩選。  
+    2.  如果您要為報表定義預設值指定一個取代值，請選擇 [覆寫報表預設值]  。 對於接受 Null 值的報表參數，您可以根據該參數，選擇性地選取 [Null]  核取方塊以防止篩選。  
   
-    3.  如果您想讓每位使用者指定值，然後再處理報表，請選擇 [參數沒有預設值]。 如果您選取這個選項，就應該設定提示使用者指定值的顯示設定。  
+    3.  如果您想讓每位使用者指定值，然後再處理報表，請選擇 [參數沒有預設值]  。 如果您選取這個選項，就應該設定提示使用者指定值的顯示設定。  
   
      請注意，如果所有參數值都具有預設值，當使用者開啟報表時，報表將會使用這些值自動執行。 不過，如果有顯示參數區域，使用者可以覆寫預設值，然後重新執行報表。  
   
 6.  您可以設定顯示選項，以便決定參數是否會顯示。  
   
-    1.  選擇 [提示使用者]，即可在頁面上顯示參數。 您可以指定出現在欄位中的提示文字，以提供關於使用者必須提供之資料格式或類型的簡短說明。  
+    1.  選擇 [提示使用者]  ，即可在頁面上顯示參數。 您可以指定出現在欄位中的提示文字，以提供關於使用者必須提供之資料格式或類型的簡短說明。  
   
-    2.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域中，請選擇 [隱藏]。  
+    2.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域中，請選擇 [隱藏]  。  
   
-    3.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域或訂閱頁面上，請選擇 [內部]。  
+    3.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域或訂閱頁面上，請選擇 [內部]  。  
   
-7.  按一下 **[套用]**。  
+7.  按一下 **[套用]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bcd63c8e3d7c02ef28ee27eda04483c46dad6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7054852982534bf0832f10694a59173ee3433b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106129"
 ---
 # <a name="using-cursors-odbc"></a>使用資料指標 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47636186"
   
  這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼和 ODBC 應用程式如何搭配資料指標使用的比較。  
   
-|動作|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |定義資料指標行為|指定透過 DECLARE CURSOR 參數|使用設定資料指標屬性[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
 |開啟資料指標|宣告資料指標開啟*cursor_name*|**SQLExecDirect**或**SQLExecute**|  

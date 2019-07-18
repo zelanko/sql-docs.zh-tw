@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37cdeede0497257012e73916ae7a4eddba11695c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 29fdd586004d866c3f662f69777510931359b135
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787376"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681645"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>中斷與註冊伺服器的連接 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "47787376"
   
 #### <a name="to-disconnect-from-a-registered-server"></a>若要中斷與註冊伺服器的連接  
   
--   在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [中斷連接]，或在物件總管工具列上，按一下 [中斷連接] 圖示。  
+-   在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [中斷連接]  ，或在物件總管工具列上，按一下 [中斷連接]  圖示。  
   
   

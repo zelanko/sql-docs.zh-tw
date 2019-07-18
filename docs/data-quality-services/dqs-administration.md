@@ -12,15 +12,14 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a84ff61d1656743953f5f854a1b658b303a7acf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992126"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 

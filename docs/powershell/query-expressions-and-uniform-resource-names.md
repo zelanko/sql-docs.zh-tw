@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 3ada8c5996f0324d3d1f623981b7f83f8f0aa804
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256473"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730601"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
 
@@ -29,7 +29,7 @@ ms.locfileid: "54256473"
 
 > [!NOTE]
 > 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
-> 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
+> 舊版 **SqlServer** 模組隨附於  SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
 > 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
   
@@ -116,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
   
- 如果未針對物件指定 *\<FilterExpression>*，就會列舉該節點上的所有物件。  
+ 如果未針對物件指定 *\<FilterExpression>* ，就會列舉該節點上的所有物件。  
   
 ## <a name="uniform-resource-names-urn"></a>統一資源名稱 (URN)  
  URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  

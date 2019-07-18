@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 925812e534afed0555c03a36e7d317a92163e5b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cc02137e23c3871066c01ae1a7e9655232c349c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032906"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

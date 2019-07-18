@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63021941"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
   如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]訂閱者清單，請參閱＜ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)＞。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  

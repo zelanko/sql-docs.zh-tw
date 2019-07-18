@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: faf9af4fee3d49dfacaea9ab6e73daef0d56465f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107899"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_OADestroy objecttoken
  如果**sp_OADestroy**不呼叫時，建立批次的結尾會自動終結 OLE 物件。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
+ 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
   
 ## <a name="examples"></a>範例  
  下列範例會終結之前建立**SQLServer**物件。  

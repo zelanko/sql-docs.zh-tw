@@ -17,14 +17,18 @@ ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e028b0ae0c9bd72b6b7d561b2ce316bd765cde8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2a90017caa4a5c556924756696b61f2686f57ba3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727526"
 ---
 # <a name="notify-operator-task"></a>通知操作員工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「通知操作員」工作會傳送通知訊息給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員是可接收電子通知的人員或群組使用的別名。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運算子的詳細資訊，請參閱 [運算子](../../ssms/agent/operators.md)。  
   
  藉由使用「通知操作員」工作，封裝即可透過電子郵件、呼叫器或 **網路傳送**通知一或多位操作員。 每一位操作員都可藉由不同的方法收到通知。 例如，OperatorA 可藉由電子郵件和呼叫器收到通知，而 OperatorB 則藉由呼叫器和 **網路傳送**收到通知。 從工作接收通知的操作員必須為「通知操作員」工作上 **OperatorNotify** 集合的成員。  

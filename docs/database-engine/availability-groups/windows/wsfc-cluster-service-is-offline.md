@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7fbd042ac7b8adb337500f956d865f4ece6bbc57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780105"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
 

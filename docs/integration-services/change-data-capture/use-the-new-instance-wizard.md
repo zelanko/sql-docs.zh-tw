@@ -11,14 +11,18 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75735a8f7bbcd442bd67b550b096732abcaf8544
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d77c5c6b1c0402a277eda9da944199b3f11301d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728464"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   新增執行個體精靈是用來建立 CDC 服務的新執行個體。 您會從 CDC 設計工具主控台開啟 [建立 Oracle CDC 執行個體] 精靈。 您可以在新增執行個體精靈中執行以下動作。  
   
 -   [建立 SQL Server 變更資料庫](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  

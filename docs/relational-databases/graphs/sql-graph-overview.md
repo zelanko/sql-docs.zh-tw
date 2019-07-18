@@ -1,7 +1,7 @@
 ---
 title: 圖形處理與 SQL Server 和 Azure SQL Database |Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: eb84f1cc40a05078910d10a48de67f1ac3467fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035906"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 節點和邊緣會儲存為資料表  
 
 ### <a name="query-language-extensions"></a>查詢語言擴充功能  
-新`MATCH`子句為了要支援模式比對和多重躍點瀏覽圖形。 `MATCH`函式會使用 ASCII 作品樣式語法進行模式比對。 例如：  
+新`MATCH`子句為了要支援模式比對和多重躍點瀏覽圖形。 `MATCH`函式會使用 ASCII 作品樣式語法進行模式比對。 例如:  
 
 ```   
 -- Find friends of John
@@ -84,6 +83,9 @@ AND Person1.Name = 'John';
 [合併](../../t-sql/statements/merge-transact-sql.md)陳述式會執行插入、 更新或刪除與來源資料表聯結的結果為基礎的目標資料表上的作業。 例如，您可以同步處理兩個資料表插入、 更新或刪除根據目標資料表與來源資料表之間的差異在目標資料表中的資料列。 Azure SQL Database 和 SQL Server vNext 現在支援使用 MERGE 陳述式中的相符項目述詞。 也就是說，現可使用符合述詞來指定在單一陳述式，而不是個別的 INSERT/UPDATE/DELETE 陳述式中的圖形關聯性的新資料與合併您目前的圖表資料 （節點或邊緣資料表）。
 
 若要了解如何使用相符項目，在合併 DML 參閱[MERGE 陳述式](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>最短的路徑
+[SHORTEST_PATH](./sql-graph-shortest-path.md)函式會尋找任何圖形或從指定的節點開始，到圖形中的所有其他節點中的 2 個節點之間最短路徑。 最短路徑也可用來尋找可轉移關閉或任意長度周遊圖形中。 
 
  ## <a name="next-steps"></a>後續步驟  
 讀取[SQL 圖形資料庫架構](./sql-graph-architecture.md)

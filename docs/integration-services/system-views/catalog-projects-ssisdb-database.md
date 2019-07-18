@@ -11,14 +11,18 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2449f23a910e3b7db39a7190077d8a636d51bd3e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b18b2bdd034cf5d6864ddb4e652eda0266758a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714434"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 **SSISDB** 目錄中出現的所有專案顯示詳細資料。  

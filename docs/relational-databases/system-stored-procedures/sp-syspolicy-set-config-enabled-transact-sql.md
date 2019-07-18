@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cc78d8620bdb4f8b028bc188f115ed3f1f1d2318
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e6b2b64e5a29d6c0f8a072f79714f86fc45bc973
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035485"
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

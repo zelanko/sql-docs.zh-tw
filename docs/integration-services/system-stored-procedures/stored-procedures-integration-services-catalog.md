@@ -13,14 +13,18 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1065b6ce1d57bd52ed306a54b166334df998d6e8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 93eebaef840f3a1030c7f1f625db2ab93f12f12d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805273"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本節描述可用來管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 專案 (已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的執行個體) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: efab3218e3b4ee94af22c5fe52c9c4183666c54d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479928"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立模型以包含模型物件。  
@@ -30,21 +30,21 @@ ms.locfileid: "52794990"
   
 ### <a name="to-create-a-model"></a>若要建立模型  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]** 。  
   
 3.  在 **模型維護**頁面上，按一下**Add model**。  
   
 4.  在 **模型名稱**方塊中，輸入模型的名稱。  
   
-5.  (選擇性) 選取 [建立與模型同名的實體]，建立與模型同名的實體。  
+5.  (選擇性) 選取 [建立與模型同名的實體]  ，建立與模型同名的實體。  
   
 6.  （選擇性） 選取**建立與模型同名的明確階層**來建立與模型同名的明確階層。 這個選項也會啟用集合的實體。  
   
 7.  （選擇性） 選取**強制階層 (已包含所有分葉成員**，明確階層建立為強制階層。  
   
-8.  按一下 **[儲存模型]**。  
+8.  按一下 **[儲存模型]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

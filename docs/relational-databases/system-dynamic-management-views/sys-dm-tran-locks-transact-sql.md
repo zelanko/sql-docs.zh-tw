@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f68abdfc2458284927cab68efad9c0b23eabe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32140a9ef5b1a8965876c4ee30fe72559ba8b7ce
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681986"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262619"
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47681986"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|代表資源類型。 這個值可以是下列值之一：DATABASE、FILE、OBJECT、PAGE、KEY、EXTENT、RID、APPLICATION、METADATA、HOBT 或 ALLOCATION_UNIT。|  
+|**resource_type**|**nvarchar(60)**|代表資源類型。 這個值可以是下列值之一：資料庫、 檔案、 物件、 頁面、 索引鍵、 範圍、 RID、 應用程式、 中繼資料、 HOBT 或 ALLOCATION_UNIT。|  
 |**resource_subtype**|**nvarchar(60)**|表示的子型別**resource_type**。 在技術上即使不保留父類型的非子類型鎖定，它也可以取得子類型鎖定。 不同的子類型，並不會彼此衝突，也不會與非子類型的父類型相衝突。 不過並非所有的資源類型都有子類型。|  
 |**resource_database_id**|**int**|決定這個資源範圍所用的資料庫識別碼。 所有由鎖定管理員處理的資源，都由資料庫識別碼決定範圍。|  
 |**resource_description**|**nvarchar(256)**|資源的描述，其中只包含無法從其他資源資料行取得的資訊。|  
@@ -55,7 +54,7 @@ ms.locfileid: "47681986"
 |**request_exec_context_id**|**int**|目前擁有這項要求之處理序的工作階段內容識別碼。|  
 |**request_request_id**|**int**|目前擁有這項要求之處理序的要求識別碼 (批次識別碼)。 只要交易的使用中 Multiple Active Result Set (MARS) 連接一改變，這個值就會隨之改變。|  
 |**request_owner_type**|**nvarchar(60)**|擁有要求的實體類型。 鎖定管理員要求可以由各種實體所擁有。 可能的值為：<br /><br /> TRANSACTION = 要求是由交易所擁有。<br /><br /> CURSOR = 要求是由資料指標所擁有。<br /><br /> SESSION = 要求是由使用者工作階段所擁有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求是由交易工作空間的共用部分所擁有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求是由交易工作空間的獨佔部分所擁有。<br /><br /> NOTIFICATION_OBJECT = 要求是由內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所擁有。 這個元件已要求鎖定管理員在另一個元件等候取得鎖定時通知它。 FileTable 功能是使用此值的元件。<br /><br /> **注意：** 工作空間會在內部用來鎖定已登錄的工作階段。|  
-|**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者**request_owner_id**具有下列值之一。<br /><br /> <br /><br /> -4： 已取得資料庫鎖定的 FileTable。<br /><br /> -3： 已取得資料表鎖定的 FileTable。<br /><br /> 其他值： 此值代表檔案控制代碼。 此值也會顯示為**fcb_id**動態管理檢視中[sys.dm_filestream_non_transacted_handles &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
+|**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者**request_owner_id**具有下列值之一。<br /><br /> <br /><br /> -4:已取得資料庫鎖定的 FileTable。<br /><br /> -3:資料表鎖定時，已取得 FileTable。<br /><br /> 其他值：此值代表檔案控制代碼。 此值也會顯示為**fcb_id**動態管理檢視中[sys.dm_filestream_non_transacted_handles &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
 |**request_owner_guid**|**uniqueidentifier**|此要求之特定擁有者的 GUID。 只有值對應於該交易之 MS DTC GUID 的分散式交易才會使用這個值。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 這個值代表要求器的鎖定空間識別碼。 鎖定空間識別碼可以判斷兩個要求器是否彼此相容，如果其模式會彼此衝突，是否可被授與鎖定。|  
 |**lock_owner_address**|**varbinary(8)**|追蹤這項要求所用的內部資料結構記憶體位址。 可以聯結此資料行具有**sys.dm_os_waiting_tasks**中的資料行**sys.dm_os_waiting_tasks**。|  
@@ -64,7 +63,7 @@ ms.locfileid: "47681986"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
  
 ## <a name="remarks"></a>備註  
  如果是已授與的要求狀態，表示已將資源鎖定授與要求器。 而等待中的要求，表示尚未授與該要求。 傳回下列等候要求類型**request_status**資料行：  
@@ -196,15 +195,15 @@ ms.locfileid: "47681986"
   
  下表提供的格式**resource_description**每個資源類型的資料行。  
   
-|資源|[格式]|描述|  
+|Resource|格式|描述|  
 |--------------|------------|-----------------|  
 |DATABASE|不適用|資料庫識別碼已有可用**resource_database_id**資料行。|  
 |FILE|<file_id>|這項資源所代表的檔案識別碼。|  
 |OBJECT|<object_id>|這項資源所代表的物件識別碼。 這個物件可以是任何物件中所列**sys.objects**，不只是資料表。|  
-|PAGE|<file_id>:<page_in_file>|代表這項資源所代表之頁面的檔案和頁面識別碼。|  
+|PAGE|< file_id >: < page_in_file >|代表這項資源所代表之頁面的檔案和頁面識別碼。|  
 |KEY|<hash_value>|代表這項資源所代表之資料列的索引鍵資料行雜湊。|  
-|EXTENT|<file_id>:<page_in_files>|代表這項資源所代表之範圍的檔案和頁面識別碼。 這個範圍識別碼，與範圍中第一頁的頁面識別碼相同。|  
-|RID|<file_id>:<page_in_file>:<row_on_page>|代表這項資源所代表之資料列的頁面識別碼和資料列識別碼。 請注意，如果相關聯的物件識別碼是 99，這項資源就代表 IAM 鏈結的第一個 IAM 頁面上，八個混合頁面位置之一。|  
+|EXTENT|< file_id >: < page_in_files >|代表這項資源所代表之範圍的檔案和頁面識別碼。 這個範圍識別碼，與範圍中第一頁的頁面識別碼相同。|  
+|RID|< file_id >: < page_in_file >: < row_on_page >|代表這項資源所代表之資料列的頁面識別碼和資料列識別碼。 請注意，如果相關聯的物件識別碼是 99，這項資源就代表 IAM 鏈結的第一個 IAM 頁面上，八個混合頁面位置之一。|  
 |APPLICATION|\<DbPrincipalId >:\<最多 32 個字元 >:(< hash_value >)|代表制定這個應用程式鎖定資源範圍所用之資料庫主體的識別碼。 其中包含來自對應於這個應用程式鎖定資源的資源字串，最多可以包含 32 個字元。 在某些情況下，由於完整字串已經無法使用，因此只能顯示 2 個字元。 這個行為只發生在資料庫復原時，復原程序必須重新取得應用程式鎖定。 雜湊值代表對應於這個應用程式鎖定資源的完整資源字串雜湊。|  
 |HOBT|不適用|HoBt 識別碼會當做**resource_associated_entity_id**。|  
 |ALLOCATION_UNIT|不適用|配置單位識別碼是納入**resource_associated_entity_id**。|  

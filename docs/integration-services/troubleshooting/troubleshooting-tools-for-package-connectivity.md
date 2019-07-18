@@ -18,14 +18,18 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d96a8f5797493dd0b6a3453eab841fd62f1ffd5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8dbeb09c113dceb68996582d115169e1c50ff5ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713588"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>疑難排解封裝連接的工具
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的功能及工具，可以讓您用於疑難排解封裝與封裝擷取及載入資料之資料來源之間的連接。  
   
 ## <a name="troubleshooting-issues-with-external-data-providers"></a>疑難排解外部資料提供者的問題  

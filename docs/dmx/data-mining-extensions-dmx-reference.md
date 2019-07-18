@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29454fefde7850e5e45ca6a916540e7d38e2b286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070903"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>資料採礦延伸模組 (DMX) 參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38032724"
   
  規格會將資料採礦的基準定義為資料採礦模型虛擬物件。 資料採礦模型物件會封裝特定採礦模型的所有已知內容。 資料採礦模型物件的結構就像 SQL 資料表，有描述模型的資料行、資料類型與中繼資訊。 這種結構可以讓您使用 DMX 語言 (SQL 的延伸模組) 來建立及處理模型。  
   
- **如需詳細資訊：** [採礦結構&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ **如需詳細資訊：** [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 ##  <a name="BKMK_DMXStatements"></a> DMX 陳述式  
  您可以使用 DMX 陳述式建立、處理、刪除、複製、瀏覽與預測資料採礦模型。 DMX 中有兩種陳述式類型：資料定義陳述式與資料操作陳述式。 您可以使用每一種陳述式執行不同種類的工作。  
@@ -73,13 +72,13 @@ ms.locfileid: "38032724"
   
 -   擴充選取的陳述式，來瀏覽在模型定型期間計算並儲存在資料採礦模型中，例如來源資料的統計資料的資訊。 以下是您可以用以擴充能力的 SELECT 陳述式的子句：  
   
-    -   [SELECT DISTINCT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
+    -   [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
     -   [SELECT FROM&#60;模型&#62;。內容&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
     -   [SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
-    -   [SELECT FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+    -   [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
     -   [SELECT FROM&#60;模型&#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "38032724"
   
  您可以使用 DMX 函數，取得在培訓模型過程中探索到的資訊，以及計算新資訊。 這些函數可以用於許多用途，包括傳回描述基礎資料或預測精確度的統計資料，以及傳回預測的擴充說明。  
   
- **如需詳細****資訊：** [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)，[一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [結構和 DMX 預測查詢的使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[資料採礦延伸模組&#40;DMX&#41;函式參考  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **如需詳細** **資訊：** [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)，[一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)，[結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[資料採礦擴充功能&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [回到 DMX 陳述式](#BKMK_DMXStatements)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "38032724"
  [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010538"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
  需要的成員資格**dc_admin** （具有 EXECUTE 權限） 固定的資料庫角色。  
   
 ## <a name="example"></a>範例  
- 此範例會更新一般 T-SQL 查詢收集器型別  (在此範例中，將會使用一般 T-SQL 查詢收集器型別的預設結構描述)。  
+ 此範例會更新一般 T-SQL 查詢收集器型別 (在此範例中，將會使用一般 T-SQL 查詢收集器型別的預設結構描述)。  
   
 ```  
 USE msdb;  

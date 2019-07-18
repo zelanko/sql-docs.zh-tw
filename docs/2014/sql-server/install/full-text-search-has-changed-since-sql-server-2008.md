@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095153"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>自 SQL Server 2008 起，全文檢索搜尋已經變更
   Upgrade Advisor 偵測到全文檢索搜尋即將升級。 許多全文檢索搜尋選項和設定都已經變更。 因此，當您升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 全文檢索搜尋時，某些設定可能需要進行修改。  

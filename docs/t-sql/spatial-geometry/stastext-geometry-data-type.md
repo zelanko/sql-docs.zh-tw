@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STAsText (geometry Data Type)
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 79d74b7c8840261578479ca3489f65e2772dc985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2be7933d08709b7f5526f9872cfc2bb7ba4d51ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936184"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47641496"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型：**SqlChars**  
+ CLR 傳回型別：**SqlChars**  
   
 ## <a name="examples"></a>範例  
  下列範例會從文字建立 (0,0) 到 (2,3) 的 `LineString` 幾何例項。 `STAsText()` 會在文字中傳回結果。  

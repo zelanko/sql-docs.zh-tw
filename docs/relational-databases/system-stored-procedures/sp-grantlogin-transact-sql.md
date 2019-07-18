@@ -1,5 +1,5 @@
 ---
-title: sp_grantlogin (Transact-SQL) | Microsoft Docs
+title: sp_grantlogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055314"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
@@ -37,7 +38,6 @@ ms.locfileid: "58535400"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_grantlogin [@loginame=] 'login'  
 ```  
   
@@ -58,7 +58,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="examples"></a>範例  
  下列範例會使用`CREATE LOGIN`來建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 使用者的登入`Corporate\BobJ.`這是慣用的方法。  
   
-```  
+```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  

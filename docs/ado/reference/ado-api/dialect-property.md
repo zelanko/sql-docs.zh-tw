@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef18eb3d6251bc07ae25ef8cbc3445a87b8390b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918988"
 ---
 # <a name="dialect-property"></a>Dialect 屬性
 指出的方言[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或是[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性。 方言定義的語法和一般提供者剖析字串或資料流時所使用的規則。  

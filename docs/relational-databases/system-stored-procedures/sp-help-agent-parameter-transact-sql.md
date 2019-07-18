@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_parameter (Transact-SQL) | Microsoft Docs
+title: sp_help_agent_parameter & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f732d1b8ab70fa5b188147f493af050a80bdca5b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 616e5547c4acf59f88dc67c5aabc507eb30fe251
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055305"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

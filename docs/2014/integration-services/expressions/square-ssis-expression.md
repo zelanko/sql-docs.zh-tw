@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e457601eafcdd8e363d931d53dfea673254b29f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896965"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 運算式)
   傳回數值運算式的平方。  

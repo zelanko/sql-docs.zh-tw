@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_alert_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9ca751ff6cf83b648e722a7577042adc0eb02681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f97139337b117f1f84f41df56114ca7a35b61fc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090028"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

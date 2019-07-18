@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135271"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919624"
 ---
 # <a name="dropping-an-assembly"></a>卸除組件
   如果您不再需要已經使用 CREATE ASSEMBLY 陳述式在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中註冊之組件所提供的功能，就可以刪除或卸除這些組件。 卸除組件會從資料庫中移除組件及其所有相關聯的檔案 (例如偵錯檔案)。 若要卸除組件，請使用 DROP ASSEMBLY 陳述式搭配下列語法：  
@@ -67,10 +67,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [管理 CLR 整合組件](managing-clr-integration-assemblies.md)   
  [變更組件](altering-an-assembly.md)   
  [建立組件](creating-an-assembly.md)   
- [卸除彙總&#40;Transact SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [卸除類型&#40;Transact SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [DROP TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

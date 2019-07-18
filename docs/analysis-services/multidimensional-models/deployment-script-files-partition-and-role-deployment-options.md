@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178447"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署指令碼檔 - 資料分割和角色部署選項
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "52513912"
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>修改資料分割和角色部署選項  
  您可能要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的資料分割和角色選項所儲存的專案\<*專案名稱*>.deploymentoptions 檔案。 例如，您可能想要保留現有的資料分割、 角色和角色的成員，而不是取代所有現有的資料分割、 角色和成員中所示\<*專案名稱*>.deploymentoptions 檔案。  
   
- 若要修改的資料分割和角色部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，您無法變更專案內的資料分割與角色設定，因為*\<專案名稱 >* **屬性頁面**  對話方塊中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]並未顯示這些選項。 如果您想要變更角色和資料分割的部署選項，您必須變更這項資訊內\<*專案名稱*>.deploymentoptions 檔案本身。 下列程序描述如何變更中的資料分割和角色部署選項\<*專案名稱*>.deploymentoptions 檔案。  
+ 若要修改的資料分割和角色部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，您無法變更專案內的資料分割與角色設定，因為 *\<專案名稱 >* **屬性頁面**  對話方塊中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]並未顯示這些選項。 如果您想要變更角色和資料分割的部署選項，您必須變更這項資訊內\<*專案名稱*>.deploymentoptions 檔案本身。 下列程序描述如何變更中的資料分割和角色部署選項\<*專案名稱*>.deploymentoptions 檔案。  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>在已產生輸入檔之後，變更資料分割或角色的部署  
   
--   以互動方式執行 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並在 [Partition and Role Deployment Options (資料分割和角色部署選項)] 頁面上，指定資料分割和角色的新部署選項。  
+-   以互動方式執行 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並在 [Partition and Role Deployment Options (資料分割和角色部署選項)]  頁面上，指定資料分割和角色的新部署選項。  
   
      -或-  
   

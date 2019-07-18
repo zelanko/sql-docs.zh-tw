@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_add_profileaccount_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44dc2d5341e536179fe0bf6ef152ef7d39afe966
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 11ada827add27ae2186fdcc565b3dd2f99f76452
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017760"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

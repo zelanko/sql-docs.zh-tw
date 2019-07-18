@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7fb5ada4bd580fe8b376210f2e3eb0ad92bc898
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84eee9eb282dc3734ddf5c03c131b2f6583bb5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913565"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

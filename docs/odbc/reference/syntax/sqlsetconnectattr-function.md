@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910379"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函數
 **合規性**  
@@ -39,7 +38,7 @@ ms.locfileid: "53591242"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetConnectAttr(  
      SQLHDBC       ConnectionHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLSetConnectAttr(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *Attribute*  
  [輸入]若要設定，屬性列在 [註解。]  
@@ -98,7 +97,7 @@ SQLRETURN SQLSetConnectAttr(
 |HY010|函數順序錯誤|(DM) 的呼叫以非同步方式執行的函式*StatementHandle*聯*ConnectionHandle*仍執行時和**SQLSetConnectAttr**呼叫。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *ConnectionHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對其中一個相關聯的陳述式控制代碼呼叫*ConnectionHandle*且傳回 SQL_PARAM_DATA_AVAILABLE。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*相關聯*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) **SQLBrowseConnect**針對呼叫*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前**SQLBrowseConnect**傳回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS。|  
 |HY011|現在無法設定屬性|*屬性*引數為 SQL_ATTR_TXN_ISOLATION，並已開啟的交易。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|其中包含 SQLSTATE=HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組特定的值，例如 SQL_ATTR_ACCESS_MODE 或 sql_attr_async_enable 設定 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認在指定的值*ValuePtr*。)<br /><br /> *屬性*引數為 SQL_ATTR_TRACEFILE 或 SQL_ATTR_TRANSLATE_LIB，及*ValuePtr*是空字串。|  
+|HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組特定的值，例如 SQL_ATTR_ACCESS_MODE 或 sql_attr_async_enable 設定 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認在指定的值*ValuePtr*。)<br /><br /> *屬性*引數為 SQL_ATTR_TRACEFILE 或 SQL_ATTR_TRANSLATE_LIB，及*ValuePtr*是空字串。|  
 |HY090|字串或緩衝區長度無效|*(DM) \*ValuePtr*是字元字串，而*StringLength*引數為小於 0，但不是 sql_nts;。|  
 |HY092|屬性/選項識別碼無效|(DM) 引數指定的值*屬性*ODBC 驅動程式支援的版本無效。<br /><br /> (DM) 引數指定的值*屬性*是唯讀的屬性。|  
 |HY114|驅動程式不支援連接層級非同步函式執行|(DM) 應用程式嘗試啟用 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 與驅動程式不支援非同步連接作業的非同步函式執行。|  
@@ -128,14 +127,14 @@ SQLRETURN SQLSetConnectAttr(
   
  可以設定某些連接屬性，只有之前已建立連線;只有在建立連接之後，才可以設定其他項目。 下表指出之前或之後建立的連接必須設定這些連接屬性。 *任一*表示之前或之後連接，可以設定屬性。  
   
-|attribute|設定之前或之後連線？|  
+|屬性|設定之前或之後連線？|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|之前或之後|  
 |SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|其中一個 [4]|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK|之前或之後|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT|之前或之後|  
-|SQL_ATTR_ASYNC_ENABLE 設定|其中一個 [2]|  
+|SQL_ATTR_ASYNC_ENABLE|其中一個 [2]|  
 |SQL_ATTR_AUTO_IPD|之前或之後|  
 |SQL_ATTR_AUTOCOMMIT|其中一個 [5]|  
 |SQL_ATTR_CONNECTION_DEAD|After|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48c26787d53f6ecb1ce1082a9d570c565d02e66d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6b7d4b7abc3070aa712316995c1d924fd73cbe8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105781"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
   量測計標尺是顯示在量測計上，受限於最小值與最大值的數字範圍。 量測計標尺通常包含量測計標籤與刻度，以便正確讀取量測計指標所顯示的數目。 量測計標尺通常與一或多個量測計指標相關聯。 在相同的量測計上可以有一個以上的標尺。  
@@ -27,7 +26,7 @@ ms.locfileid: "56290666"
   
  當您在已經包含一個標尺的量測計上加入另一個標尺時，第一個標尺的外觀屬性會被複製到第二個標尺上。  
   
- 您可以用滑鼠右鍵按一下標尺標籤或刻度，然後選取 [星形標尺屬性] 或 [線性標尺屬性]，以便在標尺上設定屬性。 每個量測計類型至少都包含一個具有相同屬性集的標尺。 每個量測計類型也都有唯一的屬性：  
+ 您可以用滑鼠右鍵按一下標尺標籤或刻度，然後選取 [星形標尺屬性]  或 [線性標尺屬性]  ，以便在標尺上設定屬性。 每個量測計類型至少都包含一個具有相同屬性集的標尺。 每個量測計類型也都有唯一的屬性：  
   
 -   在星形量測計上，您可以指定星形標尺的半徑、開始角度與掃掠角度。  
   

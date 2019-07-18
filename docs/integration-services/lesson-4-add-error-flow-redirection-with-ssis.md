@@ -11,14 +11,18 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721771"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>第 4 課：使用 SSIS 來新增錯誤流程重新導向
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 為了處理可能在轉換過程中發生的錯誤，[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可讓您針對每個元件和每個資料行，決定要如何處理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 無法轉換的資料。 您可以選擇忽略特定資料行的失敗、將整個失敗的資料列重新導向，或讓該元件失敗。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的元件預設是設定為在發生錯誤時失敗。 失敗的元件會進而造成套件失敗，接著處理就會停止。  
   

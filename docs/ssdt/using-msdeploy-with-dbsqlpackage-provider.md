@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256943"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65101974"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 **DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/SQL Azure 資料庫進行互動。 **DbSqlPackage** 支援下列動作：  
@@ -47,15 +47,15 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 |動詞命令|Description|  
 |--------|---------------|  
-|dump|提供有關 .dacpac 檔案中所含來源資料庫的資訊，包括名稱、版本號碼和描述。 在命令列上使用下列格式來指定來源資料庫：<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|sync|在命令列上使用下列格式來指定 dbSqlPackage 動作：<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />請參閱下列各節以了解 sync 動詞命令的有效來源和目的參數。|  
+|dump|提供有關 .dacpac 檔案中所含來源資料庫的資訊，包括名稱、版本號碼和描述。 在命令列上使用下列格式來指定來源資料庫：<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|sync|在命令列上使用下列格式來指定 dbSqlPackage 動作：<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />請參閱下列各節以了解 sync 動詞命令的有效來源和目的參數。|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 來源  
 **dbSqlPackage** 提供者可接受的輸入包括有效的 SQL Server/SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。  針對提供者指定輸入來源的語法如下：  
   
 |輸入|預設|Description|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/A**|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。<br /><br />**注意：** 使用連接字串作為輸入來源時，支援的連接字串屬性只有 *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* 和 *ConnectionTimeout*。|  
+|**-source:dbSqlPackage=** {*input*}|**N/A**|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。<br /><br />**注意：** 使用連接字串作為輸入來源時，支援的連接字串屬性只有 *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* 和 *ConnectionTimeout*。|  
   
 如果您的輸入來源是即時 SQL Server/SQL Azure 資料庫的連接字串，**dbSqlPackage** 將會從即時 SQL Server/SQL Azure 資料庫中擷取資料庫快照集 (.dacpac 格式的檔案)。  
   

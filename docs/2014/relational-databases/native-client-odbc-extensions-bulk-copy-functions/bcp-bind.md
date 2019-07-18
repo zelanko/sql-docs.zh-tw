@@ -1,5 +1,5 @@
 ---
-title: bcp_bind |Microsoft Docs
+title: bcp_bind | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63140563"
 ---
 # <a name="bcpbind"></a>bcp_bind
   將程式變數中的資料繫結至資料表資料行，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中進行大量複製。  
@@ -135,7 +135,7 @@ bcp_bind(hdbc, szName, 0,
   
  *EDataType*參數會列舉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的資料類型 token，不 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLINT2 來指定兩個位元組的整數 ODBC 類型 SQL_C_SHORT。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型語彙基元中的支援*`eDataType`* 參數。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型語彙基元中的支援 *`eDataType`* 參數。  
   
  *idxServerCol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置由報告[SQLColumns](../native-client-odbc-api/sqlcolumns.md)。  

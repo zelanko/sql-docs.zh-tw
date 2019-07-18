@@ -9,14 +9,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], settings
 - Setting class
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a779c949b90bfe0b09e17dd7a6a83f50ee8e383
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 118f116de516e912b78b7467450b44116b432271
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193594"
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>使用傳遞延伸模組的設定類別
   <xref:Microsoft.ReportingServices.Interfaces.Setting> 類別是位在 <xref:Microsoft.ReportingServices.Interfaces> 命名空間中，並且代表有關傳遞延伸模組的延伸模組設定。 <xref:Microsoft.ReportingServices.Interfaces.Setting> 類別提供基礎結構，以儲存有關為了使傳遞延伸模組正常運作所需的設定。 例如，「報表伺服器電子郵件」傳遞，使用者需要提供電子郵件傳遞特有的設定，例如收件者地址、寄件者地址、電子郵件的主旨等等。 毋庸置疑地，您的自訂傳遞提供者將要求使用者提供特定的設定，傳遞延伸模組才能傳遞通知和報表。  

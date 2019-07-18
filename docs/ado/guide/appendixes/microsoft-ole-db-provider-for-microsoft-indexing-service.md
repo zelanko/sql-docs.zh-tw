@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926669"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供程式設計的唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -87,7 +86,7 @@ MSIDXS
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|唯讀|
 |[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|
+|[狀態](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|
 
  \*為了讓這項功能提供者存在於上必須啟用書籤**資料錄集**。

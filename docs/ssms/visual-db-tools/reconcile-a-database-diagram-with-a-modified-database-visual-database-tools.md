@@ -14,15 +14,15 @@ helpviewer_keywords:
 - updating database to match diagram
 - database diagrams [SQL Server], reconciling changes
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e01ac9ee73eaa64b68153e30bcdbbb9acb98c36a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: c261bce7dde66f686ad1bb3b017fc588879bb5f5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650876"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687406"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>使用修改的資料庫協調資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "47650876"
   
 1.  儲存您的資料庫圖表。  
   
-    如果您先前未儲存圖表，請在 [儲存新資料庫圖表] 對話方塊中輸入圖表名稱，再選擇 [確定]。  
+    如果您先前未儲存圖表，請在 [儲存新資料庫圖表]  對話方塊中輸入圖表名稱，再選擇 [確定]  。  
   
-2.  [儲存] 對話方塊會列出儲存圖表時會影響的資料表。 選擇 [是] 繼續進行。  
+2.  [儲存]  對話方塊會列出儲存圖表時會影響的資料表。 選擇 [是]  繼續進行。  
   
-3.  [偵測到資料庫變更] 對話方塊會列出修改的物件，這些物件將會變更，以符合您的圖表。 選擇 [是] 儲存圖表，並接受變更的清單。  
+3.  [偵測到資料庫變更]  對話方塊會列出修改的物件，這些物件將會變更，以符合您的圖表。 選擇 [是]  儲存圖表，並接受變更的清單。  
   
     > [!NOTE]  
     > 如果您的圖表包含已經在資料庫中刪除的資料表和資料行，儲存圖表時只會在資料庫中重新建立這些物件的定義。 此程序不會還原刪除這些物件之前就存在於物件中的任何資料。  
@@ -49,7 +49,7 @@ ms.locfileid: "47650876"
   
 2.  在 [物件總管] 的圖表上按一下滑鼠右鍵。  
   
-3.  從快速鍵功能表按一下 [重新整理]。  
+3.  從快速鍵功能表按一下 [重新整理]  。  
   
 4.  重新開啟圖表。  
   

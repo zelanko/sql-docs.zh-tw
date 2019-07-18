@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7857531732e0aa8b9ee69c2ba51a873b6eb50114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e817d67dc59fd9417b518f2ee24f8006e6d7e58c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841536"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762437"
 ---
 # <a name="preparecall-method-sqlserverconnection"></a>prepareCall 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

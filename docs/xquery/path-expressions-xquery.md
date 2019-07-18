@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fdc9279d821402e0011b10ef4c1843a721178a9f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 9be2fb8752f27164e0e6dbc59e499f4b048d8979
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946396"
 ---
 # <a name="path-expressions-xquery"></a>路徑運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

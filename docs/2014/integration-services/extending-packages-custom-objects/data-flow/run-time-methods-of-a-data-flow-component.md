@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768634"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>資料流程元件的執行階段方法
   在執行階段，資料流程工作會檢查元件的順序、準備執行計畫，以及管理執行工作計畫的工作者執行緒集區。 此工作會從來源載入資料列、透過轉換處理它們，然後將它們儲存到目的地。  

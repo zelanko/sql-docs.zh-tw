@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102170"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  
@@ -30,7 +29,7 @@ ms.locfileid: "56019329"
   
  如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
- 當您啟用基本驗證之後，請注意在使用者設定外部資料來源的連線屬性，而此資料來源會提供資料給報表時，就無法選取 [Windows 整合式安全性] 選項。 資料來源屬性頁上的這個選項將會呈現灰色。  
+ 當您啟用基本驗證之後，請注意在使用者設定外部資料來源的連線屬性，而此資料來源會提供資料給報表時，就無法選取 [Windows 整合式安全性]  選項。 資料來源屬性頁上的這個選項將會呈現灰色。  
   
 > [!NOTE]  
 >  下列指示用於原生模式報表伺服器。 如果您在 SharePoint 整合模式下部署報表伺服器，您必須使用可指定 Windows 整合式安全性的預設驗證設定。 報表伺服器會使用預設 Windows 驗證延伸模組中的內部功能來支援 SharePoint 整合模式下的報表伺服器。  
@@ -66,7 +65,7 @@ ms.locfileid: "56019329"
           </AuthenticationTypes>  
     ```  
   
-4.  將它貼到 <`Authentication`> 的現有項目上。  
+4.  貼上現有的項目，如 <`Authentication`>。  
   
      如果您使用多個驗證類型，請只加入 `RSWindowsBasic` 元素，而不要刪除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的項目。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "56019329"
   
      請注意，您無法搭配其他驗證類型使用 `Custom`。  
   
-5.  使用對環境有效的值來取代 <`Realm`> 或 <`DefaultDomain`> 的空白值。  
+5.  取代空白值 <`Realm`> 或 <`DefaultDomain`> 適用於您環境的值。  
   
 6.  儲存檔案。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "56019329"
   
 |元素|必要項|有效的值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
+|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意:中不支援值 0 （用於互動式登入） 和 1 （用於批次登入） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
 |Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
 |DefaultDomain|選擇性|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   

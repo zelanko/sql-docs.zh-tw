@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103234"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
@@ -60,7 +59,7 @@ ms.locfileid: "56019119"
  [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表的執行屬性 &#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [操作說明：將快照集加入報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
+ [如何：將快照集加入報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
  [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

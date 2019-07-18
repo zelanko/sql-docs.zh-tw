@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98d2b2053fae49ae5beb3c9b7ecd0209dd33f56d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a0297b8af4e5cba9fe96df935d6d1b43a8e2d5f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907236"
 ---
 # <a name="msmergecurrentpartitionmappings"></a>MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56760100d49e76179b868c892dd3cd61cf2c8142
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985990"
 ---
 # <a name="aggregate-functions---avg"></a>彙總函式 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
   
- **Avg （)** 函式會傳回計算數字的平均值。 例如：  
+ **Avg （)** 函式會傳回計算數字的平均值。 例如:  
   
  **sum (** *$arg* **) div 計數 (** *$arg* **)**  
   

@@ -15,18 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2deedb64e5c8995524978a19b02110a068bde08d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195803"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>了解伺服器事件的 WMI 提供者
   WMI Provider for Server Events 可讓您使用 Windows Management Instrumentation (WMI) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中監視事件。 提供者的運作方式是將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換成 Managed WMI 物件。 使用這個提供者的 WMI 可利用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中產生事件通知的任何事件。 另外，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是與 WMI 互動的管理應用程式，所以它可回應這些事件，方法是增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在舊版本上所涵蓋的事件範圍。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 之類的管理應用程式可藉由發出 WMI 查詢語言 (WQL) 陳述式，使用伺服器事件的 WMI 提供者來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是結構化查詢語言 (SQL) 的簡化子集，具有一些 WMI 特定的延伸模組。 在使用 WQL 時，應用程式會針對特定的資料庫或資料庫物件來擷取事件類型。 伺服器事件的 WMI 提供者會將查詢轉譯為事件通知，以便在目標資料庫中有效地建立事件通知。 如需有關事件通知中的運作方式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 < [WMI 提供者伺服器事件概念](https://technet.microsoft.com/library/ms180560.aspx)。 可查詢的事件會列在[伺服器事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)。  
   
- 事件發生時觸發事件通知，傳送訊息，訊息中的預先定義的目標服務會進入**msdb**命名為**SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. 服務會將事件放在預先定義的佇列**msdb**命名為**WMIEventProviderNotificationQueue**。 (當此服務手冊連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，提供者會同時動態地建立服務和佇列)。接著，提供者會從此佇列讀取事件資料，並將其轉換為 Managed 物件格式 (MOF)，然後再將其傳回到應用程式。 下圖顯示這項程序。  
+ 事件發生時觸發事件通知，傳送訊息，訊息中的預先定義的目標服務會進入**msdb**命名為**SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. 服務會將事件放在預先定義的佇列**msdb**命名為**WMIEventProviderNotificationQueue**。 (服務與佇列動態建立提供者時第一次連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。)提供者然後會從此佇列讀取事件資料，並將它轉換成受管理的物件格式 (MOF) 中，然後再回到應用程式。 下圖顯示這項程序。  
   
  ![WMI Provider for Server Events 的流程圖](../../../2014/database-engine/dev-guide/media/wmi-provider-functional-spec.gif "WMI Provider for Server Events 的流程圖")  
   

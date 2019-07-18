@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BLOBs, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6c71488ab4e92e241ac7de9873febbe5e6537421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7db9b5da3a7f627070739d3e9e4e0530aae3650a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803197"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

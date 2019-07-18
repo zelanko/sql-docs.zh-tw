@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63065616"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
   不支援執行記憶體最佳化資料表上的 ALTER 作業。 這些作業包括變更 bucket_count、加入或移除索引，以及加入或移除資料行等等。 本主題提供如何更新記憶體最佳化之資料表的指導方針。  

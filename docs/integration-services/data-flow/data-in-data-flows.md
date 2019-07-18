@@ -18,14 +18,18 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07917304412c77e7cd58dd771d9ef97199270f4e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ae28de186f1f411792b1f20b728c473e6df4bca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727006"
 ---
 # <a name="data-in-data-flows"></a>資料流程中的資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一組資料流程中使用的資料類型。  
   
 ## <a name="data-type-conversion"></a>資料類型轉換  

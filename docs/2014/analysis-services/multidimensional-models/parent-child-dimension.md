@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
@@ -21,15 +20,15 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073390"
 ---
 # <a name="parent-child-hierarchy"></a>父子式階層
-  父子式階層是位於包含父屬性之標準維度中的階層。 父屬性描述維度主資料表內的「自我參考關聯性」或「自我聯結」。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層中之成員的位置是由父屬性 (Attribute) 的 `KeyColumns` 和 `RootMemberIf` 屬性 (Property) 所決定，而層級中之成員的位置是由父屬性 (Attribute) 的 `OrderBy` 屬性 (Property) 所決定。 如需屬性 (attribute) 之屬性 (property) 的詳細資訊，請參閱 [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+  父子式階層是位於包含父屬性之標準維度中的階層。 父屬性描述維度主資料表內的「自我參考關聯性」  或「自我聯結」  。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層中之成員的位置是由父屬性 (Attribute) 的 `KeyColumns` 和 `RootMemberIf` 屬性 (Property) 所決定，而層級中之成員的位置是由父屬性 (Attribute) 的 `OrderBy` 屬性 (Property) 所決定。 如需屬性 (attribute) 之屬性 (property) 的詳細資訊，請參閱 [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
  因為在父子式階層內有層級之間的父子式關聯性，所以除了有彙總自子成員的資料以外，部分非分葉成員還可能會有衍生自基礎資料來源的資料。  
   

@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070878"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>排序及群組查詢結果 (Visual Database Tools)
   可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。  

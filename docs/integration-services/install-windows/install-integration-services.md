@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723672"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了單一安裝程式，以安裝它的任何或所有元件，包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在內。 使用安裝程式來安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，不論單一電腦上是否有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。    
     
@@ -60,14 +64,14 @@ ms.locfileid: "58271199"
      
 使用 [安裝精靈] 安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時，您會使用一連串的頁面來指定元件和選項。
 
--   在 [功能選取] 頁面中，選取 [共用功能] 底下的 **Integration Services**。
+-   在 [功能選取]  頁面中，選取 [共用功能]  底下的 **Integration Services**。
 
--   在 [執行個體功能] 下方，選擇性選取 **Database Engine Services** 來裝載 SSIS 目錄資料庫 (`SSISDB`)，以便儲存、管理、執行與監視 SSIS 套件。
+-   在 [執行個體功能]  下方，選擇性選取 **Database Engine Services** 來裝載 SSIS 目錄資料庫 (`SSISDB`)，以便儲存、管理、執行與監視 SSIS 套件。
 
--   若要安裝用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程式設計的受控組件，另請選取 [共用功能] 下方的 [用戶端工具 SDK]。
+-   若要安裝用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程式設計的受控組件，另請選取 [共用功能]  下方的 [用戶端工具 SDK]  。
 
 > [!NOTE]
-> [安裝精靈] 的 [功能選取] 頁面上提供一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件供您選取安裝，以安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的部分元件。 這些元件適用於特定的工作，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能有限。 例如，[Database Engine Services] 選項會安裝 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能完整安裝，您必須在 [功能選擇] 頁面上選取 [Integration Services]。
+> [安裝精靈] 的 [功能選取]  頁面上提供一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件供您選取安裝，以安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的部分元件。 這些元件適用於特定的工作，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能有限。 例如，[Database Engine Services]  選項會安裝 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能完整安裝，您必須在 [功能選擇]  頁面上選取 [Integration Services]  。
 
 ### <a name="installing-a-dedicated-server-for-etl-processes"></a>安裝 ETL 的專用伺服器程序
 
@@ -81,7 +85,7 @@ ms.locfileid: "58271199"
 
 若要進行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的完整安裝，請從下列清單中選取您需要的元件：
 
--   **Integration Services (SSIS)**： 使用 [SQL Server 安裝精靈] 來安裝 SSIS。 選取 SSIS 時，會安裝下列項目：
+-   **Integration Services (SSIS)** ： 使用 [SQL Server 安裝精靈] 來安裝 SSIS。 選取 SSIS 時，會安裝下列項目：
 
     -   SQL Server 資料庫引擎上的 SSIS 目錄支援。
 
@@ -93,7 +97,7 @@ ms.locfileid: "58271199"
 
 -   **SQL Server 資料庫引擎**： 使用 [SQL Server 安裝精靈] 安裝資料庫引擎。 選取資料庫引擎時，可讓您建立並裝載 SSIS 目錄資料庫 (`SSISDB`)，以儲存、管理、執行及監視 SSIS 套件。
 
--   **SQL Server Data Tools (SSDT)**。 若要下載並安裝 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。 安裝 SSDT 時，可讓您設計和部署 SSIS 套件。 SSDT 會安裝下列項目：
+-   **SQL Server Data Tools (SSDT)** 。 若要下載並安裝 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。 安裝 SSDT 時，可讓您設計和部署 SSIS 套件。 SSDT 會安裝下列項目：
 
     -   SSIS 套件的設計和開發工具，包括 SSIS 設計工具。
 
@@ -119,6 +123,6 @@ ms.locfileid: "58271199"
 
 -   **其他選用元件**： 您可以從 SQL Server Feature Pack 選擇性下載其他協力廠商的元件。
 
-    -   Microsoft® Connector for SAP BW for Microsoft SQL Server®。 若要取得這些元件，請參閱 [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992)。
+    -   MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ®。 若要取得這些元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992)。
 
     -   Microsoft Connector Version 5.0 for Oracle by Attunity 和 Microsoft Connector Version 5.0 for Teradata by Attunity。 若要取得這些元件，請參閱 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)。

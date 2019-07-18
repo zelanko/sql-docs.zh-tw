@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：建立工作資料夾與環境變數 | Microsoft Docs
+title: 步驟 1:建立工作資料夾與環境變數 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767650"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1：建立工作資料夾和環境變數
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1:建立工作資料夾和環境變數
   在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  
   
  工作資料夾位於 C 磁碟的根目錄。 如果必須使用其他磁碟或位置，這是可行的。 不過必須記下這個位置，只要教學課程提到 DeploymentTutorial 工作資料夾時就會用到這個位置。  
@@ -32,53 +32,53 @@ ms.locfileid: "58392126"
   
 1.  以滑鼠右鍵按一下 [開始] 功能表，然後按一下 [檔案總管]。  
   
-2.  按一下 [本機磁碟 (C:)]。  
+2.  按一下 [本機磁碟 (C:)]  。  
   
-3.  在 [檔案] 功能表上，指向 [新增]，然後按一下 [資料夾]。  
+3.  在 [檔案]  功能表上，指向 [新增]  ，然後按一下 [資料夾]  。  
   
 4.  重新命名新的資料夾來`DeploymentTutorial`。  
   
 ### <a name="to-create-local-environment-variables"></a>建立基本環境變數  
   
-1.  在 **[開始]** 功能表上，按一下 **[控制台]**。  
+1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按兩下 [系統]。  
+2.  在 [控制台] 中，按兩下 [系統]  。  
   
-3.  在 [系統內容] 對話方塊中，按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
+3.  在 [系統內容]  對話方塊中，按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
-4.  在 [環境變數] 對話方塊的 [系統變數] 框架中，按一下 [新增]。  
+4.  在 [環境變數]  對話方塊的 [系統變數]  框架中，按一下 [新增]  。  
   
 5.  在**新增系統變數** 對話方塊中，輸入`DataTransfer`中**變數的名稱** 方塊中，並`C:\DeploymentTutorial\datatransferconfig.dtsconfig`中**變數值** 方塊中。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 7.  按一下 **新增**同樣地，並輸入`LoadXMLData`中**變數名稱** 方塊中，和`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`中**變數值** 方塊中。  
   
-8.  按一下 [確定]，結束 [環境變數] 對話方塊。  
+8.  按一下 [確定]  ，結束 [環境變數]  對話方塊。  
   
-9. 按一下 [確定]，結束 [系統內容] 對話方塊。  
+9. 按一下 [確定]  ，結束 [系統內容]  對話方塊。  
   
 10. 選擇性重新啟動電腦。 如果不重新啟動電腦，新的變數名稱不會在「封裝組態精靈」中顯示，但您仍然可以使用這個名稱。  
   
 ### <a name="to-create-destination-environment-variables"></a>建立目的環境變數  
   
-1.  在 **[開始]** 功能表上，按一下 **[控制台]**。  
+1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按兩下 [系統]。  
+2.  在 [控制台] 中，按兩下 [系統]  。  
   
-3.  在 [系統內容] 對話方塊中，按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
+3.  在 [系統內容]  對話方塊中，按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
-4.  在 [環境變數] 對話方塊的 [系統變數] 框架中，按一下 [新增]。  
+4.  在 [環境變數]  對話方塊的 [系統變數]  框架中，按一下 [新增]  。  
   
 5.  在**新的系統變數** 對話方塊中，輸入`DataTransfer`中**變數的名稱** 方塊中，和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`中**變數值** 方塊中。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 7.  按一下 **新增**同樣地，並輸入`LoadXMLData`中**變數名稱** 方塊中，和`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`中**變數值** 方塊中。  
   
-8.  按一下 [確定]，結束 [環境變數] 對話方塊。  
+8.  按一下 [確定]  ，結束 [環境變數]  對話方塊。  
   
-9. 按一下 [確定]，結束 [系統內容] 對話方塊。  
+9. 按一下 [確定]  ，結束 [系統內容]  對話方塊。  
   
 10. 選擇性重新啟動電腦。  
   

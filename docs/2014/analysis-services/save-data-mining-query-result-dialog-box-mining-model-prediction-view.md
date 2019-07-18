@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
@@ -15,12 +14,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511209"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070014"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>儲存資料採礦查詢結果對話方塊 (採礦模型預測檢視)
   使用 **[儲存資料採礦查詢結果]** 對話方塊，即可將資料採礦查詢的結果儲存到新的資料表。  
@@ -32,7 +31,7 @@ ms.locfileid: "52511209"
  從目前的專案中選取資料來源。 如果正確的資料來源不存在，請按一下 **[新增]** 建立新的資料來源。  
   
  **新增**  
- 開啟 [資料來源精靈]。  
+ 開啟 [資料來源精靈]  。  
   
  **資料表名稱**  
  輸入新資料表的名稱。  
@@ -48,7 +47,7 @@ ms.locfileid: "52511209"
   
 -   您已在目的地資料表上執行 ALTER 陳述式。  
   
- 如果多個資料行具有相同的名稱 (例如，許多衍生的資料行可能具有預設資料行名稱 [運算式])，您就必須針對名稱重複的每個資料行建立別名。 如果資料行沒有唯一的名稱，當設計師嘗試將結果儲存至 SQL Server 時，將會引發錯誤，因為資料表中的資料行必須具有唯一的名稱。  
+ 如果多個資料行具有相同的名稱 (例如，許多衍生的資料行可能具有預設資料行名稱 [運算式]  )，您就必須針對名稱重複的每個資料行建立別名。 如果資料行沒有唯一的名稱，當設計師嘗試將結果儲存至 SQL Server 時，將會引發錯誤，因為資料表中的資料行必須具有唯一的名稱。  
   
  **加入至 DSV**  
  (選擇性) 如果您要將資料表加入至現有的資料來源，請選取專案中包含的資料來源檢視。  

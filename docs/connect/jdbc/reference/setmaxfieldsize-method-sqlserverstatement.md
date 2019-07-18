@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8662d9e3143f61fae03c7158494015f42f4838bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 373af1b789843ca698bde40c4b4603eb7dbc500f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672558"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768764"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>setMaxFieldSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

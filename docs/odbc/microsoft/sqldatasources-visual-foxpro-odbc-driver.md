@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cfda465f8d9b4e04e60985b9fbd0b9aa9f2aeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82351d7cc01dbf1318d443d1afd7f6a73b36707f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054053"
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 相容性： 層級 2  
+ ODBC API 相容性：層級 2  
   
  列出資料來源名稱。  
   

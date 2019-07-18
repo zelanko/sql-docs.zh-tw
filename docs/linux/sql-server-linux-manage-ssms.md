@@ -1,21 +1,19 @@
 ---
-title: 使用 SSMS 管理 SQL Server on Linux |Microsoft Docs
+title: 使用 SSMS 管理 SQL Server on Linux
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000099"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio，來管理 SQL Server on Linux
 
@@ -65,9 +63,9 @@ SSMS for SQL Server，包括工具，可提供一組廣泛的開發和管理功�
    | **登入** | 輸入資料庫伺服器上具有存取權的使用者名稱 (例如，預設值**SA**在安裝期間建立的帳戶)。 |
    | **密碼** | 指定的使用者輸入的密碼 (如**SA**帳戶，您這在安裝期間建立)。 |
 
-    ![SQL Server Management Studio： 連接到 SQL Database 伺服器](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio:連接到 SQL Database 伺服器](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. 按一下 **[連接]**。
+1. 按一下 **[連接]** 。
 
     > [!TIP]
     > 如果您收到連線失敗，請先嘗試從錯誤訊息診斷問題。 然後檢閱[連線疑難排解建議](sql-server-linux-troubleshooting-guide.md#connection)。
@@ -93,7 +91,7 @@ SSMS for SQL Server，包括工具，可提供一組廣泛的開發和管理功�
 
 1. 按一下  **Execute**按鈕來執行查詢並查看結果。
 
-   ![成功。 連接到 SQL Database 伺服器： SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![成功。 連接到 SQL Database 伺服器：SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 雖然可以執行幾乎任何 Transact SQL 查詢使用的管理工作，但 SSMS 是一個圖形化工具，可讓您更輕鬆地管理 SQL Server。 下列各節提供使用圖形化使用者介面的一些範例。
 
@@ -146,5 +144,5 @@ SSMS for SQL Server，包括工具，可提供一組廣泛的開發和管理功�
 - [什麼是 SSMS？](../ssms/sql-server-management-studio-ssms.md)
 - [匯出和匯入資料庫，以使用 SSMS](sql-server-linux-migrate-ssms.md)
 - [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [伺服器效能與活動監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)

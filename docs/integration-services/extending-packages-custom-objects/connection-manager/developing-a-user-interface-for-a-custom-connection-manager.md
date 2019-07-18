@@ -14,14 +14,18 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cda25c052e24a8520bd0312993552d7eaf5605f4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86fdc72c811fd82140e9414a3b425a6d8ca6dcb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724697"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>開發自訂連接管理員的使用者介面
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在您覆寫基底類別的屬性與方法的實作，以提供自訂功能之後，可能會想要建立連接管理員的自訂使用者介面。 如果您不建立自訂使用者介面，使用者只能透過使用 [屬性] 視窗設定您的連接管理員。  
   
  在自訂使用者介面專案或組件中，通常有兩個類別：實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的類別，以及它所顯示的 Windows Form，以收集使用者資訊。  

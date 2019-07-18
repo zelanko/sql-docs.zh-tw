@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016259"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108359"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式是從 SharePoint 管理中心進行管理。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
@@ -40,7 +39,7 @@ ms.locfileid: "56016259"
 ## <a name="to-open-service-application-properties-page"></a>開啟服務應用程式屬性頁面  
  若要開啟 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的屬性頁面，請完成下列步驟：  
   
-1.  在 [管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]** 。  
   
 2.  在您的服務應用程式名稱附近按一下，或按一下 **[類型]** 資料行選取整個資料列，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "56016259"
 ##  <a name="bkmk_openpages"></a> 開啟服務應用程式管理頁面  
  若要開啟 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面，請完成下列步驟：  
   
-1.  在 [管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下服務應用程式的名稱， **[管理 Reporting Services 應用程式]** 頁面將會開啟。  
   
@@ -128,8 +127,8 @@ ms.locfileid: "56016259"
   
 |頁面|描述|  
 |----------|-----------------|  
-|備份加密金鑰|1) 在 [密碼:] 與 [確認密碼:] 方塊中鍵入密碼，然後按一下 [匯出]。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
-|還原加密金鑰|1) 在 [檔案位置] 方塊中鍵入或瀏覽至金鑰檔。<br /><br /> 2) 在 [密碼] 方塊中，鍵入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]。|  
+|備份加密金鑰|1) 在 [密碼:]  與 [確認密碼:]  方塊中鍵入密碼，然後按一下 [匯出]  。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
+|還原加密金鑰|1) 在 [檔案位置]  方塊中鍵入或瀏覽至金鑰檔。<br /><br /> 2) 在 [密碼]  方塊中，鍵入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]  。|  
 |變更加密金鑰|這項作業將建立新的金鑰，並且重新加密已加密的內容。 如果您擁有許多內容，這項作業可能需要數小時才能完成。<br /><br /> 變更加密金鑰作業完成時，建議您製作新金鑰的備份。|  
 |刪除加密的內容|刪除的內容無法復原。<br /><br /> **\*\* 重要事項 \*\*** 刪除和重新建立對稱金鑰的動作無法反轉或恢復。 刪除或重新建立金鑰可能會對您目前的安裝造成重大的影響。 如果您刪除金鑰，將會一併刪除對稱金鑰所加密的任何現有資料。 刪除的資料包括外部報表資料來源的連接字串、預存連接字串和一些訂閱資訊。|  
   
@@ -161,7 +160,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域\\<使用者帳戶\>。  
+ 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域\\<使用者帳戶\>  。  
   
  **密碼**  
  輸入密碼。  
@@ -172,7 +171,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 電子郵件設定  
  使用此頁面，即可指定會啟用從報表伺服器傳遞報表伺服器電子郵件的 Simple Mail Transport Protocol (SMTP) 設定。 您可以使用報表伺服器電子郵件傳遞延伸模組，透過電子郵件訂閱來散發報表或報表處理通知。 報表伺服器電子郵件傳遞延伸模組，需要使用 [從:] 欄位中的 SMTP 伺服器和電子郵件地址。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **使用 SMTP 伺服器**  
  指定報表伺服器電子郵件是透過 SMTP 伺服器來傳送。  
   
@@ -188,14 +187,14 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ## <a name="proxy-association"></a>Proxy 關聯  
  您建立 Reporting Services 服務應用程式時，會選取要產生關聯並且藉由 Reporting Services 服務應用程式提供存取權限的 Web 應用程式。 如果您選擇不產生關聯或想要變更關聯，可以使用下列步驟：  
   
-1.  在 [SharePoint 管理中心] 的 [應用程式管理] 中，按一下 **[設定服務應用程式關聯]**。  
+1.  在 [SharePoint 管理中心] 的 [應用程式管理] 中，按一下 **[設定服務應用程式關聯]** 。  
   
-2.  在 [服務應用程式關聯] 頁面上，將檢視切換至 **[服務應用程式]**。  
+2.  在 [服務應用程式關聯] 頁面上，將檢視切換至 **[服務應用程式]** 。  
   
 3.  尋找並按一下新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
   
-4.  在 **[編輯下列連線群組]** 選取方塊中選取 **[自訂]**。  
+4.  在 **[編輯下列連線群組]** 選取方塊中選取 **[自訂]** 。  
   
-5.  核取您的 Proxy 的方塊，然後按一下 **[確定]**。  
+5.  核取您的 Proxy 的方塊，然後按一下 **[確定]** 。  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919516"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>連接物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -61,7 +60,7 @@ ms.locfileid: "47744026"
   
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  [BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [ConnectComplete 和 Disconnect 事件](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  

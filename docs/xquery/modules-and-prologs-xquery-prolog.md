@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 731877fced1d14e385f8681d4a436269e518595a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946601"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模組和初構 - XQuery 初構
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

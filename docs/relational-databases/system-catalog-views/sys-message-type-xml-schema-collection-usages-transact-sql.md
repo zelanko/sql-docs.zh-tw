@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a24d2b1052c8c873ed6f522404318f89c3346f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 220f3df2f7bb8ecf0b6acd19f2cec33bf2fc7aa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125390"
 ---
 # <a name="sysmessagetypexmlschemacollectionusages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

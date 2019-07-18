@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66deae3833a738075259928855881f87b64ef0dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3d9ab76d2f2ed1a6f5dbeaf58be7d2f919acd3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932548"
 ---
 # <a name="flush-method-ado"></a>Flush 方法 (ADO)
 強制的內容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)的基礎物件的 ADO 緩衝區中剩餘**Stream**相關聯。  

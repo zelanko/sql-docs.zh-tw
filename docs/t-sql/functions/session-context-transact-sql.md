@@ -1,9 +1,9 @@
 ---
 title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/22/2016
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,18 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - SESSION_CONTEXT function
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 59aa8de6752ead8e8b8dbef92035ad59e5995307
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404433"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559453"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回目前工作階段內容中指定索引鍵的值。 會使用 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 程序來設定值。  
   
@@ -48,7 +48,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="return-value"></a>傳回值  
  為與工作階段內容中指定索引鍵建立關聯的值，或為 NULL (當該索引鍵沒有設定值時)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  任何使用者都可以讀取其工作階段的工作階段內容。  
   
 ## <a name="remarks"></a>Remarks  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: fccd4169245421dd33cb5f41bac85861679de823
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088615"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 混合雲端簡介
  大多數應用程式都面臨一些重要挑戰，例如提高效率、商業價值、複雜的硬體組態、視需要的大規模尖峰時段以及符合業界和公司的法規。 考量所有的這些因素並建立企業等級的技術是一項非常具挑戰性的工作。 Microsoft 混合雲端策略提供了傳統、私人雲端、公用雲端和混合雲端環境的支援，可克服這些重大的挑戰。 

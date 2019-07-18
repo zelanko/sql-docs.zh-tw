@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 974c93de786b363d9f8a2b5ceae8053edfe95a73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 6e1ea98e25ac8e04bdd0c0c65d6c6fb5e269de5c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696406"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679302"
 ---
 # <a name="save-queries-visual-database-tools"></a>儲存查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "47696406"
   
 1.  建立您的查詢。  
   
-2.  從 [檔案] 功能表中按一下 [儲存 <查詢名稱>]。  
+2.  從 [檔案]  功能表中按一下 [儲存 <查詢名稱>]  。  
   
     > [!NOTE]  
-    > 新建立的查詢會以系統名稱命名。 若要選擇您自己的查詢名稱，請選擇 [另存 <查詢名稱> 為]。  
+    > 新建立的查詢會以系統名稱命名。 若要選擇您自己的查詢名稱，請選擇 [另存 <查詢名稱> 為]  。  
   
 3.  查詢會儲存在 [方案總管] 中專案的 [查詢] 資料夾內。  
   

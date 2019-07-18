@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721650"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併式複寫的 Web 同步處理選項可讓您透過網際網路使用 HTTPS 通訊協定進行資料複寫。 若要使用 Web 同步處理，您必須先執行下列組態設定動作：  
@@ -92,7 +92,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
 2.  選取與 Web 同步處理網站相關聯的應用程式集區，然後按一下 **[動作]** 窗格上的 **[進階設定]** 。  
   
-3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]** 的列。 變更屬性值，然後按一下 **[確定]**。  
+3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]** 的列。 變更屬性值，然後按一下 **[確定]** 。  
   
 ## <a name="configuring-the-publication"></a>設定發行集  
  若要使用 Web 同步處理，請採用您建立標準合併拓撲的相同方式來建立發行集。 如需詳細資訊，請參閱[發行資料和資料庫物件](publish/publish-data-and-database-objects.md)。  
@@ -124,7 +124,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 使用指定的批次中的層代編號的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的 「 合併代理程式參數。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」* (Generation) 為測量單位，而這是每個發行項的變更集合。 使用指定的批次中的層代編號的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的 「 合併代理程式參數。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](agents/replication-agent-profiles.md)＞。  
   

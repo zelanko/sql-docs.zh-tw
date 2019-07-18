@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: b596a81bf48a69e9b4c641e878383a4a513c891b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793667"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>設定對 Always On 可用性群組中次要複本的唯讀存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,37 +30,14 @@ ms.locfileid: "54135818"
   
  如需針對次要複本啟用唯讀存取的含意資訊，以及連線的簡介，請參閱[關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
--   **開始之前：**  
-  
-     [必要條件和限制](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要使用下列項目設定可用性複本的存取：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **後續操作：**[針對可用性複本設定唯讀存取之後](#FollowUp)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Prerequisites"></a> 必要條件和限制  
+ 
+##  <a name="Prerequisites"></a> 必要條件和限制  
   
 -   若要設定不同的連接存取，您必須連接到裝載主要複本的伺服器執行個體。  
   
-###  <a name="Security"></a> 安全性  
+##  <a name="Permissions"></a> 權限  
   
-####  <a name="Permissions"></a> Permissions  
-  
-|工作|[權限]|  
+|工作|權限|  
 |----------|-----------------|  
 |若要在建立可用性群組時設定複本|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -70,11 +47,11 @@ ms.locfileid: "54135818"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  按一下要變更複本的可用性群組。  
   
-4.  以滑鼠右鍵按一下可用性複本，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下可用性複本，然後按一下 [屬性]  。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，可以變更主要角色和次要角色的連接存取，如下所示：  
   
@@ -232,7 +209,7 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
 -   [Always On:Why there are two options to enable a secondary replica for read workload?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx) (Always On：為何有兩個選項可針對讀取工作負載啟用次要複本？)  
   
--   [Always On:Setting up Readable Seconary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx) (Always On：設定可讀取次要複本)  
+-   [Always On:Setting up Readable Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx) (Always On：設定可讀取的次要複本)  
   
 -   [Always On:I just enabled Readable Secondary but my query is blocked?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx) (Always On：我剛剛啟用可讀取次要，但我的查詢被封鎖？)  
   

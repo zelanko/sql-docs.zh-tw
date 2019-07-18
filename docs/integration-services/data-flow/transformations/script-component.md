@@ -23,14 +23,18 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725912"
 ---
 # <a name="script-component"></a>指令碼元件
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指令碼元件可裝載指令碼，並讓封裝包含及執行自訂指令碼。 您可在封裝中使用指令碼元件以達到下列目的：  
   
 -   套用多個轉換至資料，而不使用資料流程中的多個轉換。 例如，指令碼可以加總兩個資料行中的值，然後計算總和的平均。  
@@ -115,10 +119,10 @@ ms.locfileid: "58280642"
  若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ### <a name="options"></a>選項。  
- 選擇 **[來源]**、 **[目的地]** 或 **[轉換]** ，會影響 [指令碼轉換] 的組態和指令碼轉換編輯器的頁面。  
+ 選擇 **[來源]** 、 **[目的地]** 或 **[轉換]** ，會影響 [指令碼轉換] 的組態和指令碼轉換編輯器的頁面。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
-  使用 [指令碼轉換編輯器] 的 [連線管理員] 頁面，即可指定指令碼將要使用的任何連接。  
+  使用 [指令碼轉換編輯器]  的 [連線管理員]  頁面，即可指定指令碼將要使用的任何連接。  
   
  若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
@@ -130,22 +134,22 @@ ms.locfileid: "58280642"
  輸入連接的唯一和描述性名稱。  
   
  **連線管理員**  
- 從可用的連線管理員清單中選取，或選取 [\<新增連線>] 以開啟 [新增 SSIS 連線管理員] 對話方塊。  
+ 從可用的連線管理員清單中選取，或選取 [\<新增連線>]  以開啟 [新增 SSIS 連線管理員]  對話方塊。  
   
  **說明**  
  輸入連接的描述。  
   
  **[加入]**  
- 將其他連接加入 [連線管理員] 清單中。  
+ 將其他連接加入 [連線管理員]  清單中。  
   
  **移除**  
- 從 [連線管理員] 中移除選取的連接。  
+ 從 [連線管理員]  中移除選取的連接。  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
-  使用 [指令碼轉換編輯器] 對話方塊的 [輸入資料行] 頁面，對輸入資料行設定屬性。  
+  使用 [指令碼轉換編輯器]  對話方塊的 [輸入資料行]  頁面，對輸入資料行設定屬性。  
   
 > [!NOTE]  
->  針對來源元件不會顯示 [輸入資料行] 頁面，因為來源元件只有輸出沒有輸入。  
+>  針對來源元件不會顯示 [輸入資料行]  頁面，因為來源元件只有輸出沒有輸入。  
   
  若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
@@ -157,7 +161,7 @@ ms.locfileid: "58280642"
  利用核取方塊來指定指令碼轉換所使用的資料行。  
   
  **輸入資料行**  
- 從每個資料列的可用輸入資料行清單中選取。 您的選擇會反映在 [可用的輸入資料行] 資料表的核取方塊選擇中。  
+ 從每個資料列的可用輸入資料行清單中選取。 您的選擇會反映在 [可用的輸入資料行]  資料表的核取方塊選擇中。  
   
  **輸出別名**  
  輸入每一個輸出資料行的別名。 預設是輸入資料行的名稱；但是，您可以選擇任何唯一的、描述性名稱。  
@@ -185,13 +189,13 @@ ms.locfileid: "58280642"
  將其他輸出加入到清單中。  
   
  **加入資料行**  
- 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行] 將其加入。  
+ 選取要放置新輸出資料行的資料夾，再按一下 [加入資料行]  將其加入。  
   
  **移除輸出**  
- 選取輸出，然後按一下 [移除輸出] 將它移除。  
+ 選取輸出，然後按一下 [移除輸出]  將它移除。  
   
  **移除資料行**  
- 選取資料行，然後按一下 [移除資料行] 將它移除。  
+ 選取資料行，然後按一下 [移除資料行]  將它移除。  
   
 ## <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  
@@ -208,8 +212,8 @@ ms.locfileid: "58280642"
 |**LocaleID**|指定地區設定以提供排序和日期和時間轉換的特定區域資訊。|  
 |**名稱**|輸入元件的描述性名稱。|  
 |**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 **false** 的值將會延遲到執行時間才驗證。|  
-|**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
-|**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
+|**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意:變數名稱會區分大小寫。|  
+|**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意:變數名稱會區分大小寫。|  
 |**ScriptLanguage**|選取指令碼元件所要使用的指令碼語言。<br /><br /> 若要為指令碼元件和指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。|  
 |**UserComponentTypeName**|指定支援 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> ScriptComponentHost **類別和** Microsoft.SqlServer.TxScript [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組件。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 參考 ADO 程式庫中的 Visual c + + 應用程式 |Microsoft Docs
+title: 參考 ADO 程式庫，在 視覺效果C++應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 772dbc55fdeb3b038399a3740be472497666e4da
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923029"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>在 Visual C++ 應用程式中參考 ADO 程式庫
-若要使用 ADO 的最新版本，Visual c + + 應用程式中，使用下列`#import`指示詞：  
+在 視覺效果中使用 ADO 的最新版本C++應用程式中，使用下列項目`#import`指示詞：  
   
 ```cpp
 #import "msado15.dll" \  

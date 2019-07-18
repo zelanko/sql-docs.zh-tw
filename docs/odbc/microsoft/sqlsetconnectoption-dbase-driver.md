@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (dBASE 驅動程式) |Microsoft Docs
+title: SQLSetConnectOption (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0b3c421ad00a1627ddfb7e6f4fb63ee5d30981a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9f2fc32287df9da61d8eabc1b22445d19a0f027
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090860"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (dBASE 驅動程式)
 > [!NOTE]  
 >  本主題提供 dBASE 驅動程式特定資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|Sqlfreestmt|註解|  
+|fOption|註解|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，此驅動程式無法防止更新，如果 SQL_ACCESS_MODE 設 SQL_MODE_READ_ONLY。|  
 |SQL_AUTOCOMMIT|DBASE 驅動程式僅支援 SQL_AUTOCOMMIT 設為開啟 （預設狀態），因為它不支援交易。|  

@@ -1,5 +1,5 @@
 ---
-title: bcp_colptr |Microsoft Docs
+title: bcp_colptr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62689145"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
   將目前副本的程式變數資料位址設定成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -54,7 +54,7 @@ idxServerCol
   
  如果*pData*設為 NULL，而且資料行對應至繫結的欄位不是大數值型別**bcp_colptr**失敗。  
   
- 如需有關大數值類型的詳細資訊，請參閱 < [bcp_bind](bcp-bind.md)**。**  
+ 如需有關大數值類型的詳細資訊，請參閱 < [bcp_bind](bcp-bind.md) **。**  
   
  *idxServerCol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置由報告[SQLColumns](../native-client-odbc-api/sqlcolumns.md)。  

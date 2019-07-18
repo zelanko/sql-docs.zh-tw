@@ -13,15 +13,19 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3cb979449214daa1cf9d4d03a01cd53f72eabef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729236"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
-  使用 [瀏覽所有主體] 對話方塊選取資料庫主體，以變更主體在所選專案或所選資料夾中包含之所有專案上的權限。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  使用 [瀏覽所有主體]  對話方塊選取資料庫主體，以變更主體在所選專案或所選資料夾中包含之所有專案上的權限。  
   
  **您想要做什麼事？**  
   
@@ -39,11 +43,11 @@ ms.locfileid: "58276927"
   
 3.  展開 **[SSISDB]** 節點。  
   
-4.  若要變更主體在所選資料中包含之所有專案上的權限，請以滑鼠右鍵按一下資料夾，然後按一下 [屬性]。  
+4.  若要變更主體在所選資料中包含之所有專案上的權限，請以滑鼠右鍵按一下資料夾，然後按一下 [屬性]  。  
   
-     若要變更主體在所選專案上的權限，請展開包含專案的資料夾，以滑鼠右鍵按一下該專案，然後按一下 [屬性]。  
+     若要變更主體在所選專案上的權限，請展開包含專案的資料夾，以滑鼠右鍵按一下該專案，然後按一下 [屬性]  。  
   
-5.  選取 **[權限]** 頁面，然後按一下 **[瀏覽]**。  
+5.  選取 **[權限]** 頁面，然後按一下 **[瀏覽]** 。  
   
 ##  <a name="options"></a> 設定選項  
  這個頁面會顯示來自 SSISDB 資料庫之目錄檢視 sys.database_principals 的主體。  
@@ -51,10 +55,10 @@ ms.locfileid: "58276927"
  若選取主體，在您按一下 **[確定]** 並關閉 **[瀏覽所有主體]** 對話方塊時，它們就會加入至父對話方塊中 **[權限]** 頁面上的 **[登入或角色]** 清單。 將主體加入至 **[登入或角色]** 清單後，您可以變更它們在所選專案上的權限。  
   
  **選取資料行**  
- 選取此選項即可將主體加入至父對話方塊中 [權限] 頁面上的 [登入或角色] 清單。  
+ 選取此選項即可將主體加入至父對話方塊中 [權限]  頁面上的 [登入或角色]  清單。  
   
  **圖示資料行**  
- 與主體之 [類型] 對應的圖示。  
+ 與主體之 [類型]  對應的圖示。  
   
  **名稱**  
  主體的名稱。  

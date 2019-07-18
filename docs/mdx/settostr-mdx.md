@@ -1,5 +1,5 @@
 ---
-title: SetToStr (MDX) |Microsoft 文件
+title: SetToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 57e74eb1c7db4aebdd01fde8fc48a425d7affa55
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036976"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 
@@ -33,7 +32,7 @@ SetToStr(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 這個函數是用來將集合的字串表示傳送至外部函數，以進行剖析。 所傳回的字串括在大括弧{}，每個項目以逗號分隔集合中。  
+ 這個函數是用來將集合的字串表示傳送至外部函數，以進行剖析。 所傳回的字串括在大括弧{}，每個項目以逗號分隔的集合中。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回包含 Geography.Country 屬性階層之所有成員的字串。  
@@ -45,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

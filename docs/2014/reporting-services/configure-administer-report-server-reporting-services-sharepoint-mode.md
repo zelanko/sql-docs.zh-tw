@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 94d8b8fcf578a01de96be0b0e36c20629d6d5c72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109777"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>設定和管理報表伺服器 (Reporting Services SharePoint 模式)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是一種伺服器報表平台，可提供齊全的現成工具與服務，協助您建立、部署和管理您組織的報表，並提供可讓您擴充和自訂報表功能的程式設計功能。 您可以將報表環境與 SharePoint 產品整合，以體驗使用 SharePoint 網站所提供之共同作業環境的優點。  

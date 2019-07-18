@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a0e2fe956221614bd2fe24198f57ec02eba72c2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 00d4557d7a525866bf74cd4883d0b403d6382232
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717683"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 部署 SSIS 專案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本快速入門示範如何使用 SQL Server Management Studio (SSMS) 連線到 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式將 SSIS 專案部署至 SSIS 目錄。 
 
@@ -42,7 +46,7 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 1. 開啟 SQL Server Management Studio。
 
-2. 在 [連線至伺服器] 對話方塊中，輸入下列資訊：
+2. 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
    | 設定       | 建議值 | 其他資訊 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -52,9 +56,9 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 
-3. 按一下 **[連接]**。 [物件總管] 視窗會在 SSMS 中開啟。 
+3. 按一下 **[連接]** 。 [物件總管] 視窗會在 SSMS 中開啟。 
 
-4. 在 [物件總管] 中，展開 [Integration Services 目錄]，然後展開 [SSISDB] 以檢視 SSIS 目錄資料庫中的物件。
+4. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
 
 ## <a name="run-the-t-sql-code"></a>執行 T-SQL 程式碼
 執行下列 Transact-SQL 程式碼來部署 SSIS 專案。

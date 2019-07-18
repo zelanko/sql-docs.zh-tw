@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126731"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788797"
 ---
 # <a name="backup-checksum-default"></a>備份總和檢查碼預設
   使用備份總和檢查碼預設設定，在備份及還原期間啟用或停用備份總和檢查碼。  
@@ -25,7 +25,7 @@ ms.locfileid: "48126731"
 |-|-|  
 |**值**|**意義**|  
 |0|已停用。 這是預設值。|  
-|1|已啟用|  
+|1|Enabled|  
   
  這項設定會立即生效。  
   

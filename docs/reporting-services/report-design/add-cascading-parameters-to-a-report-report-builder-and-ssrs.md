@@ -2,18 +2,18 @@
 title: 將串聯參數新增至報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9a597a7cf808028127e6c04d991e20bf7b83bc51
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582083"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
   串聯參數會提供管理大量報表資料的方法。 您可以定義一組相關的參數，讓某一個參數的值清單會視另一個參數所選擇的值而定。 例如，第一個參數是獨立的，而且可能代表一個產品類別目錄的清單。 使用者選取類別目錄時，第二個參數會相依於第一個參數的值。 其值會隨著所選類別目錄內的子類別目錄清單更新。 當使用者檢視報表時，類別目錄與子類別目錄參數的值都用於篩選報表資料。  
@@ -29,7 +29,7 @@ ms.locfileid: "56292316"
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>若要利用包含多個相關參數的查詢建立主資料集  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **[加入資料集]**。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **[加入資料集]** 。  
   
 2.  在 **[名稱]** 中，輸入資料集的名稱。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "56292316"
   
     2.  適用於每個串聯參數的一個查詢參數。 查詢參數會指定要在查詢中包含或排除的特定值，藉以限制從資料來源擷取的資料。 查詢參數通常出現在查詢的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，查詢參數會出現在 WHERE 子句中。  
   
-6.  按一下 **[執行]** (**!**)。 加入查詢參數然後執行查詢之後，會自動建立對應到查詢參數的報表參數。  
+6.  按一下 **[執行]** ( **!** )。 加入查詢參數然後執行查詢之後，會自動建立對應到查詢參數的報表參數。  
   
     > [!NOTE]  
     >  您第一次執行查詢時，查詢參數的順序會決定這些參數在報表中建立的順序。 若要變更順序，請參閱[變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "56292316"
   
 ## <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>建立資料集以提供獨立參數的值  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **[加入資料集]**。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **[加入資料集]** 。  
   
 2.  在 **[名稱]** 中，輸入資料集的名稱。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "56292316"
   
      SELECT DISTINCT 命令會從結果集移除重複的值，讓您可以從指定之資料表的指定資料行中取得每個唯一的值。  
   
-     按一下 **[執行]** (**!**)。 結果集會顯示可用於這個第一個參數的值。  
+     按一下 **[執行]** ( **!** )。 結果集會顯示可用於這個第一個參數的值。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,13 +78,13 @@ ms.locfileid: "56292316"
   
 ## <a name="to-set-available-values-for-a-report-parameter"></a>設定報表參數的可用值  
   
-1.  在 [報表資料] 窗格的 [參數] 資料夾中，以滑鼠右鍵按一下第一個參數，然後按一下 **[參數屬性]**。  
+1.  在 [報表資料] 窗格的 [參數] 資料夾中，以滑鼠右鍵按一下第一個參數，然後按一下 **[參數屬性]** 。  
   
 2.  在 **[名稱]** 中，確認參數的名稱正確。  
   
-3.  按一下 **[可用的值]**。  
+3.  按一下 **[可用的值]** 。  
   
-4.  按一下 **[從查詢取得值]**。 三個欄位隨即出現。  
+4.  按一下 **[從查詢取得值]** 。 三個欄位隨即出現。  
   
 5.  在 **[資料集]** 中，從下拉式清單按一下您在先前程序中建立之資料集的名稱。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "56292316"
   
 ## <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>建立資料集以提供相依參數的值  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **[加入資料集]**。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **[加入資料集]** 。  
   
 2.  在 **[名稱]** 中，輸入資料集的名稱。  
   
@@ -121,13 +121,13 @@ ms.locfileid: "56292316"
   
 ## <a name="to-set-available-values-for-a-report-parameter"></a>設定報表參數的可用值  
   
-1.  在 [報表資料] 窗格的 [參數] 資料夾中，以滑鼠右鍵按一下第一個參數，然後按一下 **[參數屬性]**。  
+1.  在 [報表資料] 窗格的 [參數] 資料夾中，以滑鼠右鍵按一下第一個參數，然後按一下 **[參數屬性]** 。  
   
 2.  在 **[名稱]** 中，確認參數的名稱正確。  
   
-3.  按一下 **[可用的值]**。  
+3.  按一下 **[可用的值]** 。  
   
-4.  按一下 **[從查詢取得值]**。  
+4.  按一下 **[從查詢取得值]** 。  
   
 5.  在 **[資料集]** 中，從下拉式清單按一下您在先前程序中建立之資料集的名稱。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "56292316"
   
 ## <a name="to-test-the-cascading-parameters"></a>測試串聯參數  
   
-1.  按一下 **[執行]**。  
+1.  按一下 **[執行]** 。  
   
 2.  從第一個獨立參數的下拉式清單中選擇一個值。  
   
@@ -149,12 +149,12 @@ ms.locfileid: "56292316"
   
      報表不會在選擇最後一個參數後自動執行，因此您可以變更您的選擇。  
   
-4.  按一下 **[檢視報表]**。 報表會根據您所選擇的參數，更新顯示。  
+4.  按一下 **[檢視報表]** 。 報表會根據您所選擇的參數，更新顯示。  
   
 ## <a name="see-also"></a>另請參閱  
  [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
  [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

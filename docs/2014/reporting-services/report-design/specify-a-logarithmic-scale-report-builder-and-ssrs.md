@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 391625f6ed1b739bbce2cdb16eabbe10eda56da3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0910888603528d899f0180bf96c66cfbea045aa4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285276"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104941"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定對數刻度 (報表產生器及 SSRS)
   如果您的資料在對數上成比例，您可能會想要考慮在圖表上使用對數刻度。 這樣可以讓您的資料更容易管理，而有助於改善圖表的外觀。 大部分的對數刻度都使用 10 當做基底。  
@@ -30,11 +29,11 @@ ms.locfileid: "56285276"
   
 ### <a name="to-specify-a-logarithmic-scale"></a>若要指定對數刻度  
   
-1.  以滑鼠右鍵按一下圖表的 Y 軸，然後按一下 [垂直軸屬性]。 [垂直軸屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下圖表的 Y 軸，然後按一下 [垂直軸屬性]  。 [垂直軸屬性]  對話方塊隨即出現。  
   
-2.  在 [軸選項] 中，選取 [使用對數刻度]。  
+2.  在 [軸選項]  中，選取 [使用對數刻度]  。  
   
-3.  在 [對數底數] 文字方塊中，為對數底數鍵入正值。 如果沒有指定任何值，對數基底預設為 10。  
+3.  在 [對數底數]  文字方塊中，為對數底數鍵入正值。 如果沒有指定任何值，對數基底預設為 10。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

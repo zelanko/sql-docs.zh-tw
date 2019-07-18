@@ -11,14 +11,18 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7b71c3d1e92f755227903f9a02a7e37f28a0307
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13b88630ed7f8280bc57282f9f6681de29080a47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726321"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目的地自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地同時具有自訂屬性，以及所有資料流程元件通用的屬性。  
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地的自訂屬性。 所有屬性都是可讀寫的。  

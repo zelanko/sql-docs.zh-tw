@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840062"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412669"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,11 +52,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      授與變更特定安全性實體之屬性 (除了擁有權之外) 的能力。 在特定範圍授與 ALTER 權限時，也會一併授與改變、建立或卸除該範圍內包含之任何安全性實體的能力。 例如，結構描述上的 ALTER 權限包括建立、改變與卸除結構描述之物件的能力。  
   
--   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」可以是任何伺服器安全性實體。  
+-   ALTER ANY \<*伺服器安全性實體*>，其中「伺服器安全性實體」  可以是任何伺服器安全性實體。  
   
      授與 *伺服器安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體的能力。 例如，ALTER ANY LOGIN 會授與建立、改變或卸除執行個體中任何登入的能力。  
   
--   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」可以是資料庫層級上的任何安全性實體。  
+-   ALTER ANY \<*資料庫安全性實體*>，其中「資料庫安全性實體」  可以是資料庫層級上的任何安全性實體。  
   
      授與 *資料庫安全性實體*的 CREATE、ALTER 或 DROP 個別執行個體能力。 例如，ALTER ANY SCHEMA 會授與建立、改變或卸除資料庫中任何結構描述的能力。  
   
@@ -109,7 +109,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |IMPERSONATE|登入及使用者|  
 |Insert|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列|  
-|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br />VIEW，以及<br />XML SCHEMA COLLECTION|  
+|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />TABLE、<br />TYPE、<br />VIEW，以及<br />XML SCHEMA COLLECTION|  
 |SELECT|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  
 |TAKE OWNERSHIP|除了 DATABASE SCOPED CONFIGURATION、LOGIN、SERVER 及 USER 之外的所有物件類別。|  
 |UPDATE|同義字、資料表與資料行、檢視與資料行。 權限可以在資料庫、結構描述或物件層級授與。|  
@@ -259,7 +259,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|Delete|DL|SCHEMA|Delete|  
 |OBJECT|執行 CREATE 陳述式之前，請先執行|EX|SCHEMA|執行 CREATE 陳述式之前，請先執行|  
 |OBJECT|Insert|IN|SCHEMA|Insert|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -418,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>資料行層級權限的特殊考量
 
-資料行層級權限授與使用語法 *<table_name>(\<column _name>)*。 例如：
+資料行層級權限授與使用語法 *<table_name>(\<column _name>)* 。 例如：
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

@@ -11,15 +11,17 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577460"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   更新 JSON 字串中的屬性值，並傳回更新後的 JSON 字串。  
   
@@ -31,7 +33,8 @@ ms.locfileid: "56026519"
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
  *expression*  
  運算式。 通常為變數的名稱或包含 JSON 文字的資料行。  
   
@@ -44,16 +47,16 @@ JSON_MODIFY ( expression , path , newValue )
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *append*  
-    選用的修飾詞，指定新的值應附加到 \<JSON 路徑> 參考的陣列。  
+- *append*  
+    選用的修飾詞，指定新的值應附加到 \<JSON 路徑>  參考的陣列。  
   
--   *lax*  
-    指定 \<JSON 路徑> 參考的屬性不一定要存在。 若屬性不存在，JSON_MODIFY 便會嘗試在指定的路徑插入新值。 若屬性無法在路徑上插入，插入可能會失敗。 若您未指定 *lax* 或 *strict*，則預設模式為 *lax*。  
+- *lax*  
+    指定 \<JSON 路徑>  參考的屬性不一定要存在。 若屬性不存在，JSON_MODIFY 便會嘗試在指定的路徑插入新值。 若屬性無法在路徑上插入，插入可能會失敗。 若您未指定 *lax* 或 *strict*，則預設模式為 *lax*。  
   
--   *strict*  
-    指定 \<JSON 路徑> 參考的屬性必須存在於 JSON 運算式中。 若屬性不存在，JSON_MODIFY 會傳回錯誤。  
+- *strict*  
+    指定 \<JSON 路徑>  參考的屬性必須存在於 JSON 運算式中。 若屬性不存在，JSON_MODIFY 會傳回錯誤。  
   
--   \<JSON 路徑>  
+- \<JSON 路徑>   
     指定要更新之屬性的路徑。 如需詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，您可以將變數作為 *path* 的值提供。
@@ -67,10 +70,12 @@ JSON_MODIFY ( expression , path , newValue )
   
 JSON_MODIFY 會逸出所有類型為 NVARCHAR 或 VARCHAR 新值中的特殊字元。 若文字值為 FOR JSON、JSON_QUERY 或 JSON_MODIFY 所產生之格式正確的 JSON，則文字值便不會逸出。  
   
-## <a name="return-value"></a>傳回值  
+## <a name="return-value"></a>傳回值
+
  將 *expression* 的更新值以格式正確的 JSON 文字傳回。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  JSON_MODIFY 函式讓您可以更新現有屬性的值、插入新的索引鍵/值組，或根據模式與提供值的組合來刪除索引鍵。  
   
  下列表格會比較 lax 模式與 strict 模式中 **JSON_MODIFY** 的行為。 如需選擇性路徑模式規格 (lax 或 strict) 的詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  
@@ -86,10 +91,11 @@ JSON_MODIFY 會逸出所有類型為 NVARCHAR 或 VARCHAR 新值中的特殊字�
   
 ## <a name="examples"></a>範例  
   
-### <a name="example---basic-operations"></a>範例 - 基本作業  
+### <a name="example---basic-operations"></a>範例 - 基本作業
+
  下列範例示範可使用 JSON 文字進行的基本作業。  
   
- **[資料集屬性]**  
+ **[資料集屬性]**
   
 ```sql  
 
@@ -122,7 +128,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **結果**  
+ **結果**
   
 ```json  
 {
@@ -144,10 +150,11 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>範例 - 多個更新  
+### <a name="example---multiple-updates"></a>範例 - 多個更新
+
  使用 JSON_MODIFY，您可以僅更新一個屬性。 若您需要進行多個更新，您可以使用多個 JSON_MODIFY 呼叫。  
   
- **[資料集屬性]**  
+ **[資料集屬性]**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -161,7 +168,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **結果**  
+ **結果**
   
 ```json  
 {
@@ -177,7 +184,7 @@ PRINT @info
 ### <a name="example---rename-a-key"></a>範例 - 重新命名索引鍵  
  下列範例示範如何使用 JSON_MODIFY 函式重新命名 JSON 文字中的屬性。 首先，您可以使用現有屬性的值，並將其插入為新的索引鍵/值組。 然後您便可以透過將舊屬性的值設為 NULL 來刪除舊索引鍵。  
   
- **[資料集屬性]**  
+ **[資料集屬性]**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -196,7 +203,7 @@ SET @product=
 PRINT @product
 ```  
   
- **結果**  
+ **結果**
   
 ```json  
 {
@@ -208,10 +215,11 @@ PRINT @product
   
  若您沒有將新的值轉換成數值類型，JSON_MODIFY 便會將其當作文字處理，並用雙引號括住。  
   
-### <a name="example---increment-a-value"></a>範例 - 遞增值  
+### <a name="example---increment-a-value"></a>範例 - 遞增值
+
  下列範例示範如何使用 JSON_MODIFY 函式遞增 JSON 文字中的屬性。 首先，您可以使用現有屬性的值，並將其插入為新的索引鍵/值組。 然後您便可以透過將舊屬性的值設為 NULL 來刪除舊索引鍵。  
   
- **[資料集屬性]**  
+ **[資料集屬性]**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -226,7 +234,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **結果**  
+ **結果**
   
 ```json  
 {
@@ -236,7 +244,8 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>範例 - 修改 JSON 物件  
+### <a name="example---modify-a-json-object"></a>範例 - 修改 JSON 物件
+
  JSON_MODIFY 會將 *newValue* 引數以純文字來處理，即使它包含格式正確的 JSON 文字。 因此，函式的 JSON 輸出會由雙引號括住，並且所有的特殊字元都會遭到逸出，如下列範例中所示。  
   
  **[資料集屬性]**  
@@ -253,7 +262,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **結果**  
+ **結果**
   
 ```json  
 {
@@ -281,7 +290,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **結果**  
+ **結果**
   
 ```json  
 {
@@ -293,7 +302,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>範例 - 更新 JSON 資料行  
+### <a name="example---update-a-json-column"></a>範例 - 更新 JSON 資料行
+
  下列範例會更新包含 JSON 之資料表資料行中屬性的值。  
   
 ```sql  
@@ -303,8 +313,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 資料 &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

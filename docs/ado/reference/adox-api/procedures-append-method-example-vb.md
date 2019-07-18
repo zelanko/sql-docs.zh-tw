@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14de33e27d184c4474aeb6eb601f7d34969c47a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965429"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append 方法範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)物件並[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[附加](../../../ado/reference/adox-api/append-method-adox-procedures.md)基礎資料來源中建立新的程序的方法。  

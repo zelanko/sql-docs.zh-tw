@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN (geometry Data Type)
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 05980c75165ef648f55a9e3b040d7f12b3685aa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e494349d40f78d1f6886e3091c3399b3f25e55d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938918"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47807886"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  如果參數大於 `STNumGeometries()` 的結果，這個方法會傳回 **null**；如果 *expression* 參數小於 1，將會擲回 **ArgumentOutOfRangeException**。  

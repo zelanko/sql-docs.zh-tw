@@ -12,13 +12,12 @@ apilocation:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 870acddcd825c9c112274d294fa4c97848a85236
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8a873fbc1b5031d6f26f0a3809675276c7806fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021995"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52507785"
   
  *major.minor[.build[.revision]]*  
   
- 版本字串的前兩個數字 (*主要*並*次要*) 是必要項目。 版本字串的最後兩個數字 (*建置*並*修訂*) 為選擇性，預設為零，如果使用者離開其。這表示如果使用者僅指定 "12.2" 做為 LocalDB 版本號碼，則會視為使用者指定 "12.2.0.0"。  
+ 版本字串的前兩個數字 (*主要*並*次要*) 是必要項目。 版本字串的最後兩個數字 (*建置*並*修訂*) 為選擇性，預設為零，如果使用者離開其。這表示，如果使用者僅指定"12.2"做為 LocalDB 版本號碼，則會被視為使用者指定"12.2.0.0"。  
   
  例如，LocalDB 安裝的版本定義於 MSSQLServer\CurrentVersion 登錄機碼中的 SQL Server 執行個體登錄機碼底下，例如：  
   
@@ -46,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 在此機碼下會列出機碼清單，其中每個機碼各代表電腦上已安裝的每個 LocalDB 版本。 每個這些金鑰使用 LocalDB 版本號碼的格式命名*\<主要版本 >*。*\<次要版本 >* (例如，索引鍵[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]名為 13.0)。 在每個版本機碼下會列出 `InstanceAPIPath` 名稱/值組，定義隨該版本安裝之 SQLUserInstance.dll 檔案的完整路徑。 下列範例示範 LocalDB 11.0 和 13.0 安裝的版本的電腦的登錄項目：  
+ 在此機碼下會列出機碼清單，其中每個機碼各代表電腦上已安裝的每個 LocalDB 版本。 每個這些金鑰使用 LocalDB 版本號碼的格式命名 *\<主要版本 >* 。 *\<次要版本 >* (例如，索引鍵[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]名為 13.0)。 在每個版本機碼下會列出 `InstanceAPIPath` 名稱/值組，定義隨該版本安裝之 SQLUserInstance.dll 檔案的完整路徑。 下列範例示範 LocalDB 11.0 和 13.0 安裝的版本的電腦的登錄項目：  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  

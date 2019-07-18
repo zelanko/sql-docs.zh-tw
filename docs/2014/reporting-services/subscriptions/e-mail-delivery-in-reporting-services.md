@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100890"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 您可以透過 Reporting Services 組態管理員並藉由編輯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔，設定電子郵件傳遞延伸模組。  
@@ -50,7 +49,7 @@ ms.locfileid: "56029549"
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在傳送報表之前，不會檢查附加檔案或訊息的大小。 如果附加檔案或訊息超過郵件伺服器所允許的上限，將不會傳遞報表。 如果是大型報表，請選擇其他傳遞選項之一 (例如 URL 或通知)。  
   
- 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]，則電子郵件訊息包含連結到報表的超連結。  
+ 您可以設定傳遞選項，來決定建立訂閱時如何傳遞報表。 例如，您若是在訂閱中選取 [包含連結]  ，則電子郵件訊息包含連結到報表的超連結。  
   
 ## <a name="role-based-e-mail-settings"></a>以角色為基礎的電子郵件設定  
  您訂閱報表時所使用的電子郵件傳遞設定，會依您的角色包含的是「管理個別訂閱」工作或「管理所有訂閱」工作而異。  

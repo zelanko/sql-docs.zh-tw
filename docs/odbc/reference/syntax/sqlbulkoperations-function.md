@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 496148e51e56ebbeea239101660b37e45cfa7eba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036176"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53212708"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -261,7 +260,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="code-example"></a>程式碼範例  
  下列範例會從 [客戶] 資料表擷取一次的 10 個資料列的資料。 然後，它會提示使用者輸入動作來採取。 若要減少網路流量，範例緩衝區更新、 刪除，並將在本機插入，繫結的陣列，但在過去的資料列集資料的位移。 當使用者選擇要傳送更新、 刪除和插入到資料來源時，設定適當位移的繫結的程式碼，並呼叫**SQLBulkOperations**。 為了簡單起見，使用者無法緩衝的 10 個以上的更新、 刪除或插入。  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

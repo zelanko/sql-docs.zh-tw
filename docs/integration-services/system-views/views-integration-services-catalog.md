@@ -13,14 +13,18 @@ ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19b15e078e077a7a448ae95ddc9f4b9e14093e64
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7133e0fc0b070c15be8f47df0ce4da650e2f12c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65802354"
 ---
 # <a name="views-integration-services-catalog"></a>檢視 (Integration Services 目錄)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本節描述可用來管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 專案 (已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的執行個體) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檢視。  

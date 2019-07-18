@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.download.f1
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeadcc3de3e7b183bf89c09f2287984db814589b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 498e7a5fbf892d622b814b0350e9a8f38d6e78f1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799236"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681440"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目標伺服器 (下載指示索引標籤)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

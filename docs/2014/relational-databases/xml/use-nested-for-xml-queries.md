@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528468"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63232410"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
   `xml`資料類型和[FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)讓 FOR XML 查詢所傳回的 XML 在伺服器上，以及在用戶端上進行處理。  

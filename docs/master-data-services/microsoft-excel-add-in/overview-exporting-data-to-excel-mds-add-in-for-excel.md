@@ -1,5 +1,5 @@
 ---
-title: 概觀：將資料匯出至 Excel (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+title: 概觀：將資料匯出至 Excel （MDS 增益集適用於 Excel） |Microsoft Docs
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 05b5eb61afee1c38c64c2b071efd7b808fade030
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074502"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概觀：將資料匯出至 Excel (適用於 Excel 的 MDS 增益集)
 
@@ -26,7 +25,7 @@ ms.locfileid: "52396801"
   
  您可以匯出的資料限制為您有權存取的資料。 存取資料的權限是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中設定，或以程式設計方式設定。  
   
- 當您匯出大量資料時，可以設定資料載入時間可能很長時所顯示的警告。 若要這樣做，請按一下 [選項] 群組中的 [設定]。 在 [資料] 索引標籤上，選取 [顯示大型資料集的篩選警告]。  
+ 當您匯出大量資料時，可以設定資料載入時間可能很長時所顯示的警告。 若要這樣做，請按一下 [選項]  群組中的 [設定]  。 在 [資料]  索引標籤上，選取 [顯示大型資料集的篩選警告]  。  
   
 > [!WARNING]  
 >  啟用 MDS 的活頁簿僅能在 Excel 中使用適用於 Excel 的 MDS 增益集開啟並更新。 不支援在未安裝 MDS Excel 增益集所在電腦上的 Excel 中開啟啟用 MDS 的活頁簿，而且可能會造成活頁簿檔案損毀。 如果您要與其他人共用資料，請以電子郵件傳送捷徑查詢檔案給他們，而不要儲存工作表後以電子郵件傳送該工作表。 如需查詢的詳細資訊，請參閱[以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)。  

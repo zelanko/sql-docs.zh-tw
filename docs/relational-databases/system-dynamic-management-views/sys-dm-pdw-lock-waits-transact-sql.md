@@ -11,16 +11,15 @@ dev_langs:
 ms.assetid: 8ef966f8-d14e-40d3-9626-3508ada9b8fb
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a376ac534182f5ebdae8a3af5e32f9c4a536f8aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 29a82daa2857177200bd76b738f92d65f6b26668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899381"
 ---
-# <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits (Transact-SQL)
+# <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留的要求正在等待鎖定的相關資訊。  
@@ -29,7 +28,7 @@ ms.locfileid: "56014119"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|要求的等候清單中的位置。|0 為基底的序數。 這不是唯一在所有等候的項目。|  
 |session_id|**nvarchar(32)**|發生等候狀態的工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|型別|**nvarchar(255)**|此項目所代表的等候類型。|可能的值如下：<br /><br /> 共用<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> 排除|  
+|type|**nvarchar(255)**|此項目所代表的等候類型。|可能的值如下：<br /><br /> 共用<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> 排除|  
 |object_type|**nvarchar(255)**|等候受影響的物件型別。|可能的值如下：<br /><br /> OBJECT<br /><br /> DATABASE<br /><br /> SYSTEM<br /><br /> SCHEMA<br /><br /> APPLICATION|  
 |object_name|**nvarchar(386)**|指定等候受影響之物件的 GUID 或名稱。|資料表和檢視表會顯示使用三部分名稱。<br /><br /> 索引和統計資料會顯示四部分名稱。<br /><br /> 名稱、 主體及資料庫是字串名稱。|  
 |request_id|**nvarchar(32)**|等候狀態發生所在之要求的識別碼。|要求的識別碼。<br /><br /> 這是載入要求的 GUID。|  

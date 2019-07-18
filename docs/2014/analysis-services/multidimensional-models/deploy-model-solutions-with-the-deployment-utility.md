@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -16,12 +15,12 @@ ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075361"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署公用程式的部署模型方案
   **Microsoft.AnalysisServices.Deployment** 公用程式可讓您在命令提示字元之下啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 這個公用程式利用在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案所產生的 XML 輸出檔來作為輸入檔。 您可以輕易地修改這些輸入檔來自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
@@ -69,7 +68,7 @@ ms.locfileid: "48106768"
 ##  <a name="Modes"></a> 模式  
  可以使用下表列出的模式來執行這個公用程式。  
   
-|[模式]|描述|  
+|模式|描述|  
 |----------|-----------------|  
 |無訊息模式|不顯示任何使用者介面，部署所需要的所有資訊都由輸入檔提供。 在無訊息模式下，此公用程式不會顯示任何進度。 相反地，您可以利用選擇性的記錄檔來擷取進度和錯誤資訊，以便稍後進行檢閱。|  
 |回應模式|這個模式會顯示部署精靈使用者介面，使用者回應會儲存在指定的輸入檔中，以便稍後進行部署。 回應模式下不會進行部署。 回應模式的唯一用途是擷取使用者回應。|  

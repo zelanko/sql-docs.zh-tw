@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b803b86c216d877c0e056dd4892931575ca91010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d5ebc844c2cee8f92266cf5ea18b82666ea203
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837996"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264472"
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47837996"
 |user_object_reserved_page_count|**bigint**|從一致範圍中配置給資料庫使用者物件的總頁數。 這個計數不包括已配置範圍中的未使用頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 您可以使用中的 total_pages 資料行[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)目錄檢視，以傳回使用者物件中的每一個配置單位的保留的頁面計數。 不過請注意，total_pages 資料行包含 IAM 頁面。|  
 |internal_object_reserved_page_count|**bigint**|配置給檔案中內部物件之一致範圍中的總頁數。 這個計數不包括已配置範圍中的未使用頁面。<br /><br /> 不包含 IAM 頁面，因為它們一律從混合範圍中配置。 如果 PFS 頁面是從一致範圍配置，則會包含它們。<br /><br /> 沒有目錄檢視或動態管理物件可傳回每一個內部物件的頁數。|  
 |mixed_extent_page_count|**bigint**|檔案中已配置混合範圍的已配置和未配置總頁數。 混合範圍包含已配置給不同物件的頁面。 這個計數包含檔案中的所有 IAM 頁面。|
-|modified_extent_page_count|**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />中修改的頁面總數前次完整資料庫備份之後，配置檔案的範圍。 已修改的頁面計數可用來追蹤資料庫中的差異變更數量自上次完整備份的詳細資訊，決定如果需要差異備份。|
+|modified_extent_page_count|**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />中修改的頁面總數前次完整資料庫備份之後，配置檔案的範圍。 已修改的頁面計數可用來追蹤資料庫中的差異變更數量自上次完整備份的詳細資訊，決定如果需要差異備份。|
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
 |distribution_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 與發佈相關聯的唯一數值識別碼。|  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47837996"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
   

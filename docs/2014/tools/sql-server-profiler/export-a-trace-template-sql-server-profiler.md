@@ -15,24 +15,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184260"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>匯出追蹤範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來匯出現有的追蹤範本，並且另存為範本檔 (.tdf)。 當您匯出追蹤範本，並且另存成檔案，即可以另一個 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的執行個體來使用該範本。  
   
 ### <a name="to-export-a-trace-template"></a>若要匯出追蹤範本  
   
-1.  在 [檔案] 功能表上，指向 [範本]，然後按一下 [匯出範本]。  
+1.  在 [檔案]  功能表上，指向 [範本]  ，然後按一下 [匯出範本]  。  
   
-2.  在 [選取範本名稱] 對話方塊的 [選取範本名稱] 清單中，選取要匯出的範本，然後按一下 [確定]。  
+2.  在 [選取範本名稱]  對話方塊的 [選取範本名稱]  清單中，選取要匯出的範本，然後按一下 [確定]  。  
   
-     [另存新檔] 對話方塊隨即出現。  
+     [另存新檔]  對話方塊隨即出現。  
   
-3.  為所匯出的範本檔案輸入一個檔案名稱，然後按一下 [儲存]。  
+3.  為所匯出的範本檔案輸入一個檔案名稱，然後按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立追蹤範本 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   

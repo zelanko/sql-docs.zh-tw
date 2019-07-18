@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768534"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎允許在執行期間，使用中斷點暫停封裝、工作和其他類型的容器。 使用中斷點可讓您檢閱和修正妨礙應用程式或工作正確執行的錯誤。 中斷點架構可讓用戶端在定義的執行點暫停工作處理，以評估封裝中物件的執行階段值。  

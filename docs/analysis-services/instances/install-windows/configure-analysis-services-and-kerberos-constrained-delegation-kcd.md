@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181633"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52811150"
   
  ![做為資料來源的活頁簿](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "做為資料來源的活頁簿")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>案例 2:Excel 活頁簿的 Analysis Services 表格式模型連結  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>案例 2：Excel 活頁簿的 Analysis Services 表格式模型連結  
  Analysis Services 表格式模型![請參閱 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "請參閱 1")包含 Powerpivot 模型的 Excel 活頁簿的連結。 在此案例中，當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 載入表格式模型時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會偵測到活頁簿的連結。 處理模型時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會將查詢要求傳送至 SharePoint，以載入活頁簿。 在此案例中，「不」  需要將用戶端認證從 Analysis Services 委派給 SharePoint，不過用戶端應用程式可能會覆寫非正規繫結中的資料來源資訊。 如果非正規繫結要求指定要模擬目前的使用者，就必須委派使用者認證，而這會需要在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 與 SharePoint 之間設定 KCD。  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  

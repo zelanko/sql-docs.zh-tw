@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1791fa0569012ca9c3cb66068a45104f95b35717
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135754"
 ---
 # <a name="other-dbase-driver-programming-details"></a>其他 dBASE 驅動程式的程式設計詳細資料
 > [!NOTE]  
@@ -48,4 +47,4 @@ ms.locfileid: "47857246"
   
 -   [SQLTransact (dBASE 驅動程式)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [dBASE 索引 (dBASE 驅動程式)](../../odbc/microsoft/dbase-indexes.md)
+-   [dBASE Indexes (dBASE Driver)](../../odbc/microsoft/dbase-indexes.md)

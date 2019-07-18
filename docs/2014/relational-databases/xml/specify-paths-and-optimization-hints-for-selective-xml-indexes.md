@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62679796"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
   本主題描述如何指定建立或修改選擇性 XML 索引時，要索引的節點路徑以及索引的最佳化提示。  
@@ -29,7 +29,7 @@ ms.locfileid: "58528800"
  如需選擇性 XML 索引的詳細資訊，請參閱 [選擇性 XML 索引 &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)。  
   
 ##  <a name="untyped"></a> 了解不具類型之 XML 中的 XQuery 和 SQL Server 類型  
- 選擇性 XML 索引支援兩種類型系統：XQuery 類型和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型別。 索引路徑可用來比對 XQuery 運算式，或是比對 XML 資料類型之 value() 方法的傳回類型。  
+ 選擇性 XML 索引支援兩種類型的系統：XQuery 類型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型。 索引路徑可用來比對 XQuery 運算式，或是比對 XML 資料類型之 value() 方法的傳回類型。  
   
 -   如果要索引的路徑未加上註解，或是使用 XQUERY 關鍵字註解，則路徑會比對 XQuery 運算式。 XQUERY 註解的節點路徑有兩種變化：  
   
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>選擇要索引的節點  
  您可以利用下列兩種簡單的原則，識別要加入至選擇性 XML 索引的正確節點子集。  
   
-1.  **原則 1**:若要評估特定的 XQuery 運算式，編製索引，您需要檢查所有節點。  
+1.  **原則 1**：若要評估特定 XQuery 運算式，請為您需要檢查的所有節點編製索引。  
   
     -   索引在 XQuery 運算式中存在或使用其值的所有節點。  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   節點 `b`，因為述詞會在 XQuery 運算式的節點`b` 上套用。  
   
-2.  **原則 2**:為了達到最佳效能，請為評估特定的 XQuery 運算式所需的所有節點編製都索引。 如果您只索引部分節點，則選擇性 XML 索引可改善僅包括索引節點的子運算式評估。  
+2.  **原則 2**：為了達到最佳效能，請為評估指定 XQuery 運算式所需的所有節點編製索引。 如果您只索引部分節點，則選擇性 XML 索引可改善僅包括索引節點的子運算式評估。  
   
  若要改善上面所示 SELECT 陳述式的效能，您可以建立下列選擇性 XML 索引：  
   
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果查詢需要已利用 node() 提示索引之節點的值，則無法使用選擇性 XML 索引。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最佳化提示  
- 適用於：XQuery 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型  
+ 適用於：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型  
   
  SINGLETON 最佳化提示會指定節點的基數。 此提示可改善查詢效能，因為事先就已知道節點最多只會在其父系或上階內出現一次。  
   

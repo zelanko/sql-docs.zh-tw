@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc244667df41f625084c9d436d30652491e4b3dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210180"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 關聯規則檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。  
   
  以下是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法的主要原因：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52503068"
   
 -   **只顯示屬性名稱**  
   
- 您可以使用 **[最小案例數]** 和 **[項目集大小下限]**，來篩選索引標籤中所顯示的項目集數目。 您可以使用 **[篩選項目集]** 和輸入必須存在的項目集特性，來進一步限制所顯示的項目集數目。 例如，若您輸入「Water Bottle = existing」，您就可以將項目集限制為僅包含水壺的那些項目集。 **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
+ 您可以使用 **[最小案例數]** 和 **[項目集大小下限]** ，來篩選索引標籤中所顯示的項目集數目。 您可以使用 **[篩選項目集]** 和輸入必須存在的項目集特性，來進一步限制所顯示的項目集數目。 例如，若您輸入「Water Bottle = existing」，您就可以將項目集限制為僅包含水壺的那些項目集。 **[篩選項目集]** 選項也會顯示您先前已用過的篩選清單。  
   
  您可以按一下資料行標題來排序方格中的資料列。  
   

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742088"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585061"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>將資料行從一個資料表複製至另一個資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "55742088"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>若要將資料行定義從一個資料表複製到另一個資料表  
   
-1.  以滑鼠右鍵按一下含有要複製之資料行的資料表，以及您要複製到其中的目標資料表，再按一下 [設計]，加以開啟。  
+1.  以滑鼠右鍵按一下含有要複製之資料行的資料表，以及您要複製到其中的目標資料表，再按一下 [設計]  ，加以開啟。  
   
 2.  按一下您要複製資料行的資料表索引標籤，並選取這些資料行。  
   
@@ -63,8 +63,10 @@ ms.locfileid: "55742088"
   
 4.  按一下資料行複製目的地的資料表之索引標籤。  
   
-5.  選取要在其前面插入資料行的資料行，並從 **[編輯]** 功能表中，按一下 **[貼上]**。  
-  
+5.  選取要在其前面插入資料行的資料行，並從 **[編輯]** 功能表中，按一下 **[貼上]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>若要將資料從一個資料表複製到另一個資料表  
   
 1.  依照前述的指示複製資料行定義。  
@@ -74,13 +76,13 @@ ms.locfileid: "55742088"
   
 2.  開啟新的 [查詢編輯器] 視窗。 
 
-3.  以滑鼠右鍵按一下 [查詢編輯器]，然後按一下 [在編輯器中設計查詢]。 
+3.  以滑鼠右鍵按一下 [查詢編輯器]，然後按一下 [在編輯器中設計查詢]  。 
 
-4.  在 [新增資料表] 對話方塊中，選取來源和目的地資料表，並按一下 [新增]，然後關閉 [新增資料表] 對話方塊。 
+4.  在 [新增資料表]  對話方塊中，選取來源和目的地資料表，並按一下 [新增]  ，然後關閉 [新增資料表]  對話方塊。 
 
-5.  以滑鼠右鍵按一下 [查詢編輯器] 的已開啟區域，並指向 [變更類型]，然後按一下 [插入結果]。  
+5.  以滑鼠右鍵按一下 [查詢編輯器] 的已開啟區域，並指向 [變更類型]  ，然後按一下 [插入結果]  。  
 
-6.  在 [選擇插入結果的目標資料表] 對話方塊中，選取目的地資料表。 
+6.  在 [選擇插入結果的目標資料表]  對話方塊中，選取目的地資料表。 
 
 7.  在 [查詢設計工具] 的上方部分，按一下來源資料表中的來源資料行。
 
@@ -99,9 +101,9 @@ ms.locfileid: "55742088"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

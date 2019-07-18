@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode |Microsoft Docs
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 description: 若要建立完的大量複製查詢或資料表使用 IBCPSession2::BCPSetBulkMode
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8df4a1e06e0bb1d7fbc4f4352c5c650be029f980
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5987ca7b01022d30df0ee9bcded83ec4f65078ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790742"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,14 +67,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|此引數無效。|  
 |**E_OUTOFMEMORY**|記憶體不足的錯誤。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  IBCPSession2::BCPSetBulkMode 可用來大量複製查詢或資料表。 當 IBCPSession2::BCPSetBulkMode 用來大量複製查詢陳述式時，您必須先呼叫此方法，再呼叫 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 來指定查詢陳述式。  
   
  您應該避免在單一命令文字中結合 RPC 呼叫語法與批次查詢語法 (例如 `{rpc func};SELECT * from Tbl`)。  這會導致 icommandprepare:: Prepare 傳回錯誤，並讓您無法擷取中繼資料。 如果您需要在單一命令文字中結合預存程序執行與批次查詢，請使用 ODBC CALL 語法 (例如 `{call func}; SELECT * from Tbl`)。  
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應到 BCP 中的-c 選項。EXE，並具有的 ibcpsession:: Bcpcolfmt *eUserDataType*屬性設定為**BCP_TYPE_SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應到 BCP 中的-w 選項。EXE 和使用的 ibcpsession:: Bcpcolfmt *eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**。|  

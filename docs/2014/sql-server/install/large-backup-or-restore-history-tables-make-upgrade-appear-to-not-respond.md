@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - backup history tables
@@ -14,12 +13,12 @@ ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0cf438c6c5ef374e6119f583ffd72a76a99d3110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd0e8ad6c4230e01b689e5863b770cdd78ddfccc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094130"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>大型備份或還原記錄資料表會使升級作業看似沒有回應
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，新的資料行會加入至某些備份和還原記錄資料表。 升級這些資料表需要更改它們，以便加入新的資料行。 如果其中一個或多個資料表包含大量資料列，則升級會延滯相當長的一段時間，等候 ALTER TABLE 陳述式將資料行加入至該資料表。  
@@ -54,6 +53,6 @@ ms.locfileid: "48105788"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

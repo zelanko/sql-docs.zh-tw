@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755593"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>資料庫鏡像及 SQL Server 容錯移轉叢集執行個體
   容錯移轉叢集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集服務 (MSCS) 叢集群組 (即所謂的資源群組) 中一或多個實體磁碟的結合，它們是叢集的參與節點。 資源群組會設定為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的容錯移轉叢集執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體會以單一電腦的型態出現在網路上，但是它具有在一個節點無法使用時，提供從一個節點容錯移轉到另一個節點的功能。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "48151176"
   
  ![叢集上的容錯移轉](../media/dbm-and-failover-clustering.gif "叢集上的容錯移轉")  
   
- 鏡像工作階段中的三個伺服器執行個體位於三個不同的叢集： **Cluster_A**、 **Cluster_B**，以及 **Cluster_C**。 在每一個叢集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的身分來執行。 鏡像工作階段啟動時， **Cluster_A** 上的容錯移轉叢集執行個體是主體伺服器、 **Cluster_B** 上的容錯移轉叢集執行個體是鏡像伺服器，而 **Cluster_C** 上的容錯移轉叢集執行個體則是鏡像工作階段中的見證。 最後， **Cluster_A** 上的使用中節點失敗，這造成主體伺服器無法使用。  
+ 鏡像工作階段中的三個伺服器執行個體位於三個不同的叢集：**Cluster_A**、**Cluster_B** 和 **Cluster_C**。 在每一個叢集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的身分來執行。 鏡像工作階段啟動時， **Cluster_A** 上的容錯移轉叢集執行個體是主體伺服器、 **Cluster_B** 上的容錯移轉叢集執行個體是鏡像伺服器，而 **Cluster_C** 上的容錯移轉叢集執行個體則是鏡像工作階段中的見證。 最後， **Cluster_A** 上的使用中節點失敗，這造成主體伺服器無法使用。  
   
  在叢集有時間進行容錯移轉之前，鏡像伺服器透過見證的協助，而偵測到主體伺服器遺失。 鏡像伺服器會向前復原它的資料庫，並儘快將它與新的主體資料庫連線。 **Cluster_A** 完成容錯移轉時，先前的主體伺服器現在是鏡像伺服器，而且它會與目前在 **Cluster_B**上的主體資料庫同步處理其資料庫。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3da1afcd34e530b96a9be091c3f5ffe3aa247f48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800253"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>用於 SQL Server 之 PHP 的 Microsoft 驅動程式
 
@@ -27,13 +27,13 @@ Microsoft Drivers for PHP for SQL Server 讓 PHP 應用程式與 SQL Server 整�
 ## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 PHP 開發的開發環境](step-1-configure-development-environment-for-php-development.md)  
 * [步驟 2︰建立 PHP 開發的資料庫](step-2-create-a-sql-database-for-php-development.md)  
-* [步驟 3︰使用 PHP 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [步驟 3︰使用 PHP 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [步驟 4︰使用 PHP 彈性地連線到 SQL](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>文件集  
 * [快速入門](getting-started-with-the-php-sql-driver.md)
 * [概觀](overview-of-the-php-sql-driver.md)
-* [程式設計指南](programming-guide-for-php-sql-driver.md) 
+* [程式設計手冊](programming-guide-for-php-sql-driver.md) 
 * [安全性考量](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>社群  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726896"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768598"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726896"
 
   OLE DB Driver for SQL Server 會針對用於建立資料存放區連結的 OLE DB 介面集合，使用資料來源這個詞；例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立提供者的資料來源物件的執行個體是 OLE DB Driver for SQL Server 取用者的第一個工作。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 OLE DB driver for SQL Server 的 CLSID 為 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 會解析為正確的符號 progid 您參考 msoledbsql.h 檔案中)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 OLE DB driver for SQL Server 的 CLSID 為 C /C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 會解析為正確的符號 progid 您參考 msoledbsql.h 檔案中)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
  OLE DB Driver for SQL Server 是在同處理序伺服器。 OLE DB Driver for SQL Server 物件的執行個體會使用 CLSCTX_INPROC_SERVER 巨集來建立，以便指示可執行的內容。  
   

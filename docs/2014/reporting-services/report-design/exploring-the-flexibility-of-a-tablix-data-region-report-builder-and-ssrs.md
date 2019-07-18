@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4c3e5ab1a3e3e61c8a9f7ec974840bed5ec06e72
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105953"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>探索 Tablix 資料區的彈性(報表產生器及 SSRS)
   當您從功能區上的 [插入] 索引標籤加入資料表、矩陣或清單資料區域時，您會從 Tablix 資料區域的初始範本開始，但是您不會受到該範本的限制。 您可以加入或移除任何 Tablix 資料區域功能 (例如，群組、資料列和資料行)，藉以繼續開發資料顯示的方式。  

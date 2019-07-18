@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68aaaf9db4b2376a1c950bc4c2b463bd2b7b6391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029330"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>自訂呼叫順序 (SybaseToSQL)
 在此步驟中，您選取要測試的物件將會在其中叫用的順序。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cf7cd81-1750-46ee-80ed-be70f57e8569
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5399ff5fa98b98665cea3e7fa67eb94eee693a63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf983af92c8d4677657a369e520709b39196bde8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903988"
 ---
 # <a name="from-clause-limitations"></a>FROM 子句限制
 FROM 子句中資料表的最大數目為 16。

@@ -1,5 +1,5 @@
 ---
-title: SQLSetDescField |Microsoft Docs
+title: SQLSetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188683"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField 可用來設定資料表值參數和資料表值參數資料行的描述項欄位。 如需可用的欄位資訊，請參閱[資料表值參數描述項欄位](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)並[資料表值參數組成資料行的描述項欄位](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  

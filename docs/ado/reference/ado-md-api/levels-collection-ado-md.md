@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de15d97098c61ae73ddade761ddad716947715f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68b0f56de12ade676024933c3cfdbfd834f5cc46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949579"
 ---
 # <a name="levels-collection-ado-md"></a>Levels 集合 (ADO MD)
 包含[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)構成的階層物件。  

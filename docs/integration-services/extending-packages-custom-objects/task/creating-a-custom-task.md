@@ -13,14 +13,18 @@ ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1af22803fd1204e2735dde535ce23ce99a4a449a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aeddafd6eeada0479cc18c008c5afabd71d713f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724415"
 ---
 # <a name="creating-a-custom-task"></a>建立自訂工作
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   建立自訂工作的步驟，與建立 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之其他自訂物件的步驟類似：  
   
 -   建立繼承自基底類別的新類別。 對於工作而言，基底類別是 <xref:Microsoft.SqlServer.Dts.Runtime.Task>。  

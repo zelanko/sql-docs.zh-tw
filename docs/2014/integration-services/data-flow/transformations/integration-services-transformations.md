@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900261"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換是封裝之資料流程中的元件，用以彙總、合併、散發和修改資料。 轉換還可以執行查閱作業，並產生範例資料集。 此章節描述 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包含的轉換，並解釋其運作方式。  

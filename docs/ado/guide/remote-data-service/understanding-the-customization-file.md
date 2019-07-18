@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921963"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
-在自訂檔案中的每個區段標頭包含方括號 (**[]**) 包含型別和參數。 四個區段類型會以常值字串**連接**， **sql**， **userlist**，或**記錄**。 參數是常值字串、 預設值、 使用者指定的識別項，或執行任何動作。  
+在自訂檔案中的每個區段標頭包含方括號 ( **[]** ) 包含型別和參數。 四個區段類型會以常值字串**連接**， **sql**， **userlist**，或**記錄**。 參數是常值字串、 預設值、 使用者指定的識別項，或執行任何動作。  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -55,7 +54,7 @@ identifier
   
  在下列情況下，使用特定的區段：  
   
--   A**連接**如果用戶端的值部分連接字串關鍵字，就會使用區段 」**資料來源 =**_值_"，符合**連接**區段識別碼 *。*  
+-   A**連接**如果用戶端的值部分連接字串關鍵字，就會使用區段 」**資料來源 =** _值_"，符合**連接**區段識別碼。 
   
 -   **Sql**如果用戶端命令字串包含符合的字串，就會使用 區段**sql**區段識別項。  
   

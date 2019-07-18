@@ -3,20 +3,19 @@ title: 如何在 Azure Data Studio 中使用 SQL Notebook
 titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 中使用 SQL Notebook
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959268"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -51,7 +50,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>SQL 核心
 
 在程式碼內的資料格的 Notebook，類似於查詢編輯器中，我們支援最新的 SQL 程式碼撰寫體驗，可讓您日常的工作更容易利用內建的功能，例如豐富的 SQL 編輯器、 IntelliSense 和內建的程式碼片段。 程式碼片段可讓您產生適當的 SQL 語法來建立資料庫、 資料表、 檢視、 預存程序等，並更新現有的資料庫物件。 使用程式碼片段來快速建立您用於開發或測試用途的資料庫副本，以及產生和執行指令碼。
 
@@ -71,7 +70,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 查詢結果
 
-![image20](media/sql-notebooks/pgsql-cell-results.png)
+![Image20](media/sql-notebooks/pgsql-cell-results.png)
 
 ### <a name="configure-python-for-notebooks"></a>設定 Python notebook
 
@@ -85,10 +84,10 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 |核心|描述
 |:-----|:-----
-| SQL Kernel | 撰寫 SQL 程式碼在您的關聯式資料庫為目標。
+| SQL 核心 | 撰寫 SQL 程式碼在您的關聯式資料庫為目標。
 |PySpark3 和 PySpark 核心| 撰寫使用從叢集的 Spark 計算的 Python 程式碼。
 |Spark 核心|撰寫使用 Spark 的計算，從叢集的 Scala 和 R 程式碼。
-|Python Kernel|撰寫適用於本機開發的 Python 程式碼。
+|Python 核心|撰寫適用於本機開發的 Python 程式碼。
 
 `Attach to` 提供的核心，以附加的內容。 如果您使用的 SQL 核心，則您可以`Attach to`任何您的 SQL Server 執行個體。
 
@@ -110,7 +109,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 文字中的資料格外按一下，會顯示的 markdown 文字。
 
-![image10](media/sql-notebooks/notebook-markdown-preview.png)
+![Image10](media/sql-notebooks/notebook-markdown-preview.png)
 
 ### <a name="trusted-and-non-trusted"></a>信任和非信任
 
@@ -126,7 +125,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 選擇`PySpark Kernel`在下列程式碼中的資料格類型。
 
-按一下 **[執行]**。
+按一下 **[執行]** 。
 
 Spark 應用程式已啟動，並傳回下列輸出：
 
@@ -163,14 +162,13 @@ import <package-name>
 
 當您執行此命令，`Module not found`會傳回。 如果您的套件存在，則您不會收到錯誤。
 
-如果它傳回`Module not Found`錯誤，然後按一下**管理套件**啟動終端機。 您現在可以安裝在本機的套件。 使用下列命令來安裝封裝：
+如果它傳回`Module not Found`錯誤，然後按一下**管理套件**來啟動精靈 體驗。 
 
-```bash
-./pip install <package-name>
-```
+![Image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > 在 Mac 上，請遵循安裝套件的終端機視窗中的指示。 
+在此精靈中您會看到**已安裝**封裝。 您可以搜尋清單和相關聯的每個這些套件的版本。 如果您需要**解除安裝**任一這些封裝，然後您可以按一下其中一個封裝，然後按一下 上**解除安裝選取的封裝**選項。
+
+您也可以按一下**新增**套件**搜尋**特定套件，請選擇相關的版本，然後按一下**安裝**。 根據預設，我們可以選取搜尋封裝的最新版本。 
 
 安裝套件之後，您應該能夠在 Notebook 資料格，並輸入下列命令：
 
@@ -178,11 +176,7 @@ import <package-name>
 import <package-name>
 ```
 
-若要解除安裝封裝，請使用下列命令，從您的終端機：
-
-```bash
-./pip uninstall <package-name>
-```
+如果您需要**解除安裝**任一這些封裝，然後您可以按一下 上一或多個封裝，然後按一下 上**解除安裝選取的封裝**選項。
 
 ## <a name="next-steps"></a>後續步驟
 

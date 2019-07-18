@@ -17,15 +17,15 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 66d30b148aae068c5d86e29f25548996bc958284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c27111dac0da8d9248bea1b7d7408cd70130d01b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807276"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948805"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ int 資料類型的憑證識別碼值。
 ## <a name="remarks"></a>Remarks  
 請在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視中查看憑證資訊。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要憑證的適當權限，並且需要呼叫端尚未拒絕憑證的 VIEW 權限。 如需憑證權限的詳細資訊，請參閱 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) 和 [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  

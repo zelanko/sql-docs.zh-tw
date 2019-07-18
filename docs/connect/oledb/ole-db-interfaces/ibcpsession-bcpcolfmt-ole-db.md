@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 007a8d7a9a8f7a617445393dfcfb5f5a718b1cf8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791019"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **BCPColFmt** 方法是用來建立 BCP 資料檔欄位與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行之間的繫結。 它會使用資料行的長度、類型、結束字元和前置長度當做參數，並為個別欄位設定每一個屬性。  
   
  如果使用者選擇互動模式，就會呼叫這個方法兩次；一次是根據預設值設定資料行格式 (預設值是根據伺服器資料行的類型)，另一次是根據互動模式期間選擇之用戶端的資料行類型，針對每一個資料行設定格式。  

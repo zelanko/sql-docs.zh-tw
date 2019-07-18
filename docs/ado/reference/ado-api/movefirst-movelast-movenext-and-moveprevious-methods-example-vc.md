@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9cbfbdb67df21e6274353d71398a640f52d6fa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f544afd1a82a2e42a7fae110f20dc51f865a69f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932070"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法範例 （VC + +）
 這個範例會使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)，以及[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法，移動的記錄指標[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據提供的命令。 若要執行此範例需要 MoveAny 函式。  

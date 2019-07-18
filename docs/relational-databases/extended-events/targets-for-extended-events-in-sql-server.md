@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478133"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583393"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 
@@ -46,7 +46,7 @@ ms.locfileid: "58478133"
     - [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
-- 在 SSMS.exe 中，了解如何使用物件總管以滑鼠右鍵按一下事件工作階段下的目標節點，[輕鬆檢視輸出資料](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
+- 在 SSMS.exe 中，了解如何使用物件總管  以滑鼠右鍵按一下事件工作階段下的目標節點，[輕鬆檢視輸出資料](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
     - 事件資料會被擷取成 XML 字串。 但在本文中，資料會顯示在關聯式資料列中。 SSMS 是用來檢視資料，然後將其複製並貼入本文中。
     - [ring_buffer](#h2_target_ring_buffer)一節說明從 XML 產生資料列集的替代 T-SQL 技巧。 它包含 XQuery。
 
@@ -83,7 +83,7 @@ SQL Server 擴充事件可以與 Windows 事件追蹤 (ETW) 搭配運作，以�
 - [使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-這個 ETW 目標會「同步」處理所接收到的資料，大部分的目標則會「非同步」處理所接收到的資料。
+這個 ETW 目標會「同步」  處理所接收到的資料，大部分的目標則會「非同步」  處理所接收到的資料。
 
 > [!NOTE]
 > Azure SQL Database 不支援 `etw_classic_sync_target target`。
@@ -103,9 +103,9 @@ event_counter 目標只會計算每個所指定事件的發生次數。
 - event_counter 沒有任何參數。
 
 
-- 與大部分的目標不同，event_counter 目標會「同步」處理所接收到的資料。
+- 與大部分的目標不同，event_counter 目標會「同步」  處理所接收到的資料。
     - 因為 event_counter 所需的處理很少，所以簡單 event_counter 接受同步處理。
-    - 資料庫引擎會中斷任何速度太慢的目標，以及因而讓資料庫引擎效能變慢的目標。 這是大多數目標進行「非同步」處理的其中一個原因。
+    - 資料庫引擎會中斷任何速度太慢的目標，以及因而讓資料庫引擎效能變慢的目標。 這是大多數目標進行「非同步」  處理的其中一個原因。
 
 
 #### <a name="example-output-captured-by-eventcounter"></a>event_counter 所擷取的範例輸出
@@ -280,8 +280,8 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 
 **source_type** 參數是控制 histogram 目標的重要項目：
 
-- **source_type=0** - 表示收集「事件欄位」的資料。
-- **source_type=1** - 表示收集「動作」的資料。
+- **source_type=0** - 表示收集「事件欄位」  的資料。
+- **source_type=1** - 表示收集「動作」  的資料。
     - 預設值為 1。
 
 
@@ -290,7 +290,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 例如，slots=59 會四捨五入為 =64。
 
 
-### <a name="action-example-for-histogram"></a>histogram 的「動作」範例
+### <a name="action-example-for-histogram"></a>histogram 的「動作」  範例
 
 
 在其 TARGET...SET 子句上，下列 Transact-SQL CREATE EVENT SESSION 陳述式指定 **source_type=1** 的目標參數指派。 1 表示 histogram 目標會追蹤動作。
@@ -359,7 +359,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### <a name="event-field-example-for-histogram"></a>histogram 的事件「欄位」範例
+### <a name="event-field-example-for-histogram"></a>histogram 的事件「欄位」  範例
 
 
 下列範例會設定 **source_type=0**。 指派給 **source=** 的值是事件欄位 (不是動作)。
@@ -521,6 +521,7 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. 除非在檢查目標之後，否則會刻意不發出 COMMIT TRANSACTION。
 4. 稍後，在測試之後，我們已發出 COMMIT TRANSACTION。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 簡單 **event_counter** 目標提供下列輸出資料列。 因為 52-50=2，所以檢查成對目標的輸出時，輸出告訴我們應該會看到 2 個不成對的 lock_acquired 事件。
 

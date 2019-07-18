@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1a183ba4c5ab5bf3698ecf421899d00a70c746ef
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 69dbdc3eea720d359b6f3346bf52d789c7798c2e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291134"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730866"
 ---
 # <a name="name-element-for-database-dta"></a>資料庫的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

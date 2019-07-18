@@ -18,16 +18,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e5b353725cda984a65cbbbb35878c6d79ae4bb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 28a282e9f5f4061d94059986e70b4bf0755ceb5a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698966"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687640"
 ---
 # <a name="use-performance-objects"></a>使用效能物件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "51698966"
   
 |執行個體類型|物件名稱|  
 |-----------------|---------------|  
-|預設|**SQLAgent:**_object_:_counter_|  
-|具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
+|預設|**SQLAgent:** _object_:_counter_|  
+|具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :** _object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的下列效能物件。  
   
@@ -57,5 +57,5 @@ ms.locfileid: "51698966"
   
 ## <a name="see-also"></a>另請參閱  
 [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[如何：啟動系統監視器 (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[操作說明：啟動系統監視器 (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

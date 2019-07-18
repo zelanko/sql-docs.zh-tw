@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a89d4bab-ef3c-45c2-aa72-2639b3e0f856
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a8848bad9d27dfd9318b725b77203706d3dfd5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5ec0f3943fd52540f094a23e9b3f9f3886e1371
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114083"
 ---
 # <a name="supported-data-types"></a>支援的資料類型
 支援的 Dbms 的資料類型的變化相當大。 應用程式可以藉由呼叫判斷名稱和支援的資料類型的特性**SQLGetTypeInfo**。 由於資料型別名稱中的各種變化，應用程式必須使用所傳回的資料類型名稱**SQLGetTypeInfo**中**CREATE TABLE**陳述式。 如需詳細資訊，請參閱 < [ODBC 中的資料類型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。

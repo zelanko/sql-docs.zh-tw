@@ -2,18 +2,18 @@
 title: 解決 Excel 2003 資料列限制 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3ba814e194af423d18ecdd5ab9e94bf0fa6d3c2c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577786"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>解決 Excel 2003 資料列限制
   本主題說明如何在您將分頁報表匯出至 Excel 時解決 Excel 2003 的資料列限制。 此因應措施適用於只包含資料表的報表。  
@@ -27,11 +27,11 @@ ms.locfileid: "56287036"
   
 1.  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中開啟報表。  
   
-2.  以滑鼠右鍵按一下資料表中的資料列，然後按一下 [加入群組] > [父群組] 來加入外部資料表群組。  
+2.  以滑鼠右鍵按一下資料表中的資料列，然後按一下 [加入群組]   > [父群組]  來加入外部資料表群組。  
   
      ![選取父群組](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "選取父群組")  
   
-3.  在 [群組依據] 運算式方塊中輸入下列公式，然後按一下 [確定] 來加入父群組。  
+3.  在 [群組依據]  運算式方塊中輸入下列公式，然後按一下 [確定]  來加入父群組。  
   
      =Int((RowNumber(Nothing)-1)/65000)  
   
@@ -39,19 +39,19 @@ ms.locfileid: "56287036"
   
      加入外部資料表群組會將群組資料行加入至報表中。  
   
-4.  以滑鼠右鍵按一下群組資料行標頭來刪除群組資料行，再按一下 [刪除資料行]，並選取 [只刪除資料行]，然後按一下 [確定]。  
+4.  以滑鼠右鍵按一下群組資料行標頭來刪除群組資料行，再按一下 [刪除資料行]  ，並選取 [只刪除資料行]  ，然後按一下 [確定]  。  
   
      ![刪除群組資料行](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "刪除群組資料行")  
   
-5.  以滑鼠右鍵按一下 [資料列群組] 區段中的 [群組 1]，然後按一下 [群組屬性]。  
+5.  以滑鼠右鍵按一下 [資料列群組]  區段中的 [群組 1]  ，然後按一下 [群組屬性]  。  
   
      ![檢視群組屬性](../../reporting-services/report-builder/media/groupproperties-updated.png "檢視群組屬性")  
   
-6.  在 [群組屬性] 對話方塊的 [排序] 頁面上，選取預設排序選項，然後按一下 [刪除]。  
+6.  在 [群組屬性]  對話方塊的 [排序]  頁面上，選取預設排序選項，然後按一下 [刪除]  。  
   
      ![刪除預設排序](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "刪除預設排序")  
   
-7.  在 [分頁符號] 頁面上，按一下 [在群組的每個執行個體之間]，然後按一下 [確定]。  
+7.  在 [分頁符號]  頁面上，按一下 [在群組的每個執行個體之間]  ，然後按一下 [確定]  。  
   
      ![設定分頁符號](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "設定分頁符號")  
   

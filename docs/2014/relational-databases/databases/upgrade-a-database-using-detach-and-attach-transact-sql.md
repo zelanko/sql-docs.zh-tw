@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916752"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加來升級資料庫 (Transact-SQL)
   本主題描述如何使用卸離和附加作業升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的資料庫。 附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫可立即使用並自動進行升級。  
@@ -39,7 +39,7 @@ ms.locfileid: "54100873"
   
      [使用卸離和附加作業](#SSMSProcedure)  
   
--   **後續操作：**[升級 SQL Server 資料庫之後](#FollowUp)  
+-   **後續操作：** [升級 SQL Server 資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54100873"
   
 -   您無法附加系統資料庫。  
   
--   若將資料庫的 [跨資料庫擁有權鏈結] 選項設為 0，附加與卸離會停用資料庫的跨資料庫擁有權鏈結。 如需啟用鏈結的資訊，請參閱[跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
+-   若將資料庫的 [跨資料庫擁有權鏈結]  選項設為 0，附加與卸離會停用資料庫的跨資料庫擁有權鏈結。 如需啟用鏈結的資訊，請參閱[跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
   
 -   當附加複製的而非卸離的複寫資料庫時：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54100873"
     > [!IMPORTANT]  
     >  針對實際執行的資料庫，將資料庫與交易記錄放在不同的磁碟上。  
   
-     若要經由網路將檔案複製到遠端電腦的磁碟，請使用遠端位置的通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_。 如同將檔案寫入本機硬碟一樣，您必須將在遠端磁碟讀取或寫入檔案所需的適當權限，授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體所用的使用者帳戶。  
+     若要經由網路將檔案複製到遠端電腦的磁碟，請使用遠端位置的通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_。 如同將檔案寫入本機硬碟一樣，您必須將在遠端磁碟讀取或寫入檔案所需的適當權限，授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體所用的使用者帳戶。  
   
 3.  若要附加已移動的資料庫和記錄檔 (選擇性)，請執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54100873"
     GO  
     ```  
   
-     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的資料庫無法立即在 [物件總管] 中可見。 若要檢視資料庫，請在 [物件總管] 中按一下 **[檢視]** ，然後按一下 **[重新整理]**。 在 [物件總管] 中展開 **[資料庫]** 節點時，剛才附加的資料庫就會出現在資料庫清單中。  
+     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的資料庫無法立即在 [物件總管] 中可見。 若要檢視資料庫，請在 [物件總管] 中按一下 **[檢視]** ，然後按一下 **[重新整理]** 。 在 [物件總管] 中展開 **[資料庫]** 節點時，剛才附加的資料庫就會出現在資料庫清單中。  
   
 ##  <a name="FollowUp"></a> 後續操作：升級 SQL Server 資料庫之後  
  如果資料庫具有全文檢索索引，升級程序就會根據 **upgrade_option** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為匯入 (**upgrade_option** = 2) 或重建 (**upgrade_option** = 0)，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 若要變更 **upgrade_option** 伺服器屬性的設定，請使用 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)。  

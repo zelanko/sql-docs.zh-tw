@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210263"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 回溯相容性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 這篇文章說明功能可用性和目前的版本與舊版之間的行為變更。
 
-## <a name="deprecated-features"></a>已被取代的功能
+## <a name="deprecated-features"></a>即將淘汰的功能
 A*已被取代功能*將不再從產品在未來的版本中，但仍支援且包含在目前版本為了維持回溯相容性。 建議您停止使用新的和現有的專案中的已被取代的功能，為了相容於未來的版本。
   
 在此版本中已被取代的下列功能：
@@ -39,7 +39,7 @@ A*已被取代功能*將不再從產品在未來的版本中，但仍支援且�
 |表格式|未來版本將不支援表格式模型 1100 和 1103 相容性層級。 取代為 1200年或更高版本，將模型定義轉換成表格式中繼資料，請在相容性層級設定模型。 請參閱 [Analysis Services 中表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
 |工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|Server Profiler for Trace Replay <br />取代。 沒有取代項目。|  
-|追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> -追蹤組態︰ Microsoft.SqlServer.Management.XEvent<br />-追蹤讀取︰ Microsoft.SqlServer.XEvent.Linq<br />-   追蹤重新執行：無|  
+|追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> -追蹤組態︰Microsoft.SqlServer.Management.XEvent<br />-追蹤讀取︰Microsoft.SqlServer.XEvent.Linq<br />-追蹤重新執行：None|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中所宣告之先前已被取代的功能仍然有效。 因為尚未從產品中移除支援這些功能的程式碼，所以許多功能仍會在此版本中。 在先前已被取代的功能時可能會存取，他們仍視為已被取代，而且可能會實際移除從產品在任何時間。  
@@ -62,7 +62,7 @@ A*已停止的功能*先前的版本中已被取代。 它可能會繼續包含�
 >  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中所宣告之先前已被取代的功能仍然有效。 因為尚未從產品中移除支援這些功能的程式碼，所以許多功能仍會在此版本中。 在先前已被取代的功能時可能會存取，他們仍視為已被取代，而且可能會實際移除從產品在任何時間。  
 
 ## <a name="breaking-changes"></a>重大變更
-「重大變更」會導致資料模型、應用程式程式碼或指令碼在升級模型或伺服器之後無法運作。
+「重大變更」  會導致資料模型、應用程式程式碼或指令碼在升級模型或伺服器之後無法運作。
   
 ### <a name="net-40-version-upgrade"></a>.NET 4.0 版本升級  
  Analysis Services 管理物件 (AMO)、 ADOMD.NET 和表格式物件模型 (TOM) 用戶端程式庫現在.NET 4.0 執行階段為目標。 這可能是以 .NET 3.5 為目標之應用程式的重大變更。 使用這些組件之更新版本的應用程式現在必須以 .NET 4.0 或更新版本為目標。  

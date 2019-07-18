@@ -18,16 +18,16 @@ helpviewer_keywords:
 - type IDs [SQL Server]
 - data types [SQL Server], IDs
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f822fc5dc4a115b5277c33c6578b0870137bbdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65946911"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C：查閱系統資料類型的 TYPE ID  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C.查閱系統資料類型的 TYPE ID  
  下列範例會針對 `TYPE ID` 系統資料類型來傳回 `datetime`。  
   
 ```  

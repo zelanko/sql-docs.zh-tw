@@ -11,14 +11,18 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 245073c8bef9fa62acce86ecfb742524bc821443
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 922d55e335c8310cec3cf4db8967cadc2affd1f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714873"
 ---
-# <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values
+# <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示封裝執行期間所設定的屬性覆寫值。  
@@ -32,7 +36,7 @@ ms.locfileid: "58277497"
 |sensitive|**bit**|當值為 1 時，屬性為敏感值，而且會在儲存時加密。 當值為 0 時，屬性不是敏感值，而且會儲存為純文字。|  
   
 ## <a name="remarks"></a>Remarks  
- 這個檢視會針對使用 [執行封裝] 對話方塊之 [進階] 索引標籤中的 [屬性覆寫] 區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑] 屬性。  
+ 這個檢視會針對使用 [執行封裝]  對話方塊之 [進階]  索引標籤中的 [屬性覆寫]  區段來覆寫屬性值的每個執行，顯示一個資料列。 屬性的路徑衍生自封裝工作的 [封裝路徑]  屬性。  
   
 ## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  

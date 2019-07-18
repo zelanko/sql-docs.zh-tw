@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c1d1b2e646eb12fbfb1b0226cb20a8a97bf92b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51c69479eef14c2fa86ddac9ef6790c0158adce5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508552"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680518"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,9 +71,9 @@ ms.locfileid: "52508552"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要寫入執行追蹤訊息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄檔。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 -_server\_name_] 對話方塊中，於 [一般] 頁面的 [錯誤記錄檔] 下，選取 [包含執行追蹤訊息] 核取方塊。  
+3.  在 [SQL Server Agent 屬性 -_server\_name_]  對話方塊中，於 [一般]  頁面的 [錯誤記錄檔]  下，選取 [包含執行追蹤訊息]  核取方塊。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932967"
 ---
 # <a name="error-object"></a>Error 物件
 包含屬於單一作業牽涉到提供者的資料存取錯誤的詳細資料。  

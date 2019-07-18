@@ -13,15 +13,15 @@ helpviewer_keywords:
 - NOT operator [Visual Database Tools]
 - search criteria [SQL Server], rows not matching value
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8800b6bc7cccf9053b23b394ab54389d6f2235b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: d33faa4f04c9448910493c9511edffd418e7161c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816586"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687689"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>選取不符合某值的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47816586"
   
 1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式新增至[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件] 方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]  方格資料行中輸入 NOT 運算子，後面再加上搜尋值。  
   
 例如，若要尋找 `products` 資料表中產品代碼資料行不是以 "A," 為開頭的所有資料列，則可以輸入如下所示的搜尋條件：  
   

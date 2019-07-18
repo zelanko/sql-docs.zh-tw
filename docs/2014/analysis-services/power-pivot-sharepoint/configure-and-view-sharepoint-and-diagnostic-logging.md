@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071849"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、事件與訊息都會記錄在 SharePoint 記錄檔中。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>  
@@ -37,17 +36,17 @@ ms.locfileid: "53354698"
  LOGS 資料夾中包含記錄檔 (`.log`)、資料檔 (`.txt`) 與使用方式檔案 (`.usage`)。 SharePoint 追蹤記錄的檔案命名慣例為伺服器名稱後面緊接著日期和時間戳記。 SharePoint 追蹤記錄會定期以及有 IISRESET 時建立。 通常在 24 小時的週期內會有許多追蹤記錄。  
   
 ##  <a name="bkmk_modifyloglevels"></a> 為個別的事件類別目錄修改診斷記錄層次  
- 根據預設，PowerPivot 事件的 ULS 記錄是設為 *「中」*。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」*(SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 PowerPivot 伺服器使用資訊，會注意到因為此變更，PowerPivot 伺服器作業相關資訊變少了。  
+ 根據預設，PowerPivot 事件的 ULS 記錄是設為 *「中」* 。 這是 SQL Server 2012 的新設定。 如果您從舊版升級伺服器，記錄層次可能仍然設為 *「詳細資訊」* (SQL Server 2008 R2 的預設層次)。 如果您習慣檢閱 ULS 記錄檔中的 PowerPivot 伺服器使用資訊，會注意到因為此變更，PowerPivot 伺服器作業相關資訊變少了。  
   
- 除了例外狀況 (類型為 *「高」*) 以外，所有的 PowerPivot 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
+ 除了例外狀況 (類型為 *「高」* ) 以外，所有的 PowerPivot 訊息都會歸類為「詳細資訊」類別目錄。 如果您想要例行伺服器作業 (例如連接、要求或查詢報告) 的記錄項目，必須將記錄層次變更為「詳細資訊」。  
   
  若要為個別的事件類別修改診斷記錄層次：  
   
-1.  在 SharePoint 管理中心，按一下 **[監視]**。  
+1.  在 SharePoint 管理中心，按一下 **[監視]** 。  
   
-2.  按一下 **[設定診斷記錄]**。  
+2.  按一下 **[設定診斷記錄]** 。  
   
-3.  捲動到 **[PowerPivot 服務]**。  
+3.  捲動到 **[PowerPivot 服務]** 。  
   
 4.  展開類別目錄，然後選取個別的類別目錄。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "53354698"
   
 8.  選取 **[詳細資訊]** ，將所有事件記錄到追蹤記錄檔。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> 如何檢視 SharePoint 記錄檔  
  記錄檔是文字檔。 您可以使用任何文字編輯器來開啟它們。 您也可以使用協力廠商的記錄檢視器應用程式。  
@@ -98,9 +97,9 @@ ms.locfileid: "53354698"
   
      如果您正在下載 SharePoint ULS 記錄檢視器，請將 ULSViewer.zip 儲存至 Downloads 資料夾。  
   
-6.  在 [Downloads] 資料夾中，以滑鼠右鍵按一下 ULSViewer.zip，然後選取 **[解壓縮全部]**。  
+6.  在 [Downloads] 資料夾中，以滑鼠右鍵按一下 ULSViewer.zip，然後選取 **[解壓縮全部]** 。  
   
-7.  指定目的地資料夾，然後按一下 **[解壓縮]**。  
+7.  指定目的地資料夾，然後按一下 **[解壓縮]** 。  
   
 8.  在包含已解壓縮之程式檔的資料夾中，按兩下 **[ULSViewer]** 並執行應用程式。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "53354698"
 #### <a name="entries-for-powerpivot-services"></a>PowerPivot 服務的項目  
  下表描述很可能在 SharePoint 記錄檔中找到之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業的項目。  
   
-|處理|區域|類別目錄|層級|訊息|詳細資料|  
+|處理|區域|Category|層級|Message|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[PowerPivot 服務]|[使用量]|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
 |w3wp.exe|[PowerPivot 服務]|Web 前端|「詳細資訊」|開始尋找資料來源的應用程式伺服器 =\<*路徑*>|當它收到連接要求時， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  

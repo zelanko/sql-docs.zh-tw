@@ -15,14 +15,18 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728312"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。 不論您是否將快取連接管理員設定為使用快取檔案，資料一定會儲存在記憶體中。  
   
  「快取轉換」轉換會將資料流程中已連接之資料來源的資料寫入快取連接管理員。 封裝中的「查閱」轉換會在資料上執行查閱。  

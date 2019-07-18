@@ -2,21 +2,20 @@
 title: 教學課程：啟用五個最慢的查詢範例小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 5c94d2cf8b80ad7724cc1f710dc67d3f4a13c59e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959060"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：新增*五個最慢的查詢*資料庫儀表板的範例小工具
 
@@ -32,7 +31,7 @@ ms.locfileid: "53030782"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -129,7 +128,7 @@ ms.locfileid: "53030782"
 
 ## <a name="view-insight-details-for-more-information"></a>如需詳細資訊的 檢視深入解析詳細資料
 
-1. 若要檢視深入解析小工具的其他資訊，請按一下 省略符號 (**...**)，然後選取右上角**顯示詳細資料**。
+1. 若要檢視深入解析小工具的其他資訊，請按一下 省略符號 ( **...** )，然後選取右上角**顯示詳細資料**。
 2. 若要顯示的項目更多詳細資料，請選取 中的任何項目**圖表資料**清單。
 
    ![了解詳細資料 對話方塊](./media/tutorial-qds-sql-server/insight-details-dialog.png)

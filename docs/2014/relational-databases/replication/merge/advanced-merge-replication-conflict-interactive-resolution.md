@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135628"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245123"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫提供互動式解決器，可讓您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 中於需要同步處理期間手動解決衝突。 「互動解析程式」是圖形介面，會在執行時期啟動並顯示各衝突資料列的資料，以及提供檢視及編輯衝突資料的選項，然後個別解決每項衝突。  

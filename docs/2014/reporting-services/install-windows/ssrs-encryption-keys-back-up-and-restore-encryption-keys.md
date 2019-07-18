@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108709"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>備份與還原 Reporting Services 加密金鑰
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  
@@ -58,7 +57,7 @@ ms.locfileid: "56036589"
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  按一下 **[加密金鑰]**，然後按一下 **[備份]**。  
+2.  按一下 **[加密金鑰]** ，然後按一下 **[備份]** 。  
   
 3.  輸入增強式密碼。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "56036589"
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [加密金鑰] 頁面上，按一下 **[還原]**。  
+2.  在 [加密金鑰] 頁面上，按一下 **[還原]** 。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   

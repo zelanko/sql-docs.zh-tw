@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088189"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>搭配使用 16 位元應用程式與 32 位元驅動程式
 > [!IMPORTANT]  
@@ -36,7 +35,7 @@ ms.locfileid: "47752926"
 >  16 位元應用程式與 32 位元驅動程式互動時，每當 32 位元驅動程式管理員一律會傳回"2.0"的 ODBC 版本與驅動程式支援。  
   
 ## <a name="administration"></a>系統管理  
- 您可以使用 ODBC 資料來源管理員來管理資料來源的 32 位元驅動程式。 若要開啟 ODBC 管理員身分執行 Microsoft® Windows® 2000年的電腦上，開啟 Windows 控制台中，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)**。 在電腦上執行舊版的 Microsoft Windows，名為圖示**32 位元 ODBC**簡稱**ODBC**。  
+ 您可以使用 ODBC 資料來源管理員來管理資料來源的 32 位元驅動程式。 若要開啟 ODBC 管理員身分執行 Microsoft® Windows® 2000年的電腦上，開啟 Windows 控制台中，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 在電腦上執行舊版的 Microsoft Windows，名為圖示**32 位元 ODBC**簡稱**ODBC**。  
   
  下圖顯示的 16 位元應用程式如何呼叫 32 位元驅動程式安裝程式 DLL。 16 位元安裝程式 DLL 與 32 位元驅動程式安裝程式 DLL 會是泛型的 thunk DLL，將轉換的 16 位元安裝程式 DLL 會呼叫 32 位元安裝程式 DLL 呼叫。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47752926"
   
  在 Windows (thunking 的 16 位元為 32 位元) 上的 Windows，其他的 thunk DLL，名為 Ds32gt.dll 轉換的 16 位元引數值傳遞 32 位元安裝程式 DLL 回 16 位元。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>元件  
  MDAC 2.8 SP1 SDK 的 ODBC 元件包含下列檔案來執行 32 位元驅動程式的 16 位元應用程式。 這些元件是在 \Redist 目錄中。  
   
 |[檔案名稱]|描述|  

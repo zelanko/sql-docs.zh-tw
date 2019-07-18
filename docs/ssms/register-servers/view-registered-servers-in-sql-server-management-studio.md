@@ -12,15 +12,15 @@ helpviewer_keywords:
 - viewing Registered Servers
 - Registered Servers [SQL Server], viewing
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03ff4ef697e9da8d26f2a5dd5c74811ae9ada327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: debf72aa5a1804c7d214f5e945fe500f44cff157
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738256"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683898"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中檢視已註冊的伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47738256"
   
 #### <a name="to-view-registered-servers-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中檢視已註冊的伺服器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]** 。  
   
      根據預設，[已註冊的伺服器] 會出現在主視窗的 [物件總管] 上方。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107527"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>模擬定點更新和刪除陳述式
 如果資料來源不支援定位的 update 以及 delete 陳述式，可以模擬這些驅動程式。 比方說，ODBC 資料指標程式庫會模擬定位的 update 和 delete 陳述式。 模擬定位的 update 和 delete 陳述式的一般策略是要搜尋的項目轉換定位陳述式。 這是藉由取代**WHERE CURRENT OF**子句以搜尋**其中**子句可識別目前的資料列。  

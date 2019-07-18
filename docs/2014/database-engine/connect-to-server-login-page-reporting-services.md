@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808720"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>連線到伺服器 (登入頁面) Reporting Services
   連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，可使用此索引標籤檢視或指定下列選項。  
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  
- 從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從已註冊的伺服器註冊伺服器時，[伺服器類型] 方塊會呈現唯讀，並會與已註冊的伺服器元件中所顯示的伺服器類型進行比對。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../includes/ssde-md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
+ 從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從已註冊的伺服器註冊伺服器時，[伺服器類型]  方塊會呈現唯讀，並會與已註冊的伺服器元件中所顯示的伺服器類型進行比對。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../includes/ssde-md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
   
  **伺服器名稱**  
  您要連接之報表伺服器執行個體的伺服器模式會決定您必須輸入的值。  
@@ -42,10 +42,10 @@ ms.locfileid: "48108708"
  使用您的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認證連接到報表伺服器執行個體。  
   
  **基本驗證**  
- 如果您的 Reporting Services 安裝設定為使用基本驗證，請使用 [基本驗證] 來連接。  
+ 如果您的 Reporting Services 安裝設定為使用基本驗證，請使用 [基本驗證]  來連接。  
   
  **表單驗證**  
- 如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證] 來連接。  
+ 如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證]  來連接。  
   
  **使用者名稱**  
  請輸入連接將使用的登入名稱。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
@@ -54,7 +54,7 @@ ms.locfileid: "48108708"
  請輸入使用者名稱的密碼。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能編輯此選項。  
   
  **記住密碼**  
- 請儲存您輸入的密碼。 您必須按一下 [選項] 才會顯示此選項，而且只有在選取使用 [基本] 或 [表單驗證] 進行連線時，才可編輯此選項。  
+ 請儲存您輸入的密碼。 您必須按一下 [選項]  才會顯示此選項，而且只有在選取使用 [基本]  或 [表單驗證]  進行連線時，才可編輯此選項。  
   
  **[連接]**  
  連接到選取的伺服器。  
@@ -63,7 +63,7 @@ ms.locfileid: "48108708"
  顯示其他伺服器連接選項，例如記住密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [連接至 Management Studio 中的報表伺服器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [報表伺服器的驗證](../reporting-services/security/authentication-with-the-report-server.md)  
   

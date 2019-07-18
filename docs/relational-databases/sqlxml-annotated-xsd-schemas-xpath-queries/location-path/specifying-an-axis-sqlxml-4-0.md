@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f35aaa9009d07e4dad6f7c5309d9f2bb6c23ea4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 29d97b92f6979a7e5bbc67185f6e5a47ff82af68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073277"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "56013319"
   
      包含內容節點的子系。  
   
-     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 子系：  
+     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取 **\<客戶 >** 子系：  
   
     ```  
     child::Customer  
@@ -48,7 +47,7 @@ ms.locfileid: "56013319"
   
      包含內容節點的父系。  
   
-     下列 XPath 運算式會選取所有**\<客戶 >** 父系**\<順序 >** 子系：  
+     下列 XPath 運算式會選取所有 **\<客戶 >** 父系 **\<順序 >** 子系：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -70,7 +69,7 @@ ms.locfileid: "56013319"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式會選取目前的節點才**\<順序 >** 節點：  
+     下列 XPath 運算式會選取目前的節點才 **\<順序 >** 節點：  
   
     ```  
     self::Order  

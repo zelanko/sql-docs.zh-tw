@@ -16,16 +16,16 @@ helpviewer_keywords:
 - uniqueidentifier data type
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6d789c1841681ca2126de8e90baf62e5fa072bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d411af5fe27f012884f44e18fd065091237b394f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943008"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

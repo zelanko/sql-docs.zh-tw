@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f39911901b6ab729382c2e08b34c3452d4ec65cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63246041"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)
   *「Windows Server 容錯移轉叢集」* (Windows Server Failover Clustering，WSFC) 叢集是一組獨立的伺服器，會一起運作以提高應用程式和服務的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服務和功能，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。  
@@ -65,7 +65,7 @@ ms.locfileid: "53367050"
  如需詳細資訊，請參閱：[容錯移轉叢集詞彙](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Windows Server 容錯移轉叢集概觀  
- Windows Server 容錯移轉叢集提供基礎結構功能，支援 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Microsoft Exchange 等託管伺服器應用程式的高可用性和災害復原案例。 如果叢集節點或服務失敗，該節點上裝載的服務可在稱為 *「容錯移轉」*(Failover) 的程序中自動或手動轉移至另一個可用的節點。  
+ Windows Server 容錯移轉叢集提供基礎結構功能，支援 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Microsoft Exchange 等託管伺服器應用程式的高可用性和災害復原案例。 如果叢集節點或服務失敗，該節點上裝載的服務可在稱為 *「容錯移轉」* (Failover) 的程序中自動或手動轉移至另一個可用的節點。  
   
  WSFC 叢集中的節點會一起運作，共同提供這些類型的功能：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53367050"
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 技術和 WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn*是的新高可用性和災害復原方案，利用 WSFC。 此整合、具有彈性的 AlwaysOn 方案可提高應用程式可用性、提供更佳的硬體投資報酬率，以及簡化高可用性部署和管理。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 容錯移轉叢集執行個體都會使用 WSFC 做為平台技術，並且將元件註冊為 WSFC 叢集資源。  相關資源會合併為一個可相依於其他 WSFC 叢集資源的 *「資源群組」*(Resource Group)。 然後 WSFC 叢集服務會感測重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的需要並發出訊號，或自動將它容錯移轉至 WSFC 叢集中不同的伺服器節點。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 容錯移轉叢集執行個體都會使用 WSFC 做為平台技術，並且將元件註冊為 WSFC 叢集資源。  相關資源會合併為一個可相依於其他 WSFC 叢集資源的 *「資源群組」* (Resource Group)。 然後 WSFC 叢集服務會感測重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的需要並發出訊號，或自動將它容錯移轉至 WSFC 叢集中不同的伺服器節點。  
   
 > [!IMPORTANT]  
 >  若要充分利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 技術，應該符合數個 WSFC 相關的必要條件。  
@@ -90,7 +90,7 @@ ms.locfileid: "53367050"
 >  如需詳細資訊，請參閱：[必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-alwayson-failover-cluster-instances"></a>執行個體層級高可用性與 AlwaysOn 容錯移轉叢集執行個體搭配使用  
- AlwaysOn *「容錯移轉叢集執行個體」*(Failover Cluster Instance，FCI) 是在 WSFC 叢集中跨多個節點安裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 這類執行個體有共用磁碟儲存體 (透過光纖通道或 iSCSI SAN) 和虛擬網路名稱的資源相依性。 虛擬網路名稱有一個或多個虛擬 IP 位址 (各在不同子網路) 的資源相依性。 SQL Server 服務和 SQL Server Agent 服務會註冊為資源，且兩者都會相依於虛擬網路名稱資源。  
+ AlwaysOn *「容錯移轉叢集執行個體」* (Failover Cluster Instance，FCI) 是在 WSFC 叢集中跨多個節點安裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 這類執行個體有共用磁碟儲存體 (透過光纖通道或 iSCSI SAN) 和虛擬網路名稱的資源相依性。 虛擬網路名稱有一個或多個虛擬 IP 位址 (各在不同子網路) 的資源相依性。 SQL Server 服務和 SQL Server Agent 服務會註冊為資源，且兩者都會相依於虛擬網路名稱資源。  
   
  在發生容錯移轉時，WSFC 服務會將執行個體的資源擁有權轉移到指定的容錯移轉節點。 然後 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會在容錯移轉節點上重新啟動，而且資料庫會照常復原。 在任何給定的時刻，只有一個叢集節點可以裝載 FCI 和基礎資源。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "53367050"
 ### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>WSFC 節點間健全狀況偵測和仲裁投票  
  WSFC 叢集中的每個節點都會參與定期的活動訊號通訊，與其他節點共用節點的健全狀況。 沒有回應的節點是視為處於失敗狀態。  
   
- *「仲裁」* (Quorum) 節點集是 WSFC 叢集中的多數投票節點和見證。 WSFC 叢集的整體健全狀況和狀態是由定期 *「仲裁投票」*(Quorum Vote) 所決定。 仲裁的存在意味著叢集狀況良好，能提供節點層級的容錯功能。  
+ *「仲裁」* (Quorum) 節點集是 WSFC 叢集中的多數投票節點和見證。 WSFC 叢集的整體健全狀況和狀態是由定期 *「仲裁投票」* (Quorum Vote) 所決定。 仲裁的存在意味著叢集狀況良好，能提供節點層級的容錯功能。  
   
  *「仲裁模式」* (Quorum Mode) 是在指定仲裁投票所使用方法以及指定何時執行自動容錯移轉或使叢集離線的 WSFC 叢集層級設定。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "53367050"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server Technologies:Failover Clusters](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx) (Windows Server 技術：容錯移轉叢集)  
   
 -   [Windows Server 2008 R2 中的容錯移轉叢集](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 98ebc20d497165d4e2d80438bcd711490fd6bc8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b921846b0fc27e59ff0874cdbf0827095bfc7db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140663"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回擴充事件針對一段指定期間所報告，包含 0 個、一個或多個彙總錯誤計數資料列的資料表。  
   
- 函數可用來報告 Smart Admin 下服務的健全狀態。目前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可在 Smart Admin 範圍內受到支援。 因此傳回的錯誤與[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關。  
+ 函數用來報告 Smart admin 下服務的健全狀況狀態目前[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之下 Smart Admin 範圍內受到支援。 因此傳回的錯誤與[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相關。  
   
  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

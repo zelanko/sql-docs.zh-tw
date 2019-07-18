@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc50c8392232f96d1a64af124d2d5a773daf1d4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 3a80688d458b70f470643830406668ac2a056498
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795277"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,15 +29,15 @@ ms.locfileid: "52525405"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要移除資料庫鏡像，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作**  [移除資料庫鏡像之後](#FollowUp)  
+-   **後續操作：**[移除資料庫鏡像之後](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52525405"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

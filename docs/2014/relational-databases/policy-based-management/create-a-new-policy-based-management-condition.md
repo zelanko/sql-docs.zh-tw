@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 942a0be0503cd728defb6800a516b0cb0c85c13f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856836"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>建立新的原則式管理條件
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立原則式管理條件。  
@@ -43,15 +43,15 @@ ms.locfileid: "52804289"
   
 #### <a name="to-create-a-condition"></a>建立條件  
   
-1.  在物件總管中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
+1.  在物件總管  中，按一下加號，展開您想要建立原則式管理條件的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要建立新條件的 Facet，然後選取 [新增條件]。  
+5.  以滑鼠右鍵按一下您想要建立新條件的 Facet，然後選取 [新增條件]  。  
   
 6.  在 **[建立新條件]** 對話方塊的 **[名稱]** 方塊中，輸入新條件的名稱。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "52804289"
   
 8.  在 **[運算式]** 底下的 **[欄位]** 方塊中選取 Facet 屬性及其相關聯的運算子和值，藉以建構條件運算式。 當您加入多個運算式時，可以使用 **[及]** 或 **[或]** 來聯結運算式。 如需此對話方塊可用之選項的詳細資訊，請參閱[建立新條件或開啟條件對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)、[建立新條件或開啟條件對話方塊，描述頁面](create-new-condition-or-open-condition-dialog-box-description-page.md)和[進階編輯 &#40;條件&#41; 對話方塊](advanced-edit-condition-dialog-box.md)。  
   
-9. 完成後，請按一下 **[確定]**。  
+9. 完成後，請按一下 **[確定]** 。  
   
   

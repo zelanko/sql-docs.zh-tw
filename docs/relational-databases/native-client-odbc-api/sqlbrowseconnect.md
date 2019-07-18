@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b3980ee8eb0f5f2085f47a1e2ef7f7967e998549
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115264"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "51660567"
   
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|不適用|否|所傳回的資料來源名稱**SQLDataSources**。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
-|DRIVER|不適用|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
+|DSN|N/A|否|所傳回的資料來源名稱**SQLDataSources**。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
+|DRIVER|N/A|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
   
 ## <a name="level-2"></a>層級 2  
   
@@ -56,7 +55,7 @@ ms.locfileid: "51660567"
   
  下列屬性，而這藉由呼叫設定[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)，判斷所傳回的結果集**SQLBrowseConnect**。  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果設定為 SQL_MORE_INFO_YES， **SQLBrowseConnect**傳回伺服器屬性的擴充的字串。<br /><br /> 以下是所傳回之擴充字串的範例**SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 在這個字串中，分號是用來區隔伺服器相關資訊的不同部分， 逗號則是用來區隔不同的伺服器執行個體。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定的伺服器名稱，則**SQLBrowseConnect**會傳回指定之伺服器的資訊。 如果 SQL_COPT_SS_BROWSE_SERVER 設定為 NULL， **SQLBrowseConnect**傳回網域中的所有伺服器的資訊。<br /><br /> <br /><br /> 請注意，因為網路問題，而**SQLBrowseConnect**可能未收到所有伺服器及時的回應。 因此，每個要求所傳回的伺服器清單可能各不相同。|  

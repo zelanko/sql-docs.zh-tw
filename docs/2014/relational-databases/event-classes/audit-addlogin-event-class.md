@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b40ec59f8d0f845528bb644631142ee89af03dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912162"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件類別
   當新增或移除  登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  

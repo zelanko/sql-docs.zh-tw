@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061778"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>執行 Data Migration Assistant 的最佳做法
 本文提供安裝、 評估和移轉一些最佳作法資訊。

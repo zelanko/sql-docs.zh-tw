@@ -1,5 +1,5 @@
 ---
-title: 使用維度、 階層和層級函數 |Microsoft 文件
+title: 使用維度、 階層及層級函數 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fb6460ed28c856ef6b5ceea8bf89c7bf33f54f2e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097183"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>使用維度、階層及層級函數
 

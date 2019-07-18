@@ -11,15 +11,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 12b658fec91df0473feb2888e4edf55ede5f4c97
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504077"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682494"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

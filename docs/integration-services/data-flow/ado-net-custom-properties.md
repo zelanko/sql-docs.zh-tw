@@ -11,14 +11,18 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77b941d4f1460b81acf2e90185f6e1a4d9ecbde9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277517"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727226"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **來源自訂屬性**  
   
  ADO NET 來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -39,7 +43,7 @@ ms.locfileid: "58277517"
   
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地同時具有自訂屬性，以及所有資料流程元件通用的屬性。  
   
- 下表描述 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地的自訂屬性。 所有屬性都是可讀寫的。 雖然您無法在 [ADO NET 目的地編輯器] 中使用這些屬性，但是可以使用 [進階編輯器] 來設定這些屬性。  
+ 下表描述 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地的自訂屬性。 所有屬性都是可讀寫的。 雖然您無法在 [ADO NET 目的地編輯器]  中使用這些屬性，但是可以使用 [進階編輯器]  來設定這些屬性。  
   
 |屬性|資料類型|Description|  
 |--------------|---------------|-----------------|  

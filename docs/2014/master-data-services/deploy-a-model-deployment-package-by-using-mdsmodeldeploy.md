@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02db491e350de93aff1015583f71566af747c878
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483077"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具來部署封裝，其中包含下列其中一項：  
@@ -32,13 +32,13 @@ ms.locfileid: "52780260"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理] 功能區域的權限。  
+-   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]  功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱  [使用 MDSModelDeploy 建立模型部署套件](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
 -   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定] 或 [已認可]。  
+-   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定]  或 [已認可]  。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>若要部署模型部署封裝  
   

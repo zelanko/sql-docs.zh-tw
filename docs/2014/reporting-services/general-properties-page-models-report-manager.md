@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109105"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
   您可以使用報表模型的 [一般屬性] 頁面來重新命名、刪除、移動或取代模型定義 (.smdl) 檔案。 有關模型建立者與修改者及變更日期的詳細資料都會顯示在頁面頂端。  
@@ -32,7 +31,7 @@ ms.locfileid: "56018240"
   
 2.  將滑鼠停留在該模型上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該模型的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -46,7 +45,7 @@ ms.locfileid: "56018240"
  **在清單檢視中隱藏**  
  選取此核取方塊即可在清單檢視中設定資料夾時，隱藏項目。 清單檢視是檢視資料夾內容的一種模式，報表管理員中支援這種檢視模式。 您可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中設定這個選項，以便定義在報表管理員中檢視這個項目的方式。 如需有關在報表管理員中的檢視模式的詳細資訊，請參閱 <<c0> [ 內容 頁面&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)。</c0>  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

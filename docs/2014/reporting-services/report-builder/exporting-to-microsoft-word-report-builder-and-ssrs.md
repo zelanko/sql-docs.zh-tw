@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 81ac2f4972cadfcab6fa48a96e9780507faf2137
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294886"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285027"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
   Word 轉譯延伸模組會將報表轉譯成 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的原生格式。 此格式為 Office Open XML。  
   
- Word 轉譯器相容於 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 以及已安裝 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office Word、Excel 和 PowerPoint 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003。 如需有關相容性套件的詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](https://go.microsoft.com/fwlink/?LinkID=205622)。  
+ Word 轉譯器相容於 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 以及已安裝 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office Word、Excel 和 PowerPoint 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003。 
   
  此轉譯器所產生之檔案的內容類型為 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 而檔案的副檔名為 .docx。  
   

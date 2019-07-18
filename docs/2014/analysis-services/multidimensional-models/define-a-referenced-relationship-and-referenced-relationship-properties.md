@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - referenced dimension relationship
@@ -14,15 +13,15 @@ ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b173aa62dfe5656bfc784c766791c294453596c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00305d00bb3a11cc4237e005a057c70d4c5f3397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133238"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075755"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>定義參考的關聯性及參考的關聯性屬性
-  參考維度關聯性是在 Cube 設計師的 [維度使用方式] 索引標籤上定義的。 透過指定下列項目即可定義參考維度關聯性：  
+  參考維度關聯性是在 Cube 設計師的 [維度使用方式]  索引標籤上定義的。 透過指定下列項目即可定義參考維度關聯性：  
   
 -   要聯結的中繼維度。 這可以是一般維度或另一個參考維度。  
   

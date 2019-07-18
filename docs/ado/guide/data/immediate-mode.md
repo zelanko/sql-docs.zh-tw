@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ff8782287f5a6cbeb3f22ca58eaa3bd061c6c89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925018"
 ---
 # <a name="immediate-mode"></a>即時模式
 即時模式處於作用中時**LockType**屬性設定為**adLockOptimistic**或是**Locktype**。 在即時模式、 一筆記錄的變更會傳播至資料來源為您宣告工作的資料列完成藉由呼叫**更新**方法。  

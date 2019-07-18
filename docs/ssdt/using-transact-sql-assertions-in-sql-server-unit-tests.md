@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65102011"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
 在 SQL Server 單元測試中，Transact\-SQL 測試指令碼會執行並傳回結果。 有時候，結果會當做結果集傳回來。 您可以使用測試條件來驗證結果。 例如，您可以使用測試條件來檢查特定結果集傳回的資料列數目或驗證執行特定測試所花費的時間長度。 如需有關測試條件的詳細資訊，請參閱[在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "52543897"
   
 任何未指定的參數都會被忽略。 您可以將這些參數傳遞至資料庫程式碼中的 RAISERROR 陳述式。 如果指定 MatchFirstError = true，此屬性會符合例外狀況中的任何 SqlErrors。 預設行為 (MatchFirstError = true) 是只符合第一個發生的錯誤。  
   
-如需如何使用預期的例外狀況和負面的 SQL Server 單元測試的範例，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
+如需如何使用預期例外狀況以及負面 SQL Server 單元測試的範例，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
   
 ## <a name="the-raiserror-statement"></a>RAISERROR 陳述式  
   
@@ -79,11 +79,11 @@ ms.locfileid: "52543897"
   
 @ErrorState 是 1 - 127 之間的任意整數。 您可以使用此整數來區別在程式碼中不同位置引發之單一錯誤的出現項目。  
   
-如需詳細資訊，請參閱 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 [如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)主題會提供在 SQL Server 單元測試中使用 RAISERROR 的範例。  
+如需詳細資訊，請參閱 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 以下主題會提供在 SQL Server 單元測試中使用 RAISERROR 的範例，[如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [使用 SQL Server 單元測試驗證資料庫程式碼](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[如何：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[操作說明：開啟要編輯的 SQL Server 單元測試](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

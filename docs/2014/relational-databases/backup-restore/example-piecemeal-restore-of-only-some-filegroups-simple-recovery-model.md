@@ -1,5 +1,5 @@
 ---
-title: 範例：僅限於某些檔案群組的分次還原 (簡單復原模式) | Microsoft Docs
+title: 範例分次還原的只是部分檔案群組 （簡單復原模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cdc7e6c036a38ac40eb8c7bb2495b1ed5a3e6e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922026"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>範例：僅限於某些檔案群組的分次還原 (簡單復原模式)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>範例僅對部分檔案群組分次還原 (簡單復原模式)
   本主題是關於在簡單復原模式下，包含唯讀檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
  分次還原順序會在檔案群組層級，分階段地還原與復原資料庫，先從主要檔案群組開始，然後才是所有的讀取/寫入次要檔案群組。  
@@ -75,7 +75,7 @@ ms.locfileid: "48083678"
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

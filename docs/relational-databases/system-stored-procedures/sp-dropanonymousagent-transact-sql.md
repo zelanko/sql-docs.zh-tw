@@ -14,15 +14,16 @@ helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911957"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從發行者卸除在散發者端之複寫監視的匿名代理程式。 這個預存程序執行於任何資料庫的發行者端。  
@@ -32,7 +33,6 @@ ms.locfileid: "58537880"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   

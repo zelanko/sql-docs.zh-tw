@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - M (geometry Data Type)
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: eb518b1ce37d035278c885ed0f55a9aa46c17d60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c15802d4cf60f507b02733d9b85684576c38774f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937536"
 ---
 # <a name="m-geometry-data-type"></a>M (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

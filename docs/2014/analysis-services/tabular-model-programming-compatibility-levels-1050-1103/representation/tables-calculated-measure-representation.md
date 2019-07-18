@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58382e66ca6e59ea89e942f97a20ba5d6a138559
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757657"
 ---
 # <a name="calculated-measure-representation-tabular"></a>導出量值表示法 (表格式)
   導出量值是每次使用時都會進行評估的具名 DAX 運算式。  

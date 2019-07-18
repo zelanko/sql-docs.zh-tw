@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926760"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者概觀
 Microsoft OLE DB 持續性提供者可讓您儲存[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件到檔案，並稍後再還原，**資料錄集**檔案中的物件。 結構描述資訊及資料，而且會保留暫止的變更。

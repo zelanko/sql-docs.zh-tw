@@ -1,5 +1,5 @@
 ---
-title: DRILLTHROUGH 陳述式 (MDX) |Microsoft 文件
+title: DRILLTHROUGH 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006261"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>MDX 資料操作鑽研
+# <a name="mdx-data-manipulation---drillthrough"></a>MDX 資料操作 - DRILLTHROUGH
 
 
   擷取在 Cube 中用來建立指定資料格的基礎資料表資料列。  
@@ -43,16 +42,16 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  以逗號分隔的維度屬性和量值清單。  
   
 ## <a name="remarks"></a>備註  
- 在鑽研作業中，使用者會從 Cube 選取單一資料格，並且從該資料格的來源資料中擷取結果集，以便取得更詳細的資訊。 依預設，鑽研結果集是從評估以計算所選 Cube 資料格之值的資料表資料列衍生而來。 若要讓使用者能執行鑽研，用戶端應用程式必須支援此功能。 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，直接從 MOLAP 儲存所擷取的結果，除非查詢 ROLAP 資料分割或維度。  
+ 在鑽研作業中，使用者會從 Cube 選取單一資料格，並且從該資料格的來源資料中擷取結果集，以便取得更詳細的資訊。 依預設，鑽研結果集是從評估以計算所選 Cube 資料格之值的資料表資料列衍生而來。 若要讓使用者能執行鑽研，用戶端應用程式必須支援此功能。 在  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，直接從 MOLAP 儲存所擷取的結果，除非查詢 ROLAP 資料分割或維度。  
   
 > [!IMPORTANT]  
 >  鑽研安全性是以定義於 Cube 的一般安全性選項為基礎。 如果使用者無法透過 MDX 取得某些資料，鑽研也會以完全相同的方式限制使用者。  
   
- MDX 陳述式可指定主旨資料格。 所指定的值**MAXROWS**引數表示應該產生的資料列集所傳回的資料列的數目上限。  
+ MDX 陳述式可指定主旨資料格。 所指定的值**MAXROWS**引數指出應該傳回結果的資料列集的資料列的數目上限。  
   
- 根據預設，傳回的資料列數上限為 10,000 個資料列。 這表示，如果您離開**MAXROWS**未指定，就會收到 10,000 個資料列或更少。 如果這個值是對您的案例而言太低，您可以設定**MAXROWS**為較高的數字，例如`MAXROWS 20000`。 如果是過低整體來說，您可以藉由變更增加預設**OLAP\Query\DefaultDrillthroughMaxRows**伺服器屬性。 如需有關如何變更此屬性的詳細資訊，請參閱[Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+ 根據預設，傳回的資料列數上限為 10,000 個資料列。 這表示，如果您離開**MAXROWS**未指定，您將得到 10,000 個資料列或更少。 如果此值為對您的案例而言太低，您可以設定**MAXROWS**更高的數字，例如`MAXROWS 20000`。 如果是過低整體來說，您還可以增加預設值，藉由變更**OLAP\Query\DefaultDrillthroughMaxRows**伺服器屬性。 如需變更此屬性的詳細資訊，請參閱[Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- 除非另有指定，否則所傳回的資料行會包含與指定量值之量值群組相關的所有維度 (多對多維度除外) 之全部資料粒度屬性。 Cube 維度前面有 $，以區分維度和量值群組。 **傳回**子句用來指定鑽研查詢所傳回的資料行。 下列函數可套用至單一屬性或量值**傳回**子句。  
+ 除非另有指定，否則所傳回的資料行會包含與指定量值之量值群組相關的所有維度 (多對多維度除外) 之全部資料粒度屬性。 Cube 維度前面有 $，以區分維度和量值群組。 **傳回**子句來指定鑽研查詢所傳回的資料行。 下列函數可套用至單一屬性，或藉由測量**傳回**子句。  
   
  Name(attribute_name)  
  傳回指定屬性成員的名稱。  

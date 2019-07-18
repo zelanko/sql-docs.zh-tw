@@ -11,14 +11,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2ec5ac57e69b74b97b027ce5119ab74ec97acee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193860"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的驗證
   驗證是建立使用者對識別的權限之程序。 您可以使用許多技術來驗證使用者。 最常見的方式是使用密碼。 例如，當您實作表單驗證時，想要查詢使用者是否有認證 (通常是透過某個介面來要求登入名稱與密碼)，然後針對資料存放區來驗證使用者，例如資料庫資料表或是組態檔。 如果無法驗證認證，驗證程序會失敗，而且使用者將假設匿名識別。  

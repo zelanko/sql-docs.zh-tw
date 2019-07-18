@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922881"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元會使用與 XPath 運算式類似的兩種運算式字串類型。 查詢運算式是字串，其中指定一組用來列舉物件模型階層中之一個或多個物件的準則。 統一資源名稱 (URN) 是可唯一識別單一物件的特定查詢運算式字串類型。  
@@ -104,7 +104,7 @@ ms.locfileid: "52752070"
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
   
- 如果未針對物件指定 *\<FilterExpression>*，就會列舉該節點上的所有物件。  
+ 如果未針對物件指定 *\<FilterExpression>* ，就會列舉該節點上的所有物件。  
   
 ## <a name="uniform-resource-names-urn"></a>統一資源名稱 (URN)  
  URN 是查詢運算式的子集。 每個 URN 都會構成單一物件的完整參考。 一般的 URN 會使用 Name 屬性來識別位於每個節點的單一物件。 例如，這個 URN 會參考特定資料行：  

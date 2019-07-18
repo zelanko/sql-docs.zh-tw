@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f04a0baa52eff0ac5742769e9eb6bfd7bfc246c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f69de90386263df8b2be4638e257dcf58cf5dad7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064302"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>從 SQL Server 中移除擴充預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

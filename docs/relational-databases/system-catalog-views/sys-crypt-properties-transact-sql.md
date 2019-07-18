@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9655866d4fd2d6f98b38532f77f94bc12f16f9b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109486"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ ms.locfileid: "47805436"
 |**class**|**tinyint**|識別屬性所在的項目類別。<br /><br /> 1 = 物件或資料行<br /> 5 = 組件|  
 |**class_desc**|**nvarchar(60)**|屬性所在項目類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|屬性所在項目的識別碼，根據類別加以解譯|  
-|**憑證指紋**|**varbinary(32)**|所用憑證或非對稱金鑰的 SHA-1 雜湊。|  
-|**crypt_type**|**char(4)**|加密類型。<br /><br /> SPVC = 以憑證私密金鑰加密<br /><br /> SPVA = 以非對稱私密金鑰加密<br /><br /> CPVC = 以憑證私密金鑰簽署的計數器簽章<br /><br /> CPVA = 以非對稱金鑰簽署的計數器簽章|  
+|**thumbprint**|**varbinary(32)**|所用憑證或非對稱金鑰的 SHA-1 雜湊。|  
+|**crypt_type**|**char(4)**|加密類型。<br /><br /> SPVC = 以憑證私密金鑰的簽章<br /><br /> SPVA = 以非對稱私密金鑰的簽章<br /><br /> CPVC = 以憑證私密金鑰簽署的計數器簽章<br /><br /> CPVA = 以非對稱金鑰簽署的計數器簽章|  
 |**crypt_type_desc**|**nvarchar(60)**|加密類型的描述。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
-|**crypt_property**|**varbinary(max)**|簽署或加密的位元。|  
+|**crypt_property**|**varbinary(max)**|簽署或加密的位元。 帶正負號的模組，這些都是模組的簽章位元的內容。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

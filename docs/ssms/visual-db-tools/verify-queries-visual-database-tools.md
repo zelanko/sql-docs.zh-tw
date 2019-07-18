@@ -14,15 +14,15 @@ helpviewer_keywords:
 - queries [SQL Server], verifying
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 827cee98b9ddc40385eb47d7588770b62a6558ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: de8bb0c96f313a91f146816042e9ba61c5937910
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711846"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689349"
 ---
 # <a name="verify-queries-visual-database-tools"></a>驗證查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47711846"
   
 關於驗證查詢的注意事項：  
   
--   即使在 [圖表] 窗格和 [準則] 窗格中無法表示陳述式，其語法也可以是正確的，因此能夠成功地驗證。  
+-   即使在 [圖表]  窗格和 [準則]  窗格中無法表示陳述式，其語法也可以是正確的，因此能夠成功地驗證。  
   
 -   [SQL 驗證] 能夠偵測某些，但不是所有的 SQL 錯誤。 如果查詢中包含在 SQL 驗證期間未偵測到的錯誤，當您執行查詢時，資料庫會偵測到錯誤。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47711846"
   
 ### <a name="to-verify-an-sql-statement"></a>若要驗證 SQL 陳述式  
   
--   在 [SQL] 窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]。  
+-   在 [SQL]  窗格按一下滑鼠右鍵，然後從快速鍵功能表選取 [驗證 SQL 語法]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  

@@ -2,18 +2,18 @@
 title: 規劃地圖報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7a744233ace7e6c31bb2d00c5bdd888a4be371f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576330"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
 良好的報表會呈現具備行動力或洞察能力的資訊。 若要針對地理背景呈現分析資料 (例如銷售總計或人口統計)，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中。 一個地圖可以包含多個圖層，而每個圖層都會顯示由特定類型之空間資料所定義的地圖元素：表示位置的點、表示路線的線條，或表示區域的多邊形。 您可以讓您的分析資料與每個圖層上的地圖元素產生關聯。  

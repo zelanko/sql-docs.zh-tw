@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011264"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 傳回碼與錯誤資訊
-  OLE Automation 系統預存程序傳回`int`傳回碼，這是基礎 OLE Automation 作業所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800 OLE 錯誤碼*nnnnn*，但若以傳回`int`預存程序傳回碼的 HRESULT 值的形式為 214*nnnnnnn*。  
+  OLE Automation 系統預存程序將傳回 `int` 傳回碼，這是底下的 OLE Automation 操作所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800 OLE 錯誤碼*nnnnn*，但若以傳回`int`預存程序傳回碼的 HRESULT 值的形式為 214*nnnnnnn*。  
   
  例如，若將無效的物件名稱 (SQLDMO。Xyzzy) 給 sp_OACreate 會導致該程序傳回`int`2147221005 的 HRESULT 為 0x800401f3。  
   

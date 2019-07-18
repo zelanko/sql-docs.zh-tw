@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062619"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084604"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
   如果採礦模型已經設定為讓您鑽研模型案例，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
@@ -49,15 +48,15 @@ ms.locfileid: "48062619"
   
 2.  在資料採礦設計師中，按一下 **[採礦模型檢視器]** 索引標籤。  
   
-3.  從 [採礦模型] 下拉式清單中選取模型。  
+3.  從 [採礦模型]  下拉式清單中選取模型。  
   
-4.  從 [檢視器] 下拉式清單中選取一個檢視器，然後以滑鼠右鍵按一下特定的節點。  
+4.  從 [檢視器]  下拉式清單中選取一個檢視器，然後以滑鼠右鍵按一下特定的節點。  
   
-5.  選取 [鑽研]，然後選取 [僅模型資料行] 或 [模型和結構資料行]，即可開啟 [鑽研] 視窗。  
+5.  選取 [鑽研]  ，然後選取 [僅模型資料行]  或 [模型和結構資料行]  ，即可開啟 [鑽研]  視窗。  
   
-6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
+6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢&#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  
+ [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  
   
   

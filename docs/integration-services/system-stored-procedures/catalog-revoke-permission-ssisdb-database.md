@@ -14,14 +14,18 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2ba95693f64cecdefc140e38f9ae048ca9945b5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 41946fdf50ec72d7c81340dd40c99447a9dbbf40
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715973"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   撤銷 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的安全性實體物件權限。  
@@ -37,7 +41,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引數  
  [ @object_type = ] *object_type*  
- 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint**_。_  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
  安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  

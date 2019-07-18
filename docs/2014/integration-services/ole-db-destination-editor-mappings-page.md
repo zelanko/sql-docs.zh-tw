@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.mappings.f1
@@ -15,19 +14,19 @@ ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7f08879e314ac17e47d4bc3eb096a559ff654d2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057085"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目的地編輯器 (對應頁面)
   使用 [OLE DB 目的地編輯器] 對話方塊的 [對應] 頁面，將輸入資料行對應至目的地資料行。  
   
  若要深入了解 OLE DB 目的地，請參閱＜ [OLE DB Destination](data-flow/ole-db-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將資料表中的可用輸入資料行對應到目的地資料行。  
   

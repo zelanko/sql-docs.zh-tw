@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943781"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 命令
 從一或多個資料表擷取資料。  
@@ -97,7 +96,7 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  指定在查詢輸出中的資料行的標題。 這很有用，當*Select_Item*是運算式，或包含欄位函式，而且您想要讓資料行有意義的名稱。 *Column_Name*可以是運算式，但不能包含資料表的欄位名稱中不允許的字元 （例如空格）。  
   
- 從 [*DatabaseName*！]*表格*[*Local_Alias*] [，[*DatabaseName*！]*表格*[*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  列出包含此查詢會擷取資料的資料表。 如果資料表不是開啟的就會顯示 Visual FoxPro**開啟**對話方塊，讓您指定的檔案位置。 開啟它之後，資料表仍為開啟之後查詢已完成。  
   
  *DatabaseName*！ 指定與資料來源所指定以外的資料庫名稱。 您必須包含資料庫包含資料表，如果未指定資料庫與資料來源的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
@@ -195,7 +194,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- 此篩選條件會搜尋比對每個欄位*cExpression*。 您可以使用百分比符號 （%） 和底線 (_) 萬用字元所組成的一部分*cExpression*。 底線表示未知的單一字元，在字串中。  
+ 此篩選條件會搜尋比對每個欄位*cExpression*。 您可以使用百分比符號 （%）和底線 (_) 萬用字元，做為一部分*cExpression*。 底線表示未知的單一字元，在字串中。  
   
  GROUP BY *GroupColumn* [， *GroupColumn* ...]  
  在查詢中一或多個資料行中的值為基礎的群組資料列。 *GroupColumn*可以是下列其中之一：  
@@ -283,6 +282,6 @@ WHERE customer.cust_id NOT IN ;
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
- [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
+ [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
  [設定正確](../../odbc/microsoft/set-exact-command.md)

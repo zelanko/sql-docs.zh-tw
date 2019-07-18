@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843654"
 ---
 # <a name="retrieve-files"></a>擷取檔案
   開啟原始檔控制專案之後，您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，將原始檔控制存放區中的專案檔本機複本擷取到專案所在的本機目錄中。  
@@ -38,7 +38,7 @@ ms.locfileid: "48149538"
   
 1.  在 [方案總管] 中，選取一個專案。  
   
-2.  在 **檔案**功能表上，指向**原始檔控制**，然後按一下**取得最新版本 （遞迴）**。  
+2.  在 **檔案**功能表上，指向**原始檔控制**，然後按一下**取得最新版本 （遞迴）** 。  
   
  專案中檔案的最新版本會擷取到本機磁碟的專案位置中。  
   

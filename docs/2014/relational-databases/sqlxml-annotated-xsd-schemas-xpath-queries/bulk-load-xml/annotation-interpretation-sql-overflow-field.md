@@ -12,15 +12,15 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 935f1c9ea98c28b7f75e1665de7445f779af41d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793491"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013464"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   在結構描述中，您可以將資料行識別為溢位資料行，以便從 XML 文件中接收所有未耗用的資料。 請藉由使用 `sql:overflow-field` 註解，在結構描述中指定這個資料行。 具有多個溢位資料行是可行的。  
@@ -29,7 +29,7 @@ ms.locfileid: "52793491"
   
  當它將資料儲存在溢位資料行時，XML 大量載入也會儲存有定義 `sql:overflow-field` 之父元素的開頭標記與結束標記。  
   
- 例如，下列結構描述會描述**\<客戶 >** 並 **\<CustOrder >** 項目。 每一個元素都可識別溢位資料行：  
+ 例如，下列結構描述會描述 **\<客戶 >** 並 **\<CustOrder >** 項目。 每一個元素都可識別溢位資料行：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +73,9 @@ ms.locfileid: "52793491"
 </xsd:schema>  
 ```  
   
- 在結構描述中， **\<客戶 >** 元素會對應到 Cust 資料表和**\<順序 >** 元素會對應到 CustOrder 資料表。  
+ 在結構描述中， **\<客戶 >** 元素會對應到 Cust 資料表和 **\<順序 >** 元素會對應到 CustOrder 資料表。  
   
- 這兩個**\<客戶 >** 並**\<順序 >** 項目會識別為溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性**\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的**\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
+ 這兩個 **\<客戶 >** 並 **\<順序 >** 項目會識別為溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性 **\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的 **\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

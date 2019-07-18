@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variableoptionswindow.f1
@@ -15,19 +14,19 @@ ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054680"
 ---
 # <a name="variable-grid-options"></a>變數方格選項
   使用 **[變數方格選項]** 對話方塊選擇將顯示在 **[變數]** 視窗中的資料行，並選取要套用到此變數清單的篩選。 如需所對應之變數屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。  
   
 ## <a name="options-for-filter"></a>篩選選項  
  **顯示系統變數**  
- 選取此選項即可在 [變數] 視窗中列出系統變數。 系統變數是預先定義的， 您無法加入或刪除系統變數。 但您可以修改 **RaiseChangedEvent** 屬性設定。  
+ 選取此選項即可在 [變數]  視窗中列出系統變數。 系統變數是預先定義的， 您無法加入或刪除系統變數。 但您可以修改 **RaiseChangedEvent** 屬性設定。  
   
  此清單有色碼。 系統變數是灰色，而使用者定義的變數是黑色。  
   

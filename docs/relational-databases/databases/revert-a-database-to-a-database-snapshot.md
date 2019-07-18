@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591052"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583546"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53591052"
   
      [安全性](#Security)  
   
--   **若要將資料庫還原成資料庫快照集，請使用下列方式：**[Transact-SQL](#TsqlProcedure)  
+-   **若要將資料庫還原成資料庫快照集，請使用下列方式：** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53591052"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  任何擁有來源資料庫之 RESTORE DATABASE 權限的使用者都可以將它還原成建立資料庫快照集時的狀態。  
   
 ##  <a name="TsqlProcedure"></a> 如何將資料庫還原成資料庫快照集 (使用 Transact-SQL)  
@@ -91,7 +91,7 @@ ms.locfileid: "53591052"
 > [!NOTE]  
 >  如需此程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
-1.  識別您要將資料庫還原成哪一個資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中之資料庫的快照集 (請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md))。 此外，您可以從 **sys.databases &#40;Transact-SQL&#41;** 目錄檢視的 [sys.databases &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行中，識別某個檢視的來源資料庫。  
+1.  識別您要將資料庫還原成哪一個資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中之資料庫的快照集 (請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md))。 此外，您可以從 **sys.databases &amp;#40;Transact-SQL&amp;#41;** 目錄檢視的 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行中，識別某個檢視的來源資料庫。  
   
 2.  卸除任何其他資料庫快照集。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "53591052"
   
      還原作業需要來源資料庫上的 RESTORE DATABASE 權限。 若要還原資料庫，請使用下列 Transact-SQL 陳述式：  
   
-     RESTORE DATABASE *資database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *資database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      其中 *database_name* 是來源資料庫，而 *database_snapshot_name* 是要用來還原資料庫的快照集名稱。 請注意，在此陳述式中，您必須指定快照名稱，而非備份裝置。  
   
@@ -118,7 +118,9 @@ ms.locfileid: "53591052"
 5.  啟動資料庫。  
   
 6.  您可以選擇性地備份還原的資料庫，特別是當它使用完整 (或大量記錄) 復原模式時。 若要備份資料庫，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  本節包含將資料庫還原成資料庫快照集的下列範例：  
   

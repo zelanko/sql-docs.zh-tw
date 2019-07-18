@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524327"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
+# <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：資料庫引擎使用者入門
   歡迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用者入門教學課程。 本教學課程的主要對象是剛接觸 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 且已安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的使用者。 這個簡短的教學課程可幫助您開始使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
@@ -31,10 +31,10 @@ ms.locfileid: "53355190"
   
  這個教學課程分成兩個課程：  
   
- [第 1 課：連接到 Database Engine](lesson-1-connecting-to-the-database-engine.md)  
+ [第 1 課：連接至資料庫引擎](lesson-1-connecting-to-the-database-engine.md)  
  在這一課，您將學會如何連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 並讓其他人可以連接。  
   
- [第 2 課：從另一部電腦連接](lesson-2-connecting-from-another-computer.md)  
+ [第 2 課：從另一部電腦連線](lesson-2-connecting-from-another-computer.md)  
  在這一課，您將學會如何從第二部電腦連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，包括啟用通訊協定、設定通訊埠及設定防火牆設定。  
   
 ## <a name="requirements"></a>需求  

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65101963"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用組建和部署參與者自訂資料庫建置和部署
 Visual Studio 提供可用來修改資料庫專案建置和部署動作行為的擴充點。  
@@ -48,7 +48,7 @@ Visual Studio 提供可用來修改資料庫專案建置和部署動作行為的
 |**一般工作**|**支援內容**|  
 |--------------------|--------------------------|  
 |**深入了解擴充點：** 您可以了解用來實作組建和部署參與者的基底類別。|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**建立範例參與者：** 了解建立組建或部署參與者所需的步驟。 如果遵循這些逐步解說，您會：<br /><br />-   建立組建參與者，以產生列出模型中所有項目的報表。<br />-   建立部署參與者，以便在執行之前變更部署計畫。<br />-   建立部署參與者，以便在部署 SQL 專案時產生部署報表。<br /><br />根據您要如何將參與者散發給小組，可以在單一組件或數個組件中建立所有參與者。|[逐步解說：擴充資料庫專案組建，以產生模型統計資料](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md) \(機器翻譯\)<br /><br />[逐步解說：擴充資料庫專案部署以修改部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[逐步解說：擴充資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**建立範例參與者：** 了解建立組建或部署參與者所需的步驟。 如果遵循這些逐步解說，您會：<br /><br />-   建立組建參與者，以產生列出模型中所有項目的報表。<br />-   建立部署參與者，以便在執行之前變更部署計畫。<br />-   建立部署參與者，以便在部署 SQL 專案時產生部署報表。<br /><br />根據您要如何將參與者散發給小組，可以在單一組件或數個組件中建立所有參與者。|[逐步解說：延伸資料庫專案組建，以產生模型統計資料](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[逐步解說：延伸資料庫專案部署以修改部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[逐步解說：延伸資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>另請參閱  
 [定義 SQL 單元測試的自訂條件](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -21,15 +20,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bc62428aafdb3d3ec252c0b10cbe5a7c2db515cd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292297"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105525"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端邊緣處的頁首和頁尾。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩、背景影像和運算式。 運算式包含剛好具有一個資料集之報表的資料集欄位參考，以及包含該資料集做為範圍的彙總函式呼叫。  

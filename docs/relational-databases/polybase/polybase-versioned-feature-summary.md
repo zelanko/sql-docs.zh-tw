@@ -1,22 +1,21 @@
 ---
 title: PolyBase 功能和限制 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e4a267e98b38ff294366ce198518ffdb3062d460
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665423"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731958"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -61,6 +60,8 @@ ms.locfileid: "51665423"
 ## <a name="known-limitations"></a>已知限制
 
 PolyBase 具有下列限制：
+
+- 若要使用 PolyBase，您必須在資料庫上具有系統管理員或 CONTROL SERVER 層級權限。
 
 - 在 SQL Server 中最大資料列大小 (包括變數長度資料行的完整長度) 不能超過 32 KB，在 Azure SQL 資料倉儲中則不能超過 1 MB。
 

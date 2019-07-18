@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
@@ -15,19 +14,19 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2eec4fbeb300ce2a43e1007245fad573f1c5a44
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057666"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
   
  若要了解這個工作，請參閱＜ [Message Queue Task](control-flow/message-queue-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **RemoveFromMessageQueue**  
  指出接收訊息之後，是否從佇列中移除該訊息。 依預設，此值設定為 `False`。  
   

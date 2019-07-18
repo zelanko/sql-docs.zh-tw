@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190819"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>建立購物籃結構和模型 (中繼資料採礦教學課程)
   現在您已經建立了資料來源檢視，接著要使用資料採礦精靈建立新的採礦結構。 在這項工作中，您將根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法建立一個採礦結構和一個採礦模型。  
@@ -27,15 +27,15 @@ ms.locfileid: "56019449"
   
 1.  在 [方案總管] 中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下**採礦結構**，然後選取**New Mining Structure&lt**開啟資料採礦精靈。  
   
-2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]**。  
+2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]** 。  
   
-3.  在 [**選取定義方法**頁面上，確認**從現有的關聯式資料庫或資料倉儲**已選取，然後按一下**下一步]**。  
+3.  在 [**選取定義方法**頁面上，確認**從現有的關聯式資料庫或資料倉儲**已選取，然後按一下**下一步]** 。  
   
-4.  在上**建立資料採礦結構**頁面的 [**您想要使用哪一種資料採礦技術？**，選取**Microsoft 關聯規則**從清單中，然後按一下**下一步]**。 **選取資料來源檢視**頁面隨即出現。  
+4.  在上**建立資料採礦結構**頁面的 [**您想要使用哪一種資料採礦技術？** ，選取**Microsoft 關聯規則**從清單中，然後按一下**下一步]** 。 **選取資料來源檢視**頁面隨即出現。  
   
-5.  選取 [**訂單**下方**可用的資料來源檢視**，然後按一下**下一步]**。  
+5.  選取 [**訂單**下方**可用的資料來源檢視**，然後按一下**下一步]** 。  
   
-6.  在 [**指定資料表類型**vAssocSeqLineItems 資料表的資料列中的頁面上，選取**巢狀**核取方塊，然後在巢狀的資料表 vAssocSeqOrders 的資料列，選取**案例** ] 核取方塊。 按一下 [下一步] 。  
+6.  在 [**指定資料表類型**vAssocSeqLineItems 資料表的資料列中的頁面上，選取**巢狀**核取方塊，然後在巢狀的資料表 vAssocSeqOrders 的資料列，選取**案例** ] 核取方塊。 按一下 [下一步]  。  
   
 7.  在 **指定培訓資料**頁面上，清除可能已核取所有方塊。 選取以設定 vAssocSeqOrders 案例資料表、 索引鍵**金鑰**OrderNumber 旁的核取方塊。  
   
@@ -49,19 +49,19 @@ ms.locfileid: "56019449"
   
      ![對話方塊應該看起來](../../2014/tutorials/media/tutorial-configassocmodel.gif "對話方塊應該看起來如何")  
   
-10. 按一下 [下一步] 。  
+10. 按一下 [下一步]  。  
   
-11. 在 [**指定資料行的內容和資料類型**頁面上，檢閱選項，這應該是下表所示，然後按一下**下一步]**。  
+11. 在 [**指定資料行的內容和資料類型**頁面上，檢閱選項，這應該是下表所示，然後按一下**下一步]** 。  
   
     |[資料行]|內容類型|資料類型|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|文字|  
-    |Order Number|Key|文字|  
-    |Region|Discrete|文字|  
+    |IncomeGroup|Discrete|Text|  
+    |Order Number|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |[模型]|Key|文字|  
+    |[模型]|Key|Text|  
   
-12. 在 **建立測試設定**頁面上，選項的預設值**測試資料的百分比**為 30%。 變更為**0**。 按一下 [下一步] 。  
+12. 在 **建立測試設定**頁面上，選項的預設值**測試資料的百分比**為 30%。 變更為**0**。 按一下 [下一步]  。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會提供不同的圖表來測量模型精確度。 不過，有些圖表類型 (例如增益圖和交叉驗證報告)，是專為分類和估計而設計。 這些方法不支援用於關聯式預測。  

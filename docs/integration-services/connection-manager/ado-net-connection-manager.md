@@ -1,7 +1,7 @@
 ---
 title: ADO.NET 連線管理員 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,14 +17,18 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5811c4ea89a177f9862f27ba75f6baaddef7208
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66221178"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員可讓封裝使用 .NET 提供者來存取資料來源。 此連線管理員通常用於存取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這類的資料來源，以及透過自訂工作 (使用如 C# 這類語言以 Managed 程式碼撰寫) 中之 OLE DB 和 XML 公開的資料來源。  
   
  當您將 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立一個連線管理員 (在執行階段會解析為 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接)、設定連線管理員屬性，並將該連線管理員加入封裝上的 **Connections** 集合。  
@@ -83,6 +87,74 @@ ms.locfileid: "58272376"
  **刪除**  
  請選取一個連接，然後使用 [刪除] 按鈕刪除它。  
   
+### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 資源驗證的受控識別
+在 [Azure Data Factory 中的 Azure-SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上執行 SSIS 套件時，您可以使用與您資料處理站建立關聯的[受控識別](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)來進行 Azure SQL Database (或受控執行個體) 驗證。 指定的處理站可以使用此身分識別從您資料庫存取資料，或從您的資料庫複製資料。
+
+若要使用 Azure SQL Database 的受控識別驗證，請遵循下列步驟來設定您的資料庫：
+
+1. **在 Azure AD 中建立群組。** 將受控識別新增為群組的成員。
+    
+   1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製**受控識別物件識別碼**。
+    
+   1. 安裝 [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) 模組。 使用 `Connect-AzureAD` 命令登入。 執行下列命令來建立群組，並將受控識別新增為成員。
+      ```powershell
+      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
+      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
+      ```
+    
+1. 在 Azure 入口網站為您的 Azure SQL Server **[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)**，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 3 和 4。 系統管理員將擁有資料庫的完整存取權。
+
+1. 為 Azure AD 群組**[建立自主資料庫使用者](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)**。 使用至少具有 ALTER ANY USER 權限的 Azure AD 身分識別，使用 SSMS 等工具連線至您要複製資料的資料庫。 執行下列 T-SQL： 
+    
+    ```sql
+    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    ```
+
+1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣**授與 Azure AD 群組所需權限**。 例如，執行下列程式碼：
+
+    ```sql
+    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    ```
+
+若要使用 Azure SQL Database 受控執行個體的受控識別驗證，請遵循下列步驟來設定您的資料庫：
+    
+1. 在 Azure 入口網站為您的受控執行個體**[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)**，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 2-5。 系統管理員將擁有資料庫的完整存取權。
+
+1. **[從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)**。 前往您資料處理站的**屬性**。 複製**受控識別應用程式識別碼** (不是**受控識別物件識別碼**)。
+
+1. **將資料處理站受控識別轉換成二進位類型**。 使用您的 SQL/Active Directory 系統管理員帳戶，使用 SSMS 等工具連線至您受控執行個體的 **master** 資料庫。 對 **master** 資料庫執行下列 T-SQL，以二進位格式取得您的受控識別應用程式識別碼：
+    
+    ```sql
+    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
+    select CAST(@applicationId AS varbinary)
+    ```
+
+1. 在 Azure SQL Database 受控執行個體中**將資料處理站受控識別新增為使用者**。 對 **master** 資料庫執行下列 T-SQL：
+    
+    ```sql
+    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    ```
+
+1. **授與資料處理站受控識別所需的權限**。 對您要複製資料的資料庫執行下列 T-SQL：
+
+    ```sql
+    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
+    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ```
+
+最後，為 ADO.NET 連線管理員**設定受控識別驗證**。 有兩種選項可以執行此操作。
+    
+1. 在設計階段設定。 在 SSIS 設計工具中以滑鼠右鍵按一下 [ADO.NET 連線管理員]，然後按一下 [屬性] 開啟 [屬性視窗]。 將 **ConnectUsingManagedIdentity** 屬性更新為 **True**。
+    > [!NOTE]
+    >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，連線管理員的 **ConnectUsingManagedIdentity** 屬性不會生效 (表示受控識別驗證無法運作)。
+    
+1. 在執行階段設定。 當您透過 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 或 [Azure Data Factory 執行 SSIS 套件活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)來執行套件時，請尋找 ADO.NET 連線管理員，並將其 **ConnectUsingManagedIdentity** 屬性更新為 **True**。
+    > [!NOTE]
+    >  在 Azure-SSIS 整合執行階段中，當受控識別驗證用於建立資料庫連線時，會**覆寫** ADO.NET 連線管理員上預先設定的所有其他驗證方法 (例如整合式驗證、密碼)。
+
+> [!NOTE]
+>  若要在現有套件上設定受控識別驗證，請務必至少使用[最新的 SSIS 設計工具](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)來重建您的 SSIS 專案一次，然後將 SSIS 專案重新部署至您的 Azure-SSIS 整合執行階段，以便新連線管理員的 **ConnectUsingManagedIdentity** 屬性自動新增至您 SSIS 專案中的所有 ADO.NET 連線管理員。
+
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

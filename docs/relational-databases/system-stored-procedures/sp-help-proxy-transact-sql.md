@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact-SQL) | Microsoft Docs
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085282"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_proxy
 |Dts|SSIS 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
-`[ @name = ] 'name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出 proxy 的登入。 檔案名**nvarchar(256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
+`[ @name = ] 'name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出 proxy 的登入。 檔案名**nvarchar(256)** ，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

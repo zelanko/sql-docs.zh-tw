@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 308281ed30b7f0a56acbe397c0294932afeae121
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211756"
 ---
 # <a name="view-the-table-definition"></a>檢視資料表定義
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中顯示資料表的屬性。  
@@ -29,7 +29,7 @@ ms.locfileid: "52782020"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來顯示資料表屬性：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52782020"
   
 1.  在 [物件總管] 中，選取您想要顯示屬性的資料表。  
   
-2.  以滑鼠右鍵按一下資料表，然後從捷徑功能表中選擇 [屬性]。 如需詳細資訊，請參閱 [Table Properties](table-properties-ssms.md)。  
+2.  以滑鼠右鍵按一下資料表，然後從捷徑功能表中選擇 [屬性]  。 如需詳細資訊，請參閱 [Table Properties](table-properties-ssms.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -58,9 +58,9 @@ ms.locfileid: "52782020"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會從指定之物件的 `sys.tables` 目錄檢視傳回所有資料行。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會從指定之物件的 `sys.tables` 目錄檢視傳回所有資料行。  
   
     ```  
     SELECT * FROM sys.tables  

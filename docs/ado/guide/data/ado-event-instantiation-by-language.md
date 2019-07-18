@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 131e889847625dea825ca48ca30bf801046d229c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926171"
 ---
 # <a name="ado-event-instantiation-by-language"></a>ADO 事件具現化 (依語言)
 每個程式語言會以不同的方式建立 ADO 事件的執行個體。 所有下列的範例中建立**ConnectComplete**事件處理常式。  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
--   [Visual c + +](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [視覺化C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
 -   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   

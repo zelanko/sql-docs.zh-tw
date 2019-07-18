@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f1af3719a658711b1a232b0248e511e0a658414d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078177"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
   在這一課中，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  

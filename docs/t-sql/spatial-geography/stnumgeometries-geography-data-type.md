@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries method
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 385b2779189c7e73e78676e8160204e0cdd017f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a5cf36976538bc264ec96ea7a3f5835dc9ad9bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935726"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47761226"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型：**SqlInt32**  
+ CLR 傳回型別：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geography** 執行個體不是 **MultiPoint**、**MultiLineString**、**MultiPolygon** 或 **GeometryCollection** 執行個體，則此方法會傳回 1，如果 **geography** 執行個體為空，則傳回 0。  

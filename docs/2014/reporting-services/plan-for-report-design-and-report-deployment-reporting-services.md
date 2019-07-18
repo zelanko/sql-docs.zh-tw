@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108053"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>規劃報表設計與報表部署 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了數種撰寫與部署報表。 您可以使用本主題來協助針對一起運作的報表撰寫環境和報表伺服器進行規劃。 本主題為 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件支援之報表定義的概觀。 報表定義是以報表定義語言 (RDL) 或用戶端報表定義語言 (RDLC) 撰寫的 XML 檔案。 每個報表定義都符合列於檔案開頭的特定結構描述版本。  
@@ -56,15 +55,15 @@ ms.locfileid: "56032009"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> 報表伺服器與 RDL 結構描述支援  
  報表定義檔案可以透過下列方式部署至 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 報表伺服器：  
   
--   **報表設計工具：** 將報表從報表設計師部署到 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中。  
+-   **報表設計工具：** 將報表從報表設計師中部署[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]。  
   
--   **報表產生器：** 從報表產生器中將報表儲存至報表伺服器。  
+-   **報表產生器：** 從報表產生器將報表儲存至報表伺服器。  
   
--   **報表管理員：** 從報表管理員中將報表上傳至原生模式報表伺服器。  
+-   **報表管理員：** 上傳報表至原生模式報表伺服器從報表管理員。  
   
--   **SharePoint:** 將報表上傳至以 SharePoint 模式報表伺服器設定的 SharePoint 網站。  
+-   **SharePoint:** 上傳報表至 SharePoint 網站設定為在 SharePoint 模式報表伺服器。  
   
--   **以程式設計的方式：** 使用 SOAP API 介面，以程式設計的方式將報表發行至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](report-server-web-service/report-server-web-service.md)。  
+-   **以程式設計的方式：** 使用 SOAP API 介面與報表伺服器，以程式設計的方式發行報表。 如需詳細資訊，請參閱 [Report Server Web Service](report-server-web-service/report-server-web-service.md)。  
   
  下表依照報表伺服器的版本列出支援的 rdl 結構描述版本。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "56032009"
   
  當您將報表定義上傳至報表伺服器，或升級包含現有報表的報表伺服器時，報表伺服器會以原始格式保留報表定義。 **第一次使用時**，報表伺服器會將報表伺服器資料庫中的報表升級為二進位格式，而這個格式在後續檢視時都會保留著。 報表定義 (.rdl) 本身不會升級。  
   
- 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至報表管理員，然後選取報表並按一下 **[下載]**。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]**。  
+ 您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至報表管理員，然後選取報表並按一下 **[下載]** 。 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]** 。  
   
  若要升級報表定義，您必須在報表撰寫環境下開啟報表，然後儲存報表。  
   

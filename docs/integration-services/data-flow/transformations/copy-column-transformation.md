@@ -18,14 +18,18 @@ ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6023db6e91b7d689afe621b23b6b0654ff70d985
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7ff2de68a43fff15b452579c6ecf681ea586772c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726202"
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「複製資料行」轉換會複製輸入資料行，並將新資料行加入轉換輸出，以建立新資料行。 稍後在資料流程中，可將不同的轉換套用至資料行副本。 例如，您可以使用「複製資料行」轉換建立資料行複本，然後使用「字元對應」轉換將複製的資料轉換為大寫字元，或使用「彙總」轉換將彙總套用至新資料行。  
   
 ## <a name="configuration-of-the-copy-column-transformation"></a>設定複製資料行轉換  
@@ -57,7 +61,7 @@ ms.locfileid: "58290424"
  從可用輸入資料行的清單中選取要複製的資料行。 您的選擇會反映在 **[可用的輸入資料行]** 資料表的核取方塊選擇中。  
   
  **輸出別名**  
- 輸入每個新輸出資料行的別名。 預設為 **[的副本]**，後面緊接著輸入資料行的名稱，但是您也可以選擇任何唯一的描述性名稱。  
+ 輸入每個新輸出資料行的別名。 預設為 **[的副本]** ，後面緊接著輸入資料行的名稱，但是您也可以選擇任何唯一的描述性名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   

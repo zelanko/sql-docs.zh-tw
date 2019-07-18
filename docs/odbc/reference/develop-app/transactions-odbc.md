@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6ce5decd2744c0ce9d753e355321a40d00fd620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 521a2ffbf0f8eb5e2590ae6e42d50dc71d536683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086039"
 ---
 # <a name="transactions-odbc"></a>交易 ODBC
 A*交易*是工作單位，是以單一、 不可部分完成的作業; 也就是說，作業成功或失敗的整體。 比方說，請考慮將 money 從一個銀行帳戶傳輸到另一個。 這牽涉到兩個步驟： 從第一個帳戶提款金額和存入第二個。 很重要，這兩個步驟都成功您不接受用於成功的一個步驟，另一個則失敗。 支援交易的資料庫可保證這點。  

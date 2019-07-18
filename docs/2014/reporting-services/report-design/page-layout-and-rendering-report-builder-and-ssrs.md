@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105504"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
   當您撰寫報表時，最好了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯器的行為以確保經過轉譯的報表看起來是您想要的方式，包括頁面配置與分頁。 您也可能想要確認經過轉譯的報表是否符合您或組織常用的紙張大小。  

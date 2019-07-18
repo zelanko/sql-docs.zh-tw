@@ -15,15 +15,19 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fc767224bb77f3ddbb0f6f562a5d5fce2a56981
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bcbb3de0820b7f8489a21e4630538246da561f1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725429"
 ---
 # <a name="expressions-page"></a>運算式頁面
-  使用 [運算式] 頁面，即可編輯屬性運算式，並存取 [屬性運算式編輯器] 和 [屬性運算式產生器] 對話方塊。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  使用 [運算式]  頁面，即可編輯屬性運算式，並存取 [屬性運算式編輯器]  和 [屬性運算式產生器]  對話方塊。  
   
  屬性運算式會在執行封裝時更新屬性值。 屬性運算式可與封裝、工作、容器、連接管理員以及一些資料流程元件的屬性一起使用。 會評估這些運算式並使用其結果，但不會使用您在設定封裝和封裝物件時所設定的屬性值。 運算式可以包含變數以及運算式語言提供的函數與運算子。 例如，您可以將包含字串 "Weather forecast for " 的變數值與 GETDATE() 函數的傳回結果，串連成字串 "Weather forecast for 4/5/2006"，以產生「傳送郵件」工作的主旨列。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+manager: jroth
+ms.openlocfilehash: 36ccbdddde5276bedffe3271a541875f1e555df3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770483"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC Driver 的 Always Encrypted API 參考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "54361668"
   
  **SQLServerConnection 類別**  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |新的連接字串關鍵字：<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled 會啟用連線的 Always Encrypted 功能，而 columnEncryptionSetting=Disabled 會予以停用。 接受的值為 Enabled/Disabled。 預設值為 Disabled。|  
 |新方法：<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|可讓您為資料庫伺服器設定/更新/移除受信任的金鑰路徑清單。 如果驅動程式在處理應用程式查詢時接收到不在清單上的金鑰路徑，則查詢會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，這類 SQL Server 會傳送假的金鑰路徑，而可能會導致遺漏金鑰存放區認證。|  
@@ -43,7 +43,7 @@ ms.locfileid: "54361668"
 
  **SQLServerConnectionPoolProxy 類別**
  
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | 傳回 sendTimeAsDatetime 連接屬性的設定。|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)` | 修改 sendTimeAsDatetime 連接屬性的設定。|
@@ -51,7 +51,7 @@ ms.locfileid: "54361668"
   
  **SQLServerDataSource 類別**  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public void setColumnEncryptionSetting(String columnEncryptionSetting)`|啟用/停用資料來源物件的一律加密功能。<br /><br /> 預設值為 Disabled。|  
 |`public String getColumnEncryptionSetting()`|擷取資料來源物件的一律加密功能設定。|
@@ -67,13 +67,13 @@ ms.locfileid: "54361668"
   
  建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public SQLServerColumnEncryptionJavaKeyStoreProvider (String keyStoreLocation, char[] keyStoreSecret)`|Java 金鑰存放區的金鑰存放區提供者。|  
   
  方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|將資料行加密金鑰的指定加密值解密。 加密的值必須使用具指定金鑰路徑的憑證，以及指定的演算法，進而加以加密。<br /><br /> **金鑰路徑的格式應為下列其中一項：**<br /><br /> 憑證指紋：<certificate_thumbprint><br /><br /> 別名：<certificate_alias><br /><br /> 覆寫 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。)|  
 |`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用具指定金鑰路徑的憑證，以及指定的演算法，將資料行加密金鑰加密。<br /><br /> **金鑰路徑的格式應為下列其中一項：**<br /><br /> 憑證指紋：<certificate_thumbprint><br /><br /> 別名：<certificate_alias><br /><br /> 覆寫 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。)|  
@@ -86,13 +86,13 @@ ms.locfileid: "54361668"
   
  建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public SQLServerColumnEncryptionAzureKeyVaultProvider (String clientId, String clientKey)`|Azure Key Vault 的金鑰存放區提供者。  您需要提供識別碼和用戶端要求權杖來向 Azure Key Vault 的金鑰。|  
   
  方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 | `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 加密資料行加密金鑰 (CEK)。 使用主要金鑰路徑所指定的非對稱金鑰的 RSA 加密演算法可完成此解密。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。) |  
 | `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 加密資料行加密金鑰，讓指定的演算法指定的資料行主要金鑰。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。) |  
@@ -106,7 +106,7 @@ ms.locfileid: "54361668"
   
  方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public String getAccessToken(String authority, String resource, String scope);`|此方法需要覆寫。 方法用來取得存取權杖至 Azure 金鑰保存庫。|  
   
@@ -114,13 +114,13 @@ ms.locfileid: "54361668"
   
  擴充此類別來實作自訂金鑰存放區提供者。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |SQLServerColumnEncryptionKeyStoreProvider|所有金鑰存放區提供者的基底類別。 自訂提供者必須衍生自此類別並覆寫其成員函式，然後使用 SQLServerConnection 予以註冊。 registerColumnEncryptionKeyStoreProviders()。|  
   
  方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public abstract byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)`|用來將資料行加密金鑰的指定加密值解密的基底類別方法。 加密的值必須使用具有指定金鑰路徑的資料行主要金鑰和指定的演算法，進而加以加密。|  
 |`public abstract byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[]  columnEncryptionKey)`|基底類別方法，使用具指定金鑰路徑的資料行主要金鑰，以及指定的演算法，進而將資料加密金鑰加密。|
@@ -129,7 +129,7 @@ ms.locfileid: "54361668"
   
  在新的或多載方法**SQLServerPreparedStatement**類別  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public void setBigDecimal(int parameterIndex, BigDecimal x, int precision, int scale)`<br /><br /> `public void setObject(int parameterIndex, Object x, int targetSqlType, Integer precision, int scale)`<br /><br /> `public void setObject(int parameterIndex, Object x, SQLType targetSqlType, Integer precision, Integer scale)`<br /><br /> `public void setTime(int parameterIndex, java.sql.Time x, int scale)`<br /><br /> `public void setTimestamp(int parameterIndex, java.sql.Timestamp x, int scale)` <br />`public void setDateTimeOffset(int parameterIndex, microsoft.sql.DateTimeOffset x, int scale)`|這些方法多載與有效位數或小數位數引數或兩者皆可支援 「 永遠加密 」 的特定資料類型，需要有效位數和小數位數資訊。|  
 |`public void setMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setSmallMoney(int parameterIndex, BigDecimal x)`<br /><br /> `public void setUniqueIdentifier(int parameterIndex, String guid)`<br /><br /> `public void setDateTime(int parameterIndex, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(int parameterIndex, java.sql.Timestamp x)`|這些方法會加入至資料類型 money、 smallmoney、 uniqueidentifier、 datetime 和 smalldatetime 的支援 「 永遠加密。 <br/><br/>請注意，現有`setTimestamp()`方法用於將參數值傳送到已加密的 datetime2 資料行。 對於加密的 datetime 和 smalldatetime 資料行，請使用新的方法`setDateTime()`和`setSmallDateTime()`分別。|  
@@ -137,7 +137,7 @@ ms.locfileid: "54361668"
   
  在新的或多載方法**SQLServerCallableStatement**類別  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)`<br /><br /> `public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)`<br />`public void setBigDecimal(String parameterName, BigDecimal bd, int precision, int scale)`<br /><br /> `public void setTime(String parameterName, java.sql.Time t, int scale)`<br /><br /> `public void setTimestamp(String parameterName, java.sql.Timestamp t, int scale)`<br /><br /> `public void setDateTimeOffset(String parameterName, microsoft.sql.DateTimeOffset t, int scale)`<br/><br/>`public final void setObject(String sCol, Object x, int targetSqlType, Integer precision, int scale)`|這些方法多載與有效位數或小數位數引數或兩者皆可支援 「 永遠加密 」 的特定資料類型，需要有效位數和小數位數資訊。|  
 |`public void setDateTime(String parameterName, java.sql.Timestamp x)`<br /><br /> `public void setSmallDateTime(String parameterName, java.sql.Timestamp x)`<br /><br /> `public void setUniqueIdentifier(String parameterName, String guid)`<br /><br /> `public void setMoney(String parameterName, BigDecimal bd)`<br /><br /> `public void setSmallMoney(String parameterName, BigDecimal bd)`<br/><br/>`public Timestamp getDateTime(int index)`<br/><br/>`public Timestamp getDateTime(String sCol)`<br/><br/>`public Timestamp getDateTime(int index, Calendar cal)`<br/><br/>`public Timestamp getSmallDateTime(int index)`<br/><br/>`public Timestamp getSmallDateTime(String sCol)`<br/><br/>`public Timestamp getSmallDateTime(int index, Calendar cal)`<br/><br/>`public Timestamp getSmallDateTime(String name, Calendar cal)`<br/><br/>`public BigDecimal getMoney(int index)`<br/><br/>`public BigDecimal getMoney(String sCol)`<br/><br/>`public BigDecimal getSmallMoney(int index)`<br/><br/>`public BigDecimal getSmallMoney(String sCol)`|這些方法會加入至資料類型 money、 smallmoney、 uniqueidentifier、 datetime 和 smalldatetime 的支援 「 永遠加密。 <br/><br/>請注意，現有`setTimestamp()`方法用於將參數值傳送到已加密的 datetime2 資料行。 對於加密的 datetime 和 smalldatetime 資料行，請使用新的方法`setDateTime()`和`setSmallDateTime()`分別。|  
@@ -146,7 +146,7 @@ ms.locfileid: "54361668"
 
  在新的或多載方法**SQLServerResultSet**類別  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public String getUniqueIdentifier(int columnIndex)`<br/><br/>`public String getUniqueIdentifier(String columnLabel)`<br/><br/>   `public java.sql.Timestamp getDateTime(int columnIndex)` <br/><br/> `public java.sql.Timestamp getDateTime(String columnName)`   <br/><br/> `public java.sql.Timestamp getDateTime(int columnIndex, Calendar cal)`   <br/><br/>`public java.sql.Timestamp getDateTime(String colName, Calendar cal)`    <br/><br/>`public java.sql.Timestamp getSmallDateTime(int columnIndex)`    <br/><br/> `public java.sql.Timestamp getSmallDateTime(String columnName)`   <br/><br/> `public java.sql.Timestamp getSmallDateTime(int columnIndex, Calendar cal)`   <br/><br/> `public java.sql.Timestamp getSmallDateTime(String colName, Calendar cal)`   <br/><br/>  `public BigDecimal getMoney(int columnIndex)`  <br/><br/> `public BigDecimal getMoney(String columnName)`   <br/><br/> `public BigDecimal getSmallMoney(int columnIndex)`   <br/><br/>  `public BigDecimal getSmallMoney(String columnName)`  <br/><br/>`public void updateMoney(String columnName, BigDecimal x)`    <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x)`  <br/><br/>     `public void updateDateTime(int index, java.sql.Timestamp x)` <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x)` |這些方法會新增至支援的資料類型 money、 smallmoney、 uniqueidentifier、 datetime 和 smalldatetime 的 Always Encrypted。 <br/><br/>請注意，現有`updateTimestamp()`方法用來更新加密的 datetime2 資料行。 對於加密的 datetime 和 smalldatetime 資料行，請使用新的方法`updateDateTime()`和`updateSmallDateTime()`分別。|
 |`public void updateBoolean(int index, boolean x, boolean forceEncrypt)`  <br/><br/>  `public void updateByte(int index, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(int index, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(int index, int x, boolean forceEncrypt)`   <br/><br/>  `public void updateLong(int index, long x, boolean forceEncrypt)`  <br/><br/> `public void updateFloat(int index, float x, boolean forceEncrypt)`   <br/><br/> `public void updateDouble(int index, double x, boolean forceEncrypt)`   <br/><br/> `public void updateMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateSmallMoney(int index, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallMoney(String columnName, BigDecimal x, boolean forceEncrypt)`  <br/><br/> `public void updateBigDecimal(int index, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateString(int columnIndex, String stringValue, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(int columnIndex, String nString, boolean forceEncrypt)`  <br/><br/>  `public void updateNString(String columnLabel, String nString, boolean forceEncrypt)`  <br/><br/> `public void updateBytes(int index, byte x[], boolean forceEncrypt)   <br/><br/>  public void updateDate(int index, java.sql.Date x, boolean forceEncrypt)`  <br/><br/> `public void updateTime(int index, java.sql.Time x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateTimestamp(int index, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/> `public void updateDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/> `public void updateSmallDateTime(int index, java.sql.Timestamp x, Integer scale, boolean forceEncrypt)`   <br/><br/>  `public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateUniqueIdentifier(int index, String x, boolean forceEncrypt)`    <br/><br/>  `public void updateObject(int index, Object x, int precision, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateObject(int index, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateBoolean(String columnName, boolean x, boolean forceEncrypt)`    <br/><br/>  `public void updateByte(String columnName, byte x, boolean forceEncrypt)`  <br/><br/>  `public void updateShort(String columnName, short x, boolean forceEncrypt)`  <br/><br/> `public void updateInt(String columnName, int x, boolean forceEncrypt)`   <br/><br/>   `public void updateLong(String columnName, long x, boolean forceEncrypt)` <br/><br/>  `public void updateFloat(String columnName, float x, boolean forceEncrypt)`  <br/><br/>  `public void updateDouble(String columnName, double x, boolean forceEncrypt)  <br/><br/> public void updateBigDecimal(String columnName, BigDecimal x, boolean forceEncrypt)`   <br/><br/>  `public void updateBigDecimal(String columnName, BigDecimal x, Integer precision, Integer scale, boolean forceEncrypt)`  <br/><br/> `public void updateString(String columnName, String x, boolean forceEncrypt)`   <br/><br/>  `public void updateBytes(String columnName, byte x[], boolean forceEncrypt)`  <br/><br/> `public void updateDate(String columnName, java.sql.Date x, boolean forceEncrypt)`   <br/><br/>  `public void updateTime(String columnName, java.sql.Time x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateTimestamp(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/> `public void updateDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`   <br/><br/>  `public void updateSmallDateTime(String columnName, java.sql.Timestamp x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset x, int scale, boolean forceEncrypt)`  <br/><br/>  `public void updateUniqueIdentifier(String columnName, String x, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object x, int precision, int scale, boolean forceEncrypt)`<br/><br/>`public void updateObject(String columnName, Object obj, SQLType targetSqlType, int scale, boolean forceEncrypt)`|為給定的 java 值更新指定的資料行。<br/><br/>如果布林 forceEncrypt 設為 true，資料行才會設定如果已加密，並啟用 永遠加密連接或陳述式。<br/><br/>如果布林 forceEncrypt 設為 false 時，驅動程式將不會強制加密參數。|
@@ -154,7 +154,7 @@ ms.locfileid: "54361668"
   
 在新的型別**microsoft.sql.Types**類別
 
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |DATETIME、 SMALLDATETIME、 MONEY、 SMALLMONEY、 GUID|用戶端傳送的參數值時，使用這些類型做為目標 SQL 型別**加密**datetime、 smalldatetime、 money、 smallmoney、 使用 uniqueidentifier 資料行將`setObject()/updateObject()`API 方法。|  
   
@@ -171,7 +171,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
  **成員**  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |UseConnectionSetting|指定命令應該預設為連接字串中的 [永遠加密] 設定。|  
 |已啟用|啟用 Always Encrypted 的查詢。|  
@@ -180,7 +180,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
  AE 的陳述式層級設定會新增至 SQLServerConnection 類別以及 SQLServerConnectionPoolProxy 類別。 這些類別中的下列方法會多載，以新的設定。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |`public Statement createStatement(int nType, int nConcur, int statementHoldability, SQLServerStatementColumnEncryptionSetting stmtColEncSetting)`|建立會產生具有給定型的別、 並行處理、 保留性和資料行加密設定的結果集物件的陳述式物件。|  
 |`public CallableStatement prepareCall(String sql, int nType, int nConcur, int statementHoldability, SQLServerStatementColumnEncryptionSetting stmtColEncSetiing)`|建立 CallableStatement 物件將會產生具有給定型的別、 並行和保留性的結果集物件的指定資料行加密設定。|  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188777"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   本主題將討論特定的 SQLSetDescRec 功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端。  
@@ -30,7 +30,7 @@ ms.locfileid: "53365800"
 |參數|對於非資料表值參數類型，包括資料表值參數資料行相關聯的屬性|資料表值參數的相關屬性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*型別*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*子類型*|忽略|如果是 SQL_DATETIME 或 SQL_INTERVAL 類型的記錄，請將這個設定為 SQL_DESC_DATETIME_INTERVAL_CODE。|  
+|*SubType*|忽略|如果是 SQL_DATETIME 或 SQL_INTERVAL 類型的記錄，請將這個設定為 SQL_DESC_DATETIME_INTERVAL_CODE。|  
 |*長度*|SQL_DESC_OCTET_LENGTH|資料表值參數類型名稱的長度。 如果此類型名稱以 null 結尾，這項設定可以是 SQL_NTS；如果不需要資料表值參數類型名稱則為零。|  
 |*有效位數*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*小數位數*|SQL_DESC_SCALE|未使用的。 這個參數應為零。|  
@@ -43,9 +43,9 @@ ms.locfileid: "53365800"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLSetDescRec 支援  
  日期/時間類型所允許的值如下：  
   
-||*型別*|*子類型*|*長度*|*有效位數*|*小數位數*|  
+||*型別*|*SubType*|*長度*|*有效位數*|*小數位數*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
-|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |日期|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  

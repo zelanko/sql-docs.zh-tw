@@ -11,14 +11,18 @@ ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef9ceb68f507cb3e3a3a5440f06e74e9bf623eeb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64deeb6482784c77fa68d4eea3d7c91c58b4ee64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726496"
 ---
 # <a name="request-log"></a>要求記錄檔
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[要求記錄檔]** 對話方塊可以檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如果您需要疑難排解 SAP BW 來源的組態，這項資訊可能很有用。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源元件，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)。  
@@ -33,7 +37,7 @@ ms.locfileid: "58273163"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   

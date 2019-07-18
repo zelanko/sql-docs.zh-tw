@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
@@ -22,12 +21,12 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2cd70f20297e446971b46fa38bd2f3e8379192e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056887"
 ---
 # <a name="package-configurations"></a>封裝組態
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供可用以在執行階段更新屬性值的封裝組態。  
@@ -94,7 +93,7 @@ ms.locfileid: "58392016"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
   
 ### <a name="xml-configuration-files"></a>XML 組態檔  
- 如果選取 [XML 組態檔] 組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
+ 如果選取 [XML 組態檔]  組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
   
  XML 組態檔包含兩個區段：  
   
@@ -124,10 +123,10 @@ ms.locfileid: "58392016"
 ### <a name="registry-entry"></a>登錄項目  
  如果您想使用登錄項目儲存組態，可以使用現有的機碼或在 HKEY_CURRENT_USER 中建立新的機碼。 您所使用的登錄機碼必須具有名為 `Value` 的值。 該值可以是 DWORD 或字串。  
   
- 如果您選取 [登錄項目] 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 `SSISPackages\MyPackage`。  
+ 如果您選取 [登錄項目]  組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 `SSISPackages\MyPackage`。  
   
 ### <a name="sql-server"></a>[SQL Server]  
- 如果選取 [SQL Server] 組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
+ 如果選取 [SQL Server]  組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
   
  下列 SQL 陳述式顯示 [封裝組態精靈] 提供的預設 CREATE TABLE 陳述式。  
   

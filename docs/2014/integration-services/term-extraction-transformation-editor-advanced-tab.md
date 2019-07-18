@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055266"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
   使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
@@ -41,7 +40,7 @@ ms.locfileid: "58385036"
  指定分數是詞彙的頻率。  
   
  **TFIDF**  
- 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是詞彙頻率 」 和 「 反向文件頻率，定義為乘積：詞彙 T 的 TFIDF = （T 的頻率） * log ((輸入中的 #rows) / （#rows T）)  
+ 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為：詞彙 T 的 TFIDF = (T 的頻率) * log( (輸入中的資料列數目) / (有 T 的資料列數目) )  
   
  **頻率臨界值**  
  指定擷取單字或片語前，該單字或片語必須出現的次數。 預設值為 2。  

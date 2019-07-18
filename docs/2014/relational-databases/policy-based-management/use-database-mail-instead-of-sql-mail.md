@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfce3fb95ddae03525b7f63f09d109c6dc80b47c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676971"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>使用 Database Mail 而非 SQL Mail
   此規則會檢查 sys.configurations 目錄檢視，以判斷 SQL Mail XP 的整個伺服器組態選項是否設定為 ON。  

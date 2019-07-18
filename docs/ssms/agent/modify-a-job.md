@@ -12,16 +12,16 @@ helpviewer_keywords:
 - modifying jobs
 - SQL Server Agent jobs, modifying
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 231a823dec8d3ad06d7cf858c926cef227d860bd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 37e55952278dd28464bc5ceca1d330fa68642621
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703106"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685827"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "51703106"
   
 **本主題內容**  
   
--   **開始之前：**   
+-   **開始之前：**  
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目修改作業：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "51703106"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業無法同時存在於本機和遠端伺服器內。  
   
 ### <a name="Security"></a>安全性  
-除非您是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員，否則您只能修改您所擁有的作業。 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+除非您是系統管理員 ( **sysadmin** ) 固定伺服器角色的成員，否則您只能修改您所擁有的作業。 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51703106"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [SQL Server Agent]，展開 [作業]，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]。  
+2.  展開 [SQL Server Agent]  ，展開 [作業]  ，以滑鼠右鍵按一下要修改的作業，然後按一下 [屬性]  。  
   
 3.  在 **[作業屬性]** 對話方塊中，利用相對應的頁面更新作業的屬性、步驟、排程、警示及通知。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "51703106"
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在查詢視窗中，使用下列系統預存程序修改作業。  
   

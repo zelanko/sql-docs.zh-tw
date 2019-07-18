@@ -10,19 +10,19 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbf35f72721cee361d62ad5b5ac2b6b09c9c58df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: a7a875e114c9f1e485442191ae077339c967274e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823136"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684806"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>選項 (設計工具 - 資料表和資料庫設計工具頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具] 功能表上按一下 [選項]、展開 [設計工具] 資料夾，然後按一下 [資料表設計工具]。  
+使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具]  功能表上按一下 [選項]  、展開 [設計工具]  資料夾，然後按一下 [資料表設計工具]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **覆寫資料表設計師更新的連接字串逾時值**  
@@ -80,5 +80,5 @@ ms.locfileid: "47823136"
     允許您選擇要檢視的資料行。  
   
 **在新圖表上啟動加入資料表對話方塊**  
-在開啟設計師時自動開啟 [新增資料表] 對話方塊。  
+在開啟設計師時自動開啟 [新增資料表]  對話方塊。  
   

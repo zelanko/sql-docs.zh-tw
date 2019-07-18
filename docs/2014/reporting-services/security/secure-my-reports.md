@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88bceac4d712eb1010e4915e11267b7d2ee258a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101738"
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  
@@ -35,7 +34,7 @@ ms.locfileid: "56035169"
   
  **我的報表** 角色指派是由下列元素組成：  
   
--   使用者的 [我的報表] 資料夾，位於 Users Folders\\\<使用者名稱>\My Reports 資料夾內。  
+-   使用者的 [我的報表] 資料夾，位於 Users Folders\\\<使用者名稱>  \My Reports 資料夾內。  
   
 -   使用者帳戶，會判斷何時啟用 [我的報表] 資料夾。 資料夾是當使用者按一下報表管理員的 [我的報表] 資料夾，或者從報表設計師發行報表至 [我的報表] 資料夾時啟用。 此資料夾也會在使用者要求 [我的報表] 連結的屬性時啟用。  
   

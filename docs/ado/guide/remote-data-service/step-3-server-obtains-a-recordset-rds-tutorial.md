@@ -1,5 +1,5 @@
 ---
-title: 步驟 3： 伺服器取得資料錄集 （RDS 教學課程） |Microsoft Docs
+title: 步驟 3：伺服器會取得資料錄集 （RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922086"
 ---
-# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3：伺服器取得資料錄集 (RDS 教學課程)
+# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>步驟 3：伺服器會取得資料錄集 (RDS 教學課程)
 伺服器程式會使用連接字串和命令文字，來查詢所需的資料列的資料來源。 ADO 通常用來擷取這**資料錄集**，不過，其他 Microsoft 資料存取介面，例如 OLE DB 中，無法使用。  
   
 > [!IMPORTANT]
@@ -39,5 +38,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [步驟 4：伺服器會傳回資料錄集 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

@@ -1,5 +1,5 @@
 ---
-title: 預存程序 |Microsoft Docs
+title: 預存程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 181558e7827102a3b35b7b32227f8164a2e1490d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de206025249bb04fe35ced4f36213b8b8268ebaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031797"
 ---
 # <a name="stored-procedures"></a>預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

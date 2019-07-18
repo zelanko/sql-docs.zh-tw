@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
@@ -19,15 +18,15 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083903"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft 貝氏機率分類演算法技術參考
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供用於預測模型的分類演算法。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供用於預測模型的分類演算法。 此演算法會計算輸入資料行和可預測資料行之間的條件式機率，並假設資料行是獨立的。 這種獨立性假設產生了貝氏機率分類這個名稱。  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法的實作  
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 此演算法會考量輸入屬性值與輸出屬性值的每個配對。  
@@ -82,7 +81,7 @@ ms.locfileid: "53376930"
   
 |模型旗標|描述|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態： 「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
+|MODEL_EXISTENCE_ONLY|表示資料行都會被視為擁有兩個可能狀態：遺失，且現有的。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
 ## <a name="requirements"></a>需求  

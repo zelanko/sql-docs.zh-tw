@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015410"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>索引和索引鍵對話方塊 (Visual Database Tools)
   使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
@@ -26,7 +26,7 @@ ms.locfileid: "52806940"
 > [!NOTE]  
 >  如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取的主/唯一索引鍵或索引**  
  列出現有的主索引鍵或唯一鍵和索引。 選取一項，以便在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有任何定義的項目。  
   

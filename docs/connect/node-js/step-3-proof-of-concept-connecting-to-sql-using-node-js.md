@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834137"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800503"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3︰使用 Node.js 連線到 SQL 的概念證明
 

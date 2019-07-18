@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bd992f16158e7286db668256dc5963d83dbd4b8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786997"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
   本主題描述如何設定`network packet size`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `network packet size`選項會設定用於整個網路的封包大小 （以位元組為單位）。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
@@ -44,7 +44,7 @@ ms.locfileid: "58528260"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 network packet size 選項之後](#FollowUp)  
+-   **後續操作：** [設定網路封包大小 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -73,7 +73,7 @@ ms.locfileid: "58528260"
   
 #### <a name="to-configure-the-network-packet-size-option"></a>設定 network packet size 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "58528260"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `network packet size` 選項的值設定為 `6500` 個位元組。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `network packet size` 選項的值設定為 `6500` 個位元組。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -105,7 +105,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 network packet size 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定網路封包大小選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

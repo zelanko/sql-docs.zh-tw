@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_tables_cursor (Transact-SQL) | Microsoft Docs
+title: 遇到 sp_help_fulltext_tables_cursor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables_cursor
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d43903af7a4626c7d9645e1b750696b15cc692ec
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8e4218f6a105f81997c37202421feb689cd3a074
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054997"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +49,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文檢索目錄的名稱。 *fulltext_catalog_name*已**sysname**，預設值是 NULL。 如果*fulltext_catalog_name*省略或為 NULL，就會傳回所有與資料庫相關聯的全文檢索索引的資料表。 如果*fulltext_catalog_name*未指定，但*table_name*省略或是 NULL，擷取這個目錄相關聯的每個全文檢索索引資料表的全文檢索索引資訊。 如果兩個*fulltext_catalog_name*並*table_name*都有指定，會傳回一個資料列，如果*table_name*聯*fulltext_catalog_name*;否則，就會引發錯誤。  
   
-`[ @table_name = ] 'table_name'` 是全文檢索中繼資料要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)**，預設值是 NULL。 如果只有*table_name*指定時，只有資料列相關*table_name*會傳回。  
+`[ @table_name = ] 'table_name'` 是全文檢索中繼資料要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)** ，預設值是 NULL。 如果只有*table_name*指定時，只有資料列相關*table_name*會傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -90,7 +89,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_fulltext_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [sp_fulltext_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

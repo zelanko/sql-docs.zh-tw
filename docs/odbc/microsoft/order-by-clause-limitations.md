@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2835396a7b8266d812ca5a1049679c7d82549389
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b58afff444c09622027f50a87bd77fcd6ed45640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100785"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 子句限制
 如果 SELECT 陳述式包含 GROUP BY 子句和 ORDER BY 子句，ORDER BY 子句可以包含在結果集中資料行或 GROUP BY 子句中的運算式。

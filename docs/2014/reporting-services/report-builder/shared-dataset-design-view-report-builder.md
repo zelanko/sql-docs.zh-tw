@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107590"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共用資料集設計檢視 (報表產生器)
   [共用資料集設計] 視窗可協助您建立資料集查詢來與其他人共用。 此視窗可讓您選取共用資料來源、指定共用資料集的屬性，以及在查詢設計工具中建立查詢。  
@@ -26,7 +25,7 @@ ms.locfileid: "56292581"
  如需有關使用報表中資料的詳細資訊，請參閱[將資料加入至報表&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
 ##  <a name="Ribbon"></a> 功能區  
- [功能區] 可協助您快速找到完成工作所需的命令。 命令會分成下列邏輯群組：連接、資料集和查詢設計工具。  
+ [功能區] 可協助您快速找到完成工作所需的命令。 命令會分成下列邏輯群組：連接、 資料集和查詢設計工具。  
   
 ### <a name="connection"></a>連接  
  使用 [連接] 群組中的 **[選取]** 按鈕，可選取報表中的共用資料來源，或瀏覽到報表伺服器上的共用資料來源。  

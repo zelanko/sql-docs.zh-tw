@@ -11,15 +11,14 @@ helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3cbd0815109b5242f7f49b791f24cfc348200ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906204"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
 

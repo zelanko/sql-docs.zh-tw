@@ -1,21 +1,19 @@
 ---
-title: 使用環境變數來設定 SQL Server 設定 |Microsoft 文件
+title: 使用環境變數來設定 SQL Server 設定
 description: 本文說明如何使用環境變數來在 Linux 上設定 SQL Server 2017 的特定設定。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 29869a34883fdb4fbdf105321f0621cc3323d17b
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 2e28c995e5c2c0bb08938bf7ca73bda718c44ff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967496"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用 Linux 上的環境變數來設定 SQL Server 設定
 
@@ -49,7 +47,7 @@ ms.locfileid: "58566477"
 |-----|-----|
 | **ACCEPT_EULA** | 接受 SQL Server 授權合約，當設定為任何值 (例如，' Y')。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
-| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定的產品金鑰，它必須是 # # #-# # #-# # #-# # #-# # #，此處的 '#' 是數字或字母的形式。|
+| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**企業**</br>**產品金鑰**</br></br>如果指定的產品金鑰，它必須是 # # #-# # #-# # #-# # #-# # #，此處的 '#' 是數字或字母的形式。|
 | **MSSQL_LCID** | 設定要用於 SQL Server 的語言識別碼。 例如 1036年為法文。 |
 | **MSSQL_COLLATION** | 設定 SQL Server 的預設定序。 這會覆寫定序的語言識別碼 (LCID) 的預設的對應。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 設定 SQL Server 可以使用的記憶體 （以 mb 為單位） 的最大數量。 根據預設，它會是總實體記憶體的 80%。 |
@@ -73,7 +71,7 @@ ms.locfileid: "58566477"
 |-----|-----|
 | **ACCEPT_EULA** | 接受 SQL Server 授權合約，當設定為任何值 (例如，' Y')。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
-| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定的產品金鑰，它必須是 # # #-# # #-# # #-# # #-# # #，此處的 '#' 是數字或字母的形式。|
+| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**企業**</br>**產品金鑰**</br></br>如果指定的產品金鑰，它必須是 # # #-# # #-# # #-# # #-# # #，此處的 '#' 是數字或字母的形式。|
 | **MSSQL_LCID** | 設定要用於 SQL Server 的語言識別碼。 例如 1036年為法文。 |
 | **MSSQL_COLLATION** | 設定 SQL Server 的預設定序。 這會覆寫定序的語言識別碼 (LCID) 的預設的對應。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 設定 SQL Server 可以使用的記憶體 （以 mb 為單位） 的最大數量。 根據預設，它會是總實體記憶體的 80%。 |
@@ -138,13 +136,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 如果您在 Linux/macOS 上執行 Docker，請以單引號中使用下列語法：
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 如果您在 Windows 上執行 Docker，請使用下列語法使用雙引號括住：
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ::: moniker-end

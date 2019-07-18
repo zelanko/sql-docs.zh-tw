@@ -11,14 +11,18 @@ ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abb86d31c3d91736f951946f519de87250ebcec9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea7b40ca0a7a7bd0502feb6c8613141257d3ee20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805373"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 語言參考
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本節描述用來管理 [!INCLUDE[tsql](../includes/tsql-md.md)] 專案 (已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的執行個體) 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] API。  

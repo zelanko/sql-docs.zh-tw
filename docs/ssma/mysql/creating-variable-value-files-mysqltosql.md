@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 73919295dbd53cbaaca3847d5be119e5fe2d0bb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be1530bdec1c1523a873dc93b1d70e6e72c880ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103017"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>建立變數值檔案 (MySQLToSQL)
 變數值檔案是 XML 檔案包含一些來源或目的地伺服器名稱經常變更從一部伺服器移轉到另一個的命令的參數值。 大量的資料庫移轉發生時，會建立並使用主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值 **-v**在命令列切換。 這有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  
   
 > [!NOTE]  
 > 1.  變數名稱會做為前置詞和後置字元為 $ （美元） 符號。 如果變數未指派的變數值檔案中的值，您就會導致懸置在主控台執行程序的指令碼檔案剖析期間發生錯誤。  
-> 2.  逸出字元**$** 是**$$**。 如果變數或靜態值的參數值包含**$** （貨幣） 符號，然後**$$** 必須指定將它視為一個字元，而不是變數。  
+> 2.  逸出字元 **$** 是 **$$** 。 如果變數或靜態值的參數值包含 **$** （貨幣） 符號，然後 **$$** 必須指定將它視為一個字元，而不是變數。  
 > 3.  基於可維護性，變數可以宣告內`'variable-group'`邏輯區隔使用者的項目定義的變數。  這個元素的使用方式不是必要的。  
   
 **範例：**  

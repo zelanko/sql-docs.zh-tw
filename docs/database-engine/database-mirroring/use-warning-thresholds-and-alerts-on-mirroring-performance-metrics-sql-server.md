@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e4272345c1da08b79ffd1d76438a88baa9ea581a
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+manager: jroth
+ms.openlocfilehash: fcf22dd79fb19585f1f62ddfd52b89420b135380
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795098"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "58788035"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|卸除指定效能標準的警告。|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>傳送至 Windows 事件記錄檔的效能臨界值事件  
- 如果已經定義效能標準的警告臨界值，當狀態資料表更新後，就會根據臨界值評估最新的值。 如果已經達到臨界值，更新程序 **sp_dbmmonitorupdate** 就會產生此標準的參考用事件 (「效能臨界值事件」) 並將事件寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔。 下表將列出效能臨界值事件的事件識別碼。  
+ 如果已經定義效能標準的警告臨界值，當狀態資料表更新後，就會根據臨界值評估最新的值。 如果已經達到臨界值，更新程序 **sp_dbmmonitorupdate** 就會產生此標準的參考用事件 (「效能臨界值事件」  ) 並將事件寫入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔。 下表將列出效能臨界值事件的事件識別碼。  
   
 |效能標準|事件識別碼|  
 |------------------------|--------------|  

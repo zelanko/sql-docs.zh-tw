@@ -13,25 +13,19 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 23c32528e590b0484082cd74429cdf472907fba1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798194"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>原則評估結果頁面 (Always On 儀表板)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 AlwaysOn 儀表板的 [原則評估結果] 頁面檢視任何目前的原則問題。  
-  
- **本主題內容：**  
-  
--   [對話方塊選項](#Options)  
-  
--   [相關工作](#RelatedTasks)  
-  
+  使用 AlwaysOn 儀表板的 [原則評估結果]  頁面檢視任何目前的原則問題。  
+    
 ##  <a name="Options"></a> 對話方塊選項  
  **偵測到的問題**  
  針對每個偵測到的問題，各顯示一個資料列。 與問題相關的圖示提供視覺指標，以指出問題嚴重性，如下所示：  

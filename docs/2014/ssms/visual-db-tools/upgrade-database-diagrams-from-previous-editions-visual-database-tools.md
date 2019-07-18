@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205712"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上設定資料庫圖表化時，會自動升級在舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料庫上所建立的資料庫圖表。 如需設定圖表化，請參閱詳細步驟[設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](visual-database-tools.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "52812910"
   
 2.  在資料庫中展開 [資料庫圖表] 節點。  
   
-3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
+3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]  。  
   
      這樣將會升級資料庫上預存的圖表。  
   

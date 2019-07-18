@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 06429303e70cd63e15b35d4d88181379c65bb09b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 33c32949d57784d1579a3641c1b65e36e97fbf29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055136"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

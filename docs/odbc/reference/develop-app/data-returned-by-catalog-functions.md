@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077018"
 ---
 # <a name="data-returned-by-catalog-functions"></a>目錄函式所傳回的資料
 每個目錄函式會傳回資料當作結果集。 此結果集是與其他類型的結果集。 它通常就會產生依預先定義參數化**選取**是硬式編碼在驅動程式，或是儲存在資料來源中的程序中的陳述式。 如需如何擷取資料，從結果集資訊，請參閱[結果集建立？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  

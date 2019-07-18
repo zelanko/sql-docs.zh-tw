@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032820"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,15 +46,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @procedure_name = ] 'name'` 是用來傳回目錄資訊的程序的名稱。 *名稱*已**nvarchar (** 390 **)**，預設值是 %，代表目前資料庫中的所有資料表。 支援萬用字元的模式比對。  
+`[ @procedure_name = ] 'name'` 是用來傳回目錄資訊的程序的名稱。 *名稱*已**nvarchar (** 390 **)** ，預設值是 %，代表目前資料庫中的所有資料表。 支援萬用字元的模式比對。  
   
-`[ @procedure_owner = ] 'owner'` 為程序的擁有者的名稱。 *擁有者*已**nvarchar (** 384 **)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，會套用基礎 DBMS 的預設程序可見性規則。  
+`[ @procedure_owner = ] 'owner'` 為程序的擁有者的名稱。 *擁有者*已**nvarchar (** 384 **)** ，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，會套用基礎 DBMS 的預設程序可見性規則。  
   
  如果目前使用者擁有含指定名稱的程序，就會傳回這個程序的相關資訊。 如果*擁有者*未指定且目前使用者並未擁有指定之名稱的程序**sp_sproc_columns**會尋找具有指定名稱的資料庫擁有者所擁有的程序。 如果程序存在，就會傳回它的資料行的相關資訊。  
   
 `[ @procedure_qualifier = ] 'qualifier'` 為程序限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*qualifier.owner.name*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個參數代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
-`[ @column_name = ] 'column_name'` 是單一資料行，並想要使用的類別目錄資訊的只有一個資料行時，會使用。 *column_name*已**nvarchar (** 384 **)**，預設值是 NULL。 如果*column_name*已省略，會傳回所有資料行。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  
+`[ @column_name = ] 'column_name'` 是單一資料行，並想要使用的類別目錄資訊的只有一個資料行時，會使用。 *column_name*已**nvarchar (** 384 **)** ，預設值是 NULL。 如果*column_name*已省略，會傳回所有資料行。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  
   
 `[ @ODBCVer = ] 'ODBCVer'` 正在使用的 ODBC 版本。 *ODBCVer*已**int**，預設值是 2，表示 ODBC 2.0 版。 如需有關 ODBC 2.0 版和 ODBC 3.0 版之間的差異的詳細資訊，請參閱 ODBC **SQLProcedureColumns** odbc 3.0 版規格  
   
@@ -80,7 +79,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**SCALE**|**smallint**|小數點右側的位數。|  
 |**RADIX**|**smallint**|這是數值類型的基底。|  
 |**可為 NULL**|**smallint**|指定 Null 屬性：<br /><br /> 1 = 資料類型可以建立成允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
-|**REMARKS**|**varchar(** 254 **)**|程序資料行的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**註解**|**varchar(** 254 **)**|程序資料行的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |**COLUMN_DEF**|**nvarchar(** 4000 **)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|它會出現在 SQL 資料類型的值**型別**描述項欄位。 除了 **datetime** 和 **ISO interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 資料類型以外**datetime**和 ISO**間隔**，這個欄位是 NULL。|  

@@ -17,14 +17,18 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a43ee9007ab396357e2390841384e61101fa4ec4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713668"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
   
  在設計階段， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會提供中斷點以暫停封裝的執行，並提供 [進度] 視窗及資料檢視器以監視通過資料流程的資料。 不過，如果您是執行已經部署的封裝，就無法使用這些功能。 以下列出用於疑難排解已部署之封裝的主要技術：  
@@ -82,7 +86,7 @@ ms.locfileid: "58290124"
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   
-     如需此方法的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書 [Project REAL:Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) \(英文\) 中的 "ETL Auditing and Logging" 一節。  
+     如需此方法的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書中以下內容的＜ETL 稽核與記錄＞一節：[Project REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用偵錯傾印檔案針對封裝執行進行疑難排解  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  

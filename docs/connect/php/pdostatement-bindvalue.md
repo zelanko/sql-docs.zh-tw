@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindValue |Microsoft Docs
+title: PDOStatement::bindValue | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7ae069a5bb485f4b74a11b066f5871aba2f30ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 93cf012017e6614bc0ae4d81150e90ddab5b424a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780670"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ $*data_type*：PDO::PARAM_* 常數所表示的選用 (整數) 資料類型。 �
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 TRUE，否則為 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
@@ -77,10 +77,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](https://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議在將值繫結至 [decimal 或 numeric 資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
 ## <a name="example"></a>範例  
-此程式碼範例示範如何繫結十進位值做為輸入參數。  
+此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```
 <?php  

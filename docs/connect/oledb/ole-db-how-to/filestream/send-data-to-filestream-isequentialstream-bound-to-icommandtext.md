@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5b678ee8bdd709583359fd2c6c9574676fe1c83f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5c3279e71c3ab206922e396541587702c1805ed1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210037"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791490"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

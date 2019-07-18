@@ -1,5 +1,5 @@
 ---
-title: DataMember (MDX) |Microsoft 文件
+title: DataMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 98b10c951043416280c05fd6a0e5eeb5df92c104
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 6be7de10c10c39e5e53cbe43ca7be46219e7d4cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023403"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -33,7 +32,7 @@ Member_Expression.DataMember
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 此函式中的任何階層的非分葉成員上運作，並可供[UPDATE CUBE 陳述式 (MDX)](../mdx/mdx-data-manipulation-update-cube.md)命令到非分葉成員直接管理，而不是分葉成員的下階的回寫資料。  
+ 此函式會在所有階層架構中的非分葉成員上運作，並可供[UPDATE CUBE 陳述式 (MDX)](../mdx/mdx-data-manipulation-update-cube.md)命令給非分葉成員直接，而不是分葉成員的下階的回寫資料。  
   
 > [!NOTE]  
 >  如果指定的成員是分葉成員，或如果非分葉成員沒有相關聯的資料成員，就會傳回指定的成員。  
@@ -51,7 +50,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

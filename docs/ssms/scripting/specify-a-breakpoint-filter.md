@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6966074e4dd232ae60f5eef27d9d178bfa95363
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: b70890403a5e60bdc915bf42f5dc63bd8f902f34
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328311"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679863"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "53328311"
   
 #### <a name="to-specify-a-breakpoint-filter"></a>若要指定中斷點篩選條件  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]  。  
   
      -或-  
   
-     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]  。  
   
-2.  在 [中斷點篩選條件] 對話方塊中，使用 [篩選] 方塊來指定電腦 (依名稱) 或作業系統處理序和執行緒 (依名稱或識別碼)：  
+2.  在 [中斷點篩選條件]  對話方塊中，使用 [篩選]  方塊來指定電腦 (依名稱) 或作業系統處理序和執行緒 (依名稱或識別碼)：  
   
     -   **MachineName** 是執行 Database Engine 執行個體的電腦。  
   

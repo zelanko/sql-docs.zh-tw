@@ -16,14 +16,18 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9269920c478b13d7e981acc619075c5017055b8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0e849d6ee10486489d7ba6ce3b115613b109f44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724875"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回小寫字元轉換為大寫字元之後的字元運算式。  
   
 ## <a name="syntax"></a>語法  

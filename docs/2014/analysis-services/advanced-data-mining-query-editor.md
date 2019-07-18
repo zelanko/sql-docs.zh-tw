@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a633bd4c6a9ffe91a74858641b0b0305577922af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062803"
 ---
 # <a name="advanced-data-mining-query-editor"></a>進階資料採礦查詢編輯器
   **資料採礦進階查詢編輯器**是工具，可協助您建立自訂模型和查詢。  
@@ -31,7 +30,7 @@ ms.locfileid: "48072798"
   
  用滑鼠右鍵按一下窗格即可複製目前的 DMX 陳述式。  
   
- 您可以按一下陳述式的任何反白顯示部分，以取得該子句特定的選項。 例如，若要刪除、 新增或編輯輸出，以滑鼠右鍵按一下**\<輸出 >** 連結。  
+ 您可以按一下陳述式的任何反白顯示部分，以取得該子句特定的選項。 例如，若要刪除、 新增或編輯輸出，以滑鼠右鍵按一下 **\<輸出 >** 連結。  
   
  **編輯查詢/查詢產生器**  
  使用此按鈕可在文字編輯器，其中您可以直接; 撰寫 DMX 陳述式之間切換編輯器而**查詢產生器**，可協助您建立的 DMX 陳述式。  
@@ -48,23 +47,23 @@ ms.locfileid: "48072798"
  您也可以顯示一份可用模型的 DMX 陳述式中的模型名稱，即可**DMX 查詢**窗格。 模型名稱通常會以紅色反白顯示。  
   
  **選取 [輸入]**  
- 按一下即可選擇要做為採礦模型之輸入的資料。 如果尚未指定任何資料來源，您也可以按一下**\<輸入 >** 中以紅色反白顯示的連結**DMX 查詢**窗格。  
+ 按一下即可選擇要做為採礦模型之輸入的資料。 如果尚未指定任何資料來源，您也可以按一下 **\<輸入 >** 中以紅色反白顯示的連結**DMX 查詢**窗格。  
   
- 選取 [ **@InputRowset**從下拉式清單中，以開啟**取代 inputrowset]** 對話方塊方塊中，並修改現有輸入。  
+ 選取 [ **@InputRowset** 從下拉式清單中，以開啟 **取代 inputrowset** ] 對話方塊方塊中，並修改現有輸入。  
   
  選取**加入輸入**來開啟**加入輸入**對話方塊方塊中，並指定新的資料來源。  
   
- 您也可以修改現有輸入，依序按一下**@InputRowset** DMX 查詢 窗格中以紅色反白顯示的連結。  
+ 您也可以修改現有輸入，依序按一下 **@InputRowset** DMX 查詢 窗格中以紅色反白顯示的連結。  
   
  **將資料行對應**  
  從採礦模型中選取資料行，然後將這些資料行對應至外部資料來源中的資料行。  
   
- 您也可以按一下反白顯示**\<對應 >** DMX 查詢 窗格中的連結。  
+ 您也可以按一下反白顯示 **\<對應 >** DMX 查詢 窗格中的連結。  
   
  **加入輸出**  
  按一下即可選擇應輸出成為預測查詢一部分的資料行。  
   
- 您也可以按一下反白顯示**\<加入輸出 >** DMX 查詢 窗格中的連結。  
+ 您也可以按一下反白顯示 **\<加入輸出 >** DMX 查詢 窗格中的連結。  
   
  **模型資料行**  
  列出選取之採礦模型中的資料行。 資料行名稱旁的菱形表示資料行是可預測資料行。  

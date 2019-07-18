@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033629"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676261"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>第 1 課：建立購物籃採礦結構
   在這一課，您將建立一個可讓您預測客戶可能同時購買哪些 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 產品的採礦結構。 如果您不熟悉採礦結構和資料採礦中的其角色，請參閱[採礦結構&#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
@@ -98,7 +98,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
-2.  在 [**連接到伺服器**] 對話方塊中，如**伺服器類型**，選取**Analysis Services**。 在 **伺服器名稱**，型別`LocalHost`，或執行個體名稱[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要連接到這一課。 按一下 **[連接]**。  
+2.  在 [**連接到伺服器**] 對話方塊中，如**伺服器類型**，選取**Analysis Services**。 在 **伺服器名稱**，型別`LocalHost`，或執行個體名稱[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要連接到這一課。 按一下 **[連接]** 。  
   
 3.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
   

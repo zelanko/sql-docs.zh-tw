@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078148"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

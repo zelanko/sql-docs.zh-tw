@@ -12,20 +12,20 @@ helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], bookmarks
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22c7831bd4083ef542fce01c87526af506225c52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e03e46b1818ba8b106232660bb170b695f4fb76c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642804"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683846"
 ---
 # <a name="bookmarks-f1-help"></a>書籤 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [書籤] 頁面的 F1 說明。  
+  此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [書籤]  頁面的 F1 說明。  
   
  [管理書籤](../../relational-databases/scripting/manage-bookmarks.md)  
   

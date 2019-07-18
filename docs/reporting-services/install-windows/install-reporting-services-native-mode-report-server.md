@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513639"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
@@ -87,7 +87,7 @@ ms.locfileid: "52712379"
 |Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|  
 |通訊埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|  
-|虛擬目錄|根據預設，系統會使用 ReportServer_\<執行個體名稱> (針對報表伺服器 Web 服務) 和 Reports_\<執行個體名稱> (針對[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]) 的格式來建立虛擬目錄。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|  
+|虛擬目錄|根據預設，系統會使用 ReportServer_\<執行個體名稱  > (針對報表伺服器 Web 服務) 和 Reports_\<執行個體名稱  > (針對[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]) 的格式來建立虛擬目錄。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|  
   
  完整 URL 字串可能出現的範例如下：  
   
@@ -114,21 +114,21 @@ ms.locfileid: "52712379"
   
     -   安裝規則  
   
-2.  在 **[安裝程式角色]** 頁面上，選取 **[SQL Server 功能安裝]**。  
+2.  在 **[安裝程式角色]** 頁面上，選取 **[SQL Server 功能安裝]** 。  
   
      ![適用於安裝程式角色的 SQL Server 功能安裝](../../reporting-services/install-windows/media/rs-setuprole.png "適用於安裝程式角色的 SQL Server 功能安裝")  
   
 3.  在 **[特徵選取]** 頁面上，選取下列選項：  
   
-    -   (1) [Database Engine Services]\(除非已安裝資料庫引擎執行個體)。  
+    -   (1) [Database Engine Services]  \(除非已安裝資料庫引擎執行個體)。  
   
-    -   (2) [Reporting Services-原生]。  
+    -   (2) [Reporting Services-原生]  。  
   
      ![特徵選取中的 SSRS 原生模式選取](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "特徵選取中的 SSRS 原生模式選取")  
   
 4.  檢閱通過的 [功能規則]  。  
   
-5.  在 [執行個體組態] 頁面上，請記住，如果您選擇設定 [具名執行個體] ，則在瀏覽至報表管理員和報表伺服器本身時，需要在 URL 中使用執行個體名稱。 如果執行個體名稱為 "THESQLINSTANCE"，則 URL 會如下所示︰  
+5.  在 [執行個體組態] 頁面上，請記住，如果您選擇設定 [具名執行個體]  ，則在瀏覽至報表管理員和報表伺服器本身時，需要在 URL 中使用執行個體名稱。 如果執行個體名稱為 "THESQLINSTANCE"，則 URL 會如下所示︰  
   
     -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
@@ -138,16 +138,16 @@ ms.locfileid: "52712379"
   
 7.  在 [資料庫引擎組態]  頁面上加入 SQL Server 系統管理員。  
   
-8.  在 **[Reporting Services 組態]** 頁面上選取 **[安裝和設定]**。  
+8.  在 **[Reporting Services 組態]** 頁面上選取 **[安裝和設定]** 。  
   
      ![SSRS 原生模式設定](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS 原生模式設定")  
   
     > [!NOTE]  
-    >  您必須同時選取要安裝的資料庫功能，才能使用 [安裝和設定] 。  
+    >  您必須同時選取要安裝的資料庫功能，才能使用 [安裝和設定]  。  
   
 9. 功能組態規則︰驗證通過的規則。 如果規則都通過，則安裝精靈會自動移到 [準備安裝]  。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的是規則會確認報表伺服器目錄和 temp 目錄資料庫尚未存在。  
   
-10. 在 [準備安裝] 頁面上，記下稍後可參考的組態檔路徑，以取得伺服器初始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態的良好摘要 (包括已安裝的元件、服務帳戶和系統管理員)。  
+10. 在 [準備安裝]  頁面上，記下稍後可參考的組態檔路徑，以取得伺服器初始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態的良好摘要 (包括已安裝的元件、服務帳戶和系統管理員)。  
   
 11. SQL Server 安裝精靈完成後，請利用下列基本步驟驗證預設的原生模式安裝。  
   

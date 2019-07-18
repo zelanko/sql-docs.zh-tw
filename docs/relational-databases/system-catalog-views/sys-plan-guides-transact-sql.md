@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068072"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47696477"
 |**name**|**sysname**|計畫指南的名稱。|  
 |**create_date**|**datetime**|建立計畫指南的日期和時間。|  
 |**modify_date**|**Datetime**|上次修改計畫指南的日期。|  
-|**sys.indexes**|**bit**|1 = 計畫指南已停用。<br /><br /> 0 = 計畫指南已啟用。|  
+|**is_disabled**|**bit**|1 = 計畫指南已停用。<br /><br /> 0 = 計畫指南已啟用。|  
 |**query_text**|**nvarchar(max)**|建立計畫指南的查詢文字。|  
 |**scope_type**|**tinyint**|識別計畫指南的範圍。<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|計畫指南範圍的描述。<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  

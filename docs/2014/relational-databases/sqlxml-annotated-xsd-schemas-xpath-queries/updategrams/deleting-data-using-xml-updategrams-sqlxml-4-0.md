@@ -13,18 +13,18 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014872"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
-  當記錄執行個體中出現時，updategram 代表刪除作業**\<之前 >** 區塊中沒有對應記錄**\<之後 >** 區塊。 在此情況下，updategram 會刪除中的資料錄**\<之前 >** 從資料庫的區塊。  
+  當記錄執行個體中出現時，updategram 代表刪除作業 **\<之前>** 區塊中沒有對應記錄 **\<之後>** 區塊。 在此情況下，updategram 會刪除中的資料錄 **\<之前>** 從資料庫的區塊。  
   
  下列是刪除作業的 Updategram 格式：  
   
@@ -41,9 +41,9 @@ ms.locfileid: "52788990"
 </ROOT>  
 ```  
   
- 您可以省略**\<之後 >** 標記如果 updategram 會執行刪除作業。 如果您未指定選擇性`mapping-schema`屬性， **\<項目名稱 >** 則 updategram 會對應至資料庫資料表和子元素或屬性對應到資料表中的資料行中指定。  
+ 您可以省略 **\<之後>** 標記如果 updategram 會執行刪除作業。 如果您未指定選擇性`mapping-schema`屬性， **\<項目名稱 >** 則 updategram 會對應至資料庫資料表和子元素或屬性對應到資料表中的資料行中指定。  
   
- 如果在 updategram 中指定的項目會符合資料表中的多個資料列，或者不符合任何資料列，updategram 會傳回錯誤，並取消整個**\<同步 >** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
+ 如果在 updategram 中指定的項目會符合資料表中的多個資料列，或者不符合任何資料列，updategram 會傳回錯誤，並取消整個 **\<同步 >** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
   
 ## <a name="examples"></a>範例  
  本章節中的範例會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "52788990"
   
  在這些範例中，Updategram 不會指定對應結構描述。 因此 Updategram 會使用預設對應，其中元素的名稱會對應到資料表名稱，而屬性或子元素則會對應到資料行。  
   
- 這個第一個 updategram 以屬性為中心和識別 （一天 Day-evening 和 Evening-night） 的兩個值班**\<之前 >** 區塊。 因為沒有任何對應的記錄**\<之後 >** 區塊中，這是刪除作業。  
+ 這個第一個 updategram 以屬性為中心和識別 （一天 Day-evening 和 Evening-night） 的兩個值班 **\<之前>** 區塊。 因為沒有任何對應的記錄 **\<之後>** 區塊中，這是刪除作業。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

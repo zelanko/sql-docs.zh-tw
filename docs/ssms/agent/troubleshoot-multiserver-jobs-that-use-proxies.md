@@ -11,16 +11,16 @@ helpviewer_keywords:
 - proxies [SQL Server Agent], multiserver jobs
 - jobs [SQL Server Agent], multiserver jobs using proxies
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2fc185d32566d5ee8aad313790e5159f860fd41e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1628af19adfb60875e0cb660d7999ecb360338ae
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856849"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681433"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>針對使用 Proxy 的多伺服器作業進行疑難排解
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47856849"
   
 -   「作業步驟需要 Proxy 帳戶，不過目標伺服器上已停用 Proxy 比對。」  
   
-    若要解決此錯誤，請將 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n\>_**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 登錄子機碼設定為 **1 (true)**。 依預設，這個子機碼設為 **0** (**False**)。 **MSSQL.**\<*n*> 的值是執行個體名稱，例如 **MSSQL.1** 或 **MSSQL.3**。  
+    若要解決此錯誤，請將 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 登錄子機碼設定為 **1 (true)** 。 依預設，這個子機碼設為 **0** (**False**)。 **MSSQL.** \<*n*> 的值是執行個體名稱，例如 **MSSQL.1** 或 **MSSQL.3**。  
   
 -   「找不到 Proxy。」  
   

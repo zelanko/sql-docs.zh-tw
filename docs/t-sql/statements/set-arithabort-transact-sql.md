@@ -29,11 +29,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ffe255903a397fd3bc1f36dd57cf38f17eac00ba
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638389"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,7 +92,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  

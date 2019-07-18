@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2296933a6cced349dac17ead5a78cf0f999e23f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78377afa1f1f71f8553a17df30a904a275afd577
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102474"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 裝置資訊設定
   下表列出以 RGDI 格式轉譯的裝置資訊設定。  

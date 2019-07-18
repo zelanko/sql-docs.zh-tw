@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 40350310858415cd7e5451bbd2f99e9d00ddbf4a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793572"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>連接到現有次要複本頁面 - Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

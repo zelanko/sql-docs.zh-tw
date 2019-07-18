@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767330"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>步驟 4：部署第 6 課封裝
+# <a name="step-4-deploying-the-lesson-6-package"></a>步驟 4：部署第 6 課的封裝
   部署封裝時，需要將封裝新增至 SSISDB 目錄中的 SQL Server 執行個體上的整合服務。 在本課程中您會將第 6 課封裝加入至 SSISDB 目錄、 設定參數，以及執行封裝。 本課程中引導您使用 SQL Server Management Studio 來將第 6 課封裝加入至 SSISDB 目錄，以及部署封裝。 在部署封裝之後，您將修改參數指向新位置，然後執行封裝。  
   
  在這一課中，您將會：  

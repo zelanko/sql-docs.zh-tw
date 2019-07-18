@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918644"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 屬性範例 (VB)
 此範例中開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中的發行者資料表***Pubs***資料庫。 然後它會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來限制要在特定國家/地區中的這些 「 發行者 」 的可見記錄的數目。 **RecordCount**屬性用來顯示篩選和已篩選資料錄集之間的差異。  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774822"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>從記錄傳送組態中移除次要資料庫 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 移除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送次要資料庫。  
@@ -53,13 +53,13 @@ ms.locfileid: "48157838"
   
 1.  連接至目前是記錄傳送主要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並展開該執行個體。  
   
-2.  展開 [資料庫]，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]。  
+2.  展開 [資料庫]  ，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]  。  
   
-3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
+3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]** 。  
   
 4.  在 **[次要伺服器執行個體與資料庫]** 下，按一下您要移除的資料庫。  
   
-5.  按一下 **[移除]**。  
+5.  按一下 **[移除]** 。  
   
 6.  按一下 **[確定]** 以更新組態。  
   

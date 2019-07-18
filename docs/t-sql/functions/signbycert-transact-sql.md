@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SIGNBYCERT function
 - cryptography [SQL Server], certificates
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 884e7f3928c95584b6a2e675f79a8b88d5fb36bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c1e1f86a52ddc441048d25a5ef5d3b8071b96a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947833"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  為 **nvarchar**、**char**、**varchar** 或 **nchar** 類型的變數，其中包含將簽署的資料。  
   
  **'** *password* **'**  
- 這是用來加密憑證私密金鑰的密碼。 *password* 為 **nvarchar(128)**。  
+ 這是用來加密憑證私密金鑰的密碼。 *password* 為 **nvarchar(128)** 。  
   
 ## <a name="return-types"></a>傳回類型  
  **varbinary**，大小上限為 8,000 位元組。  

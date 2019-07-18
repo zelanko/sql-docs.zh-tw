@@ -16,22 +16,26 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719567"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>使用控制流程封裝組件在封裝之間重複使用控制流程
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   將常用的控制流程工作或容器儲存到獨立的組件檔案 (".dtsxp" 檔案)，並使用控制流程封裝組件在一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>建立新的控制流程封裝組件  
- 若要建立新的控制流程封裝組件，請在方案總管中展開 [封裝組件]  資料夾。 以滑鼠右鍵按一下 [控制流程]，然後選取 [New Control Flow Package Part (新增控制流程封裝組件)]。  
+ 若要建立新的控制流程封裝組件，請在方案總管中展開 [封裝組件]  資料夾。 以滑鼠右鍵按一下 [控制流程]  ，然後選取 [New Control Flow Package Part (新增控制流程封裝組件)]  。  
   
  ![建立新的控制流程範本](../integration-services/media/control-flow-templates-create-new.png "建立新的控制流程範本")  
   
- [封裝組件] | [控制流程] 資料夾下即會建立新的組件檔案，副檔名為 ".dtsxp"。 同時，具有相同名稱的新項目也會加入 SSIS 工具箱中。 (只有在 Visual Studio 中開啟包含組件的專案，才會顯示工具箱項目。)  
+ [封裝組件] | [控制流程]  資料夾下即會建立新的組件檔案，副檔名為 ".dtsxp"。 同時，具有相同名稱的新項目也會加入 SSIS 工具箱中。 (只有在 Visual Studio 中開啟包含組件的專案，才會顯示工具箱項目。)  
   
  ![工具箱中的控制流程範本](../integration-services/media/control-flow-templates-in-toolbox.png "工具箱中的控制流程範本")  
   
@@ -53,7 +57,7 @@ ms.locfileid: "58282712"
   
 -   若要重複使用屬於目前專案的組件，請從 [工具箱] 拖放組件。  
   
--   若要重複使用屬於不同專案的組件，請使用 [Add Existing Control Flow Package Part] \(加入現有的控制流程封裝組件) 命令。  
+-   若要重複使用屬於不同專案的組件，請使用 [Add Existing Control Flow Package Part] \(加入現有的控制流程封裝組件) 命令。   
   
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>拖放控制流程封裝組件  
  若要重複使用專案中的組件，只要從 [工具箱] 拖放組件項目，就像拖放任何其他工作或容器一樣。 組件可以多次拖放到封裝，在封裝中的多個位置重複使用邏輯。 使用這個方法重複使用屬於目前專案的組件。  
@@ -71,7 +75,7 @@ ms.locfileid: "58282712"
  ![具有控制流程範本的方案總管](../integration-services/media/control-flow-templates-in-solution-explorer.png "具有控制流程範本的方案總管")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>將現有的控制流程封裝組件或參考的複本加入現有的組件  
- 若要將檔案系統中現有的組件加入封裝中，請在方案總管中展開 [封裝組件]  資料夾。 以滑鼠右鍵按一下 [控制流程]，然後選取 [Add Existing Control Flow Package Part (加入現有的控制流程封裝組件)]。  
+ 若要將檔案系統中現有的組件加入封裝中，請在方案總管中展開 [封裝組件]  資料夾。 以滑鼠右鍵按一下 [控制流程]  ，然後選取 [Add Existing Control Flow Package Part (加入現有的控制流程封裝組件)]  。  
   
  ![從功能表新增控制流程範本](../integration-services/media/control-flow-templates-add-from-menu.png "從功能表新增控制流程範本")  
   
@@ -92,7 +96,7 @@ ms.locfileid: "58282712"
   
 #### <a name="to-open-the-package-part-configuration-dialog-box"></a>開啟 [Package Part Configuration]\(封裝組件組態) 對話方塊  
   
-1.  若要設定組件執行個體，請按兩下控制流程中的組件執行個體。 或以滑鼠右鍵按一下組件執行個體並選取 [編輯]。 [Package Part Configuration]\(封裝組件組態)  對話方塊隨即開啟。  
+1.  若要設定組件執行個體，請按兩下控制流程中的組件執行個體。 或以滑鼠右鍵按一下組件執行個體並選取 [編輯]  。 [Package Part Configuration]\(封裝組件組態)  對話方塊隨即開啟。  
   
 2.  設定組件執行個體的屬性和連線管理員。  
   
@@ -131,12 +135,12 @@ ms.locfileid: "58282712"
 -   **值**。 已設定的值。 這個值會覆寫預設值。  
   
 ## <a name="delete-a-control-flow-part"></a>刪除控制流程組件  
- 若要刪除組件，請在方案總管中以滑鼠右鍵按一下組件，然後選取 [刪除]。 選取 [確定]  確認刪除，或選取 [取消]  保留組件。  
+ 若要刪除組件，請在方案總管中以滑鼠右鍵按一下組件，然後選取 [刪除]  。 選取 [確定]  確認刪除，或選取 [取消]  保留組件。  
   
  如果您刪除了專案的組件，它就會從檔案系統永久刪除，且無法還原。  
   
 > [!NOTE]  
->  如果您要移除 Integration Services 專案的組件，但希望在其他專案中繼續使用，請使用 [從專案移除] 選項，不要使用 [刪除] 選項。  
+>  如果您要移除 Integration Services 專案的組件，但希望在其他專案中繼續使用，請使用 [從專案移除]  選項，不要使用 [刪除]  選項。  
   
 ## <a name="package-parts-are-a-design-time-feature-only"></a>封裝組件只是設計階段功能  
  封裝組件只是設計階段功能。 SSIS 設計工具會建立、開啟、儲存和更新組件，並且加入、設定或刪除封裝中的組件執行個體。 不過，SSIS 執行階段並不知道組件。 以下是設計工具達到這種區隔的方法。  

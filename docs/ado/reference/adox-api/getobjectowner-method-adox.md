@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b2c967ac293ed59fde6494e12c2afc2c5b6de90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966275"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
 傳回物件的擁有者[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767476"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>步驟 4：測試第 2 課的教學課程封裝
   利用現在已設定的 Foreach 迴圈容器和一般檔案連接管理員，第 2 課的封裝可反覆進行範例資料夾之 14 個一般檔案的集合。 每次一找到符合指定檔案名稱準則的檔案名稱時，Foreach 迴圈容器就會以該檔案名稱擴展使用者自訂變數。 然後，這個變數會更新一般檔案連接管理員的 ConnectionString 屬性，並建立與新的一般檔案之連接。 在連接到資料夾的下一個檔案之前，Foreach 迴圈容器會對新的一般檔案中的資料執行未修改過的資料流程工作。  
@@ -38,11 +38,11 @@ ms.locfileid: "58385916"
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>若要測試第 2 課的教學課程封裝  
   
-1.  在 **[方案總管]** 中，以滑鼠右鍵按一下 **[Lesson 2.dtsx]** ，然後按一下 **[執行封裝]**。  
+1.  在 **[方案總管]** 中，以滑鼠右鍵按一下 **[Lesson 2.dtsx]** ，然後按一下 **[執行封裝]** 。  
   
      此時會執行封裝。 您可以在 [輸出] 視窗中確認每一個迴圈的狀態，或按一下 **[進度]** 索引標籤來確認。例如，您會看到有 1097 行已從 Currency_VEB.txt 檔案加入目的地資料表中。  
   
-2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 ## <a name="next-lesson"></a>下一課  
  [第 5 課：加入封裝部署模型的封裝組態](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  

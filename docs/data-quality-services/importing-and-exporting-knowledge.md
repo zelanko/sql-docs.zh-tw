@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d90cf40ff410f9e79c0d37450b5e50ff48fb4d0d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935258"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
 
@@ -25,7 +24,7 @@ ms.locfileid: "56016289"
   您可以直接在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中建立知識庫和定義域，也可以將知識匯入知識庫或從中匯出知識。 在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中，您可以使用資料檔案進行匯入和匯出作業，或使用 Excel 檔案進行匯入作業。 使用的資料檔案是 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 所建立的加密檔案，副檔名為 .dqs。 由 Microsoft Excel 建立的檔案可以具有 .xlsx、.xls 或 .csv 的副檔名。 這些作業可讓您更有彈性地建置並共用執行資料清理和比對所用的知識。  
   
 > [!IMPORTANT]  
->  您可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 *中的「所有」*[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 知識庫匯出至 DQS 備份檔案 (.dqsb)。 同樣地，您也可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 DQS 備份檔案 (.dqsb) 中的「所有」  知識庫匯入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中。 如需有關執行此作業的詳細資訊，請參閱《DQS 安裝指南》中的＜ [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) ＞。  
+>  您可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 *中的「所有」* [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 知識庫匯出至 DQS 備份檔案 (.dqsb)。 同樣地，您也可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 DQS 備份檔案 (.dqsb) 中的「所有」  知識庫匯入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中。 如需有關執行此作業的詳細資訊，請參閱《DQS 安裝指南》中的＜ [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) ＞。  
   
 ## <a name="in-this-section"></a>本節內容  
  您可以執行下列匯入和匯出作業：  

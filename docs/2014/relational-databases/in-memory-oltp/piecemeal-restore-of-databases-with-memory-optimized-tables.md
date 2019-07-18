@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170098"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806690"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫
   具有記憶體最佳化資料表的資料庫支援分次還原，但受到下列一項限制。 如需分次備份和還原的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) 和[分次還原 &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md)。  
@@ -62,7 +62,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### <a name="backup"></a>備份  
+### <a name="backup"></a>Backup  
  此範例顯示如何備份主要檔案群組和記憶體最佳化的檔案群組。 您必須同時指定主要檔案群組和記憶體最佳化的檔案群組。  
   
 ```  

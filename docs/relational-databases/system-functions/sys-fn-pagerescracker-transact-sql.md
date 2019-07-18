@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899704"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267068"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -52,9 +52,9 @@ sys.fn_PageResCracker ( page_resource )
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|db_id|**ssNoversion**|資料庫識別碼|  
-|file_id|**ssNoversion**|檔案識別碼|  
-|page_id|**ssNoversion**|頁面識別碼|  
+|db_id|**int**|資料庫識別碼|  
+|file_id|**int**|檔案識別碼|  
+|page_id|**int**|頁面識別碼|  
   
 ## <a name="remarks"></a>備註  
 `sys.fn_PageResCracker` 用來將資料庫頁面的 8 位數十六進位表示法轉換成資料列集，其中包含資料庫識別碼，檔案識別碼和頁面的頁面識別碼。   
@@ -77,7 +77,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

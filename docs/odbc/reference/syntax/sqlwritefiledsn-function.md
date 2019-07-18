@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73092fcd7091665f9a3dae969b7821cbf9777c9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8b1ce34074a2326d17a199537b308a9a670d8163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039434"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53209997"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLWriteFileDSN(  
      LPCSTR     lpszFileName,  

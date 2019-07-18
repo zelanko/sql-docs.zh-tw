@@ -15,15 +15,14 @@ helpviewer_keywords:
 - system tables [Integration Services]
 - SSIS, system tables
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d622158b639c912028144ab5003faef91a2030f7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990133"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Integration Services 資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

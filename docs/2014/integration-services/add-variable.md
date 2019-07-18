@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addvariable.f1
@@ -15,15 +14,15 @@ ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bf8cce4fec8bb0156155d5e2cb3ef6d7a9ea5a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389946"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061790"
 ---
 # <a name="add-variable"></a>加入變數
-  使用 [加入變數] 對話方塊，即可指定新變數的屬性。  
+  使用 [加入變數]  對話方塊，即可指定新變數的屬性。  
   
 ## <a name="options"></a>選項。  
  **容器**  
@@ -39,7 +38,7 @@ ms.locfileid: "58389946"
  選取資料類型。  
   
  **值**  
- 鍵入值。 此值必須與 [值類型] 選項中所指定的資料類型相容。  
+ 鍵入值。 此值必須與 [值類型]  選項中所指定的資料類型相容。  
   
  **唯讀**  
  選取即可使變數成為唯讀的。  

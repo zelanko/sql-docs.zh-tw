@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 588927f94d2c50d5d34485cae030e9cea6a6b5ec
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aead5d8e5c85b67333f10bee4e73e2bb1a8633ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109367"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>資料集屬性對話方塊、查詢
   選取 **查詢**上**資料集屬性**對話方塊來選擇資料來源，並建立查詢。  
@@ -34,21 +33,21 @@ ms.locfileid: "56292387"
   
 -   [資料集屬性對話方塊，篩選](report-data/dataset-properties-dialog-box-filters.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  輸入資料集的名稱。 此名稱不可以與報表中任何資料區域或群組的名稱相同。  
   
  **資料來源**  
- 選取要做為資料集基礎的資料來源。 若要建立新的資料來源，按一下 **[新增]**。  
+ 選取要做為資料集基礎的資料來源。 若要建立新的資料來源，按一下 **[新增]** 。  
   
  **查詢類型**  
- 選取資料集使用的命令或查詢類型。 選取 **[文字]** 來執行查詢，以便從資料庫中擷取資料。 選取 **[資料表]** 即可使用 **的** [TableDirect] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能來選取資料表中的所有欄位。 選取 **[預存程序]** 即可依名稱執行預存程序。 依預設，會選取 **[文字]** ，這適用於大多數的查詢。 若要編輯選取的資料來源查詢，按一下 **[查詢設計工具]**。  
+ 選取資料集使用的命令或查詢類型。 選取 **[文字]** 來執行查詢，以便從資料庫中擷取資料。 選取 **[資料表]** 即可使用 **的** [TableDirect] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能來選取資料表中的所有欄位。 選取 **[預存程序]** 即可依名稱執行預存程序。 依預設，會選取 **[文字]** ，這適用於大多數的查詢。 若要編輯選取的資料來源查詢，按一下 **[查詢設計工具]** 。  
   
 > [!NOTE]  
 >  並非所有的查詢類型都受到所有資料來源的支援。 例如， **[資料表]** 只受到 **[OLE DB]** 和 **[ODBC]** 資料來源類型的支援。  
   
  **[資料集屬性]**  
- 此選項會在選擇 [文字] 命令類型選項時出現。 鍵入查詢，或按一下 [匯入] 來匯入已存在的查詢。 請按一下 **「運算式」** (*fx*) 按鈕來編輯運算式。  
+ 此選項會在選擇 [文字]  命令類型選項時出現。 鍵入查詢，或按一下 [匯入]  來匯入已存在的查詢。 請按一下 **「運算式」** (*fx*) 按鈕來編輯運算式。  
   
 > [!NOTE]  
 >  如果您使用查詢設計工具來建立查詢，則查詢的文字會顯示在此方塊中。  

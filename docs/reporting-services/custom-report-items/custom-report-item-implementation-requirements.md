@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e643352261945a289776824bbe164798828e3d66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3e90b19178bc62d0c6ef51a740ab86244709a948
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194320"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>自訂報表項目實作需求
   本主題將討論開發和部署自訂報表項目的必要條件。  

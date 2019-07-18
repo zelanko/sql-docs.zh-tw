@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ConvexHullAggregate method (geography)
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 77233eace56bfbd41a8c1a80234e879125d0be34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fa0b938cfc4d8d544dbfde3eb0b97b19d06d1dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935373"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

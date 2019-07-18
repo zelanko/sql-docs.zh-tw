@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959126"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 匯入擴充功能 （預覽）
 
@@ -39,7 +38,7 @@ SQL Server 匯入擴充功能 （預覽） 會將.txt 或.csv 檔案轉換成 SQ
 
 1. 若要啟動 SQL Server 匯入，首先請在 [伺服器] 索引標籤中的伺服器的連接。
 2. 您建立連線之後，向下鑽研至您想要將檔案匯入的 SQL 資料表的目標資料庫。
-3. 以滑鼠右鍵按一下資料庫，然後按一下 [**匯入精靈]**。
+3. 以滑鼠右鍵按一下資料庫，然後按一下 [**匯入精靈]** 。
     ![開啟匯入精靈](media/sql-server-import-extension/open-import-wizard.png)
 
 ## <a name="importing-a-file"></a>匯入檔案

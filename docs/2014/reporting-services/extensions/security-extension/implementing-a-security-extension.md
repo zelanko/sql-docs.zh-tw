@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e3248ab676386ad510639d782738915e9636193
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024459"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211530"
 ---
 # <a name="implementing-a-security-extension"></a>實作安全性延伸模組
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 驗證是保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的報表之主要系統。 不過，在某些情況下，您可能需要擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性系統，以配合企業中的自訂安全性。 您可以使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API 提供的開發平台來完成這項動作。 本節將提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中安全性延伸模組的概觀。  

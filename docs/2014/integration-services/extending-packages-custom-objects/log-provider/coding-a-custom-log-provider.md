@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768577"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -30,7 +30,7 @@ ms.locfileid: "58381076"
  您覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> 方法以快取連接集合與事件介面的參考。 您可以稍後在記錄提供者的其他方法中使用這些快取的參考。  
   
 ### <a name="using-the-configstring-property"></a>使用 ConfigString 屬性  
- 在設計階段，記錄提供者會從 [組態] 資料行接收組態資訊。 這個組態資訊會對應至記錄提供者的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性。 依預設，這個資料行包含您可以從中擷取任何字串資訊的文字方塊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的大部分記錄提供者，都會使用此屬性儲存提供者用以連接外部資料來源之連接管理員的名稱。 如果您的記錄提供者使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性，請使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法驗證這個屬性，並確定已正確設定屬性。  
+ 在設計階段，記錄提供者會從 [組態]  資料行接收組態資訊。 這個組態資訊會對應至記錄提供者的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性。 依預設，這個資料行包含您可以從中擷取任何字串資訊的文字方塊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的大部分記錄提供者，都會使用此屬性儲存提供者用以連接外部資料來源之連接管理員的名稱。 如果您的記錄提供者使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性，請使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法驗證這個屬性，並確定已正確設定屬性。  
   
 ### <a name="validating-the-log-provider"></a>驗證記錄提供者  
  您覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法以確定已正確設定提供者，而且已準備執行。 一般而言，驗證的最低層級是確定 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 已正確地設定。 必須等到記錄提供者從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> 方法傳回 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>，執行才能繼續。  

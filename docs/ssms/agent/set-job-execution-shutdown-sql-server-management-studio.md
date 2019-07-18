@@ -13,16 +13,16 @@ helpviewer_keywords:
 - stopping jobs
 - SQL Server Agent jobs, execution shutdowns
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 283768ef7189335965e942ecd8e6810cc9d981e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0971103e8424a3d2a23ce9cb7f6f9a58e9fecd01
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842986"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685096"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>設定作業執行關機 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47842986"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目設定 SQL Server Agent 作業的關機時間：**  
   
@@ -61,9 +61,9 @@ ms.locfileid: "47842986"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要設定作業執行關機間隔的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 **[選取頁面]** 底下，選取 **[作業的系統]**。  
+3.  在 **[選取頁面]** 底下，選取 **[作業的系統]** 。  
   
-4.  設定 [關機逾時間隔]\(以秒為單位)，以增加或減少關機的逾時間隔。 這決定了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 自行結束前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會等待執行中作業完成的時間。  
+4.  設定 [關機逾時間隔]  \(以秒為單位)，以增加或減少關機的逾時間隔。 這決定了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 自行結束前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會等待執行中作業完成的時間。  
   

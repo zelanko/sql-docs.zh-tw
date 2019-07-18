@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 147679798418dceb7de94ec8dbcc8489ad6fda3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8af6065a08cc85c7bdc2c36c6032506ba6d56c57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031757"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系統需求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,11 +71,11 @@ ms.locfileid: "51662963"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Image|  
-|varchar(max)|varchar|varchar|文字|  
+|varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|Image|  
-|日期|日期|varchar|Varchar|  
+|Xml|Xml|Xml|Ntext|  
+|CLR UDT (> 8 Kb)|udt|varbinary|Image|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  

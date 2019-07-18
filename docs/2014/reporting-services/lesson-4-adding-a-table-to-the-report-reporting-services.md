@@ -1,40 +1,39 @@
 ---
-title: 第 4 課：將資料表加入至報表 (Reporting Services) |Microsoft Docs
+title: 第 4 課：將資料表新增至報表 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e47ec23a06971bd6ab1d6b4e13c07c5fc5092df
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108444"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表加入至報表 (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表新增至報表 (Reporting Services)
   定義資料集之後，您就可以開始設計報表。 您可以將資料區域、文字方塊、影像和您要包含在報表中的其他項目拖放至設計介面來建立報表配置。  
   
- 包含基礎資料集之重複資料列的項目稱為「資料區域」。 基本報表只有一個資料區域，但是您可以加入其他資料區域，例如，當您想要將圖表加入至表格式報表時。 加入資料區域之後，您可以將欄位加入到資料區域中。  
+ 包含基礎資料集之重複資料列的項目稱為「資料區域」  。 基本報表只有一個資料區域，但是您可以加入其他資料區域，例如，當您想要將圖表加入至表格式報表時。 加入資料區域之後，您可以將欄位加入到資料區域中。  
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>將資料表資料區域和欄位加入到報表配置中  
   
-1.  在 [工具箱] 中，按一下 [資料表]，然後按一下設計介面並拖曳滑鼠。 報表設計師會繪製一個資料表資料區域，而且在設計介面的中央包含三個資料行。  
+1.  在 [工具箱]  中，按一下 [資料表]  ，然後按一下設計介面並拖曳滑鼠。 報表設計師會繪製一個資料表資料區域，而且在設計介面的中央包含三個資料行。  
   
     > [!NOTE]  
-    >  [工具箱] 可能會顯示為 [報表資料] 窗格左側的索引標籤。 若要開啟 [工具箱]，請將指標移至 [工具箱] 索引標籤。如果看不到 [工具箱]，請按一下 [檢視] 功能表上的 [工具箱]。  
+    >  [工具箱]  可能會顯示為 [報表資料]  窗格左側的索引標籤。 若要開啟 [工具箱]  ，請將指標移至 [工具箱]  索引標籤。如果看不到 [工具箱]  ，請按一下 [檢視]  功能表上的 [工具箱]  。  
   
 2.  在 **報表資料**窗格中，展開**AdventureWorksDataset**來顯示欄位的資料集。  
   
 3.  拖曳 [日期] 欄位從**報表資料**窗格，即可在資料表中的第一個資料行。  
   
-     當您將欄位放到第一個資料行時，會出現兩種情況。 首先，資料將會顯示欄位名稱，也就是所謂的「欄位運算式」，並以方括弧括住：`[Date]`。 接著，資料行標頭值會自動加到標頭資料列中，就在欄位運算式的正上方。 依預設，這個資料行是欄位的名稱。 您可以選取標頭資料列文字，然後輸入新的名稱。  
+     當您將欄位放到第一個資料行時，會出現兩種情況。 首先，資料將會顯示欄位名稱，也就是所謂的「欄位運算式」  ，並以方括弧括住：`[Date]`。 接著，資料行標頭值會自動加到標頭資料列中，就在欄位運算式的正上方。 依預設，這個資料行是欄位的名稱。 您可以選取標頭資料列文字，然後輸入新的名稱。  
   
 4.  拖曳 Order 欄位從**報表資料**窗格，即可在資料表中的第二個資料行。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "56290246"
     > [!NOTE]  
     >  資料行標頭是 Line Total。 報表設計師會將 LineTotal 分割成兩個字，藉以自動建立資料行的易記名稱。  
   
-     下圖顯示已填入這些欄位的資料表資料區域：日期、 訂單、 產品、 Qty 和行總計。  
+     下圖顯示已使用這些欄位填入的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
   
      ![設計，具有標頭資料列和詳細資料列的資料表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "設計，資料表具有標頭資料列和詳細資料列")  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56290246"
 >  按一下 **[檔案]** 功能表上的 **[全部儲存]** ，即可儲存報表。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您已經成功將資料表資料區域加入到報表中、將欄位加入到資料區域中，並預覽過您的報表。 下一步，您將格式化資料行標頭和日期以及貨幣值。 請參閱[第 5 課：格式化報表&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
+ 您已經成功將資料表資料區域加入到報表中、將欄位加入到資料區域中，並預覽過您的報表。 下一步，您將格式化資料行標頭和日期以及貨幣值。 請參閱[第 5 課：格式化報表 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946486"
 ---
 # <a name="path-expressions---specifying-axis"></a>路徑運算式 - 指定軸
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "51670326"
 |**child**|傳回內容節點的子系。|  
 |**descendant**|傳回內容節點的所有下階。|  
 |**parent**|傳回內容節點的父系。|  
-|**屬性**|傳回內容節點的屬性。|  
+|**attribute**|傳回內容節點的屬性。|  
 |**self**|傳回內容節點本身。|  
 |**descendant-or-self**|傳回內容節點及內容節點的所有下階。|  
   
@@ -109,11 +108,11 @@ select @y
   
  在此運算式中，如果您為下列路徑運算式指定 descendant 軸：  
   
- `/child::a/child::b/descendant::*`，表示您要求 <`b`> 元素節點的所有下階。  
+ `/child::a/child::b/descendant::*`您所要求的所有下階 <`b`> 項目節點。  
   
  在節點測試中的星號 (*) 代表做為節點測試的節點名稱。 因此，descendant 軸、元素節點的主要節點類型將決定要傳回的節點類型。 也就是，運算式會傳回所有的元素節點。 但不會傳回文字節點。 如需有關主要節點類型和其關聯性與節點測試的詳細資訊，請參閱[在路徑運算式步驟中指定節點測試](../xquery/path-expressions-specifying-node-test.md)主題。  
   
- 如下列結果所示，將會傳回 <`c`> 與 <`d`> 元素節點：  
+ 元素節點 <`c`> 和 <`d`> 會傳回，如下列結果所示：  
   
 ```  
 <c>text2  
@@ -122,7 +121,7 @@ select @y
 <d>text3</d>  
 ```  
   
- 如果您指定 descendant-or-self 軸而不是 descendant 軸，`/child::a/child::b/descendant-or-self::*` 會傳回內容節點、元素 <`b`> 以及其下階。  
+ 如果您指定而不是 descendant 軸的下階或本身 」 座標軸`/child::a/child::b/descendant-or-self::*`傳回內容節點中，項目 <`b`>，以及其下階。  
   
  以下是結果：  
   
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. 指定父軸  
- 下列查詢會傳回 `Production.ProductModel` 資料表中所儲存的產品目錄 XML 文件的 <`ProductDescription`> 元素之 <`Summary`> 元素子系。  
+ 下列查詢會傳回 <`Summary`> 元素子系 <`ProductDescription`> 產品目錄 XML 文件中的項目儲存在`Production.ProductModel`資料表。  
   
- 此範例使用父軸傳回 <`Feature`> 元素的父系，並擷取 <`ProductDescription`> 元素的 <`Summary`> 元素子系。  
+ 此範例會使用父軸傳回父系的 <`Feature`> 項目，並擷取 <`Summary`> 元素子系 <`ProductDescription`> 項目。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 若要對每個 `ProductModelID`> 元素加入 `<Feature`，就會指定 `parent` 軸：  
+ 若要新增`ProductModelID`針對每個`<Feature`> 項目，`parent`座標軸指定：  
   
 ```  
 SELECT CatalogDescription.query('  

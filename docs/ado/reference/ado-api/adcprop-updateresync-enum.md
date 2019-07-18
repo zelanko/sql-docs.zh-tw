@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_UPDATERESYNC_ENUM |Microsoft Docs
+title: ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afaadf62c38c318c759be1c452ff0953ba19c7d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82a5473a68303d429794d8b98c4e91293e4e30cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921408"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法後面隱含[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法作業，如果是的話，該作業的範圍。  

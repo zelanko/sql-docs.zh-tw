@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62792038"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本加入至現有的 AlwaysOn 可用性群組。  
@@ -37,7 +37,7 @@ ms.locfileid: "52525854"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**[加入次要複本之後](#FollowUp)  
+-   **後續操作：** [加入次要複本之後](#FollowUp)  
   
 ## <a name="before-you-begin"></a>開始之前  
  我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
@@ -115,13 +115,13 @@ ms.locfileid: "52525854"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 後續操作：加入次要複本之後  
+##  <a name="FollowUp"></a> 後續操作：新增次要複本之後  
  若要將複本加入至現有的可用性群組，您必須執行下列步驟：  
   
 1.  連接到將要裝載新次要複本的伺服器執行個體。  

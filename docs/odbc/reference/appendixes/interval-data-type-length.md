@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947583"
 ---
 # <a name="interval-data-type-length"></a>間隔資料類型長度
 下列規則用來決定間隔資料類型以字元為單位的長度。 長度是以字元數表示。 位元組數目，取決於的字元集。 的長度會包含下列的值加在一起：  

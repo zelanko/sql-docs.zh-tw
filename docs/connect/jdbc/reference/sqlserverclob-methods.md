@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 839f9c67-4cd4-4e07-a0ef-ba62591e9e5a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 38ff333c7ef2ca007e3fee26fcc89b4d46ba40bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b07e73b1440c28519c3dbdd97660f8a48f8aa4fd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842809"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803113"
 ---
 # <a name="sqlserverclob-methods"></a>SQLServerClob 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

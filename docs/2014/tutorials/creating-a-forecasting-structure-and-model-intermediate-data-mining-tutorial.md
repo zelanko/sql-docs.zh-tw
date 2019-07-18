@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204807"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>建立預測結構和模型 (中繼資料採礦教學課程)
   接下來，您將使用資料採礦精靈，根據您剛建立的資料來源檢視建立新的採礦結構和採礦模型。 在這項工作中，您將指定採礦模型應使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法。  
@@ -24,15 +24,15 @@ ms.locfileid: "56015249"
   
 1.  在 [方案總管] 中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下**採礦結構**，然後選取**New Mining Structure&lt**。  
   
-2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]**。  
+2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]** 。  
   
-3.  在 [**選取定義方法**頁面上，確認**從現有的關聯式資料庫或資料倉儲**已選取，然後按一下**下一步]**。  
+3.  在 [**選取定義方法**頁面上，確認**從現有的關聯式資料庫或資料倉儲**已選取，然後按一下**下一步]** 。  
   
-4.  在上**建立資料採礦結構**頁面的 **您想要使用哪一種資料採礦技術？**，選取**Microsoft 時間序列**，然後按一下  **下一步**。  
+4.  在上**建立資料採礦結構**頁面的 **您想要使用哪一種資料採礦技術？** ，選取**Microsoft 時間序列**，然後按一下  **下一步**。  
   
 5.  在 **選取資料來源檢視**頁面的 **可用的資料來源檢視**，選取**SalesByRegion**。  
   
-6.  按一下 [下一步] 。  
+6.  按一下 [下一步]  。  
   
 7.  在上**指定資料表類型**頁面上，確認中的核取方塊**案例**vTimeSeries 資料表的資料行已選取，然後再按**下一步**。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56015249"
   
      ModelRegion 資料行指定為**金鑰**資料行和 ReportingDate 資料行被自動指定為**Key Time**資料行。 每一種類型的索引鍵，您只能有一個。  
   
-11. 按一下 [下一步] 。  
+11. 按一下 [下一步]  。  
   
 12. 在上**完成精靈**頁面上，如**採礦結構名稱**，型別`Forecasting`。  
   

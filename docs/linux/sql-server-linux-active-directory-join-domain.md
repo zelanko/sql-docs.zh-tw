@@ -3,19 +3,18 @@ title: 加入至 Active Directory 的 Linux 上的 SQL Server
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
-ms.author: Dylan.Gray
-ms.reviewer: rothja
+ms.author: dygray
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027337"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入 Active Directory 網域的 Linux 主機上的 SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "59243582"
 
 這篇文章提供有關如何將 SQL Server Linux 主機電腦加入 Active Directory (AD) 網域的一般指引。 有兩種方法： 使用內建的 SSSD 封裝，或使用協力廠商 Active Directory 提供者。 第三方網域聯結產品的範例包括[PowerBroker 身分識別服務 (PBI)](https://www.beyondtrust.com/)，[一個身分識別](https://www.oneidentity.com/products/authentication-services/)，並[Centrify](https://www.centrify.com/)。 本指南包含要檢查您的 Active Directory 設定的步驟。 不過，它並不打算提供有關如何使用協力廠商公用程式時，將機器加入網域的指示。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 設定 Active Directory 驗證之前，您需要設定一個 Active Directory 網域控制站，Windows，您的網路。 然後，加入您的 SQL Server 的 Active Directory 網域的 Linux 主機上。
 
@@ -127,8 +126,8 @@ ping contoso.com
 
 在基本組態和網域控制站的連線通過驗證之後，有兩個聯結與 Active Directory 網域控制站的 SQL Server Linux 主機電腦的選項：
 
-- [選項 1：使用 SSSD 封裝](#option1)
-- [選項 2：使用第三方 openldap 提供者公用程式](#option2)
+- [選項 1:使用 SSSD 封裝](#option1)
+- [選項 2:使用第三方 openldap 提供者公用程式](#option2)
 
 ### <a id="option1"></a> 選項 1:若要加入 AD 網域使用 SSSD 封裝
 
@@ -139,7 +138,7 @@ ping contoso.com
 
 若要加入至 Active Directory 網域的 SQL Server 主機使用下列步驟：
 
-1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md)主機電腦加入 AD 網域。 您必須先安裝兩者**realmd**和 SQL Server 主機上使用您的 Linux 散發套件管理員的 Kerberos 用戶端套件：
+1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)主機電腦加入 AD 網域。 您必須先安裝兩者**realmd**和 SQL Server 主機上使用您的 Linux 散發套件管理員的 Kerberos 用戶端套件：
 
    **RHEL:**
 
@@ -179,7 +178,7 @@ ping contoso.com
 
    SQL Server 會使用 SSSD 和 NSS 對應使用者帳戶和群組安全性識別元 (Sid)。 SSSD 必須設定並執行 SQL Server 已成功建立 AD 登入。 **realmd**平常這會自動在加入網域，但在某些情況下，您必須分別執行此動作。
 
-   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951)，並[設定來使用 SSSD NSS](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951)，並[設定來使用 SSSD NSS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 請確認您現在可以收集使用者資訊從網域，而且您可以取得 Kerberos 票證，以該使用者。 下列範例會使用**識別碼**， [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)，並[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)這個命令。
 
@@ -198,7 +197,7 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - 如果**識別碼user@contoso.com**會傳回`No such user`，請確定已成功啟動 SSSD 服務： 執行命令`sudo systemctl status sssd`。 如果服務正在執行，而且您仍然看到錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件[疑難排解 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
+   > - 如果**識別碼user@contoso.com** 會傳回`No such user`，請確定已成功啟動 SSSD 服務： 執行命令`sudo systemctl status sssd`。 如果服務正在執行，而且您仍然看到錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件[疑難排解 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
    >
    > - 如果**kinit user@CONTOSO.COM** 會傳回`KDC reply did not match expectations while getting initial credentials`，請確定您以大寫指定領域。
 

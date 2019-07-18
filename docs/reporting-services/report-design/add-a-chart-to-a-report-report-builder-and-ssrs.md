@@ -2,25 +2,25 @@
 title: 將圖表新增至報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 53e52f403c6ed76db265a05879a9ebea15aca30d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: df6236249bc494eb5235439b273889a15b982582
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571622"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>將圖表加入至報表 (報表產生器及 SSRS)
   當您想要以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表的視覺格式摘要資料時，請使用圖表資料區域。 針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這會影響以圖表形式放入資料時可以解譯資料的程度。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
  將圖表資料區加入至報表最簡單的方式就是執行新增圖表精靈。 該精靈提供直條圖、折線圖、圓形圖、橫條圖和區域圖。 您也可以透過手動方式，加入上述圖表以及其他的圖表類型。  
   
- 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 按一下圖表以顯示 [圖表資料] 窗格及其三個區域：數列群組、類別目錄群組和值。  
+ 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 按一下圖表即可顯示 [圖表資料] 窗格，其中包含三個區域：[數列群組]、[類別群組] 和 [值]。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -30,9 +30,9 @@ ms.locfileid: "56298346"
 1.  > [!NOTE]  
     >  您只能在報表產生器中使用圖表精靈。  
   
-     在 [插入] 索引標籤上，按一下 [圖表]，然後按一下 [圖表精靈]。  
+     在 [插入]  索引標籤上，按一下 [圖表]  ，然後按一下 [圖表精靈]  。  
   
-2.  請遵循 [新增圖表精靈] 中的步驟執行。  
+2.  請遵循 [新增圖表精靈]  中的步驟執行。  
   
 3.  在 **[主資料夾]** 索引標籤上，按一下 **[執行]** 查看轉譯的報表。  
   
@@ -42,21 +42,21 @@ ms.locfileid: "56298346"
   
 1.  建立報表，並定義資料集。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
-2.  在 [插入] 索引標籤上，按一下 [圖表]，然後按一下 [插入圖表]。  
+2.  在 [插入]  索引標籤上，按一下 [圖表]  ，然後按一下 [插入圖表]  。  
   
 3.  在設計介面上您要放置圖表左上角的位置按一下，然後拖曳到您要放置圖表右下角的位置。  
   
-     [選取圖表類型] 對話方塊隨即出現。  
+     [選取圖表類型]  對話方塊隨即出現。  
   
 4.  選取您想要加入的圖表類型。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-5.  按一下圖表以顯示 [圖表資料] 窗格。  
+5.  按一下圖表以顯示 [圖表資料]  窗格。  
   
-6.  將一或多個欄位新增至 [值] 區域。 這些資訊將會繪製在值軸上。  
+6.  將一或多個欄位新增至 [值]  區域。 這些資訊將會繪製在值軸上。  
   
-7.  將群組欄位新增至 [類別目錄群組] 區域。 當您將這個欄位新增至[類別目錄群組] 區域時，系統會自動為您建立群組欄位。 每一個群組都代表數列中一個資料點。  
+7.  將群組欄位新增至 [類別目錄群組]  區域。 當您將這個欄位新增至[類別目錄群組]  區域時，系統會自動為您建立群組欄位。 每一個群組都代表數列中一個資料點。  
   
-8.  若要依據類別目錄摘要資料，請以滑鼠右鍵按一下資料欄位，然後按一下 [數列屬性]。 在 [類別目錄] 方塊中，從下拉式清單選取類別目錄欄位。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  若要依據類別目錄摘要資料，請以滑鼠右鍵按一下資料欄位，然後按一下 [數列屬性]  。 在 [類別目錄]  方塊中，從下拉式清單選取類別目錄欄位。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. 在 **[主資料夾]** 索引標籤上，按一下 **[執行]** 查看轉譯的報表。  
   

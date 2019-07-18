@@ -1,20 +1,20 @@
 ---
 title: 版本資訊 (SSRS) 2017年和更新版本 |Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283289"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533835"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
@@ -51,6 +51,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 
+## <a name="1406001274-20190701"></a>2019/07/01 14.0.600.1274
+
+| 已修正的問題 | 詳細資料 |
+| :---------- | :------ |
+| 安全性更新 | &nbsp; |
+| 無法選取工作日建立共用的每週排程時 | &nbsp; |
+| 報表不會顯示換行字元正確 Word 格式 | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 沒有較長的運作方式，使用最新的 SSRS 2017 升級 | &nbsp; |
+| 叫用授權延伸模組共用資料集時，發生錯誤 | &nbsp; |
+| 變更預存程序 GetAllProperties SSRS 2017 及 PBIRS，這會導致 Web 服務端點 ReportingService2010.GetProperties 方法無法取得連結報表中的任何資料的邏輯 | &nbsp; |
+| 按一下方格內的項目時，就會消失在行動報表中的簡單格線資料列標頭 | &nbsp; |
+| 無法使用資料驅動訂閱參數中的 [日期] 欄位 | &nbsp; |
+| 巢狀的 tablix 會顯示小字型或部分的字型，在 SSRS 2016 和更新版本 | &nbsp; |
+| 使用日期時間參數發生錯誤的訂用帳戶之後以不同的地區設定編輯訂用帳戶的使用者 | &nbsp; |
+| 使用 Null 傳遞延伸模組來建立資料驅動訂閱的 「 發生傳遞錯誤 」 發生失敗 | &nbsp; |
+| URL 編碼不正確，Excel\Word 格式設定值時 | &nbsp; |
+
 ## <a name="1406001109-20190212"></a>14.0.600.1109，2019/02/12
 
 | 已修正的問題 | 詳細資料 |
@@ -86,7 +103,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 若 pageHeight 小於 0.5 英吋，則不會縮放文字大小。 | &nbsp; |
 | CRM 搭配使用時，就會在 SSRS 類別目錄資料庫中發生死結。 | &nbsp; |
 | 當在報告中向下捲動時，垂直對齊資料行標頭不正確地顯示。 | &nbsp; |
-| 被新增到 SCOM 回報角色的使用者將無法存取 SSRS Web 入口網站。 | &nbsp; |
+| 新增至 System Center Operations Manager 報表的角色的使用者可以封鎖至 SSRS web 入口網站的存取。 | &nbsp; |
 | 泰文字元未正確匯出至 PDF。 | &nbsp; |
 | 瀏覽器角色行為變更。 | &nbsp; |
 | rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
@@ -111,7 +128,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 編輯報表參數的屬性之後，它在連結的報表中的可見性會被還原。 | &nbsp; |
 | URL 參數 rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
 | 需要運算式在文字方塊中的 cangrow 屬性設定為未顯示的值，則為 false 的結果。 | &nbsp; |
-| 在安裝程式中新增產品金鑰的 [深入了解] 連結。 | &nbsp; |
+| 在安裝程式中新增產品金鑰的 [深入了解]  連結。 | &nbsp; |
 | 含自訂表單驗證的 Web 入口網站會忽略變動到期 Cookie。 | &nbsp; |
 | 如果資料列的內容是空的，匯出到 Word 會建立不相等的資料列高度。 | &nbsp; |
 | &nbsp; | &nbsp; |

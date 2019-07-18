@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f452da206afd91c2db49d32600c34397ef7b2609
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62868773"
 ---
 # <a name="mssqlserver30089"></a>MSSQLSERVER_30089
     
@@ -43,7 +43,7 @@ ms.locfileid: "48212758"
 2.  查看搜耙記錄檔，以便識別無法進行全文檢索索引的任何新文件，然後移除該文件。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_fulltext_system_components &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../search/configure-and-manage-filters-for-search.md)  
   

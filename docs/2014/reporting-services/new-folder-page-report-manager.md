@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108196"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
   使用 [新增資料夾] 頁面，即可在報表伺服器資料夾階層中建立新的資料夾。 您建立的資料夾是儲存在報表伺服器資料庫中的虛擬資料夾。 這個資料夾並不是在電腦的檔案系統中建立的。  
@@ -32,9 +31,9 @@ ms.locfileid: "56020582"
   
 1.  開啟報表管理員中，然後導覽至您想要在其中建立新資料夾的資料夾。  
   
-2.  在工具列中，按一下 **[新增資料夾]**。  
+2.  在工具列中，按一下 **[新增資料夾]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定資料夾的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   

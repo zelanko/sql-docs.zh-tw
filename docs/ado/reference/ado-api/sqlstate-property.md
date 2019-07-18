@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00ab80a10b2c7c411cee0fb6061467d67cfbd4a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e43ace17f3f2b709c327f185a189a107b6b73065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916878"
 ---
 # <a name="sqlstate-property"></a>SQLState 屬性
 表示 SQL 狀態給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

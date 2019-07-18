@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900771"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47745356"
 |**primary_recovery_health_desc**|**nvarchar(60)**|Popis **primary_replica_health**，下列其中一個的：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|指出次要複本的複本，其中的復原健全狀況：<br /><br /> 0 = 進行中<br /><br /> 1 = 線上<br /><br /> NULL<br /><br /> 在主要複本**secondary_recovery_health**資料行是 NULL。|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Popis **secondary_recovery_health**，下列其中一個的：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|反映的彙總**synchronization_health**可用性群組中的所有可用性複本。 以下是可能的值和它們的描述。<br /><br /> 0： 非狀況良好。 沒有任何可用性複本擁有狀況良好**synchronization_health** (2 = 狀況良好)。<br /><br /> 1： 部分狀況良好。 部分 (而不是所有) 可用性複本的同步處理狀況良好。<br /><br /> 2： 狀況良好。 每一個可用性複本的同步處理狀況良好。<br /><br /> 如需有關複本同步處理健全狀況資訊，請參閱**synchronization_health**中的資料行[sys.dm_hadr_availability_replica_states &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)。|  
+|**synchronization_health**|**tinyint**|反映的彙總**synchronization_health**可用性群組中的所有可用性複本。 以下是可能的值和它們的描述。<br /><br /> 0：非狀況良好。 沒有任何可用性複本擁有狀況良好**synchronization_health** (2 = 狀況良好)。<br /><br /> 1：部分狀況良好。 部分 (而不是所有) 可用性複本的同步處理狀況良好。<br /><br /> 2：狀況良好。 每一個可用性複本的同步處理狀況良好。<br /><br /> 如需有關複本同步處理健全狀況資訊，請參閱**synchronization_health**中的資料行[sys.dm_hadr_availability_replica_states &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)。|  
 |**synchronization_health_desc**|**nvarchar(60)**|Popis **synchronization_health**，下列其中一個的：<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>安全性  

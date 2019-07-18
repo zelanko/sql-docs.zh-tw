@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103004"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>編輯類型對應 (MySQLToSQL)
 **編輯類型對應**對話方塊可讓您指定類型的來源和目的地的資料庫物件之間的對應方式。  

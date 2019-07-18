@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3252494623ce1341e77f04d844bb1e9215064201
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed7b1d3ae88ef50d267cb129d861abab2b33ffd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116664"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

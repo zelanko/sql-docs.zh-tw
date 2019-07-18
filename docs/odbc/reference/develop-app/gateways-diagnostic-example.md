@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50476cb92d477bb9a72ac8d4311d24572b0368e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069677"
 ---
 # <a name="gateways-diagnostic-example"></a>閘道診斷範例
 在閘道架構中，驅動程式會將要求傳送至支援 ODBC 的閘道。 閘道會將要求傳送至 DBMS。 因為它是介面驅動程式管理員使用的元件時，驅動程式格式，並傳回引數**SQLGetDiagRec**。  

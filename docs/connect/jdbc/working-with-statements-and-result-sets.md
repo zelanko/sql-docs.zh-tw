@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94a0a5fbf228f7fbf8249e9e75a7e2aebf861065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690048"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780801"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式及結果集
 

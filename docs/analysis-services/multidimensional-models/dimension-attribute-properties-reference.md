@@ -1,5 +1,5 @@
 ---
-title: 維度屬性 （Property） 參考 |Microsoft 文件
+title: 維度屬性 （Property） 參考 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26975562f3617742cbcc3bfb3a47e41af09ba8b3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208917"
 ---
 # <a name="dimension-attribute-properties-reference"></a>維度屬性 (attribute) 屬性 (property) 參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，有許多屬性 (property) 可用來決定維度和維度屬性 (attribute) 如何運作。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|識別向使用者顯示相關聯屬性階層的資料夾。|  
 |**AttributeHierarchyEnabled**|決定是否由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生屬性的屬性階層。 如果屬性階層未啟用，則不能在使用者自訂階層中使用該屬性，也不能在多維度運算式 (MDX) 陳述式中參考此屬性階層。|  
@@ -30,12 +30,12 @@ ms.locfileid: "34026665"
 |**CustomRollupColumn**|指定用來定義自訂積存公式的資料行。|  
 |**CustomRollupPropertiesColumn**|指定包含自訂積存公式之屬性的資料行。|  
 |**DefaultMember**|指定定義屬性之預設量值的多維度運算式 (MDX) 運算式。|  
-|**說明**|包含屬性的描述。|  
+|**描述**|包含屬性的描述。|  
 |**DiscretizationBucketCount**|包含要進行離散化的值區數目。|  
 |**DiscretizationMethod**|定義用於分隔的方法。|  
 |**EstimatedCount**|指定屬性中的估計成員數目。 在您執行彙總設計精靈之前，預設值為零。 您可以讓精靈來計算記錄的數目，或輸入估計的值。 如果您知道成員的數目，且想要節省查詢資料庫以找出該計數所需的時間，請手動輸入值。 如果使用的是實際資料的測試子集，則可使用實際資料的計數，這樣會針對實際資料 (而非測試資料) 最佳化彙總設計。|  
 |**GroupingBehavior**|使用者定義的值，可對用戶端應用程式提供有關如何群組屬性的提示。|  
-|**識別碼**|包含維度的唯一識別碼 (ID)。|  
+|**ID**|包含維度的唯一識別碼 (ID)。|  
 |**InstanceSelection**|提供用戶端應用程式提示，以根據清單中的預期項目數目來如何顯示項目清單。 可用的選項如下：<br /><br /> **None** ：不會對用戶端應用程式提供任何提示。 這是預設值。<br /><br /> **DropDown** ：項目數目夠小，可顯示在下拉式清單中。<br /><br /> **List** ：項目數目對於下拉式 **清單**而言太大，但不需要篩選。<br /><br /> **FilteredList** ：項目數目夠大，因此使用者必須篩選要顯示的項目。<br /><br /> **MandatoryFilter** ：項目數目非常大，一律必須篩選才能顯示。|  
 |**IsAggregatable**|指定是否可彙總屬性成員的值。 預設值是 **True**，表示屬性階層包含 (全部) 層級。 如果此屬性的值為 **False**，則屬性階層不會包含 (全部) 層級。|  
 |**KeyColumns**|包含表示屬性之索引鍵的一或多個資料行，這是繫結屬性之資料來源檢視的基礎關聯式資料表中的資料行。 除非已指定 **NameColumn** 屬性的值，否則會向使用者顯示每個成員之這個資料行的值。|  

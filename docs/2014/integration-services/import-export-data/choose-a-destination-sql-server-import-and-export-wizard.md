@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768022"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
   使用**選擇目的地**頁面，即可指定您想要複製之資料的目的地。  
@@ -58,17 +58,17 @@ ms.locfileid: "58393500"
  從指定的執行個體上的資料庫清單中選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或按一下 建立新的資料庫**新增**。  
   
  **[重新整理]**  
- 按一下 [重新整理] 來還原可用資料庫的清單。  
+ 按一下 [重新整理]  來還原可用資料庫的清單。  
   
  **新增**  
  使用建立新的目的地資料庫**Create Database**  對話方塊。  
   
 ### <a name="destination--flat-file-destination"></a>目的地 = 一般檔案目的地  
  **檔案名稱**  
- 指定儲存資料之檔案的路徑和檔案名稱。 或按一下 [瀏覽] 找出檔案。  
+ 指定儲存資料之檔案的路徑和檔案名稱。 或按一下 [瀏覽]  找出檔案。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出檔案。  
+ 使用 [開啟]  對話方塊來找出檔案。  
   
  **地區設定**  
  指定用來定義字元排序順序及日期和時間格式的地區設定識別碼 (LCID)。  
@@ -129,6 +129,6 @@ ms.locfileid: "58393500"
  當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果所有使用者的單一密碼保護資料庫，您必須提供此值**資料連結屬性** 對話方塊中，該對話方塊可由**進階** 按鈕。  
   
  **進階**  
- 使用 [資料連結屬性] 對話方塊來指定進階選項，例如資料庫密碼或非預設工作群組資訊檔案。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)。  
+ 使用 [資料連結屬性]  對話方塊來指定進階選項，例如資料庫密碼或非預設工作群組資訊檔案。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)。  
   
   

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928299"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;結構&gt;。案例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  運算式可以包含資料行識別碼、使用者定義函數，以及 VBA 函數。  
   
- *結構*  
+ *structure*  
  結構的名稱。  
   
  *條件運算式*  
@@ -78,7 +77,7 @@ WHERE [Bike Buyer] = 1
 ORDER BY Age DESC;  
 ```  
   
-### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>範例 2：僅鑽研測試或培訓案例  
+### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>範例 2：鑽研測試或定型案例只  
  下列範例會針對為測試而保留的「目標郵寄」，傳回結構案例的清單。 如果採礦結構不包含鑑效組測試集，系統預設會將所有案例視為培訓案例，因此，此查詢會傳回 0 個案例。  
   
 ```  
@@ -90,7 +89,7 @@ WHERE IsTestCase();
  若要傳回培訓案例，取代函數 `IsTrainingCase()`。  
   
 ## <a name="see-also"></a>另請參閱  
- [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  

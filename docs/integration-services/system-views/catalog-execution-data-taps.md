@@ -11,14 +11,18 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f305c0439c7c7f30343f1dea42b5965716f9e927
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714777"
 ---
-# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps
+# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示執行中定義之每個資料點選的資訊。  

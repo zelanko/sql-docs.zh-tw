@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84673b88ce6401986655a16fd407cafea6f3af1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297661"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>停止追蹤 (SQL Server Profiler)
   此主題說明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來停止執行中的追蹤。  
@@ -29,7 +29,7 @@ ms.locfileid: "52823832"
   
 1.  選擇執行中的追蹤。  
   
-2.  在 **[檔案]** 功能表上，按一下 **[停止追蹤]**。  
+2.  在 **[檔案]** 功能表上，按一下 **[停止追蹤]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](sql-server-profiler.md)  

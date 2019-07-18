@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fa4be367b9f04fb8d96bb228b7d040aae0e120d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a7b952414a86a647655a7a0c0dbc2754b352e671
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041259"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107179"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中報表設計師的查詢設計工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供各種查詢設計工具，您可以在報表設計師中利用這些工具來建立資料集查詢。 您使用的資料來源類型會決定特定查詢設計工具的可用性。 此外，某些查詢設計工具還提供替代模式，讓您能夠選擇使用視覺化模式或直接使用查詢語言。 本主題簡介每個工具，並描述每個工具支援的資料來源類型。 本主題將描述下列工具：  
@@ -52,21 +51,21 @@ ms.locfileid: "56041259"
   
  ![關聯式資料查詢的一般查詢設計工具](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
   
- 建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。  
+ 建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。  
   
 ##  <a name="Graphical"></a> 圖形化查詢設計工具  
  圖形化查詢設計工具用於建立或修改根據關聯式資料庫執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。 此查詢設計工具可用於數種 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 產品以及其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件。 根據資料來源類型，它支援文字模式、StoredProcedure 模式和 TableDirect 模式。 下圖說明圖形化查詢設計工具。  
   
  ![SQL 查詢適用的圖形化查詢設計工具](../media/rsqd-dsaw-sql.gif "SQL 查詢適用的圖形化查詢設計工具")  
   
- 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](graphical-query-designer-user-interface.md)。  
+ 您可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](graphical-query-designer-user-interface.md)。  
   
 ##  <a name="Model"></a> 報表模型查詢設計工具  
  報表模型查詢設計工具是用於建立或修改針對已發行至報表伺服器的 SMDL 報表模型所執行的查詢。 針對模型執行的報表支援 clickthrough 資料瀏覽。 查詢會在執行階段判斷資料瀏覽的路徑。 下圖說明報表模型查詢設計工具。  
   
  ![語意模型查詢設計工具 UI](../media/rsqd-dsawmodel-smql.gif "語意模型查詢設計工具 UI")  
   
- 若要使用報表模型查詢設計工具，您必須定義指向已發行模型的資料來源。 當您定義資料來源的資料集時，您可以在報表模型查詢設計工具中開啟資料集查詢。 報表模型查詢設計工具可用於圖形化模式或以文字為基礎的模式。 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [報表模型查詢設計工具使用者介面](report-model-query-designer-user-interface.md)。  
+ 若要使用報表模型查詢設計工具，您必須定義指向已發行模型的資料來源。 當您定義資料來源的資料集時，您可以在報表模型查詢設計工具中開啟資料集查詢。 報表模型查詢設計工具可用於圖形化模式或以文字為基礎的模式。 您可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [報表模型查詢設計工具使用者介面](report-model-query-designer-user-interface.md)。  
   
 ##  <a name="MDX"></a> MDX 查詢設計工具  
  多維度運算式 (MDX) 查詢設計工具用於建立或修改針對包含多維度 Cube 之 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源所執行的查詢。 下圖說明定義查詢和篩選之後的 MDX 查詢設計工具。  

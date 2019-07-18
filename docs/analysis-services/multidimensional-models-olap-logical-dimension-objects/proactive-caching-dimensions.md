@@ -1,5 +1,5 @@
 ---
-title: 主動式快取 （維度） |Microsoft 文件
+title: 主動式快取 （維度） |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db9b77c799f674b39f3c6a66a6812464896abefc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209237"
 ---
 # <a name="proactive-caching-dimensions"></a>主動式快取 (維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

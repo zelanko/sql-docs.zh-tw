@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73fffd183e9bfea55cc5a86184e348618eabf927
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62932443"
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management 事件類別
   在建立、變更或卸除資料庫時，即會產生 **Audit Database Management** 事件類別。  

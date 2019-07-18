@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63207101"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型日期和時間類型的大量複製變更 (OLE DB 和 ODBC)
   本主題描述可支援大量複製功能的日期/時間增強功能。 本主題中的資訊同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC。  
@@ -28,9 +28,9 @@ ms.locfileid: "52401613"
   
 |檔案儲存類型|主檔案資料類型|提示的回應：「 輸入欄位 < field_name > 檔案儲存類型 [\<預設 >]: 」|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|date|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -61,7 +61,7 @@ ms.locfileid: "52401613"
 ```  
   
 ## <a name="character-data-files"></a>字元資料類型  
- 在字元資料檔中，日期和時間值的表示如「資料格式：字串和常值 > 一節[資料類型對 ODBC 日期和時間改善支援](data-type-support-for-odbc-date-and-time-improvements.md)若是 ODBC，或是[OLE DB 日期和時間改善的資料型別支援](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)for OLE DB。  
+ 在字元資料檔中，日期和時間值的表示如中所述"資料格式：字串和常值 > 一節[資料類型對 ODBC 日期和時間改善支援](data-type-support-for-odbc-date-and-time-improvements.md)若是 ODBC，或是[OLE DB 日期和時間改善的資料型別支援](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)for OLE DB。  
   
  在原生資料檔中的四個新類型的日期和時間值會表示為的 TDS 表示法小數位數 7 的 (因為這是支援的最大[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而且 bcp 資料檔不會儲存這些資料行的小數位數)。 沒有任何變更到現有的儲存體`datetime`和`smalldatetime`型別或其表格式資料流 (TDS) 表示法。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52401613"
   
 |檔案儲存類型|儲存體大小 (以位元組為單位)|  
 |-----------------------|---------------------------|  
-|DATETIME|8|  
+|datetime|8|  
 |smalldatetime|4|  
 |日期|3|  
 |time|6|  
@@ -92,9 +92,9 @@ ms.locfileid: "52401613"
   
 |檔案儲存類型|主檔案資料類型|在搭配 ibcpsession:: Bcpcolfmt sqlncli.h 中，輸入|值|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -104,12 +104,12 @@ ms.locfileid: "52401613"
   
  **OLE DB 注意**：下列轉換是由 IBCPSession 所執行。 IRowsetFastLoad 中所定義，請使用 OLE DB 轉換[進行轉換，從用戶端伺服器](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
   
-|目標 --><br /><br /> 來源|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|目標--><br /><br /> 來源|日期|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  

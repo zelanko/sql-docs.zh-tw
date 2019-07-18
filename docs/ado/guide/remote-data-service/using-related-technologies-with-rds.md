@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28f03940214817a4f578e76e1d56f2b9a99c1482
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921891"
 ---
 # <a name="using-related-technologies-with-rds"></a>搭配 RDS 使用相關技術
 此章節包含下列主題。  

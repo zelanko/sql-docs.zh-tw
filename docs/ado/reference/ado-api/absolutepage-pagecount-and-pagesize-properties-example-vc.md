@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921840"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、 PageCount、 和 PageSize 屬性範例 （VC + +）
 這個範例會使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)，並[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)屬性，以顯示名稱和雇用日期從***員工***資料表中，一次的五筆記錄。  

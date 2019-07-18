@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7fa7c3607dd652b2a56324b3fa3c7140f252685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757746"
 ---
 # <a name="perspective-representation-tabular"></a>檢視方塊表示法 (表格式)
   檢視方塊是一種針對用戶端應用程式簡化或聚焦至模型之較小部分的機制。  

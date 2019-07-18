@@ -11,14 +11,18 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728485"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服務
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服務是執行 xdbcdcsvc.exe 程式的一種 Windows 服務。 Oracle CDC 服務可設定為在相同電腦上執行多個 Windows 服務，每一個服務都有不同的 Windows 服務名稱。 在單一電腦上建立多個 Oracle CDC Windows 服務通常是為了在服務之間達成更好的分隔效果，或是在每一個服務需要搭配不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體使用時。  
   
  Oracle CDC 服務是使用 Oracle CDC 服務組態主控台所建立，或是透過 xdbcdcsvc.exe 程式所內建的命令列介面所定義。 在這兩個情況下，每一個建立的 Oracle CDC 服務都會與單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體有關聯 (可能會利用 **AlwaysOn** 設定進行叢集或鏡像處理)，而且連接資訊 (連接字串和存取認證) 是服務組態的一部分。  

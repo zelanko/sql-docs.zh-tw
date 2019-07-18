@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e287ae5f70ebe325e207d7c1fe593b60a1223f44
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044236"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件類別
   當資料表或索引掃描停止時，會發生 Scan:Stopped 事件類別。  

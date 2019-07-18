@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f17766ffc68cb42a7bf2db3a00dcdc0efc61224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0d5a60f450978f94cb9d58f381da75be6ca0c3c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766367"
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

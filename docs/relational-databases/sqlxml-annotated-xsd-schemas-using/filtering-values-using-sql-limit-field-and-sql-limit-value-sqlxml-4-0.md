@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d0c64394c8174dfdf92227107a927e640bf50d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ac64cc0ff2f16b70000ff4bc33d0f5fd114f872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067109"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ ms.locfileid: "56015089"
     INSERT INTO Addresses values  
                (1, 'Obere Str. 57 Berlin', 'billing')  
     INSERT INTO Addresses values  
-               (1, 'Avda. de la Constitución 2222 México D.F.', 'shipping')  
+               (1, 'Avda. de la Constituci?n 2222 M?xico D.F.', 'shipping')  
     INSERT INTO Addresses values  
                (2, '120 Hanover Sq., London', 'billing')  
     INSERT INTO Addresses values  
@@ -148,8 +147,10 @@ ms.locfileid: "56015089"
     ```  
   
 5.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  以下是結果：  
   
@@ -157,7 +158,7 @@ ms.locfileid: "56015089"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1" CompanyName="Company A">   
      <BillTo>Obere Str. 57 Berlin</BillTo>   
-     <ShipTo>Avda. de la Constitución 2222 México D.F.</ShipTo>   
+     <ShipTo>Avda. de la Constituci?n 2222 M?xico D.F.</ShipTo>   
   </Customer>   
   <Customer CustomerID="2" CompanyName="Company B">   
      <BillTo>120 Hanover Sq., London</BillTo>   

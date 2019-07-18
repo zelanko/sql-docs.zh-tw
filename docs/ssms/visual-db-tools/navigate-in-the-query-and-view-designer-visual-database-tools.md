@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], navigating
 - keyboard shortcuts [Visual Database Tools]
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d75895acbe90fb396751a6218df0311e1f03f20f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: abfbe23266a726053a8dbf3cf1a068d9a85046e3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678088"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681073"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47678088"
 |在資料表或表格化物件的資料行之間移動|方向鍵|要移至的資料行|  
 |選擇選取的資料行以供輸出|空白鍵或加號鍵|資料行名稱旁邊的核取方塊|  
 |從查詢輸出中移除選取的資料行|空白鍵或減號鍵|資料行名稱旁邊的核取方塊|  
-|從查詢中移除選取的資料表、表格化物件或聯結線|Delete|按一下滑鼠右鍵，再選擇 [移除]。|  
+|從查詢中移除選取的資料表、表格化物件或聯結線|Delete|按一下滑鼠右鍵，再選擇 [移除]  。|  
   
 > [!NOTE]  
 > 如果選取多個項目，按下此按鍵會影響所有選取的項目。 按住 CTRL 鍵，同時在要選取的各項目上按一下滑鼠，即可選取多個項目。  
@@ -79,7 +79,7 @@ ms.locfileid: "47678088"
 如需詳細資訊，請參閱[準則窗格 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
-在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯] 功能表上的 [剪下]、[複製] 和 [貼上] 命令。  
+在 SQL 窗格中工作時，可使用標準的 Windows 編輯鍵 (例如 CTRL + 方向鍵) 在文字間移動，以及 [編輯]  功能表上的 [剪下]  、[複製]  和 [貼上]  命令。  
   
 > [!NOTE]  
 > 您只能插入文字；沒有覆寫模式。  

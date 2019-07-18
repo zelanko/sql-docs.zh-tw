@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.availablevalues.f1
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 804673fd5b2fa9f8ed6b08b4f7609adbb5fdf157
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e9944e437be03dd7cfac3cbe6bad7c5224f3b462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106683"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>為報表參數加入、變更或刪除可用的值 (報表產生器及 SSRS)
   當您建立報表參數之後，可以指定要對使用者顯示的可用值清單。 可用值清單會將使用者可以做的選擇限制為參數的有效值。  
@@ -36,14 +35,14 @@ ms.locfileid: "56296226"
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>為報表參數加入或變更可用的值  
   
-1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]。 **[報表參數屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]  。 **[報表參數屬性]** 對話方塊隨即開啟。  
   
     > [!NOTE]  
-    >  如果看不到 [報表資料] 窗格，請按一下 [檢視]，然後按一下 [報表資料]。  
+    >  如果看不到 [報表資料] 窗格，請按一下 [檢視]  ，然後按一下 [報表資料]  。  
   
-2.  按一下 **[可用的值]**。 選取可用的值選項：  
+2.  按一下 **[可用的值]** 。 選取可用的值選項：  
   
-    -   按一下 [指定值]，以手動方式提供值的清單，並可選擇提供值的易記名稱 (標籤)。  
+    -   按一下 [指定值]  ，以手動方式提供值的清單，並可選擇提供值的易記名稱 (標籤)。  
   
          按一下 **[加入]** ，然後在 **[值]** 文字方塊中輸入值，並選擇在 **[標籤]** 文字方塊內輸入標籤。 若未提供標籤，就會使用這個值。 您可以撰寫值的運算式。 資料類型必須符合參數的資料類型。 欄位名稱不能用於參數的運算式。 如需範例，請參閱[常用的篩選 &#40;報表產生器及 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)。  
   
@@ -66,11 +65,11 @@ ms.locfileid: "56296226"
   
 ### <a name="to-remove-the-available-values-for-a-report-parameter"></a>移除報表參數的可用值  
   
-1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]。 **[報表參數]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格中，展開 [參數] 節點。 以滑鼠右鍵按一下參數，然後按一下 [參數屬性]  。 **[報表參數]** 對話方塊隨即開啟。  
   
-2.  按一下 **[可用的值]**。  
+2.  按一下 **[可用的值]** 。  
   
-3.  在 **[選取下列其中一個選項]** 中，按一下 **[無]**。  
+3.  在 **[選取下列其中一個選項]** 中，按一下 **[無]** 。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -82,7 +81,7 @@ ms.locfileid: "56296226"
  [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [為報表參數加入、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

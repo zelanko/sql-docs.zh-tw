@@ -23,14 +23,18 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4bad04ba6970b578c8dd0faa99f9860bd346408f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5db0f81b46e825201c82e0b99a15604ba1acd154
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724737"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   元件開發人員可為元件提供自訂使用者介面，當編輯此元件時會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示此使用者介面。 實作自訂使用者介面會為您提供通知功能，讓您知道何時在資料流程工作中加入及刪除此元件，以及何時要求此元件的協助。  
   
  如果您並未針對元件提供自訂使用者介面，使用者仍然可以使用進階編輯器來設定此元件和它的自訂屬性。 您可以確保進階編輯器允許使用者適當地編輯自訂屬性值，其方式是在適當時使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 屬性。 如需詳細資訊，請參閱[資料流程元件的設計階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)中的＜建立自訂屬性＞。  

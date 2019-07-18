@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f44e82be9711ed118ab755f5f45359d6281642d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 38c4ccf19e42946506b274cdef2058726ccfe407
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768255"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>createBlob 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

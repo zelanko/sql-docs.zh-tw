@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 893068965ab4566b6f6e4f78e39141de9be2b6ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75bbf1c4d468a0d6c3872a220566d667b059a5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937490"
 ---
 # <a name="transaction-promotion"></a>交易升級
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

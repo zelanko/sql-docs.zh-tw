@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188177"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整個企業的作業
   如果您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以外對多伺服器作業定義做了變更，則您必須將變更公佈到下載清單，以便目標伺服器可以再次下載已更新的作業。 若要確保目標伺服器具有目前的作業定義，請在更新多伺服器作業後公佈 INSERT 指示，如下所示：  
@@ -40,7 +40,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_detach_schedule &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
+-   [sp_detach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
     > [!NOTE]  
     >  在您呼叫 **sp_update_job** 或 **sp_delete_job** 之後，不需要呼叫 **sp_post_msx_operation**，因為這些預存程序會自動將所需的變更傳送到下載清單。  

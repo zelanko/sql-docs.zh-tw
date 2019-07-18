@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63254511"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>第 6 課：執行 RDL 結構描述應用程式 (VB-C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供兩種從整合式開發環境 (IDE) 建立與執行主控台應用程式的方法：  

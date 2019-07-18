@@ -13,14 +13,18 @@ ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e0919a2ec47d6b7910a2ddc753dd0fca613c8b57
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48d57c46be91d72973e58caf240d9c9c230bae2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273735"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726398"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 來源編輯器 (錯誤輸出頁面)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[SAP BW 來源編輯器]** 的 **[錯誤輸出]** 頁面可以選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 來源元件，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)。  
@@ -35,7 +39,7 @@ ms.locfileid: "58273735"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[錯誤輸出]** 開啟編輯器的 **[錯誤輸出]** 頁面。  
   
@@ -48,7 +52,7 @@ ms.locfileid: "58273735"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [SAP BW 來源編輯器] 對話方塊之 [資料行] 頁面上所選取的外部 (來源) 資料行。 如需此對話方塊的詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
+ 檢視您在 [SAP BW 來源編輯器]  對話方塊之 [資料行]  頁面上所選取的外部 (來源) 資料行。 如需此對話方塊的詳細資訊，請參閱 [SAP BW 來源編輯器 &#40;資料行頁面&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
   
  **錯誤**  
  指定 SAP BW 來源元件應該在發生錯誤時採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 65e057224a8456f893b38e106e6b7f75d03d237a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483228"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>建立 Web 應用程式對話方塊 (Master Data Services 組態管理員)
-  使用 [建立 Web 應用程式] 對話方塊可建立 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個 Web 應用程式會建立在您於 [Web 組態] 頁面上所選取的網站中。  
+  使用 [建立 Web 應用程式]  對話方塊可建立 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個 Web 應用程式會建立在您於 [Web 組態]  頁面上所選取的網站中。  
   
 ## <a name="web-application"></a>Web 應用程式  
  Web 伺服器會針對檔案系統中， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 資料夾內的這個 Web 應用程式提供內容。 這個位置指定在安裝期間，而且預設路徑是*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication。  

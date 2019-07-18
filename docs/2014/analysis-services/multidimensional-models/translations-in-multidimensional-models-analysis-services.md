@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
@@ -13,36 +12,36 @@ ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072737"
 ---
 # <a name="translations-in-multidimensional-models"></a>多維度模型中的翻譯
   多語言支援[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]透過翻譯來完成。 翻譯包含可以使用多種語言呈現之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的語言識別碼和屬性繫結。 例如，您可以定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的翻譯，以指定的語言來呈現該資料庫的標題和描述。 如需有關翻譯的詳細資訊，請參閱[Cube 翻譯](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  
   
 ## <a name="defining-translations"></a>定義翻譯  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義翻譯，方法是針對要翻譯的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用適當的設計師。 定義翻譯會建立`Translation`適當相關聯的物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]具有指定的明確常值，以指定的語言，相關聯的屬性物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義翻譯，方法是針對要翻譯的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用適當的設計師。 定義翻譯會建立 `Translation` 物件，並與適當的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件相關聯，其中會以指定的語言和指定的明確常值，來設定相關聯之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的屬性。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的下列物件和屬性有與其相關聯的翻譯：  
   
 |Object|屬性|設計師|  
 |------------|----------------|--------------|  
-|[資料庫]|`Caption`, `Description`|[一般&#40;資料庫設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
-|Cube|`Caption`, `Description`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|[資料庫]|`Caption`、 `Description`|[一般&#40;資料庫設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
+|Cube|`Caption`、 `Description`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |量值群組|`Caption`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|[量值]|`Caption`, `DisplayFolder`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|[量值]|`Caption`、 `DisplayFolder`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Cube 維度|`Caption`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Perspective|`Caption`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|關鍵效能指標 (KPI)|`Caption`、 `Description`、 `DisplayFolder`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|關鍵效能指標 (KPI)|`Caption`, `Description`, `DisplayFolder`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |動作|`Caption`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |命名集|`Caption`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |「導出成員」|`Caption`|[翻譯&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|資料庫維度|`Caption`, `AttributeAllMember`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption``CaptionColumn` <sup>1</sup>， `AttributeHierarchyDisplayFolder`， `NamingTemplate`， `MembersWithDataCaption`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|階層|`Caption`, `AllMemberName`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|資料庫維度|`Caption`、 `AttributeAllMember`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|屬性|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|階層|`Caption`、 `AllMemberName`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |層級|`Caption`|[翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
  <sup>1</sup> `CaptionColumn`屬性的屬性可以繫結至資料來源檢視中的資料行，而且可以使用指定的執行個體，與其他翻譯不同的 Windows 定序。  
@@ -79,6 +78,6 @@ ms.locfileid: "48218938"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 多維度的全球化案例](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [語言和定序&#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [語言和定序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   
   

@@ -2,21 +2,21 @@
 title: 效能、快照集、快取 (Reporting Services) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 35d961f2ab9714dc1841d210219510368d1fc0ca
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581483"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>效能、快照、快取 (Reporting Services)
   報表伺服器的效能會受到一些因素組合的影響，包括硬體、存取報表的並行使用者數目、報表中的資料量，以及輸出格式。 若要了解安裝特有的效能因素以及哪些補救措施可產生所需的結果，您必須取得基準資料並執行測試。 如需有關工具和指導方針的詳細資訊，請參閱下列 MSDN 出版品：＜ [Reporting Services 效能最佳化](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) ＞和＜ [在 SQL Server 2005 Reporting Services 報表伺服器上使用 Visual Studio 2005 執行負載測試](https://go.microsoft.com/fwlink/?LinkID=77519)＞。  

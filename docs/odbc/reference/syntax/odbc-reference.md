@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a7412e42032900c24e90cffdf74abb2caac9842
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036352"
 ---
 # <a name="odbc-reference"></a>ODBC 參考
 下列主題包含的語法和所有的 ODBC 函式的語意資訊。  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62889832"
 ---
 # <a name="performance-counters"></a>效能計數器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝一組您可以用於監視資料流程引擎效能的效能計數器。 例如,，您可以監看 "Buffers spooled" 計數器以判斷是否要在封裝執行時，暫時將資料緩衝區寫入到磁碟中。 這種交換會降低效能，並指出電腦的記憶體不足。  

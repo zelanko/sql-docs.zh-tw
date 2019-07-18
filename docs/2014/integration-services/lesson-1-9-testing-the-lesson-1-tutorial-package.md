@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767603"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步驟 9：測試第 1 課的教學課程封裝
   在這一課，您完成了下列工作：  
@@ -41,11 +41,11 @@ ms.locfileid: "58391266"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>若要執行第 1 課的教學課程封裝  
   
-1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
      封裝隨即執行，讓 1097 個資料列順利加入 **AdventureWorksDW2012** 的 **FactCurrency**事實資料表中。  
   
-2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 ## <a name="next-lesson"></a>下一課  
  [第 2 課：加入迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  

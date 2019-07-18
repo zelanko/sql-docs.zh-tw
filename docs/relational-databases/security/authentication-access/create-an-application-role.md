@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ed869ccfbeb745229ce1bbf2780ce6beb7e12e2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539735"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579887"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "52539735"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目建立應用程式角色：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52539735"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -59,20 +59,22 @@ ms.locfileid: "52539735"
   
 3.  展開 **[角色]** 資料夾。  
   
-4.  以滑鼠右鍵按一下 [應用程式角色] 資料夾，然後選取 [新增應用程式角色]。  
+4.  以滑鼠右鍵按一下 [應用程式角色]  資料夾，然後選取 [新增應用程式角色]  。  
   
-5.  在 [應用程式角色 - 新增] 對話方塊，於 [一般] 頁面上的 [角色名稱] 方塊中輸入新應用程式角色的名稱。  
+5.  在 [應用程式角色 - 新增]  對話方塊，於 [一般]  頁面上的 [角色名稱]  方塊中輸入新應用程式角色的名稱。  
   
-6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [尋找結構描述] 對話方塊。  
+6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)** ，開啟 [尋找結構描述]  對話方塊。  
   
 7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 **[確認密碼]** 方塊中重新輸入該密碼。  
   
 8.  在 **[此角色擁有的結構描述]** 底下，選取或檢視此角色將擁有的結構描述。 結構描述僅能由一個結構描述或角色擁有。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="additional-options"></a>其他選項  
- [應用程式角色 - 新增] 對話方塊也在其他兩個頁面上提供選項：[安全性實體] 和 [擴充屬性]。  
+ [應用程式角色 - 新增]  對話方塊也在其他兩個頁面上提供選項：[安全性實體]  和 [擴充屬性]  。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   
@@ -84,9 +86,9 @@ ms.locfileid: "52539735"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

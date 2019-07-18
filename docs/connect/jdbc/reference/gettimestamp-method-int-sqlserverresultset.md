@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 286156070f62faa576eec11cb1f6d946420c7fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a404b80c855fa866f55114431dbb0e8fc2bb476e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778657"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>getTimestamp 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +46,8 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- GetTimestamp 方法 java.sql.ResultSet 介面中所指定這個 getTimestamp 方法。  
+## <a name="remarks"></a>備註  
+ 這個 getTimestamp 方法是由 java.sql.ResultSet 介面中的 getTimestamp 方法指定。  
   
  這個方法只會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 資料行中的值。  
   

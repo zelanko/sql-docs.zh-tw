@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898852"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 相容性： 層級 1  
+ ODBC API 相容性：層級 1  
   
  傳回 Visual FoxPro ODBC Driver 和連接控制代碼相關聯的資料來源的一般資訊*hdbc*。 下列清單顯示每個 Visual FoxPro ODBC 驅動程式所傳回的值*fInfoType*引數和傳回的值相關的註解。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47855416"
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE 傳回 SQL_BP_SCROLL。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  SQL_COLUMN_ALIAS 傳回 'Y'。  
   
  SQL_CONCAT_NULL_BEHAVIOR 傳回連接。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f700a50d182239bc8e083b316f883ac484c457a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e1bb88c38a93b3af11e34fbb48575eb791a05d93
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687749"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用聯結進行查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62842524"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>疑難排解 SQL Server 公用程式
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關所識別的資源健全狀況問題的緩和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]UCP，請參閱 <<c2> [ 疑難排解的 SQL Server 資源健全狀況&#40;SQL Server 公用程式&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。</c2>  
@@ -48,9 +48,9 @@ ms.locfileid: "53371060"
   
  簡化的錯誤訊息如下：  
   
- 命令執行已停止因為 Shell 變數 "ErrorActionPreference" 已設定為 停止:拒絕存取。  
+ 命令執行已停止因為 shell 變數"ErrorActionPreference"已設定為 停止：拒絕存取。  
   
- 錯誤：\<日期-時間 （MM/DD/YYYY hh: mm:） >:收集 CPU 屬性時攔截到例外狀況。  WMI 查詢可能已經失敗。  警告。  
+ 錯誤：\<日期-時間 （MM/DD/YYYY hh: mm:） >:收集 cpu 屬性時攔截的例外狀況。  WMI 查詢可能已經失敗。  警告。  
   
  若要解決這個問題，請確認下列組態設定：  
   
@@ -96,7 +96,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   WMI 驗證失敗或不受支援。 如需詳細資訊，請參閱本主題稍早的＜WMI 驗證失敗＞一節。  
   
--   重新整理受管理的執行個體清單檢視中的資料，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式視點中的資料不會自動重新整理。 若要重新整理資料，請以滑鼠右鍵按一下 **[公用程式總管]** 導覽窗格中的 **[受管理的執行個體]** 節點，然後選取 **[重新整理]**，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 **[重新整理]**。 請注意，當使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之後，最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。  
+-   重新整理受管理的執行個體清單檢視中的資料，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式視點中的資料不會自動重新整理。 若要重新整理資料，請以滑鼠右鍵按一下 **[公用程式總管]** 導覽窗格中的 **[受管理的執行個體]** 節點，然後選取 **[重新整理]** ，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 **[重新整理]** 。 請注意，當使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之後，最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。  
   
 -   使用 SQL Server 組態管理員可確認 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體是否在執行中。  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   您應該啟動 UCP 上的 SQL Server Browser 服務，並將它設定為自動啟動。 如果您的組織阻止使用 SQL Server Browser 服務，請使用下列步驟讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的受管理的執行個體連接到 UCP：  
   
-    1.  在 Windows 工作列上的受管理的執行個體上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，按一下**開始**，然後按一下 **執行...**.  
+    1.  在 Windows 工作列上的受管理的執行個體上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，按一下**開始**，然後按一下 **執行...** .  
   
-    2.  在提供的空間內輸入 "cliconfg.exe"，然後按一下 **[確定]**。  
+    2.  在提供的空間內輸入 "cliconfg.exe"，然後按一下 **[確定]** 。  
   
-    3.  如果系統允許 SQL 用戶端組態公用程式 EXE 啟動，請按一下 **[繼續]**。  
+    3.  如果系統允許 SQL 用戶端組態公用程式 EXE 啟動，請按一下 **[繼續]** 。  
   
-    4.  在  **SQL Server 用戶端網路公用程式**對話方塊中，選取**別名**索引標籤，然後按一下 **加入...**.  
+    4.  在  **SQL Server 用戶端網路公用程式**對話方塊中，選取**別名**索引標籤，然後按一下 **加入...** .  
   
     5.  在 **[加入網路程式庫組態]** 對話方塊中：  
   
@@ -154,13 +154,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   如果在 Windows Server 2003 電腦上主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務帳戶必須屬於效能監視器使用者安全性群組或本機系統管理員群組。 否則，資料收集將會失敗，並產生拒絕存取錯誤。 若要將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務帳戶加入到效能監視器使用者安全性群組，請使用以下步驟：  
   
-    1.  開啟 **[電腦管理]**，然後展開 **[本機使用者和群組]**，再展開 **[群組]**。  
+    1.  開啟 **[電腦管理]** ，然後展開 **[本機使用者和群組]** ，再展開 **[群組]** 。  
   
-    2.  以滑鼠右鍵按一下 **[效能監視器使用者]** ，然後選取 **[加入群組]**。  
+    2.  以滑鼠右鍵按一下 **[效能監視器使用者]** ，然後選取 **[加入群組]** 。  
   
-    3.  按一下 **[加入]**。  
+    3.  按一下 **[加入]** 。  
   
-    4.  輸入用來執行 SQL Server Agent 服務的帳戶，然後按一下 **[確定]**。  
+    4.  輸入用來執行 SQL Server Agent 服務的帳戶，然後按一下 **[確定]** 。  
   
     5.  如果將使用者加入至這個群組之前，已經使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務。  
   

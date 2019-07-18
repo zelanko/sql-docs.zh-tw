@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STStartPoint (geometry Data Type)
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ff24ccb799c4a0e4b199399a58c1df41c8a4c4bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bf1d079fec6b825ef3ca28e85b17d6880a305d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938229"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47629096"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- 開放地理空間協會 (OGC) 類型：**Point**  
+ 開放式地理空間協會 (OGC) 類型：**點**  
   
 ## <a name="remarks"></a>Remarks  
  `STStartPoint()` 等同於 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1)。  

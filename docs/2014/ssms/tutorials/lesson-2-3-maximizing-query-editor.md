@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63222525"
 ---
 # <a name="maximizing-query-editor"></a>將查詢編輯器最大化
   程式設計人員常常會問：「我要怎麼樣才能有更多空間來撰寫程式碼？」 答案是有兩種方式，都很簡單：將 [查詢編輯器] 視窗最大化以及隱藏未使用的工具視窗。  
@@ -36,9 +36,9 @@ ms.locfileid: "48105928"
   
 1.  按一下 [查詢編輯器] 視窗中的任何位置。  
   
-2.  在 [視窗] 功能表上，按一下 [自動全部隱藏]。  
+2.  在 [視窗]  功能表上，按一下 [自動全部隱藏]  。  
   
-3.  若要還原工具視窗，請開啟每個工具，然後按一下視窗的 [自動隱藏] 按鈕，將它固定成開啟狀態。  
+3.  若要還原工具視窗，請開啟每個工具，然後按一下視窗的 [自動隱藏]  按鈕，將它固定成開啟狀態。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [使用註解](lesson-2-4-using-comments.md)  

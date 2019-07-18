@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sql:max-depth
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013661"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 來指定遞迴關聯性的深度
   在關聯式資料庫中，當某份資料表與本身具有關聯性時，它就稱為遞迴關聯性。 例如，在監督者-被監督者的關聯性中，儲存員工記錄的資料表會與本身具有關聯。 在此情況下，員工資料表在關聯性的一端扮演監督者的角色，而同一份資料表在另一端則扮演被監督者的角色。  
@@ -59,7 +59,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  在這個片段中，員工 5 會向員工 4 報告、員工 4 會向員工 3 報告，而員工 3 和 2 會向員工 1 報告。  
   
- 若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 結構描述會描述 **\<Emp >** 屬於 EmployeeType，其中包含類型的項目 **\<Emp >** 相同 EmployeeType 類型的子元素。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，會使用結構描述 **\<sql: relationship >** 來描述監督者與被監督者之間的父子式關聯性。 請注意，在這 **\<sql: relationship >**，Emp 是父代和子資料表。  
+ 若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 結構描述會描述 **\<Emp >** 屬於 EmployeeType，其中包含類型的項目 **\<Emp >** 相同 EmployeeType 類型的子元素。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，會使用結構描述 **\<sql: relationship >** 來描述監督者與被監督者之間的父子式關聯性。 請注意，在這 **\<sql: relationship >** ，Emp 是父代和子資料表。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  由於此關聯性是遞迴的，所以您需要某種方式來指定結構描述中的遞迴深度。 否則，結果將是無止盡的遞迴 (員工向員工報告，依此類推)。 `sql:max-depth` 註解可讓您指定遞迴的深度。 在這個範例中，若要指定 `sql:max-depth` 的值，您必須知道公司中管理階層的深度。  
   
 > [!NOTE]  
->  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工  (ReportsTo 為 NULL)。指定 `sql:limit-field` 而不指定 `sql:limit-value` (預設為 NULL) 註解即可完成此目標。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
+>  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工 （ReportsTo 為 NULL）。指定`sql:limit-field`而不指定`sql:limit-value`（預設為 NULL） 註釋可完成此作業。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
   
 > [!NOTE]  
 >  下列程序會使用 tempdb 資料庫。  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  您可以在結構描述中使用 `sql:max-depth` 註解，以便指定結構描述所描述之遞迴關聯性的遞迴深度。 值`sql:max-depth`註釋是正整數 （1 到 50 個），表示遞迴的數目：值為 1，停止遞迴`sql:max-depth`註解會指定; 值為 2 的停止處的項目從上一層樓遞迴`sql:max-depth`指定; 等等。  
   
 > [!NOTE]  
->  在基礎實作中，針對對應結構描述所指定的 XPath 查詢會轉換成 SELECT ...FOR XML EXPLICIT 查詢。 這個查詢會要求您指定有限的遞迴深度。 您針對 `sql:max-depth` 指定的值越高，產生的 FOR XML EXPLICIT 查詢就越大。 這可能會降低擷取速度。  
+>  在基礎實作中，針對對應結構描述指定 XPath 查詢會轉換成 SELECT...FOR XML EXPLICIT 查詢。 這個查詢會要求您指定有限的遞迴深度。 您針對 `sql:max-depth` 指定的值越高，產生的 FOR XML EXPLICIT 查詢就越大。 這可能會降低擷取速度。  
   
 > [!NOTE]  
 >  Updategram 和 XML 大量載入會忽略 max-depth 註解。 這表示，不論您針對 max-depth 指定的值為何，都會進行遞迴更新或插入。  
@@ -281,9 +281,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  若要測試這個結構描述，請遵循本主題前面針對「範例 A」所提供的步驟。  
   
 ### <a name="nonrecursive-elements"></a>非遞迴元素  
- 如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列結構描述中，  **\<Emp >** 元素所組成**\<常數 >** 子元素，其具有 **\<Emp >** 子項目。  
+ 如果您在結構描述中不會導致任何遞迴的元素上指定了 `sql:max-depth` 註解，系統就會忽略此註解。 在下列結構描述中，  **\<Emp >** 元素所組成 **\<常數 >** 子元素，其具有 **\<Emp >** 子項目。  
   
- 在這個結構描述中，`sql:max-depth`上所指定的註釋**\<常數 >** 項目會被忽略，因為沒有任何遞迴之間 **\<Emp >** 父系和**\<常數 >** 子項目。 但沒有之間的遞迴 **\<Emp >** 祖系及 **\<Emp >** 子系。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，`sql:max-depth`註釋所指定的上階 (**\<Emp >** 在監督員的角色) 的優先順序。  
+ 在這個結構描述中，`sql:max-depth`上所指定的註釋 **\<常數 >** 項目會被忽略，因為沒有任何遞迴之間 **\<Emp >** 父系和 **\<常數 >** 子項目。 但沒有之間的遞迴 **\<Emp >** 祖系及 **\<Emp >** 子系。 此結構描述會同時在這兩個項目上指定 `sql:max-depth` 註解。 因此，`sql:max-depth`註釋所指定的上階 ( **\<Emp >** 在監督員的角色) 的優先順序。  
   
 #### <a name="example-c"></a>範例 C  
   
@@ -327,11 +327,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  若要測試這個結構描述，請遵循本主題前面針對「範例 A」所提供的步驟。  
   
 ## <a name="complex-types-derived-by-restriction"></a>限制所衍生的複雜類型  
- 如果您擁有所衍生的複雜型別**\<限制 >**，對應的基底複雜類型的元素不能指定`sql:max-depth`註釋。 在這些情況下，您可以將 `sql:max-depth` 註解加入至衍生類型的元素。  
+ 如果您擁有所衍生的複雜型別 **\<限制 >** ，對應的基底複雜類型的元素不能指定`sql:max-depth`註釋。 在這些情況下，您可以將 `sql:max-depth` 註解加入至衍生類型的元素。  
   
- 另一方面，如果您擁有所衍生的複雜型別**\<擴充功能 >**，可以指定對應的基底複雜類型的項目`sql:max-depth`註釋。  
+ 另一方面，如果您擁有所衍生的複雜型別 **\<擴充功能 >** ，可以指定對應的基底複雜類型的項目`sql:max-depth`註釋。  
   
- 例如，下列 XSD 結構描述會產生錯誤，因為在基底類型上指定了 `sql:max-depth` 註解。 由衍生的類型不支援此註解**\<限制 >** 從另一個型別。 若要修正這個問題，您必須變更此結構描述並且在衍生類型的元素上指定 `sql:max-depth` 註解。  
+ 例如，下列 XSD 結構描述會產生錯誤，因為在基底類型上指定了 `sql:max-depth` 註解。 由衍生的類型不支援此註解 **\<限制 >** 從另一個型別。 若要修正這個問題，您必須變更此結構描述並且在衍生類型的元素上指定 `sql:max-depth` 註解。  
   
 #### <a name="example-d"></a>範例 D  
   
@@ -375,7 +375,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- 在此結構描述中，`sql:max-depth` 指定於 `CustomerBaseType` 複雜類型上。 結構描述也會指定**\<客戶 >** 類型的項目`CustomerType`，其係衍生自`CustomerBaseType`。 在這類結構描述上指定的 XPath 查詢將會產生錯誤，因為定義於限制基底類型中的元素不支援 `sql:max-depth`。  
+ 在此結構描述中，`sql:max-depth` 指定於 `CustomerBaseType` 複雜類型上。 結構描述也會指定 **\<客戶 >** 類型的項目`CustomerType`，其係衍生自`CustomerBaseType`。 在這類結構描述上指定的 XPath 查詢將會產生錯誤，因為定義於限制基底類型中的元素不支援 `sql:max-depth`。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>具有深度階層的結構描述  
  您可能會擁有一個包括深度階層的結構描述，其中某個元素包含子元素，而後者又包含其他子元素，依此類推。 如果在這類結構描述中指定的 `sql:max-depth` 註解產生了包含超過 500 個層級之階層的 XML 文件 (最上層元素位於第 1 層，其子系位於第 2 層，依此類推)，系統就會傳回錯誤。  

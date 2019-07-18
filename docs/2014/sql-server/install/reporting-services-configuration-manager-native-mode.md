@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -16,12 +15,12 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092655"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。  
@@ -39,10 +38,10 @@ ms.locfileid: "48209788"
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  描述如何設定用來存取報表伺服器 Web 服務和報表管理員的 URL。  
   
- [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  描述如何建立儲存伺服器中繼資料和物件所需的報表伺服器資料庫。  
   
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  描述如何修改報表伺服器用來連接到報表伺服器資料庫的連接字串。  
   
  [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
@@ -61,7 +60,7 @@ ms.locfileid: "48209788"
  提供一般工作的逐步指示。  
   
  [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- 提供說明主題中的頁面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具。  
+ 提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中頁面的說明主題。  
   
  **本主題內容：**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48209788"
   
 -   設定報表伺服器服務帳戶。 此帳戶一開始是在安裝過程中設定，但是如果您更新密碼或想要使用其他帳戶，則可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來修改。  
   
--   建立並設定 URL。 報表伺服器和報表管理員是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]透過 Url 存取的應用程式。 報表伺服器 URL 可存取報表伺服器的 SOAP 端點。 報表管理員 URL 是用來開啟報表管理員。 您可以針對每個應用程式設定單一 URL 或多個 URL。  
+-   建立並設定 URL。 報表伺服器與報表管理員是透過 URL 存取的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式。 報表伺服器 URL 可存取報表伺服器的 SOAP 端點。 報表管理員 URL 是用來開啟報表管理員。 您可以針對每個應用程式設定單一 URL 或多個 URL。  
   
 -   建立和設定報表伺服器資料庫。 報表伺服器是需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫做為內部儲存的無狀態伺服器。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來建立及設定報表伺服器資料庫的連接。 您也可以選取已經包含您要使用之內容的現有報表伺服器資料庫。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48209788"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來啟用其他功能或修改預設值，並使用報表管理員來授與使用者對伺服器的存取權。  
   
 ##  <a name="bkmk_requirements"></a> 需求  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager 是特定版本。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員為特定版本所專用。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  
   
  若要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，您必須：  
   
@@ -113,13 +112,13 @@ ms.locfileid: "48209788"
   
     -   在 Windows 的 [開始] 畫面上，輸入 **Reporting** ，然後從搜尋結果中選取 **[Reporting Services 組態管理員]** 。  
   
-    -   按一下 **開始**，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後指向**組態工具**。  
+    -   按一下 **[開始]** ，然後依序指向 **[所有程式]** 和 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 **[組態工具]** 。  
   
-         如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]而非[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]以開啟 組態工具，適用於[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]伺服器元件。  
+         如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向 [ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ] 而不是 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ]，以開啟 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 伺服器元件的組態工具。  
   
-         按一下 **[Reporting Services 組態管理員]**。  
+         按一下 **[Reporting Services 組態管理員]** 。  
   
-2.  **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 按一下 **[連接]**。  
+2.  **[Reporting Services 組態連接]** 對話方塊隨即出現，可讓您選取所要設定的報表伺服器執行個體。 按一下 **[連接]** 。  
   
 3.  在 **[伺服器名稱]** 中，指定安裝報表伺服器執行個體的電腦名稱。 預設會出現本機電腦的名稱，但是如果您想要連接到遠端電腦上所安裝的報表伺服器，也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
@@ -127,12 +126,12 @@ ms.locfileid: "48209788"
   
 5.  在 **Report Server 在stance**中，選取您要設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 只有這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的報表伺服器執行個體會顯示在清單中。 您不能設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
-6.  按一下 **[連接]**。  
+6.  按一下 **[連接]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)   
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

@@ -230,63 +230,63 @@
     - name: 第 1 課：建立專案和基本封裝
       href: lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
-        - name: 步驟 1：建立新的 Integration Services 專案
+        - name: '步驟 1:建立新的 Integration Services 專案'
           href: lesson-1-1-creating-a-new-integration-services-project.md
-        - name: 步驟 2：加入和設定一般檔案連接管理員
+        - name: '步驟 2:新增和設定一般檔案連線管理員'
           href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
-        - name: 步驟 3：加入和設定 OLE DB 連接管理員
+        - name: 步驟 3：新增和設定 OLE DB 連線管理員
           href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
-        - name: 步驟 4：將資料流程工作加入至封裝中
+        - name: 步驟 4：將資料流程工作新增至封裝
           href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
-        - name: 步驟 5：加入和設定一般檔案來源
+        - name: 步驟 5：新增和設定一般檔案來源
           href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
-        - name: 步驟 6：加入及設定查閱轉換
+        - name: 步驟 6：新增和設定查閱轉換
           href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
-        - name: 步驟 7：加入及設定 OLE DB 目的地
+        - name: 步驟 7：新增和設定 OLE DB 目的地
           href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
         - name: 步驟 8：使第 1 課的封裝更容易了解
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
         - name: 步驟 9：測試第 1 課的教學課程封裝
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: 第 2 課：加入迴圈
+    - name: 第 2 課：新增迴圈
       href: lesson-2-adding-looping-with-ssis.md
       items:
-        - name: 步驟 1：複製第 1 課的套件
+        - name: '步驟 1:複製第 1 課的封裝'
           href: lesson-2-1-copying-the-lesson-1-package.md
-        - name: 步驟 2：加入和設定 Foreach 迴圈容器
+        - name: '步驟 2:新增和設定 Foreach 迴圈容器'
           href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
-        - name: 步驟 3：修改一般檔案連接管理員
+        - name: 步驟 3：修改一般檔案連線管理員
           href: lesson-2-3-modifying-the-flat-file-connection-manager.md
         - name: 步驟 4：測試第 2 課的教學課程封裝
           href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
-    - name: 第 3 課：加入記錄
+    - name: 第 3 課：新增記錄
       href: lesson-3-add-logging-with-ssis.md
       items:
-        - name: 步驟 1：複製第 2 課的套件
+        - name: '步驟 1:複製第 2 課的封裝'
           href: lesson-3-1-copying-the-lesson-2-package.md
-        - name: 步驟 2：加入和設定記錄
+        - name: '步驟 2:新增和設定記錄'
           href: lesson-3-2-adding-and-configuring-logging.md
         - name: 步驟 3：測試第 3 課的教學課程封裝
           href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: 「課程 4：加入錯誤流程重新導向
+    - name: 第 4 課：新增錯誤流程重新導向
       href: lesson-4-add-error-flow-redirection-with-ssis.md
       items:
-        - name: 步驟 1：複製第 3 課的套件
+        - name: '步驟 1:複製第 3 課的封裝'
           href: lesson-4-1-copying-the-lesson-3-package.md
-        - name: 步驟 2：建立損毀檔案
+        - name: '步驟 2:建立損毀的檔案'
           href: lesson-4-2-creating-a-corrupted-file.md
-        - name: 步驟 3：加入錯誤流程重新導向
+        - name: 步驟 3：新增錯誤流程重新導向
           href: lesson-4-3-adding-error-flow-redirection.md
-        - name: 步驟 4：加入一般檔案目的地
+        - name: 步驟 4：新增一般檔案目的地
           href: lesson-4-4-adding-a-flat-file-destination.md
         - name: 步驟 5：測試第 4 課的教學課程封裝
           href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
-    - name: 第 5 課：加入封裝部署模型的封裝組態
+    - name: 第 5 課：新增封裝部署模型的封裝組態
       href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
-        - name: 步驟 1：複製第 4 課的套件
+        - name: '步驟 1:複製第 4 課的封裝'
           href: lesson-5-1-copying-the-lesson-4-package.md
-        - name: 步驟 2：啟用和設定封裝組態
+        - name: '步驟 2:啟用和設定封裝組態'
           href: lesson-5-2-enabling-and-configuring-package-configurations.md
         - name: 步驟 3：修改 Directory 屬性組態值
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
@@ -295,43 +295,43 @@
     - name: 第 6 課：搭配專案部署模型使用參數
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
-        - name: 步驟 1：複製第 5 課的封裝
+        - name: '步驟 1:複製第 5 課的封裝'
           href: lesson-6-1-copying-the-lesson-5-package.md
-        - name: 步驟 2：將專案轉換成專案部署模型
+        - name: '步驟 2:將專案轉換成專案部署模型'
           href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
-        - name: 步驟 3：測試第 6 課的套件
+        - name: 步驟 3：測試第 6 課的封裝
           href: lesson-6-3-testing-the-lesson-6-package.md
-        - name: 步驟 4：部署第 6 課的套件
+        - name: 步驟 4：部署第 6 課的封裝
           href: lesson-6-4-deploying-the-lesson-6-package.md
 - name: SSIS 教學課程：部署封裝
   href: deploy-packages-with-ssis.md
   items:
-    - name: 第 1 課：準備建立部署配套
+    - name: 第 1 課：準備建立部署套件組合
       href: lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
-        - name: 步驟 1：建立工作資料夾和環境變數
+        - name: '步驟 1:建立工作資料夾和環境變數'
           href: lesson-1-1-creating-working-folders-and-environment-variables.md
-        - name: 步驟 2：建立部署專案
+        - name: '步驟 2:建立部署專案'
           href: lesson-1-2-creating-the-deployment-project.md
-        - name: 步驟 3：加入封裝和其他檔案
+        - name: 步驟 3：新增封裝和其他檔案
           href: lesson-1-3-adding-packages-and-other-files.md
-        - name: 步驟 4：加入封裝組態
+        - name: 步驟 4：新增封裝組態
           href: lesson-1-4-adding-package-configurations.md
         - name: 步驟 5：測試更新的封裝
           href: lesson-1-5-testing-the-updated-packages.md
-    - name: 第 2 課：建立部署配套
+    - name: 第 2 課：建立部署套件組合
       href: lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
-        - name: 步驟 1：建立部署公用程式
+        - name: '步驟 1:建置部署公用程式'
           href: lesson-2-1-building-the-deployment-utility.md
-        - name: 步驟 2：確認部署配套
+        - name: '步驟 2:確認部署套件組合'
           href: lesson-2-2-verifying-the-deployment-bundle.md
     - name: 第 3 課：安裝封裝
       href: lesson-3-install-ssis-package.md
       items:
-        - name: 步驟 1：複製部署配套
+        - name: '步驟 1:複製部署套件組合'
           href: lesson-3-1-copying-the-deployment-bundle.md
-        - name: 步驟 2：執行封裝安裝精靈
+        - name: '步驟 2:執行封裝安裝精靈'
           href: lesson-3-2-running-the-package-installation-wizard.md
         - name: 步驟 3：測試部署的封裝
           href: lesson-3-3-testing-the-deployed-packages.md

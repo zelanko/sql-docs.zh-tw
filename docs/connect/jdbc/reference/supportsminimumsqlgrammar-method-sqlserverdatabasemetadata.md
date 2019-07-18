@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce3e64aa44041ffea28bd96d822d4c77e9967577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1630ef0bebfef447074b6ec8c10305638497cb5b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763673"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764230"
 ---
 # <a name="supportsminimumsqlgrammar-method-sqlserverdatabasemetadata"></a>supportsMinimumSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

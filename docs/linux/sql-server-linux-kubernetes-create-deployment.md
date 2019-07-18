@@ -3,19 +3,18 @@ title: 建立的 SQL Server Always On 可用性群組在 Kubernetes 上部署指
 description: 這篇文章說明如何建立 SQL Server Always On 可用性群組在 Kubernetes 上部署指令碼
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000137"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立部署指令碼以 SQL Server Always On 可用性群組
 
@@ -64,7 +63,7 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 下列範例示範如何執行`deploy-ag.py`。
 
-### <a name="help"></a>說明
+### <a name="help"></a>Help
 
 ```cmd
 python ./deploy-ag.py --help

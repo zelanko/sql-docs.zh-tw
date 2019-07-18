@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015770"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
   如果您有現有的 SQL 追蹤指令碼想要轉換成「擴充事件」工作階段，您可以使用本主題的程序建立同等的「擴充事件」工作階段。 您可以藉由使用 trace_xe_action_map 和 trace_xe_event_map 系統資料表中的資訊來收集執行轉換所必須擁有的資訊。  
@@ -79,7 +79,7 @@ ms.locfileid: "52766930"
   
     2.  針對您在上一個步驟所識別的每個 SQL 追蹤事件類別，尋找同等的「擴充事件」事件名稱 (如果您不確定同等的事件名稱，請使用 [檢視同等於 SQL 追蹤事件類別的擴充事件項目](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主題中的查詢)。  
   
-    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>。  
+    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>  。  
   
         ```sql
         SELECT xp.name package_name, xe.name event_name  

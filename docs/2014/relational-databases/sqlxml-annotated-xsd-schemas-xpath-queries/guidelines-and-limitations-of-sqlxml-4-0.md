@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffe5c84f4ac76fe339735b50843185d122b1cb70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dec69250a728edbb61805528320670908a0671bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012723"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的指導方針和限制
   當您使用 SQLXML 4.0 時，請記住以下事項：  

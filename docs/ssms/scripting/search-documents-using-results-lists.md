@@ -12,16 +12,16 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b23df8108ef95822447e6da22ad944c465b11d06
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d5fb32bd0d82b8031bfb77d94751793736a8aa75
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642882"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690109"
 ---
 # <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "51642882"
   
 ### <a name="to-search-in-multiple-files"></a>在多個檔案中搜尋  
   
-1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中尋找]**。  
+1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中尋找]** 。  
   
 2.  在 **[尋找目標]** 文字方塊中，輸入要搜尋的文字。  
   
-3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]** 或 **[整個方案]**，或輸入目錄路徑。  
+3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]** 、 **[目前的專案]** 或 **[整個方案]** ，或輸入目錄路徑。  
   
-4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 請利用 \*.\* 來搜尋 [查詢] 下拉式清單列出之目錄中的所有檔案。  
+4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 請利用 \*.\* 來搜尋 [查詢]  下拉式清單列出之目錄中的所有檔案。  
   
 5.  選取其餘搜尋選項來改進搜尋的精確度。  
   
 6.  按一下 **[尋找]** 來開始搜尋。  
   
- 依預設，搜尋的相符項目會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽搜尋相符項目。 若要在新視窗中檢視搜尋結果，請選取 **[顯示在 [尋找結果 2] 視窗]**。  
+ 依預設，搜尋的相符項目會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽搜尋相符項目。 若要在新視窗中檢視搜尋結果，請選取 **[顯示在 [尋找結果 2] 視窗]** 。  
   
 #### <a name="to-replace-across-multiple-files-or-folders"></a>跨多個檔案或資料夾取代  
   
-1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中取代]**。  
+1.  在 **[編輯]** 功能表上，指向 **[尋找和取代]** ，再按一下 **[檔案中取代]** 。  
   
 2.  在 **[尋找目標]** 文字方塊中，輸入要搜尋的文字。  
   
 3.  在 **[取代成]** 方塊中，輸入用來取代搜尋文字的文字。  
   
-4.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]** 或 **[整個方案]**，或輸入目錄路徑。  
+4.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]** 、 **[目前的專案]** 或 **[整個方案]** ，或輸入目錄路徑。  
   
 5.  按一下 **[取代]** 來利用 **[取代成]** 方塊中的文字取代目前的搜尋相符項目。 您可以按一下 **[尋找下一個]** 來略過單一相符項目，或按一下 **[略過檔案]** 來略過整個檔案。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_plan & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135181"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sys.dm_exec_query_plan(plan_handle)
   
 ## <a name="arguments"></a>引數  
 *plan_handle*  
-可唯一識別查詢執行計畫，該批次已經執行的語彙基元且其計畫位於計畫快取，或正在執行。 *plan_handle*已**varbinary(64)**。   
+可唯一識別查詢執行計畫，該批次已經執行的語彙基元且其計畫位於計畫快取，或正在執行。 *plan_handle*已**varbinary(64)** 。   
 
 *Plan_handle*可以從下列動態管理物件取得：
   
@@ -55,7 +54,7 @@ sys.dm_exec_query_plan(plan_handle)
 
 -   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -64,7 +63,7 @@ sys.dm_exec_query_plan(plan_handle)
 |**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
 |**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 針對隨選和備妥的批次，這個資料行是**null**。<br /><br /> 資料行可為 Null。|  
 |**number**|**smallint**|編號預存程序整數。 例如，群組的程序**訂單**可能名為應用程式**orderproc; 1**， **orderproc; 2**，依此類推。 針對隨選和備妥的批次，這個資料行是**null**。<br /><br /> 資料行可為 Null。|  
-|**encrypted**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
+|**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
 |**query_plan**|**xml**|包含指定的查詢執行計畫的編譯時間執行程序表表示法*plan_handle*。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
   
 ## <a name="remarks"></a>備註  
@@ -78,7 +77,9 @@ sys.dm_exec_query_plan(plan_handle)
   
  當隨選查詢使用簡單或強制參數化**query_plan**資料行會包含陳述式文字並不實際查詢計劃。 若要傳回的查詢計劃，請呼叫**sys.dm_exec_query_plan**準備參數化查詢的計畫控制代碼。 您可以判斷查詢是否已藉由參考參數化**sql**資料行[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)檢視或文字資料行[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動態管理檢視。  
   
- 基於中允許的巢狀層級數目的限制**xml**資料類型**sys.dm_exec_query_plan**無法傳回達到或超過 128 個層級的巢狀項目查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行會傳回 NULL。 您可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動態管理函數，以文字格式傳回查詢計畫的輸出。  
+> [!NOTE] 
+> 基於中允許的巢狀層級數目的限制**xml**資料類型**sys.dm_exec_query_plan**無法傳回達到或超過 128 個層級的巢狀項目查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行會傳回 NULL。   
+> 您可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動態管理函數，以文字格式傳回查詢計畫的輸出。  
   
 ## <a name="permissions"></a>Permissions  
  若要執行**sys.dm_exec_query_plan**，使用者必須是成員**sysadmin**固定伺服器角色，或有`VIEW SERVER STATE`伺服器的權限。  

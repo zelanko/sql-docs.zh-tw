@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a08a594694e9aac30620837f2a324da5a4d6fe4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012520"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR 事件類別
   每當 Microsoft SQL Server 中的使用者對伺服器物件權限發出 GRANT、REVOKE 或 DENY 時，就會發生 **Audit Server Object GDR** 事件類別。  

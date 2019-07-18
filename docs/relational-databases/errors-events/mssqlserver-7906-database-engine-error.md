@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6866cf3674282b00ddc5ada1b389cbb7a1cfd946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694519"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47697666"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7906|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|訊息文字|資料庫錯誤: 檔案 'FILE' 不是有效的 Filestream 檔案。|  
+|訊息文字|資料庫錯誤:檔案 'FILE' 不是有效的 Filestream 檔案。|  
   
 ## <a name="explanation"></a>說明  
 除了某些特殊的檔案 (例如 'filestream.hdr') 以外，您應該不會直接在 Filestream 資料空間底下找到任何檔案。  

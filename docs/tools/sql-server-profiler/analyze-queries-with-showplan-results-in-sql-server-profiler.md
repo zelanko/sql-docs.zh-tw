@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca9bef932db98bc4bcfef6d0b9a8ca58249abd6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9fce4b6b1667c05ff9308e76b3c6569e6f7b49
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731550"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "47798536"
   
  若要從追蹤中擷取顯示計畫事件，可以使用下列其中一個方式來進行：  
   
--   在追蹤組態時，使用 [事件擷取設定] 索引標籤。請注意，必須先選取 [事件選取範圍] 索引標籤上的其中一個 Showplan 事件，此索引標籤才會顯示。  
+-   在追蹤組態時，使用 [事件擷取設定]  索引標籤。請注意，必須先選取 [事件選取範圍]  索引標籤上的其中一個 Showplan 事件，此索引標籤才會顯示。  
   
--   使用 [檔案] 功能表上的 [擷取 SQL Server 事件] 選項。  
+-   使用 [檔案]  功能表上的 [擷取 SQL Server 事件]  選項。  
   
--   您可以用滑鼠右鍵按一下個別事件，然後選擇 [擷取事件資料]，以擷取並儲存個別事件。  
+-   您可以用滑鼠右鍵按一下個別事件，然後選擇 [擷取事件資料]  ，以擷取並儲存個別事件。  
   
 ## <a name="showplan-events"></a>顯示計畫事件  
  下表列出並說明顯示計畫追蹤事件。  

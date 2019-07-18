@@ -10,15 +10,15 @@ helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483538"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
   集合是一組來自單一實體的分葉成員和合併成員。 當您不需要完整的階層，而且想要檢視成員的不同群組進行報告或分析時，或當您不需要建立分類時，請使用集合。  
@@ -36,7 +36,7 @@ ms.locfileid: "52792020"
 >  在您可以建立集合之前，實體必須啟用明確階層。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
   
 ## <a name="subscription-views-for-collections"></a>集合的訂閱檢視  
- 顯示集合的訂閱檢視有兩種。 [集合屬性] 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合] 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱 <<c0> [ 匯出的資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。</c0>  
+ 顯示集合的訂閱檢視有兩種。 [集合屬性]  格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合]  格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱 <<c0> [ 匯出的資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。</c0>  
   
  如果您為某個集合中的特定成員設定加權值，這些值則可以在相關的訂閱檢視中使用。  
   

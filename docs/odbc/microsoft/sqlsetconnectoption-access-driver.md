@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897789"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access 驅動程式)
 > [!NOTE]  
 >  本主題提供存取驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|Sqlfreestmt|註解|  
+|fOption|註解|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，此驅動程式無法防止更新，如果 SQL_ACCESS_MODE 設 SQL_MODE_READ_ONLY。|  
 |SQL_AUTOCOMMIT|使用 Microsoft Access 驅動程式時，SQL_AUTOCOMMIT 選項可能會設定為 SQL_AUTOCOMMIT_ON 或 SQL_AUTOCOMMIT_OFF，因為 Microsoft Access 驅動程式支援交易 [1]。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packageconfigurationorganizer.f1
@@ -15,12 +14,12 @@ ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa795467e603ff8758e76fff6a3cc7fea48e4c87
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056971"
 ---
 # <a name="package-configurations-organizer"></a>[封裝組態組合管理]
   使用 **[封裝組態組合管理]** 對話方塊，即可啟用封裝組態、檢視目前封裝的組態清單，以及指定載入組態的喜好順序。  
@@ -35,7 +34,7 @@ ms.locfileid: "58378635"
   
  封裝組態會在執行階段更新封裝物件的屬性值。 載入封裝時，組態值將會取代開發封裝時所設定的值。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援不同的組態類型。 例如，您可以使用包含多個組態的 XML 檔案，或是包含單一組態的環境變數。 如需相關資訊，請參閱 [Package Configurations](../../2014/integration-services/package-configurations.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟用封裝組態**  
  選取即可使用封裝的組態。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "58378635"
  重新執行封裝組態精靈來編輯現有的組態。  
   
  **移除**  
- 選取組態，然後按一下 [移除]。  
+ 選取組態，然後按一下 [移除]  。  
   
  **箭頭**  
  選取組態，然後使用向上和向下箭頭，即可將其在清單中向上移動或向下移動。 組態會依其出現在清單中的順序載入。  

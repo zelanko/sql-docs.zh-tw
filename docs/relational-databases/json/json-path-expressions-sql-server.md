@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afa7622b5d8b71949018091862a70bc638b48c80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c2dbfac4980252d42f9a1a9dbf8f6467b2f21b1c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025919"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583826"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,6 +42,8 @@ ms.locfileid: "56025919"
 1.  選擇性[路徑模式](#PATHMODE)，其值為 **lax** 或 **strict**。  
   
 2.  [路徑](#PATH) 本身。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="PATHMODE"></a> Path mode  
  在路徑運算式的開頭，指定關鍵字 **lax** 或 **strict**以選擇性地宣告路徑模式。 預設值是 **lax**。  

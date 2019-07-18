@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
@@ -15,15 +14,15 @@ ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab19949b3a05040285a11b6988614d34bf5f5ccf
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073544"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多維度模型方案部署
-  您完成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的開發之後，即可將資料庫部署至 Analysis Services 伺服器。 Analysis Services 提供六種可能的部署方法，可用來將資料庫移至測試伺服器或實際伺服器。 此處以優點的順序列出這些方法：AMO 自動化、XMLA、部署精靈、部署公用程式、同步處理精靈、備份與還原。  
+  您完成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的開發之後，即可將資料庫部署至 Analysis Services 伺服器。 Analysis Services 提供六種可能的部署方法，可用來將資料庫移至測試伺服器或實際伺服器。 優點的順序在這裡列出的方法：AMO 自動化、 XMLA、 部署精靈 」，部署公用程式，同步處理精靈、 備份和還原。  
   
  本主題包含下列各節：  
   
@@ -42,7 +41,7 @@ ms.locfileid: "50147433"
 |**部署精靈**|使用 [部署精靈]，即可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的 XMLA 輸出檔來部署專案的中繼資料至目的地伺服器。 使用 [部署精靈] 時，您可以直接從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 檔案進行部署，如同由專案建置的輸出目錄所建立的一樣。<br /><br /> 使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 的主要優點在於其便利性。 就像是您可以儲存 XMLA 指令碼以供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]稍後使用一樣，您也可以儲存 [部署精靈] 指令碼。 您可以透過部署公用程式，在命令提示字元處以互動方式執行 [部署精靈]。|[Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**部署公用程式**|部署公用程式可讓您在命令提示字元之下啟動 Analysis Services 部署引擎。|[使用部署公用程式的部署模型方案](deploy-model-solutions-with-the-deployment-utility.md)|  
 |**同步處理資料庫精靈**|使用 [同步處理資料庫精靈]，即可同步處理任何兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫之間的中繼資料和資料。<br /><br /> [同步處理精靈] 可以從來源伺服器，將資料和中繼資料複製到目的地伺服器。 如果目的地伺服器沒有您要部署的資料庫複本，則會將新資料庫複製到目的地伺服器。 如果目的地伺服器已經有相同資料庫的複本，則會更新目的地伺服器上的資料庫，以使用來源資料庫的中繼資料和其他資料。|[同步處理 Analysis Services 資料庫](synchronize-analysis-services-databases.md)|  
-|**備份與還原**|備份提供傳送 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫最簡單的方式。 從 [備份] 對話方塊，您可以設定選項的組態，並可隨後從對話方塊本身來執行備份。 或者，您可建立可依需求頻率來儲存和執行的指令碼。<br /><br /> 備份和還原不像其他部署方法一般常用，但卻是可在最小基礎結構需求內快速完成部署的方法。|[備份與還原 Analysis Services 資料庫](backup-and-restore-of-analysis-services-databases.md)|  
+|**備份與還原**|備份提供傳送 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫最簡單的方式。 從 [備份]  對話方塊，您可以設定選項的組態，並可隨後從對話方塊本身來執行備份。 或者，您可建立可依需求頻率來儲存和執行的指令碼。<br /><br /> 備份和還原不像其他部署方法一般常用，但卻是可在最小基礎結構需求內快速完成部署的方法。|[備份與還原 Analysis Services 資料庫](backup-and-restore-of-analysis-services-databases.md)|  
   
 ##  <a name="bkmk_considerations"></a> 部署考量因素  
  在部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案之前，請先考量這些問題中的哪些問題適用於您的解決方案，然後檢閱相關連結，以了解對付問題的方法：  

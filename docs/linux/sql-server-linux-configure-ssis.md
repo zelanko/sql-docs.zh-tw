@@ -1,21 +1,19 @@
 ---
-title: 在 Linux 上設定 SSIS 以 ssis conf |Microsoft Docs
+title: 在 Linux 上設定 SSIS 以 ssis conf
 description: 本文說明如何使用 ssis conf 公用程式在 Linux 上設定 SQL Server Integration Services (SSIS)。
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077527"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>在 Linux 上設定 SQL Server Integration Services 使用 ssis conf
 
@@ -27,7 +25,7 @@ ms.locfileid: "52412505"
 
 | 命令 | 描述 |
 |-------------|---------------------------------------------------------------------|
-| 設定版本 | 設定 SQL Server 的版本                                       |
+| set-edition | 設定 SQL Server 的版本                                       |
 | 遙測   | 啟用或停用 SQL Server Integration Services 遙測服務 |
 | 安裝程式       | 初始化和設定 Microsoft SQL Server Integration Services      |
 |||

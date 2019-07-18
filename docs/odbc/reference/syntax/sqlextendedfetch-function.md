@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ce4bd75b2a1ffac44b14c9906e669421d55888c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003075"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函式
 **合規性**  
@@ -39,7 +38,7 @@ ms.locfileid: "53204037"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLExtendedFetch(  
       SQLHSTMT         StatementHandle,  
@@ -53,7 +52,7 @@ SQLRETURN SQLExtendedFetch(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Sqlfetchscroll*  
+ *FetchOrientation*  
  [輸入]擷取的型別。 這是相同*Sqlfetchscroll*中**SQLFetchScroll**。  
   
  *FetchOffset*  

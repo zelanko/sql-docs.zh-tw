@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4f6244ee58619e48a1fb17b9eb803f013e2120b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013838"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的明確對應 (SQLXML 4.0)
   使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
@@ -58,7 +58,7 @@ ms.locfileid: "52798790"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 結構描述所組成**\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
+ 在此範例中，XSD 結構描述所組成 **\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
   
  `sql:relation`註解 maps **\<連絡人 >** 至 AdventureWorks 資料庫中的 Person.Contact 資料表的項目。 `sql:field`註解 maps  **\<FName >** FirstName 資料行的項目和 **\<LName >** 到 LastName 資料行的項目。  
   

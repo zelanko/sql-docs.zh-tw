@@ -15,16 +15,16 @@ helpviewer_keywords:
 - defecting target servers
 - multiple target server defections
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1098b5a3792bf1327d15964f39567c97f4a56900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9680c9e956964fcc8aa4f4ffb94dd345bda6288f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609936"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688041"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ ms.locfileid: "47609936"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  在 [SQL Server Agent]，再指向 [多伺服器管理]，然後按一下 [管理目標伺服器]。  
+2.  在 [SQL Server Agent]  ，再指向 [多伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
   
-3.  按一下 **[公佈指示]**，然後在 **[指示類型]** 清單中選取 **[脫離]**。  
+3.  按一下 **[公佈指示]** ，然後在 **[指示類型]** 清單中選取 **[脫離]** 。  
   
 4.  在 **[收件者]** 下，執行下列其中一項：  
   
     -   按一下 **[所有目標伺服器]** ，脫離此主要伺服器的所有目標伺服器。 如果您要完整解除安裝目前的多伺服器管理組態，請使用此選項。  
   
-    -   按一下 **[下列目標伺服器]**，然後按一下對應的 **[選取]** 方塊，脫離此主要伺服器的部份目標伺服器，但不是所有目標伺服器。  
+    -   按一下 **[下列目標伺服器]** ，然後按一下對應的 **[選取]** 方塊，脫離此主要伺服器的部份目標伺服器，但不是所有目標伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482756"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要從 MDS 存放庫取得最新資訊，而不開啟新的工作表時，請重新整理資料。 您可以重新整理所有資料格或資料格的選取範圍。 當您已經插入含有自訂公式或不在 MDS 中管理之資料的資料行，而且想要加以保留時，這樣做可能很有用。  
@@ -40,7 +40,7 @@ ms.locfileid: "53207584"
 > -   當您重新整理時，系統會刪除 MDS 管理之資料格的註解。  
   
 ## <a name="how-to-refresh-mds-managed-data"></a>如何重新整理 MDS 管理的資料  
- 在功能區的 [連接和載入] 群組中，[重新整理] 按鈕有兩個選項，分別是 [全部重新整理] 和 [重新整理選取項目]。 功能區按鈕的預設動作是 [全部重新整理]。 若要使用來自伺服器的值重新整理整份工作表，按一下 [重新整理] 按鈕，或選擇 [全部重新整理] 選項。 若僅要重新整理工作表中的部分資料格，請選取資料格 (必須是一個連續的選取範圍)，然後選擇 [重新整理選取項目] 選項。  
+ 在功能區的 [連接和載入]  群組中，[重新整理]  按鈕有兩個選項，分別是 [全部重新整理]  和 [重新整理選取項目]  。 功能區按鈕的預設動作是 [全部重新整理]  。 若要使用來自伺服器的值重新整理整份工作表，按一下 [重新整理]  按鈕，或選擇 [全部重新整理]  選項。 若僅要重新整理工作表中的部分資料格，請選取資料格 (必須是一個連續的選取範圍)，然後選擇 [重新整理選取項目]  選項。  
   
 ## <a name="related-tasks"></a>相關工作  
   

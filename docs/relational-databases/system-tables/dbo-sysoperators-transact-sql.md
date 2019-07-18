@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984912"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

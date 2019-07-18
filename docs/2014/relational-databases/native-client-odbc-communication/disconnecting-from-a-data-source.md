@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205674"
 ---
 # <a name="disconnecting-from-a-data-source"></a>從資料來源中斷連接
   當應用程式完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**釋放連接配置的任何陳述式，並從資料來源中斷驅動程式。 中斷連接之後，應用程式可以呼叫[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)來釋放連接控制代碼。 結束之前，應用程式也會呼叫**SQLFreeHandle**來釋放環境控制代碼。  

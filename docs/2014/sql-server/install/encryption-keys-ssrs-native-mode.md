@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
@@ -13,12 +12,12 @@ ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095420"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密金鑰 (SSRS 原生模式)
   使用 [加密金鑰] 頁面，即可管理用來加密和解密報表伺服器中之資料的對稱金鑰。 管理加密金鑰是報表伺服器組態之很重要的一部分。 當您建立報表伺服器資料庫時，就會自動建立並套用對稱金鑰。 請建立對稱金鑰的備份副本，以便執行例行維護作業。 您必須擁有對稱金鑰的有效副本，才能執行下列維護工作：  
@@ -43,9 +42,9 @@ ms.locfileid: "48144228"
 > [!IMPORTANT]  
 >  刪除和重新建立對稱金鑰的動作無法反轉或恢復。 刪除或重新建立金鑰可能會對您目前的安裝造成重大的影響。 如果您刪除金鑰，將會一併刪除對稱金鑰所加密的任何現有資料。 刪除的資料包括外部報表資料來源的連接字串、預存連接字串和一些訂閱資訊。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager，然後選取 [瀏覽] 窗格中的連結。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並在導覽窗格中選取此連結。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **備份**  
  將對稱金鑰複製到您指定的檔案。 對稱金鑰絕不會以純文字的方式儲存。 您必須輸入密碼來保護該檔案。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7105160c7008d6f36d1c4e01faf8b1631080b8d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921117"
 ---
 # <a name="ado-code-examples"></a>ADO 程式碼範例
 您可以使用下列程式碼範例，了解如何使用 ADO 物件、 方法、 屬性和事件。  

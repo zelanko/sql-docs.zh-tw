@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba7914456e4ffcf19a52c6e7f7206a390147cc2f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662421"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted 事件類別
   **FT:Crawl Aborted** 事件類別指出全文檢索搜耙期間遇到了例外狀況。 這個錯誤通常會造成全文檢索搜耙停止。 請檢查 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔或搜耙記錄檔，以取得更詳細的錯誤資訊。  

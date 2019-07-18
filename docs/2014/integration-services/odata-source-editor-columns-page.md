@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
@@ -13,15 +12,15 @@ ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057334"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 來源編輯器 (資料行頁面)
-  使用 [OData 來源編輯器] 對話方塊的 [資料行] 頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
+  使用 [OData 來源編輯器]  對話方塊的 [資料行]  頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
   
 ## <a name="options"></a>選項。  
  **可用的外部資料行**  

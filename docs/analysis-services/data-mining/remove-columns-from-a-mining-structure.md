@@ -1,5 +1,5 @@
 ---
-title: 從採礦結構移除資料行 |Microsoft 文件
+title: 移除採礦結構中的資料行 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd8691d8ec0cc1546e27e8195e7d0bbc20709f59
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015875"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209681"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>從採礦結構中移除資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "34015875"
   
 2.  展開採礦結構的樹狀，以顯示所有資料行。  
   
-3.  以滑鼠右鍵按一下您想要刪除的資料行，然後選取 [刪除]。  
+3.  以滑鼠右鍵按一下您想要刪除的資料行，然後選取 [刪除]  。  
   
-4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
+4.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

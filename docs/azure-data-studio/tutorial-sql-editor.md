@@ -2,21 +2,20 @@
 title: 教學課程：使用 TRANSACT-SQL 編輯器來建立資料庫物件
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範在 Azure 資料 Studio 中的簡化使用 T-SQL 的主要功能。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959016"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教學課程：使用 TRANSACT-SQL 編輯器來建立資料庫物件， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -32,7 +31,7 @@ ms.locfileid: "53030452"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -51,11 +50,11 @@ ms.locfileid: "53030452"
 1. 在儀表板上，滑鼠右鍵點選 **dbo.Customers**（在 [搜尋] 小工具中) 並選取**編輯資料**。
    
    > [!TIP]
-   >  對於包含許多物件的資料庫，您可以透過搜尋小工具快速地找到想要的資料表、檢視表...等。
+   > 對於包含許多物件的資料庫，您可以透過搜尋小工具快速地找到想要的資料表、檢視表...等。
 
    ![快速搜尋小工具](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯**電子郵件**的第一筆資料，輸入 *orlando0@adventure-works.com*，然後按 **Enter** 鍵儲存變更。
+1. 編輯**電子郵件**的第一筆資料，輸入 *orlando0@adventure-works.com* ，然後按 **Enter** 鍵儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
@@ -70,7 +69,7 @@ ms.locfileid: "53030452"
 
    ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
-3.  建立預存程序程式碼片段有兩個欄位可以進行 [快速編輯]， *StoredProcedureName* 和 *SchemaName*。  選取 *StoredProcedureName* ，按一下滑鼠右鍵，然後選取**變更所有相符項目**。 鍵入 *getCustomer* 並將全部 *StoredProcedureName* 項目變更為 *getCustomer*。
+3. 建立預存程序程式碼片段有兩個欄位可以進行 [快速編輯]， *StoredProcedureName* 和 *SchemaName*。 選取 *StoredProcedureName* ，按一下滑鼠右鍵，然後選取**變更所有相符項目**。 鍵入 *getCustomer* 並將全部 *StoredProcedureName* 項目變更為 *getCustomer*。
 
    ![程式碼片段](./media/tutorial-sql-editor/snippet.png)
 
@@ -117,7 +116,7 @@ ms.locfileid: "53030452"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 讓您能夠檢視使用 [查看定義] 功能的物件定義。 本節會建立第二個預存程序，並使用查看定義查看資料表內有那些欄位，快速地建立預存程序主體。
 
-1. 按下 **Ctrl + N** 開啟新的編輯器。  
+1. 按下 **Ctrl + N** 開啟新的編輯器。 
 
 2. 在編輯器中輸入 *sql*，按向下鍵至 *sqlCreateStoredProcedure*，然後按 *Tab*鍵 (或*Enter*) 載入新增預存程序程式碼片段。
 3. 在編輯器中輸入 *setCustomer* 取代 *StoredProcedureName*、輸入 *dbo* 取代 *SchemaName*
@@ -183,7 +182,7 @@ ms.locfileid: "53030452"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>將查詢結果儲存為 JSON，對 setCustomer 預存程序進行測試
 
-*SetCustomer*如上一節中所建立的預存程序需要 JSON 資料傳遞至*@json_val*參數。 本節說明如何取得正確格式的位元，json 來傳遞至參數，因此，您可以測試預存程序。
+*SetCustomer*如上一節中所建立的預存程序需要 JSON 資料傳遞至 *@json_val* 參數。 本節說明如何取得正確格式的位元，json 來傳遞至參數，因此，您可以測試預存程序。
 
 1. 在**伺服器**[資訊看板] 上滑鼠右鍵點選 *dbo.Customers* 資料表，並點選**選取前 1000 個資料列**。
 
@@ -193,8 +192,8 @@ ms.locfileid: "53030452"
    ![將儲存為 JSON](./media/tutorial-sql-editor/save-as-json.png)
 
 4. 在編輯器中選取的 JSON 資料，並將它複製。
-5. 按下 **Ctrl + N** 開啟新的編輯器。 
-6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，以便完成呼叫 *setCustomer* 程序。 如您所見，下列程式碼使用相同的 JSON 格式並具有新的客戶詳細資料，讓我們能測試 *setCustomer* 預存程序。  陳述式包含參數宣告和執行新的 Get 與 Set 程序語法。 您可以貼上從上一章節複製的資料並加以編輯，使之與下列範例相同，或直接將下列陳述式貼到查詢編輯器中。
+5. 按下 **Ctrl + N** 開啟新的編輯器。
+6. 先前的步驟顯示如何輕鬆地取得正確格式的資料，以便完成呼叫 *setCustomer* 程序。 如您所見，下列程式碼使用相同的 JSON 格式並具有新的客戶詳細資料，讓我們能測試 *setCustomer* 預存程序。 陳述式包含參數宣告和執行新的 Get 與 Set 程序語法。 您可以貼上從上一章節複製的資料並加以編輯，使之與下列範例相同，或直接將下列陳述式貼到查詢編輯器中。
 
    ```sql
    -- example to execute the stored procedure we just created

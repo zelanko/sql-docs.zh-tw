@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 572166d2278f193c0f40c87b0548f8a7d290897b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dd517154b1390ae7c4ba7e4c13ce030df926958c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66766332"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public boolean supportsConvert(int fromType,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 supportsConvert 方法是由 java.sql.DatabaseMetaData 介面中 supportsConvert 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

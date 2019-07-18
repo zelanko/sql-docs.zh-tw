@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3aa9eb773b173d093528a567b56dddf481da241
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 7d7d4a10935f25498200c9277d80eee6249ac258
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328338"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679877"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定中斷點條件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,18 +31,18 @@ ms.locfileid: "53328338"
   
 #### <a name="to-specify-a-condition"></a>若要指定條件  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]  。  
   
      -或-  
   
-     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]  。  
   
-2.  在 [中斷點條件] 對話方塊的 [條件] 方塊中，輸入有效的布林值運算式。  
+2.  在 [中斷點條件]  對話方塊的 [條件]  方塊中，輸入有效的布林值運算式。  
   
-3.  如果您想要在運算式評估為 **true** 時中斷，請選擇 [為 true]。如果您想要在運算式的值已變更時中斷，請選擇 [已變更]。  
+3.  如果您想要在運算式評估為 **true** 時中斷，請選擇 [為 true]  。如果您想要在運算式的值已變更時中斷，請選擇 [已變更]  。  
   
     > [!NOTE]  
-    >  在第一次到達中斷點之前，偵錯工具不會評估布林運算式。 如果您選擇 [已變更]，偵錯工具不會將第一次評估視為變更，因此偵錯工具不會在第一次評估時中斷。  
+    >  在第一次到達中斷點之前，偵錯工具不會評估布林運算式。 如果您選擇 [已變更]  ，偵錯工具不會將第一次評估視為變更，因此偵錯工具不會在第一次評估時中斷。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定叫用計數](../../relational-databases/scripting/specify-a-hit-count.md)   

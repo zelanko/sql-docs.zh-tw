@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16750be8520038500e605f4eb3f6f6939b2ca3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: a305fd79a7036ae2081283372db9fe7b2c5cd4ca
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764006"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690546"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在資料庫圖表設計工具中導覽 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

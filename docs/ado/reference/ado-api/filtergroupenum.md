@@ -1,5 +1,5 @@
 ---
-title: FilterGroupEnum |Microsoft Docs
+title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89cab313736a8d5acf2f7796ea79fb5649f85ab2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97add08a1d656e8c163600bb0ea8dda7fca264b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932648"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 指定要從篩選的記錄群組[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

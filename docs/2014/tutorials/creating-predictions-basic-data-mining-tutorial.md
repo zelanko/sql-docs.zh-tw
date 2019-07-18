@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035259"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597516"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>建立預測 (基本資料採礦教學課程)
   您已測試好採礦模型的精確度，並決定您滿意結果之後，您可以上使用預測查詢產生器，然後產生預測**採礦模型預測**在資料採礦 索引標籤設計工具。  
@@ -57,7 +57,7 @@ ms.locfileid: "56035259"
   
      這會將可預測的資料行 [Bike Buyer] 對應到輸入資料表資料行。  
   
-3.  按一下 [確定] 。  
+3.  按一下 [確定]  。  
   
 4.  在 [**方案總管] 中**，以滑鼠右鍵按一下**Targeted Mailing**資料來源檢視，並選取**檢視表設計工具**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "56035259"
     > [!WARNING]  
     >  如果您未在清單中看見資料行，可能必須重新整理設計師中所載入資料來源檢視的定義。 若要這樣做，請從**檔案**功能表上，選取**全部儲存**，然後關閉再重新開啟設計工具中的專案。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 ## <a name="designing-the-prediction-query"></a>設計預測查詢  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56035259"
   
      這會指定 `PredictProbability` 函數的目的地資料行。 如需函式的詳細資訊，請參閱[資料採礦延伸模組&#40;DMX&#41;函式參考](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
-5.  按一下 下一步中的空白資料列**來源**資料行，並接著選取 TM_Decision_Tree 採礦模型 **。**  
+5.  按一下 下一步中的空白資料列**來源**資料行，然後選取**TM_Decision_Tree**採礦模型。  
   
 6.  在 `TM_Decision_Tree`資料列中**欄位**欄中，選取`Bike Buyer`。  
   

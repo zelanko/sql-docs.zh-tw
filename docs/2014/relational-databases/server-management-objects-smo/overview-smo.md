@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63131796"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 是專為以程式設計方式管理的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
@@ -141,7 +141,7 @@ ms.locfileid: "52788160"
   
  索引資料表資料分割可讓您管理資料表中資料的散佈以及檔案群組之間的索引。 這項新功能是由 SMO 物件所表示。  
   
- **端點**  
+ **EndPoints**  
   
  SOAP 和資料庫鏡像要求是由端點利用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 物件所處理。  
   

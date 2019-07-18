@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - securable items [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b20ecf14b789ef87b818463f36eea47879938b4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4c5c4d515ebe6aa9b4b8120ae909f07dccc74de0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101703"
 ---
 # <a name="securable-items"></a>安全性實體項目
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的安全性，控制儲存在報表伺服器上之項目的存取權。 當您授與使用者對報表伺服器的存取權時，您通常會建立一對角色指派來進行此動作：  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843711"
 ---
 # <a name="set-source-control-options"></a>設定原始檔控制選項
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中所建立的原始檔控制功能之前，您應該先設定您的各種工作環境的原始檔控制選項。  
@@ -34,7 +34,7 @@ ms.locfileid: "53589892"
   
 ### <a name="to-set-source-control-options"></a>設定原始檔控制選項  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 2.  在**選項**對話方塊方塊中，展開**原始檔控制**，然後按一下**外掛程式選取範圍**頁面。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "53589892"
      指定當您簽入項目以更新原始檔控制存放區時，項目應保持簽出。 如果您想要變更此特定簽入的選項，按一下**選項**中的箭號**簽入** 對話方塊中，然後再清除**保留簽出**核取方塊。  
   
      **簽入的項目**  
-     顯示選項清單，其中指定當您嘗試編輯某個未簽出項目時，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 應有的行為。下表描述可用的選項。  
+     會顯示一份指定的選項如何[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]您嘗試編輯某個未簽出的項目時的行為。下表描述可用的選項。  
   
      **正在儲存**  
   

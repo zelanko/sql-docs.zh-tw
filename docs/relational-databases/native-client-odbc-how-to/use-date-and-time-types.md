@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa533b4bd5b46d841b6ca4750f9cef838cc555ba
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9de540ec1ba30ea4cfe4ff45bcbe3a203eb0ceeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937441"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

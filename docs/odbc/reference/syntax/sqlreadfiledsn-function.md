@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a247b9916bd4b8bfe8704d7f374ef027043e2ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ad1e3dc4901fc7251528e6040b9250469f8fef6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053661"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53206587"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLReadFileDSN(  
      LPCSTR   lpszFileName,  

@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017924"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581428"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -54,8 +54,9 @@ ms.locfileid: "57017924"
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -74,8 +75,9 @@ END
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -134,6 +136,8 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 2. SQL Server 還會推斷隱含的 `GROUP BY O_CUSTKEY on ORDERS`，並使用 IndexSpool + StreamAggregate 來進行實作。
 3. SQL Server 現在正在所有的運算子之間使用平行處理原則。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 視 UDF 的邏輯複雜度而定，產生的查詢計劃也可能會變得更大且更複雜。 如我們所見，UDF 內的作業現在不再是黑盒子，因此查詢最佳化工具能夠估算這些作業的成本，並將其最佳化。 此外，因為計劃中不再有 UDF，所以反覆執行 UDF 叫用會取代為完全避免函式呼叫額外負荷的計劃。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可內嵌的純量 UDF 需求
@@ -143,7 +147,7 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 - UDF 使用下列建構函式撰寫：
     - `DECLARE`、`SET`：變數宣告和指派。
     - `SELECT`:包含單一/多個變數指派的 SQL 查詢<sup>1</sup>。
-    - `IF`/`ELSE`:使用任意巢狀層級的分支。
+    - `IF`/`ELSE`：使用任意巢狀層級的分支。
     - `RETURN`:單一或多個傳回陳述式。
     - `UDF`:巢狀/遞迴函式呼叫<sup>2</sup>。
     - 其他：`EXISTS`、`ISNULL` 等關聯式作業。
@@ -180,7 +184,7 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 
 ## <a name="enabling-scalar-udf-inlining"></a>啟用純量 UDF 內嵌
 
-您可以啟用資料庫的相容性層級 150，讓工作負載自動符合純量 UDF 內嵌的資格。  您可以使用 Transact-SQL 設定此項目。 例如：  
+您可以啟用資料庫的相容性層級 150，讓工作負載自動符合純量 UDF 內嵌的資格。 您可以使用 Transact-SQL 設定此項目。例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -206,8 +210,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```

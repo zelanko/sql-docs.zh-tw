@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ef517e329c651e4d3f21207d1f9e30bcfa0bb9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639301"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2d01c25044bf7b03e2fabe9c615668fc7837312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d58d7885eed1a8ed0611470f29cb24e8072afcb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053797"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 相容性： 層級 2  
+ ODBC API 相容性：層級 2  
   
  類似於[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)但會傳回每個資料行使用陣列的多個資料列。 結果集是順向可捲動，並可回溯可捲動資料指標會定義為靜態，不順如果。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.output.f1
@@ -15,12 +14,12 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7be72475f5aa6db32b65d4a9f542cd9fe82756c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059780"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
@@ -39,7 +38,7 @@ ms.locfileid: "58393596"
   
 ## <a name="output-tab-options"></a>輸出索引標籤選項  
  **[連接]**  
- 在清單中選取連線管理員，或按一下 [新增] 來建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [新增]  來建立新的連線管理員。  
   
  **新增**  
  建立新的連接管理員。 只能使用 ADO.NET 和 OLE DB 連接管理員類型。  

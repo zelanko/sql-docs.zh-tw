@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068640"
 ---
 # <a name="file-data-sources"></a>檔案資料來源
 *檔案資料來源*會儲存在檔案，並允許一位使用者重複使用或在數個使用者之間共用的連接資訊。 使用檔案資料來源時，驅動程式管理員會建立使用.dsn 檔案中的資訊的資料來源的連線。 就像任何其他檔案一樣，都可以操作這個檔案。 檔案資料來源沒有資料來源名稱，因為不機器資料來源，以及未註冊到任何一位使用者或電腦。  

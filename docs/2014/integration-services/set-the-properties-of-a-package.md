@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -17,12 +16,12 @@ ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055794"
 ---
 # <a name="set-the-properties-of-a-package"></a>設定封裝的屬性
   此程序描述如何使用 **[屬性]** 視窗設定封裝屬性。  
@@ -34,13 +33,13 @@ ms.locfileid: "58374546"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要設定之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，按兩下封裝以使其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中開啟，或是以滑鼠右鍵按一下並選取 [檢視設計師]。  
+2.  在方案總管  中，按兩下封裝以使其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中開啟，或是以滑鼠右鍵按一下並選取 [檢視設計師]  。  
   
 3.  按一下 **[控制流程]** 索引標籤，然後執行下列其中之一：  
   
-    -   以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+    -   以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-    -   在 [檢視]  功能表上，按一下 [屬性視窗] 。  
+    -   在 [檢視]  功能表上，按一下 [屬性視窗]  。  
   
 4.  在 **[屬性]** 視窗中編輯封裝屬性。  
   

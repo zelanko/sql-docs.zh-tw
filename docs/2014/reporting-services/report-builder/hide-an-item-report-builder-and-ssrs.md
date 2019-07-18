@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b0cd9fc3c7a2621aef6d2b77bf0cd80d6ca73916
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5daf807904f833a5e8cbe8f237d3f5df77e3887b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107815"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
   當您想要有條件地根據報表參數或是您所指定的某些其他運算式來隱藏項目時，請設定報表項目的可見性。  
@@ -33,20 +32,20 @@ ms.locfileid: "56291336"
   
 ### <a name="to-hide-a-report-item"></a>隱藏報表項目  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下報表項目，然後開啟其 [屬性] 頁面。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下報表項目，然後開啟其 [屬性]  頁面。  
   
     > [!NOTE]  
-    >  若要選取整個資料表或矩陣資料區，請在資料區中按一下來選取它，以滑鼠右鍵按一下資料列、資料行或角控點，然後按一下 [Tablix 屬性]。  
+    >  若要選取整個資料表或矩陣資料區，請在資料區中按一下來選取它，以滑鼠右鍵按一下資料列、資料行或角控點，然後按一下 [Tablix 屬性]  。  
   
-2.  按一下 **[可見性]**。  
+2.  按一下 **[可見性]** 。  
   
 3.  在 **[一開始執行報表時]** 中，指定當您一開始檢視報表時，是否要隱藏此項目：  
   
-    -   若要顯示此項目，請按一下 **[顯示]**。  
+    -   若要顯示此項目，請按一下 **[顯示]** 。  
   
-    -   若要隱藏此項目，請按一下 **[隱藏]**。  
+    -   若要隱藏此項目，請按一下 **[隱藏]** 。  
   
-    -   若要指定在執行階段評估的運算式，請按一下 [依據運算式顯示或隱藏]。 鍵入運算式或按一下運算式 (**fx**) 按鈕，在 [運算式] 對話方塊中建立運算式。  
+    -   若要指定在執行階段評估的運算式，請按一下 [依據運算式顯示或隱藏]  。 鍵入運算式或按一下運算式 (**fx**) 按鈕，在 [運算式]  對話方塊中建立運算式。  
   
         > [!NOTE]  
         >  當您指定可見性的運算式時，會設定報表項目的 Hidden 屬性，如下圖所示。 評估之後的運算式會在值為 False 時顯示此報表項目，並在值為 True 時隱藏此報表項目。   
@@ -58,7 +57,7 @@ ms.locfileid: "56291336"
   
 1.  在報表設計檢視中，按一下資料表、矩陣或清單來顯示資料列和資料行控點。  
   
-2.  以滑鼠右鍵按一下資料列控點，然後按一下 [資料列可見性]。 **[資料列可見性]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下資料列控點，然後按一下 [資料列可見性]  。 **[資料列可見性]** 對話方塊隨即開啟。  
   
 3.  若要設定可見性，請遵循第一個程序中的步驟 3 和 4。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "56291336"
   
 1.  在 [設計] 檢視中，選取資料表、矩陣或清單來顯示資料列和資料行控點。  
   
-2.  以滑鼠右鍵按一下資料行控點，然後按一下 [資料行可見性]。  
+2.  以滑鼠右鍵按一下資料行控點，然後按一下 [資料行可見性]  。  
   
 3.  在 **[資料行可見性]** 對話方塊中，遵循第一個程序中的步驟 3 和 4。  
   

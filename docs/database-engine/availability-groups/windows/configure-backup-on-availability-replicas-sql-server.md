@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: f4c5a8a94da47f5961d2034a76b6195420b3f8f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793799"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>在 Always On 可用性群組的次要複本上設定備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,36 +33,13 @@ ms.locfileid: "54133220"
 > [!NOTE]  
 >  如需在次要複本上備份的簡介，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
--   **開始之前：**  
-  
-     [必要條件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
--   **若要使用下列項目來設定次要複本的備份：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **後續操作：**[設定次要複本的備份之後](#FollowUp)  
-  
--   [若要取得有關備份喜好設定的資訊](#ForInfoAboutBuPref)  
-  
--   [相關內容](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載主要複本的伺服器執行個體。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
   
-|工作|[權限]|  
+|工作|權限|  
 |----------|-----------------|  
 |若要在建立可用性群組時設定次要複本的備份|需要系統管理員 ( **sysadmin** ) 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性群組或可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -72,7 +49,7 @@ ms.locfileid: "54133220"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  按一下您想要設定其備份喜好設定的可用性群組，然後選取 **[屬性]** 命令。  
   
@@ -90,7 +67,7 @@ ms.locfileid: "54133220"
      指定備份一定要在主要複本上進行。 如果當您在次要複本上執行備份時，需要不支援的備份功能 (例如建立差異備份)，這個選項會很實用。  
   
     > [!IMPORTANT]  
-    >  如果您計畫要使用記錄傳送來準備可用性群組的任何次要資料庫，請將自動備份喜好設定設為 [主要]，直到所有次要資料庫都已經準備完成並且聯結至可用性群組為止。  
+    >  如果您計畫要使用記錄傳送來準備可用性群組的任何次要資料庫，請將自動備份喜好設定設為 [主要]  ，直到所有次要資料庫都已經準備完成並且聯結至可用性群組為止。  
   
      **任何複本**  
      指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
@@ -104,12 +81,12 @@ ms.locfileid: "54133220"
      裝載可用性複本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
      **備份優先權 (最低 = 1，最高 = 100)**  
-     指定在這個複本上執行備份的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。 1 表示最低優先權，100 表示最高優先權。 如果 [備份優先權] = 1，則只有當目前沒有更高優先權的可用性複本可用時，才會選擇此可用性複本來執行備份。  
+     指定在這個複本上執行備份的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。 1 表示最低優先權，100 表示最高優先權。 如果 [備份優先權]  = 1，則只有當目前沒有更高優先權的可用性複本可用時，才會選擇此可用性複本來執行備份。  
   
      **排除複本**  
      決定是否絕對不要選擇這個可用性複本來執行備份。 例如，這對於您永遠不希望將備份容錯移轉到其中的遠端可用性複本十分有用。  
   
-7.  若要認可變更，請按一下 **[確定]**。  
+7.  若要認可變更，請按一下 **[確定]** 。  
   
  **存取備份喜好設定頁面的其他方式**  
   
@@ -152,7 +129,7 @@ ms.locfileid: "54133220"
      指定備份一定要在主要複本上進行。 如果當您在次要複本上執行備份時，需要不支援的備份功能 (例如建立差異備份)，這個選項會很實用。  
   
     > [!IMPORTANT]  
-    >  如果您計畫要使用記錄傳送來準備可用性群組的任何次要資料庫，請將自動備份喜好設定設為 [主要]，直到所有次要資料庫都已經準備完成並且聯結至可用性群組為止。  
+    >  如果您計畫要使用記錄傳送來準備可用性群組的任何次要資料庫，請將自動備份喜好設定設為 [主要]  ，直到所有次要資料庫都已經準備完成並且聯結至可用性群組為止。  
   
      **SecondaryOnly**  
      指定絕對不能在主要複本上執行備份。 如果主要複本是唯一的線上複本，不應該進行備份。  

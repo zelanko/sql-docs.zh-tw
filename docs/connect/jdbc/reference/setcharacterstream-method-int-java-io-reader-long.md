@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cb6ac7f5-81ae-4cb7-87c8-cbee40d278c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ce5694d1f594c69e6f7f72cc7abb497e65bf250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 67b28857940387b6feb7b2ce2bb2e7fed0eceff5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795740"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-long"></a>setCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public final void setCharacterStream(int parameterIndex,
   
  *reader*  
   
- 包含 Unicode 資料 java.io.Reader 物件。  
+ 包含 Unicode 資料的 java.io.Reader 物件。  
   
  *length*  
   
@@ -48,7 +48,7 @@ public final void setCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setCharacterStream 方法 setCharacterStream 方法 java.sql.PreparedStatement 介面中所指定。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  

@@ -3,19 +3,19 @@ title: 虛擬化 SQL Server 2019 CTP 2.0 中的外部資料 | Microsoft Docs
 description: 此頁面詳述針對 CSV 檔案使用 [建立外部資料表精靈] 的步驟
 author: Abiola
 ms.author: aboke
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3d00744ff63d51cb7557a8f299a3fb8fb53a99be
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512955"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729482"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>搭配使用外部資料表精靈與 CSV 檔案
 
@@ -26,26 +26,25 @@ SQL Server 2019 也可讓您虛擬化 HDFS 中 CSV 檔案的資料。  此程序
 從 CTP 2.4 開始，依預設已不會在巨量資料叢集中建立資料集區和存放集區外部資料來源。 使用精靈之前，請使用下列 Transact-SQL 查詢在您的目標資料庫中建立預設的 **SqlStoragePool** 外部資料來源。 請務必先將查詢的內容變更為您的目標資料庫。
 
 ```sql
+-- Create default data sources for SQL Big Data Cluster
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://controller-svc/default');
+
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-  BEGIN
-    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-  END
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>啟動 [外部資料表精靈]
 
-使用 IP 位址連線到 HDFS 根目錄。 在 [物件總管] 中展開所有項目。 然後選取您想要將其資料虛擬化到現有 SQL Server 執行個體的其中一個來源 CSV。 以滑鼠右鍵按一下檔案，然後從操作功能表選取 [Create External Table From CSV File] \(從 CSV 檔案建立外部資料表\)。 您也可以從 HDFS 中資料夾內的 CSV 檔案建立外部資料表，但前提是這些檔案所在資料夾遵循相同的結構描述。 如此可在資料夾層級虛擬化資料，而不需要處理個別檔案並透過合併資料來取得聯結的結果集。 這會啟動 [虛擬化資料精靈]。 您也可以鍵入 Ctrl+Shift+P (在 Windows 中) 和 Cmd+Shift+P (在 Mac 中)，以從命令選擇區啟動 [虛擬化資料精靈]。
+使用 IP 位址連線到 HDFS 根目錄。 在 [物件總管] 中展開所有項目。 然後選取您想要將其資料虛擬化到現有 SQL Server 執行個體的其中一個來源 CSV。 以滑鼠右鍵按一下檔案，然後從操作功能表選取 [Create External Table From CSV File] \(從 CSV 檔案建立外部資料表\)  。 您也可以從 HDFS 中資料夾內的 CSV 檔案建立外部資料表，但前提是這些檔案所在資料夾遵循相同的結構描述。 如此可在資料夾層級虛擬化資料，而不需要處理個別檔案並透過合併資料來取得聯結的結果集。 這會啟動 [虛擬化資料精靈]。 您也可以鍵入 Ctrl+Shift+P (在 Windows 中) 和 Cmd+Shift+P (在 Mac 中)，以從命令選擇區啟動 [虛擬化資料精靈]。
 
 ![虛擬化資料精靈](media/data-virtualization/csv-virtualize-data-wizard.png)
 
 ## <a name="connect-to-a-sql-server-master-instance"></a>連線到 SQL Server 主要執行個體
 
-您也可以在這裡指定要使用 IP、連接埠和認證資訊連線的 SQL 主要執行個體。 之前儲存的連線可透過 [Active SQL Server connections] \(使用中的 SQL Server 連線\) 下拉式清單方塊來存取。 
+您也可以在這裡指定要使用 IP、連接埠和認證資訊連線的 SQL 主要執行個體。 之前儲存的連線可透過 [Active SQL Server connections] \(使用中的 SQL Server 連線\)  下拉式清單方塊來存取。 
 > [!NOTE]
 >如果您使用儲存的連線，則不會封鎖其他防火牆
 
@@ -78,7 +77,7 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
 
 ## <a name="summary"></a>摘要
 
-此步驟提供您選項的摘要。 它會提供 SQL 主要執行個體和提議的外部資料表資訊。 在此步驟中，您可以選擇 [產生指令碼] (這會以建立外部資料來源語法的 T-SQL 來撰寫指令碼) 或 [建立] (這會建立外部資料來源物件)。
+此步驟提供您選項的摘要。 它會提供 SQL 主要執行個體和提議的外部資料表資訊。 在此步驟中，您可以選擇 [產生指令碼]  (這會以建立外部資料來源語法的 T-SQL 來撰寫指令碼) 或 [建立]  (這會建立外部資料來源物件)。
 
 ![摘要畫面](media/data-virtualization/csv-virtualize-data-summary.png)
 
@@ -86,7 +85,7 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
 
 ![外部資料來源](media/data-virtualization/csv-external-data-sources.png)
 
-如果您按一下 [產生指令碼]，則會看到建立外部資料來源物件所產生的 T-SQL 查詢。
+如果您按一下 [產生指令碼]  ，則會看到建立外部資料來源物件所產生的 T-SQL 查詢。
 
 ![產生指令碼](media/data-virtualization/csv-generated-script.png)
 

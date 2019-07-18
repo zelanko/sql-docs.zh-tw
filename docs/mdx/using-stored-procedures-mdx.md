@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0d4d455ed7bd804f4c2d4ce036c00f85fd94629f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038010"
 ---
 # <a name="using-stored-procedures-mdx"></a>使用預存程序 (MDX)
 

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480524"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
   若要使用您的來源資料進行 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 作業，並匯出已處理的資料，您可以執行下列任一項操作：  
@@ -34,19 +34,19 @@ ms.locfileid: "56019919"
   
 1.  啟動 Microsoft SQL Server Management Studio。  
   
-2.  在 Microsoft SQL Server Management Studio 中，展開您的 SQL Server 執行個體及 **[安全性]**，然後展開 **[登入]**。  
+2.  在 Microsoft SQL Server Management Studio 中，展開您的 SQL Server 執行個體及 **[安全性]** ，然後展開 **[登入]** 。  
   
-3.  以滑鼠右鍵按一下 SQL 登入，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下 SQL 登入，然後按一下 **[屬性]** 。  
   
 4.  在 **[登入屬性]** 對話方塊的左窗格中，按一下 **[使用者對應]** 頁面。  
   
 5.  在右窗格中，選取 底下的核取方塊**地圖**資料行**DQS_STAGING_DATA**資料庫，然後再選取 在下列角色**資料庫角色成員資格對象：DQS_STAGING_DATA**窗格：  
   
-    -   **db_datareader**:從資料表/檢視讀取資料。  
+    -   **db_datareader**：從資料表/檢視讀取資料。  
   
-    -   **db_datawriter**:新增、 刪除或變更資料表中的資料。  
+    -   **db_datawriter**：新增、刪除或變更資料表中的資料。  
   
-    -   **db_ddladmin**:建立、 修改或刪除資料表/檢視表。  
+    -   **db_ddladmin**：建立、修改或刪除資料表/檢視。  
   
 6.  在 **[登入屬性]** 對話方塊中，按一下 **[確定]** 套用變更。  
   

@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761675"
 ---
 # <a name="understanding-database-engine-errors"></a>了解 Database Engine 錯誤
   下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發之錯誤的屬性。  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |錯誤號碼|每一則錯誤訊息都有唯一的錯誤號碼。|  
 |錯誤訊息字串|錯誤訊息包含錯誤原因的診斷資訊。 許多錯誤訊息都有用來插入資訊 (例如產生錯誤的物件名稱) 的替代變數。|  

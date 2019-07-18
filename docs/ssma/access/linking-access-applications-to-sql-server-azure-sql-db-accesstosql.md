@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668527"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259907"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>連結到 SQL Server-Azure SQL DB (AccessToSQL) 存取應用程式
 如果您想要使用您現有的 Access 應用程式搭配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將原始的 Access 資料表連結至移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。 連結，讓您查詢、 表單、 報表和資料存取頁面使用中的資料會修改您的 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫，而非 Access 資料庫中的資料。  
@@ -107,16 +107,16 @@ ms.locfileid: "51668527"
   
 -   更新或刪除多個資料列的查詢會傳送 Jet 做為參數化查詢每個資料列。  
   
-**解決方式：** 轉換傳遞查詢、 預存程序或檢視表的查詢執行緩慢。 將轉換成傳遞查詢有下列問題：  
+**解決方案：** 轉換傳遞查詢、 預存程序或檢視表的查詢執行緩慢。 將轉換成傳遞查詢有下列問題：  
   
 -   無法修改傳遞查詢。 修改查詢結果，或加入新的記錄中，必須完成的替代方式，例如藉由明確**修改**或是**新增**您繫結至查詢的表單上的按鈕。  
   
 -   某些查詢需要使用者輸入，但傳遞的查詢不支援使用者輸入。 Visual Basic for Applications (VBA) 程式碼會提示您輸入參數，或做為輸入的控制項的表單，您可以取得使用者輸入。 在這兩種情況下，VBA 程式碼會提交至伺服器的使用者輸入的查詢。  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>更新記錄之前，不會更新自動遞增資料行  
-**原因：** 之後呼叫 RecordSet.AddNew Jet 中，自動遞增資料行便會更新的記錄之前。 這不是在 true[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 儲存新的記錄後，才可的身分識別資料行的新值的新值。  
+**原因：** 之後呼叫 RecordSet.AddNew Jet 中，自動遞增資料行隨即出現，才會更新記錄。 這不是在 true[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 儲存新的記錄後，才可的身分識別資料行的新值的新值。  
   
-**解決方式：** 才能存取 [身分識別] 欄位中執行下列 Visual Basic for Applications (VBA) 程式碼：  
+**解決方案：** 執行下列 Visual Basic for Applications (VBA) 程式碼才能存取 [身分識別] 欄位：  
   
 ```  
 Recordset.Update  
@@ -125,33 +125,33 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>未提供新的記錄  
-**原因：** 當您將記錄新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或使用 VBA 中，如果資料表的唯一索引欄位的預設值，而您不指派值至該欄位中，不會出現新的記錄直到您重新開啟中的資料表的 SQL Azure 資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SSQL Azure。 如果您嘗試取得新的記錄中的值，您會收到下列錯誤訊息：  
+**原因：** 當您將記錄新增至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表，如果資料表的唯一索引欄位的預設值，而您不指派值至該欄位中，不會出現新的記錄直到您重新開啟中的資料表使用 VBA，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 如果您嘗試取得新的記錄中的值，您會收到下列錯誤訊息：  
   
 `Run-time error '3167' Record is deleted.`  
   
-**解決方式︰** 當您開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表使用 VBA 程式碼中包含`dbSeeChanges`選項，如下列範例所示：  
+**解決方案：** 當您開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表使用 VBA 程式碼中包含`dbSeeChanges`選項，如下列範例所示：  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>移轉之後，某些查詢將不允許使用者加入新的記錄  
 **原因：** 如果查詢不包含唯一的索引中包含的所有資料行，您無法使用查詢來加入新的值。  
   
-**解決方式：** 確保至少一個唯一的索引中包含的所有資料行查詢的一部分。  
+**解決方案：** 確定至少一個唯一的索引中包含的所有資料行查詢的一部分。  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>您無法修改連結的資料表結構描述具有存取權  
-**原因：** 後移轉資料和連結的資料表，使用者無法修改的 Access 中的資料表結構描述。  
+**原因：** 移轉資料和連結的資料表之後, 使用者就無法修改 Access 中的資料表結構的描述。  
   
-**解決方式︰** 修改資料表結構描述使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然後更新中存取的連結。  
+**解決方案：** 修改資料表結構描述使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然後更新中存取的連結。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>超連結功能在移轉之後會遺失資料  
 **原因：** 移轉之後資料行中的超連結會失去其功能和變得簡單**nvarchar （max)** 資料行。  
   
-**解決方式：** None。  
+**解決方案：** 無。  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>存取不支援某些 SQL Server 資料類型  
 **原因：** 如果您稍後可以更新您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表來包含資料類型不支援的存取權，您無法在 Access 中開啟資料表。  
   
-**解決方式：** 您可以定義 Access 查詢會傳回只支援的資料類型與資料列。  
+**解決方案：** 您可以定義 Access 查詢會傳回只支援的資料類型與資料列。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

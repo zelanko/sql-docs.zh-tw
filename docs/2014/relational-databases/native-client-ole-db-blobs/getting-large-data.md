@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195233"
 ---
 # <a name="getting-large-data"></a>取得大型資料
   一般而言，取用者應該隔離程式碼會建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者儲存物件，從處理不透過參考資料的其他程式碼**ISequentialStream**介面指標。  

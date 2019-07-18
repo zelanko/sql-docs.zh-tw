@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.connection.f1
@@ -15,30 +14,30 @@ ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e48018f3bbc3f266a4e537f067b3fa9466dea275
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059440"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 計畫的連接或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之執行個體的連接。  
   
  若要深入了解維度處理目的地，請參閱＜ [Dimension Processing Destination](data-flow/dimension-processing-destination.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連接管理員，或按一下 [新增] 來建立新的連接管理員。  
+ 從清單中選取現有的連接管理員，或按一下 [新增]  來建立新的連接管理員。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
   
  **可用維度清單**  
  選取要處理的維度。  
   
  **處理方法**  
- 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
+ 選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]** 。  
   
 |值|描述|  
 |-----------|-----------------|  

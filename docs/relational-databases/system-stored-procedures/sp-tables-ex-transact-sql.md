@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096069"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |值|描述|  
 |-----------|-----------------|  
-|**ALIAS**|別名的名稱。|  
+|**別名**|別名的名稱。|  
 |**全域暫存**|全系統所能使用之暫存資料表的名稱。|  
 |**本機暫存**|只供目前作業使用之暫存資料表的名稱。|  
 |**SYNONYM**|同義字的名稱。|  
@@ -66,7 +65,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|使用者資料表的名稱。|  
 |**VIEW**|檢視表的名稱。|  
   
-`[ @fUsePattern = ] 'fUsePattern'` 決定是否將字元 **_**， **%**， **[**，並 **]** 解譯成萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*已**元**，預設值是 1。  
+`[ @fUsePattern = ] 'fUsePattern'` 決定是否將字元 **_** ， **%** ， **[** ，並 **]** 解譯成萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*已**元**，預設值是 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -75,11 +74,11 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|資料表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些其他產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
+|**TABLE_CAT**|**sysname**|資料表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_ **。** _擁有者_ **。** _名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些其他產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
 |**TABLE_SCHEM**|**sysname**|資料表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個欄位一律會傳回值。|  
 |**TABLE_TYPE**|**varchar(32)**|資料表、系統資料表或檢視表。|  
-|**REMARKS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**註解**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
   
 ## <a name="remarks"></a>備註  
  **sp_tables_ex**執行查詢的資料表資料列集**IDBSchemaRowset**對應至 OLE DB 提供者介面*table_server&lt*。 *Table_name*， *table_schema*， *table_catalog 排列*，以及*資料行*參數傳遞給這個介面來限制的資料列傳回此項目。  
@@ -101,13 +100,13 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
   
 ## <a name="see-also"></a>另請參閱  
  [分散式查詢預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_columns_ex &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_column_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [< sp_indexes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_table_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

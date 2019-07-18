@@ -1,21 +1,19 @@
 ---
-title: 開始使用 Linux 上的 SQL Server 安全性 |Microsoft 文件
+title: 開始使用 Linux 上的 SQL Server 安全性
 description: 本文說明一般的安全性動作。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019506"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -29,7 +27,7 @@ ms.locfileid: "53211737"
 
 ## <a name="create-a-login-and-a-database-user"></a>建立登入和資料庫使用者 
 
-授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)陳述式。 例如：
+授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)陳述式。 例如:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -50,7 +48,7 @@ GO
 - SQL Server 系統管理員帳戶可以連接到任何資料庫，而且可以建立多個登入和使用者在任何資料庫中。  
 - 當有人建立資料庫時，它們成為資料庫擁有者，可以連接至該資料庫。 資料庫擁有者可以建立更多使用者。
 
-稍後您可以授權其他登入，以便建立更多的登入，授與他們`ALTER ANY LOGIN`權限。 在資料庫內，您可以授權其他使用者授與它們建立更多使用者`ALTER ANY USER`權限。 例如：   
+稍後您可以授權其他登入，以便建立更多的登入，授與他們`ALTER ANY LOGIN`權限。 在資料庫內，您可以授權其他使用者授與它們建立更多使用者`ALTER ANY USER`權限。 例如:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -138,7 +136,7 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 建立安全性原則 SalesFilter   
-新增篩選器述詞 Security.fn_securitypredicate(SalesPersonID)    
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   在 Sales.SalesOrderHeader，   
 加入區塊述詞 Security.fn_securitypredicate(SalesPersonID)    
   在 Sales.SalesOrderHeader   
@@ -148,12 +146,12 @@ WITH (STATE = ON);
 Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-EXECUTE AS 使用者 = 'SalesPerson280';   
-選取 * 從 Sales.SalesOrderHeader;    
+EXECUTE AS USER = 'SalesPerson280';   
+SELECT * FROM Sales.SalesOrderHeader;    
 還原; 
  
-EXECUTE AS 使用者 = 'Manager';   
-選取 * 從 Sales.SalesOrderHeader;   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
 還原;   
 ```
  
@@ -182,8 +180,8 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 建立使用者 TestUser 沒有登入;   
 GRANT SELECT ON Person.EmailAddress 至 TestUser;    
  
-EXECUTE AS 使用者 = 'TestUser';   
-選取 EmailAddressID，EmailAddress 從 Person.EmailAddress;       
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
 還原;    
 ```
  
@@ -224,7 +222,7 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-建立主要金鑰加密的密碼 = ' * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
 建立憑證 MyServerCert 主體 = '我資料庫加密金鑰憑證';  
@@ -266,7 +264,7 @@ The following example creates a certificate, and then creates a backup protected
   ENCRYPTION   
    (  
    演算法 = AES_256，  
-   伺服器憑證 = BackupEncryptCert  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62864994"
 ---
 # <a name="allocating-a-connection-handle"></a>配置連接控制代碼
   在應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼。 這是藉由呼叫**SQLAllocHandle**具有*HandleType*參數設定為 SQL_HANDLE_DBC 並*InputHandle*指向初始化的環境控制代碼。  

@@ -1,5 +1,5 @@
 ---
-title: 資料指標類型 （SQLSRV 驅動程式） |Microsoft Docs
+title: 資料指標類型 (SQLSRV 驅動程式) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801487"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>資料指標類型 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ SQLSRV 驅動程式可讓您根據資料指標類型，建立能夠以任何順�
   
 您可以建立含有可讓您存取任何資料列在結果集中，以任何順序可捲動資料指標的結果集。 下表列出的值，可以傳遞至**可捲動**sqlsrv_query sqlsrv_prepare 中的選項。  
   
-|選項|Description|  
+|選項|描述|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|可讓您開始第一列的結果集，直到您到達結果集的結尾一次移動一個資料列。<br /><br />這是預設資料指標類型。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)會傳回與此資料指標類型所建立的結果集的錯誤。<br /><br />**向前**是 SQLSRV_CURSOR_FORWARD 縮寫的形式。|  
 |SQLSRV_CURSOR_STATIC|可讓您以任何順序存取資料列，但將不會反映資料庫中的變更。<br /><br />**靜態**是 SQLSRV_CURSOR_STATIC 縮寫的形式。|  
@@ -43,7 +43,7 @@ SQLSRV 驅動程式可讓您根據資料指標類型，建立能夠以任何順�
   
 下表描述您可以在指定的值*資料列*參數。  
   
-|參數|Description|  
+|參數|描述|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|指定下一個資料列。 這是預設值，如果您未指定*資料列*可捲動的結果集的參數。|  
 |SQLSRV_SCROLL_PRIOR|指定目前的資料列之前的資料列。|  
@@ -122,9 +122,9 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>用戶端資料指標和 SQLSRV 驅動程式  
 用戶端資料指標是 3.0 版中新增的功能[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，可讓您快取的整個結果集在記憶體中。 使用用戶端資料指標時，會執行查詢之後，可以使用資料列計數。  
   
-用戶端資料指標應該用於小型到中型-大小的結果集。 使用伺服端資料指標的大型結果集。  
+用戶端資料指標應該用於小型到中型的結果集。 使用伺服端資料指標的大型結果集。  
   
-查詢會傳回 false，如果緩衝區不夠大，無法容納整個結果集。 您可以增加到 PHP 記憶體限制的緩衝區大小。  
+查詢會傳回 false，如果緩衝區不夠大，無法容納整個結果集。 您可以將緩衝區大小上限提高到 PHP 記憶體限制。  
   
 使用 SQLSRV 驅動程式，您可以設定保留的結果集的 ClientBufferMaxKBSize 設定緩衝區的大小[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)。 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)傳回 ClientBufferMaxKBSize 的值。 您也可以在 php.ini 檔案中以 sqlsrv 設定緩衝區大小上限。ClientBufferMaxKBSize (比方說，sqlsrv。ClientBufferMaxKBSize = 1024年)。  
   

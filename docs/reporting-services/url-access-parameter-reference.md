@@ -1,24 +1,24 @@
 ---
 title: URL 存取參數參考 | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65620592"
 ---
-# <a name="url-access-parameter-reference"></a>URL 存取參數參考URL 存取參數參考
+# <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
@@ -35,7 +35,7 @@ ms.locfileid: "52515096"
 -   [報表檢視器 Web 組件命令 (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML 檢視器命令 (rc:)  
- HTML 檢視器命令的用途為將 HTML 檢視器 (例如，從報表管理員) 作為目標，而且前面會加上 *rc:*：  
+ - HTML 檢視器命令的使用對象是 HTML 檢視器，其前置詞為 *rc:* ：
   
 -   *Toolbar* ：  
                   顯示或隱藏工具列。 如果這個參數的值為 **false**，則會忽略所有剩餘的選項。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。 這個參數的預設值為 **true**。  
@@ -267,7 +267,7 @@ ms.locfileid: "52515096"
      您可以將工作階段識別碼指定為 Cookie 或是 URL 的一部分。 當將報表伺服器設定成不使用工作階段 Cookie 時，第一個沒有指定工作階段識別碼的要求，會導致使用某個工作階段識別碼來進行重新導向。 如需有關報表伺服器工作階段的詳細資訊，請參閱＜ [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)＞。  
   
 -   *ClearSession*：  
-                  **true** 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 (報表執行個體定義為：使用不同的報表參數值多次執行相同的報表)。預設值為 **false**。  
+                  **true** 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 (報表執行個體的定義：使用不同報表參數值執行多次的相同一份報表)。預設值為 **false**。  
   
 -   *ResetSession*：  
                   **true** 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值為 **false**。  
@@ -342,27 +342,27 @@ ms.locfileid: "52515096"
   
 -   *ToolBarItemsDisplayMode*：控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如：針對沒有動作功能表，請使用 rv:ToolBarItemsDisplayMode=63 (或 0x3F)，這就是 1+2+4+8+16+ 32；僅針對動作功能表項目，請使用 rv:ToolBarItemsDisplayMode=960 (或 0x3C0)。 預設值是 **-1**，其中包含所有的工具列項目。 有效值為：  
   
-    -   1 (0x1)：[上一步] 按鈕  
+    -   1 (0x1)：[上一步]  按鈕  
   
     -   2 (0x2)：文字搜尋控制項  
   
     -   4 (0x4)：頁面導覽控制項  
   
-    -   8 (0x8)：[重新整理] 按鈕  
+    -   8 (0x8)：[重新整理]  按鈕  
   
-    -   16 (0x10)：[顯示比例] 清單方塊  
+    -   16 (0x10)：[顯示比例]  清單方塊  
   
-    -   32 (0x20)：[Atom 摘要] 按鈕  
+    -   32 (0x20)：[Atom 摘要]  按鈕  
   
-    -   64 (0x40)：[動作] 中的 [列印] 功能表選項  
+    -   64 (0x40)：[動作]  中的 [列印]  功能表選項  
   
-    -   128 (0x80)：[動作] 中的 [匯出] 子功能表  
+    -   128 (0x80)：[動作]  中的 [匯出]  子功能表  
   
-    -   256 (0x100：[動作] 中的 [用報表產生器開啟] 功能表選項  
+    -   256 (0x100：[動作]  中的 [用報表產生器開啟]  功能表選項  
   
-    -   512 (0x200：[動作] 中的 [訂閱] 功能表選項  
+    -   512 (0x200：[動作]  中的 [訂閱]  功能表選項  
   
-    -   1024 (0x400：[動作] 中的 [新資料警示] 功能表選項  
+    -   1024 (0x400：[動作]  中的 [新資料警示]  功能表選項  
   
      例如，在 **SharePoint** 模式中，只顯示 **[上一步]** 按鈕、文字搜尋控制項、頁面導覽控制項和 **[重新整理]** 按鈕。  
   

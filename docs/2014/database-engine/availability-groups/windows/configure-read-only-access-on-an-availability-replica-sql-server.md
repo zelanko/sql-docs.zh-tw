@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aaed1030d35fffb1b539339dc882cfb2d6676229
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815371"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>設定可用性複本上的唯讀存取 (SQL Server)
   預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接 AlwaysOn 可用性群組的次要複本。 本主題說明如何藉由使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性群組的可用性複本設定連接存取。  
   
- 如需有關啟用次要複本和連接存取簡介的唯讀存取之含意的資訊，請參閱[關於用戶端連接存取可用性複本&#40;SQL Server&#41; ](about-client-connection-access-to-availability-replicas-sql-server.md)和[作用中次要複本：可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 如需針對次要複本啟用唯讀存取的含意資訊，以及連線的簡介，請參閱[關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md) 和[使用中次要：可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
   
   
@@ -55,7 +55,7 @@ ms.locfileid: "53358960"
   
 3.  按一下要變更複本的可用性群組。  
   
-4.  以滑鼠右鍵按一下可用性複本，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下可用性複本，然後按一下 [屬性]  。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，可以變更主要角色和次要角色的連接存取，如下所示：  
   
@@ -162,7 +162,7 @@ GO
          主要複本的資料庫允許所有連接。 這是預設值。  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -182,7 +182,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ```  
   
   
-##  <a name="FollowUp"></a> 後續操作：可用性複本設定唯讀存取之後  
+##  <a name="FollowUp"></a> 後續操作：針對可用性複本設定唯讀存取之後  
  **可讀取的次要複本的唯讀存取**  
   
 -   使用時[bcp 公用程式](../../../tools/bcp-utility.md)或是[sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)，您可以指定唯讀存取任何已啟用的次要複本進行唯讀存取，藉由指定`-K ReadOnly`切換。  
@@ -214,25 +214,25 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [AlwaysOn:可讀取次要複本的價值主張](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn:Value Proposition of Readable Secondary](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx) (Always On：可讀取次要的價值主張)  
   
--   [AlwaysOn:為什麼會有兩個選項可啟用讀取工作負載的次要複本？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn:Why there are two options to enable a secondary replica for read workload?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx) (Always On：為何有兩個選項可針對讀取工作負載啟用次要複本？)  
   
--   [AlwaysOn:設定可讀取的次要複本](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn:Setting up Readable Seconary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx) (Always On：設定可讀取次要複本)  
   
--   [AlwaysOn:我剛剛啟用可讀取次要複本，但我的查詢被封鎖？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn:I just enabled Readable Secondary but my query is blocked?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx) (Always On：我剛剛啟用可讀取次要，但我的查詢被封鎖？)  
   
--   [AlwaysOn:可讀取次要、 唯讀資料庫和資料庫快照集上提供最新的統計資料](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn:Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx) (Always On：在可讀取次要、唯讀資料庫和資料庫快照集上提供最新的統計資料)  
   
--   [AlwaysOn:上的統計資料唯讀資料庫、 資料庫快照集和次要複本的挑戰](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn:Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx) (Always On：唯讀資料庫、資料庫快照集和次要複本上的統計資料挑戰)  
   
--   [AlwaysOn:當您在次要複本上執行的報表工作負載的主要工作負載的影響](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn:Impact on the primary workload when you run reporting workload on the secondary replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx) (Always On：在次要複本上執行報告工作負載時，對主要工作負載的影響)  
   
--   [AlwaysOn:對應至快照集隔離的可讀取次要上的報表工作負載的影響](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn:Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx) (Always On：可讀取次要上報告工作負載對應至快照集隔離的影響)  
   
--   [AlwaysOn:當執行報表工作負載的次要複本上重做執行緒封鎖降至最低](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn:Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx) (Always On：在次要複本上執行報告工作負載時，將 REDO 執行緒封鎖降至最低)  
   
--   [AlwaysOn:可讀取次要功能和資料延遲](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn:Readable Secondary and data latency](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx) (Always On：可讀取次要和資料延遲)  
   
   
 ## <a name="see-also"></a>另請參閱  

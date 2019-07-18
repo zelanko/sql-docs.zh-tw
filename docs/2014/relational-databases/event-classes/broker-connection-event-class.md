@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664374"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Connection** 事件以報告 Service Broker 所管理的傳輸連線狀態。  

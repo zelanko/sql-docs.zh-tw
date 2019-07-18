@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055370"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引數  
- *層級*  
- 這是套用權限的安全性實體種類。 *層級*已**nvarchar(60)**。  
+ *level*  
+ 這是套用權限的安全性實體種類。 *層級*已**nvarchar(60)** 。  
   
- *權限*  
- 這是權限資料行中傳回的位元遮罩。 *perms*已**varbinary(16)**。  
+ *perms*  
+ 這是權限資料行中傳回的位元遮罩。 *perms*已**varbinary(16)** 。  
   
 ## <a name="returns"></a>傳回值  
  **table**  

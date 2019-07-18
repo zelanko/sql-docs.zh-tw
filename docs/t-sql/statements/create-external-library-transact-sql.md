@@ -1,7 +1,7 @@
 ---
-title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e0704f80105ef0f24cacef43dfdcfb52b053dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140793"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "58493284"
 將 R、Python 或 Java 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員針對 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支援的任何新外部語言執行階段和 OS 平台，上傳所需的成品。 
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 2.4 中，支援 Windows 和 Linux 平台上的 R、Python 和 Java。
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 3.0 中，支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
@@ -53,9 +53,7 @@ WITH ( LANGUAGE = <language> )
 
 <client_library_specifier> :: = 
 {
-      '[\\computer_name\]share_name\[path\]manifest_file_name'  
-    | '[local_path\]manifest_file_name'  
-    | '<relative_path_in_external_data_source>'  
+    '[file_path\]manifest_file_name'  
 } 
 
 <library_bits> :: =  
@@ -74,7 +72,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 
 ```
@@ -97,9 +95,7 @@ WITH ( LANGUAGE = 'R' )
 
 <client_library_specifier> :: = 
 {
-      '[\\computer_name\]share_name\[path\]manifest_file_name'  
-    | '[local_path\]manifest_file_name'  
-    | '<relative_path_in_external_data_source>'  
+    '[file_path\]manifest_file_name'
 } 
 
 <library_bits> :: =  
@@ -132,6 +128,8 @@ WITH ( LANGUAGE = 'R' )
 
 指定檔案時，可以採用本機路徑或網路路徑的形式來指定。
 
+當您試圖存取在 **<client_library_specifier>** 中所指定的檔案時，SQL Server 會模擬目前 Windows 登入的安全性內容。 由於委派限制之故，如果 **<client_library_specifier>** 指定網路位置 (UNC 路徑)，目前登入的模擬並不會在網路位置發揮作用。 此時就得利用 SQL Server 服務帳戶的資訊安全內容進行存取。 如需詳細資訊，請參閱[認證 (資料引擎)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
+
 (選擇性) 可以指定檔案的 OS 平台。 針對特定語言或執行階段，每個 OS 平台只允許一個檔案成品或內容。
 
 **library_bits**
@@ -156,14 +154,15 @@ WITH ( LANGUAGE = 'R' )
 
 **language**
 
-指定套件的語言。 值可以是 `R`、`Python` 或 `Java`。
+指定套件的語言。 此值可以是 `R`、`Python`，或[已建立的外部語言](create-external-language-transact-sql.md)名稱。
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 在 SQL Server 2017 中僅支援 Windows 平台。 
+針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 在 SQL Server 2017 中僅支援 Windows 平台。
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 針對 R 語言，在使用檔案時，必須以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。  
 
@@ -178,7 +177,17 @@ WITH ( LANGUAGE = 'R' )
 
 需要 `CREATE EXTERNAL LIBRARY` 權限。 根據預設，任何具有 **dbo** 或為 **db_owner** 角色成員的使用者，都有建立外部程式庫的權限。 對於其他所有使用者，您必須使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 陳述式指定 CREATE EXTERNAL LIBRARY 做為權限，以明確授予權限給他們。
 
-若要修改程式庫，需要個別的權限 `ALTER ANY EXTERNAL LIBRARY`。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在 SQL Server 2019 中，除了 'CREATE EXTERNAL LIBRARY' 權限外，使用者也需要有外部語言的參考權限才能建立該外部語言的外部程式庫。
+
+```sql
+GRANT REFERENCES ON EXTERNAL LANGUAGE::Java to user
+GRANT CREATE EXTERNAL LIBRARY to user
+```
+
+::: moniker-end
+
+若要修改任何程式庫，則需要不同的權限，`ALTER ANY EXTERNAL LIBRARY`。
 
 若要使用檔案路徑建立外部程式庫，使用者必須是 Windows 驗證的登入，或是 sysadmin 固定伺服器角色的成員。
 
@@ -207,7 +216,7 @@ EXEC sp_execute_external_script
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. 安裝具有相依性的套件
 
-如果您想要安裝的套件具有許多相依性，請務必在嘗試安裝目標套件「之前」，先分析第一層和第二層的相依性，並確定所有必要的套件都可供使用。
+如果您想要安裝的套件具有許多相依性，請務必在嘗試安裝目標套件「之前」  ，先分析第一層和第二層的相依性，並確定所有必要的套件都可供使用。
 
 例如，假設您想要安裝新套件 `packageA`：
 

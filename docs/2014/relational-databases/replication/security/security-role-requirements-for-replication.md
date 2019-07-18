@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676894"
 ---
 # <a name="security-role-requirements-for-replication"></a>複寫的安全性角色需求
   基於使用者登入所對應之角色，複寫會限制使用者執行的特定動作。 複寫會將部份權限授與 **系統管理員 (sysadmin)** 固定伺服器角色、 **db_owner** 固定資料庫角色，以及發行集存取清單 (PAL) 中的登入。  

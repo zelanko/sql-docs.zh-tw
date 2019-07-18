@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ReorientObject method (geography)
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: e2945b08eaf0a22c6c83bd412e97c729bedfdfea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936349"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ _地理位置_
 ## <a name="return-value"></a>傳回值  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-CLR 傳回類型：**SqlGeography**  
+CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
 這個方法會變更 **GeometryCollection** 中所有 **Polygons** 的環方向，但不會移除或變更指定集合中的任何 **Points**或 **Linestrings**。  

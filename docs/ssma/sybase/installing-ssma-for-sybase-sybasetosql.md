@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b859c3b9841945241ac0ec9c5238a479a5ba3343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91a4dfcf8add3900c51e33a6e40fa874ce9f9798
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028969"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>安裝 SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for SAP Adaptive Server Enterprise (ASE) 包含您用來從 SAP ASE 來執行移轉的用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database。 它也包含支援已移轉的資料庫中的資料移轉以及使用 ASE 系統函式的延伸模組組件。  

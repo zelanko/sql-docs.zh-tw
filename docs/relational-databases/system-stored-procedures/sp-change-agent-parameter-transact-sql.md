@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 610d63df2bf3496abaed8682ac83a72883e184b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045897"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **Output**  
+-   **輸出**  
   
 -   **OutputVerboseLevel**  
   
@@ -79,7 +78,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **輸出**  
   
 -   **OutputVerboseLevel**  
   
@@ -115,7 +114,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **輸出**  
   
 -   **OutputVerboseLevel**  
   
@@ -179,7 +178,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **Output**  
+-   **輸出**  
   
 -   **OutputMessageFile**  
   
@@ -227,7 +226,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **Output**  
+-   **輸出**  
   
 -   **OutputVerboseLevel**  
   
@@ -241,7 +240,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看已針對給定的設定檔定義哪些參數，執行**sp_help_agent_profile** ，並記下*profile_name*相關聯*profile_id*。 以適當*profile_id*，接下來執行**sp_help_agent_parameters**使用該*profile_id*查看設定檔相關聯的參數。 可以在設定檔中加入參數，藉由執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
-`[ @parameter_value = ] 'parameter_value'` 新的參數值。 *parameter_value*已**nvarchar(255)**，沒有預設值。  
+`[ @parameter_value = ] 'parameter_value'` 新的參數值。 *parameter_value*已**nvarchar(255)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6c9a01c4be9dd0777d57cf87ab7613c1de3a832
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e0329f097e51ce3e2e725a6d652265349ffc7c1b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718066"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776965"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>getDefaultTransactionIsolation 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

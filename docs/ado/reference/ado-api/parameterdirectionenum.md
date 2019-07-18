@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917745"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 既是輸入和一個 output 參數或從預存程序的傳回值。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924961"
 ---
 # <a name="internet-publishing-scenario"></a>網際網路發佈案例
 此程式碼範例示範如何搭配使用 ADO 與 Microsoft OLE DB Provider for Internet Publishing。 在此案例中，您將建立會使用 Visual Basic 應用程式**Recordset**，**記錄**，和**Stream**物件顯示資源的內容一起發佈網際網路發佈提供者。  
@@ -33,7 +32,7 @@ ms.locfileid: "47602996"
   
 -   [步驟 3：填入 [欄位] 清單方塊](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [步驟 4：填入 [詳細資料] 文字方塊](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [步驟 4：填入詳細資料 文字方塊](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [適用於網際網路發佈的 Microsoft OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

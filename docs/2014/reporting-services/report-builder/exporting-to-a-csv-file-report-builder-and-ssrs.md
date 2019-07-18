@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 778c65a7c8a7e1cf98a4ad8a7cf65ab28c3cf19a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107931"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
   逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。  

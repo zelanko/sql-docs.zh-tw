@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 48616d24169e0b3981595baf2ff924b83ca45224
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062410"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教學課程 (SSAS)
   本節包含 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 的教學課程。  
@@ -37,7 +36,7 @@ ms.locfileid: "53359010"
  大部分 SQL Server 2008 R2 教學課程都可在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 伺服器運作。 如果您不熟悉資料採礦，請使用這個連結尋找 SQL Server 2008 R2 資料採礦教學課程，該教學課程同樣可搭配 Analysis Services 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 執行個體使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [TechNet WIKI:SQL Server 2012 範例](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [TechNet WIKI：SQL Server 2012 範例](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Picnic 資料集 （範例資料）](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

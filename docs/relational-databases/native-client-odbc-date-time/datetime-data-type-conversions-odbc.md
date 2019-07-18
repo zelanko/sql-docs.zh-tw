@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269b07032cd76d18dabfe43e14435c830c4a627f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d16221a47f2cee588d0c5ef38aaa179b61bdf8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030395"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 資料類型轉換 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47748026"
   
 -   date 字串的格式為 'yyyy-mm-dd'  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱 「 資料格式： 字串和常值 」 一節[資料類型對 ODBC 日期和時間改善支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱 「 資料格式：字串和常值 > 一節[資料類型對 ODBC 日期和時間改善支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
   
  下面是一般轉換規則：  
   

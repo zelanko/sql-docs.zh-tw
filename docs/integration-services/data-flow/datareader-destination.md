@@ -16,14 +16,18 @@ ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b384f9d1ad2140ca5c7aef586a9948521459c5eb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fe2c9335eeb25fec264e2750dc1f9487ca53ff80
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726988"
 ---
 # <a name="datareader-destination"></a>DataReader 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DataReader 目的地使用 ADO.NET **DataReader** 介面來公開資料流程中的資料。 然後，資料可以由其他應用程式取用。 例如，您可以設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的資料來源，以使用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的結果。 若要這樣做，請建立實作 DataReader 目的地的資料流程。  
   
  如需以程式設計方式存取和讀取 DataReader 目的地之值的詳細資訊，請參閱 [載入本機封裝的輸出](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)。  

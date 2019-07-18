@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a532c253ea2204fa3636c24c503cbefd3fa6311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56f09a82c2e67ee74ce140f4742bfaf0bcce247f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088119"
 ---
 # <a name="using-operating-system-authentication"></a>使用作業系統驗證
 > [!IMPORTANT]  
@@ -27,9 +26,9 @@ ms.locfileid: "47686496"
   
  Oracle 作業系統驗證依賴基礎作業系統來控制資料庫帳戶的存取權。 當使用這種類型的登入，使用者不需要輸入密碼。  
   
- 若要利用這項功能，請指定"/"作為使用者識別碼和使用任何下列的 Api 連線進行連線時未指定密碼： [SQLBrowseConnect](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)， [SQLConnect](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)，或[SQLDriverConnect](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)。  
+ 若要利用這項功能，請指定"/"作為使用者識別碼和使用任何下列的 Api 連線進行連線時未指定密碼：[SQLBrowseConnect](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)， [SQLConnect](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)，或[SQLDriverConnect](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)。  
   
- Oracle 資料庫使用 SQL * Net 的驗證服務，來驗證登入的使用者。 這項服務適用於使用者登入 SQLPlus; 透過 Oracle不過，例如 Internet Information Services 的服務登入的使用者時，驗證將會失敗。 這是已知的限制，SQL 的\*Net 的驗證，並產生下列錯誤: 「 [Microsoft] [ODBC driver for Oracle] [Oracle] ORA-12641: TNS:authentication 服務無法初始化。 」  
+ Oracle 資料庫使用 SQL * Net 的驗證服務，來驗證登入的使用者。 這項服務適用於使用者登入 SQLPlus; 透過 Oracle不過，例如 Internet Information Services 的服務登入的使用者時，驗證將會失敗。 這是已知的限制，SQL 的\*Net 的驗證，並產生下列錯誤: 「 [Microsoft] [ODBC driver for Oracle] [Oracle] ORA-12641:TNS:authentication 服務無法初始化。 」  
   
  您可以藉由編輯 Sqlnet.ora 檔案來修正此問題。 此組態檔通常會儲存在 Oracle 主目錄的 Network\Admin 子目錄中。 將下行新增至 Sqlnet.ora 中：  
   

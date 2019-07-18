@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925768"
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
-連接字串是由以分號分隔的引數/值組 （也就是 「 參數 」） 清單所組成。 例如：  
+連接字串是由以分號分隔的引數/值組 （也就是 「 參數 」） 清單所組成。 例如:  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  

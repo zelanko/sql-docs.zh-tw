@@ -15,14 +15,18 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c4d9cc0f6d3487a1eae6118c2df64527d97160f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a9953cba066e658b6198718f4039487330e8f15f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713617"
 ---
 # <a name="use-annotations-in-packages"></a>使用封裝中的註解
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會提供註解，可用於使封裝自我記錄並易於了解及維護。 您可以將註解加入「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」的控制流程、資料流程及事件處理常式設計介面。 註解 (Annotation) 可以包含任何類型的文字，而且它們可用於將標籤、註解 (Comment) 及其他描述性資訊加入至封裝。 註解只是設計階段功能。 例如，註解不寫入記錄檔中。  
   
  當您按 ENTER 鍵時，文字會折行。 註解方塊會自動在您加入其他文字行時放大。 封裝註解會以純文字格式保存在封裝檔案的 CDATA 區段中。  
@@ -37,19 +41,19 @@ ms.locfileid: "58282012"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，以滑鼠右鍵按一下 [控制流程]、[資料流程] 或 [事件處理常式] 索引標籤設計介面上的任何位置，然後按一下 [加入註解]。 索引標籤的設計介面上將出現一個文字區塊。  
+3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，以滑鼠右鍵按一下 [控制流程]  、[資料流程]  或 [事件處理常式]  索引標籤設計介面上的任何位置，然後按一下 [加入註解]  。 索引標籤的設計介面上將出現一個文字區塊。  
   
 4.  加入文字。  
   
     > [!NOTE]  
     >  如果不加入文字，則按一下區塊以外的位置，文字區塊便會移除。  
   
-5.  若要變更註解中文字的大小或格式，請在註解按一下滑鼠右鍵，然後選取 [設定文字註解的字型]。  
+5.  若要變更註解中文字的大小或格式，請在註解按一下滑鼠右鍵，然後選取 [設定文字註解的字型]  。  
   
 6.  若要加入其他文字行，請按 ENTER。  
   
      註解方塊會自動在您加入其他文字行時放大。  
   
-7.  若要將註解加入群組，請在註解上按一下滑鼠右鍵，然後按一下 [群組]。  
+7.  若要將註解加入群組，請在註解上按一下滑鼠右鍵，然後按一下 [群組]  。  
   
-8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]**。  
+8.  若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[全部儲存]** 。  

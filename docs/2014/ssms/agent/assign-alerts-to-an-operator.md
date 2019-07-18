@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62473209"
 ---
 # <a name="assign-alerts-to-an-operator"></a>指派警示給操作員
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示指派給操作員，讓操作員可以接收與作業相關的通知。  
@@ -62,17 +62,17 @@ ms.locfileid: "52762850"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要指派警示的操作員。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要指派警示的操作員並選取 [屬性]，然後選取 [通知] 頁面。  
+4.  以滑鼠右鍵按一下要指派警示的操作員並選取 [屬性]  ，然後選取 [通知]  頁面。  
   
-5.  在 [<操作員名稱> 屬性] 對話方塊中，選取 [選取頁面] 底下的 [通知]。  
+5.  在 [<操作員名稱> 屬性]   對話方塊中，選取 [選取頁面]  底下的 [通知]  。  
   
-6.  在 **[檢視傳送給這名使用者的通知來源]** 下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一或多個核取方塊，視需要定義每個通知的通知方法：**電子郵件**，**呼叫器**，或**Net send**。  
+6.  在 **[檢視傳送給這名使用者的通知來源]** 下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一或多個核取方塊，視需要定義每個通知的通知方法：[電子郵件]  、[呼叫器]  ，或 [Net send]  。  
   
-7.  完成後，請按一下 **[確定]**。  
+7.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -80,9 +80,9 @@ ms.locfileid: "52762850"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  

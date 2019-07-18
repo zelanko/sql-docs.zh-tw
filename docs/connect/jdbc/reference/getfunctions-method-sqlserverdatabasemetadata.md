@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6032cd14cf93d75714d46bfc825d53ecc68d39b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe24a26956a295ccfd00f8d782611057cf019308
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774615"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,8 +51,8 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getFunctions 方法是由 java.sql.DatabaseMetaData 介面中 getFunctions 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getFunctions 方法是由 java.sql.DatabaseMetaData 介面中的 getFunctions 方法指定。  
   
  這個方法只會傳回符合指定之結構描述和函數名稱的系統和使用者函數。  
   
@@ -61,7 +61,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  每個函數描述都包括下列資料行：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|函數所在之資料庫的名稱。|  
 |FUNCTION_SCHEM|**String**|函數所在之結構描述的名稱。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c8e4e59606f3b68fbd9ce272db8ea8a50ab53e88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922710"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>讀取可重複的隔離等級發生死結
 如果自訂商務物件會使用 read repeatable 隔離等級來存取 SQL Server、 商務物件由傳送查詢，並在相同交易中更新的兩個用戶端同時呼叫，死結是可能的。 遠端資料服務的設計可讓其中一個處理序逾時來釋放死結，但該用戶端將會失敗的更新。  

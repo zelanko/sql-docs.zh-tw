@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b628a2d2ee2ca21cfb75abadce01293f536b8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bef8bcf36629b0cb31afef31f4d9a199313f015
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193951"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自訂組件物件
   在某些情況下，您可能需要在初始化自訂組件類別時，初始化其中的屬性與欄位值。 您很可能需要使用報表全域物件集合中可用的值，來初始化自訂類別。 您可以透過覆寫報表之 **Code** 物件的 **OnInit** 方法來完成。 若要存取 **OnInit**，請使用報表定義的 **Code** 項目。 有兩個技術可初始化您計劃在報表中使用的自訂組件中類別之屬性或欄位值。您可以使用 **OnInit** 來宣告和建立類別的新執行個體，或者您可以使用 **OnInit** 來呼叫公開可用的方法。  

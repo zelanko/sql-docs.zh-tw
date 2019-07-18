@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250529"
 ---
 # <a name="scripting-replication"></a>編寫複寫指令碼
   拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 指令碼包含實作已編寫指令碼之複寫元件所必要的 Transact-SQL 系統預存程序，例如，發行集或訂閱。 指令碼可以在精靈中建立 (如新增發行集精靈)，或者可以在建立元件之後，於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立。 您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**，檢視、修改和執行指令碼。 指令碼可以和備份檔案一起儲存，萬一必須重新設定複寫拓撲時即可使用。  
@@ -80,28 +80,28 @@ ms.locfileid: "52792330"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾或 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]**。  
+3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]** 。  
   
-4.  指定 [產生 SQL 指令碼 - \<複寫物件>] 對話方塊中的選項。  
+4.  指定 [產生 SQL 指令碼 - \<複寫物件>]  對話方塊中的選項。  
   
-5.  按一下 **[編寫指令碼至檔案]**。  
+5.  按一下 **[編寫指令碼至檔案]** 。  
   
-6.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]**。 就會顯示狀態訊息。  
+6.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]** 。 就會顯示狀態訊息。  
   
-7.  按一下 **[確定]**，然後按一下 **[關閉]**。  
+7.  按一下 **[確定]** ，然後按一下 **[關閉]** 。  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>若要從 Management Studio 編寫多個物件的指令碼  
   
 1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的散發者、發行者或訂閱者，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[產生指令碼]**。  
+2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[產生指令碼]** 。  
   
 3.  指定 **[產生 SQL 指令碼]** 對話方塊中的選項。  
   
-4.  按一下 **[編寫指令碼至檔案]**。  
+4.  按一下 **[編寫指令碼至檔案]** 。  
   
-5.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]**。 就會顯示狀態訊息。  
+5.  在 **[指令碼檔案位置]** 對話方塊中輸入檔案名稱，然後按一下 **[儲存]** 。 就會顯示狀態訊息。  
   
-6.  按一下 **[確定]** ，然後按一下 **[關閉]**。  
+6.  按一下 **[確定]** ，然後按一下 **[關閉]** 。  
   
   

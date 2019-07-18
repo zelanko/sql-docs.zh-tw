@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: de7466bb2a2697b0b8aa2a994797cb66c69b74f0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f8f25e4229cdff0151f044be6d10719ab7f260f7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733294"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

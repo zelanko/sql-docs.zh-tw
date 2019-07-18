@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,18 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3d544999b83645e40b7579d7c5e049cff2d36439
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 735822224ef24dc609ca0f84c3265e89f1f63240
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462611"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 連線管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server Integration Services (SSIS) 套件可使用 Azure Data Lake Analytics 連線管理員，連線至具有下列兩種驗證類型其中之一的 Data Lake Analytics 帳戶：
 -   Azure Active Directory (Azure AD) 使用者身分識別
@@ -41,7 +45,7 @@ Data Lake Analytics 連線管理員是 [SQL Server Integration Services (SSIS) F
    A. 如果您選取 [Azure AD 使用者身分識別] 驗證選項：
    
       i. 提供 [使用者名稱] 和 [密碼] 欄位的值。    
-      ii. 選取 [測試連線] 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Data Lake Analytics 帳戶，當提示出現時請選取 [接受]。 如需此同意體驗的詳細資訊，請參閱 [整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)。
+      ii. 選取 [測試連線] 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Data Lake Analytics 帳戶，當提示出現時請選取 [接受]。 如需此同意體驗的詳細資訊，請參閱 [整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)。
     
    > [!NOTE] 
    > 當您選取 [Azure AD 使用者身分識別] 驗證選項時，不支援多重要素驗證和 Microsoft 帳戶驗證。

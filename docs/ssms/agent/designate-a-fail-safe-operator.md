@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 28a98ac0c6fea61ca39c6618a2f1f80c00383ba0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501982"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687820"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "52501982"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目指定保全操作員：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   
@@ -63,17 +63,17 @@ ms.locfileid: "52501982"
   
 #### <a name="to-designate-a-fail-safe-operator"></a>若要指定保全操作員  
   
-1.  在物件總管中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
+1.  在物件總管  中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 - _server\_name_] 對話方塊的 [選取頁面] 下，選取 [警示系統]。  
+3.  在 [SQL Server Agent 屬性 - _server\_name_]  對話方塊的 [選取頁面]  下，選取 [警示系統]  。  
   
-4.  在 [保全操作員] 下方，選取 [啟用保全操作員]。  
+4.  在 [保全操作員]  下方，選取 [啟用保全操作員]  。  
   
-5.  在 [操作員] 清單中，選取您想要設為保全操作員的操作員。  
+5.  在 [操作員]  清單中，選取您想要設為保全操作員的操作員。  
   
-6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：[電子郵件]、[呼叫器] 或 [Net send]。  
+6.  選取下列任何一個或所有核取方塊，指定通知操作員的方式：[電子郵件]  、[呼叫器]  ，或 [Net send]  。  
   
-7.  完成後，請按一下 **[確定]**。  
+7.  完成後，請按一下 **[確定]** 。  
   

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d878a3dde7ae227e3f2d1394440e0b1e2b7bb1f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f99df8f47b50649f46e4acc0aeecb040bf214806
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220400"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當記錄執行個體中出現時，updategram 代表刪除作業**\<之前 >** 區塊中沒有對應記錄**\<之後 >** 區塊。 在此情況下，updategram 會刪除中的資料錄**\<之前 >** 從資料庫的區塊。  
+  當記錄執行個體中出現時，updategram 代表刪除作業 **\<之前>** 區塊中沒有對應記錄 **\<之後>** 區塊。 在此情況下，updategram 會刪除中的資料錄 **\<之前>** 從資料庫的區塊。  
   
  下列是刪除作業的 Updategram 格式：  
   
@@ -44,9 +43,9 @@ ms.locfileid: "56043069"
 </ROOT>  
 ```  
   
- 您可以省略**\<之後 >** 標記如果 updategram 會執行刪除作業。 如果您未指定選擇性**對應結構描述**屬性， **\<項目名稱 >** 則 updategram 會對應至資料庫資料表與子元素或屬性對應到所指定資料表中的資料行。  
+ 您可以省略 **\<之後>** 標記如果 updategram 會執行刪除作業。 如果您未指定選擇性**對應結構描述**屬性， **\<項目名稱 >** 則 updategram 會對應至資料庫資料表與子元素或屬性對應到所指定資料表中的資料行。  
   
- 如果在 updategram 中指定的項目會符合資料表中的多個資料列，或者不符合任何資料列，updategram 會傳回錯誤，並取消整個**\<同步 >** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
+ 如果在 updategram 中指定的項目會符合資料表中的多個資料列，或者不符合任何資料列，updategram 會傳回錯誤，並取消整個 **\<同步 >** 區塊。 Updategram 中的元素一次只能刪除一個記錄。  
   
 ## <a name="examples"></a>範例  
  本章節中的範例會使用預設對應 (也就是說，Updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
@@ -58,7 +57,7 @@ ms.locfileid: "56043069"
   
  在這些範例中，Updategram 不會指定對應結構描述。 因此 Updategram 會使用預設對應，其中元素的名稱會對應到資料表名稱，而屬性或子元素則會對應到資料行。  
   
- 這個第一個 updategram 以屬性為中心和識別 （一天 Day-evening 和 Evening-night） 的兩個值班**\<之前 >** 區塊。 因為沒有任何對應的記錄**\<之後 >** 區塊中，這是刪除作業。  
+ 這個第一個 updategram 以屬性為中心和識別 （一天 Day-evening 和 Evening-night） 的兩個值班 **\<之前>** 區塊。 因為沒有任何對應的記錄 **\<之後>** 區塊中，這是刪除作業。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

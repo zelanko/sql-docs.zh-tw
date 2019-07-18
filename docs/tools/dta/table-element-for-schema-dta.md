@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6a2b0e5b416775124fb1cc36a9b68dde6c1d676
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 12bcab75d2c208dd53bb4f4c77bc5a882f3b32b1
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292484"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733444"
 ---
 # <a name="table-element-for-schema-dta"></a>結構描述的 Table 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

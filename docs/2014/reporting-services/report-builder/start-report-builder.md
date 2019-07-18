@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 506a989494d3f69b5ca9873cc191487bb3b0b296
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107594"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括單機和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
@@ -39,7 +38,7 @@ ms.locfileid: "56290036"
   
 1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 http://\<*伺服器名稱*>/reports。 報表管理員隨即開啟。  
   
-2.  按一下 **[報表產生器]**。  
+2.  按一下 **[報表產生器]** 。  
   
      報表產生器隨即開啟，而且您可以在報表伺服器上建立報表或開啟報表。  
   
@@ -59,9 +58,9 @@ ms.locfileid: "56290036"
   
 2.  開啟文件庫。  
   
-3.  按一下 [文件]。  
+3.  按一下 [文件]  。  
   
-4.  在 [新增文件] 功能表上，按一下 [報表產生器報表]。  
+4.  在 [新增文件]  功能表上，按一下 [報表產生器報表]  。  
   
      報表產生器隨即開啟，而且您可以在報表伺服器上建立報表或開啟報表。  
   

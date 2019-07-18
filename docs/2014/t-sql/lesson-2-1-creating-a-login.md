@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221931"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211201"
 ---
 # <a name="creating-a-login"></a>建立登入
   若要存取 [!INCLUDE[ssDE](../includes/ssde-md.md)]，使用者需要登入。 登入可以用 Windows 帳戶或 Windows 群組的成員來代表使用者的身分識別，或者登入也可以是只存在於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入。 請盡可能使用「Windows 驗證」。  
@@ -28,11 +28,11 @@ ms.locfileid: "48221931"
   
 1.  按一下**開始**，按一下**執行**，請在**開啟**方塊中，輸入`%SystemRoot%\system32\compmgmt.msc /s`，然後按一下 **確定**以開啟 電腦管理 程式。  
   
-2.  在 [系統工具] 底下，展開 [本機使用者和群組]，以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
+2.  在 [系統工具]  底下，展開 [本機使用者和群組]  ，以滑鼠右鍵按一下 [使用者]  ，然後按一下 [新增使用者]  。  
   
-3.  在 [使用者名稱] 方塊中輸入 **Mary**。  
+3.  在 [使用者名稱]  方塊中輸入 **Mary**。  
   
-4.  在 [密碼] 和 [確認密碼] 方塊中輸入強式密碼，然後按一下 [建立]，建立新的本機 Windows 使用者。  
+4.  在 [密碼]  和 [確認密碼]  方塊中輸入強式密碼，然後按一下 [建立]  ，建立新的本機 Windows 使用者。  
   
 ### <a name="to-create-a-login"></a>若要建立登入  
   

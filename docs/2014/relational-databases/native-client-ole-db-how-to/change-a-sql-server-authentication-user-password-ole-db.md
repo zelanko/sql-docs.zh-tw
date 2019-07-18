@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9bef75196b2106fd72e3f1f4989e70b994508723
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63233064"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>變更 SQL Server 驗證使用者密碼 (OLE DB)
   此範例顯示如何使用 OLE DB 變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證下，使用者帳戶的密碼。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - mapping many-to-many relationships [SQL Server]
 - database diagrams [SQL Server], relationships
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e0bddfda2016208065449f678cb1931832b1d7b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 74ee534f8451c7951f8bce1fa7ef9a738e1f37ae
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701906"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682095"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>對應多對多關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "51701906"
   
 1.  在資料庫圖表中，加入您要在其間建立多對多關聯性的資料表。  
   
-2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]，建立第三個資料表。 這會成為聯合資料表。  
+2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]  ，建立第三個資料表。 這會成為聯合資料表。  
   
-3.  在 [選擇名稱] 對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
+3.  在 [選擇名稱]  對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
   
 4.  將兩個資料表的主索引鍵資料行都複製到聯合資料表。 您可以將其他資料行加入到此資料表，也可以加入到其他資料表。  
   
-5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資訊，請參閱 [如何：建立主索引鍵 (Visual Database Tools)](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
+5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資料，請參閱[如何：建立主索引鍵 (Visual Database Tools)](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
   
-6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資訊，請參閱 [如何：建立資料表之間的關聯性 (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
+6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資料，請參閱[如何：建立資料表之間的關聯性 (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
   
     > [!NOTE]  
     > 在資料庫圖表中建立聯合資料表，並不會將關聯資料表的資料插入至聯合資料表。 如需將資料插入資料表的詳細資訊，請參閱[建立插入結果查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)。  

@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 08df7b421795ad73090fe8edfbe6657ed7ffca11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052096"
 ---
 # <a name="change-the-order-of-attributes"></a>變更屬性的順序
 
@@ -24,7 +23,7 @@ ms.locfileid: "52754830"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性的順序。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -33,15 +32,15 @@ ms.locfileid: "52754830"
   
 ### <a name="to-change-the-order-of-an-attribute"></a>若要變更屬性的順序  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
 3.  在 [管理實體]  頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]**。  
+4.  按一下 **[屬性]** 。  
   
-5.  在 [管理屬性] 頁面上，執行下列其中一項動作。  
+5.  在 [管理屬性]  頁面上，執行下列其中一項動作。  
   
     -   如果是分葉成員的屬性，請選取 [成員類型]  清單方塊的 [分葉]  。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "52754830"
     > [!NOTE]  
     >  無法變更 Name 或 Code 屬性的順序。  
   
-7.  按一下 [上移] 或 [下移]。  
+7.  按一下 [上移]  或 [下移]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

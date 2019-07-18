@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937324"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47695796"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="exceptions"></a>例外狀況  
  下列準則會擲回 **ArgumentException**。  
@@ -61,7 +61,7 @@ ms.locfileid: "47695796"
 |distance 值|維度類型|傳回的空間類型|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|零或一維|空的 **GeometryCollection** 執行個體|  
-|distance \< 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。<br /><br /> 注意：負數緩衝可能會建立空白 **GeometryCollection**|
+|distance \< 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。<br /><br /> 注意:負數緩衝可能會建立空白 **GeometryCollection**|
 |distance = 0|所有維度|叫用 **geography** 執行個體的副本|  
 |distance > 0|所有維度|**CurvePolygon** 或 **GeometryCollection** 執行個體|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47695796"
  SELECT @g.BufferWithCurves(-1).ToString()
  ```  
   
-### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 以參數值 < 0 呼叫 BufferWithCurves()，傳回空的 GeometryCollection  
+### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 以參數值 < 0 呼叫 BufferWithCurves()，傳回空白 GeometryCollection  
  下列範例示範當 *distance* 參數等於 -2 時會發生何種狀況：  
   
  ```sql

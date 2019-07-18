@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 091073431b3ff349b8ae107fcb6a37bfab94e46e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949381"
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
 擷取多維度查詢的結果，並傳回結果[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9accf8a3a0d6f07b641298c75802426f10178313
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45aca6d7ff7806ed2315e4b582ce4f724927bb1b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659026"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798882"
 ---
 # <a name="updatebigdecimal-method-int-javamathbigdecimal"></a>updateBigDecimal 方法 (int, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

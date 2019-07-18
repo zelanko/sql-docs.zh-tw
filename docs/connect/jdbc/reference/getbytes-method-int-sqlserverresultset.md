@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 631534e2ca1d0fe7a4c127acb277fc9db7208ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f3299b061303400f75241e863b8675ad95b3e485
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804045"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>getBytes 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public byte[] getBytes(int columnIndex)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getBytes 方法是由 java.sql.ResultSet 介面中的 getBytes 方法指定。  
   
  這個方法支援從伺服器擷取所有資料行當做原始的位元組讀取。 它會直接從伺服器傳回位元組的陣列 (使用儲存於伺服器上的格式)。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28101e099f698039058aa4a4b252616aa4eef4b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060317"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47824846"
 |**subject**|**nvarchar(510)**|訊息的主旨。|  
 |**內文**|**varchar(max)**|訊息的主體。|  
 |**body_format**|**varchar(20)**|訊息的主體格式。 可能的值是 TEXT 和 HTML。|  
-|**重要性**|**varchar(6)**|**重要性**訊息參數。|  
+|**importance**|**varchar(6)**|**重要性**訊息參數。|  
 |**敏感度**|**varchar(12)**|**敏感度**訊息參數。|  
 |**file_attachments**|**varchar(max)**|附加至電子郵件訊息中的檔案名稱清單，用分號分隔各檔案名稱。|  
 |**attachment_encoding**|**varchar(20)**|郵件附加檔案的類型。|  

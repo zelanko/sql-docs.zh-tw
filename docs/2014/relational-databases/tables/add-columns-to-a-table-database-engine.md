@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856138"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將新的資料行加入至資料表。  
@@ -52,7 +52,7 @@ ms.locfileid: "52768770"
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>若要使用資料表設計工具將資料行插入資料表中  
   
-1.  在物件總管 中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]。  
+1.  在物件總管  中，以滑鼠右鍵按一下要加入資料行的資料表，然後選擇 [設計]  。  
   
 2.  在 **[資料行名稱]** 資料行中，按一下第一個空白資料格。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "52768770"
 4.  按下 TAB 鍵以移至 [ **資料類型** ] 資料格，然後從下拉式清單中選取資料類型。 這也是必要值。如果未選擇，將會指派預設值。  
   
     > [!NOTE]  
-    >  您可以在 [資料庫工具] 的 [選項] 對話方塊中變更預設值。  
+    >  您可以在 [資料庫工具]  的 [選項]  對話方塊中變更預設值。  
   
 5.  在 [ **資料行屬性** ] 索引標籤中繼續定義其他任何的資料行屬性。  
   
     > [!NOTE]  
-    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性] 索引標籤中變更預設值。  
+    >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性]  索引標籤中變更預設值。  
   
-6.  加入資料行完成之後，請從 [檔案]  功能表中，選擇 [儲存] _table name_。  
+6.  加入資料行完成之後，請從 [檔案]  功能表中，選擇 [儲存]  _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52768770"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  下列範例會將兩個資料行加入至 `dbo.doc_exa`資料表。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**  
   

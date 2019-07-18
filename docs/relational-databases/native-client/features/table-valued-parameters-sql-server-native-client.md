@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3d9ff2b6aa8156cf27d66c14545bd0d23d8a385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1cea38336a01a31b4fea9c6bb2a78e99ff60fe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112027"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>資料表值參數 (SQL Server Native Client)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

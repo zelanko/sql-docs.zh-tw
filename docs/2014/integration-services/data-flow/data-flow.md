@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 2ab14ac049e9081e82175512a0107af446a51f37
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241356"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343864"
 ---
 # <a name="data-flow"></a>資料流程
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, 提供三種不同類型的資料流程元件：來源、轉換與目的地。n來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。l轉換會修改、摘要並清除資料。s目的地則將資料載入資料存放區或建立記憶體中資料集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
   
 > [!NOTE]  
 >  使用自訂提供者時，您需要使用中繼資料資料行值更新 ProviderDescriptors.xml 檔。  
@@ -64,14 +64,14 @@ ms.locfileid: "59241356"
 > [!NOTE]  
 >  當您建立新的封裝時，也可以使用精靈來幫助您正確設定連線管理員、來源和目的地。 如需詳細資訊，請參閱 [在 SQL Server 資料工具中建立封裝](../create-packages-in-sql-server-data-tools.md)。  
   
- 當 [資料流程] 索引標籤作用中時，工具箱內會包含可加入資料流程的來源、轉換與目的地。  
+ 當 [資料流程]  索引標籤作用中時，工具箱內會包含可加入資料流程的來源、轉換與目的地。  
   
 ## <a name="expressions"></a>運算式  
  某些資料流程元件 (來源、轉換及目的地) 支援在它們的某些屬性中使用屬性運算式。 屬性運算式是在封裝載入時取代屬性值的運算式。 在執行階段，封裝會使用更新的屬性值。 這些運算式是以 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 運算式語法所建置，而且可以包含 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 函數、運算子、識別碼和變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)、[Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)和[在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)。  
   
  如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建構封裝，任何支援屬性運算式之資料流程元件的屬性便會在其所屬的資料流程工作上公開。 若要加入、變更及移除資料流程元件的屬性運算式，請按一下資料流程工作，然後使用 [屬性] 視窗或工作編輯器加入、變更或刪除屬性運算式。 資料流程工作本身的屬性運算式是在 [屬性] 視窗中進行管理。  
   
- 如果資料流程包含使用運算式的任何元件，[屬性] 視窗中也會公開運算式。 若要檢視運算式，請選取元件所屬的資料流程工作。 您可以依類別或是以字母順序檢視屬性。 如果您在 [屬性] 視窗中使用分類檢視，任何沒有在特定屬性中使用的運算式都會列在 [其他] 類別中。 如果您使用依字母順序檢視，就會以資料流程元件的名稱順序列出運算式。  
+ 如果資料流程包含使用運算式的任何元件，[屬性] 視窗中也會公開運算式。 若要檢視運算式，請選取元件所屬的資料流程工作。 您可以依類別或是以字母順序檢視屬性。 如果您在 [屬性] 視窗中使用分類檢視，任何沒有在特定屬性中使用的運算式都會列在 [其他]  類別中。 如果您使用依字母順序檢視，就會以資料流程元件的名稱順序列出運算式。  
   
 ## <a name="sources"></a>來源  
  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，來源是一個資料流程元件，可讓資料流程中的其他元件使用不同外部資料來源的資料。 您可以從一般檔案、XML 檔案、Microsoft Excel 活頁簿及包含原始資料的檔案中擷取資料。 您也可以透過存取資料庫中的資料表和檢視以及執行查詢來擷取資料。  
@@ -97,7 +97,7 @@ ms.locfileid: "59241356"
 ### <a name="sources-available-for-download"></a>可下載的來源  
  下表列出您可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站下載的其他來源。  
   
-|原始程式檔|描述|  
+|`Source`|描述|  
 |------------|-----------------|  
 |Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
 |SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)＞。|  
@@ -158,10 +158,10 @@ ms.locfileid: "59241356"
 ### <a name="destinations-available-for-download"></a>可下載的目的地  
  下表列出您可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站下載的其他目的地。  
   
-|原始程式檔|描述|  
+|`Source`|描述|  
 |------------|-----------------|  
 |Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
+|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)＞。|  
 |Teradata 目的地|Teradata 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
@@ -178,18 +178,18 @@ ms.locfileid: "59241356"
  來源具有輸出，目的地具有輸入，而轉換既有輸入又有輸出。 此外，許多資料流程元件都可以設定為使用錯誤輸出。  
   
 ### <a name="inputs"></a>輸入  
- 目的地和轉換具有輸入。 輸入包含一或多個輸入資料行，如果資料流程元件已設定為使用外部資料行，這些輸入資料行便可以參考外部資料行。 輸入可以設定為監視和控制資料流程：例如，您可以指定元件是否應在回應錯誤時失敗、忽略錯誤，或將錯誤資料列重新導向至錯誤輸出。 您也可以指派輸入的描述或更新輸入名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸入。 如需**進階編輯器**詳細資訊，請參閱 [Integration Services 使用者介面](../integration-services-user-interface.md)。  
+ 目的地和轉換具有輸入。 輸入包含一或多個輸入資料行，如果資料流程元件已設定為使用外部資料行，這些輸入資料行便可以參考外部資料行。 輸入可以設定為監視和控制資料流程：例如，您可以指定元件是否應在回應錯誤時失敗、忽略錯誤，或將錯誤資料列重新導向至錯誤輸出。 您也可以指派輸入的描述或更新輸入名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器]  對話方塊設定輸入。 如需**進階編輯器**詳細資訊，請參閱 [Integration Services 使用者介面](../integration-services-user-interface.md)。  
   
 ### <a name="outputs"></a>輸出  
- 來源和轉換始終具有輸出。 輸出包含一或多個輸出資料行，如果資料流程元件設定為使用外部資料行，這些輸出資料行便可以參考外部資料行。 輸出可以設定為對資料之下游處理提供有用的資訊。 例如，您可以指示是否對輸出進行排序。 您也可以提供輸出的描述，或更新輸出名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸出。  
+ 來源和轉換始終具有輸出。 輸出包含一或多個輸出資料行，如果資料流程元件設定為使用外部資料行，這些輸出資料行便可以參考外部資料行。 輸出可以設定為對資料之下游處理提供有用的資訊。 例如，您可以指示是否對輸出進行排序。 您也可以提供輸出的描述，或更新輸出名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器]  對話方塊設定輸出。  
   
 ### <a name="error-outputs"></a>錯誤輸出  
- 來源、目的地和轉換都可以包含錯誤輸出。 您可以使用 [設定錯誤輸出] 對話方塊，指定資料流程元件如何回應每個輸入或資料行中的錯誤。 如果在執行階段發生錯誤或資料截斷，且資料流程元件設定為重新導向至資料列，則包含錯誤的資料列會被傳送至錯誤輸出。 錯誤輸出可以連接到轉換，該轉換會套用其他轉換或將資料導向不同目的地。 根據預設，錯誤輸出包含輸出資料行和兩個錯誤資料行：**ErrorCode** 和 **ErrorColumn**。 輸出資料行包含來自失敗資料列的資料， **ErrorCode** 提供錯誤碼， **ErrorColumn** 識別失敗的資料行。  
+ 來源、目的地和轉換都可以包含錯誤輸出。 您可以使用 [設定錯誤輸出]  對話方塊，指定資料流程元件如何回應每個輸入或資料行中的錯誤。 如果在執行階段發生錯誤或資料截斷，且資料流程元件設定為重新導向至資料列，則包含錯誤的資料列會被傳送至錯誤輸出。 錯誤輸出可以連接到轉換，該轉換會套用其他轉換或將資料導向不同目的地。 根據預設，錯誤輸出包含輸出資料行和兩個錯誤資料行：**ErrorCode** 和 **ErrorColumn**。 輸出資料行包含來自失敗資料列的資料， **ErrorCode** 提供錯誤碼， **ErrorColumn** 識別失敗的資料行。  
   
  如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。  
   
 ### <a name="columns"></a>[資料行]  
- 輸入、輸出和錯誤輸出都是資料行的集合。 每個資料行皆可供設定，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會依據資料行類型 (輸入、輸出或外部) 提供不同的資料行屬性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同的方式用於設定資料行屬性，包括以程式設計的方式、使用元件特定對話方塊，或是使用 [進階編輯器] 對話方塊。  
+ 輸入、輸出和錯誤輸出都是資料行的集合。 每個資料行皆可供設定，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會依據資料行類型 (輸入、輸出或外部) 提供不同的資料行屬性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同的方式用於設定資料行屬性，包括以程式設計的方式、使用元件特定對話方塊，或是使用 [進階編輯器]  對話方塊。  
   
 ## <a name="paths"></a>路徑  
  路徑連接資料流程元件。 在 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，您可以檢視和修改路徑屬性、檢視路徑起始點的輸出中繼資料，還可以將資料檢視器附加到某個路徑。  
@@ -205,13 +205,13 @@ ms.locfileid: "59241356"
   
 -   在資料行層級，除元件提供給資料行的任何自訂屬性之外，您還可以設定所有資料行的通用屬性。 如果元件支援輸出資料行的加入，您可以將資料行加入到輸出。  
   
- 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，您可以使用提供給每個元素類型的自訂對話方塊，或者使用 [屬性] 視窗或 [進階編輯器] 對話方塊，設定元素屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，您可以使用提供給每個元素類型的自訂對話方塊，或者使用 [屬性] 視窗或 [進階編輯器]  對話方塊，設定元素屬性。  
   
  如需如何使用 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [在資料流程中加入或刪除元件](add-or-delete-a-component-in-a-data-flow.md)  
+-   [在資料流程中新增或刪除元件](add-or-delete-a-component-in-a-data-flow.md)  
   
 -   [連接資料流程中的元件](connect-components-in-a-data-flow.md)  
   

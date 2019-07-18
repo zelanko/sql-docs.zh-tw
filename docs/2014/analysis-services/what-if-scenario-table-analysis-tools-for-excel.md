@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fef8ca20bd3e137d21b5121f42a0d7fee82ae4a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065384"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>假設狀況 (適用於 Excel 的資料表分析工具
   ![資料表分析工具中的假設狀況按鈕](media/tat-whatif.gif "那假設狀況資料表分析工具中的按鈕")  
@@ -84,7 +83,7 @@ ms.locfileid: "48140358"
   
  **'Purchases Bicycle' = 是**  
   
- **信心： 普通**  
+ **信心：公平**  
   
  由於這項結果是根據資料表中的現有資料列，表示對於特定的客戶，如果其他關於客戶的一切都維持不變，客戶的年齡卻增加為 25，客戶便很可能會購買單車。  
   

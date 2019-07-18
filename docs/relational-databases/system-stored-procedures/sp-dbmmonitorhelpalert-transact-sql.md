@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899183"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_dbmmonitorhelpalert database_name
 |「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|下的表列出**alert_id**每個效能計量值中顯示的度量的度量單位**sp_dbmmonitorresults**結果集：|  
-|**threshold**|**int**|警告的臨界值。 如果在更新鏡像狀態時，傳回了這個臨界值以上的值，會在 Windows 事件記錄檔中輸入一個項目。 根據警告而定，這個值可能代表 KB、分鐘或毫秒。 如果目前尚未設定臨界值，則此值為 NULL。<br /><br /> **注意︰** 若要檢視目前的值，請執行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)預存程序。|  
+|**threshold**|**int**|警告的臨界值。 如果在更新鏡像狀態時，傳回了這個臨界值以上的值，會在 Windows 事件記錄檔中輸入一個項目。 根據警告而定，這個值可能代表 KB、分鐘或毫秒。 如果目前尚未設定臨界值，則此值為 NULL。<br /><br /> **注意：** 若要檢視目前的值，請執行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)預存程序。|  
 |**enabled**|**bit**|0 = 事件已停用。<br /><br /> 1 = 事件已啟用。<br /><br /> **注意：** 一定會啟用保留期限。|  
   
 |值|效能標準|單位|  

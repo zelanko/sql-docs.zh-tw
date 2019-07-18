@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.general.f1
@@ -15,15 +14,15 @@ ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088702"
 ---
 # <a name="trace-template-properties-general-tab"></a>追蹤範本屬性 (一般索引標籤)
-  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[新增範本]**。  
+  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]** ，然後按一下 **[新增範本]** 。  
   
 ## <a name="options"></a>選項。  
  **選取伺服器類型**  
@@ -39,7 +38,7 @@ ms.locfileid: "48088808"
  依預設，會針對為此伺服器類型所建立的追蹤使用此範本。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立追蹤範本&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

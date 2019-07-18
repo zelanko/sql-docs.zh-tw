@@ -7,16 +7,20 @@ ms.prod: sql
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 972a3f058ce77b9fceb48cd4279ec32baf834377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012899"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>在 SSIS 套件部署於 Azure 的情況下，於內部部署與 Azure 中開啟和儲存檔案
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 本文描述當您將使用本機檔案系統的 SSIS 套件隨即轉移至 Azure 中的 SSIS 時，如何在內部部署與 Azure 中開啟和儲存檔案。
 

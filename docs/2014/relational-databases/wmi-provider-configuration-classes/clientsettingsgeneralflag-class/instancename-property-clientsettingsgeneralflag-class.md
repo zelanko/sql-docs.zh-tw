@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5e742e30ed90bf4415aa4fba8db6c4c92e62389d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242505"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName 屬性 (ClientSettingsGeneralFlag 類別)
   取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端的執行個體名稱。  

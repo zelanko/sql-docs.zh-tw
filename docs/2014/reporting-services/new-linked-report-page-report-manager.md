@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108172"
 ---
 # <a name="new-linked-report-page-report-manager"></a>新增連結報表頁面 (報表管理員)
   使用 [新增連結報表] 頁面即可建立連結報表。 連結報表具有專屬的設定值和屬性，但連結至另一個報表的報表定義。 當您有想要針對特定群組或使用者改變的基底報表時，連結報表就很有用。例如，根據您指定為參數之區域碼傳回不同資料的區域報表。 通常是在變更參數化的報表時建立連結報表，然後以不同的參數值儲存每一個報表執行個體。 不過，可以從您有權存取的任何報表來建立連結報表。  
@@ -32,7 +31,7 @@ ms.locfileid: "56010869"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[建立連結報表]**。  
+3.  在下拉式功能表中，按一下 **[建立連結報表]** 。  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-general-properties-page-of-a-report"></a>若要從報表的一般屬性頁面開啟新增連結報表頁面  
   
@@ -40,18 +39,18 @@ ms.locfileid: "56010869"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
-4.  在項目工具列中，按一下 **[建立連結報表]**。  
+4.  在項目工具列中，按一下 **[建立連結報表]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定連結報表的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 不過，您不可以使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   
  **說明**  
  輸入報表內容的描述。 此描述顯示在有權存取此報表的使用者的 [內容] 頁面上。  
   
- **位置**  
+ **Location**  
  指定含有此報表的資料夾路徑。 在預設狀況下，建立的連結報表與基礎報表為同層級。 按一下 **[變更位置]** 即可將連結報表置於不同的資料夾中。  
   
  **確定**  

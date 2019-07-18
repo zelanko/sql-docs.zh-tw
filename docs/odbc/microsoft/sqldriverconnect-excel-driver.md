@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053899"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Excel 驅動程式)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "47775346"
   
  **SQLDriverConnect**可讓您連接至驅動程式，而不需建立資料來源 (DSN)。  
   
- 所有驅動程式的連接字串中支援下列關鍵字： **DSN**， **DBQ**，並**FIL**。  
+ 中的所有驅動程式的連接字串，可支援下列關鍵字：**DSN**， **DBQ**，以及**FIL**。  
   
  下表顯示最小的關鍵字，才能連接到每個驅動程式，並提供搭配使用的關鍵字/值組的範例**SQLDriverConnect**。 如 DRIVERID 值的完整清單，請參閱 < [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。  
   

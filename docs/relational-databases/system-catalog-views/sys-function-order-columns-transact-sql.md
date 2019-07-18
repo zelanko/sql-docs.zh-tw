@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122751"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

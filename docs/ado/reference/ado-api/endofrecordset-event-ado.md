@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1697197bf9450a6487e70b0257160221e59359f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918944"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 **EndOfRecordset**嘗試移動超過結尾的資料列時，會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

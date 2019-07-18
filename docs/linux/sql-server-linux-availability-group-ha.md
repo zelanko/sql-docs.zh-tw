@@ -1,21 +1,19 @@
 ---
-title: SQL Server Always On 可用性群組部署模式 |Microsoft Docs
-ms.custom: sql-linux
-ms.date: 10/16/2017
+title: SQL Server Always On 可用性群組部署模式
+ms.date: 04/17/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: linux
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.reviewer: vanto
+ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996423"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性和資料保護
 
@@ -62,7 +60,7 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 | |讀取級別|高可用性 （& s) </br> 資料保護 | 資料保護|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。 |
+|主要複本中斷 |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。 |
 |一個次要複本中斷  | 主要複本是 R / W 如果主要沒有自動容錯移轉會失敗。 |主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 |
 
 <sup>\*</sup> 預設值
@@ -71,7 +69,7 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 
 ## <a name="two-synchronous-replicas"></a>兩個同步複本
 
-此設定可啟用資料保護。 類似可用性群組組態，它可以讓讀取級別。 兩個同步複本組態未提供自動的高可用性。 
+此設定可啟用資料保護。 類似可用性群組組態，它可以讓讀取級別。 兩個同步複本組態未提供自動的高可用性。 兩個複本設定只適用於 SQL Server 2017 RTM，且不再支援更高版本 (CU1 及更新版本) 的 SQL Server 2017 的版本...
 
 ![兩個同步複本][1]
 
@@ -84,9 +82,6 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 |一個次要複本中斷  |主要複本是 R/W，執行時暴露資料遺失。 |主要不適用於使用者交易直到次要複本復原為止。|
 
 <sup>\*</sup> 預設值
-
-> [!NOTE]
-> 先前的案例是在 SQL Server 2017 CU 1 之前的行為。 
 
 <a name = "configOnly"></a>
 
@@ -147,7 +142,7 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 
 例如，可用性群組具有三個同步複本-一個主要複本和兩個同步次要複本。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 為 1;(3 / 2]-> [1)。
 
 - 複本回應預先升級動作的必要的數目為 2;(3-1 = 2)。 
 

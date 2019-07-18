@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85ba57ba9e3559a790ae983025356510987c1eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133125"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "47845126"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|稽核的識別碼。|  
-|NAME|**sysname**|稽核的名稱。|  
+|name|**sysname**|稽核的名稱。|  
 |audit_guid|**uniqueidentifier**|稽核的 GUID。|  
 |create_date|**datetime**|建立檔案稽核時的 UTC 日期。|  
 |modify_date|**日期時間**|上次修改檔案稽核的 UTC 日期。|  
 |principal_id|**int**|在伺服器上註冊之稽核擁有者的識別碼。|  
-|型別|**char(2)**|稽核類型：<br /><br /> 0 = NT 安全性事件記錄檔<br /><br /> 1 = NT 應用程式事件記錄檔<br /><br /> 2 = 檔案系統上的檔案|  
+|type|**char(2)**|稽核類型：<br /><br /> 0 = NT 安全性事件記錄檔<br /><br /> 1 = NT 應用程式事件記錄檔<br /><br /> 2 = 檔案系統上的檔案|  
 |type_desc|**nvarchar(60)**|稽核類型描述。|  
 |on_failure|**tinyint**|失敗時條件。<br /><br /> 0 = 繼續<br /><br /> 1 = 關閉伺服器執行個體<br /><br /> 2 = 讓作業失敗|  
 |on_failure_desc|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

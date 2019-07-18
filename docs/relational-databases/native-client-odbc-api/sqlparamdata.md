@@ -1,5 +1,5 @@
 ---
-title: SQLParamData |Microsoft Docs
+title: SQLParamData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e76ca73ea92d7402e601729df9855d237c3c23d3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d105b09c94f75ee7ab2317c601c63efda405d682
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131257"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

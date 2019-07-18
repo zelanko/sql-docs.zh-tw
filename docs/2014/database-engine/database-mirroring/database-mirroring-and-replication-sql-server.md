@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807453"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
   資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
@@ -121,7 +121,7 @@ ms.locfileid: "54130478"
 ## <a name="maintaining-a-mirrored-publication-database"></a>維護鏡像發行集資料庫  
  維護鏡像發行集資料庫基本上與維護非鏡像資料庫相同，不過請注意下列事項：  
   
--   管理和監視必須在使用中伺服器端發生。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，發行集只會出現在使用中伺服器的 [本機發行集] 資料夾下。 例如，如果您容錯移轉至鏡像，則發行集會在鏡像端顯示，而不會再顯示於主體端。 如果資料庫容錯移轉至鏡像，您可能需要手動重新整理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和複寫監視器，才能反映出變更。  
+-   管理和監視必須在使用中伺服器端發生。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，發行集只會出現在使用中伺服器的 [本機發行集]  資料夾下。 例如，如果您容錯移轉至鏡像，則發行集會在鏡像端顯示，而不會再顯示於主體端。 如果資料庫容錯移轉至鏡像，您可能需要手動重新整理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和複寫監視器，才能反映出變更。  
   
 -   複寫監視器會同時在主體和鏡像的物件樹中顯示「發行者」節點。 如果主體為使用中伺服器，則發行集資訊只會顯示在「複寫監視器」的主體節點下。  
   

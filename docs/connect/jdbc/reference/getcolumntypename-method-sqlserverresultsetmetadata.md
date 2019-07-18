@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68d7389cc50f69c94d28265dc988937e9191063e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 72d51d7830cdcdb14208550974fe432a48a67b1f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755436"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763268"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>getColumnTypeName 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

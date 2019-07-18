@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250644"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
   SQL Server 中的 **SQLServer:Databases** 物件提供計數器，可用來監視大量複製作業、備份和還原輸送量以及交易記錄活動。 監視交易和交易記錄檔，可以判斷資料庫中有多少使用者活動，以及交易記錄檔有多滿。 使用者活動量可用來判斷資料庫的效能，並且會影響記錄檔大小、鎖定和複寫。 監視低階記錄檔活動，則可量測使用者活動和資源使用量，以協助您找出效能瓶頸。  
@@ -48,7 +48,7 @@ ms.locfileid: "52776420"
 |**Log Flushes/sec**|每秒的記錄檔排清數目。|  
 |**Log Growths**|資料庫之交易記錄檔的擴大總次數。|  
 |**Log Shrinks**|資料庫之交易記錄縮小的總次數。|  
-|**Log Pool Cache Misses/sec**|記錄檔區塊無法在記錄檔集區中使用的要求數目。 「記錄集區」是交易記錄的記憶體中快取。 此快取是用來最佳化記錄的讀取，以便進行復原、交易複寫、回復和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。|  
+|**Log Pool Cache Misses/sec**|記錄檔區塊無法在記錄檔集區中使用的要求數目。 「記錄集區」  是交易記錄的記憶體中快取。 此快取是用來最佳化記錄的讀取，以便進行復原、交易複寫、回復和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。|  
 |**Log Pool Disk Reads/sec**|由記錄檔集區發出來提取記錄檔區塊的磁碟讀取數目。|  
 |**Log Pool Requests/sec**|記錄檔集區處理的記錄檔區塊要求數目。|  
 |**Log Truncations**|交易記錄檔被壓縮的次數。|  
@@ -57,7 +57,7 @@ ms.locfileid: "52776420"
 |**Repl.Trans.Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  
 |**Shrink Data Movement Bytes/sec**|經由自動壓縮作業或是 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 陳述式移動的每秒資料量。|  
 |**Tracked transactions/sec**|資料庫的認可資料表中記錄的已認可交易數目。|  
-|**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec] 並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
+|**Transactions/sec**|每秒針對資料庫啟動的交易數。<br /><br /> [Transactions/sec]  並未計入僅限 XTP 交易 (由原生編譯的預存程序啟動的交易)。|  
 |**Write Transactions/sec**|上一秒寫入資料庫並認可的交易數目。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
+title: sp_syspolicy_add_policy_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7489b68c8e41ca90acc83e0a0ea0b4fe5783ed9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010526"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122627"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  這是安全性實體的名稱。 如果安全性實體是伺服器或資料庫，這個值應該設為 NULL。 *securable* 為 **sysname** 類型的純量運算式。 *安全性實體*可以是多部分名稱。  
   
  '*securable_class*'  
- 這是列出權限之安全性實體的類別名稱。 *securable_class*已**sysname**。 *securable_class*必須是下列其中之一： 應用程式角色、 組件、 非對稱金鑰、 憑證、 合約、 資料庫、 ENDPOINT、 FULLTEXT CATALOG、 登入、 訊息類型、 物件、 REMOTE SERVICE BINDING、 角色、 路由、 結構描述、 伺服器、 服務對稱金鑰、 型別、 使用者、 XML 結構描述集合。  
+ 這是列出權限之安全性實體的類別名稱。 *securable_class*已**sysname**。 *securable_class*必須是下列其中之一：應用程式角色、 組件、 非對稱金鑰、 憑證、 合約、 資料庫、 端點、 FULLTEXT CATALOG、 登入、 訊息類型、 物件、 遠端服務繫結、 角色、 路由、 結構描述、 伺服器、 服務、 對稱金鑰、 型別、 使用者、 XML 結構描述集合。  
   
 ## <a name="columns-returned"></a>傳回的資料行  
  下表列出的資料行， **fn_my_permissions**傳回。 傳回的每個資料列都會描述安全性實體之目前安全性內容所持有的權限。 如果查詢失敗，則傳回 NULL。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|有效授與列出權限的安全性實體名稱。|  
 |subentity_name|**sysname**|如果安全性實體有資料行，則為資料行名稱，否則為 NULL。|  

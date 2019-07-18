@@ -2,23 +2,23 @@
 title: 列印報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3904d1498207bbd1384639613457257fbc75647d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581172"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
   將報表儲存至報表伺服器之後，您就可以從瀏覽器、 Reporting Services 入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
   
- 當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以強制分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
+ 當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以硬分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
  您可以從 Reporting Services 入口網站的報表檢視器工具列或報表產生器中的預覽，將報表匯出到手動分頁轉譯器，或是按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "56292906"
   
 1.  開啟報表。  
   
-2.  在 [主資料夾] 索引標籤上，按一下 **[執行]**。  
+2.  在 [主資料夾] 索引標籤上，按一下 **[執行]** 。  
   
-3.  (選擇性) 按一下 [整頁模式] 查看報表列印時的外觀。  
+3.  (選擇性) 按一下 [整頁模式]  查看報表列印時的外觀。  
   
-4.  (選擇性) 按一下 [版面設定] 設定紙張、方向與邊界。  
+4.  (選擇性) 按一下 [版面設定]  設定紙張、方向與邊界。  
   
     > [!NOTE]  
     >  這些設定的預設值來自 [設計] 檢視中所設定的報表屬性。 您在 **[版面設定]** 對話方塊中設定的值只會用於此工作階段。 當您關閉這份報表並重新開啟時，它就會再次具有預設值。  
   
-5.  按一下 **[列印]**。  
+5.  按一下 **[列印]** 。  
   
 6.  在 **[列印]** 對話方塊中，選取印表機並指定其他列印選項。  
   
@@ -57,26 +57,26 @@ ms.locfileid: "56292906"
   
 1.  在 Reporting Services 入口網站中，巡覽至您想要列印的報表。 開啟報表。  
   
-3.  在報表頂端的工具列上，按一下 **[列印]**。  
+3.  在報表頂端的工具列上，按一下 **[列印]** 。  
   
     > [!NOTE]  
     >  您第一次列印 HTML 報表時，報表伺服器會提示您安裝用於列印的 ActiveX 控制項。 您必須安裝並設定控制項才能列印。  
   
-4.  在 **[列印]** 對話方塊中，選取一個印表機，然後按一下 **[列印]**。  
+4.  在 **[列印]** 對話方塊中，選取一個印表機，然後按一下 **[列印]** 。  
   
 ### <a name="to-print-a-report-from-other-applications"></a>若要從其他應用程式列印報表  
   
 1.  在 Reporting Services 入口網站中，巡覽至您想要列印的報表。 開啟報表。  
   
-2.  在報表頂端的工具列上，選取一種轉譯格式，然後按一下 **[匯出]**。 報表會在對應至轉譯格式的檢視器應用程式中開啟。  
+2.  在報表頂端的工具列上，選取一種轉譯格式，然後按一下 **[匯出]** 。 報表會在對應至轉譯格式的檢視器應用程式中開啟。  
   
      例如，如果您選取 PDF，則報表會在 Adobe Acrobat Reader 中開啟。  
   
-3.  在該程式的 **[檔案]** 功能表上，按一下 **[列印]**。  
+3.  在該程式的 **[檔案]** 功能表上，按一下 **[列印]** 。  
   
 ### <a name="to-change-paper-size"></a>變更紙張大小  
   
-1.  以滑鼠右鍵按一下報表主體的外面，然後按一下 [報表屬性]。  
+1.  以滑鼠右鍵按一下報表主體的外面，然後按一下 [報表屬性]  。  
   
 2.  在 **[版面設定]** 中，從 **[紙張大小]** 清單選取一個值。 每個選項都會填入 **[寬度]** 和 **[高度]** 屬性。 您也可以指定自訂大小，其方式是在 **[寬度]** 和 **[高度]** 方塊內輸入數值。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56292906"
   
 ### <a name="to-set-page-margins-in-design-mode"></a>在設計模式中設定頁面邊界  
   
--   以滑鼠右鍵按一下設計介面周圍的藍色區域，按一下 [報表屬性]，然後按一下 [版面設定] 頁面。  
+-   以滑鼠右鍵按一下設計介面周圍的藍色區域，按一下 [報表屬性]  ，然後按一下 [版面設定]  頁面。  
   
 ### <a name="to-set-page-margins-in-run-mode"></a>若要在執行模式中設定頁面邊界  
   

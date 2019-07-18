@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502697"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773733"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用叢集資料行存放區索引
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用叢集資料行存放區索引的工作。  
@@ -60,7 +60,7 @@ GO
  使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)卸除叢集資料行存放區索引的陳述式。 此作業將卸除索引並將資料行存放區資料表轉換成資料列存放區堆積。  
   
 ##  <a name="load"></a> 將資料載入叢集資料行存放區索引  
- 您可以利用任何一種標準的載入方法，將資料加入至現有的叢集資料行存放區索引中。  例如，bcp 大量載入工具、 Integration Services 和 INSERT...SELECT 都可以將資料載入叢集資料行存放區索引中。  
+ 您可以利用任何一種標準的載入方法，將資料加入至現有的叢集資料行存放區索引中。  例如，bcp 大量載入工具、 Integration Services 和 INSERT...SELECT 都可以將資料載入叢集資料行存放區索引。  
   
  叢集資料行存放區索引會運用差異存放區防止資料行存放區中出現資料行區段的片段。  
   
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 資料列群組大小：145,000|0|  
-|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576.|1|  
-|2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576, 1,048,576, 155,000.|0|  
+|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|1|  
+|2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576、1,048,576、155,000。|0|  
   
  下列範例顯示將 1,048,577 個資料列載入分割區的結果。 結果顯示，資料行存放區中有一個 COMPRESSED 資料列群組 (壓縮的資料行區段)，而差異存放區中有 1 個資料列。  
   

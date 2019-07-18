@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670916"
 ---
 # <a name="about-change-tracking-sql-server"></a>關於變更追蹤 (SQL Server)
   變更追蹤是為應用程式提供高效率變更追蹤機制的輕量型方案。 一般而言，若要讓應用程式查詢對資料庫中之資料所做的變更並且存取與這些變更有關的資訊，應用程式開發人員就必須實作自訂變更追蹤機制。 建立這些機制通常需要進行大量工作而且經常涉及使用觸發程序的組合`timestamp`資料行、 儲存追蹤資訊和自訂清除程序的新資料表。  

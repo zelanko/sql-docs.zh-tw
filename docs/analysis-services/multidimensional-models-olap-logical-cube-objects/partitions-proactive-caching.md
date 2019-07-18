@@ -1,5 +1,5 @@
 ---
-title: 主動式快取 （資料分割） |Microsoft 文件
+title: 主動式快取 （資料分割） |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4959473b120a3a8a0c289ff3cd8f91e89df44b86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62640386"
 ---
-# <a name="partitions---proactive-caching"></a>資料分割-主動式快取
+# <a name="partitions---proactive-caching"></a>資料分割 - 主動式快取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   主動式快取會提供自動 MOLAP 快取建立及 OLAP 物件的管理。 Cube 會根據從資料庫接收而來的通知，立即併入對資料庫資料所做的變更。 主動式快取的目標是要提供傳統 MOLAP 的效能，同時保持 ROLAP 所提供的立即性與便於管理性。  
   
@@ -35,6 +35,6 @@ ms.locfileid: "34020755"
   
 ## <a name="see-also"></a>另請參閱  
  [維度儲存](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [設定資料分割儲存體 & #40;Analysis Services-多維度 & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [設定分割區儲存 &#40;Analysis Services - 多維度&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

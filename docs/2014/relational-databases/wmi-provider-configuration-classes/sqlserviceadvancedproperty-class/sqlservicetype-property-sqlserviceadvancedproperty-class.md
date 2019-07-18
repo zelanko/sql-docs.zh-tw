@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 769ffe6b74c5b1cc4a2f21842df3e88a9df5af73
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363427"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211636"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType 屬性 (SqlServiceAdvancedProperty 類別)
   取得與進階屬性相關之受管理服務的類型。  
@@ -49,7 +49,7 @@ NumValue
 ## <a name="remarks"></a>備註  
  傳回值可以是下列其中一個：  
   
-|類型|定義|  
+|type|定義|  
 |----------|----------------|  
 |*1*|MSSQLSERVER 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。|  
 |*2*|SQLSERVERAGENT 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務。|  

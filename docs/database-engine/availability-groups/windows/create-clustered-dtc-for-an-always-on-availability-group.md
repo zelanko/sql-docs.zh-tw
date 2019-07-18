@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 92a75d72a280d3d9e329f38a661a65f9c491cb3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793477"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>建立 Always On 可用性群組的叢集 DTC 資源
 
@@ -116,8 +116,8 @@ foreach ($node in $nodes) {
     New-NetFirewallRule -CimSession $node -DisplayName 'SQL Server Mirroring' -Description 'Port 5022 for SQL Server Mirroring' -Action Allow -Direction Inbound -Protocol TCP -LocalPort 5022 -RemotePort Any -LocalAddress Any -RemoteAddress Any;
     };
 ```  
-## <a name="3--configure-in-doubt-xact-resolution"></a>3.設定 [不能肯定的交易解析] 
-此指令碼會將未決交易的 [不能肯定的交易解析] 伺服器設定選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
+## <a name="3--configure-in-doubt-xact-resolution"></a>3.設定 [不能肯定的交易解析]  
+此指令碼會將未決交易的 [不能肯定的交易解析]  伺服器設定選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************

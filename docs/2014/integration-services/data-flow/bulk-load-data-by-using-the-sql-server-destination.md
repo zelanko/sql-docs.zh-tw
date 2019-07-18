@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828131"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
   若要加入及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，封裝至少必須包含一個「資料流程」工作及一個資料來源。  
@@ -54,7 +54,7 @@ ms.locfileid: "58387406"
     > [!NOTE]  
     >  目的地會自動對應名稱相同的資料行。  
   
-9. 按一下 **進階**設定大量載入選項：**保留識別**，**保留 null**， **Table lock**， **Check 條件約束**，並**引發觸發程序**。  
+9. 按一下 [進階]，然後設定大量載入選項：[保留識別]、[保留 Null]、[資料表鎖定]、[檢查條件約束] 和 [引發觸發程序]。  
   
      (選擇性) 指定要插入的第一個和最後一個輸入資料列，插入作業停止之前發生的最大錯誤數目，以及排序插入的資料行。  
   

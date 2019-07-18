@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773783"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非叢集資料行存放區索引
   描述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表上使用非叢集資料行存放區索引的主要工作。  
   
- 如需資料行存放區索引的概觀，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 如需資料行存放區索引的概觀，請參閱＜ [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)＞。  
   
- 叢集資料行存放區索引的相關資訊，請參閱[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
+ 如需有關叢集資料行存放區索引的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)＞。  
   
 ## <a name="contents"></a>目錄  
   

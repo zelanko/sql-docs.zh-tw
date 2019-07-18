@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 82d5671ca8923b1e85a189c6913c4cefe2a293c3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe90cfca55fb51af6f599d72320c6a5b9108bf7e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681096"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727759"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

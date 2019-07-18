@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, security
 - security [SQLXML]
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcaff1509a08cc14ffb0d5ce267607b75a942229
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f9a2380ae4ab5b59fa974093d81a09266ebd8c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010524"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全性考量
   本節提供與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 之安全性相關考量的資訊。  

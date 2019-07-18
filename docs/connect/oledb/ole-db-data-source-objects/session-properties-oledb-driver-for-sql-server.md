@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9cefecde35d33b9bf400b5af014756f2ddd09a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 873921a00392a9555c0fa33fe29a2df961128fdc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660426"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768416"
 ---
 # <a name="session-properties---ole-db-driver-for-sql-server"></a>工作階段屬性 - OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

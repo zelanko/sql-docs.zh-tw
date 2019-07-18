@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780347"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>在 SQL Server 2014 中已停止的管理工具功能
   此主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中無法再使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理工具功能。  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>移除的功能 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中移除的功能  
  None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>移除的功能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中移除的功能  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  已從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]移除 SQL Server Compact Edition 程式碼編輯器。 此外，亦從 [物件總管]、[方案總管] 及 [範本總管] 中移除了 SQL Server Compact Edition 支援。 請改用 Microsoft Visual Studio 2010 Service Pack 1 或 Webmatrix 的 Transact-SQL 編輯器。  

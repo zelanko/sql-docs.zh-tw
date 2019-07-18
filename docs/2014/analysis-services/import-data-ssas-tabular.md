@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080620"
 ---
 # <a name="import-data-ssas-tabular"></a>匯入資料 (SSAS 表格式)
   您可以從許多不同的來源，將資料匯入表格式模型中。 本節的主題描述如何使用資料匯入精靈連接至資料，以及選取要匯入模型專案的資料。  
@@ -43,6 +42,6 @@ ms.locfileid: "48145986"
 |[從多維度資料來源匯入&#40;SSAS 表格式&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|描述如何從多維度 SQL Server Analysis Services Cube 匯入資料。|  
 |[從資料摘要匯入&#40;SSAS 表格式&#41;](import-from-a-data-feed-ssas-tabular.md)|描述如何從 Microsoft Reporting Services 報表或 Azure DataMarket 資料集等資料摘要匯入資料。|  
 |[從文字檔匯入&#40;SSAS 表格式&#41;](import-from-a-text-file-ssas-tabular.md)|描述如何從 Microsoft Excel 活頁簿或文字檔匯入資料。|  
-|[複製並貼上資料&#40;SSAS 表格式&#41;](copy-and-paste-data-ssas-tabular.md)|描述如何使用 [貼上] 和 [貼上新增]，將資料加入模型設計師中的現有資料表。|  
+|[複製及貼上資料 &#40;SSAS 表格式&#41;](copy-and-paste-data-ssas-tabular.md)|描述如何使用 [貼上] 和 [貼上新增]，將資料加入模型設計師中的現有資料表。|  
   
   

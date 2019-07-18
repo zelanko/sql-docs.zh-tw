@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224601"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>瀏覽決策樹模型 (基本資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法會根據定型集中的其餘資料行，預測哪些資料行影響了自行車的購買決策。  
@@ -23,7 +23,7 @@ ms.locfileid: "56013739"
 
   
 ##  <a name="Decision_Tree_Tab"></a> 決策樹索引標籤  
- 在 **決策樹**索引標籤上，您可以檢視每個可預測屬性的決策樹中的資料集。  
+ 在 [**決策樹**索引標籤上，您可以檢視每個可預測屬性的決策樹中的資料集。  
   
  在此情況下，此模型會預測只有一個資料行，Bike Buyer，因此只有一個樹狀結構檢視。 如果有多個樹狀結構，您可以使用**樹狀結構**方塊來選擇另一個樹狀結構。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "56013739"
   
 #### <a name="to-explore-the-model-in-the-decision-tree-tab"></a>若要在決策樹索引標籤中瀏覽模型  
   
-1.  選取 **採礦模型檢視器**索引標籤中**資料採礦設計師**。  
+1.  選取 [**採礦模型檢視器**索引標籤中**資料採礦設計師**。  
   
      根據預設，設計師會開啟第一個模型，在此情況下，已加入至結構- `TM_Decision_Tree`。  
   
@@ -76,12 +76,12 @@ ms.locfileid: "56013739"
      隨即顯示相同的資料表，且結尾附加結構資料行。  
   
   
-###  <a name="Dependency_Network_Tab"></a> 相依性網路 索引標籤  
+###  <a name="Dependency_Network_Tab"></a> 相依性網路] 索引標籤  
  **相依性網路**索引標籤會顯示採礦模型的預測能力來幫助的變數之間的關聯性。 相依性網路檢視器更加印證我們的發現，也就是在預測自行車購買行為時，年齡和地區是重要的因素。  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>若要在相依性網路索引標籤中瀏覽模型  
   
-1.  按一下 `Bike Buyer`節點以找出其相依性。  
+1.  按一下 [`Bike Buyer`節點以找出其相依性。  
   
      相依性網路中，[中心] 節點`Bike Buyer`，表示採礦模型中的可預測屬性。 圖形會反白顯示對可預測屬性有影響的任何相連節點。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "56013739"
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [決策樹索引標籤&#40;採礦模型檢視器&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
- [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
+ [相依性網路] 索引標籤&#40;採礦模型檢視器&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [使用 Microsoft 樹狀檢視器瀏覽模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
   

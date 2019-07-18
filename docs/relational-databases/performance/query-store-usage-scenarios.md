@@ -13,13 +13,13 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372480"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586314"
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53372480"
   
 -   在迴歸查詢之間，輕易地就能找出具有多個計畫的查詢，以及因選擇不正確的計畫而造成執行計量降低的查詢。 使用 [迴歸查詢]  中的 [計畫摘要]  窗格，以視覺化方式顯示某個迴歸查詢的所有計畫及其在某一段期間內的查詢效能。  
   
--   從歷程記錄強制執行先前的計畫 (如果已證實該計畫比較好)。 使用 [迴歸查詢] 中的 [強制計劃] 按鈕，強制執行針對查詢所選取的計劃。  
+-   從歷程記錄強制執行先前的計畫 (如果已證實該計畫比較好)。 使用 [迴歸查詢]  中的 [強制計劃]  按鈕，強制執行針對查詢所選取的計劃。  
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53372480"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>找出並調整熱門資源取用查詢  
  雖然您的工作負載可能會產生成千上萬個查詢，但通常只有其中幾個實際上最常使用系統資源，因而需要您多加注意。 在前幾大耗用資源的查詢中，您通常會發現這類查詢若不是迴歸，就是可透過其他調整來改善的查詢。  
   
- 開始探勘的最簡單方式是開啟 **中的 [熱門資源取用查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 使用者介面分為三個窗格：代表熱門資源取用查詢的長條圖 (左)、所選取查詢的計畫摘要 (右)，以及所選取計畫的視覺化查詢計畫 (下方)。 按一下 [設定]  按鈕，來控制您想要分析的查詢數量以及感興趣的時間間隔。 此外，您可以在不同的資源耗用維度 (持續時間、CPU、記憶體、IO、執行數目) 和基準 (平均、最小值、最大值、總計、標準差) 之間進行選擇。  
+ 開始探勘的最簡單方式是開啟 **中的 [熱門資源取用查詢]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 使用者介面分為三個窗格：代表熱門資源取用查詢的長條圖 (左)、所選取查詢的計畫摘要 (右)，以及所選取計畫的視覺化查詢計畫 (下方)。 按一下 [設定]  按鈕，來控制您想要分析的查詢數量以及感興趣的時間間隔。 此外，您可以在不同的資源耗用維度 (持續時間、CPU、記憶體、IO、執行數目) 和基準 (平均、最小值、最大值、總計、標準差) 之間進行選擇。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -67,7 +67,9 @@ ms.locfileid: "53372480"
 4.  確定查詢所使用的索引會重組。  
   
 5.  考慮重寫耗用資源的查詢。 例如，充分利用查詢參數化並減少動態 SQL 的使用。 在讀取資料時實作最佳邏輯 (在資料庫端套用資料篩選，而不是在應用程式端)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>A/B 測試  
  使用查詢存放區，來比較您計畫引進之應用程式變更前後的工作負載效能。 下列清單包含數個範例，您可以使用查詢存放區，來評估環境或應用程式變更對工作負載效能的影響︰  
   
@@ -91,13 +93,13 @@ ms.locfileid: "53372480"
   
 4.  比較 #1 和 #3 的結果。  
   
-    1.  開啟 [整體資料庫耗用量] 來判斷對整個資料庫的影響。  
+    1.  開啟 [整體資料庫耗用量]  來判斷對整個資料庫的影響。  
   
-    2.  開啟 [資源耗用量排名在前的查詢] (或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行您自己的分析)，以分析變更最重要的查詢的影響。  
+    2.  開啟 [資源耗用量排名在前的查詢]  (或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行您自己的分析)，以分析變更最重要的查詢的影響。  
   
 5.  萬一無法接受新的效能，請決定要保留變更，或是執行復原。  
   
-下圖顯示發生遺漏索引建立情況的查詢存放區分析 (步驟 4)。 開啟 [熱門資源取用查詢] / [計畫摘要] 窗格，即可針對應該會受到索引建立影響的查詢取得這個檢視︰  
+下圖顯示發生遺漏索引建立情況的查詢存放區分析 (步驟 4)。 開啟 [熱門資源取用查詢]  / [計畫摘要] 窗格，即可針對應該會受到索引建立影響的查詢取得這個檢視︰  
   
 ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
@@ -131,15 +133,18 @@ ms.locfileid: "53372480"
     A.  如果發生迴歸的情況，請強制執行查詢存放區中先前已知的良好計畫。  
   
     B.  如果無法強制執行查詢計畫，或效能仍然不足，請考慮將[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)還原為先前的設定，然後通知 Microsoft 客戶支援。  
+    
+> [!TIP]
+> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [升級資料庫]  工作來將資料庫的[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)升級。 如需詳細資訊，請參閱[使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>找出並改善臨機操作工作負載  
-某些工作負載沒有主控查詢，可讓您加以調整來改善整體應用程式效能。 這些工作負載通常是使用相對大量的各種查詢作為特性，這其中每一個查詢都會耗用部分的系統資源。 由於是唯一的，這些查詢很少執行 (通常只執行一次，因此會以特別的方式命名)，所以它們的執行階段耗用量並不重要。 另一方面，假設該應用程式會不停地產生全新的查詢，則絕大部分的系統資源會耗費在查詢編譯上，這並不能達到最佳效能。 這對查詢存放區而言不是理想的情況，假設有更大量的查詢和計畫湧進您所保留的空間，這表示查詢存放區很可能會非常快速地以唯讀模式結束。 若您啟用 [Size Based Cleanup Policy (大小基礎清除原則)] ([強烈建議](best-practice-with-the-query-store.md)持續啟動並執行查詢存放區)，則背景處理程序大部分的時間將會清除查詢存放區結構，並佔用大量系統資源。  
+某些工作負載沒有主控查詢，可讓您加以調整來改善整體應用程式效能。 這些工作負載通常是使用相對大量的各種查詢作為特性，這其中每一個查詢都會耗用部分的系統資源。 由於是唯一的，這些查詢很少執行 (通常只執行一次，因此會以特別的方式命名)，所以它們的執行階段耗用量並不重要。 另一方面，假設該應用程式會不停地產生全新的查詢，則絕大部分的系統資源會耗費在查詢編譯上，這並不能達到最佳效能。 這對查詢存放區而言不是理想的情況，假設有更大量的查詢和計畫湧進您所保留的空間，這表示查詢存放區很可能會非常快速地以唯讀模式結束。 若您啟用 [Size Based Cleanup Policy (大小基礎清除原則)]  ([強烈建議](best-practice-with-the-query-store.md)持續啟動並執行查詢存放區)，則背景處理程序大部分的時間將會清除查詢存放區結構，並佔用大量系統資源。  
   
- [前幾大耗用資源的查詢] 檢視初步顯示出您工作負載在臨機操作方面的根本情況：  
+ [前幾大耗用資源的查詢]  檢視初步顯示出您工作負載在臨機操作方面的根本情況：  
   
 ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
-使用 [執行計數] 計量來分析您排名最前面的查詢是否是特定的 (這需要您使用 `QUERY_CAPTURE_MODE = ALL` 來執行查詢存放區)。 您可以從上圖看見 90% 的 **前幾大耗用資源的查詢** 只執行了一次。  
+使用 [執行計數]  計量來分析您排名最前面的查詢是否是特定的 (這需要您使用 `QUERY_CAPTURE_MODE = ALL` 來執行查詢存放區)。 您可以從上圖看見 90% 的 **前幾大耗用資源的查詢** 只執行了一次。  
   
 或者，您可以執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼來取得系統中查詢文字、查詢和計畫的總數，並藉由比較 query_hash 和 plan_hash 來判斷其中的差異：  
   
@@ -217,6 +222,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
   
 ## <a name="see-also"></a>另請參閱  
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)         
+ [使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   
   

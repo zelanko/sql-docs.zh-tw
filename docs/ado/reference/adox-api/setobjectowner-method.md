@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43f325382cc556d75d7ab08c5b3dbdc94f68704f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965233"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 方法
 指定物件的擁有者[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。  

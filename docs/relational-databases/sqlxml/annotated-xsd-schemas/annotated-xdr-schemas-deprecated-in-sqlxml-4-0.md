@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e13a99684d9395b51c5ccfe32b8e7ee229175c03
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48969e14077bdc2487ee94d942a3ce7f4e84461d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997594"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>註解式 XDR 結構描述 (在 SQLXML 4.0 中已被取代)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b742bf46ae6bcdba17638de11675594e62dba5cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b9df008c37a6efb645df4ceed46d30e6da452eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078346"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>目錄預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

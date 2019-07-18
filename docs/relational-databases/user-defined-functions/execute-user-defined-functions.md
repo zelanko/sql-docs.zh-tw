@@ -16,18 +16,18 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 74a14c0f28b7353a4d09eb531678450f0b26f3fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034732"
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   使用 Transact-SQL 執行使用者定義函數。
   
 
-> **注意** ︰造訪  [使用者定義的函式](user-defined-functions.md) 和 [Create Function (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) 以取得使用者定義函式的詳細資訊。 
+> **注意：** 前往[使用者定義函式](user-defined-functions.md)和[建立函式 (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) 以取得使用者定義函式的詳細資訊。 
   
  
 ##  <a name="BeforeYouBegin"></a> 開始之前  

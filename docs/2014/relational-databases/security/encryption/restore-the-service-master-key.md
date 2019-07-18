@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011544"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，還原 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的服務主要金鑰。  
@@ -62,9 +62,9 @@ ms.locfileid: "48229788"
   
 2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3.  在標準列上，按一下 **[新增查詢]**。  
+3.  在標準列上，按一下 **[新增查詢]** 。  
   
-4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Restores the service master key from a backup file.  

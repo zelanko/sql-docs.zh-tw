@@ -1,7 +1,7 @@
 ---
 title: Broker:Corrupted Message 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ef3eaafc0d9eb5953db7d26c594020466c1e488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73b12fb1e6d2b008bbde9f7863ce0d7eaa620a1f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66265548"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Broker:Corrupted Message** 事件。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Broker:Corrupted Message** 事件。  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 事件類別資料行  
   
@@ -45,7 +47,7 @@ ms.locfileid: "47745986"
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|交談另一端的服務名稱，以及遠端資料庫用來連接此資料庫的連接字串。|34|否|  
-|**RoleName**|**nvarchar**|接收此訊息的結束點角色。 下列其中一個值。<br /><br /> **起始端**：接收的結束點是交談的起始端。<br /><br /> **目標**：接收的結束點是交談的目標。|38|否|  
+|**RoleName**|**nvarchar**|接收此訊息的結束點角色。 下列其中一個值。<br /><br /> **起始端**：接收的結束點是交談的起始端。<br /><br /> **目標**：               接收的結束點是交談的目標。|38|否|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**Severity**|**int**|若錯誤造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將訊息卸除，此錯誤的嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  

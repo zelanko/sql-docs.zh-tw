@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157958"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
   無論您要建立新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]記憶體最佳化的資料表或將現有磁碟型資料表移轉至記憶體最佳化資料表中，務必要有適當地估計的每個資料表的記憶體需求，因此您可以佈建的伺服器具有足夠記憶體。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱 [雜湊索引](../../database-engine/hash-indexes.md)。  
   
- **注意：** 您無法立即變更雜湊索引陣列大小。 若要變更雜湊索引陣列大小，您必須卸除資料表、變更 bucket_count 值，然後重新建立資料表。  
+ **注意：** 您無法變更即時雜湊索引陣列大小。 若要變更雜湊索引陣列大小，您必須卸除資料表、變更 bucket_count 值，然後重新建立資料表。  
   
  **設定雜湊索引陣列大小**  
   

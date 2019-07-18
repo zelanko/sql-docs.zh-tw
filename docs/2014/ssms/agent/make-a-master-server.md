@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189138"
 ---
 # <a name="make-a-master-server"></a>設為主要伺服器
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設為主要伺服器 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -35,7 +35,7 @@ ms.locfileid: "52752601"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要設為主要伺服器，使用：**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52752601"
 ###  <a name="Security"></a> 安全性  
  具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
--   主要伺服器登錄子機碼**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 設定為 1 (true)。 依預設，這個子機碼設為 0 (False)。  
+-   主要伺服器登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 設定為 1 (true)。 依預設，這個子機碼設為 0 (False)。  
   
 -   存在於目標伺服器上的 Proxy 帳戶，而該帳戶名稱與執行作業步驟之主要伺服器上的 Proxy 帳戶名稱相同。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "52752601"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多重伺服器管理]**，然後按一下 **[設為主要伺服器]**。 **「主要伺服器精靈」** 會引導您完成設定主要伺服器與新增目標伺服器的步驟。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多重伺服器管理]** ，然後按一下 **[設為主要伺服器]** 。 **「主要伺服器精靈」** 會引導您完成設定主要伺服器與新增目標伺服器的步驟。  
   
-3.  從 [主要伺服器操作員] 頁面設定主要伺服器的操作員。若要使用電子郵件或呼叫器傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來傳送電子郵件。 若要使用 **net send**傳送通知給操作員， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在伺服器上必須執行 Messenger 服務。  
+3.  從 [主要伺服器操作員]  頁面設定主要伺服器的操作員。若要使用電子郵件或呼叫器傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來傳送電子郵件。 若要使用 **net send**傳送通知給操作員， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在伺服器上必須執行 Messenger 服務。  
   
      **電子郵件地址**  
      設定操作員的電子郵件地址。  
@@ -121,9 +121,9 @@ ms.locfileid: "52752601"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
   
 ```  
 USE msdb ;  

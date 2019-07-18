@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a733c2b88954c9937e8a170b949535ffa118bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039730"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLSetDescRec**函式會將多個會影響資料類型的描述項欄位，而且緩衝區的繫結至資料行或參數資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetDescRec(  
       SQLHDESC      DescriptorHandle,  
@@ -61,7 +60,7 @@ SQLRETURN SQLSetDescRec(
  *型別*  
  [輸入]要用來設定描述項記錄的 SQL_DESC_TYPE 欄位的值。  
   
- *子類型*  
+ *SubType*  
  [輸入]型別是 SQL_DATETIME 或 SQL_INTERVAL 的記錄，這是要用來設定 SQL_DESC_DATETIME_INTERVAL_CODE 欄位的值。  
   
  *長度*  
@@ -101,7 +100,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
 |HY016|無法修改實作資料列描述項|*DescriptorHandle*引數為 IRD 相關聯。|  
 |HY021|不一致的描述元資訊|*型別* 欄位中或任何其他的描述元中的 SQL_DESC_TYPE 欄位相關聯的欄位不是有效或一致。<br /><br /> 描述項一致性檢查期間檢查的資訊不一致。 （請參閱 「 一致性檢查，」 本節稍後的）。|  
-|HY090|字串或緩衝區長度無效|(DM) 驅動程式的 ODBC 2 *.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，並指定引數的值*Columnsize*已不等於 4。|  
+|HY090|字串或緩衝區長度無效|(DM) 驅動程式的 ODBC *2.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，並指定引數的值*Columnsize*已不等於 4。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*DescriptorHandle*不支援此函式。|  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multiple query columns
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5afeeaec91d6c7e2443360be67ffca88ef23df8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 999844d4dcc915d008ecc92f8f3bf82927d2614c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710216"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681317"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47710216"
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>若要使用一個以上的資料行排序查詢結果  
   
-1.  在 [準則] 窗格中，針對要排序之資料行按一下 [排序次序] 欄位。  
+1.  在 [準則]  窗格中，針對要排序之資料行按一下 [排序次序]  欄位。  
   
 2.  輸入一個整數，或是從下拉清單中選取整數，以指示此資料行在排序資料行中的次序。  
   

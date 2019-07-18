@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113552"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "52414075"
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR for **varchar （max)** 資料型別。|  
-|TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，並**nvarchar （max)** 資料型別。|  
+|TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)** ， **varbinary （max)** ，並**nvarchar （max)** 資料型別。|  
 |COLUMN_SIZE|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 資料型別表示，資料行的大小不受限制。|  
 |BUFFER_LENGTH|傳回為 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 資料型別表示，緩衝區的大小不受限制。|  
 |SQL_DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR for **varchar （max)** 資料型別。|  

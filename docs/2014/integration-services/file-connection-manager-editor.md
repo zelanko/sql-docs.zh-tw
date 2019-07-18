@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnectionmanager.f1
@@ -15,12 +14,12 @@ ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058813"
 ---
 # <a name="file-connection-manager-editor"></a>檔案連接管理員編輯器
   使用 **[檔案連接管理員編輯器]** 對話方塊，以指定用來連接到檔案或資料夾的屬性。  
@@ -32,7 +31,7 @@ ms.locfileid: "58374826"
   
 ## <a name="options"></a>選項。  
  **使用類型**  
- 指定 [檔案連線管理員] 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
+ 指定 [檔案連線管理員]  是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -42,12 +41,12 @@ ms.locfileid: "58374826"
 |現有的資料夾|使用現有的資料夾。|  
   
  **檔案 / 資料夾**  
- 若為 [檔案]，請指定要使用的檔案。  
+ 若為 [檔案]  ，請指定要使用的檔案。  
   
- 若為 **[資料夾]**，請指定要使用的資料夾。  
+ 若為 **[資料夾]** ，請指定要使用的資料夾。  
   
  **瀏覽**  
- 使用 [選取檔案] 或 [瀏覽資料夾] 對話方塊，來選取檔案或資料夾。  
+ 使用 [選取檔案]  或 [瀏覽資料夾]  對話方塊，來選取檔案或資料夾。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)  

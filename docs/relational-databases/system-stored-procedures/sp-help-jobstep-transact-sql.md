@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_help_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090056"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**os_run_priority**|**int**|已保留。|  
 |**output_file_name**|**nvarchar(200)**|命令輸出應該寫入的檔案 ([!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**，以及**PowerShell**只有步驟)。|  
 |**last_run_outcome**|**int**|上次執行步驟的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
-|**last_run_duration**|**int**|步驟上次執行的持續時間 (以秒為單位)。|  
+|**last_run_duration**|**int**|上次執行步驟的持續期間 (hhmmss)。|  
 |**last_run_retries**|**int**|上次執行步驟時的命令重試次數。|  
 |**last_run_date**|**int**|上次開始執行步驟的日期。|  
 |**last_run_time**|**int**|上次開始執行步驟的時間。|  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150110"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評估未來 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級的影響。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 微調的影響。  
@@ -41,7 +41,7 @@ ms.locfileid: "53358460"
   
 |工具|使用時機...|  
 |----------|---------------|  
-|[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|您想要在單一電腦上使用傳統的重新執行機制。 尤其，您需要逐行偵錯功能，例如 [步驟]、[執行至資料指標處] 及 [切換中斷點] 命令。<br /><br /> 您想要重新執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤。|  
+|[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|您想要在單一電腦上使用傳統的重新執行機制。 尤其，您需要逐行偵錯功能，例如 [步驟]  、[執行至資料指標處]  及 [切換中斷點]  命令。<br /><br /> 您想要重新執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤。|  
 |Distributed Replay|您想要評估應用程式相容性。 例如，您想要測試 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和作業系統升級狀況、硬體升級或索引微調。<br /><br /> 擷取之追蹤中的並行過高，導致單一重新執行用戶端無法充分模擬它。|  
   
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 概念  

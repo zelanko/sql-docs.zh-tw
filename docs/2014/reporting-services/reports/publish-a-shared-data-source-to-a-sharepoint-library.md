@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4dbe708d18cf7b8c3fa02ebd3da174d76a9683ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102535"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  
@@ -31,23 +30,23 @@ ms.locfileid: "56031119"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  按一下 [專案] 功能表上的 [屬性]。 \<專案> [屬性頁] 對話方塊隨即開啟。  
+2.  按一下 [專案]  功能表上的 [屬性]  。 \<專案>  [屬性頁]  對話方塊隨即開啟。  
   
-3.  選擇您用來發行至 SharePoint 網站的 [組態]。  
+3.  選擇您用來發行至 SharePoint 網站的 [組態]  。  
   
 4.  如果您想要發行專案中的共用資料來源，並覆寫之前發行的共用資料來源，請將 **OverwriteDataSources** 設定為 **True**。  
   
-5.  (選擇性) 為 **TargetDataSourceFolder**輸入 SharePoint 文件庫或文件庫資料夾的 URL。 例如， *http://TestServer/TestSite/Documents/DataSources*。  
+5.  (選擇性) 為 **TargetDataSourceFolder**輸入 SharePoint 文件庫或文件庫資料夾的 URL。 例如， *http://TestServer/TestSite/Documents/DataSources* 。  
   
      如果您未指定值，則會使用 **TargetReportFolder** 值。  
   
-6.  為 **TargetReportFolder**輸入文件庫或文件庫資料夾的 URL。 例如，http:*//TestServer/TestSite/Documents/Reports*。  
+6.  為 **TargetReportFolder**輸入文件庫或文件庫資料夾的 URL。 例如，http: *//TestServer/TestSite/Documents/Reports*。  
   
 7.  為 **TargetServerURL**輸入 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如， http://*servername*、 http://*servername*/*site* 或 http://*servername*/*site*/*subsite*。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在方案總管中，以滑鼠右鍵按一下您要發行的共用資料來源，然後按一下 [部署]。 資料來源便會發行到 **TargetDataSourceFolder**中指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
+9. 在方案總管中，以滑鼠右鍵按一下您要發行的共用資料來源，然後按一下 [部署]  。 資料來源便會發行到 **TargetDataSourceFolder**中指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
   
     > [!NOTE]  
     >  當您將共用資料來源發行到 SharePoint 網站時，副檔名會變更為 .rsds。 您可以直接在 SharePoint 網站上編輯及管理共用資料來源。 如需詳細資訊，請參閱[建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。  

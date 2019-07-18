@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7e003406049be26025723a6a1118d80ec6457b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9031f4b2e5923d1382c10c97dd6886959af108a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043018"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>異動資料擷取函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

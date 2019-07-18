@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7367def40e230c71b16a4206735ae65ce7693857
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0bcb90aab7d2b66dc227fd0083bf38f6bb34e2c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771949"
 ---
 # <a name="security-requirements-for-managing-services"></a>管理服務的安全性需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

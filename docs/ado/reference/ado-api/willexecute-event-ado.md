@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936618"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件被呼叫之前暫止的命令執行的連接上。  

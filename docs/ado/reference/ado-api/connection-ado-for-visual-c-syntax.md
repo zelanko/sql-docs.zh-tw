@@ -1,5 +1,5 @@
 ---
-title: Connection (ADO for Visual c + + 語法) |Microsoft Docs
+title: 連接 (ADO for VisualC++語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 356713d24cd4e37014884cf39aa903267d5378b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919549"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (ADO for Visual C++ 語法)
 ## <a name="methods"></a>方法  
@@ -63,7 +62,7 @@ get_Version(BSTR *pbstr)
 get_Errors(ADOErrors **ppvObject)  
 ```  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
   
 ```  
 BeginTransComplete(LONG TransactionLevel, ADOError *pError, EventStatusEnum *adStatus, _ADOConnection *pConnection)  

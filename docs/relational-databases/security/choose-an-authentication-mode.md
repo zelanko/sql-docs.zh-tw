@@ -26,16 +26,16 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac0c3526439d0dc899e81554305c7602c4fa8a9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb99199e90a4e85412fed33210d75b18c8f2975a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781906"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579870"
 ---
 # <a name="choose-an-authentication-mode"></a>選擇驗證模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式和混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
+  在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式與混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  
   
 ## <a name="configuring-the-authentication-mode"></a>設定驗證模式  
  如果您在安裝期間選取混合模式驗證，就必須為名為 sa 的內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供並確認增強式密碼。 sa 帳戶會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接。  
@@ -69,13 +69,15 @@ ms.locfileid: "47781906"
   
 #### <a name="to-determine-the-password-policies-of-the-local-computer"></a>判斷本機電腦的密碼原則  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [執行] 對話方塊中，輸入 **secpol.msc**，然後按一下 [確定]。  
+2.  在 [執行]  對話方塊中，輸入 **secpol.msc**，然後按一下 [確定]  。  
   
-3.  在 [本機安全性設定] 應用程式中，依序展開 [安全性設定] 和 [帳戶原則]，然後按一下 [密碼原則]。  
-  
-     密碼原則就會描述在結果窗格中。  
+3.  在 [本機安全性設定]  應用程式中，依序展開 [安全性設定]  和 [帳戶原則]  ，然後按一下 [密碼原則]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The password policies are described in the results pane.  
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>SQL Server 驗證的缺點  
   

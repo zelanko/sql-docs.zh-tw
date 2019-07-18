@@ -14,14 +14,18 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b1e9dccf528a06ae9f2dceb44ff0af65bc30e77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca43c5b6faaa8aecf24da81e7a587f9c33636ac3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715730"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   以非同步方式驗證 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的封裝。  
@@ -40,13 +44,13 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含封裝之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含封裝之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @project_name = ] *project_name*  
- 包含封裝之專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 包含封裝之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @package_name = ] *package_name*  
- 封裝名稱。 *package_name* 是 **nvarchar(260)**。  
+ 封裝名稱。 *package_name* 是 **nvarchar(260)** 。  
   
  [ @validation_id = ] *validation_id*  
  傳回驗證的唯一識別碼 (ID)。 *validation_id* 是 **bigint**。  
@@ -55,7 +59,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 `1` 值，即可在執行 64 位元作業系統時，使用 32 位元執行階段執行套件。 使用 `0` 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這個參數是選擇性的。 *use32bitruntime* 是 **bit**。  
   
  [ @environment_scope = ] *environment_scope*  
- 指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這個參數是選擇性的。 預設會使用字元 `D`。 *environment_scope* 是 **char(1)**。  
+ 指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這個參數是選擇性的。 預設會使用字元 `D`。 *environment_scope* 是 **char(1)** 。  
   
  [ @reference_id = ] *reference_id*  
  環境參考的唯一識別碼。 只有在驗證中包含單一環境參考，也就是在 *environment_scope* 為 `S` 時，才需要這個參數。 *reference_id* 是 **bigint**。  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4cd58a535836a82dc6cca660ba745aed58e2c84c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986322"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取使用精靈來安裝 Windows Installer 為基礎。 本主題提供有關安裝必要條件的資訊 SSMA，最新版本的連結和安裝、 授權、 解除安裝和升級 SSMA 的指示。  
@@ -70,7 +69,7 @@ SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Mig
   
 4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
-5.  按一下 **[安裝]**。  
+5.  按一下 **[安裝]** 。  
   
 預設安裝位置是 C:\Program Files\Microsoft SQL Server Migration Assistant for Access。  
   

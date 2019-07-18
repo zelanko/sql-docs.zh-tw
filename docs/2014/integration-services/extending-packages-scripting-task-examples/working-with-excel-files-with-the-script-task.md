@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62894782"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。 您可以輕鬆地修改這些範例，使其可與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 所支援的其他以檔案為基礎之資料來源搭配使用。  
@@ -48,7 +48,7 @@ ms.locfileid: "58376087"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案，並開啟預設封裝以進行編輯。  
   
-2.  **變數**。 開啟 [變數] 視窗，並定義下列變數：  
+2.  **變數**。 開啟 [變數]  視窗，並定義下列變數：  
   
     -   類型為 `String` 的 `ExcelFile`。 輸入現有 Excel 活頁簿的完整路徑與檔案名稱。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "58376087"
   
 4.  **參考**。 從 Excel 檔案讀取結構描述資訊的程式碼範例，在指令碼專案中需要有 `System.Xml` 命名空間的參考。  
   
-5.  請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
+5.  請使用 [選項]  對話方塊中 [一般]  頁面上的 [指令碼語言]  選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 ##  <a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
  此範例會判斷 `ExcelFile` 變數中指定的 Excel 活頁簿檔案是否存在，然後將 `ExcelFileExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
@@ -81,13 +81,13 @@ ms.locfileid: "58376087"
   
 1.  將新的指令碼工作加入封裝，並變更其名稱`ExcelFileExists`。  
   
-2.  在 [指令碼工作編輯器] 的 [指令碼] 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
+2.  在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
     -   輸入 `ExcelFile`。  
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFile`變數。  
+    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFile`變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -95,9 +95,9 @@ ms.locfileid: "58376087"
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFileExists`變數。  
+    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFileExists`變數。  
   
-4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
   
 5.  在指令碼檔案最上方加入 `Imports` 命名空間的 `System.IO` 陳述式。  
   
@@ -151,13 +151,13 @@ public class ScriptMain
   
 1.  將新的指令碼工作加入封裝，並變更其名稱`ExcelTableExists`。  
   
-2.  在 [指令碼工作編輯器] 的 [指令碼] 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
+2.  在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
     -   型別`ExcelTable`和`ExcelFile`以逗號分隔`.`  
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
+    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -165,9 +165,9 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTableExists`變數。  
+    -   按一下省略符號 ( **...** ) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTableExists`變數。  
   
-4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
   
 5.  在指令碼專案中加入 `System.Xml` 組件的參考。  
   
@@ -251,20 +251,20 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案的清單  
+##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案清單  
  此範例會使用在 `ExcelFolder` 變數值中指定的資料夾內所找到的 Excel 檔案清單，來填滿陣列，然後將陣列複製到 `ExcelFiles` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的檔案。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelFiles**。  
   
-2.  開啟 [指令碼工作編輯器] 的 [指令碼] 索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
   
     -   輸入 `ExcelFolder`  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFolder] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelFolder] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -272,9 +272,9 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFiles] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelFiles] 變數。  
   
-4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
   
 5.  在指令碼檔案最上方加入 `Imports` 命名空間的 `System.IO` 陳述式。  
   
@@ -333,13 +333,13 @@ public class ScriptMain
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelTables**。  
   
-2.  開啟 [指令碼工作編輯器] 的 [指令碼] 索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
+2.  開啟 [指令碼工作編輯器]  的 [指令碼]  索引標籤，並按一下 **ReadOnlyVariables**，然後使用下列其中一項方法輸入屬性值：  
   
     -   輸入 `ExcelFile`。  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFile] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelFile] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -347,9 +347,9 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelTables] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取 [ExcelTables] 變數。  
   
-4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
+4.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
   
 5.  在指令碼專案中，加入 `System.Xml` 命名空間的參考。  
   
@@ -444,17 +444,17 @@ public class ScriptMain
   
 2.  依序連線這四個範例指令碼工作，好讓每個工作在前一個工作順利完成之後接著執行，然後將第四個範例工作連線至 **DisplayResults** 工作。  
   
-3.  開啟 [指令碼工作編輯器] 中的 **DisplayResults** 工作。  
+3.  開啟 [指令碼工作編輯器]  中的 **DisplayResults** 工作。  
   
-4.  在 [指令碼] 索引標籤上，按一下 **ReadOnlyVariables** 並使用下列其中一個方法，新增[設定套件以測試範例](#configuring)中的所有七個變數：  
+4.  在 [指令碼]  索引標籤上，按一下 **ReadOnlyVariables** 並使用下列其中一個方法，新增[設定套件以測試範例](#configuring)中的所有七個變數：  
   
     -   輸入每個變數名稱，並以逗號分隔。  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...])  按鈕，然後在 [選取變數]  對話方塊中選取變數。  
   
-5.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
+5.  按一下 [編輯指令碼]  ，以開啟指令碼編輯器。  
   
 6.  在指令碼檔案最上方加入 `Imports` 與 `Microsoft.VisualBasic` 命名空間的 `System.Windows.Forms` 陳述式。  
   

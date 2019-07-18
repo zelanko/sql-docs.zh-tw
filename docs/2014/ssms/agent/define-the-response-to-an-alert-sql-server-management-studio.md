@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524068"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定義對警示的回應 (SQL Server Management Studio)
   本主題說明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 回應 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
@@ -59,19 +59,19 @@ ms.locfileid: "52795860"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要定義回應的警示。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  在要定義回應的警示上按一下滑鼠右鍵，然後選取 [屬性]。  
+4.  在要定義回應的警示上按一下滑鼠右鍵，然後選取 [屬性]  。  
   
-5.  在 _alert_name_的 [警示屬性] 對話方塊中，選取 [選取頁面] 下的 [回應]。  
+5.  在 _alert_name_的 [警示屬性]  對話方塊中，選取 [選取頁面]  下的 [回應]  。  
   
-6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業] 與 [作業屬性_job_name_] 對話方塊中使用的選項詳細資訊，請參閱＜[建立作業](create-a-job.md)＞及＜[檢視作業](view-a-job.md)＞。  
+6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業]  與 [作業屬性  _job_name_] 對話方塊中使用的選項詳細資訊，請參閱＜[建立作業](create-a-job.md)＞及＜[檢視作業](view-a-job.md)＞。  
   
-7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在 **操作員清單**，選取一或多個下列的方法，來通知操作員：**電子郵件**，**呼叫器**，或**Net 傳送**。 您可以按一下 **[新增操作員]** 來建立新操作員。 您可以按一下 **[檢視操作員]** 檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](create-an-operator.md) ＞和＜ [View Information About an Operator](view-information-about-an-operator.md)＞。  
+7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在 [操作員清單]  中，選取下列其中一或多個方法來通知操作員：[電子郵件]  、[呼叫器]  ，或 [Net send]  。 您可以按一下 **[新增操作員]** 來建立新操作員。 您可以按一下 **[檢視操作員]** 檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](create-an-operator.md) ＞和＜ [View Information About an Operator](view-information-about-an-operator.md)＞。  
   
-8.  完成後，請按一下 **[確定]**。  
+8.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "52795860"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- adds an e-mail notification for Test Alert.  

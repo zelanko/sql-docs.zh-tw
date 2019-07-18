@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082744"
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -67,7 +66,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT ={1,3}，...|  
+|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},....|  
   
  預設週期性提示為 {1}，而且會出現在所有模型中；這個範例模型是使用其他提示所建立，這個提示可能不會出現在最終模型中。  
   
@@ -100,7 +99,7 @@ WHERE NODE_NAME = 'TA00000007'
   
 |簡短的方程式|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24....|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   

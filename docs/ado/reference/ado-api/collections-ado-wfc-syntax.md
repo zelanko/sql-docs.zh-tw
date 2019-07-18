@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4c5a2e9ae543f7ebbbefb6286835906626a6285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919900"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO - WFC 語法)
 **封裝 com.ms.wfc.data**  

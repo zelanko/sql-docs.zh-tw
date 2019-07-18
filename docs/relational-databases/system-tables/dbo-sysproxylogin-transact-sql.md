@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00a3b3b53bcede7f43aad556465358b957331f45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984875"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

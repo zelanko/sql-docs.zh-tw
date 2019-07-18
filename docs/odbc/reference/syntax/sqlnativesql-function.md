@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138819"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53208629"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -49,7 +48,7 @@ SQLRETURN SQLNativeSql(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *InStatementText*  
  [輸入]要轉譯的 SQL 文字字串。  
@@ -97,25 +96,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>註解  
  以下是範例，示範哪些**SQLNativeSql**可能會傳回下列輸入包含純量函式轉換的 SQL 字串。 假設資料來源中的整數類型的資料行 empid:  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Microsoft SQL Server 的驅動程式可能會傳回下列已翻譯的 SQL 字串：  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  ORACLE 伺服器的驅動程式可能會傳回下列已翻譯的 SQL 字串：  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Ingres 的驅動程式可能會傳回下列已翻譯的 SQL 字串：  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

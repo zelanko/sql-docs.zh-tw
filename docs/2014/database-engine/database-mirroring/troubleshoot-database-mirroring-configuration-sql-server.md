@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754206"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>疑難排解資料庫鏡像組態 (SQL Server)
   本主題提供資訊以協助您對設定資料庫鏡像工作階段的問題進行疑難排解。  

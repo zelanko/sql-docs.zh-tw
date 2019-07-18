@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079564"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
@@ -71,7 +70,7 @@ ms.locfileid: "53374270"
   
  下表說明 Analysis Services SPN 的每一個部分。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |服務類別|MSOLAPSvc.3 會將服務識別為 Analysis Services 執行個體， 其中 .3 是 Analysis Services 傳輸時所使用 XMLA-over-TCP/IP 通訊協定版本的參考， 與產品版本無關。 因此，除非通訊協定本身有異動，否則 MSOLAPSvc.3 都會是 SQL Server 2005、2008、2008 R2、2012 以及未來所有 Analysis Services 版本的正確服務類別。|  
 |主機名稱|識別執行服務的電腦。 可以是完整網域名稱或 NetBIOS 名稱 您應該針對這兩者註冊 SPN。<br /><br /> 當您針對伺服器的 NetBIOS 名稱註冊 SPN 時，請務必使用 `SetupSPN -S` 來檢查是否有重複註冊。 樹系中可能會有重複的 NetBIOS 名稱，而重複的 SPN 註冊將會導致連接失敗。<br /><br /> 如果是 Analysis Services 負載平衡叢集，主機名稱必須是指派給叢集的虛擬名稱。<br /><br /> 請絕對不要使用 IP 位址來建立 SPN， 因為 Kerberos 會使用 DNS 網域解析功能， 如果指定 IP 位址則會略過這項功能。|  
@@ -80,7 +79,7 @@ ms.locfileid: "53374270"
 |服務帳戶|這是 **MSSQLServerOLAPService** Windows 服務的啟動帳戶。 可以是 Windows 網域使用者帳戶、虛擬帳戶、受管理的服務帳戶 (MSA) 或內建帳戶 (如個別服務 SID、NetworkService 或 LocalSystem)。 Windows 網域使用者帳戶可格式化為 「 網域 \ 使用者或user@domain。|  
   
 ##  <a name="bkmk_virtual"></a> 虛擬帳戶的 SPN 註冊  
- 虛擬帳戶是 SQL Server 服務的預設帳戶類型。 虛擬帳戶是**NT Service\MSOLAPService**的預設執行個體並**NT Service\MSOLAP$**\<執行個體名稱 > 的具名執行個體。  
+ 虛擬帳戶是 SQL Server 服務的預設帳戶類型。 虛擬帳戶是**NT Service\MSOLAPService**的預設執行個體並**NT Service\MSOLAP$** \<執行個體名稱 > 的具名執行個體。  
   
  如同名稱所指示，這些帳戶在 Active Directory 中並不存在。 虛擬帳戶只存在於本機電腦上。 當連接到外部服務、應用程式或裝置時，將會使用本機帳戶進行連接。 因此，在虛擬帳戶之下執行之 Analysis Services 的 SPN 註冊實際上是電腦帳戶的 SPN 註冊。  
   
@@ -97,7 +96,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **以 NT Service\MSOLAP$ 身分執行的具名執行個體的範例語法\<執行個體名稱 >**  
   
- 這個範例會針對在預設虛擬帳戶之下執行的具名執行個體顯示 **setspn** 語法。 在此範例中，電腦主機名稱為 **AW-SRV02**，執行個體名稱則為 **AW-FINANCE**。 同樣地，它是 SPN，針對指定的電腦帳戶，而不是虛擬帳戶時**NT Service\MSOLAP$**\<執行個體名稱 >。  
+ 這個範例會針對在預設虛擬帳戶之下執行的具名執行個體顯示 **setspn** 語法。 在此範例中，電腦主機名稱為 **AW-SRV02**，執行個體名稱則為 **AW-FINANCE**。 同樣地，它是 SPN，針對指定的電腦帳戶，而不是虛擬帳戶時**NT Service\MSOLAP$** \<執行個體名稱 >。  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -142,7 +141,7 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="bkmk_spnCluster"></a> 為 SSAS 叢集註冊 SPN  
- 如果是 Analysis Services 容錯移轉叢集，主機名稱必須是指派給叢集的虛擬名稱。 這是當您安裝在現有的 WSFC 上安裝 Analysis Services 時，SQL Server 安裝程式所指定的 SQL Server 網路名稱。 您可以在 Active Directory 中找到此名稱。 您也可以在 [容錯移轉叢集管理員]  |  |  索引標籤中尋找。[資源] 索引標籤上的伺服器名稱是在 SPN 命令中，要用為「虛擬名稱」的名稱。  
+ 如果是 Analysis Services 容錯移轉叢集，主機名稱必須是指派給叢集的虛擬名稱。 這是當您安裝在現有的 WSFC 上安裝 Analysis Services 時，SQL Server 安裝程式所指定的 SQL Server 網路名稱。 您可以在 Active Directory 中找到此名稱。 您也可以在 [容錯移轉叢集管理員]   |    |   索引標籤中尋找。[資源] 索引標籤上的伺服器名稱是在 SPN 命令中，要用為「虛擬名稱」的名稱。  
   
  **Analysis Services 叢集的 SPN 語法**  
   

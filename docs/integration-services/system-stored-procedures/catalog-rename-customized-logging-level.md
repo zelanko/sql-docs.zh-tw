@@ -11,14 +11,18 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 972cc532916a135562fbd0e860ad2d003cdc9ee7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 255068b1d20d67b18a9c0a1679b8ee424192045e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716015"
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   重新命名現有的自訂記錄層次。 如需自訂記錄層次的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -34,12 +38,12 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  [ @old_name = ] *old_name*  
  要重新命名的現有自訂記錄層次名稱。  
   
- *old_name* 是 **nvarchar(128)**。  
+ *old_name* 是 **nvarchar(128)** 。  
   
  [ @new_name = ] *new_name*  
  指定的自訂記錄層次的新名稱。  
   
- *new_name* 是 **nvarchar(128)**。  
+ *new_name* 是 **nvarchar(128)** 。  
   
 ## <a name="remarks"></a>Remarks  
   

@@ -7,13 +7,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e0cded793f6017398641ffa055deec62010b2b3d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3482a15392fa04f7f10d2acbb0843d124e27dc21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962741"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy （SQL Server 中的 Python 模組）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

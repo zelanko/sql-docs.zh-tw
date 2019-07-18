@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c7bd6bc8281dd6bdc3bcfbd437380b2d5269ee43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2107ca1eeecc6fad24311c5bce629784ae4ceff0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023277"
 ---
 # <a name="prepared-execution-odbc"></a>備妥的執行 ODBC
 備妥的執行是有效的方式來執行陳述式一次以上。 第一次編譯的陳述式，或是*備妥，* 到存取計畫。 然後執行一或多次稍後存取計劃。 如需有關存取計劃的詳細資訊，請參閱[處理 SQL 陳述式](../../../odbc/reference/processing-a-sql-statement.md)。  

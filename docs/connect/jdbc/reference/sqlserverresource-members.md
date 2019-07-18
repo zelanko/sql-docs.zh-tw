@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f30e853c8673fd020dd08239c34b0fd2c3ad77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 427bee6c3a70238dcfc1abede9d6afb0b86aa088
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814566"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801535"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

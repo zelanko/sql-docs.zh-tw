@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c7be80b40c80edf3811f996e8037cbdbc9fa4d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071972"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>將 BI 語意模型連接內容類型加入至文件庫 (PowerPivot for SharePoint)
   BI 語意模型連接是在 SharePoint 中所建立，它會重新導向至網路伺服器上 PowerPivot 活頁簿或 Analysis Services 表格式模型資料庫內的商業智慧語意模型資料。 在 SharePoint 中建立 BI 語意模型連接之前，您必須擴充文件庫以允許建立 .bism 檔。 針對每個文件庫，僅需要執行一次這個步驟，但是您將需要針對您要建立 .bism 檔的任何來源文件庫重複該步驟。 最佳做法建議您建立集中式文件庫來儲存 .bism 檔，讓您可以在一個地方管理權限。  
@@ -31,25 +30,25 @@ ms.locfileid: "48052968"
   
 1.  開啟要啟用 BI 語意模型連接內容類型的文件庫。  
   
-2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]**。  
+2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]** 。  
   
-3.  按一下 **[文件庫設定]**。  
+3.  按一下 **[文件庫設定]** 。  
   
-4.  按一下 [一般設定] 中的 **[進階設定]**。  
+4.  按一下 [一般設定] 中的 **[進階設定]** 。  
   
-5.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]**。  
+5.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]** 。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
-7.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]**。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]**。  
+7.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]** 。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]** 。  
   
-8.  在 [內容類型] 中，按一下 **[從現有的網站內容類型新增]**。  
+8.  在 [內容類型] 中，按一下 **[從現有的網站內容類型新增]** 。  
   
-9. 在 [從下列位置選取網站內容類型:] 中，選取 **[商業智慧]**。  
+9. 在 [從下列位置選取網站內容類型:] 中，選取 **[商業智慧]** 。  
   
-10. 在 [可用的網站內容類型] 中，按一下 **[BI 語意模型連接檔案]**，然後按一下 **[加入]** ，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
+10. 在 [可用的網站內容類型] 中，按一下 **[BI 語意模型連接檔案]** ，然後按一下 **[加入]** ，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 12. 若要驗證您是否加入此內容類型，請回到文件庫，然後在文件庫功能區的文件區域上按一下 **[新文件]** 。 您應該會在 [新文件] 清單中看到 **[BI 語意模型連接檔案]** 。  
   

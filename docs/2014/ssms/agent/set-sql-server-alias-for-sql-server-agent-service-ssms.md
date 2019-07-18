@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245943"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>設定追蹤篩選 (Transact-SQL)
   本主題描述如何使用預存程序來建立篩選，針對所追蹤的事件，只擷取您需要的資訊。  
@@ -30,7 +30,7 @@ ms.locfileid: "54126688"
 2.  執行 **sp_trace_setfilter** 以設定要從追蹤的事件中擷取的相關資訊類型。  
   
 > [!IMPORTANT]
->  不同於一般預存程序，所有的參數[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]預存程序 (<strong>sp_trace_*xx*</strong>) 都有強制類型，而且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+>  與一般的預存程序不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序 (<strong>sp_trace_*xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型的轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)   

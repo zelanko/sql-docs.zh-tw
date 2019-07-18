@@ -1,20 +1,20 @@
 ---
 title: Hadoop 的 PolyBase 設定和安全性 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b71d226a5b2f9e7113d1aba89fe5718441d8cc2d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257103"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733441"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 設定和安全性
 
@@ -33,6 +33,8 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
      <value></value>
    </property> 
 ```
+
+SQL Server 必須至少是 SQL Server 2016 SP1 CU7、SQL Server 2016 SP2 或 SQL Server 2017 CU3，才能使用 hadoop.rpc.protection 的「私人」或「完整性」。
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>CDH 5.X 叢集的範例 XML 檔案
 
@@ -167,6 +169,8 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
    |7|yarn-site.xml yarn。|yarn.resourcemanager.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： yarn/_HOST@YOUR-REALM.COM|  
 
 4. 建立資料庫範圍的認證物件，以指定每個 Hadoop 使用者的驗證資訊。 請參閱 [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL 物件)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="next-steps"></a>後續步驟  
 

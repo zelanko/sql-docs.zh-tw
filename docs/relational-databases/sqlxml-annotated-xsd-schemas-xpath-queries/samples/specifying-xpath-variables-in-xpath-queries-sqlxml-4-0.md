@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f6d8bb97da7bd678f23c13f48c6a4c973071b43
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1036b6e1255013fac79e10b31f5870436344c36c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027046"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "56037509"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. 使用 XPath 變數  
- 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 使用預設值的兩個參數中指定 **\<sql:header >**。  
+ 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 使用預設值的兩個參數中指定 **\<sql:header >** 。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

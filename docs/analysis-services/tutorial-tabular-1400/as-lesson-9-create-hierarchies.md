@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 92f83e1e2b3553f85301574e98f95ed7e22c1184
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148981"
 ---
 # <a name="create-hierarchies"></a>建立階層
 
@@ -25,7 +25,7 @@ ms.locfileid: "57685415"
   
 若要建立階層，請使用 模型設計師中的*圖表檢視*。 建立及管理階層不支援在資料檢視中。  
   
-完成本課程的估計時間：**20 分鐘的時間**  
+估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
 

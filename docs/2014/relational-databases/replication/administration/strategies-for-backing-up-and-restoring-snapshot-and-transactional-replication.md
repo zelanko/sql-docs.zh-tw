@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210779"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
   當為快照式及異動複寫設計備份與還原策略時，需要考慮三個方面：  
@@ -148,7 +148,7 @@ ms.locfileid: "54125228"
   
          如需有關如何指定訂閱者已經擁有該資料的詳細資訊，請參閱＜ [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)＞。  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>發行集資料庫：具有可更新訂閱的異動複寫  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>發行集資料庫：具有更新訂閱的異動複寫  
   
 1.  還原最新的發行集資料庫備份。 移至步驟 2。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54125228"
   
 9. 還原之後，您針對資料庫 **A** 中的每一個資料表指派的識別範圍也會在資料庫 **B** 中使用。請確保還原的資料庫 **B** 已接收到來自失敗資料庫 **B** 中已傳播至資料庫 **A** 和資料庫 **C** 的所有變更；然後為每個資料表的識別範圍重設種子資料。  
   
-    1.  在資料庫 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id**＞。 移至步驟 b。  
+    1.  在資料庫 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 b。  
   
     2.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 如需詳細資訊，請參閱[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)或[啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 移至步驟 c。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125228"
   
     1.  停止點對點拓撲中已發行資料表上的所有活動。 移至步驟 b。  
   
-    2.  在資料庫 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id**＞。 移至步驟 c。  
+    2.  在資料庫 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 c。  
   
     3.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 移至步驟 d。  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125228"
   
 2.  還原最新一次訂閱資料庫備份。 移至步驟 3。  
   
-3.  如果訂閱資料庫僅包含發送訂閱，請移至步驟 4。 如果訂閱資料庫包含任何提取訂閱，請詢問下列問題：訂閱資訊是最新的嗎？ 資料庫包含所有在失敗時所設定的資料表和選項嗎？ 如果是，則移至步驟 4。 如果否，請重新初始化該項訂閱。 復原即可完成。  
+3.  如果訂閱資料庫僅包含發送訂閱，請移至步驟 4。 如果訂閱資料庫包含任何提取訂閱，請詢問下列問題：是最新的訂用帳戶資訊？ 資料庫包含所有在失敗時所設定的資料表和選項嗎？ 如果是，則移至步驟 4。 如果否，請重新初始化該項訂閱。 復原即可完成。  
   
 4.  若要同步處理「訂閱者」，請執行「散發代理程式」。 復原即可完成。  
   
@@ -350,7 +350,7 @@ ms.locfileid: "54125228"
  [備份及還原複寫的資料庫](back-up-and-restore-replicated-databases.md)   
  [[設定散發]](../configure-distribution.md)   
  [發行資料和資料庫物件](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [訂閱發行集](../subscribe-to-publications.md)   
  [初始化訂閱](../initialize-a-subscription.md)   
  [同步處理資料](../synchronize-data.md)  
   

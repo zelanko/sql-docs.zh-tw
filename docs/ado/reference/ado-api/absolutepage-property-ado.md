@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efdbd68bf464fea3a0d59396380b082eb66375b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921837"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 屬性 (ADO)
 指出目前記錄位於哪一頁。  

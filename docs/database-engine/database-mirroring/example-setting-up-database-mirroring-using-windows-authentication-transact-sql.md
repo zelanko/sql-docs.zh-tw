@@ -1,5 +1,5 @@
 ---
-title: 範例：使用 Windows 驗證設定資料庫鏡像 (T-SQL) | Microsoft Docs
+title: 範例使用 Windows 驗證設定資料庫鏡像 (T-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4f4fe56652f71e3c46e93b8115e792154d17a74f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 42f706ed9b7975c73f6c24b3f7e828ab077c8776
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795433"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>範例：使用 Windows 驗證設定資料庫鏡像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>範例使用 Windows 驗證設定資料庫鏡像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此範例顯示使用 Windows 驗證建立具有見證的資料庫鏡像工作階段的所有必要階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 請注意，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟的另一種方法是，您可以使用 [設定資料庫鏡像安全性精靈] 來設定資料庫鏡像。 如需詳細資訊，請參閱本主題稍後的 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
@@ -40,7 +40,7 @@ GO
   
  如需在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更復原模式的資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要資料庫的 ALTER 權限及 CREATE ENDPOINT 權限，或是 **sysadmin** 固定伺服器角色的成員資格。  
   
 ## <a name="example"></a>範例  
@@ -162,7 +162,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 Always On 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

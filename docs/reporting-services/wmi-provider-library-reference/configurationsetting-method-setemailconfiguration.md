@@ -2,7 +2,7 @@
 title: SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 227122568d206e9459811b090b1b1dbb2c53c356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581002"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 方法 - SetEmailConfiguration
   設定報表伺服器用來傳送電子郵件的電子郵件傳遞延伸模組。  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificateBindings method
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9802176b5f5c82ba60a4e47d85445b54eaa1a5f0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031619"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098355"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
   傳回電腦上已安裝之 SSL 憑證的清單。  

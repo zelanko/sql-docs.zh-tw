@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebc5caa6ccdb3c14faf722f1ccc66c46befa6fbb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963870"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 屬性 (RDS)
 表示要求逾時之前要等候的毫秒數。  

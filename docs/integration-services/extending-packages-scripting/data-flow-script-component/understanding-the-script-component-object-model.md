@@ -15,14 +15,18 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64218cb8435f7bb30fc1a1309daeb93632d2bad9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1109e0b7c86e03efe41c05b47af9e74c266edb3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724127"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如同[指令碼元件的程式碼撰寫和偵錯](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中所討論，指令碼元件專案包含了三個專案項目：  
   
 1.  **ScriptMain** 項目，其中包含您用來撰寫程式碼的 **ScriptMain** 類別。 **ScriptMain** 類別繼承自 **UserComponent** 類別。  
@@ -114,9 +118,9 @@ public override void PreExecute()
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>BufferWrapper 專案項目提供的內容  
  如果是您已設定的每一個輸入，**BufferWrapper** 專案項目都會包含一個衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 的類別，而且名稱與輸入相同。 每一個輸入緩衝區類別都包含下列屬性、函數和方法：  
   
--   每一個選定輸入資料行的具名、具類型存取子屬性。 這些屬性是唯讀或可讀寫，這取決於在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上針對資料行所指定的 [使用類型]。  
+-   每一個選定輸入資料行的具名、具類型存取子屬性。 這些屬性是唯讀或可讀寫，這取決於在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上針對資料行所指定的 [使用類型]  。  
   
--   每一個選定輸入資料行的 **\<資料行>_IsNull** 屬性。 這個屬性也是唯讀或可讀寫，這取決於針對資料行指定的 [使用類型] 而定。  
+-   每一個選定輸入資料行的 **\<資料行>_IsNull** 屬性。 這個屬性也是唯讀或可讀寫，這取決於針對資料行指定的 [使用類型]  而定。  
   
 -   每個已設定輸出的 **DirectRowTo\<輸出緩衝區>** 方法。 當您在相同的 **ExclusionGroup** 中將資料列篩選成數個輸出的其中一個時，您將會使用這些方法。  
   
@@ -125,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 專案項目提供的內容  
  ComponentWrapper 專案項目包含了衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的 **UserComponent** 類別。 接著您撰寫自訂程式碼所使用的 **ScriptMain** 類別就會衍生自 **UserComponent**。 **UserComponent** 類別包含以下的方法：  
   
--   已覆寫的 **ProcessInput** 方法實作。 這是資料流程引擎在執行階段的 **PreExecute** 方法之後所呼叫的方法，而且它可呼叫多次。 **ProcessInput** 將處理交給**\<輸入緩衝區>_ProcessInput** 方法。 然後 **ProcessInput** 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 **FinishOutputs** 方法和私用 **MarkOutputsAsFinished** 方法。 **MarkOutputsAsFinished** 方法會接著呼叫最後一個輸出緩衝區上的 **SetEndOfRowset**。  
+-   已覆寫的 **ProcessInput** 方法實作。 這是資料流程引擎在執行階段的 **PreExecute** 方法之後所呼叫的方法，而且它可呼叫多次。 **ProcessInput** 將處理交給 **\<輸入緩衝區>_ProcessInput** 方法。 然後 **ProcessInput** 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 **FinishOutputs** 方法和私用 **MarkOutputsAsFinished** 方法。 **MarkOutputsAsFinished** 方法會接著呼叫最後一個輸出緩衝區上的 **SetEndOfRowset**。  
   
 -   可覆寫的 **\<輸入緩衝區>_ProcessInput** 方法實作。 這個預設實作只會在每一個輸入資料列中執行迴圈，並呼叫 **\<輸入緩衝區>_ProcessInputRow**。  
   

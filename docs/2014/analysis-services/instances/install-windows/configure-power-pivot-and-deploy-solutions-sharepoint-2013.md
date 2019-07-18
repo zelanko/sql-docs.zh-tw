@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23eaa3b9394822399618a99483dfb2b22fe13455
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079960"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>設定 PowerPivot 及部署方案 (SharePoint 2013)
   本主題將描述如何部署和設定 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 中 PowerPivot 功能的中介層增強功能，包括 PowerPivot 圖庫、排程資料重新整理、管理儀表板和資料提供者。 請執行 **PowerPivot for SharePoint 2013 組態** 工具以完成下列作業：  
@@ -38,7 +37,7 @@ ms.locfileid: "53370080"
  [疑難排解問題](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 執行 PowerPivot for SharePoint 2013 組態  
- **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈會安裝兩個不同的組態工具[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 它們各支援不同的 SharePoint 版本。  
+ **注意：** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈會安裝兩個不同的組態工具[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 它們各支援不同的 SharePoint 版本。  
   
 |名稱|描述|  
 |----------|-----------------|  
@@ -51,11 +50,11 @@ ms.locfileid: "53370080"
   
  請以安裝 SharePoint 的帳戶登入或將安裝帳戶設定為 SharePoint 管理中心網站的主要管理員。  
   
-1.  在 **[開始]** 功能表上，依序按一下 **[所有程式]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot For SharePoint 2013 組態]**。 只有在本機伺服器上安裝了 PowerPivot for SharePoint 時，才會列出此工具。  
+1.  在 **[開始]** 功能表上，依序按一下 **[所有程式]** 、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot For SharePoint 2013 組態]** 。 只有在本機伺服器上安裝了 PowerPivot for SharePoint 時，才會列出此工具。  
   
-2.  按一下 **[設定或修復 PowerPivot for SharePoint]** ，然後按一下 **[確定]**。  
+2.  按一下 **[設定或修復 PowerPivot for SharePoint]** ，然後按一下 **[確定]** 。  
   
-3.  此工具會執行驗證，以確認 PowerPivot 的目前狀態，而且需要哪些步驟來完成組態。 將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
+3.  此工具會執行驗證，以確認 PowerPivot 的目前狀態，而且需要哪些步驟來完成組態。 將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]** 、 **[執行]** 和 **[結束]** 命令。  
   
 4.  在 **[參數]** 索引標籤上：  
   
@@ -71,7 +70,7 @@ ms.locfileid: "53370080"
   
 5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每一項的詳細資訊，請參閱下節 「 輸入值用來設定中的伺服器[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) in this 主題。  
   
-6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]**，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
+6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]** ，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
   
 7.  按一下 **[驗證]** ，檢查此工具是否有足夠的資訊來處理清單中的動作。 如果您看到驗證錯誤，請按一下左窗格中的警告，查看驗證錯誤的詳細資料。 更正任何驗證錯誤，然後再按一下 **[驗證]** 。  
   
@@ -82,15 +81,15 @@ ms.locfileid: "53370080"
 ##  <a name="bkmk_verify_powerpivot"></a> 確認 PowerPivot 組態  
  **服務：**  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]** 。  
   
 2.  確認 **SQL Server Analysis Services** 和 **SQL Server PowerPivot 系統服務** 都已啟動。  
   
  **伺服器陣列功能：**  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列功能]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列功能]** 。  
   
-2.  確認 **[PowerPivot 整合功能]** 為 **[使用中]**。  
+2.  確認 **[PowerPivot 整合功能]** 為 **[使用中]** 。  
   
  **網站集合功能：**  
   
@@ -98,15 +97,15 @@ ms.locfileid: "53370080"
   
      按一下 **設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下**站台設定**。  
   
-     按一下 **[網站集合功能]**。  
+     按一下 **[網站集合功能]** 。  
   
-2.  確認 **[網站集合的 PowerPivot 功能整合]** 為 **[使用中]**。  
+2.  確認 **[網站集合的 PowerPivot 功能整合]** 為 **[使用中]** 。  
   
  **PowerPivot 服務應用程式：**  
   
-1.  在管理中心的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]**。  
+1.  在管理中心的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]** 。  
   
-2.  確認服務應用程式狀態為 **[已啟動]**。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。  
+2.  確認服務應用程式狀態為 **[已啟動]** 。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。  
   
      按一下服務應用程式的名稱，即可針對已開啟的服務應用程式開啟 PowerPivot 管理儀表板。 在第一次使用時，需要數分鐘才能載入儀表板。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "53370080"
 ##  <a name="bkmk_troubleshoot_issues"></a> 疑難排解問題  
  為了協助疑難排解問題，建議您最好先確認診斷記錄是否已啟用。  
   
-1.  在 SharePoint 管理中心內，按一下 **[監視]** ，然後按一下 **[設定 Usage and Health Data Collection]**。  
+1.  在 SharePoint 管理中心內，按一下 **[監視]** ，然後按一下 **[設定 Usage and Health Data Collection]** 。  
   
 2.  確認已選取 **[啟用使用狀況資料收集]** 。  
   
@@ -133,9 +132,9 @@ ms.locfileid: "53370080"
   
 4.  確認已選取 **[啟用健康情況資料收集]** 。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
- 如需有關疑難排解資料重新整理的詳細資訊，請參閱 <<c0> [ 疑難排解 PowerPivot 資料重新整理](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 如需有關疑難排解資料重新整理的詳細資訊，請參閱 <<c0> [ 疑難排解 PowerPivot 資料重新整理](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 。  
   
  如需有關組態工具的詳細資訊，請參閱＜ [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)＞。  
   

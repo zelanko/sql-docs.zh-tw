@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35c1fce22e700ddd7ca2e738449a7b8b4ce4a63a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925869"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>使用命令呼叫預存程序
 您可以使用命令呼叫的預存程序。 本主題結尾的程式碼範例是指在 Northwind 範例資料庫中，稱為 CustOrdersOrders，如下列所定義的預存程序。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e60756b2b8980825fdd61e0e589f36fc29c0b579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 46098bd775dba93adf89b1504c582f4aa0233240
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803847"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>設定 fill factor 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47727348"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 fill factor 選項：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47727348"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 fill factor 選項之後](#FollowUp)  
+-   **後續操作：**[設定填滿因數選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -87,7 +87,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 fill factor 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定填滿因數選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

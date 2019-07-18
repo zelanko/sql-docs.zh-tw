@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 12e285e4348c2fac373797d4e260ea088facaabf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b8b0d47a3778303cfcbd234add3167f6c225bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054758"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ object.SqlServiceType [= value]
 ## <a name="remarks"></a>備註  
  傳回值可以是下列其中一個：  
   
-|類型|定義|  
+|type|定義|  
 |----------|----------------|  
 |*1*|MSSQLSERVER 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。|  
 |*2*|SQLSERVERAGENT 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務。|  
@@ -55,6 +54,11 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService 是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服務。|  
 |*6*|ReportServer 是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。|  
 |*7*|SQLBrowser 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser 服務。|  
+|*8*|NsService 是[!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)]通知服務。|  
+|*9*|MSSQLFDLauncher 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]全文檢索篩選背景程式啟動器服務。|  
+|*10*|SQLPBENGINE 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Polybase 引擎服務。|  
+|*11*|SQLPBDMS 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Polybase Data Movement service。|  
+|*12*|MSSQLLaunchpad 是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Launchpad 服務。|  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

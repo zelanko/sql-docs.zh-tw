@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc6b574702f71a70de842c3a3b51110e8eed9814
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207623"
 ---
 # <a name="perspectives-in-tabular-models"></a>表格式模型中的檢視方塊
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52983889"
  檢視方塊並非用來做為安全性機制，而是用來提供較佳使用者體驗的工具。 特定檢視方塊的所有安全性，都是繼承自基礎模型。 如果使用者沒有模型物件的存取權，檢視方塊也無法提供這些存取權。 必須先解決模型資料庫的安全性，才能透過檢視方塊提供模型中物件的存取權。 您可使用安全性角色來保護模型中繼資料和資料的安全。 如需詳細資訊，請參閱 <<c0> [ 角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
 ##  <a name="bkmk_testpersp"></a> Testing perspectives  
- 在撰寫模型時，您可以使用模型設計師中的 [在 Excel 中進行分析] 功能，來測試所定義之檢視方塊的效率。 請從模型設計師中的 **[模型]** 功能表，按一下 **[在 Excel 中進行分析]**， **[選擇認證和檢視方塊]** 對話方塊即會在 Excel 開啟前出現。 在這個對話方塊中，您可指定目前的使用者名稱、其他使用者、角色，以及您想用來連接至做為資料來源之模型工作空間資料庫並檢視資料的檢視方塊。  
+ 在撰寫模型時，您可以使用模型設計師中的 [在 Excel 中進行分析] 功能，來測試所定義之檢視方塊的效率。 請從模型設計師中的 **[模型]** 功能表，按一下 **[在 Excel 中進行分析]** ， **[選擇認證和檢視方塊]** 對話方塊即會在 Excel 開啟前出現。 在這個對話方塊中，您可指定目前的使用者名稱、其他使用者、角色，以及您想用來連接至做為資料來源之模型工作空間資料庫並檢視資料的檢視方塊。  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   

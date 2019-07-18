@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 15fa1269b733c9adc938b1880735ae2a4e5db731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039560"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **合規性**  
@@ -40,7 +39,7 @@ ms.locfileid: "53204367"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
      SQLHSTMT      StatementHandle,  
@@ -151,9 +150,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**標準的結果集，依 SCOPE 來排序的方式傳回結果。  
   
- 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC *3.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
+|ODBC 2.0 資料行|ODBC *3.x*資料行|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

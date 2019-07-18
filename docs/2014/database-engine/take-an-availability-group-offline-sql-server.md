@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773580"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>讓可用性群組離線 (SQL Server)
   本主題描述如何使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 和更新版本中的 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] ，將 AlwaysOn 可用性群組從 ONLINE 狀態變成 OFFLINE 狀態。 同步認可資料庫不會有資料遺失，因為如果有任何未同步處理的同步認可複本，OFFLINE 作業就會引發錯誤並且讓可用性群組維持 ONLINE 狀態。 讓可用性群組保持上線可保護未同步處理的同步認可資料庫，避免可能的資料遺失。 在可用性群組離線之後，其資料庫就無法供用戶端使用，而且您無法讓可用性群組恢復上線。 因此，只有在從某一個 WSFC 叢集將可用性群組資源移轉至另一個叢集時，才讓可用性群組離現。  
@@ -54,7 +54,7 @@ ms.locfileid: "53371370"
   
      ALTER AVAILABILITY GROUP *group_name* OFFLINE  
   
-     其中 <群組名稱> 是可用性群組的名稱。  
+     其中 <群組名稱>  是可用性群組的名稱。  
   
 ### <a name="example"></a>範例  
  下列範例會讓 `AccountsAG` 可用性群組離線。  
@@ -65,9 +65,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="FollowUp"></a> 後續操作：可用性群組離線之後  
   
--   **OFFLINE 作業記錄：** 起始 OFFLINE 作業所在的 WSFC 節點識別會儲存在 WSFC 叢集記錄檔和 SQL ERRORLOG 中。  
+-   **OFFLINE 作業的記錄：** OFFLINE 作業起始所在的 WSFC 節點身分識別會同時儲存在 WSFC 叢集記錄檔和 SQL ERRORLOG 中。  
   
--   **如果您未在群組離線之前刪除可用性群組接聽程式：** 如果您將可用性群組移轉至另一個 WSFC 叢集，請刪除的 VNN 和 VIP 的接聽程式。 您可以使用容錯移轉叢集管理主控台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)刪除它們。 請注意，cluster.exe 在 Windows 8 中已被取代。  
+-   **如未在群組離線前刪除可用性群組接聽程式：** 如果您要將可用性群組移轉至另一個 WSFC 叢集，請刪除接聽程式的 VNN 和 VIP。 您可以使用容錯移轉叢集管理主控台、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 或 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)刪除它們。 請注意，cluster.exe 在 Windows 8 中已被取代。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

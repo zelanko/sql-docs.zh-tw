@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638733"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用擴充事件監視系統活動
   此程序說明如何搭配 Windows 事件追蹤 (ETW) 來使用擴充的事件，以監視系統活動。 此程序也會示範如何使用 CREATE EVENT SESSION、ALTER EVENT SESSION 和 DROP EVENT SESSION 陳述式。  

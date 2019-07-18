@@ -49,7 +49,7 @@
       href: concatenate-ssis-expression.md
     - name: '- (減) (SSIS 運算式)'
       href: subtract-ssis-expression.md
-    - name: '- (負) (SSIS 運算式)'
+    - name: '- (變換正負號) (SSIS 運算式)'
       href: negate-ssis-expression.md
     - name: '* (乘) (SSIS 運算式)'
       href: multiply-ssis-expression.md
@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <= (小於或等於) (SSIS 運算式)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? : (條件) (SSIS 運算式)'
+    - name: '? 所解碼的字元：(條件) (SSIS 運算式)'
       href: conditional-ssis-expression.md
 - name: 函數 (SSIS 運算式)
   href: functions-ssis-expression.md

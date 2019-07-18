@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920232"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消暫止的非同步方法呼叫的執行。  

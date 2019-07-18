@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cba2759d6a1725056fcb792e7efa1a94c17b5b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df793f0bb2ad156d2f793826411f17741862fa55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061947"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>記憶體最佳化的資料表動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

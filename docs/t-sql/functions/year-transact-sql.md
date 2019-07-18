@@ -20,16 +20,16 @@ helpviewer_keywords:
 - YEAR function [SQL Server]
 - dateparts [SQL Server], year
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28d7df812fb8d945bfb87bb7de59f52b67f0037d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a8c6728692e27a1af301e28f58c9f3640d5eb48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944915"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

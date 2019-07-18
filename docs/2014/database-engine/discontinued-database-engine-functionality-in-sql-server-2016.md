@@ -33,30 +33,30 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132610"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463462"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> 在 已停止的功能 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
-|類別目錄|已停止的功能|取代|  
+|Category|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |相容性層級|90 相容性層級|資料庫至少必須設定為相容性層級 100。 當相容性層級低於 100 的資料庫升級為 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]時，資料庫的相容性層級會在升級作業期間設定為 100。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> 在 已停止的功能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
-|類別目錄|已停止的功能|取代|  
+|Category|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |備份與還原|**備份 {資料庫&#124;LOG} WITH PASSWORD**並**備份 {資料庫&#124;LOG} WITH MEDIAPASSWORD**已停用。 **RESTORE {DATABASE&#124;記錄檔} 與 [MEDIA] PASSWORD**繼續被取代。|None|  
-|備份與還原|**RESTORE {DATABASE&AMP;#124;記錄檔}...WITH DBO_ONLY**|**RESTORE {DATABASE&AMP;#124;記錄檔}......WITH RESTRICTED_USER**|  
+|備份與還原|**RESTORE { DATABASE &#124; LOG } ...WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ...WITH RESTRICTED_USER**|  
 |相容性層級|80 相容性層級|資料庫至少必須設定為相容性層級 90。|  
 |組態選項|`sp_configure 'user instance timeout'` 和 `'user instances enabled'`|使用本機資料庫功能。 如需詳細資訊，請參閱[SqlLocalDB 公用程式](../tools/sqllocaldb-utility.md)|  
 |連接通訊協定|VIA 通訊協定支援已停用。|請改用 TCP。|  
@@ -75,7 +75,7 @@ ms.locfileid: "54132610"
 |系統資料表|sys.database_principal_aliases|請使用角色，而非別名。|  
 |Transact-SQL|`RAISERROR` 格式的 `RAISERROR integer 'string'` 已停止。|請使用目前的陳述式重寫**raiserror （...)** 語法。|  
 |Transact-SQL 語法|`COMPUTE / COMPUTE BY`|使用`ROLLUP`|  
-|Transact-SQL 語法|利用**\* =** 和 **=&#42;**|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL 語法|利用 **\* =** 和 **=&#42;**|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|取代 database_file_size_change event，database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **其他 XEvent 變更**  
@@ -93,6 +93,6 @@ ms.locfileid: "54132610"
 -   加入的欄位：target_kb、pages_kb  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 中已淘汰的資料庫引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2014 中已淘汰的資料庫引擎功能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

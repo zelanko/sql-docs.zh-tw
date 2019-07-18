@@ -18,11 +18,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974297"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716185"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "57974297"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]:使用 [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) 的 **upgrade\_option** 動作  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用 [伺服器屬性] 對話方塊的 [全文檢索升級選項]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用 [伺服器屬性]  對話方塊的 [全文檢索升級選項]  。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的考量 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  將全文檢索資料從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一種方法是將完整資料庫備份還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -174,7 +174,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上，每個所附加之全文檢索目錄的狀態都與從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中卸離資料庫時的狀態相同。 如果卸離作業暫停了任何全文檢索索引母體擴展，就會在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上繼續進行母體擴展，而且全文檢索索引會變成可用於全文檢索搜尋。  
   
- 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入] 或 [重建]，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]，系統就會重設附加的全文檢索目錄。  
+ 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入]  或 [重建]  ，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]  ，系統就會重設附加的全文檢索目錄。  
   
  如需卸離和附加資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
   

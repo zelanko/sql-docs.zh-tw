@@ -15,16 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edaebbf5d6b8f0f5e91e1fc4cd2f3a719363053c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 24a36f46cdd4a3db095170e41e992747b722df3f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695707"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688890"
 ---
 # <a name="assign-alerts-to-an-operator"></a>指派警示給操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "51695707"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目指派警示給操作員：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -69,17 +69,17 @@ ms.locfileid: "51695707"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要指派警示的操作員。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要指派警示的操作員並選取 [屬性]，然後選取 [通知] 頁面。  
+4.  以滑鼠右鍵按一下要指派警示的操作員並選取 [屬性]  ，然後選取 [通知]  頁面。  
   
-5.  在 [_operator\_name_ 屬性] 對話方塊中，選取 [選取頁面] 下的 [通知]。  
+5.  在 [_operator\_name_ 屬性]  對話方塊中，選取 [選取頁面]  下的 [通知]  。  
   
-6.  在 **[檢視傳送給這名使用者的通知來源]** 下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一個或多個核取方塊，視需要定義每個通知的通知方法：[電子郵件]、[呼叫器] 或 [Net send]。  
+6.  在 **[檢視傳送給這名使用者的通知來源]** 下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一或多個核取方塊，視需要定義每個通知的通知方法：[電子郵件]  、[呼叫器]  ，或 [Net send]  。  
   
-7.  完成後，請按一下 **[確定]**。  
+7.  完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -87,9 +87,9 @@ ms.locfileid: "51695707"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行]  。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  

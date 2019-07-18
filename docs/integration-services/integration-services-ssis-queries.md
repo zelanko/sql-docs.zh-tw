@@ -18,14 +18,18 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289429"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723539"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「執行 SQL」工作、OLE DB 來源、OLE DB 目的地和「查閱」轉換可使用 SQL 查詢。 在「執行 SQL」工作中，SQL 陳述式可建立、更新和刪除資料庫物件和資料；執行預存程序；以及執行 SELECT 陳述式。 在 OLE DB 來源和「查閱」轉換中的 SQL 陳述式通常都是 SELECT 陳述式或 EXEC 陳述式。 後者最常執行傳回結果集的預存程序。  
   
  可以剖析查詢，以確定它是否有效。 剖析使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]連接的查詢時，會剖析和執行該查詢，並將執行結果 (成功或失敗) 指派給剖析結果。 如果查詢使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以外的資料連接，就只會剖析陳述式。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], item relocation
 - relocating items
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb43a2d7d7bf8aec9e1b27863cfbe0c57773cd6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 217ad4a4d045798adaa7d430b0b91ba2eb3e8d7c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752326"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689800"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47752326"
   
 1.  在 [方案總管] 中，選取您要移動的項目。  
   
-2.  在 [編輯] 功能表上，按一下 [剪下]。  
+2.  在 [編輯]  功能表上，按一下 [剪下]  。  
   
 3.  在 [方案總管] 中，選取目的地。  
   
-4.  在 [編輯] 功能表上，按一下 [貼上]。  
+4.  在 [編輯]  功能表上，按一下 [貼上]  。  
   
 您可以在 [方案總管] 內拖曳「查詢」和「其他」檔案來移動項目。 拖曳可讓您查看拖曳作業的結果。 在專案類型之間移動查詢，可能會造成在目標專案中，將查詢視為其他檔案。  
   

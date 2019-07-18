@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149844"
 ---
 # <a name="column-element-for-index-dta"></a>索引的 Column 元素 (DTA)
   指定針對使用者指定的組態來建立索引的資料行。  
@@ -41,7 +41,7 @@ ms.locfileid: "52770250"
 |資料行屬性|描述|  
 |----------------------|-----------------|  
 |`Type`|選擇性。 指定索引資料行類型。 請利用 **string** 資料類型和下列其中一個允許的值，來指定這個屬性：<br /><br /> `KeyColumn`:<br />                  指定由索引鍵參考資料行。 請利用下列語法來設定這個屬性：<br />`<Column Type="KeyColumn">`<br />如需索引鍵資料行的詳細資訊，請參閱 [叢集與非叢集索引說明](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)。<br /><br /> `IncludedColumn`:指定資料行是一個內含資料行 (而不是索引鍵資料行)。 請利用下列語法來設定這個屬性：<br />`<Column Type="IncludedColumn">`<br />如需內含資料行的詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
-|`SortOrder`|選擇性。 指定資料行的排序順序。 請依照下列方式，利用 **string** 資料類型來指定「遞增」或「遞減」排列順序：<br /><br /> `<Column SortOrder="Ascending">`|  
+|`SortOrder`|選擇性。 指定資料行的排序順序。 請依照下列方式，利用 **string** 資料類型來指定「遞增」  或「遞減」  排列順序：<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>元素特性  
   

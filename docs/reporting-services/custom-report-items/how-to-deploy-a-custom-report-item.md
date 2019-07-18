@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6315362b4c8d308e3be8d812ccfdeadaa1e7de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194133"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>如何：部署自訂報表項目
   若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自訂報表項目，您必須修改報表伺服器組態檔，並將設計階段和執行階段元件組件複製到適當的報表設計師和報表伺服器應用程式資料夾中。  

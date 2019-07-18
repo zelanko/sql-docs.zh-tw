@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472177"
 ---
 # <a name="rename-a-table-or-column"></a>重新命名資料表或資料行 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53072635"
   
 ### <a name="to-rename-a-table"></a>重新命名資料表  
   
-1.  在模型設計師中，以滑鼠右鍵按一下包含您要重新命名之資料表的索引標籤，然後按一下 **[重新命名]**。  
+1.  在模型設計師中，以滑鼠右鍵按一下包含您要重新命名之資料表的索引標籤，然後按一下 **[重新命名]** 。  
   
 2.  輸入新的名稱。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "53072635"
   
 -   控制字元  
   
--   （這不適用於 Analysis Services 物件的名稱） 的下列字元:。，;': /\\*|?& %$！ + = （) []{}<>  
+-   （這不適用於 Analysis Services 物件的名稱） 的下列字元:。，;': /\\\*|?& %$！ + = （) []{}<>  
   
 -   Analysis Services 保留關鍵字，包括多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 的函數名稱與運算子。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124999"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "52506358"
 |**on_failure_desc**|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已停用<br /><br /> 1 - 已啟用|  
 |**queue_delay**|**int**|寫入磁碟前等候的最大時間值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
-|**述詞**|**nvarchar(3000)**|套用至事件的述詞運算式。|  
+|**predicate**|**nvarchar(3000)**|套用至事件的述詞運算式。|  
   
 ## <a name="permissions"></a>Permissions  
  具有主體**ALTER ANY SERVER AUDIT**或是**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，不應拒絕主體**VIEW ANY DEFINITION**權限。  

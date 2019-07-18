@@ -2,7 +2,7 @@
 title: Reporting Services 和 Power View 的瀏覽器支援 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574812"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 
@@ -82,7 +82,11 @@ ms.locfileid: "50021213"
 
  **(+)** 最新的公開發行版本
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  如果您使用整合於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的 SharePoint 產品，請參閱  [Plan browser support in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2016 中規劃瀏覽器支援)。
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>驗證需求
 
@@ -142,7 +146,11 @@ ms.locfileid: "50021213"
 
  **(+)** 最新的公開發行版本
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  如需 SharePoint 2016 瀏覽器支援的詳細資訊，請參閱 [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2013 中規劃瀏覽器支援)。
+
+::: moniker-end
 
 ## <a name="next-steps"></a>後續步驟
 

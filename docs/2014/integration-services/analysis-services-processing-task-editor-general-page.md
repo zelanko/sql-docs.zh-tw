@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.general.f1
@@ -15,19 +14,19 @@ ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820fa0e277f2f1643c6d44d95f09a4d48546a4ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061446"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 處理工作編輯器 (一般頁面)
   使用 [Analysis Services 處理工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述 Analysis Services 處理工作。  
   
  若要了解這個工作，請參閱 [Analysis Services 處理工作](control-flow/analysis-services-processing-task.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  為 Analysis Services 處理工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   

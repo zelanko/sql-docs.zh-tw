@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925647"
 ---
 # <a name="data-section"></a>資料區段
 [資料] 區段會定義以及任何暫止的更新、 插入或刪除資料列集的資料。 [資料] 區段可以包含零個或多個資料列。 它只能包含結構描述所定義的資料列所在的一個資料列集的資料。 此外，如先前所述，就可以省略資料行沒有任何資料。 如果屬性或子元素會在 [資料] 區段，該建構尚未定義在結構描述區段中，它會以無訊息方式忽略。  
@@ -35,7 +34,7 @@ ms.locfileid: "53207767"
 ## <a name="binary"></a>二進位  
  二進位資料會將編碼 （也就是一個位元組並對應至兩個字元，每半位元組的一個字元）。  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  XML 資料的資料類型所不直接支援 variant 的 VT_DATE 格式。 使用資料和時間元件的日期的正確格式為 yyyy-mm-Yyyy-mm-ddthh。  
   
  如需有關 XML 所指定的日期格式的詳細資訊，請參閱[W3C XML 資料的規格](https://go.microsoft.com/fwlink/?LinkId=5692)。  

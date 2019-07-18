@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], about Query Designer
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81cc997b9d8d62c9a3c5ed458f2a2afba644a20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e8d1e286165a8215a2c8c081c78e7c49886f679e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767126"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690371"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>設計查詢和檢視操作說明主題 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

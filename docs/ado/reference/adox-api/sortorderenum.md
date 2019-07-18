@@ -1,5 +1,5 @@
 ---
-title: SortOrderEnum |Microsoft Docs
+title: SortOrderEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e192b5ea817654ff382482e2ef466ddbdaf63fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965187"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 指定索引的資料行的排序順序。  

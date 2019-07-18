@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010284"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
   描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
@@ -35,7 +35,7 @@ ms.locfileid: "58530660"
   
 -   要用於 3 個自動建立的主索引鍵條件約束和唯一條件約束的名稱。  
   
-###  <a name="HowToCreate"></a> 操作說明：建立 FileTable  
+###  <a name="HowToCreate"></a> 如何：建立 FileTable  
  **使用 Transact-SQL 建立 FileTable**  
  您可以使用 **AS FileTable** 選項來呼叫 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 陳述式，藉以建立 FileTable。 因為 FileTable 具有固定的結構描述，所以您不需要指定資料行的清單。 您可以針對新的 FileTable 指定下列設定：  
   
@@ -107,7 +107,7 @@ GO
   
  如需使用 ALTER TABLE 陳述式啟用或停用 FileTable 命名空間 (包括系統定義的條件約束) 的相關資訊，請參閱 [管理 FileTable](manage-filetables.md)。  
   
-###  <a name="HowToChange"></a> 操作說明：變更 FileTable 的目錄  
+###  <a name="HowToChange"></a> 如何：變更 FileTable 的目錄  
  **使用 Transact-SQL 變更 FileTable 的目錄**  
  呼叫 ALTER TABLE 陳述式，並提供有效的新 **FILETABLE_DIRECTORY** SET 選項值。  
   

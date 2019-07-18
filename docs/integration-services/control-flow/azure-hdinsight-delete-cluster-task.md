@@ -14,14 +14,18 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a64cf0fecb7313ebd8947a1acd3ef54ccb34636f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d9f33fa68288f216f0b4cbac61f1ef75086feb21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727972"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 刪除叢集工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **Azure HDInsight 刪除叢集工作**可讓 SSIS 套件刪除指定之 Azure 訂用帳戶和資源群組中的 Azure HDInsight 叢集。
   
 **Azure HDInsight 刪除叢集工作**是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。

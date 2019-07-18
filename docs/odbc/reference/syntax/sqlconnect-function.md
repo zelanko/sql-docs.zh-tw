@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121455"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53213694"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
      SQLHDBC        ConnectionHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLConnect(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *ServerName*  
  [輸入]資料來源名稱。 資料可能位於程式，在同一部電腦或網路上的某個位置的另一部電腦上。 如需應用程式如何選擇資料來源資訊，請參閱[選擇資料來源或驅動程式](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  
@@ -193,7 +192,7 @@ SQLRETURN SQLConnect(
 ### <a name="code-example"></a>程式碼範例  
  在下列範例中，應用程式配置環境和連接控制代碼。 然後，它會連接到與使用者識別碼 JohnS SalesOrders 資料來源 」 和 「 密碼 Sesame 並處理資料。 當它完成處理資料時，它會從資料來源中斷連線的連線，並釋放控制代碼。  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

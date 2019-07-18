@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208175"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "58658225"
 ||||  
 |-|-|-|  
 ||Excel 2013 活頁簿|Excel 2010 活頁簿|  
-|觸發資料重新整理|**互動式：** 已驗證的使用者<br /><br /> **已排程：**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務|  
+|觸發資料重新整理|**互動式：** 已驗證的使用者<br /><br /> **已排程：** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務|  
 |從內容資料庫載入活頁簿|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |在 Analysis Services 執行個體上載入資料模型|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |將處理命令傳送至 Analysis Services 執行個體|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務|  
@@ -60,7 +60,7 @@ ms.locfileid: "58658225"
  **(\*)** 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- SharePoint Server 2013 Excel Services 中的互動式或手動資料重新整理，可以利用原始資料來源中的資料，以重新整理資料模型。 在您透過註冊以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，設定 Excel Services 應用程式之後，就可以使用互動式資料重新整理。 如需詳細資訊，請參閱 <<c0> [ 管理 Excel Services 資料模型設定 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)。  
+ SharePoint Server 2013 Excel Services 中的互動式或手動資料重新整理，可以利用原始資料來源中的資料，以重新整理資料模型。 在您透過註冊以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，設定 Excel Services 應用程式之後，就可以使用互動式資料重新整理。 如需詳細資訊，請參閱 <<c0> [ 管理 Excel Services 資料模型設定 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx) 。  
   
 > [!NOTE]
 >  互動式資料重新整理僅適用於在 Excel 2013 中建立的活頁簿。 如果您嘗試重新整理 Excel 2010 活頁簿，Excel Services 就會顯示類似的錯誤訊息 「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]作業失敗：建立在較舊版本的 Excel 活頁簿和[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]檔案升級之前無法重新整理 」。 如需升級活頁簿的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
@@ -69,9 +69,9 @@ ms.locfileid: "58658225"
   
 -   互動式資料重新整理只會重新整理目前使用者工作階段中的資料。 資料不會自動儲存回 SharePoint 內容資料庫中的活頁簿項目。  
   
--   **認證：** 互動式資料重新整理可以使用目前登入之使用者的識別做為認證或預存認證來連接到資料來源。 使用的認證會取決於針對外部資料來源之活頁簿連接所定義的 Excel Services 驗證設定。  
+-   **認證：** 互動式資料重新整理可以使用目前登入使用者的身分識別做為認證或預存的認證來連接到資料來源。 使用的認證會取決於針對外部資料來源之活頁簿連接所定義的 Excel Services 驗證設定。  
   
--   **支援的活頁簿：** 以 Excel 2013 建立的活頁簿。  
+-   **支援的活頁簿：** 在 Excel 2013 中建立的活頁簿。  
   
  **若要重新整理資料：**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "58658225"
   
 1.  在 SharePoint 文件庫中，使用瀏覽器來開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。  
   
-2.  在瀏覽器視窗中，按一下 **[資料]** 功能表，然後按一下 **[重新整理選取的連線]** 或 **[重新整理所有連線]**。  
+2.  在瀏覽器視窗中，按一下 **[資料]** 功能表，然後按一下 **[重新整理選取的連線]** 或 **[重新整理所有連線]** 。  
   
 3.  Excel Services 就會載入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫、加以處理，然後進行查詢以重新整理 Excel 活頁簿快取。  
   
@@ -88,25 +88,25 @@ ms.locfileid: "58658225"
  ![互動式資料重新整理](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "互動式資料重新整理")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows 驗證與活頁簿資料連接以及互動式資料重新整理  
- Excel Services 會將處理命令傳送至 Analysis Services 伺服器，以便指示伺服器模擬使用者帳戶。 為了取得足以執行使用者模擬-委派處理的系統權限，Analysis Services 服務帳戶需要本機伺服器的 [當成作業系統的一部分] 權限。 Analysis Services 伺服器也必須能夠將使用者的認證委派給資料來源。 查詢結果會傳送到 Excel Services。  
+ Excel Services 會將處理命令傳送至 Analysis Services 伺服器，以便指示伺服器模擬使用者帳戶。 為了取得足以執行使用者模擬-委派處理的系統權限，Analysis Services 服務帳戶需要本機伺服器的 [當成作業系統的一部分]  權限。 Analysis Services 伺服器也必須能夠將使用者的認證委派給資料來源。 查詢結果會傳送到 Excel Services。  
   
  一般使用者經驗：當客戶在包含的 Excel 2013 活頁簿中選取 [重新整理所有連線][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]模型中，他們會看到類似下列的錯誤訊息：  
   
--   **外部資料重新整理失敗：** 在活頁簿中處理資料模型時發生錯誤。 請再試一次。 無法重新整理此活頁簿中的一個或多個資料連線。  
+-   **外部資料重新整理失敗：** 使用活頁簿中的資料模型時發生錯誤。 請再試一次。 無法重新整理此活頁簿中的一個或多個資料連線。  
   
  根據您所使用的資料提供者，您會在 ULS 記錄中看見類似以下的訊息。  
   
  **使用 SQL Native Client：**  
   
--   無法建立外部連線或執行查詢。 提供者訊息：參考至識別碼 '20102481-39c8-4d21-bf63-68f583ad22bb' 的非正規物件 'DataSource' 已指定，但尚未使用。  OLE DB 或 ODBC 錯誤：建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。 找不到伺服器或是無法存取。 檢查執行個體名稱是否正確以及 SQL Server 執行個體是否設定為允許遠端連接。 如需詳細資訊，請參閱《SQL Server 線上叢書》。08001。＜SSL 提供者：要求的安全性封裝不存在。08001。用戶端無法建立連線。08001。用戶端上不支援加密。08001。  連線名稱：ThisWorkbookDataModel，活頁簿：book1.xlsx。  
+-   無法建立外部連線或執行查詢。 提供者訊息：非正規物件 'DataSource'，參考至識別碼 ' 20102481-39 c 8 4d 21-bf63-68f583ad22bb'，已指定，但尚未使用。  OLE DB 或 ODBC 錯誤：建立 SQL Server 的連接時發生網路相關或執行個體特有的錯誤。 找不到伺服器或是無法存取。 檢查執行個體名稱是否正確以及 SQL Server 執行個體是否設定為允許遠端連接。 如需詳細資訊請參閱 SQL Server 線上叢書 》。;08001;SSL 提供者：要求的安全性封裝不存在;08001;用戶端無法建立連線;08001;不支援在用戶端上加密。;08001。  連線名稱：ThisWorkbookDataModel，活頁簿： book1.xlsx。  
   
  **使用 Microsoft OLE DB Provider for SQL Server：**  
   
--   無法建立外部連線或執行查詢。 提供者訊息：參考至識別碼 '6e711bfa-b62f-4879-a177-c5dd61d9c242' 的非正規物件 'DataSource' 已指定，但尚未使用。 OLE DB 或 ODBC 錯誤。 連線名稱：ThisWorkbookDataModel，活頁簿：OLEDB Provider.xlsx。  
+-   無法建立外部連線或執行查詢。 提供者訊息：非正規物件 'DataSource'，參考至識別碼 ' 6e711bfa-b62f-4879-a177-c5dd61d9c242'，已指定，但尚未使用。 OLE DB 或 ODBC 錯誤。 連線名稱：ThisWorkbookDataModel，活頁簿：OLEDB Provider.xlsx。  
   
  **使用 .NET Framework Data Provider for SQL Server：**  
   
--   無法建立外部連線或執行查詢。 提供者訊息：參考至識別碼 'f5fb916c-3eac-4d07-a542-531524c0d44a' 的非正規物件 'DataSource' 已指定，但尚未使用。  高層級關聯式引擎有錯誤。 使用 Managed IDbCommand 介面時，發生下列例外狀況: 無法載入檔案或組件 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 或其相依性的其中之一。 未提供所要求的模擬層，或所提供的模擬層不正確。 (發生例外狀況於 HRESULT：0x80070542)。  連線名稱：ThisWorkbookDataModel，活頁簿：NETProvider.xlsx。  
+-   無法建立外部連線或執行查詢。 提供者訊息：非正規物件 'DataSource'，參考至識別碼 ' f5fb916c-3eac-4d 07-a542-531524c0d44a'，已指定，但尚未使用。  高層級關聯式引擎有錯誤。 Managed 的 IDbConnection 介面時，就會發生下列例外狀況：無法載入檔案或組件 'System.Transactions，version=4.0.0.0，Culture = neutral，publickeytoken=b77a5c561934e089' 或其中一個相依性。 未提供所要求的模擬層，或所提供的模擬層不正確。 (來自 HRESULT 的例外狀況：0x80070542)。  連線名稱：ThisWorkbookDataModel，活頁簿：NETProvider.xlsx。  
   
  **組態設定步驟的摘要** ：若要在本機伺服器上設定 **[當成作業系統的一部分]** 權限：  
   
@@ -114,7 +114,7 @@ ms.locfileid: "58658225"
   
     1.  執行 「`secpol.msc`"  
   
-    2.  依序按一下 **[本機安全性原則]**、 **[本機原則]** 和 **[使用者權限指派]**。  
+    2.  依序按一下 **[本機安全性原則]** 、 **[本機原則]** 和 **[使用者權限指派]** 。  
   
     3.  加入服務帳戶。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "58658225"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 如需詳細資訊，請參閱 <<c0> [ 做為作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 如需詳細資訊，請參閱 <<c0> [ 做為作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx) 。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **排程的資料重新整理關鍵重點：**  
@@ -147,9 +147,9 @@ ms.locfileid: "58658225"
   
 -   請參閱這些步驟後面的圖例。  
   
-1.  在 SharePoint 文件庫中，針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿按一下 [開啟] 功能表 (**...**)。  
+1.  在 SharePoint 文件庫中，針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿按一下 [開啟]  功能表 ( **...** )。  
   
-2.  按一下第二個 [開啟] 功能表，然後按一下 [管理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理]。  
+2.  按一下第二個 [開啟]  功能表，然後按一下 [管理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理]  。  
   
 3.  在 **[管理資料重新整理]** 頁面上，按一下 **[啟用]** ，然後設定重新整理排程。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "58658225"
  ![管理資料重新整理操作功能表](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理操作功能表")  
   
 > [!TIP]  
->  如需重新整理活頁簿從 SharePoint online 的資訊，請參閱[從 SharePoint Online （白皮書） 的內嵌 Powerpivot 模型的重新整理 Excel 活頁簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
+>  如需重新整理活頁簿從 SharePoint online 的資訊，請參閱[從 SharePoint Online （白皮書） 的內嵌 Powerpivot 模型的重新整理 Excel 活頁簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx) 。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中排程的資料重新整理架構  
  下圖摘要說明 SharePoint 2013 和 SQL Server 2012 SP1 中的資料重新整理架構。  
@@ -193,28 +193,28 @@ ms.locfileid: "58658225"
 ## <a name="data-refresh-log-data"></a>資料重新整理記錄資料  
  **使用量資料：** 您可以檢視中的資料重新整理使用量資料[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]管理儀表板。 若要查看使用量資料：  
   
-1.  在 SharePoint 管理中心的 [一般應用程式設定] 群組中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板]。  
+1.  在 SharePoint 管理中心的 [一般應用程式設定]  群組中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板]  。  
   
 2.  在儀表板底部，請參閱**資料重新整理-最近的活動**並**資料重新整理-最近的失敗**。  
   
 3.  如需有關使用量資料以及如何啟用的詳細資訊，請參閱＜ [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)＞。  
   
- **診斷記錄資料：** 您可以檢視與資料重新整理有關的 SharePoint 診斷記錄資料。 首先，請在 SharePoint 管理中心的 [監視] 頁面中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務] 的診斷記錄組態。 您可能需要增加的 「 最低緊急事件 」 記錄層級記錄檔。 例如，請暫時將此值設定為 **[詳細資訊]** ，然後重新執行資料重新整理作業。  
+ **診斷記錄資料：** 您可以檢視與資料重新整理有關的 SharePoint 診斷記錄資料。 首先，請在 SharePoint 管理中心的 [監視]  頁面中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務]  的診斷記錄組態。 您可能需要增加的 「 最低緊急事件 」 記錄層級記錄檔。 例如，請暫時將此值設定為 **[詳細資訊]** ，然後重新執行資料重新整理作業。  
   
  記錄項目就會包含：  
   
--   [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務] 的 [區域]。  
+-   [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務]  的 [區域]  。  
   
 -   **[資料重新整理]** 的類別。  
   
- 檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。
+ 檢閱 **[設定診斷記錄]** 。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。
   
 ##  <a name="datarefresh_additional_authentication"></a> 其他驗證考量  
  在 Excel 2013 中， **[Excel Services 驗證設定]** 對話方塊的設定會決定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於資料重新整理的 Windows 識別。  
   
--   **使用已驗證的使用者帳戶**:Excel Services 會以目前登入之使用者的身分執行資料重新整理。  
+-   **使用已驗證的使用者帳戶**:Excel Services 會執行資料重新整理目前登入使用者的身分識別之下。  
   
--   **使用預存的帳戶**:使用 SharePoint Secure Store Service 應用程式識別碼，讓 Excel Services 用以擷取驗證資料重新整理所需的使用者名稱及密碼。  
+-   **使用預存的帳戶**:採用 SharePoint Secure Store Service 應用程式識別碼，Excel Services 用來擷取使用者名稱和密碼來驗證資料重新整理。  
   
 -   **無**：Excel Services**無人看管的服務帳戶**用。 此服務帳戶與 Secure Store Proxy 相關聯。 您可以在 **[Excel Services 應用程式設定]** 頁面的 **[外部資料]** 區段中進行設定。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "58658225"
   
 2.  在功能區中，按一下 **[連線]** 。  
   
-3.  在 **[活頁簿連線]** 對話方塊中，選取連線，然後按一下 **[內容]**。  
+3.  在 **[活頁簿連線]** 對話方塊中，選取連線，然後按一下 **[內容]** 。  
   
 4.  在 [**連接屬性**] 對話方塊中，按一下**定義**，然後按一下 [**驗證設定...** ] 按鈕。  
   

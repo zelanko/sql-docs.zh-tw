@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c9f66bf1ded94b0877309917e9f03e71512ac8f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051588"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.locfileid: "56039919"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會在節點集上執行位置選取：例如，XPath 查詢 `Customer[3]` 表示第三個客戶；在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援此種類型的位置選取。 因此，節點-設定-到-**字串**或節點-設定-至-**數目**不會實作 XPath 規格所描述的轉換。 在 XPath 規格指定 "first" 語意的每個地方，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會使用 "any" 語意。 例如，根據 W3C XPath 規格，XPath 查詢`Order[OrderDetail/@UnitPrice > 10.0]`的第一個選取這些順序**OrderDetail**具有**UnitPrice**大於 10.0。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查詢會選取任何這些訂單**OrderDetail**具有**UnitPrice**大於 10.0。  
   
- 轉換成**布林**會產生存在測試，因此，XPath 查詢`Products[@Discontinued=true()]`相當於 SQL 運算式"Products.Discontinued is not null"，不是 SQL 運算式"Products.Discontinued = 1"。 若要使查詢相當於後者的 SQL 運算式，第一次將轉換為節點集設為非**布林**類型，例如**數目**。 例如， `Products[number(@Discontinued) = true()]` 。  
+ 轉換成**布林**會產生存在測試，因此，XPath 查詢`Products[@Discontinued=true()]`相當於 SQL 運算式"Products.Discontinued is not null"，不是 SQL 運算式"Products.Discontinued = 1"。 若要使查詢相當於後者的 SQL 運算式，第一次將轉換為節點集設為非**布林**類型，例如**數目**。 例如： `Products[number(@Discontinued) = true()]` 。  
   
  對於節點集中的任何一個節點或其中一個節點，如果運算子為 TRUE，則大部分會定義為 TRUE，所以如果節點集是空的，這些運算永遠會評估為 FALSE。 因此，如果 A 是空的，`A = B` 和 `A != B` 都為 FALSE，而 `not(A=B)` 和 `not(A!=B)` 都為 TRUE。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "56039919"
 |number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (在 XPath 中沒有相當於 fixed14.4 XDR 資料類型的資料類型)|CONVERT(money, EmployeeID)|  
-|日期|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  日期和時間轉換專為搭配值是儲存在資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料型別或**字串**。 請注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料類型不會使用**時區**且具有較小的有效位數比 XML**時間**資料型別。 若要包含**時區**資料類型或其他有效位數，將資料儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**字串**型別。  

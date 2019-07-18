@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768694"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
   傳回代表日期之年份部分的整數。  
@@ -43,7 +43,7 @@ YEAR(date)
  日期常值必須明確轉換為日期資料類型之一。 如需詳細資訊，請參閱 [Integration Services 資料類型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  運算式將會失敗時的日期常值明確轉換成其中一個日期資料類型驗證：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  當日期常值明確轉換成以下其中一個日期資料類型時，此運算式將會驗證失敗：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  使用 YEAR 函數較為簡潔，但相當於使用 DATEPART("Year", date) 函數。  
   

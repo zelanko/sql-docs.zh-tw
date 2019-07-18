@@ -1,5 +1,5 @@
 ---
-title: 使用 Tuple 運算式 |Microsoft 文件
+title: 使用 Tuple 運算式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135127"
 ---
 # <a name="using-tuple-expressions"></a>使用 Tuple 運算式
 
@@ -26,7 +25,7 @@ ms.locfileid: "34743687"
   
  Tuple 識別碼的完整運算式是由一個或多個明確指定的成員所組成 (嵌在括號中)：  
   
- (*Member_expression* [，*Member_expression* …])  
+ (*Member_expression* [，*Member_expression* ...])  
   
  Tuple 可以是完整 Tuple、可以包含隱含成員，或也可以包含單一成員。  
   
@@ -46,6 +45,6 @@ ms.locfileid: "34743687"
   
 ## <a name="see-also"></a>另請參閱  
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

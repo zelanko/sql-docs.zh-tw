@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053896"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 相容性： 層級 1  
+ ODBC API 相容性：層級 1  
   
  連接到現有的資料來源，這可以是[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)或是的目錄[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)。 UID 和 PWD ODBC 屬性關鍵字會被忽略。 下表列出的其他支援的屬性關鍵字。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "47792716"
 |排除|"Yes"或者"No"|  
 |SourceDB|完整的路徑的目錄，包含零個或多個[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)，或為絕對路徑和檔案名稱[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)。|  
 |SourceType|「 雙位元組字元"或者"DBF"|  
-|版本||  
+|Version||  
   
  如果未指定資料來源名稱，驅動程式管理員 會提示使用者輸入資訊 (視設定而定*fDriverCompletion*引數)，然後再繼續。 如果需要詳細資訊，Visual FoxPro ODBC Driver 就會顯示提示的對話方塊。  
   

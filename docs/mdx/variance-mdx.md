@@ -1,5 +1,5 @@
 ---
-title: 變異數 (MDX) |Microsoft 文件
+title: 變異數 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5825dfd51ddfc3b4a8478a0a528b5284fda49e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 01929ff721deff4011bcd1b53351c06463481491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037920"
 ---
 # <a name="variance-mdx"></a>Variance (MDX)
 
@@ -22,6 +21,6 @@ ms.locfileid: "34744047"
   別名[Var](../mdx/var-mdx.md)函式。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

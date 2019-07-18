@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], adding
 - metadata [Master Data Services], adding
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d5c5f393983f6955f94392552d62a079eac206f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054285"
 ---
 # <a name="add-metadata-master-data-services"></a>加入中繼資料 (Master Data Services)
   在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，新增至使用者定義的中繼資料**中繼資料**模型，以描述模型物件。  
@@ -31,7 +30,7 @@ ms.locfileid: "56015389"
   
 -   針對**中繼資料**模型，您必須擁有**新增**之中繼資料實體或分葉成員類型，您想要新增的權限。  
   
--   版本的狀態必須是 [開啟]。  
+-   版本的狀態必須是 [開啟]  。  
   
 ### <a name="to-add-metadata"></a>若要加入中繼資料  
   
@@ -39,7 +38,7 @@ ms.locfileid: "56015389"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  從功能表列指向**實體**然後按一下您想要新增的中繼資料實體。  
   

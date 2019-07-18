@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771178"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  
@@ -94,7 +94,7 @@ ms.locfileid: "58658052"
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 Oracle 資料庫的名稱。|  
 |config_version|對應 CDC 資料庫 **xdbcdc_config** 資料表中上次變更的時間戳記 (UTC)，或是此資料表中目前資料列的時間戳記 (UTC)。<br /><br /> UPDATE 觸發程序會針對這個項目強制使用 GETUTCDATE() 的值。 **config_version** 可讓 CDC 服務識別需要檢查是否有組態變更或啟用/停用的 CDC 執行個體。|  
 |cdc_service_name|這個項目會判斷哪一個 Oracle CDC 服務處理選取的 Oracle 資料庫。|  
-|enabled|指出 Oracle CDC 執行個體為使用中 (1) 還是停用 (0) 狀態。 當 Oracle CDC 服務啟動時，只會啟動標示為啟用 (1) 的執行個體。<br /><br /> **注意**:發生無法重試的錯誤時，Oracle CDC 執行個體可能會停用。 在此情況下，必須在解決錯誤之後手動重新啟動執行個體。|  
+|enabled|指出 Oracle CDC 執行個體為使用中 (1) 還是停用 (0) 狀態。 當 Oracle CDC 服務啟動時，只會啟動標示為啟用 (1) 的執行個體。<br /><br /> **注意**：發生無法重試的錯誤時，Oracle CDC 執行個體可能會停用。 在此情況下，必須在解決錯誤之後手動重新啟動執行個體。|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  此資料表列出與主機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的 CDC 服務。 CDC 設計工具主控台會使用此資料表來判斷針對本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體設定的 CDC 服務清單。 CDC 服務也會使用此資料表來確保只有一個執行中的 Windows 服務會處理給定的 Oracle CDC 服務名稱。  
@@ -217,7 +217,7 @@ ms.locfileid: "58658052"
   
  **sql-username**和 **sql-password** 為正在更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證認證。 如果 sqlacct 同時有空的使用者名稱和空的密碼，Oracle CDC 服務會使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **注意**:必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"**)。  
+ **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"** )。  
   
 ###  <a name="BKMK_create"></a> 建立  
  使用 `Create` 可從指令碼建立 Oracle CDC 服務。 此命令必須由電腦管理員執行。 以下是 `Create` 命令的範例：  
@@ -243,7 +243,7 @@ ms.locfileid: "58658052"
   
  **sql-username**和 **sql-password** 是用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶名稱和密碼。 如果這兩個參數都是空的，則 Oracle CDC 服務會使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **注意**:必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"**)。  
+ **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"** )。  
   
 ###  <a name="BKMK_delete"></a> Delete  
  使用 `Delete` 可從指令碼完全刪除 Oracle CDC 服務。 此命令必須由電腦管理員執行。 以下是 `Delete` 命令的範例。  
@@ -258,7 +258,7 @@ ms.locfileid: "58658052"
   
  **cdc-service-name** 是要刪除的 CDC 服務名稱。  
   
- **注意**:必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"**)。  
+ **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"** )。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何使用 CDC 服務命令列介面](how-to-use-the-cdc-service-command-line-interface.md)   

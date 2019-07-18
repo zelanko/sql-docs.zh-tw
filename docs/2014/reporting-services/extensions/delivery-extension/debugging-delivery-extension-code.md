@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], debugging
 - debugging delivery extensions [Reporting Services]
 - troubleshooting [Reporting Services], delivery extensions
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 30b3cdfce9d832dbacc0e77437cb32087559ffc8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164340"
 ---
 # <a name="debugging-delivery-extension-code"></a>偵錯傳遞延伸模組程式碼
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析傳遞延伸模組程式碼並尋找其中的錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
@@ -36,11 +34,11 @@ ms.locfileid: "56017859"
   
 4.  導覽至 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 與您的傳遞延伸模組專案，並在程式碼中設定某些中斷點。  
   
-5.  當傳遞延伸模組專案仍為使用中視窗時，按一下 [偵錯] 功能表的 [附加至處理序]。  
+5.  當傳遞延伸模組專案仍為使用中視窗時，按一下 [偵錯]  功能表的 [附加至處理序]  。  
   
-     [附加至處理序] 對話方塊隨即開啟。  
+     [附加至處理序]  對話方塊隨即開啟。  
   
-6.  從處理序清單中，選取 aspnet_wp.exe 處理序 (或者，如果在 IIS 6.0 上部署應用程式則選取 w3wp.exe)，然後按一下 [附加]。  
+6.  從處理序清單中，選取 aspnet_wp.exe 處理序 (或者，如果在 IIS 6.0 上部署應用程式則選取 w3wp.exe)，然後按一下 [附加]  。  
   
 7.  使用您的傳遞延伸模組定義新的訂閱。 您很可能會使用報表管理員或是 SOAP API。 這應該會叫用偵錯工具並執行對應至中斷點的程式碼。  
   

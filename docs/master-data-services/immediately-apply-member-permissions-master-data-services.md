@@ -11,15 +11,14 @@ helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bd7fd390010096e943e397a95c018c967f09d21a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2f818bcff93fb5f246f7c02676a740c0cc6cada9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945149"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>立即套用成員權限 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "52760150"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以立即套用成員權限，不等候成員安全性於固定間隔套用。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中擁有執行 mdm.udpSecurityMemberProcessRebuildModel 預存程序的權限。 如需詳細資訊，請參閱[資料庫物件安全性 &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)。  

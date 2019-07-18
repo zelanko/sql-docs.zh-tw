@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], consolidated member attribute permissions
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], consolidated members
 - members [Master Data Services], consolidated member permissions
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054104"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合併的權限 (Master Data Services)
   合併的權限適用於某個實體所有合併成員的屬性值。  
@@ -30,7 +29,7 @@ ms.locfileid: "56042899"
   
  **注意：**  
   
--   分葉權限只適用於使用者介面的總管功能區域。  
+-   分葉權限只適用於使用者介面的總管  功能區域。  
   
 -   系統不會強制使用指派給 **Name** 和 **Code** 屬性的權限。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "56042899"
 |----------------|-----------------|  
 |**唯讀**|顯示屬性，但使用者無法變更屬性值。|  
 |**Update**|顯示屬性，而且使用者可以變更屬性值。|  
-|**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
+|**拒絕**|不顯示屬性。<br /><br /> 注意:您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
  [指派模型物件權限 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac0d1d370951ea5daa2d1849d833dcc50abf83bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128867"
 ---
 # <a name="setting-large-data"></a>設定大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,9 @@ ms.locfileid: "47816016"
 5.  呼叫 **GetNextRows** 將下一個資料列擷取到資料列集中。 呼叫 **GetData** 來讀取資料列集中的資料。  
   
 6.  建立包含資料 (以及長度指標) 的儲存物件，然後使用繫結 BLOB 資料行來設定資料的存取子，呼叫 **IRowsetChange::SetData** (或 **IRowsetChange::InsertRow**)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>範例  
  這個範例會示範如何設定 BLOB 資料。 此範例會建立一個資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值：  
   

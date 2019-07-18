@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a1a5172de403d7ecfa99887439db218adb1141a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b10d8704a6badaed7cb10888e266fcdc7bb339f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028919"
 ---
 # <a name="managing-backups-sybasetosql"></a>管理備份 (SybaseToSQL)
 Sybase 備份管理可讓您備份和還原之前或之後執行測試的表格資料。 您也可以管理與管理備份的內容對話方塊中的備份內容。  

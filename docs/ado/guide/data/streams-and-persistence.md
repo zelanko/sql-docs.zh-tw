@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924023"
 ---
 # <a name="streams-and-persistence"></a>資料流和保存
 [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件[儲存](../../../ado/reference/ado-api/save-method.md)方法存放區，或*持續發生*，則**資料錄集**在檔案中，而[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法還原**資料錄集**從該檔案。  

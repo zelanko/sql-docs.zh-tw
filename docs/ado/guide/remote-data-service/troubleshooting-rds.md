@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f80f07576caebe8f4612958edae2afa42fdf0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c580006938c4180ccd0f575af81f687de5d6a630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922016"
 ---
 # <a name="troubleshooting-rds"></a>對 RDS 進行疑難排解
 > [!IMPORTANT]
@@ -28,7 +27,7 @@ ms.locfileid: "51560395"
   
 -   [在 Windows 2000 上設定 RDS](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   [「 網際網路伺服器錯誤： 拒絕存取 」](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   [「 網際網路伺服器錯誤：Access Denied"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS 傳回 "Stream Not Read" 錯誤](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

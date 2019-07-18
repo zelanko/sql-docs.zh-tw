@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073093"
 ---
 # <a name="---comment-dmx-summary"></a>-（註解） (DMX) 摘要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

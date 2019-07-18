@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811642"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>設定 default language 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **default language** 選項會指定所有新建登入的預設語言。 若要設定預設語言，請指定所需語言的 **langid** 值。 **langid** 值可透過查詢 **sys.syslanguages** 相容性檢視來取得。  
@@ -36,7 +36,7 @@ ms.locfileid: "58536490"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 default language 選項之後](#FollowUp)  
+-   **後續操作：** [設定預設語言選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -53,7 +53,7 @@ ms.locfileid: "58536490"
   
 #### <a name="to-configure-the-default-language-option"></a>設定 default language 選項  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[其他伺服器設定]** 節點。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "58536490"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `default language` 選項設定為法文 (`2`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `default language` 選項設定為法文 (`2`)。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -82,7 +82,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 default language 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定預設語言選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

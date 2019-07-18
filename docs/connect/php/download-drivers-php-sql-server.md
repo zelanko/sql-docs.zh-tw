@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8799a77817b7e01b8c3391a9b2ed06fd6bbd3c0
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744368"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796204"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>下載 Microsoft Drivers for PHP for SQL Server
 
@@ -31,7 +31,7 @@ ms.locfileid: "56744368"
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
 - [Microsoft Drivers 4.0、3.2、3.1 和 3.0 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=20098)
 
-## <a name="linux-and-macos"></a>Linux 和 macOS
+## <a name="linux-and-macos"></a>Linux 與 macOS
 
 適用於 PHP 的驅動程式會輕鬆地下載並安裝 Linux 和 macOS 上使用 PECL。 請參閱[Linux 和 macOS 安裝教學課程](installation-tutorial-linux-mac.md)如需詳細資訊。 如果您需要以手動方式在 Linux 和 macOS 上的 PHP 安裝的驅動程式，就有一個下列的版本可供下載：
 

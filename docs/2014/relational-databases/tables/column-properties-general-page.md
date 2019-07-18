@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854904"
 ---
 # <a name="column-properties-general-page"></a>資料行屬性 (一般頁面)
   使用此頁面來檢視選取之資料行的屬性。  
   
- 此頁面的資訊是唯讀的。 若要修改資料行，請關閉 [資料行屬性] 對話方塊，展開物件總管中的資料表和資料行，以滑鼠右鍵按一下資料行，然後按一下 [設計]。  
+ 此頁面的資訊是唯讀的。 若要修改資料行，請關閉 [資料行屬性]  對話方塊，展開物件總管中的資料表和資料行，以滑鼠右鍵按一下資料行，然後按一下 [設計]  。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -53,7 +53,7 @@ ms.locfileid: "52772260"
  指出識別欄位的初始資料列值。  
   
  **識別值增量**  
- [識別值增量] 屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大的現有資料列識別值的數值。  
+ [識別值增量]  屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大的現有資料列識別值的數值。  
   
  **預設繫結**  
  資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設繫結。 若未繫結預設值，此選項可為空白。  

@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90fd3a238d7b4ab3e573c4ecef76bdbdd3bde7f1
-ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179023"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>設定 Analysis Services 專案屬性 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，將會包含一些影響 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案建立及部署的預設屬性。  
   
- 若要變更專案屬性，請以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案物件，然後按一下 [屬性]。 或者，您可以在 [專案] 功能表上，按一下 [屬性]。  
+ 若要變更專案屬性，請以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案物件，然後按一下 [屬性]  。 或者，您可以在 [專案] 功能表上，按一下 [屬性]  。  
   
 ## <a name="property-description"></a>屬性描述  
  下表描述的是每一個專案屬性、列出其預設值，以及提供變更屬性值的詳細資訊。  

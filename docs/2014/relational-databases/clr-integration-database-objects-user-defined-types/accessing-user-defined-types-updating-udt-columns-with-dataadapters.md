@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919638"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>以 DataAdapter 更新 UDT 資料行
   可藉由使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 擷取與修改資料，以支援使用者定義型別 (UDT)。  

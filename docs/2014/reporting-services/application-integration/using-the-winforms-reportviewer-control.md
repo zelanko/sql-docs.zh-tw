@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff1c143f1619eee0965b3dafb5e002bb52e90bcc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63239048"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WinForms ReportViewer 控制項在 Windows 應用程式中加以轉譯。  
@@ -32,7 +30,7 @@ ms.locfileid: "56019719"
   
      開啟現有的 Windows 應用程式專案並加入的新表單。  
   
-2.  在 [工具箱] 中找出 ReportViewer 控制項。 如果看不到 [工具箱]，可以從 [檢視] 功能表選取 [工具箱] 加以存取。  
+2.  在 [工具箱]  中找出 ReportViewer 控制項。 如果看不到 [工具箱]  ，可以從 [檢視]  功能表選取 [工具箱]  加以存取。  
   
      ![選取 ReportViewer 控制項](../../../2014/reporting-services/media/windowsapp-toolboxreportviewer.png "選取 ReportViewer 控制項")  
   
@@ -40,13 +38,13 @@ ms.locfileid: "56019719"
   
      名為 reportViewer1 的 ReportViewer 控制項會加入至表單。  
   
- 將控制項新增至表單後，[ReportViewer 工作] 智慧標籤會顯示，並提示您選取報表。  
+ 將控制項新增至表單後，[ReportViewer 工作]  智慧標籤會顯示，並提示您選取報表。  
   
- 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] 下拉式清單，選取 [\<伺服器報表>] 選項。 在後**\<伺服器報表 >** 選取選項，則會顯示兩個額外屬性：**報表伺服器 Url**並**報表路徑**。 [報表伺服器 URL] 是報表伺服器的位址，[報表路徑] 則是要轉譯之報表的完整路徑。  
+ 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表]  下拉式清單，選取 [\<伺服器報表>]  選項。 在後 **\<伺服器報表>** 選取選項，則會顯示兩個額外屬性：**報表伺服器 Url**並**報表路徑**。 [報表伺服器 URL]  是報表伺服器的位址，[報表路徑]  則是要轉譯之報表的完整路徑。  
   
  ![選取伺服器報表](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "選取伺服器報表")  
   
- 如果您要檢視的報表是本機模式報表，請選取 [設計新報表] 選項以啟動報表設計師，或選取已是現有專案一部分的報表。  
+ 如果您要檢視的報表是本機模式報表，請選取 [設計新報表]  選項以啟動報表設計師，或選取已是現有專案一部分的報表。  
   
  ![選取本機報表](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "選取本機報表")  
   
@@ -150,30 +148,30 @@ End Class
   
 1.  開啟其中將加入此報表的 Windows 專案。  
   
-2.  從 [專案] 功能表上，選取 [新增現有項目]。  
+2.  從 [專案]  功能表上，選取 [新增現有項目]  。  
   
 3.  瀏覽到安裝「[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 報表範例」專案的位置。  
   
      如果要下載報表範例，請移至 [AdventureWorks 2012 報表範例](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
-4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增] 按鈕。  
+4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增]  按鈕。  
   
      Sales Order Detail.rdl 檔案現在應該是專案的一部分。  
   
      ![Sales Order Detail 報表](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Sales Order Detail 報表")  
   
-5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
+5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]  。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
   
-     如果看不到方案總管，可以從 [檢視] 功能表選取方案總管開啟。  
+     如果看不到方案總管，可以從 [檢視]  功能表選取方案總管  開啟。  
   
     > [!NOTE]  
     >  將副檔名從 rdl 重新命名為 rdlc 可以讓您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的報表設計師編輯報表。  
   
-6.  在報表重新命名後，選取檔案並找出 [屬性] 視窗。 將 [複製到輸出目錄] 屬性變更為 [有更新時才複製]。  
+6.  在報表重新命名後，選取檔案並找出 [屬性] 視窗。 將 [複製到輸出目錄]  屬性變更為 [有更新時才複製]  。  
   
      ![設定 [複製到輸出] 設定](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "設定 [複製到輸出] 設定")  
   
-     如果看不到 [屬性] 視窗，可以從 [檢視] 功能表選取 [屬性視窗] 加以開啟。  
+     如果看不到 [屬性]  視窗，可以從 [檢視]  功能表選取 [屬性視窗]  加以開啟。  
   
  下列的程式碼範例會為銷售訂單資料建立資料集，然後以本機模式轉譯 Sales Order Detail 報表。  
   

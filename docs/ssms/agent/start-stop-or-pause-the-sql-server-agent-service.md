@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent, pausing
 - SQL Server Agent, stopping
 ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d718ad5257e61eeba7a75230fc99842acc51ff3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e625828d85631af1acd5dbe42473d13fda351cf7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703056"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681528"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51703056"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   [若要使用 SQL Server Management Studio 啟動、停止或重新啟動 SQL Server Agent 服務](#SSMSProcedure)  
   
@@ -72,11 +72,11 @@ ms.locfileid: "51703056"
   
 1.  在 **[物件總管]** 中，按一下加號展開要管理 SQL Server Agent 服務所在的伺服器。  
   
-2.  在 [SQL Server Agent]，然後選取 [啟動]、[停止] 或 [重新啟動]。  
+2.  在 [SQL Server Agent]  ，然後選取 [啟動]  、[停止]  或 [重新啟動]  。  
   
-3.  在 **[使用者帳戶控制]** 對話方塊中，按一下 **[是]**。  
+3.  在 **[使用者帳戶控制]** 對話方塊中，按一下 **[是]** 。  
   
-4.  當系統提示您是否要執行動作時，請按一下 **[是]**。  
+4.  當系統提示您是否要執行動作時，請按一下 **[是]** 。  
   
 如需詳細資訊，請參閱：  
   

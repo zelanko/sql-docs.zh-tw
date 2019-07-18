@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4017ed07681a74da4832db2db3aeabddf22edb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020327"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53591812"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetCursorName(  
      SQLHSTMT        StatementHandle,  
@@ -49,7 +48,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Current*  
+ *CursorName*  
  [輸出]在其中傳回資料指標名稱之緩衝區的指標。  
   
  如果*Current*為 NULL，就*NameLengthPtr*仍會傳回 （不含字元資料的 null 終止字元） 的字元總數可用來傳回中所指向的緩衝區*Current*。  

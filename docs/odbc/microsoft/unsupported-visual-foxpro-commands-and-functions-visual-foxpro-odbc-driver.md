@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912327"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支援的 Visual FoxPro 命令和函式 (Visual FoxPro ODBC Driver)
 下表列出 FoxPro 命令和函式不會受到 Visual FoxPro ODBC Driver，但所支援的 Microsoft® Visual FoxPro®。  
@@ -33,8 +32,8 @@ ms.locfileid: "47802696"
   
 ||||  
 |-|-|-|  
-|#DEFINE...&GT; #UNDEF|#IF #ENDIF 前置處理器指示詞|#IFDEF &AMP;#124; #IFNDEF|  
-|#INCLUDE 前置處理器指示詞|:: 範圍解析運算子|! 命令 (請參閱 < 執行&#124;！ 命令中）|  
+|#DEFINE...> #UNDEF|#IF #ENDIF 前置處理器指示詞|#IFDEF &#124; #IFNDEF|  
+|#INCLUDE 前置處理器指示詞|::範圍解析運算子|! 命令 (請參閱 < 執行&#124;！ 命令中）|  
 |? &#124; ?? 命令|??? 命令|\ &#124; \\\ 命令|  
 |@ ...方塊命令|@ ...類別的命令|@ ...清除命令|  
 |@ ...編輯-編輯方塊命令|@ ...填滿命令|@ ...GET|  
@@ -61,7 +60,7 @@ ms.locfileid: "47802696"
 |_BROWSER 系統記憶體變數|建置應用程式命令|建置 EXE 命令|  
 |建置專案命令|_BUILDER 系統記憶體變數||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -237,7 +236,7 @@ ms.locfileid: "47802696"
 |重新命名連線命令|重新命名的資料表 命令|還原命令|  
 |報表命令|重新查詢 （） 函式|還原視窗命令|  
 |還原巨集指令|還原 [螢幕] 命令|RGBSCHEME （） 函式|  
-|RESUME 命令|RGB （） 函式|執行&AMP;#124;！ 命令|  
+|RESUME 命令|RGB （） 函式|執行&#124;！ 命令|  
 |RMDIR 命令|資料列 （） 函式||  
 |RUNSCRIPT 命令|RDLEVEL （） 函式||  
   
@@ -291,7 +290,7 @@ ms.locfileid: "47802696"
 |轉換 （） 函式|_TRANSPORT 系統記憶體變數||  
 |TYPE 命令|_THROTTLE 系統記憶體變數||  
   
-## <a name="u"></a>u  
+## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  

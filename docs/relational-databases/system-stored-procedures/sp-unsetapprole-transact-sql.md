@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52a3c04463eb4384d48e333e6d81097a33fd9ac1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022238"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>引數  
  **@cookie**  
- 指定在應用程式角色啟動時所建立的 Cookie。 Cookie 由[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary(8000)**。  
+ 指定在應用程式角色啟動時所建立的 Cookie。 Cookie 由[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary(8000)** 。  
   
 > [!NOTE]  
->  **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)**。 應用程式應繼續保留**varbinary(8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加在未來的版本。  
+>  **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)** 。 應用程式應繼續保留**varbinary(8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加在未來的版本。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 和 1 (失敗)  

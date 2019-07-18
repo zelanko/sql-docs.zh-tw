@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9cea65df353bfd207f54f7ab4d5408491ab1d042
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a2060defebee30d7f31d33fa8ada069095780c39
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726406"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769826"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 資料類型範例
 

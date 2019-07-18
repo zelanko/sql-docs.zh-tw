@@ -11,14 +11,18 @@ ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7230c0fe7263d16f3b61aefac6f7a55a465b2f8c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716907"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案建立環境參考。  

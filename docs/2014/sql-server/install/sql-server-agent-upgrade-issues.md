@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server Agent
@@ -14,12 +13,12 @@ ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba8f9ce8d5783ae2d16703d3057727caf0f06ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092004"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server Agent 升級問題
   下列主題描述的是可能會影響升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境的影響。  
@@ -43,7 +42,7 @@ ms.locfileid: "48078194"
 -   [升級會將 SQL Server Agent 使用者 Proxy 帳戶變更為暫時的 UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

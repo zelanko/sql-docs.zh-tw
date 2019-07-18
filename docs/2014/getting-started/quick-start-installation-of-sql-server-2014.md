@@ -4,15 +4,7 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
@@ -22,12 +14,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b06f5248152f8a11bf3e46d222df457f5442b6b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62837779"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
     

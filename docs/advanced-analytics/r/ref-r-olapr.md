@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e5419900b8ba573ec0658a5022be68105b0b8607
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 431fddf870b5755691cad92e576c95d0d3a83890
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962490"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR （SQL Server 中的 R 程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ library(olapR)
 
 此套件會提供在下列的產品，以及在 Azure 上的數個虛擬機器映像。 封裝位置隨之而異。
 
-產品 | 位置 |
+產品 | Location |
 --------|----------|
 SQL Server 2017 Machine Learning 服務 （使用 R 整合） | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library

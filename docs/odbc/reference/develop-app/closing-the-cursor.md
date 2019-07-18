@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 632a922abb544a379892dfa168f55efd605304c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de22797bdcf4ff526a8c17aee313567da3114b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036539"
 ---
 # <a name="closing-the-cursor"></a>關閉資料指標
-當應用程式完成使用資料指標時，它會呼叫**SQLCloseCursor**來關閉資料指標。 例如：  
+當應用程式完成使用資料指標時，它會呼叫**SQLCloseCursor**來關閉資料指標。 例如:  
   
 ```  
 SQLCloseCursor(hstmt);  
 ```  
   
- 應用程式會關閉資料指標，直到開啟資料指標的陳述式不能用於大部分其他作業，例如執行其他的 SQL 陳述式。 如需可以在資料指標開啟時呼叫的函式的完整清單，請參閱[附錄 b: ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 應用程式會關閉資料指標，直到開啟資料指標的陳述式不能用於大部分其他作業，例如執行其他的 SQL 陳述式。 如需可以在資料指標開啟時呼叫的函式的完整清單，請參閱[附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
 > [!NOTE]  
 >  若要關閉資料指標，應用程式應該呼叫**SQLCloseCursor**，而非**SQLCancel**。  

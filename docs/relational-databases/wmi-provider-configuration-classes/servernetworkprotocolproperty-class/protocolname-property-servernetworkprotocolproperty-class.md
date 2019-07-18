@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d67fc694f564b9e726b7aa1d4da33f5bd93013b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 28eccbd7d96ff309e3a459d3e0de6c6592c4764f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899240"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933410"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 複製所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  
@@ -47,10 +46,10 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *密碼*  
  選擇性。 A**字串**值，其中包含的密碼，如有需要請確認*UserName*。  
   
- *選項*  
+ *選項。*  
  選擇性。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)值，其預設值為**adCopyUnspecified**。 指定此方法的行為。  
   
- *非同步處理*  
+ *Async*  
  選擇性。 A**布林**值，當 **，則為 True**，指定此作業應該為非同步。  
   
 ## <a name="return-value"></a>傳回值  

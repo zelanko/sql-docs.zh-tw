@@ -38,11 +38,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104115"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011726"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
   為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 它們就像是 ***Windows 作業系統中的*** 群組 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 資料庫層級角色的權限範圍為整個資料庫。  

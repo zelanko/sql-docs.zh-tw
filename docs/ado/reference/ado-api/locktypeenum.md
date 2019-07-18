@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918250"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定在編輯期間鎖定記錄的型別。  

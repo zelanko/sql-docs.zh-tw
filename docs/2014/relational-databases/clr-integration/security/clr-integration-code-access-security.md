@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075999"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873744"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
   Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜程式碼存取安全性＞一節。  
   
  下列三個不同的位置會定義可決定授與給組件之權限的安全性原則：  
   
--   電腦原則：此原則適用於在已安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之電腦中執行的所有 Managed 程式碼。  
+-   電腦原則：這是原則生效的機器中執行的所有 managed 程式碼[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝。  
   
--   使用者原則：此原則適用於由處理序主控的 Managed 程式碼。 針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務正在執行。  
+-   使用者原則：這是作用中的處理程序所裝載的 managed 程式碼原則。 針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務正在執行。  
   
--   主機原則：此原則由 CLR 的主機 (在此案例中為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 所設定，適用於在該主機中執行的 Managed 程式碼。  
+-   主機原則：這是由 CLR 的主機設定的原則 (在此情況下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])，實際上是在該主機中執行的 managed 程式碼。  
   
  CLR 所支援的程式碼存取安全性機制是根據執行階段可以主控完全信任和部分信任程式碼的假設。 受 CLR 程式碼存取安全性的資源通常包裝由受管理的應用程式開發介面允許資源的存取權之前該 requirethe 對應權限。 只有當所有的呼叫端 （在組件層級） 的呼叫堆疊中具有對應的資源權限，會滿足 demandfor 權限。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48075999"
 |權限|值/描述|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` 執行 Managed 程式碼的權限。|  
-|`SqlClientPermission`|`Context connection = true`、`context connection = yes`：只能使用內容連接，而且連接字串只能指定 "context connection=true" 或 "context connection=yes" 的值。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
+|`SqlClientPermission`|`Context connection = true`、`context connection = yes`：只可以使用內容連線，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 組件具有相同的權限`SAFE`組件，並附帶存取外部系統資源，例如檔案、 網路、 環境變數和登錄的能力。  

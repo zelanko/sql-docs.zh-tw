@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039259"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107042"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -73,10 +72,10 @@ ms.locfileid: "56039259"
 -   使用預存認證或提示認證，即可查詢報表資料的外部資料來源。 認證可以是 Windows 網域帳戶或資料庫登入。  
   
 ### <a name="prompted-credentials"></a>提示認證  
- 當您將報表資料來源連接設定為使用提示認證時，存取此報表的每位使用者都必須輸入使用者名稱和密碼，才能擷取資料。 此方法建議用於包含機密資料的報表。 提示認證只能用於視需要執行的報表上。 提示認證可以是 Windows 帳戶或資料庫登入。 若要使用 Windows 驗證，必須選取 [連線到資料來源時作為 Windows 認證]。 否則，報表伺服器會將認證傳遞至資料庫伺服器以供使用者驗證。 如果資料庫伺服器無法驗證您所提供的認證，連接將會失敗。  
+ 當您將報表資料來源連接設定為使用提示認證時，存取此報表的每位使用者都必須輸入使用者名稱和密碼，才能擷取資料。 此方法建議用於包含機密資料的報表。 提示認證只能用於視需要執行的報表上。 提示認證可以是 Windows 帳戶或資料庫登入。 若要使用 Windows 驗證，必須選取 [連線到資料來源時作為 Windows 認證]  。 否則，報表伺服器會將認證傳遞至資料庫伺服器以供使用者驗證。 如果資料庫伺服器無法驗證您所提供的認證，連接將會失敗。  
   
 ### <a name="windows-integrated-security"></a>Windows 整合式安全性  
- 當您使用 [Windows 整合式安全性] 選項時，報表伺服器會將存取報表之使用者的安全性權杖，傳遞至主控外部資料來源的伺服器。 在此情況下，不會提示使用者輸入使用者名稱或密碼。 如果模擬和委派功能已啟用，建議您使用此方法。 如果這些功能未啟用，只有當所有您想要存取的伺服器都位於相同電腦上時，才應該使用此方法。  
+ 當您使用 [Windows 整合式安全性]  選項時，報表伺服器會將存取報表之使用者的安全性權杖，傳遞至主控外部資料來源的伺服器。 在此情況下，不會提示使用者輸入使用者名稱或密碼。 如果模擬和委派功能已啟用，建議您使用此方法。 如果這些功能未啟用，只有當所有您想要存取的伺服器都位於相同電腦上時，才應該使用此方法。  
   
 ### <a name="stored-credentials"></a>預存認證  
  您可以儲存用於存取外部資料來源的認證。 認證是以可回復加密的方式，儲存在報表伺服器資料庫中。 您可以為用於報表中的每一個資料來源，指定一組預存認證。 您提供的認證會為執行報表的每一個使用者擷取相同的資料。  
@@ -90,25 +89,25 @@ ms.locfileid: "56039259"
   
  若要授與此權限，請執行下列動作：  
   
-1.  在報表伺服器電腦的 [系統管理工具] 中，開啟 [本機安全性原則]。  
+1.  在報表伺服器電腦的 [系統管理工具]  中，開啟 [本機安全性原則]  。  
   
-2.  在 [安全性設定] 底下，展開 [本機原則]，然後按一下 [使用者權限指派]。  
+2.  在 [安全性設定]  底下，展開 [本機原則]  ，然後按一下 [使用者權限指派]  。  
   
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [允許本機登入]，然後以滑鼠右鍵按一下 [內容]。  
+3.  在詳細資料窗格中，以滑鼠右鍵按一下 [允許本機登入]  ，然後以滑鼠右鍵按一下 [內容]  。  
   
-4.  按一下 **[加入使用者或群組]**。  
+4.  按一下 **[加入使用者或群組]** 。  
   
-5.  按一下 [位置]，指定要搜尋的網域或其他位置，然後按一下 [確定]。  
+5.  按一下 [位置]  ，指定要搜尋的網域或其他位置，然後按一下 [確定]  。  
   
-6.  輸入允許互動式登入的 Windows 帳戶，然後按一下 [確定]。  
+6.  輸入允許互動式登入的 Windows 帳戶，然後按一下 [確定]  。  
   
-7.  在 [允許本機登入內容] 對話方塊中，按一下 [確定]。  
+7.  在 [允許本機登入內容]  對話方塊中，按一下 [確定]  。  
   
 8.  確定您選取的帳戶沒有拒絕權限：  
   
-    1.  以滑鼠右鍵按一下 [拒絕本機登入]，然後以滑鼠右鍵按一下 [內容]。  
+    1.  以滑鼠右鍵按一下 [拒絕本機登入]  ，然後以滑鼠右鍵按一下 [內容]  。  
   
-    2.  如果帳戶列於其中，請選取帳戶，然後按一下 [移除]。  
+    2.  如果帳戶列於其中，請選取帳戶，然後按一下 [移除]  。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>以預存認證使用模擬  
  您也可以使用認證來模擬其他使用者的身分。 針對 SQL Server 資料庫，使用模擬選項會設定 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 函數。  

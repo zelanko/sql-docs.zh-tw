@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104284"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>將報表檢視器 Web 組件加入至網頁 (SharePoint 整合模式的 Reporting Services)
   您可以使用報表檢視器 Web 組件來檢視在設定為以 SharePoint 整合模式執行之報表伺服器上執行的報表。 您可以使用 Web 組件顯示在報表產生器或報表設計師中建立，並且上傳至文件庫的報表定義 (.rdl) 檔案。  
@@ -37,24 +36,24 @@ ms.locfileid: "56030689"
   
 1.  開啟或建立網頁組件頁面或儀表板。  
   
-2.  在 [網站動作] 中，按一下 [編輯頁面]。  
+2.  在 [網站動作]  中，按一下 [編輯頁面]  。  
   
 3.  按一下 **新增網頁組件**。  
   
-4.  在網頁組件類別目錄的清單中，選取 [其他] 類別目錄，然後選取 [SQL Server Reporting Services 報表檢視器]。  
+4.  在網頁組件類別目錄的清單中，選取 [其他]  類別目錄，然後選取 [SQL Server Reporting Services 報表檢視器]  。  
   
-5.  按一下 **[加入]**。 Web 組件會加入區域頂端。 您可將它拖曳至該區域中的其他位置。  
+5.  按一下 **[加入]** 。 Web 組件會加入區域頂端。 您可將它拖曳至該區域中的其他位置。  
   
-6.  在檢視器中，按一下 [請按這裡開啟工具窗格]。  
+6.  在檢視器中，按一下 [請按這裡開啟工具窗格]  。  
   
-7.  按一下瀏覽 ([...]) 按鈕，選取目前網站集合中任意文件庫的報表。 您也可以輸入報表的 URL。 若要判斷任何報表的 URL，請以滑鼠右鍵按一下報表，然後選取 [屬性]。 請勿按報表旁邊的向下箭號，因為在項目的 [檢視屬性] 頁面中不會指示報表 URL。 如果您從 [屬性] 對話方塊複製並貼上 URL，請將 "%20" URL 編碼取代為空格 (例如，"Company%20Sales" 應該是 "Company Sales")。  
+7.  按一下瀏覽 ([...]  ) 按鈕，選取目前網站集合中任意文件庫的報表。 您也可以輸入報表的 URL。 若要判斷任何報表的 URL，請以滑鼠右鍵按一下報表，然後選取 [屬性]  。 請勿按報表旁邊的向下箭號，因為在項目的 [檢視屬性] 頁面中不會指示報表 URL。 如果您從 [屬性]  對話方塊複製並貼上 URL，請將 "%20" URL 編碼取代為空格 (例如，"Company%20Sales" 應該是 "Company Sales")。  
   
     > [!NOTE]  
     >  每一個報表檢視器 Web 組件都包含單一報表。 URL 必須是完整的路徑，指向位於目前的 SharePoint 網站，或是位於相同 Web 應用程式或伺服陣列內之網站的報表。 URL 必須解析為文件庫，或包含該報表之文件庫內的資料夾。 報表 URL 必須包括副檔名 .rdl。 如果報表是根據模型或共用資料來源檔案，則不需要在 URL 中指定這些檔案。 報表會包含所需的檔案參考。  
   
 8.  在工具窗格開啟時，可以設定屬性以修改預設的外觀和配置。  
   
-9. 按一下工具窗格底部的 [套用]，然後按一下 [確定] 關閉窗格。  
+9. 按一下工具窗格底部的 [套用]  ，然後按一下 [確定]  關閉窗格。  
   
 ## <a name="see-also"></a>另請參閱  
  [SharePoint 網站上的報表檢視器 Web 組件](../report-viewer-web-part-on-a-sharepoint-site.md)   

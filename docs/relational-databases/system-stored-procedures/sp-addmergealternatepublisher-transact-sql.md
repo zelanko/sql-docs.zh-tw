@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0e34ad32ed5fb2ae54c5a32b715ee6eb417023b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118075"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 `[ @alternate_distributor = ] 'alternate_distributor'` 為替代同步夥伴的散發者名稱。 *alternate_distributor*已**sysname**，沒有預設值。  
   
-`[ @friendly_name = ] 'friendly_name'` 是可供識別之發行者、 發行集和組成替代同步夥伴的散發者關聯的顯示名稱。 *friendly_name*已**nvarchar(255)**，預設值是 NULL。  
+`[ @friendly_name = ] 'friendly_name'` 是可供識別之發行者、 發行集和組成替代同步夥伴的散發者關聯的顯示名稱。 *friendly_name*已**nvarchar(255)** ，預設值是 NULL。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -74,7 +73,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addmergealternatepublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+ [sp_dropmergealternatepublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

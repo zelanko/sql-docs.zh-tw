@@ -1,28 +1,28 @@
 ---
 title: 預覽報表
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 4b7f822e9bc6d3a875f0b0049c68a6d3ee010327
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935887"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>在 SQL Server Reporting Services (SSRS) 中預覽報表
 
   設計 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，在尚未發佈至生產環境之前，您可能會想要先檢視該報表。 您可以利用數種方式進行檢視：在報表設計師中切換到 [預覽] 模式、使用報表設計師中的預覽視窗，以及在測試環境中將報表發行至報表伺服器。  
   
 > [!NOTE]  
-> 預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>*.rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
+> 預覽報表時，報表的資料會快取至本機電腦上的檔案。 當您再次預覽同一份報表時 (使用相同的查詢、參數和認證)，報表設計師會擷取快取複本，而非重新執行查詢。 資料檔案儲存為 *\<reportname>* .rdl.data 與報表定義檔案相同的目錄中。 您關閉報表設計師時，不會刪除此檔案。  
   
 ## <a name="preview-mode"></a>預覽模式
 
@@ -32,7 +32,7 @@ ms.locfileid: "53553000"
 
  另一個預覽報表的方式是在偵錯組態下執行報表專案，例如，偵錯您撰寫的自訂組件。 報表會在預設瀏覽器中開啟。 有三種方法可以執行專案：  
   
-- 在 [偵錯] 功能表中，按一下 [開始偵錯]。  
+- 在 [偵錯]  功能表中，按一下 [開始偵錯]  。  
   
 - 依序按一下**啟動**按鈕[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][標準] 工具列![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug")。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "53553000"
  如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 **StartItem** 屬性中所指定的報表，會在另一個預覽視窗中開啟。 預覽視窗顯示報表的方式和功能都與 [預覽] 模式相同。  
   
 > [!NOTE]  
-> 在偵錯報表之前，您必須設定一個啟動項目。 例如，如果您執行偵錯模式，瀏覽器會開啟主要報表伺服器頁面，而不是預覽模式的報表。 若要設定啟動項目，請在方案總管中以滑鼠右鍵按一下報表專案，再按一下 [屬性]，然後在 [StartItem] 中選取要顯示的報表名稱。  
+> 在偵錯報表之前，您必須設定一個啟動項目。 例如，如果您執行偵錯模式，瀏覽器會開啟主要報表伺服器頁面，而不是預覽模式的報表。 若要設定啟動項目，請在方案總管中以滑鼠右鍵按一下報表專案，再按一下 [屬性]  ，然後在 [StartItem]  中選取要顯示的報表名稱。  
   
- 如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
+ 如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]  。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   
 ## <a name="publish-to-a-test-server"></a>發佈至測試伺服器
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8e131e2550ffa5078df5e284898ffe936128b7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906348"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265872"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "48906348"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|如果與資源管理員集區相關聯，則是資源集區的識別碼。|  
-|**memory_broker_type**|**nvarchar(60)**|記憶體 Broker 的類型。 目前有三種記憶體 broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 列出以下及其說明。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 供配置的記憶體快取物件 （不是緩衝集區快取）。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 從緩衝集區奪取的記憶體。 在目前的擁有者釋放這種記憶體前，其他元件無法重複使用它。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供未來使用的目前執行之要求的記憶體。|  
+|**memory_broker_type**|**nvarchar(60)**|記憶體 Broker 的類型。 目前有三種記憶體 broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 列出以下及其說明。<br /><br /> **MEMORYBROKER_FOR_CACHE** :以供配置的記憶體快取物件 （不是緩衝集區快取）。<br /><br /> **MEMORYBROKER_FOR_STEAL** :從緩衝集區奪取的記憶體。 在目前的擁有者釋放這種記憶體前，其他元件無法重複使用它。<br /><br /> **MEMORYBROKER_FOR_RESERVE** :保留供未來使用的目前執行之要求的記憶體。|  
 |**allocations_kb**|**bigint**|已經配置給此類型 Broker 的記憶體數量 (以 KB 為單位)。|  
 |**allocations_kb_per_sec**|**bigint**|每秒的記憶體配置率 (以 KB 為單位)。 對於記憶體取消配置，這個值可以是負值。|  
 |**predicted_allocations_kb**|**bigint**|預測 Broker 所配置的記憶體數量。 這是以記憶體使用量模式為基礎。|  
@@ -54,7 +53,7 @@ ms.locfileid: "48906348"
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
   
 ## <a name="see-also"></a>另請參閱  
 

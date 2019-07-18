@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924186"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 Shape 命令 APPEND 子句附加的資料行或資料行**資料錄集**。 通常，這些資料行是章節資料行，參考的子系**資料錄集**。  
@@ -43,7 +42,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   資料表關鍵字，後面加上資料表中的資料提供者的名稱。  
   
- *父別名*  
+ *parent-alias*  
  父代是指的選擇性別名**資料錄集**。  
   
  *column-list*  

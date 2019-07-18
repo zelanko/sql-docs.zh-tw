@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60144c2b3283621d6365a3016b4f1d436319b05a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7577a95f08b4e960fc3f5dfdeb356cd7434d73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795154"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>資料庫鏡像端點 (SQL Server)
 

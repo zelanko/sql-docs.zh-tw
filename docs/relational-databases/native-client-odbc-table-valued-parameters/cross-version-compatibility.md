@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1979d090ea01648f36ee0ee20b6aa7aa2138cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ce057a2ea0985243bc9c42e6384dfe805e56ff4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030280"
 ---
 # <a name="cross-version-compatibility"></a>跨版本相容性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

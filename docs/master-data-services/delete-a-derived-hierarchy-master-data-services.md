@@ -11,15 +11,14 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8918a9c8373f8d711f0400915be97dc6799a5b5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906460"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>刪除衍生階層 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52779600"
 > [!NOTE]  
 >  刪除衍生階層對於此階層所依據的屬性關聯性沒有影響。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -39,17 +38,17 @@ ms.locfileid: "52779600"
   
 ### <a name="to-delete-a-derived-hierarchy"></a>若要刪除衍生階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列指向 [管理]，然後按一下 [衍生階層]。  
+2.  從功能表列指向 [管理]  ，然後按一下 [衍生階層]  。  
   
-3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
   
 4.  選取要刪除之衍生階層的資料列。  
   
-5.  按一下 **[刪除]**。  
+5.  按一下 **[刪除]** 。  
   
-6.  在確認對話方塊中按一下 **[確定]**。  
+6.  在確認對話方塊中按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立衍生階層 &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   

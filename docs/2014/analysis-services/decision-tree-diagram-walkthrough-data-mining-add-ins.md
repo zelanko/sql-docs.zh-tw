@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
@@ -16,12 +15,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082274"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>決策樹圖表逐步解說 （資料採礦增益集）
   如果您已經建立決策樹模型，就可以在 Visio 中使用 [決策樹] 圖形或 [相依性網路] 圖形來建立自訂的圖表。 本主題說明您可以使用執行的自訂**決策樹**圖形和下列控制項：  

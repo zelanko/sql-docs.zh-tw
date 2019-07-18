@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - named queries [Analysis Services], creating
@@ -15,12 +14,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075555"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
   具名查詢是以資料表代表的 SQL 運算式。 在具名查詢中，您可以指定 SQL 運算式，來選取在一個或多個資料來源中的一個或多個資料表所傳回的資料列和資料行。 具名查詢就像資料來源檢視 (DSV) 中具有資料列和關聯性的其他任何資料表一樣，差別在於具名查詢是以運算式為基礎。  
@@ -42,24 +41,24 @@ ms.locfileid: "53350614"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中加入具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
-2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視。  
+2.  在方案總管中，展開 [資料來源檢視]  資料夾，然後按兩下資料來源檢視。  
   
-3.  在 [資料表] 或 [圖表] 窗格中，以滑鼠右鍵按一下開放區域，然後按一下 [新增具名查詢]。  
+3.  在 [資料表]  或 [圖表]  窗格中，以滑鼠右鍵按一下開放區域，然後按一下 [新增具名查詢]  。  
   
-4.  在 [建立具名查詢] 對話方塊中，執行下列動作：  
+4.  在 [建立具名查詢]  對話方塊中，執行下列動作：  
   
-    1.  在 [名稱] 文字方塊中，輸入查詢名稱。  
+    1.  在 [名稱]  文字方塊中，輸入查詢名稱。  
   
-    2.  可以選擇在 [描述] 文字方塊中輸入查詢的描述。  
+    2.  可以選擇在 [描述]  文字方塊中輸入查詢的描述。  
   
-    3.  在 [資料來源] 清單方塊中，選取具名查詢執行時所要針對的資料來源。  
+    3.  在 [資料來源]  清單方塊中，選取具名查詢執行時所要針對的資料來源。  
   
     4.  在下方窗格中輸入查詢，或是使用圖形化查詢建立工具來建立查詢。  
   
     > [!NOTE]  
     >  請注意，建立查詢的使用者介面 (UI) 需視資料來源而定； 您可以取得一般文字式 UI，而非圖形 UI。 您可以使用不同的 UI 來完成相同的工作，但必須以不同的方式執行。 如需詳細資訊，請參閱[建立/編輯具名查詢對話方塊 &#40;Analysis Services - 多維度資料&#41;](../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)。  
   
-5.  按一下 [確定] 。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
+5.  按一下 [確定]  。 資料表頁首會出現表示兩個重疊資料表的圖示，指出資料表已取代為具名查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   

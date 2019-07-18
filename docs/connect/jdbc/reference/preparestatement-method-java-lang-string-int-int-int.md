@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b3979628c2676b6a3780536a217885e8547d42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c01717f734a4bbf2d9df35b8f2c3ce2e40baa19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762324"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement 方法 (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  **String**，其中包含 SQL 陳述式。  
   
- *n*  
+ *nType*  
   
  **int**，指出結果集類型。  
   
@@ -61,7 +61,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 prepareStatement 方法是由 java.sql.Connection 介面中的 prepareStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

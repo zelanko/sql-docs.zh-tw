@@ -1,20 +1,19 @@
 ---
-title: 設定容錯移轉叢集執行個體存放區 NFS-Linux 上的 SQL Server |Microsoft Docs
+title: 設定容錯移轉叢集執行個體存放區 NFS-Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032362"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-NFS-Linux 上的 SQL Server
 

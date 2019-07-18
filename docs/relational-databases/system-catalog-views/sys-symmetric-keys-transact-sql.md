@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e5bc6d2959e14c7af7e5ccefddc14e9bb630ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108936"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47672946"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|金鑰的名稱。 在 c4database 是唯一的。|  
+|**name**|**sysname**|金鑰的名稱。 在資料庫中，這是唯一的。|  
 |**principal_id**|**int**|擁有金鑰的資料庫主體識別碼。|  
 |**symmetric_key_id**|**int**|金鑰的識別碼。 在資料庫中，這是唯一的。|  
 |**key_length**|**int**|金鑰的長度 (以位元為單位)。|  
@@ -56,7 +55,7 @@ ms.locfileid: "47672946"
  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
   
  **釐清有關 DES 演算法的資訊：**  
   

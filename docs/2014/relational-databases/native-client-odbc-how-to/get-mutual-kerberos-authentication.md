@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200418"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>取得相互 Kerberos 驗證
   此範例顯示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 取得 Kerberos 相互驗證。  

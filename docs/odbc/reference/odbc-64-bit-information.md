@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937972"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
 從 Windows Server 2003 開始，Microsoft 作業系統有支援的 64 位元 ODBC 程式庫。 ODBC 標頭和程式庫最初隨附於 MDAC 2.7 SDK 包含可讓程式設計人員，輕鬆地撰寫程式碼適用於新的 64 位元平台的變更。 確保您的程式碼會使用下面所列的 ODBC 定義類型，您可以編譯 64 位元和 32 位元平台採用相同的原始程式碼 **_WIN64**或是**WIN32**巨集。  
@@ -34,7 +33,7 @@ ms.locfileid: "52321664"
 ## <a name="function-declaration-changes"></a>函式宣告的變更  
  下列函式簽章已變更為 64 位元程式設計。 以粗體文字的項目是不同的特定參數。  
   
-```c
+```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -126,7 +125,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  32 位元和 64 位元編譯器已變更的 SQLSETPOSIROW 定義：  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +135,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  SQLLEN 和 SQLULEN 的定義已變更適用於 64 位元編譯器中：  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +147,7 @@ typedef UINT64 SQLULEN;
   
  雖然 SQL_C_BOOKMARK 已不再 2.0 的用戶端上的 64 位元編譯器支援在 ODBC 3.0 中，此值已變更：  
   
-```c
+```cpp
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +157,7 @@ typedef UINT64 SQLULEN;
   
  書籤的型別定義中的較新的標頭的不同：  
   
-```c
+```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   
@@ -231,7 +230,7 @@ typedef SQLULEN BOOKMARK;
   
  當*屬性*參數具有下列值之一，64 位元值傳入*值*:  
   
- SQL_ATTR_ASYNC_ENABLE 設定  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -303,7 +302,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_APP_ROW_DESC  
   
- SQL_ATTR_ASYNC_ENABLE 設定  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -345,7 +344,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_PARAMSET_SIZE  
   
- SQL_ATTR_QUERY_TIMEOUT 時  
+ SQL_ATTR_QUERY_TIMEOUT  
   
  SQL_ATTR_RETRIEVE_DATA  
   
@@ -357,7 +356,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_OPERATION_PTR  
   
- SQL_ATTR_ROW_STATUS_PTR 設定  
+ SQL_ATTR_ROW_STATUS_PTR  
   
  SQL_ATTR_SIMULATE_CURSOR  
   
@@ -365,7 +364,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtOption**  
   
- 當* 選項*參數可以有下列值之一，是 64 位元值會傳回在 **值*:  
+ 當 *選項*參數可以有下列值之一，是 64 位元值會傳回在 **值*:  
   
  SQL_KEYSET_SIZE  
   
@@ -379,7 +378,7 @@ typedef SQLULEN BOOKMARK;
   
  當*屬性*參數具有下列值之一，是 64 位元值會傳入*值*:  
   
- SQL_ATTR_ASYNC_ENABLE 設定  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -425,7 +424,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_APP_ROW_DESC  
   
- SQL_ATTR_ASYNC_ENABLE 設定  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -465,7 +464,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_PARAMSET_SIZE  
   
- SQL_ATTR_QUERY_TIMEOUT 時  
+ SQL_ATTR_QUERY_TIMEOUT  
   
  SQL_ATTR_RETRIEVE_DATA  
   
@@ -477,7 +476,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_OPERATION_PTR  
   
- SQL_ATTR_ROW_STATUS_PTR 設定  
+ SQL_ATTR_ROW_STATUS_PTR  
   
  SQL_ATTR_ROWS_FETCHED_PTR  
   
@@ -487,7 +486,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- 當* 選項*參數具有下列值之一，是 64 位元值會傳入*值*:  
+ 當 *選項*參數具有下列值之一，是 64 位元值會傳入*值*:  
   
  SQL_KEYSET_SIZE  
   

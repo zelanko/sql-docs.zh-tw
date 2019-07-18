@@ -1,22 +1,23 @@
 ---
 title: 列印報表 (SharePoint 模式的 Reporting Services) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 319e00685255e77c7afe17fc932467268e020873
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65875195"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>列印報表 (SharePoint 模式的 Reporting Services)
   當報表伺服器以 SharePoint 模式執行時，您可以使用下列三種方法從 SharePoint Web 應用程式列印報表：  
@@ -38,13 +39,13 @@ ms.locfileid: "56294356"
   
 1.  開啟報表。  
   
-2.  在 **[動作]** 功能表上，按一下 **[列印]**。 如果沒有看到 **[動作]** 功能表，表示系統已隱藏報表工具列，而且您不能使用工具列提供的功能。 如果有 **[動作]** 功能表，但功能表上沒有 **[列印]** 選項，則表示報表伺服器已經停用列印功能，而無法使用此功能。  
+2.  在 **[動作]** 功能表上，按一下 **[列印]** 。 如果沒有看到 **[動作]** 功能表，表示系統已隱藏報表工具列，而且您不能使用工具列提供的功能。 如果有 **[動作]** 功能表，但功能表上沒有 **[列印]** 選項，則表示報表伺服器已經停用列印功能，而無法使用此功能。  
   
-3.  在 **[列印]** 對話方塊中，選取您要使用的印表機和設定，然後按一下 **[確定]**。  
+3.  在 **[列印]** 對話方塊中，選取您要使用的印表機和設定，然後按一下 **[確定]** 。  
   
      若要修改預設值，請按一下 **[內容]** 按鈕。 頁面大小會由報表定義中所定義之報表頁面大小的預設高度和寬度來決定。 您可以變更頁面維度的範圍會根據所使用的印表機功能而定。  
   
-     若要在列印之前檢視報表，請按一下 **[預覽]** 按鈕。 這樣就會在個別的預覽視窗中開啟報表的第一頁。 其他的頁面在報表於報表伺服器上完成轉譯之後即可使用。 預覽的報表會轉譯成 EMF 格式。 您可以導覽至上一頁或下一頁，直到出現最後一頁為止，此時 **[下一頁]** 按鈕就會停用。 若要在預覽頁面中修改列印邊界，請按一下 **[邊界]** 按鈕。 **[邊界]** 對話方塊隨即出現。 請設定您上、下、左、右邊界，然後按一下 **[確定]**。 對話方塊會關閉並儲存設定，以供轉譯預覽和列印使用。  
+     若要在列印之前檢視報表，請按一下 **[預覽]** 按鈕。 這樣就會在個別的預覽視窗中開啟報表的第一頁。 其他的頁面在報表於報表伺服器上完成轉譯之後即可使用。 預覽的報表會轉譯成 EMF 格式。 您可以導覽至上一頁或下一頁，直到出現最後一頁為止，此時 **[下一頁]** 按鈕就會停用。 若要在預覽頁面中修改列印邊界，請按一下 **[邊界]** 按鈕。 **[邊界]** 對話方塊隨即出現。 請設定您上、下、左、右邊界，然後按一下 **[確定]** 。 對話方塊會關閉並儲存設定，以供轉譯預覽和列印使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟用和停用 Reporting Services 的用戶端列印功能](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 34cb0cbe98bd0afd9eb1e3183839984799df7718
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: b8fb77ad04ee14db19ffde93a6c92cca938115a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937889"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ _relative_
 ## <a name="return-types"></a>傳回類型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-CLR 傳回類型：**SqlGeography**  
+CLR 傳回型別：**SqlGeography**  
   
 ## <a name="exceptions"></a>例外狀況  
 設定容錯 <= 0 會擲回 **ArgumentOutOfRange** 例外狀況。  

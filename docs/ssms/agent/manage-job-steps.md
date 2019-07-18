@@ -22,16 +22,16 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 08886c0ac6b5f0e3c6a0f781a8df8a24e6213313
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211587"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685907"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ Set oServer = nothing
   
 -   新增或修改命令列選項。  
   
-請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄] 指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態] 索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
+請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄]  指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態]  索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
   
 如需建立用於執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之作業步驟的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 878afb5f16c988ee98908030695e0f03c7e2f7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b7be2bb99a92794ed8c1b5971edca47522c2552
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941931"
 ---
 # <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

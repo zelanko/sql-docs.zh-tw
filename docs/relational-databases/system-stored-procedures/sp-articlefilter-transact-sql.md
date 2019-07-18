@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 11d00c389f815117f624ea0a8099a49e7db28fdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129748"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
-`[ @filter_name = ] 'filter_name'` 要從建立的篩選預存程序的名稱*filter_name*。 *filter_name*已**nvarchar(386)**，預設值是 NULL。 您必須指定發行項篩選的唯一名稱。  
+`[ @filter_name = ] 'filter_name'` 要從建立的篩選預存程序的名稱*filter_name*。 *filter_name*已**nvarchar(386)** ，預設值是 NULL。 您必須指定發行項篩選的唯一名稱。  
   
 `[ @filter_clause = ] 'filter_clause'` 是一項限制會定義水平篩選 (WHERE) 子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*已**ntext**，預設值是 NULL。  
   
@@ -93,7 +92,7 @@ sp_articlefilter [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [定義及修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_articleview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

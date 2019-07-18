@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667376"
 ---
 # <a name="using-catalog-functions"></a>使用目錄函數
   所有資料庫都有包含儲存在資料庫之資料的結構。 此結構的定義以及權限之類的其他資訊會儲存在目錄 (當做一組系統資料表實作) 中，也就是所謂的資料字典。  
@@ -43,7 +43,7 @@ ms.locfileid: "54100633"
   
      傳回連結伺服器中所包含的目錄清單。  
   
- 您擁有連結的伺服器名稱和目錄名稱之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式支援從目錄取得資訊使用兩部分名稱_linked_server_name_**。**_catalog_ for *CatalogName*下列 odbc 目錄函數：  
+ 您擁有連結的伺服器名稱和目錄名稱之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式支援從目錄取得資訊使用兩部分名稱_linked_server_name_ **。** _catalog_ for *CatalogName*下列 odbc 目錄函數：  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54100633"
   
 -   **SQLTables**  
   
- 兩段_linked_server_name_**。**_catalog_也支援*FKCatalogName*並*PKCatalogName*上[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)。  
+ 兩段_linked_server_name_ **。** _catalog_也支援*FKCatalogName*並*PKCatalogName*上[SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要下列檔案：  
   

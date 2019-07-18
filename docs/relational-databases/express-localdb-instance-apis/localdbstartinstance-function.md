@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022096"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>詳細資料  
  這兩個連接緩衝區引數 (*wszSqlConnection*) 和連接緩衝區大小引數 (*lpcchSqlConnection*) 是選擇性的。 下表顯示使用這些引數的選項及其結果。  
   
-|緩衝區|緩衝區大小|基本原理|動作|  
+|緩衝區|緩衝區大小|基本原理|Action|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|使用者想要啟動的執行個體，但不需要管道名稱。|啟動執行個體 (不傳回管道且不傳回所需的緩衝區大小)。|  
 |NULL|存在|使用者要求輸出緩衝區大小。 (在下一個呼叫中，使用者可能會要求實際啟動。)|傳回所需的緩衝區大小 (不啟動且不傳回管道)。 結果為 S_OK。|  

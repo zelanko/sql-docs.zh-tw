@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144674"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>檢查資料庫完整性工作 (維護計畫)
-  使用 [檢查資料庫完整性工作] 對話方塊，並執行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以檢查使用者和系統資料表的配置和結構完整性以及資料庫的索引。 執行 `DBCC` 以確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。  
+  使用 [檢查資料庫完整性工作]  對話方塊，並執行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以檢查使用者和系統資料表的配置和結構完整性以及資料庫的索引。 執行 `DBCC` 以確實回報任何有關資料庫完整性的問題，以便系統管理員或資料庫擁有者稍後解決。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   

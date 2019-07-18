@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3847dd6f7ce9f5592bdf4c072f0cb2f72e3bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b0cb39dff8306c2fcba5bcb67f1ada2a279b35b3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756216"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686381"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>選擇插入結果的目標資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47756216"
 從清單中選取要加入資料列的資料表名稱。 您只能為 NSERT RESULTS 查詢指定一個資料表。  
   
 > [!NOTE]  
-> 在 [屬性] 視窗中，您可以變更要插入資料列的資料表。  
+> 在 [屬性]  視窗中，您可以變更要插入資料列的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立插入結果查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  

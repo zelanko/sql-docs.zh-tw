@@ -12,11 +12,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: mbarwin
 ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522803"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連線
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "56828048"
 
 若要使用 Azure AD，使用**驗證**或是**AccessToken**關鍵字 （它們是互斥的） 下, 表所示。 如需更多技術的詳細資訊，請參閱[使用 Azure Active Directory 與 ODBC 驅動程式](../../connect/odbc/using-azure-active-directory.md)。
 
-|關鍵字|值|描述|
+|關鍵字|值|Description|
 |-|-|-|
 |**AccessToken**|未設定 （預設值）|驗證模式取決於其他關鍵字。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。 |
 ||位元組的字串|Azure AD 存取權杖的 OAuth JSON 回應中擷取。 連接字串不可以包含使用者識別碼、 密碼或驗證關鍵字 (需要 ODBC Driver 17 版或更新版本在 Linux 或 macOS)。 |

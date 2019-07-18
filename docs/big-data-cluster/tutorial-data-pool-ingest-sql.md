@@ -2,20 +2,19 @@
 title: 將資料內嵌到 SQL Server 資料集區
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將資料內嵌至 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 03/27/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957793"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
 
@@ -63,7 +62,7 @@ ms.locfileid: "58860340"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. 建立名為外部資料表**web_clickstream_clicks_data_pool**資料集區中。
@@ -79,41 +78,22 @@ ms.locfileid: "58860340"
       );
    ```
   
-1. 在 CTP 2.4，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 3.1 中，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="load-data"></a>載入資料
 
 下列步驟會將範例 web 點選流資料嵌入使用先前步驟中建立外部資料表的資料集區。
 
-1. 定義您想要將資料插入的資料集區使用之查詢的變數。 CTP 2.3 或更早版本，**模型...sp_data_pool_table_insert_data**需要預存程序。 CTP 2.4 和更新版本，您可以使用`INSERT INTO`陳述式來查詢的結果插入的資料集區 ( **web_clickstream_clicks_data_pool**外部資料表)。
+1. 使用`INSERT INTO`陳述式來查詢的結果插入的資料集區 ( **web_clickstream_clicks_data_pool**外部資料表)。
 
    ```sql
-   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-   BEGIN
-      INSERT INTO web_clickstream_clicks_data_pool
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-        FROM sales.dbo.web_clickstreams_hdfs_parquet
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-                              AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;
-   END
-
-   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-   BEGIN
-      DECLARE @db_name SYSNAME = 'Sales'
-      DECLARE @schema_name SYSNAME = 'dbo'
-      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-      DECLARE @query NVARCHAR(MAX) = '
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-      FROM sales.dbo.web_clickstreams
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-         AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;'
-
-      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
-   END
+   INSERT INTO web_clickstream_clicks_data_pool
+   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+     FROM sales.dbo.web_clickstreams_hdfs_parquet
+   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                           AND wcs_user_sk IS NOT NULL)
+   GROUP BY wcs_user_sk, i_category_id
+   HAVING COUNT_BIG(*) > 100;
    ```
 
 1. 檢查兩個選取的查詢與插入的資料。

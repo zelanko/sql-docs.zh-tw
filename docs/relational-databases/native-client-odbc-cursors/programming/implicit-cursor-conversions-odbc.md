@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eebbfcefdf5c4c9e2d6ed1409e3c119f598a22d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25c3622db3271a01a0c4700ff93e0bfaebe7d93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934393"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>隱含資料指標轉換 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

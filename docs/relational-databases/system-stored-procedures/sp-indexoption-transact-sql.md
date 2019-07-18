@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030899"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @IndexNamePattern = ] 'table_or_index_name'` 是使用者定義資料表或索引的完整或非完整名稱。 *table_or_index_name&lt*已**nvarchar(1035)**，沒有預設值。 只有在指定完整索引或資料表名稱時，才會需要引號。 如果提供其中包括資料庫名稱的完整資料表名稱，資料庫名稱就必須是目前資料庫的名稱。 如果指定資料表名稱，但不含索引，且沒有任何叢集索引存在，便會將指定的選項值設給這份資料表的所有索引以及資料表本身。  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 是使用者定義資料表或索引的完整或非完整名稱。 *table_or_index_name&lt*已**nvarchar(1035)** ，沒有預設值。 只有在指定完整索引或資料表名稱時，才會需要引號。 如果提供其中包括資料庫名稱的完整資料表名稱，資料庫名稱就必須是目前資料庫的名稱。 如果指定資料表名稱，但不含索引，且沒有任何叢集索引存在，便會將指定的選項值設給這份資料表的所有索引以及資料表本身。  
   
-`[ @OptionName = ] 'option_name'` 是一個索引選項名稱。 *option_name*已**varchar(35)**，沒有預設值。 *option_name*可以有下列值之一。  
+`[ @OptionName = ] 'option_name'` 是一個索引選項名稱。 *option_name*已**varchar(35)** ，沒有預設值。 *option_name*可以有下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -58,7 +57,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|當設為 TRUE 時，不會使用資料列鎖定。 當設為 FALSE 時，在存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。|  
 |**DisAllowPageLocks**|當設為 TRUE 時，不會使用頁面鎖定。 當設為 FALSE 時，在存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。|  
   
-`[ @OptionValue = ] 'value'` 指定是否*option_name*設定是啟用 （TRUE、 ON、 yes 或 1） 或停用 (FALSE、 OFF、 no 或 0)。 *值*已**varchar(12)**，沒有預設值。  
+`[ @OptionValue = ] 'value'` 指定是否*option_name*設定是啟用 （TRUE、 ON、 yes 或 1） 或停用 (FALSE、 OFF、 no 或 0)。 *值*已**varchar(12)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或大於零 (失敗)  

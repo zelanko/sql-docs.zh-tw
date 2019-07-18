@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00a24ffca764c029b87470b7aa07d15f33b4c673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996450"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>登錄項目 (Visual FoxPro ODBC Driver)
 當您安裝 Visual FoxPro ODBC Driver 時，安裝程式會更新您的系統登錄中，登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，以新增新的金鑰，稱為 Microsoft Visual FoxPro 驅動程式中。 在該機碼，如下表所示的值會加入。  

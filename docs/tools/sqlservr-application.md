@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656908"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733352"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  啟動只含最小組態的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。  
   
  **-e** *error_log_path*  
- 指出錯誤記錄檔的完整路徑。 如果未指定此選項，預設執行個體的預設位置會是 *\<磁碟機>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog，而具名執行個體的預設位置會是 *\<磁碟機>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog。 **-e** 和 *error_log_path*之間沒有空格。  
+ 指出錯誤記錄檔的完整路徑。 如果未指定此選項，預設執行個體的預設位置會是 *\<磁碟機>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog，而具名執行個體的預設位置會是 *\<磁碟機>* :\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog。 **-e** 和 *error_log_path*之間沒有空格。  
   
  **-l** *master_log_path*  
  指出 **master** 資料庫交易記錄檔的完整路徑。 **-l** 和 *master_log_path*之間沒有空格。  
@@ -75,10 +75,10 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **選項啟動** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** *trace#*  
- 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#*)。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
+ 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#* )。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
 > [!IMPORTANT]  
->  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
+>  指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。  
   
  **-v**  
  顯示伺服器版本號碼。  

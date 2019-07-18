@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050079"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  

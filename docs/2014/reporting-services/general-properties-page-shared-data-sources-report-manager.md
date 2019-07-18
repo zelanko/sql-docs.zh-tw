@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109080"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>一般屬性頁面、共用資料來源 (報表管理員)
   使用 [一般] 屬性頁面，即可檢視或修改共用資料來源項目的屬性。 按一下 **[套用]** 時，您對屬性所做的任何變更，將在參考該項目的所有報表上生效。  
@@ -30,7 +29,7 @@ ms.locfileid: "56040400"
   
 2.  將滑鼠停留在該資料來源上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該共用資料來源的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該共用資料來源的 [一般] 屬性頁面。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -87,7 +86,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需有關此帳戶的詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。</c0>  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

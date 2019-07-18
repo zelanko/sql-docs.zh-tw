@@ -2,18 +2,19 @@
 title: Reporting Services 報表伺服器 (SharePoint 模式) | Microsoft Docs
 ms.date: 09/26/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 51e926f730269f2c4f6202ecffca1936f49dbf85
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580554"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -64,9 +65,9 @@ ms.locfileid: "52529744"
 
  SQL Server 2008 R2 版本導入了全新的 *「本機模式」* (Local Mode)，可用於從已安裝適用於 SharePoint 2010 產品之 Microsoft SQL Server 2008 R2 或更新版的 Reporting Services 增益集的 SharePoint 2010 伺服器檢視報表。  
   
--   *「本機模式」*：本機模式可讓您從 SharePoint 文件庫本機轉譯報表，而不需要與 Reporting Services 報表伺服器整合。 需要 SharePoint 產品的 Reporting Services 增益集，但不需要 Reporting Services 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[比較報表檢視器中的本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 和[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   *「本機模式」* ：本機模式可讓您從 SharePoint 文件庫本機轉譯報表，而不需要與 Reporting Services 報表伺服器整合。 需要 SharePoint 產品的 Reporting Services 增益集，但不需要 Reporting Services 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[比較報表檢視器中的本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 和[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   「連線模式」：連線模式的支援方式是使用 SharePoint 管理中心，將 Reporting Services 報表伺服器整合至 SharePoint 伺服陣列中。 與報表伺服器整合會啟用完整的端對端報表，並提供 SharePoint 2010 的共同作業功能以及報表伺服器的伺服器架構功能，包括：訂閱、快照集和伺服器架構處理。  
+-   「連線模式」  ：連線模式的支援方式是使用 SharePoint 管理中心，將 Reporting Services 報表伺服器整合至 SharePoint 伺服陣列中。 與報表伺服器整合會啟用完整的端對端報表，並提供 SharePoint 2010 的共同作業功能以及報表伺服器的伺服器架構功能，包括：訂閱、快照集和伺服器架構處理。  
   
 ## <a name="unsupported-sharepoint-features"></a>不支援的 SharePoint 功能
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529744"
   
  將報表伺服器設定為在 SharePoint 產品的部署內執行時，可能會看到多種語言。 使用者介面、文件和訊息可能會以下列語言顯示：  
   
--   所有源自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式頁面、工具、錯誤、警告和訊息，都會由 Reporting Services 執行個體所使用的語言以其中一種 Reporting Services 語言來顯示。  
+- 所有源自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式頁面、工具、錯誤、警告和訊息，都會由 Reporting Services 執行個體所使用的語言以其中一種 Reporting Services 語言來顯示。  
   
--   您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](https://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
+- 您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](https://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
   
--   SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
+- SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
   
  如果 SharePoint 產品或技術的語言與報表伺服器語言不同，則 Reporting Services 會嘗試使用相同語系中最接近的語言。 如果找不到接近的替代語言，報表伺服器就會使用英文。  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529744"
 
 ## <a name="next-steps"></a>後續步驟
 
-[安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[測驗：為 SharePoint 整合設定 SSRS 2012](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[安裝或解除安裝適用於 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

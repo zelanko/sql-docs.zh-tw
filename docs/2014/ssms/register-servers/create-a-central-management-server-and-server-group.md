@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188158"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>建立中央管理伺服器與伺服器群組 (SQL Server Management Studio)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體指定為 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的中央管理伺服器。 中央管理伺服器會儲存組織成一個或多個中央管理伺服器群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體清單。 使用中央管理伺服器群組所採取的動作將會在伺服器群組中的所有伺服器上運作。 這包括使用 [物件總管] 來連接至伺服器，以及同時在多部伺服器上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和以原則為基礎的管理原則。  
@@ -29,7 +29,7 @@ ms.locfileid: "52792750"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立中央管理伺服器和伺服器群組：**  
   
@@ -53,27 +53,27 @@ ms.locfileid: "52792750"
   
 #### <a name="create-a-central-management-server"></a>建立中央管理伺服器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]** 。  
   
-2.  在 [已註冊的伺服器] 中，展開 [Database Engine]，以滑鼠右鍵按一下 [中央管理伺服器]，然後按一下 [註冊中央管理伺服器]。  
+2.  在 [已註冊的伺服器] 中，展開 [Database Engine]  ，以滑鼠右鍵按一下 [中央管理伺服器]  ，然後按一下 [註冊中央管理伺服器]  。  
   
-3.  在 [新增伺服器註冊] 對話方塊中，從伺服器下拉式清單中選取您想要成為中央管理伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 中央管理伺服器必須使用 Windows 驗證。  
+3.  在 [新增伺服器註冊]  對話方塊中，從伺服器下拉式清單中選取您想要成為中央管理伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 中央管理伺服器必須使用 Windows 驗證。  
   
-4.  在 **[已註冊的伺服器]**，輸入伺服器名稱和選擇性描述。  
+4.  在 **[已註冊的伺服器]** ，輸入伺服器名稱和選擇性描述。  
   
 5.  從 **[連接屬性]** 索引標籤，檢閱或修改網路和連接屬性。 如需詳細資訊，請參閱[連接到伺服器 &#40;連接屬性頁面&#41; Database Engine](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
 6.  按一下 **[測試]** 測試連接。  
   
-7.  按一下 [儲存] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會出現在 **[中央管理伺服器]** 資料夾底下。  
+7.  按一下 [儲存]  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會出現在 **[中央管理伺服器]** 資料夾底下。  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>建立新的伺服器群組並將伺服器加入至群組  
   
-1.  從 **[已註冊的伺服器]**，展開 **[中央管理伺服器]**。 以滑鼠右鍵按一下上述程序中加入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後選取 [新增伺服器群組]。  
+1.  從 **[已註冊的伺服器]** ，展開 **[中央管理伺服器]** 。 以滑鼠右鍵按一下上述程序中加入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後選取 [新增伺服器群組]  。  
   
-2.  在 **[新增伺服器群組屬性]**，輸入群組名稱和選擇性描述。  
+2.  在 **[新增伺服器群組屬性]** ，輸入群組名稱和選擇性描述。  
   
-3.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [新增伺服器註冊]。  
+3.  在 [已註冊的伺服器]  中，以滑鼠右鍵按一下伺服器群組，然後按一下 [新增伺服器註冊]  。  
   
 4.  從 [新增伺服器註冊]，選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[建立新的已註冊伺服器 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)。 適當地加入其他伺服器。  
   

@@ -2,18 +2,18 @@
 title: 總計、彙總與內建集合的運算式範圍 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579816"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>總計、彙總與內建集合的運算式範圍
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  
@@ -57,7 +57,7 @@ ms.locfileid: "56297476"
  撰寫包含彙總函式的運算式時，了解包含和被包含的範圍相當重要。  
   
 ##  <a name="Aggregates"></a> 資料格範圍和運算式  
- 當您指定範圍時，表示您向報表處理器指示要用於彙總計算的資料。 根據運算式和運算式的位置，有效範圍可能是 *「包含的範圍」*(Containing Scope) (亦稱為父範圍) 或 *「被包含的範圍」*(Contained Scope) (亦稱為子範圍或巢狀範圍)。 一般而言，您無法在彙總計算中指定個別的群組執行個體。 您可以跨所有群組執行個體指定彙總。  
+ 當您指定範圍時，表示您向報表處理器指示要用於彙總計算的資料。 根據運算式和運算式的位置，有效範圍可能是 *「包含的範圍」* (Containing Scope) (亦稱為父範圍) 或 *「被包含的範圍」* (Contained Scope) (亦稱為子範圍或巢狀範圍)。 一般而言，您無法在彙總計算中指定個別的群組執行個體。 您可以跨所有群組執行個體指定彙總。  
   
  報表處理器會結合來自報表資料集中的資料以及 Tablix 資料區，因此，它會評估群組運算式，並建立表示群組執行個體所需的資料列和資料行。 在每個 Tablix 資料格中，文字方塊內的運算式值會在資料格範圍的內容中評估。 根據 Tablix 結構，資料格可以屬於多個資料列群組和資料行群組。 若是彙總函式，您可以使用下列其中一個範圍指定要使用的範圍：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "56297476"
   
   
 ##  <a name="Sparklines"></a> 同步處理走勢圖的縮放比例  
- 若要針對內嵌在資料表或矩陣中的走勢圖，跨時間比較水平軸上的值，您可以同步處理類別目錄群組值。 這稱為對齊座標軸。 透過選取要對齊座標軸的選項，報表會自動設定座標軸的最小值和最大值，並提供預留位置給不存在於每個類別目錄中的彙總值。 這會使走勢圖中的值跨每個類別目錄對齊，並讓您比較彙總資料之每個資料列的值。 透過選取這個選項，表示您要從運算式評估的範圍變更為 *「網域範圍」*(Domain Scope)。 設定巢狀圖表的網域範圍也會間接地控制每個類別目錄在圖例中的色彩指派。  
+ 若要針對內嵌在資料表或矩陣中的走勢圖，跨時間比較水平軸上的值，您可以同步處理類別目錄群組值。 這稱為對齊座標軸。 透過選取要對齊座標軸的選項，報表會自動設定座標軸的最小值和最大值，並提供預留位置給不存在於每個類別目錄中的彙總值。 這會使走勢圖中的值跨每個類別目錄對齊，並讓您比較彙總資料之每個資料列的值。 透過選取這個選項，表示您要從運算式評估的範圍變更為 *「網域範圍」* (Domain Scope)。 設定巢狀圖表的網域範圍也會間接地控制每個類別目錄在圖例中的色彩指派。  
   
  例如，在顯示每週趨勢的走勢圖中，假設某個城市有 3 個月的銷售資料，而另一個城市有 12 個月的銷售資料。 如果沒有同步處理的縮放比例，第一個城市的走勢圖只會有 3 個橫條，而且這 3 個橫條會比較寬，所佔用的空間會與第二個城市 12 個月的橫條相同。  
   

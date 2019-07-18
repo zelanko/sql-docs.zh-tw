@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
@@ -21,12 +20,12 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355817"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088029"
 ---
 # <a name="choosing-data-for-data-mining"></a>選擇要進行資料採礦的資料
   當您開始資料採礦，您可能會問 「 資料量執行我需要嗎？ 」 或是 「 我應該知道有關清除或格式化資料的任何特殊需求嗎？ 」  
@@ -73,7 +72,7 @@ ms.locfileid: "53355817"
   
  如果您有大小適當的資料集，請將焦點放在資料品質，而不是增加更多的資料。 在某個點之後，統計上有效的所有模式都將會被發現，而增加更多資料並不會改善其有效性。 相反地，增加更多資料有時可能會導入意外的相互關聯性。  
   
-### <a name="discrete-vs-continuous-numbers"></a>在資料採礦中，離散數字與連續的數字  
+### <a name="discrete-vs-continuous-numbers"></a>離散與連續的數字  
  A*離散*資料行包含有限數量的值。 例如，文字一定會被視為離散值。  
   
  離散值有一些重要的屬性。 例如，如果您將數字視為離散，數字之間就不會隱含任何順序，您也無法平均數字或加總數字。 電話區域碼是很好的離散數值資料範例，您絕對不會使用這些代碼執行數學運算。  

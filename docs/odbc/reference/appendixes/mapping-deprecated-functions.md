@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990707"
 ---
 # <a name="mapping-deprecated-functions"></a>對應已淘汰的函式
-本節說明如何已被取代的函式會對應由 ODBC 3 *.x*驅動程式管理員，以確保 ODBC 3 的回溯相容性 *.x*驅動程式所使用的 ODBC 2。*x*應用程式。 驅動程式管理員會執行這項對應，而不論應用程式版本。 因為每個 ODBC 2。*x*下列清單中的函式會對應到對應的 ODBC 3 *.x*函式呼叫在 ODBC 3 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式不需要實作 ODBC 2。*x*函式。  
+本節說明如何已被取代的函式會對應由 ODBC *3.x*以確保回溯相容性的 ODBC 驅動程式管理員*3.x*可搭配 ODBC 驅動程式*2.x*應用程式。 驅動程式管理員會執行這項對應，而不論應用程式版本。 因為每個 ODBC *2.x*下列清單中的函式會對應到對應的 ODBC *3.x*函式中的 ODBC 呼叫時*3.x*驅動程式，ODBC *3.x*驅動程式不需要實作 ODBC *2.x*函式。  
   
- ODBC 3 驅動程式時，會觸發在清單中的對應 *.x*驅動程式和驅動程式不支援要對應的函式。  
+ ODBC 驅動程式時，會觸發在清單中的對應*3.x*驅動程式和驅動程式不支援要對應的函式。  
   
- 下表列出所有重複的功能，在 ODBC 3 引入 *.x*。  
+ 下表列出所有重複的功能，在 ODBC 中引進*3.x*。  
   
-|ODBC 2。*x*函式|ODBC 3 *.x*函式|  
+|ODBC *2.x*函式|ODBC *3.x*函式|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -52,7 +51,7 @@ ms.locfileid: "47818362"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使 ODBC 2 中沒有此函式 *.x*，它會在 Open Group 和 ISO 標準中。  
+ [1] 即使此函式不存在於 ODBC *2.x*，它會在 Open Group 和 ISO 標準中。  
   
  [2] 這是 ODBC 1.0 函式。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9aa14dfba76af243ee91c044c89993ca6cfec05
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0100c20c2a6ebaaa0eecdcf0bfe21829740e2d65
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780553"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

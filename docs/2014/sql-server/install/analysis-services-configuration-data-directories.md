@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096804"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services 組態 - 資料目錄
   下表的預設目錄可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間由使用者設定。 存取這些檔案的權限會授與本機系統管理員，以及安裝期間建立及佈建的 SQLServerMSASUser$\<執行個體> 安全性群組成員。  

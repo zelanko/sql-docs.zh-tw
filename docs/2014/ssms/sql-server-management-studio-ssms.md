@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155014"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理 SQL Server 基礎結構的整合式環境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供工具來設定、監視以及管理 SQL Server 執行個體。 也提供工具來部署、監視以及升級資料層元件 (例如應用程式所使用的資料庫和資料倉儲)，以及建立查詢和指令碼。  
@@ -37,6 +37,6 @@ ms.locfileid: "52812350"
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [教學課程：撰寫 TRANSACT-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IsSibling (MDX) |Microsoft 文件
+title: IsSibling (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d86c96686357533aa1217571f3c199ec8ddff508
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105353"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
 
@@ -36,7 +35,7 @@ IsSibling(Member_Expression1, Member_Expression2)
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **IsSibling**函式會傳回**true**如果第一個指定成員是第二個指定成員的同層級。 否則，函數會傳回**false**。  
+ **IsSibling**函式會傳回 **，則為 true**如果第一個指定成員是第二個指定成員的同層級。 否則，函數會傳回**false**。  
   
 ## <a name="example"></a>範例  
  如果 Date 維度 Fiscal 階層上的目前成員是 2002 年 7 月的同層級，下列範例會傳回 TRUE：  
@@ -52,6 +51,6 @@ IsSibling(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

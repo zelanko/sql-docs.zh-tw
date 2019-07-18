@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827402"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>依據變更類型來導向 CDC 資料流
   若要加入及設定 CDC 分隔器轉換，封裝至少必須包含一個資料流程工作及一個 CDC 來源。  
@@ -40,7 +40,7 @@ ms.locfileid: "58377266"
   
     -   插入輸出：導向 INSERT 變更資料列的輸出。  
   
-    -   更新輸出：變更的輸出前/後更新變更資料列和合併資料列會被導向。  
+    -   更新輸出：導向 UPDATE 前/後變更資料列和合併變更資料列的輸出。導向 UPDATE 前/後變更資料列和合併變更資料列的輸出。  
   
 7.  (選擇性) 您可以使用 **[進階編輯器]** 對話方塊來設定進階屬性。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "58377266"
   
      若要開啟 **[進階編輯器]** 對話方塊：  
   
-    -   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]**。  
+    -   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 分隔器，然後選取 **[顯示進階編輯器]** 。  
   
      如需有關使用 CDC 分隔器的詳細資訊，請參閱＜Microsoft SQL Server Integration Services 的 CDC 元件＞。  
   

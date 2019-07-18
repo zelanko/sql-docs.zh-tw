@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923266"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基本概念
 Microsoft® ActiveX® 資料物件的擴充功能資料定義語言和安全性 (ADOX) 是 ADO 物件和程式設計模型的擴充功能。 ADOX 包含物件的結構描述建立和修改，以及安全性。 因為它是以結構描述管理物件為基礎的方法，您可以撰寫程式碼，能針對各種資料來源，不論其原生的語法差異。  

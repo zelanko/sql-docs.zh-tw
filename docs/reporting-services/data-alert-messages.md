@@ -2,19 +2,19 @@
 title: 資料警示訊息 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d7a3a2d1320e2f33a9246c538d30c63bd0cc890e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571560"
 ---
 # <a name="data-alert-messages"></a>資料警示訊息
 
@@ -50,7 +50,7 @@ SQL Server Reporting Services 資料警示會以電子郵件傳遞兩種類型�
   
 4.  **移至報表** 是建立警示定義所在報表的連結。 如果因為報表移動或刪除而導致連結無效，則會顯示錯誤訊息。  
   
-5.  [規則] 會列出警示定義中的規則和子句。 這項資訊有助於驗證和了解警示結果，並且識別資料警示定義中您可能想要變更以縮小或擴大結果的規則。  
+5.  [規則]  會列出警示定義中的規則和子句。 這項資訊有助於驗證和了解警示結果，並且識別資料警示定義中您可能想要變更以縮小或擴大結果的規則。  
   
 6.  **報表參數** 會列出報表執行時使用的參數和參數值。 參數和參數值有助於了解警示結果。  
   

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150797"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 選項，可設定查詢存放區。  
@@ -32,11 +32,11 @@ ms.locfileid: "52756610"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
   
-1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性] 。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
+1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性]  。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
-3.  在 [啟用]  方塊中，選取 [True] 。  
+3.  在 [啟用]  方塊中，選取 [True]  。  
   
 #### <a name="by-using-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
@@ -90,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 選取 [迴歸查詢] ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
+ 選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   

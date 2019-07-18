@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: 5cb3ff58156d35a348a432e6d7edb7f794e59e6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409225"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266086"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>執行 SSMA 主控台 (OracleToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 主控台應用程式會使用某些標準的指令碼檔命令為列舉這一節。  
@@ -29,7 +29,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 **Command**  
   
-建立新專案間的  
+create-new-project  
                   所解碼的字元：建立新的 SSMA 專案。  
   
 **指令碼**  
@@ -42,7 +42,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 -   `project-type:`選擇性屬性。 表示專案類型也就是 「 sql-server 2005 的 「 專案或 「 sql-server 2008 的 「 專案或 「 sql-server 2012 的 「 專案或 「 sql-server 2014 的 「 專案或 [sql azure]。 預設值為"sql-server-2014"。  
   
-**範例：**  
+**範例:**  
   
 ```xml  
 <create-new-project  
@@ -86,7 +86,7 @@ SSMA for Oracle 主控台應用程式支援回溯相容性。 您可以在 若�
   
 **Command**  
   
-儲存專案  
+save-project  
   
 儲存移轉的專案。  
   
@@ -160,7 +160,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <force-load>  
@@ -186,7 +186,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-連線目標資料庫  
+connect-target-database  
   
 -   連接到目標 SQL Server 資料庫，並完全載入目標資料庫的高等級的中繼資料，但不是的中繼資料。  
   
@@ -273,7 +273,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -347,7 +347,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -364,7 +364,7 @@ convert-schema
 ```  
 **Command**  
   
-移轉資料  
+migrate-data  
   
 將來源資料移轉至目標。  
   
@@ -415,7 +415,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -479,9 +479,9 @@ convert-schema
   
 -   `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -504,7 +504,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -513,7 +513,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -528,7 +528,7 @@ convert-schema
 ```  
 **Command**  
   
-從資料庫重新整理  
+refresh-from-database  
   
 -   重新整理資料庫的來源物件。  
   
@@ -544,9 +544,9 @@ convert-schema
   
 -   `on-error:` 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -569,7 +569,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -578,7 +578,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -628,7 +628,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -704,7 +704,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -727,7 +727,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  

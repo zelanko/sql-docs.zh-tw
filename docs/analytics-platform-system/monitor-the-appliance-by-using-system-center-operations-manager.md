@@ -2,26 +2,25 @@
 title: 透過 SCOM-分析平台系統監視 |Microsoft Docs
 description: 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960543"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>監視與 System Center Operations Manager-Analytics Platform System
 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
   
 1.  System Center Operations Manager 2007 R2、 2012年或 2012 SP1 必須安裝且正在執行。  
   

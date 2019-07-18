@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524134"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一個與最後一個觸發程序
   您可以指定與資料表關聯的其中一個 AFTER 觸發程序，做為針對每一個 INSERT、DELETE 和 UPDATE 觸發動作而引發的第一個或最後一個 AFTER 觸發程序。 在第一個及最後一個觸發程序之間啟動的 AFTER 觸發程序，會以未定義的順序執行。  
@@ -49,7 +49,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  INSTEAD OF 觸發程序不得被指定為第一個或最後一個觸發程序。 INSTEAD OF 觸發程序必須在更新基礎資料表之前啟動。 如果是由 INSTEAD OF 觸發程序更新基礎資料表，則更新會發生在引發對資料表定義的 AFTER 觸發程序之前。 例如，如果在檢視上的 INSTEAD OF INSERT 觸發程序將資料插入基底資料表，而基底資料表本身包含 INSTEAD OF INSERT 觸發程序和三個 AFTER INSERT 觸發程序，就會引發基底資料表上的 INSTEAD OF INSERT 觸發程序，而不是插入動作，而且在基底資料表上的任何插入動作之後，都會引發基底資料表的 AFTER 觸發程序。 如需詳細資訊，請參閱 [DML Triggers](dml-triggers.md)。  
   
- 如果 ALTER TRIGGER 陳述式變更第一個或最後一個觸發程序，則會捨棄 **First** 或 **Last** 屬性，並且將順序值設為 [None]。 順序必須使用 **sp_settriggerorder** 進行重設。  
+ 如果 ALTER TRIGGER 陳述式變更第一個或最後一個觸發程序，則會捨棄 **First** 或 **Last** 屬性，並且將順序值設為 [None]  。 順序必須使用 **sp_settriggerorder** 進行重設。  
   
  OBJECTPROPERTY 函數也會利用 **ExecIsFirstTrigger** 及 **ExecIsLastTrigger**屬性，來報告觸發程序究竟是第一個或最後一個觸發程序。  
   

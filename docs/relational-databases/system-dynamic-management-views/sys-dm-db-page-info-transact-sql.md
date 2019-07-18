@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -16,19 +16,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_page_info dynamic management view
-author: ''
+author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899714"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263816"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 在資料庫中傳回頁面的相關資訊。  此函數會傳回一個資料列包含標頭資訊 頁面上，從包括`object_id`， `index_id`，和`partition_id`。  在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。
 

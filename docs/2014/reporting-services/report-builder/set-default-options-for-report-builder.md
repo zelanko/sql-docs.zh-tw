@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cb15e699a7c4403e2590bb119350cac74e5e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107620"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
   按一下 **報表產生器**按鈕，然後按一下**選項**設定選項，以顯示最近使用的檔案和連線。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  
@@ -35,10 +34,10 @@ ms.locfileid: "56289519"
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
  **顯示下列數量之最近使用的網站和伺服器**  
- 指定要顯示在 [開啟報表] 和 [另存為報表] 對話方塊中的最近使用之網站和連接的數目。  
+ 指定要顯示在 [開啟報表]  和 [另存為報表]  對話方塊中的最近使用之網站和連接的數目。  
   
  **顯示下列數量之最近使用的共用資料集和資料來源連接**  
- 指定要顯示在 [資料集屬性] 對話方塊和資料區域精靈之 [選擇與資料來源的連接] 頁面中的最近使用之共用資料集和資料來源連接的數目。  
+ 指定要顯示在 [資料集屬性]  對話方塊和資料區域精靈之 [選擇與資料來源的連接]  頁面中的最近使用之共用資料集和資料來源連接的數目。  
   
  **顯示下列數量之最近使用的文件**  
  指定要在您按一下 [報表產生器] 按鈕時顯示的最近使用之文件的數目。  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8478a619aa6a85e8d398b4c79399faa3b9f56b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944125"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在使用 **ORDER BY** 子句的陳述式中 (除非使用 **NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...))。  
   
--   在下列子句中：**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY**，或 **FOR XML**。  
+-   在下列子句中：**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY** 或 **FOR XML**。  
   
 -   在使用 **CASE**、**CHOOSE**、**COALESCE**、**IIF**、**ISNULL**，或 **NULLIF** 的條件運算式中。  
   
@@ -103,7 +103,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在檢查條件約束的定義中。  
   
--   在規則或預設物件的定義中  (它可以用於預設條件約束中)。  
+-   在規則或預設物件的定義中 (它可以用於預設條件約束中)。  
   
 -   使用者定義資料表類型的預設值。  
   
@@ -152,7 +152,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要順序物件或順序之結構描述的 **UPDATE** 權限。 如需授與權限的範例，請參閱本主題稍後的範例 F。  
   
 ### <a name="ownership-chaining"></a>擁有權鏈結  

@@ -3,17 +3,16 @@ title: 安裝 SQL Server 2016 R Services （資料庫內）-SQL Server 機器學
 description: 新增 R 程式設計語言支援，可在 Windows 上 SQL Server 2016 R Services 上的資料庫引擎。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 439ce4388f03422be40c9b35fa4a5d4e3dbf5299
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962846"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +70,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 3. 在 **特徵選取**頁面上，選取下列選項：
 
    - 選取  **Database Engine Services**。 使用機器學習服務的每個執行個體中只需要 database engine。
-   - 選取  **R Services （資料庫）**。 安裝支援的資料庫中使用。
+   - 選取  **R Services （資料庫）** 。 安裝支援的資料庫中使用。
     
      ![R Services 的特徵選取](media/2016setup-rsvcs-features.png "選取這些功能的 R Services 資料庫")
 
@@ -208,6 +207,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 * [SQL Server Machine Learning 服務的防火牆設定](../../advanced-analytics/security/firewall-configuration.md)
 * [啟用額外的網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [管理磁碟配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)以避免執行耗盡磁碟空間的工作的外部指令碼
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>
@@ -215,7 +215,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 在資料庫上，您可能需要將下列的組態更新：
 
 * [SQL Server Machine Learning 服務的權限授與使用者](../../advanced-analytics/security/user-permission.md)
-* [新增 SQLRUserGroup 作為資料庫使用者](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [新增 SQLRUserGroup 作為資料庫使用者](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > 並非所有列出的變更是必要的而且沒有任何可能需要。 需求取決於您的安全性結構描述，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。 其他疑難排解提示可以在這裡找到：[升級及安裝常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)

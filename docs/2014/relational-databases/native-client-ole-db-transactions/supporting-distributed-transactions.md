@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63213502"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者可以使用**itransactionjoin:: Jointransaction**方法來參與分散式交易協調 Microsoft 分散式交易協調器 (MS DTC)。  
@@ -139,6 +139,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Transactions](transactions.md)  
+ [交易](transactions.md)  
   
   

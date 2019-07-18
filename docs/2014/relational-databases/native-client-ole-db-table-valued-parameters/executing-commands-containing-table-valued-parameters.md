@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63228562"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
   執行包含資料表值參數的命令需要兩個階段：  

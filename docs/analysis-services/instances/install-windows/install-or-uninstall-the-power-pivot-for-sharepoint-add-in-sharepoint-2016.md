@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a3fba818dbedfe7d21f3b3a9527ed3b83f085ef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63055123"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52407385"
 > [!NOTE]  
 >  您必須使用 **spPowerPivot16.msi**，在 SharePoint 2016 伺服器上安裝 Analysis Services 資料提供者。 不支援 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能套件中的其他安裝程式封裝，因為這些封裝不包含資料提供者在此環境中需要的 SharePoint 2016 支援檔案。  
   
- **組態工具：**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]只有其中一個 SharePoint 伺服器上需要組態工具。 不過在多伺服器的伺服器陣列中，建議的最佳作法是在至少兩個伺服器上安裝組態工具，如此一來，即使其中一個伺服器已離線，您也可以存取組態工具。  
+ **組態工具：** [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]只有其中一個 SharePoint 伺服器上需要組態工具。 不過在多伺服器的伺服器陣列中，建議的最佳作法是在至少兩個伺服器上安裝組態工具，如此一來，即使其中一個伺服器已離線，您也可以存取組態工具。  
   
 ##  <a name="bkmk_prereq"></a> 需求和必要條件  
   
@@ -76,15 +76,15 @@ ms.locfileid: "52407385"
   
 1.  執行 **spPowerPivot16.msi**。  
   
-2.  在 [歡迎使用] 頁面上，選取 [下一步]。  
+2.  在 [歡迎使用] 頁面上，選取 [下一步]  。  
   
-3.  檢閱並接受授權條款，然後選取 [下一步]。  
+3.  檢閱並接受授權條款，然後選取 [下一步]  。  
   
 4.  在 **[特徵選取]** 頁面上，已預設選取所有功能。  
   
-5.  選取 **[下一步]**。  
+5.  選取 **[下一步]** 。  
   
-6.  選取 [安裝] 進行並完成安裝。  
+6.  選取 [安裝]  進行並完成安裝。  
   
 ### <a name="command-line-installation"></a>命令列安裝  
  若為命令列安裝，請以系統管理權限開啟命令提示字元，然後執行 **spPowerPivot16.msi**。 例如：  
@@ -145,19 +145,19 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADO
   
  **若要啟動組態工具：**  
   
- 在 Windows [開始畫面中，輸入"power"，並在應用程式] 搜尋結果中，選取**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]組態**。 請注意，搜尋結果可能包含兩個連結，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會分別為 SharePoint 2013 和 SharePoint 2016 安裝不同的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具。 請務必啟動 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 組態工具。  
+ 在 Windows [開始畫面中，輸入"power"，並在應用程式] 搜尋結果中，選取 **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]組態**。 請注意，搜尋結果可能包含兩個連結，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會分別為 SharePoint 2013 和 SharePoint 2016 安裝不同的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具。 請務必啟動 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 組態工具。  
   
  ![PowerPivot for SharePoint 2016 組態](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 組態")  
   
  **Or**  
   
-1.  移至 **[開始]**、 **[所有程式]**。  
+1.  移至 **[開始]** 、 **[所有程式]** 。  
   
 2.  選取 [[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]。  
   
-3.  選取 [組態工具]。  
+3.  選取 [組態工具]  。  
   
-4.  選取 [[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 組態]。  
+4.  選取 [[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 組態]  。  
   
  如需組態工具的詳細資訊，請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
@@ -168,9 +168,9 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADO
   
  您可以使用下列其中一個方法來解除安裝或修復 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] ：  
   
-1.  **Windows 控制台：** 選取  [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]**。 選取 [解除安裝] 或 [修復]。  
+1.  **Windows 控制台：** 選取  [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]** 。 選取 [解除安裝]  或 [修復]  。  
   
-2.  執行 spPowerPivot16.msi，然後選取 [移除] 選項或 [修復] 選項。  
+2.  執行 spPowerPivot16.msi，然後選取 [移除]  選項或 [修復]  選項。  
   
  **命令列：** 若要修復或解除安裝[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]使用命令列中，開啟命令提示字元**系統管理員權限**並執行下列命令之一：  
   

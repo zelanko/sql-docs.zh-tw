@@ -2,18 +2,18 @@
 title: 巢狀資料區域 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dfbfcb3b37fe9f2ab9b12beff61d60fd0e509892
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fd50e97693c254e3b28c431a6b2961fc15df8585
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578718"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
@@ -68,7 +68,7 @@ ms.locfileid: "56291637"
   
  您必須設定將會顯示在量測計標尺上的最小值與最大值。 若要指定量測計的最大值，您可以使用運算式，例如 `=Max!MyField.Value`。 不過，因為此運算式僅會在資料格中資料的範圍內進行評估，對於 Tablix 中的所有資料列而言，每個量測計的最大值都不會相同。 這在 Tablix 中的量測計間進行比較時，可能會更難以了解。 或者，您可以為最大值指定一個靜態值。 Tablix 內部的所有資料列都會顯示包含此最大值的量測計。 如需詳細資訊，請參閱[設定量測計的最小值或最大值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
- 如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]** 指定一個值。  
+ 如果量測計上的資料變得太大，請考慮使用標尺乘數減少所顯示的位數。 若要指定乘數，您可以用滑鼠右鍵按一下標尺，然後選取 [標尺屬性]  。 當 **[標尺屬性]** 對話方塊開啟時，針對 **[乘數]** 指定一個值。  
   
 ## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>在清單中巢狀資料表或矩陣與圖表  
  若要在清單中巢狀多個資料區域，請先加入矩形，然後將資料區域加入到該矩形中。  
@@ -86,8 +86,8 @@ ms.locfileid: "56291637"
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [設定報表項目的格式 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [格式化量測計上的標尺 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

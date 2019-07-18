@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tracer
@@ -14,12 +13,12 @@ ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 688357b2357cba8fa868eca18b5c100cfff1722d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 576cb395f7f488eec8ebf28ab5bc7f226cb81809
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065889"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>追蹤 (適用於 Excel 的資料採礦用戶端)
   ![追蹤按鈕](media/misc-trace.gif "追蹤按鈕")  
@@ -30,7 +29,7 @@ ms.locfileid: "48161300"
   
  **追蹤**監視只為目前的連線，以及內容**追蹤**對話方塊不會儲存。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  追蹤窗格  
  列出從 Excel 用戶端傳送到伺服器的所有陳述式。  
   

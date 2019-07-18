@@ -24,14 +24,18 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1ca89542cfdeebd9993b86a049c0190e12d16887
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727108"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
   
 ## <a name="configuring-the-data-flow"></a>設定資料流程  
@@ -77,7 +81,7 @@ ms.locfileid: "58657882"
  請勿增加發生分頁至磁碟之起始點的緩衝區大小。 分頁至磁碟所妨礙的效能超過尚未經過最佳化的緩衝區大小。 若要判斷是否發生分頁，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的效能嵌入式管理單元中監視 "Buffers spooled" 效能計數器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>設定平行執行的封裝  
- 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：**MaxConcurrentExecutables** 和 **EngineThreads**。  
+ 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在套件中支援平行執行不同工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：**MaxConcurrentExecutables** 和 **EngineThreads**。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
  **MaxConcurrentExecutables** 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  

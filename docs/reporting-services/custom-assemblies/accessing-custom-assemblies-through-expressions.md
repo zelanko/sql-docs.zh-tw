@@ -12,14 +12,14 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6adbdb5f718a25453f0a77a297331a7ab17c3849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 101af9d59d4a3f1e48d85859c91f77c8be2e4719
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194369"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>透過運算式存取自訂組件
   一旦您建立自訂組件，請將它提供給報表設計師或是報表伺服器、加入適當的安全性原則，以及將參考加入報表定義中的自訂組件，這樣您就可以使用報表運算式來存取組件中的類別成員。 若要在運算式中參考自訂程式碼，您必須在組件中呼叫類別的成員。 該如何完成，取決於此方法為靜態或以執行個體為基礎。  
@@ -39,7 +39,7 @@ ms.locfileid: "47657336"
  目前，會在相同的應用程式網域中執行所有的報表。 這表示含有使用者特定的靜態資料會向相同報表的其他執行個體公開此資料。 這個情況可能會使一個使用者的靜態資料，可供目前執行特定報表的所有使用者使用。 基於這個理由，強烈建議您不要在自訂組件或是在 **Code** 元素中使用靜態欄位或是屬性；請改在報表中用執行個體欄位或是屬性。 靜態方法仍然可以使用，因為它們不會儲存狀態或是資料。  
   
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>呼叫報表定義檔案中的執行個體成員  
- 如果您的自訂組件包含需要在報表定義中存取的執行個體成員，則必須將類別的執行個體名稱加入報表。 您可以使用 [報表屬性] 對話方塊的 [程式碼] 索引標籤，來為類別新增執行個體名稱。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 如果您的自訂組件包含需要在報表定義中存取的執行個體成員，則必須將類別的執行個體名稱加入報表。 您可以使用 [報表屬性]  對話方塊的 [程式碼]  索引標籤，來為類別新增執行個體名稱。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  若要呼叫靜態成員，您需要以運算式的形式加以參考，其格式為 =Code *.InstanceName.Method*。  
   

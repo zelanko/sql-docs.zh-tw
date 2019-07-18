@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8bfb0fc8deb40d46712bf072ab4a72a4eccf23f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aa5d75b01fc30783505b2e149f3487b50f75150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915829"
 ---
 # <a name="odbc-errors"></a>ODBC 錯誤
 發生錯誤時，Microsoft ODBC 桌面資料庫驅動程式會傳回自發性錯誤號碼、 SQLSTATE （ODBC 錯誤碼） 和錯誤訊息。  

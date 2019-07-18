@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 84c517fe891052ff6e12ee6e92a2d16d912a140b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905197"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 是要變更的發行集屬性。 *屬性*已**sysname**，沒有預設值。  
   
-`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(524)**，預設值是 NULL。  
+`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(524)** ，預設值是 NULL。  
   
  下表描述可變更的合併代理程式作業屬性及這些屬性值的限制。  
   
@@ -90,6 +89,6 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>請參閱  
  [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

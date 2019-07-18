@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2a0b2994bf377610574efbd5c3ff78b0d55035d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 989cb8fee55de2ec522e4517521815b467d7d946
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718366"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784654"
 ---
 # <a name="getmoreresults-method-"></a>getMoreResults 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

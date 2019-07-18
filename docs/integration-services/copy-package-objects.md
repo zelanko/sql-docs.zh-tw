@@ -16,14 +16,18 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46fc751556c7e9e1ca9fc122bf8c80a2f5056fc8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f27e5f7a9227ee9792c45eca87dbef9f78c34df3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727256"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此主題描述如何在某個封裝內或兩個封裝之間複製控制流程項目、資料流程項目和連接管理員。  
   
 ### <a name="to-copy-control-and-data-flow-items"></a>若要複製控制和資料流程項目  
@@ -32,21 +36,21 @@ ms.locfileid: "58276356"
   
 2.  在 [方案總管] 中，按兩下您要在其間進行複製的封裝。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下內含欲複製項目之封裝的索引標籤，然後按一下 [控制流程]、[資料流程] 或 [事件處理常式] 索引標籤。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下內含欲複製項目之封裝的索引標籤，然後按一下 [控制流程]  、[資料流程]  或 [事件處理常式]  索引標籤。  
   
 4.  選取要複製的控制流程或資料流程項目。 您可以按住 Shift 鍵再按一下項目，逐一選取項目，也可以拖曳指標使其跨越您想選取的項目，以群組方式選項項目。  
   
     > [!IMPORTANT]  
     >  當您選取優先順序條件約束和路徑連接的兩個項目時，並不會自動選取連接項目的這些優先順序條件約束和路徑。 若要複製已排序的工作流程 (也就是控制流程或資料流程的區段)，請務必同時複製優先順序條件約束和路徑。  
   
-5.  以滑鼠右鍵按一下選取的項目，然後按一下 [複製]。  
+5.  以滑鼠右鍵按一下選取的項目，然後按一下 [複製]  。  
   
 6.  若要將項目複製到不同的封裝，請按一下要複製到其中的封裝，然後按一下適用於項目類型的索引標籤。  
   
     > [!IMPORTANT]  
     >  除非封裝中包含至少一項「資料流程」工作，否則您就不能將資料流程複製到封裝中。  
   
-7.  按一下滑鼠右鍵，並按一下 [貼上]。  
+7.  按一下滑鼠右鍵，並按一下 [貼上]  。  
   
 ### <a name="to-copy-connection-managers"></a>若要複製連接管理員  
   
@@ -54,13 +58,13 @@ ms.locfileid: "58276356"
   
 2.  在 [方案總管] 中，按兩下封裝。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [控制流程]、[資料流程] 或 [事件處理常式] 索引標籤。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [控制流程]  、[資料流程]  或 [事件處理常式]  索引標籤。  
   
-4.  在 [連線管理員] 區域中，以滑鼠右鍵按一下連線管理員，然後按一下 [複製]。 您一次僅能複製一個連接管理員。  
+4.  在 [連線管理員]  區域中，以滑鼠右鍵按一下連線管理員，然後按一下 [複製]  。 您一次僅能複製一個連接管理員。  
   
-5.  若要將項目複製到不同的封裝，請按一下要複製到其中的封裝，然後按一下 [控制流程]、[資料流程] 或 [事件處理常式] 索引標籤。  
+5.  若要將項目複製到不同的封裝，請按一下要複製到其中的封裝，然後按一下 [控制流程]  、[資料流程]  或 [事件處理常式]  索引標籤。  
   
-6.  以滑鼠右鍵按一下 [連線管理員] 區域，然後按一下 [貼上]。  
+6.  以滑鼠右鍵按一下 [連線管理員]  區域，然後按一下 [貼上]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [控制流程](../integration-services/control-flow/control-flow.md)   

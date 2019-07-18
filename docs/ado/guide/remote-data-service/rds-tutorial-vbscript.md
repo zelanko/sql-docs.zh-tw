@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a50b9d8c1f22f23f3533240b2543ef981fef8e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922420"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教學課程 (VBScript)
 這是 RDS 教學課程中，以 Microsoft Visual Basic Scripting Edition。 如需本教學課程的用途的說明，請參閱 < [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)。  

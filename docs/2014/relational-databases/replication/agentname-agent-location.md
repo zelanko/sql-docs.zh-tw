@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721870"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;代理程式名稱&gt; 代理程式位置
   合併代理程式 (用於合併訂閱) 和散發代理程式 (用於交易式與快照式訂閱) 會在散發者端或在訂閱者端執行。 如果代理程式是在散發者端執行，訂閱就稱為發送訂閱；如果代理程式是在訂閱者端執行，訂閱就稱為提取訂閱。 如需發送和提取訂閱的詳細資訊，請參閱[訂閱發行集](subscribe-to-publications.md)。 透過精靈在此過程中建立的所有訂閱，都屬於選取的類型。 若要建立兩種類型的訂閱，您就必須執行精靈兩次。  
@@ -26,7 +26,7 @@ ms.locfileid: "52813790"
 >  建立訂閱之後，就無法變更訂閱類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [複寫代理程式概觀](agents/replication-agents-overview.md)  
   

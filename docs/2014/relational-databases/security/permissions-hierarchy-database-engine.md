@@ -20,14 +20,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 05cc0d47053d8ddef0962c4aceee75e61b8b4b64
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211943"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>權限階層 (Database Engine)
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 會管理階層式實體集合，這些實體可使用權限來確保安全性。 這些實體也稱為「安全性實體」。 最明顯的安全性實體為伺服器和資料庫，但是個別權限可以在更細微的層次進行設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過驗證主體是否已被授與適當的權限，進而規範主體在安全性實體上的動作。  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 會管理階層式實體集合，這些實體可使用權限來確保安全性。 這些實體也稱為「安全性實體」  。 最明顯的安全性實體為伺服器和資料庫，但是個別權限可以在更細微的層次進行設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過驗證主體是否已被授與適當的權限，進而規範主體在安全性實體上的動作。  
   
  下圖顯示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 權限階層之間的關係。  
   

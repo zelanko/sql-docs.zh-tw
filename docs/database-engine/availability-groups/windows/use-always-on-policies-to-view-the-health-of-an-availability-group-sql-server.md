@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f658ae1bfbfca7a487157c0129d67a12e890a2e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 0c01218cf7303653464814a554771d2ea386f1fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803444"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,19 +27,9 @@ ms.locfileid: "52523531"
 > [!IMPORTANT]  
 >  對於 AlwaysOn 原則而言，類別目錄名稱會當作識別碼使用。 變更 AlwaysOn 類別目錄的名稱會破壞其健全狀況評估功能。 因此，永遠不應修改 AlwaysOn 類別目錄的名稱。  
   
--   **開始之前**：[安全性](#Security)  
   
--   **透過以下方式，使用 AlwaysOn 原則檢視可用性群組的健全狀況：**  
   
-     [AlwaysOn 儀表板](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 AlwaysOn 儀表板  
@@ -49,9 +39,9 @@ ms.locfileid: "52523531"
   
 2.  按一下伺服器名稱展開伺服器樹狀目錄。  
   
-3.  展開 [AlwaysOn 高可用性] 節點。  
+3.  展開 [AlwaysOn 高可用性]  節點。  
   
-     以滑鼠右鍵按一下 [可用性群組] 節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
+     以滑鼠右鍵按一下 [可用性群組]  節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
   
 4.  選取 **[顯示儀表板]** 命令。  
   
@@ -125,13 +115,13 @@ ms.locfileid: "52523531"
 ##  <a name="RelatedContent"></a> 相關內容  
  **SQL Server AlwaysOn 團隊部落格 - 使用 PowerShell 監視 AlwaysOn 健全狀況：**  
   
--   [第 1 部：基本指令程式概觀](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+-   [第 1 部分：Basic Cmdlet Overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/) (使用 PowerShell 監視 Always On 健全狀況 - 第 1 部分：基本 Cmdlet 概觀)  
   
--   [第 2 部：進階指令程式使用](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+-   [第 2 部分：Advanced Cmdlet Usage](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/) (使用 PowerShell 監視 Always On 健全狀況 - 第 2 部分：進階 Cmdlet 使用方式)  
   
--   [第 3 部：簡單監控應用程式](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+-   [第 3 部分：A Simple Monitoring Application](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/) (使用 PowerShell 監視 Always On 健全狀況 - 第 3 部分：簡單的監視應用程式)  
   
--   [第 4 部：與 SQL Server Agent 整合](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+-   [第 4 部分：Integration with SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/) (使用 PowerShell 監視 Always On 健全狀況 - 第 4 部分：與 SQL Server Agent 整合)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

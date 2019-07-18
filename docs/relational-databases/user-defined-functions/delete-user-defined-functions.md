@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9a7986803518b9227d873a303b87358829cde3cd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412095"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581455"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "52412095"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目刪除使用者定義函數：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "52412095"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -66,12 +66,14 @@ ms.locfileid: "52412095"
   
     -   彙總函式  
   
-4.  以滑鼠右鍵按一下您想刪除的函數，然後選取 [刪除]。  
+4.  以滑鼠右鍵按一下您想刪除的函數，然後選取 [刪除]  。  
   
-5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
-  
+5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!IMPORTANT]  
-    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 [_function\_name_ 相依性] 對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _function\_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +81,9 @@ ms.locfileid: "52412095"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates function called "Sales.ufn_SalesByStore"  

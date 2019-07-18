@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - HasM geography
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9ece3c57981f52b1359f40d59487c464b6c5a230
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 038610db98b647aa48b633ccd90fc6a2310c06b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937754"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "56852853"
 ## <a name="return-types"></a>傳回類型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
-CLR 傳回類型：**布林**  
+CLR 傳回型別：**布林**  
   
 ## <a name="remarks"></a>Remarks  
   

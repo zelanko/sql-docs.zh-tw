@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056793"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>執行 SQL 工作中的參數和傳回碼
   SQL 陳述式和預存程序經常使用 `input` 參數、`output` 參數以及傳回碼。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，執行 SQL 工作支援 `Input`、`Output` 和 `ReturnValue` 等參數類型。 您可以使用 `Input` 類型當做輸入參數，使用 `Output` 當做輸出參數，並使用 `ReturnValue` 當做傳回碼。  
@@ -180,7 +179,7 @@ ms.locfileid: "58389686"
 |ADO|如果 IsQueryStoreProcedure 設為`False`， `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為`True`， `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為`True`。<br /><br /> `myStoredProcedure`|  
   
- 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入] 來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接] 來源類型執行預存程序。 不論 「 執行 SQL 」 工作是使用**直接輸入**或是**檔案連接**來源類型，請使用參數的`ReturnValue`實作傳回碼的型別。 如需如何設定「執行 SQL」工作所執行之 SQL 陳述式來源類型的詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)。  
+ 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入]  來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接]  來源類型執行預存程序。 不論 「 執行 SQL 」 工作是使用**直接輸入**或是**檔案連接**來源類型，請使用參數的`ReturnValue`實作傳回碼的型別。 如需如何設定「執行 SQL」工作所執行之 SQL 陳述式來源類型的詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)。  
   
  如需搭配 Transact-SQL 預存程序使用傳回碼的詳細資訊，請參閱 [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)。  
   

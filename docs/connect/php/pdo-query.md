@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: query |Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761980"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,14 +41,14 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>例外狀況  
 PDOException。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 使用 PDO::query 執行的查詢可以執行已備妥的陳述式或直接執行 (視 PDO::SQLSRV_ATTR_DIRECT_QUERY 的設定而定)。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 PDO::exec 的行為；如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。  
   
 您可以為 $*fetch_style* 指定下列選項。  
   
-|style|Description|  
+|style|描述|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|指定的資料行中資料的查詢。 資料表中的第一個資料行是資料行 0。|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>範例
-此程式碼範例示範如何建立資料表[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)類型，並擷取插入的資料。
+此程式碼範例示範如何建立 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 類型的資料表，並擷取插入的資料。
 
 ```
 <?php

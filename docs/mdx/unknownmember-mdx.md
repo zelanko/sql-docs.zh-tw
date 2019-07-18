@@ -1,5 +1,5 @@
 ---
-title: UnknownMember (MDX) |Microsoft 文件
+title: UnknownMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097277"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -40,19 +39,19 @@ Hierarchy_Expression.UnknownMember
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- Analysis Services 建立事實資料表資料與階層產生關聯，當在階層未知時未知的成員。 未知的成員可位於以下其中一個層級：  
+ Analysis Services 建立事實資料表資料與階層產生關聯，在階層未知時未知的成員。 未知的成員可位於以下其中一個層級：  
   
 -   無法彙總之屬性階層的最上層。  
   
--   在第一個層級下面的**所有**自然階層的層級。  
+-   在第一個層級下面的**所有**自然階層層級。  
   
 -   非自然階層的任何層級。  
   
  如果指定成員運算式，則**UnknownMember**函式會傳回指定成員的未知的成員子系。 如果指定的成員不存在，此函數會傳回 Null。  
   
- 如果指定了階層運算式， **UnknownMember**函式會傳回未知的成員在最上層，如果有的話。  
+ 如果指定階層運算式，則**UnknownMember**函式會傳回未知的成員，在最上層，如果有的話。  
   
- 如果不存在未知的成員，這是層級或成員， **UnknownMember**函式會建立 null 成員。  
+ 如果層級或成員上沒有未知的成員**UnknownMember**函式會建立 null 成員。  
   
 > [!NOTE]  
 >  如果階層或成員上沒有未知的成員存在，就會產生一個錯誤。  
@@ -81,6 +80,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

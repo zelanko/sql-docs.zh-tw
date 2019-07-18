@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ccb3e36739043684f2a86a082dd04ab749a0b031
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467424"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
+  「鑽研」  表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "49085434"
 |Microsoft 貝氏機率分類演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 類神經網路演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 羅吉斯迴歸演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
-|Microsoft 線性迴歸演算法|支援。<br /><br /> 不過，由於此模型會建立單一節點 [全部]，因此鑽研會傳回模型的所有定型案例。 如果定型集很龐大，載入結果的時間可能會很長。|  
+|Microsoft 線性迴歸演算法|支援。<br /><br /> 不過，由於此模型會建立單一節點 [全部]  ，因此鑽研會傳回模型的所有定型案例。 如果定型集很龐大，載入結果的時間可能會很長。|  
 |Microsoft 時間序列演算法|支援。<br /><br /> 不過，您無法使用資料採礦設計師中的 **[採礦模型檢視器]** ，鑽研結構或案例資料。 您必須改為建立 DMX 查詢。<br /><br /> 此外，您無法鑽研至特定節點，或撰寫 DMX 查詢來擷取時間序列模型之特定節點中的案例。 您可以使用其他準則 (例如日期或屬性值)，從模型或結構內部擷取案例資料。<br /><br /> 如果您想要檢視 Microsoft 時間序列演算法所建立之 ARTXP 和 ARIMA 節點的詳細資訊，使用 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) 可能更容易。|  
   
 ## <a name="related-tasks"></a>相關工作  

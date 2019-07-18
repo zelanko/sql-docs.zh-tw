@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -26,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063883"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
   您可以使用其中一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器，以互動方式編輯及測試 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 指令碼，或者編輯 XML 或純文字檔。 每個編輯器都會得到一項特定語言專用服務的支援，會將關鍵字著上顏色，且會進行語法和用法錯誤的檢查。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器含有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具，可讓您用來協助修正 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的問題。  
@@ -66,7 +65,7 @@ ms.locfileid: "53328888"
  這個視窗用來檢視查詢結果。 這個視窗能夠以方格或文字來顯示結果，或者將結果導向至檔案。 結果方格可以顯示為個別的索引標籤視窗。  
   
  **IntelliSense**  
- 在編輯器的 [編輯] 功能表上，指向 [IntelliSense] 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
+ 在編輯器的 [編輯]  功能表上，指向 [IntelliSense]  來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
   
  **色彩編碼**  
  顯示每種語法元素類型的不同色彩，改進了複雜陳述式的可讀性。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
@@ -16,12 +15,12 @@ ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086693"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>建立和使用屬性值 (MDX)
   多維度運算式 (MDX) 支援內建和使用者自訂維度、層級、成員，和資料格的屬性。 內建屬性可提供唯一的名稱、標題，甚至個別資料格的格式和字型大小。 另一方面使用者自訂屬性幾乎可以為成員提供所有的額外屬性。  
@@ -39,6 +38,6 @@ ms.locfileid: "48195998"
  如需資料格屬性及如何使用資料格屬性的詳細資訊，請參閱[使用資料格屬性 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

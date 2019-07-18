@@ -2,18 +2,18 @@
 title: 將展開或摺疊動作新增項目中 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d79c923a332667b6d971eede5ab0b67e12a99063
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582128"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
@@ -31,16 +31,16 @@ ms.locfileid: "56287956"
   
      ![群組窗格](../../reporting-services/report-design/media/groupingpane.png "群組窗格")  
   
-     如果未顯示 [群組] 窗格，請按一下[檢視]  功能表，然後按一下 [群組] 。  
+     如果未顯示 [群組] 窗格，請按一下[檢視]  功能表，然後按一下 [群組]  。  
   
-2.  以滑鼠右鍵按一下 [群組] 窗格標題列的任意位置，然後按一下 [進階]。 [群組] 窗格模式會切換以便在設計介面上，顯示資料列和資料行的基礎顯示結構。  
+2.  以滑鼠右鍵按一下 [群組] 窗格標題列的任意位置，然後按一下 [進階]  。 [群組] 窗格模式會切換以便在設計介面上，顯示資料列和資料行的基礎顯示結構。  
   
      ![含 [進階模式] 功能表的 [群組] 窗格](../../reporting-services/report-design/media/groupingpane-advancedmode.png "含 [進階模式] 功能表的 [群組] 窗格")  
   
 3.  在適當的群組窗格中，按一下您要隱藏相關聯資料列或資料行之資料列群組或資料行群組的名稱。 群組選定之後，[屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視]，然後按一下 [屬性]。  
+    >  如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視]  ，然後按一下 [屬性]  。  
   
 4.  在 **[隱藏]** 中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56287956"
   
     -   選取 **[True]** 來隱藏報表項目。  
   
-    -   選取 [\<運算式>] 開啟 [運算式] 對話方塊，即可建立在執行階段評估的運算式來決定可見度。  
+    -   選取 [\<運算式>]  開啟 [運算式]  對話方塊，即可建立在執行階段評估的運算式來決定可見度。  
   
 5.  在 **ToggleItem**中，從下拉式方塊選取要加入切換影像之目標文字方塊的名稱。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "56287956"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>若要將展開和摺疊動作加入至報表項目中  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表項目，然後按一下 [\<報表項目> 屬性]。 該報表項目的 [\<報表項目> 屬性] 對話方塊隨即開啟。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表項目，然後按一下 [\<報表項目>  屬性]  。 該報表項目的 [\<報表項目>  屬性]  對話方塊隨即開啟。  
   
-2.  按一下 **[可見性]**。  
+2.  按一下 **[可見性]** 。  
   
 3.  在 **[一開始執行報表時]** 中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
   
@@ -75,12 +75,12 @@ ms.locfileid: "56287956"
   
     -   選取 **[隱藏]** 來隱藏報表項目。  
   
-    -   選取 **[依據運算式顯示或隱藏]** ，使用在執行階段評估的運算式來決定可見性。 按一下 (**fx**) 開啟 [運算式] 對話方塊，即可建立運算式。  
+    -   選取 **[依據運算式顯示或隱藏]** ，使用在執行階段評估的運算式來決定可見性。 按一下 (**fx**) 開啟 [運算式]  對話方塊，即可建立運算式。  
   
         > [!NOTE]  
         >  當您指定可見性的運算式時，會設定報表項目的 Hidden 屬性。 運算式會評估為 **Boolean** 值 **True** 來隱藏項目，以及 **False** 來顯示項目。  
   
-4.  在 [此報表項目可以切換顯示] 中，從下拉式方塊鍵入或選取報表中要顯示切換影像的文字方塊名稱；例如 Textbox1。  
+4.  在 [此報表項目可以切換顯示]  中，從下拉式方塊鍵入或選取報表中要顯示切換影像的文字方塊名稱；例如 Textbox1。  
   
      在下圖中，資料表已設定為讓使用者可展開及摺疊該資料表。 [Products 資料表] 文字方塊可以切換資料表的顯示。  
   

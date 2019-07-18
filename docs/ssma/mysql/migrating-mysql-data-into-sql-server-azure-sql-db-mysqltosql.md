@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908829"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料移轉到 SQL Server-Azure SQL DB (MySQLToSQL)
 您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以移轉的資料從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -64,7 +63,7 @@ ms.locfileid: "52400201"
   
 **若要將資料移轉**  
   
-1.  驗證下列項目：  
+1.  驗證下列各項：  
   
     -   執行 SSMA 的電腦上安裝 MySQL 提供者。  
   

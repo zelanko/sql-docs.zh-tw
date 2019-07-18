@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663909"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **傳送或接收訊息收條時，會產生** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
@@ -50,7 +50,7 @@ ms.locfileid: "52812260"
 |**ServerName**|**nvarchar**|所追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**StarvationElevation**|**int**|傳送訊息時，使用的優先權高於原本為交談所設定的優先權：0 = false、1 = true。|33|是|  
+|**StarvationElevation**|**int**|傳送訊息時，使用的優先權高於原本為對話所設定的優先權：0 = false、1 = true。|33|是|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   

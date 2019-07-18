@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 2ebef11839ed14422f624149ffea57308dc9e61a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935620"
 ---
 # <a name="change-domain-values"></a>變更定義域值
 
@@ -43,7 +42,7 @@ ms.locfileid: "56011899"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能變更定義域值。  
   
 ##  <a name="Change"></a> 變更定義域值  
@@ -59,7 +58,7 @@ ms.locfileid: "56011899"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]** 。 如需相關資訊，請參閱 [建立知識庫](../data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
@@ -76,7 +75,7 @@ ms.locfileid: "56011899"
   
     -   **將選取的定義域值設為無效**：若要將值的狀態從更正或錯誤變更為無效，請選取值，然後從圖示列的向下箭號或是從 [類型] 下拉式清單按一下**將選取的定義域值設為無效** (三角形) 圖示。 您可以在 **[更正為]** 資料行中輸入更正，或是將它保留空白。  
   
-    -   **更正為**：將值設定為錯誤或無效之後，請在 **[更正為]** 資料行中輸入新的值。 DQS 將會為取代值新增資料列、將它指定為正確的值，然後將兩個值群組在一起。 新的值將會顯示為前置值，前置值會以粗體顯示，而錯誤或無效的值則縮排。  
+    -   **更正為**：將值設定為錯誤或無效之後，請在 [更正為]  資料行中輸入新的值。 DQS 將會為取代值新增資料列、將它指定為正確的值，然後將兩個值群組在一起。 新的值將會顯示為前置值，前置值會以粗體顯示，而錯誤或無效的值則縮排。  
   
 6.  若要將值指定為一組同義字，請選取多個正確值，然後依照以下方式繼續進行：  
   
@@ -87,7 +86,7 @@ ms.locfileid: "56011899"
   
     -   **中斷所選取同義字之間的關聯**：若要復原兩個或多個值的同義字指定，請選取這些值，然後按一下**中斷所選取同義字之間的關聯**圖示。 這些值必須群組在一起，而且必須是正確的，取消群組同義字才有效。  
   
-    -   **將選取的定義域值設為群組的前置值**：若要變更群組的前置值，請在群組中選取未指定為前置值的某個值，然後按一下 [將選取的定義域值設為群組的前置值] 按鈕。 這樣會將前置值設定為其他值的取代值。 只有在您已經設定兩個或多個群組在一起的值，而且要變更 DQS 所指定的前置值時，才能執行這項作業。 請注意，前置值是由藍色資料列中的粗體值所指定。  
+    -   **將選取的定義域值設為群組的前置值**：若要變更群組的前置值，請在群組中選取未指定為前置值的某個值，然後按一下 [將選取的定義域值設為群組的前置值]  按鈕。 這樣會將前置值設定為其他值的取代值。 只有在您已經設定兩個或多個群組在一起的值，而且要變更 DQS 所指定的前置值時，才能執行這項作業。 請注意，前置值是由藍色資料列中的粗體值所指定。  
   
 7.  **拼字檢查**：如果某個值有波浪式紅色底線，則表示拼字檢查建議對此值進行更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 及 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
   
@@ -96,9 +95,9 @@ ms.locfileid: "56011899"
   
 8.  **新增新的定義域值**：按一下此選項，在資料表結尾新增資料列。 在您輸入值之後，此資料列將會依字母順序重新定位，而且前面會有星號將其識別為新的項目。  
   
-9. **從 Excel 匯入定義域值**：若要從 Excel 試算表新增新值，請按一下**匯入值**圖示的向下箭號，然後選取 [從 Excel 匯入定義域值]。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
+9. **從 Excel 匯入定義域值**：若要從 Excel 試算表新增新值，請按一下**匯入值**圖示的向下箭號，然後選取 [從 Excel 匯入定義域值]  。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]** 。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-10. **匯入專案值**：若要從資料品質專案新增新值，請按一下**匯入值**圖示的向下箭號，然後選取 [匯入專案值]。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 **[完成]**。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
+10. **匯入專案值**：若要從資料品質專案新增新值，請按一下**匯入值**圖示的向下箭號，然後選取 [匯入專案值]  。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]** 。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]** 。 隨即顯示匯入的值。 按一下 [ **完成**]。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   
 11. **刪除選取的定義域值**：若要從定義域中移除一個或多個現有的值，請選取 [值] 資料表中的值，然後按一下**刪除選取的定義域值**圖示。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   

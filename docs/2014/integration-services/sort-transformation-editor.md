@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttransformation.f1
@@ -15,19 +14,19 @@ ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abc74915adf0f2b3fd3ae96420dea921f28ff8e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055486"
 ---
 # <a name="sort-transformation-editor"></a>排序轉換編輯器
   使用 **[排序轉換編輯器]** 對話方塊，即可選取要排序的資料行、設定排序順序和指定是否要移除重複的項目。  
   
  若要深入了解排序轉換，請參閱＜ [Sort Transformation](data-flow/transformations/sort-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  使用核取方塊來指定要排序的資料行。  
   

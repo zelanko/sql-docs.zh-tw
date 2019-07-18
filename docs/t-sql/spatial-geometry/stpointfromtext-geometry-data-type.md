@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromText (geometry Data Type)
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e1ee814563b12479e79383069e1fffc2141cc840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5c0d41925b6d0ec943e3009402eaa9b4c5a4b1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938404"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ STPointFromText ( 'point_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- OGC 類型：**Point**  
+ OGC 類型：**點**  
   
 ## <a name="remarks"></a>Remarks  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  

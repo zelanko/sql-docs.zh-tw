@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772232"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -57,7 +57,7 @@ RECONFIGURE
   
  這些是 Hadoop 連接性設定及其對應的支援 Hadoop 資料來源。 一次只能有一個設定生效。 選項 1、 4 和 7 可讓多個類型的外部資料來源能夠在伺服器上的所有工作階段之間建立和使用。  
   
--   選項 0︰停用 Hadoop 連接  
+-   選項 0︰停用 Hadoop 連線  
   
 -   選項 1：Windows Server 上的 Hortonworks HDP 1.3  
   
@@ -107,7 +107,7 @@ RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>限制事項  
  在明確或隱含的交易中，不允許使用 RECONFIGURE。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  所有的使用者都可以執行 **sp_configure** 且不含參數或搭配 @configname 參數。  
   
  需要 **系統管理員** 固定伺服器角色中的 **ALTER SETTINGS** 伺服器層級權限或成員資格，來變更組態值或執行 RECONFIGURE。  

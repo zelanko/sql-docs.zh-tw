@@ -15,15 +15,14 @@ helpviewer_keywords:
 - reactivating collections [Master Data Services]
 - leaf members [Master Data Services], reactivating
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85653036f4e5348e7bb9d53959b0d6957564f18a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093107"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新啟用成員或集合 (Master Data Services)
 
@@ -43,28 +42,28 @@ ms.locfileid: "52783050"
   
  重新啟用集合或成員時，會還原先前所有的交易。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，您必須具有 [版本管理] 功能區域的權限。  
+-   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，您必須具有 [版本管理]  功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>若要重新啟用成員或集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]  。  
   
-2.  在功能表列上，按一下 [交易]。  
+2.  在功能表列上，按一下 [交易]  。  
   
-3.  在 [交易] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [交易]  頁面上，選取 [模型]  清單中的模型。  
   
 4.  從 **[版本]** 清單中選取版本。  
   
-5.  在 [交易] 窗格中，按一下您要重新啟用之成員或集合的資料列。 此資料列應該在 [先前的值] 資料行中顯示 [Active]，並在 [新值] 資料行中顯示 [De-Activated]。  
+5.  在 [交易]  窗格中，按一下您要重新啟用之成員或集合的資料列。 此資料列應該在 [先前的值]  資料行中顯示 [Active]  ，並在 [新值]  資料行中顯示 [De-Activated]  。  
   
-6.  按一下 [反轉交易]。  
+6.  按一下 [反轉交易]  。  
   
-7.  在確認對話方塊中按一下 **[確定]**。 即會加入新交易，在 [新值] 資料行中顯示 [Active]。  
+7.  在確認對話方塊中按一下 **[確定]** 。 即會加入新交易，在 [新值]  資料行中顯示 [Active]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [刪除成員或集合 &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   

@@ -12,20 +12,20 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 86298faa86bf439c7efcaddcce35033eeb2e63cc
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 283c1c2022cad1926771620db508b0457a70351d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689751"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581794"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 停用資源管理員。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要停用 Resource Governor，請使用下列方式：**[物件總管](#RGOffObjEx)、[Resource Governor 屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
+-   **若要停用 Resource Governor，請使用下列方式：** [物件總管](#RGOffObjEx)、[Resource Governor 屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  停用資源管理員會產生下列結果：  
@@ -47,24 +47,26 @@ ms.locfileid: "55689751"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  在使用者交易中時，您無法使用 **ALTER RESOURCE GOVERNOR** 陳述式停用資源管理員。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  停用資源管理員需要 CONTROL SERVER 權限。  
   
 ##  <a name="RGOffObjEx"></a> 使用物件總管停用資源管理員  
  **若要使用物件總管停用資源管理員**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [停用]。  
-  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [停用]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGOffProp"></a> 使用資源管理員屬性停用資源管理員  
  **若要使用資源管理員屬性頁面來停用資源管理員**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
   
-3.  按一下 **[啟用資源管理員]** 核取方塊，確定未選取方塊，然後按一下 **[確定]**。  
+3.  按一下 **[啟用資源管理員]** 核取方塊，確定未選取方塊，然後按一下 **[確定]** 。  
   
 ##  <a name="RGOffTSQL"></a> 使用 Transact-SQL 停用資源管理員  
  **若要使用 Transact-SQL 停用資源管理員**  

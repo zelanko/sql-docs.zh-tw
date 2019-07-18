@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c59357d402cd12d73fecc91c4f40a6ca0ec32b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62938878"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 事件類別
   每次使用者變更其 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼時，就會發生 **Audit Login Change Password** 事件類別。  

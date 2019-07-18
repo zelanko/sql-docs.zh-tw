@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096457"
 ---
 # <a name="data-type-limitations"></a>資料類型限制
 Microsoft ODBC 桌面資料庫驅動程式以強制資料類型有以下限制：  
@@ -33,6 +32,6 @@ Microsoft ODBC 桌面資料庫驅動程式以強制資料類型有以下限制�
 |十進位 （精確數值）|不支援。|  
 |浮點資料類型|浮點數中的小數位數可能會受限於數字格式的 Windows 控制台中的國際區段中設定。|  
 |NUMERIC|支援最大有效位數和小數位數 28。|  
-|timestamp|TIMESTAMP 資料類型無法轉換以本身，CONVERT 函式。|  
+|TIMESTAMP|TIMESTAMP 資料類型無法轉換以本身，CONVERT 函式。|  
 |TINYINT|TINYINT 值一律是不帶正負號。|  
 |零長度字串|DBASE、 Microsoft Excel、 Paradox、 或 Textdriver 使用時，長度為零的字串插入資料行實際插入 null 值改為。|

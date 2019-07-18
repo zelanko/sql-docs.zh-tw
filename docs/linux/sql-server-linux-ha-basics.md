@@ -1,20 +1,19 @@
 ---
-title: Linux 部署的 SQL Server 可用性基本概念 |Microsoft Docs
+title: Linux 部署的 SQL Server 可用性基本概念
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952613"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
@@ -84,7 +83,7 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 ### <a name="configure-the-firewall"></a>設定防火牆
 類似於 Windows，Linux 散發套件有內建的防火牆。 如果貴公司使用外部防火牆的伺服器，停用防火牆，在 Linux 中的可能可以接受。 不過，不論其中已啟用防火牆，連接埠必須開啟。 下表列出常見的連接埠進行高可用性[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上的部署。
 
-| 通訊埠編號 | 類型     | 描述                                                                                                                 |
+| 通訊埠編號 | type     | 描述                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | （如果使用） samba-結束點對應程式                                                                                          |
@@ -164,7 +163,7 @@ Ubuntu 沒有可用性的指南。
 #### <a name="node"></a>節點
 節點是參與叢集的伺服器。 Pacemaker 叢集原本就支援最多 16 個節點。 如果 Corosync 未在其他節點上執行，但 Corosync 是需要，可能會超過此數字[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 因此，最大節點數目的叢集可以有任何[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-根據的設定為 16，這是 Pacemaker 限制，而且不執行任何動作與 Ag 或 Fci 所加諸的最大限制[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 
 
-#### <a name="resource"></a>資源
+#### <a name="resource"></a>Resource
 WSFC 和 Pacemaker 叢集有資源的概念。 資源是在叢集中，例如磁碟或 IP 位址的內容中執行的特定功能。 例如，在 Pacemaker FCI 和 AG 資源可以取得建立。 這不是要在 WSFC 中，您會看到其中有何不同[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]fci 資源還是 AG 資源時設定 AG，但並不完全相同因為方式的基礎差異[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]與 Pacemaker 整合。
 
 Pacemaker 會具有標準和複製的資源。 複製資源是在所有節點上同時執行。 範例會在達到負載平衡的多個節點執行的 IP 位址。 取得為 Fci 建立的任何資源會使用標準的資源，因為只有一個節點可以裝載 FCI 在任何指定時間。
@@ -200,7 +199,7 @@ Wsfc 會監視參與節點的狀態，並發生問題時，請處理它們。 �
 #### <a name="cluster-log-location"></a>叢集記錄檔位置
 Pacemaker 叢集的記錄檔位置是根據散發而有所不同。
 -   RHEL 與 SLES- `/var/log/cluster/corosync.log`
--   Ubuntu - `/var/log/corosync/corosync.log`
+-   Ubuntu- `/var/log/corosync/corosync.log`
 
 若要變更預設的記錄位置，請修改`corosync.conf`。
 

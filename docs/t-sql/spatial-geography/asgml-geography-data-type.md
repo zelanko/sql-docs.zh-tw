@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - AsGml method
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d6620beb8537a05f766f1f68eb07c0b1cd07d1a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9d4faaae6df3f1800c592d511972e9fa46c7348e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935474"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography 資料型別
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回 **geography** 執行個體的地理標記語言 (GML) 表示法。  
   
- 如需有關地理標記語言的詳細資訊，請參閱開放地理空間協會規格：[OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)。  
+ 如需地理標記語言的詳細資訊，請參閱開放式地理空間協會規格：[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629) (OGC 規格，地理標記語言)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51701980"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**xml**  
   
- CLR 傳回類型：**SqlXml**  
+ CLR 傳回型別：**SqlXml**  
   
 ## <a name="remarks"></a>Remarks  
   

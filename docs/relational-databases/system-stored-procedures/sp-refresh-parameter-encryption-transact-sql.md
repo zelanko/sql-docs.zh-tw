@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002458"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
+# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 更新指定的非結構描述繫結預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序，或目前資料庫中的伺服器層級 DDL 觸發程序參數的 Always Encrypted 中繼資料。 

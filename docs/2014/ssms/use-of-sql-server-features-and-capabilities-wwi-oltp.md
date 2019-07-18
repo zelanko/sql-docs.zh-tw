@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280486"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
-  引數是 Studio 環境提供的變數，適用於從 [工具] 功能表中啟動外部工具之時。 您可以使用 [外部工具] 對話方塊，將 [記事本] 之類的外部工具加入 [工具] 功能表中。  
+  引數是 Studio 環境提供的變數，適用於從 [工具]  功能表中啟動外部工具之時。 您可以使用 [外部工具]  對話方塊，將 [記事本] 之類的外部工具加入 [工具]  功能表中。  
   
  下表列出外部工具的引數。  
   

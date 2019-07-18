@@ -28,16 +28,16 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b197330b1acbb32be6793ad57e2b8764cfd6bbc
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801472"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793644"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ DATEDIFF ( datepart , startdate , enddate )
 請使用四位數年份以避免模糊不清。 如需兩位數年份值的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 *enddate*  
-請參閱＜*startdate*＞。
+請參閱 *startdate*。
   
 ## <a name="return-type"></a>傳回類型  
  **int**  
@@ -99,7 +99,7 @@ DATEDIFF ( datepart , startdate , enddate )
   
 如果 *startdate* 和 *enddate* 都只獲指派時間值，且 *datepart* 不是時間 *datepart*，`DATEDIFF` 會傳回 0。
   
-`DATEDIFF` 不會使用 *startdate* 或 *enddate* 的時區時差元件來計算傳回值。
+`DATEDIFF` 會使用 *startdate* 或 *enddate* 的時區時差元件來計算傳回值。
   
 由於 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘，因此當 *startdate* 或 *enddate* 具有 **smalldatetime** 值時，秒和毫秒就一律會在傳回值中設定為 0。
   
@@ -108,7 +108,7 @@ DATEDIFF ( datepart , startdate , enddate )
 如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，`DATEDIFF` 會將另一個項目的遺漏部分設定為 0。
   
 ## <a name="datepart-boundaries"></a>datepart 界限  
-下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一微秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
+下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一百奈秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -121,9 +121,10 @@ SELECT DATEDIFF(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
   
 `DATEDIFF` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。

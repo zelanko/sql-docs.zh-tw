@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815266"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263934"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對每一個排程要非同步 (背景) 執行的查詢處理器作業，各傳回一個資料列。  
   
-> **注意！！** 若要呼叫這個屬性從**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或是**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**，使用名稱**sys.dm_pdw_nodes_exec_background_job_queue**。  
+> **注意！！** 若要呼叫這個屬性從 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或是 **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** ，使用名稱**sys.dm_pdw_nodes_exec_background_job_queue**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +53,7 @@ ms.locfileid: "47815266"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
   
 ## <a name="remarks"></a>備註  
  這個檢視只會傳回非同步更新統計資料作業的資訊。 如需有關非同步更新統計資料的詳細資訊，請參閱 <<c0> [ 統計資料](../../relational-databases/statistics/statistics.md)。  

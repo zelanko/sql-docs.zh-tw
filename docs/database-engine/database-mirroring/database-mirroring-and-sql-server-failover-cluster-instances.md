@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00397c644e2e9cffd04026d4cc4beb4ade4b69c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ce3c4df7141f6bf31c02e4376001a280135db5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774727"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>資料庫鏡像及 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47830857"
   
  ![叢集上的容錯移轉](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "叢集上的容錯移轉")  
   
- 鏡像工作階段中的三個伺服器執行個體位於三個不同的叢集： **Cluster_A**、 **Cluster_B**，以及 **Cluster_C**。 在每一個叢集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的身分來執行。 鏡像工作階段啟動時， **Cluster_A** 上的容錯移轉叢集執行個體是主體伺服器、 **Cluster_B** 上的容錯移轉叢集執行個體是鏡像伺服器，而 **Cluster_C** 上的容錯移轉叢集執行個體則是鏡像工作階段中的見證。 最後， **Cluster_A** 上的使用中節點失敗，這造成主體伺服器無法使用。  
+ 鏡像工作階段中的三個伺服器執行個體位於三個不同的叢集：**Cluster_A**、**Cluster_B** 和 **Cluster_C**。 在每一個叢集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的身分來執行。 鏡像工作階段啟動時， **Cluster_A** 上的容錯移轉叢集執行個體是主體伺服器、 **Cluster_B** 上的容錯移轉叢集執行個體是鏡像伺服器，而 **Cluster_C** 上的容錯移轉叢集執行個體則是鏡像工作階段中的見證。 最後， **Cluster_A** 上的使用中節點失敗，這造成主體伺服器無法使用。  
   
  在叢集有時間進行容錯移轉之前，鏡像伺服器透過見證的協助，而偵測到主體伺服器遺失。 鏡像伺服器會向前復原它的資料庫，並儘快將它與新的主體資料庫連線。 **Cluster_A** 完成容錯移轉時，先前的主體伺服器現在是鏡像伺服器，而且它會與目前在 **Cluster_B**上的主體資料庫同步處理其資料庫。  
   

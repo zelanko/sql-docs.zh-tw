@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809566"
 ---
 # <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系統預存程序，透過組態選項來管理及最佳化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資源。 最常使用的伺服器組態選項可以透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來使用，而所有組態選項都可以透過 sp_configure 來存取。 在設定這些選項前，請仔細考慮這些選項對系統所造成的效果。 如需詳細資訊，請參閱[檢視或變更伺服器屬性 &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)。  
@@ -105,7 +105,7 @@ ms.locfileid: "52640549"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。)|0<br /><br /> 零表示自動設定最大的工作者執行緒數目，而這個數目是根據處理器數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256+(\<處理器> -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為該數目的兩倍。|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 是 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最大建議值，64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為 2048。)|0<br /><br /> 零表示自動設定最大的工作者執行緒數目，而這個數目是根據處理器數目，透過用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的公式 (256+(\<處理器>  -4) * 8) 來決定，而 64 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則為該數目的兩倍。|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  

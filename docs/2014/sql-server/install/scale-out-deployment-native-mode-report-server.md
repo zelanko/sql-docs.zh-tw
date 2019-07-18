@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
@@ -13,15 +12,15 @@ ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092424"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>向外延展部署 (原生模式報表伺服器)
-  使用**向外延展部署**頁面中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 來檢視向外延展部署的初始化狀態，或將報表伺服器聯結至向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
+  請使用 **組態管理員中的** [向外延展部署] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面檢視向外延展部署的初始化狀態，或將報表伺服器聯結到向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
@@ -35,11 +34,11 @@ ms.locfileid: "48099938"
   
  若要設定向外延展部署，請從兩個或多個全都連接到相同報表伺服器資料庫的報表伺服器執行個體開始。 在安裝所有的執行個體之後，您會連接到第一部報表伺服器，然後使用 [向外延展部署] 頁面來加入其他每一個執行個體。 只有已經初始化來使用資料庫的報表伺服器才可以初始化其他節點。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員，並選取**向外延展部署**瀏覽窗格中。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並選取導覽窗格中的 **[向外延展部署]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SQL Server 名稱**  
- 指定的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]主控報表伺服器資料庫的執行個體。  
+ 指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體名稱。  
   
  **Database Name**  
  指定報表伺服器執行個體目前連接的資料庫名稱。  
@@ -56,9 +55,9 @@ ms.locfileid: "48099938"
  **狀態**  
  指示要初始化報表伺服器，還是等候加入向外延展部署：  
   
--   如果是不屬於向外延展部署之一部分的獨立報表伺服器，此頁面會顯示報表伺服器執行個體取決於它的專用報表伺服器資料庫來進行初始化。 狀態設定為 **[已加入]**。  
+-   如果是不屬於向外延展部署之一部分的獨立報表伺服器，此頁面會顯示報表伺服器執行個體取決於它的專用報表伺服器資料庫來進行初始化。 狀態設定為 **[已加入]** 。  
   
--   如果是等候加入向外延展部署的報表伺服器，此頁面的 [伺服器]、[執行個體] 和 [狀態] 都會是空的值。 如果您選取了已經由另一個報表伺服器執行個體所使用的現有報表伺服器資料庫，則報表伺服器會等候加入向外延展部署。 此頁面上的訊息會指示您連接到已加入此伺服陣列的報表伺服器。 若要完成此要求，請按一下 **[連接]**，並選取已初始化來使用報表伺服器資料庫的報表伺服器，再按一下 **[向外延展部署]**，然後選取 **[正在等候加入]** 的報表伺服器執行個體，再按一下 **[初始化]**。  
+-   如果是等候加入向外延展部署的報表伺服器，此頁面的 [伺服器]、[執行個體] 和 [狀態] 都會是空的值。 如果您選取了已經由另一個報表伺服器執行個體所使用的現有報表伺服器資料庫，則報表伺服器會等候加入向外延展部署。 此頁面上的訊息會指示您連接到已加入此伺服陣列的報表伺服器。 若要完成此要求，請按一下 **[連接]** ，並選取已初始化來使用報表伺服器資料庫的報表伺服器，再按一下 **[向外延展部署]** ，然後選取 **[正在等候加入]** 的報表伺服器執行個體，再按一下 **[初始化]** 。  
   
 -   如果報表伺服器目前是向外延展部署的一部分，此頁面會顯示共用相同報表伺服器資料庫之所有報表伺服器執行個體的初始化狀態。 檢視向外延展部署的狀態時，不論您連接的是哪個伺服器都不會有影響。 向外延展部署中的所有節點都會報告相同的狀態資訊。  
   

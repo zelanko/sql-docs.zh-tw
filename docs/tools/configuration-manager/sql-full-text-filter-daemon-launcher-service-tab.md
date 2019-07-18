@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75993f05c3b92593f0d9eb56c29505041889164c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 074d85356e3ddf5ce9516ec3ba11a5b4dd59c811
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733320"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 全文檢索篩選背景程式啟動器 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索就會使用 SQL 全文檢索篩選背景程式啟動器 (FDHOST 啟動器) 服務。 如果您使用全文檢索搜尋，這個服務就必須執行。 如需篩選背景程式主機處理序的相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜全文檢索搜尋架構＞。  
   
- 您可以使用 [SQL 全文檢索篩選背景程式啟動器屬性] 對話方塊的 [服務] 索引標籤來檢視或指定下列選項。  
+ 您可以使用 [SQL 全文檢索篩選背景程式啟動器屬性]  對話方塊的 [服務]  索引標籤來檢視或指定下列選項。  
   
 ## <a name="options"></a>選項。  
  **二進位路徑**  
@@ -57,6 +57,6 @@ ms.locfileid: "52538797"
 -   停用：這項服務無法啟動。  
   
  **State**  
- 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 " **...** " 表示狀態變更已暫止。  
   
   

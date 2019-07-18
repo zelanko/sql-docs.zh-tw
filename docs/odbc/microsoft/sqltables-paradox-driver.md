@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c845bd2e5e3ec5e52cfd6d1c0891f8825af1e148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48cbc19506a7f695433489c952f53864b614a05e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949021"
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (Paradox 驅動程式)
 > [!NOTE]  

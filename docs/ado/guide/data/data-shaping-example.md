@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92e34de1b9fd675570527f9a28f8476a51597f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925661"
 ---
 # <a name="data-shaping-example"></a>資料成形範例
 下列資料成形命令示範如何建置一個階層式**Recordset**從**客戶**並**訂單**Northwind 資料庫中的資料表。  
@@ -29,7 +28,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- 此命令用來開啟**資料錄集**物件 (如中所示[Visual Basic 範例中的資料成形](../../../ado/guide/data/visual-basic-example-of-data-shaping.md))，它會建立一個章節 (**chapOrders**) 傳回每一筆記錄從**客戶**資料表。 這一章所組成的子集**Recordset**傳回**訂單**資料表。 **ChapOrders**章節包含有關給定的客戶所下訂單的所有要求的資訊。 在此範例中，一章包含三個資料行： **OrderID**， **OrderDate**，並**CustomerID**。  
+ 此命令用來開啟**資料錄集**物件 (如中所示[Visual Basic 範例中的資料成形](../../../ado/guide/data/visual-basic-example-of-data-shaping.md))，它會建立一個章節 (**chapOrders**) 傳回每一筆記錄從**客戶**資料表。 這一章所組成的子集**Recordset**傳回**訂單**資料表。 **ChapOrders**章節包含有關給定的客戶所下訂單的所有要求的資訊。 在此範例中，一章包含三個資料行：**OrderID**， **OrderDate**，以及**CustomerID**。  
   
  前兩個項目的結果的形狀**資料錄集**如下所示：  
   
@@ -38,7 +37,7 @@ RELATE customerID TO customerID)
 |ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- 在圖形的命令中，附加用來建立子系**資料錄集**與父代**資料錄集**（如圖形關鍵字討論之後立即傳回提供者特定命令較早的） 由 RELATE 子句。 父系和子系通常具有至少一個資料行共同： 父代的資料列中的資料行的值是子系的所有資料列中的資料行的值相同。  
+ 在圖形的命令中，附加用來建立子系**資料錄集**與父代**資料錄集**（如圖形關鍵字討論之後立即傳回提供者特定命令較早的） 由 RELATE 子句。 父系和子系通常在一般具有至少一個資料行：中資料列的資料行的值可以是父的子系的所有資料列中的資料行的值相同。  
   
  若要使用圖形命令的第二個方法： 也就是產生父代**資料錄集**從子系**資料錄集**。 中子系的記錄**資料錄集**分組，通常使用 BY 子句和一個資料列加入至父代**資料錄集**子系中每個產生的群組。 如果省略 BY 子句，則子系**Recordset**可形成單一的群組和父代**資料錄集**會包含一個資料列。 這可用來將整個子計算 「 總計 」 彙總**資料錄集**。  
   

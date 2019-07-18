@@ -1,5 +1,5 @@
 ---
-title: '- （負）(MDX) |Microsoft 文件'
+title: '- （負）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1406eee16ed2ec0349aa4405a4f59b478048dcdf
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3221a54c8bedd67c28e1bf1f353f2cf7414829ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088376"
 ---
 # <a name="--negative-mdx"></a>- (負) (MDX)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
@@ -13,12 +12,12 @@ ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e08ed37f94a60e1727dfcd006de7faff0545a23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a82cbcc9ef1ab57279b44cc83509cb1efad855ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091394"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>升級會將 SQL Server Agent 使用者 Proxy 帳戶變更為暫時的 UpgradedProxyAccount
   升級之後，已啟用記錄傳送的資料庫維護計劃將無法啟用。  

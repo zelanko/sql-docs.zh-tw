@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138031"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53208277"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 RETCODE SQLInstallerError(  
      WORD      iError,  
@@ -47,7 +46,7 @@ RETCODE SQLInstallerError(
 ```  
   
 ## <a name="arguments"></a>引數  
- *Irc*  
+ *iError*  
  [輸入]錯誤記錄號碼。 有效的數字是從 1 到 8。  
   
  *pfErrorCode*  

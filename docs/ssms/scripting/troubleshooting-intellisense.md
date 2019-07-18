@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff17b297edc21a94f872a172cf81d2ceed667aec
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d04976066cf43a52272edfdc836abbb822459b48
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642972"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682446"
 ---
 # <a name="troubleshooting-intellisense"></a>針對 IntelliSense 進行疑難排解
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51642972"
   
 -   IntelliSense 功能不包含您的編輯器視窗連接到資料庫後，由另一個連接所建立的資料庫物件。 如果 IntelliSense 功能中遺漏物件，例如完成清單，您可以選擇三個機制的其中一個，以重新整理編輯器視窗的快取物件：  
   
-    -   選取 **[編輯]** 功能表，選取 **[IntelliSense]**，再選取 **[重新整理本機快取]**。  
+    -   選取 **[編輯]** 功能表，選取 **[IntelliSense]** ，再選取 **[重新整理本機快取]** 。  
   
     -   使用 CTRL+Shift+R 鍵盤快速鍵。  
   

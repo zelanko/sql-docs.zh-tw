@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62834574"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
   新增執行個體精靈是用來建立 CDC 服務的新執行個體。 您會從 CDC 設計工具主控台開啟 [建立 Oracle CDC 執行個體] 精靈。 您可以在新增執行個體精靈中執行以下動作。  

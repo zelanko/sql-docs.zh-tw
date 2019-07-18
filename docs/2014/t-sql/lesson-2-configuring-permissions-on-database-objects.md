@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52746921"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62642584"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 課：資料庫物件上設定權限
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
   授與使用者存取資料庫的權限包括三個步驟。 首先，請建立登入。 登入可讓使用者連接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]。 接著，請將登入設定為指定之資料庫的使用者。 最後，請授與該使用者存取資料庫物件的權限。 這一課會示範這三個步驟，並且說明如何將檢視和預存程序建立為物件。  
   
  這個課程包含下列主題：  

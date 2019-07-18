@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
@@ -13,22 +12,22 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090014"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>選項 (查詢結果-SQL Server-以結果文字頁面）
-  使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢] 視窗，然後選取 [查詢選項]。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]**。  
+  使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]  功能表上的 [查詢選項]  ，或以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢] 視窗，然後選取 [查詢選項]  。 在 **[查詢選項]** 對話方塊中，於 **[結果]** 之下，按一下 **[文字]** 。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **輸出格式**  
- 根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項為使用逗號、定位點或空格來分隔資料行。 在此下拉式清單中選取 [自訂分隔符號]，即可在 [自訂分隔符號] 文字方塊中指定不同的分隔字元。  
+ 根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項為使用逗號、定位點或空格來分隔資料行。 在此下拉式清單中選取 [自訂分隔符號]  ，即可在 [自訂分隔符號]  文字方塊中指定不同的分隔字元。  
   
  **自訂分隔符號**  
- 指定您要用來分隔資料行的字元。 此文字方塊只有在 [輸出格式] 下拉式清單方塊中，按一下自訂分隔符號時才能使用。  
+ 指定您要用來分隔資料行的字元。 此文字方塊只有在 [輸出格式]  下拉式清單方塊中，按一下自訂分隔符號時才能使用。  
   
  **在結果集內包含資料行標頭**  
  如果您不要每個資料行均標示有資料行標題，請清除此核取方塊。  

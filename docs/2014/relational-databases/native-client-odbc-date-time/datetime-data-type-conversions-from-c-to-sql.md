@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63207012"
 ---
 # <a name="conversions-from-c-to-sql"></a>從 C 轉換成 SQL
   本主題列出問題需要考量當您從 C 類型轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間類型。  

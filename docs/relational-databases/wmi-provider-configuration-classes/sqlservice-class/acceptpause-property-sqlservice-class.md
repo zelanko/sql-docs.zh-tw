@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c1c8a32e8b11bbc15e9fc9bf2c18a935a660dab3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e6c6f79d468cefa3c9487a9827fc62c917bb39dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052323"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

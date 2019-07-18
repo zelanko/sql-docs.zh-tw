@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6703906dbe133436656ca2822ac18a9df42ad4c
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: e2a80a2a3e1cf0745553dbb494f8e39cde8f9d3e
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334575"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826597"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -547,6 +547,6 @@ ORDER BY SalesOrderNumber,ProductKey;
 ## <a name="see-also"></a>另請參閱  
  [彙總函數 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [分析函數 &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Itzik Ben-Gan 在 sqlmag.com 上所發表有關視窗函數和 OVER 的精彩部落格文章](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1) \(英文\)  
+ [Itzik Ben-Gan 在 sqlmag.com 上所發表有關視窗函數和 OVER 的精彩部落格文章](https://www.itprotoday.com/sql-server/how-use-microsoft-sql-server-2012s-window-functions-part-1) \(英文\)  
   
   

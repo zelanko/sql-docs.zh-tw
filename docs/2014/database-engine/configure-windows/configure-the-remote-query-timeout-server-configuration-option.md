@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787090"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>設定 remote query timeout 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote query timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote query timeout** 選項會指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。此選項的預設值是 600，這允許 10 分鐘的等待。 此值可套用到由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟始做為遠端查詢的傳出連接。 此值對 [!INCLUDE[ssDE](../../includes/ssde-md.md)]收到的查詢沒有影響。 若要停用逾時，請將值設定為 0。 查詢會等候，直到完成。  
   
- 對於異質性查詢，[遠端查詢逾時] 可指定遠端提供者在等候查詢結果集時，應等候幾秒 (使用 DBPROP_COMMANDTIMEOUT 資料列集屬性在命令物件中初始化) 後，查詢才會逾時。這個值也用來設定 DBPROP_GENERALTIMEOUT (如果遠端提供者支援的話)。 這會使其他任何作業在指定秒數後變逾時。  
+ 對於異質性查詢，[遠端查詢逾時]  可指定遠端提供者在等候查詢結果集時，應等候幾秒 (使用 DBPROP_COMMANDTIMEOUT 資料列集屬性在命令物件中初始化) 後，查詢才會逾時。這個值也用來設定 DBPROP_GENERALTIMEOUT (如果遠端提供者支援的話)。 這會使其他任何作業在指定秒數後變逾時。  
   
  對於遠端預存程序， **remote query timeout** 會指定在傳送遠端 `EXEC` 陳述式之後，遠端預存程序逾時之前必須經過的秒數。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58527810"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 remote query timeout 選項之後](#FollowUp)  
+-   **後續操作：** [設定遠端查詢逾時選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -58,7 +58,7 @@ ms.locfileid: "58527810"
   
 #### <a name="to-configure-the-remote-query-timeout-option"></a>設定 remote query timeout 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[連接]** 節點。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "58527810"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote query timeout` 選項的值設定為 `0` ，以停用逾時。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote query timeout` 選項的值設定為 `0` ，以停用逾時。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -86,7 +86,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 remote query timeout 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定遠端查詢逾時選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

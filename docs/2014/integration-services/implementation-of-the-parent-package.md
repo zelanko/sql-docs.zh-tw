@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
@@ -13,20 +12,20 @@ ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06adb2034134b7cc49a8313fb501edc845244922
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058160"
 ---
 # <a name="implementation-of-the-parent-package"></a>父封裝的實作
   設定跨越各種伺服器之 SSIS 封裝的負載平衡時，在完成建立、部署子封裝，以及建立執行這些子封裝的遠端 SQL Server Agent 作業之後，下一個步驟就是建立父封裝。 父封裝將包含許多「執行 SQL Server Agent 作業」工作，每一項工作負責呼叫執行其中一個子封裝的不同 SQL Server Agent 作業。 接著父封裝中的「執行 SQL Server Agent 作業」工作會執行各種 SQL Server Agent 作業。 父封裝中的每項工作都包含如何連接到遠端伺服器以及要在該伺服器上執行哪一項作業之類的資訊。 如需詳細資訊，請參閱 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)。  
   
- 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [方案總管] 中的封裝，然後按一下 **[進入點封裝]**。  
+ 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [方案總管] 中的封裝，然後按一下 **[進入點封裝]** 。  
   
 ## <a name="listing-child-packages"></a>列出子封裝  
- 若您將包含父封裝及子封裝的專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器，可以檢視由父封裝執行的子封裝清單。 當您執行父封裝時，會在 **中自動產生父封裝的 [概觀]**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]報告。 該告會列出父封裝中包含的執行封裝工作所執行之子封裝清單，如下圖所示。  
+ 若您將包含父封裝及子封裝的專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器，可以檢視由父封裝執行的子封裝清單。 當您執行父封裝時，會在 **中自動產生父封裝的 [概觀]** [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]報告。 該告會列出父封裝中包含的執行封裝工作所執行之子封裝清單，如下圖所示。  
   
  ![含有子套件清單的概觀報表](media/overviewreport-childpackagelisting.png "含有子套件清單的概觀報表")  
   

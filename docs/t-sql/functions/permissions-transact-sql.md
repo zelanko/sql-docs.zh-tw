@@ -22,15 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943435"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  當指定的參數為 NULL 或無效時，會傳回 NULL (例如不存在的 *objectid* 或資料行)。 不套用權限的位元值 (例如，用於資料表的 EXECUTE 權限 bit 0x20) 尚未定義。  
   
- 使用位元 AND (&) 運算子，來決定 PERMISSIONS 函數傳回的點陣圖中設定的每一個位元。  
+ 使用位元 AND (&) 運算子，來決定 PERMISSIONS 函式所傳回點陣圖中設定的每一個位元。  
   
  sp_helprotect 系統預存程序也用來傳回目前資料庫中使用者的權限清單。  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767415"
 ---
-# <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>第 5 課：加入封裝部署模型的封裝組態
+# <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>第 5 課：新增封裝部署模型的封裝組態
   封裝組態可讓您從開發環境之外設定執行階段屬性和變數。 組態可讓您開發彈性且易於部署和散發的封裝。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會提供下列組態類型：  
   
 -   XML 組態檔  

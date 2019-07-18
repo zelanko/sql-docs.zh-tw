@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097945"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState 方法 (WMI MSReportServer_ConfigurationSetting)
   開啟和關閉報表伺服器 Windows 與 Web 服務。  

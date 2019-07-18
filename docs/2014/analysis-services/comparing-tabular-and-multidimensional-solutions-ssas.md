@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087765"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比較表格式和多維度解決方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供兩個不同方法的資料模型化： 表格式和多維度。 雖然這兩種方法有很多重疊之處，但在告知關於後續進展方式的決策這一點上卻有著重大差異。 本主題將會進行功能比較，並說明每一種方法如何應付常見的專案需求。 例如，如果主要的考量是要支援特定資料來源，在關於資料來源的章節可引導您決定要使用哪一個模型化方法。  
@@ -47,7 +46,7 @@ ms.locfileid: "53365840"
   
 -   [下一個步驟：建置解決方案](#bkmk_Next)  
   
- 在 MSDN 上，可以在此技術文章中找到其他資訊：[在 SQL Server 2012 Analysis Services 中選擇表格式或多維度模型化體驗](https://go.microsoft.com/fwlink/?LinkId=251588)。  
+ 可以在 MSDN 上的此技術文章中找到其他資訊：[在 SQL Server 2012 Analysis Services 中選擇表格式或多維度模型化體驗](https://go.microsoft.com/fwlink/?LinkId=251588)。  
   
 ##  <a name="bkmk_overview"></a> Analysis Services 中的模型化的概觀  
  Analysis Services 提供模型開發體驗，以及透過裝載於 Analysis Services 執行個體上的資料庫進行的模型部署。 模型類型包含表格式和多維度。 如您所料，資料庫裝載支援您所建立的表格式和多維度解決方案，但資料庫裝載也包含 PowerPivot for SharePoint。  
@@ -117,7 +116,7 @@ ms.locfileid: "53365840"
 |使用者定義階層|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
 |回寫|[是](multidimensional-models/set-partition-writeback.md)|否|  
   
- * 如果您的解決方案必須支援非常大量的相異計數 （例如數以百萬計的客戶 Id），請優先考慮表格式。 它在這種案例中往往會有更好的效能。 請參閱白皮書中有關相異計數的章節[Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
+ \* 如果您的解決方案必須支援非常大量的相異計數 （例如數以百萬計的客戶 Id），請優先考慮表格式。 它在這種案例中往往會有更好的效能。 請參閱白皮書中有關相異計數的章節[Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)。  
   
 ##  <a name="bkmk_modelsize"></a> 模型大小  
  模型的大小 (就物件總數而言) 不會因解決方案類型而異。 但是，用來建立每個解決方案的設計工具，會因為其適應處理大量物件的方式而有所不同。 較大的模型比較容易在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中建立，因為它會在 [物件總管] 和 [方案總管] 中提供更多的功能來依據類型繪製物件圖表及列出物件。  
@@ -191,7 +190,7 @@ ms.locfileid: "53365840"
 |Office 365 中的 Power BI 網站|在 Power BI 網站中，Power View 報表可以連接到在內部部署中執行的表格式資料模型。|  
 |在內部部署伺服器 (SharePoint 和 SQL Server 執行個體)|內部部署資料庫伺服器 (也就是已安裝 Analysis Services 的 SQL Server 執行個體) 仍然是讓報表和用戶端應用程式可以使用 Analysis Services 資料的主要方式。 表格式、多維度和資料採礦解決方案會在網路上的 Analysis Services 執行個體中執行，不需取決於 SharePoint。<br /><br /> SQL Server 藉由新增 PowerPivot 資料存取和表格式資料存取的支援來與 SharePoint 整合。 當您將每一個產品中使用的功能數目最大化時，SharePoint 和 SQL Server 整合的投資也會增加。 如果您有 SharePoint，您可以安裝 SQL Server PowerPivot for SharePoint 來啟用 PowerPivot 資料存取，並取得用來存取表格式資料庫的 PowerPivot .bism 連接檔案，該資料庫會在網路伺服器上的外部 Analysis Services 執行個體中執行。<br /><br /> 如果您同時有 SharePoint 和 SQL Server，則可支援下列服務與應用程式的組合：<br /><br /> Analysis Services 模型 (表格式或多維度)<br /><br /> 中間層 SharePoint 服務 (Excel Services、SharePoint 中的 Reporting Services、PerformancePoint Services)<br /><br /> 瀏覽器用戶端或豐富型用戶端 (Excel)，以進行更深層的資料分析和探索。|  
   
-##  <a name="bkmk_Next"></a> 下一個步驟：建立解決方案  
+##  <a name="bkmk_Next"></a> 下一個步驟：建置解決方案  
  現在您對於解決方法的比較已經有了基本了解，請試試以下的教學課程，以了解建立每一個解決方案的步驟。 以下連結會帶領您前往說明步驟的教學課程。  
   
 -   使用[表格式模型化 &#40;Adventure Works 教學課程&#41;](tabular-modeling-adventure-works-tutorial.md) 建置表格式模型。  

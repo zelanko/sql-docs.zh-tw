@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921881"
 ---
 # <a name="writing-your-own-customized-handler"></a>撰寫您自己的自訂處理常式
 您可能想要撰寫您自己的處理常式，如果您是 IIS 伺服器系統管理員，想要支援 RDS，預設值，但更充分掌控使用者的要求和存取權限。  
@@ -32,7 +31,7 @@ ms.locfileid: "53214007"
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 介面  
  此介面有兩種方法， **GetRecordset**並**重新連接**。 這兩種方法需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
   
- 這兩種方法不接受引數中的第一個逗號後面出現的 「**處理常式 =**"關鍵字。 例如，`"Handler=progid,arg1,arg2;"`將傳遞的引數字串`"arg1,arg2"`，和`"Handler=progid"`會傳遞 null 引數。  
+ 這兩種方法不接受引數中的第一個逗號後面出現的 「**處理常式 =** "關鍵字。 例如，`"Handler=progid,arg1,arg2;"`將傳遞的引數字串`"arg1,arg2"`，和`"Handler=progid"`會傳遞 null 引數。  
   
 ## <a name="getrecordset-method"></a>GetRecordset 方法  
  這個方法會查詢資料來源，並建立新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件使用提供的引數。 **Recordset**必須以開啟**Adlockpessimistic** ，必須以非同步方式開啟。  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d3718357b68aa47bbc32e4d975a546f3e86cb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079426"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -33,8 +32,9 @@ ms.locfileid: "47814836"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
+|name|**sysname**|名稱的資料庫範圍認證。 是在資料庫中是唯一的。|  
 |credential_id|**int**|資料庫範圍認證的識別碼。 是在資料庫中是唯一的。|  
-|NAME|**sysname**|名稱的資料庫範圍認證。 是在資料庫中是唯一的。|  
+|principal_id|**int**|擁有金鑰的資料庫主體識別碼。|  
 |credential_identity|**nvarchar(4000)**|要使用之識別的名稱。 這通常是 Windows 使用者。 這不需要是唯一的。|  
 |create_date|**datetime**|建立資料庫範圍認證的時間。|  
 |modify_date|**datetime**|上次修改的資料庫範圍認證的時間。|  

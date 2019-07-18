@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
@@ -19,12 +18,12 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068894"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中設定伺服器屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，可以在同一部伺服器上與其他執行個體分開設定。  
@@ -47,9 +46,9 @@ ms.locfileid: "53369730"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-     在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後按一下 [屬性]。 [一般] 頁面隨即顯示，其中顯示最常使用的屬性。  
+     在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後按一下 [屬性]  。 [一般] 頁面隨即顯示，其中顯示最常使用的屬性。  
   
-2.  若要檢視其他屬性，請按一下頁面底部的 [顯示進階 (全部) 屬性] 核取方塊。  
+2.  若要檢視其他屬性，請按一下頁面底部的 [顯示進階 (全部) 屬性]  核取方塊。  
   
      只有表格式模式和多維度模式伺服器支援修改伺服器屬性。 如果您已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，除非 Microsoft 產品支援工程師另有指示，否則請務必使用預設值。  
   

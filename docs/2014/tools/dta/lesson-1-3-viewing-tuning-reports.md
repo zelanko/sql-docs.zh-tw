@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110149"
 ---
 # <a name="viewing-tuning-reports"></a>檢視微調報表
   在這個課程的上一個練習中，您檢視了在 MySession 微調工作階段所產生的 Database Engine Tuning Advisor 建議中建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 MySession 微調工作階段是先前在 [微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的。  
@@ -47,6 +46,6 @@ ms.locfileid: "48173638"
  現在，您已在 Database Engine Tuning Advisor GUI 的 [報表] 索引標籤中，探索了 MySession 微調工作階段。 您可以利用這些相同的步驟來探索針對 EvaluateMySession 微調工作階段而產生的報表。 請在 [工作階段監視器] 窗格中，按兩下 [EvaluateMySession] 來開始作業。  
   
 ## <a name="next-lesson"></a>下一課  
- [課程 3：使用 dta 命令提示字元公用程式](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [第 3 課：使用 dta 命令提示字元公用程式](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

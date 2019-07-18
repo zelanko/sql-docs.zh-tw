@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185962"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
@@ -76,8 +76,8 @@ ms.locfileid: "52791910"
  [ **-?** ]  
  傳回支援的參數清單。  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- 這是來源伺服器的名稱。 指定_來源\_伺服器\_名稱_預設執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_來源\_伺服器\_名稱_**\\**_執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ 這是來源伺服器的名稱。 指定_來源\_伺服器\_名稱_預設執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_來源\_伺服器\_名稱_ **\\** _執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -100,8 +100,8 @@ ms.locfileid: "52791910"
  **-sourcelocked**  
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
- **-destinationserver** *destination_server_name*[**\\**_執行個體\_名稱_]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_目的地\_伺服器\_名稱_**\\**_執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[ **\\** _執行個體\_名稱_]  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_目的地\_伺服器\_名稱_ **\\** _執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  

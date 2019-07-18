@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164460"
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>啟用 CA 中的網站集合的 Power Pivot 整合
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,19 +29,19 @@ ms.locfileid: "50100059"
   
 ## <a name="activate-power-pivot-features"></a>啟動 Power Pivot 功能  
   
-1.  按一下 SharePoint 網站上的 [網站動作]。  
+1.  按一下 SharePoint 網站上的 [網站動作]  。  
   
      根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站中輸入 http://\<電腦名稱 > 以開啟根網站集合。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  按一下 [網站集合管理] 中的 [網站集合功能]。  
+3.  按一下 [網站集合管理] 中的 [網站集合功能]  。  
   
-4.  向下捲動頁面，直到您找到 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 整合網站集合功能]。  
+4.  向下捲動頁面，直到您找到 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 整合網站集合功能]  。  
   
-5.  按一下 **[啟用]**。  
+5.  按一下 **[啟用]** 。  
   
-6.  開啟每個網站並按一下 [網站動作]，為其他網站集合重複執行。  
+6.  開啟每個網站並按一下 [網站動作]  ，為其他網站集合重複執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081554"
 ---
 # <a name="dmx-templates"></a>DMX 範本
   資料採礦範本可幫助您快速建立複雜的查詢。 雖然 DMX 查詢的一般語法已完整記載，但是使用範本可直接按一下並指向引數和資料來源，讓您更容易建立查詢。  
@@ -43,7 +42,7 @@ ms.locfileid: "52504687"
   
      但是請注意，如果您在使用查詢編輯器時切換檢視，便會清除在上一個檢視中的所有資訊。 在變更檢視之前，請將 DMX 陳述式複製並貼到另一個檔案以儲存您的工作。  
   
-8.  按一下 **[完成]**。 在  **選擇目的地**對話方塊方塊中，指定您想要儲存結果的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  按一下 **[完成]** 。 在  **選擇目的地**對話方塊方塊中，指定您想要儲存結果的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  如果您已成功執行陳述式，您傳送到伺服器的 DMX 陳述式也會記錄於**追蹤**視窗。 如需如何使用追蹤功能的詳細資訊，請參閱[追蹤&#40;適用於 Excel 的資料採礦用戶端&#41;](trace-data-mining-client-for-excel.md)。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb74f32ba6eb464707721b5529cb0478d1b4ceb2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fd5115b4dcf4db7e8f7d5e4c1e2b5d4d4159e8e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964346"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>DataSpace 物件 (RDS) 屬性、方法和事件
 > [!IMPORTANT]
@@ -31,7 +30,7 @@ ms.locfileid: "51606040"
 ## <a name="methods"></a>方法  
  [CreateObject 方法 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148986"
 ---
 # <a name="create-a-tabular-model-project"></a>建立表格式模型專案
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685215"
 
 在這一課，您使用 Visual Studio 與 SQL Server Data Tools (SSDT) 或 Visual Studio 2017 與 Microsoft Analysis Services 專案 VSIX 1400 相容性層級建立新的表格式模型專案。 一旦建立新的專案時，就可以開始加入資料，並撰寫您的模型。 這一課也可讓您的表格式模型撰寫環境，在 Visual Studio 中的簡介。  
   
-完成本課程的估計時間：**10 分鐘**  
+估計的時間才能完成這一課：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件
 
@@ -41,13 +41,13 @@ ms.locfileid: "57685215"
   
     根據預設，**方案名稱**等同於專案名稱; 不過，您可以輸入不同的解決方案名稱。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
 5.  在 **表格式模型設計師**對話方塊中，選取**整合式工作區**。  
   
     工作區會裝載與專案同名的表格式模型資料庫，在模型製作期間。 整合式工作區意味著 Visual Studio 會使用內建的執行個體，不需要安裝個別的 Analysis Services 伺服器執行個體，只為了撰寫模型。
       
-6.  在 **相容性層級**，選取**SQL Server 2017 / Azure Analysis Services (1400)**。   
+6.  在 **相容性層級**，選取**SQL Server 2017 / Azure Analysis Services (1400)** 。   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       

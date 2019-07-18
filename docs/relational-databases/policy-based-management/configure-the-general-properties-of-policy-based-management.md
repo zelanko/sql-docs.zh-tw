@@ -15,12 +15,12 @@ ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: afd93dd5543d515c6dc77548f5a9f70542af9ea1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: edd786253bb39d947671757f82b240f6d7c5022f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512470"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582532"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>設定原則式管理的一般屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "51512470"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目設定原則式管理：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -42,18 +42,18 @@ ms.locfileid: "51512470"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>設定以原則為基礎的管理  
   
-1.  在物件總管中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
+1.  在物件總管  中，按一下加號，展開您想要設定原則式管理屬性的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理]，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下 [原則管理]  ，然後選取 [屬性]  。  
   
      **[原則管理屬性]** 對話方塊有下列選項。  
   
@@ -70,17 +70,19 @@ ms.locfileid: "51512470"
   
     -   當這個值為 true 時，成功和失敗的原則評估都會記錄下來。  
   
-4.  完成後，請按一下 **[確定]**。  
-  
+4.  完成後，請按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>設定以原則為基礎的管理  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- enables Policy-Based Management   

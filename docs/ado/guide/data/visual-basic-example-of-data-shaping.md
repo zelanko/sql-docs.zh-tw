@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923500"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 的資料成形範例
 ```  

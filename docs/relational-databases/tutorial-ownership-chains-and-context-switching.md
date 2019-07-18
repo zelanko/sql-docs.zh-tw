@@ -1,5 +1,5 @@
 ---
-title: 教學課程：擁有權鏈結和內容切換 | Microsoft 文件
+title: 教學課程：擁有權鏈結和內容切換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74c768c55058f2ec17fb569c934317f550d13bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22851b6b515d50ce9a68c4323729b1b838b5e281
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657192"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581465"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>教學課程：擁有權鏈結和環境切換
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 這個教學課程利用案例來說明涉及擁有權鏈結和使用者內容切換的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念。  
   
@@ -40,7 +40,9 @@ ms.locfileid: "47657192"
 2.  建立預存程序用於存取訂單資料。   
 3.  透過預存程序存取資料。  
 4.  重設環境。  
-  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。
 
 ## <a name="prerequisites"></a>Prerequisites

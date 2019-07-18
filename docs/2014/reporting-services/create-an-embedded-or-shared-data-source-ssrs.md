@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff7f9c94aded21d70ea4b6ef6b31d2f8094f2592
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109661"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>建立內嵌或共用資料來源 (SSRS)
   報表資料來源會指定名稱及連接資訊。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援兩種類型的資料來源：內嵌和共用。 內嵌資料來源是定義在報表定義中，而且只能供該報表使用。 共用資料來源會定義成個別的項目，而且可以供多個報表使用。 如需詳細資訊，請參閱 <<c0> [ 內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。</c0>  
@@ -34,16 +33,16 @@ ms.locfileid: "56289806"
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>建立內嵌或共用資料來源  
   
-1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]** 。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
     > [!NOTE]  
-    >  如果看不到 [報表資料] 窗格，請按一下 [檢視] 功能表上的 [報表資料]。  
+    >  如果看不到 [報表資料] 窗格，請按一下 [檢視]  功能表上的 [報表資料]  。  
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱或接受預設值。 資料來源名稱是在報表內部使用。 為了清楚起見，我們建議資料來源的名稱要包含連接字串中所指定的資料庫名稱。  
   
 3.  內嵌的資料來源，請確認**內嵌連接**已選取。  
   
-    1.  從 [類型] 下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server] 或 [OLE DB]。  
+    1.  從 [類型]  下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server]  或 [OLE DB]  。  
   
     2.  使用以下其中一個替代方式指定連接字串：  
   
@@ -57,7 +56,7 @@ ms.locfileid: "56289806"
   
 4.  共用的資料來源，請確認**使用共用資料來源參考**已選取。  
   
-    1.  按一下 **[新增]**。 在 [共用資料來源] 屬性對話方塊中，遵循步驟 2 和 3 來建立新的資料來源。  
+    1.  按一下 **[新增]** 。 在 [共用資料來源]  屬性對話方塊中，遵循步驟 2 和 3 來建立新的資料來源。  
   
     2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -69,9 +68,9 @@ ms.locfileid: "56289806"
   
 ### <a name="to-import-an-existing-data-source-in-report-designer"></a>若要在報表設計師中匯入現有的資料來源  
   
-1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源] 資料夾，然後按一下 [加入現有項目]。 [新增現有項目] 對話方塊隨即開啟。  
+1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源]  資料夾，然後按一下 [加入現有項目]  。 [新增現有項目]  對話方塊隨即開啟。  
   
-2.  巡覽至現有的報表定義共用資料來源 (rds) 檔案，然後按一下 [開啟]。  
+2.  巡覽至現有的報表定義共用資料來源 (rds) 檔案，然後按一下 [開啟]  。  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

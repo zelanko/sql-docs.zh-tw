@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997576"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|伺服器|**sysname**|本機伺服器上定義之遠端伺服器的名稱。|  
+|server|**sysname**|本機伺服器上定義之遠端伺服器的名稱。|  
 |local_user_name|**sysname**|來自伺服器的遠端登入所對應之本機伺服器的登入。|  
 |remote_user_name|**sysname**|對應至 local_user_name 遠端伺服器上的登入。|  
 |選項|**sysname**|信任 = 從遠端伺服器連接到本機伺服器時，遠端登入無需提供密碼。<br /><br /> 未受信任 (或空白) = 從遠端伺服器連接到本機伺服器時，會提示遠端登入輸入密碼。|  
@@ -85,7 +84,7 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addremotelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   

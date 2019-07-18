@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
@@ -24,12 +23,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47bb42b4709c7978c9319e0021bac4d188d29fab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086505"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>資料採礦演算法 (SQL Server 資料採礦增益集)
   適用於 Office 的資料採礦增益集支援使用下列資料採礦演算法建立分析模型。 所有的演算法都是根據已知的機器學習方法而由 Microsoft Research 實作過。  
@@ -56,7 +55,7 @@ ms.locfileid: "53371560"
   
 -   使用 **[資料採礦查詢]** 精靈建立模型。  
   
--   在 **[資料採礦用戶端]** 中啟動精靈之後，按一下 **[參數]**。  
+-   在 **[資料採礦用戶端]** 中啟動精靈之後，按一下 **[參數]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -20,12 +19,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9d3dd4e9da0445f966e9e46013f0b7cd4998190
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083943"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
@@ -45,7 +44,7 @@ ms.locfileid: "52518048"
  所有 Analysis Services 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在羅吉斯迴歸模型中，特徵選取所使用的方法取決於屬性的資料類型。 羅吉斯迴歸是以 Microsoft 類神經網路演算法為基礎，因此，它會使用適用於類神經網路的特徵選取方法子集。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
 ### <a name="scoring-inputs"></a>計分輸入  
- 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值的差異的每個輸入的重要性。  
+ 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」  表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值的差異的每個輸入的重要性。  
   
  對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入會調整為數值的格式使用 z-score 正規化方法，(x-μ） / 標準差。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "52518048"
   
  Μ = p-（狀態的優先機率）  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  值會出現：   (1-μ)/σ / / (1 減平均值) 除以標準差)  
   
@@ -85,7 +84,7 @@ WHERE NODE_TYPE = 23
   
  針對每個輸出值，此查詢會傳回係數以及指回相關輸入節點的識別碼。 它也會傳回包含輸出值與截距的資料列。 每個輸入 X 都有自己的係數 (Ci)，但巢狀的資料表也包含 「 可用 」 係數 (Co)，根據下列公式計算：  
   
- F （x) = X1 * C1 + X2\*C2 + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Activation: exp(F(X)) / (1 + exp(F(X)) )  
   

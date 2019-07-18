@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207026"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
   此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例會使用四個新的日期和時間類型 (`date`，**時間**， `datetime2`，和`datetimeoffset`) 來執行具有參數的命令，並擷取資料列集結果。  

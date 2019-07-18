@@ -2,19 +2,18 @@
 title: 備份與還原-Parallel Data Warehouse |Microsoft Docs
 description: 說明資料如何備份及還原的運作方式的 Parallel Data Warehouse (PDW)。 備份和還原作業會用於災害復原。 備份與還原也可用來將資料庫從一個應用裝置複製到另一個應用裝置。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961406"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
@@ -120,7 +119,7 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
   
 5.  每個計算節點還原它的使用者資料庫的部分。 如果還原的任何未完成成功，所有資料庫中移除，並還原未順利完成。  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>還原至具有大量的計算節點的應用裝置  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>還原至具有較多計算節點的設備  
   
 將備份還原至具有較多計算節點的應用裝置時，會讓已配置的資料庫大小依計算節點數目比例成長。  
   

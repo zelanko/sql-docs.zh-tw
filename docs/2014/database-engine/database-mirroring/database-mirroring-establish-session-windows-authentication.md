@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755513"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 驗證建立資料庫鏡像工作階段 (Transact-SQL)
     
@@ -42,9 +42,9 @@ ms.locfileid: "54135523"
      資料庫鏡像工作階段中的每個伺服器執行個體都需要一個資料庫鏡像端點。 如果端點不存在，您就必須自行建立。  
   
     > [!NOTE]  
-    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 兩種類型的傳輸安全性可供資料庫鏡像：Windows 驗證或憑證式驗證。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
+    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 有兩種傳輸安全性可用於資料庫鏡像：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
   
-     確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 若要讓資料庫鏡像工作階段的夥伴獨佔使用此伺服器執行個體，您可以將夥伴的角色指派給端點 (ROLE**=** PARTNER)。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
+     確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 若要讓資料庫鏡像工作階段的夥伴獨佔使用此伺服器執行個體，您可以將夥伴的角色指派給端點 (ROLE **=** PARTNER)。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
   
      若要執行 SET PARTNER 陳述式，兩個夥伴的端點狀態 (STATE) 必須都設為 STARTED。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54135523"
     ```  
   
     > [!IMPORTANT]  
-    >  請不要重新設定使用中資料庫鏡像端點。 若資料庫鏡像端點存在且已在使用中，我們建議您在該伺服器執行個體上為每個工作階段使用該端點。 卸除使用中端點可能會導致端點重新啟動，並中斷現有工作階段的連接，而這對於其他伺服器執行個體可能會是一項錯誤。 在具有自動容錯移轉的高安全性模式中，這點尤其重要，因為在這種模式中重新設定夥伴上的端點，可能會導致發生容錯移轉。 此外，如果已針對工作階段設定見證，則卸除資料庫鏡像端點可能會導致該工作階段的主體伺服器失去仲裁。若發生此情況，則資料庫會離線，並中斷與資料庫使用者的的連線。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  請不要重新設定使用中資料庫鏡像端點。 若資料庫鏡像端點存在且已在使用中，我們建議您在該伺服器執行個體上為每個工作階段使用該端點。 卸除使用中端點可能會導致端點重新啟動，並中斷現有工作階段的連接，而這對於其他伺服器執行個體可能會是一項錯誤。 在具有自動容錯移轉的高安全性模式中，這點尤其重要，因為在這種模式中重新設定夥伴上的端點，可能會導致發生容錯移轉。 此外，如果已針對工作階段設定見證，則卸除資料庫鏡像端點可能會導致該工作階段的主體伺服器失去仲裁。若發生此情況，則資料庫會離線，並中斷與資料庫使用者的的連線。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
      如果任一夥伴缺少端點，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
@@ -63,15 +63,15 @@ ms.locfileid: "54135523"
   
 4.  若要設定主體伺服器做為鏡像資料庫上的夥伴，請連接到該鏡像伺服器，並執行以下陳述式：  
   
-     ALTER DATABASE <資料庫名稱> SET PARTNER **=**<伺服器網路位址>  
+     ALTER DATABASE <資料庫名稱>  SET PARTNER **=** <伺服器網路位址>   
   
-     其中 <資料庫名稱> 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 <伺服器網路位址> 是主體伺服器的伺服器網路位址。  
+     其中 <資料庫名稱>  是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 <伺服器網路位址>  是主體伺服器的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
-     TCP<strong>://</strong>\<*系統位址>*<strong>:</strong>\<*通訊埠>*  
+     TCP<strong>://</strong>\<*系統位址>* <strong>:</strong>\<*通訊埠>*  
   
-     其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<系統位址>  是清楚識別目的地電腦系統的字串，\<通訊埠>  是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在鏡像伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始主體伺服器執行個體。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER1 (夥伴系統的名稱)，而夥伴資料庫鏡像端點使用的通訊埠是 7022：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54135523"
   
 5.  若要設定鏡像伺服器做為主體資料庫上的夥伴，請連接到該主體伺服器，並發出以下陳述式：  
   
-     ALTER DATABASE <資料庫名稱> SET PARTNER **=**<伺服器網路位址>  
+     ALTER DATABASE <資料庫名稱>  SET PARTNER **=** <伺服器網路位址>   
   
      如需詳細資訊，請參閱步驟 4。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54135523"
          或者，如果您不想進行自動容錯移轉，而且較注重效能而非可用性，請關閉交易安全性。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
   
         > [!NOTE]  
-        >  在高效能模式中，必須將 WITNESS 設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+        >  在高效能模式中，必須將 WITNESS 設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ## <a name="example"></a>範例  
   

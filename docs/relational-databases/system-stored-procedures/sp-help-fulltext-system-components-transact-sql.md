@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055056"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -107,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 判斷特定的斷詞工具是否已註冊  
- 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱， **@component_type**並**@param**。  
+ 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱， **@component_type** 並 **@param** 。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

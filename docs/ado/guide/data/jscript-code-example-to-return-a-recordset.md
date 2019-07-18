@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2dc86d8f454b67c00073508a4ed6d7e8fc0d033e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924924"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>可傳回資料錄集的 JScript 程式碼範例
 ## <a name="jscript-code-rsjs"></a>JScript 程式碼 (rs.js)  

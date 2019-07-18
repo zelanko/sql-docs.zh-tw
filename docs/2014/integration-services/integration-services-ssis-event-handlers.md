@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767716"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
@@ -49,7 +49,7 @@ ms.locfileid: "58384886"
   
  ![事件處理常式流程](media/mw-dts-eventhandlers.gif "事件處理常式流程")  
   
- 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管] 索引標籤上的 [事件處理常式] 資料夾中，查看事件處理常式集合的成員。  
+ 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管]  索引標籤上的 [事件處理常式]  資料夾中，查看事件處理常式集合的成員。  
   
  您可以利用下列方式設定事件處理常式容器：  
   
@@ -64,14 +64,14 @@ ms.locfileid: "58384886"
 -   指定事件處理常式使用的記錄模式。  
   
 ## <a name="event-handler-content"></a>事件處理常式內容  
- 建立事件處理常式與建立封裝相似；事件處理常式具有工作和容器，它們會循序進入控制流程，並且事件處理常式還可以包含資料流程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師包含 [事件處理常式] 索引標籤，用以建立自訂事件處理常式。 如需詳細資訊，請參閱 < [SSIS 封裝事件處理常式](integration-services-ssis-event-handlers.md)。  
+ 建立事件處理常式與建立封裝相似；事件處理常式具有工作和容器，它們會循序進入控制流程，並且事件處理常式還可以包含資料流程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師包含 [事件處理常式]  索引標籤，用以建立自訂事件處理常式。 如需詳細資訊，請參閱 < [SSIS 封裝事件處理常式](integration-services-ssis-event-handlers.md)。  
   
  您還可以程式設計方式建立事件處理常式。 如需詳細資訊，請參閱[以程式設計方式處理事件](building-packages-programmatically/handling-events-programmatically.md)。  
   
 ## <a name="run-time-events"></a>執行階段事件  
  下表列出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的事件處理常式，並描述引發事件處理常式執行的執行階段事件。  
   
-|事件處理常式|事件|  
+|事件處理常式|Event - 事件|  
 |-------------------|-----------|  
 |`OnError`|事件處理常式，如`OnError`事件。 當發生錯誤時，可執行檔會引發此事件。|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** 事件的事件處理常式。 當可執行檔的執行狀態變更時，它會引發此事件。|  
@@ -87,7 +87,7 @@ ms.locfileid: "58384886"
 |**OnWarning**|**OnWarning** 事件的事件處理常式。 當發生警告時，可執行檔會引發此事件。|  
   
 ## <a name="configuration-of-an-event-handler"></a>設定事件處理常式  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或以程式設計方式設定屬性。  
   
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)。  
   

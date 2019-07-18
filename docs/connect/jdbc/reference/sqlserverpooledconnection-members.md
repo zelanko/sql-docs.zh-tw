@@ -1,5 +1,5 @@
 ---
-title: SQLServerPooledConnection 成員 |Microsoft Docs
+title: SQLServerPooledConnection 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad4ee3752b321803b4d2c3e05bbf317775e859e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cfa525dd700ae5baf653278de1d4fe11af5287ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803014"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47695842"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|註冊指定的事件接聽程式，如此一來，當這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件上發生事件時，它就可以收到通知。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|關閉這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件所代表的實體連接。|  

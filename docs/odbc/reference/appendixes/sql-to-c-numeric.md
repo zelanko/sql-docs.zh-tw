@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c:Numeric | Microsoft Docs
+title: SQL 轉換為 C：數值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9abd536110222f8e30a781b6d648402335837f61
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a23e60b161c09367cfb079cea1f7ca146b4ebee5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056855"
 ---
-# <a name="sql-to-c-numeric"></a>SQL 到 c:數值
+# <a name="sql-to-c-numeric"></a>SQL 轉換為 C：Numeric
 
 數字的 ODBC SQL 資料類型的識別碼，如下所示：
 
@@ -39,13 +38,13 @@ ms.locfileid: "54420003"
 
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|字元的位元組長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字元長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|資料<br /><br /> 截斷的資料<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|資料轉換，而不會截斷 [a]<br /><br /> 資料轉換與截斷的小數數字 [a]<br /><br /> 資料轉換會導致遺失的 （相對於小數） 的整數位數 [a]|資料<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|資料範圍內的數值轉換的資料類型是 [a]<br /><br /> 資料超出範圍的數值轉換的資料類型是 [a]|資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_BIT|資料是 0 或 1，[a]<br /><br /> 資料是大於 0，小於 2，且不等於 1，[a]<br /><br /> 資料是小於 0 或大於或等於 2，[a]|資料<br /><br /> 截斷的資料<br /><br /> 未定義|1[b]<br /><br /> 1[b]<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 未定義|資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH[c] SQL_C_INTERVAL_YEAR[c] SQL_C_INTERVAL_DAY[c] SQL_C_INTERVAL_HOUR[c] SQL_C_INTERVAL_MINUTE[c] SQL_C_INTERVAL_SECOND[c]|不會被截斷的資料<br /><br /> 截斷的小數秒部分<br /><br /> 截斷的數字的整數部分|資料<br /><br /> 截斷的資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_CHAR|字元的位元組長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|Data<br /><br /> 截斷的資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字元長度 < *Columnsize*<br /><br /> （相對於小數） 的整數位數 < *Columnsize*<br /><br /> 整體 （而不是小數） 數 > = *Columnsize*|Data<br /><br /> 截斷的資料<br /><br /> 未定義|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|資料轉換，而不會截斷 [a]<br /><br /> 資料轉換與截斷的小數數字 [a]<br /><br /> 資料轉換會導致遺失的 （相對於小數） 的整數位數 [a]|Data<br /><br /> 截斷的資料<br /><br /> 未定義|C 資料類型的大小<br /><br /> C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|資料範圍內的數值轉換的資料類型是 [a]<br /><br /> 資料超出範圍的數值轉換的資料類型是 [a]|Data<br /><br /> 未定義|C 資料類型的大小<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_BIT|資料是 0 或 1，[a]<br /><br /> 資料是大於 0，小於 2，且不等於 1，[a]<br /><br /> 資料是小於 0 或大於或等於 2，[a]|Data<br /><br /> 截斷的資料<br /><br /> 未定義|1[b]<br /><br /> 1[b]<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|Data<br /><br /> 未定義|資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH[c] SQL_C_INTERVAL_YEAR[c] SQL_C_INTERVAL_DAY[c] SQL_C_INTERVAL_HOUR[c] SQL_C_INTERVAL_MINUTE[c] SQL_C_INTERVAL_SECOND[c]|不會被截斷的資料<br /><br /> 截斷的小數秒部分<br /><br /> 截斷的數字的整數部分|Data<br /><br /> 截斷的資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01S07<br /><br /> 22015|  
 |SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|截斷的數字的整數部分|未定義|未定義|22015|  
   
  [a] 的值*Columnsize*會忽略這項轉換。 驅動程式會假設大小 **TargetValuePtr*是 C 資料類型的大小。  

@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035297"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 屬性 ([別名] 索引標籤)
-  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)] 對話方塊的 [別名] 頁面來指定別名的連接字串元素。  
+  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)]   對話方塊的 [別名]  頁面來指定別名的連接字串元素。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **別名名稱**  
  您想要用來代表這個連接的名稱 (別名)。  
   

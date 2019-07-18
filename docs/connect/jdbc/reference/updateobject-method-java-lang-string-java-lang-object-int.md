@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10959976eb6c3c9908d7f5953a8a2edb1c1328c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: caad7bed9eab964193f0c5ec6734a1dc097b26ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654908"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761531"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 方法 (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

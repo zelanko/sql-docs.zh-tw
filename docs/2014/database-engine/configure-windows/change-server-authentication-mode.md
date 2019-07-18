@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641153"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812294"
 ---
 # <a name="change-server-authentication-mode"></a>變更伺服器驗證模式
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的伺服器驗證模式。 在安裝期間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會設為 **[Windows 驗證模式]** 或 **[SQL Server 及 Windows 驗證模式]**。 安裝後，您可以隨時變更驗證模式。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的伺服器驗證模式。 在安裝期間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會設為 **[Windows 驗證模式]** 或 **[SQL Server 及 Windows 驗證模式]** 。 安裝後，您可以隨時變更驗證模式。  
   
- 如果您在安裝期間選取 [Windows 驗證模式]，sa 登入便會停用，且安裝程式會指派密碼。 即使稍後將驗證模式改成 [SQL Server 及 Windows 驗證模式]，sa 登入也會保持停用狀態。 若要使用 sa 登入，請使用 ALTER LOGIN 陳述式啟用 sa 登入並指派新密碼。 sa 登入只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到伺服器。  
+ 如果您在安裝期間選取 [Windows 驗證模式]  ，sa 登入便會停用，且安裝程式會指派密碼。 即使稍後將驗證模式改成 [SQL Server 及 Windows 驗證模式]  ，sa 登入也會保持停用狀態。 若要使用 sa 登入，請使用 ALTER LOGIN 陳述式啟用 sa 登入並指派新密碼。 sa 登入只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到伺服器。  
   
  **本主題內容**  
   
@@ -48,13 +48,13 @@ ms.locfileid: "52641153"
   
 #### <a name="to-change-security-authentication-mode"></a>變更安全性驗證模式  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
-2.  在 **[安全性]** 頁面上的 **[伺服器驗證]** 中，選取新的伺服器驗證模式，然後按一下 **[確定]**。  
+2.  在 **[安全性]** 頁面上的 **[伺服器驗證]** 中，選取新的伺服器驗證模式，然後按一下 **[確定]** 。  
   
 3.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊中，按一下 **[確定]** 以確認需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-4.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [重新啟動]。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。  
+4.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [重新啟動]  。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行，也必須將它重新啟動。  
   
 #### <a name="to-enable-the-sa-login"></a>若要啟用 sa 登入  
   
@@ -62,16 +62,16 @@ ms.locfileid: "52641153"
   
 2.  在 **[一般]** 頁面上，您可能需要為登入建立並確認密碼。  
   
-3.  在 **[狀態]** 頁面的 **[登入]** 區段中按一下 **[已啟用]**，然後按一下 **[確定]**。  
+3.  在 **[狀態]** 頁面的 **[登入]** 區段中按一下 **[已啟用]** ，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要啟用 sa 登入**  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 下列範例會啟用 sa 登入並設定新密碼。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會啟用 sa 登入並設定新密碼。  
   
     ```  
     ALTER LOGIN sa ENABLE ;  

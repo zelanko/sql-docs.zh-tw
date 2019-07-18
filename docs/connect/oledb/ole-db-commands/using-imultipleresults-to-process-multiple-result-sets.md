@@ -15,13 +15,13 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d5ea43d5607dc999bfbcc85d821167c6cdd8ae96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a8a2b76946245021683f3224f67070dce04c3ed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768593"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>使用 IMultipleResults 來處理多個結果集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

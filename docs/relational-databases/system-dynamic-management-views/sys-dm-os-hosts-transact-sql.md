@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43083d569ca8f06571ce52445b2a2d9c2bb6178e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794c8834f429d84eea94ad331401e84253c28c93
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837926"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265832"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47837926"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|主物件的內部記憶體位址。|  
-|**type**|**nvarchar(60)**|主控的元件類型。 例如，<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server Native Interface<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 提供者<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access Run Time|  
+|**type**|**nvarchar(60)**|主控的元件類型。 例如，套用至物件的<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server Native Interface<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 提供者<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access Run Time|  
 |**name**|**nvarchar(32)**|主機的名稱。|  
 |**enqueued_tasks_count**|**int**|這個主機置於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之佇列的工作總數。|  
 |**active_tasks_count**|**int**|這個主機置於佇列中而目前正在執行的工作總數。|  
@@ -50,7 +49,7 @@ ms.locfileid: "47837926"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
 
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許不屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔一部分的元件 (例如 OLE DB 提供者) 配置記憶體，以及參與非先佔式排程。 這些元件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主控，並且這些元件所配置的所有資源都會進行追蹤。 主控可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更有效地管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔之外部元件所使用的資源。  
@@ -59,8 +58,8 @@ ms.locfileid: "47837926"
   
 |來源|若要|關聯性|  
 |----------|--------|------------------|  
-|sys.dm_os_hosts.  default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一對一|  
-|sys.dm_os_hosts.  host_address|sys.dm_os_memory_clerks. host_address|一對一|  
+|sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|一對一|  
+|sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|一對一|  
   
 ## <a name="examples"></a>範例  
  下列範例會判斷由主控元件認可的記憶體總數。  

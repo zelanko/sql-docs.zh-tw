@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField |Microsoft Docs
+title: SQLGetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353001"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62657777"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會公開實作資料列描述項 (IRD) 只的驅動程式專屬描述項欄位。 在 IRD 內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]描述項欄位會透過驅動程式特有的資料行屬性來參考。 可用的驅動程式專屬描述項欄位的完整清單的相關資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  

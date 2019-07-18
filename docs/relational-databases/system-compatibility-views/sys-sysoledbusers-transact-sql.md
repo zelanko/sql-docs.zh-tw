@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 71d04ef07053eb893a98d654424eb49b61f0c7e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076528"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

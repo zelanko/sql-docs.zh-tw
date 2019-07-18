@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db00ac11e2e3ec8cc0119dfa7f34452409689d6d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 84161501d3d705ef60559340502ee702e7c28437
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056887"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL 到 C 資料轉換範例
 

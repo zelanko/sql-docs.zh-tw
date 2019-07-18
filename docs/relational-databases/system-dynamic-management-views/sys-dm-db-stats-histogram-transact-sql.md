@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d65d8686dcb5651e19a2e18fec4f0e82e51402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096247"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *@object_id* 是 **int**。  
+ 這是目前資料庫中，要求其中一個統計資料屬性之物件的識別碼。 *object_id* 是 **int**。  
   
  *stats_id*  
  這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  

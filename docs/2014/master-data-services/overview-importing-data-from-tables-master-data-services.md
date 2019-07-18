@@ -11,15 +11,15 @@ helpviewer_keywords:
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479007"
 ---
 # <a name="data-import-master-data-services"></a>資料匯入 (Master Data Services)
   為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的資料建立模型之後，即可開始加入資料，並對 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  

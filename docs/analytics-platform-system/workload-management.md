@@ -2,19 +2,18 @@
 title: Analytics Platform System 中的工作負載管理 |Microsoft Docs
 description: Analytics Platform System 中的工作負載管理。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959742"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938851"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 屬性
 指出目前的值[欄位](../../../ado/reference/ado-api/field-object.md)資料庫中的物件。  

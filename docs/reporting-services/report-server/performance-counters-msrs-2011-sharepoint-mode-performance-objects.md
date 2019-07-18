@@ -1,8 +1,8 @@
 ---
 title: 效能計數器 MSRS 2011 SharePoint 模式效能物件 | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 1818d38ef9d877ef30e74ad95d7893bf197ae23a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529506"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412673"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
   本主題描述屬於 **SharePoint 模式部署一部分之** MSRS 2011 Web 服務 SharePoint 模式 **和** MSRS 2011 Windows 服務 SharePoint 模式 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  
@@ -28,7 +29,7 @@ ms.locfileid: "52529506"
 > [!NOTE]  
 >  此效能物件會監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  如需效能計數器和原生模式報表伺服器的資訊，請參閱 [MSRS 2011 Web Service 和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) 和 [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 (SharePoint 模式)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   

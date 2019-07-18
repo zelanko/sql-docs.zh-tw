@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 了解如何建立可用性群組叢集 SQL Server 在 SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003555"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -123,7 +122,7 @@ ms.locfileid: "58658092"
 
    b. 輸入多點傳送的位址。 指令碼建議為預設值，您可以使用隨機位址。 
 
-   c.  輸入多點傳送連接埠。 指令碼建議 5405 為預設值。 
+   c. 輸入多點傳送連接埠。 指令碼建議 5405 為預設值。 
 
    d. 若要設定`SBD ()`，輸入您想要使用 SBD 的區塊裝置的分割區的持續性的路徑。 在叢集中的所有節點之間必須一致的路徑。 
    最後，指令碼會啟動 Pacemaker 服務，若要讓單一節點叢集上線，並啟用 Web 管理介面 Hawk2。 要用於 Hawk2 URL 會顯示在螢幕上。 

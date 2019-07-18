@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ae12ee7c40fe72e78bde2602177f741093a83c4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183041"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "57579568"
  所有 Analysis Services 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在羅吉斯迴歸模型中，特徵選取所使用的方法取決於屬性的資料類型。 羅吉斯迴歸是以 Microsoft 類神經網路演算法為基礎，因此，它會使用適用於類神經網路的特徵選取方法子集。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)。  
   
 ### <a name="scoring-inputs"></a>計分輸入  
- 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 這個轉換程序可讓您比較每個輸入的重要性，無論這些值的差異為何。  
+ 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」  表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 這個轉換程序可讓您比較每個輸入的重要性，無論這些值的差異為何。  
   
  對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入都會使用 z-score 正規化方法 `(x - μ)\StdDev`來調整為數值格式。  
   
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態： **遺漏**並**現有**。 Null 為遺漏值。  
+ 表示資料行都會被視為擁有兩個可能狀態：**遺漏**並**現有**。 Null 為遺漏值。  
   
  適用於採礦模型資料行。  
   

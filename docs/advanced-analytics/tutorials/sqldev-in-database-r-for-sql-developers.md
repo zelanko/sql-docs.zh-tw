@@ -3,24 +3,23 @@ title: 使用 R-SQL Server 機器學習服務的資料庫內分析的教學課�
 description: 了解如何內嵌 R 程式設計語言中 SQL Server 預存程序和 T-SQL 函式的程式碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961896"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 R 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本教學課程中的 SQL 程式設計人員，透過建置和部署 R 為基礎的機器學習解決方案使用了解 R 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 您將使用 T-SQL、 SQL Server Management Studio，並使用 [機器學習服務] 的資料庫引擎執行個體 ([Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)和 R 語言支援
 
-本教學課程會向您介紹的資料模型化工作流程中使用的 R 函數。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您將建置此模型會預測一趟車程是否可能會造成提示，根據的時間、 歷經一段，距離和上車位置中。 
+本教學課程會向您介紹的資料模型化工作流程中使用的 R 函數。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您將建置此模型會預測一趟車程是否有可能導致提示，根據日期、 運動，距離和上車位置的時間。 
 
 在本教學課程中使用的 R 程式碼的所有包裝在您建立和在 Management Studio 中執行的預存程序。
 
@@ -55,7 +54,7 @@ ms.locfileid: "58511215"
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)或[SQL Server 2017 Machine Learning 服務以啟用 R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R 程式庫](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [R 程式庫](../package-management/installed-package-information.md)
 
 + [Permissions](../security/user-permission.md)
 

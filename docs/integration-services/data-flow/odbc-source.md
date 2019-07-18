@@ -16,14 +16,18 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8a0bef11a16b939c4d169a3b2ee967d6b374f2eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726616"
 ---
 # <a name="odbc-source"></a>ODBC 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
   
  ODBC 來源有下列資料存取模式可供擷取資料：  
@@ -53,9 +57,9 @@ ms.locfileid: "58289834"
  如需有關 ODBC 來源支援之資料類型的資訊，請參閱＜Connector for Open Database Connectivity (ODBC)＞。  
   
 ## <a name="extract-options"></a>擷取選項  
- ODBC 來源以 [批次] 或 [逐列] 模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
+ ODBC 來源以 [批次]  或 [逐列]  模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
   
--   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的擷取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
+-   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的擷取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
 -   **逐列**：元件會使用 SQLFetch，一次擷取一個資料列。  
   
@@ -76,7 +80,7 @@ ms.locfileid: "58289834"
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 ODBC 來源，然後選取 **[顯示進階編輯器]**。  
+-   在 **專案的** [資料流程] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 ODBC 來源，然後選取 **[顯示進階編輯器]** 。  
   
  如需有關可在 [進階編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱＜ [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)＞。  
   
@@ -94,7 +98,7 @@ ms.locfileid: "58289834"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤上，按兩下 ODBC 來源。  
+-   在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
   
 ### <a name="options"></a>選項。  
   
@@ -102,7 +106,7 @@ ms.locfileid: "58289834"
  從清單中選取現有的 ODBC 連接管理員，或按一下 **[新增]** 建立新的連接。 此連接可以指向任何 ODBC 支援的資料庫。  
   
 #### <a name="new"></a>新增  
- 按一下 **[新增]**。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的 ODBC 連接管理員。  
+ 按一下 **[新增]** 。 **[設定 ODBC 連接管理員編輯器]** 對話方塊隨即開啟，讓您能夠建立新的 ODBC 連接管理員。  
   
 #### <a name="data-access-mode"></a>資料存取模式  
  選取從來源中選取資料的方法。 下表將顯示這些選項：  
@@ -121,16 +125,16 @@ ms.locfileid: "58289834"
  按一下 **[預覽]** ，最多可檢視從所選取之資料表或檢視表中擷取的前 200 個資料列。  
   
 ## <a name="odbc-source-editor-columns-page"></a>ODBC 來源編輯器 (資料行頁面)
-  使用 [ODBC 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [ODBC 來源編輯器]  對話方塊的 [資料行]  頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
   
 ### <a name="task-list"></a>工作清單  
  **若要開啟 ODBC 來源編輯器的資料行頁面**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ODBC 來源。  
+2.  在 [資料流程]  索引標籤中，按兩下 ODBC 來源。  
   
-3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]**。  
+3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]** 。  
   
 ### <a name="options"></a>選項。  
   
@@ -153,9 +157,9 @@ ms.locfileid: "58289834"
   
 -   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟具有 ODBC 來源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
--   在 [資料流程] 索引標籤上，按兩下 ODBC 來源。  
+-   在 [資料流程]  索引標籤上，按兩下 ODBC 來源。  
   
--   在 **[ODBC 來源編輯器]** 中，按一下 **[錯誤輸出]**。  
+-   在 **[ODBC 來源編輯器]** 中，按一下 **[錯誤輸出]** 。  
   
 ### <a name="options"></a>選項。  
   

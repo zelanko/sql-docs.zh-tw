@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012759"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62745539"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>在結構資料上使用鑽研 (基本資料採礦教學課程)
   做為其廣告宣傳活動中，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]傳送郵件給潛在客戶在 34 到 40 歲人口統計。 行銷部門決定，他們也想要傳送郵件給五年以前曾經從 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 購買自行車的客戶。 在這一課，您將會識別擁有比較舊的自行車的客戶，並擷取他們的連絡資訊。 此資訊不包括在模型中，但是會包括在結構中。 若要擷取連絡資訊，您要先確定此結構已啟用鑽研，然後您將會使用鑽研來顯示目標客戶的姓名和地址。  
@@ -24,7 +24,7 @@ ms.locfileid: "56012759"
   
 1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，請在**Mining Models**  索引標籤的資料採礦設計師中，以滑鼠右鍵按一下**TM_Decision_Tree**模型，然後選取**屬性**。  
   
-2.  在 [屬性] 視窗中，按一下 **[AllowDrillThrough]**，然後選取 **[True]**。  
+2.  在 [屬性] 視窗中，按一下 **[AllowDrillThrough]** ，然後選取 **[True]** 。  
   
 3.  採礦模型索引標籤中，以滑鼠右鍵按一下模型，然後選取**處理序模型**。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "56012759"
   
 4.  從 **[檢視器]** 清單中，選取 [Microsoft 樹狀檢視器]。 這樣會強制檢視器重新整理並顯示新的篩選條件。 然後，找出**Age > = 34 和 < 41**節點並以滑鼠右鍵按一下節點。  
   
-5.  選取 **[鑽研]**，然後選取 **[模型和結構資料行]** ，開啟 **[鑽研]** 視窗。  
+5.  選取 **[鑽研]** ，然後選取 **[模型和結構資料行]** ，開啟 **[鑽研]** 視窗。  
   
 6.  捲動到 **[Structure.Date First Purchase]** 資料行，檢視較舊的自行車的購買日期。  
   
-7.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
+7.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]  。  
   
  恭喜！您已順利完成基本資料採礦教學課程。 現在您可以輕鬆地使用資料採礦工具，我們建議您最好也完成中繼資料採礦教學課程，其中會示範如何建立模型以供預測、購物籃分析和時序群集。  
   

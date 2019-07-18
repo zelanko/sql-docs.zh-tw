@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62836694"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
   在以程式設計方式建立新封裝或是修改現有封裝之後，通常會想要儲存變更。  

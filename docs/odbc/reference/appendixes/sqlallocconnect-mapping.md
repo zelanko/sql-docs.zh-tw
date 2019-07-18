@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdb63e9610d00c0736f640b6f4c4d743f3335c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65c23f41ea9176c460c8fb32ece5e74dfb803541
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065018"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect 對應
 當應用程式呼叫**SQLAllocConnect**透過 ODBC 3。*x*驅動程式，會呼叫**SQLAllocConnect**(*henv*， *phdbc*) 會對應至**SQLAllocHandle** ，如下所示：  

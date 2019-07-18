@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997771"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
 判斷如何比較不同長度的字串之間進行與 = Visual FoxPro SQL 命令中的運算子。  

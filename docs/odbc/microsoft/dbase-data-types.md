@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096456"
 ---
 # <a name="dbase-data-types"></a>dBASE 資料類型
 下表顯示 dBASE 資料類型如何對應至 ODBC SQL 資料類型。 請注意，並非所有的 ODBC SQL 資料類型所支援。  
@@ -32,7 +31,7 @@ ms.locfileid: "47626266"
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT [1]|SQL_DOUBLE|  
+|FLOAT[1]|SQL_DOUBLE|  
 |邏輯|SQL_BIT|  
 |附註|SQL_LONGVARCHAR|  
 |數值 (BCD)|SQL_DOUBLE|  

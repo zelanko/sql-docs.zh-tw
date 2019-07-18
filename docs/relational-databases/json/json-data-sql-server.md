@@ -1,7 +1,7 @@
 ---
 title: 使用 SQL Server 中的 JSON | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -13,16 +13,16 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82df7760fbcf82d6f9699a0adeb95036e64c946e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 442e349da7b8b21363e747910044cbbd537ffa0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65620618"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON 是種熱門的文字資料格式，用於在新式 Web 和行動應用程式中交換資料。 其也可用於將非結構化的資料儲存在記錄檔或是類似 Microsoft Azure Cosmos DB 的 NoSQL 資料庫中。 許多 REST Web 服務會傳回已格式化為 JSON 文字的結果，或接受已格式化為 JSON 的資料。 例如，大部分的 Azure 服務 (例如 Azure 搜尋服務、Azure 儲存體和 Azure Cosmos DB) 都具有傳回或取用 JSON 的 REST 端點。 JSON 也是用於透過 AJAX 呼叫在網頁和 Web 伺服器之間交換資料的主要格式。 
 
@@ -30,10 +30,10 @@ SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同�
 
 *NoSQL 與關聯式領域之間的橋樑 JSON*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-以下是 JSON 文字範例︰ 
- 
-```json 
+
+以下是 JSON 文字範例︰
+
+```json
 [{
     "name": "John",
     "skills": ["SQL", "C#", "Azure"]
@@ -41,7 +41,7 @@ SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同�
     "name": "Jane",
     "surname": "Doe"
 }]
-``` 
+```
  
 您可使用 SQL Server 內建函式和運算子，以 JSON 文字執行下列作業： 
  
@@ -125,7 +125,7 @@ FROM OPENJSON(@json)
   
 **結果**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -165,7 +165,7 @@ FROM OPENJSON(@json)
 
 **結果**  
   
-|id|firstName|lastName|age|dateOfBirth|skill|  
+|ID|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -175,6 +175,10 @@ FROM OPENJSON(@json)
 `OUTER APPLY OPENJSON` 會聯結第一個層級的實體和子陣列，並傳回壓平合併的結果集。 因為「聯結」的緣故，每個技能都會重複第二個資料列。
 
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>將 SQL Server 資料轉換為 JSON 或匯出 JSON
+
+>[!NOTE]
+>目前不支援將 Azure SQL 資料倉儲資料轉換成 JSON 或匯出 JSON。
+
 將 **FOR JSON** 子句加入至 **SELECT** 陳述式，以將 SQL Server 資料或 SQL 查詢結果格式化為 JSON。 使用 **FOR JSON** 將您用戶端應用程式的 JSON 輸出格式設定委派給 SQL Server。 如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
 下列範例示範搭配 **FOR JSON** 子句使用 PATH 模式：  
@@ -330,11 +334,11 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
   
 例如，您可能想要產生符合 OData 規格的 JSON 輸出。 Web 服務預期具備下列格式的要求和回應： 
   
--   要求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- 要求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   回應︰ `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- 回應︰ `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-此 OData URL 表示對於 `id` 1 的產品之 ProductID 和 ProductName 資料行的要求。 您可以使用 **FOR JSON**，以 SQL Server 的預期方式來格式化輸出。  
+此 OData URL 表示對於 `ID` 1 的產品之 ProductID 和 ProductName 資料行的要求。 您可以使用 **FOR JSON**，以 SQL Server 的預期方式來格式化輸出。  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'

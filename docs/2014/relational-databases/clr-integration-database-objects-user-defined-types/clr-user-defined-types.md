@@ -33,11 +33,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874443"
 ---
 # <a name="clr-user-defined-types"></a>CLR 使用者定義型別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的功能可讓您建立針對 .NET Framework Common Language Runtime (CLR) 中建立的組件來進行程式設計的資料庫物件。 資料庫物件可充分運用 CLR 所提供的豐富程式設計模型，包括觸發程序、預存程序、函數、彙總函式和類型等。  

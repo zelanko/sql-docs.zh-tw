@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.controlflowwindow.f1
@@ -13,12 +12,12 @@ ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86e2e1793693527ee96ea4057061ade98b70884d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060356"
 ---
 # <a name="control-flow-tab"></a>控制流程索引標籤
   使用 **設計師的** [控制流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -14,12 +13,12 @@ ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226984"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082685"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>檢視或變更演算法參數
   您可以變更演算法所提供的參數，您會使用該演算法來建立資料採礦模型，以自訂模型的結果。  
@@ -36,11 +35,11 @@ ms.locfileid: "48226984"
   
 -   指定模型建立所使用之內部鑑效組集合的初始值或大小。  
   
- 為每個演算法提供的參數會有很大的差異；如需您可以為每個演算法設定的參數清單，請參閱本節中的技術參考主題：[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。  
+ 提供給每個演算法的參數會有很大;如需您可以針對每個演算法設定參數的清單，請參閱這一節的技術參考主題：[資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。  
   
 ### <a name="change-an-algorithm-parameter"></a>變更演算法參數  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型] 索引標籤上，以滑鼠右鍵按一下您要微調演算法之採礦模型的演算法類型，並選取 [設定演算法參數]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師的 [採礦模型]  索引標籤上，以滑鼠右鍵按一下您要微調演算法之採礦模型的演算法類型，並選取 [設定演算法參數]  。  
   
      就會開啟 **[演算法參數]** 對話方塊。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48226984"
   
      如果您沒有在 **[值]** 資料行中輸入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用預設參數值。 **[範圍]** 資料行描述您可以輸入的可能值。  
   
-3.  按一下 [確定] 。  
+3.  按一下 [確定]  。  
   
      演算法參數就會以新值設定。 要等到您重新處理採礦模型之後，參數變更才會反映在該採礦模型中。  
   

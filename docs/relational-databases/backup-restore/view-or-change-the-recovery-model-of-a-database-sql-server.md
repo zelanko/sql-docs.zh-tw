@@ -1,7 +1,7 @@
 ---
 title: 檢視或變更資料庫的復原模式 (SQL Server) | Microsoft 文件
 ms.custom: ''
-ms.date: 08/05/2016
+ms.date: 05/10/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,21 +19,21 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: dae91654a04921340b043518d6d5cf3363ad6a1b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753508"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581781"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]檢視或變更資料庫。 
   
-  「復原模式」是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。 **model** 資料庫會設定新資料庫的預設復原模式。  
+  「復原模式」  是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。 **model** 資料庫會設定新資料庫的預設復原模式。  
   
-  如需 [復原模式](recovery-models-sql-server.md)的更深入說明，請參閱 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人員提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)(SQL Server 復原模式)。
+  如需更深入的解釋，請參閱[復原模式](recovery-models-sql-server.md)。
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -60,27 +60,29 @@ ms.locfileid: "50753508"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]，這會開啟 [資料庫屬性] 對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  ，這會開啟 [資料庫屬性]  對話方塊。  
   
-4.  在 **[選取頁面]** 窗格中，按一下 **[選項]**。  
+4.  在 **[選取頁面]** 窗格中，按一下 **[選項]** 。  
   
 5.  目前的復原模式會顯示在 **[復原模式]** 清單方塊中。  
   
-6.  或者，您可以從不同的模式清單中選取來變更復原模式。 這些選擇包括 [完整]、[大量記錄] 或 [簡單]。  
+6.  或者，您可以從不同的模式清單中選取來變更復原模式。 這些選擇包括 [完整]  、[大量記錄]  或 [簡單]  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>檢視復原模式  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視，以了解 **model** 資料庫的復原模式。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例示範如何查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視，以了解 **model** 資料庫的復原模式。  
   
 ```sql  
 SELECT name, recovery_model_desc  
@@ -94,16 +96,16 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 `model` ALTER DATABASE `FULL` 陳述式的 `SET RECOVERY` 選項，將 [資料庫的復原模式變更為](../../t-sql/statements/alter-database-transact-sql-set-options.md) 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例示範如何使用 `model` ALTER DATABASE `FULL` 陳述式的 `SET RECOVERY` 選項，將 [資料庫的復原模式變更為](../../t-sql/statements/alter-database-transact-sql-set-options.md) 。  
   
 ```sql  
 USE [master] ;  
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 建議：變更復原模式之後  
+##  <a name="FollowUp"></a> 建議：在您變更復原模式之後  
   
 -   **在完整模式與大量記錄復原模式之間切換之後**  
   

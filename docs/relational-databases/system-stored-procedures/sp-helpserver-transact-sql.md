@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (Transact-SQL) | Microsoft Docs
+title: sp_helpserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997440"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>引數  
 `[ @server = ] 'server'` 是了解哪種報告資訊的伺服器。 當*伺服器*未指定中的所有伺服器都在報導**master.sys.servers**。 *伺服器*已**sysname**，預設值是 NULL。  
   
-`[ @optname = ] 'option'` 會描述伺服器選項。 *選項*已**varchar (** 35 **)**，預設值是 NULL，而且必須是下列值之一。  
+`[ @optname = ] 'option'` 會描述伺服器選項。 *選項*已**varchar (** 35 **)** ，預設值是 NULL，而且必須是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -55,12 +54,12 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**延遲結構描述驗證**|在查詢開始時，略過遠端資料表的結構描述檢查。|  
 |**pub**|簽發者。|  
 |**rpc**|從指定伺服器啟用 RPC。|  
-|**rpc out**|啟用對指定伺服器的 RPC。|  
+|**rpc 輸出**|啟用對指定伺服器的 RPC。|  
 |**sub**|訂閱者。|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用遠端定序**|利用遠端資料行的定序來取代本機伺服器的定序。|  
   
-`[ @show_topology = ] 'show_topology'` 為指定的伺服器與其他伺服器的關聯性。 *show_topology*已**varchar (** 1 **)**，預設值是 NULL。 如果*show_topology*不等於**t**是 NULL，或**sp_helpserver**傳回結果集一節中列出的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
+`[ @show_topology = ] 'show_topology'` 為指定的伺服器與其他伺服器的關聯性。 *show_topology*已**varchar (** 1 **)** ，預設值是 NULL。 如果*show_topology*不等於**t**是 NULL，或**sp_helpserver**傳回結果集一節中列出的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)。  
@@ -105,12 +104,12 @@ EXEC sp_helpserver 'SEATTLE2';
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_dropserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   

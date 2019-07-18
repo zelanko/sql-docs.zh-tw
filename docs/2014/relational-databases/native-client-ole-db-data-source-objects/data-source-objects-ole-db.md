@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63130592"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 介面，可用來建立連結到資料存放區，例如一組使用資料來源這個詞[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 建立資料來源物件的提供者的執行個體是第一項工作的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 取用者。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 CLSID 為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者是 C/c + + GUID CLSID_SQLNCLI10 (sqlncli_clsid 符號將會正確解析您參考之 sqlncli.h 檔中的 progid)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是 C /C++ GUID CLSID_SQLNCLI10 (sqlncli_clsid 符號將會正確解析您參考之 sqlncli.h 檔中的 progid)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是同處理序伺服器。 執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者物件會建立使用 CLSCTX_INPROC_SERVER 巨集指示可執行檔的內容。  
   

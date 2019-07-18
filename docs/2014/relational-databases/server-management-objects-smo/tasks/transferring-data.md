@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62519174"
 ---
 # <a name="transferring-data"></a>傳送資料
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 類別是一種公用程式類別，可提供工具來傳送物件和資料。  

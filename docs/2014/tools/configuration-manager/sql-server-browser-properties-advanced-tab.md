@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a3eae5b89a0b4c07dcd32c8db454312879e581a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137618"
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>SQL Server Browser 屬性 (進階索引標籤)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 程式會以伺服器服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **叢集**  
  指出這項服務是否安裝為叢集伺服器的資源。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "52795510"
  在發生錯誤時放置記憶體傾印的位置。  
   
  **錯誤報告**  
- 若設定為 [是]，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。  
+ 若設定為 [是]  ，一旦發生嚴重錯誤，Dr. Watson 程式會將資訊轉送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或您的錯誤伺服器。 如需錯誤報表的詳細資訊，請搜尋《線上叢書》的＜錯誤報告和使用方式報告設定＞主題。  
   
  **執行個體識別碼**  
  指出使用此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 預設執行個體為 **MSSQL10_50.MSSQLSERVER**。  

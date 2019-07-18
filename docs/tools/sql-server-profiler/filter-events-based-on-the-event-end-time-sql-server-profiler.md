@@ -13,15 +13,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc27374ac2840f360af7863ca3b2a7676cc4a298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 587d557c7be978e5066dff42ba3ece04aaaf5b9d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664126"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731031"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>根據事件結束時間篩選事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,22 @@ ms.locfileid: "47664126"
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>若要根據事件結束時間篩選事件  
   
-1.  在 [檔案] 功能表上，按一下 [新增追蹤]，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+1.  在 [檔案]  功能表上，按一下 [新增追蹤]  ，接著連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
      會出現 [追蹤屬性] **[追蹤屬性]** 對話方塊。  
   
     > [!NOTE]  
-    >  如果選取 [進行連接後立即啟動追蹤]，將不會顯示 [追蹤屬性] 對話方塊，而是開始追蹤。 於 [工具] 功能表，按一下 [選項]，並清除 [連接後立即啟動追蹤] 核取方塊，以關閉這項設定。  
+    >  如果選取 [進行連接後立即啟動追蹤]  ，將不會顯示 [追蹤屬性]  對話方塊，而是開始追蹤。 於 [工具]  功能表，按一下 [選項]  ，並清除 [連接後立即啟動追蹤]  核取方塊，以關閉這項設定。  
   
-2.  在 [追蹤屬性] 對話方塊中，請確定已選取 [一般] 索引標籤，並在 [追蹤名稱] 文字方塊中輸入名稱。  
+2.  在 [追蹤屬性]  對話方塊中，請確定已選取 [一般]  索引標籤，並在 [追蹤名稱]  文字方塊中輸入名稱。  
   
-3.  在 [使用範本] 清單中，選取追蹤範本。  
+3.  在 [使用範本]  清單中，選取追蹤範本。  
   
 4.  選擇性，指定要儲存追蹤結果的目的地檔案或資料表。  
   
-5.  在 [事件選取範圍] 索引標籤上，按一下 [結束時間] 資料行，以啟動 [編輯篩選] 對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選取 [編輯資料行篩選]。  
+5.  在 [事件選取範圍]  索引標籤上，按一下 [結束時間]  資料行，以啟動 [編輯篩選]  對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選取 [編輯資料行篩選]  。  
   
-6.  展開 [大於] 或 [小於]，然後在比較運算子下方的欄位中輸入 **datetime**值。  
+6.  展開 [大於]  或 [小於]  ，然後在比較運算子下方的欄位中輸入 **datetime**值。  
   
 ## <a name="see-also"></a>另請參閱  
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   

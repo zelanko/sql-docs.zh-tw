@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdatasource.f1
@@ -13,12 +12,12 @@ ms.assetid: ee6c283d-60a2-4f51-9406-483cd1df2d7d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f1272a654749f1fa6c3b4f8cafdada26ad56a56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069676"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>選取資料來源檢視 (資料採礦精靈)
   使用 [選取資料來源檢視] 頁面，即可識別採礦結構的資料來源檢視。  
@@ -26,9 +25,9 @@ ms.locfileid: "48177918"
 > [!NOTE]  
 >  唯有您在精靈的 [選取定義方法] 頁面上選取了 [從現有的關聯式資料庫或資料倉儲] 後，才會顯示此頁面。  
   
- **如需詳細資訊，請參閱**[多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：**[資料來源的多維度模型中的檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的資料來源檢視**  
  按一下採礦結構的資料來源。  
   

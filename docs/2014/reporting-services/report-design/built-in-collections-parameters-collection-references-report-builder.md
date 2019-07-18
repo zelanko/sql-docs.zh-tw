@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 178060835cf90032013a11e2b674462cb6e26ea7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106406"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>參數集合參考 (報表產生器及 SSRS)
   報表參數是您可以從運算式參考的其中一個內建集合。 您可以在運算式中包含參數，以根據使用者所做的選擇來自訂報表資料及外觀。 可以針對提供 (*Fx*) 或 \<**運算式**> 選項的任何報表項目屬性或文字方塊屬性使用運算式。 您也可以用其他方法來使用運算式控制報表的內容及外觀。 如需詳細資訊，請參閱[運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
   
- 在執行階段比較參數值與資料集欄位值時，所比較的兩個項目的資料類型必須相同。 報表參數可以是下列類型之一：布林值、 DateTime、 整數、 浮點數或代表基礎資料型別字串的文字。 如有必要，也可以將參數值的資料類型轉換成符合資料集值。 如需詳細資訊，請參閱 [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
+ 在執行階段比較參數值與資料集欄位值時，所比較的兩個項目的資料類型必須相同。 報表參數可以是下列類型的其中一種：布林值、DateTime、整數、浮點數或文字，代表基礎資料類型字串 (String)。 如有必要，也可以將參數值的資料類型轉換成符合資料集值。 如需詳細資訊，請參閱 [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
  若要在運算式中包含參數參考，您必須了解如何指定參數參考的正確語法，此語法會根據參數是單一值或多重值參數而改變。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "56287967"
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [常用的篩選 &#40;報表產生器及 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
  [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)   
  [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   

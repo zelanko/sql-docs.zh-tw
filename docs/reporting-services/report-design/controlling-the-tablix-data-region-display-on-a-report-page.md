@@ -2,18 +2,18 @@
 title: 控制報表頁面上的 Tablix 資料區顯示 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 255332399739b84a3f52446d97e6cf553c5c198b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581531"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制報表頁面上的 Tablix 資料區顯示
 請了解您可在資料表、矩陣或清單資料區之 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中設定的屬性，以變更它在您檢視報表時的顯示方式。  

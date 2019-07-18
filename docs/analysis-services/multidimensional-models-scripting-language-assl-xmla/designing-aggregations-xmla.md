@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9f681b3c99bd0e8351a844f28b16be6249de199
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63288497"
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
   彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義 合併資料分割可以稍後使用[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令。 如需有關彙總設計的詳細資訊，請參閱[彙總及彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -97,7 +97,7 @@ ms.locfileid: "50147183"
 |步驟|Integer|在將控制權還給用戶端應用程式之前，命令所使用的步驟數目。|  
 |Time|長整數|在將控制權還給用戶端應用程式之前，命令所花費的毫秒數目。|  
 |Optimization|Double|在將控制權還給用戶端應用程式之前，命令所達成的效能改善估計百分比。|  
-|Storage|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
+|儲存體|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
 |Aggregations|長整數|在將控制權還給用戶端應用程式之前，命令所定義的彙總數目。|  
 |LastStep|布林|指出在資料列集中的資料是否代表設計程序中的最後一個步驟。 如果**具體化**命令的屬性已設為此資料行的值設為 true，則為 true。|  
   

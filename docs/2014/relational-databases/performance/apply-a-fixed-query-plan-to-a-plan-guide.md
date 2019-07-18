@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0afa2d8770589ed82890cf5b54e99916f9eb1d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150953"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>將固定的查詢計畫套用至計畫指南
   您可以將固定的查詢計畫套用至 OBJECT 或 SQL 類型的計畫指南。 當您知道現有執行計畫的效能比最佳化工具針對特定查詢所選取的計畫更好時，套用固定查詢計畫的計畫指南就很有用。  

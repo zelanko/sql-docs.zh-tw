@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac5256d0f2d0cddea9f3b6ef29163381e1deccbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1dbb3fd9ec10c5e1ca11a7e150f0d8a4c0fec883
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106523"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>加入走勢圖和資料橫條 (報表產生器及 SSRS)
   走勢圖和資料橫條很小，也就是以少量的外來細節傳達許多資訊的精簡圖表。 如需詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
@@ -32,20 +31,20 @@ ms.locfileid: "56288496"
   
 2.  將資料行插入資料表或矩陣中。 如需詳細資訊，請參閱[插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
-3.  在 **[插入]** 索引標籤上，按一下 **[走勢圖]** 或 **[資料橫條]**，然後在新資料行的資料格內按一下。  
+3.  在 **[插入]** 索引標籤上，按一下 **[走勢圖]** 或 **[資料橫條]** ，然後在新資料行的資料格內按一下。  
   
     > [!NOTE]  
     >  您無法將走勢圖放在資料表的詳細資料群組中。 它們必須放在與群組相關聯的資料格中。  
   
-4.  在 [變更走勢圖類型/變更資料橫條類型] 對話方塊中，按一下您想要的走勢圖或資料橫條類型，然後按一下 [確定]。  
+4.  在 [變更走勢圖類型/變更資料橫條類型]  對話方塊中，按一下您想要的走勢圖或資料橫條類型，然後按一下 [確定]  。  
   
 5.  按一下走勢圖或資料橫條。  
   
      隨即開啟 **[圖表資料]** 窗格。  
   
-6.  在 [值] 區域中，按一下 [新增欄位] 的加號 (**+**)，然後按一下您想要將哪一個欄位的值加入圖表。  
+6.  在 [值]  區域中，按一下 [新增欄位]  的加號 ( **+** )，然後按一下您想要將哪一個欄位的值加入圖表。  
   
-7.  在 [類別目錄群組] 區域中，按一下 [新增欄位] 的加號 (**+**)，然後按一下您想要將哪一個欄位的值當作分組依據。  
+7.  在 [類別目錄群組]  區域中，按一下 [新增欄位]  的加號 ( **+** )，然後按一下您想要將哪一個欄位的值當作分組依據。  
   
      一般對於走勢圖或資料橫條而言，您不會將欄位加入至 **[數列群組]** 區域，因為您希望每一個資料列只有一個數列。  
   

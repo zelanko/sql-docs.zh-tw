@@ -8,14 +8,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aa026182ac6001a9ca360dedba85dfc7ea8eafec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652336"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
 
@@ -57,13 +57,13 @@ ms.locfileid: "50020262"
   
 1.  如果您正在使用遠端 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，請登入資料庫伺服器，以確認或啟用 TCP/IP 連接。  
   
-2.  依序指向 **[開始]**、 **[所有程式]**、 **[Microsoft SQL Server]**、 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
+2.  依序指向 **[開始]** 、 **[所有程式]** 、 **[Microsoft SQL Server]** 、 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-3.  開啟 **[SQL Server 網路組態]**。  
+3.  開啟 **[SQL Server 網路組態]** 。  
   
 4.  選取資料庫執行個體。  
   
-5.  以滑鼠右鍵按一下 [TCP/IP]，然後選取 [啟用]。  
+5.  以滑鼠右鍵按一下 [TCP/IP]  ，然後選取 [啟用]  。  
   
 6.  重新啟動服務。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "50020262"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [資料庫] 頁面上，選取 [變更資料庫]。  
+2.  在 [資料庫] 頁面上，選取 [變更資料庫]  。  
   
-3.  選取 [建立新的報表伺服器資料庫]，然後選取 [下一步]。  
+3.  選取 [建立新的報表伺服器資料庫]  ，然後選取 [下一步]  。  
   
 4.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   
@@ -83,9 +83,9 @@ ms.locfileid: "50020262"
   
     2.  輸入用於與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之單次連接的認證，以便建立報表伺服器資料庫。 如需有關如何使用這些認證的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
-    3.  選取 [測試連線] 可驗證與伺服器的連線。  
+    3.  選取 [測試連線]  可驗證與伺服器的連線。  
   
-    4.  選取 **[下一步]**。  
+    4.  選取 **[下一步]** 。  
   
 5.  指定用來建立資料庫的屬性。 如需有關如何使用這些屬性的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "50020262"
   
     2.  選取您希望角色定義和 [我的報表] 所顯示的語言。  
   
-    3.  報表伺服器模式一律設定為 **[原生]**。  
+    3.  報表伺服器模式一律設定為 **[原生]** 。  
   
-    4.  選取 **[下一步]**。  
+    4.  選取 **[下一步]** 。  
   
 6.  指定報表伺服器用來連接到報表伺服器資料庫的認證。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "50020262"
   
          如果您希望報表伺服器使用它的服務帳戶進行連接，請選取 **[服務認證]** 。 有了這個選項，伺服器就會使用整合式安全性來進行連接；認證並不會加密或儲存起來。  
   
-    2.  選取 **[下一步]**。  
+    2.  選取 **[下一步]** 。  
   
-7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後選取 [下一步]。  
+7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後選取 [下一步]  。  
   
 8.  選取 [報表伺服器 URL] 頁面上的 URL 來確認連線。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連線有效，您將會看到報表伺服器資料夾階層。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
@@ -119,15 +119,15 @@ ms.locfileid: "50020262"
 
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [資料庫] 頁面上，選取 [變更認證]。 
+2.  在 [資料庫] 頁面上，選取 [變更認證]  。 
 
 3.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   
     1.  輸入用於與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之單次連接的認證，以便建立報表伺服器資料庫。 如需有關如何使用這些認證的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
-    2.  選取 [測試連線] 可驗證與伺服器的連線。  
+    2.  選取 [測試連線]  可驗證與伺服器的連線。  
   
-    3.  選取 **[下一步]**。  
+    3.  選取 **[下一步]** 。  
 
 4.  指定報表伺服器用來連接到報表伺服器資料庫的認證。  
   
@@ -139,11 +139,11 @@ ms.locfileid: "50020262"
   
          如果您希望報表伺服器使用它的服務帳戶進行連接，請選取 **[服務認證]** 。 有了這個選項，伺服器就會使用整合式安全性來進行連接；認證並不會加密或儲存起來。  
   
-    2.  選取 **[下一步]**。 
+    2.  選取 **[下一步]** 。 
 
-5. 檢閱設定並選取 [下一步]。
+5. 檢閱設定並選取 [下一步]  。
 
-6. 變更後選取 [完成]。
+6. 變更後選取 [完成]  。
 
 ## <a name="next-steps"></a>後續步驟
 

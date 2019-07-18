@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c75b5b8ef384956ac05bab4e016ce37e691856da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090712"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>第 7 課：將資料檔案移至 Windows Azure 儲存體
   在這一課，您將學習如何將資料檔案移至 Windows Azure 儲存體 (而不是您的 SQL Server 執行個體)。 進行這一課並不需要完成第 4、5 和 6 課。  
@@ -64,7 +63,7 @@ ms.locfileid: "58534070"
   
     ```  
   
-3.  當您執行此程式碼時，會看到此訊息：「 系統目錄中已修改的檔案"TestDB1Alter"。 新的路徑將用於的下次啟動資料庫。 」  
+3.  當您執行此動作時，您會看到此訊息：「 系統目錄中已修改的檔案"TestDB1Alter"。 新的路徑將用於的下次啟動資料庫。 」  
   
 4.  然後將資料庫設為離線。  
   
@@ -75,9 +74,9 @@ ms.locfileid: "58534070"
   
     ```  
   
-5.  現在，您必須使用下列方法之一，將資料檔複製到 Windows Azure 儲存體：[AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)， [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)，[儲存體用戶端程式庫參考](https://msdn.microsoft.com/library/azure/dn261237.aspx)，或協力廠商儲存體總管工具。  
+5.  現在，您需要將資料檔案複製到 Windows Azure 儲存體中，使用其中一種下列方法：[AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)， [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)，[儲存體用戶端程式庫參考](https://msdn.microsoft.com/library/azure/dn261237.aspx)，或協力廠商儲存體總管工具。  
   
-     **重要：** 使用這項新的增強功能時，請務必確定您建立的是分頁 Blob，而不是區塊 Blob。  
+     **重要：** 當使用這個新的增強功能，請務必確定您建立分頁 blob 不是區塊 blob。  
   
 6.  然後將資料庫設為線上。  
   

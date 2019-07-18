@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c20cab2fec681e1e223f4982854ca3dbfac5542e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 4e7233ca94ecdc10544d0ceae1e5e53b215fa9e2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680896"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687411"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

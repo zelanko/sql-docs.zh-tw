@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dbb7de3a1e979a7b91b5532d319ff68e1a4fe778
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482685"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>刪除資料列 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您不再想要讓使用者使用某個資料列 (成員) 時，請從 MDS 存放庫中刪除它。  

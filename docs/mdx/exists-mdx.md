@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 781c03283c39ab5ec100ba7f7d83b3cbe19a7c19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139177"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 

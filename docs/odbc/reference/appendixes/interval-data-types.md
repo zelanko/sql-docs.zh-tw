@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947550"
 ---
 # <a name="interval-data-types"></a>間隔資料類型
 間隔被定義為兩個日期和時間之間的差異。 間隔被以兩種不同方式的其中一個。 其中一個是*年月*表示年和月數的整數間隔的時間間隔。 另一個則是*日期時間*表示時間間隔，以天、 分和秒為單位的間隔。 這兩種類型的間隔相異，且不能混用，因為月份可以有不同的數字的天數。  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462510"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "55421185"
 
 對於裝載於 Azure SQL Database 雲端服務的資料庫，您所選的服務層會影響資料庫允許使用的使用中記憶體數量。 您應該規劃使用警示來監視資料庫的記憶體使用量。 如需詳細資料，請參閱：
 
-- 檢閱您的[定價層](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)適用的記憶體內部 OLTP 儲存體限制
+- 檢閱您的[定價層](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)適用的記憶體內部 OLTP 儲存體限制
 - [監視記憶體內部 OLTP 儲存體](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
@@ -104,7 +104,7 @@ ms.locfileid: "55421185"
 
 您可以使用由 SSDT 管理的 .dacpac 檔案就地更新資料庫。 在 SSDT 中，您可以指定編碼在 .dacpac 檔案中的結構描述的變更。
 
-請在類型為「資料庫」的 Visual Studio 專案內容中使用 .dacpac 檔案
+請在類型為「資料庫」  的 Visual Studio 專案內容中使用 .dacpac 檔案
 
 - [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md) 和 .dacpac 檔案
 
@@ -214,19 +214,19 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 #### <a name="hash-indexes"></a>雜湊索引
 
-要使用 '**=**' 運算子，以精確的主索引鍵值來存取一個特定資料列時，雜湊索引可能是最快速的格式。
+要使用 ' **=** ' 運算子，以精確的主索引鍵值來存取一個特定資料列時，雜湊索引可能是最快速的格式。
 
-- 不精確的運算子，例如 '**!=**'、'**>**'，或 '**BETWEEN**' 會損害效能，如果搭配雜湊索引使用的話。
+- 不精確的運算子，例如 ' **!=** '、' **>** '，或 '**BETWEEN**' 會損害效能，如果搭配雜湊索引使用的話。
 
 - 如果索引鍵值重複率變得太高，則雜湊索引可能不是最佳的選擇。
 
-- 防堵低估您的雜湊索引可能需要多少「值區」，以避免在個別值區內產生長鏈。 如需詳細資料，請參閱：
+- 防堵低估您的雜湊索引可能需要多少「值區」  ，以避免在個別值區內產生長鏈。 如需詳細資料，請參閱：
     - [記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
 #### <a name="nonclustered-columnstore-indexes"></a>非叢集資料行存放區索引
 
-記憶體最佳化資料表提供一般商務交易資料的高輸送量，這個典範我們稱為「線上交易處理」或 *OLTP*。 資料行存放區索引提供彙總與類似處理的高輸送量，我們稱為「分析」。 在過去，滿足 OLTP 和分析的需求最好的方法，是使用個別的資料表，並大量移動資料，且具有某種程度的資料重複。 現在，有更簡單的 **混合式解決方案** ︰記憶體最佳化資料表的資料行存放區索引。
+記憶體最佳化資料表提供一般商務交易資料的高輸送量，這個典範我們稱為「線上交易處理」  或 *OLTP*。 資料行存放區索引提供彙總與類似處理的高輸送量，我們稱為「分析」  。 在過去，滿足 OLTP 和分析的需求最好的方法，是使用個別的資料表，並大量移動資料，且具有某種程度的資料重複。 現在，有更簡單的 **混合式解決方案** ︰記憶體最佳化資料表的資料行存放區索引。
 
 
 - [資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-overview.md) 可以建立在以磁碟為基礎的資料表上，甚至是作為叢集索引。 但是記憶體最佳化資料表的資料行存放區索引無法加入叢集。
@@ -294,7 +294,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 - 錯誤號碼是 41839。 (在 SQL Server 2014 中的錯誤號碼是 41301。)
 
 
-您可以讓您的 Transact-SQL 指令碼更能應付可能的交易錯誤，方法是在指令碼新增「重試邏輯」。 在 UPDATE 和 DELETE 呼叫很頻繁時，或是另一個資料表中的外部索引鍵參考了記憶體最佳化的資料表時，重試邏輯更可能有幫助。 如需詳細資料，請參閱：
+您可以讓您的 Transact-SQL 指令碼更能應付可能的交易錯誤，方法是在指令碼新增「重試邏輯」  。 在 UPDATE 和 DELETE 呼叫很頻繁時，或是另一個資料表中的外部索引鍵參考了記憶體最佳化的資料表時，重試邏輯更可能有幫助。 如需詳細資料，請參閱：
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/) (經記憶體最佳化資料表的交易相依性限制 - 錯誤 41839)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -16,12 +15,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081051"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>預測 (適用於 Excel 的資料表分析工具)
   ![預測的按鈕，在 資料表分析工具功能區](media/tat-forecast.gif "預測資料表分析工具功能區中的按鈕")  
@@ -42,11 +41,11 @@ ms.locfileid: "52518109"
   
 3.  指定要預測的資料行。 此工具會自動選取資料行中具有可預測的資料類型的資料-也就是連續的數值資料。 如果資料行包含許多 null 或零值，此工具便可能不會選取一些具有連續數值資料的資料行，因為資料遺失可能會影響結果。 如果發生這種情況，您可以使用來修正資料[重定標籤&#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md)工具。  
   
-4.  指定包含日期、時間或其他序列識別碼的資料行。 如果您選取的選項**\<沒有時間戳記 >** 此工具會建立一系列根據來源資料中的資料列順序。  
+4.  指定包含日期、時間或其他序列識別碼的資料行。 如果您選取的選項 **\<沒有時間戳記 >** 此工具會建立一系列根據來源資料中的資料列順序。  
   
 5.  指定要做出的預測數目。  
   
-6.  您可以選擇性地提供有關您預期資料是要每週、每月或依其他間隔重複之演算法的提示。 如果您的資料不符合任何一個指定的模式，或如果您未察覺任何模式中，選取**\<自動偵測 >** ，讓工具尋找重複的期間。  
+6.  您可以選擇性地提供有關您預期資料是要每週、每月或依其他間隔重複之演算法的提示。 如果您的資料不符合任何一個指定的模式，或如果您未察覺任何模式中，選取 **\<自動偵測 >** ，讓工具尋找重複的期間。  
   
 7.  精靈會將預測加入來源資料表，並且在新的工作表中建立預測報表。  
   

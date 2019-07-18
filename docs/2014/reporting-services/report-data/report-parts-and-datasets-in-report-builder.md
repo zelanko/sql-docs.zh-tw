@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c6cb19da853387f4684c301e183276a0f4b7e96
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107164"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
-  在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」*(Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。  
+  在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」* (Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

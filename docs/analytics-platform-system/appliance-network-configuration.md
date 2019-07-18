@@ -2,19 +2,18 @@
 title: 設備網路設定 Analytics Platform System |Microsoft Docs
 description: Analytics Platform System (APS) 設備是內建，而且修正一份在所有伺服器和 IHV 的工廠適用於裝置的 IP 位址設定。 設備的傳遞，就必須重新設定外部 （乙太網路） IP 位址以符合特定的客戶資料中心的需求。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961466"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System 的設備網路設定
 Analytics Platform System (APS) 設備是內建，而且修正一份在所有伺服器和 IHV 的工廠適用於裝置的 IP 位址設定。 設備的傳遞，就必須重新設定外部 （乙太網路） IP 位址以符合特定的客戶資料中心的需求。  

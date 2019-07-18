@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083566"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是設計來自動化 SQL Server 從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 資料庫移轉工具。  
@@ -45,9 +44,9 @@ SSMA 支援下列版本的目標。
 - 在 Windows 和 Linux 上的 SQL Server 2017
 - 在 Windows 和 Linux 上的 SQL Server 2019
 - Azure SQL Database
-- Azure SQL 資料倉儲
+- Azure SQL 資料倉儲**
 
-* * 此目標，只有支援 SSMA for Oracle。
+** 此目標，只有支援 SSMA for Oracle。
  
 ## <a name="downloads"></a>下載
 - [SSMA for Access](https://aka.ms/ssmaforaccess)
@@ -82,7 +81,7 @@ SSMA 支援下列版本的目標。
   
 Microsoft 可能擁有本文件集所提及內容中所含之專利權、專利優先權、商標、著作權，或其他智慧財產權。 除非 Microsoft 書面授權合約所明示規定者外，提供本文件集並不授與貴用戶上述專利權、商標、著作權或其他智慧財產權。  
   
-© Microsoft Corporation 2019。 著作權所有，並保留一切權利。  
+© 2019 Microsoft Corporation. 著作權所有，並保留一切權利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 及 WinFX 係 Microsoft Corporation 在美國及 (或) 其他國家/地區的註冊商標或商標。  
   

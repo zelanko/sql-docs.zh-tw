@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cf58aa27b8b426dca887d24fbfe15158263c8ae2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a9789c2d017200650bcae7b5f864da708e5c7453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194292"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
   自訂報表項目設計階段元件是可用於 Visual Studio 報表設計工具環境的控制項。 自訂報表項目設計階段元件提供啟動的設計介面，這個介面與 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器相整合，可接受拖放作業，並能夠提供自訂屬性編輯器。  
@@ -84,7 +84,7 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改元件屬性  
- 您可以用數種方式在設計環境中修改 **CustomData** 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器以 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性] 以顯示自訂屬性視窗。  
+ 您可以用數種方式在設計環境中修改 **CustomData** 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器以 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性]  以顯示自訂屬性視窗。  
   
  下列程式碼範例示範套用 <xref:System.ComponentModel.BrowsableAttribute> 屬性的 **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** 屬性：  
   
@@ -190,7 +190,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的元件  
   
--   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項  
+-   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂報表項目架構](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   

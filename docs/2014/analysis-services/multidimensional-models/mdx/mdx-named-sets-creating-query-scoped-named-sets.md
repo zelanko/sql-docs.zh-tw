@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - query-scoped named sets [MDX]
@@ -14,12 +13,12 @@ ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074073"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>建立查詢範圍命名集 (MDX)
   如果單一多維度運算式 (MDX) 查詢只需要有命名集，您可以使用 WITH 關鍵字來定義命名集。 查詢完成執行之後，使用 WITH 關鍵字建立的命名集就不再存在。  
@@ -94,7 +93,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [建立工作階段範圍命名集&#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [建立工作階段範圍命名集 &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

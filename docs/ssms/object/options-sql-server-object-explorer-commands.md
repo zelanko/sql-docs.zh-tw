@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7281b6862d1785fc1b2b93a543c10738a454adaa
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0d498cc3b60603c66c5032104f4a3cc1c9cc7800
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700189"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683471"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>選項 (SQL Server 物件總管 - 命令)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51700189"
   
     在 Visual Database Tools 中開啟已填入 200 個資料列的資料表。  
   
-使用 [一般指令碼選項] 對話方塊，以變更將會開啟的資料列數目。  
+使用 [一般指令碼選項]  對話方塊，以變更將會開啟的資料列數目。  
   
 ## <a name="general-scripting-options"></a>一般指令碼選項  
 **[選取前 <n> 筆稽核記錄] 命令的值**  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63241159"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>儲存對話方塊 (Visual Database Tools)
   當您在 [資料表設計師] 中儲存工作，且該工作影響其他資料表時，便會出現此對話方塊。 此對話方塊可讓您確認將要儲存的資料表。  
@@ -28,10 +28,10 @@ ms.locfileid: "52800220"
   
 ## <a name="options"></a>選項。  
  **警告受影響資料表**  
- 指定下次儲存選取的資料表時是否出現此對話方塊。 依照預設，此方塊為核取。 如果您清除此選項，可以在 [選項] 對話方塊中重新選取。  
+ 指定下次儲存選取的資料表時是否出現此對話方塊。 依照預設，此方塊為核取。 如果您清除此選項，可以在 [選項]  對話方塊中重新選取。  
   
  **儲存為文字檔**  
- 顯示 [另存新檔] 對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
+ 顯示 [另存新檔]  對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
  [設計資料表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

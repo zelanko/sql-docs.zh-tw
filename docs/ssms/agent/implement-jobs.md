@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, about jobs
 - jobs [SQL Server Agent], about jobs
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3d065ded1a116c124105023915e6b5380e28403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 804fd7c15a639df1b59059ddba11f2a341efa061
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631236"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687003"
 ---
 # <a name="implement-jobs"></a>實作作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

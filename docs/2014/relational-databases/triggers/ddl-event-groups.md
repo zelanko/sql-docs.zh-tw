@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211722"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件群組
   下表列出可用來執行 DDL 觸發程序或事件通知的 DDL 事件群組，以及它們所涵蓋的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 請注意這些事件群組的內含本質。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 觸發程序或事件通知會涵蓋 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 觸發程序或事件通知會涵蓋 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 類型底下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -27,12 +27,12 @@ ms.locfileid: "52812750"
 > [!NOTE]  
 >  執行類似 DDL 作業的某些系統預存程序也可以引發 DDL 觸發程序或事件通知。 請測試 DDL 觸發程序和事件通知，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序或事件通知。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  列在 DDL_DATABASE_LEVEL_EVENTS 底下的事件會在伺服器 (執行個體) 或資料庫層級執行。 列在 DDL_SERVER_LEVEL_EVENTS 底下的事件只能在伺服器層級執行。  
   
 ||||  
 |-|-|-|  
-|parent_type|型別|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

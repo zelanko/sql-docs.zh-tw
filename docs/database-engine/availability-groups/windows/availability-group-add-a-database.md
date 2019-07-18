@@ -14,28 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+manager: jroth
+ms.openlocfilehash: 262a4538774d2827d60367d1d96a12fb15e2d0f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860439"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789431"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>將資料庫新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將資料庫加入 AlwaysOn 可用性群組中。  
   
--   **開始之前：**  
-  
-     [必要條件和限制](#prerequisites-and-restrictions)    
-     [權限](#Permissions)    
--   **若要使用下列項目，將資料庫加入至可用性群組：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)    
-     [Transact-SQL](#TsqlProcedure)    
-     [PowerShell](#PowerShellProcedure)  
-  
+
   
 ## <a name="prerequisites-and-restrictions"></a>必要條件和限制  
   
@@ -43,8 +34,7 @@ ms.locfileid: "58860439"
   
 -   資料庫必須位於裝載主要複本的伺服器執行個體上，且符合可用性資料庫的必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-##  <a name="Security"></a> 安全性  
-  
+ 
 ##  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
@@ -53,7 +43,7 @@ ms.locfileid: "58860439"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  以滑鼠右鍵按一下可用性群組，然後選取下列其中一個命令：  
   
@@ -142,5 +132,5 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

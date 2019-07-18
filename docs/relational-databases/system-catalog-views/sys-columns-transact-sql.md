@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6006daa91355803fa9ac937c660d503bd7e97579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109579"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,11 +49,11 @@ ms.locfileid: "52405273"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。|  
-|NAME|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
+|name|**sysname**|資料行的名稱。 在物件中，這是唯一的。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。<br /><br /> 資料行識別碼不一定會循序排列。|  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。|  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。<br /><br /> 若要傳回之型別的名稱，加入[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視這個資料行。|  
-|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行，max_length 值就是 16，或是由 sp_tableoption 'text in row' 所設定的值。|  
+|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行，max_length 值就是 16，或是由 sp_tableoption 'text in row' 所設定的值。|  
 |有效位數|**tinyint**|如果是以數值為基礎，便是資料行的有效位數；否則，便是 0。|  
 |scale|**tinyint**|如果是以數值為基礎，便是資料行的小數位數；否則，便是 0。|  
 |collation_name|**sysname**|如果是以字元為基礎，便是資料行的定序名稱；否則，便是 NULL。|  
@@ -74,7 +73,7 @@ ms.locfileid: "52405273"
 |rule_object_id|**int**|獨立規則的識別碼，這個規則是利用 sys.sp_bindrule 與資料行繫結。<br /><br /> 0 = 沒有獨立規則。 資料行層級 CHECK 條件約束，請參閱 < [sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
 |is_sparse|**bit**|1 = 資料行是疏鬆資料行。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 資料行是資料行集。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
-|將 generated_always_type|**tinyint**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 識別產生的資料行值時 （一律會在系統資料表中的資料行 0）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 時態表&#40;關聯式資料庫&#41;](../../relational-databases/tables/temporal-tables.md)。</c0>|  
+|generated_always_type|**tinyint**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 識別產生的資料行值時 （一律會在系統資料表中的資料行 0）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 時態表&#40;關聯式資料庫&#41;](../../relational-databases/tables/temporal-tables.md)。</c0>|  
 |generated_always_type_desc|**nvarchar(60)**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 文字描述`generated_always_type`的值 (一律 NOT_APPLICABLE 系統資料表中的資料行) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型：<br /><br /> 1 = 確定性加密<br /><br /> 2 = 隨機化加密|  
 |encryption_type_desc|**nvarchar(64)**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型的描述：<br /><br /> 隨機<br /><br /> DETERMINISTIC|  

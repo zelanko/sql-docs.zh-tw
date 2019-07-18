@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072025"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62509920"
 ---
 # <a name="data-mining-properties"></a>資料採礦屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的資料採礦伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **適用於：** 僅限於多維度伺服器模式  
+ **適用於：** 僅限多維度伺服器模式  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  **AllowSessionMiningModels**  

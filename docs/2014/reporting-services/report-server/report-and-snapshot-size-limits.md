@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - large reports
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103543"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  
@@ -53,7 +52,7 @@ ms.locfileid: "59240646"
  報表大小唯一的硬限制只會發生在轉譯成 Excel 格式時， 因為工作表不能超過 65536 個資料列或 256 個資料行。 其他轉譯格式沒有這些限制，因此檔案大小僅受限於伺服器的資源數量。 如需有關 Excel 檔案限制的詳細資訊，請參閱 <<c0> [ 將報表匯出為其他檔案類型&#40;報表產生器及 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
->  報表處理及轉譯是在記憶體中處理， 因此，如果您有大型的報表或大量的使用者，請務必先做好容量計劃，以確保您的報表伺服器部署執行方式可以滿足使用者。 如需有關工具和指導方針的詳細資訊，請參閱下列 MSDN 發行集：[使用 Reporting Services 規劃延展性和效能](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)並[到 SQL Server 2005 Reporting Services 報表伺服器上執行負載測試中使用 Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=77519)。  
+>  報表處理及轉譯是在記憶體中處理， 因此，如果您有大型的報表或大量的使用者，請務必先做好容量計劃，以確保您的報表伺服器部署執行方式可以滿足使用者。 如需有關工具和指導方針的詳細資訊，請參閱 MSDN 上的下列發行集：[使用 Reporting Services 規劃延展性和效能](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)並[到 SQL Server 2005 Reporting Services 報表伺服器上執行負載測試中使用 Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=77519)。  
   
 ## <a name="measuring-snapshot-storage"></a>測量快照集儲存區  
  任何給定之快照集的大小，會與報表中的資料數量呈現直接正比， 因此會遠大於儲存在報表伺服器上的其他項目。 快照集大小一般會介於數 MB 到數十 MB 之間， 如果您的報表非常大，則可以預期會看到更大的快照集。 根據您使用快照集的頻率以及設定報表記錄的方式，可能在短時間內，報表伺服器資料庫所需的磁碟空間數量就會快速增加。  

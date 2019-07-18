@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d1fc46d8ccffa84ad820153a060b6b02c2deb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028033"
 ---
 # <a name="assemblies---designing"></a>組件 - 設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47808026"
 -   如果有段 Managed 程式碼需要更高的權限，最好將那個程式碼跟不需要較高權限的程式碼分隔，放在個別的組件。  
   
 ## <a name="managing-assembly-security"></a>管理組件安全性  
- 您可以控制在執行 Managed 程式碼時，可存取受到「.NET 程式碼存取安全性」保護之資源的組件多寡。 建立或修改組件時，指定三種權限集之一，就可以完成此動作：SAFE、EXTERNAL_ACCESS 或 UNSAFE。  
+ 您可以控制在執行 Managed 程式碼時，可存取受到「.NET 程式碼存取安全性」保護之資源的組件多寡。 您這麼做，當您建立或修改組件指定三個權限集合的其中一個：SAFE、 EXTERNAL_ACCESS 或 UNSAFE。  
   
 ### <a name="safe"></a>SAFE  
  SAFE 是預設的權限集，而且其限制最為嚴格。 由具有 SAFE 權限的組件執行的程式碼，無法存取外部系統資源，例如，檔案、網路、環境變數或登錄。 SAFE 程式碼可以存取本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，或是執行不會存取本機資料庫以外資源的計算及商務邏輯。  

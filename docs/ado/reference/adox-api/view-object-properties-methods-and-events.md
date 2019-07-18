@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b0281821ff073b09de1158b9c88ec126702b5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01ddab58c594991cf38fb6da66dc2b77692c3daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964818"
 ---
 # <a name="view-object-properties-methods-and-events"></a>View 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -33,7 +32,7 @@ ms.locfileid: "47822117"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

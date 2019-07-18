@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044053"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>強制目標伺服器輪詢主要伺服器
   此主題描述如何強制目標伺服器輪詢主要伺服器。 目標伺服器必須是主要伺服器上已註冊的伺服器。  
@@ -30,9 +30,9 @@ ms.locfileid: "52764210"
 > [!NOTE]  
 >  如果當目標伺服器嘗試上傳作業狀態時無法存取主要伺服器，作業狀態會被多工緩衝處理，直到可以存取主要伺服器為止。  
   
--   **開始之前：**[限制事項](#Restrictions)，[安全性](#Security)  
+-   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
   
--   **若要強制目標伺服器輪詢主要伺服器中，請使用：**[SQL Server Management Studio](#SSMS)  
+-   **若要強制目標伺服器輪詢主要伺服器，請使用：**[SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

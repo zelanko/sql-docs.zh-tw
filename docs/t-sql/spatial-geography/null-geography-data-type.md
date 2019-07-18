@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Null (geography Data Type)
 - Null method
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4972ec118bf7d9abc146271c97072a7184d726af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34d9b73b050d40e6ae83637f69f2f7aa2ec6f7b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937604"
 ---
 # <a name="null-geography-data-type"></a>Null (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Null
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型別：**geography**  
   
- CLR 型別：**SqlGeography**  
+ CLR 類型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
   

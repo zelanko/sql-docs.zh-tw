@@ -11,15 +11,14 @@ helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e17fe8627164132568be0b7447656cc02a221ea6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f8d770d32ee60c2ec2407b5f0bc805b2ee3a5aa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079765"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "52753513"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要建立分頁成員和合併成員的一般清單時，請建立集合。 集合不必包含實體的所有成員。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -40,11 +39,11 @@ ms.locfileid: "52753513"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
-4.  從功能表列指向 [集合]，然後按一下 *entity_name*。  
+4.  從功能表列指向 [集合]  ，然後按一下 *entity_name*。  
   
-5.  按一下 **[加入集合]**。  
+5.  按一下 **[加入集合]** 。  
   
 6.  在 **[詳細資料]** 索引標籤的 **[名稱]** 方塊中，輸入集合的名稱。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "52753513"
   
 8.  或者，在 **[描述]** 方塊中，輸入集合的描述。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定 **Deploying Office Solutions**]。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [將成員加入至集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   

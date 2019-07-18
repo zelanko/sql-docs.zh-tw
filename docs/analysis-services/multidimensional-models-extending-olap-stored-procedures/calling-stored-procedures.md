@@ -1,5 +1,5 @@
 ---
-title: 呼叫預存程序 |Microsoft 文件
+title: 呼叫預存程序 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181160"
 ---
 # <a name="calling-stored-procedures"></a>呼叫預存程序
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,17 +58,17 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ```  
   
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>使用 CALL 陳述式呼叫預存程序  
- 預存程序可以呼叫內容的 MDX 查詢使用 MDX 外部**呼叫**陳述式。  
+ 預存程序可以呼叫使用 MDX 的 MDX 查詢的內容之外**呼叫**陳述式。  
   
- 您可使用這個方法具現化預存程序的副作用，或讓應用程式取得預存查詢的結果。 常見用法**呼叫**陳述式就是使用分析管理物件 (AMO) 來執行沒有傳回結果的系統管理功能。 例如，下列命令會呼叫預存程序：  
+ 您可使用這個方法具現化預存程序的副作用，或讓應用程式取得預存查詢的結果。 常見用法**呼叫**陳述式是使用分析管理物件 (AMO) 來執行沒有傳回結果的管理功能。 例如，下列命令會呼叫預存程序：  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- 唯一支援的預存程序所傳回的型別**呼叫**陳述式是資料列集。 資料列集的序列化是由 XML for Analysis 定義的。 如果在預存程序**呼叫**陳述式會傳回任何其他型別，則會忽略，並不在 XML 中傳回呼叫的應用程式。 如需有關 XML for Analysis 資料列集的詳細資訊，請參閱＜XML for Analysis 結構描述資料列集＞。  
+ 唯一支援的預存程序所傳回的型別**呼叫**陳述式是資料列集。 資料列集的序列化是由 XML for Analysis 定義的。 如果在預存程序**呼叫**陳述式會傳回任何其他型別，它會忽略，並不會傳回 XML 中呼叫的應用程式。 如需有關 XML for Analysis 資料列集的詳細資訊，請參閱＜XML for Analysis 結構描述資料列集＞。  
   
- 如果預存程序傳回 .NET 資料列集，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將伺服器上的結果轉換成 XML for Analysis 資料列集。 XML for Analysis 資料列集一律會傳回在預存程序**呼叫**函式。 如果資料集包含的功能無法在 XML for Analysis 資料列集內表示，結果會失敗。  
+ 如果預存程序傳回 .NET 資料列集，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將伺服器上的結果轉換成 XML for Analysis 資料列集。 XML for Analysis 資料列集一律會傳回預存程序中所**呼叫**函式。 如果資料集包含的功能無法在 XML for Analysis 資料列集內表示，結果會失敗。  
   
  傳回空值的程序 (例如，Visual Basic 中的副程式) 也可以和 CALL 關鍵字一起使用。 例如，如果您想要在 MDX 陳述式中使用函數 MyVoidFunction()，應使用以下的語法：  
   

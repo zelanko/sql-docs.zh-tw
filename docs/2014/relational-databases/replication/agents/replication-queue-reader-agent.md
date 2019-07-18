@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63191669"
 ---
 # <a name="replication-queue-reader-agent"></a>複寫佇列讀取器代理程式
   「複寫佇列讀取器代理程式」是一個可執行檔，它會讀取儲存在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue 中的訊息，然後將這些訊息套用至發行者。 佇列讀取器代理程式可搭配允許佇列更新的快照式和交易式發行集使用。  
@@ -62,7 +62,7 @@ ms.locfileid: "54131408"
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令列引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
  這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上的 *server_name*\\*instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果沒有指定這個參數，此名稱就會預設為本機電腦上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體的名稱。  
   
  **-DistributionDB** _distribution_database_  
@@ -108,12 +108,12 @@ ms.locfileid: "54131408"
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
+ 指定輸出是否應該詳細。  如果詳細資訊層級為 0，系統就只會列印錯誤訊息。  如果詳細資訊層級為 1，系統就會列印所有進度報表訊息。  如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-PollingInterval** _polling_interval_  
  這僅與使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 架構佇列的更新訂閱有關。 指定針對暫止佇列交易輪詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列的頻率 (以秒為單位)。 此值可介於 0 與 240 秒之間。 預設值是 5 秒。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱[資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-ProfileName** _agent_profile_name_  

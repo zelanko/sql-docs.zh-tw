@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08dea52e952986f37be30bb6fc40a295ecfdc898
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963618"
 ---
 # <a name="rds-properties"></a>RDS 屬性
 > [!IMPORTANT]
@@ -37,7 +36,7 @@ ms.locfileid: "51604233"
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|表示要求逾時之前要等候的毫秒數。|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|表示進度**DataControl**物件，它會擷取資料到其**資料錄集**物件。|  
 |[Recordset 和 SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|指出**資料錄集**從自訂商務物件傳回的物件。|  
-|[伺服器 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|指出 Internet Information Services (IIS) 名稱和通訊的通訊協定。|  
+|[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|指出 Internet Information Services (IIS) 名稱和通訊的通訊協定。|  
 |[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|指出哪些資料行來排序記錄。|  
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|表示排序順序為遞增或遞減。|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|表示用來擷取查詢字串**資料錄集**。|  

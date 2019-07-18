@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966043"
 ---
 # <a name="indexes-collection-adox"></a>Indexes 集合 (ADOX)
 包含所有[Index](../../../ado/reference/adox-api/index-object-adox.md)資料表的物件。  

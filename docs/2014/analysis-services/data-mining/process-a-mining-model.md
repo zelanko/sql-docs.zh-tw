@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
@@ -13,12 +12,12 @@ ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584412e37754a9cf66a783c490931e351c6cf831
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083101"
 ---
 # <a name="process-a-mining-model"></a>處理採礦模型
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料採礦設計師的 [採礦模型] 索引標籤中，您可以處理與採礦結構相關聯的特定採礦模型，或處理與結構相關聯的所有模型。  
@@ -33,17 +32,17 @@ ms.locfileid: "48093888"
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>使用 SQL Server 資料工具處理單一採礦模型  
   
-1.  在 [資料採礦設計師] 的 [採礦模型] 索引標籤上，從方格中模型的一或多個資料行選取採礦模型。  
+1.  在 [資料採礦設計師] 的 [採礦模型]  索引標籤上，從方格中模型的一或多個資料行選取採礦模型。  
   
-2.  在 [採礦模型] 功能表上，選取 [處理模型]。  
+2.  在 [採礦模型]  功能表上，選取 [處理模型]  。  
   
-     如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
+     如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 [ **是**]。  
   
 3.  在 **處理採礦模型-\<模型 >**  對話方塊中，按一下 **執行**。  
   
-     [處理進度] 對話方塊就會開啟，以顯示模型處理的詳細資料。  
+     [處理進度]  對話方塊就會開啟，以顯示模型處理的詳細資料。  
   
-4.  在模型順利完成處理之後，按一下 [處理進度] 對話方塊中的 [關閉]。  
+4.  在模型順利完成處理之後，按一下 [處理進度]  對話方塊中的 [關閉]  。  
   
 5.  按一下 [**關閉**中**處理採礦模型-\<模型 >** ] 對話方塊。  
   
@@ -51,15 +50,15 @@ ms.locfileid: "48093888"
   
 ### <a name="process-all-mining-models-that-are-associated-with-a-mining-structure"></a>處理與採礦結構相關聯的所有採礦模型  
   
-1.  在 [資料採礦設計師] 的 [採礦模型] 索引標籤上，從 [採礦模型] 功能表中選取 [處理採礦結構和所有模型]。  
+1.  在 [資料採礦設計師] 的 [採礦模型]  索引標籤上，從 [採礦模型]  功能表中選取 [處理採礦結構和所有模型]  。  
   
-2.  如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
+2.  如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 [ **是**]。  
   
 3.  在 **處理採礦結構 –\<結構 >**  對話方塊中，按一下 **執行**。  
   
-4.  [處理進度] 對話方塊就會開啟，以顯示模型處理的詳細資料。  
+4.  [處理進度]  對話方塊就會開啟，以顯示模型處理的詳細資料。  
   
-5.  在模型順利完成處理之後，按一下 [處理進度] 對話方塊中的 [關閉]。  
+5.  在模型順利完成處理之後，按一下 [處理進度]  對話方塊中的 [關閉]  。  
   
 6.  按一下 [**關閉**中**處理\<模型 >** ] 對話方塊。  
   

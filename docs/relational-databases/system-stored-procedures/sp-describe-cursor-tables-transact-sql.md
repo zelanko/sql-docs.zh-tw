@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053093"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +52,16 @@ sp_describe_cursor_tables
  這是用來接收資料指標輸出之宣告資料指標變數的名稱。 *output_cursor_variable*已**游標**，沒有預設值，而且不能在呼叫 sp_describe_cursor_tables 時的 關聯於任何資料指標。 傳回的資料指標是一個可捲動的動態唯讀資料指標。  
   
  [ @cursor_source=] {N'local' |N'global' |N'variable'}  
- 指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數是**nvarchar(30)**。  
+ 指定報告的資料指標是利用本機資料指標、全域資料指標或資料指標變數的名稱來指定。 參數是**nvarchar(30)** 。  
   
  [ @cursor_identity=] N'*local_cursor_name&lt*'  
- 這是含有 LOCAL 關鍵字或預設為 LOCAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *local_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+ 這是含有 LOCAL 關鍵字或預設為 LOCAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *local_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
  [ @cursor_identity=] N'*global_cursor_name&lt*'  
- 這是含有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name&lt*也可以是 ODBC 應用程式，然後藉由呼叫 SQLSetCursorName 具名資料指標所開啟之 API 伺服器資料指標名稱。*global_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+ 這是含有 GLOBAL 關鍵字或預設為 GLOBAL 的 DECLARE CURSOR 陳述式所建立之資料指標的名稱。 *global_cursor_name&lt*也可以是 ODBC 應用程式，然後藉由呼叫 SQLSetCursorName 具名資料指標所開啟之 API 伺服器資料指標名稱。*global_cursor_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
  [ @cursor_identity=] N'*input_cursor_variable&lt*'  
- 這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+ 這是與開啟的資料指標相關聯的資料指標變數名稱。 *input_cursor_variable&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  

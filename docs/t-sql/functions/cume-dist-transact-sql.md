@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: d134e97d5e22d86d6ab3d072b5e2be29c589cde9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944548"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

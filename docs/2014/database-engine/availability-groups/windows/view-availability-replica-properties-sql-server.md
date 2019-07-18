@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097268"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788004"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>檢視可用性複本屬性 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，檢視 AlwaysOn 可用性群組的可用性複本屬性。  
@@ -32,7 +32,7 @@ ms.locfileid: "48097268"
   
 3.  展開可用性複本所屬的可用性群組，然後展開 **[可用性複本]** 節點。  
   
-4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性] 命令。  
+4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性]  命令。  
   
 5.  在 **[可用性複本屬性]** 對話方塊中，使用 **[一般]** 頁面檢視此複本的屬性。 如果您連接至主要複本，可以變更下列屬性：可用性模式、容錯移轉模式、主要角色的連接存取、次要角色的唯讀存取 (可讀取的次要)，以及工作階段逾時值。 如需詳細資訊，請參閱 <<c0> [ 可用性複本屬性&#40;一般頁面&#41;](availability-replica-properties-general-page.md)。</c0>  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48097268"
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [變更可用性複本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   

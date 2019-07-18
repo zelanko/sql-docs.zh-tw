@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c1a5e117ee1c79b918f9785310b9b7c97671729
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2ff4537f5db246dd9bcdc114b02005402f8745f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029606"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

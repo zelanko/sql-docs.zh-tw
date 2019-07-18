@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779222"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>使用記憶體最佳化資料表索引的方針
   索引是用來有效率地存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表中的資料。 指定正確的索引可以大幅提高查詢效能。 假設有以下的查詢範例：  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  如果 c1 資料行上沒有索引，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將必須掃描整個資料表 t，然後篩選滿足 c1=1 條件的資料列。 不過，如果資料行 c1 上有索引，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以直接搜尋 1 的值並擷取資料列。  
   
- 當搜尋具有特定值或值範圍的記錄來找出資料表中的一個或多個資料行時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用這些資料行上的索引來快速尋找對應的記錄。 以磁碟為基礎的資料表及記憶體最佳化的資料表都受益於索引。 但是，當使用記憶體最佳化資料表時，必須考量索引架構之間的一些差異。 (記憶體最佳化資料表的索引，稱為記憶體最佳化索引。)某些主要差異在於：  
+ 當搜尋具有特定值或值範圍的記錄來找出資料表中的一個或多個資料行時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用這些資料行上的索引來快速尋找對應的記錄。 以磁碟為基礎的資料表及記憶體最佳化的資料表都受益於索引。 但是，當使用記憶體最佳化資料表時，必須考量索引架構之間的一些差異。 （記憶體最佳化資料表上的索引稱為記憶體最佳化索引。）一些主要差異如下：  
   
 -   必須使用建立記憶體最佳化的索引[CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)。 以磁碟為基礎的索引可以使用 `CREATE TABLE` 和 `CREATE INDEX` 建立。  
   
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      如果資料表上的索引都經常使用，記憶體回收的效果最好。 很少使用的索引可能會造成記憶體回收系統對舊的資料列版本無法達到最佳執行效果。  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>建立記憶體最佳化的索引：程式碼範例  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>建立記憶體最佳化索引：程式碼範例  
  資料行層級雜湊索引：  
   
 ```sql  

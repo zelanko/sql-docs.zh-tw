@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d593bd3ad745f316b833b375ceaae8b764d21ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bd3b72e897b8ae12441c7cf28d1995eb45318d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923696"
 ---
 # <a name="updating-data"></a>更新資料
 更新行為和功能主要是依據更新模式 （鎖定型別）、 資料指標類型，以及資料指標位置。  

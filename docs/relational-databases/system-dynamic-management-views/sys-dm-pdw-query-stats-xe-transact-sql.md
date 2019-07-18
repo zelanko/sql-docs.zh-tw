@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_query_stats_xe (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_query_stats_xe (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4ade9fe6cb13ae26823a399678e994edc69a3f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cb9980f74bdb37b1fab43db352e35c43151c390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899148"
 ---
 # <a name="sysdmpdwquerystatsxe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

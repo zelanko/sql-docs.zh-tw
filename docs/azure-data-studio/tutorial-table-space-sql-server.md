@@ -2,21 +2,20 @@
 title: 教學課程：啟用資料表的空間使用方式範例深入解析小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何啟用資料表空間使用方式範例深入解析小工具在 Azure Data Studio database 儀表板上。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 6ec653eac10da8c28f727277fc130722c3badef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958980"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用情況下啟用資料表空間使用方式範例深入解析小工具 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -29,7 +28,7 @@ ms.locfileid: "53030352"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038937"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>資料存取子函式 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ fn:string($arg as item()?) as xs:string
  本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用字串函數  
- 以下查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素節點。  
+ 下列查詢會擷取 <`Features`> 子元素節點 <`ProductDescription`> 項目。  
   
 ```  
 SELECT CatalogDescription.query('  

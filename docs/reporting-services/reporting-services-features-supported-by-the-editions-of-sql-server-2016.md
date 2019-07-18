@@ -1,18 +1,18 @@
 ---
 title: SQL Server 版本所支援的 Reporting Services 功能
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.date: 11/01/2018
-ms.openlocfilehash: 1b46c6cec15f3a229892116758fe7f147f24c9ac
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185034"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343883"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 版本所支援的 Reporting Services 功能
 
@@ -53,7 +53,7 @@ ms.locfileid: "54185034"
 |共用元件程式庫|是|是|||是|  
 |電子郵件和檔案共用訂閱與排程|是|是|||是|  
 |報表記錄、執行快照集和快取|是|是|||是|  
-|SharePoint 整合|是|是|||是|  
+|SharePoint 整合<sup>2</sup>|是|是|||是|  
 |遠端及非 SQL 資料來源支援<sup>1</sup>|是|是|||是|  
 |資料來源、傳遞和轉譯與 RDCE 擴充性|是|是|||是|  
 |自訂商標|是||||是|  
@@ -88,9 +88,9 @@ ms.locfileid: "54185034"
   
 |工具名稱|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、**.rdl** 和 **.rds**|是|是|是|是|是|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、**.rsmobile**|是||||是|  
-|Power BI 行動裝置應用程式 (iOS、Windows 10 和 Android)、**.rsmobile**|是||||是|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 **.rdl** 和 **.rds**|是|是|是|是|是|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、 **.rsmobile**|是||||是|  
+|Power BI 行動裝置應用程式 (iOS、Windows 10 和 Android)、 **.rsmobile**|是||||是|  
   
 > [!NOTE]  
 > * 上表指出了啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 不過，這些工具能夠存取裝載於任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本的資料。  

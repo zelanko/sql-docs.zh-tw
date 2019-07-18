@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6bdbeb3d7d344c437c0e33af497c5b97d237b306
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 70f8e02ded424469590a4b85343b3e518fac31f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802413"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>變更 SQL Server 驗證使用者密碼 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920011"
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 建立複本[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)從現有的物件**資料錄集**物件。 選擇性地指定複製處於唯讀模式。  
@@ -68,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  下表提供所有的完整清單**資料錄集**事件。 它會指出它們是否有效且觸發的任何使用所產生的資料錄集複製品**複製品**方法。  
   
-|事件|觸發此選項，以複製程式碼嗎？|  
+|Event - 事件|觸發此選項，以複製程式碼嗎？|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|否|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|否|  

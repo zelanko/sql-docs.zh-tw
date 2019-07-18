@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58797038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65095330"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
 建立 SQL Server、SQL Database、SQL 資料倉儲或 Analytics Platform System 資料庫的登入。 按一下下列其中一個索引標籤，以查看特定版本的語法、引數、備註、權限和範例。
+
+CREATE LOGIN 會參與交易。 如果在交易內執行 CREATE LOGIN 並復原交易，將會復原建立登入作業。 如果在交易內執行，則在認可交易之前，無法使用建立的登入。
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
@@ -49,7 +51,7 @@ ms.locfileid: "58797038"
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -86,9 +88,9 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 登入有四種類型：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
-ASSWORD **=**'*password*' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+ASSWORD **=** '*password*' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
@@ -98,13 +100,13 @@ HASHED 僅適用於 SQL Server 登入。 指定在 PASSWORD 引數之後輸入�
 
 MUST_CHANGE 只適用於 SQL Server 登入。 如果有包含這個選項，第一次使用新登入時，SQL Server 會提示使用者輸入新密碼。
 
-CREDENTIAL **=**_credential\_name_ 對應到新 SQL Server 登入的認證名稱。 認證必須已存在於伺服器中。 目前這個選項只會將認證連結到登入。 認證無法對應至系統管理員 (sa) 登入。
+CREDENTIAL **=** _credential\_name_ 對應到新 SQL Server 登入的認證名稱。 認證必須已存在於伺服器中。 目前這個選項只會將認證連結到登入。 認證無法對應至系統管理員 (sa) 登入。
 
-SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 (**binary(16)**) 常值。 例如， `SID = 0x14585E90117152449347750164BA00A7`。
+SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 (**binary(16)** ) 常值。 例如， `SID = 0x14585E90117152449347750164BA00A7`。
 
-DEFAULT_DATABASE **=**_database_ 指定要指派給登入的預設資料庫。 如果不包括這個選項，預設資料庫將設為 master。
+DEFAULT_DATABASE **=** _database_ 指定要指派給登入的預設資料庫。 如果不包括這個選項，預設資料庫將設為 master。
 
-DEFAULT_LANGUAGE **=**_language_ 指定要指派給登入的預設語言。 如果不包括這個選項，預設語言將設為伺服器的目前預設語言。 如果伺服器的預設語言在未來有所變更，登入的預設語言會保持不變。
+DEFAULT_LANGUAGE **=** _language_ 指定要指派給登入的預設語言。 如果不包括這個選項，預設語言將設為伺服器的目前預設語言。 如果伺服器的預設語言在未來有所變更，登入的預設語言會保持不變。
 
 CHECK_EXPIRATION **=** { ON | **OFF** } 僅適用於 SQL Server 登入。 指定是否應該對這個登入強制執行密碼逾期原則。 預設值是 OFF。
 
@@ -257,7 +259,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|** _\* SQL Database<br />單一資料庫/彈性集區 \*_ **|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -279,11 +281,11 @@ CREATE LOGIN login_name
 
 *login_name* 指定建立的登入名稱。 Azure SQL Database 單一資料庫/彈性集區只支援 SQL 登入。
 
-PASSWORD **='** password**'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
-SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)**) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
+SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
 
 ## <a name="remarks"></a>Remarks
 
@@ -299,11 +301,11 @@ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，�
 
 **CREATE LOGIN** 陳述式必須是批次中唯一的陳述式。
 
-在連線至 SQL Database 的一些方法中 (例如 **sqlcmd**)，您必須使用 *\<login>*@*\<server>* 標記法，將 SQL Database 伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL Database 伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
+在連線至 SQL Database 的一些方法中 (例如 **sqlcmd**)，您必須使用 *\<login>* @ *\<server>* 標記法，將 SQL Database 伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL Database 伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
 
 在 SQL Database 中，您必須連線至 master 資料庫以建立登入。
 
-SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com**，則必須以 **myemail@live.com@myazureserver** 提供登入。
+SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
 在 SQL Database 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -377,7 +379,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|** _\* SQL Database<br />受控執行個體 \*_ **|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -410,7 +412,7 @@ PASSWORD **=** '*password*' 指定要建立的 SQL 登入密碼。 請使用增�
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
-SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)**) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
+SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
 
 ## <a name="remarks"></a>Remarks
 
@@ -558,7 +560,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL 資料<br />倉儲 \*_ **|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -580,11 +582,11 @@ CREATE LOGIN login_name
 
 *login_name* 指定建立的登入名稱。 Azure SQL Database 僅支援 SQL 登入。
 
-PASSWORD **='** password**'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+PASSWORD **='** password* *'* 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
- SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL 資料倉儲，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)**) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
+ SID = *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL 資料倉儲，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如， `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`。
 
 ## <a name="remarks"></a>Remarks
 
@@ -598,11 +600,11 @@ PASSWORD **='** password**'* 指定要建立的 SQL 登入密碼。 請使用增
 
 **CREATE LOGIN** 陳述式必須是批次中唯一的陳述式。
 
-在連線至 SQL 資料倉儲的一些方法中 (例如 **sqlcmd**)，您必須使用 *\<login>*@*\<server>* 標記法，將 SQL 資料倉儲伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL 資料倉儲伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
+在連線至 SQL 資料倉儲的一些方法中 (例如 **sqlcmd**)，您必須使用 *\<login>* @ *\<server>* 標記法，將 SQL 資料倉儲伺服器名稱附加至連接字串中的登入名稱。 例如，如果您的登入為 `login1`，且 SQL 資料倉儲伺服器的完整名稱為 `servername.database.windows.net`，則連接字串的 *username* 參數應該是 `login1@servername`。 由於 *username* 參數的總長度為 128 個字元，因此 *login_name* 的限制為 127 個字元減去伺服器名稱的長度。 在此範例中，`login_name` 的長度只能是 117 個字元，因為 `servername` 為 10 個字元。
 
 在 SQL 資料倉儲中，您必須連線至 master 資料庫以建立登入。
 
-SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com**，則必須以 **myemail@live.com@myazureserver** 提供登入。
+SQL Server 規則可讓您建立 \<loginname>@\<servername> 格式的 SQL Server 驗證登入。 如果您的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器是 **myazureserver**，而您的登入是 **myemail@live.com** ，則必須以 **myemail@live.com@myazureserver** 提供登入。
 
 在 SQL 資料倉儲中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
@@ -672,7 +674,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 
@@ -695,9 +697,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 登入有四種類型：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 ' **\\** '。 Windows 登入可以包含 ' **\\** '。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
-ASSWORD **='**_password_' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
+ASSWORD **='** _password_' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 

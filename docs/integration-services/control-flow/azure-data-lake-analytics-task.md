@@ -2,10 +2,10 @@
 title: Azure Data Lake Analytics 工作 | Microsoft Docs
 description: 您可以利用 Data Lake Analytics 工作，將 U-SQL 作業提交至 Azure Data Lake Analytics 服務。
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,14 +14,18 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808460"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419171"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 您可以利用 Data Lake Analytics 工作，將 U-SQL 作業提交至 Azure Data Lake Analytics 服務。 此工作是 [Azure SQL Server Integration Services (SSIS) Feature Pack](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) 的元件。
 
@@ -29,11 +33,11 @@ ms.locfileid: "52808460"
 
 ## <a name="configure-the-task"></a>設定工作
 
-若要將 Data Lake Analytics 工作新增至套件，請將該工作從 SSIS 工具箱拖曳至設計工具畫布。 接著，按兩下此工作，或以滑鼠右鍵按一下此工作，然後選取 [編輯]。 [Azure Data Lake Analytics 工作編輯器] 對話方塊隨即開啟。 您可以透過 SSIS 設計工具或以程式設計方式來設定屬性。
+若要將 Data Lake Analytics 工作新增至套件，請將該工作從 SSIS 工具箱拖曳至設計工具畫布。 接著，按兩下此工作，或以滑鼠右鍵按一下此工作，然後選取 [編輯]  。 [Azure Data Lake Analytics 工作編輯器]  對話方塊隨即開啟。 您可以透過 SSIS 設計工具或以程式設計方式來設定屬性。
 
 ## <a name="general-page-configuration"></a>一般頁面設定
 
-使用 [一般] 頁面來設定工作，並提供工作提交的 U-SQL 指令碼。 若要深入了解 U-SQL 語言，請參閱 [U-SQL 語言參考](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference) \(英文\)。
+使用 [一般]  頁面來設定工作，並提供工作提交的 U-SQL 指令碼。 若要深入了解 U-SQL 語言，請參閱 [U-SQL 語言參考](/u-sql/) \(英文\)。
 
 ### <a name="basic-configuration"></a>基本組態
 
@@ -49,21 +53,21 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 |-----------|-----------------|  
 |**DirectInput**|透過內嵌編輯器指定 U-SQL 指令碼。 選取此值會顯示動態選項 **USQLStatement**。|  
 |**FileConnection**|指定本機的.usql 檔案，其中包含 U-SQL 指令碼。 選取此選項會顯示動態選項 **FileConnection**。|  
-|**變數**|指定 SSIS 變數，其中包含 U-SQL 指令碼。 選取此值會顯示動態選項 [SourceVariable]。|
+|**變數**|指定 SSIS 變數，其中包含 U-SQL 指令碼。 選取此值會顯示動態選項 [SourceVariable]  。|
 
 **SourceType 動態選項：** 指定 U-SQL 查詢的指令碼內容。 
 
 |SourceType|動態選項|  
 |-----------|-----------------|  
-|**SourceType = DirectInput**|直接在選項方塊輸入要提交的 U-SQL 查詢，或選取瀏覽按鈕 (...)，在 [輸入 U-SQL 查詢] 對話方塊中輸入 U-SQL 查詢。|  
-|**SourceType = FileConnection**|選取現有的檔案連線管理員，或選取 [<新增連線>] 以建立新的檔案連線。 如需相關資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
-|**SourceType = Variable**|選取現有的變數，或選取 [\<新增變數...>] 以建立新的變數。 如需相關資訊，請參閱[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
+|**SourceType = DirectInput**|直接在選項方塊輸入要提交的 U-SQL 查詢，或選取瀏覽按鈕 (...)，在 [輸入 U-SQL 查詢]  對話方塊中輸入 U-SQL 查詢。|  
+|**SourceType = FileConnection**|選取現有的檔案連線管理員，或選取 [<新增連線>]  以建立新的檔案連線。 如需相關資訊，請參閱[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)和[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
+|**SourceType = Variable**|選取現有的變數，或選取 [\<新增變數...>]  以建立新的變數。 如需相關資訊，請參閱[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
 
 
 ### <a name="job-configuration"></a>作業設定
 作業設定指定 U-SQL 作業提交屬性。
 
-- **AzureDataLakeAnalyticsConnection:** 指定要提交 U-SQL 指令碼的 Data Lake Analytics 帳戶。 從已定義的連接管理員清單中選擇連接。 若要建立新的連接，請選取 [<新增連接>]。 如需相關資訊，請參閱 [Azure Data Lake Analytics 連線管理員](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)。
+- **AzureDataLakeAnalyticsConnection:** 指定要提交 U-SQL 指令碼的 Data Lake Analytics 帳戶。 從已定義的連接管理員清單中選擇連接。 若要建立新的連接，請選取 [<新增連接>]  。 如需相關資訊，請參閱 [Azure Data Lake Analytics 連線管理員](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)。
 
 - **JobName：** 指定 U-SQL 作業的名稱。 
 - **AnalyticsUnits：** 指定 U-SQL 作業的分析單位計數。
@@ -80,9 +84,9 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 
 ## <a name="parameter-mapping-page-configuration"></a>參數對應頁面設定
 
-使用 [Azure Data Lake Analytics 工作編輯器] 對話方塊的 [參數對應] 頁面，將變數對應至 U-SQL 指令碼中的參數 (U-SQL 變數)。
+使用 [Azure Data Lake Analytics 工作編輯器]  對話方塊的 [參數對應]  頁面，將變數對應至 U-SQL 指令碼中的參數 (U-SQL 變數)。
 
-- **變數名稱：** 選取 [新增] 來新增參數對應之後，從清單中選取系統或使用者定義的變數。 或者，您可以選取 [<新增變數...>]，然後使用 [加入變數] 對話方塊來加入新的變數。 如需相關資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
+- **變數名稱：** 選取 [新增]  來新增參數對應之後，從清單中選取系統或使用者定義的變數。 或者，您可以選取 [<新增變數...>]  ，然後使用 [加入變數]  對話方塊來加入新的變數。 如需相關資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
 
 - **參數名稱：** 提供 U-SQL 指令碼中的參數/變數名稱。 確定參數名稱開頭都是 \@ 符號，例如 \@Param1。 
 
@@ -116,7 +120,7 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-請注意，輸入和輸出路徑會定義在 **\@in** 與 **\@out** 參數之中。 在 U-SQL 指令碼中，**\@in** 與 **\@out** 參數的值是透過「參數對應」設定來動態傳遞。
+請注意，輸入和輸出路徑會定義在 **\@in** 與 **\@out** 參數之中。 在 U-SQL 指令碼中， **\@in** 與 **\@out** 參數的值是透過「參數對應」設定來動態傳遞。
 
 |變數名稱|參數名稱|
 |-------------|--------------|

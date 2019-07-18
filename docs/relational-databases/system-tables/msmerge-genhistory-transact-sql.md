@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a56efcc95965d3af9d01f618baba416a65226ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017698"
 ---
 # <a name="msmergegenhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52807880"
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|由訂閱者的層代 (Generation) 所識別之變更的全域識別碼。|  
 |**pubid**|**uniqueidentifier**|發行集識別碼。|  
-|**產生**|**bigint**|層代 (Generation) 值。|  
+|**generation**|**bigint**|層代 (Generation) 值。|  
 |**art_nick**|**int**|發行項的暱稱。|  
 |**暱稱**|**varbinary(1001)**|這個層代 (Generation) 已經知道的其他訂閱者的暱稱清單。 其目的是避免將層代 (Generation) 傳送給已經看過那些變更的訂閱者。 為了提高搜尋的效率，暱稱清單中的暱稱都是依序維護的。 如果暱稱太多，超過這個欄位的容量，它們就無法達到最佳化的效果。|  
 |**coldate**|**datetime**|將目前層代 (Generation) 加入資料表中的日期。|  

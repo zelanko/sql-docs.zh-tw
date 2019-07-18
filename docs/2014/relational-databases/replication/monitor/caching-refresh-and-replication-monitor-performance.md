@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667366"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>快取、重新整理和複寫監視器效能
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」設計成能有效地監視發行集系統中的大量電腦。 會定期快取和重新整理「複寫監視器」用作執行計算和收集資料的查詢。 快取可減少您在「複寫監視器」中檢視不同頁面時的查詢和計算次數，並可使監視範圍擴大到多個使用者。  
   
  快取重新整理由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業 (即 **散發的複寫監視重新整理器**) 處理。 此作業連續執行，但快取重新整理排程需要在上一次重新整理後等候一段時間：  
   
--   如果自上次建立快取之後，有個代理程式歷程記錄變更，則等候時間沒有的最小值：4 秒;或是建立上次快取所花費的時間量。  
+-   如果自上次建立快取之後有發生代理程式記錄變更，則最短的等候時間是：4 秒；或建立先前快取所花費的時間。  
   
--   如果沒有任何代理程式歷程記錄變更從快取最近建立 （可能已有其他變更），則等候時間沒有最大值：30 秒;或是建立上次快取所花費的時間量。  
+-   如果自上次建立快取之後沒有發生任何代理程式記錄變更 (可能有發生其他變更)，則最長的等候時間是：30 秒；或建立先前快取所花費的時間。  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>重新整理複寫監視器使用者介面  
  「複寫監視器」使用者介面可以按下列方式重新整理：  
@@ -39,7 +39,7 @@ ms.locfileid: "52800620"
   
 -   依預設，透過「複寫監視器」啟動的詳細資料視窗不會自動重新整理，正在同步處理的合併訂閱的相關視窗除外。 如果您將詳細資料視窗指定為應自動重新整理，則它們將按照與「複寫監視器」主視窗相同的排程重新整理。  
   
--   可以透過按 F5 或以滑鼠右鍵按一下「複寫監視器」樹狀目錄中的節點，再按一下 **[重新整理]**，手動重新整理所有視窗。 手動重新整理會強制重新整理快取。  
+-   可以透過按 F5 或以滑鼠右鍵按一下「複寫監視器」樹狀目錄中的節點，再按一下 **[重新整理]** ，手動重新整理所有視窗。 手動重新整理會強制重新整理快取。  
   
  如需詳細資訊，請參閱[在複寫監視器中重新整理資料](refresh-data-in-replication-monitor.md)。  
   

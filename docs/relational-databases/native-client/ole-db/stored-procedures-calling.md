@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a95705e24d2437a2a8f2695a68e97c129fd619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4de0a6213f27f4feb88949dd6062321ad30c2866
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031866"
 ---
 # <a name="stored-procedures---calling"></a>預存程序 - 呼叫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,9 @@ ms.locfileid: "54131055"
     -   存取子控制代碼會在步驟 3 中建立。  
   
 5.  使用 **ICommand::Execute** 執行命令。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="methods-of-calling-a-stored-procedure"></a>呼叫預存程序的方法  
  執行中的預存程序時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者支援:  
   
@@ -96,9 +97,9 @@ ms.locfileid: "54131055"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**？ =**]**呼叫**_procedure_name_[**(**[*參數*] [**，**[*參數*]]...**)**]}  
+ {[ **?=** ]**call**_procedure_name_[ **(** [*parameter*][ **,** [*parameter*]]... **)** ]}  
   
- 例如：  
+ 例如:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  

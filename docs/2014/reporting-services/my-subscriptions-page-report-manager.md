@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108193"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
   使用 [我的訂閱] 頁面來檢視某個位置的所有訂閱。 從這個頁面中，您可以存取與修改或刪除擁有的任何訂閱。 您只擁有您所建立的訂閱。 您不可以存取其他使用者的訂閱，也不可以存取您有權使用但並未擁有的訂閱 (例如，如果您的名稱已經加入另一位使用者所定義的現有訂閱中)。 您不可以在此頁面建立訂閱。 如需建立訂用帳戶的詳細資訊，請參閱 <<c0> [ 新的訂用帳戶或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。</c0>  
@@ -38,9 +37,9 @@ ms.locfileid: "56026899"
     > [!NOTE]  
     >  [我的訂閱] 永遠可以使用，即使您沒有建立訂閱的權限。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **刪除**  
- 選取您要刪除的每一個訂閱旁邊的核取方塊，然後按一下 **[刪除]**。  
+ 選取您要刪除的每一個訂閱旁邊的核取方塊，然後按一下 **[刪除]** 。  
   
  **編輯**  
  按一下即可檢視或編輯訂閱。  

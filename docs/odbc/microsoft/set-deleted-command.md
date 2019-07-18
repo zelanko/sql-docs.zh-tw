@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54900f00e03e1f236baf0b6eef152081b1f384a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997742"
 ---
 # <a name="set-deleted-command"></a>SET DELETED 命令
 指定是否標示為要刪除的記錄會被處理，以及是否可用於其他命令。  

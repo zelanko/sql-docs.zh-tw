@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72a20c639519013000d0839a9ea8f1f20d06b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cb36768300fb682305a37285fb7659238eeb104
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098160"
 ---
 # <a name="using-capture-mode"></a>使用擷取模式
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

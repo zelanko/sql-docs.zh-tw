@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ab79de3551f1ef4613bb3c6f14b44ca660e2dfc
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472088"
 ---
 # <a name="sort-data-in-a-table"></a>排序資料表中的資料 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "53072065"
   
 2.  在 [自動篩選] 功能表中，執行下列其中一項：  
   
-    -   若要以遞增的英數順序排序，按一下 **[從 A 到 Z 排序]**。  
+    -   若要以遞增的英數順序排序，按一下 **[從 A 到 Z 排序]** 。  
   
-    -   若要以遞減的英數順序排序，按一下 **[從 Z 到 A 排序]**。  
+    -   若要以遞減的英數順序排序，按一下 **[從 Z 到 A 排序]** 。  
   
     > [!NOTE]  
     >  在某些情況下，從其他應用程式匯入的資料在資料前面可能會插入開頭空白。 您必須移除開頭空白，才能正確排序資料。  
@@ -39,9 +39,9 @@ ms.locfileid: "53072065"
   
 2.  在 [自動篩選] 功能表中，執行下列其中一項：  
   
-    -   若要從最小的數字排序到最大的數字，按一下 **[從最小到最大排序]**。  
+    -   若要從最小的數字排序到最大的數字，按一下 **[從最小到最大排序]** 。  
   
-    -   若要從最大的數字排序到最小的數字，按一下 **[從最大到最小排序]**。  
+    -   若要從最大的數字排序到最小的數字，按一下 **[從最大到最小排序]** 。  
   
     > [!NOTE]  
     >  如果結果不如預期，資料行可能會包含儲存為文字而非數字的數字。 例如，從某些會計系統匯入的負數，或者以開頭 ' (單引號) 輸入的數字儲存為文字。  

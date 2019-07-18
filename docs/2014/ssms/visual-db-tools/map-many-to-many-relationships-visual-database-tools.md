@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63306007"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>對應多對多關聯性 (Visual Database Tools)
   多對多關聯性可讓您將一個資料表中的每一個資料列，關聯到另一個資料表的多個資料列，反之亦然。 例如，您可以建立 `authors` 資料表和 `titles` 資料表之間的多對多關聯性，以將每一個作者和他/她的書搭配，並將每一本書和所有的作者搭配。 在任一資料表建立一對多關聯性，可能會錯指每一本書只能有一位作者，或每一位作者只能寫一本書。  
@@ -32,9 +32,9 @@ ms.locfileid: "52775040"
   
 1.  在資料庫圖表中，加入您要在其間建立多對多關聯性的資料表。  
   
-2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]，建立第三個資料表。 這會成為聯合資料表。  
+2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]  ，建立第三個資料表。 這會成為聯合資料表。  
   
-3.  在 [選擇名稱] 對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
+3.  在 [選擇名稱]  對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
   
 4.  將兩個資料表的主索引鍵資料行都複製到聯合資料表。 您可以將其他資料行加入到此資料表，也可以加入到其他資料表。  
   

@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1807c1d2cafd6e499d226c83d1556abc3ddb71b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6c75a745928a9bb8b912c507415e3233515f0ff4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717375"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入門示範如何使用 SQL Server Management Studio (SSMS) 連線至 SSIS 目錄資料庫，然後從 SSMS 的 [物件總管] 中執行儲存在 SSIS 目錄中的 SSIS 套件。
 
 SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever 到 SQL Database 皆適用。 如需 SSMS 的詳細資訊，請參閱 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。
@@ -42,8 +46,8 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
+2. 從左側功能表中選取 [SQL 資料庫]  ，然後選取 [SQL 資料庫]  頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀]  頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製]  選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 
 ## <a name="connect-to-the-ssisdb-database"></a>連線至 SSISDB 資料庫
@@ -52,7 +56,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 1. 開啟 SQL Server Management Studio。
 
-2. 在 [連線至伺服器] 對話方塊中，輸入下列資訊：
+2. 在 [連線至伺服器]  對話方塊中，輸入下列資訊：
 
    | 設定       | 建議值 | 其他資訊 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -62,17 +66,17 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 
-3. 按一下 **[連接]**。 [物件總管] 視窗會在 SSMS 中開啟。 
+3. 按一下 **[連接]** 。 [物件總管] 視窗會在 SSMS 中開啟。 
 
-4. 在 [物件總管] 中，展開 [Integration Services 目錄]，然後展開 [SSISDB] 以檢視 SSIS 目錄資料庫中的物件。
+4. 在 [物件總管] 中，展開 [Integration Services 目錄]  ，然後展開 [SSISDB]  以檢視 SSIS 目錄資料庫中的物件。
 
 ## <a name="run-a-package"></a>執行套件
 
 1. 在 [物件總管] 中，選取您要執行的套件。
 
-2. 按一下滑鼠右鍵，然後選取 [執行]。 即會開啟 [執行套件] 對話方塊。
+2. 按一下滑鼠右鍵，然後選取 [執行]  。 即會開啟 [執行套件]  對話方塊。
 
-3.  使用 [執行套件] 對話方塊之 [參數]、[連線管理員] 和 [進階] 索引標籤上的設定，設定套件執行。
+3.  使用 [執行套件] 對話方塊之 [參數]  、[連線管理員]  和 [進階]  索引標籤上的設定，設定套件執行。
 
 4.  按一下 [確定] 以執行套件。
 

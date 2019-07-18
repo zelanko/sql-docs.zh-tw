@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962552"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R services 的效能： 結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "58645550"
 6. 主控台輸出也被導向到輸出目錄中的檔案。
 7. 測試指令碼處理這些檔案，以透過執行計算的平均時間的時間。
 
-例如，下列的結果會是從單一測試的時間。 主要的相關時間為「總讀取時間」(IO 時間) 和「轉換時間」(在設定處理序以進行計算方面的負擔)。
+例如，下列的結果會是從單一測試的時間。 主要的相關時間為「總讀取時間」  (IO 時間) 和「轉換時間」  (在設定處理序以進行計算方面的負擔)。
 
 **範例時間**
 
@@ -90,7 +89,7 @@ metric time pct
 
 第一項測試會比較使用壓縮和單欄式資料表，以減少資料的大小。
 
-| 資料表名稱            | 資料列     | 已保留   | 資料       | index_size | 未使用  | 節省 % (已保留) |
+| 資料表名稱            | 資料列     | 已保留   | Data       | index_size | 未使用  | 節省 % (已保留) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -110,9 +109,9 @@ metric time pct
 | *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
 |                       | NoCompression-平行| 4        | 5.1775       |
 | *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
-|                       | PageCompression - parallel | 4        | 5.3225       |
+|                       | PageCompression-平行 | 4        | 5.3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
-|                       | RowCompression - parallel  | 4        | 5.2375       |
+|                       | RowCompression-平行  | 4        | 5.2375       |
 
 **結論**
 
@@ -145,7 +144,7 @@ metric time pct
 |           | 6      | 3.47 秒 |              |
 |           |        |              | 3.5075       |
 
-「平衡」電源選項：
+「平衡」  電源選項：
 
 | 測試名稱 | 執行 \# | 經過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
@@ -180,7 +179,7 @@ metric time pct
 
 | 資料表名稱          | 測試名稱   | 平均時間 |
 |---------------------|-------------|--------------|
-| *Airline*           | *FactorCol* | 10.72        |
+| *航空公司*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **結論**

@@ -2,20 +2,19 @@
 title: 主要執行個體是什麼？
 titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的 SQL Server 主要執行個體。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958705"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是中的 SQL Server 的巨量資料叢集的主要執行個體？
 

@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Errorinfo |Microsoft Docs'
+title: PDOStatement::errorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fc81be8628145c63a3d9c2296846ca19b0cc39b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7bcce0c5006be65137cd04da28a5c3e2c8844551
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768192"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ array PDOStatement::errorInfo();
   
 如果沒有發生錯誤，或如果未設定 SQLSTATE，則驅動程式特有的欄位會是 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

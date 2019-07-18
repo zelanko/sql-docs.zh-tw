@@ -11,14 +11,18 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e38dd997a64170755b70b5066cd43aaa1d0f9517
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a7923439456ba1b2e697b7e634130c9376b82ef6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716342"
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾，或更新先前已部署的現有專案。  
@@ -34,10 +38,10 @@ catalog.deploy_project [@folder_name =] folder_name
   
 ## <a name="arguments"></a>引數  
  [@folder_name =] *folder_name*  
- 部署專案之目標資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 部署專案之目標資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [@project_name =] *project_name*  
- 資料夾中全新或已更新專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 資料夾中全新或已更新專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [@projectstream =] *projectstream*  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署檔案 (副檔名為 .ispac) 的二進位內容。  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6207ad4b-56b3-4c66-bad5-6e590591ac2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8adc59ec68bb4b929dcfb5a913f2e65dc833a559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c95b54c1cc552fb27922b6cf0a030fc4c1b54353
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775724"
 ---
 # <a name="getcharacterstream-method-sqlservercallablestatement"></a>getCharacterStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

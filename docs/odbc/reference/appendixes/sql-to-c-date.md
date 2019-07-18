@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c： 日期 |Microsoft Docs
+title: SQL 轉換為 C：日期 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056877"
 ---
-# <a name="sql-to-c-date"></a>SQL 到 C：日期
+# <a name="sql-to-c-date"></a>SQL 轉換為 C：Date
 日期的 ODBC SQL 資料類型的識別項是：  
   
  SQL_TYPE_DATE  
@@ -31,11 +30,11 @@ ms.locfileid: "47777476"
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字元位元組長度<br /><br /> 11 < = *Columnsize* < = 字元位元組長度<br /><br /> *BufferLength* < 11|data<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字元長度<br /><br /> 11 < = *Columnsize* < = 字元長度<br /><br /> *BufferLength* < 11|data<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|無 [a]|data|6 [c]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|無 [a]|資料 [b]|16 [c]|n/a|  
+|SQL_C_CHAR|*BufferLength* > 字元位元組長度<br /><br /> 11 < = *Columnsize* < = 字元位元組長度<br /><br /> *BufferLength* < 11|Data<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字元長度<br /><br /> 11 < = *Columnsize* < = 字元長度<br /><br /> *BufferLength* < 11|Data<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|Data<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|無 [a]|Data|6[c]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|無 [a]|資料 [b]|16[c]|n/a|  
   
  [a] 的值*Columnsize*會忽略這項轉換。 驅動程式會假設大小 **TargetValuePtr*是 C 資料類型的大小。  
   

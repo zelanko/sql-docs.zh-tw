@@ -11,16 +11,16 @@ helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1d5d24c9a1fa4527ca199d649318c0c927a9c821
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732061"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,9 +72,9 @@ sqlps
  指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 只有當*Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
- 指定包含要執行之 PowerShell 命令的字串。 使用 **"&{**_command_**}"** 的格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
+ 指定包含要執行之 PowerShell 命令的字串。 使用 **"&{** _command_ **}"** 的格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  顯示 **sqlps** 公用程式選項的語法摘要。  
   
 ## <a name="remarks"></a>Remarks  

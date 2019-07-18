@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036197"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
 **合規性**  
@@ -37,7 +36,7 @@ ms.locfileid: "57683608"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLBrowseConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLBrowseConnect(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *InConnectionString*  
  [輸入]瀏覽要求的連接字串 (請參閱 「*InConnectionString*引數""註解"中)。  
@@ -223,7 +222,7 @@ SQLRETURN SQLBrowseConnect(
   
  這是資訊的最終的一段的驅動程式必須連接到資料來源**SQLBrowseConnect**都會傳回 SQL_SUCCESS，和 **OutConnectionString*包含完整的連接字串：  
   
-```  
+```cpp  
 // SQLBrowseConnect_Function.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

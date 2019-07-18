@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d8925299ad236e8908f6114bd9cf3841c2846c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: fa49540e4ca856c04065775540a1c6970af0cb2f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718506"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687430"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

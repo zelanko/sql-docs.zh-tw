@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
@@ -15,20 +14,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be2957778e30af73abfafa210dee4746ffd869c9
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520375"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463458"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 功能的行為變更
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的行為變更  
+## <a name="SQL14"></a> 中的行為變更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，針對包含超過特定長度 (超過 4020 個字元) 之字串的 XML 文件進行查詢，可能會傳回不正確的結果。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，這類查詢會傳回正確的結果。  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的行為變更  
+## <a name="Denali"></a> 中的行為變更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>中繼資料探索  
  改進[!INCLUDE[ssDE](../includes/ssde-md.md)]開頭[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允許以取得更精確的預期的結果描述比在舊版中傳回 SQLDescribeCol SQLDescribeCol [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../relational-databases/native-client/features/metadata-discovery.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "52520375"
  [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)選項，來判斷回應格式，不會取代實際執行查詢[sp_describe_first_result_set &#40;-&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)， [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)， [sys.dm_exec_describe_first_result_set &#40;-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)，和[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>編寫 SQL Server Agent 工作之指令碼時的行為變更  
- 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您透過從現有的作業複製指令碼來建立新的作業，新的作業可能會對現有的作業產生不良的影響。 若要建立新的工作，使用來自現有工作的指令碼，以手動方式刪除參數*@schedule_uid*而這通常是可在 現有的工作中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
+ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，如果您透過從現有的作業複製指令碼來建立新的作業，新的作業可能會對現有的作業產生不良的影響。 若要建立新的工作，使用來自現有工作的指令碼，以手動方式刪除參數 *@schedule_uid* 而這通常是可在 現有的工作中建立作業排程之區段的最後一個參數。 這將會為新的作業建立新的獨立排程，而不會影響現有的作業。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 使用者定義函數和方法的常數摺疊  
  在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，下列使用者定義的 CLR 物件現在是可摺疊的：  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad4f7e8cee834619985be1ab140bc39698215060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 92ffcfe235d33158fb26552c74c13d9533a11781
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798236"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767815"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>setSendTimeAsDatetime 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - synchronization [SQL Server], target server clocks
 - target servers [SQL Server], clock synchronization
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e034bc8cba4265f74f8dfdc9257846dee3a8412f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 197f9258974b045e92d4529bbca29f5f888bd4fa
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702642"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681456"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51702642"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目將目標伺服器的時鐘同步處理：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -58,11 +58,11 @@ ms.locfileid: "51702642"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要將目標伺服器的時鐘與主要伺服器的時鐘進行同步處理的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多伺服器管理]，然後選取 [管理目標伺服器]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多伺服器管理]  ，然後選取 [管理目標伺服器]  。  
   
-3.  在 **[管理目標伺服器]** 對話方塊中，按一下 **[公佈指示]**。  
+3.  在 **[管理目標伺服器]** 對話方塊中，按一下 **[公佈指示]** 。  
   
-4.  在 **[指示類型]** 清單中選取 **[同步處理時鐘]**。  
+4.  在 **[指示類型]** 清單中選取 **[同步處理時鐘]** 。  
   
 5.  在 **[收件者]** 下，執行下列其中一項：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51702642"
   
     -   按一下 **[下列目標伺服器]** 以同步處理特定的伺服器時鐘，然後選取要與主要伺服器時鐘進行時鐘同步處理的每一部目標伺服器。  
   
-6.  完成後，請按一下 **[確定]**。  
+6.  完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -78,9 +78,9 @@ ms.locfileid: "51702642"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb ;  

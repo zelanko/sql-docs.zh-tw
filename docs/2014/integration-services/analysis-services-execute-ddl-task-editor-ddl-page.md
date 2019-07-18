@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.ddl.f1
@@ -15,30 +14,30 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb9bb4127e521300a8406786c931b9f70bd87add
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061610"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [DDL] 頁面，即可指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
+  使用 [Analysis Services 執行 DDL 工作編輯器]  對話方塊的 [DDL]  頁面，即可指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
   
  若要了解這個工作，請參閱＜ [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)＞。  
   
 ## <a name="static-options"></a>靜態選項  
  **[連接]**  
- 選取清單中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>] 並使用 [新增 Analysis Services 連線管理員] 對話方塊，即可建立新的連線。  
+ 選取清單中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或是按一下 [\<新增連線...>]  並使用 [新增 Analysis Services 連線管理員]  對話方塊，即可建立新的連線。  
   
- **相關主題：**[加入 Analysis Services 連線管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)  
+ **相關主題：** [加入 Analysis Services 連線管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  指定 DDL 陳述式的來源類型。 此屬性具有下表所列的選項：  
   
 |值|描述|  
 |-----------|-----------------|  
-|**直接輸入**|將來源設定為 [SourceDirect] 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
+|**直接輸入**|將來源設定為 [SourceDirect]  文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**變數**|將來源設定為變數。 選取這個值就會顯示在下列章節中的動態選項。|  
   
@@ -46,19 +45,19 @@ ms.locfileid: "58379826"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = 直接輸入  
  **Source**  
- 鍵入 DDL 陳述式或按一下省略符號 **(...)**，然後在 [DDL 陳述式] 對話方塊中鍵入陳述式。  
+ 鍵入 DDL 陳述式或按一下省略符號 **(...)** ，然後在 [DDL 陳述式]  對話方塊中鍵入陳述式。  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = 檔案連接  
  **Source**  
- 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>] 再使用 [檔案連線管理員] 對話方塊，即可建立新的連線。  
+ 選取清單中的 [檔案連線]，或是按一下 [\<新增連線...>]  再使用 [檔案連線管理員]  對話方塊，即可建立新的連線。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)  
+ **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 變數  
  **Source**  
- 在清單中選取變數，或按一下 [\<新增變數...>] 並使用 [新增變數] 對話方塊，以建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>]  並使用 [新增變數]  對話方塊，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

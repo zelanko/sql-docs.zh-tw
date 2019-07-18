@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63ed2ae07b4180daba40a5333ddc8f3321f876dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 516a26466a4e817fc2fdabffadf8f19dc9593781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965803"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Keys 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -33,7 +32,7 @@ ms.locfileid: "47666548"
   
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

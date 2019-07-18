@@ -7,20 +7,19 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961815"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建立 R 模型，並儲存至 SQL Server （逐步解說）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在此步驟中，了解如何建置機器學習模型，並儲存在模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 儲存模型，您可以呼叫它直接從[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼，使用系統預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[PREDICT (T-SQL) 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 這個步驟會假設根據先前在本逐步解說的步驟進行中的 R 工作階段。 它會使用連接字串和資料來源中建立的物件執行這些步驟。 下列工具和套件來執行指令碼。
 
@@ -204,7 +203,7 @@ GO
 
 在您建置模型並確定它的運作狀況良好之後，您可能要將它部署至網站，其中使用者或組織中的人員可以將使用此模型，或可能是重新定型以及隨處可見以規則為基礎的模型。 此程序有時稱為*另尋高就*模型。 在 SQL Server 中，運算化之後，即可將 R 程式碼內嵌在預存程序。 因為程式碼所在的程序，它可以從任何可以連線到 SQL Server 的應用程式呼叫它。
 
-您可以從外部應用程式呼叫模型之前，您必須將模型儲存至用於生產環境資料庫中。 定型的模型會儲存在類型的單一資料行中的二進位格式**varbinary （max)**。
+您可以從外部應用程式呼叫模型之前，您必須將模型儲存至用於生產環境資料庫中。 定型的模型會儲存在類型的單一資料行中的二進位格式**varbinary （max)** 。
 
 一般部署工作流程包含下列步驟：
 

@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025717"
 ---
 # <a name="solution-explorer"></a>方案總管
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   
  方案包括一個或多個專案，加上有助於將方案當做一個整體來定義的檔案和中繼資料。 專案是一組檔案，加上連接資訊等相關的中繼資料。 方案和專案包含代表建立資料庫方案時所需要之指令碼、查詢、連接資訊和檔案的項目。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924810"
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 保存格式會使用下列四個命名空間。  

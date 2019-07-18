@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106539"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_type = ] 'job\_type'` 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 不能是 NULL。 有效輸入如下 **'capture'** 並 **'cleanup'**。  
+`[ @job_type = ] 'job\_type'` 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 不能是 NULL。 有效輸入如下 **'capture'** 並 **'cleanup'** 。  
   
 `[ @start_job = ] start_job` 旗標，指出作業是否應該在已加入之後立即啟動。 *start_job*已**元**預設值是 1。  
   
@@ -90,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  由於系統預設會建立清除和擷取作業，因此只有在作業已經明確卸除而且必須重新建立時，這個預存程序才是必要項目。  
   
- 作業名稱是**cdc。**_\<資料庫\_名稱\>_**\_清除**或**cdc。**_\<資料庫\_名稱\>_**\_擷取**，其中 *< 資料庫名稱 >* 名稱目前的資料庫。 如果已經存在具有相同名稱的作業，則會將名稱附加以句號 (**。**) 後面的唯一識別碼，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作業名稱是**cdc。** _\<資料庫\_名稱\>_ **\_清除**或**cdc。** _\<資料庫\_名稱\>_ **\_擷取**，其中 *< 資料庫名稱 >* 名稱目前的資料庫。 如果已經存在具有相同名稱的作業，則會將名稱附加以句號 ( **。** ) 後面的唯一識別碼，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  若要檢視清除或擷取作業的目前組態，請使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要變更作業的組態，請使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   

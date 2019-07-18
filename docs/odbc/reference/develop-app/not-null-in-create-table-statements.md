@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fb69943-f0c9-4ed2-aa42-20440e37e49d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4147e560d953b97ecba2e707d354bb6bf2ead59b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 808cddbd805db09d1b5c356d5b5af5734a5dcc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086322"
 ---
 # <a name="not-null-in-create-table-statements"></a>CREATE TABLE 陳述式中的 NOT NULL
 某些資料庫和特別桌面的資料庫，不支援**NOT NULL**中的資料行條件約束**CREATE TABLE**陳述式。 如需詳細資訊，請參閱中的 SQL_NON_NULLABLE_COLUMNS 選項[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。

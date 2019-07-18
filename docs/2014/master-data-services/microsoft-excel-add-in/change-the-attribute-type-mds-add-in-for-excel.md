@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482759"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當資料類型或是允許的字元數目不正確時，管理員可以變更屬性類型。  
@@ -28,7 +28,7 @@ ms.locfileid: "52783940"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
+-   您必須擁有存取 [系統管理]  和總管  功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "52783940"
   
 2.  在您想要變更的資料行中按一下任何資料格。  
   
-3.  在 [建立模型] 群組中，按一下 [屬性內容]。  
+3.  在 [建立模型]  群組中，按一下 [屬性內容]  。  
   
-4.  在 [屬性內容] 對話方塊中，視需要更新設定。  
+4.  在 [屬性內容]  對話方塊中，視需要更新設定。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>當您變更屬性類型時會發生什麼情況？  
  如果有屬性的相依性，例如屬性由任何 MDS 商務規則參考或屬性包含在訂閱檢視中，而且您變更屬性的資料類型，則 MDS 會：  

@@ -2,19 +2,18 @@
 title: 設定 Active Directory 密碼-Analytics Platform System |Microsoft Docs
 description: 在 目錄服務還原模式 Analytics Platform System (APS) 中設定 Active Directory 節點管理員登入密碼。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3df6203a4d98bace5d23a92e70a596a34dedb60e
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960069"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>設定系統管理員密碼的登入 AD 節點，在 目錄服務還原模式 (DSRM)-Analytics Platform System
 目錄服務還原模式 (DSRM) 是可修復或復原 Active Directory 網域服務 (AD DS) 的開機模式。 它用來登入設備 AD 節點失敗 AD DS 之後，或需要還原的 AD DS。 DSRM 密碼已經初始化應用裝置設定硬體供應商站台期間，並且應用裝置系統管理員才可變更。 Analytics Platform System 有兩個 AD DS （網域控制站）; **_appliance_domain_-AD01**並 **_appliance_domain_-ad02 移**。 針對每個設備 AD] 節點中，變更 [使用下列步驟將 DSRM 密碼。  

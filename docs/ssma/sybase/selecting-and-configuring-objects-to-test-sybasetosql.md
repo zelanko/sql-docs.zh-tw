@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2b8d842e9febc94d35f2a8c53c6106159f44423a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020960"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>選取並設定要測試的物件 (SybaseToSQL)
 在此步驟中，您選取測試，並設定為比較程序的函式的輸出參數，以及函式的傳回值的物件。  

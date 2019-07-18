@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62630800"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步處理排程
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步處理排程。 當您建立訂閱時，可以定義一個同步排程，以控制訂閱的複寫代理程式將於何時執行。 如果不指定排程參數，訂閱將使用預設排程。  
@@ -52,13 +52,13 @@ ms.locfileid: "52788672"
 |提取訂閱的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<訂閱資料庫>-\<GUID>** <sup>2</sup>|  
 |發送訂閱至非 SQL Server 訂閱者的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<整數>**|  
   
- <sup>1</sup> 如果是 Oracle 發行集的發送訂閱，其作業名稱會是 [\<發行者>-\<發行者>]，而不是 [\<發行者>-\<發行集資料庫>]。  
+ <sup>1</sup> 如果是 Oracle 發行集的發送訂閱，其作業名稱會是 [\<發行者>-\<發行者>]  ，而不是 [\<發行者>-\<發行集資料庫>]  。  
   
- <sup>2</sup> 如果是 Oracle 發行集的提取訂閱，其作業名稱會是 [\<發行者>-\<散發資料庫>]，而不是 [\<發行者>-\<發行集資料庫>]。  
+ <sup>2</sup> 如果是 Oracle 發行集的提取訂閱，其作業名稱會是 [\<發行者>-\<散發資料庫>]  ，而不是 [\<發行者>-\<發行集資料庫>]  。  
   
 #### <a name="to-specify-synchronization-schedules"></a>若要指定同步排程  
   
-1.  在 [新增訂閱精靈] 的 [同步排程] 頁面，從 [代理程式排程] 下拉式清單中為您正建立的每個訂閱選取下列值的其中之一：  
+1.  在 [新增訂閱精靈] 的 [同步排程]  頁面，從 [代理程式排程]  下拉式清單中為您正建立的每個訂閱選取下列值的其中之一：  
   
     -   **連續執行**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52788672"
   
     -   **\<定義排程...>**  
   
-2.  如果您選取 [\<定義排程...>]，請在 [作業排程屬性] 對話方塊中指定排程，然後按一下 [確定]。  
+2.  如果您選取 [\<定義排程...>]  ，請在 [作業排程屬性]  對話方塊中指定排程，然後按一下 [確定]  。  
   
 3.  完成精靈。  
   
@@ -76,21 +76,21 @@ ms.locfileid: "52788672"
   
 2.  按一下 **[所有訂閱]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
+3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。  
   
 4.  在 **訂用帳戶\<SubscriptionName >**  視窗中，按一下**動作**，然後按一下  **\<代理程式名稱 > 作業屬性**。  
   
-5.  在 [作業屬性 - \<工作名稱>] 對話方塊的 [排程] 頁面，按一下 [編輯]。  
+5.  在 [作業屬性 - \<工作名稱>]  對話方塊的 [排程]  頁面，按一下 [編輯]  。  
   
 6.  在 **[作業排程屬性]** 對話方塊中，從 **[排程類型]** 下拉式清單內選取一個值：  
   
-    -   若要指定代理程式應持續執行，請選取 **[當 SQL Server Agent 啟動時自動啟動]**。  
+    -   若要指定代理程式應持續執行，請選取 **[當 SQL Server Agent 啟動時自動啟動]** 。  
   
-    -   若要指定代理程式應於排程上執行，請選取 **[重複執行]**。  
+    -   若要指定代理程式應於排程上執行，請選取 **[重複執行]** 。  
   
-    -   若要指定代理程式應視需要執行，請選取 **[執行一次]**。  
+    -   若要指定代理程式應視需要執行，請選取 **[執行一次]** 。  
   
-7.  若您選取 **[重複執行]**，請為代理程式指定排程。  
+7.  若您選取 **[重複執行]** ，請為代理程式指定排程。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -100,19 +100,19 @@ ms.locfileid: "52788672"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下與訂閱相關聯的散發代理程式或合併代理程式的作業，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下與訂閱相關聯的散發代理程式或合併代理程式的作業，然後按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - \<工作名稱>] 對話方塊的 [排程] 頁面，按一下 [編輯]。  
+4.  在 [作業屬性 - \<工作名稱>]  對話方塊的 [排程]  頁面，按一下 [編輯]  。  
   
 5.  在 **[作業排程屬性]** 對話方塊中，從 **[排程類型]** 下拉式清單內選取一個值：  
   
-    -   若要指定代理程式應持續執行，請選取 **[當 SQL Server Agent 啟動時自動啟動]**。  
+    -   若要指定代理程式應持續執行，請選取 **[當 SQL Server Agent 啟動時自動啟動]** 。  
   
-    -   若要指定代理程式應於排程上執行，請選取 **[重複執行]**。  
+    -   若要指定代理程式應於排程上執行，請選取 **[重複執行]** 。  
   
-    -   若要指定代理程式應視需要執行，請選取 **[執行一次]**。  
+    -   若要指定代理程式應視需要執行，請選取 **[執行一次]** 。  
   
-6.  若您選取 **[重複執行]**，請為代理程式指定排程。  
+6.  若您選取 **[重複執行]** ，請為代理程式指定排程。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -122,19 +122,19 @@ ms.locfileid: "52788672"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下與訂閱相關聯的散發代理程式或合併代理程式的作業，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下與訂閱相關聯的散發代理程式或合併代理程式的作業，然後按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - \<工作名稱>] 對話方塊的 [排程] 頁面，按一下 [編輯]。  
+4.  在 [作業屬性 - \<工作名稱>]  對話方塊的 [排程]  頁面，按一下 [編輯]  。  
   
 5.  在 **[作業排程屬性]** 對話方塊中，從 **[排程類型]** 下拉式清單內選取一個值：  
   
-    -   若要指定代理程式應持續執行，請選取 **[當 SQL Server Agent 啟動時自動啟動]**。  
+    -   若要指定代理程式應持續執行，請選取 **[當 SQL Server Agent 啟動時自動啟動]** 。  
   
-    -   若要指定代理程式應於排程上執行，請選取 **[重複執行]**。  
+    -   若要指定代理程式應於排程上執行，請選取 **[重複執行]** 。  
   
-    -   若要指定代理程式應視需要執行，請選取 **[執行一次]**。  
+    -   若要指定代理程式應視需要執行，請選取 **[執行一次]** 。  
   
-6.  若您選取 **[重複執行]**，請為代理程式指定排程。  
+6.  若您選取 **[重複執行]** ，請為代理程式指定排程。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -167,25 +167,25 @@ ms.locfileid: "52788672"
   
 1.  建立交易式發行集的新提取訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
-2.  在訂閱者端，執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的散發代理程式作業定義排程。  
+2.  在訂閱者端，執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher** 或 Replication Management Objects (RMO)，在 **@publisher_db** 或 Replication Management Objects (RMO)，在 **@publication** 以及針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** ＞與＜ **@password** ＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的散發代理程式作業定義排程。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>針對交易式發行集的發送訂閱定義同步排程  
   
 1.  建立交易式發行集的新發送訂閱。 如需詳細資訊，請參閱 [建立發送訂閱](create-a-push-subscription.md)。  
   
-2.  在訂閱者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的散發代理程式作業定義排程。  
+2.  在訂閱者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定 **@subscriber** 或 Replication Management Objects (RMO)，在 **@subscriber_db** 或 Replication Management Objects (RMO)，在 **@publication** 以及針對 **@job_name** ＞與＜ **@password** ＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的散發代理程式作業定義排程。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>針對合併式發行集的提取訂閱定義同步排程  
   
 1.  建立合併式發行集的新提取訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](create-a-pull-subscription.md)。  
   
-2.  在訂閱者上，執行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的合併代理程式作業定義排程。  
+2.  在訂閱者上，執行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 指定 **@publisher** 或 Replication Management Objects (RMO)，在 **@publisher_db** 或 Replication Management Objects (RMO)，在 **@publication** 以及針對 **@job_name** ＞與＜ **@password** ＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的合併代理程式作業定義排程。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>針對合併式發行集的發送訂閱定義同步排程  
   
 1.  建立合併式發行集的新發送訂閱。 如需詳細資訊，請參閱 [建立發送訂閱](create-a-push-subscription.md)。  
   
-2.  在訂閱者上，執行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的合併代理程式作業定義排程。  
+2.  在訂閱者上，執行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定 **@subscriber** 或 Replication Management Objects (RMO)，在 **@subscriber_db** 或 Replication Management Objects (RMO)，在 **@publication** 以及針對 **@job_name** ＞與＜ **@password** ＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的合併代理程式作業定義排程。  
   
 ##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  複寫會使用 SQL Server Agent 來排程定期發生之活動的作業，例如快照集的產生和訂閱同步處理。 您可以使用Replication Management Objects (RMO)，以程式設計方式指定複寫代理程式作業的排程。  
@@ -326,7 +326,7 @@ ms.locfileid: "52788672"
   
 ## <a name="see-also"></a>另請參閱  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [訂閱發行集](subscribe-to-publications.md)   
  [同步處理發送訂閱](synchronize-a-push-subscription.md)   
  [同步處理提取訂閱](synchronize-a-pull-subscription.md)   
  [同步處理資料](synchronize-data.md)  

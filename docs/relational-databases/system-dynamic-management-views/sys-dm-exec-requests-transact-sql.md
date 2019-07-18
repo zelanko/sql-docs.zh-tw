@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: c4e12ee4d40cb200124748c07bcc3e78a5076a07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936951"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -89,13 +88,14 @@ ms.locfileid: "58072232"
 |group_id|**int**|這個查詢所屬工作負載群組的識別碼。 不可為 Null。|  
 |query_hash|**binary(8)**|針對查詢所計算的二進位雜湊值，可用來識別含有類似邏輯的查詢。 您可以使用查詢雜湊判別只有常值不同之查詢的彙總資源使用狀況。|  
 |query_plan_hash|**binary(8)**|從查詢執行計畫計算所得的二進位雜湊值將用於識別類似的查詢執行計畫。 您可以使用查詢計劃雜湊尋找具有類似執行計畫之查詢的累計成本。|  
-|statement_sql_handle|**varbinary(64)**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 個別查詢的 SQL 控制代碼。 |  
-|statement_context_id|**bigint**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> Sys.query_context_settings 選擇性外部索引鍵。 |  
+|statement_sql_handle|**varbinary(64)**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 個別查詢的 SQL 控制代碼。<br /><br />如果資料庫未啟用查詢存放區，則此資料行是 NULL。 |  
+|statement_context_id|**bigint**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> Sys.query_context_settings 選擇性外部索引鍵。<br /><br />如果資料庫未啟用查詢存放區，則此資料行是 NULL。 |  
 |dop |**int** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 查詢的平行處理原則程度。 |  
 |parallel_worker_count |**int** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 如果這是平行查詢的保留平行工作者數目。  |  
 |external_script_request_id |**uniqueidentifier** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 與目前要求相關聯的外部指令碼要求識別碼。 |  
 |is_resumable |**bit** |**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出要求是否可繼續索引作業。 |  
-|page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 個位元組的十六進位表示的頁面資源如果`wait_resource`資料行包含一頁。 |
+|page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 個位元組的十六進位表示的頁面資源如果`wait_resource`資料行包含一頁。 |  
+|page_server_reads|**bigint**|**適用於**：Azure SQL Database 的超大規模<br /><br /> 這項要求所執行的網頁伺服器讀取數目。 不可為 Null。|  
 
 ## <a name="remarks"></a>備註 
 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。

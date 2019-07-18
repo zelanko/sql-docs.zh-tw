@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1ba4de5a3ed59e13e87c0fc9094d1571975467e9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8ffc550212a8dd4237c9129cf7a5c1ea2244aa12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201797"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66783778"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53201797"
 >  **[加入 IP 位址]** 對話方塊不會驗證 IP 位址。 此對話方塊也不會阻止您為已加入至可用性群組接聽程式的子網路加入第二個子網路位址。  
   
  **取消**  
- 按一下以取消選取，並返回 [新增可用性群組接聽程式] 對話方塊或 [接聽程式] 索引標籤，而不加入任何子網路的靜態 IP 位址。  
+ 按一下以取消選取，並返回 [新增可用性群組接聽程式]  對話方塊或 [接聽程式]  索引標籤，而不加入任何子網路的靜態 IP 位址。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63020057"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,21 +30,21 @@ ms.locfileid: "52525882"
   
 ## <a name="switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>以互動方式使用 Management Studio 來切換資料庫的讀取/寫入模式  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫，然後選取 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫，然後選取 [屬性]  。  
   
      記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
   
 2.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
-3.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
+3.  將密碼指派給要卸離的資料庫，然後按一下 [確定]  執行卸離命令。  
   
 4.  在 [物件總管] 中，以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
-5.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 (**...**) 來找出資料庫資料夾。  
+5.  在 [資料夾]  文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 ( **...** ) 來找出資料庫資料夾。  
   
 6.  選取資料庫的讀取/寫入模式。  
   
-7.  輸入密碼，然後按一下 [確定] 執行附加命令。  
+7.  輸入密碼，然後按一下 [確定]  執行附加命令。  
   
 ## <a name="switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>以程式設計方式使用 AMO 來切換資料庫的讀取/寫入模式  
  在您的 C# 應用程式中，使用必要的參數來叫用 `SwitchReadWrite()` 。 編譯並執行程式碼，以便移動資料庫。  
@@ -89,7 +89,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
 ## <a name="switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>使用 XMLA 有指令碼切換資料庫的讀取/寫入模式  
  下列指示適用於相容性模式 1050、1100 或 1103 的多維度資料庫和表格式資料庫。  
   
-1.  在物件總管中，以滑鼠右鍵按一下資料庫，然後選取 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下資料庫，然後選取 [屬性]  。  
   
      記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
   

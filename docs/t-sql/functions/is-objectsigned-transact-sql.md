@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e1c26b6e934a929fc04316c4640825ab2f1ec46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd733ff5de0a45f689a8d768c29453136cba550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65942902"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ IS_OBJECTSIGNED (
  *@class* 為 **sysname**。  
   
  *@thumbprint*  
- 物件的 SHA 指模。 *@thumbprint* 的類型為 **varbinary(32)**。  
+ 物件的 SHA 指模。 *@thumbprint* 的類型為 **varbinary(32)** 。  
   
 ## <a name="returned-types"></a>傳回的類型  
  **int**  
@@ -72,7 +72,7 @@ IS_OBJECTSIGNED (
 |0|物件已簽署，但簽章無效。|  
 |1|已簽署物件。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要憑證或非對稱金鑰的 VIEW DEFINITION。  
   
 ## <a name="examples"></a>範例  

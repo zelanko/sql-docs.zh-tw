@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1771f88987073b1ef0bcc106f8de28549affe6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085467"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>層級 1 API 函式 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -42,7 +41,7 @@ ms.locfileid: "47829416"
 |**SQLGetTypeInfo**|傳回資料來源所支援的資料類型的相關資訊。 驅動程式中的 SQL 結果集傳回的資訊。|  
 |**SQLParamData**|用於搭配**SQLPutData**來指定參數資料在陳述式執行階段。|  
 |**SQLPutData**|允許應用程式將參數或資料行的資料傳送到在陳述式執行階段的驅動程式。|  
-|**SQLSetConnectOption**|提供存取權管理許多層面之連接的選項。 此函式僅部分支援： 此驅動程式支援的所有值*fOption*引數，但不支援部分*vParam*值*fOption*引數[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)。 如需詳細資訊，請參閱 <<c0> [ 連接選項](../../odbc/microsoft/connect-options.md)。|  
+|**SQLSetConnectOption**|提供存取權管理許多層面之連接的選項。 此函式僅部分支援：此驅動程式支援的所有值*fOption*引數，但不支援部分*vParam*值*fOption*引數[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). 如需詳細資訊，請參閱 <<c0> [ 連接選項](../../odbc/microsoft/connect-options.md)。|  
 |**SQLSetStmtOption**|設定與陳述式控制代碼相關的選項*hstmt*。 如需詳細資訊，請參閱 <<c0> [ 陳述式選項](../../odbc/microsoft/statement-options.md)。|  
 |**SQLSpecialColumns**|擷取一組最佳的資料行可唯一識別資料表中的資料列。|  
 |**SQLStatistics**|擷取單一的資料表和索引或與資料表相關聯的標記名稱相關的統計資料的清單。 驅動程式會傳回資訊當作結果集。|  

@@ -20,23 +20,23 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e07114e37293eb4c7b1a6a6b31d59bd7ce562b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb46b7fceb46185fdfd03874854649f67ef30c76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982086"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (小於或等於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元的值小於或等於右運算元，則結果為 TRUE，否則結果就是 FALSE。  
   
- 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 >= 比較結果不受到 ANSI_NULLS 設定的影響。  
+ 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 >= 比較結果不受 ANSI_NULLS 設定的影響。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

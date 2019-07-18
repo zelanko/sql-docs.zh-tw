@@ -17,12 +17,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 057320ea2d739b89675a253f4dad80b0f78357f3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 296edae8bce8fad55d655a59449da9a9431d3a40
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128248"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860673"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +60,18 @@ ms.locfileid: "54128248"
      此預存程序會使用由合併代理程式傳遞給這些參數的值，以實作自訂衝突解決邏輯；它必須傳回結構上與基底資料表相同的單一資料列結果集，並包含此資料列之獲勝版本的資料值。  
   
 2.  將預存程序的 EXECUTE 權限授與給訂閱者使用的任何登入，以連接到發行者。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>搭配新的資料表發行項使用自訂衝突解決器  
   
 1.  執行 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來定義發行項，針對 **@article_resolver** **參數指定** Microsoft SQL **@article_resolver** 的值，並針對 **@resolver_info** 參數指定可實作衝突解決器邏輯的預存程序名稱。 如需詳細資訊，請參閱 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>搭配現有的資料表發行項使用自訂衝突解決器  
   
-1.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication**、**@article**、**@property** 的 **article_resolver** 值，以及 **@value** 的 **MicrosoftSQL** **Server Stored ProcedureResolver** 值。  
+1.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication** 、 **@article** 、 **@property** 的 **article_resolver** 值，以及 **@value** 的 **MicrosoftSQL** **Server Stored ProcedureResolver** 值。  
   
-2.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication**、 **@article**，並針對 **@property** 指定 **@property**的值及針對 **@value**中針對合併發行項實作自訂衝突解析程式。  
+2.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication** 、 **@article** ，並針對 **@property** 指定 **@property** 的值及針對 **@value** 中針對合併發行項實作自訂衝突解析程式。  
   
 ##  <a name="COM"></a> 使用以 COM 為基礎的自訂解析程式  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空間會實作一個介面，此介面可讓您撰寫複雜的商務邏輯來處理事件，並解決合併複寫同步處理程序期間所發生的衝突。 如需相關資訊，請參閱 [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以撰寫自己的原生程式碼式自訂商務邏輯，以解決衝突。 此邏輯會建立為 COM 元件，並編譯成動態連結程式庫 (DLL) (使用類似 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 的產品)。 這類以 COM 為基礎的自訂衝突解決器必須實作 **ICustomResolver** 介面，此介面是專門針對衝突解決所設計。  
@@ -99,7 +101,7 @@ ms.locfileid: "54128248"
   
 8.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，以確認此程式庫尚未註冊為自訂衝突解決器。  
   
-9. 若要將此程式庫註冊為自訂衝突解決器，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 針對 **@article_resolver**指定 COM 物件的易記名稱、針對 **@resolver_clsid**的值及針對 **false** 指定 **@is_dotnet_assembly**中針對合併發行項實作自訂衝突解析程式。  
+9. 若要將此程式庫註冊為自訂衝突解決器，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 針對 **@article_resolver** 指定 COM 物件的易記名稱、針對 **@resolver_clsid** 的值及針對 **false** 指定 **@is_dotnet_assembly** 中針對合併發行項實作自訂衝突解析程式。  
   
     > [!NOTE]  
     >  當不再需要時，可以使用 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) 來取消註冊自訂衝突解決器。  
@@ -110,13 +112,13 @@ ms.locfileid: "54128248"
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下所需解決器的易記名稱。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來定義發行項。 針對 **@article_resolver**中針對合併發行項實作自訂衝突解析程式。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
+2.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來定義發行項。 針對 **@article_resolver** 中針對合併發行項實作自訂衝突解析程式。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>搭配現有的資料表發行項使用自訂衝突解決器  
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下所需解決器的易記名稱。  
   
-2.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication**、**@article**、**@property** 的 **article_resolver** 值，以及 **@value** 之步驟 1 的發行項解析程式易記名稱。  
+2.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication** 、 **@article** 、 **@property** 的 **article_resolver** 值，以及 **@value** 之步驟 1 的發行項解析程式易記名稱。  
   
 
 ## <a name="see-also"></a>另請參閱  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
@@ -15,12 +14,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18be600182e3ebef6a13e19fecd7af06be2c19ec
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056192"
 ---
 # <a name="script-task-editor-script-page"></a>指令碼工作編輯器 (指令碼頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[指令碼]** 頁面，即可設定指令碼屬性以及指定指令碼可存取的變數。  
@@ -30,7 +29,7 @@ ms.locfileid: "58390116"
   
  若要深入了解指令碼工作，請參閱＜ [Script Task](control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器設定指令碼工作](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **ScriptLanguage**  
  為此工作選取指令碼語言，可以是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   
@@ -44,13 +43,13 @@ ms.locfileid: "58390116"
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 **[EntryPoint]** 屬性的值。  
   
  **ReadOnlyVariables**  
- 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 ( **...** ) 按鈕，並在 [選取變數]  對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
   
  **ReadWriteVariables**  
- 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 ( **...** ) 按鈕，並在 [選取變數]  對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  

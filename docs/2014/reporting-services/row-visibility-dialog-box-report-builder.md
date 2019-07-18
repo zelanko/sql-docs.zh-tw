@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf4ff717d5f772b8ef3d78c3cd307b9d923fea79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d5ad7e47457aa2d1f1d5e36adec7e988de7b8bbb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102344"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>資料列可見性對話方塊 (報表產生器)
   使用 **[資料列可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料列，或使用其他報表項目來切換資料列的可見性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **一開始執行報表時**  
  選擇一個選項以指出資料列最初顯示在報表中的方式。  
   

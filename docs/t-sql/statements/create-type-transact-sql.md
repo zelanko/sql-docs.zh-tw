@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265999"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463593"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53265999"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定組件內實作使用者自訂類型的類別。 *class_name* 必須是有效的識別碼，且必須以類別的形式存在於可以顯示的組件中。 不論資料庫定序為何，*class_name* 都要區分大小寫，且必須完全符合相對應組件中的類別名稱。 如果用來撰寫類別的程式設計語言使用命名空間概念 (如 C#)，類別名稱可以是一個以方括弧 (**[ ]**) 括住之符合命名空間資格的名稱。 如果未指定 *class_name*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設它和 *type_name* 一樣。  
+ 指定組件內實作使用者自訂類型的類別。 *class_name* 必須是有效的識別碼，且必須以類別的形式存在於可以顯示的組件中。 不論資料庫定序為何，*class_name* 都要區分大小寫，且必須完全符合相對應組件中的類別名稱。 如果用來撰寫類別的程式設計語言使用命名空間概念 (如 C#)，類別名稱可以是一個以方括弧 ( **[ ]** ) 括住之符合命名空間資格的名稱。 如果未指定 *class_name*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設它和 *type_name* 一樣。  
   
  \<column_definition>  
  定義使用者定義資料表類型的資料行。  
@@ -274,7 +276,7 @@ column_name <data_type>
 ## <a name="memory-optimized-table-types"></a>記憶體最佳化的資料表類型  
  從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，資料表類型的資料處理可以在主要記憶體中執行，而不是在磁碟上。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 如需如何建立經記憶體最佳化的資料表類型的範例程式碼，請參閱[建立經記憶體最佳化的資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要目前資料庫的 CREATE TYPE 權限，以及 *schema_name*的 ALTER 權限。 如果未指定 *schema_name* ，則套用用來判斷目前使用者之結構描述的預設名稱解析規則。 如果指定 *assembly_name*，則使用者必須擁有該組件，或必須有在該組件上的 REFERENCES 權限。  
 
  如果將 CREATE TABLE 陳述式中的任何資料行定義成使用者定義型別，則需要使用者定義型別的 REFERENCES 權限。
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. 使用主索引鍵和索引來建立使用者定義的資料表類型
+以下範例會建立使用者定義的資料表類型，具有三個資料行，且其中一個 (`Name`) 是主索引鍵，另一個 (`Price`) 則是非叢集索引。  如需如何建立及使用資料表值參數的詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

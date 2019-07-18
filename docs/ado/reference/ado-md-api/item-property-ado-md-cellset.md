@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949629"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 屬性 (ADO MD Cellset)
 擷取資料格[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)使用其座標。  

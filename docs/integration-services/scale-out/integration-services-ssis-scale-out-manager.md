@@ -10,14 +10,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53235c3c95c6c943ac340aecfaa8a62ff347a753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65718762"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out Manager 是一種管理工具，可讓您透過單一應用程式管理整個 SSIS Scale Out 拓撲。 它會移除在多部電腦上執行管理工作以及執行 Transact-SQL 命令的負擔。
 

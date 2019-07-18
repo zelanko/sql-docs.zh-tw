@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080768"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、觸發程序、預設值和預存程序支援 (Visual FoxPro ODBC Driver)
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC Driver 的預存程序。 不過，您的應用程式可能互動與現有的規則、 觸發程序、 預設值或預存程序中，因為它會插入、 更新或刪除 Visual FoxPro 資料儲存在資料庫中。  
@@ -44,7 +43,7 @@ ms.locfileid: "47655006"
  如果您的應用程式互動資料的規則、 觸發程序、 預設值，或任何其他的 Visual FoxPro 命令或函式，呼叫預存程序，驅動程式會產生錯誤。 請參閱[不支援的 Visual FoxPro 命令和函式](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)如需命令和驅動程式不支援的函式的清單。  
   
 > [!TIP]  
->  如果您想要將條件式的程式碼插入您的規則、 觸發程序或預存程序可決定要呼叫由驅動程式時所執行的命令，您可以使用**版本 （)** 函式。 **版本 （)** 函式會傳回 「 Visual FoxPro ODBC Driver *\<版本 >*」 驅動程式呼叫時。  
+>  如果您想要將條件式的程式碼插入您的規則、 觸發程序或預存程序可決定要呼叫由驅動程式時所執行的命令，您可以使用**版本 （)** 函式。 **版本 （)** 函式會傳回 「 Visual FoxPro ODBC Driver *\<版本 >* 」 驅動程式呼叫時。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 命令和規則、 觸發程序、 預設值和預存程序中支援的函式  
   
@@ -81,7 +80,7 @@ ms.locfileid: "47655006"
 |位元測試 （） 函式|BITXOR （） 函式||  
 |BOF （） 函式|BITAND （） 函式||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -202,7 +201,7 @@ ms.locfileid: "47655006"
 |參數的命令|主要 （） 函式|私用的命令|  
 |PI （） 函式|程式 （） 函式|適當的 （） 函式|  
 |程序命令|PV （） 函式||  
-|公用的命令|PADL （) &#124; PADR （) &#124; PADC （） 函式||  
+|公用的命令|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>R  
   
@@ -254,7 +253,7 @@ ms.locfileid: "47655006"
 |TTOC （） 函式|TTOD （） 函式||  
 |型別 （） 函式|TABLEREVERT （） 函式||  
   
-## <a name="u"></a>u  
+## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  

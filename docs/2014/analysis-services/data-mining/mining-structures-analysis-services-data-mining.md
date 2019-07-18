@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -22,12 +21,12 @@ ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083382"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>採礦結構 (Analysis Services - 資料採礦)
   採礦結構定義從中建立採礦模型的資料：此結構會指定來源資料檢視、資料行的數目和類型，並將選用的資料分割指定為定型集和測試集。 單一採礦結構可支援共用相同網域的多個採礦模型。 下列圖表說明資料採礦結構與資料來源及其所構成資料採礦模型間的關聯性。  
@@ -94,7 +93,7 @@ ms.locfileid: "48172518"
 ### <a name="processing-mining-structures"></a>處理採礦結構  
  採礦結構在處理之前只是一個中繼資料容器。 當您處理採礦結構時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會建立快取來儲存有關資料的統計資料、如何將連續屬性離散化的資訊，以及採礦模型稍後所使用的其他資訊。 採礦模型本身不會儲存此摘要資訊，而是參考在處理採礦結構時快取的資訊。 因此，您不需要在每次將新模型加入至現有的結構時，重新處理結構；您可以只處理模型。  
   
- 如果快取很大，或您想移除詳細的資料，您可以選擇在處理後捨棄此快取。 如果不要快取資料，您可以將採礦結構的 `CacheMode` 屬性變更為 `ClearAfterProcessing`。 這樣一來就會在處理任何模型之後將快取終結。 設定`CacheMode`屬性設`ClearAfterProcessing`會停用從採礦模型的鑽研。  
+ 如果快取很大，或您想移除詳細的資料，您可以選擇在處理後捨棄此快取。 如果不要快取資料，您可以將採礦結構的 `CacheMode` 屬性變更為 `ClearAfterProcessing`。 這樣一來就會在處理任何模型之後將快取終結。 將 `CacheMode` 屬性設定為 `ClearAfterProcessing` 會從採礦模型停用鑽研。  
   
  但是在您終結快取之後，則無法將新模型加入至採礦結構。 如果您將新的採礦模型加入至結構，或變更現有模型的屬性，則需要先重新處理採礦結構。 如需詳細資訊，請參閱[處理需求和考量 &#40;資料採礦&#41;](processing-requirements-and-considerations-data-mining.md)。  
   
@@ -106,9 +105,9 @@ ms.locfileid: "48172518"
  `SELECT * FROM <model>.CASES` 陳述式會傳回相同的資料行，但是僅針對該特定模型中的案例。 如需詳細資訊，請參閱 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases) 和 [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>搭配採礦結構使用資料採礦模型  
- 資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 採礦模型是屬於特定採礦結構的物件，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。 您可以將結構資料行的多個複本加入到結構中。 您也可以將結構資料行的多個複本加入到模型中，然後針對此模型中的每一個結構資料行指派不同的名稱或 *「別名」*(Alias)。 如需為結構資料行建立別名的詳細資訊，請參閱 [建立模型資料行的別名](create-an-alias-for-a-model-column.md) 和 [採礦模型屬性](mining-model-properties.md)。  
+ 資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 採礦模型是屬於特定採礦結構的物件，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。 您可以將結構資料行的多個複本加入到結構中。 您也可以將結構資料行的多個複本加入到模型中，然後針對此模型中的每一個結構資料行指派不同的名稱或 *「別名」* (Alias)。 如需為結構資料行建立別名的詳細資訊，請參閱 [建立模型資料行的別名](create-an-alias-for-a-model-column.md) 和 [採礦模型屬性](mining-model-properties.md)。  
   
- 如需詳細的資料採礦模型架構的相關資訊，請參閱[採礦模型&#40;Analysis Services-Data Mining&#41;](mining-models-analysis-services-data-mining.md)。  
+ 如需資料採礦模型之結構的詳細資訊，請參閱 [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
  使用此處提供的連結來深入了解如何定義、管理及使用採礦結構。  
@@ -122,7 +121,7 @@ ms.locfileid: "48172518"
 |使用基礎資料來源及更新來源資料|[編輯用於採礦結構的資料來源檢視](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [處理採礦結構](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件&#40;Analysis Services-多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [採礦模型&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
   

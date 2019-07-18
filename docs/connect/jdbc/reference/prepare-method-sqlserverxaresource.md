@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a16d143266823b9455c306cefa37c9a7618524d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: acf6efd0799b129ed06ab272a67e5bf6bebfb05c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743646"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771031"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>prepare 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

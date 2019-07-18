@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 提交 Azure Data Studio 中的 SQL Server 巨量資料叢集上的 Spark 作業。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: db92ab03380bab1d6465fb53821ee6afbb345c54
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860449"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727366"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>將 SQL Server 在 Azure 資料 Studio 中的巨量資料叢集上的 Spark 作業提交
 

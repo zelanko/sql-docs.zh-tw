@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049238"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774582"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
@@ -78,7 +78,7 @@ ms.locfileid: "48049238"
   
 8.  請注意 **[備份作業]** 之下 **[排程]** 方塊所列的備份排程。 如果您想要自訂安裝的排程，請按一下 **[排程]** ，並視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以選擇以下其中一個選項來控制記錄備份的備份壓縮行為： **[使用預設伺服器設定]**、 **[壓縮備份]** 或 **[不要壓縮備份]**。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以透過選擇下列其中一個選項，來控制記錄備份的備份壓縮行為：[使用預設伺服器設定]、[壓縮備份]，或 [不要壓縮備份]。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
 10. 按一下 [確定] 。  
   

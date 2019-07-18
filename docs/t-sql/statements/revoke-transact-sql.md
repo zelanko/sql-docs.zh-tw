@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2993baa2608c4d5852bd691dcc45667de736edc8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638697"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -155,7 +155,7 @@ REVOKE
   
  從被授與指定了 GRANT OPTION 之權限的主體撤銷權限時，如果未指定 CASCADE，REVOKE 陳述式便會失敗。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  具有安全性實體之 CONTROL 權限的主體可以撤銷安全性實體的權限。 物件擁有者可以撤銷他們所擁有之物件的權限。  
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以撤銷伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以撤銷資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以撤銷結構描述中任何物件的任何權限。  

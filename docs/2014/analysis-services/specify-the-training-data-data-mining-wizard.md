@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
@@ -13,24 +12,24 @@ ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068070"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定培訓資料 (資料採礦精靈)
-  使用 [指定定型資料] 頁面，即可識別要在採礦結構中包含什麼資料行。 您可以選取要包含在結構中的資料行，即使不會在所有模型中使用也是如此。 例如，如果想要從採礦模型鑽研資料行，則可將這些資料行包含在結構中 (而非模型中)。  
+  使用 [指定定型資料]  頁面，即可識別要在採礦結構中包含什麼資料行。 您可以選取要包含在結構中的資料行，即使不會在所有模型中使用也是如此。 例如，如果想要從採礦模型鑽研資料行，則可將這些資料行包含在結構中 (而非模型中)。  
   
  包含在結構中的每個資料表都至少需要一個索引鍵資料行。 您挑選為索引鍵的資料行是根據資料表是案例資料表或巢狀資料表而定。 如果資料表是巢狀資料表，則索引鍵通常是可預測的資料行，而不是關聯的外部索引鍵。 若要深入了解巢狀索引鍵，請參閱[巢狀資料表 &#40;Analysis Services - 資料採礦&#41;](data-mining/nested-tables-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  不同的採礦演算法會以不同的方式使用索引鍵。 若要深入了解不同種類的索引鍵，請參閱[內容類型 &#40;資料採礦&#41;](data-mining/content-types-data-mining.md)。  
   
- **如需詳細資訊，請參閱**[採礦結構 &#40;Analysis Services - 資料採礦&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[採礦模型資料行](data-mining/mining-model-columns.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
+ **如需詳細資訊：** [採礦結構&#40;Analysis Services-資料採礦&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[採礦模型資料行](data-mining/mining-model-columns.md)，[資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料表/資料行**  
  顯示在精靈的上一頁上所選取的資料表和資料行。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48149328"
   
  對案例資料表而言，索引鍵通常是唯一識別碼。  
   
- 對巢狀資料表而言，[索引鍵] 指出相關聯案例內容中之資料列的識別碼。  
+ 對巢狀資料表而言，[索引鍵]  指出相關聯案例內容中之資料列的識別碼。  
   
  **輸入**  
  選取即可在建立預測時使用資料行。  
@@ -60,7 +59,7 @@ ms.locfileid: "48149328"
  **注意** ：只有在建立採礦模型時同時建立採礦結構，才可以使用這個資料行。  
   
  **建議**  
- 按一下即可開啟 [建議相關資料行] 對話方塊，它會對採樣資料進行分析，來識別與依據 Entropy 所選取 [可預測] 資料行展現最大關聯性的輸入資料行。 此分析也適用於以 OLAP 來源為基礎的巢狀資料表資料行或採礦結構。  
+ 按一下即可開啟 [建議相關資料行]  對話方塊，它會對採樣資料進行分析，來識別與依據 Entropy 所選取 [可預測]  資料行展現最大關聯性的輸入資料行。 此分析也適用於以 OLAP 來源為基礎的巢狀資料表資料行或採礦結構。  
   
  **附註** 只有在建立採礦模型時同時建立採礦結構，才可以使用這個資料行。  
   

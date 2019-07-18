@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920086"
 ---
 # <a name="charset-property-ado"></a>Charset 屬性 (ADO)
 指出字元集所在的文字內容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)應轉譯為儲存體中的內部緩衝區**Stream**物件。  
@@ -36,7 +35,7 @@ ms.locfileid: "47752336"
   
  **Charset**僅適用於文字**Stream**物件 ([類型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。 如果此屬性則會忽略**型別**是**adTypeBinary**。  
   
- 如需程式碼範例，請參閱[步驟 4： 填入 [詳細資料] 文字方塊中](../../../ado/guide/data/step-4-populate-the-details-text-box.md)。  
+ 如需程式碼範例，請參閱[步驟 4:填入詳細資料 文字方塊](../../../ado/guide/data/step-4-populate-the-details-text-box.md)。  
   
 ## <a name="applies-to"></a>適用於  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

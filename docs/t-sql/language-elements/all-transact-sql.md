@@ -16,15 +16,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff274ae7251fdf60d6f92680f076d2e60f9eb37b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65983237"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **布林**  
   
 ## <a name="result-value"></a>結果值  
- 若各組 (_scalar_expression_**,**_x)_ 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則傳回 TRUE。 否則傳回 FALSE。  
+ 若各組 (_scalar_expression_ **,** _x)_ 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則傳回 TRUE。 否則傳回 FALSE。  
   
 ## <a name="remarks"></a>Remarks  
  ALL 需要正面比較 *scalar_expression* 與子查詢所傳回的每個值。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* <= ALL (子查詢) 會針對值為 2 的 *scalar_expression* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式準則。  

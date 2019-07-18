@@ -2,19 +2,18 @@
 title: PDW 拓撲-Analytics Platform System |Microsoft Docs
 description: Analytics Platform System 的 PDW 拓撲。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0c0c16f331c81dd34fc5b7256805efc231a1c97c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 665bd84c6f44c23559ef6450111c045d2701811b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960357"
 ---
 # <a name="pdw-topology"></a>PDW 拓撲
 顯示 SQL Server PDW 元件的名稱和網路資訊。 使用**設備拓撲網路設定**頁面，以變更網路的 IP 位址。  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 92aa4343d2c9ec6b0b69275be71923595e2dc76e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109531"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警示系統管理員的資料警示管理員
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供 [資料警示管理員] 讓 SharePoint 警示系統管理員管理資料警示。 警示系統管理員可以檢視儲存到網站之所有警示的相關資訊，以及刪除警示。 下圖說明 [資料警示管理員] 中可供 SharePoint 警示管理員使用的功能。  
@@ -42,7 +41,7 @@ ms.locfileid: "56018889"
   
  [資料警示管理員] 包含一個資料表，其中列出警示名稱、報表名稱、警示擁有者的名稱、傳送的警示訊息數目、上一次執行警示的時間、上一次修改警示定義的時間，以及警示訊息的狀態。 如果警示無法產生或是傳送，狀態資料行就會包含有關錯誤的資訊並協助您疑難排解警示。 如需詳細資訊，請參閱 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
- 下表顯示 [資料警示管理員] 中資料表的範例資料。 當發生錯誤時，資料表的 [狀態] 欄位中會包含錯誤訊息和記錄中項目的識別碼 (GUID)。  
+ 下表顯示 [資料警示管理員] 中資料表的範例資料。 當發生錯誤時，資料表的 [狀態]  欄位中會包含錯誤訊息和記錄中項目的識別碼 (GUID)。  
   
 |警示名稱|報表名稱|建立者|傳送警示|最後執行|上次修改|[狀態]|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  

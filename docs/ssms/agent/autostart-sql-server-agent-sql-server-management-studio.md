@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Server Agent, starting
 - autostart SQL Server Agent
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7dc377ba9898afaae14208bdd610a8e932a9d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 646a6f33bbde9b81b4f30dfb1157a720b6b65eb2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844736"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688836"
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47844736"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   [若要使用 SQL Server Management Studio，將 SQL Server Agent 設定為自動重新啟動](#SSMSProcedure)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47844736"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要設定 SQL Server Agent 自動重新啟動的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  在 **[一般]** 頁面上，核取 **[如果 SQL Server Agent 非預期地停止，則自動予以重新啟動]**。  
+3.  在 **[一般]** 頁面上，核取 **[如果 SQL Server Agent 非預期地停止，則自動予以重新啟動]** 。  
   

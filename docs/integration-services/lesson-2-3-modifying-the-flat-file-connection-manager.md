@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65722554"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>課程 2-3：修改一般檔案連線管理員
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在此工作中，您會修改來自第 1 課的「一般檔案」連線管理員。 「一般檔案」連線管理員已設定成以靜態方式載入單一檔案。 若要讓「一般檔案」連線管理員反覆載入檔案，您需將連線管理員的 ConnectionString 屬性變更成使用使用者定義的變數 `User::varFileName`，此變數包含在執行階段要載入的檔案路徑。  
   
@@ -26,23 +30,23 @@ ms.locfileid: "58278922"
   
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>將一般檔案連線管理員設定成使用變數  
   
-1.  在 **[連接管理員]** 窗格中，以滑鼠右鍵按一下 **[範例一般檔案來源資料]**，並選取 **[屬性]**。  
+1.  在 **[連接管理員]** 窗格中，以滑鼠右鍵按一下 **[範例一般檔案來源資料]** ，並選取 **[屬性]** 。  
 
-2.  在 [屬性] 視窗中確認 **PackagePath** 的開頭為 **\Package.Connections**。 否則，請在 [連線管理員] 窗格中，以滑鼠右鍵按一下 [一般檔案來源資料範例]，並選取 [轉換為套件連線]
+2.  在 [屬性]  視窗中確認 **PackagePath** 的開頭為 **\Package.Connections**。 否則，請在 [連線管理員]  窗格中，以滑鼠右鍵按一下 [一般檔案來源資料範例]  ，並選取 [轉換為套件連線] 
   
-3.  在 [屬性] 視窗中，針對 [運算式]選取空白資料格，然後選取省略符號按鈕 **(...)**。  
+3.  在 [屬性]  視窗中，針對 [運算式]  選取空白資料格，然後選取省略符號按鈕 **(...)** 。  
   
-4.  在 [屬性運算式編輯器] 對話方塊的 [屬性] 資料行中，選取 [ConnectionString]。  
+4.  在 [屬性運算式編輯器]  對話方塊的 [屬性]  資料行中，選取 [ConnectionString]  。  
   
-5.  在 [運算式] 資料行中，選取省略符號按鈕 **(…)** 以開啟 [運算式產生器] 對話方塊。  
+5.  在 [運算式]  資料行中，選取省略符號按鈕 **(…)** 以開啟 [運算式產生器]  對話方塊。  
   
-6.  在 [運算式產生器] 對話方塊中，展開 [變數] 節點。  
+6.  在 [運算式產生器]  對話方塊中，展開 [變數]  節點。  
   
-7.  將變數 [User::varFileName] 拖曳至 [運算式] 方塊中。  
+7.  將變數 [User::varFileName]  拖曳至 [運算式]  方塊中。  
   
-8.  選取 **[確定]** 以關閉 [運算式產生器] 對話方塊。  
+8.  選取 **[確定]** 以關閉 [運算式產生器]  對話方塊。  
   
-9.  再次選取 [確定] 以關閉 [屬性運算式編輯器] 對話方塊。  
+9.  再次選取 [確定]  以關閉 [屬性運算式編輯器]  對話方塊。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作  
 [步驟 4：測試第 2 課教學課程套件](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

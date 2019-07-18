@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605128"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801434"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3︰使用 PHP 連接到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919309"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>Common Language Runtime (CLR) 整合概觀
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 現在具備 .NET Framework for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 的 Common Language Runtime (CLR) 元件整合功能。 CLR 提供含有如跨語言整合、程式碼存取安全性、物件存留期間管理，以及偵錯和設定檔作業支援的 Managed 程式碼。 對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者和應用程式開發人員，CLR 整合意味著您現在可以使用任何 .NET Framework 語言 (包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#) 撰寫預存程序、觸發程序、使用者定義型別、使用者定義函數 (純量和資料表值) 和使用者定義彙總函式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含預先安裝的 .NET Framework 版本 4。  
@@ -34,7 +34,7 @@ ms.locfileid: "53354849"
   
 -   **可增進的安全和安全性。** Managed 程式碼會在 Database Engine 主控的 Common Language Run-time 環境下執行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會運用此環境提供更安全的替代方式給舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所提供的擴充預存程序。  
   
--   **定義資料類型和彙總函式的能力。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用者定義型別和使用者定義彙總是兩個新的 Managed 資料庫物件，它們可以擴充  的儲存和查詢功能。  
+-   **定義資料類型和彙總函式的能力。** 使用者定義型別和使用者定義彙總是兩個新的 Managed 資料庫物件，它們可以擴充 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的儲存和查詢功能。  
   
 -   **透過標準化環境簡化的開發。** [!INCLUDE[msCoName](../../../includes/msconame-md.md)]資料庫開發會整合到後續版本的  Visual Studio .NET 開發環境中。 開發人員用來開發與偵錯資料庫物件和指令碼的工具，與他們用來撰寫中介層或用戶層的 .NET Framework 元件和服務的工具是一樣的。  
   

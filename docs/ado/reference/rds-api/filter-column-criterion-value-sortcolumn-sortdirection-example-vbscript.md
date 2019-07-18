@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 755ca4454ecf1d07f2f932a4651ab6378d5eb189
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8703641b25f7e5956fe4204db9775b0ada90cba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964130"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、 FilterCriterion、 FilterValue、 SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript)
 > [!IMPORTANT]

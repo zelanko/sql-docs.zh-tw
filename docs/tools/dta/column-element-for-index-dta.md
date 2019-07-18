@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 77972892b2efcac8554f79ea9c41720f9ae40277
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 6d9d2ee76d1ac9acd230e04ec44dcf0b6c91087f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290814"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732541"
 ---
 # <a name="column-element-for-index-dta"></a>索引的 Column 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51290814"
   
      如需內含資料行的詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
- **SortOrder**︰選擇性。 指定資料行的排序順序。 請依照下列方式，利用 **string** 資料類型來指定「遞增」或「遞減」排列順序：  
+ **SortOrder**︰選擇性。 指定資料行的排序順序。 請依照下列方式，利用 **string** 資料類型來指定「遞增」  或「遞減」  排列順序：  
   
 ```  
 <Column SortOrder="Ascending">  

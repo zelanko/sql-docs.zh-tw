@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22ee1b88ee6065a49c53ae7024c93e869099ca3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931452"
 ---
 # <a name="provider-property-ado"></a>Provider 屬性 (ADO)
 指出提供者的名稱[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

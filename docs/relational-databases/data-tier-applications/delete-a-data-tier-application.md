@@ -20,19 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999593"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用 [刪除資料層應用程式精靈] 或 Windows PowerShell 指令碼來刪除資料層應用程式。 您可以指定是否要保留、卸離或卸除相關聯的資料庫。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要升級 DAC，請使用下列方式：**[註冊資料層應用程式精靈](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
+-   **若要升級 DAC，請使用下列方式：** [註冊資料層應用程式精靈](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  當您刪除資料層應用程式 (DAC) 執行個體時，可以選擇三個選項中的一個，指定要使用與資料層應用程式相關聯之資料庫執行的動作。 所有的三個選項都會刪除 DAC 定義中繼資料。 這些選項的差異在於它們使用與資料層應用程式相關聯之資料庫執行的動作。 精靈不會刪除與 DAC 或資料庫相關聯的任何執行個體層級物件，例如登入。  
@@ -67,7 +67,7 @@ ms.locfileid: "53591342"
   
 3.  展開 **資料層應用程式** 節點。  
   
-4.  以滑鼠右鍵按一下要刪除的 DAC，然後選取 [刪除資料層應用程式…]  
+4.  以滑鼠右鍵按一下要刪除的 DAC，然後選取 [刪除資料層應用程式…]   
   
 5.  完成精靈對話方塊：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "53591342"
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
   
- **下一步 >** - 繼續進行 [選擇方法] 頁面。  
+ **下一步 >** - 繼續進行 [選擇方法]  頁面。  
   
  **取消** - 結束精靈，不刪除資料層應用程式或資料庫。  
   
@@ -103,9 +103,9 @@ ms.locfileid: "53591342"
   
  資料庫的資料和記錄檔會遭到永久刪除。  
   
- **< 上一步** - 回到 [簡介] 頁面。  
+ **< 上一步** - 回到 [簡介]  頁面。  
   
- **下一步 >** - 繼續進行 [摘要] 頁面。  
+ **下一步 >** - 繼續進行 [摘要]  頁面。  
   
  **取消** - 結束精靈，不刪除 DAC 或資料庫。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "53591342"
   
  **檢閱選項摘要** - 檢閱顯示在方塊中的 DAC、資料庫與刪除方法。 如果資訊正確，選取 **[下一步]** 或 **[完成]** 來刪除 DAC。 如果 DAC 和資料庫資訊不正確，選取 **[取消]** ，然後選取正確的 DAC。 如果刪除方法不正確，選取 **[上一步]** ，返回 **[選擇方法]** 頁面，然後選取其他方法。  
   
- **< 上一步** - 回到 [選擇方法] 頁面以選擇其他刪除方法。  
+ **< 上一步** - 回到 [選擇方法]  頁面以選擇其他刪除方法。  
   
- **下一步 >** - 使用您在上一頁選擇的方法刪除 DAC 執行個體，然後繼續進行 [刪除資料層應用程式] 頁面。  
+ **下一步 >** - 使用您在上一頁選擇的方法刪除 DAC 執行個體，然後繼續進行 [刪除資料層應用程式]  頁面。  
   
  **取消** - 結束精靈，不刪除 DAC 執行個體。  
   

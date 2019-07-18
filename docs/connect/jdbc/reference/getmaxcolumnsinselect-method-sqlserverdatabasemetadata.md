@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 43c428df-ef91-4f55-81c3-49a4db3379cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83833d79c2822caacd2b0b0dde09cef543933d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 115458efa339633c3e69e7d4bc91166337a4e192
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596938"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792782"
 ---
 # <a name="getmaxcolumnsinselect-method-sqlserverdatabasemetadata"></a>getMaxColumnsInSelect 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

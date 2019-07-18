@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091221"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>在升級過程中，確認已為所有資料和記錄檔開啟自動成長
   Upgrade Advisor 偵測到未設定為自動成長的資料或記錄檔。 全新和增強功能需要額外的磁碟空間供使用者資料庫和**tempdb**系統資料庫。 若要確保升級和後續實際執行作業期間，資源可以配合規模的增加，我們建議所有的使用者資料和記錄檔自動成長設定為 ON， **tempdb**升級前的資料和記錄檔。  
@@ -64,7 +63,7 @@ ms.locfileid: "48220498"
   
 |功能|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引入的變更|  
 |-------------|-----------------------------------------------------|  
-|資料列版本設定|資料列版本設定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一般架構，可用來執行下列作業：<br /><br /> 支援觸發程序： 建立觸發程序中的 inserted 及 deleted 資料表。 經由觸發程序修改過的任何資料列都會被建立版本。 這包括啟動觸發程序之陳述式所修改的資料列，以及觸發程序所做的任何資料修改。 觸發程序使用的版本存放區之後**tempdb**來保存變更觸發程序的資料列的前置資料影像。 當您在啟用觸發程序的情況下大量載入資料時，系統會將每個資料列的副本加入至版本存放區。<br /><br /> 支援 Multiple Active Result Sets (MARS)。 如果 MARS 工作階段在有現用結果集的情況下，發出資料修改陳述式 (例如 INSERT、UPDATE 或 DELETE)，就會為修改陳述式所影響的資料列建立版本。<br /><br /> 支援指定 ONLINE 選項的索引作業。 線上索引作業會使用資料列版本設定來隔離索引作業與其他交易所進行的修改影響。 這樣可避免在已讀取的資料列上要求共用鎖定。 此外，並行使用者更新和刪除作業期間線上索引作業都需要空間中產生版本記錄**tempdb**。<br /><br /> 支援資料列版本設定為基礎的交易隔離等級： 的新實作的讀取認可隔離等級使用資料列版本設定來提供陳述式層級讀取一致性。 新的隔離等級 (快照集)，可以提供交易等級的讀取一致性。<br /><br /> <br /><br /> 資料列版本會保留在**tempdb**版本存放區足以滿足需求的資料列版本設定為基礎的隔離等級下執行的交易。<br /><br /> 如需有關資料列版本設定和版本存放區的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜了解以資料列版本設定為基礎的隔離等級＞主題。|  
+|資料列版本設定|資料列版本設定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一般架構，可用來執行下列作業：<br /><br /> 支援觸發程序：建置觸發程序中的 inserted 及 deleted 資料表。 經由觸發程序修改過的任何資料列都會被建立版本。 這包括啟動觸發程序之陳述式所修改的資料列，以及觸發程序所做的任何資料修改。 觸發程序使用的版本存放區之後**tempdb**來保存變更觸發程序的資料列的前置資料影像。 當您在啟用觸發程序的情況下大量載入資料時，系統會將每個資料列的副本加入至版本存放區。<br /><br /> 支援 Multiple Active Result Sets (MARS)。 如果 MARS 工作階段在有現用結果集的情況下，發出資料修改陳述式 (例如 INSERT、UPDATE 或 DELETE)，就會為修改陳述式所影響的資料列建立版本。<br /><br /> 支援指定 ONLINE 選項的索引作業。 線上索引作業會使用資料列版本設定來隔離索引作業與其他交易所進行的修改影響。 這樣可避免在已讀取的資料列上要求共用鎖定。 此外，並行使用者更新和刪除作業期間線上索引作業都需要空間中產生版本記錄**tempdb**。<br /><br /> 支援以資料列版本設定為基礎的交易隔離等級：新的讀取認可隔離等級實作方式，其使用資料列版本設定來提供陳述式層級的讀取一致性。 新的隔離等級 (快照集)，可以提供交易等級的讀取一致性。<br /><br /> <br /><br /> 資料列版本會保留在**tempdb**版本存放區足以滿足需求的資料列版本設定為基礎的隔離等級下執行的交易。<br /><br /> 如需有關資料列版本設定和版本存放區的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜了解以資料列版本設定為基礎的隔離等級＞主題。|  
 |暫存資料表和暫存變數中繼資料的快取|每個中繼資料的暫存資料表和暫存變數中的中繼資料快取的快取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，兩個額外的頁面配置**tempdb**。<br /><br /> 如果預存程序或觸發程序建立暫存資料表或暫存變數，則在該程序或觸發程序完成執行時，將不會刪除暫存物件。 而是將暫存物件截斷為單一頁面，並在下次執行該程序或觸發程序時重複使用。|  
 |分割區資料表的索引|當[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行排序來建立資料分割的索引，足夠空間來容納中繼排序結果的每個資料分割所需要的是**tempdb**如果指定 SORT_IN_TEMPDB 索引選項。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 明確使用**tempdb**當保留無法留在記憶體 (大約每個對話 1 KB) 的現有對話內容。<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會隱含地使用**tempdb**透過快取的查詢執行內容中的物件。 例如，用於計時器事件和背景傳遞交談的工作資料表。<br /><br /> DBMail、事件通知和查詢通知等功能會隱含使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。|  
@@ -90,12 +89,12 @@ MODIFY FILE
   
 |檔案大小|FILEGROWTH 增量|  
 |---------------|--------------------------|  
-|0 到 50 MB|10 MB|  
-|100-200 MB|20 MB|  
+|0 到 50 MB|10MB|  
+|100-200 MB|20MB|  
 |500 MB 以上|10%|  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

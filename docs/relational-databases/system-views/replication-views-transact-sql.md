@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f90b60b13d9641771ce549bfccdba3f6fc5308a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129571"
 ---
 # <a name="replication-views-transact-sql"></a>複寫檢視表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

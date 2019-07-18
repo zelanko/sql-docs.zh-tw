@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62992350"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
   維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  

@@ -2,25 +2,25 @@
 title: Oracle 連線類型 (SSRS) | Microsoft Docs
 ms.date: 01/11/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67cb43743f8153a39d28af26807ddea98955674e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813418"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499553"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 連接類型 (SSRS)
 若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。
 
 若要安裝 Oracle 用戶端工具，您可以執行下列步驟。
  
-1.  前往 [Oracle 的下載網站](https://www.oracle.com/us/products/tools/index-090165.html)
+1.  前往 [Oracle 的下載網站](https://www.oracle.com/downloads/)
 2.  下載 ODAC 12c Release 4 (12.1.0.2.4) for Windows (伺服器為 64bit，工具為 32bit)
 3.  安裝 Data Provider for .NET 4
   
@@ -33,14 +33,14 @@ ms.locfileid: "51813418"
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源及連接字串&#40;報表產生器及 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或是[指定的認證及連接資訊，為報表資料來源](specify-credential-and-connection-information-for-report-data-sources.md).</c0>  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -51,7 +51,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Parameters"></a> 參數  
  如果查詢包含查詢變數，就會自動產生對應的報表參數。 此延伸模組支援具名參數。 若使用 Oracle 9 或更新版本，則支援多重值的參數。  
   
- 報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如，每一個報表參數的資料類型都是 **[文字]**。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
+ 報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如，每一個報表參數的資料類型都是 **[文字]** 。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
 ##  <a name="Remarks"></a> 備註  
@@ -59,7 +59,7 @@ Data Source="Oracle"; Unicode="True"
   
  如需詳細資訊，請參閱下列內容：  
   
--   msdn.microsoft.com 上的[使用 Oracle 的 .NET Framework 資料提供者](https://go.microsoft.com/fwlink/?LinkId=112314)   
+-   msdn.microsoft.com 上的[使用 Oracle 的 .NET Framework 資料提供者](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
 -   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://support.microsoft.com/kb/834305)  
   
@@ -91,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

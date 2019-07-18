@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900312"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>排序合併和合併聯結轉換的資料
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，「合併」和「合併聯結」轉換需要針對其輸入排序的資料。 輸入資料必須實際排序，且必須在來源中或上游轉換中設定輸出和輸出資料行的排序選項。 如果排序選項表示資料已排序，但實際上資料並未排序，則合併或合併聯結作業的結果可能無法預測。  
@@ -67,7 +67,7 @@ ms.locfileid: "58384859"
   
 3.  在 **[資料流程]** 索引標籤上，找出適當的來源或上游轉換，或者將其從 **[工具箱]** 拖曳到設計介面。  
   
-4.  以滑鼠右鍵按一下元件，然後按一下 [顯示進階編輯器]。  
+4.  以滑鼠右鍵按一下元件，然後按一下 [顯示進階編輯器]  。  
   
 5.  按一下 **[輸入與輸出屬性]** 索引標籤。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "58384859"
     > [!NOTE]  
     >  如果您手動將輸出的 `IsSorted` 屬性設定為 `True` 而且資料未排序，則當您執行封裝時，下游「合併」或「合併聯結」轉換中可能會有資料遺失或是不正確的資料比較。  
   
-7.  展開 **[輸出資料行]**。  
+7.  展開 **[輸出資料行]** 。  
   
 8.  按一下要表示為已排序的資料行，並按照下列指導方針，將其 `SortKeyPosition` 屬性設定為非零整數值：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "58384859"
   
 9. 針對每個已排序的資料行重複步驟 8。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

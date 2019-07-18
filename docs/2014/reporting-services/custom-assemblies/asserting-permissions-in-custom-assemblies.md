@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - secure calls [Reporting Services]
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f2ac7bfb08aa5812b8db90d3c1a6049665ce1b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63265375"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>自訂組件中的判斷提示權限
   根據預設，自訂組譯碼會使用有限的 **Execution** 權限集合執行。 在某些情況下，您可能希望實作自訂組件，以安全地呼叫在安全性系統中受保護的資源 (例如檔案或是登錄)。 若要完成這個動作，您必須執行下列項目：  

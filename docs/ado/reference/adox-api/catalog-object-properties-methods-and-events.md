@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02f018052567a82a87d4a541c23ae1ee5ed9e1b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967043"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -41,7 +40,7 @@ ms.locfileid: "47630786"
   
  [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

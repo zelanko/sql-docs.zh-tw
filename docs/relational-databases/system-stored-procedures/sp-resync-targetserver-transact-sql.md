@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995483"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

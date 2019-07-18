@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1445f89200a876b5ac945ea1a577d6cc3f7445a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 712644352eeb7ac55af861dfef48292aad0d5adb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107488"
 ---
 # <a name="sql-statements"></a>SQL 陳述式
 ODBC 應用程式執行的 SQL 陳述式執行幾乎所有資料庫存取權。 這些陳述式-硬式編碼，或在執行的階段，互通性或資料來源相關，等位建構的形式取決於應用程式的需求。  

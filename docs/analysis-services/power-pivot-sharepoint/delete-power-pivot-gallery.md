@@ -1,5 +1,5 @@
 ---
-title: 刪除 Power Pivot 圖庫 |Microsoft 文件
+title: 刪除 Power Pivot 圖庫 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e288a1823ca2dca44b4c032b1618710212c2a65
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164034"
 ---
 # <a name="delete-power-pivot-gallery"></a>刪除 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,27 +27,27 @@ ms.locfileid: "34023485"
   
 ### <a name="delete-power-pivot-gallery-sharepoint-2013"></a>刪除 Power Pivot 圖庫 SharePoint 2013  
   
-1.  按一下 設定![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下 **站台設定**。  
+1.  按一下 [設定] ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下**站台設定**。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  在 [網站管理] 之下，按一下 [網站文件庫與清單]。  
+3.  在 [網站管理] 之下，按一下 [網站文件庫與清單]  。  
   
-4.  按一下**自訂"[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫"**。  
+4.  按一下 **來自訂 「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資源庫 」** 。  
   
-5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
+5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]  。  
   
 ### <a name="delete-power-pivot-gallery-sharepoint-2010"></a>刪除 Power Pivot 圖庫 SharePoint 2010  
   
-1.  按一下 **[網站動作]**。  
+1.  按一下 **[網站動作]** 。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  在 [網站管理] 之下，按一下 [網站文件庫與清單]。  
+3.  在 [網站管理] 之下，按一下 [網站文件庫與清單]  。  
   
-4.  按一下**自訂"[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫"**。  
+4.  按一下 **來自訂 「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資源庫 」** 。  
   
-5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
+5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [Power Pivot 圖庫](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  

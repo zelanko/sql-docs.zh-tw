@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811601"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>設定 cost threshold for parallelism 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **平行處理原則的成本臨界值** 選項指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為查詢建立及執行平行計劃的臨界值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 **或**。 成本是指在特定硬體組態下，估計執行序列計畫所需的已耗用時間 (以秒為單位)。 **cost threshold for parallelism** 選項可設成從 0 到 32767 的任何值。 預設值為 5。  
@@ -38,7 +38,7 @@ ms.locfileid: "58527620"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 cost threshold for parallelism 選項之後](#FollowUp)  
+-   **後續操作：** [設定平行處理原則的成本閾值選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -77,7 +77,7 @@ FROM sys.dm_os_sys_info
   
 #### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>設定 cost threshold for parallelism 選項  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]**。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]** 。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -89,9 +89,9 @@ FROM sys.dm_os_sys_info
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `cost threshold for parallelism` 選項的值設定為 `10`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `cost threshold for parallelism` 選項的值設定為 `10`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -108,7 +108,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 cost threshold for parallelism 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定平行處理原則的成本閾值選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

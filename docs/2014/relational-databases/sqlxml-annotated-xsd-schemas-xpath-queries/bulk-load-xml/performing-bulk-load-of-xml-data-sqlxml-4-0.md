@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013364"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>執行 XML 資料的大量載入 (SQLXML 4.0)
   XML 大量載入是獨立的 COM 物件，可讓您將半結構化的 XML 資料載入至 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  

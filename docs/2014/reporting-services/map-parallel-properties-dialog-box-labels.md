@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f274d544162b7fa9f5cf8321c246477311cbbf2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108250"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>地圖平行屬性對話方塊、標籤
   使用**MapParallel 屬性**對話方塊來變更地圖檢視區中水平格線的標籤選項。 根據指定之檢視區的座標系統，平行表示下列值：  
@@ -30,15 +29,15 @@ ms.locfileid: "56297983"
   
  按一下 **[運算式]** (*fx*) 按鈕來編輯設定選項值的運算式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Interval**  
- 輸入指定平行之間間隔的整數值 (以度數為單位)。 根據預設，會選取 **[自動]** 。 如果此選項設定為 **[自動]**，則值由地圖資料集的資料決定。  
+ 輸入指定平行之間間隔的整數值 (以度數為單位)。 根據預設，會選取 **[自動]** 。 如果此選項設定為 **[自動]** ，則值由地圖資料集的資料決定。  
   
  **顯示標籤**  
  選取此選項即可顯示平行的標籤。  
   
  **放置**  
- 選取要顯示相對於檢視區上方、中間與下方之標籤的位置。 預設位置為 **[靠近]**。  
+ 選取要顯示相對於檢視區上方、中間與下方之標籤的位置。 預設位置為 **[靠近]** 。  
   
 -   **靠近** ：在上方顯示標籤。  
   

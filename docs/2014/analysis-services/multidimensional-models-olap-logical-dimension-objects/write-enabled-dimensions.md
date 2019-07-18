@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727436"
 ---
 # <a name="write-enabled-dimensions"></a>可寫入維度
     
@@ -63,7 +61,7 @@ ms.locfileid: "48225128"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫維度屬性](database-dimension-properties.md)   
- [寫入的資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [可寫入的資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [維度 &#40;Analysis Services-多維度資料 &#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

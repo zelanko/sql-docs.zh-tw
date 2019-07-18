@@ -1,20 +1,19 @@
 ---
-title: 在 Linux 上的 SQL Server 的效能最佳做法 |Microsoft Docs
+title: 在 Linux 上的 SQL Server 的效能最佳做法
 description: 這篇文章會提供在 Linux 上執行 SQL Server 效能最佳做法和方針。
 author: rgward
 ms.author: bobward
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105446"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>效能最佳做法和 Linux 上的 SQL Server 組態指導方針
 
@@ -74,7 +73,7 @@ ms.locfileid: "51676899"
 | 設定 | 值 | 詳細資訊 |
 |---|---|---|
 | 磁碟 readahead | 4096 | 請參閱**blockdev**命令 |
-| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 請參閱**sysctl**命令 |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | 請參閱**sysctl**命令 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>平衡多節點 NUMA 系統的核心設定自動 numa
 

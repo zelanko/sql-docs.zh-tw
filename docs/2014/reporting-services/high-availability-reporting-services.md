@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
 - Reporting Services, high availability
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 097a118a23bcec722710bc404e9e6452d6504b69
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dfa0548bc526b007c4301572cd1a8e47a2851e18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032459"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109016"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器是無狀態伺服器，它會將應用程式資料、內容、屬性和工作階段資訊儲存在兩個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料庫中。 因此，確保 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能可用性的最佳方式是進行下列作業：  

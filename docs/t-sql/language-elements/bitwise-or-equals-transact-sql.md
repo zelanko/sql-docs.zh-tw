@@ -18,16 +18,16 @@ helpviewer_keywords:
 - augmented operators, |=
 - '|= (bitwise OR equals)'
 ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d90e979d9bebf33b3749b170bf16d384f7e2761d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0b4d005d321df257fb787b92dae4ec483a1f6a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981238"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (位元 OR 指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

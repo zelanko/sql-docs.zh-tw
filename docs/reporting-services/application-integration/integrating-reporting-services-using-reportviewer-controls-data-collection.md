@@ -1,21 +1,22 @@
 ---
 title: ReportViewer 控制項 2016 中的資料收集
 uthor: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: 52f23cd615179b774392920c84ab4370892e1dd5
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
-ms.translationtype: HT
+ms.openlocfilehash: 69d37c54e49943807c35102362f161e2dbf23068
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100193"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66823001"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集
 
@@ -27,14 +28,14 @@ ms.locfileid: "54100193"
 
 透過 ```EnableTelemetry``` 屬性，可以停用收集使用方式資料。
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 或者，在呈現控制項之前實際停用。
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

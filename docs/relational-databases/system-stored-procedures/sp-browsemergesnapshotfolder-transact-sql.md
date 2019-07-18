@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f740a306d10305856ef35e47c6088db7c5ad2849
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046008"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

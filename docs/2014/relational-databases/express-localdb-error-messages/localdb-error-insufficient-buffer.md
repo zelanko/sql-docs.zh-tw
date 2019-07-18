@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_INSUFFICIENT_BUFFER |Microsoft Docs
+title: LOCALDB_ERROR_INSUFFICIENT_BUFFER | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b16cd79186357dafd07fa5f0f19dee05b03722f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990444"
 ---
 # <a name="localdberrorinsufficientbuffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
     

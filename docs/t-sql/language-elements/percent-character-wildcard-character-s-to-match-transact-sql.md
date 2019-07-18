@@ -20,15 +20,15 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - characters [SQL Server], wildcard
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 11d70a61f3e6fca60ffbbdd45fa1d3ab5d2d5e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64eb6442b20d6e8aa15619ae572bb406acde6768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65980448"
 ---
 # <a name="percent-character-wildcard---characters-to-match-transact-sql"></a>百分比字元 (萬用字元 - 相符的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

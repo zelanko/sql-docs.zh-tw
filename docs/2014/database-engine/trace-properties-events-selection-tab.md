@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.eventsselection.f1
@@ -15,18 +14,18 @@ ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089583"
 ---
 # <a name="trace-properties-events-selection-tab"></a>追蹤屬性 (事件選取範圍索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  
   
-## <a name="options"></a>選項。  
- [事件] 資料行  
+## <a name="options"></a>選項  
+ [事件]  資料行  
  選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 依事件類別目錄所組織的**事件** 。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  資料行  
@@ -41,13 +40,13 @@ ms.locfileid: "48129448"
  顯示所有可用的資料行。 依預設，僅會顯示選取的資料行。 取消選取此方塊，即可隱藏 **[事件選取範圍]** 方格中所有未選取的資料行。  
   
  **資料行篩選**  
- 啟動 [編輯篩選] 對話方塊。 您可以使用此對話來編輯資料行篩選。  
+ 啟動 [編輯篩選]  對話方塊。 您可以使用此對話來編輯資料行篩選。  
   
  **組織資料行**  
  變更追蹤中資料行的順序，並且依據一或多個資料行對結果進行分組。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定事件及資料行追蹤檔案的&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [組織追蹤內顯示的資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [篩選追蹤中的事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [檢視篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

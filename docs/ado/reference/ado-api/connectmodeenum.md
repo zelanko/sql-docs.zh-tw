@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933450"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定在修改資料的可用權限[連接](../../../ado/reference/ado-api/connection-object-ado.md)，開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或指定值[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性**資料錄**並[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -30,7 +29,7 @@ ms.locfileid: "47637856"
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|表示唯讀權限。|  
 |**adModeReadWrite**|3|指出讀取/寫入權限。|  
-|**adModeRecursive**|0x400000|使用與其他*\*ShareDeny\** 的值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 傳播至所有子記錄的目前的共用限制**記錄**。 如果有任何作用**記錄**並沒有任何子系。 如果搭配使用，就會產生執行階段錯誤**adModeShareDenyNone**只。 不過，它可以搭配**adModeShareDenyNone**結合其他值。 例如，您可以使用 「**adModeRead**或是**adModeShareDenyNone**或是**adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|使用與其他 *\*ShareDeny\** 的值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 傳播至所有子記錄的目前的共用限制**記錄**。 如果有任何作用**記錄**並沒有任何子系。 如果搭配使用，就會產生執行階段錯誤**adModeShareDenyNone**只。 不過，它可以搭配**adModeShareDenyNone**結合其他值。 例如，您可以使用 「**adModeRead**或是**adModeShareDenyNone**或是**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|可讓其他人開啟與任何權限的連線。 無法拒絕他人的讀取或寫入權限。|  
 |**adModeShareDenyRead**|4|防止他人具有讀取權限開啟的連線。|  
 |**adModeShareDenyWrite**|8|防止他人具有寫入權限開啟的連線。|  

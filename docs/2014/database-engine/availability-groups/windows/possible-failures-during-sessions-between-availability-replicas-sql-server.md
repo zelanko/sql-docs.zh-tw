@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789177"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>工作階段期間可用性複本之間可能發生失敗 (SQL Server)
-  實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」。  
+  實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」  。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」  。  
   
 > [!IMPORTANT]  
 >  系統無法偵測主要資料庫以外之資料庫中的失敗。 此外，除非是因為資料磁碟錯誤而重新啟動資料庫，否則不太可能偵測得到資料磁碟錯誤。  

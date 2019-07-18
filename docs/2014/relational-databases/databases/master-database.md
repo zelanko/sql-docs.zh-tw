@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917041"
 ---
 # <a name="master-database"></a>master 資料庫
   **master** 資料庫會記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統的所有系統層級資訊。 這包括了整個執行個體範圍的中繼資料，例如登入帳戶、端點、連結的伺服器，以及系統組態設定。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系統物件不再儲存於 **master** 資料庫，而是儲存於 [Resource 資料庫](resource-database.md)。 **master** 資料庫也會記錄所有其他資料庫的存在與這些資料庫檔案的所在位置，並記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化資訊。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **資料庫無法使用，** 也會無法啟動。  

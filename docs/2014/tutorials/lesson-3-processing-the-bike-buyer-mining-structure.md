@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655803"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>第 3 課：處理自行車買主採礦結構
   在這一課，您將使用 INSERT INTO 陳述式和從的 vTargetMail 檢視[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]範例資料庫來處理採礦結構和採礦模型中建立[第 1 課：建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)和[第 2 課：將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  

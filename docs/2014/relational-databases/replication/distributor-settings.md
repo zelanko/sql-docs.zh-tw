@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132318"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721346"
 ---
 # <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 複寫 [散發者設定] 對話方塊
   **[散發者設定]** 對話方塊，可讓您針對已加入至複寫監視器之左窗格的散發者變更設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟動複寫監視器時自動連接**  
  選取以讓複寫監視器連接到「散發者」並擷取狀態資訊。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084679"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ ms.locfileid: "47855037"
 
 下表顯示之 include_event_description 位元遮罩值。 Dbo.sysalerts 會傳回的十進位值。 
 
-|Decimal | BINARY | 意義 |
+|decimal | BINARY | 意義 |
 |------|------|------|
 |0 |0000 |沒有訊息 |
-|1 |0001 |電子郵件 |
+|1 |0001 |email |
 |2 |0010 |呼叫器 |
 |3 |0011 |呼叫器和電子郵件 |
 |4 |0100 |Net Send |

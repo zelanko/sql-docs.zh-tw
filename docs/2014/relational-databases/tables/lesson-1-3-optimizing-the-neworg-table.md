@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
@@ -13,12 +12,12 @@ ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110066"
 ---
 # <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
   **NewOrd**中所建立的資料表[使用現有的階層式資料填入資料表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作包含所有員工資訊，並使用代表階層結構`hierarchyid`資料類型。 此工作會加入新索引以支援在 `hierarchyid` 資料行上進行搜尋。  
@@ -96,7 +95,7 @@ ms.locfileid: "48146978"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID** 優先索引：資料列會以 **EmployeeID** 順序儲存。  
+     **EmployeeID**-優先索引：資料列會儲存在**EmployeeID**順序。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

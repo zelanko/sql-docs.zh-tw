@@ -16,20 +16,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a4f5357e9645eb5ab1e55db96ae0138144ded8b9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639178"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的預存程序相依性。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序相依性。  
   
 ##  <a name="Top"></a>   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
--   使用 [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure) **檢視程序的相依性**  
+-   **若要檢視程序的相依性，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -37,7 +37,7 @@ ms.locfileid: "52617738"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  系統函數： **sys.dm_sql_referencing_entities**  
  需要受參考實體的 CONTROL 權限和 sys.dm_sql_referencing_entities 的 SELECT 權限。 當受參考實體為資料分割函數時，便需要資料庫的 CONTROL 權限。 根據預設，SELECT 權限會授與 public。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52617738"
 ##  <a name="Procedures"></a> 如何檢視預存程序的相依性  
  您可以使用下列其中一項：  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -59,15 +59,15 @@ ms.locfileid: "52617738"
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
+2.  依序展開 **[資料庫]** 、程序所屬的資料庫，以及 **[可程式性]** 。  
   
-3.  展開 [預存程序]，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]。  
+3.  展開 [預存程序]  ，以滑鼠右鍵按一下程序，然後按一下 [檢視相依性]  。  
   
 4.  檢視相依於程序的物件清單。  
   
 5.  檢視程序所相依的物件清單。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的相依性**  
@@ -77,7 +77,7 @@ ms.locfileid: "52617738"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
+2.  展開 **[資料庫]** ，展開程序所屬的資料庫。  
   
 3.  按一下 **[檔案]** 功能表下的 **[新增查詢]** 。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "52617738"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
+2.  展開 **[資料庫]** ，展開程序所屬的資料庫。  
   
 3.  按一下 **[檔案]** 功能表下的 **[新增查詢]** 。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52617738"
  顯示相依於程序的物件。  
  1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
+2.  展開 **[資料庫]** ，展開程序所屬的資料庫。  
   
 3.  按一下 **[檔案]** 功能表下的 **[新增查詢]** 。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52617738"
  顯示程序所相依的物件。  
  1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
+2.  展開 **[資料庫]** ，展開程序所屬的資料庫。  
   
 3.  按一下 **[檔案]** 功能表下的 **[新增查詢]** 。  
   

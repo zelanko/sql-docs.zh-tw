@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting rows
 - Results pane
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3b19d450144eedf2462acb113712b09c5aa88fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 3625943e4adb361b3f437696cda03aa728c6a997
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712557"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690410"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>刪除結果窗格中的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47712557"
   
 2.  按下 DELETE 鍵。  
   
-3.  在詢問確認的訊息方塊中，按一下 [是]。  
+3.  在詢問確認的訊息方塊中，按一下 [是]  。  
   
 > [!CAUTION]  
 > 用這種方式刪除的資料列，會永久自資料庫移除，無法重新叫用。  

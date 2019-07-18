@@ -22,14 +22,18 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bed8f1e69ca8e3590abb7fe9cf8cd226ac5be24
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b10902e9b7a1258bf453e30d2db6fc1cbd4e241e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723577"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
   
 -   封裝或工作完成執行後，清除暫存資料儲存。  
@@ -50,7 +54,7 @@ ms.locfileid: "58281212"
   
  ![事件處理常式流程](../integration-services/media/mw-dts-eventhandlers.gif "事件處理常式流程")  
   
- 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管] 索引標籤上的 [事件處理常式] 資料夾中，查看事件處理常式集合的成員。  
+ 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管]  索引標籤上的 [事件處理常式]  資料夾中，查看事件處理常式集合的成員。  
   
  您可以利用下列方式設定事件處理常式容器：  
   
@@ -65,7 +69,7 @@ ms.locfileid: "58281212"
 -   指定事件處理常式使用的記錄模式。  
   
 ## <a name="event-handler-content"></a>事件處理常式內容  
- 建立事件處理常式與建立封裝相似；事件處理常式具有工作和容器，它們會循序進入控制流程，並且事件處理常式還可以包含資料流程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師包含 [事件處理常式] 索引標籤，用以建立自訂事件處理常式。  
+ 建立事件處理常式與建立封裝相似；事件處理常式具有工作和容器，它們會循序進入控制流程，並且事件處理常式還可以包含資料流程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師包含 [事件處理常式]  索引標籤，用以建立自訂事件處理常式。  
   
  您還可以程式設計方式建立事件處理常式。 如需詳細資訊，請參閱 [以程式設計方式處理事件](../integration-services/building-packages-programmatically/handling-events-programmatically.md)。  
   
@@ -92,11 +96,11 @@ ms.locfileid: "58281212"
   
  事件處理常式與封裝相似。 事件處理常式與封裝相似，可提供變數的範圍，並包括控制流程和選擇性的資料流程。 您可以為封裝、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器及所有工作建立事件處理常式。  
   
- 您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)]設計師中 [事件處理常式] 索引標籤的設計介面，來建立事件處理常式。  
+ 您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)]設計師中 [事件處理常式]  索引標籤的設計介面，來建立事件處理常式。  
   
- 當 [事件處理常式] 索引標籤為使用中時，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中 [工具箱] 的 [控制流程項目] 和 [維護計畫工作] 節點，會包含用於在事件處理常式中建立控制流程的工作及容器。 [資料流程來源]、[轉換] 及 [資料流程目的地] 節點包含用於在事件處理常式中建立資料流程的資料來源、轉換及目的地。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
+ 當 [事件處理常式]  索引標籤為使用中時，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中 [工具箱] 的 [控制流程項目]  和 [維護計畫工作]  節點，會包含用於在事件處理常式中建立控制流程的工作及容器。 [資料流程來源]  、[轉換]  及 [資料流程目的地]  節點包含用於在事件處理常式中建立資料流程的資料來源、轉換及目的地。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
- [事件處理常式] 索引標籤還包含 [連線管理員] 區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ [事件處理常式]  索引標籤還包含 [連線管理員]  區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在事件處理常式索引標籤上新增事件處理常式  
   
@@ -104,26 +108,26 @@ ms.locfileid: "58281212"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [事件處理常式] 索引標籤。  
+3.  按一下 [事件處理常式]  索引標籤。  
   
      ![含事件處理常式之設計介面的螢幕擷取畫面](../integration-services/media/eventhandlers.gif "含事件處理常式之設計介面的螢幕擷取畫面")  
   
      在事件處理常式中建立控制流程和資料流程，與在封裝中建立控制流程和資料流程相似。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
-4.  在 [可執行檔] 清單中，選取要為其建立事件處理常式的可執行檔。  
+4.  在 [可執行檔]  清單中，選取要為其建立事件處理常式的可執行檔。  
   
-5.  在 [事件處理常式] 清單中，選取要建立的事件處理常式。  
+5.  在 [事件處理常式]  清單中，選取要建立的事件處理常式。  
   
-6.  按一下 [事件處理常式] 索引標籤之設計介面上的連結。  
+6.  按一下 [事件處理常式]  索引標籤之設計介面上的連結。  
   
 7.  將控制流程項目加入事件處理常式，並使用優先順序條件約束連接項目，方法是將條件約束從一個控制流程項目拖曳到另一個控制流程項目。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)。  
   
-8.  選擇性地加入「資料流程」工作，並在 [資料流程] 索引標籤的設計介面上，為事件處理常式建立資料流程。 如需詳細資訊，請參閱[資料流程](../integration-services/data-flow/data-flow.md)。  
+8.  選擇性地加入「資料流程」工作，並在 [資料流程]  索引標籤的設計介面上，為事件處理常式建立資料流程。 如需詳細資訊，請參閱[資料流程](../integration-services/data-flow/data-flow.md)。  
   
-9. 在 [檔案] 功能表上，按一下 [儲存選取項目]，以儲存封裝。  
+9. 在 [檔案]  功能表上，按一下 [儲存選取項目]  ，以儲存封裝。  
 
 ## <a name="set-the-properties-of-an-event-handler"></a>設定事件處理常式的屬性  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或以程式設計方式設定屬性。  
   
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   

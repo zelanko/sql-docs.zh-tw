@@ -1,5 +1,5 @@
 ---
-title: 將資料採礦方案部署到舊版的 SQL Server |Microsoft 文件
+title: 將資料採礦方案部署到舊版的 SQL Server |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015095"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011016"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>將資料採礦方案部署到舊版的 SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34015095"
  如果用於模型資料來源的提供者是 SQL Client Data Provider 10，您也必須修改資料來源定義來指定舊版的 SQL Server Native Client。 否則， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會產生錯誤，指出此提供者尚未註冊。  
   
 ##  <a name="bkmk_Holdout"></a> 部署含鑑效組的模型  
- 如果您建立採礦結構，其中包含用於測試資料採礦模型之鑑效組資料分割時，此採礦結構可以部署執行個體的 SQL Server 2005，但磁碟分割資訊將會遺失。  
+ 如果您建立採礦結構，其中包含用於測試資料採礦模型之鑑效組資料分割時，此採礦結構可以部署至執行個體的 SQL Server 2005，但資料分割資訊將會遺失。  
   
  當您在 SQL Server 2005 Analysis Services 中開啟此採礦結構時， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會引發錯誤，然後重新產生此結構來移除鑑效組資料分割。  
   
- 已經重建結構之後，鑑效組資料分割的大小已無法再使用在 [屬性] 視窗中。不過，值\<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍會存在於 ASSL 指令碼檔案。  
+ 已重建結構之後，鑑效組資料分割大小不再提供在 [屬性] 視窗中;不過，值\<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍會存在於 ASSL 指令碼檔案。  
   
 ##  <a name="bkmk_Filter"></a> 部署含篩選的模型  
- 如果您將篩選套用至採礦模型時，此模型可以部署到 SQL Server 2005 的執行個體，但不是會套用篩選。  
+ 如果您將篩選套用至採礦模型時，此模型可以部署到 SQL Server 2005 的執行個體，但不是會套用篩選條件。  
   
  當您開啟此採礦模型時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會引發錯誤，然後重新產生此模型來移除篩選。  
   
@@ -70,6 +70,6 @@ ms.locfileid: "34015095"
  如果您嘗試同步處理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫，伺服器會傳回錯誤，而且資料庫同步處理會失敗。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 回溯相容性](../../analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

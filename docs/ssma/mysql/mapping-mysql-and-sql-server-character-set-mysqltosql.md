@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909027"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>對應 MySQL 和 SQL Server 字元集 (MySQLToSQL)
 可以針對 MySQL 字元資料型別、 運算式和常值中指定字元集 （字元集）。  
@@ -56,7 +55,7 @@ ms.locfileid: "47789026"
 >   
 > 其中包括：  
 >   
-> 1.  **適用於：** 套用字元集對應的編輯與尚未儲存時，才啟用的使用者所做的變更。  
+> 1.  **適用於：** 適用於編輯字元集對應且尚未儲存時，才啟用的使用者所做的變更。  
 > 2.  **取消：** 取消使用者所做的變更。 字元集對應編輯，但不是會儲存時，取得啟用 按鈕。  
 > 3.  **重設預設值：** 所有對應重設都為預設值。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "47789026"
     |cp932|對於 Windows 日文 SJIS|NCHAR/NVARCHAR （預設值）|  
     |eucjpms|對於 Windows 日文 UJIS|NCHAR/NVARCHAR （預設值）|  
   
-2.  **在資料庫、 類別或物件節點層級：** 資料庫、 類別或物件節點層級中，字元集對應方格包含根中繼資料節點層級上相同的資料列上來。:  
+2.  **資料庫、 類別或物件節點層級：** 資料庫、 類別或物件節點層級中，字元集對應方格包含根中繼資料節點層級上相同的資料列上來。:  
   
     1.  方格標題的第一個資料行**字元設定名稱**包含字元集名稱。  
   

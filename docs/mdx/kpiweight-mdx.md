@@ -1,5 +1,5 @@
 ---
-title: KPIWeight (MDX) |Microsoft 文件
+title: KPIWeight (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 325942d8bd0b4aa674266b2f3e40941fc401b277
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 47e68a956595a1f2ac42cfbfe28d0b93a1e7a694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905811"
 ---
 # <a name="kpiweight-mdx"></a>KPIWeight (MDX)
 
@@ -36,6 +35,6 @@ KPIWeight(KPI_Name)
  傳回的值是父系的 KPI 比重。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

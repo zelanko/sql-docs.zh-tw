@@ -1,5 +1,5 @@
 ---
-title: 範例指定 CDATA 指示詞 |Microsoft Docs
+title: 範例指定 CDATA 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287765"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>範例指定 CDATA 指示詞
   如果指示詞設為 **CDATA**，包含的資料將不會進行實體編碼，但會放在 CDATA 區段中。 **CDATA** 屬性必須沒有名稱。  

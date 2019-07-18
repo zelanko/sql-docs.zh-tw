@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5486e2dc10e13d3c022ec3d470781a5556c63dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2481cf6881a7bc54ec44072069f5429284cf4b86
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723796"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690021"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47723796"
 ## <a name="running-a-custom-report"></a>執行自訂報表  
 您可以利用下列方式在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中執行自訂報表：  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]，然後以滑鼠左鍵按一下 [自訂報表]。 在 [開啟檔案] 對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  ，然後以滑鼠左鍵按一下 [自訂報表]  。 在 [開啟檔案]  對話方塊中，找出包含 .rdl 檔的資料夾，然後開啟適當的報表檔案。  
   
--   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]、指向 [自訂報表]，然後從最近使用過的檔案清單中選取自訂報表。  
+-   以滑鼠右鍵按一下物件總管中的節點、指向 [報表]  、指向 [自訂報表]  ，然後從最近使用過的檔案清單中選取自訂報表。  
   
 ## <a name="limitations"></a>限制  
 當您使用自訂報表時，請考量下列限制：  
@@ -62,7 +62,7 @@ ms.locfileid: "47723796"
 ## <a name="managing-custom-reports"></a>管理自訂報表  
 我們建議擁有許多自訂報表的使用者，最好使用具有適當 NTFS 檔案系統權限的檔案系統資料夾來組織這些報表。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 自訂報表會使用目前使用者的權限來執行。 若要防止惡意使用者變更報表所執行的查詢，包含報表檔案之檔案系統資料夾的權限應該要設定為限制存取。  
   
 使用者以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務所使用的帳戶，都需要包含報表檔案之檔案系統資料夾的讀取權。  

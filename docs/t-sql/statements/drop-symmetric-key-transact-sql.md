@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 46dd5c58d666d85f6cbf03021a2faacecbc7502c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681487"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
   
  如果將非對稱金鑰對應到 EKM 裝置上的可延伸金鑰管理 (EKM) 金鑰，而且未指定 **REMOVE PROVIDER KEY** 選項，金鑰就會從資料庫中卸除，但不會從裝置卸除，而且會發出警告。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要對稱金鑰的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

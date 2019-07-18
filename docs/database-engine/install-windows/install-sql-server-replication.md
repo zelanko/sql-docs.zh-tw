@@ -16,13 +16,13 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 5fbfc888698149c960f4555a5ec88e9483e46a9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8bfb3281923fb3ebfa22bd8dfc5dec8f1423ec49
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794919"
 ---
 # <a name="install-sql-server-replication"></a>安裝 SQL Server 複寫
 
@@ -38,7 +38,7 @@ ms.locfileid: "47609226"
 ## <a name="installing-replication-by-using-setup"></a>使用安裝程式安裝複寫  
 **在安裝新執行個體時安裝複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- 若要安裝複寫元件 (包括 Replication Management Objects (RMO))，請在安裝精靈的 [特徵選取] 頁面上選取 [SQL Server 複寫]。  
+- 若要安裝複寫元件 (包括 Replication Management Objects (RMO))，請在安裝精靈的 [特徵選取]  頁面上選取 [SQL Server 複寫]  。  
   
 ## <a name="installing-replication-from-the-command-prompt"></a>從命令提示字元安裝複寫  
  **在安裝新執行個體時安裝複寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  

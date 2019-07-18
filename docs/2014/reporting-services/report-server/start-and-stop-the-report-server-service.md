@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31daaf135e2a5315cea5d71ca6ef0b61e91ff9c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103172"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>啟動與停止 Report Server 服務
   報表伺服器會實作成一項 Windows 服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 如果您想要使用任何報表伺服器功能，就必須執行這項服務。 停止此服務會停止所有報表伺服器作業。  
@@ -38,11 +37,11 @@ ms.locfileid: "56029179"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器。  
   
-2.  在 [報表伺服器狀態] 頁面上，按一下 **[停止]** 或 **[啟動]**。  
+2.  在 [報表伺服器狀態] 頁面上，按一下 **[停止]** 或 **[啟動]** 。  
   
 ### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>使用系統管理工具中的服務來啟動或停止服務  
   
--   在 [系統管理工具] 中開啟 [服務]、以滑鼠右鍵按一下 **[SQL Server Reporting Services (MSSQLSERVER)]**，然後按一下 **[停止]** 或 **[重新啟動]**。  
+-   在 [系統管理工具] 中開啟 [服務]、以滑鼠右鍵按一下 **[SQL Server Reporting Services (MSSQLSERVER)]** ，然後按一下 **[停止]** 或 **[重新啟動]** 。  
   
  如果您執行多個執行個體，或者報表伺服器是以具名執行個體執行，請確認括號中的執行個體名稱是否對應於您要停止或重新啟動的報表伺服器執行個體。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "56029179"
   
 1.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
-2.  選取 [SQL Server 服務]，並以滑鼠右鍵按一下 **[SQL Server Reporting Services]**，然後按一下 **[停止]** 或 **[重新啟動]**。  
+2.  選取 [SQL Server 服務]，並以滑鼠右鍵按一下 **[SQL Server Reporting Services]** ，然後按一下 **[停止]** 或 **[重新啟動]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

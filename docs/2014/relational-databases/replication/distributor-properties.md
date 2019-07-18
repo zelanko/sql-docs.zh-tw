@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721402"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 複寫散發者屬性
 本主題將討論上找到的屬性**一般**，**發行者**，並**散發資料庫**頁面內**散發者屬性**視窗。 
@@ -68,7 +68,7 @@ ms.locfileid: "54135690"
 ## <a name="distribution-database"></a>散發資料庫
  **[散發資料庫屬性]** 對話方塊可讓您檢視許多屬性，並設定資料庫的交易保留期限和記錄保留期限。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **名稱**  
  散發資料庫的名稱，預設為「distribution」(唯讀)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54135690"
  記錄中繼資料的儲存時間長度，適用於所有類型的複寫。  
   
  **佇列讀取器代理程式安全性**  
- 佇列讀取器代理程式會用於具有佇列更新訂閱的異動複寫。 如果您在新增發行集精靈的 **[發行集類型]** 頁面上選取 **[具更新訂閱的交易式發行集]** ，則會自動建立佇列讀取器代理程式。 按一下 [安全性設定]，以變更執行代理程式和與散發者連線的帳戶。  
+ 佇列讀取器代理程式會用於具有佇列更新訂閱的異動複寫。 如果您在新增發行集精靈的 **[發行集類型]** 頁面上選取 **[具更新訂閱的交易式發行集]** ，則會自動建立佇列讀取器代理程式。 按一下 [安全性設定]  ，以變更執行代理程式和與散發者連線的帳戶。  
   
  在此頁面上選取 **[建立佇列讀取器代理程式]** 也可以建立佇列讀取器代理程式 (如果已建立代理程式，此選項會停用)。  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012516"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 事件類別
   **Audit Server Alter Trace** 事件類別會針對所有檢查 ALTER TRACE 權限的陳述式而發生。 檢查 ALTER TRACE 的陳述式，包括用來建立或設定追蹤、或是為追蹤而設定篩選的陳述式。  

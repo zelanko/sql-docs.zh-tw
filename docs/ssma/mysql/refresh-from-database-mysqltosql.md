@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066699"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>從資料庫重新整理 (MySQLToSQL)
 **從資料庫重新整理**對話方塊可讓您選取要重新整理從 MySQL 資料庫的物件。 在對話方塊中的資料列的色彩標示根據中繼資料的狀態：  
@@ -36,7 +35,7 @@ ms.locfileid: "47746436"
   
 |||  
 |-|-|  
-|**詞彙**|**定義**|  
+|**詞彙**|**[定義]**|  
 |**摺疊 （-）**|摺疊所有的物件群組，若要隱藏個別的物件。|  
 |**展開 （+）**|展開以顯示個別物件的所有物件群組。|  
 |**隱藏/顯示相等的物件**|如果物件中繼資料相同的 MySQL 資料庫中，並在 SSMA 中，會隱藏清單中的物件。|  

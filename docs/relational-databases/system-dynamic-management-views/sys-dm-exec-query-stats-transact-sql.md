@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 9f98d906c39b46b36fe68e0480b757a5ae854d27
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072352"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252258"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,14 +117,17 @@ ms.locfileid: "58072352"
 |**min_spills**|**bigint**|此查詢有以往會在單次執行期間溢出的頁面最小數目。<br /><br /> **適用於**：開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|此查詢有以往會在單次執行期間溢出的頁面數目上限。<br /><br /> **適用於**：開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|這個分佈是在節點的識別碼。<br /><br /> **適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|編譯以來執行所執行的此計劃的遠端網頁伺服器讀取總數。<br /><br /> **適用於：** Azure SQL DB 超大規模 |  
+|**last_page_server_reads**|**bigint**|計畫上次執行的最後一個時間執行的遠端網頁伺服器讀取的次數。<br /><br /> **適用於：** Azure SQL DB 超大規模 |  
+|**min_page_server_reads**|**bigint**|所讀取的最小次數遠端網頁伺服器，在單次執行期間曾執行此計劃。<br /><br /> **適用於：** Azure SQL DB 超大規模 |  
+|**max_page_server_reads**|**bigint**|最大數目的遠端網頁伺服器會讀取這個計劃，在單次執行期間曾執行。<br /><br /> **適用於：** Azure SQL DB 超大規模 |  
 > [!NOTE]
 > <sup>1</sup>原生編譯的預存程序啟用統計資料收集時，會收集的工作者時間 （毫秒）。 小於一毫秒一次執行查詢，如果值是 0。  
   
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
    
 ## <a name="remarks"></a>備註  
  完成查詢時，會更新檢視中的統計資料。  
@@ -177,7 +179,7 @@ ORDER BY qs.execution_count DESC;
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 

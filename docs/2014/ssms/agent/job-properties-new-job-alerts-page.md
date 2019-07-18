@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189275"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>作業屬性：新增作業 （警示頁面）
+# <a name="job-properties-new-job-alerts-page"></a>作業屬性：新增作業 (警示頁面)
   使用此頁面即可檢視和組織 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的警示。  
   
 ## <a name="options"></a>選項。  

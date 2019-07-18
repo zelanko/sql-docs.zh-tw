@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c0b5847cb5d4b4d6643edceadbd4d95cec5f152
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946549"
 ---
 # <a name="numeric-values-functions---round"></a>數值函式 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回最接近引數且去掉小數部份的數字。 如果這樣的數字不止一個，則傳回最接近正無限數的那一個。 例如：  
+  傳回最接近引數且去掉小數部份的數字。 如果這樣的數字不止一個，則傳回最接近正無限數的那一個。 例如:  
   
  如果引數是 2.5 **round （)** 傳回 3。  
   

@@ -14,16 +14,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973937"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860515"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」  ，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
 
 系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 `FORMSOF THESAURUS` 子句的任何 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查詢進行同義字比對。
   
@@ -36,15 +36,15 @@ ms.locfileid: "57973937"
   
      展開集包含可以由全文檢索查詢彼此替代的一組同義字，例如 "writer"、"author" 和 "journalist"。 包含展開集中任何同義字之相符項目的查詢會展開成包含展開集中的其他每個同義字。  
   
-     如需詳細資訊，請參閱本主題後面的[展開集的 XML 結構](#expansion)。  
+     如需詳細資訊，請參閱此主題後面的[展開集的 XML 結構](#expansion)。  
   
 -   取代集  
   
-     取代集包含替代集所要取代的文字模式。 如需範例，請參閱本主題後面的[取代集的 XML 結構](#replacement)一節。 
+     取代集包含替代集所要取代的文字模式。 如需範例，請參閱此主題後面的[取代集的 XML 結構](#replacement)一節。 
 
 -   變音符號設定  
   
-     對於給定的同義字而言，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 (**~**)、尖重音符號 (**´**) 或母音變化 (**¨**) (亦即，「區分腔調字」或「不區分腔調字」)。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "café"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "café" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "café"。 根據預設，同義字不會區分腔調字。  
+     針對給定的同義字，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 ( **&acute;** ) 或母音變化 ( **&uml;** ) (亦即，「區分腔調字」  或「不區分腔調字」  )。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "caf&eacute;"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf&eacute;" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf&eacute;"。 根據預設，同義字不會區分腔調字。  
   
 ##  <a name="initial_thesaurus_files"></a> 預設的同義字檔案
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組 XML 同義字檔案 (每個支援的語言都有一個檔案)。 這些檔案基本上都是空的。 它們僅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同義字通用的最上層 XML 結構以及標記為註解的範例同義字。  
@@ -83,6 +83,8 @@ ms.locfileid: "57973937"
 同義字查詢會同時使用語言特有的同義字和通用同義字。
 1.  首先，查詢會查閱語言特有的檔案並載入此檔案，以便進行處理 (除非已經載入此檔案)。 查詢會展開成包含同義字 (Thesaurus) 檔案中展開集和取代集規則所指定的語言特有同義字 (Synonym)。 
 2.  然後，系統會針對通用同義字重複這些步驟。 不過，如果某個詞彙已經是語言特有同義字檔案中相符項目的一部分，該詞彙就不適用於在通用同義字中比對。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> 同義字檔案的結構  
  每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus` 的 XML 容器，以及包含範例同義字的 `<!--` ... `-->` 註解。 您可在包含子元素範例的 `<thesaurus>` 元素中定義同義字，而這些子元素會定義變音符號設定、展開集和取代集。

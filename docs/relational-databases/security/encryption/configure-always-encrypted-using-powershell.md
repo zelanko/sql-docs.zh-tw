@@ -1,7 +1,7 @@
 ---
 title: 使用 PowerShell 設定 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ec7d60a0e7b89720b28c20b3e50cfa8354aea77b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407985"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585466"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ SqlServer PowerShell 模組提供 Cmdlet 讓您在 Azure SQL Database 與 SQL Se
 
 因為 SqlServer 模組中的永遠加密 Cmdlet 會處理金鑰或敏感性資料，所以請務必在安全的電腦上執行 Cmdlet。 管理永遠加密時，請從與裝載您的 SQL Server 執行個體不同的電腦上執行 Cmdlet。
 
-因為永遠加密的主要目標是為了確保已加密的敏感性資料安全無虞，即使資料庫系統遭到入侵亦然，所以在 SQL Server 電腦上執行處理金鑰或敏感性資料的 PowerShell 指令碼，可能會降低或損害此功能的優勢。 如需其他安全性相關建議，請參閱 [金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+因為永遠加密的主要目標是為了確保已加密的敏感性資料安全無虞，即使資料庫系統遭到入侵亦然，所以在 SQL Server 電腦上執行處理金鑰或敏感性資料的 PowerShell 指令碼，可能會降低或損害此功能的優勢。 如需其他安全性相關建議，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 [此頁面底部](#aecmdletreference)的連結。
 
@@ -53,6 +53,8 @@ Import-Module "SqlServer"
 某些永遠加密 Cmdlet 會處理資料庫中的資料或中繼資料，因此要求您必須先連接到資料庫。 使用 SqlServer 模組設定永遠加密時，有兩種建議的方法可連接到資料庫： 
 1. 使用 SQL Server PowerShell 連接。
 2. 使用 SQL Server 管理物件 (SMO) 連接。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>使用 SQL Server PowerShell
 

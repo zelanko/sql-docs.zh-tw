@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 803944c9b572061204045d2b11311cee0d7a26b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe6fffc96a816c9b71c003926d6267e8287a1c48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106862"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>加入詳細資料群組 (報表產生器及 SSRS)
   系統會將報表資料集中的詳細資料指定為沒有群組運算式的群組。 當您想要顯示矩陣的詳細資料、加回您已經從資料表或清單中刪除的詳細資料，或加入額外的詳細資料群組時，請將詳細資料群組加入至現有的 Tablix 資料區域。 如需群組的詳細資訊，請參閱 [了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)。  
@@ -28,11 +27,11 @@ ms.locfileid: "56291377"
   
 1.  在設計介面上，按一下 Tablix 資料區域中的任意位置來選取它。 [群組] 窗格會顯示選定資料區域的資料列和資料行群組。  
   
-2.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部之子群組的群組。 按一下 **[加入群組]**，然後按一下 **[子群組]**。 **[Tablix 群組]** 對話方塊隨即開啟。  
+2.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部之子群組的群組。 按一下 **[加入群組]** ，然後按一下 **[子群組]** 。 **[Tablix 群組]** 對話方塊隨即開啟。  
   
 3.  在 **[群組運算式]** 中，將運算式保留空白。 詳細資料群組沒有運算式。  
   
-4.  選取 **[顯示詳細資料]**。  
+4.  選取 **[顯示詳細資料]** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

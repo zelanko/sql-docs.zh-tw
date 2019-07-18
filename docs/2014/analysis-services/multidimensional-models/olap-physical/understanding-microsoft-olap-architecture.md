@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], about multidimensional data
@@ -14,12 +12,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3d257560caebf2d52ee3cb01875302584f598b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62698948"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 架構
   使用這些主題可更加了解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料庫，並規劃如何在商業智慧方案中實作多維度資料庫。  

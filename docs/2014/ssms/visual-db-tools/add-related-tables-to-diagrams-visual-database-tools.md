@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297580"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>將相關的資料表加入圖表 (Visual Database Tools)
   您可將與已選取之資料表有關聯性的所有資料表，快速加入至資料庫圖表。  

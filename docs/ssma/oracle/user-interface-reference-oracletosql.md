@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2acf2dca7b383d6ab579f46e33b10c10e541b88c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 1cd74d2e3c5825618a6c893551cc8ae7298d00d8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738846"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266402"
 ---
 # <a name="user-interface-reference-oracletosql"></a>使用者介面參考 (OracleToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Oracle。  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e8b98135d07ecc51ce2570a481fac4924266668
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771135"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>變更為了擷取變更所選取的資料表
   在此對話方塊中，您可以從要擷取變更的選定資料表中選取特定資料行。 您也可以編輯 **[安全性角色]** 和 **[擷取執行個體]** 資訊。  

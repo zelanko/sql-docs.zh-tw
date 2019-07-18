@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62679786"
 ---
 # <a name="data-source-information-properties"></a>資料來源資訊屬性
   在提供者專用的屬性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會定義下列資料來源資訊屬性。  
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|類型：VT_BOOL<br /><br /> R/W：讀取<br /><br /> 預設：VARIANT_TRUE<br /><br /> 描述：用來判斷是否支援資料行定序。<br /><br /> VARIANT_TRUE：支援資料行層級定序。<br /><br /> VARIANT_FALSE：不支援資料行層級定序。|  
+|SSPROP_COLUMNLEVELCOLLATION|類型：VT_BOOL<br /><br /> R/W:讀取<br /><br /> 預設：VARIANT_TRUE<br /><br /> 描述：用來判斷是否支援資料行定序。<br /><br /> VARIANT_TRUE:支援資料行層級定序。<br /><br /> VARIANT_FALSE:不支援資料行層級定序。|  
 |SSPROP_UNICODELCID|類型：VT_I4 R/W:讀取<br /><br /> 描述：Unicode 地區設定識別碼。<br /><br /> 這是用於 Unicode 資料排序的地區設定。|  
 |SSPROP_UNICODECOMPARISONSTYLE|類型：VT_I4 R/W:讀取<br /><br /> 描述：Unicode 比較樣式。<br /><br /> 用於 Unicode 資料排序的排序選項。|  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb700997165ceeb6d300f6332c9e758706c0fbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947400"
 ---
 # <a name="axes-collection-ado-md"></a>Axes 集合 (ADO MD)
 包含[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)定義資料格集的物件。  

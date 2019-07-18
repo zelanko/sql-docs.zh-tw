@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932430"
 ---
 # <a name="index-property"></a>Index 屬性
 指出正在使用中的目前的索引名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -46,7 +45,7 @@ ms.locfileid: "47716306"
   
  如果可以設定索引和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性是**Locktype**或是**adLockOptimistic**，然後隱含[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)執行作業。 這會釋放目前和受影響的群組。 已釋放任何現有的篩選條件，和目前的資料列位置變更為已排序的第一列**資料錄集**。  
   
- **Index**屬性可搭配[搜尋](../../../ado/reference/ado-api/seek-method.md)方法。 如果基礎提供者不支援**索引**屬性，因此**Seek**方法，請考慮使用[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法改為。 判斷是否**Recordset**物件支援的索引[支援](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** 方法。  
+ **Index**屬性可搭配[搜尋](../../../ado/reference/ado-api/seek-method.md)方法。 如果基礎提供者不支援**索引**屬性，因此**Seek**方法，請考慮使用[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法改為。 判斷是否**Recordset**物件支援的索引[支援](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** 方法。  
   
  內建**Index**屬性不相關的動態[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性，雖然它們都處理索引。  
   

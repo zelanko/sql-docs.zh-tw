@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.advanced.f1
@@ -15,19 +14,19 @@ ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fff89f4be7953e2eb0cec3ed9a04883052ed6d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089725"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - 重新執行組態 (進階重新執行選項)
   在 [重新執行組態] 對話方塊中，使用 [進階重新執行選項] 索引標籤來指定如何重新執行追蹤檔案。  
   
  若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 [重新執行] 功能表上按一下 [啟動]，連接到想要重新執行追蹤之 SQL Server 的執行個體，然後按一下 [進階重新執行選項] 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **重新執行系統 SPID**  
  指定 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 是否重新執行系統處理序識別碼 (SPID)。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48192478"
  設定封鎖處理序監視器搜尋已封鎖或封鎖中處理序的頻率。  
   
 ## <a name="see-also"></a>另請參閱  
- [重新執行追蹤資料表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [重新執行追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重新執行追蹤](../tools/sql-server-profiler/replay-traces.md)  
   

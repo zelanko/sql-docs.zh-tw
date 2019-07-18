@@ -14,14 +14,18 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d82da0734ba0e3dda009b912fa9c537e77a6f39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cf646a6cc26b757b65e0c7c1e561aa7aff26d020
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725504"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回代表日期之日期部分的整數。  
   
 ## <a name="syntax"></a>語法  

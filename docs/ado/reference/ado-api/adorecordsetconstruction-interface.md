@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920798"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
-**ADORecordsetConstruction**介面用來建構 ADO **Recordset**的 OLE DB 物件**資料列集**C/c + + 應用程式中的物件。  
+**ADORecordsetConstruction**介面用來建構 ADO **Recordset**的 OLE DB 物件**資料列集**C 中的物件 /C++應用程式。  
   
  此介面支援下列屬性：  
   
@@ -39,7 +38,7 @@ ms.locfileid: "47634386"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="remarks"></a>備註  

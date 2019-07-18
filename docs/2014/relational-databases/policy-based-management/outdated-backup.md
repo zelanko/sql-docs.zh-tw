@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bcdfc02c06117529c2f09621197728f3c9e77dc1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253156"
 ---
 # <a name="outdated-backup"></a>過期的備份
   這個規則會檢查資料庫是否有最新備份。 排程定期備份對於保護資料庫避免因為許多不同失敗而造成資料遺失而言，是很重要的工作。 備份資料的適當頻率取決於資料庫的復原模式、有關可能資料遺失的商業需求及資料庫的更新頻率。 在經常更新的資料庫中，備份之間的工作損失風險會快速地增加。  

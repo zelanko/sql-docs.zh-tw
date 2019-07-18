@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211866"
 ---
 # <a name="modify-statistics"></a>修改統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改現有統計資料。  
@@ -27,7 +27,7 @@ ms.locfileid: "52398951"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目修改統計資料：**  
   
@@ -58,11 +58,11 @@ ms.locfileid: "52398951"
   
 4.  按一下加號展開 **[統計資料]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [一般] 頁面上，按一下 [加入]、[移除]、[上移]、[下移] 或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行] 方格中位置會大幅影響統計資料的效益。  
+6.  在 [統計資料屬性 - *statistics_name*]  對話方塊的 [一般]  頁面上，按一下 [加入]  、[移除]  、[上移]  、[下移]  或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行]  方格中位置會大幅影響統計資料的效益。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改統計資料**  

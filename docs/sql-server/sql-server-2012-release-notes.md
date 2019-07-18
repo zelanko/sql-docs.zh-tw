@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658312"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351547"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658312"
 **因應措施：** 您可以參考系統組態檢查報告，深入了解這些安裝程式規則。 系統組態檢查會產生報告，其中包含每個已執行之規則以及執行狀態的簡短描述。 系統組態檢查報告位於 %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 加入 Distributed Replay Controller 服務的本機使用者帳戶可能會非預期地終止安裝程式  
-**問題：** 在 SQL Server 安裝程式的 [Distributed Replay Controller] 頁面中，當您嘗試加入 Distributed Replay Controller 服務的本機使用者帳戶時，安裝程式將會非預期地終止並顯示「SQL Server 安裝程式失敗」錯誤訊息。  
+**問題：** 在 SQL Server 安裝程式的 [Distributed Replay Controller]  頁面中，當您嘗試加入 Distributed Replay Controller 服務的本機使用者帳戶時，安裝程式將會非預期地終止並顯示「SQL Server 安裝程式失敗」錯誤訊息。  
   
 **因應措施：** 在安裝 SQL 期間，請勿經由 [新增目前使用者] 或 [新增...] 來新增本機使用者帳戶。 請在安裝之後，依照下列步驟手動加入本機使用者帳戶：  
   
@@ -43,15 +43,15 @@ ms.locfileid: "58658312"
   
 2.  在安裝控制器服務的控制器電腦上，於命令提示字元中輸入 dcomcnfg。  
   
-3.  在 [元件服務] 視窗中，導覽至 [主控台根目錄] -> [元件服務] -> [電腦] -> [我的電腦] -> [Dconfig] ->[DReplayController]。  
+3.  在 [元件服務] 視窗中，導覽至 [主控台根目錄]   -> [元件服務]   -> [電腦]   -> [我的電腦]   -> [Dconfig]   ->[DReplayController]  。  
   
-4.  以滑鼠右鍵按一下 [DReplayController] ，然後按一下 [內容] 。  
+4.  以滑鼠右鍵按一下 [DReplayController]  ，然後按一下 [內容]  。  
   
 5.  在 [DReplayController 內容]  視窗的 [安全性]  索引標籤上，按一下 [啟動和啟用權限]  區段中的 [編輯]  。  
   
-6.  將 [本機和遠端啟用]  權限授與本機使用者帳戶，然後按一下 [確定] 。  
+6.  將 [本機和遠端啟用]  權限授與本機使用者帳戶，然後按一下 [確定]  。  
   
-7.  按一下 [存取權限] 區段中的 [編輯]  將 [本機和遠端存取]  權限授與本機使用者帳戶，然後按一下 [確定] 。  
+7.  按一下 [存取權限] 區段中的 [編輯]  將 [本機和遠端存取]  權限授與本機使用者帳戶，然後按一下 [確定]  。  
   
 8.  按一下 [確定]  關閉 [DReplayController 內容]  視窗。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "58658312"
 10. 啟動 SQL Server Distributed Replay Controller 服務。  
   
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 SQL Server 安裝程式可能會在嘗試啟動 SQL Server Browser 服務時失敗  
-**問題：** SQL Server 安裝程式可能會在嘗試啟動 SQL Server Browser 服務時失敗，並出現類似下面的錯誤：  
+**問題：** SQL Server 安裝程式可能會在嘗試啟動 SQL Server Browser 服務時失敗，並出現類似以下的錯誤：  
   
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
@@ -70,10 +70,10 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**因應措施：** 當 SQL Server 引擎或 Analysis Services 無法安裝時，就可能會發生這種情況。 若要修正此問題，請參閱 SQL Server 安裝程式記錄檔，然後疑難排解 SQL Server 引擎和 Analysis Services 失敗。 如需詳細資訊，請參閱＜檢視與讀取 SQL Server 安裝程式記錄檔＞。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。  
+**因應措施：** SQL Server 引擎或 Analysis Services 無法安裝時，就可能發生這種情況。 若要修正此問題，請參閱 SQL Server 安裝程式記錄檔，然後疑難排解 SQL Server 引擎和 Analysis Services 失敗。 如需詳細資訊，請參閱＜檢視與讀取 SQL Server 安裝程式記錄檔＞。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重新命名網路名稱之後，SQL Server 2008、2008 R2 Analysis Services 容錯移轉叢集升級到 SQL Server 2012 可能會失敗  
-**問題：** 在您使用 Windows 叢集系統管理員工具來變更 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 容錯移轉叢集執行個體的網路名稱之後，升級作業可能會失敗。  
+**問題：** 在您使用 Windows 叢集系統管理員工具變更 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 容錯移轉叢集執行個體的網路名稱之後，升級作業可能會失敗。  
   
 **因應措施：** 若要解決這個問題，請根據[這篇知識庫文章](https://support.microsoft.com/kb/955784)中解決方法章節的指示來更新 ClusterName 登錄項目。  
   
@@ -95,7 +95,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **因應措施：** 若要將語意語言統計資料庫設定為語意索引的必要元件，請執行下列工作：  
   
-1.  在 SQL Server 安裝媒體上，找到並執行名稱為 SemanticLanguageDatabase.msi 的 Windows Installer 套件，以擷取資料庫。 若為 SQL Server 2012 Express，請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582)下載語意語言統計資料庫，然後執行 Windows Installer 套件。  
+1.  在 SQL Server 安裝媒體上，找到並執行名稱為 SemanticLanguageDatabase.msi 的 Windows Installer 套件，以擷取資料庫。 若為 SQL Server 2012 Express，請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) 下載語意語言統計資料庫，然後執行 Windows Installer 套件。  
   
 2.  將資料庫移至適當的資料夾。 若將資料庫保留在預設位置，則必須要變更權限，才能順利地進行附加。  
   
@@ -127,17 +127,17 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  在 [選取功能]  介面中，展開 [.NET Framework 3.5.1 功能]  項目。  
   
-        3.  展開 [.NET Framework 3.5.1 功能] 之後，您會看見兩個核取方塊。 一個是 .NET Framework 3.5.1 的核取方塊，另一個則是 WCF 啟動的核取方塊。 選取 [.NET Framework 3.5.1] ，然後按 [下一步] 。 除非您也安裝了必要的角色服務和功能，否則無法安裝 .NET Framework 3.5.1 功能。  
+        3.  展開 [.NET Framework 3.5.1 功能]  之後，您會看見兩個核取方塊。 一個是 .NET Framework 3.5.1 的核取方塊，另一個則是 WCF 啟動的核取方塊。 選取 [.NET Framework 3.5.1]  ，然後按 [下一步]  。 除非您也安裝了必要的角色服務和功能，否則無法安裝 .NET Framework 3.5.1 功能。  
   
-        4.  在 [確認安裝選項] 中檢閱選項，然後按一下 [安裝]。  
+        4.  在 [確認安裝選項]  中檢閱選項，然後按一下 [安裝]。  
   
-        5.  讓安裝程序完成，然後按一下 [關閉] 。  
+        5.  讓安裝程序完成，然後按一下 [關閉]  。  
   
         方法 2：使用 Windows PowerShell  
   
-        1.  按一下 [開始] | [所有程式] | [附屬應用程式]  
+        1.  按一下 [開始]   | [所有程式]   | [附屬應用程式]   
   
-        2.  展開 [Windows PowerShell]以滑鼠右鍵按一下 [Windows PowerShell]，然後按一下 [以系統管理員身分執行]。 請在 [使用者帳戶控制]  方塊中按一下 [是]  。  
+        2.  展開 [Windows PowerShell]  以滑鼠右鍵按一下 [Windows PowerShell]  ，然後按一下 [以系統管理員身分執行]  。 請在 [使用者帳戶控制]  方塊中按一下 [是]  。  
   
         3.  在 PowerShell 命令提示字元中，輸入下列命令，然後在每個命令後面按下 ENTER：  
   
@@ -148,11 +148,11 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **使用以下方法，在 Windows 7 SP1 上啟用 .NET Framework 3.5 SP1：**  
   
-        1.  按一下 [開始] | [控制台] | [程式]，然後按一下 [開啟或關閉 Windows 功能]。 如果系統提示需要系統管理員密碼或確認，請輸入密碼或提供確認。  
+        1.  按一下 [開始]   | [控制台]   | [程式]  ，然後按一下 [開啟或關閉 Windows 功能]  。 如果系統提示需要系統管理員密碼或確認，請輸入密碼或提供確認。  
   
-        2.  若要啟用 [Microsoft .NET Framework 3.5.1] ，請選取此功能旁的核取方塊。 若要關閉某項 Windows 功能，請清除核取方塊。  
+        2.  若要啟用 [Microsoft .NET Framework 3.5.1]  ，請選取此功能旁的核取方塊。 若要關閉某項 Windows 功能，請清除核取方塊。  
   
-        3.  按一下 [確定] 。  
+        3.  按一下 [確定]  。  
   
         **使用部署映像服務與管理 (DISM.exe) 來啟用 .NET Framework 3.5 SP1：**  
   
@@ -164,7 +164,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
             sm /online /Get-Features  
             ```  
   
-        2.  選擇性:在命令提示字元輸入下列命令，列出您感興趣之特定功能的資訊。  
+        2.  選擇性：在命令提示字元鍵入下列命令，列出您感興趣的特定功能相關資訊。  
   
             ```  
             Dism /online /Get-FeatureInfo /FeatureName:NetFx3  
@@ -217,9 +217,9 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
   
 5.  在 [選取執行個體]  頁面上，選取要修復的執行個體，然後按一下 [下一步]  繼續進行。  
   
-6.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]**。  
+6.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]** 。  
   
-7.  [已完成修復準備工作]  頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復] 。  
+7.  [已完成修復準備工作]  頁面會指出作業準備繼續進行。 若要繼續，請按一下 [修復]  。  
   
 8.  [修復進度]  頁面會顯示修復作業的狀態。 [完成]  頁面會指出作業已完成。  
   
@@ -233,7 +233,7 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
 **因應措施**：在您升級作業系統之後，請修復 .NET Framework 4 的安裝。 如需詳細資訊，請參閱 [如何修復現有的 .NET Framework 安裝](https://support.microsoft.com/kb/306160)。  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server 版本升級需要重新啟動  
-**問題**：當您針對 SQL Server 2012 執行個體進行版本升級時，與新版本相關聯的某些功能可能無法立即啟動。  
+**問題**：在您升級 SQL Server 2012 執行個體的版本後，與新版本相關聯的某些功能可能無法立即啟動。  
   
 **因應措施**：在 SQL Server 2012 執行個體的版本升級完成之後重新啟動電腦。 如需有關 SQL Server 2012 支援之升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  
   
@@ -243,20 +243,20 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
 **因應措施：** 升級之前，請確定資料庫及其檔案/檔案群組設定為可讀寫。  
   
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 如果您使用相同的 IP 位址，重新安裝 SQL Server 容錯移轉叢集的執行個體會失敗  
-**問題：** 若在安裝 SQL Server 容錯移轉叢集執行個體期間指定了不正確的 IP 位址，安裝就會失敗。 解除安裝失敗的執行個體之後，如果您嘗試使用相同的執行個體名稱和正確的 IP 位址來重新安裝 SQL Server 容錯移轉叢集執行個體，安裝仍會失敗。 發生失敗的原因是先前的安裝遺留了重複的資源群組。  
+**問題：** 若在安裝 SQL Server 容錯移轉叢集執行個體時指定了不正確的 IP 位址，安裝就會失敗。 解除安裝失敗的執行個體之後，如果您嘗試使用相同的執行個體名稱和正確的 IP 位址來重新安裝 SQL Server 容錯移轉叢集執行個體，安裝仍會失敗。 發生失敗的原因是先前的安裝遺留了重複的資源群組。  
   
-**因應措施：** 若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+**因應措施：** 若要解決此問題，請在重新安裝時使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="AS"></a>2.0 Analysis Services  
   
 ### <a name="21-sql-editor-and-as-editor-cannot-connect-to-their-respective-server-instances-in-the-same-ssms-instance"></a>2.1 SQL 編輯器和 AS 編輯器無法在相同 SSMS 執行個體中連接到其各自的伺服器執行個體  
-**問題：** 已連接 SQL 編輯器時，無法使用 MDX/DMX 編輯器連接到 Analysis Services 伺服器。  
+**問題：** 當 SQL 編輯器已連線時，無法使用 MDX/DMX 編輯器連線到 Analysis Services 伺服器。  
   
 使用 SQL Server Management Studio 2012 (SSMS) 時，如果 .sql 檔案已在編輯器中開啟而且連接到 SQL Server 執行個體，則相同 SSMS 執行個體中開啟的 MDX 或 DMX 檔案就無法連接到 AS 伺服器執行個體。 同樣地，如果 MDX 或 DMX 檔案已在 SSMS 的編輯器中開啟，並連接到 AS 伺服器執行個體，則相同 SSMS 執行個體中開啟的 .sql 檔案就無法連接到 SQL Server 執行個體。  
   
-**因應措施**：若要解決這個問題，請使用下列其中一個選項。  
+**因應措施**：若要解決此問題，請使用下列任一選項。  
   
 -   啟動另一個 SSMS 執行個體，開啟 MDX / DMX 檔案。  
   
@@ -276,21 +276,21 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
 ### <a name="23-ssis-components-for-as-tabular-models-do-not-work-as-expected"></a>2.3 AS 表格式模型的 SSIS 元件未如預期運作  
 Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以預期方式針對表格式模型運作。 以下是當您嘗試為搭配表格式模型運作而撰寫 SSIS 套件時，可能發生的已知問題。  
   
-**問題：** AS 連接管理員無法在與資料來源相同的解決方案中使用表格式模型。  
+**問題：** AS 連線管理員無法在與資料來源相同的解決方案中使用表格式模型。  
   
-**因應措施：** 您必須明確地連接到 AS 伺服器，再設定 AS 處理工作或 AS 執行 DDL 工作。  
+**因應措施：** 您必須明確地連線到 AS 伺服器，再設定 AS 處理工作或 AS 執行 DDL 工作。  
   
 當您使用表格式模型時，AS 處理工作有一些問題存在：  
   
-**問題：** 您不是看到資料庫、資料表和資料分割，而是看到 Cube、量值群組和維度。 這是工作的限制。  
+**問題：** 您沒有看到資料庫、資料表和資料分割，而是看到 Cube、量值群組和維度。 這是工作的限制。  
   
 **因應措施：** 您仍然可以使用 Cube/量值群組/維度結構來處理表格式模型。  
   
 **問題：** 由表格式模式中執行之 AS 支援的一些處理選項並未在 AS 處理工作中公開，如處理重組。  
   
-**因應措施：** 請改用 Analysis Services 執行 DDL 工作來執行包含 ProcessDefrag 命令的 XMLA 指令碼。  
+**因應措施：** 請改用 Analysis Services 執行 DDL 工作，執行包含 ProcessDefrag 命令的 XMLA 指令碼。  
   
-**問題：** 工具中有些設定選項不適用。 例如，處理資料分割時不應該使用「處理相關物件」，而「平行處理」組態選項則包含無效錯誤訊息，說明標準 SKU 上不支援平行處理。  
+**問題：** 工具中有些組態選項不適用。 例如，處理資料分割時不應該使用「處理相關物件」，而「平行處理」組態選項則包含無效錯誤訊息，說明標準 SKU 上不支援平行處理。  
   
 **因應措施：** None  
   
@@ -306,7 +306,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 > [!IMPORTANT]  
 > 適用於只啟用 IPv6 的所有環境。 IPv4 (以及混合 IPv4 與 IPv6) 啟用的環境不受影響。  
   
-**因應措施**：若要避免這個問題，請啟用 IPv4，或使用下列步驟加入登錄項目，並建立 ACL 以針對 IPv6 啟用說明檢視器：  
+**因應措施**：若要避免此問題，請啟用 IPv4，或使用下列步驟加入登錄項目，並建立 ACL 以針對 IPv6 啟用說明檢視器：  
   
 1.  在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0 底下建立名為 "IPv6" 且具有 "1 (DWORD(32 bit))" 值的登錄機碼。  
   
@@ -323,32 +323,32 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 叢集中不支援 DQS  
 **問題：** SQL Server 叢集安裝中不支援 DQS。 如果您正在安裝 SQL Server 的叢集執行個體，就不得在 [特徵選取]  頁面上選取 [Data Quality Services]  和 [Data Quality Client]  核取方塊。 如果您在叢集執行個體安裝期間選取這兩個核取方塊 (而且您藉由執行 DQSInstaller.exe 檔案完成 Data Quality Server 安裝)，DQS 將會安裝在這個節點上，但是當您在叢集中加入其他節點時無法在其他節點上使用，因此 DQS 無法在其他節點上運作。  
   
-**因應措施：** 安裝 SQL Server 2012 累計更新 1 可解決此問題。 如需指示，請參閱[https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)。  
+**因應措施：** 安裝 SQL Server 2012 累積更新 1 可解決此問題。 如需指示，請參閱[https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安裝 Data Quality Server，請在解除安裝資料品質伺服器之後刪除 DQS 物件  
-**問題：** 如果您解除安裝資料品質伺服器，並不會自 SQL Server 執行個體刪除 DQS 物件 (DQS 資料庫、DQS 登入和 DQS 預存程序)。  
+**問題：** 如果您解除安裝 Data Quality Server，並不會自 SQL Server 執行個體刪除 DQS 物件 (DQS 資料庫、DQS 登入和 DQS 預存程序)。  
   
-**因應措施：** 若要在相同電腦的同一個 SQL Server 執行個體中重新安裝資料品質伺服器，您必須手動從該 SQL Server 執行個體中刪除 DQS 物件。 此外，您也必須從電腦上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 資料夾中刪除 DQS 資料庫 (DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA) 檔案，然後再重新安裝資料品質伺服器。 否則，Data Quality Server 安裝會失敗。 若要保留資料 (如知識庫或資料品質專案)，請移動資料庫檔案而不要刪除。 如需有關解除安裝程序完成之後移除 DQS 物件的詳細資訊，請參閱 [移除 Data Quality Server 物件](https://msdn.microsoft.com/library/hh231667.aspx)。  
+**因應措施：** 若要在相同電腦的同一個 SQL Server 執行個體中重新安裝 Data Quality Server，您必須從該 SQL Server 執行個體中手動刪除 DQS 物件。 此外，您也必須從電腦上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 資料夾中刪除 DQS 資料庫 (DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA) 檔案，然後再重新安裝資料品質伺服器。 否則，Data Quality Server 安裝會失敗。 若要保留資料 (如知識庫或資料品質專案)，請移動資料庫檔案而不要刪除。 如需有關解除安裝程序完成之後移除 DQS 物件的詳細資訊，請參閱 [移除 Data Quality Server 物件](https://msdn.microsoft.com/library/hh231667.aspx)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 指示知識探索已終止或互動式清理活動已延遲  
-**問題：**：如果系統管理員在 [活動監控] 畫面上終止活動，則執行知識探索、網域管理或互動式清理活動的互動式使用者在執行下一項作業之前，不會接到任何資訊指出活動已被終止。  
+**問題：** 如果系統管理員在 [活動監控] 畫面上終止活動，則執行知識探索、網域管理或互動式清理活動的互動式使用者在執行下一項作業之後，才會收到活動已被終止的資訊。  
   
 **因應措施：** None  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 取消作業會捨棄多項活動的工作  
-**問題：** 如果您針對執行中的知識探索或網域管理活動按一下 [取消]，而在該活動執行時，先前已完成其他活動但未執行發行作業，則從上次發行以來所執行的所有活動工作都會被捨棄，而不只是捨棄目前的活動。  
+**問題：** 如果您針對執行中的知識探索或網域管理活動按一下 [取消]  ，而在該活動執行時，先前已完成其他活動但未執行發行作業，則從上次發行以來所執行的所有活動工作都會被捨棄，而不只是捨棄目前的活動。  
   
-**因應措施：** 若要避免這種狀況，請發行您需要保存在知識探索中的工作，再啟動新的活動。  
+**因應措施：** 若要避免這種狀況，請發行您需要保存在知識庫中的工作，再啟動新的活動。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 控制項無法針對大字型適當縮放  
-**問題：** 如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫] 頁面上的 [取消] 和 [建立] 按鈕。  
+**問題：** 如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
   
 **因應措施**：若要解決這個問題，請將字型設定為較小的大小。  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 不支援 800x600 螢幕解析度  
 **問題：** 如果螢幕解析度設定為 800x600，Data Quality Client 應用程式不會正確顯示。  
   
-**因應措施：** 若要解決這個問題，請將螢幕解析度設定為較高的值。  
+**因應措施：** 若要解決此問題，請將螢幕解析度設定為較高的值。  
   
 ### <a name="47-map-bigint-column-in-the-source-data-to-a-decimal-domain-to-prevent-data-loss"></a>4.7 將來源資料中的 Bigint 資料行對應至 Decimal 定義域以防止資料遺失  
 **問題：** 如果來源資料中的資料行是 **bigint** 資料類型，您必須在 DQS 中將該資料行對應至 **decimal** 資料類型的定義域，而不是 **integer** 資料類型的定義域。 這是因為 **decimal** 資料類型代表比 **int** 資料類型更大範圍的值，因此可以保存較大的值。  
@@ -359,7 +359,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 **因應措施：** 使用 DQS 清理元件來處理這些資料行之前，您必須先使用資料轉換，將它們轉換成 **DT_STR** 或 **DT_WSTR** 資料類型。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 新的 SQL Server 執行個體安裝會覆寫開始功能表上執行 DQSInstaller.exe 的項目  
-**問題：** 如果您選擇在 SQL Server 執行個體中安裝 Data Quality Services，完成 SQL Server 安裝程式之後，系統會在 [開始] 功能表的 [Data Quality Services] 程式群組底下建立名為 [資料品質伺服器安裝程式] 的項目。 不過，如果您在相同的電腦上安裝多個 SQL Server 執行個體，[開始]  功能表上仍會只有單一 [Data Quality Server 安裝程式]  項目。 只要按一下這個項目，就會在最近安裝的 SQL Server 執行個體中執行 DQSInstaller.exe 檔案。  
+**問題：** 如果您選擇在 SQL Server 執行個體中安裝 Data Quality Services，完成 SQL Server 安裝程式之後，系統會在 [開始]  功能表的 [Data Quality Services]  程式群組底下建立名為 [資料品質伺服器安裝程式]  的項目。 不過，如果您在相同的電腦上安裝多個 SQL Server 執行個體，[開始]  功能表上仍會只有單一 [Data Quality Server 安裝程式]  項目。 只要按一下這個項目，就會在最近安裝的 SQL Server 執行個體中執行 DQSInstaller.exe 檔案。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 活動監控針對失敗的 Integration Services 清理活動顯示不正確的狀態  
 即使 Integration Services 清理活動失敗，[活動監控] 畫面仍然會在 [目前狀態]  資料行中不正確地顯示 [成功]  。  
@@ -371,7 +371,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 在清理資料品質專案中，如果您將來源資料中的欄位對應至具有日期資料類型之子定義域的複合定義域，清理結果的子定義域輸出就會具有不正確的日期格式，而且匯出至資料庫的作業會失敗。  
   
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 對應至名稱包含 ; (分號) 的 Excel 工作表時發生錯誤  
-**問題：** 在 Data Quality Client 中任何 DQS 活動的 [對應] 頁面上，如果您對應至名稱包含 ; (分號) 的來源 Excel 工作表，則在 [對應] 頁面上按 [下一步] 時，就會顯示無法處理的例外狀況訊息。  
+**問題：** 在 Data Quality Client 中任何 DQS 活動的 [對應]  頁面上，如果您對應至名稱包含 ; (分號) 的來源 Excel 工作表，則在 [對應]  頁面上按 [下一步]  時，就會顯示無法處理的例外狀況訊息。  
   
 **因應措施：** 在包含要對應之來源資料的 Excel 檔案中，移除工作表名稱中的 ; (分號)，然後再試一次。  
   
@@ -382,12 +382,12 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
   
 -   未對應之 **DateTime** 值的時間值會遺失，而且它們會以 yyyymmdd 格式顯示並匯出。  
   
-**因應措施：** 您可以在清理活動的 [管理和檢視結果] 頁面以及比對活動的 [比對] 頁面上，於右下角的窗格中檢視未對應的欄位值。  
+**因應措施：** 您可以在清理活動的 [管理和檢視結果]  頁面以及比對活動的 [比對]  頁面上，於右下角的窗格中檢視未對應的欄位值。  
   
 ### <a name="415-cannot-import-domain-values-from-an-excel-file-xls-containing-more-than-255-columns-of-data"></a>4.15 無法從包含超過 255 個資料行的 Excel 檔案 (.xls) 匯入定義域值  
-**問題：** 如果您從包含超過 255 個資料行的 Excel 97-2003 檔案 (.xls)，將值匯入定義域中，就會出現例外狀況訊息，而且匯入會失敗。  
+**問題：** 如果您將值匯入來自 Excel 97-2003 檔案 (.xls) (包含超過 255 個資料行) 的定義域中，會出現例外狀況訊息，而且匯入會失敗。  
   
-**因應措施：** 若要修正此問題，您可以進行下列其中一項作業：  
+**因應措施：** 若要修正此問題，您可以進行下列任一作業：  
   
 -   將 .xls 檔案另存為 .xlsx 檔案，然後將 .xlsx 檔案的值匯入定義域中。  
   
@@ -397,15 +397,15 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 活動監控功能只適用於擁有 dqs_administrator 角色的使用者。 如果您的使用者帳戶具有 dqs_kb_editor 或 dqs_kb_operator 角色，則 Data Quality Client 應用程式中將無法使用活動監控功能。  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 在最近使用的知識庫清單中針對定義域管理開啟知識庫時發生錯誤  
-問題如果您在 Data Quality Client 首頁畫面中，於 [最近使用的知識庫] 清單中針對定義域管理活動開啟知識庫，您可能會收到以下錯誤：  
+問題如果您在 Data Quality Client 首頁畫面中，於 [最近使用的知識庫]  清單中針對定義域管理活動開啟知識庫，您可能會收到以下錯誤：  
   
 `"A configuration with name 'RecentList:KB:<domain>\<username>' already exists in the database."`  
   
 發生此錯誤是因為 DQS 在 SQL Server 資料庫中與在 C# 中比較字串的方式不同。 SQL Server 資料庫中的字串比較不區分大小寫，但是在 C# 中則區分大小寫。  
   
-我們使用範例來說明。 假設有使用者 Domain\user1。 此使用者使用 "user1" 帳戶登入 Data Quality Client 電腦，並處理知識庫。 DQS 會針對每一位使用者將最近使用的知識庫儲存為 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表內的記錄。 在此情況下，記錄會儲存具有下列名稱：Domain\user1。 之後，使用者以 "User1" 身分 (請注意 U 為大寫) 登入 Data Quality Client 電腦，並嘗試在 [最近使用的知識庫] 清單中針對定義域管理活動開啟此知識庫。 DQS 中的基礎程式碼將會比較兩個字串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，而 C# 中會進行區分大小寫的字串比較，因為這兩個字串不相符，所以 DQS 會嘗試在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中為使用者 (User1) 插入一筆新的記錄。 但是，由於 SQL 資料庫中的字串比較不區分大小寫，所以導致該字串已經存在於 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中，因此插入作業將會失敗。  
+我們使用範例來說明。 假設有使用者 Domain\user1。 此使用者使用 "user1" 帳戶登入 Data Quality Client 電腦，並處理知識庫。 DQS 會針對每一位使用者將最近使用的知識庫儲存為 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表內的記錄。 在此情況下，此記錄將會以下列名稱儲存：RecentList:KB:Domain\user1。 之後，使用者以 "User1" 身分 (請注意 U 為大寫) 登入 Data Quality Client 電腦，並嘗試在 [最近使用的知識庫]  清單中針對定義域管理活動開啟此知識庫。 DQS 中的基礎程式碼將會比較兩個字串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，而 C# 中會進行區分大小寫的字串比較，因為這兩個字串不相符，所以 DQS 會嘗試在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中為使用者 (User1) 插入一筆新的記錄。 但是，由於 SQL 資料庫中的字串比較不區分大小寫，所以導致該字串已經存在於 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中，因此插入作業將會失敗。  
   
-**因應措施：** 若要修正此問題，您可以進行下列其中一項作業：  
+**因應措施：** 若要修正此問題，您可以進行下列任一作業：  
   
 -   執行下列陳述式來確認是否有重複的項目存在：  
   
@@ -462,14 +462,16 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 -   或從 32 位元 Windows PowerShell 2.0 提示匯入 SQLPS 模組。  
   
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 在產生指令碼精靈中導覽時可能會發生錯誤  
-**問題：** 在產生指令碼精靈中，按一下 [儲存或發佈指令碼] 產生指令碼，然後按一下 [選擇選項] 或 [設定指令碼編寫選項] 進行導覽之後，再次按一下 [儲存或發佈指令碼] 可能會產生下列錯誤：  
+**問題：** 在產生指令碼精靈中，按一下 [儲存或發佈指令碼]  產生指令碼，然後按一下 [選擇選項]  或 [設定指令碼編寫選項]  進行導覽之後，再次按一下 [儲存或發佈指令碼]  可能會產生下列錯誤：  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-其他資訊:  
-無效的物件名稱 'sys.federations'。 (Microsoft SQL Server，錯誤：208)</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
-**因應措施：** 關閉產生指令碼精靈，並重新開啟。  
+**因應措施：** 關閉 [產生指令碼精靈]，並重新開啟。  
   
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 新的維護計畫配置與舊版的 SQL Server 工具不相容  
 **問題：** 當 SQL Server 2012 管理工具用來修改舊版 SQL Server 管理工具 (SQL Server 2008 R2、SQL Server 2008 或 SQL Server 2005) 所建立的現有維護計畫時，會以新格式儲存維護計畫。 舊版 SQL Server 管理工具不支援此新格式。  
@@ -503,7 +505,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
-|具有連接修補程式的 ADO.NET 與 .NET Framework 4.0**\&#42;**|是|是|是|是|是|  
+|具有連接修補程式的 ADO.NET 與 .NET Framework 4.0 **\&#42;**|是|是|是|是|是|  
 |具有連接修補程式的 ADO.NET 與 .NET Framework 3.5 SP1 **\&#42;\&#42;**|是|是|是|是|是|  
 |Microsoft JDBC Driver 4.0 for SQL Server|是|是|是|是|是|  
   
@@ -529,21 +531,21 @@ MultiSubnetFailover 是新的連接字串關鍵字，可用來加快 SQL Server 
   
 **NET Framework 3.5 或 OLEDB 不支援 MultiSubnetFailover=True**  
   
-**問題：** 如果您的可用性群組或容錯移轉叢集執行個體具有相依於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的 50% 用戶端連接要求可能會達到連接逾時。  
+**問題：** 如果您的可用性群組或容錯移轉叢集執行個體具有相依於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的用戶端連線要求中，可能有 50% 會連線逾時。  
   
-**因應措施：** 建議您執行下列其中一項工作。  
+**因應措施：** 建議您執行下列任一項工作。  
   
 -   如果您沒有操作叢集資源的權限，請將連接逾時變更為 30 秒 (此值會產生 20 秒 TCP 逾時期間加上 10 秒緩衝時間)。  
   
     **優點**：如果發生跨子網路的容錯移轉，用戶端復原時間很短。  
   
-    **缺點**：半數的用戶端連接需要 20 秒以上。  
+    **缺點**：半數的用戶端連線需要 20 秒以上  
   
 -   如果您有操作叢集資源的權限，比較建議的作法是將可用性群組接聽程式的網路名稱設定為 **RegisterAllProvidersIP**=0。 如需詳細資訊，請參閱本節後面的＜停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼＞。  
   
-    **優點：** 您不需要增加用戶端連接逾時值。  
+    **優點：** 您不需要增加用戶端連線逾時值。  
   
-    **缺點：** 如果發生跨子網路的容錯移轉，用戶端復原時間可能是 15 分鐘以上，取決於您的 HostRecordTTL 設定和跨網站 DNS/AD 複寫排程設定。  
+    **缺點：** 如果是跨子網路的容錯移轉，用戶端復原時間可能是 15 分鐘以上，取決於您的 HostRecordTTL 設定和跨網站 DNS/AD 複寫排程設定。  
   
 **停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼**  
   
@@ -597,9 +599,9 @@ Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並�
 ## <a name="MDS"></a>7.0 Master Data Services  
   
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 修正叢集中的 MDS 安裝  
-**問題：** 如果您在選取 [Master Data Services] 核取方塊的情況下安裝 RTM 版本的 SQL Server 2012 叢集執行個體，將會在單一節點上安裝 MDS，但是 MDS 將無法在您加入至叢集的其他節點上使用及運作。  
+**問題：** 如果您在選取 [Master Data Services]  核取方塊的情況下安裝 RTM 版本的 SQL Server 2012 叢集執行個體，將會在單一節點上安裝 MDS，但是 MDS 將無法在您加入至叢集的其他節點上使用及運作。  
   
-**因應措施**：若要解決此問題，您必須安裝 SQL Server 2012 Cumulative Release 1 (CU1) 並執行下列步驟：  
+**因應措施**：若要解決此問題，您必須安裝 SQL Server 2012 累積更新 1 (CU1) 並執行下列步驟：  
   
 1.  確定沒有任何現有的 SQL/MDS 安裝。  
   
@@ -629,7 +631,7 @@ SQL Server 2012 包括 StreamInsight 2.0。 StreamInsight 2.0 需要 Microsoft S
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 在中文 (HK) 作業系統上並未啟用安裝 Upgrade Advisor 的連結  
-問題當您嘗試在任何支援的中文 (香港) 作業系統 (OS) Windows 版本上安裝 Upgrade Advisor 時，可能會發現未啟用安裝 Upgrade Advisor 的連結。  
+問題當您嘗試在任何支援的中文 (香港) 作業系統 (OS) Windows 版本上安裝升級建議程式時，可能會發現未啟用安裝升級建議程式的連結。  
   
 **因應措施**：在 SQL Server 2012 媒體中的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 上找出 **SQLUA.msi** 檔案，視您的作業系統架構而定。  
   

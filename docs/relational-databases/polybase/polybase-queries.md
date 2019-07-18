@@ -1,9 +1,7 @@
 ---
 title: PolyBase 查詢情節 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 keywords:
@@ -15,15 +13,17 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: fb91a4603fa55fa967c51e25d24fcd33bc211218
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 24902c6cbcbc84c6f4f5ce463e4629f9e8f2d1af
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731129"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查詢情節
 

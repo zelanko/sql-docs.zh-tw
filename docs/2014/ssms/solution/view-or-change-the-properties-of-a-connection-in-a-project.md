@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704727"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>檢視或變更專案中連接的屬性
   您可以檢視專案中所儲存之連接的屬性，也可以修改其中的部份屬性。  
   
 ### <a name="to-change-the-properties-of-a-connection-in-a-project"></a>變更專案中之連接的屬性  
   
-1.  在方案總管中，以滑鼠右鍵按一下連接，再按一下 [屬性視窗]。  
+1.  在方案總管中，以滑鼠右鍵按一下連接，再按一下 [屬性視窗]  。  
   
-2.  在 [屬性] 視窗中，檢視連接內容。 您可以變更 [執行逾時]、[資料庫] 和 [登入逾時] 等屬性。  
+2.  在 [屬性] 視窗中，檢視連接內容。 您可以變更 [執行逾時]  、[資料庫]  和 [登入逾時]  等屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

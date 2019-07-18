@@ -16,16 +16,16 @@ helpviewer_keywords:
 - disabling alerts
 - removing alerts
 ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a35df41f75f966ccdfe4dc3d2719177b519d7648
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4c470054a274a9065a46c1478ef8ce324af25dbc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696046"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687944"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "51696046"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目刪除警示：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -65,13 +65,13 @@ ms.locfileid: "51696046"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要刪除的 SQL Server Agent 警示。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  在您要刪除的警示上按一下滑鼠右鍵，然後選取 [刪除]。  
+4.  在您要刪除的警示上按一下滑鼠右鍵，然後選取 [刪除]  。  
   
-5.  在 **[刪除物件]** 對話方塊中，確認已選取正確的警示，然後按一下 **[確定]**。  
+5.  在 **[刪除物件]** 對話方塊中，確認已選取正確的警示，然後按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "51696046"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- deletes the SQL Server Agent alert called 'Test Alert.'  

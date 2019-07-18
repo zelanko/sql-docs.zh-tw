@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a125bdb345f8e3760560638a137ff160821bd1b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d7b83d68999d18e368459f0e3623b4f40ab2b5d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642872"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679679"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,11 +53,11 @@ ms.locfileid: "51642872"
   
 |動作|執行動作：|  
 |------------|---------------------|  
-|執行所有陳述式，從目前的陳述式到下一個端點|在 [偵錯] 功能表上，按一下 [繼續]。<br /><br /> 在 [偵錯] 工具列上，按一下 [繼續] 按鈕。|  
-|逐步執行下一個陳述式或模組|在 [偵錯] 功能表上，按一下 [逐步執行]。<br /><br /> 在 [偵錯] 工具列上，按一下 [逐步執行] 按鈕。<br /><br /> 按下 F11。|  
-|不進入下一個陳述式或模組|在 [偵錯] 功能表上，按一下 [不進入函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [不進入函數] 按鈕。<br /><br /> 按下 F10。|  
-|跳離模組|在 [偵錯] 功能表上，按一下 [跳離函數]。<br /><br /> 在 [偵錯] 工具列上，按一下 [跳離函數] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
-|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]。<br /><br /> 按下 CTRL+F10。|  
+|執行所有陳述式，從目前的陳述式到下一個端點|在 [偵錯]  功能表上，按一下 [繼續]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [繼續]  按鈕。|  
+|逐步執行下一個陳述式或模組|在 [偵錯]  功能表上，按一下 [逐步執行]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [逐步執行]  按鈕。<br /><br /> 按下 F11。|  
+|不進入下一個陳述式或模組|在 [偵錯]  功能表上，按一下 [不進入函數]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [不進入函數]  按鈕。<br /><br /> 按下 F10。|  
+|跳離模組|在 [偵錯]  功能表上，按一下 [跳離函數]  。<br /><br /> 在 [偵錯]  工具列上，按一下 [跳離函數]  按鈕。<br /><br /> 按下 SHIFT+F11。|  
+|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]  。<br /><br /> 按下 CTRL+F10。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)  

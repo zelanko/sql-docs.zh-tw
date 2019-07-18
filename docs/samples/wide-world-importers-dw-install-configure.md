@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a1335b430346cf64d143ce3e07887d78f65a451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed3c5f1a4f2168196a651aea64c9c88311a197b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104256"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安裝和設定
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -47,9 +46,9 @@ WideWorldImportersDW 資料庫的安裝和組態指示。
 1. 開啟 SQL Server Management Studio 並連接至目標 SQL Server 執行個體。
 2. 以滑鼠右鍵按一下**資料庫**節點，然後選取**Restore Database**。
 3. 選取 **裝置**，然後按一下按鈕 **...**
-4. 在對話方塊**選取備份裝置**，按一下**新增**，瀏覽至伺服器的檔案系統中的資料庫備份，並選取備份。 按一下 [確定] 。
+4. 在對話方塊**選取備份裝置**，按一下**新增**，瀏覽至伺服器的檔案系統中的資料庫備份，並選取備份。 按一下 [確定 **Deploying Office Solutions**]。
 5. 如有需要變更資料的目標位置，並在記錄檔**檔案**窗格。 請注意，您要放置資料和記錄檔在不同的磁碟機上的最佳作法。
-6. 按一下 [確定] 。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 WideWorldImporters 的資料庫。
+6. 按一下 [確定]  。 這會起始資料庫還原。 完成之後，您必須安裝在您的 SQL Server 執行個體上的 WideWorldImporters 的資料庫。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 

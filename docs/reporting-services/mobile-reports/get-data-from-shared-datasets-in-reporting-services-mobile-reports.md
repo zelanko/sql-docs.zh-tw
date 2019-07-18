@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1437d9394a372ba9a0aa3510db8f903f9b737e16
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298177"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061150"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>從 Reporting Services 行動報表中的共用資料集取得資料
 除了[載入 Excel 檔案資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，SQL Server 行動報表發行工具也可以存取幾乎所有來源的資料。 存取資料需有共用的資料來源，在 Reporting Services 入口網站設定。 深入了解 [建立共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [建立共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  
@@ -22,9 +22,9 @@ ms.locfileid: "56298177"
   
 從 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 連接到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]伺服器之後，即可直接將行動報表連接到共用資料集。   
   
-1. 在 **[資料]** 索引標籤上，選取 **[加入資料]**。  
+1. 在 **[資料]** 索引標籤上，選取 **[加入資料]** 。  
   
-2. 選取 **[報表伺服器]**。   
+2. 選取 **[報表伺服器]** 。   
   
 3.  如果這是第一次連接到伺服器，請填入伺服器名稱以及您的名稱和密碼。 在 [伺服器位址] 方塊中放入伺服器名稱，其格式如下：  
   
@@ -45,9 +45,9 @@ ms.locfileid: "56298177"
   
 ## <a name="add-edit-or-remove-a-report-server"></a>加入、編輯或移除報表伺服器  
   
-如果您已連線到報表伺服器，當您選取 [資料] 索引標籤中的 [新增資料] 時，您不會看到新增其他報表伺服器的選項。 請改為遵循下列步驟。  
+如果您已連線到報表伺服器，當您選取 [資料] 索引標籤中的 [新增資料]  時，您不會看到新增其他報表伺服器的選項。 請改為遵循下列步驟。  
   
-1. 選取左上角的 [連線]。  
+1. 選取左上角的 [連線]  。  
   
    ![SSMRP_AddConnectionIcon](../../reporting-services/mobile-reports/media/ssmrp-addconnectionicon.png)  
      

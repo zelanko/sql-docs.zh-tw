@@ -2,7 +2,7 @@
 title: Reporting Services (SSRS) 支援的資料來源 | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f0d1e59f0f049373b0858b756618454659898dc2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500456"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -81,19 +81,19 @@ ms.locfileid: "53211927"
 ## <a name="supported-data-sources"></a>支援的資料來源  
  下表列出您可以用來擷取報表資料集與報表模型之資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料處理延伸模組和資料提供者。 如需有關延伸模組或資料提供者的詳細資訊，請按一下第二欄中的連結。 相關的資料表資料行描述如下：  
   
--   報表資料來源：所存取之資料類型；例如，關聯式資料庫、多維度資料庫、一般檔案或 XML。 此欄為「[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以用於報表的資料類型為何？」這個問題的答案。  
+-   報表資料來源：所存取之資料類型；例如，關聯式資料庫、多維度資料庫、一般檔案或 XML。 此欄為「 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以用於報表的資料類型為何？」這個問題的答案。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型：當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中定義資料來源時，可在下拉式清單中看到的其中一種資料來源類型。 此清單會從已安裝並註冊的 DPE 和資料提供者擴展。 此欄為「當我建立報表資料來源時，可以從下拉式清單中選取哪種資料來源類型？」這個問題的答案。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型：當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中定義資料來源時，您可以在下拉式清單中看到的其中一種資料來源類型。 此清單會從已安裝並註冊的 DPE 和資料提供者擴展。 此欄為「當我建立報表資料來源時，可以從下拉式清單中選取哪種資料來源類型？」這個問題的答案。  
   
--   資料處理延伸模組/資料提供者的名稱：對應所選 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組或其他資料提供者。 此欄為「當我選取資料來源類型時，要使用哪個對應的資料處理延伸模組或資料提供者？」這個問題的答案。  
+-   資料處理延伸模組/資料提供者的名稱：對應選取之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組或其他資料提供者。 此欄為「當我選取資料來源類型時，要使用哪個對應的資料處理延伸模組或資料提供者？」這個問題的答案。  
   
--   基礎資料提供者版本 (選擇性)：某些資料來源類型支援一種以上的資料提供者。 這些可能是相同提供者的不同版本，或是依協力廠商針對資料提供者類型的不同實作。 提供者名稱通常會在已設定資料來源之後，出現在連接字串中。 此欄為「選取資料來源類型後，我可以在 [連接屬性] 對話方塊中選取哪個資料提供者？」這個問題的答案。  
+-   基礎資料提供者版本 (選擇性)：某些資料來源類型支援一種以上的資料提供者。 這些可能是相同提供者的不同版本，或是依協力廠商針對資料提供者類型的不同實作。 提供者名稱通常會在已設定資料來源之後，出現在連接字串中。 此欄為「選取資料來源類型後，我可以在 **[連接屬性]** 對話方塊中選取哪個資料提供者？」這個問題的答案。  
   
--   資料來源 \<平台>：目標資料來源的資料處理延伸模組或資料提供者，所支援的資料來源平台。 此欄為「這個資料處理延伸模組或資料提供者，可以從此類型平台的資料來源擷取資料嗎？」這個問題的答案。  
+-   資料來源 \<平台>  ：目標資料來源的資料處理延伸模組或資料提供者所支援的資料來源平台。 此欄為「這個資料處理延伸模組或資料提供者，可以從此類型平台的資料來源擷取資料嗎？」這個問題的答案。  
   
 -   資料來源的版本：DPE 或資料提供者支援的目標資料來源版本。 此欄為「這個資料處理延伸模組或資料提供者，可以從此版本的資料來源擷取資料嗎？」這個問題的答案。  
   
--   RS \<平台>：報表伺服器與報表撰寫用戶端的平台，您可以於該處安裝自訂的 DPE 或資料提供者。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝所包含的內建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料處理延伸模組。 自訂的資料處理延伸模組或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者必須原始就針對特定平台編譯。 此欄為「這個資料處理延伸模組或資料提供者，可以安裝在此類型的平台上嗎？」這個問題的答案。  
+-   RS \<平台>  ：報表伺服器與報表撰寫用戶端的平台，您可以在該處安裝自訂的 DPE 或資料提供者。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝所包含的內建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料處理延伸模組。 自訂的資料處理延伸模組或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者必須原始就針對特定平台編譯。 此欄為「這個資料處理延伸模組或資料提供者，可以安裝在此類型的平台上嗎？」這個問題的答案。  
   
 ###  <a name="DataSourcesTable"></a> 資料來源的類型  
   
@@ -106,7 +106,7 @@ ms.locfileid: "53211927"
 |SQL 資料倉儲|[Microsoft Azure SQL Database](#Azure)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.SqlClient|不適用|不適用|SQL 資料倉儲|Y|Y| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 應用裝置|[Microsoft Parallel Data Warehouse](#PWD)|已被取代的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|不適用|不適用|不適用|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫|[Microsoft SQL Server Analysis Services](#AnalysisServices)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|使用 ADOMD.NET|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更新版本|Y|Y|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫|OLEDB|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.OledbClient<br /><br /> 10.0 版|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|   
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫|OLEDB|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.OledbClient<br /><br /> 10\.0 版|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|   
 |SharePoint 清單|[Microsoft SharePoint 清單](#SharePointList)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|從 Lists.asmx 或 SharePoint 物件模型 API 介面取得資料。<br /><br /> 請參閱 [注意事項](#SharePointList)。|N|Y|SharePoint 2013 產品及更新版本|Y|Y|   
 |XML|[XML](#XML)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|XML 資料來源沒有平台相依性。|不適用|不適用|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 或文件|Y|Y|  
 |報表伺服器模型|報表模型|已發行之 SMDL 檔案的已被取代 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|模型的資料來源使用內建的資料處理延伸模組。<br /><br /> 以 Oracle 為基礎的模型需要 Oracle 用戶端元件。<br /><br /> 以 Teradata 為基礎的模型需要來自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 請參閱平台支援的 Teradata 文件集。|不適用|不適用|模型可以從以下版本建立：[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 或更新版本<br /><br /> Teradata V14、v13、v12 和 v6.2|N|N|  
@@ -132,7 +132,7 @@ ms.locfileid: "53211927"
 > [!NOTE]
 >  目前並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料處理延伸模組。  
   
- 如需報表產生器支援之資料處理延伸模組的詳細資訊，請參閱 msdn.microsoft.com 上 [報表產生器文件](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 中的 [報表產生器中的資料連接、資料來源及連接字串](https://go.microsoft.com/fwlink/?LinkId=154494) 。  
+ 如需報表產生器支援之資料處理延伸模組的詳細資訊，請參閱 msdn.microsoft.com 上 [報表產生器文件](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 中的 [報表產生器中的資料連接、資料來源及連接字串](https://go.microsoft.com/fwlink/?LinkId=154494) 。  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server 資料處理延伸模組  
  資料來源類型 **Microsoft SQL Server** 會包裝與擴充 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此資料處理延伸模組是原生針對 x86 與 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]平台編譯，並在這些平台上執行。  
@@ -173,7 +173,7 @@ ms.locfileid: "53211927"
  您也可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源建立模型。  
   
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
- OLE DB 資料處理延伸模組需要根據您要在報表中使用的資料來源版本，選擇其他資料提供者層。 如果您不選取特定的資料提供者，則會提供預設值。 透過從 [資料來源] 或 [共用資料來源] 對話方塊的 [編輯] 按鈕存取的 [連接屬性] 對話方塊，選擇特定的資料提供者。  
+ OLE DB 資料處理延伸模組需要根據您要在報表中使用的資料來源版本，選擇其他資料提供者層。 如果您不選取特定的資料提供者，則會提供預設值。 透過從 [資料來源] 或 [共用資料來源] 對話方塊的 [編輯]  按鈕存取的 [連接屬性]  對話方塊，選擇特定的資料提供者。  
   
  如需 OLE DB 相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。 如需有關 OLE DB 提供者之特定支援的詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET 設計工具支援 OLE DB 提供者特定資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "53211927"
  
 若要安裝 Oracle 用戶端工具，您可以執行下列步驟。
  
-1.  前往 [Oracle 的下載網站](https://www.oracle.com/us/products/tools/index-090165.html)
+1.  前往 [Oracle 的下載網站](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)
 2.  下載 ODAC 12c Release 4 (12.1.0.2.4) for Windows (伺服器為 64bit，工具為 32bit)
 3.  安裝 Data Provider for .NET 4
   
@@ -270,7 +270,7 @@ ms.locfileid: "53211927"
   
  如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
   
- 您也可以根據 Teradata 資料庫建立模型。 如需詳細資訊，請參閱 Teradata 網站上的以下白皮書：[Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP) (Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation)。  
+ 您也可以根據 Teradata 資料庫建立模型。 如需詳細資訊，請參閱 Teradata 網站上的以下白皮書： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(英文)。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   
@@ -292,7 +292,7 @@ ms.locfileid: "53211927"
  您可以指定的認證是依照用戶端應用程式所使用的實作而定。 如需詳細資訊，請參閱 [SharePoint 清單連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)。  
   
 ###  <a name="XML"></a> XML 資料處理延伸模組  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括 XML 資料處理延伸模組，因此您可以在報表中使用 XML 資料。 可以從 XML 文件、Web 服務或是可透過 URL 存取的網路架構應用程式來擷取這些資料。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 如需相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的＜以文字為基礎的查詢設計工具＞一節。 如需範例，請參閱 [Reporting Services:Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654) (Reporting Services：使用 XML 與 Web 服務資料來源)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括 XML 資料處理延伸模組，因此您可以在報表中使用 XML 資料。 可以從 XML 文件、Web 服務或是可透過 URL 存取的網路架構應用程式來擷取這些資料。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 如需相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的＜以文字為基礎的查詢設計工具＞一節。 如需範例，請參閱 [Reporting Services：使用 XML 與 Web 服務資料來源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   

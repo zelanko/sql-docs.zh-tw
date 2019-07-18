@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d73282cde4d0598d7e6a35ac6273935626b96969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001378"
 ---
 # <a name="escape-sequences"></a>逸出序列
 ODBC 定義包含日期、 時間、 時間戳記和日期時間間隔常值的純量函式呼叫，標準文法的逸出序列**像**述詞逸出字元、 外部聯結和程序呼叫。 互通的應用程式應該使用這些盡可能的序列。  

@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fe76662cd9b04370fd6110fe918fdadfdff02cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4300a76b7325029cb2126bb988efb6f7d401e511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942001"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>受管理備份的預存程序 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

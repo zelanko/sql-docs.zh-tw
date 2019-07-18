@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359310"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727737"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "53359310"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DUP_KEY|  
-|訊息文字|發現物件名稱 '%.*ls' 和索引名稱 '%.\*ls' 的重複索引鍵，CREATE UNIQUE INDEX 已結束。  重複的索引鍵值為 %ls。|  
+|訊息文字|發現物件名稱 '%.\*ls' 和索引名稱 '%.\*ls' 的重複索引鍵，CREATE UNIQUE INDEX 已結束。  重複的索引鍵值為 %ls。|  
   
 ## <a name="explanation"></a>說明  
  當您嘗試建立唯一索引，而且資料表中的多個資料列包含指定的重複值時，就會發生這項錯誤。 當您建立索引並指定 UNIQUE 關鍵字，或者建立 UNIQUE 條件約束時，就會建立唯一索引。 資料表無法包含在索引或條件約束中定義的資料行內具有重複值的任何資料列。  
@@ -50,7 +50,7 @@ ms.locfileid: "53359310"
   
  錯誤訊息 1505 會傳回違反唯一性條件約束的第一個資料列。 資料表可能含有其他重複的資料列。 若要尋找所有重複的資料列，請查詢指定的資料表並使用 GROUP BY 和 HAVING 子句來報告重複的資料列。 例如，下列查詢會傳回 **Employee** 資料表中具有重複名字和姓氏的資料列。  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
   
 ## <a name="user-action"></a>使用者動作  
  請考慮下列解決方案。  
@@ -59,7 +59,7 @@ ms.locfileid: "53359310"
   
 -   當您選擇唯一索引或條件約束的資料行時，請選取已定義為 NOT NULL 的資料行。 這樣做可以排除多個資料列的索引鍵值包含 NULL 而導致違反唯一性的可能。  
   
--   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複的資料列的資訊，請參閱知識庫文件 139444:[如何從 SQL Server 中的資料表中移除重複的資料列](https://support.microsoft.com/kb/139444)。  
+-   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需有關移除資料表中重複資料列的資訊，請參閱知識庫文件 139444：[如何在 SQL Server 中移除資料表中的重複資料列](https://support.microsoft.com/kb/139444) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920250"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 (VC++)
 這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性以顯示作業的效能差異執行，而 30 記錄快取。  

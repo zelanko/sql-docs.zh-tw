@@ -11,16 +11,16 @@ helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ef5c3558ca7afbcdfeec18b7041ad9b27a8cc8fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64946383"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 資料檔案中的第一個欄位不是字元。
 
-請考慮下列因應措施是否適用於情況︰
+請考慮下列因應措施是否適用於  情況︰
 * 不使用格式檔案。  以下是此因應措施的範例。您可以參閱 [不使用格式檔案而使用 bcp 與 Unicode 字元格式匯入資料](#bcp_widechar_import)。
 
 * 使用 **-c** 參數而不使用 **-w**。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -14,20 +13,20 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101992"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>將報表伺服器的存取權授與使用者 (報表管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用角色型安全性將報表伺服器的存取權授與使用者。 在新的報表伺服器安裝上，只有屬於本機管理員群組的成員擁有報表伺服器內容和作業的權限。 若要讓報表伺服器供其他使用者使用，您必須建立角色指派，以便將使用者或群組帳戶對應至指定工作集合的預先定義角色。  
   
- **SharePoint 模式報表伺服器：** 若為針對 SharePoint 整合模式所設定的報表伺服器，您可以設定使用 SharePoint 權限從 SharePoint 網站存取的方式。 SharePoint 網站的權限等級會決定報表伺服器內容和作業的存取權。 您必須是網站管理員，才能授與 SharePoint 網站的權限。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
+ **SharePoint 模式報表伺服器：** 已針對 SharePoint 整合模式報表伺服器，您可以設定從 SharePoint 網站，使用 SharePoint 權限的存取權。 SharePoint 網站的權限等級會決定報表伺服器內容和作業的存取權。 您必須是網站管理員，才能授與 SharePoint 網站的權限。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
   
  **原生模式報表伺服器：** 本主題著重於報表伺服器設定為原生模式和使用報表管理員將使用者指派給角色。 目前有兩種角色類型：  
   
@@ -52,15 +51,15 @@ ms.locfileid: "56024849"
   
 1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  按一下 **[安全性]**。  
+3.  按一下 **[安全性]** 。  
   
-4.  按一下 **[新增角色指派]**。  
+4.  按一下 **[新增角色指派]** 。  
   
 5.  在 **群組或使用者名稱**，輸入 Windows 網域使用者或群組帳戶，格式如下：\<網域 >\\< 帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
   
-6.  選取系統角色，然後按一下 **[確定]**。  
+6.  選取系統角色，然後按一下 **[確定]** 。  
   
      由於角色是累計的，因此如果您同時選取「系統管理員」和「系統使用者」，則使用者或群組就能夠以這兩種角色來執行工作。  
   
@@ -72,16 +71,16 @@ ms.locfileid: "56024849"
   
 2.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 [安全性]。  
+3.  在下拉式功能表中，按一下 [安全性]  。  
   
-4.  按一下 **[新增角色指派]**。  
+4.  按一下 **[新增角色指派]** 。  
   
     > [!NOTE]  
-    >  如果某個項目目前是從父項目繼承安全性，請按一下工具列中的 **[編輯項目安全性]** 來變更安全性設定。 然後，按一下 **[新增角色指派]**。  
+    >  如果某個項目目前是從父項目繼承安全性，請按一下工具列中的 **[編輯項目安全性]** 來變更安全性設定。 然後，按一下 **[新增角色指派]** 。  
   
 5.  在 **群組或使用者名稱**，輸入 Windows 網域使用者或群組帳戶，格式如下：\<網域 >\\< 帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
   
-6.  選取描述使用者或群組應如何存取項目的一或多個角色定義，然後按一下 **[確定]**。  
+6.  選取描述使用者或群組應如何存取項目的一或多個角色定義，然後按一下 **[確定]** 。  
   
 7.  重複上述步驟，以便建立其他使用者或群組的指派。  
   

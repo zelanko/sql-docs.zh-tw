@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d8c931f4ec38fe6099afa6b098445dcdbc52b0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090004"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @tranid = ] 'tranid' ]` 這是交易識別碼。 *tranid*已**sysname**，預設值是 NULL。 所有交易都是 NULL。  
   
- [**@queuetype=** ] **'***queuetype***'** ]  
+ [ **@queuetype=** ] **'***queuetype***'** ]  
  這是儲存交易的佇列類型。 *queuetype*已**tinyint**預設值是**0**，而且可以是下列值之一。  
   
 |值|描述|  

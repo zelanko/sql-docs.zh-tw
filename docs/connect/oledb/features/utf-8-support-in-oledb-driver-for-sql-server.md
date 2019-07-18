@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server 中的 UTF-8 支援| Microsoft Docs
 description: OLE DB Driver for SQL Server 中的 UTF-8 支援
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,43 +10,61 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775166"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的 UTF-8 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Microsoft OLE DB Driver for SQL Server （版本 18.2.1） 新增支援 utf-8 伺服器版本編碼方式。 如需 SQL Server utf-8 支援資訊，請參閱：
+Microsoft OLE DB Driver for SQL Server (18.2.1 版) 新增 UTF-8 伺服器編碼的支援。 如需有關 SQL Server UTF-8 支援的相關資訊，請參閱：
 - [定序與 Unicode 支援](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 支援](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
+- [UTF-8 支援](#ctp23)
 
-## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>資料插入 utf-8 編碼的 CHAR 或 VARCHAR 資料行
-在建立時插入一個輸入的參數的緩衝區，所使用的陣列描述緩衝區[DBBINDING 結構](https://go.microsoft.com/fwlink/?linkid=2071182)。 每個 DBBINDING 結構使取用者緩衝區的單一參數，且包含資料值的類型與長度等資訊。 針對輸入的參數的型別 CHAR、 緩衝區*wType*的 DBBINDING 結構應該設定為 DBTYPE_STR。 針對輸入的參數緩衝區的型別 WCHAR *wType*的 DBBINDING 結構應該設定為 DBTYPE_WSTR。
+## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>將資料插入至 UTF-8 編碼的 CHAR 或 VARCHAR 資料行
+建立輸入參數緩衝區以用於插入時，會使用 [DBBINDING 結構](https://go.microsoft.com/fwlink/?linkid=2071182) \(英文\) 的陣列來描述緩衝區。 每個 DBBINDING 結構都會將單一參數關聯至取用者的緩衝區，並包含資料值的類型與長度等資訊。 針對類型 CHAR 的輸入參數緩衝區，應該將 DBBINDING 結構的 *wType* 設定為 DBTYPE_STR。 針對類型 WCHAR 的輸入參數緩衝區，應該將 DBBINDING 結構的 *wType* 設定為 DBTYPE_WSTR。
 
-當執行含有參數的命令，此驅動程式會建構參數資料類型資訊。 如果輸入的緩衝區型別和參數資料類型比對，驅動程式中不進行任何轉換。 否則驅動程式會將輸入的參數緩衝區轉換成參數資料類型。 參數資料類型可以明確設定使用者藉由呼叫[icommandwithparameters:: Setparameterinfo](https://go.microsoft.com/fwlink/?linkid=2071577)。 如果未提供的資訊，此驅動程式會衍生參數資料類型資訊 （a） 資料行中繼資料從伺服器擷取時準備的陳述式，或 （b） 嘗試從輸入的參數資料類型的預設轉換。
+搭配參數執行命令時，驅動程式會建構參數資料類型資訊。 如果輸入緩衝區類型和參數資料類型相符，就不會在驅動程式中進行任何轉換。 否則，驅動程式會將輸入參數緩衝區轉換為參數資料類型。 使用者可以藉由呼叫 [ICommandWithParameters::SetParameterInfo](https://go.microsoft.com/fwlink/?linkid=2071577) \(英文\)，明確地設定參數資料類型。 若未提供此資訊，驅動程式就會 (a) 在陳述式備妥時從伺服器中擷取資料行中繼資料，或 (b) 嘗試從輸入參數資料類型進行預設轉換，藉以衍生參數資料類型資訊。
 
-輸入的參數緩衝區可能會轉換成伺服器的資料行定序，驅動程式，或根據輸入的緩衝區的資料型別和參數資料類型的伺服器。 在轉換期間，如果用戶端字碼頁或資料庫的定序字碼頁無法表示在輸入緩衝區中的所有字元，可能會發生資料遺失。 下表描述轉換程序，將資料插入至 utf-8 啟用資料行：
+根據輸入緩衝區資料類型和參數資料類型而定，可能會透過驅動程式或伺服器來將輸入參數緩衝區轉換為伺服器資料行定序。 轉換期間，如果用戶端字碼頁或資料庫定序字碼頁無法表示輸入緩衝區中的所有字元，則可能會發生資料遺失。 下表描述將資料插入至啟用 UTF-8 的資料行時的轉換流程：
 
-|緩衝區的資料類型|參數資料類型|轉換|使用者的預防措施|
+|緩衝區資料類型|參數資料類型|轉換|使用者預防措施|
 |---             |---                |---       |---            |
-|DBTYPE_STR|DBTYPE_STR|用戶端字碼頁的伺服器轉換成資料庫定序字碼頁;資料庫定序字碼頁從伺服器轉換到資料行定序字碼頁。|請確定用戶端字碼頁和資料庫定序字碼頁，則可以代表輸入資料中的所有字元。 比方說，來插入波蘭文字元，可以設定用戶端字碼頁 1250 （ANSI 中歐），來和資料庫定序無法波蘭文做為定序指示項 (例如 Polish_100_CI_AS_SC)，或為 utf-8 啟用。|
-|DBTYPE_STR|DBTYPE_WSTR|用戶端字碼頁的驅動程式轉換成 utf-16 編碼;從 utf-16 編碼方式為資料行定序字碼頁的伺服器轉換。|請確定用戶端字碼頁可代表輸入資料中的所有字元。 比方說，若要插入波蘭文的字元，用戶端字碼頁無法設定為 1250 （ANSI 中歐）。|
-|DBTYPE_WSTR|DBTYPE_STR|從資料庫定序字碼頁; 的 utf-16 編碼的驅動程式轉換資料庫定序字碼頁從伺服器轉換到資料行定序字碼頁。|請確定資料庫定序字碼頁可代表輸入資料中的所有字元。 比方說，若要插入波蘭文的字元，資料庫的定序字碼頁無法波蘭文做為定序指示項 (例如 Polish_100_CI_AS_SC)，或為 utf-8 啟用。|
-|DBTYPE_WSTR|DBTYPE_WSTR|從 utf-16 伺服器轉換到資料行定序字碼頁。|無。|
+|DBTYPE_STR|DBTYPE_STR|從用戶端字碼頁到資料庫定序字碼頁的伺服器轉換；從資料庫定序字碼頁到資料行定序字碼頁的伺服器轉換。|確定用戶端字碼頁和資料庫定序字碼頁均可表示輸入資料中的所有字元。 例如，若要插入波蘭文字元，可以將用戶端字碼頁設定為 1250 (ANSI 中歐語系)，而資料庫定序可以使用波蘭文作為定序指示項 (例如 Polish_100_CI_AS_SC) 或啟用 UTF-8。|
+|DBTYPE_STR|DBTYPE_WSTR|從用戶端字碼頁到 UTF-16 編碼的驅動程式轉換；從 UTF-16 編碼到資料行定序字碼頁的伺服器轉換。|確定用戶端字碼頁可以表示輸入資料中的所有字元。 例如，若要插入波蘭文字元，可以將用戶端字碼頁設定為 1250 (ANSI 中歐語系)。|
+|DBTYPE_WSTR|DBTYPE_STR|從 UTF-16 編碼到資料庫定序字碼頁的驅動程式轉換；從資料庫定序字碼頁到資料行定序字碼頁的伺服器轉換。|確定資料庫定序字碼頁可以表示輸入資料中的所有字元。 例如，若要插入波蘭文字元，資料庫定序字碼頁可以使用波蘭文作為定序指示項 (例如 Polish_100_CI_AS_SC) 或啟用 UTF-8。|
+|DBTYPE_WSTR|DBTYPE_WSTR|從 UTF-16 到資料行定序字碼頁的伺服器轉換。|無。|
 
-## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>資料擷取從 utf-8 編碼的 CHAR 或 VARCHAR 資料行
-在建立時擷取資料的緩衝區，所使用的陣列描述緩衝區[DBBINDING 結構](https://go.microsoft.com/fwlink/?linkid=2071182)。 每個 DBBINDING 結構會將擷取的資料列中的單一資料行產生關聯。 若要擷取成 CHAR 資料行的資料，請設定*wType* DBTYPE_STR DBBINDING 結構。 若要擷取成 WCHAR 資料行的資料，請設定*wType* DBTYPE_WSTR DBBINDING 結構。
+## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>從 UTF-8 編碼的 CHAR 或 VARCHAR 資料行擷取資料
+針對擷取的資料建立緩衝區時，會使用 [DBBINDING 結構](https://go.microsoft.com/fwlink/?linkid=2071182) \(英文\) 的陣列來描述緩衝區。 每個 DBBINDING 結構都會與所擷取資料列中的單一資料行產生關聯。 若要以 CHAR 格式擷取資料行資料，將 DBBINDING 結構的 *wType* 設定為 DBTYPE_STR。 若要以 WCHAR 格式擷取資料行資料，將 DBBINDING 結構的 *wType* 設定為 DBTYPE_WSTR。
 
-結果的緩衝區型別指示器 DBTYPE_STR，驅動程式會將 utf-8 編碼資料轉換成編碼的用戶端。 使用者應該確定用戶端的編碼方式來表示該資料從 utf-8 資料行，否則可能會發生資料遺失。
+針對結果緩衝區類型指示器 DBTYPE_STR，驅動程式會將啟用 UTF-8 編碼的資料轉換為用戶端編碼。 使用者應該確定用戶端編碼可以表示來自 UTF-8 資料行的資料，否則可能會發生資料遺失。
 
-結果的緩衝區型別指示器 DBTYPE_WSTR，驅動程式會將 utf-8 編碼資料轉換成 utf-16 編碼。
-  
+針對結果緩衝區類型指示器 DBTYPE_WSTR，驅動程式會將啟用 UTF-8 編碼的資料轉換為 UTF-16 編碼。
+
+<a name="ctp23"></a>
+
+### <a name="utf-8-support-sql-server-2019-ctp-23"></a>UTF-8 支援 (SQL Server 2019 CTP 2.3)
+
+[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] 開始完整支援廣泛使用 UTF-8 字元編碼作為匯入或匯出編碼，或作為文字資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 `CHAR` 和 `VARCHAR` 資料類型，並且在建立物件定序或將其變更為具有 `UTF8` 尾碼的定序時啟用。
+
+例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中推出。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
+
+此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII (拉丁文) 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
+
+如需詳細資訊，請參閱 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
+
+**CTP 2.1** 新增在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設的支援。
+
+**CTP 2.2** 新增在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
+
+**CTP 2.3** 新增在 BIN2 定序 (UTF8_BIN2) 中使用 UTF-8 字元編碼的支援。
+
 ## <a name="see-also"></a>另請參閱  
 [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 

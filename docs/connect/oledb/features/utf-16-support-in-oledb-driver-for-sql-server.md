@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e0c76b7a62150fe4ee53fd83b63d7b9ebe1fd737
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 421b7e37054fbc283959373a01921fd4f9e8ca2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641711"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796063"
 ---
 # <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>在 OLE DB Driver for SQL Server 的 UTF-16 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

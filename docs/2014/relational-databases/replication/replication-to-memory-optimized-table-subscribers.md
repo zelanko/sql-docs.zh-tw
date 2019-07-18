@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250876"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
   做為異動複寫訂閱者的資料表 (不包括點對點異動複寫) 可以設定為記憶體最佳化資料表。 其他複寫組態與記憶體最佳化資料表不相容。  
@@ -301,7 +301,7 @@ GO
   
 -   對於更新複寫至訂閱者端之記憶體最佳化資料表的資料表主索引鍵也有些限制。 如需詳細資訊，請參閱 <<c0> [ 將變更複寫至主索引鍵](#PrimaryKey)。  
   
--   記憶體最佳化資料表中不支援外部索引鍵、唯一條件約束、觸發程序、結構描述修改、ROWGUIDCOL、計算資料行、資料壓縮、別名資料類型、版本設定及鎖定。 如需詳細資訊，請參閱＜ [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) ＞。  
+-   記憶體最佳化資料表中不支援外部索引鍵、唯一條件約束、觸發程序、結構描述修改、ROWGUIDCOL、計算資料行、資料壓縮、別名資料類型、版本設定及鎖定。 如需詳細資訊，請參閱＜ [記憶體內部 OLTP 不支援 T-SQL 建構](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) ＞。  
   
 ##  <a name="Schema"></a> 修改結構描述檔案  
   

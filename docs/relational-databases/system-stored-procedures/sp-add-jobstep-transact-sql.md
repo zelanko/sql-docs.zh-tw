@@ -1,7 +1,7 @@
 ---
-title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_add_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140486"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   將步驟 (操作) 加入作業中。  
   
@@ -34,8 +34,7 @@ ms.locfileid: "58494410"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -71,7 +70,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'` 步驟的名稱。 *step_name*已**sysname**，沒有預設值。  
   
-`[ @subsystem = ] 'subsystem'` 所使用的子系統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務來執行*命令*。 *子系統*已**nvarchar(40)**，而且可以是下列值之一。  
+`[ @subsystem = ] 'subsystem'` 所使用的子系統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務來執行*命令*。 *子系統*已**nvarchar(40)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -88,19 +87,19 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|PowerShell 指令碼|  
 |'**TSQL**' （預設值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式|  
   
-`[ @command = ] 'command'` 要執行的命令**SQLServerAgent**服務透過*子系統*。 *命令*已**nvarchar （max)**，預設值是 NULL。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。  
+`[ @command = ] 'command'` 要執行的命令**SQLServerAgent**服務透過*子系統*。 *命令*已**nvarchar （max)** ，預設值是 NULL。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。  
   
 > [!IMPORTANT]  
->  逸出巨集現在必須伴隨著作業步驟中使用的所有 Token 一起執行，否則這些作業步驟將會失敗。 此外，您現在必須用括號括住 Token 名稱，並且在 Token 語法的開頭加上貨幣符號 (`$`)。 例如：  
+>  逸出巨集現在必須伴隨著作業步驟中使用的所有 Token 一起執行，否則這些作業步驟將會失敗。 此外，您現在必須用括號括住 Token 名稱，並且在 Token 語法的開頭加上貨幣符號 (`$`)。 例如:  
 >   
 >  `$(ESCAPE_` *巨集名稱* `(DATE))`  
   
  如需有關這些 token 以及如何更新您的作業步驟，以利用新 token 語法的詳細資訊，請參閱 <<c0> [ 作業步驟中使用的語彙基元](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
->  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(**<屬性>**)**。 請注意在此版本中，Token 的使用擴充到所有警示。  
+>  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(** <屬性>  **)** 。 請注意在此版本中，Token 的使用擴充到所有警示。  
 >   
->  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]、選取 [屬性]，然後在 [警示系統] 頁面上選取 [取代回應警示之所有作業的 Token]，以啟用這些 Token。  
+>  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]  、選取 [屬性]  ，然後在 [警示系統]  頁面上選取 [取代回應警示之所有作業的 Token]  ，以啟用這些 Token。  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *參數*已**ntext**，預設值是 NULL。  
   
@@ -128,7 +127,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id` 此作業中步驟的識別碼，來執行作業失敗時， *fail_action*是**4**。 *fail_step_id*已**int**，預設值是**0**。  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已**nvarchar(30)**，預設值是 NULL。  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已**nvarchar(30)** ，預設值是 NULL。  
   
 `[ @database_name = ] 'database'` 在其中執行的資料庫名稱[!INCLUDE[tsql](../../includes/tsql-md.md)]步驟。 *資料庫*已**sysname**，預設值是 NULL，在此情況下**主要**會使用資料庫。 不允許以括號 ([ ]) 括住的名稱。 ActiveX 作業步驟，如*資料庫*步驟會使用指令碼語言的名稱。  
   
@@ -192,14 +191,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  這個範例假設 `Weekly Sales Data Backup` 作業已在執行中。  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  

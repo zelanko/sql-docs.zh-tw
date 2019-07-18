@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b061aa89ef6c10789511f05c4ca0763bd54a860d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 34174f3609886f3b9373020ef366cc4db379d562
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524965"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685173"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52524965"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   [若要使用 SQL Server Management Studio 傳送 SQL Server Agent 錯誤訊息](#SSMSProcedure)  
   
@@ -71,9 +71,9 @@ ms.locfileid: "52524965"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含您要透過 Net Send 從中傳送錯誤訊息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄檔。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後選取 [屬性]  。  
   
-3.  在 [SQL Server Agent 屬性 - _server\_name_] 對話方塊 [一般] 頁面的 [錯誤記錄檔] 下，於 [Net Send 收件者] 方塊中鍵入要傳送錯誤訊息的目標使用者名稱或電腦名稱。  
+3.  在 [SQL Server Agent 屬性 - _server\_name_]  對話方塊 [一般]  頁面的 [錯誤記錄檔]  下，於 [Net Send 收件者]  方塊中鍵入要傳送錯誤訊息的目標使用者名稱或電腦名稱。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   

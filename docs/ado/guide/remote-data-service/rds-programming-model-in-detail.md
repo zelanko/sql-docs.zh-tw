@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922521"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 程式設計模型詳述
 RDS 程式設計模型的重要元素如下：  
@@ -29,7 +28,7 @@ RDS 程式設計模型的重要元素如下：
   
 -   RDS.DataControl  
   
--   事件  
+-   Event - 事件  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -65,7 +64,7 @@ RDS 程式設計模型的重要元素如下：
   
  **Rds。DataControl**物件也有它自己的方法，來瀏覽、 排序和篩選相關聯的資料列**資料錄集**物件。 這些方法很相似，但不同的方法，在 ADO**資料錄集**物件。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  RDS 可支援兩個本身的 ADO 事件模型無關的事件。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)事件會被呼叫時**rds。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)屬性變更，藉此非同步作業已順利完成，通知您終止，或發生錯誤。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)事件每次錯誤發生時，即使呼叫非同步作業期間發生錯誤。  
   
 > [!NOTE]

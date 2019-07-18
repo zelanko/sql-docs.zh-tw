@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_semantic_languages catalog view
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fb609936d7f86728fca53021f96afcbaed412c2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133782"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

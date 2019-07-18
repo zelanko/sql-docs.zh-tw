@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7203740ba7f52dfc2cd3793a20fed9fecf5f9468
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103002"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services 回溯相容性
   本節將描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本之間的行為變更。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 也將描述產品的基礎性變更，已知這些變更會中斷包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的自訂應用程式。  

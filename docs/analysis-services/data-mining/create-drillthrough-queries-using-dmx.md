@@ -1,5 +1,5 @@
 ---
-title: 使用 DMX 建立鑽研查詢 |Microsoft 文件
+title: 使用 DMX 建立鑽研查詢 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6616f90f475da91f3f5c38c0f5922d16d72a5408
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014495"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210145"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 建立鑽研查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ WHERE [Model Region] = 'M200 Pacific'
  請注意，在這則範例中，別名已用來重新命名結構資料行。 如果您沒有指派別名給結構資料行，就會傳回名為 'Expression' 的資料行。 這是所有未命名資料行的預設行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [採礦結構的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

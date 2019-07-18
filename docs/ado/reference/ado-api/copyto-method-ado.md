@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933376"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 複製指定的字元或位元組數 (取決於[型別](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[Stream](../../../ado/reference/ado-api/stream-object-ado.md)到另一個**Stream**物件。  
@@ -41,7 +40,7 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  *DestStream*參數不可以是一個 proxy **Stream**物件，因為這需要私用介面的存取權**Stream**無法遠端處理到的物件用戶端。  
   
- *numChars*  
+ *NumChars*  
  選擇性。 **整數**值，指定要從目前的位置，在來源中複製的字元或位元組數目**Stream**目的地**Stream**。 預設值為-1，指定複製所有的字元或位元組，從目前的位置向[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
 ## <a name="remarks"></a>備註  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4e7c8ea96708886f9edf54047bd2a2104ba0ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031218"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>桌面資料庫驅動程式的診斷
 驅動程式會處理所有錯誤和警告不核取或部分核取驅動程式管理員。 驅動程式也會對應原生錯誤或傳回的資料來源，Sqlstate 的錯誤。 中所列每個函式*ODBC 程式設計人員參考*包含會指定條件和訊息 「 診斷 」 一節。  

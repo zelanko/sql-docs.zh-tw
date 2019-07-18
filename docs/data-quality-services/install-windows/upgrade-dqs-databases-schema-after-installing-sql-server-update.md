@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 789887e445ce9b2b6ac72f78051d0cb82c083e5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935136"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
 
@@ -31,9 +30,9 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  升級 DQS 資料庫結構描述並不會影響 DQS 資料庫中的現有資料 (知識庫、資料品質專案及 DQS_STAGING_DATA 資料庫中的匯出結果)。 但是，在您升級 DQS 資料庫結構描述之前必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的資料遺失狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
   
 > [!NOTE]  
->  大部分的 SQL Server 更新都需要升級至 DQS 資料庫結構描述。 如需將需要升級至 DQS 資料庫結構描述之 SQL Server 更新的資訊，請參閱 [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565) (升級 DQS：在 Data Quality Services 上安裝累計更新或 Hotfix 修補程式) 中步驟 1.A 的圖表。  
+>  大部分的 SQL Server 更新都需要升級至 DQS 資料庫結構描述。 如需將需要升級至 DQS 資料庫結構描述之 SQL Server 更新資訊，請參閱圖表中步驟 1.A[升級 DQS:Data Quality Services 上安裝累計更新或 Hotfix 修補](https://go.microsoft.com/fwlink/?LinkID=251565)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   
@@ -61,10 +60,10 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  在成功升級 DQS 資料庫結構描述之後，將會顯示完成訊息。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  從 Data Quality Client 應用程式登入已升級的資料品質伺服器。  
   
- 如需在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述及相關疑難排解步驟的詳細資訊，請參閱 [Upgrade DQS:Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565) (升級 DQS：在 Data Quality Services 上安裝累計更新或 Hotfix 修補程式)。  
+ 如需有關升級 DQS 資料庫結構描述，SQL Server 安裝完成後的更新及相關疑難排解步驟，請參閱[升級 DQS:Data Quality Services 上安裝累計更新或 Hotfix 修補](https://go.microsoft.com/fwlink/?LinkID=251565)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

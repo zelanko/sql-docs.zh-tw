@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1205c87f1251543521deddd7d1118b602ac7e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965546"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 屬性 (ADOX)
 指出索引是否代表資料表的主索引鍵。  
@@ -34,7 +33,7 @@ ms.locfileid: "47723506"
  設定，並傳回**布林**值。  
   
 ## <a name="remarks"></a>備註  
- 預設值為 **[False]**。  
+ 預設值為 **[False]** 。  
   
  這個屬性是唯讀[Index](../../../ado/reference/adox-api/index-object-adox.md)已經附加到集合的物件。  
   

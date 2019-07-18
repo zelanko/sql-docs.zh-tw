@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196666"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
   疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 當空間至少節省了百分之 20 到 40 時，請考慮使用疏鬆資料行。 疏鬆資料行和資料行集是使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 陳述式所定義。  
@@ -158,7 +158,7 @@ ms.locfileid: "52798930"
   
      異動複寫支援疏鬆資料行，但是不支援資料行集，資料行集可搭配疏鬆資料行使用。 如需資料行集的詳細資訊，請參閱[使用資料行集](../tables/use-column-sets.md)。  
   
-     SPARSE 屬性的複寫是由使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [發行項屬性] 對話方塊所指定的結構描述選項所決定。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援疏鬆資料行。 如果您必須將資料複寫到舊版，請指定不應該複寫 SPARSE 屬性。  
+     SPARSE 屬性的複寫是由使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [發行項屬性]  對話方塊所指定的結構描述選項所決定。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援疏鬆資料行。 如果您必須將資料複寫到舊版，請指定不應該複寫 SPARSE 屬性。  
   
      如果是發行的資料表，您不能將任何新的疏鬆資料行加入資料表，或是變更現有資料行的疏鬆屬性。 如果需要進行這類作業，請卸除發行集再重新建立。  
   

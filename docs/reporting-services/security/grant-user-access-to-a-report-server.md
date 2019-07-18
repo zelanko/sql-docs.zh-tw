@@ -1,8 +1,8 @@
 ---
 title: 將報表伺服器的存取權授與使用者 | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65619611"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021852"
 
  **SharePoint 模式報表伺服器：** 若為針對 SharePoint 整合模式所設定的報表伺服器，您可以設定使用 SharePoint 權限從 SharePoint 網站存取的方式。 SharePoint 網站的權限等級會決定報表伺服器內容和作業的存取權。 您必須是網站管理員，才能授與 SharePoint 網站的權限。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。
 
- **原生模式報表伺服器：** 此主題的重點在於為原生模式所設定的報表伺服器，以及使用入口網站將使用者指派至角色。 目前有兩種角色類型：
+ **原生模式報表伺服器：** 本文的重點在於為原生模式所設定的報表伺服器，以及使用入口網站將使用者指派給角色。 目前有兩種角色類型：
 
 - 項目層級角色是用來檢視、加入和管理報表伺服器內容、訂閱、報表處理，以及報表記錄。 項目層級角色指派定義於根節點 ([主資料夾] 資料夾) 或階層中更低的特定資料夾或項目上。
 
@@ -53,52 +53,50 @@ ms.locfileid: "50021852"
 
 1. 啟動[入口網站](../web-portal-ssrs-native-mode.md)。
 
-2. 選取右上方的齒輪圖示。
+2. 選取左上方的**齒輪**圖示，然後從下拉式功能表選取 [網站設定]  。
 
-3. 選取 [站台設定] 。
+    ![報表伺服器入口網站齒輪圖示和下拉式功能表](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. 選取 [安全性] 。
+3. 選取 [安全性]  。
 
-5. 選取 [新增群組或使用者]。
+4. 選取 [新增群組或使用者]  。
 
-6. 在 [群組或使用者] 中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 
+5. 在 [群組或使用者]  中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。
 
     > [!NOTE]
     > 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
 
-7. 選取系統角色，然後選取 [確定]。
+6. 選取系統角色，然後選取 [確定]  。
 
     由於角色是累計的，因此如果您同時選取「系統管理員」和「系統使用者」，則使用者或群組就能夠以這兩種角色來執行工作。
 
-8. 重複上述步驟，以便建立其他使用者或群組的指派。
+7. 重複上述步驟，以便建立其他使用者或群組的指派。
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>若要將使用者或群組加入至項目角色
 
-1. 啟動入口網站，並找出您想要新增使用者或群組的報表項目。
+1. 啟動入口網站  ，並找出您想要新增使用者或群組的報表項目。
 
 2. 選取項目上的 **...** (省略符號)。
 
-3. 從下拉式功能表中選取 [管理]。
+3. 從下拉式功能表中選取 [管理]  。
 
-4. 選取 [安全性] 。
+4. 選取 [安全性]  。
 
-5. 選取 [新增群組或使用者]。
+5. 選取 [新增群組或使用者]  。
 
     > [!NOTE]
-    > 如果某個項目目前是從父項目繼承安全性，請選取工具列中的 [自訂安全性] 來變更安全性設定。 然後選取 [新增群組或使用者]。
+    > 如果某個項目目前是從父項目繼承安全性，請選取工具列中的 [自訂安全性]  來變更安全性設定。 然後選取 [新增群組或使用者]  。
 
-6. 在 [群組或使用者] 中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
+6. 在 [群組或使用者]  中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。
 
-7. 選取描述使用者或群組應如何存取項目的一或多個角色定義，然後選取 [確定]。
+7. 選取描述使用者或群組應如何存取項目的一或多個角色定義，然後選取 [確定]  。
 
 8. 重複上述步驟，以便建立其他使用者或群組的指派。
 
 ## <a name="next-steps"></a>後續步驟
 
-[建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[新增角色指派：編輯角色指派頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[安全性屬性頁面，項目 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[角色指派](../../reporting-services/security/role-assignments.md)   
+[建立及管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[角色指派](../../reporting-services/security/role-assignments.md)  
 [角色定義](../../reporting-services/security/role-definitions.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

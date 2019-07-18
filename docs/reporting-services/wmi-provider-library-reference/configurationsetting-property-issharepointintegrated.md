@@ -2,20 +2,20 @@
 title: IsSharePointIntegrated 屬性 (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 431d11c50aef27f84cb7595a8716b6f7387b0f83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0bac72cf23cfebf48f58b24bea0b50aa9033bf5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573732"
 ---
 # <a name="configurationsetting-property---issharepointintegrated"></a>ConfigurationSetting 屬性 - IsSharePointIntegrated
   指定報表伺服器是否處於 SharePoint 整合模式。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，此屬性一律傳回 **False** ，因為在 SharePoint 模式中， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體是 SharePoint 共用服務且不受 WMI 提供者控制。  

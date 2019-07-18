@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ffe475b53048a97f878bfad1d8bef68d6fb3cfc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908994"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>對應 MySQL 和 SQL Server 資料類型 (MySQLToSQL)
 MySQL 資料庫類型不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫的型別。 當您將轉換至 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件，您必須指定如何將資料從 mysql 移轉至的型別對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
@@ -77,7 +76,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
     1.  在 [類型對應] 窗格中，選取包含您想要移除的資料類型對應的類型對應清單中的資料列。  
   
-    2.  按一下 **[移除]**。  
+    2.  按一下 **[移除]** 。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是為任一[建立評量報告](assessing-mysql-databases-for-conversion-mysqltosql.md)或[轉換的 MySQL 資料庫物件為 SQL Server 或 SQL Azure 的語法](converting-mysql-databases-mysqltosql.md)。 如果您建立報表時，評估期間時，會自動轉換 MySQL 物件。  

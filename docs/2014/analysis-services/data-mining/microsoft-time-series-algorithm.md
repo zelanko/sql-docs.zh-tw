@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -20,12 +19,12 @@ ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083773"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法提供最適合用於預測連續值，例如產品銷售狀況經過一段時間的迴歸演算法。 雖然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法 (如決策樹) 需要含有新資訊的其他資料行當做輸入來預測趨勢，但是時間序列模型則不需要。 時間序列模型可以只根據用於建立此模型的原始資料集來預測趨勢。 當您做出預測並將新的資料自動納入趨勢分析時，也可以將新的資料加入此模型中。  
@@ -36,7 +35,7 @@ ms.locfileid: "48134258"
   
 -   預測的資訊會出現在垂直線的右方，並表示此模型所做出的預測。  
   
- 來源資料和預測資料的組合稱為「序列」。  
+ 來源資料和預測資料的組合稱為「序列」  。  
   
  ![時間序列的範例](../media/time-series.gif "的時間序列範例")  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48134258"
   
  在這兩個範例中，您可以針對每一個產品預測新的未來銷售和數量。 您無法預測產品或時間的新值。  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>範例 1：具有表示為資料行值的時間序列資料集  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>範例 1：時間序列資料集，具有表示為資料行值  
  這個範例使用下列的輸入案例表：  
   
 |TimeID|產品|Sales|數量|  
@@ -115,7 +114,7 @@ ms.locfileid: "48134258"
   
  Sales 資料行描述所指定產品一天的毛利，而 Volume 資料行描述所指定產品在倉庫中剩餘的數量。 這兩個資料行都包含用於定型此模型的資料。 對於 Product 資料行中的每一個序列而言，Sales 和 Volume 都是可以預測的屬性。  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>範例 2：時間序列資料集，其中的每一個序列都在個別資料行中  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>範例 2：使用不同的資料行中每個數列的時間序列資料集  
  雖然這個範例基本上會使用與第一個範例相同的輸入資料，但是輸入資料的結構有所不同，如下表所示：  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -123,7 +122,7 @@ ms.locfileid: "48134258"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 在此表格中，TimeID 資料行仍然包含時間序列模型的案例序列，您會將此資料行指定為 Key Time 資料行。 但是，之前的 Sales 和 Volume 資料行現在已分成兩個資料行，而且每一個資料行的前面都有產品名稱。 因此，TimeID 資料行中每一天只有單一項目存在。 這會建立一個包含 4 個可預測資料行的時間序列模型：A_Sales、A_Volume、B_Sales 和 B_Volume。  
+ 在此表格中，TimeID 資料行仍然包含時間序列模型的案例序列，您會將此資料行指定為 Key Time 資料行。 但是，之前的 Sales 和 Volume 資料行現在已分成兩個資料行，而且每一個資料行的前面都有產品名稱。 因此，TimeID 資料行中每一天只有單一項目存在。 這會建立時間序列模型會包含四個可預測資料行：A_Sales、 A_Volume、 B_Sales 和 B_Volume。  
   
  此外，由於您已經將產品分成不同的資料行，所以您不必指定其他的序列索引鍵資料行。 此模型中的所有資料行不是案例序列資料行，就是可預測資料行。  
   
@@ -154,10 +153,10 @@ ms.locfileid: "48134258"
 -   支援鑽研。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [瀏覽模型，使用 Microsoft 時間序列檢視器](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [使用 Microsoft 時間序列檢視器瀏覽模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)   
  [時間序列模型查詢範例](time-series-model-query-examples.md)   
- [時間序列模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

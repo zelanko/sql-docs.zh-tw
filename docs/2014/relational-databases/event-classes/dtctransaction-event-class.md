@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662965"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件類別
   使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散式交易協調器 (DTC) 進行協調之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  

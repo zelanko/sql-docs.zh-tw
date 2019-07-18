@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b34f5bb8f272014c6207d0f1ea14d5154be341b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b99d0b97179899b804a31b48a1334172e214f9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133439"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>處理結果 - 擷取結果集資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

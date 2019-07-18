@@ -2,18 +2,18 @@
 title: Reporting Services 網站集合功能 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bacd4064238b3f1e29da67ea8e72bac481939bf
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580492"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
 
@@ -34,7 +34,7 @@ Reporting Services SharePoint 模式提供了三個 SharePoint 網站集合功�
 |-------------|-----------------|  
 |**報表伺服器管理中心功能**|啟用管理與 Reporting Services 報表伺服器整合的功能。 此功能只在 SharePoint 管理中心網站集合中安裝及使用。<br /><br /> 在安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 增益集後，SharePoint 管理中心網站集合中會自動啟用報表伺服器整合功能。 在某些情況下，您必須手動啟動此功能。 若要啟用報表伺服器功能，請使用 SharePoint 管理中心內 [網站設定] 頁面中的 Reporting Services 頁面。<br /><br /> 適用於 SharePoint 產品的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 版及以後版本的增益集，會在安裝增益集時，針對所有現有的網站集合啟用報表伺服器整合功能。 此外，新的網站集合會自動啟用這項功能。|  
 |**報表伺服器整合功能**|使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services 可擁有豐富的報表功能<br /><br /> 此功能預設為使用中。|  
-|**Power View 整合功能**|針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿與 Analysis Services 表格式資料庫啟用互動式資料瀏覽及視覺化簡報。<br /><br /> 此功能可透過下列資料來源的操作功能表存取：<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> **.bism** 連線檔案<br /><br /> <br /><br /> 如果 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 未出現在操作功能表中，請確認已啟用 [Power View 整合功能]。<br /><br /> 此功能預設為停用。|  
+|**Power View 整合功能**|針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿與 Analysis Services 表格式資料庫啟用互動式資料瀏覽及視覺化簡報。<br /><br /> 此功能可透過下列資料來源的操作功能表存取：<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> **.bism** 連線檔案<br /><br /> <br /><br /> 如果 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 未出現在操作功能表中，請確認已啟用 [Power View 整合功能]  。<br /><br /> 此功能預設為停用。|  
 
 ## <a name="next-steps"></a>後續步驟
 

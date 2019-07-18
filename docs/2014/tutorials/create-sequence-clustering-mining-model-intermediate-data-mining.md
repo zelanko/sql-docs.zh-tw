@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273482"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>建立時序群集採礦模型結構 (中繼資料採礦教學課程)
   建立時序群集採礦模型的第一個步驟就是使用資料採礦精靈，根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時序群集演算法來建立新的採礦結構和採礦模型。  
@@ -28,19 +28,19 @@ ms.locfileid: "56039349"
   
 1.  在 [方案總管] 中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下**採礦結構**，然後選取**New Mining Structure&lt**。  
   
-2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]**。  
+2.  在 **[歡迎使用資料採礦精靈]** 頁面上，按 **[下一步]** 。  
   
-3.  在 [**選取定義方法**頁面上，確認**從現有的關聯式資料庫或資料倉儲**已選取，然後按一下**下一步]**。  
+3.  在 [**選取定義方法**頁面上，確認**從現有的關聯式資料庫或資料倉儲**已選取，然後按一下**下一步]** 。  
   
-4.  在 **建立資料採礦結構**頁面上，確認選項**建立採礦結構與採礦模型**已選取。 接下來，按一下下拉式清單選項時，**您想要使用哪一種資料採礦技術？**，然後選取**Microsoft 時序群集**。 按一下 [下一步] 。  
+4.  在 **建立資料採礦結構**頁面上，確認選項**建立採礦結構與採礦模型**已選取。 接下來，按一下下拉式清單選項時，**您想要使用哪一種資料採礦技術？** ，然後選取**Microsoft 時序群集**。 按一下 [下一步]  。  
   
      **選取資料來源檢視**頁面隨即出現。 底下**可用的資料來源檢視**，選取`Orders`。  
   
      Orders 是您用於購物籃分析案例的相同資料來源檢視。 如果您尚未建立這個資料來源檢視，請參閱[加入具有巢狀資料表的資料來源檢視&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
-6.  在 **指定資料表類型**頁面上，選取**案例**旁的核取方塊**vAssocSeqOrders**資料表，然後選取**巢狀**核取方塊旁**vAssocSeqLineItems**資料表。 按一下 [下一步] 。  
+6.  在 **指定資料表類型**頁面上，選取**案例**旁的核取方塊**vAssocSeqOrders**資料表，然後選取**巢狀**核取方塊旁**vAssocSeqLineItems**資料表。 按一下 [下一步]  。  
   
     > [!NOTE]  
     >  如果當您選取時，就會發生錯誤**案例**或是**巢狀**核取方塊，它可能是資料來源檢視中的聯結不正確。 巢狀的資料表中， **vAssocSeqLineItems**，必須連接到案例資料表**vAssocSeqOrders**由多對一聯結。 您可以用滑鼠右鍵按一下聯結線並反轉聯結的方向，藉以編輯關聯性。 如需詳細資訊，請參閱 <<c0> [ 建立或編輯關聯性對話方塊&#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)。</c0>  
@@ -65,20 +65,20 @@ ms.locfileid: "56039349"
   
     -   **模型**選取 **輸入**並**Predictable**核取方塊。  
   
-     確認選取項目都正確無誤，然後按一下 [**下一步]**。  
+     確認選取項目都正確無誤，然後按一下 [**下一步]** 。  
   
-8.  在 [**指定資料行的內容和資料類型**頁面上，確認此方格有包含資料行、 內容類型和下表所示的資料類型，然後按一下**下一步]**。  
+8.  在 [**指定資料行的內容和資料類型**頁面上，確認此方格有包含資料行、 內容類型和下表所示的資料類型，然後按一下**下一步]** 。  
   
     |資料表/資料行|內容類型|資料類型|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|文字|  
-    |OrderNumber|Key|文字|  
-    |Region|Discrete|文字|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|長整數|  
-    |[模型]|Discrete|文字|  
+    |[模型]|Discrete|Text|  
   
-9. 在 [**建立測試集**頁面上，變更**測試資料的百分比**為 20，然後按一下**下一步]**。  
+9. 在 [**建立測試集**頁面上，變更**測試資料的百分比**為 20，然後按一下**下一步]** 。  
   
 10. 在上**完成精靈**頁面上，如**採礦結構名稱**，型別`Sequence Clustering with Region`。  
   

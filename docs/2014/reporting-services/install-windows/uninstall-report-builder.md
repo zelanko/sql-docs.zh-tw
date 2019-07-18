@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e93efd0fc399fc6ed2f0de732c433e4614f5aaaf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108654"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>解除安裝單機版報表產生器 (報表產生器)
   您可以從控制台或命令列解除安裝單機版本的報表產生器。 如果沒有解除安裝 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]，您就不能解除安裝 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 版本的報表產生器。  
@@ -27,19 +26,19 @@ ms.locfileid: "56297716"
   
 ### <a name="to-uninstall-report-builder-from-the-control-panel"></a>若要從控制台解除安裝報表產生器  
   
-1.  在 **[開始]** 功能表上，按一下 **[控制台]**。  
+1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按一下 **[程式和功能]**。  
+2.  在 [控制台] 中，按一下 **[程式和功能]** 。  
   
-3.  在 [名稱] 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表產生器，然後按一下它。  
+3.  在 [名稱]  清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表產生器，然後按一下它。  
   
-4.  按一下 **[解除安裝]**。  
+4.  按一下 **[解除安裝]** 。  
   
-5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]**。  
+5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]** 。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>若要從命令列解除安裝報表產生器  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
 2.  在 **開啟**文字方塊中，輸入 `cmd.`  
   

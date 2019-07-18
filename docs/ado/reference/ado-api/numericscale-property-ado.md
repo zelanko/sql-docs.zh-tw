@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99d27ff0348a22324ad99c515617a6831fa9f9f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d283e8fedb90ed5a99143090bc6a077efa8512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932100"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 屬性 (ADO)
 中的數值，指出[參數](../../../ado/reference/ado-api/parameter-object.md)或是[欄位](../../../ado/reference/ado-api/field-object.md)物件。  

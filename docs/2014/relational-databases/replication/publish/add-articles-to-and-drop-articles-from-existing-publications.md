@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63020731"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
   建立發行集後，可以新增或卸除發行項。 發行項可以隨時新增，但卸除發行項所需的動作取決於複寫的類型以及卸除發行項的時機。  
@@ -33,7 +33,7 @@ ms.locfileid: "54132338"
  新增發行項涉及的動作包括：在發行集中新增發行項、建立發行集的新快照集、同步處理訂閱以套用新發行項的結構描述和資料。  
   
 > [!NOTE]
->  如果您將發行項加入至合併式發行集且現有的某發行項相依於新的發行項，您必須使用 **@processing_order** 和 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)參數，來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函數加入至發行集時：將 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；將 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，指定 **@article**＞。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+>  如果您將發行項加入至合併式發行集且現有的某發行項相依於新的發行項，您必須使用 **@processing_order** 和 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)參數，來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函數加入至發行集時：將 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；將 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，指定 **@article** ＞。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 1.  透過下列方法之一新增一或多個發行項：  
   

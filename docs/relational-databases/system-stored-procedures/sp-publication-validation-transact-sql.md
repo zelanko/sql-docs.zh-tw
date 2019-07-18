@@ -1,5 +1,5 @@
 ---
-title: sp_publication_validation (Transact-SQL) | Microsoft Docs
+title: sp_publication_validation & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896626"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **'** _publication'_  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  這是指是否只傳回資料表的資料列數。 *rowcount_only*已**smallint**而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意:當水平篩選發行項時，會執行資料列計數作業，而不是總和檢查碼作業。|  
+|**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意:當水平篩選發行項時，在資料列計數 」 作業會執行，而非總和檢查碼作業。|  
 |**1** (預設值)|只執行資料列計數檢查。|  
-|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意:如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版訂閱者，就只會執行資料列計數驗證。|  
+|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意:針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行 7.0 版訂閱者，只有資料列計數驗證。|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  這是用於計算資料列計數的方法。 *full_or_fast*已**tinyint**而且可以是下列值之一。  
   
 |值|描述|  
@@ -85,8 +84,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [驗證訂閱者端的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007197"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
 
@@ -30,15 +29,15 @@ ms.locfileid: "52817800"
 
   分葉權限適用於某個實體所有分葉成員的屬性值。  
   
- 如果是沒有啟用明確階層的實體，將權限指派給 [分葉] 與指派給實體相同。  
+ 如果是沒有啟用明確階層的實體，將權限指派給 [分葉]  與指派給實體相同。  
   
  **注意：**  
   
--   分葉權限只適用於使用者介面的總管功能區域。  
+-   分葉權限只適用於使用者介面的總管  功能區域。  
   
 -   系統不會強制使用指派給 **Name** 和 **Code** 屬性的權限。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取分葉成員、屬性。|  
 |**建立**|使用者可以建立分葉成員，並在建立期間指派屬性值。|  
@@ -51,23 +50,23 @@ ms.locfileid: "52817800"
 ## <a name="attribute-permissions"></a>屬性權限  
  屬性權限適用於特定實體的屬性值。 只有屬性權限的使用者無法加入或移除成員。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取屬性。|  
 |**建立**|使用者可以在建立成員時指派值。|  
 |**Update**|使用者可以更新屬性。|  
 |**刪除**|沒有影響。|  
-|**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
+|**拒絕**|不顯示屬性。<br /><br /> 注意:您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ### <a name="example"></a>範例  
- 如果是 Product 實體，請將 [更新] 權限指派給 Subcategory 屬性。 拒絕其他所有屬性的權限。  
+ 如果是 Product 實體，請將 [更新]  權限指派給 Subcategory 屬性。 拒絕其他所有屬性的權限。  
   
-|[屬性]|程式碼|Subcategory (更新)|  
+|名稱|程式碼|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} 登山車|  
+|Mountain-100|BK-M201|{5} 登山車|  
   
- 在總管中，您可以更新 Subcategory 資料行中的任何屬性值。 如果您沒有屬性的權限，就不會顯示該屬性。  
+ 在總管  中，您可以更新 Subcategory 資料行中的任何屬性值。 如果您沒有屬性的權限，就不會顯示該屬性。  
   
 > [!NOTE]  
 >  在這個範例中，Subcategory 是根據 SubcategoryList 實體的網域屬性。 您可以為 Mountain-100 選取不同的子類別目錄，但是您無法從 SubcategoryList 實體中加入成員或刪除成員。  

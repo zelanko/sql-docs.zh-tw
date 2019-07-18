@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
@@ -23,12 +22,12 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 196bfdc78ea29b1d334660a732f087a50ae9c2ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096116"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
 
@@ -108,7 +107,7 @@ ms.locfileid: "56802444"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 設定郵件至：欄位的組態選項  
+##  <a name="bkmk_setting_TO_field"></a> 設定郵件至：在訊息中的欄位  
  如果依據 **[管理個別訂閱]** 工作所授與的權限建立使用者自訂訂閱，這些訂閱中便會包含以網域使用者帳戶為基礎的預設使用者名稱。 當使用者建立訂閱時，系統就會利用建立訂閱之使用者的網域使用者帳戶，自行處理 **[收件者:]** 欄位中的收件者名稱。  
   
  如果使用 SMTP 伺服器或轉送器，而伺服器或轉送器所使用的電子郵件帳戶與網域使用者帳戶不同時，則 SMTP 伺服器嘗試將報表傳遞給該使用者時便會失敗。  
@@ -132,7 +131,7 @@ ms.locfileid: "56802444"
   
 -   `SMTPServer` 指定遠端 SMTP 伺服器或轉送子。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
   
--   [`From`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
+-   [`From`] 設定的值，會在電子郵件訊息 [寄件者:]  行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
   
  用於遠端 SMTP 服務的其他值包括下列項目 (請注意，除非您要覆寫預設值，否則不需要指定這些值)。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "56802444"
   
 -   **SMTPAuthenticate** 會指定報表伺服器如何連接到遠端 SMTP 伺服器。 預設值是 0 (或無驗證)。 在此情況下，連接是透過匿名存取。 依照您的網域組態，報表伺服器和 SMTP 伺服器可能必須是同一網域的成員。  
   
-     若要傳送電子郵件至限制的通訊群組清單 (例如，只接受來自已驗證帳戶之內送訊息的通訊群組清單)，請將 **[SMTPAuthenticate]** 設定為 **[2]**。  
+     若要傳送電子郵件至限制的通訊群組清單 (例如，只接受來自已驗證帳戶之內送訊息的通訊群組清單)，請將 **[SMTPAuthenticate]** 設定為 **[2]** 。  
   
 
   
@@ -156,7 +155,7 @@ ms.locfileid: "56802444"
     > [!NOTE]  
     >  請確定您執行不設定`SMTPServer`如果您使用本機 SMTP 伺服器。  
   
--   [`From`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 這是必要的值。  
+-   [`From`] 設定的值，會在電子郵件訊息 [寄件者:]  行內顯示。 這是必要的值。  
   
  
   
@@ -170,7 +169,7 @@ ms.locfileid: "56802444"
   
 4.  在 **[寄件者地址]** 中，輸入擁有從 SMTP 伺服器傳送電子郵件之權限的帳戶名稱。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
 
   
@@ -180,15 +179,15 @@ ms.locfileid: "56802444"
   
 2.  在文字編輯器中開啟 RSReportServer.config 檔。  
   
-3.  確認 <`UrlRoot`> 設為報表伺服器的 URL 位址。 此值是在您設定報表伺服器時設定的，所以它應該已被填入。 如果未設定此值，請輸入報表伺服器的 URL 位址。  
+3.  確認 <`UrlRoot`> 設為報表伺服器 URL 位址。 此值是在您設定報表伺服器時設定的，所以它應該已被填入。 如果未設定此值，請輸入報表伺服器的 URL 位址。  
   
 4.  在 [傳遞] 區段中，尋找 <`ReportServerEmail`>。  
   
-5.  在 <`SMTPServer`> 提供 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。  
+5.  在 <`SMTPServer`>，輸入 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。  
   
-6.  確認 <`SendUsing`> 設為 2。 如果將它設定為其他值，報表伺服器就不會設定為使用遠端 SMTP 服務。  
+6.  確認 <`SendUsing`> 設定為 2。 如果將它設定為其他值，報表伺服器就不會設定為使用遠端 SMTP 服務。  
   
-7.  在 <`From`> 中，輸入擁有從 SMTP 伺服器傳送電子郵件之權限的帳戶名稱。  
+7.  在 <`From`>，輸入擁有從 SMTP 伺服器傳送電子郵件的權限的帳戶名稱。  
   
 8.  儲存檔案。  
   
@@ -198,17 +197,17 @@ ms.locfileid: "56802444"
   
 ##  <a name="bkmk_confiugre_local_SMTP"></a> 若要設定報表伺服器的本機 SMTP 服務  
   
-1.  在 [控制台] 中，按兩下 **[新增或移除程式]**。  
+1.  在 [控制台] 中，按兩下 **[新增或移除程式]** 。  
   
 2.  按一下 **[新增/移除 Windows 元件]** 以啟動 [Windows 元件精靈]。  
   
-3.  選取 **[應用程式伺服器]** 並按一下 **[詳細資料]**。  
+3.  選取 **[應用程式伺服器]** 並按一下 **[詳細資料]** 。  
   
-4.  選取 **[Internet Information Services (IIS)]** ，再按一下 **[詳細資料]**。  
+4.  選取 **[Internet Information Services (IIS)]** ，再按一下 **[詳細資料]** 。  
   
-5.  選取 **[SMTP 服務]** 核取方塊，再按一下 **[確定]**。  
+5.  選取 **[SMTP 服務]** 核取方塊，再按一下 **[確定]** 。  
   
-6.  在 [Windows 元件精靈] 中按 **[下一步]**。 按一下 **[完成]**。  
+6.  在 [Windows 元件精靈] 中按 **[下一步]** 。 按一下 **[完成]** 。  
   
 7.  確認 **[服務]** 主控台中有執行該服務。  
   

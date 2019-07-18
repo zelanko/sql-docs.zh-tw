@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e29fac8b9cdb955ddaff6643eacae352e9c39bf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020910"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>測試移轉的資料庫物件 (SybaseToSQL)
 Microsoft SQL Server Migration Assistant for Sybase Tester （SSMA 測試器） 會自動測試資料庫物件轉換和 SSMA 所做的資料移轉。 所有 SSMA 的移轉步驟都完成之後，使用 SSMA 軟體測試人員確認已轉換的物件執行相同的方式，而且所有的資料已正確移轉。  
@@ -46,7 +45,7 @@ SSMA 軟體測試人員執行在 Sybase 和 SQL Server 中的其對應項目上�
 > [!NOTE]  
 > 注意 ！ 絕對不要在實際系統上使用 SSMA 軟體測試人員。 在測試執行期間會修改來源結構描述和資料。 同時，原始狀態的完整還原可能無法針對某些類型的測試的程式碼。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
 如果您想要使用 SSMA Tester，安裝 SSMA Sybase 延伸模組套件，與**安裝的軟體測試人員資料庫**開啟選項。  
   
 此外，請檢查下列各項：  

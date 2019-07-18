@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a007f4c7c92bf4254e4d36638cf2d92ba0764be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082026"
 ---
 # <a name="connection-string-format-and-attributes"></a>連接字串格式和屬性
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ ms.locfileid: "52542783"
   
  連接字串的屬性如下所示：  
   
-|attribute|描述|預設值|  
+|屬性|描述|預設值|  
 |---------------|-----------------|-------------------|  
 |DSN|資料來源名稱列在 驅動程式 索引標籤**ODBC 資料來源管理員** 對話方塊。|""|  
 |PWD|您想要存取的 Oracle 伺服器的密碼。 此驅動程式支援 Oracle 置於密碼的限制。|""|  

@@ -1,7 +1,7 @@
 ---
 title: Broker:Message Classify 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -13,16 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e6c3eb4997cd89bae19a231e808cb4699528e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf9029a72ab1d02f02c5d1e7f51ffb85b76d93e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66265504"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 為訊息決定路由時，產生 **Broker:Message Classify** 事件。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 為訊息決定路由時，產生 **Broker:Message Classify** 事件。  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Broker:Message Classify 事件類別資料行  
   
@@ -33,7 +35,7 @@ ms.locfileid: "47632436"
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 **Broker:Message Classify** 永遠都是 **141**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 此資料行可包含下列值。<br /><br /> **本機**：選擇的路由已處理 LOCAL。<br /><br /> **遠端**：選擇的路由有 LOCAL 以外的位址。<br /><br /> **延遲**：訊息已延遲，原因是因為停用轉寄或沒有符合的路由存在。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 此資料行可包含下列值。<br /><br /> **本機**：選擇的路由位址為 LOCAL。<br /><br /> **遠端**：               選擇的路由具有 LOCAL 以外的位址。<br /><br /> **延遲**：               訊息已延遲，原因是因為轉送已停用或沒有符合的路由存在。|21|是|  
 |**FileName**|**nvarchar**|訊息已導向至服務名稱。|36|否|  
 |**GUID**|**uniqueidentifier**|對話的交談識別碼。 此識別碼是以訊息的一部份傳送，並在交談的兩端之間共用。|54|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  

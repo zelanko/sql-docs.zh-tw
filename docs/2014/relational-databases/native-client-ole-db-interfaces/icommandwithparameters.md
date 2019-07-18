@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea85e526d99e586c2534eee8ab83c6ddc66939db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643258"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
   改進 database engine 開頭的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允許 icommandwithparameters:: Getparameterinfo 以取得更精確的預期結果的描述。 這些更精確的結果可能不同於在舊版的 CommandWithParameters::GetParameterInfo 傳回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../native-client/features/metadata-discovery.md)。  

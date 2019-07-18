@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fe2d8d88d2b12b2b0eac2e0a23644d1866dff2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1402886d70447a5bf0324d101136cb7c8f5ce065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934221"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>執行 XPath 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ class Test
   
 2.  將這個範例所提供的 XSD 結構描述 (MySchema.xml) 儲存在資料夾中。  
   
-3.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+3.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 4.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   

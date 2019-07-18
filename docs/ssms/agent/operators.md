@@ -21,16 +21,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60e05754e43056e3f71d4abccb1d8af91c650684
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1a8686722244e107aba20168c63375ba09da5de3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212117"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685531"
 ---
 # <a name="operators"></a>操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,9 +80,9 @@ ms.locfileid: "53212117"
   
         **主旨：**  
   
-        副本：  
+        副本：   
   
-        收件者：  
+        收件者：   
   
     > [!NOTE]  
     > 如果使用低容量的英數字元呼叫系統，您可以將呼叫器通知中的錯誤文字排除，以縮短所傳送的文字。 例如，有一種低容量英數字元呼叫系統，每頁限制為 64 個字元。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5fa9e40e0f83e4d47d4f31cfd43f4215ec60ea49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943512"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是其屬性會傳回 「 發行者 」。 *發行者*已**sysname**，預設值是**%**。  
+`[ @publisher = ] 'publisher'` 是其屬性會傳回 「 發行者 」。 *發行者*已**sysname**，預設值是 **%** 。  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -54,7 +53,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**password**|**nvarchar(524)**|傳回的密碼 (以簡單加密形式)。 密碼為 NULL 的使用者以外**sysadmin**。|  
 |**active**|**bit**|遠端發行者是否利用本機伺服器來作為散發者：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**working_directory**|**nvarchar(255)**|工作目錄的名稱。|  
-|**trusted**|**bit**|當發行者連接到散發者時，是否需要密碼。 針對[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更新版本中，這一律會傳回**0**，這表示，不需要密碼。|  
+|**受信任**|**bit**|當發行者連接到散發者時，是否需要密碼。 針對[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更新版本中，這一律會傳回**0**，這表示，不需要密碼。|  
 |**thirdparty_flag**|**bit**|發行集是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟用，或由協力廠商應用程式啟用：<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，oracle 或 Oracle Gateway 發行者。<br /><br /> **1** = 已與整合發行者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用第三方應用程式。|  
 |**publisher_type**|**sysname**|發行者的類型；它可以是下列項目之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|發行者之 OLE DB 資料來源的名稱。|  
@@ -73,8 +72,8 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_dropdistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

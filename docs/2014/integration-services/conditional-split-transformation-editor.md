@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060890"
 ---
 # <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
   使用 **[條件式分割轉換編輯器]** 對話方塊，即可建立運算式、設定評估運算式的順序，以及命名條件式分割的輸出。 此對話方塊包含可用來建立運算式的數學、字串，以及日期/時間函數與運算子。 評估為 True 的第一個條件會決定資料列的輸出導向。  
@@ -30,7 +29,7 @@ ms.locfileid: "58392958"
   
  若要深入了解條件式分割轉換，請參閱 [條件式分割轉換](data-flow/transformations/conditional-split-transformation.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **單**  
  選取資料列並使用右邊的方向鍵來變更評估運算式的順序。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "58392958"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;運算式](expressions/integration-services-ssis-expressions.md)，[運算子&#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)，和[函式&#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
   
  **預設輸出名稱**  
  輸入預設輸出的名稱，或使用預設值。  

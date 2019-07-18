@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9edc9762a1d75c90c5fb1c9564766eb38da0421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aec9dda321477e15c3bc984283e29a2a29170f17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773676"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66785772"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate 方法 (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,13 +51,13 @@ public java.sql.Date getDate(int columnIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效日期部分，而時間部分會根據所提供的 Calendar 時區設定成 Java 時間基準 00:00 (午夜)。  
   
 ## <a name="see-also"></a>另請參閱  
- [getDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
+ [getDate 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

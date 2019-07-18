@@ -2,20 +2,19 @@
 title: 安裝巨量資料工具
 titleSuffix: SQL Server big data clusters
 description: 了解如何安裝 SQL Server 2019 巨量資料叢集 （預覽） 搭配使用的工具。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: a23d2859221242e6978790a838a135ccf1375283
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958589"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -33,7 +32,7 @@ ms.locfileid: "58860479"
 |---|---|---|---|
 | **mssqlctl** | 是 | 安裝和管理的巨量資料叢集的命令列工具。 | [安裝](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | 是 | 監視基礎 Kuberentes 叢集的命令列工具 ([進一歩](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | 是 | 查詢 SQL Server 的跨平台圖形化工具 ([進一歩](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安裝](../azure-data-studio/download.md) |
+| **Azure Data Studio （測試人員）** | 是 | 查詢 SQL Server 的跨平台圖形化工具 ([進一歩](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安裝](https://aka.ms/azdata-insiders) |
 | **SQL Server 2019 延伸模組** | 是 | 適用於支援連接至巨量資料叢集的 Azure 資料 Studio 的延伸模組。 也提供資料虛擬化精靈。 | [安裝](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 供 AKS 使用 | 現代的命令列介面來管理 Azure 服務。 搭配 AKS 巨量資料叢集部署 ([進一歩](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 選擇性 | 查詢 SQL Server 的新式命令列介面 ([進一歩](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

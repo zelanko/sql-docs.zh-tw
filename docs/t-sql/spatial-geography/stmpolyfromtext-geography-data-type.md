@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fa121faac168a2d3729145eb9b87d5e4e4416fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 318f58fb2bde2d60c1937191a54fec49caabf4c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936574"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**Sql Geography**  
+ CLR 傳回型別：**QL 地理位置**  
   
  OGC 類型：**MultiPolygon**  
   

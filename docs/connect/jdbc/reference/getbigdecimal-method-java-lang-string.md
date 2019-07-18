@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d0b29b48-9663-4de4-9fc2-82bc30e44aed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff651f2cc52ebca4b6d10a4e9cb01eebbb736970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 07c806f69c6b1469d3312c796023139b5bde1baa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799853"
 ---
 # <a name="getbigdecimal-method-javalangstring"></a>getBigDecimal 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  GetBigDecimal 方法 java.sql.CallableStatement 介面中所指定這個 getBigDecimal 方法。  
   
 ## <a name="see-also"></a>另請參閱  

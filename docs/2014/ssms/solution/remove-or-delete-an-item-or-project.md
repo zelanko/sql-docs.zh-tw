@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035666"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或刪除項目或專案
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中的專案項目有「查詢」、「連接」及「其他」檔案。 您可以在不從儲存體清除檔案的情況下，從方案中移除專案查詢和其他檔案。 當專案或項目在目前的方案中沒有用，而且您想要將它包含在另一個方案中時，就可移除它。  
@@ -28,9 +28,9 @@ ms.locfileid: "52795700"
   
 1.  在 [方案總管] 中，選取您要移除的專案項目。  
   
-2.  在 [編輯] 功能表上，按一下 [移除]。  
+2.  在 [編輯]  功能表上，按一下 [移除]  。  
   
-3.  在確認對話方塊中，按一下 [移除]，從專案中移除項目。  
+3.  在確認對話方塊中，按一下 [移除]  ，從專案中移除項目。  
   
  移除的項目仍會在檔案系統中。 因此，您可以將已移除的項目加入原始方案或另一個方案中。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "52795700"
   
 1.  在 [方案總管] 中，選取您要移除的專案。  
   
-2.  在 [編輯] 功能表上，按一下 [移除]。  
+2.  在 [編輯]  功能表上，按一下 [移除]  。  
   
-3.  在確認對話方塊中，按一下 [確定]，從方案中移除專案。  
+3.  在確認對話方塊中，按一下 [確定]  ，從方案中移除專案。  
   
  您可以永久刪除專案，但您必須先從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案中，移除任何指向這個專案的參考，之後，再利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 檔案總管，從儲存體中，永久刪除相關的檔案。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52795700"
   
 2.  在 Windows 的 [檔案總管] 中，尋找和選取您要刪除的專案或項目的相關檔案。  
   
-3.  在 [檔案] 功能表上，按一下 [刪除]。  
+3.  在 [檔案]  功能表上，按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

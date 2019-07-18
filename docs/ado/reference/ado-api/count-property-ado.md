@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919359"
 ---
 # <a name="count-property-ado"></a>Count 屬性 (ADO)
 指出集合中的物件數目。  

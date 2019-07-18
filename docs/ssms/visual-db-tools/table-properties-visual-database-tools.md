@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 72a91250b5b39c4e7c15c5264ba66c68327e714d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508859"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689591"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52508859"
 顯示選取資料表的資料來源名稱。  
   
 **說明**  
-顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右邊的省略符號 **(...)**。  
+顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)** 。  
   
 **結構描述**  
 顯示此資料表所屬結構描述的名稱 (只適用於 Microsoft SQL Server)。  
@@ -67,7 +67,7 @@ ms.locfileid: "52508859"
 顯示是否已在其他位置複寫資料表。  
   
 **規則資料空間規格分類**  
-展開以顯示 **(資料空間類型)**、 **檔案群組或資料分割配置名稱**及 **資料分割資料行清單**的屬性。  
+展開以顯示 **(資料空間類型)** 、 **檔案群組或資料分割配置名稱**及 **資料分割資料行清單**的屬性。  
   
 **(資料空間類型)**  
 顯示此資料表是否使用檔案群組或資料分割配置加以儲存。  

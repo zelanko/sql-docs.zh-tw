@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927221"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -34,7 +34,7 @@ ms.locfileid: "58391256"
 |系統變數|資料類型|描述|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|[Windows 事件] 物件的控制代碼，可以讓工作發出信號以指出該工作應該停止執行。|  
-|`ContainerStartTime`|DateTime|容器的開始時間。|  
+|`ContainerStartTime`|Datetime|容器的開始時間。|  
 |**CreationDate**|DateTime|建立封裝的日期。|  
 |`CreatorComputerName`|String|建立封裝的電腦。|  
 |**CreatorName**|String|建立封裝之人員的姓名。|  
@@ -47,7 +47,7 @@ ms.locfileid: "58391256"
 |**OfflineMode**|布林|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
 |**PackageID**|String|封裝的唯一識別碼。|  
 |**PackageName**|String|封裝名稱。|  
-|**StartTime**|DateTime|封裝開始執行的時間。|  
+|**StartTime**|Datetime|封裝開始執行的時間。|  
 |`ServerExecutionID`|Int64|在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行之封裝的執行識別碼。<br /><br /> 預設值為零。 只有在 ISServerExec 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上執行封裝時，才會變更此值。 有子封裝時，此值會從父封裝傳遞至子封裝。|  
 |**UserName**|String|啟動封裝之使用者的帳戶。 使用者名稱必須以網域名稱來限定。|  
 |**VersionBuild**|Int32|封裝版本。|  
@@ -89,7 +89,7 @@ ms.locfileid: "58391256"
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |`ProgressCountLow`|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證封裝期間，會忽略 `Propagate` 變數的值。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意:值`Propagate`驗證封裝期間，會忽略變數。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |`SourceDescription`|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |`SourceID`|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  

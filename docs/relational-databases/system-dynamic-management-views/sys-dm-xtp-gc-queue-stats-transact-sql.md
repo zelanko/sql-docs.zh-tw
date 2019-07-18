@@ -18,16 +18,17 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 189d6c83eee8caa891585f051d4ee66f4d22e44f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090204"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   伺服器上每一個記憶體回收工作者佇列的相關輸出資訊，以及有關每一個項目的各種統計資料。 每個邏輯 CPU 都有一個佇列。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "52413736"
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
 
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|佇列的唯一識別碼。|  
 |total_enqueues|**bigint**|自從伺服器啟動之後加入這個佇列中的記憶體回收工作項目的總數。|  

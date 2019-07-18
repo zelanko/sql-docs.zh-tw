@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef37233326597dc2a83f3089590e07f7b6efe51f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803163"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290359"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,15 +49,15 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>引數  
- [ \@stmt= ] *statement*  
- 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 \@陳述式必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。比方說，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上字串的大小會限制為 2 GB，最大的大小**nvarchar （max)**。  
+ [ \@stmt =]*陳述式*  
+ 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 \@陳述式必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。比方說，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上字串的大小會限制為 2 GB，最大的大小**nvarchar （max)** 。  
   
 > [!NOTE]  
 >  \@陳述式可以包含參數擁有相同的格式，做為變數的名稱，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  包含在每個參數\@陳述式必須有對應的項目中都\@params 參數定義清單和參數值清單。  
   
- [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ [ \@params =] N'\@*parameter_name* *data_type* [，...*n* ] '  
  是一個字串，其中包含之所有參數的已內嵌在定義\@陳述式。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 每個指定的參數\@陳述式都必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次都在\@陳述式不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
  [ \@param1= ] '*value1*'  
@@ -249,8 +248,6 @@ EXECUTE sp_executesql
           N'@level tinyint',  
           @level = 109;  
 ```  
-  
- 如需其他範例，請參閱 < [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

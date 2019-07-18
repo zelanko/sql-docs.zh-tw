@@ -17,14 +17,18 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15e1ef5983228eb9da820897e7f4a78358c12513
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c035be98a8327ff0abc6fa6beece3c5cb6a2d7ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725577"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   將運算式從一種資料類型明確轉換成另一種資料類型。 轉換運算子也可以當作截斷運算子使用。  
   
 ## <a name="syntax"></a>語法  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
@@ -16,12 +15,12 @@ ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059714"
 ---
 # <a name="data-profile-viewer-f1-help"></a>資料設定檔檢視器 F1 說明
   您可以使用資料設定檔檢視器來檢視資料分析工作的輸出。  
@@ -33,7 +32,7 @@ ms.locfileid: "58377516"
  按一下即可瀏覽包含資料分析工作之輸出的已儲存檔案。  
   
  **設定檔** 窗格  
- 展開 [設定檔] 窗格中的樹狀結構，即可查看輸出中所包含的設定檔。 選取設定檔，即可檢視該設定檔的結果。  
+ 展開 [設定檔]  窗格中的樹狀結構，即可查看輸出中所包含的設定檔。 選取設定檔，即可檢視該設定檔的結果。  
   
  **訊息** 窗格  
  顯示狀態訊息。  
@@ -41,7 +40,7 @@ ms.locfileid: "58377516"
  **向下鑽研** 窗格  
  顯示符合輸出中某個值的資料列 (如果資料分析工作所使用的資料來源可用的話)。  
   
- 例如，如果您要針對「美國州名」資料行檢視資料行值散發設定檔的輸出， **[詳細值散發]** 窗格可能會包含 "WA" 的資料列。 在 [詳細值散發] 窗格中按兩下該資料列，即可利用 [向下鑽研] 窗格查看 [州] 資料行值為 "WA" 的資料列。  
+ 例如，如果您要針對「美國州名」資料行檢視資料行值散發設定檔的輸出， **[詳細值散發]** 窗格可能會包含 "WA" 的資料列。 在 [詳細值散發]  窗格中按兩下該資料列，即可利用 [向下鑽研] 窗格查看 [州] 資料行值為 "WA" 的資料列。  
   
 ## <a name="dynamic-options"></a>動態選項  
   
@@ -68,10 +67,10 @@ ms.locfileid: "58377516"
  顯示在已分析資料行中找到的資料行長度。  
   
  **計數**  
- 顯示已分析資料行的值具有 [長度] 資料行中所顯示之長度的資料列數目。  
+ 顯示已分析資料行的值具有 [長度]  資料行中所顯示之長度的資料列數目。  
   
  **百分比**  
- 顯示已分析資料行的值具有 [長度] 資料行中所顯示之長度的資料列百分比。  
+ 顯示已分析資料行的值具有 [長度]  資料行中所顯示之長度的資料列百分比。  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>設定檔類型 = 資料行 Null 比例設定檔  
   
@@ -96,7 +95,7 @@ ms.locfileid: "58377516"
  顯示針對已分析資料行所計算的模式。  
   
  **百分比**  
- 顯示值符合 [模式] 資料行中所顯示之模式的資料列百分比。  
+ 顯示值符合 [模式]  資料行中所顯示之模式的資料列百分比。  
   
 ### <a name="profile-type--column-statistics-profile"></a>設定檔類型 = 資料行統計資料設定檔  
   
@@ -127,10 +126,10 @@ ms.locfileid: "58377516"
  顯示在已分析資料行中找到的相異值。  
   
  **計數**  
- 顯示已分析資料行具有 [值] 資料行中所顯示之值的資料列數目。  
+ 顯示已分析資料行具有 [值]  資料行中所顯示之值的資料列數目。  
   
  **百分比**  
- 顯示已分析資料行具有 [值] 資料行中所顯示之值的資料列百分比。  
+ 顯示已分析資料行具有 [值]  資料行中所顯示之值的資料列百分比。  
   
 ### <a name="profile-type--candidate-key-profile"></a>設定檔類型 = 候選索引鍵設定檔  
   

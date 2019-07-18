@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], installing
@@ -16,12 +15,12 @@ ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d42fe629fec13c941dc358f58f797b32df7ef09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059617"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Deploy Packages by Using the Deployment Utility
   當已建立部署公用程式，以從建立部署公用程式之電腦以外電腦上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案安裝封裝時，必須首先將部署資料夾複製到目的地電腦。  
@@ -53,15 +52,15 @@ ms.locfileid: "58393286"
   
 2.  按兩下資訊清單檔 \<專案名稱>.SSISDeploymentManifest，以啟動 [套件安裝精靈]。  
   
-3.  在 [部署 SSIS 封裝] 頁面上，選取 [SQL Server 部署] 選項。  
+3.  在 [部署 SSIS 封裝]  頁面上，選取 [SQL Server 部署]  選項。  
   
-4.  選擇性地選取 [安裝之後驗證封裝]，以在將封裝安裝到目標伺服器後對其進行驗證。  
+4.  選擇性地選取 [安裝之後驗證封裝]  ，以在將封裝安裝到目標伺服器後對其進行驗證。  
   
-5.  在 [指定目標 SQL Server] 頁面上，指定要安裝封裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，並選取驗證模式。 如果選取「[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證」，則您必須提供使用者名稱和密碼。  
+5.  在 [指定目標 SQL Server]  頁面上，指定要安裝封裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，並選取驗證模式。 如果選取「[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證」，則您必須提供使用者名稱和密碼。  
   
-6.  在 [選取安裝資料夾] 頁面上，為要安裝的封裝相依性指定檔案系統中的資料夾。  
+6.  在 [選取安裝資料夾]  頁面上，為要安裝的封裝相依性指定檔案系統中的資料夾。  
   
-7.  如果封裝包括組態，則可透過更新 [設定封裝] 頁面上 [值] 清單中的值來編輯組態。  
+7.  如果封裝包括組態，則可透過更新 [設定封裝] 頁面上 [值]  清單中的值來編輯組態。  
   
 8.  如果選擇在安裝後驗證封裝，請檢視已部署封裝的驗證結果。  
   

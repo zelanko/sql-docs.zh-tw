@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a00861365df27357099176151bcd681e15e585e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985121"
 ---
 # <a name="tracing"></a>追蹤
 ODBC 驅動程式管理員有追蹤功能，可讓 ODBC 應用程式記錄和謄寫到記錄檔所做的函式呼叫的順序。 追蹤是由追蹤 DLL 可擷取呼叫應用程式與驅動程式管理員 中，以及驅動程式管理員和驅動程式執行。 這種追蹤方法取代了追蹤執行的 ODBC 2 *.x* ODBC 2 中執行的驅動程式管理員和追蹤 *.x*由 ODBC Spy。  

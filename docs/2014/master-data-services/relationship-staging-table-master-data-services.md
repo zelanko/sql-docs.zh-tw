@@ -10,15 +10,15 @@ helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9db9d44ac174619a8cd0061d048fefe2dfdfa1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761830"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284986"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>關聯性暫存資料表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的關聯性暫存資料表 (stg.name_Relationship) 來依據成員之間的必要關聯性變更成員在明確階層中的位置。  
@@ -29,7 +29,7 @@ ms.locfileid: "52761830"
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |**ID**|自動指派的識別碼。 請勿在此欄位中輸入值。 如果尚未處理批次，這個欄位是空白。|  
-|**RelationshipType**<br /><br /> 必要項|所設定的關聯性類型。 可能的值為：<br /><br /> **1**：父系<br /><br /> **2**:同層級 （在相同的層級）|  
+|**RelationshipType**<br /><br /> 必要項|所設定的關聯性類型。 可能的值為：<br /><br /> **1**：父系<br /><br /> **2**:同層級 (在相同層級)|  
 |**ImportStatus_ID**<br /><br /> 必要項|匯入程序的狀態。 可能的值為：<br /><br /> **0**：您用來指定記錄已備妥，可供暫存。<br /><br /> **1**：自動指派，表示記錄的暫存處理序已成功。<br /><br /> **2**：自動指派，表示記錄的暫存處理序已失敗。|  
 |**Batch_ID**<br /><br /> 只有 Web 服務需要|自動指派的識別碼，可用來將暫存的記錄分組。 批次中的所有成員都會被指派這個識別碼，這個識別碼會顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者介面的 **[識別碼]** 欄中。<br /><br /> 如果尚未處理批次，這個欄位是空白。|  
 |**BatchTag**<br /><br /> 必要項，只有 Web 服務不需要|批次的唯一名稱 (最多 50 個字元)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "52761830"
 |**ErrorCode**|顯示錯誤碼。 若要查詢 **ImportStatus_ID** 為 **2**的所有記錄，請參閱 [暫存處理序錯誤 &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用暫存處理序移動明確階層成員&#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [使用暫存處理序移動明確階層成員&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [檢視暫存處理序期間發生的錯誤&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [暫存處理序錯誤 &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

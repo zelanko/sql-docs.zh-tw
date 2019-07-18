@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684723"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,24 +52,24 @@ ms.locfileid: "53201868"
   
 #### <a name="to-disable-smb"></a>若要停用 SMB  
   
-1.  在 [開始] 功能表上，指向 [設定]，然後按一下 [網路和撥號連線]。  
+1.  在 [開始]  功能表上，指向 [設定]  ，然後按一下 [網路和撥號連線]  。  
   
-     以滑鼠右鍵按一下[網際網路方向連線]，然後按一下 [內容]。  
+     以滑鼠右鍵按一下[網際網路方向連線]，然後按一下 [內容]  。  
   
-2.  選取 **[Client for Microsoft Networks]** 核取方塊，再按一下 **[解除安裝]**。  
+2.  選取 **[Client for Microsoft Networks]** 核取方塊，再按一下 **[解除安裝]** 。  
   
 3.  請遵照解除安裝步驟。  
   
-4.  選取 **[Microsoft 網路的檔案和印表機共用]**，再按一下 **[解除安裝]**。  
+4.  選取 **[Microsoft 網路的檔案和印表機共用]** ，再按一下 **[解除安裝]** 。  
   
 5.  請遵照解除安裝步驟。  
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>若要在可從網際網路存取的伺服器上停用 SMB  
   
--   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)] 內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks] 和 [Client for Microsoft Networks]。  
+-   在 [本機區域連線內容] 中，使用 [傳輸控制通訊協定/網際網路通訊協定 (TCP/IP)]  內容對話方塊來移除 [File and Printer Sharing for Microsoft Networks]  和 [Client for Microsoft Networks]  。  
   
 ## <a name="endpoints"></a>端點  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 導入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的新概念；伺服器端的連接是以 [!INCLUDE[tsql](../../includes/tsql-md.md)]*「端點」*(endpoint) 的概念來表示。 可對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點授與、撤銷和拒絕權限。 依預設，所有使用者對端點都有存取權限，除非權限遭到系統管理員 (sysadmin) 群組的成員或端點擁有者拒絕或撤銷。 GRANT、REVOKE 和 DENY ENDPOINT 語法使用的是系統管理員必須從端點之目錄檢視中取得的端點識別碼。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 導入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的新概念；伺服器端的連接是以 [!INCLUDE[tsql](../../includes/tsql-md.md)] *「端點」* (endpoint) 的概念來表示。 可對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點授與、撤銷和拒絕權限。 依預設，所有使用者對端點都有存取權限，除非權限遭到系統管理員 (sysadmin) 群組的成員或端點擁有者拒絕或撤銷。 GRANT、REVOKE 和 DENY ENDPOINT 語法使用的是系統管理員必須從端點之目錄檢視中取得的端點識別碼。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會建立所有支援之網路通訊協定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端點，也會針對專用管理員連接建立這類端點。  
   

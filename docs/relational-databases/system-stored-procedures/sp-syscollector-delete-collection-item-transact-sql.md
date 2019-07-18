@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000901"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  這是收集項目的唯一識別碼。 *collection_item_id*已**int**預設值是 NULL。 *collection_item_id*必須有值，如果*名稱*是 NULL。  
   
- [ @name =] '*名稱*'  
+ [ @name = ] '*name*'  
  這是收集項目的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_item_id*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 613053b05d675963ceef89a71de4e8ac73352fad
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c91733601949e8a084fef72e6ae388c25b569085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961680"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>檢視及摘要使用 R （逐步解說） 的 SQL Server 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

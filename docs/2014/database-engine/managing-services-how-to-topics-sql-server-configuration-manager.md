@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, managing services
@@ -13,12 +12,12 @@ ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064634"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>管理服務的如何主題 (SQL Server 組態管理員)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 會在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統上以服務的形式來執行。 如需服務的詳細資訊，請參閱 [管理 Database Engine Services](configure-windows/manage-the-database-engine-services.md)。  

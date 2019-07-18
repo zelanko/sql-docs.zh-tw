@@ -17,14 +17,18 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d28d68409ccdee801c1a614add2559ae69b1ac6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cc7a5b230120f7f392d33793a18994932ce8f05c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727396"
 ---
 # <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 使用者定義的訊息是識別碼等於或大於 50000 的訊息。 識別碼小於 50000 的訊息是系統錯誤訊息，這種訊息無法使用「傳送錯誤訊息」工作進行傳送。  
   
  「傳送錯誤訊息」工作可以設定為傳送所有錯誤訊息，或只傳送指定的錯誤訊息。 使用者自訂的錯誤訊息可能有很多不同的語言版本，您可以設定工作只傳送所選語言的訊息。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，使用字碼頁 1033 的 us_english 版訊息必須存在於該伺服器上。  
@@ -58,7 +62,7 @@ ms.locfileid: "58282992"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   此記錄項目報告傳送已完成。 記錄項目會包含結束時間。  
   
- 此外， **OnInformation** 事件的記錄項目會報告已傳送的錯誤訊息，並會為在目的地上覆寫的每個錯誤訊息，寫入 [OnWarning 事件] 的記錄項目。  
+ 此外， **OnInformation** 事件的記錄項目會報告已傳送的錯誤訊息，並會為在目的地上覆寫的每個錯誤訊息，寫入 [OnWarning 事件]  的記錄項目。  
   
 ## <a name="security-and-permissions"></a>安全性和權限  
  若要建立新的錯誤訊息，執行封裝的使用者必須是目的地伺服器上 sysadmin 或 serveradmin 伺服器角色的成員。  
@@ -80,7 +84,7 @@ ms.locfileid: "58282992"
 -   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
-  使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。   
+  使用 [傳送錯誤訊息工作編輯器]  對話方塊的 [一般]  頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。   
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -93,14 +97,14 @@ ms.locfileid: "58282992"
  輸入傳送錯誤訊息工作的描述。  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>傳送錯誤訊息工作編輯器 (訊息頁面)
-  使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [訊息] 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者自訂錯誤訊息，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 
+  使用 [傳送錯誤訊息工作編輯器]  對話方塊的 [訊息]  頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者自訂錯誤訊息，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
- 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>] 建立來源伺服器的新連線。  
+ 在清單中選取 SMO 連線管理員，或按一下 [\<新增連線...>]  建立來源伺服器的新連線。  
   
  **DestinationConnection**  
- 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]，以建立目的地伺服器的新連線。  
+ 在清單中選取一個 SMO 連線管理員，或按一下 [\<新增連線...>]  ，以建立目的地伺服器的新連線。  
   
  **IfObjectExists**  
  如果有相同名稱的錯誤訊息已存在於目的地伺服器上，選取工作應覆寫現有使用者自訂錯誤訊息、略過現有訊息，或是失敗。  
@@ -119,13 +123,13 @@ ms.locfileid: "58282992"
  按一下瀏覽按鈕 **(...)** 來選取要複製的錯誤訊息。  
   
 > [!NOTE]  
->  您必須先指定 [SourceConnection]，才能選取要複製的錯誤訊息。  
+>  您必須先指定 [SourceConnection]  ，才能選取要複製的錯誤訊息。  
   
  **ErrorMessageLanguagesList**  
- 按一下瀏覽按鈕 **(...)**，來選取將使用者定義之錯誤訊息複製到目的地伺服器所用的語言。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，us_english (字碼頁 1033) 版的訊息必須存在於該伺服器上。  
+ 按一下瀏覽按鈕 **(...)** ，來選取將使用者定義之錯誤訊息複製到目的地伺服器所用的語言。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，us_english (字碼頁 1033) 版的訊息必須存在於該伺服器上。  
   
 > [!NOTE]  
->  您必須先指定 [SourceConnection]，才能選取要複製的錯誤訊息。  
+>  您必須先指定 [SourceConnection]  ，才能選取要複製的錯誤訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

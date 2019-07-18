@@ -11,24 +11,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771238"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
   此程序描述如何使用 CDC 設計工具主控台來管理 CDC 服務。  
   
 ### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>若要從 CDC 設計工具主控台來管理 CDC 服務  
   
-1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]**。  
+1.  從 **[開始]** 功能表選取 **[CDC 設計工具主控台]** 。  
   
-2.  在左窗格中，展開 **[異動資料擷取]**。  
+2.  在左窗格中，展開 **[異動資料擷取]** 。  
   
 3.  選取您要管理的服務。  
   
-     **注意**:如果不有列出在 CDC 設計工具主控台中任何服務，您必須建立使用 CDC 服務組態主控台的新執行個體。 如需有關建立新服務的詳細資訊，請參閱服務組態主控台所隨附的線上說明。  
+     **注意**：如果 CDC 設計工具主控台中未列出任何服務，您必須使用 CDC 服務組態主控台來建立新的執行個體。 如需有關建立新服務的詳細資訊，請參閱服務組態主控台所隨附的線上說明。  
   
 4.  您可以針對 CDC 服務執行以下工作：  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095696"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
   這份檢查清單會引導您逐步完成新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]針對至您建置全新的三層式 SharePoint 2010 伺服陣列的 SharePoint。 三層伺服陣列包含資料庫、應用程式和 Web 層。 新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]此拓撲會要求您執行 SQL Server 安裝程式安裝[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式層上。 當您部署 web 應用程式方案時，PowerPivot 程式檔案會加入至 web 層，而只會做為後續安裝工作。 即使有部署步驟，但是在您需要執行的 Web 層或資料層並沒有個別的安裝步驟。 正在安裝您需要執行的唯一安裝步驟[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式伺服器上。  
@@ -85,13 +84,13 @@ ms.locfileid: "53350538"
   
     2.  開啟 SQL Server 網路組態。  
   
-    3.  選取 [MSSQLSERVER 的通訊協定] 。  
+    3.  選取 [MSSQLSERVER 的通訊協定]  。  
   
     4.  以滑鼠右鍵按一下**TCP/IP** ，然後選取**啟用**。  
   
     5.  按一下  **SQL Server 服務**。  
   
-    6.  以滑鼠右鍵按一下**SQL Server (MSSQLSERVER)**，然後按一下**重新啟動**。  
+    6.  以滑鼠右鍵按一下**SQL Server (MSSQLSERVER)** ，然後按一下**重新啟動**。  
   
 3.  透過 Windows 防火牆啟用對資料庫伺服器的傳入存取。 這可讓伺服陣列中的 SharePoint 伺服器連接至 SharePoint 資料庫。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "53350538"
   
     4.  在 [規則類型] 中按一下**自訂**。  
   
-    5.  按 [下一步] 。  
+    5.  按一下 [下一步]  。  
   
     6.  在程式中，在 [服務] 區段中，按一下**自訂**。  
   
@@ -111,9 +110,9 @@ ms.locfileid: "53350538"
   
     8.  選取  **SQL Server (MSSQLSERVER)** 如果您安裝 SQL Server 的預設執行個體，然後再按一下**確定**。  
   
-    9. 按 [下一步] 。  
+    9. 按一下 [下一步]  。  
   
-    10. 在 [通訊協定和連接埠，接受預設設定，然後按一下**下一步]**。  
+    10. 在 [通訊協定和連接埠，接受預設設定，然後按一下**下一步]** 。  
   
     11. 在範圍內，接受預設設定，然後按一下**下一步**。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "53350538"
   
     14. 在 名稱 輸入 輸入規則的描述性名稱 (例如**SQL Server**)。  
   
-    15. 按一下 **[完成]**。  
+    15. 按一下 **[完成]** 。  
   
 ##  <a name="installsp"></a> 安裝及設定三層 SharePoint 2010 伺服器陣列  
  在您要當做 SharePoint 伺服器使用的每部電腦上，執行 SharePoint 必要條件安裝程式，然後再執行 SharePoint Server 安裝程式。  
@@ -194,7 +193,7 @@ ms.locfileid: "53350538"
   
 2.  確認應用程式中可以使用 PowerPivot 資料存取和處理功能。 若要這樣做，您可以確認 PowerPivot 提供的文件庫範本是否存在：  
   
-    1.  在 網站動作，按一下 **更多選項...**.  
+    1.  在 網站動作，按一下 **更多選項...** .  
   
     2.  在程式庫，您應該會看到**資料摘要庫**並**PowerPivot 圖庫**。 這些文件庫範本是由 PowerPivot 功能所提供，如果此功能已正確整合，就可以在文件庫清單中看到這些範本。  
   
@@ -210,11 +209,11 @@ ms.locfileid: "53350538"
   
 5.  在 [開始] 功能表中，從 Microsoft SQL Server 2008 R2 程式群組啟動 SQL Server Management Studio。 如果伺服器上未安裝這個工具，您可以跳到最後一個步驟，確認快取檔案存在。  
   
-6.  在 [伺服器類型] 中，選取 [Analysis Services]。  
+6.  在 [伺服器類型] 中，選取 [Analysis Services]  。  
   
-7.  在 伺服器名稱輸入**\<伺服器名稱 > \powerpivot**，其中**\<伺服器名稱 >** 是已安裝 PowerPivot for SharePoint 的電腦名稱。  
+7.  在 伺服器名稱輸入 **\<伺服器名稱 > \powerpivot**，其中 **\<伺服器名稱 >** 是已安裝 PowerPivot for SharePoint 的電腦名稱。  
   
-8.  按一下 **[連接]**。  
+8.  按一下 **[連接]** 。  
   
 9. 在 [物件總管] 中，按一下**資料庫**，檢視載入的 PowerPivot 資料檔案的清單。  
   
@@ -227,14 +226,14 @@ ms.locfileid: "53350538"
  您可以設定快取到磁碟之 PowerPivot 資料檔案所能使用的磁碟空間上限。 預設值是使用所有可用的磁碟空間。 如需有關如何限制磁碟空間使用量的相關指示，請參閱[設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
 ####  <a name="Upload"></a> 增加 SharePoint Web 應用程式的檔案上傳大小上限  
- 因為 PowerPivot 活頁簿可能很龐大，所以您可能會想要增加檔案上傳大小上限。 有兩個檔案大小設定需要設定：Web 應用程式的 [最大上傳大小] 及 Excel Services 的 [最大活頁簿大小]。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需相關指示，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
+ 因為 PowerPivot 活頁簿可能很龐大，所以您可能會想要增加檔案上傳大小上限。 有兩個檔案大小設定，以設定：上傳大小上限的 web 應用程式和在 Excel Services 中的活頁簿大小上限。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需相關指示，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>將 SharePoint 權限授與活頁簿使用者  
  使用者需要有 SharePoint 權限，才能發行或檢視活頁簿。 請務必授與**檢視**給需要檢視已發行的活頁簿的使用者權限及**參與**發行或管理活頁簿的使用者權限。 您必須是網站集合管理員，才能授與權限。  
   
-1.  在網站中，按一下 **[網站動作]**。  
+1.  在網站中，按一下 **[網站動作]** 。  
   
-2.  按一下 **[網站權限]**。  
+2.  按一下 **[網站權限]** 。  
   
 3.  選取 網站集合的核取方塊**成員**群組。  
   
@@ -242,7 +241,7 @@ ms.locfileid: "53350538"
   
 5.  輸入應該擁有加入或移除文件之權限的 Windows 網域使用者或群組帳戶。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 7.  選取 網站集合的核取方塊**訪客**群組。  
   
@@ -250,7 +249,7 @@ ms.locfileid: "53350538"
   
 9. 輸入應該擁有檢視文件之權限的 Windows 網域使用者或群組帳戶。 如同上面所述，如果應用程式有設定傳統驗證，請勿使用電子郵件地址或通訊群組。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>安裝 ADO.NET Data Services 3.5 SP1  
  從 SharePoint 清單匯出資料摘要需要 ADO.NET Data Services。 SharePoint 2010 不會在 PrerequisiteInstaller 程式中包含這個元件，所以您必須手動安裝它。 如需有關如何安裝 ADO.NET Data Services 的詳細資訊，請參閱 <<c0> [ 安裝 ADO.NET Data Services 以支援資料摘要的 SharePoint 清單匯出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  

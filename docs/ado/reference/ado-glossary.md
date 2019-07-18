@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911697"
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題會定義與 ADO 的詞彙。  
@@ -47,10 +46,10 @@ ms.locfileid: "52530396"
   
 ## <a name="b"></a>B  
  繫結項目  
- 資料表中的欄位和變數之間的對應。 在 ADO Visual c + + 延伸模組**資料錄集**欄位會對應至 C/c + + 變數。  
+ 資料表中的欄位和變數之間的對應。 在 ADO VisualC++延伸模組**資料錄集**欄位會對應至 C /C++變數。  
   
  位元遮罩  
- 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中**&** 並 **&#124;** c + + 中。  
+ 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中 **&** 並 **&#124;** 在C++。  
   
  例如，ADO **FieldAttributeEnum**值可用來當做位元遮罩來決定欄位的屬性。 假設您想要判斷欄位是否可更新。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`  
   
@@ -65,7 +64,7 @@ ms.locfileid: "52530396"
  商務規則  
  驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務往來的演算轉換組合。 也稱為*商務邏輯*。  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  導出的運算式  
  運算式不是常數，但其值取決於其他值。 要評估，必須取得的導出的運算式，並將其計算從其他來源，通常是在其他欄位或資料列的值中。  
   
@@ -264,7 +263,7 @@ ms.locfileid: "52530396"
  一組從資料來源，全都具有相同的欄位結構描述的資料列。 資料列集可以代表資料表中的所有或部分欄位。 資料列集也可以代表的虛擬資料表，查詢或聯結的兩個或多個資料表所建立。 在 ADO 中，資料列集由**資料錄集**物件。  
   
 ## <a name="s"></a>S  
- 範圍。  
+ `Scope`  
  參考的物件或變數或檢視表或資料表中的記錄範圍的範圍。 比方說，本機變數可以參考只有在所定義的程序內。 公用變數是可從應用程式的任何位置存取。 如果在定義的搜尋路徑物件，例如目前的資料庫，就會在範圍內。 記錄範圍可以指定含有範圍子句中的許多命令。  
   
  服務提供者  

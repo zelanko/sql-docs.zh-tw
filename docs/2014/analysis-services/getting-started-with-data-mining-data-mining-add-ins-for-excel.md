@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080940"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>開始使用資料採礦 (適用於 Excel 的資料採礦增益集)
   資料採礦是探索有意義資料模式的程序。 資料採礦自然補充了透過傳統 BI 瀏覽及了解資料的程序。 機器演算法可以處理非常大量的資料，並且找出原本隱藏的模式和趨勢。  

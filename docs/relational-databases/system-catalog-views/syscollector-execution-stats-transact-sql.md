@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b89823af1295b329046395a8f3c345401ca61805
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca1d879c0988ffb48eb5ae2fd080b1133e24339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060333"
 ---
 # <a name="syscollectorexecutionstats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

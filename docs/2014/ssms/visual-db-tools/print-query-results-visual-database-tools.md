@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295261"
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
   若要列印查詢結果，可將 [結果窗格](visual-database-tools.md) 的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  
@@ -31,11 +31,11 @@ ms.locfileid: "52755590"
   
 1.  選取要列印的資料行或資料列。  
   
-2.  使用 [複製] 命令將它們移至剪貼簿。  
+2.  使用 [複製]  命令將它們移至剪貼簿。  
   
 3.  切換控制至列印結果用的 Windows 程式。  
   
-4.  使用 [貼上] 命令將查詢結果移出剪貼簿。  
+4.  使用 [貼上]  命令將查詢結果移出剪貼簿。  
   
 5.  格式化並列印出結果。  
   

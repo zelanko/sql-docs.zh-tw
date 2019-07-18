@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: de41d864b6bfd8e7fe80188b69b50e2592d6cf16
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938266"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項。 後續章節將詳細說明相同。  
@@ -25,7 +24,7 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
   
 本節中，為了 「 選項 」 一詞也稱為 'switch'。  
   
-選項不區分大小寫和可能的開頭是 '**-**'**/**' 字元。  
+選項不區分大小寫和可能的開頭是 ' **-** ' **/** ' 字元。  
   
 如果指定了選項，就一定要指定對應的選項參數。  
   

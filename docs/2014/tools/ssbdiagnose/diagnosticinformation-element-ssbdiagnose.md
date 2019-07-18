@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63186913"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
   **DiagnosticInformation** 元素包含報告此公用程式找到之診斷資訊的所有元素。 **DiagnosticInformation** 是 **ssbdiagnostic** XML 輸出檔的根元素。  
@@ -35,7 +35,7 @@ ms.locfileid: "53367870"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`None`|N/A|  
   

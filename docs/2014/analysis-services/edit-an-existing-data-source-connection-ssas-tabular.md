@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
@@ -13,12 +12,12 @@ ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081445"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>編輯現有的資料來源連接 (SSAS 表格式)
   本主題描述如何編輯表格式模型中現有資料來源連接的屬性。  
@@ -36,17 +35,17 @@ ms.locfileid: "48117798"
   
 #### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>若要變更目前連接所使用的外部資料來源  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後再按一下 **[現有連接]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後再按一下 **[現有連接]** 。  
   
-2.  選取您要修改的資料來源連接，然後按一下 **[編輯]**。  
+2.  選取您要修改的資料來源連接，然後按一下 **[編輯]** 。  
   
 3.  在 **[編輯連接]** 對話方塊中，按一下 **[瀏覽]** ，找出另一個類型相同，但名稱或位置不同的資料庫。  
   
      您一變更資料庫檔案之後，就會出現一則訊息，指出您需要儲存及重新整理資料表，才能看到新的資料。  
   
-4.  按一下 **[儲存]**，然後按一下 **[關閉]**。  
+4.  按一下 **[儲存]** ，然後按一下 **[關閉]** 。  
   
-5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，依序按一下 **[模型]**、 **[處理]** 及 **[處理全部]**。  
+5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，依序按一下 **[模型]** 、 **[處理]** 及 **[處理全部]** 。  
   
      資料表隨即以新的資料來源重新處理，但是會採用原始資料選擇。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48117798"
   
 1.  在模型設計師中，選取一個資料表。  
   
-2.  按一下 **[資料表]** 功能表，然後再按一下 **[資料表屬性]**。  
+2.  按一下 **[資料表]** 功能表，然後再按一下 **[資料表屬性]** 。  
   
      所選資料表的名稱會顯示在 **[資料表名稱]** 方塊中。 **[來源名稱]** 方塊會包含此資料表在外部資料來源的名稱。 如果資料行在來源和模型中的名稱不同，您可以在兩組資料行名稱之間切換，其方式是選取 **[來源]** 或 **[模型]** 選項。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48117798"
      當您儲存目前的資料表屬性集時，可能會出現一則訊息，指出您需要處理資料表。 按一下 **[處理]** ，將更新的資料載入模型中。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理資料&#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
+ [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

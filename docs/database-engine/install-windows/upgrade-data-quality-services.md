@@ -10,13 +10,13 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 63b3f49f191cb1c7e20c398ab1ca1d6cf79a5ba3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794764"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
 
@@ -44,9 +44,9 @@ ms.locfileid: "53208828"
   
     1.  執行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
-    2.  按一下左窗格中的 [安裝]。  
+    2.  按一下左窗格中的 [安裝]  。  
   
-    3.  在右窗格中，按一下 [升級來源] 從舊版 SQL Server 升級。  
+    3.  在右窗格中，按一下 [升級來源]  從舊版 SQL Server 升級。  
   
     4.  完成安裝精靈。  
   

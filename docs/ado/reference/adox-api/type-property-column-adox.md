@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a7fc9e5982280cc1c26a0179e9de8adc30e06d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965022"
 ---
 # <a name="type-property-column-adox"></a>Type 屬性 (Column) (ADOX)
 指出資料行的資料類型。  

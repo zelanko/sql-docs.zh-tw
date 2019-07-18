@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc21969541334a1cf07887e0a5bc5074d1083bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd0527188ebdf3bbe5f0e2504ddd696f92038faa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794611"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924829"
 ---
 # <a name="named-commands"></a>具名命令
-[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法來執行命令。 還有另一個方法： 您可以把它具名的命令，，，然後呼叫具名命令直接對這**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 命名命令表示指派名稱給**名稱**屬性**命令**物件。 例如，  
+[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法來執行命令。 還有另一個方法： 您可以把它具名的命令，，，然後呼叫具名命令直接對這**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 命名命令表示指派名稱給**名稱**屬性**命令**物件。 例如，套用至物件的  
   
 ```  
 objCmd.Name = "GetCustomers"  

@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775644"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升級 PowerPivot for SharePoint
   本主題概述將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步驟。 特定步驟取決於您環境目前所執行的 SharePoint 版本，並包含 PowerPivot for SharePoint 增益集 (**spPowerPivot.msi**)。  
@@ -64,11 +64,11 @@ ms.locfileid: "58434499"
   
 1.  在以 SharePoint 模式執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的後端伺服器上，執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安裝程式。 如果該伺服器主控多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，則至少要升級 **POWERPIVOT** 執行個體。 下列清單是有關 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 升級的安裝精靈步驟摘要：  
   
-    1.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 中，按一下 **[安裝]**。  
+    1.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 中，按一下 **[安裝]** 。  
   
-    2.  按一下 [從 SQL Server 升級...]。  
+    2.  按一下 [從 SQL Server 升級...]  。  
   
-    3.  在 **[選取執行個體]** 頁面上，選取 **[POWERPIVOT]** 執行個體名稱，然後按 **[下一步]**。  
+    3.  在 **[選取執行個體]** 頁面上，選取 **[POWERPIVOT]** 執行個體名稱，然後按 **[下一步]** 。  
   
     4.  如需詳細資訊，請參閱 <<c0> [ 升級到使用的 SQL Server 2014 安裝精靈&#40;安裝程式&#41;</c0>](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
@@ -78,17 +78,17 @@ ms.locfileid: "58434499"
   
 4.  在其中一個 SharePoint 應用程式伺服器上**執行 PowerPivot for SharePoint 2013 組態** 工具，以增益集所安裝的更新方案檔案來設定 SharePoint 伺服器陣列。 您無法使用 SharePoint 管理中心來進行此步驟。 如需詳細資訊，請參閱下列內容：  
   
-    1.  在 Windows 的 [開始] 頁面中，輸入 **PowerPivot** ，然後在搜尋結果中，按一下 **[PowerPivot for SharePoint 2013 組態]**。 請注意，搜尋可能會將組態工具的兩個版本皆傳回。  
+    1.  在 Windows 的 [開始] 頁面中，輸入 **PowerPivot** ，然後在搜尋結果中，按一下 **[PowerPivot for SharePoint 2013 組態]** 。 請注意，搜尋可能會將組態工具的兩個版本皆傳回。  
   
          ![兩個 PowerPivot 組態工具](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
          或  
   
-         在 **[開始]** 功能表上，指向 **[所有程式]**，然後依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot for SharePoint 2013 組態工具]**。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
+         在 **[開始]** 功能表上，指向 **[所有程式]** ，然後依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot for SharePoint 2013 組態工具]** 。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
     2.  啟動時，組態工具會檢查 PowerPivot 伺服器陣列方案以及 PowerPivot Web 應用程式方案的狀態。 如果偵測到這些解決方案的較舊版本，您會看到訊息 「**已偵測到較新版本的 PowerPivot 方案檔。請選取升級選項以升級您的伺服器陣列**」。 按一下 [確定]  以關閉系統驗證訊息。  
   
-    3.  按一下 **[升級功能、服務、應用程式和方案]**，然後按一下 **[確定]**。  
+    3.  按一下 **[升級功能、服務、應用程式和方案]** ，然後按一下 **[確定]** 。  
   
     4.  檢閱左窗格工作清單中的動作，並排除您不希望該工具執行的任何動作。 預設包含所有動作。 若要移除動作，請在左邊工作清單中選取該動作，然後清除 **[參數]** 頁面上的 **[在工作清單中包含這個動作]** 核取方塊。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "58434499"
     6.  按一下 **[驗證]** 來檢查每個動作是否有效。 如果無法使用 **[驗證]** ，表示所有動作都適用於您的系統。 如果可以使用 **[驗證]** ，表示您可能已經修改輸入值 (例如，Excel 服務應用程式名稱)，或此工具可能已經判定府執行特定動作。 如果無法執行某個動作，您必須排除該動作，或修正造成此動作標示為無效的基礎條件。  
   
         > [!IMPORTANT]  
-        >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]**。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
+        >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]** 。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
   
-    7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「**工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。您要繼續嗎？**」  
+    7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行]  時，會出現下列警告，提醒您動作是在批次模式下處理：「**工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。您要繼續嗎？** 」  
   
     8.  按一下 **[是]** 繼續。  
   
@@ -154,13 +154,13 @@ ms.locfileid: "58434499"
   
 7.  **執行 PowerPivot 組態工具**第一部 SharePoint 應用程式伺服器在 SharePoint 中執行 SQL Server Analysis Services (PowerPivot) 服務，若要升級方案和 Web 服務。 您無法使用管理中心進行此步驟。  
   
-    1.  指向 **[開始]** 功能表上的 **[所有程式]**，按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]**，再按一下 **[PowerPivot 組態工具]**。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
+    1.  指向 **[開始]** 功能表上的 **[所有程式]** ，按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]** ，再按一下 **[PowerPivot 組態工具]** 。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
     2.  啟動時，組態工具會檢查 PowerPivot 伺服器陣列方案以及 PowerPivot Web 應用程式方案的狀態。 如果偵測到這些解決方案的較舊版本，您會看到訊息 「 有已偵測到較新版本的 PowerPivot 方案檔。 請選取升級選項以升級您的伺服器陣列」。 按一下 **[確定]** 以關閉訊息。  
   
-    3.  按一下 **[升級功能、服務、應用程式和方案]**，然後按一下 **[確定]** 繼續。  
+    3.  按一下 **[升級功能、服務、應用程式和方案]** ，然後按一下 **[確定]** 繼續。  
   
-    4.  會出現下列警告：「 PowerPivot 管理儀表板中的活頁簿即將升級為最新版本。 您對現有活頁簿所做的任何自訂內容都將遺失。 您要繼續嗎？」  
+    4.  出現下列警告：「 PowerPivot 管理儀表板中的活頁簿即將升級為最新版本。 您對現有活頁簿所做的任何自訂內容都將遺失。 您要繼續嗎？」  
   
          此警告指的是 PowerPivot 管理儀表板中，針對資料重新整理活動報告的活頁簿。 如果您自訂這些活頁簿，當現有的檔案取代成較新的版本時，您對這些活頁簿所做的任何變更都會遺失。  
   
@@ -179,15 +179,15 @@ ms.locfileid: "58434499"
     7.  按一下 **[驗證]** 來檢查每個動作是否有效。 如果無法使用 **[驗證]** ，表示所有動作都適用於您的系統。 如果可以使用 **[驗證]** ，表示您可能已經修改輸入值 (例如，Excel 服務應用程式名稱)，或此工具可能已經判定府執行特定動作。 如果無法執行某個動作，您必須排除該動作，或修正造成此動作標示為無效的基礎條件。  
   
         > [!IMPORTANT]  
-        >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]**。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
+        >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]** 。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
   
-    8.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
+    8.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行]  時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
   
     9. 按一下 **[是]** 繼續。  
   
     10. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在此期間，PowerPivot 資料連接要求將會失敗並出現 「 無法重新整理資料 」 或者 「 錯誤時發生嘗試執行要求的動作。 請再試一次」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
   
-8.  **重複此程序**伺服陣列中每個 SQL Server Analysis Services (PowerPivot) 服務：1) 執行 SQL Server 安裝程式 2) 執行 PowerPivot 組態工具。  
+8.  **重複此程序**伺服陣列中每個 SQL Server Analysis Services (PowerPivot) 服務：1） 執行 SQL Server 安裝程式 2） 執行 PowerPivot 組態工具。  
   
 9. 透過執行升級後的步驟以及檢查伺服器陣列中的 PowerPivot 伺服器版本，驗證升級成功。 如需詳細資訊，請參閱本主題中的 [Post-upgrade verification tasks](#verify) 和下列章節：  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434499"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  檢閱現有部署的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  檢閱現有部署中的下列資訊：[類型]  是 [撤銷] 或 [部署]、[檔案]  是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  部署或撤銷與 PowerPivot 方案相關將複製的 GUID 值**JobId**然後將它貼到下列命令 （使用標記]、 [複製] 和 [貼上命令殼層的 [編輯] 功能表上來複製 GUID）：  
   
@@ -211,7 +211,7 @@ ms.locfileid: "58434499"
         Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
-    4.  依序按一下 **[驗證]** 和 **[執行]**，重試組態工具中的工作。  
+    4.  依序按一下 **[驗證]** 和 **[執行]** ，重試組態工具中的工作。  
   
      至於其他所有錯誤，請檢查 ULS 記錄檔。 如需詳細資訊，請參閱 <<c0> [ 設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。</c0>  
   
@@ -246,9 +246,9 @@ Get-PowerPivotSystemService
   
 1.  瀏覽至 **Bin** 資料夾，尋找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體。 例如 `C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\bin`。  
   
-2.  以滑鼠右鍵按一下 `msmdsrv.exe`，然後選取 **[屬性]**。  
+2.  以滑鼠右鍵按一下 `msmdsrv.exe`，然後選取 **[屬性]** 。  
   
-3.  按一下 **[詳細資料]**。  
+3.  按一下 **[詳細資料]** 。  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 檔案版本應為 12.00。\<主要組建 >。\<次要組建 >。  
   
@@ -283,11 +283,11 @@ Get-PowerPivotSystemService
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>驗證 SharePoint 上的 MSOLAP 資料提供者版本  
  使用下列指示即可查看 Excel Services 信任的 Analysis Services OLE DB 提供者版本。 您必須是伺服陣列或服務應用程式系統管理員，才能檢查 Excel Services 信任的資料提供者設定。  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
-2.  按一下 Excel Services 服務應用程式的名稱，例如 **[ExcelServiceApp1]**。  
+2.  按一下 Excel Services 服務應用程式的名稱，例如 **[ExcelServiceApp1]** 。  
   
-3.  按一下 **[信任的資料提供者]**。 您應該會看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果您已升級 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝，也會看到舊版的 MSOLAP.4。  
+3.  按一下 **[信任的資料提供者]** 。 您應該會看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果您已升級 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝，也會看到舊版的 MSOLAP.4。  
   
 4.  如需詳細資訊，請參閱＜ [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)＞。  
   
@@ -324,9 +324,9 @@ Get-PowerPivotSystemService
   
 2.  啟動 PowerPivot 組態工具。  
   
-3.  按一下 **[升級功能、服務、應用程式和方案]**，然後按一下 **[確定]**。  
+3.  按一下 **[升級功能、服務、應用程式和方案]** ，然後按一下 **[確定]** 。  
   
-4.  檢閱升級工作中所包含的動作，然後按一下 **[驗證]**。  
+4.  檢閱升級工作中所包含的動作，然後按一下 **[驗證]** 。  
   
 5.  按一下 **[執行]** 套用動作。  
   

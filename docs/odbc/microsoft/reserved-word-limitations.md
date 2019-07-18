@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 531a100fed389264d9af6a1733636792a3dc7920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988022"
 ---
 # <a name="reserved-keyword-limitations"></a>保留的關鍵字限制
 
@@ -31,5 +30,5 @@ ODBC 保留關鍵字清單將會位於：
 
 - [ODBC 保留關鍵字](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)。
 
-- 在  *ODBC 程式設計人員參考指南*，請參閱[附錄 c: SQL 文法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)。
+- 在  *ODBC 程式設計人員參考指南*，請參閱[附錄 c:SQL 文法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)。
 

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText (geometry Data Type)
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8ec4adefe4696312a499cf622bb5f20e4b71900f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62526fb80056ea9074f562d304e5d511e898953e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938706"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
  OGC 類型：**LineString**  
   

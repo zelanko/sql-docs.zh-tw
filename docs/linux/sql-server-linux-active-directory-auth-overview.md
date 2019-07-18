@@ -2,22 +2,21 @@
 title: Linux 上的 SQL Server 的 active Directory 驗證
 titleSuffix: SQL Server
 description: 這篇文章會提供在 Linux 上的 SQL Server 中的 Active Directory 驗證的概觀。
-author: rothja
 ms.date: 04/01/2019
-ms.author: jroth
-manager: craigg
+author: Dylan-MSFT
+ms.author: dygray
+ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241018"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834417"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 驗證
 

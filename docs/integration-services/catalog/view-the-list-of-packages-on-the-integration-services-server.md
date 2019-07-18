@@ -11,14 +11,18 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af38a6ad6134d3fa53d10d9f6abf2cbbf18fc08d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 383d45c66c59055761c0fd1f9f112e24f41bad29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65801414"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>檢視 Integration Services 伺服器上的封裝清單
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用下列兩種方式之一，檢視儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝清單。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  

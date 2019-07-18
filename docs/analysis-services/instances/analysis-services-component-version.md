@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62659055"
 ---
-# <a name="verify-analysis-services-cumulative-update-build-version"></a>確認 Analysis Services 累積更新組建版本
+# <a name="verify-analysis-services-cumulative-update-build-version"></a>驗證 Analysis Services 累積更新組建版本
 
 從 SQL Server 2017 開始，SQL Server Database Engine 組建版本號碼與 Analysis Services 組建版本號碼不相符。 雖然 Analysis Services 和 Database Engine 使用相同的安裝程式，建置系統每次使用是分開的。
 

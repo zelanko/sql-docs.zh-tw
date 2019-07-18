@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: e98863dcdd7f0cac2534f73c8c99b1d38e7b81b0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.reviewer: mathoma
+ms.openlocfilehash: 475c3dc1366e69dbc164547bbf5dfc8c06515c56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050475"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示字元中執行 資料庫測試助理
 
@@ -47,7 +46,7 @@ ms.locfileid: "56987744"
     
     b.  執行`Set @durationInMins=0`以便追蹤擷取指定的時間之後不會自動停止。
     
-    c.   若要設定每個追蹤檔案的檔案大小上限，請執行`Set @maxfilesize`。 建議的大小為 200 （以 mb 為單位）。
+    c.  若要設定每個追蹤檔案的檔案大小上限，請執行`Set @maxfilesize`。 建議的大小為 200 （以 mb 為單位）。
     
     d.  編輯`@Tracefile`設定追蹤檔案的唯一名稱。
     

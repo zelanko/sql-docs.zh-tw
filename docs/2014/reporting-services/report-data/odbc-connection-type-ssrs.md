@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4337babc43983523939f6c6aaa8329964fd49b23
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 58c6a7aeca7bd465b793b7fa81fc56d15c27f060
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107225"
 ---
 # <a name="odbc-connection-type-ssrs"></a>ODBC 連接類型 (SSRS)
   若要加入來自 ODBC 資料提供者的資料，您必須具有以 ODBC 類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ODBC 資料處理延伸模組為基礎。  
@@ -45,7 +44,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
   
   
 ##  <a name="Remarks"></a> 備註  
- ODBC 是在 OLEDB 之前的早期資料存取技術。 ODBC 只能支援關聯式資料來源。 ODBC 資料提供者稱為 *「驅動程式」*(Driver)。 ODBC 驅動程式由 Microsoft 和協力廠商提供。 例如，Microsoft Office 會安裝連接至 Office 檔案格式的 ODBC 驅動程式。  
+ ODBC 是在 OLEDB 之前的早期資料存取技術。 ODBC 只能支援關聯式資料來源。 ODBC 資料提供者稱為 *「驅動程式」* (Driver)。 ODBC 驅動程式由 Microsoft 和協力廠商提供。 例如，Microsoft Office 會安裝連接至 Office 檔案格式的 ODBC 驅動程式。  
   
  在建立 ODBC 連接字串之前，您必須已安裝 ODBC 驅動程式並建立機器或系統資料來源名稱 (DSN)。 若要成功擷取您想要的資料，您必須提供驅動程式支援的查詢語法。 參數支援會因驅動程式而異。 如需詳細資訊，請參閱所選驅動程式的特定主題，例如 [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)。  
   

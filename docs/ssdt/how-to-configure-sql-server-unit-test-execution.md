@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65090188"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>HOW TO：設定 SQL Server 單元測試執行
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：設定 SQL Server 單元測試執行
 您可以藉由設定測試專案，指定可控制如何執行 SQL Server 單元測試的數個設定。 這些組態設定會儲存在測試專案的 app.config 檔案中。 如果直接編輯這個檔案，新的值會出現在測試組態對話方塊中。  
   
 方案可以包含多個測試專案。 每個測試專案都會包含一個 app.config 檔案 (也就是一組組態設定)。 因此，方案可以包含幾組不同的單元測試 (每個測試專案各有一組)，設定以不同的方式執行。  
@@ -36,21 +36,21 @@ ms.locfileid: "51666757"
   
 #### <a name="to-specify-database-connection-strings"></a>若要指定資料庫連接字串  
   
-1.  在 [方案總管] 中，以滑鼠右鍵按一下單元測試專案，然後按一下 [SQL Server 測試組態]。  
+1.  在 [方案總管]  中，以滑鼠右鍵按一下單元測試專案，然後按一下 [SQL Server 測試組態]  。  
   
-    [SQL Server 測試組態 -'<projectname>'] 對話方塊隨即出現。  
+    [SQL Server 測試組態 -'<projectname>']  對話方塊隨即出現。  
   
-2.  在 [資料庫連接] 底下，您可以執行下列動作：  
+2.  在 [資料庫連接]  底下，您可以執行下列動作：  
   
     -   按一下要執行單元測試的資料庫連接。  
   
-    -   如果您要對不同的資料庫連接驗證測試執行，選取 [使用次要資料連接來驗證單元測試] 核取方塊，然後按一下清單中的資料庫連接。  
+    -   如果您要對不同的資料庫連接驗證測試執行，選取 [使用次要資料連接來驗證單元測試]  核取方塊，然後按一下清單中的資料庫連接。  
   
-    -   按一下 [新增連接]，將連接加入任一清單。 您也可以按一下 [編輯連接]，修改現有連接的設定。  
+    -   按一下 [新增連接]  ，將連接加入任一清單。 您也可以按一下 [編輯連接]  ，修改現有連接的設定。  
   
     這個步驟會建立 `ExecutionContext` 連接字串，用來執行單元測試中的測試指令碼。 如果您也指定了次要連接，也會建立 `PrivilegedContext` 連接字串。 這個連接會在單元測試的測試指令碼以外，測試與資料庫的互動。 如需詳細資訊，請參閱[連接字串和權限概觀](../ssdt/overview-of-connection-strings-and-permissions.md)。  
   
-3.  按一下 [確定]，關閉 [SQL Server 測試組態 -'<projectname>'] 對話方塊。  
+3.  按一下 [確定]  ，關閉 [SQL Server 測試組態 -'<projectname>']  對話方塊。  
   
 4.  重建測試專案來套用組態變更。  
   
@@ -58,25 +58,25 @@ ms.locfileid: "51666757"
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>若要將資料庫專案的結構描述部署到資料庫  
   
-1.  在 [方案總管] 中，以滑鼠右鍵按一下資料庫專案，然後按一下 [建置]。  
+1.  在 [方案總管]  中，以滑鼠右鍵按一下資料庫專案，然後按一下 [建置]  。  
   
     當您建置資料庫專案時，會產生 Transact\-SQL 指令碼。 在對資料庫執行這個指令碼時，會在該資料庫中重新建立資料庫專案的結構。  
   
 2.  選取要設定的測試專案。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下單元測試專案，然後按一下 [SQL Server 測試組態]。  
+3.  在 [方案總管]  中，以滑鼠右鍵按一下單元測試專案，然後按一下 [SQL Server 測試組態]  。  
   
-    [SQL Server 測試組態 -'<projectname>'] 對話方塊隨即出現。  
+    [SQL Server 測試組態 -'<projectname>']  對話方塊隨即出現。  
   
-4.  在 [部署] 底下，您可以執行下列動作：  
+4.  在 [部署]  底下，您可以執行下列動作：  
   
-    -   選取 [執行測試前自動部署資料庫專案] 核取方塊，確定對資料庫專案所做的任何結構描述變更都會先認可，然後才執行測試。  
+    -   選取 [執行測試前自動部署資料庫專案]  核取方塊，確定對資料庫專案所做的任何結構描述變更都會先認可，然後才執行測試。  
   
-    -   在 [資料庫專案] 底下，按一下要部署的資料庫專案，或按一下省略符號以瀏覽其他專案。 資料庫專案檔的副檔名為 .dbproj。  
+    -   在 [資料庫專案]  底下，按一下要部署的資料庫專案，或按一下省略符號以瀏覽其他專案。 資料庫專案檔的副檔名為 .dbproj。  
   
-    -   在 [部署組態] 底下，按一下要部署的目標專案組態。 選項包括 [偵錯]、[預設] 或 [發行]。 不過，如果您建立單元測試的組態，該組態也會顯示為其中一個選項。  
+    -   在 [部署組態]  底下，按一下要部署的目標專案組態。 選項包括 [偵錯]  、[預設]  或 [發行]  。 不過，如果您建立單元測試的組態，該組態也會顯示為其中一個選項。  
   
-5.  按一下 [確定]，關閉 [SQL Server 測試組態 -'<projectname>'] 對話方塊。  
+5.  按一下 [確定]  ，關閉 [SQL Server 測試組態 -'<projectname>']  對話方塊。  
   
     在測試回合開始時，系統會執行步驟 1 中所產生的 Transact\-SQL 指令碼。 這個動作會將結構描述部署到目標資料庫。  
   

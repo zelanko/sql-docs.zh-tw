@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - semantic search [SQL Server], system functions
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5f2a6364d002200cea1c04b35216dcec6dc0743d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042750"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>全文檢索搜尋與語意搜尋函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

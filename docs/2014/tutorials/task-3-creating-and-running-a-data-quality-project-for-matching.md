@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca7c735f00f4fa5c7baf102b26edb6634f57b90f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489235"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>工作 3：建立及執行資料品質專案以進行比對
   在這項工作中，您會針對比對活動建立資料品質專案，並針對已清理的供應商資料執行比對程序，以移除資料中的任何重複項。  
@@ -30,9 +30,9 @@ ms.locfileid: "56035851"
   
      ![新增資料品質專案-比對所選](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新增資料品質專案-比對所選")  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
-6.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案] 。  
+6.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案]  。  
   
 7.  按一下 **瀏覽**，然後選取**Cleansed Supplier List.xls**，這是清理活動的輸出檔案。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "56035851"
 12. 按一下 **下一步**轉為**匯出**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4:將結果匯出比對活動到 Excel 檔案](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [工作 4：將結果匯出比對活動到 Excel 檔案](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922408"
 ---
 # <a name="rds-usage-and-security"></a>RDS 使用方式與安全性
 使用本節中的資訊，設定您的伺服器，並快速地使用 RDS。 本節包含您可能需要實作 RDS，說明一些 RDS 和其他技術之間的索引鍵關聯性時所要採取的特定組態步驟，以及協助識別設定時，可能會遇到的問題的解決方案RDS 的方案。  

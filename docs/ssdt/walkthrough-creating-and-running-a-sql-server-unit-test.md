@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65101944"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 在這個逐步解說中，您要建立 SQL Server 單元測試，以確認數個預存程序的行為。 您可以建立 SQL Server 單元測試，協助識別可能會導致不正確之應用程式行為的程式碼缺失。 您可以執行 SQL Server 單元測試和應用程式測試，作為自動化測試套件的一部分。  
@@ -723,7 +723,7 @@ ms.locfileid: "58305956"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|成功|  
     |Sales_uspShowOrderDetailsTest|成功|  
-    |Sales_uspFillOrderTest|失敗會顯示下列錯誤：「ScalarValueCondition 條件 (scalarValueCondition2) 失敗: ResultSet 1 資料列 1 資料行 1: 值不相符，實際為 '-100'，預期為 '100'」。發生這個錯誤的原因是預存程序的定義包含次要錯誤。|  
+    |Sales_uspFillOrderTest|失敗並顯示下列錯誤：「ScalarValueCondition 條件 (scalarValueCondition2) 失敗: ResultSet 1 資料列 1 資料行 1: 值不相符，實際為 '-100'，預期為 '100'。」發生這個錯誤的原因是預存程序的定義包含次要錯誤。|  
   
     接下來，您將更正錯誤並重新執行測試。  
   

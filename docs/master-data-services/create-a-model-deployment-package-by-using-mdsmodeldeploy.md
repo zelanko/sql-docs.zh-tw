@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b04bd61a01e133f331dd5f93b5b3c7e328e39d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b080e704abb4a187ad975f6b1b7b94334648f92b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906660"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
 
@@ -30,7 +29,7 @@ ms.locfileid: "52761681"
   
  如果您想要部署只包含模型物件的封裝，您可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中改用模型部署精靈。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 1.  執行 MDSModelDeploy 工作所需的基本權限如下：  
@@ -95,7 +94,7 @@ ms.locfileid: "52761681"
   
 6.  按 Enter 鍵。 當成功建立套件之後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [使用 MDSModelDeploy 部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   

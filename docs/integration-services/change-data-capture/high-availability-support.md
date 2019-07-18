@@ -11,14 +11,18 @@ ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0dc24825795c3066ed92759597388e563a9eb4ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 610da7f6b7ef6fed5e3be6cb5ae2e7be53bf31fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728837"
 ---
 # <a name="high-availability-support"></a>高可用性支援
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服務是專為高可用性所設計。 以下功能會提供部分高可用性支援：  
   
 -   Oracle CDC 服務不使用任何檔案資源 (本機或其他資源)。 其完整狀態會儲存在目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中。 如此一來，如果執行此服務的電腦失敗，便可在使用相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的另一部電腦上輕鬆啟動此服務。 為了減少復原時間，長時間執行的 Oracle 交易會保留在目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的暫存資料表中，這樣就不需要在失敗之後重新掃描許多 Oracle 交易記錄 (或是重新啟動服務)。  

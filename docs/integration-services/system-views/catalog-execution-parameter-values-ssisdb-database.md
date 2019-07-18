@@ -11,14 +11,18 @@ ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05b8024ababbe6e0c07ee72e50d844609c7a816c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a018123080076cfcc3886395345e29df62feed79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714738"
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示執行執行個體期間由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝所使用的實際參數值。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - adding rows
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 444d6d79a1c381a9a65df17c3949ddba5020a51e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: e2efd0c9cddc2342b506e44438af0a8890efe941
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832506"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686579"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47832506"
     > [!NOTE]  
     > 如果所貼上的一或多個資料列無法為資料庫認可，您將會收到通知哪些資料列不被認可的訊息。  
   
-3.  輸入新資料列的資料。 若要貼上，請從 [編輯] 功能表選擇 [貼上]。  
+3.  輸入新資料列的資料。 若要貼上，請從 [編輯]  功能表選擇 [貼上]  。  
   
 4.  離開該資料列，讓資料庫對其進行認可。  
   

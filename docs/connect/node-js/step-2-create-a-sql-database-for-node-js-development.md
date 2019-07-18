@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 14be607f-f1dc-4201-a664-5fa4682cfaae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ac45caaa10fde65e5cad0699dae0618a3d8b528
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5876c0796c85889f8543ae8687eadb77679ae034
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799350"
 ---
 # <a name="step-2-create-a-sql-database-for-nodejs-development"></a>步驟 2︰建立 Node.js 開發的 SQL 資料庫
 

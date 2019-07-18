@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62938947"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件類別
   每當  的任何使用者，對於授與資料庫權限的資料庫專有動作，對陳述式權限發出 GRANT、REVOKE 或 DENY 時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  

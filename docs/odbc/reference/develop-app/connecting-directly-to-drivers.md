@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f5818d67659769ae104b3e98248c26f5b9fe8a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44b9de304069849e965fc335e130ae57d9ec8bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083159"
 ---
 # <a name="connecting-directly-to-drivers"></a>直接連線到驅動程式
 如所述[選擇資料來源或驅動程式](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)稍早在此區段中，某些應用程式不會希望完全使用資料來源。 相反地，他們想要直接連接到驅動程式。 **SQLDriverConnect**可讓應用程式直接連接到驅動程式但未指定資料來源。 就概念而言，就會在執行階段建立暫存的資料來源。  

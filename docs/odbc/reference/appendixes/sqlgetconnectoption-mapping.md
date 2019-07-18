@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0533a0ee616d4097793eca46c7d45a269142737
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086402"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 對應
-當應用程式呼叫**SQLGetConnectOption**透過 ODBC 3 *.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLGetConnectOption**透過 ODBC *3.x*驅動程式，會呼叫  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -52,4 +51,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  如 ODBC 定義的字串連接選項，請設定驅動程式管理員*Columnsize*呼叫中的引數**SQLGetConnectAttr**預先定義的最大長度 (SQL_MAX_OPTION_STRING_LENGTH);非連線選項，如*Columnsize*設為 0。  
   
- 適用於 ODBC 3 *.x*驅動程式，則驅動程式管理員不會再檢查，看看是否*選項*介於 SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 此驅動程式必須檢查的選項值的有效性。
+ 適用於 ODBC *3.x*驅動程式，則驅動程式管理員不會再檢查，看看是否*選項*介於 SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 此驅動程式必須檢查的選項值的有效性。

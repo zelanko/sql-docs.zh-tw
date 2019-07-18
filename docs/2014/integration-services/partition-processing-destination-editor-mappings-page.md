@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.mapping.f1
@@ -15,12 +14,12 @@ ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056695"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>資料分割處理目的地編輯器 (對應頁面)
   使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[對應]** 頁面，來將輸入資料行對應至資料分割資料行。  

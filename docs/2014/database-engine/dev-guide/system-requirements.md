@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SMO]
@@ -17,12 +15,12 @@ ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ed548f52fbb81a4a5a7b973af9bd58cb5a3a452
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781947"
 ---
 # <a name="system-requirements"></a>系統需求
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 會使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]`System.Data.SqlClient`物件驅動程式來連線及通訊的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

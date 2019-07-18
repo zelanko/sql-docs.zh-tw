@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be36bd8efc059c1a4f9b5ddf2cdd7faf32cf7dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107453"
 ---
 # <a name="sql-type-identifiers"></a>SQL 類型識別碼
 每個資料來源定義自己的 SQL 資料類型。 ODBC 定義型別識別項，並說明 SQL 資料類型，可能會對應至每個類型識別項的一般特性。 它是驅動程式專用的基礎資料來源中的每個資料類型對應至 ODBC SQL 類型識別碼的方式。  
@@ -31,4 +30,4 @@ ms.locfileid: "47740146"
   
  ODBC 定義各種不同的 SQL 型別識別項。 不過，此驅動程式不需要使用所有這些識別項。 相反地，它使用基礎資料來源只有在需要公開 （expose） 支援的 SQL 資料類型的識別碼。 如果基礎資料來源支援的 SQL 資料類型的任何型別識別項對應，此驅動程式可以定義其他的型別識別項。 如需詳細資訊，請參閱 <<c0> [ 驅動程式專屬資料型別、 描述項類型、 資訊類型、 診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- SQL 型別識別項的完整說明，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。
+ SQL 型別識別項的完整說明，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d:資料類型。

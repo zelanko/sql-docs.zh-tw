@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fc622f0f8d4e8d07594fca5ebead56502cfc3526
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 807c3f30a23b9629cf8dcbc68555a66176654c2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935283"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
 
@@ -37,34 +36,34 @@ ms.locfileid: "56019559"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入知識庫。  
   
-##  <a name="Import"></a> 從.dqs 檔案匯入知識庫  
+##  <a name="Import"></a> 從 .dqs 檔案匯入知識庫  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，按一下 **[新增知識庫]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，按一下 **[新增知識庫]** 。  
   
 3.  輸入知識庫的名稱。  
   
-4.  按一下 **[建立知識庫來源]** 的向下箭號，然後選取 **[從 DQS 檔案匯入]**。  
+4.  按一下 **[建立知識庫來源]** 的向下箭號，然後選取 **[從 DQS 檔案匯入]** 。  
   
-5.  針對 **[選取資料檔]** 按一下 **[瀏覽]**。  
+5.  針對 **[選取資料檔]** 按一下 **[瀏覽]** 。  
   
-6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 **[開啟]**。  
+6.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之 .dqs 檔案的資料夾，然後按一下檔案的名稱。 按一下 **[開啟]** 。  
   
 7.  確認 **[定義域]** 清單中是否顯示正確的知識庫和定義域。  
   
-8.  請選取您要執行的活動，然後按一下 **[建立]**。  
+8.  請選取您要執行的活動，然後按一下 **[建立]** 。  
   
-9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定] 。  
+9. 在 **[匯入知識庫]** 對話方塊中，確認狀態行指出已完成匯入。 按一下 [確定 **Deploying Office Solutions**]。  
   
-10. 完成您需要執行的知識探索、定義域管理或比對原則工作，然後按一下 **[完成]**。  
+10. 完成您需要執行的知識探索、定義域管理或比對原則工作，然後按一下 **[完成]** 。  
   
 11. 按一下 **[發行]** 發行知識庫中的知識，或是按一下 **[否]** ，不發行。  
   
-12. 如果您已發行知識庫，請按一下 **[確定]**。  
+12. 如果您已發行知識庫，請按一下 **[確定]** 。  
   
 13. 在 Data Quality Services 首頁上，確認此知識庫列在 **[最近使用的知識庫]** 底下。  
   

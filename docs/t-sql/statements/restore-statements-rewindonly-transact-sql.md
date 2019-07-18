@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df4a8ef1624d1f4244d96192bf4cb8486c92dd3d
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ffcb2612d84a7cd29044062ab264d6b40e3dfd64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943702"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 陳述式 - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  指定還原作業要用的邏輯或實體備份裝置。  
   
- { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
- 這是用來還原資料庫的 **sp_addumpdevice** 所建立之備份裝置的邏輯名稱，它必須遵循識別碼的規則。 如果備份裝置名稱是以變數 (**@**_logical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
+ 這是用來還原資料庫的 **sp_addumpdevice** 所建立之備份裝置的邏輯名稱，它必須遵循識別碼的規則。 如果備份裝置名稱是以變數 ( **@** _logical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
- {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- 可讓您從指定的磁碟或磁帶裝置中還原備份。 您應該使用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果裝置名稱是以變數 (**@**_physical\_backup\_device\_name\_var_) 的方式來提供，您可以將此裝置名稱指定為字串常數 (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
+ 可讓您從指定的磁碟或磁帶裝置中還原備份。 您應該使用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果裝置名稱是以變數 ( **@** _physical\_backup\_device\_name\_var_) 的方式來提供，您可以將此裝置名稱指定為字串常數 ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  如果所用的網路伺服器是用 UNC 名稱 (必須包含機器名稱)，請指定磁碟裝置類型。 如需如何使用通用命名慣例 (UNC) 名稱的詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
@@ -94,7 +94,7 @@ FROM <backup_device> [ ,...n ]
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  任何使用者都可以使用 RESTORE REWINDONLY。  
   
 ## <a name="see-also"></a>另請參閱  

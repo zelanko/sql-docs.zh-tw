@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050944"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 事件類別
   SP:CacheHit 事件類別指出預存程序在計畫快取中。  
@@ -34,7 +34,7 @@ ms.locfileid: "52816550"
 |DatabaseName|`nvarchar`|執行預存程序之資料庫的名稱。|35|是|  
 |EventClass|`int`|事件類型 = 38。|27|否|  
 |EventSequence|`int`|要求中之給定事件的順序。|51|否|  
-|EventSubClass|`int`|事件子類別的類型。<br /><br /> 1 = 執行內容點擊：在計畫快取中找到可用的執行計畫。<br /><br /> 2 = 編譯計畫點擊：在計畫快取中找到編譯的計畫。|21|是|  
+|EventSubClass|`int`|事件子類別的類型。<br /><br /> 1 = 執行內容點擊：在計畫快取中找不到可用的執行計畫。<br /><br /> 2 = 編譯計畫點擊：在計畫快取中找不到編譯的計畫。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  

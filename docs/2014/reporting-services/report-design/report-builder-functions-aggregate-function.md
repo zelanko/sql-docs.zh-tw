@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4de1651cb33413f6629a12ce409004b1372a2a5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f0c58b99b616c07e2144a30a9ea996b135b6f8a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105334"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>彙總函式 (報表產生器及 SSRS)
   傳回指定之運算式的自訂彙總，由資料提供者定義。  

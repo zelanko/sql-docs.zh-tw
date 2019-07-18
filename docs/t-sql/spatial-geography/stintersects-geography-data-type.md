@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects method
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 617edb15f042478982f62846947fad5caf5a0714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 355fd415dac0399385bd13bcabfe2eb095e08ed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936844"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47740236"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geography** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 **NULL**。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
@@ -13,17 +12,17 @@ ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48deee5b5928ff812a67f26a780ea765b05d5097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070690"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>收益圖表設定對話方塊 (採礦精確度圖表檢視)
   使用 **[收益圖設定]** 對話方塊，即可設定用於產生收益圖的設定。 如需收益圖的詳細資訊，請參閱[增益圖 &#40;Analysis Services - 資料採礦&#41;](data-mining/lift-chart-analysis-services-data-mining.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **母體**  
  輸入資料集裡正用來建立收益圖的案例數目。  
   
@@ -39,6 +38,6 @@ ms.locfileid: "48114181"
 ## <a name="see-also"></a>另請參閱  
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

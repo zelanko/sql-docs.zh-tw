@@ -11,14 +11,18 @@ ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fe0aff3fdf8a61a4c7d331c0123ed6486612b40
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f288d87648a925efc177d19646a4871d4cfff59b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715947"
 ---
-# <a name="catalogsetcustomizedloggingleveldescription"></a>catalog.set_customized_logging_level_description
+# <a name="catalogsetcustomizedloggingleveldescription"></a>catalog.set_customized_logging_level_description 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   變更現有自訂記錄層次的描述。 如需自訂記錄層次的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -34,12 +38,12 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  現有自訂記錄層次的名稱。  
   
- *level_name* 是 **nvarchar(128)**。  
+ *level_name* 是 **nvarchar(128)** 。  
   
  [ @level_description = ] *level_description*  
  指定的自訂記錄層次的新描述。  
   
- *level_description* 是 **nvarchar(1024)**。  
+ *level_description* 是 **nvarchar(1024)** 。  
   
 ## <a name="remarks"></a>Remarks  
   

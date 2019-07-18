@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a29577d6027c43fd35a8b27db8b402123c89a4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035647"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>將相依性加入 SQL Server 資源
   此主題描述如何使用容錯移轉叢集管理員嵌入式管理單元，將相依性加入至 AlwaysOn 容錯移轉叢集執行個體 (FCI) 資源。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  
   
--   **開始之前**  [限制事項](#Restrictions)、 [必要條件](#Prerequisites)  
+-   **開始之前：**[限制事項](#Restrictions)，[必要條件](#Prerequisites)  
   
--   **使用下列項目將相依性加入 SQL Server 資源** [Windows 容錯移轉叢集管理員](#WinClusManager)  
+-   **若要新增相依性加入 SQL Server 資源，使用：**[Windows 容錯移轉叢集管理員](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -44,13 +44,13 @@ ms.locfileid: "48086778"
   
  請考慮這些額外問題：  
   
--   具 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫功能的 FTP：對於使用具 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫功能之 FTP 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，您的 FTP 服務所使用的實體磁碟，必須與設定要使用 FTP 服務的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝相同。  
+-   使用 FTP[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複寫：針對的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]也會使用與 FTP[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複寫，您的 FTP 服務必須使用相同的實體磁碟的其中一個與安裝的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 FTP 服務設定。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源相依性：如果您將資源加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組，而且要仰賴該 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源以確保能夠使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 資源上新增相依性。 請不要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源上新增相依性。 若要確定執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的電腦維持在高度可用的狀態，請設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源，這樣如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源發生失敗，就不會影響到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源相依性：如果您新增至資源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]群組，且您有相依性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，以確保能夠[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可供使用，[!INCLUDE[msCoName](../../../includes/msconame-md.md)]建議您加入的相依性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式資源。 請不要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源上新增相依性。 若要確定執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的電腦維持在高度可用的狀態，請設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源，這樣如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源發生失敗，就不會影響到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組。  
   
--   檔案共用與印表機資源：安裝「檔案共用」資源或「印表機」叢集資源時，不應該將它們放在跟執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的電腦一樣的實體磁碟資源上。 如果它們都放在相同的實體磁碟資源上，效能可能會降低，而且執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的電腦可能會失去服務能力。  
+-   檔案共用與印表機資源：當您安裝的檔案共用資源或印表機 」 叢集資源時，它們不應該放在相同的實體磁碟資源做為正在執行的電腦上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果它們都放在相同的實體磁碟資源上，效能可能會降低，而且執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的電腦可能會失去服務能力。  
   
--   MS DTC 考慮事項：安裝作業系統並設定 FCI 之後，您必須使用容錯移轉叢集管理員嵌入式管理單元，設定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 在叢集中使用。 如果無法將 MS DTC 設定為搭配群集使用，也不會封鎖 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，但如果沒有正確設定 MS DTC，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式功能可能會受到影響。  
+-   MS DTC 考慮事項：在安裝作業系統並設定 FCI 之後，您必須設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)]分散式交易協調器 (MS DTC) 來搭配叢集使用容錯移轉叢集管理員嵌入式管理單元。 如果無法將 MS DTC 設定為搭配群集使用，也不會封鎖 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，但如果沒有正確設定 MS DTC，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式功能可能會受到影響。  
   
      如果將 MS DTC 安裝在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組中，而且您有其他相依於 MS DTC 的資源，當此群組離線或發生容錯移轉時，MS DTC 將無法使用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您將 MS DTC 放在本身具有實體磁碟資源的群組中 (如果可能)。  
   

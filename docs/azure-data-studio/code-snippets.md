@@ -2,21 +2,20 @@
 title: 建立可重複使用的程式碼片段
 titleSuffix: Azure Data Studio
 description: 了解如何建立和使用 Azure Data Studio 中的 SQL 程式碼片段
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959705"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>透過建立與使用程式碼片段，在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內快速地建立 TRANSACT-SQL (T-SQL) 指令碼
 
@@ -100,7 +99,6 @@ ms.locfileid: "53030262"
 2. 輸入 **sql**，然後您會看到您剛加入的兩個使用者程式碼片段：*sqlCreateTable2* 和 *sqlSelectTop5*。
 
 選取其中一個新的程式碼片段，並進行測試 ！
-
 
 
 ## <a name="additional-resources"></a>其他資源

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944622"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
 本節包含適用於 MySQL 的說明主題的 SQL Server Migration Assistant (SSMA)。  
@@ -25,7 +24,7 @@ ms.locfileid: "51671338"
   
 |||  
 |-|-|  
-|**主題**|**說明**|  
+|**主題**|**描述**|  
 |[進階物件選取項目&#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|使用**進階物件選取**對話方塊來尋找資料庫物件所使用的篩選準則，然後選取或清除這些物件。|  
 |[評定報告&#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|若要檢視 MySQL 物件轉換為 TRANSACT-SQL 語法的結果，以估計的時間和 SQL server 移轉的複雜度，請使用報表。|  
 |[連線至 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|使用**連接到 MySQL**對話方塊，即可連接至您想要移轉的 MySQL 資料庫。|  

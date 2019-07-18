@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 900fdcafe18c2a885ea7191ce8619e46e8f0f963
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2b1472ccbcdf888e7772bb94f47993c5e8978746
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531819"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729331"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52531819"
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay 的優點  
  與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]相似之處在於，您可以使用 Distributed Replay，針對已升級的測試環境重新執行擷取的追蹤。 而與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不同的是，Distributed Replay 不限於從單一電腦重新執行工作負載。  
   
- Distributed Replay 提供比 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 更容易擴充的方案。 您可以使用 Distributed Replay，從多部電腦重新執行工作負載，並有效地模擬關鍵任務的工作負載。  
+ Distributed Replay 提供比 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]更容易擴充的方案。 您可以使用 Distributed Replay，從多部電腦重新執行工作負載，並有效地模擬關鍵任務的工作負載。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可以使用多部電腦重新執行追蹤資料，並模擬任務關鍵性工作負載。 您可以使用 Distributed Replay 進行應用程式相容性測試、效能測試或容量計畫。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52531819"
   
 |工具|使用時機...|  
 |----------|---------------|  
-|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|您想要在單一電腦上使用傳統的重新執行機制。 尤其，您需要逐行偵錯功能，例如 [步驟]、[執行至資料指標處] 及 [切換中斷點] 命令。<br /><br /> 您想要重新執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤。|  
+|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|您想要在單一電腦上使用傳統的重新執行機制。 尤其，您需要逐行偵錯功能，例如 [步驟]  、[執行至資料指標處]  及 [切換中斷點]  命令。<br /><br /> 您想要重新執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤。|  
 |Distributed Replay|您想要評估應用程式相容性。 例如，您想要測試 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和作業系統升級狀況、硬體升級或索引微調。<br /><br /> 擷取之追蹤中的並行過高，導致單一重新執行用戶端無法充分模擬它。|  
   
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 概念  

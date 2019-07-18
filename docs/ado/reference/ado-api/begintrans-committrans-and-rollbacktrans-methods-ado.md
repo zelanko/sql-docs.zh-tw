@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c796cefc03092e944520a6517bc31c585a2dc42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920520"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
 這些交易方法管理內處理的交易[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，如下所示：  

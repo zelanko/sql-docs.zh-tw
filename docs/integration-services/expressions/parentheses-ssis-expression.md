@@ -15,14 +15,18 @@ ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99ab67a88006579d61ba4d084d37b60d5b80bd45
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5eaf16b94271bb27808571c9bf219e41d8a1d868
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276917"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725065"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (括號) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   識別運算式的評估順序。 加上括號的運算式擁有最高的評估優先順序。 加上括號的巢狀運算式會以由內向外的順序評估。  
   
  括號還可用來讓複雜的運算式更易於了解。  

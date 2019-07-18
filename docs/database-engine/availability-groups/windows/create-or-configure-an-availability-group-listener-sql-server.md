@@ -16,65 +16,23 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: fae8d782dfcc4fd5e3c653cf5ac37f1323ebf59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510327"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」(Availability Group Listener)。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」  (Availability Group Listener)。  
   
 > [!IMPORTANT]  
 >  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
   
--   **開始之前：**  
-  
-     [這個可用性群組已經有接聽程式？](#DoesListenerExist)  
-  
-     [限制事項](#Restrictions)  
-  
-     [建議](#Recommendations)  
-  
-     [必要條件](#Prerequisites)  
-  
-     [可用性群組接聽程式之 DNS 名稱的需求](#DNSnameReqs)  
-  
-     [Windows 權限](#WinPermissions)  
-  
-     [SQL Server 權限](#SqlPermissions)  
-  
--   **若要建立或設定可用性群組接聽程式，使用：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **疑難排解**  
-  
-     [由於 Active Directory 配額而無法建立可用性群組接聽程式](#ADQuotas)  
-  
--   **後續操作：建立可用性群組接聽程式之後**  
-  
-     [MultiSubnetFailover 關鍵字和相關聯的功能](#MultiSubnetFailover)  
-  
-     [RegisterAllProvidersIP 設定](#RegisterAllProvidersIP)  
-  
-     [HostRecordTTL 設定](#HostRecordTTL)  
-  
-     [停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼](#SampleScript)  
-  
-     [後續建議](#FollowUpRecommendations)  
-  
-     [為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="DoesListenerExist"></a> 這個可用性群組已經有接聽程式？  
+ 
+##  <a name="DoesListenerExist"></a> 這個可用性群組已經有接聽程式？  
+
  **若要判斷可用性群組的接聽程式是否已經存在**  
   
 -   [檢視可用性群組接聽程式屬性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
@@ -82,14 +40,14 @@ ms.locfileid: "53213587"
 > [!NOTE]  
 >  如果接聽程式已存在，而且您想要建立其他接聽程式，請參閱本主題稍後的 [為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)。  
   
-###  <a name="Restrictions"></a> 限制事項  
+##  <a name="Restrictions"></a> 限制事項  
   
 -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您只可以為每個可用性群組建立一個接聽程式。 通常每個可用性群組只需要一個接聽程式。 但是，某些客戶情況下一個可用性群組需要多個接聽程式。   透過 SQL Server 建立接聽程式之後，您可以使用適用容錯移轉叢集的 Windows PowerShell 或 WSFC 容錯移轉叢集管理員建立額外的接聽程式。 如需詳細資訊，請參閱本主題稍後的 [為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)。  
   
-###  <a name="Recommendations"></a> 建議  
+##  <a name="Recommendations"></a> 建議  
  建議為多重子網路組態使用靜態 IP 位址，但並不是必要的。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
@@ -106,19 +64,19 @@ ms.locfileid: "53213587"
 > [!IMPORTANT]  
 >  NetBIOS 只會辨識 DNS 名稱中的前 15 個字元。 如果您有兩個由相同 Active Directory 所控制的 WSFC 叢集，而且嘗試使用超過 15 個字元的名稱以及完全相同的 15 個字元前置詞，在這兩個叢集中建立可用性群組接聽程式，就會收到一則錯誤，指出系統無法讓虛擬網路名稱資源上線。 如需有關 DNS 名稱之前置詞命名規則的詳細資訊，請參閱＜ [指派網域名稱](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx)＞。  
   
-###  <a name="WinPermissions"></a> Windows 權限  
+##  <a name="WinPermissions"></a> Windows 權限  
   
-|[權限]|連結|  
+|權限|連結|  
 |-----------------|----------|  
-|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意：在某些組織中，安全性原則會禁止將 [建立電腦物件] 權限授與個別使用者帳戶。|＜Steps for configuring the account for the person who installs the cluster＞(為叢集安裝人員設定帳戶的步驟)，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)<br /><br /> ＜Steps for prestaging the cluster name account＞(預先設置叢集名稱帳戶的步驟)，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)|  
-|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。|＜Steps for prestaging an account for a clustered service or application＞(為叢集服務或應用程式預先設置帳戶的步驟)，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)。|  
+|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」  權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」  權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意:在某些組織中，安全性原則會禁止將 [建立電腦物件]  權限授與個別使用者帳戶。|＜Steps for configuring the account for the person who installs the cluster＞(為叢集安裝人員設定帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)<br /><br /> ＜Steps for prestaging the cluster name account＞(預先設置叢集名稱帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)|  
+|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。|＜Steps for prestaging an account for a clustered service or application＞(為叢集服務或應用程式預先設置帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)。|  
   
 > [!TIP]  
 >  一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。  
   
-###  <a name="SqlPermissions"></a> SQL Server 權限  
+##  <a name="SqlPermissions"></a> SQL Server 權限  
   
-|工作|[權限]|  
+|工作|權限|  
 |----------|-----------------|  
 |建立可用性群組接聽程式|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |修改現有的可用性群組接聽程式|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -132,13 +90,13 @@ ms.locfileid: "53213587"
   
 1.  在 [物件總管] 中，連接到裝載可用性群組之主要複本的伺服器執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [AlwaysOn 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  按一下您要設定其接聽程式的可用性群組，然後選擇下列其中一個替代方式：  
   
-    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式] 節點，然後選取 [新增接聽程式] 命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的[加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
+    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式]  節點，然後選取 [新增接聽程式]  命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的[加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
   
-    -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式] 節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性] 命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]**。  
+    -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式]  節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性]  命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]** 。  
   
 ###  <a name="AddAgListenerDialog"></a> 新增可用性群組接聽程式 (對話方塊)  
  **接聽程式 DNS 名稱**  
@@ -270,19 +228,19 @@ ms.locfileid: "53213587"
   
  **NET Framework 3.5 或 OLEDB 不支援 MultiSubnetFailover=True**  
   
- **問題：** 如果您的可用性群組或容錯移轉叢集執行個體具有取決於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的 50% 用戶端連接要求可能會達到連接逾時。  
+ **問題：** 如果您的可用性群組或容錯移轉叢集執行個體具有相依於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的用戶端連線要求中，可能有 50% 會連線逾時。  
   
- **因應措施：** 建議您執行下列其中一項工作。  
+ **因應措施：** 建議您執行下列任一項工作。  
   
 -   如果您沒有操作叢集資源的權限，請將連接逾時變更為 30 秒 (此值會產生 20 秒 TCP 逾時期間加上 10 秒緩衝時間)。  
   
      **優點**：如果發生跨子網路的容錯移轉，用戶端復原時間很短。  
   
-     **缺點**：半數的用戶端連接需要 20 秒以上。  
+     **缺點**：半數的用戶端連線需要 20 秒以上  
   
 -   如果您有操作叢集資源的權限，比較建議的作法是將可用性群組接聽程式的網路名稱設定為 `RegisterAllProvidersIP=0`。 如需詳細資訊，請參閱本節稍後的＜RegisterAllProvidersIP 設定＞。  
   
-     **優點：** 您不需要增加用戶端連接逾時值。  
+     **優點：** 您不需要增加用戶端連線逾時值。  
   
      **缺點：** 如果發生跨子網路的容錯移轉，用戶端復原時間可能長達 15 分鐘或以上，取決於您的 **HostRecordTTL** 設定和跨網站 DNS/AD 複寫排程設定。  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - errors [SQL Server], logs
 - SQL Server Agent, errors
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0f2e40233d679bf79b0a4e3ee944ad10b57a19af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36525a36df94592368aff346dd13c781dba4299
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608426"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681723"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server Agent 錯誤記錄檔
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

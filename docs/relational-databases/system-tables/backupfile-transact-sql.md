@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091859"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47842976"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|備份組所在檔案的唯一識別碼。 參考**backupset （backup_set_id)**。|  
+|**backup_set_id**|**int**|備份組所在檔案的唯一識別碼。 參考**backupset （backup_set_id)** 。|  
 |**first_family_number**|**tinyint**|這個備份檔所在的第一個媒體的家族號碼。 可以是 NULL。|  
 |**first_media_number**|**smallint**|這個備份檔所在的第一個媒體的媒體號碼。 可以是 NULL。|  
 |**filegroup_name**|**nvarchar(128)**|備份的資料庫檔所在之檔案群組的名稱。 可以是 NULL。|  
@@ -46,8 +45,8 @@ ms.locfileid: "47842976"
 |**logical_name**|**nvarchar(128)**|備份檔案的邏輯名稱。 可以是 NULL。|  
 |**physical_drive**|**nvarchar(260)**|實體磁碟機或分割區名稱。 可以是 NULL。|  
 |**physical_name**|**nvarchar(260)**|實體 (作業系統) 檔案名稱的其餘部份。 可以是 NULL。|  
-|**state**|**tinyint**|這是檔案的狀態，它有下列幾種：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = 卸除<br /><br /> 注意： 值為 5 會略過，讓這些值對應至資料庫狀態的值。|  
-|**state_desc**|**nvarchar(64)**|這是檔案狀態的描述，它有下列幾種：<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state**|**tinyint**|這是檔案的狀態，它有下列幾種：<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = 卸除<br /><br /> 注意:因此，這些值對應至資料庫狀態的值，則會略過的值是 5。|  
+|**state_desc**|**nvarchar(64)**|這是檔案狀態的描述，它有下列幾種：<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|建立檔案的記錄序號。|  
 |**drop_lsn**|**numeric(25,0)**|卸除檔案的記錄序號。 可以是 NULL。<br /><br /> 如果檔案尚未卸除，這個值就是 NULL。|  
 |**file_guid**|**uniqueidentifier**|檔案的唯一識別碼。|  

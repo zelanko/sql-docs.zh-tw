@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103154"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 伺服器可以將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 事件寫入 SharePoint 統一記錄服務 (ULS) 追蹤記錄。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定類別目錄。  
@@ -40,7 +39,7 @@ ms.locfileid: "56025139"
 ##  <a name="bkmk_general"></a> 一般 ULS 記錄建議  
  下表將針對監視 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境，列出建議的事件類別目錄和層級。 記錄事件時，每個項目都會包含記錄事件的時間、處理序名稱，以及執行緒識別碼。  
   
-|類別目錄|層級|描述|  
+|Category|層級|描述|  
 |--------------|-----------|-----------------|  
 |[資料庫]|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
 |一般|「詳細資訊」|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  
@@ -52,7 +51,7 @@ ms.locfileid: "56025139"
   
 1.  在 SharePoint 管理中心內  
   
-2.  按一下 **[監視]**。  
+2.  按一下 **[監視]** 。  
   
 3.  按一下 **[報表]** 群組中的 **[設定診斷記錄]** 。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "56025139"
   
 -   **SOAP 用戶端 Proxy**  
   
--   如果您遇到組態設定方面的問題，請加入 **[組態頁面]**。  
+-   如果您遇到組態設定方面的問題，請加入 **[組態頁面]** 。  
   
  您可以使用下列 PowerShell 指令程式來檢閱所有目前伺服器陣列診斷記錄設定：  
   
@@ -102,7 +101,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括適用於 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄] 和 "Power View" [區域] 之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括適用於 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄]  和 "Power View" [區域]  之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  
@@ -110,7 +109,7 @@ Get-SPDiagnosticConfig
 |報表伺服器目錄||  
 |報表伺服器區塊||  
 |報表伺服器清除||  
-|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL http://localhost:80/ReportServer。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
+|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL http://localhost:80/ReportServer 。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
 |報表伺服器密碼編譯||  
 |報表伺服器資料延伸模組||  
 |報表伺服器資料庫輪詢||  
@@ -126,7 +125,7 @@ Get-SPDiagnosticConfig
 |報表伺服器提供者||  
 |報表伺服器轉譯||  
 |報表伺服器報表預覽||  
-|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：Evaluation<br /><br /> MediumEvaluation 複本：剩下 180 天|  
+|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU:Evaluation<br /><br /> MediumEvaluation 複本：剩下 180 天|  
 |報表伺服器執行工作||  
 |報表伺服器執行要求||  
 |報表伺服器排程||  

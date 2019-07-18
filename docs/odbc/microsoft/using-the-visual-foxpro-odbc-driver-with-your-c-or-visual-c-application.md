@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual FoxPro ODBC Driver 與 C 或 Visual c + + 應用程式 |Microsoft Docs
+title: 使用 Visual FoxPro ODBC Driver 與 C 或視覺效果C++應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d1fb400fec20017fc37a937b2ca5d911e8413bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087969"
 ---
-# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>使用 Visual FoxPro ODBC Driver 與 C 或 Visual c + + 應用程式
-C 或 c + + 應用程式傳送與通訊 Visual FoxPro 資料[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)或是[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro 陳述式。 此陳述式可以包含下列內容：  
+# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>使用 Visual FoxPro ODBC Driver 與 C 或 VisualC++應用程式
+您的 C 或C++應用程式傳送與通訊 Visual FoxPro 資料[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)或是[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro 陳述式。 此陳述式可以包含下列內容：  
   
 -   Visual FoxPro 語言中，原生的 SQL 陳述式這類[DROP TABLE](../../odbc/microsoft/drop-table-command.md)命令。  
   
@@ -35,7 +34,7 @@ C 或 c + + 應用程式傳送與通訊 Visual FoxPro 資料[SQLExecute](../../o
   
  如需有關 SQL Visual FoxPro 的原生的詳細資訊，請參閱 Visual FoxPro 文件。  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>範例： 使用 Visual FoxPro ODBC Driver 與 C 或 c + + 應用程式  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>範例使用 Visual FoxPro ODBC Driver，使用您的 c# 或C++應用程式  
  下列範例會使用 ODBC C API 來擷取儲存在名為 TasTrade Microsoft® Visual FoxPro 範例資料庫中的 employee 資料表中的 [last_name] 欄位的資料。 這個資料庫隨附 Visual FoxPro，預設會在下列位置安裝：  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  

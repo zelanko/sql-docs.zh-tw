@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 608b14de16b338225be7e500a77cb612b5ee9312
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013569"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 和 sql:limit-value (SQLXML 4.0)
   XML 大量載入會根據 `sql:limit-field` 和 `sql:limit-value` 註解的定義來處理這些註解。 如需詳細資訊，請參閱 <<c0> [ 篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)。</c0>  

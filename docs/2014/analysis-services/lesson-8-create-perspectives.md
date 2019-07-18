@@ -1,22 +1,21 @@
 ---
-title: 第 9 課： 建立檢視方塊 |Microsoft Docs
+title: 第 9 課：建立檢視方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83d9b10af87926a26b2a671ff162163d3c8fa62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078246"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 課：建立檢視方塊
   在這一課，您將建立一個 [網際網路銷售] 檢視方塊。 檢視方塊會定義可檢視之模型的子集，而這類子集會提供有焦點的商務特有或應用程式特有視點。 使用者使用檢視方塊連接到模型時，只會將那些模型物件 (資料表、資料行、量值、階層和 KPI) 視為該檢視方塊中定義的欄位。  
@@ -27,10 +26,10 @@ ms.locfileid: "48163608"
   
  如需詳細資訊，請參閱[檢視方塊 &#40;SSAS 表格式&#41;](tabular-models/perspectives-ssas-tabular.md)。  
   
- 完成本課程的估計時間： **5 分鐘**  
+ 估計的時間才能完成這一課：**5 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>建立檢視方塊  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48163608"
   
 1.  在模型設計師中，按一下**模型**功能表，然後再按一下**觀點**。  
   
-2.  在 [檢視方塊] 對話方塊中，按一下 [新增檢視方塊]。  
+2.  在 [檢視方塊]  對話方塊中，按一下 [新增檢視方塊]  。  
   
 3.  若要重新命名檢視方塊，請按兩下**新的檢視方塊 1**資料行標題，然後按`Internet Sales`。  
   
@@ -46,9 +45,9 @@ ms.locfileid: "48163608"
   
      請注意，您從此檢視方塊中排除了 Customer 資料表及其所有資料行。 稍後，您將在第 12 課中使用 [在 Excel 中進行分析] 功能測試此檢視方塊。 Excel 樞紐分析表欄位清單將包含 Customer 資料表之外的每個資料表。  
   
-5.  驗證您所做的選擇，確定未核取 [Customer] 資料表，然後按一下 [確定]  
+5.  驗證您所做的選擇，確定未核取 [Customer]  資料表，然後按一下 [確定]   
   
 ## <a name="next-steps"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
+ 若要繼續本教學課程，請移至下一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
   
   

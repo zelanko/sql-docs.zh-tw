@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871125"
 ---
 # <a name="system-databases"></a>系統資料庫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括下列系統資料庫。  

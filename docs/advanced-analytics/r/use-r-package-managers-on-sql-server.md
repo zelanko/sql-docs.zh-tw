@@ -3,17 +3,16 @@ title: 使用 R 套件管理員 SQL Server Machine Learning 服務
 description: 使用標準的 R 命令，例如 install.packages 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d53725e708a5aaf6fb8476ce2d7408ffcfa7f102
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962401"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 SQL Server 上安裝 R 套件的 R 套件管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "58510385"
 
 ## <a name="install-a-package-using-rgui"></a>使用 RGui 安裝封裝
 
-1. [判斷執行個體文件庫的位置](installing-and-managing-r-packages.md)。 瀏覽至安裝 R 工具的資料夾。 例如，SQL Server 2017 的預設執行個體的預設路徑如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [判斷執行個體文件庫的位置](../package-management/default-packages.md)。 瀏覽至安裝 R 工具的資料夾。 例如，SQL Server 2017 的預設執行個體的預設路徑如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. 以滑鼠右鍵按一下 RGui.exe，然後選取**系統管理員身分執行**。 如果您沒有必要的權限，請連絡資料庫管理員，並提供所需的套件清單。
 

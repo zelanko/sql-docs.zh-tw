@@ -11,14 +11,18 @@ ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc444ff27f948ac452e6da05c6ba33113fb62f39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70dcdbce74a138a9228928df86adc2405dee98e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726553"
 ---
-# <a name="preview"></a>預覽
+# <a name="preview"></a>預覽 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[預覽]** 對話方塊可以預覽 SAP BW 來源即將擷取的資料。  
   
 > [!IMPORTANT]  
@@ -36,7 +40,7 @@ ms.locfileid: "58289914"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 來源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 來源。  
   
 3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   

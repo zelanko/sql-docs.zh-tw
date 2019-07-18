@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63185392"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>第 6 課：建立及處理預測 （基本資料採礦教學課程）
   您已經定型、測試及瀏覽您所建立的資料採礦模型。 現在，您可準備開始使用模型來識別最有可能對新的目標郵寄促銷活動做出回應的人。  

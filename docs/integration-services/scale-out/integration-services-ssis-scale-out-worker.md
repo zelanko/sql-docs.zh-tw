@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: bb649888638ec4e194d64679b73fc69806664fc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65718463"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 相應放大背景工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out Worker 會執行 Scale Out Worker 服務，以從 Scale Out Master 提取執行工作。 然後，背景工作會使用 `ISServerExec.exe` 在本機執行套件。
 

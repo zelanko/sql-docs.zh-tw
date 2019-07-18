@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187925"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
   中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 例如，如果授與使用者資料表 `myTable`的 SELECT 或 INSERT 權限，則下列查詢會傳回一個資料列。  
@@ -102,7 +102,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>中繼資料可見性組態的優點和限制  
  中繼資料可見性組態在整體安全性計畫中扮演著重要的角色。 但在某些情況中，技術純熟又執意操作的使用者還是能夠強制洩漏某些中繼資料。 我們建議您將中繼資料權限部署為全面防禦中的一環。  
   
- 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
+ 強制發出錯誤訊息中的中繼資料，理論上是可行的，做法是在查詢中操縱述詞評估的順序。 這種「嘗試與錯誤攻擊」  的可能性不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有。 它由關聯式代數所允許的關聯式和交換式轉換所暗示。 您可以限制錯誤訊息所傳回的資訊來減輕此風險。 若要以此方式進一步限制中繼資料的可見性，您可以用追蹤旗標 3625 來啟動伺服器。 此追蹤旗標限制錯誤訊息所顯示的資訊量。 而這有助於防止強制洩漏。 代價是錯誤訊息會簡單一些，用於偵錯時可能會比較困難。 如需詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
  下列的中繼資料不會被強制洩漏：  
   

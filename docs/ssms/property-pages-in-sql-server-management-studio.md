@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b9c399e30e39cc07a27d805032f2176541d9df9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 095f446192beb8441e0587bbf3ef6af0307d0208
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735532"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681160"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的屬性頁
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,5 +32,5 @@ ms.locfileid: "47735532"
 |**字母順序**|依字母順序排序來列出所選物件的所有屬性和屬性值。|  
 |屬性名稱|方格的第一個資料行列出屬性名稱。|  
 |屬性|方格的第二個資料行列出屬性值。|  
-|描述窗格|描述窗格在頁面底端，它會顯示屬性類型和屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述] 命令，來關閉和開啟屬性的描述。|  
+|描述窗格|描述窗格在頁面底端，它會顯示屬性類型和屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述]  命令，來關閉和開啟屬性的描述。|  
   

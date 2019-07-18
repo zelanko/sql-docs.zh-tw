@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029634"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "52747882"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|這個資料行出現在其中的資料列內位移。|  
 |**collationid**|**int**|資料行定序的識別碼。 以非字元為基礎的資料行是 NULL。|  
-|**語言**|**int**|資料行的語言識別碼。|  
+|**language**|**int**|資料行的語言識別碼。|  
 |**status**|**int**|用來描述資料行或參數屬性的點陣圖：<br /><br /> **0x08** = 資料行允許 null 值。<br /><br /> **0x10** = ANSI 填補生效時**varchar**或是**varbinary**加入資料行。 保留尾端的空白**varchar**並保留尾端的零**varbinary**資料行。<br /><br /> **0x40** = 參數是一個 OUTPUT 參數。<br /><br /> **0x80** = 資料行是識別欄位。|  
 |**type**|**int**|實際儲存類型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**usertype**|**tinyint**|從使用者定義資料類型的識別碼[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  

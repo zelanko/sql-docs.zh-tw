@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 914ec6be6d73bf6411a700ab6fc9586743c40527
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: a2dfe7b9efa78d03a2233eedaa040e47d6f2b25c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067659"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 功能和功能
 
@@ -35,7 +34,7 @@ WideWorldImporters 被設計來展示的許多重要功能的 SQL Server，包�
 |資料列層級安全性 (RLS)|資料列層級安全性 (RLS) 用來限制存取權 [客戶] 資料表中，根據角色成員資格。 每個銷售領域有角色和使用者。 若要查看作用中限制，請使用對應的指令碼範例-script.zip RLS 存取的一部分[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
 |即時作業分析|（完整版的資料庫）核心交易資料表`Sales.InvoiceLines`和`Sales.OrderLines`兩者都有支援有效率的分析查詢的執行上作業的工作負載的影響降到最低的交易式資料庫中的非叢集資料行存放區索引。 在相同的資料庫執行交易和分析也稱為[混合式交易/分析處理 (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP))。 若要查看此動作，請使用對應的指令碼範例-script.zip，也就是組件中的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
 |PolyBase|若要查看此 PolyBase 外部資料表使用公用資料集，裝載於 Azure blob 儲存體，在動作中，請使用對應的指令碼範例-script.zip，也就是組件中的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
-|In-Memory OLTP|（完整版的資料庫）資料表類型是所有記憶體最佳化，以便從記憶體最佳化的資料表值參數 (Tvp) 都會獲益。<br/><br/>兩個監視資料表`Warehouse.VehicleTemperatures`和`Warehouse.ColdRoomTemperatures`，是記憶體最佳化。 記憶體最佳化可讓 ColdRoomTemperatures 資料表填入以較高的速度，比傳統以磁碟為基礎的資料表。 VehicleTemperatures 資料表保存 JSON 承載，並朝向 IoT 案例的擴充功能可用於。 進一步 VehicleTemperatures 資料表本身涉及 EventHubs、 Stream Analytics 與 Power BI 的案例。<br/><br/>預存程序`Website.RecordColdRoomTemperatures`原生編譯以進一步改善記錄冷聊天室溫度的效能。<br/><br/>若要查看作用中記憶體內部 OLTP 的範例，請參閱工作負載-drivers.zip，也就是組件中的車輛位置的工作負載驅動程式的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
+|記憶體內部 OLTP|（完整版的資料庫）資料表類型是所有記憶體最佳化，以便從記憶體最佳化的資料表值參數 (Tvp) 都會獲益。<br/><br/>兩個監視資料表`Warehouse.VehicleTemperatures`和`Warehouse.ColdRoomTemperatures`，是記憶體最佳化。 記憶體最佳化可讓 ColdRoomTemperatures 資料表填入以較高的速度，比傳統以磁碟為基礎的資料表。 VehicleTemperatures 資料表保存 JSON 承載，並朝向 IoT 案例的擴充功能可用於。 進一步 VehicleTemperatures 資料表本身涉及 EventHubs、 Stream Analytics 與 Power BI 的案例。<br/><br/>預存程序`Website.RecordColdRoomTemperatures`原生編譯以進一步改善記錄冷聊天室溫度的效能。<br/><br/>若要查看作用中記憶體內部 OLTP 的範例，請參閱工作負載-drivers.zip，也就是組件中的車輛位置的工作負載驅動程式的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
 |叢集資料行存放區索引|（完整版的資料庫）資料表`Warehouse.StockItemTransactions`使用叢集資料行存放區索引。 此資料表中的資料列數目預期變大，而且叢集資料行存放區索引大幅減少磁碟上資料表的大小，並可改善查詢效能。 此資料表上所作的修改都只能插入-沒有任何更新/刪除在線上的工作負載-這個資料表上和叢集資料行存放區索引也會執行插入的工作負載。|
 |動態資料遮罩|資料庫結構描述中的資料遮罩已套用至資料表中的供應商，保留銀行詳細資料`Purchasing.Suppliers`。 非系統管理人員不會有存取此資訊。|
 |永遠加密|Always Encrypted 的示範包含可下載 samples.zip，也就是組件中的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。 示範建立加密金鑰，使用加密的敏感性資料，以及將資料插入資料表的小型範例應用程式的資料表。|
@@ -43,7 +42,7 @@ WideWorldImporters 被設計來展示的許多重要功能的 SQL Server，包�
 |全文檢索索引|全文檢索索引會改善搜尋的人員、 客戶和 StockItems。 只有當您安裝在您的 SQL Server 執行個體上的全文檢索索引，索引會套用至查詢。 非持續性的計算資料行用來建立的全文檢索索引 StockItems 資料表中的資料。<br/><br/>`CONCAT` 用於串連欄位以建立的全文檢索索引的 SearchData。<br/>若要啟用全文檢索索引，在此範例中使用，請在資料庫中執行下列陳述式：<br/><br/>`EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>在程序建立預設全文檢索目錄如果其中一個尚未存在，則搜尋檢視取代這些檢視的全文檢索版本）。<br/><br/>請注意，使用 SQL Server 中的全文檢索索引需要全文檢索安裝時選取選項。 Azure SQL Database 不需要和特定組態資訊才能啟用全文檢索索引。|
 |索引的保存計算資料行|編製索引 SupplierTransactions 和 CustomerTransactions 中使用的保存計算資料行。|
 |檢查條件約束|相對複雜的 check 條件約束是在`Sales.SpecialDeals`。 這可確保一，而且只有其中一個 DiscountAmount，DiscountPercentage，且會設定 UnitPrice。|
-|Unique 條件約束|多對多建構 （和唯一條件約束） 所設定的`Warehouse.StockItemStockGroups`。|
+|UNIQUE 條件約束|多對多建構 （和唯一條件約束） 所設定的`Warehouse.StockItemStockGroups`。|
 |資料表資料分割|（完整版的資料庫）資料表`Sales.CustomerTransactions`並`Purchasing.SupplierTransactions`兩者都分割所使用的資料分割函數的年度`PF_TransactionDate`和分割區配置`PS_TransactionDate`。 資料分割用來改善大型資料表管理能力。|
 |清單處理|類型的範例資料表`Website.OrderIDList`提供。 它由範例程序`Website.InvoiceCustomerOrders`。 程序使用通用資料表運算式 (Cte)、 TRY/CATCH，JSON_MODIFY，XACT_ABORT、 NOCOUNT、 擲回和 XACT_STATE 來示範如何處理訂單，而不是只是單一訂單，以減少來回行程，從應用程式清單database engine。|
 |GZip 壓縮|在 [ `Warehouse.VehicleTemperature` ] 檢視中，其資料表會保存完整的感應器資料。 但超過幾個月舊資料時，它會壓縮成節省空間。 COMPRESS 函式會使用 GZip 壓縮。<br/><br/>檢視`Website.VehicleTemperatures`擷取先前已壓縮的資料時，會使用 DECOMPRESS 函式。|

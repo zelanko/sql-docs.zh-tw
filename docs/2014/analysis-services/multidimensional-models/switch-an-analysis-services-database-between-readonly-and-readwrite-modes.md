@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
@@ -15,12 +14,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072890"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
   通常在很多情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要變更表格式或多維度資料庫的讀取/寫入模式。 這些情況通常是由商務需求所驅使，例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器集區之間共用資料庫，以便改善使用者經驗。  
@@ -46,13 +45,13 @@ ms.locfileid: "53362610"
   
 3.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
-4.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
+4.  將密碼指派給要卸離的資料庫，然後按一下 [確定]  執行卸離命令。  
   
 5.  找出**資料庫**的左或右窗格中的資料夾[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
-7.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 (**...**) 來找出資料庫資料夾。  
+7.  在 [資料夾]  文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 ( **...** ) 來找出資料庫資料夾。  
   
 8.  選取資料庫的讀取/寫入模式。  
   

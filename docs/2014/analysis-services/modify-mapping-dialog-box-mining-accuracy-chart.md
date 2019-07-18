@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
@@ -13,12 +12,12 @@ ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077677"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>修改對應對話方塊 (採礦精確度圖表)
   使用 **[修改對應]** 對話方塊可變更輸入資料行與採礦模型中的資料行聯結的方法。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將對應會自動根據資料行名稱和資料類型的資料行，但您可以使用此對話方塊來變更資料行對應。 如果要進行變更，則必須確定外部資料來源中的資料行具有與所測試採礦模型中的資料行相符的資料類型和內容類型。  
@@ -33,6 +32,6 @@ ms.locfileid: "48106478"
 ## <a name="see-also"></a>另請參閱  
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27d3ff9ef1c6296a6bec2040f9caefd477568bfa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900144"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
   「百分比取樣」轉換會藉由選取轉換輸入資料列的一部分來建立取樣資料集。 取樣資料集是從轉換輸出隨機選取的資料列，用來製作輸入的結果取樣代表。  
@@ -48,7 +48,7 @@ ms.locfileid: "58375006"
   
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
- 如需可在 [百分比取樣轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[百分比取樣轉換編輯器](../../percentage-sampling-transformation-editor.md)。  
+ 如需可在 [百分比取樣轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[百分比取樣轉換編輯器](../../percentage-sampling-transformation-editor.md)。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

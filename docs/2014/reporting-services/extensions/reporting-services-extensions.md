@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Reporting Services, extending
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services, extending
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 231ba80e2abe304ba98f6ab64eaeba30ea783918
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985769"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 延伸模組
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模組化架構是針對擴充性所設計。 現在可以使用 Managed 程式碼 API，這樣您就可以輕鬆地開發、安裝和管理許多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件取用的延伸模組。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 建立私人或共用組件，並新增新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能以滿足不斷成長的商務需求。  

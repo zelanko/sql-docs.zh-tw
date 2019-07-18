@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907516"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "52810540"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**msdbms_datatype**|**int**|識別每個唯一資料類型。|  
-|**msdbms**|**int**|識別類型所屬的 DBMS。|  
+|**datatype_id**|**int**|識別每個唯一資料類型。|  
+|**dbms_id**|**int**|識別類型所屬的 DBMS。|  
 |**type**|**sysname**|資料類型名稱 (原生)。|  
 |**createparams**|**int**|用來描述每個資料類型所適用之長度、有效位數和小數位數組合的點陣圖，其中包括：<br /><br /> **0x1** = PRECISION。<br /><br /> **0x2** = 小數位數。<br /><br /> **0x4** = 長度。|  
   

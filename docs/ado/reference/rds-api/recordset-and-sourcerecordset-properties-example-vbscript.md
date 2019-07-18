@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f57dba47697120e2632afebbd24ea6b16270d195
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963599"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 和 SourceRecordset 屬性範例 (VBScript)
 > [!IMPORTANT]

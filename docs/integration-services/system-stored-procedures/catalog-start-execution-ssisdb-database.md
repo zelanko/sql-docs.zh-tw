@@ -11,14 +11,18 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6068cb284bc0ff8d29f9a4c4da5b5bf3174ce5cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 733e71edda284d8051cc1f641ae94a3518e6b0d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715739"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   啟動在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的執行執行個體。  

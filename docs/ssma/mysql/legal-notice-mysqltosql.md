@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 12b945d4f9e320cba6a143893b306a9fc11da675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3927e0a312c077f1d39405ca5526d7f3c0099342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909030"
 ---
 # <a name="legal-notice-mysqltosql"></a>法律聲明 (MySQLToSql)
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  

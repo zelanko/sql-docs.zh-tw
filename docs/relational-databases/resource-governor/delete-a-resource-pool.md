@@ -13,21 +13,21 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 94a559d7486263d1edf50383e3a8af39fe93689d
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: c389ed72d7aa6f49c320585ee8f23e35eaec1bc7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689801"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581822"
 ---
 # <a name="delete-a-resource-pool"></a>刪除資源集區
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除資源集區。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要刪除資源集區，請使用下列方式：**[SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
+-   **若要刪除資源集區，請使用下列方式：** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果資源集區包含工作負載群組，您就無法刪除該資源集區。  
@@ -35,20 +35,22 @@ ms.locfileid: "55689801"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  您無法刪除資源管理員的預設或內部資源集區。 如果資源集區包含工作負載群組，您就無法刪除該資源集區。 如需詳細資訊，請參閱 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  刪除資源集區需要 CONTROL SERVER 權限。  
   
 ##  <a name="DelRPSSMS"></a> 使用物件總管刪除資源集區  
  **若要使用 SQL Server Management Studio 刪除資源集區**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下要刪除的資源集區，然後按一下 [刪除]  。  
   
-3.  在 **[刪除物件]** 視窗中，資源集區列於 **[要刪除的物件]** 清單內。 若要刪除資源集區，請按一下 **[確定]**。  
-  
+3.  在 **[刪除物件]** 視窗中，資源集區列於 **[要刪除的物件]** 清單內。 若要刪除資源集區，請按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  如果您嘗試刪除的資源集區包含工作負載群組，這項動作將會失敗。  
+    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
   
 ##  <a name="DelRPTSQL"></a> 使用 Transact-SQL 刪除資源集區  
  **若要使用 Transact-SQL 刪除資源集區**  

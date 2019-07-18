@@ -1,32 +1,31 @@
 ---
-title: 第 10 課： 建立階層 |Microsoft Docs
+title: 第 10 課：建立階層 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51f8d7b6616f6f14621209561146916cb4b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078184"
 ---
 # <a name="lesson-10-create-hierarchies"></a>第 10 課：建立階層
   在這一課，您將建立階層。 階層是以層級排列的資料行群組；例如，[地理位置] 階層可能有 [國家/地區]、[州省]、[縣市]、[縣 (市)] 的子層級。 在報表用戶端應用程式欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。 如需詳細資訊，請參閱[ &#40;SSAS 表格式&#41;](tabular-models/hierarchies-ssas-tabular.md)。  
   
- 若要建立階層，您將使用 [圖表檢視] 中的模型設計師。 不支援在模型設計師的 [資料檢視] 中建立及管理階層。  
+ 若要建立階層，您將使用 [圖表檢視]  中的模型設計師。 不支援在模型設計師的 [資料檢視] 中建立及管理階層。  
   
- 完成本課程的估計時間： **20 分鐘**  
+ 估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課程的工作之前，您應已完成上一課：[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>建立階層  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48187284"
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>在日期資料表中建立階層  
   
-1.  在模型設計師中，以滑鼠右鍵按一下 [日期] 資料表，然後按一下 [建立階層]。  
+1.  在模型設計師中，以滑鼠右鍵按一下 [日期]  資料表，然後按一下 [建立階層]  。  
   
 2.  將階層重新命名為 **Calendar**。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48187284"
     |Month Calendar|Month|  
     |Day Of Month|Day|  
   
-4.  在 [日期] 資料表中重複上述步驟，建立 [Fiscal] 階層，包括下列資料行：  
+4.  在 [日期]  資料表中重複上述步驟，建立 [Fiscal]  階層，包括下列資料行：  
   
     |「資料行」|重新命名為：|  
     |------------|----------------|  
@@ -80,7 +79,7 @@ ms.locfileid: "48187284"
     |Month Calendar|Month|  
     |Day Of Month|Day|  
   
-5.  最後，在 [日期] 資料表中重複上述步驟，建立 [Production Calendar] 階層，包括下列資料行：  
+5.  最後，在 [日期]  資料表中重複上述步驟，建立 [Production Calendar]  階層，包括下列資料行：  
   
     |「資料行」|重新命名為：|  
     |------------|----------------|  
@@ -89,6 +88,6 @@ ms.locfileid: "48187284"
     |週中的日|Day|  
   
 ## <a name="next-steps"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 11 課：建立資料分割](lesson-10-create-partitions.md)。  
+ 若要繼續本教學課程，請移至下一課：[第 11 課：建立分割區](lesson-10-create-partitions.md)。  
   
   

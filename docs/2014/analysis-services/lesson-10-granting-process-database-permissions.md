@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079152"
 ---
 # <a name="granting-process-database-permissions"></a>授與處理資料庫權限
   當您安裝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體之後，該執行個體中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器管理員角色的所有成員都會具有伺服器範圍權限，可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體內執行任何工作。 依預設，其他使用者都無權管理或檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的任何物件。  
@@ -27,29 +26,29 @@ ms.locfileid: "48171758"
   
 ## <a name="defining-a-process-database-objects-security-role"></a>定義處理資料庫物件安全性角色  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [角色]，然後按一下 [新增角色] 以開啟 [角色設計師]。  
+1.  在方案總管中，以滑鼠右鍵按一下 [角色]  ，然後按一下 [新增角色]  以開啟 [角色設計師]。  
   
-2.  按一下 [處理資料庫] 核取方塊。  
+2.  按一下 [處理資料庫]  核取方塊。  
   
 3.  在 [屬性] 視窗中，變更**名稱**屬性到這個新角色`Process Database Objects Role`。  
   
      ![角色設計師](../../2014/tutorials/media/l10-security-1.png "角色設計工具")  
   
-4.  切換到 [角色設計師] 的 [成員資格] 索引標籤，然後按一下 [新增]。  
+4.  切換到 [角色設計師] 的 [成員資格]  索引標籤，然後按一下 [新增]  。  
   
-5.  輸入 Windows 網域使用者或群組的帳戶，他們將成為這個角色的成員。 按一下 [檢查名稱] 來確認帳戶資訊，然後按一下 [確定]。  
+5.  輸入 Windows 網域使用者或群組的帳戶，他們將成為這個角色的成員。 按一下 [檢查名稱]  來確認帳戶資訊，然後按一下 [確定]  。  
   
-6.  切換到 [角色設計師] 的 [Cube] 索引標籤。  
+6.  切換到 [角色設計師] 的 [Cube]  索引標籤。  
   
      請注意，雖然這個角色的成員有權處理這個資料庫，但是無權存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中的資料，也沒有本機 Cube/鑽研存取權，如下圖所示。  
   
      ![角色設計師的 cube 索引標籤](../../2014/tutorials/media/l10-security-2.png "角色設計師的 Cube 索引標籤")  
   
-7.  切換到 [角色設計師] 的 [維度] 索引標籤。  
+7.  切換到 [角色設計師] 的 [維度]  索引標籤。  
   
      請注意，這個角色的成員有權處理這個資料庫中的所有維度物件，而且依預設，也有權讀取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程資料庫中的每一個維度物件。  
   
-8.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+8.  在 [建立]  功能表上，按一下 [部署 Analysis Services 教學課程]  。  
   
      現在您已經順利定義和部署處理資料庫物件安全性角色了。 當您把 Cube 部署到實際環境之後，部署 Cube 的管理員就可以根據需要，把使用者加入這個角色中，將處理責任委託給特定的使用者。  
   
@@ -57,6 +56,6 @@ ms.locfileid: "48171758"
 >  您可以下載並安裝範例，取得完成第 10 課的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](install-sample-data-and-projects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [角色和權限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [角色與權限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

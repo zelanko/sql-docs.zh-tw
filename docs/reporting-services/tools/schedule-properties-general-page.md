@@ -2,20 +2,20 @@
 title: 排程屬性 (一般頁面) | Microsoft Docs
 ms.date: 06/11/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 907e3eaa4852979797395317a2db93276c551965
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571400"
 ---
 # <a name="schedule-properties-general-page"></a>排程屬性 (一般頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 頁面即可檢視或修改共用排程。 共用排程可以用來取代報表特定或訂閱特定的排程。 對排程所做的變更會在您儲存排程之後套用。 編輯排程並不會影響目前正在進行中的作業。 如果您編輯排程時，該排程正在使用中，則系統會允許根據該排程觸發的所有目前處理中報表和訂閱繼續完成。  
@@ -27,8 +27,8 @@ ms.locfileid: "52712149"
  開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 連接到報表伺服器。
- 3) 展開 [共用排程] 資料夾。
- 4) 以滑鼠右鍵按一下共用排程，然後選取 [屬性]。  
+ 3) 展開 [共用排程]  資料夾。
+ 4) 以滑鼠右鍵按一下共用排程，然後選取 [屬性]  。  
   
 > [!NOTE]  
 >並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  

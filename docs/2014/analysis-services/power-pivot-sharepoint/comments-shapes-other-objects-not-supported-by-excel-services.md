@@ -1,22 +1,21 @@
 ---
-title: 下列功能不受 Excel Services 和可能不會顯示或是只顯示一部分： 註解、 形狀或其他物件 |Microsoft Docs
+title: 下列功能不受 Excel Services 的支援，而且可能不會顯示或是只顯示一部分：註解、 形狀或其他物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03411134eb1350adcd37badd458e7f7a0198a9ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071923"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>下列功能不受 Excel Services 的支援，而且可能不會顯示或是只顯示一部分：註解、形狀或其他物件
   當您從 PowerPivot 欄位清單將交叉分析篩選器加入到 PowerPivot 活頁簿時，將會發生這個錯誤。  
@@ -25,7 +24,7 @@ ms.locfileid: "48188698"
   
 |||  
 |-|-|  
-|適用對象|PowerPivot for SharePoint|  
+|適用於|PowerPivot for SharePoint|  
 |產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Excel Web Access 無法轉譯形狀物件，該物件用來控制從 PowerPivot 欄位清單加入至活頁簿之交叉分析篩選器的位置和格式。|  
 |訊息文字|下列功能不受 Excel Services 的支援，而且可能不會顯示或是只顯示一部分：<br /><br /> 註解、形狀或其他物件<br /><br /> 某些功能 (例如外部資料查詢) 會顯示只能在 Microsoft Excel 中重新整理的快取資料。|  
@@ -38,6 +37,6 @@ ms.locfileid: "48188698"
  Excel Services 無法轉譯形狀物件，但是因為此物件是隱藏的，所以它無法轉譯的事實並不會造成問題。  
   
 ## <a name="user-action"></a>使用者動作  
- 可以忽略這個錯誤。 按一下 [確定]，關閉錯誤訊息，並繼續使用活頁簿和交叉分析篩選器，而不會發生任何問題。  
+ 可以忽略這個錯誤。 按一下 [確定]  ，關閉錯誤訊息，並繼續使用活頁簿和交叉分析篩選器，而不會發生任何問題。  
   
   

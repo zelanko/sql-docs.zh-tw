@@ -16,15 +16,15 @@ helpviewer_keywords:
 - .sqlsuo files
 - files [SQL Server Management Studio], projects
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3bff8bd75d6852cc978dc63d198479a65f4ede9d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: f95bf24b01e8dde62b766f424f111c5acf7c7615
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100239"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688260"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>管理方案和專案的檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771124"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
   在執行累加式變更資料載入之 Integration Services 封裝的資料流程中，第二個工作是分隔插入、更新與刪除。 然後，您可以使用適當的命令，將其套用到目的地。  
@@ -67,7 +67,7 @@ select
 ## <a name="next-step"></a>下一個步驟  
  分割要處理的資料列後，下一個步驟是將變更套用到目的地。  
   
- **下一個主題：**[將變更套用到目的地](apply-the-changes-to-the-destination.md)  
+ **下一個主題：** [將變更套用到目的地](apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [條件式分割轉換](../data-flow/transformations/conditional-split-transformation.md)   

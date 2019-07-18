@@ -13,19 +13,23 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9b0ba6e5a3ee22bb29aac7bedc0be7e5a4619d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8e9266e93a48987d2d00207b52760df033a11c97
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728612"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>為 CDC 準備 SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服務要求所有目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體都必須包含 MSXDBCDC 資料庫。 您可在 CDC 服務組態主控台中使用「準備 SQL Server」動作來建立這個資料庫。 這樣會建立特殊指令碼，可執行該指令碼來針對這個資料庫建立必要資料表、預存程序和其他必要成品。 這個工作只會針對每個目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體執行一次。  
   
  如需有關 MSXDBCDC 資料庫的詳細資訊，請參閱＜MSXDBCDC 資料庫＞。  
   
- 在 CDC 服務組態主控台中，按一下 [Prepare SQL Server (準備 SQL Server)]。 如果無法使用這個選項，請確定已在主控台的左窗格選取 [Local CDC Services (本機 CDC 服務)]。  
+ 在 CDC 服務組態主控台中，按一下 [Prepare SQL Server (準備 SQL Server)]  。 如果無法使用這個選項，請確定已在主控台的左窗格選取 [Local CDC Services (本機 CDC 服務)]  。  
   
 ## <a name="options"></a>選項。  
   
@@ -48,12 +52,12 @@ ms.locfileid: "58283102"
   
 -   **執行逾時**：輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
--   **加密連接**：針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]。  
+-   **加密連接**：針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]  。  
   
 -   **進階**：必要時輸入其他任何連接屬性。  
   
 ### <a name="view-script"></a>檢視指令碼  
- 按一下 [檢視指令碼]，檢視安裝指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 SQL Server 管理主控台來進行編輯 (必要的話)。 如需準備 SQL Server 指令碼的詳細資訊，請參閱 [為 Oracle CDC 檢視指令碼準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)。  
+ 按一下 [檢視指令碼]  ，檢視安裝指令碼的唯讀版本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將此指令碼複製到 SQL Server 管理主控台來進行編輯 (必要的話)。 如需準備 SQL Server 指令碼的詳細資訊，請參閱 [為 Oracle CDC 檢視指令碼準備 SQL Server](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何使用 CDC 服務](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   

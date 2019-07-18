@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929364"
 ---
 # <a name="save-metadata--mysqltosql"></a>儲存中繼資料 (MySQLToSQL)
 **儲存中繼資料**對話方塊會提示您載入 SSMA 專案中的中繼資料，才能將它儲存。 這可以讓您擁有完整的專案檔案，您可離線使用，並傳送給其他人，例如技術支援人員。  

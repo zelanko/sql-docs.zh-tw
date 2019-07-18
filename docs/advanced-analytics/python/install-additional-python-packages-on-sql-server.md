@@ -3,24 +3,23 @@ title: 安裝新的 Python 語言套件-SQL Server Machine Learning
 description: 將新的 Python 套件新增至 SQL Server 2017 Machine Learning 服務 （資料庫內） 和 Machine Learning Server （獨立式）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962778"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何在 SQL Server 2017 Machine Learning 服務的執行個體上安裝新的 Python 套件。 一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
 
-如需封裝的位置和安裝路徑的詳細資訊，請參閱 <<c0> [ 取得 R 或 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md)。
+如需封裝的位置和安裝路徑的詳細資訊，請參閱 <<c0> [ 取得 R 或 Python 封裝資訊](../package-management/installed-package-information.md)。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -50,7 +49,7 @@ ms.locfileid: "58510295"
 
 + 如果您要在沒有網際網路存取伺服器上安裝 Python 套件，您必須下載到不同的電腦的 WHL 檔案，並再將它複製到伺服器。
 
-    比方說，在另一部電腦，您可以下載的 WHL 檔案從這個站台[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
+    比方說，在另一部電腦，您可以下載的 WHL 檔案從這個站台[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl` 到 SQL Server 電腦上的本機資料夾。
 
 + SQL Server 2017 會使用 Python 3.5。 
 

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704948"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>保留 Affinity Mask 預設值
   此規則會檢查 Affinity Mask 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定是否設定為預設值 0。 affinity mask 選項會動態控制 CPU 相似性。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f58c6d22ff5a76836c9e348cc387eadd1dc8cf15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccee0a1b6f31bf9cb54272387e2d7363d2324530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911545"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -41,7 +40,7 @@ ms.locfileid: "47714546"
   
  [Open 方法](../../../ado/reference/ado-md-api/open-method-ado-md.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

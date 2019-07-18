@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 60d38caf365d6db54ea0abe688a3fc2979fdab82
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809681"
 ---
 # <a name="configure-sql-server-error-logs"></a>設定 SQL Server 錯誤記錄檔
   此主題描述如何檢視或修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔的回收方式。  
   
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>若要開啟 [設定 SQL Server 錯誤記錄檔] 對話方塊  
   
-1.  在 [物件總管] 中展開 SQL Server 執行個體，展開 [管理]，以滑鼠右鍵按一下 [SQL Server 記錄檔]，然後按一下 [設定]。  
+1.  在 [物件總管] 中展開 SQL Server 執行個體，展開 [管理]  ，以滑鼠右鍵按一下 [SQL Server 記錄檔]  ，然後按一下 [設定]  。  
   
 2.  在 **[設定 SQL Server 錯誤記錄檔]** 對話方塊中，從下列選項中進行選擇。  
   

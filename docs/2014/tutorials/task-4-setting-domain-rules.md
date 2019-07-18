@@ -1,5 +1,5 @@
 ---
-title: 工作 4:設定定義域規則 |Microsoft Docs
+title: 工作 4：設定定義域規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489072"
 ---
-# <a name="task-4-setting-domain-rules"></a>工作 4:設定定義域規則
-  在這個工作中，您建立的規則**Contact Email**網域來驗證是否電子郵件地址結尾**@adventure-works.com**。 請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)如需詳細資料頁面上的主題。  
+# <a name="task-4-setting-domain-rules"></a>工作 4：設定定義域規則
+  在這個工作中，您建立的規則**Contact Email**網域來驗證是否電子郵件地址結尾 **@adventure-works.com** 。 請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)如需詳細資料頁面上的主題。  
   
 1.  按一下  **Contact Email**中**定義域清單**。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "56035309"
   
 5.  在**建立規則**窗格中，按一下**向下箭號**，然後選取**值結尾為**。  
   
-6.  型別**@adventure-works.com**文字方塊中，然後按下**索引標籤**。 您可以加入更多條件，依序按一下**將新條件加入選取的子句**中的工具列按鈕**建置規則**窗格。  
+6.  型別 **@adventure-works.com** 文字方塊中，然後按下 **索引標籤** 。 您可以加入更多條件，依序按一下 **將新條件加入選取的子句** 中的工具列按鈕 **建置規則** 窗格。  
   
      ![電子郵件驗證規則](../../2014/tutorials/media/et-settingdomainrules-02.jpg "電子郵件驗證規則")  
   
@@ -44,9 +44,9 @@ ms.locfileid: "56035309"
   
      ![測試定義域規則 對話方塊](../../2014/tutorials/media/et-settingdomainrules-04.jpg "測試定義域規則 對話方塊")  
   
-9. 型別**frank7@adventure-works.com** （有效的值） 中**Contact Email**資料行。  
+9. 型別 **frank7@adventure-works.com** （有效的值） 中 **Contact Email** 資料行。  
   
-10. 重複上述兩個步驟來加入**joe2@adventure-work.com** (含無效值的 ')。  
+10. 重複上述兩個步驟來加入 **joe2@adventure-work.com** (含無效值的 ')。  
   
 11. 按一下最後一個按鈕 (**對所有詞彙測試定義域規則**) 測試輸入的資料依規則 工具列上。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "56035309"
   
      ![測試定義域規則結果](../../2014/tutorials/media/et-settingdomainrules-06.jpg "測試定義域規則結果")  
   
-13. 按一下 **關閉 **以關閉**測試定義域規則** 對話方塊。  
+13. 按一下 **關閉** 以關閉**測試定義域規則** 對話方塊。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5:設定以詞彙為主的關聯性](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [工作 5：設定以詞彙為主的關聯性](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

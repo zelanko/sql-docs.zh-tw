@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984886"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52775390"
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
 |**partition_id**|**int**|資料列所屬的資料分割識別碼。 值為-1，則所有的訂閱者的相關資料列變更時。|  
-|**產生**|**bigint**|發生資料分割變更的層代 (Generation) 值。|  
+|**generation**|**bigint**|發生資料分割變更的層代 (Generation) 值。|  
 |**reason**|**tinyint**|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  

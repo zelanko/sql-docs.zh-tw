@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0ca97b6b3c156a96798e76ea0a656f3bd0e3038
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008431"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47818210"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|3456|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|REC_REDOLSNMISMATCH|  
-|訊息文字|無法重做資料庫 '%.*ls' (資料庫識別碼 %d) 中頁面 %S_PGID 上交易識別碼 %S_XID 的記錄 %S_LSN。 頁面: LSN = %S_LSN，類型 = %ld。 記錄: OpCode = %ld，內容 %ld，PrevPageLSN: %S_LSN。 請從資料庫的備份還原或修復資料庫。|  
+|訊息文字|無法重做資料庫 '%.*ls' (資料庫識別碼 %d) 中頁面 %S_PGID 上交易識別碼 %S_XID 的記錄 %S_LSN。 頁面：LSN = %S_LSN，類型 = %ld。 記錄:OpCode = %ld，內容 %ld，PrevPageLSN: %S_LSN。 請從資料庫的備份還原或修復資料庫。|  
   
 ## <a name="explanation"></a>說明  
 還原作業無法重做交易記錄。 這個錯誤已經將資料庫置於 SUSPECT 狀態。 主要檔案群組以及可能還有其他檔案群組都有疑問，而且可能已損毀。 資料庫在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間無法復原，因此無法使用。 需要使用者動作來解決問題。  

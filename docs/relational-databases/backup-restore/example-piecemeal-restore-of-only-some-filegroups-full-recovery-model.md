@@ -1,5 +1,5 @@
 ---
-title: 範例：僅限於部分檔案群組的分次還原 (完整復原模式) | Microsoft Docs
+title: 範例僅限於部分檔案群組的分次還原 (完整復原模式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97b35efa82821e38e1b74edc3c8a343a34530214
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16e030be8afa6caa0de6cb42ed82a3b396801c3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622596"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579453"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>範例：僅限於部份檔案群組的分次還原 (完整復原模式)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>範例僅對部分檔案群組分次還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
@@ -51,9 +51,9 @@ ms.locfileid: "47622596"
     ```  
     RESTORE DATABASE adb FILEGROUP='Primary' FROM backup   
     WITH PARTIAL, NORECOVERY  
-    RESTORE LOG adb FROM backup1 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup2 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup1 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup2 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -72,17 +72,19 @@ ms.locfileid: "47622596"
      此時，主要與次要檔案群組 `A` 和 `C` 會在線上。 檔案群組 `B` 裡的檔案會保持復原暫止，而檔案群組為離線。  
   
 4.  線上還原檔案群組 `B`。  
-  
-     檔案群組 `B` 中的檔案，可在此後的任何時間進行還原。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Files in filegroup `B` are restored any time thereafter.  
   
     > [!NOTE]  
-    >  檔案群組 `B` 的備份是在檔案群組變成唯讀之後進行的，因此這些檔案不需向前復原。  
+    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
     ```  
   
-     所有檔案群組現在都已在線上。  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>其他範例  
   
@@ -94,7 +96,7 @@ ms.locfileid: "47622596"
   
 -   [範例：分次還原資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

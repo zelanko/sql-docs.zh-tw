@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f24a625c3bd523907ba51662f80c2cd26bec5704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042999"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102127"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
   依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受可指定交涉驗證或 NTLM 驗證的要求。 如果您的部署包括了使用這些安全性提供者的用戶端應用程式和瀏覽器，您可以使用預設值，而不需要進行額外的組態設定。 如果您想要針對 Windows 整合式安全性使用不同的安全性提供者 (例如，如果您想要直接使用 Kerberos)，或是您修改了預設值而且想要還原原始設定，您可以使用本主題的資訊來指定報表伺服器上的驗證設定。  
@@ -97,7 +96,7 @@ ms.locfileid: "56042999"
           </AuthenticationTypes>  
     ```  
   
-4.  將它貼到 <`Authentication`> 的現有項目上。  
+4.  貼上現有的項目，如 <`Authentication`>。  
   
      請注意，您不能搭配 `Custom` 型別使用 `RSWindows`。  
   
@@ -199,7 +198,7 @@ ms.locfileid: "56042999"
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>用戶端上的 LAN 和 Proxy 設定  
  您在 Internet Explorer 中設定的 LAN 和 Proxy 設定可以決定是否優先選擇 NTLM (勝於 Kerberos)。 但是，由於組織之間的 LAN 和 Proxy 設定會有所差異，所以無法精確判斷造成 Kerberos 驗證錯誤的確切設定為何。 例如，您的組織可能會強制 Proxy 設定，這些設定會將 URL 從內部網路 URL 轉換成完整網域名稱 URL (透過網際網路連接來解析)。 如果將不同的驗證提供者用於不同類型的 URL，您可能會發現當您預期某些連接應該會失敗時，這些連接卻成功了。  
   
- 如果您遇到連接錯誤，而您認為這些錯誤是因為驗證失敗而發生，您可以嘗試 LAN 和 Proxy 設定的不同組合來隔離問題。 在 Internet Explorer 中，LAN 和 Proxy 設定位於 [區域網路 (LAN) 設定] 對話方塊上，您可以在 [網際網路選項] 的 [連線] 索引標籤上按一下 [區域網路設定] 來開啟此對話方塊。  
+ 如果您遇到連接錯誤，而您認為這些錯誤是因為驗證失敗而發生，您可以嘗試 LAN 和 Proxy 設定的不同組合來隔離問題。 在 Internet Explorer 中，LAN 和 Proxy 設定位於 [區域網路 (LAN) 設定]  對話方塊上，您可以在 [網際網路選項]  的 [連線]  索引標籤上按一下 [區域網路設定]  來開啟此對話方塊。  
   
 ## <a name="external-resources"></a>外部資源  
   

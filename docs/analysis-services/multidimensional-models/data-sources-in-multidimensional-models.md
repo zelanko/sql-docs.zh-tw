@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的資料來源 |Microsoft 文件
+title: 多維度模型中的資料來源 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 149ac1e36eb07d40223ffc97fba1646932ab0093
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022825"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178948"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多維度模型中的資料來源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,18 +44,18 @@ ms.locfileid: "34022825"
   
 ## <a name="related-topics-and-tasks"></a>相關主題和工作  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[支援的資料來源 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|描述可在多維度模型中使用的資料來源類型。|  
-|[建立資料來源 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|說明如何將資料來源物件加入至多維度模型。|  
-|[刪除在 [方案總管] & #40; 資料來源SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此程序從多維度模型中刪除資料來源物件。|  
-|[設定資料來源屬性 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|描述每個屬性，並說明如何設定每個屬性。|  
-|[設定模擬選項 & #40;SSAS-多維度 & #41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|說明如何設定 [模擬資訊] 對話方塊中的選項。|  
+|[建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|說明如何將資料來源物件加入至多維度模型。|  
+|[在方案總管中刪除資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此程序從多維度模型中刪除資料來源物件。|  
+|[設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|描述每個屬性，並說明如何設定每個屬性。|  
+|[設定模擬選項 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|說明如何設定 [模擬資訊] 對話方塊中的選項。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [邏輯架構 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [資料來源和繫結 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [資料來源和繫結 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

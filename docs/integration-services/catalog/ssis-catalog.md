@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729168"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
  
 > [!NOTE]
@@ -172,13 +176,13 @@ ms.locfileid: "58283202"
 |屬性名稱 (**[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|  
-|定期清除記錄檔|OPERATION_CLEANUP_ENABLED|  
+|定期清除記錄檔|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |保留週期 (天)|RETENTION_WINDOW|  
 |定期移除舊版本|VERSION_CLEANUP_ENABLED|  
 |每一專案的版本數目上限|MAX_PROJECT_VERSIONS|  
 |全伺服器的預設記錄層次|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  專案、環境和封裝會包含在屬於安全性實體物件的資料夾中。 您可以將權限授與資料夾，包括 MANAGE_OBJECT_PERMISSIONS 權限。 MANAGE_OBJECT_PERMISSIONS 可讓您將資料夾內容管理委派給使用者，而不必將使用者成員資格授與 ssis_admin 角色。 您還可以授與權限給專案、環境和作業。 作業包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署專案、建立及啟動執行、驗證專案和封裝及設定 **SSISDB** 目錄。  
   
  如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  

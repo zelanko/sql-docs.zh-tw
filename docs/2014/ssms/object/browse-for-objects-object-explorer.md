@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63276860"
 ---
 # <a name="browse-for-objects-object-explorer"></a>瀏覽物件 (物件總管)
-  顯示所選取類型的物件清單。 透過選取對應的核取方塊，從這份清單中選取一或多個物件。 [瀏覽物件] 方塊只會顯示適用於該動作的項目，並只顯示您有權限檢視的項目。  
+  顯示所選取類型的物件清單。 透過選取對應的核取方塊，從這份清單中選取一或多個物件。 [瀏覽物件]  方塊只會顯示適用於該動作的項目，並只顯示您有權限檢視的項目。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **核取方塊**  
  選取以包含物件。  
   

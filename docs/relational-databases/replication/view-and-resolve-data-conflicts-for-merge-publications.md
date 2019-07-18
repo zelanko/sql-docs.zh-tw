@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3669107fb439baee685939e9ed3846a5a788376f
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129378"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860603"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "54129378"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]**。  
+3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]** 。  
   
     > [!NOTE]  
     >  如果將 **conflict_logging** 屬性的值指定為 **'subscriber'** ，就無法使用 **[檢視衝突]** 功能表選項。 若要檢視衝突，請從命令提示字元啟動 ConflictViewer.exe。 ConflictViewer.exe 預設會位於下列目錄中︰Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 如需有效的啟動參數清單，請執行 ConflictViewer.exe -?。  
@@ -60,9 +60,9 @@ ms.locfileid: "54129378"
   
     -   在上方格內選取資料列，以便於下方格的該資料列顯示資訊。  
   
-    -   在上方方格中選取一個或多個資料列，然後按一下 **[移除]**，這相當於按一下 **[提交成功者]** 按鈕 (不會對資料進行任何變更)。  
+    -   在上方方格中選取一個或多個資料列，然後按一下 **[移除]** ，這相當於按一下 **[提交成功者]** 按鈕 (不會對資料進行任何變更)。  
   
-    -   按一下屬性按鈕 (**[…]**) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕 ([...]  ) 以檢視更多有關於衝突的資料行資訊。  
   
     -   在提交資料之前，編輯 **[衝突成功者]** 或 **[衝突失敗者]** 資料行中的資料 (灰色資料行表示資料為唯讀)。  
   
@@ -70,12 +70,12 @@ ms.locfileid: "54129378"
   
     -   按一下 **[提交失敗者]** ，以覆寫解決並將指定為衝突失敗者的值傳播到拓撲中的所有節點。  
   
-    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]**。 輸入值，或按一下瀏覽按鈕 (**[...]**)，然後導覽至適當的檔案。 按一下 **[確定]** 即可結束 **[選項]** 對話方塊。  
+    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]** 。 輸入值，或按一下瀏覽按鈕 ( **[...]** )，然後導覽至適當的檔案。 按一下 **[確定]** 即可結束 **[選項]** 對話方塊。  
   
 6.  關閉複寫衝突檢視器。  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## <a name="view-conflict-information"></a>檢視衝突資訊
 在合併式複寫中解決衝突時，遺失之資料列的資料會寫入衝突資料表。 可以使用複寫預存程序來以程式設計的方式檢視此衝突資料。 如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54129378"
         > [!NOTE]  
         >  合併式發行集的衝突記錄行為是使用 **@conflict_logging** 的 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 已取代使用 **@centralized_conflicts** 參數。  
   
-     下表描述這些資料行的值 (根據針對 **@conflict_logging**。  
+     下表描述這些資料行的值 (根據針對 **@conflict_logging** 。  
   
     |@conflict_logging 值|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -100,9 +100,9 @@ ms.locfileid: "54129378"
   
 3.  (選擇性) 檢閱感興趣之發行項的衝突資料列。 根據步驟 1 中 **centralized_conflicts** 和 **decentralized_conflicts** 的值而定，執行下列其中一項：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 **@conflict_table**。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
+    -   在發行集資料庫的發行者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 **@conflict_table** 。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
   
-    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 **@conflict_table**。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
+    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 **@conflict_table** 。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
   
 ## <a name="conflict-where-delete-failed"></a>發生刪除失敗的衝突   
   
@@ -119,9 +119,9 @@ ms.locfileid: "54129378"
   
 3.  (選擇性) 檢閱刪除衝突的衝突資訊。 根據步驟 1 中 **centralized_conflicts** 和 **decentralized_conflicts** 的值而定，執行下列其中一項：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object**。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在發行者上的刪除衝突資訊。  
+    -   在發行集資料庫的發行者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object** 。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在發行者上的刪除衝突資訊。  
   
-    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object**。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在訂閱者上的刪除衝突資訊。  
+    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object** 。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在訂閱者上的刪除衝突資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

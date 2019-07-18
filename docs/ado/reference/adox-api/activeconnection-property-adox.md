@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a51f18109aef439576965e73782b7aa03a6a8b56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ddd18225f8497294f1f44fa134a2d02040c8ada
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952177"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 屬性 (ADOX)
 表示 ADO[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)所屬。  

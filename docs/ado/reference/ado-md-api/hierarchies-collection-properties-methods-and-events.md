@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fb73349f3d22c04d46d995ec68e828c8e6f5999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949747"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -29,7 +28,7 @@ ms.locfileid: "47679656"
 ## <a name="methods"></a>方法  
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

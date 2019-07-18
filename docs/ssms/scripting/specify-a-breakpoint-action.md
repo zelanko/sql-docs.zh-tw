@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 035d148bc9db8d9d5d845c7b678bf3ead4272ca4
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 2adbe017a3652eef96f4ed44df025f528e92302c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328368"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679887"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  中斷點 [叫用時] 動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
+  中斷點 [叫用時]  動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
   
 ##  <a name="BKMK_ActionConsiderations"></a> 動作考量因素  
- 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時] 動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出] 視窗。  
+ 中斷點的預設動作是在已滿足叫用計數和中斷點條件時中斷執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中 [叫用時]  動作的主要用法是透過指定列印訊息，將資訊列印至偵錯工具 [輸出]  視窗。  
   
- 列印訊息是在 [列印訊息] 選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
+ 列印訊息是在 [列印訊息]  選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
 -   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
@@ -50,19 +50,19 @@ ms.locfileid: "53328368"
   
 #### <a name="to-specify-a-when-hit-action"></a>若要指定叫用時動作  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]  。  
   
      -或-  
   
-     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [叫用時]  。  
   
-2.  在 [叫用中斷點時] 對話方塊中，選取所要的行為：  
+2.  在 [叫用中斷點時]  對話方塊中，選取所要的行為：  
   
-    1.  選取 [列印訊息]，以便在叫用中斷點時，在偵錯工具的 [輸出] 視窗中列印訊息。  
+    1.  選取 [列印訊息]  ，以便在叫用中斷點時，在偵錯工具的 [輸出] 視窗中列印訊息。  
   
-    2.  [執行巨集] 選項無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中使用，會呈現灰色。  
+    2.  [執行巨集]  選項無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具中使用，會呈現灰色。  
   
-    3.  如果不要讓中斷點暫停執行，請選取 [繼續執行]。 只有當您選取了 [列印訊息] 選項時，才能使用這個選項。  
+    3.  如果不要讓中斷點暫停執行，請選取 [繼續執行]  。 只有當您選取了 [列印訊息]  選項時，才能使用這個選項。  
   
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   

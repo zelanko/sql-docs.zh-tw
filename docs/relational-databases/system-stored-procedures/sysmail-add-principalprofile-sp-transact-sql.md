@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_add_principalprofile_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0a8db1f3b8d9bc209b6f8ed238cbf0be6177e578
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017818"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 若要使公用設定檔，指定**@principal_id**的**0**或是**@principal_name**的**公用**。 公用設定檔可供中的所有使用者**msdb**資料庫，不過使用者也必須是屬於**DatabaseMailUserRole**到執行**sp_send_dbmail**。  
+ 若要使公用設定檔，指定 **@principal_id** 的**0**或是 **@principal_name** 的**公用**。 公用設定檔可供中的所有使用者**msdb**資料庫，不過使用者也必須是屬於**DatabaseMailUserRole**到執行**sp_send_dbmail**。  
   
- 資料庫使用者只能有一個預設設定檔。 當**@is_default**是 '**1**' 和使用者已與一或多個設定檔相關聯，請指定的設定檔會成為使用者的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這位使用者，但已不再是預設設定檔。  
+ 資料庫使用者只能有一個預設設定檔。 當 **@is_default** 是 '**1**' 和使用者已與一或多個設定檔相關聯，請指定的設定檔會成為使用者的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這位使用者，但已不再是預設設定檔。  
   
- 當**@is_default**是 '**0**' 並沒有任何其他關聯存在，預存程序會傳回錯誤。  
+ 當 **@is_default** 是 '**0**' 並沒有任何其他關聯存在，預存程序會傳回錯誤。  
   
  預存程序**sysmail_add_principalprofile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   

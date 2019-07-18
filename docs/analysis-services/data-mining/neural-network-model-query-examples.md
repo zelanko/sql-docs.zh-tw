@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a9829df9c616e49bca6802512f405c676d498e6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472422"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -177,7 +177,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> 範例查詢 5:建立單一預測  
  在類神經網路模型上建立預測查詢最簡單的方式就是使用預測查詢產生器 (可在 **和** 中，資料採礦設計師的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [採礦預測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤上取得)。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器中瀏覽模型來篩選感興趣的屬性並檢視趨勢，然後切換到 **[採礦預測]** 索引標籤來建立查詢，並針對這些趨勢預測新的值。  
   
- 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這樣做，開啟此模型在檢視器中，以及針對**輸入**，選取**\<所有 >**。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
+ 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這樣做，開啟此模型在檢視器中，以及針對**輸入**，選取 **\<所有 >** 。  接著，為 **[輸出]** 選取 **[訂單數目]** 。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
   
  透過瀏覽檢視器中的結果，您會發現一週的某幾天訂單量較低，而運算子數目的增加似乎與較高的銷售量互相關聯。 接著，您可以在模型上使用預測查詢來測試 "what if" 假設，並詢問在訂單量低的天數上增加層級 2 運算子的數目是否會增加訂單。 若要這樣做，建立如下的查詢：  
   

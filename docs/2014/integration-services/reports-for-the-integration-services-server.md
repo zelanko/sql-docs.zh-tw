@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
@@ -13,12 +12,12 @@ ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056436"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 伺服器的報表
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
@@ -32,7 +31,7 @@ ms.locfileid: "58394086"
   
  此報表會顯示下列資訊區段。  
   
-|章節|描述|  
+|Section|描述|  
 |-------------|-----------------|  
 |**執行資訊**|顯示在過去 24 小時內，處於不同狀態 (失敗、執行中、成功、其他) 的執行數目。|  
 |**封裝資訊**|顯示在過去 24 小時內已經執行之封裝的總數。|  
@@ -46,7 +45,7 @@ ms.locfileid: "58394086"
   
  此報表會顯示下列資訊區段。  
   
-|章節|描述|  
+|Section|描述|  
 |-------------|-----------------|  
 |篩選|顯示目前套用至報表的篩選，例如 [開始時間範圍]。|  
 |執行資訊|顯示每個封裝執行的開始時間、結束時間和期間。您可以檢視封裝執行使用的參數值清單，例如使用 [執行封裝] 工作傳遞至子封裝的值。 若要檢視參數清單，請按一下 [概觀]。|  
@@ -60,7 +59,7 @@ ms.locfileid: "58394086"
   
  此報表會顯示下列資訊區段。  
   
-|章節|描述|  
+|Section|描述|  
 |-------------|-----------------|  
 |篩選|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間] 範圍的連接。<br /><br /> 設定 [上次失敗時間] 範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
 |詳細資料|顯示連接字串、發生連接失敗的執行數目，以及上一次連接失敗的日期。|  

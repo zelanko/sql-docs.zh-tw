@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774494"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   此主題描述與記錄傳送設定關聯的所有資料表與預存程序。 所有記錄傳送資料表都儲存在每部伺服器上的 **msdb** 中。 下表描述在記錄傳送設定中，會在哪部伺服器上使用哪些資料表與預存程序。  

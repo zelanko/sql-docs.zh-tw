@@ -12,15 +12,15 @@ helpviewer_keywords:
 - adding tables
 - related tables [SQL Server]
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9846e37e890f15fc6663d2539c8b21790eed0e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 10c43c8d423a75b2e53f3ac130220139572f64d4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704986"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686557"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>將相關的資料表加入圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,5 +30,5 @@ ms.locfileid: "47704986"
   
 1.  將有關聯性之資料表加入至資料庫圖表。  
   
-2.  在資料表上按一下滑鼠右鍵，在捷徑功能表中按一下 [新增關聯資料表]。  
+2.  在資料表上按一下滑鼠右鍵，在捷徑功能表中按一下 [新增關聯資料表]  。  
   

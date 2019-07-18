@@ -16,11 +16,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011512"
 ---
 # <a name="enable-tde-using-ekm"></a>使用 EKM 啟用 TDE
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過使用儲存在可延伸金鑰管理 (EKM) 模組中的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  
@@ -77,9 +77,9 @@ ms.locfileid: "48125078"
   
 3.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-4.  在標準列上，按一下 **[新增查詢]**。  
+4.  在標準列上，按一下 **[新增查詢]** 。  
   
-5.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+5.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Enable advanced options.  

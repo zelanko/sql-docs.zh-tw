@@ -19,12 +19,12 @@ ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08abccdf7f10b2ffea795ba53a6db6fbf51a788e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e3c456dfafae92bec2cd34de1e5b9e33857d3c8e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558375"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580567"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "51558375"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法刪除資料庫的資料或記錄檔：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "51558375"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,23 +61,25 @@ ms.locfileid: "51558375"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]**。  
+2.  展開 **[資料庫]** ，以滑鼠右鍵按一下要從中刪除檔案的資料庫，再按一下 **[屬性]** 。  
   
 3.  選取 **[檔案]** 頁面。  
   
-4.  在 **[資料庫檔案]** 方格中，選取要刪除的檔案，再按一下 **[移除]**。  
+4.  在 **[資料庫檔案]** 方格中，選取要刪除的檔案，再按一下 **[移除]** 。  
   
-5.  按一下 [確定] 。  
-  
+5.  按一下 [確定]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>若要刪除資料庫的資料或記錄檔  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會移除 `test1dat4` 檔案。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會移除 `test1dat4` 檔案。  
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
   

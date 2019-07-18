@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ad253c2d0603846d6d1f795f6115e7bb727b3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95392367b70af3eb820f0943af5dc668783a3fe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046957"
 ---
 # <a name="driver-manager-diagnostic-example"></a>驅動程式管理員診斷範例
 驅動程式管理員也可以產生診斷訊息。 例如，如果應用程式傳遞的不正確的方向選項**SQLDataSources**，驅動程式管理員可能會格式化，並傳回下列值從**SQLGetDiagRec**:  

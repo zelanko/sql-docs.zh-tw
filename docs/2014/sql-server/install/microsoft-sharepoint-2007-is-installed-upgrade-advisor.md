@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0c5036763ba4cbc48a00e604c4498b8dc277e155
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3487d84f95b559c115f9be6310b07dd4d0429fea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094032"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>已安裝 Microsoft SharePoint 2007 (Upgrade Advisor)
   Upgrade Advisor 偵測到不支援的 SharePoint 產品與技術版本。  

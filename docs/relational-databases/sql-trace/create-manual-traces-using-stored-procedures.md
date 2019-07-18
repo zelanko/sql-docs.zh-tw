@@ -11,12 +11,12 @@ ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e754837f27d34877df48663f57e7f9d8086b206
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: f60959f3aebc7d6ff05d38f209dda48d90a6be59
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570867"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585715"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>使用預存程序建立手動追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "51570867"
 2.  指定事件篩選條件。 如需詳細資訊，請參閱[設定追蹤篩選 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md)。  
   
 3.  使用 **sp_trace_create** 指定擷取事件資料的目的地。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  如需使用追蹤預存程序的範例，請參閱[建立追蹤 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
  **若要設定追蹤定義預設值**  

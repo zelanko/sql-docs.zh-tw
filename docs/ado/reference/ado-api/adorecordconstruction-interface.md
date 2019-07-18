@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920802"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
-**ADORecordConstruction**介面用來建構 ADO**記錄**的 OLE DB 物件**列**C/c + + 應用程式中的物件。  
+**ADORecordConstruction**介面用來建構 ADO**記錄**的 OLE DB 物件**列**C 中的物件 /C++應用程式。  
   
  此介面支援下列屬性：  
   
@@ -38,7 +37,7 @@ ms.locfileid: "47686866"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="remarks"></a>備註  

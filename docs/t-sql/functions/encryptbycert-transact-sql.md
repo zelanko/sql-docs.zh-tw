@@ -17,15 +17,15 @@ helpviewer_keywords:
 - encryption [SQL Server], certificates
 - ENCRYPTBYCERT function
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 79530fff04d278d9dbc8e1ad1454bc4dca4c885c
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 2f7e2ca12ccd98b1b8be77e2df2e480036dda70b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948892"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

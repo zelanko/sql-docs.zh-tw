@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41d8e640d5b85f8adc32e0ce69801accacdc602d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965481"
 ---
 # <a name="procedure-object-adox"></a>Procedure 物件 (ADOX)
 代表預存程序。 當搭配 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，**程序**物件可以用於加入、 刪除或修改預存程序。  

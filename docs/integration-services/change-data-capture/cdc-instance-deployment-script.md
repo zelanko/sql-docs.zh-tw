@@ -11,14 +11,18 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75d66755f85650c6ac8630c08dc38e5d295b6f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c9942407693caaf1a8c0c2ef3222c20a237774c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273667"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729098"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 執行個體部署指令碼
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   顯示 CDC 執行個體部署指令碼的 [CDC 執行個體部署指令碼] 對話方塊。 此指令碼可用來重新建立 CDC 資料庫，並將其所有成品放在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
  在完成部署指令碼之後，您應該確定以下事項：  

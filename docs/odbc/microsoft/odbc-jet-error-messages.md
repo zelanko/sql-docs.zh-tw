@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85e0f9a8bc7015a0ad5b12ce46a6c94ab31ca43c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915808"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 錯誤訊息
 資料來源中發生的錯誤，ODBC 驅動程式會傳回錯誤訊息傳回給它 ODBC 檔案程式庫。 對於 ODBC 驅動程式或驅動程式管理員中發生的錯誤，驅動程式會傳回錯誤訊息會根據文字相關聯的 SQLSTATE。  
@@ -36,4 +35,4 @@ ms.locfileid: "47620276"
 |錯誤訊息|錯誤的位置|  
 |-------------------|--------------------|  
 |[Microsoft][ODBC 驅動程式管理員]*訊息文字*|驅動程式管理員 (Odbc32.dll)|  
-|[Microsoft][ODBC*驅動程式名稱*]*訊息文字*|驅動程式 ISAM （請參閱驅動程式 ISAMs）|
+|[Microsoft][ODBC *driver-name*]*message-text*|驅動程式 ISAM （請參閱驅動程式 ISAMs）|

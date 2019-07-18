@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80336b3b96f5a196e3c44469f635180869f4988b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 457ed25c0c1360d250cd87860e5542adffa5ec9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772055"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>使用 (或不使用) 網路執行 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "53589302"
   
  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlcmd **之類的本機用戶端連接獨立的**執行個體時，您可以不使用網路，而使用本機管道直接連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 本機管道與網路管道的差別在於是否使用網路。 除非另外指向，否則本機與網路管道都會使用標準管道 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .\pipe\sql\query) 建立與\\\\執行個體的連接。  
   
- 當您未指定伺服器名稱而連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，就會使用本機管道。 當您連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並明確指定伺服器名稱時，使用的是網路管道或別的網路跨處理序通訊 (IPC) 機制，如 Internetwork Packet Exchange (IPX) /Sequenced Packet Exchange (SPX) (假設您已將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設成可使用多個網路)。 由於獨立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援網路管道，因此從用戶端連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，必須省略不必要的 **/**<伺服器名稱> 引數。 例如，若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **連接到獨立**執行個體，請輸入：  
+ 當您未指定伺服器名稱而連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，就會使用本機管道。 當您連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並明確指定伺服器名稱時，使用的是網路管道或別的網路跨處理序通訊 (IPC) 機制，如 Internetwork Packet Exchange (IPX) /Sequenced Packet Exchange (SPX) (假設您已將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設成可使用多個網路)。 由於獨立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援網路管道，因此從用戶端連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，必須省略不必要的 **/** <伺服器名稱>  引數。 例如，若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **連接到獨立**執行個體，請輸入：  
   
- **osql /Usa /P** \<sa 密碼>  
+ **osql /Usa /P** \<sa 密碼>   
   
   

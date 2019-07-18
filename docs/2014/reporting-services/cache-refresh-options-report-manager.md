@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109914"
 ---
 # <a name="cache-refresh-options-report-manager"></a>快取重新整理選項 (報表管理員)
   使用 [快取重新整理] 選項頁面來建立排程，以供預先載入含報表或共用資料集資料暫存副本的快取。 重新整理計劃包括排程和選項，可指定或覆寫參數的值。 您不能針對共用資料集，覆寫標示為唯讀的參數值。 您可以建立並使用多個重新整理計劃做為重新整理選項頁面的一部分。  
@@ -32,16 +31,16 @@ ms.locfileid: "56011500"
   
 2.  將滑鼠停留在報表或共用資料集上方，然後按下拉式箭號。  
   
-3.  在下拉式清單中，按一下 **[管理]**， **[一般屬性]** 頁面隨即開啟。  
+3.  在下拉式清單中，按一下 **[管理]** ， **[一般屬性]** 頁面隨即開啟。  
   
 4.  按一下 **[快取重新整理計劃]** 索引標籤。  
   
-5.  若要建立新的快取計劃，請按一下 **[新增快取重新整理計劃]**。  
+5.  若要建立新的快取計劃，請按一下 **[新增快取重新整理計劃]** 。  
   
     > [!NOTE]  
     >  您必須啟用並啟動 SQL Server Agent 服務來建立快取重新整理計劃。  
   
-6.  若要建立一份快取計劃，然後加以自訂，請按一下 **[從現有的新增]**。  
+6.  若要建立一份快取計劃，然後加以自訂，請按一下 **[從現有的新增]** 。  
   
 ## <a name="cache-refresh-options"></a>快取重新整理選項  
  **刪除**  

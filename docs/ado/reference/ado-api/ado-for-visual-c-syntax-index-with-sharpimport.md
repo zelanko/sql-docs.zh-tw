@@ -1,5 +1,5 @@
 ---
-title: 'ADO for Visual c + + 語法索引與 #import |Microsoft Docs'
+title: '視覺效果的 ADOC++含 #import 語法索引 |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75fc5d3ac1aecebca938e55c29a80bf5270bbd4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920968"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO #import Visual c + + 語法索引
-這個索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和 **#import**指示詞。  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>視覺效果的 ADOC++含 #import 語法索引
+這個索引是根據 Microsoft Visual ADO 語言參考的交互參照C++和 **#import**指示詞。  
   
  這個特定的索引已編譯的程式來衍生 **#import**指示詞，針對 ADO.dll 中，然後重新格式化\*.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每一個屬性是由相對應列出 「`__declspec(property...)`"指示詞。  
   
- 您會極力建議您閱讀[Visual c + + ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)如需詳細資訊。  
+ 您會極力建議您閱讀[Visual C++ ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)如需詳細資訊。  
   
- 使用 Visual c + + 中的方法和屬性語法 **#import**針對下列項目所列的指示詞：  
+ 在視覺效果的方法和屬性語法C++具有 **#import**指示詞會列出下列項目：  
   
 -   [ADO 集合](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   

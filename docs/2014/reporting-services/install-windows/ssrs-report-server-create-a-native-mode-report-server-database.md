@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108681"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
   原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫進行內部儲存。 資料庫是必要元件，它是用來儲存已發行的報表、模型、共用資料來源、工作階段資料、資源和伺服器中繼資料。  
@@ -62,13 +61,13 @@ ms.locfileid: "56017039"
   
 1.  如果您正在使用遠端 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，請登入資料庫伺服器，以確認或啟用 TCP/IP 連接。  
   
-2.  依序指向 **[開始]**、 **[所有程式]**、 **[Microsoft SQL Server]**、 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
+2.  依序指向 **[開始]** 、 **[所有程式]** 、 **[Microsoft SQL Server]** 、 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-3.  開啟 **[SQL Server 網路組態]**。  
+3.  開啟 **[SQL Server 網路組態]** 。  
   
 4.  選取執行個體。  
   
-5.  以滑鼠右鍵按一下 **[TCP/IP]** ，然後按一下 **[已啟用]**。  
+5.  以滑鼠右鍵按一下 **[TCP/IP]** ，然後按一下 **[已啟用]** 。  
   
 6.  重新啟動服務。  
   
@@ -78,9 +77,9 @@ ms.locfileid: "56017039"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到您正在建立資料庫的報表伺服器執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]**。  
+2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]** 。  
   
-3.  按一下 **[建立新的報表伺服器資料庫]**，再按 **[下一步]**。  
+3.  按一下 **[建立新的報表伺服器資料庫]** ，再按 **[下一步]** 。  
   
 4.  連接到將用來建立及主控報表伺服器資料庫的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體：  
   
@@ -90,7 +89,7 @@ ms.locfileid: "56017039"
   
     3.  按一下 **[測試連接]** 可驗證與伺服器的連接。  
   
-    4.  按一下 [下一步] 。  
+    4.  按一下 [下一步]  。  
   
 5.  指定用來建立資料庫的屬性。 如需有關如何使用這些屬性的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
@@ -98,9 +97,9 @@ ms.locfileid: "56017039"
   
     2.  選取您希望角色定義和 [我的報表] 所顯示的語言。  
   
-    3.  報表伺服器模式一律設定為 **[原生]**。  
+    3.  報表伺服器模式一律設定為 **[原生]** 。  
   
-    4.  按一下 [下一步] 。  
+    4.  按一下 [下一步]  。  
   
 6.  指定報表伺服器用來連接到報表伺服器資料庫的認證。  
   
@@ -112,9 +111,9 @@ ms.locfileid: "56017039"
   
          如果您希望報表伺服器使用它的服務帳戶進行連接，請選取 **[服務認證]** 。 有了這個選項，伺服器就會使用整合式安全性來進行連接；認證並不會加密或儲存起來。  
   
-    2.  按一下 [下一步] 。  
+    2.  按一下 [下一步]  。  
   
-7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後按 **[下一步]**。  
+7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後按 **[下一步]** 。  
   
 8.  按一下報表伺服器 URL 頁面或報表管理員 URL 頁面上的 URL 來確認連接。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連接有效，您將會在瀏覽器視窗中看到報表伺服器資料夾階層或報表管理員。 如需詳細資訊，請參閱《 [線上叢書》的](verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793619"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -28,26 +28,10 @@ ms.locfileid: "55044315"
 
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
   
-1.  [設定資料庫發行集和訂閱。](#step1)  
-  
-2.  [設定 AlwaysOn 可用性群組。](#step2)  
-  
-3.  [確定所有次要複本主機都設定為複寫。](#step3)  
-  
-4.  [將次要複本主機設定為複寫發行者。](#step4)  
-  
-5.  [將原始發行者重新導向至可用性群組接聽程式名稱。](#step5)  
-  
-6.  [執行驗證預存程序以確認組態。](#step6)  
-  
-7.  [將原始發行者加入至複寫監視器。](#step7)  
-  
- 您可以按照任何順序執行步驟 1 和 2。  
-  
 ##  <a name="step1"></a> 1.設定資料庫發行集和訂閱  
  **設定散發者**  
   
- 散發資料庫不能置於可用性群組中。  
+ 散發資料庫不能搭配 SQL Server 2012 和 SQL Server 2014 置於可用性群組中。 SQL 2016 和更新版本支援將散發資料庫放置到可用性群組內。 如需詳細資訊，請參閱[在可用性群組中設定散發資料庫](../../../relational-databases/replication/configure-distribution-availability-group.md)。
   
 1.  在散發者端設定散發。 如果預存程序正用於組態，請執行 **sp_adddistributor**。 您可以使用 *@password* 參數來識別遠端發行者連接到散發者時使用的密碼。 設定遠端散發者時，每個遠端發行者也需要此密碼。  
   

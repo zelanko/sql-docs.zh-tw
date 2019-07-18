@@ -11,14 +11,18 @@ ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728486"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 執行個體
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 執行個體是由 Oracle CDC 服務建立的一種處理序，可處理從單一 Oracle 來源資料庫擷取的變更。 Oracle CDC 執行個體會從 **cdc.xdbcdc_config** 資料表擷取其組態，並在 **cdc.xdbcdc_state** 資料表中維護其狀態。 這些資料表是 CDC 資料庫的一部分 (此資料庫會定義 Oracle CDC 執行個體)。 如需有關 xdbcdc 資料庫和資料表的詳細資訊，請參閱＜ [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)＞。  
   
  以下描述 Oracle CDC 執行個體所執行的工作：  

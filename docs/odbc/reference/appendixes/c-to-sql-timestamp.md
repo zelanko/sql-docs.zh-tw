@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL： 時間戳記 |Microsoft Docs
+title: C 轉換為 SQL：時間戳記 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037700"
 ---
-# <a name="c-to-sql-timestamp"></a>C 到 SQL：時間戳記
+# <a name="c-to-sql-timestamp"></a>C 轉換為 SQL：時間戳記
 時間戳記 ODBC C 資料類型的識別項是：  
   
  SQL_C_TYPE_TIMESTAMP  
@@ -41,6 +40,6 @@ ms.locfileid: "47739896"
   
  如需哪些值是有效 SQL_C_TIMESTAMP 結構中的資訊，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)稍早在本附錄中。  
   
- 時間戳記 C 資料轉換為字元的 SQL 資料，產生的字元資料時，在 「*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*]"格式。  
+ 時間戳記 C 資料轉換為字元的 SQL 資料，產生的字元資料時，在 「*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...* ]"格式。  
   
  驅動程式將資料轉換的時間戳記 C 資料類型時，會忽略長度/指標值，並假設資料緩衝區的大小，是時間戳記 C 資料類型的大小。 傳入的長度/指標值無效*Strlen_or_ind&lt*中的引數**SQLPutData**並使用指定的緩衝區中*StrLen_or_IndPtr*引數中**SQLBindParameter**。 使用指定的資料緩衝區*DataPtr*中的引數**SQLPutData**並*ParameterValuePtr*中的引數**SQLBindParameter**.

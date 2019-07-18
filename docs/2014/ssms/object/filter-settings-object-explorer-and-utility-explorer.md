@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63277076"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>篩選設定 (物件總管與公用程式總管)
-  使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定] 對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
+  使用此對話方塊來指定篩選。 篩選可以讓您將 [物件總管] 與 [公用程式總管] 設定為僅顯示符合特定準則的項目。 例如，您可以使用篩選，僅顯示名稱中包含單字「Maintenance」的作業。 [篩選設定]  對話方塊的標頭包含伺服器的名稱，也可以包含資料庫的名稱。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **屬性**  
@@ -60,11 +60,11 @@ ms.locfileid: "52808920"
   
 -   **介於**  
   
-     適用於日期，此篩選會顯示日期介於所提供之兩個日期之間的項目。 選取 [介於] 並按下 TAB 鍵新增另一個資料列，以輸入第二個日期。  
+     適用於日期，此篩選會顯示日期介於所提供之兩個日期之間的項目。 選取 [介於]  並按下 TAB 鍵新增另一個資料列，以輸入第二個日期。  
   
 -   **不介於**  
   
-     適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於] 並按下 TAB 鍵跳離 [運算子] 資料行，即可新增另一個資料列，以輸入第二個日期。  
+     適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於]  並按下 TAB 鍵跳離 [運算子]  資料行，即可新增另一個資料列，以輸入第二個日期。  
   
  **值**  
  輸入要和屬性比較的值。 針對日期，按一下向下鍵以顯示用來選取日期的日曆。  

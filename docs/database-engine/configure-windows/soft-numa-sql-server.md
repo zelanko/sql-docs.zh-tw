@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775468"
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51605388"
 > 軟體 NUMA 不支援熱新增處理器。  
   
 ## <a name="automatic-soft-numa"></a>自動軟體 NUMA  
- 使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時，只要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在啟動時於每個 NUMA 節點或通訊端偵測到超過八個實體核心，就會根據預設自動建立軟體 NUMA 節點。 計算節點中的實體核心時，不會區分超執行緒處理器核心。  當偵測到每個通訊端的實體核心超過八個時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會建立軟體 NUMA 節點，此節點在理想情況下會包含八個核心，但可以減少至每個節點五個或增加至最多九個邏輯核心。 硬體節點的大小可由 CPU 關連遮罩限制。 NUMA 節點數目永遠不會超過支援的 NUMA 節點數目上限。  
+使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時，只要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在啟動時於每個 NUMA 節點或通訊端偵測到超過八個實體核心，就會根據預設自動建立軟體 NUMA 節點。 計算節點中的實體核心時，不會區分超執行緒處理器核心。  當偵測到每個通訊端的實體核心超過八個時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會建立軟體 NUMA 節點，此節點在理想情況下會包含八個核心，但可以減少至每個節點五個或增加至最多九個邏輯核心。 硬體節點的大小可由 CPU 關連遮罩限制。 NUMA 節點數目永遠不會超過支援的 NUMA 節點數目上限。  
   
- 您可以搭配使用 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 陳述式與 `SET SOFTNUMA` 引數來停用或重新啟用軟體 NUMA。 變更此設定值需要重新啟動資料庫引擎才會生效。  
+您可以搭配使用 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 陳述式與 `SET SOFTNUMA` 引數來停用或重新啟用軟體 NUMA。 變更此設定值需要重新啟動資料庫引擎才會生效。  
   
- 下圖顯示當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測到硬體 NUMA 節點在每個節點或通訊端有超過八個實體核心時，您會在 SQL Server 錯誤記錄檔中看到的軟體 NUMA 資訊類型。  
+下圖顯示當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測到硬體 NUMA 節點在每個節點或通訊端有超過八個實體核心時，您會在 SQL Server 錯誤記錄檔中看到的軟體 NUMA 資訊類型。  
 
 
 ```
@@ -49,6 +49,9 @@ ms.locfileid: "51605388"
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> 以 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開頭，使用追蹤旗標 8079 讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用自動軟體 NUMA。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8079 沒有任何作用。 如需詳細資訊，請參閱 [DBCC TRACEON - 追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 ## <a name="manual-soft-numa"></a>手動軟體 NUMA  
 若要手動設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用軟體 NUMA，請停用自動軟體 NUMA，並編輯登錄來新增節點設定親和性遮罩。 當使用此方法時，軟體 NUMA 遮罩可陳述為二進位、DWORD (十六進位或十進位) 或 QWORD (十六進位或十進位) 登錄項目。 若要設定超過前 32 個 CPU，請使用 QWORD 或 BINARY 登錄值 (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前無法使用 QWORD 值)。 在修改登錄之後，您必須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，軟體 NUMA 設定才會生效。  
@@ -70,7 +73,7 @@ ms.locfileid: "51605388"
   
  發生大量 I/O 的執行個體 A 現在有兩個 I/O 執行緒和一個延遲寫入器執行緒。 執行處理器密集作業的執行個體 B 只有一個 I/O 執行緒和一個延遲寫入器執行緒。 不同記憶體數量可以指派給執行個體，但與硬體 NUMA 不同，它們都是從相同作業系統記憶體區塊接收記憶體，而沒有記憶體對處理器的親和性。  
   
- 延遲寫入器執行緒會繫結至實體 NUMA 記憶體節點的 SQLOS 檢視。 因此，只要硬體呈現為數個實體 NUMA 節點，這就會是建立的延遲寫入器執行緒數目。 如需詳細資訊，請參閱 [運作方式：軟體 NUMA、I/O 完成執行緒、延遲寫入器工作者和記憶體節點](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
+ 延遲寫入器執行緒會繫結至實體 NUMA 記憶體節點的 SQLOS 檢視。 因此，只要硬體呈現為數個實體 NUMA 節點，這就會是建立的延遲寫入器執行緒數目。 如需詳細資訊，請參閱 [How It Works:Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)(運作方式：軟體 NUMA、I/O 完成執行緒、LAZY WRITER 背景工作角色和記憶體節點)。  
   
 > [!NOTE]
 > 當您升級 **執行個體時，不會複製** 軟體 NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登錄機碼。  
@@ -128,9 +131,9 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ## <a name="metadata"></a>中繼資料  
  您可以使用下列 DMV 來檢視軟體 NUMA 的目前狀態和設定。  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)︰顯示 SOFTNUMA 目前的值 (0 或 1)  
+-   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)：顯示 SOFTNUMA 目前的值 (0 或 1)  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：*softnuma* 和 *softnuma_desc* 資料行會顯示目前設定值。  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：*softnuma* 和 *softnuma_desc* 資料行會顯示目前的設定值。  
   
 > [!NOTE]
 > 雖然您可以使用 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 檢視自動軟體式 NUMA 執行中的值，但您無法使用 **sp_configure** 變更其值。 您必須搭配使用 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 陳述式與 `SET SOFTNUMA` 引數。  

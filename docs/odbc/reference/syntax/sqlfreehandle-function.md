@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006238"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函數
 **合規性**  
@@ -39,7 +38,7 @@ ms.locfileid: "53203907"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeHandle(  
      SQLSMALLINT   HandleType,  
@@ -50,7 +49,7 @@ SQLRETURN SQLFreeHandle(
  *HandleType*  
  [輸入]若要釋放的控制代碼的型別**SQLFreeHandle**。 必須是下列值之一：  
   
--   利用 SQL_HANDLE_DBC  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
@@ -58,7 +57,7 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_ENV  
   
--   利用 SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT  
   
  只在驅動程式管理員和驅動程式會使用 SQL_HANDLE_DBC_INFO_TOKEN 控制代碼。 應用程式不應使用此控制代碼型別。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
   
@@ -121,7 +120,7 @@ SQLRETURN SQLFreeHandle(
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // SQLFreeHandle.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

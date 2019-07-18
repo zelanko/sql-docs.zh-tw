@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b0806dc4001331523c1ee5aa400d0198f3799238
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: b0c8ada8e10ef0f1bc47e1655521acced6f0aa41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106970"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 連接類型 (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是可擴充的資料倉儲應用裝置，透過大量平行處理提供效能和擴充性。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 資料庫來進行分散式處理和資料存放。  
@@ -98,7 +97,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 按一下工具列上的 **[執行]** 按鈕 (**!**) 來執行查詢並顯示結果集。  
+ 按一下工具列上的 **[執行]** 按鈕 ( **!** ) 來執行查詢並顯示結果集。  
   
  若要將這個查詢參數化，請加入查詢參數。 例如，將 WHERE 子句變更為下列：  
   

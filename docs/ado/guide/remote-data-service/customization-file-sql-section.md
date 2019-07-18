@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922789"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL 區段
 **Sql**區段可以包含新的 SQL 字串，它會取代用戶端命令字串。 如果沒有區段中的 SQL 字串，將會忽略一節。  
@@ -43,7 +42,7 @@ SQL = " "
 ## <a name="syntax"></a>語法  
  取代 SQL 字串項目屬於表單：  
   
- **SQL=**   
+ **SQL=**    
  ***sqlString***  
   
 |部分|描述|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
@@ -13,15 +12,15 @@ ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152984"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089986"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>選項 （查詢執行-SQL Server-一般頁面）
-  使用此頁面可指定執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。  
+  使用此頁面可指定執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]  功能表上的 [查詢選項]  ，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]  。  
   
 ## <a name="options"></a>選項。  
  **SET ROWCOUNT**  

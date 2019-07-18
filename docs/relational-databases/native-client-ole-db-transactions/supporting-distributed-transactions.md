@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf8c6aa5fc5f18113e88d0f7eebec87fe538ec80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcec86afd8187bc21ca6143656b2e7d6730f541
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069447"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -144,6 +143,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [交易](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

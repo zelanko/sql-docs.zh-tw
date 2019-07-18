@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
@@ -16,12 +15,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082725"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
   當您使用外部資料測試採礦模型的精確度時，如果採礦模型包含巢狀資料表，則外部資料必須也包含案例資料表和相關聯的巢狀資料表。  
@@ -46,9 +45,9 @@ ms.locfileid: "52518282"
   
 4.  按一下 瀏覽按鈕 **（...）** 從目前的伺服器上的資料來源檢視的清單選擇外部資料集。  
   
-5.  按一下 [選取案例資料表] 。 在 **[選取資料表]** 對話方塊中，從資料來源檢視中選取包含案例資料的資料表，然後按一下 **[確定]**。  
+5.  按一下 [選取案例資料表]  。 在 **[選取資料表]** 對話方塊中，從資料來源檢視中選取包含案例資料的資料表，然後按一下 **[確定]** 。  
   
-6.  按一下 **[選取巢狀資料表]**。 在 **[選取資料表]** 對話方塊中，選取包含巢狀資料的資料表，然後按一下 **[確定]**。  
+6.  按一下 **[選取巢狀資料表]** 。 在 **[選取資料表]** 對話方塊中，選取包含巢狀資料的資料表，然後按一下 **[確定]** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

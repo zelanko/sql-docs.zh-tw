@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767715"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56230975"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 max worker threads 選項之後](#FollowUp)  
+-   **後續操作：** [設定 max worker threads 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -77,14 +77,14 @@ ms.locfileid: "56230975"
     |\>64 個處理器|256 + ((邏輯 CPU 數目 - 4) * 32)|512 + ((邏輯 CPU 數目 - 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不可以安裝在 32 位元作業系統上。 列出 32 位元電腦值以協助客戶執行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更早版本。   建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最大工作者執行緒設為 1024。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不可以安裝在 32 位元作業系統上。 列出 32 位元電腦值以協助客戶執行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更早版本。 建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的背景工作執行緒最大數目設為 1,024。  
   
     > [!NOTE]  
-    >  如需有關使用超過 64 個 CPU 的建議事項，請參閱 [在超過 64 個 CPU 之電腦上執行 SQL Server 的最佳作法](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)。  
+    > 如需有關使用超過 64 個 CPU 的建議事項，請參閱 [在超過 64 個 CPU 之電腦上執行 SQL Server 的最佳作法](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)。  
   
 -   當所有的工作者執行緒都在進行長時間執行的查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會反應遲緩，直到工作者執行緒完成並恢復為可用狀態為止。 雖然這不算是瑕疵，但有時卻讓人困擾。 若處理序反應遲緩，而且無法處理新查詢，請使用專用管理員連接 (DAC) 來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後清除處理序。 若要避免這個問題，請增加 max worker threads 的最大數目。  
   
- **max worker threads** 伺服器組態選項不會將所有系統工作 (例如可用性群組、Service Broker、鎖定管理員與其他工作) 需要的執行緒納入考量。 如果超過設定的執行緒數目，下列查詢會提供已產生其他執行緒之系統工作的相關資訊。  
+ [最大工作者執行緒]  伺服器設定選項不會限制系統中可能繁衍的所有執行緒。 可用性群組、Service Broker、鎖定管理員等工作所需的執行緒，或在此限制外繁衍的執行緒。 如果超過設定的執行緒數目，下列查詢會提供已繁衍其他執行緒之系統工作的相關資訊。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -103,18 +103,18 @@ ms.locfileid: "56230975"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
- 不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+####  <a name="Permissions"></a> 權限  
+ 不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 `RECONFIGURE` 陳述式時，使用者必須取得 `ALTER SETTINGS` 伺服器層級權限。 **sysadmin** 和 **serveradmin** 固定伺服器角色隱含地持有 `ALTER SETTINGS` 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>設定 max worker threads 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[處理器]** 節點。  
   
-3.  在 [最大背景工作執行緒] 方塊中，鍵入或選取 128 到 32,767 之間的任一數值。  
+3.  在 [最大背景工作執行緒]  方塊中，鍵入或選取 128 到 32,767 之間的任一數值。  
   
 > [!TIP]
 > **Max worker threads** 選項可用來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序可使用的工作者執行緒數目。 **max worker threads** 的預設值對大部份系統而言都是最合適的。 但依系統組態而定，將 **max worker threads** 設為較小的值有時候可提高效能。
@@ -126,9 +126,9 @@ ms.locfileid: "56230975"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max worker threads` 選項設定為 `900`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max worker threads` 選項設定為 `900`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -143,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定 max worker threads 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定最大背景工作執行緒選項之後  
  無須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，變更會在執行 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 後立即生效。  
   
 ## <a name="see-also"></a>另請參閱  

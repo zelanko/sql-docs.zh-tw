@@ -29,14 +29,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e202e2b8a7766d4dde711a7f89d27177d176b3a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073656"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "52395431"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，執行陳述式時，就會發生錯誤 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）;否則資料會傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 參數的資料類型的隱含轉換。  
+ <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_XML 以外的伺服器類型，而且存取子類型為 DBTYPE_XML，則在執行陳述式 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR) 時會發生錯誤；否則，資料會傳送到伺服器，但是伺服器會傳回錯誤，指出沒有從 XML 隱含地轉換為參數的資料類型。  
   
  <sup>2</sup>超出本主題的範圍。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "52395431"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集  
  COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集的加入項目包含下列資料行。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|定義 XML 結構描述集合所在結構描述的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
@@ -151,7 +150,7 @@ ms.locfileid: "52395431"
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 結構描述資料列集  
  用戶端推出新的結構描述資料列集 SS_XMLSCHEMA 來擷取 XML 結構描述資訊。 SS_XMLSCHEMA 資料列集包含下列資料行。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所屬的目錄。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所屬的結構描述。|  
@@ -171,7 +170,7 @@ ms.locfileid: "52395431"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  若要支援**xml**透過 OLE DB 資料類型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集，其中包含下列值。  
   
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄 (資料庫) 的名稱。 SQL 三部分名稱識別碼的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|結構描述集合內，XML 結構描述的名稱。 SQL 三部分名稱識別碼的一部分。|  
@@ -180,7 +179,7 @@ ms.locfileid: "52395431"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  若要支援的資料表中建立**ITableDefinition**介面，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端會將三個新的資料行加入到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|名稱|類型|描述|  
+|名稱|type|描述|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定儲存 XML 結構描述所在之目錄名稱的字串。 如果是其他資料行類型，這個屬性會傳回空字串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定定義此資料行之 XML 結構描述名稱的字串。|  
@@ -200,7 +199,7 @@ ms.locfileid: "52395431"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端會新增下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-所傳回的資料列集的特定資料行**icolumnrowset:: Getcolumnsrowset**方法。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 結構描述集合所屬的目錄，<br /><br /> 否則為 NULL。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 結構描述集合所屬的結構描述， 否則為 NULL。|  
@@ -216,7 +215,7 @@ ms.locfileid: "52395431"
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 介面  
  取用者可以在資料行中更新 XML 結構描述的方式有兩種。 第一種方式是透過提供者所建立的儲存物件 **ISequentialStream**。 取用者可以呼叫 **ISequentialStream::Write** 方法來直接更新提供者所傳回的 XML 執行個體。  
   
- 第二個方式是透過 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 這種方法，可以在類型 DBTYPE_BSTR、 DBTYPE_WSTR、 DBTYPE_VARIANT、 DBTYPE_XML 或 DBTYPE_IUNKNOWN 的繫結中指定取用者緩衝區中的 XML 執行個體。  
+ 第二個方式是透過 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 利用這個方式，取用者緩衝區中的 XML 執行個體可以在類型 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的繫結中指定。  
   
  如果是 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，提供者會將位於取用者緩衝區中的 XML 執行個體儲存到適當的資料行中。  
   

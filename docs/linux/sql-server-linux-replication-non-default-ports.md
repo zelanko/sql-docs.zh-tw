@@ -1,21 +1,20 @@
 ---
-title: 在 Linux 上設定快照集資料夾共用 SQL Server 複寫 |Microsoft Docs
+title: 在 Linux 上設定快照集資料夾共用 SQL Server 複寫
 description: 本文說明如何在 Linux 上設定的快照集資料夾共用 SQL Server 複寫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8ca6bbe8c8ae3bb07a6f0470cf2f6f8d648ea03
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093177"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>使用非預設連接埠設定複寫
 
@@ -30,25 +29,25 @@ ms.locfileid: "56319329"
 
 ## <a name="examples"></a>範例
 
-在 Linux 上的通訊埠 1500年 'Server1' 接聽。 若要設定發佈 'Server1'，執行`sp_adddistributor`與`@distributor`。 例如： 
+在 Linux 上的通訊埠 1500年 'Server1' 接聽。 若要設定發佈 'Server1'，執行`sp_adddistributor`與`@distributor`。 例如: 
 
 ```sql
 exec sp_adddistributor @distributor = 'Server1,1500'
 ```
 
-在 Linux 上的通訊埠 1500年 'Server1' 接聽。 若要設定為散發者的發行者，執行`sp_adddistpublisher`與`@publisher`。 例如：
+在 Linux 上的通訊埠 1500年 'Server1' 接聽。 若要設定為散發者的發行者，執行`sp_adddistpublisher`與`@publisher`。 例如:
 
 ```sql
 exec sp_adddistpublisher @publisher = 'Server1,1500' ,  ,  
 ```
 
-在 Linux 上的連接埠 6549 'Server2' 接聽。 若要設定 'Server2' 做為訂閱者，請執行`sp_addsubscription`與`@subscriber`。 例如：
+在 Linux 上的連接埠 6549 'Server2' 接聽。 若要設定 'Server2' 做為訂閱者，請執行`sp_addsubscription`與`@subscriber`。 例如:
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,  
 ```
 
-'Server3' 接聽 Server3 伺服器名稱和執行個體名稱 MSSQL2017 的連接埠 6549 在 Windows 上。 若要設定 'Server3' 做為訂閱者，請執行`sp_addsubscription`與`@subscriber`。 例如：
+'Server3' 接聽 Server3 伺服器名稱和執行個體名稱 MSSQL2017 的連接埠 6549 在 Windows 上。 若要設定 'Server3' 做為訂閱者，請執行`sp_addsubscription`與`@subscriber`。 例如:
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  

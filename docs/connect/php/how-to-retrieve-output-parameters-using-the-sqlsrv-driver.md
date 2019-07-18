@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700456"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799313"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

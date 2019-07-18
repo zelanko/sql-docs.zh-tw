@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
@@ -13,12 +12,12 @@ ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a12fb33db8b1b4da1b33c02850a108b1e30b2d2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055420"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 封裝基本功能
   封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊，[在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)SSIS 設計師 」 中並[匯入專案精靈](../../2014/integration-services/import-project-wizard.md)。  

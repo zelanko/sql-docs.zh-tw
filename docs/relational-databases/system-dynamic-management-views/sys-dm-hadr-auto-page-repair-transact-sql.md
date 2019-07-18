@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_auto_page_repair (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/05/2019
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d46e5ee0b350e7164c0dfec55666d4b6c8e34a7
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900691"
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "55771324"
   
 ## <a name="see-also"></a>另請參閱  
  [自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
+ [suspect_pages &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

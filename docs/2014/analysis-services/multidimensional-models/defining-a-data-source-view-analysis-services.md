@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
@@ -16,12 +15,12 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075394"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定義資料來源檢視 (Analysis Services)
   資料來源檢視包含所使用的結構描述的邏輯模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多維度資料庫物件-也就是 cube、 維度和採礦結構。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
@@ -85,7 +84,7 @@ ms.locfileid: "52502952"
 > [!NOTE]  
 >  或者，您可以先建構維度和 Cube，然後使用 [結構描述產生] 精靈產生模型的 DSV。 如需詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)。  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [資料來源檢視] 資料夾，然後按一下 [新增資料來源檢視]。  
+1.  在方案總管中，以滑鼠右鍵按一下 [資料來源檢視] 資料夾，然後按一下 [新增資料來源檢視]  。  
   
 2.  指定新的或現有的資料來源物件，以提供連接資訊給外部關聯式資料庫 (在精靈中只能選取一個資料來源)。  
   

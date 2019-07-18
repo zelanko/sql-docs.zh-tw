@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109124"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>一般屬性頁面，資料夾 (報表管理員)
   使用資料夾的 [一般] 屬性頁面來檢視和設定您建立之資料夾的屬性。 有關誰建立和修改資料夾及何時修改資料夾的資訊顯示會在 [一般] 屬性頁面上方。  
@@ -32,7 +31,7 @@ ms.locfileid: "56031589"
   
 1.  開啟報表管理員，然後開啟您想要檢視或設定屬性的資料夾。  
   
-2.  在資料夾橫幅底下的工具列中，按一下 **[資料夾設定]**。  
+2.  在資料夾橫幅底下的工具列中，按一下 **[資料夾設定]** 。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -44,7 +43,7 @@ ms.locfileid: "56031589"
  **在清單檢視中隱藏**  
  選取這個選項可以對正在「報表管理員」中使用清單檢視模式的使用者隱藏資料夾。 清單檢視模式是瀏覽報表伺服器資料夾階層時的預設檢視格式。 在清單檢視中，項目名稱和描述會跨頁排列。 替代格式是詳細資料檢視。 詳細資料檢視會省略描述，但會包括項目的其他相關資訊。 雖然在清單檢視中可以隱藏項目，但在詳細資料檢視中則不行。 如果想要限制項目的存取，您必須建立角色指派。  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

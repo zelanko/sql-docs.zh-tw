@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663159"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 事件類別
   **Data File Auto Shrink** 事件類別指出已壓縮資料檔。 如果資料檔由於有明確指定 ALTER DATABASE 陳述式而進行壓縮，便不會觸發這個事件。 請在監視資料檔大小變更的追蹤中，包含 **Data File Auto Shrink** 事件類別。  

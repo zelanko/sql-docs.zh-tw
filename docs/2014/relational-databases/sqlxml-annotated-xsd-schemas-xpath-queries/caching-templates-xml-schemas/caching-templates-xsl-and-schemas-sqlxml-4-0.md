@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - memory [SQLXML]
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86777a00c7382ce9a1b8d67f06a6cd222f983a11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013244"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>快取範本、XSL 和結構描述 (SQLXML 4.0)
   為增進效能，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 支援快取範本、XSL 和結構描述。  

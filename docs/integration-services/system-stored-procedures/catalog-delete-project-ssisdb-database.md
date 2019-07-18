@@ -11,14 +11,18 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cc535ec472bc3258989ed6268be17228f7dc8d7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 096e0b12aea8376ee27b7d22cceaae94a0746f99
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716348"
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的資料夾刪除現有專案。  
@@ -31,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @project_name = ] *project_name*  
- 要刪除之專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 要刪除之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

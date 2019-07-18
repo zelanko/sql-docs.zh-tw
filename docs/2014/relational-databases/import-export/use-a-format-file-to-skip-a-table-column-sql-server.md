@@ -10,15 +10,15 @@ helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011684"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
   本主題將說明格式檔案。 當欄位不存在於資料檔案中時，您就可以使用格式檔案來略過資料表資料行的匯入。 只有在略過的資料行可為 Null 和/或有預設值時，資料檔案所包含的欄位才可以少於資料表中的資料行數目。  
@@ -59,7 +59,7 @@ GO
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
- 上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 一般而言，預設格式檔案描述資料檔欄位與資料表資料行之間的一對一對應。  
+ 上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」  (Default Format File)，因為它是 **bcp** 所產生的格式。 一般而言，預設格式檔案描述資料檔欄位與資料表資料行之間的一對一對應。  
   
 > [!IMPORTANT]  
 >  您可能需要指定您要連接的伺服器執行個體的名稱。 此外，也可能需要指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  

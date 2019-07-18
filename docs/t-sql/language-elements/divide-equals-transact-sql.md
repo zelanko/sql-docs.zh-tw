@@ -18,16 +18,16 @@ helpviewer_keywords:
 - augmented operators, /=
 - /= (divide equals)
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df1840c0b97dcf43703e5d5fec447923af9265c9
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 2d8b0f725864251bba7e813de8fbfa01603949f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55046172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982479"
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (除法指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

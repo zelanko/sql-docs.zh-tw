@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789290"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的已規劃手動容錯移轉 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 (*「已規劃的手動容錯移轉」*(Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 已規劃的手動容錯移轉就像任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉一樣，會將次要複本轉換成主要角色，同時將先前的主要複本轉換成次要角色。  
@@ -89,12 +89,12 @@ ms.locfileid: "48155339"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **手動容錯移轉可用性群組**  
   
-1.  將目錄變更 (`cd`) 裝載目標次要複本的伺服器執行個體。  
+1.  將目錄 (`cd`) 切換到裝載目標次要複本的伺服器執行個體。  
   
-2.  使用`Switch-SqlAvailabilityGroup`cmdlet。  
+2.  使用 `Switch-SqlAvailabilityGroup` 指令程式。  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
      下列範例會將 *MyAg* 可用性群組手動容錯移轉到位於指定路徑的次要複本。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48155339"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 追蹤：手動容錯移轉可用性群組之後  
+##  <a name="FollowUp"></a> 後續操作：手動容錯移轉可用性群組之後  
  如果您容錯移轉可用性群組的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 外部：調整 WSFC 節點的仲裁投票，以反映您的新可用性群組組態。 如需詳細資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  

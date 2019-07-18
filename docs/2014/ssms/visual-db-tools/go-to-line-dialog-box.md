@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4439f96d79dd9ea2124009af300fa87af365e84c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028335"
 ---
 # <a name="go-to-line-dialog-box"></a>移至行對話方塊
-  若要移到程式碼編輯器視窗中的某個位置，輸入行號，然後按一下 [確定]。  
+  若要移到程式碼編輯器視窗中的某個位置，輸入行號，然後按一下 [確定]  。  

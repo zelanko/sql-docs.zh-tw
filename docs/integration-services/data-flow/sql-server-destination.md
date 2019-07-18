@@ -22,18 +22,22 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: becd2493929fb12ddcec6a0623dec7c46f7b5a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726345"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
   
 ## <a name="permissions"></a>權限  
- 使用者必須擁有「建立全域物件」權限，才能執行包含 SQL Server 目的地的封裝。 您可以使用「本機安全性原則」工具 (從 [系統管理工具] 功能表中開啟) 將此權限授與使用者。 如果您在執行使用 SQL Server 目的地的封裝時收到錯誤訊息，請確定執行該封裝的帳戶是否擁有「建立全域物件」權限。  
+ 使用者必須擁有「建立全域物件」權限，才能執行包含 SQL Server 目的地的封裝。 您可以使用「本機安全性原則」工具 (從 [系統管理工具]  功能表中開啟) 將此權限授與使用者。 如果您在執行使用 SQL Server 目的地的封裝時收到錯誤訊息，請確定執行該封裝的帳戶是否擁有「建立全域物件」權限。  
   
 ## <a name="bulk-inserts"></a>大量插入  
  如果您嘗試使用 SQL Server 目的地將資料大量載入遠端 SQL Server 資料庫，可能會看到類似下列的錯誤訊息：「有 OLE DB 記錄可用。 來源:"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult:0x80040E14 描述:"無法大量載入，因為無法開啟 SSIS 檔案對應物件 'Global\DTSQLIMPORT '。 作業系統錯誤碼 2 (系統找不到指定的檔案)。 請確定是透過 Windows 安全性存取本機伺服器」。  
@@ -124,22 +128,22 @@ ms.locfileid: "58290584"
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的連接，或按一下 [新增] 來建立新的連接。  
+ 從清單中選取現有的連接，或按一下 [新增]  來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
  **使用資料表或檢視**  
- 從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的連接。  
+ 從清單中選取現有的資料表或檢視，或按一下 [新增]  來建立新的連接。  
   
  **新增**  
- 使用 [建立資料表] 對話方塊建立新的資料表。  
+ 使用 [建立資料表]  對話方塊建立新的資料表。  
   
 > [!NOTE]  
 >  當您按一下 **[新增]** 時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **預覽**  
- 使用 [預覽查詢結果] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+ 使用 [預覽查詢結果]  對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
 ## <a name="sql-destination-editor-mappings-page"></a>SQL 目的地編輯器 (對應頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至目的地資料行。  
@@ -158,7 +162,7 @@ ms.locfileid: "58290584"
  檢視每個可用的目的地資料行，不論是否已經對應。  
   
 ## <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
-  使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
+  使用 [SQL 目的地編輯器]  對話方塊的 [進階]  頁面，即可指定進階大量插入選項。  
   
 ### <a name="options"></a>選項。  
  **保留識別**  
@@ -180,19 +184,19 @@ ms.locfileid: "58290584"
  指定要插入的第一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]  中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]  視窗、[進階編輯器]  和物件模型中，請使用 -1。  
   
  **最後一個資料列**  
  指定要插入的最後一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]  中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]  視窗、[進階編輯器]  和物件模型中，請使用 -1。  
   
  **最大錯誤數目**  
  指定停止大量插入之前可以發生的錯誤數目。 此屬性的預設值為 **-1**，表示未指派任何值。  
   
 > [!NOTE]  
->  清除 [SQL 目的地編輯器] 中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性] 視窗、[進階編輯器] 和物件模型中，請使用 -1。  
+>  清除 [SQL 目的地編輯器]  中的文字方塊，以指出您不要指派此屬性的值。 在 [屬性]  視窗、[進階編輯器]  和物件模型中，請使用 -1。  
   
  **逾時**  
  指定因逾時而停止大量插入之前要等候的秒數。  

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215629"
+---
 ## <a name="connect-locally"></a>在本機連線
 
 下列步驟使用 **sqlcmd**，在本機連線到您的新 SQL Server 執行個體。
@@ -44,7 +52,7 @@
    ```
 
 > [!TIP]
-> 若要了解撰寫 Transact-SQL 陳述式與查詢的詳細資訊，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
+> 若要深入了解撰寫 TRANSACT-SQL 陳述式和查詢，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
 ### <a name="insert-data"></a>插入資料
 
@@ -109,8 +117,9 @@ QUIT
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | 跨平台 GUI 資料庫管理公用程式。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 執行 TRANSACT-SQL 命令的跨平台命令列介面。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 使用 mssql 延伸模組執行 TRANSACT-SQL 陳述式的跨平台 GUI 程式碼編輯器中。 |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 跨平台自動化和組態工具根據 cmdlet。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 執行 TRANSACT-SQL 命令的跨平台命令列介面。 |
 
 ## <a name="connecting-from-windows"></a>從 Windows 連線
 

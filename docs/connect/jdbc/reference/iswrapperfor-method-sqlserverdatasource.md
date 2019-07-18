@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf4f7df354f8aa821305e7e847a060491e0e5a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dbf1b4159d060fce122455436a3ff7b7199e583
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796304"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>isWrapperFor 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ public boolean isWrapperFor(Class iface)
  A**類別**定義介面。  
   
 ## <a name="return-value"></a>傳回值  
- 如果這個物件會實作介面或是會包裝實作此介面的物件，則為 **true**。 否則為 **false**。  
+ 如果這個物件會實作介面或是會包裝實作此介面的物件，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) 方法是由已自 JDBC 4.0 規格中導入的 java.sql.Wrapper 介面所定義。  
   
  如果這個方法傳回 true，則配合相同引數呼叫 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) 將會成功。  

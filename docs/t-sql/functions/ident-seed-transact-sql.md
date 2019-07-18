@@ -17,20 +17,20 @@ helpviewer_keywords:
 - seed values [SQL Server]
 - IDENT_SEED function
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65946393"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回在資料表或檢視中建立識別欄位時所指定的原始種子值 (以 **numeric**(**@@** MAXPRECISION,0) 傳回)。 使用 DBCC CHECKIDENT 來變更識別欄位的目前值並不會變更這個函數所傳回的值。  
+  傳回在資料表或檢視中建立識別欄位時所指定的原始種子值 (以 **numeric**( **@@** MAXPRECISION,0) 傳回)。 使用 DBCC CHECKIDENT 來變更識別欄位的目前值並不會變更這個函數所傳回的值。  
   
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

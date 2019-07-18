@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - printing query results
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4513b9a5852d5f7dd4e182d74e15fdd02c36daa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 395e7f0427e80ac039181bad8d0866e16317a207
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698706"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680867"
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "47698706"
   
 1.  選取要列印的資料行或資料列。  
   
-2.  使用 [複製] 命令將它們移至剪貼簿。  
+2.  使用 [複製]  命令將它們移至剪貼簿。  
   
 3.  切換控制至列印結果用的 Windows 程式。  
   
-4.  使用 [貼上] 命令將查詢結果移出剪貼簿。  
+4.  使用 [貼上]  命令將查詢結果移出剪貼簿。  
   
 5.  格式化並列印出結果。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
@@ -15,15 +14,15 @@ ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059203"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 目的地編輯器 (錯誤輸出頁面)
-  使用 [Excel 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定錯誤處理的選項。  
+  使用 [Excel 目的地編輯器]  對話方塊的 [進階]  頁面，即可指定錯誤處理的選項。  
   
  若要深入了解 Excel 目的地，請參閱＜ [Excel Destination](data-flow/excel-destination.md)＞。  
   
@@ -32,12 +31,12 @@ ms.locfileid: "58387366"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [Excel 來源編輯器] 對話方塊的 [連線管理員] 節點中所選取的外部 (來源) 資料行。  
+ 檢視您在 [Excel 來源編輯器]  對話方塊的 [連線管理員]  節點中所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

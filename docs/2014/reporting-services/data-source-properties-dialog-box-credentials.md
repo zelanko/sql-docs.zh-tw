@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f54988b6cf780f9282a368237f7a79c35a17948
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109445"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>資料來源屬性對話方塊、認證
   選取 **[資料來源屬性]** 對話方塊上的 **[認證]** ，來顯示和修改要連接到報表中資料來源的認證。 您所提供的認證會用來存取資料來源，並快取資料副本，以預覽報表。 如需如何快取預覽資料的詳細資訊，請參閱 [預覽報表](reports/previewing-reports.md)。 如需認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用 Windows 驗證 （整合式安全性）**  
  選取此選項即可使用 Windows 驗證。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], copying
 - solutions [SQL Server Management Studio], item copying
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a6697e9e179e0ee9114da63ea2b994281c96e97e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 89d66aa6639b6f6a7b361f9676633892aab14c3a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666066"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689891"
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47666066"
   
 1.  在 [方案總管] 中，選取您要複製的項目。  
   
-2.  在 [編輯] 功能表上，按一下 [複製]。  
+2.  在 [編輯]  功能表上，按一下 [複製]  。  
   
 3.  在 [方案總管] 中，選取目的地專案。  
   
-4.  在 [編輯] 功能表上，按一下 [貼上]。  
+4.  在 [編輯]  功能表上，按一下 [貼上]  。  
   
 > [!NOTE]  
 > 您無法在專案之間複製連接。 將含有相關連接的查詢複製到另一個專案時，並不會將它的相關連接複製到目標專案。 您必須在目標專案中手動建立連接。  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bbb2fc8aa232175ab3dd37f580b25c1bfb77129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 661a37b4136202b9a83b863535670a88a3f100dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102182"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47823126"
 |hobt_id|**bigint**|指出包含這個資料分割的資料列之資料堆積或 B 型樹狀目錄的識別碼。|  
 |rows|**bigint**|指出這個資料分割中的近似資料列數。|  
 |filestream_filegroup_id|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出儲存在這個資料分割上之 FILESTREAM 檔案群組的識別碼。|  
-|data_compression|**tinyint**|表示每個資料分割的壓縮狀態：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 資料行存放區：**適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**適用於**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注意︰** 將會壓縮全文檢索索引，在任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|data_compression|**tinyint**|表示每個資料分割的壓縮狀態：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 資料行存放區：**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注意：** 將會壓縮全文檢索索引，在任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |data_compression_desc|**nvarchar(60)**|表示每個資料分割的壓縮狀態。 資料列存放區資料表的可能值為 NONE、ROW 和 PAGE。 資料行存放區資料表的可能值為 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
   
 ## <a name="permissions"></a>Permissions  

@@ -1,5 +1,5 @@
 ---
-title: '屬性 （Visual c + + 語法索引與 #import） |Microsoft Docs'
+title: '屬性 (VisualC++含 #import 語法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31bdc1249a82660ef7fa7c73a25fb0806c8c0744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2175b8b07fcea8dc61ab0c47a4d85fcdb94dd7d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931587"
 ---
-# <a name="property-visual-c-syntax-index-with-import"></a>屬性 （Visual c + + 語法索引與 #import）
+# <a name="property-visual-c-syntax-index-with-import"></a>屬性 (VisualC++含 #import 語法索引)
 ## <a name="properties"></a>屬性  
   
 ```  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832963"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 處理」工作會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件，例如表格式模型、Cube、維度及採礦模型。  

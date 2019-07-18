@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 226f9d37e9a65eac795b2cf6644394dae318e227
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62837473"
 ---
 # <a name="microsoft-sql-server-privacy-statement"></a>Microsoft SQL Server 隱私權聲明
   如需中的使用者資料收集元件的詳細資訊[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請參閱 < [SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=282418)。  

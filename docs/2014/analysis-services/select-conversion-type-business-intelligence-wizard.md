@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069622"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>選取轉換類型 (商業智慧精靈)
   使用 **[選取轉換類型]** 頁面，即可針對以多種貨幣儲存的交易，定義本地貨幣和報表貨幣之間的關聯性。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。 報表貨幣是用於轉換 **[選取量值]** 頁面中所選取交易的貨幣。  
@@ -26,7 +25,7 @@ ms.locfileid: "48092310"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從維度設計師啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中之方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **多對多**  
  使用本地貨幣儲存交易。 貨幣轉換功能會先將這類交易轉換為 **[設定貨幣轉換選項]** 頁面中指定的樞紐貨幣，再轉換為一或多種其他的報表貨幣。  
   

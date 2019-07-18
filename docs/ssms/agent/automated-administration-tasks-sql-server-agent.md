@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent
 - administering SQL Server, automatically
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e6ad8b25e1777f1683d9fc28caa81e9a61f3c9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25b3572ac5365578046aa272136e9bd953043e39
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636026"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688866"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自動化管理工作 (SQL Server Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

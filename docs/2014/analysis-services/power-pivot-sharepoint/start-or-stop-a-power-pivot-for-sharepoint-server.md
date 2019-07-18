@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071052"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>啟動或停止 PowerPivot for SharePoint 伺服器
   PowerPivot 系統服務和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體一起運作，以支援 SharePoint 伺服陣列中的協調的要求和資料處理相同的本機應用程式伺服器上。  
@@ -43,9 +42,9 @@ ms.locfileid: "48096602"
   
  您無法啟動、暫停或停止特定 Web 應用程式的 PowerPivot 系統服務，但是您可以從預設連接清單移除服務，使其無法使用。 如需詳細資訊，請參閱 < [PowerPivot 服務應用程式連接到 SharePoint Web 應用程式，在 [管理中心]](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-1.  在管理中心的 [系統設定] 中，按一下 [管理伺服器上的服務]。  
+1.  在管理中心的 [系統設定]  中，按一下 [管理伺服器上的服務]  。  
   
-2.  在 [伺服器] 頁面的頂端，按一下向下箭頭，然後按一下 [變更伺服器]。  
+2.  在 [伺服器] 頁面的頂端，按一下向下箭頭，然後按一下 [變更伺服器]  。  
   
 3.  選取具有您要啟動或停止的 PowerPivot 系統服務或 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體的 SharePoint 伺服器。  
   

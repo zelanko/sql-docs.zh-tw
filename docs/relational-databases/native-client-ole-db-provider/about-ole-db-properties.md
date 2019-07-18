@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 376a367bd6679c9ff1a70fad5e440365289db74c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 265ace9286d9500fff914689a045261c1bec4905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050953"
 ---
 # <a name="about-ole-db-properties"></a>關於 OLE DB 屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

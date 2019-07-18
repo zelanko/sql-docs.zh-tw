@@ -12,15 +12,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], deleting model object permissions
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9e05fe2b5001ce54681c8600f943f4fdb361ede5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fcf00249c322b754fef545ce03a730f127ed79fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906284"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
 
@@ -28,7 +27,7 @@ ms.locfileid: "52749280"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -37,25 +36,25 @@ ms.locfileid: "52749280"
   
 ### <a name="to-delete-model-object-permissions"></a>若要刪除模型物件權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
 4.  按一下 **[模型]** 索引標籤。  
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  按一下 **[編輯]**。  
+6.  按一下 **[編輯]** 。  
   
-7.  在 [模型權限摘要] 區域中，選取要刪除之權限的資料列。  
+7.  在 [模型權限摘要]  區域中，選取要刪除之權限的資料列。  
   
      已找到樹狀節點的使用權限，並反白顯示。  
   
-8.  按一下樹狀節點，然後在操作功能表中按一下 [清除存取]。  
+8.  按一下樹狀節點，然後在操作功能表中按一下 [清除存取]  。  
   
-9. 按一下 **[儲存]**。  
+9. 按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

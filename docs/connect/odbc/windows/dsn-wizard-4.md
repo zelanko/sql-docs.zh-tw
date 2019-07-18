@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724366"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797770"
 ---
 # <a name="data-source-wizard-screen-4"></a>資料來源精靈畫面 4
 

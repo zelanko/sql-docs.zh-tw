@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4aab667d16e9e6423b9e26d2c3f37a945f1ad3b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fccf3e82fbf5958e0293c462961d8aa9b459e594
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947770"
 ---
 # <a name="mspublicationaccess-transact-sql"></a>MSpublication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

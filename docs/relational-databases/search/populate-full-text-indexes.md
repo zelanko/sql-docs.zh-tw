@@ -25,16 +25,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 577de0bc80ce718c393cf8d3691e8f8051dfe56f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042267"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586115"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
+  建立和維護全文檢索索引包括使用稱為「母體擴展」  (Population) (也稱為「搜耙」  (Crawl)) 的處理序來擴展索引。  
   
 ##  <a name="types"></a> Types of population  
 全文檢索索引支援下列類型的母體擴展：
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      根據預設，或者如果您指定 `CHANGE_TRACKING AUTO`，全文檢索引擎就會針對全文檢索索引使用自動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改，而且追蹤的變更會自動傳播。 不過，全文檢索索引會在背景更新，所以傳播的變更可能不會立即反映在索引中。  
   
-     **使用自動母體擴展開始追蹤變更**  
+     **使用自動母體擴展來設定追蹤變更**  
   
     -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING AUTO  
   
@@ -161,7 +161,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  累加母體擴展的執行要件是，索引資料表必須包含 **timestamp** 資料類型資料行。 少了 **timestamp** 資料行，就無法執行累加母體擴展。   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用  資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 母體擴展結束時，全文檢索引擎會記錄新的 **timestamp** 值。 這個值就是「SQL 收集程式」所找到的最大 **timestamp** 值。 此值會在下次累加母體擴展啟動時使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **timestamp** 資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 母體擴展結束時，全文檢索引擎會記錄新的 **timestamp** 值。 這個值就是「SQL 收集程式」所找到的最大 **timestamp** 值。 此值會在下次累加母體擴展啟動時使用。  
  
 在某些情況下，累加母體擴展要求會導致完整母體擴展。
 -   對不含 **timestamp** 資料行的資料表提出累加母體擴展要求的話，會導致執行完整母體擴展作業。
@@ -176,39 +176,41 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 1.  在 Management Studio 中，於 [物件總管] 中展開伺服器。  
   
-2.  展開 [資料庫]，然後展開包含全文檢索索引的資料庫。  
+2.  展開 [資料庫]  ，然後展開包含全文檢索索引的資料庫。  
   
-3.  展開 **[資料表]**。  
+3.  展開 **[資料表]** 。  
   
-    以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]，然後按一下 [全文檢索索引] 內容功能表上的 [屬性]。 這樣就會開啟 [全文檢索索引屬性] 對話方塊。  
+    以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]  ，然後按一下 [全文檢索索引]  內容功能表上的 [屬性]  。 這樣就會開啟 [全文檢索索引屬性]  對話方塊。  
 
     > [!IMPORTANT]  
     >  如果基底資料表或檢視表未包含 **timestamp** 資料類型的資料行，則無法執行累加母體擴展。
       
-1.  在 [選取頁面] 窗格中，選取 [排程]。  
+1.  在 [選取頁面]  窗格中，選取 [排程]  。  
   
      您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引的基底資料表或索引檢視表啟動累加資料表母體擴展。  
 
      選項如下：  
   
-    -   若要**建立**新的排程，請按一下 [新增]。  
+    -   若要**建立**新的排程，請按一下 [新增]  。  
   
-        這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]。  
+        這樣就會開啟 [新增全文檢索索引資料表排程]  對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]  。  
   
         > [!IMPORTANT]  
-        >  在您結束 [全文檢索索引屬性] 對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>.<資料表名稱> 啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對相同的全文檢索索引建立多個排程，它們都會使用相同的作業。  
+        >  在您結束 [全文檢索索引屬性]  對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>  .<資料表名稱>  啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對相同的全文檢索索引建立多個排程，它們都會使用相同的作業。  
   
-    -   若要**變更**現有排程，請選取現有排程，然後按一下 [編輯]。  
+    -   若要**變更**現有排程，請選取現有排程，然後按一下 [編輯]  。  
   
-         這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您修改排程。  
+         這樣就會開啟 [新增全文檢索索引資料表排程]  對話方塊，可讓您修改排程。  
   
         > [!NOTE]  
         >  如需修改 SQL Server Agent 作業的資訊，請參閱[修改作業](../../ssms/agent/modify-a-job.md)。  
   
-    -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]。  
+    -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]  。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="crawl"></a> 為全文檢索母體擴展 (搜耙) 中的錯誤疑難排解  
 搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 所指定執行個體 (在此範例中為預設執行個體) 的編目記錄檔預設位於 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 資料夾中。
  

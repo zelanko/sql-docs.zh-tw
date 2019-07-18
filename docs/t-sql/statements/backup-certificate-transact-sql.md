@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64774896"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,28 +70,37 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>引數  
- *path_to_file*  
- 指定儲存憑證的檔案之完整路徑，包括檔案名稱。 此路徑可以是本機路徑或通往網路位置的 UNC 路徑。 預設值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾的路徑。  
-  
- *path_to_private_key_file*  
- 指定儲存私密金鑰的檔案之完整路徑，包括檔案名稱。 此路徑可以是本機路徑或通往網路位置的 UNC 路徑。 預設值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾的路徑。  
+ *certname*  
+ 這是要備份的憑證名稱。
 
- *encryption_password*  
+ TO FILE = '*path_to_file*'  
+ 指定儲存憑證的檔案之完整路徑，包括檔案名稱。 此路徑可以是本機路徑或通往網路位置的 UNC 路徑。 如果只指定檔案名稱，檔案將會儲存在執行個體的預設使用者資料夾 (它不一定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾)。 如果是 SQL Server Express LocalDB，執行個體的預設使用者資料夾是 `%USERPROFILE%` 環境變數為建立該執行個體的帳戶所指定的路徑。  
+
+ WITH PRIVATE KEY 指定憑證的私密金鑰要儲存到檔案。 這個子句是選擇性的。
+
+ FILE = '*path_to_private_key_file*'  
+ 指定儲存私密金鑰的檔案之完整路徑，包括檔案名稱。 此路徑可以是本機路徑或通往網路位置的 UNC 路徑。 如果只指定檔案名稱，檔案將會儲存在執行個體的預設使用者資料夾 (它不一定是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 資料夾)。 如果是 SQL Server Express LocalDB，執行個體的預設使用者資料夾是 `%USERPROFILE%` 環境變數為建立該執行個體的帳戶所指定路徑。  
+
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  這是將私密金鑰寫入備份檔之前用來加密該金鑰的密碼。 這個密碼必須遵守複雜性檢查。  
   
- *decryption_password*  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  這是備份私密金鑰之前用來解密該金鑰的密碼。 如果憑證由主要金鑰加密，則不需要此引數。 
   
 ## <a name="remarks"></a>Remarks  
  如果是在資料庫中利用密碼加密私密金鑰，則必須指定解密密碼。  
   
- 將私密金鑰備份至檔案時，需要加密。 用以保護憑證的密碼與用以加密憑證之私密金鑰的密碼並不相同。  
-  
- 若要還原備份憑證，請使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 陳述式。
+ 將私密金鑰備份至檔案時，需要加密。 用以保護檔案中私密金鑰的密碼與用以加密資料庫中憑證之私密金鑰的密碼並不相同。  
+
+ 私密金鑰會以 PVK 檔案格式儲存。
+
+ 若要在使用或不使用私密金鑰的情況下還原備份憑證，請使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 陳述式。
+ 
+ 若要將私密金鑰還原至資料庫中現有的憑證，請使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) 陳述式。
  
  當執行備份時，該檔案對於 SQL Server 執行個體的服務帳戶將會套用存取控制清單。 如果您要將憑證還原到在其他帳戶下執行的伺服器，您將需要調整檔案的權限，這樣新帳戶才能讀取它們。 
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要憑證的 CONTROL 權限，且必須知道用來加密私密金鑰的密碼。 如果只備份憑證的公開部份，此命令需要憑證的某些權限，且未對呼叫端拒絕憑證的 VIEW 權限。  
   
 ## <a name="examples"></a>範例  
@@ -129,6 +138,10 @@ GO
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

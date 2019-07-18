@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1939e3b1f09e6afbc63ba0565e244e66a7cff26f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103233"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** 檔會儲存報表管理員、報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -99,14 +98,14 @@ ms.locfileid: "56015599"
  下表提供有關檔案第一個部分中顯示之一般組態設定的資訊。 設定會依其出現在組態檔的順序顯示。 資料表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 **(N)** 、SharePoint 模式的報表伺服器 **(S)** ，還是兩者。  
   
 > [!NOTE]  
->  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) 。  
   
 |設定|描述|模式|  
 |-------------|-----------------|----------|  
 |**Dsn**|將連接字串指定給主控報表伺服器資料庫的資料庫伺服器。 當您建立報表伺服器資料庫時，這個值會加密並加入至組態檔。 如果是 SharePoint，資料庫連接資訊會取自 SharePoint 組態資料庫。|N、S|  
 |**ConnectionType**|指定報表伺服器用於連接到報表伺服器資料庫的認證類型。 有效值為 `Default` 和 `Impersonate`。 如果將報表伺服器設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或服務帳戶連接到報表伺服器資料庫，則會指定 `Default`。 如果報表伺服器是使用 Windows 帳戶連接到報表伺服器資料庫，則會指定 `Impersonate`。|N|  
 |**LogonUser, LogonDomain, LogonCred**|儲存報表伺服器用於連接至報表伺服器資料庫所使用之網域帳戶的網域、使用者名稱和密碼。 當報表伺服器連接設定使用網域帳戶時，會建立 `LogonUser`、`LogonDomain` 及 `LogonCred` 的值。 如需報表伺服器資料庫連接的詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
-|**InstanceID**|報表伺服器執行個體的識別碼。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 此值會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 根據預設，這個值是`MSRS12` *\<執行個體名稱 >*。 請勿修改此設定。 以下為完整值的範例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的範例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
+|**InstanceID**|報表伺服器執行個體的識別碼。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 此值會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 根據預設，這個值是`MSRS12` *\<執行個體名稱 >* 。 請勿修改此設定。 以下為完整值的範例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的範例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|安裝程式建立之報表伺服器安裝的識別碼。 此值會設定為 GUID。 請勿修改此設定。|N|  
 |**SecureConnectionLevel**|指定 Web 服務呼叫必須使用安全通訊端層 (SSL) 的程度。 這項設定同時用於報表伺服器 Web 服務和報表管理員。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中設定使用 HTTP 或 HTTPS 的 URL 時，就會設定這個值。 有效值範圍是從 0 到 3，其中 0 表示最不安全。 如需詳細資訊，請參閱 [使用安全的 Web 服務方法](../report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [在原生模式報表伺服器上設定 SSL 連接](../security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N、S|  
 |**DisableSecureFormsAuthenticationCookie**|預設值為 False。<br /><br /> 指定是否停用強制將表單和自訂驗證所使用的 Cookie 標記為安全。 從 SQL Server 2012 開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會自動將搭配自訂驗證延伸模組所使用的表單驗證 Cookie (在傳送給用戶端時) 標示為安全 Cookie。 藉由變更這個屬性，報表伺服器管理員和自訂安全性延伸模組作者可以還原成之前的行為，該行為可讓自訂安全性延伸模組作者判斷是否將 Cookie 標示為安全 Cookie。 建議針對表單驗證使用安全 Cookie，以防止網路探查和重新執行攻擊。|N|  
@@ -176,7 +175,7 @@ ms.locfileid: "56015599"
 |`RSWindowsKerberos`|伺服器接受 Kerberos 安全性 Token。<br /><br /> 當您在限制委派驗證配置中使用 Kerberos 驗證時，請使用此設定或 RSWindowsNegotiate。|N|  
 |`RSWindowsBasic`|不使用認證建立連線時，伺服器會接受基本認證並發出挑戰/回應。<br /><br /> 基本驗證會以清楚的文字，將認證傳入 HTTP 要求中。 如果您使用基本驗證，請使用 SSL 加密進出報表伺服器的網路流量。 若要檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本驗證的範例組態語法，請參閱 [使用報表伺服器驗證](../security/authentication-with-the-report-server.md)。|N|  
 |`Custom`|如果您在報表伺服器電腦上部署了自訂安全性延伸模組，請指定這個值。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)＞。|N|  
-|**LogonMethod**|這個值會指定的登入類型`RSWindowsBasic`。 如果您指定`RSWindowsBasic`，這是必要值。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> `2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
+|**LogonMethod**|這個值會指定的登入類型`RSWindowsBasic`。 如果您指定`RSWindowsBasic`，這是必要值。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> `2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> 注意:中不支援值 0 （用於互動式登入） 和 1 （用於批次登入） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|N|  
 |**Realm**|這個值用於`RSWindowsBasic`。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
 |**DefaultDomain**|這個值用於`RSWindowsBasic`。 它可用於決定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|N|  
 |**RSWindowsExtendedProtectionLevel**|預設值是 **off**。 如需詳細資訊，請參閱＜ [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)＞|N|  
@@ -283,17 +282,17 @@ ms.locfileid: "56015599"
 |-------------|-----------------|  
 |**SMTPServer**|指定表示遠端 SMTP 伺服器或轉送器位址的字串值。 遠端 SMTP 服務需要此值。 這可以是 IP 位址、您公司內部網路上電腦的 UNC 名稱，或者完整網域名稱。|  
 |**SMTPServerPort**|指定一個整數值，表示 SMTP 服務用於傳送外寄郵件的通訊埠。 通常使用通訊埠 25 來傳送電子郵件。|  
-|**SMTPAccountName**|包含指派 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook Express 帳戶名稱的字串值。 如果您的 SMTP 伺服器設定來做某些用途，您可以設定此值；否則可以將它保留空白。 使用 [寄件者]，以指定用於傳送報表的電子郵件帳戶。|  
+|**SMTPAccountName**|包含指派 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook Express 帳戶名稱的字串值。 如果您的 SMTP 伺服器設定來做某些用途，您可以設定此值；否則可以將它保留空白。 使用 [寄件者]  ，以指定用於傳送報表的電子郵件帳戶。|  
 |**SMTPConnectionTimeout**|指定表示有效通訊端在連接到 SMTP 服務逾時前，所等待之秒數的整數值。預設值是 30 秒，但是如果 **SendUsing** 設定為 2，就會忽略此值。|  
 |**SMTPServerPickupDirectory**|指定表示本機 SMTP 服務收取目錄的字串值。 此值必須是完整本機資料夾路徑 (例如，d:\rs-emails)。|  
 |**SMTPUseSSL**|指定可以設定在透過網路傳送 SMTP 訊息時，使用安全通訊端層 (SSL) 的布林值。 預設值是 0 (或 False)。 當 **[SendUsing]** 元素設定為 2 時，可使用此設定。|  
 |**SendUsing**|指定用於傳送訊息的方法。 有效值為：<br /><br /> 1=從本機 SMTP 服務收取目錄傳送訊息。<br /><br /> 2=從網路 SMTP 服務傳送訊息。|  
 |**SMTPAuthenticate**|指定表示在透過 TCP/IP 連接傳送訊息到 SMTP 服務時，要使用之驗證種類的整數值。 有效值為：<br /><br /> 0=無驗證。<br /><br /> 1= (不支援)。<br /><br /> 2= NTLM (NT LanMan) 驗證。 使用報表伺服器 Windows 服務的安全性內容，連接到網路 SMTP 伺服器。|  
-|**來源**|以 *abc@host.xyz*。 地址會在外寄電子郵件訊息的 [寄件者] 行上出現。 如果您使用的是遠端 SMTP 伺服器，則此值是必要的。 它應該是擁有傳送郵件之權限的有效電子郵件帳戶。|  
+|**來源**|以 *abc@host.xyz* 。 地址會在外寄電子郵件訊息的 [寄件者]  行上出現。 如果您使用的是遠端 SMTP 伺服器，則此值是必要的。 它應該是擁有傳送郵件之權限的有效電子郵件帳戶。|  
 |**EmbeddedRenderFormats、RenderingExtension**|指定用於將報表封裝在電子郵件訊息之主體中的轉譯格式。 報表中的影像會後續內嵌在報表中。 有效值為 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定透過「管理所有訂閱」工作啟用訂閱時，使用者可以從報表訂閱選取的轉譯格式。 如果未設定此值，就可以使用所有未刻意排除的轉譯格式。|  
 |**ExcludedRenderFormats、RenderingExtension**|刻意排除與給定傳遞延伸模組配合不良的格式。 您無法排除同一個轉譯延伸模組的多個執行個體， 如果您排除多個執行個體，就會在報表伺服器讀取組態檔時產生錯誤。 預設會排除用於電子郵件傳遞的下列延伸模組：<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  
-|**SendEmailToUserAlias**|此值使用 **DefaultHostName**。<br /><br /> 當**SendEmailToUserAlias**設定為`True`，定義個別的訂用帳戶的使用者會自動指定為報表的收件者。 **[收件者]** 欄位是隱藏的。 如果這個值是`False`，則**至**欄位會顯示。 如果您希望充分控制報表散發，請將此值設定為 `True`。 有效值包括下列各項：<br /><br /> `True`= 用於建立訂用帳戶的使用者電子郵件地址。 這是預設值。<br /><br /> `False`=可以指定任何電子郵件地址。|  
+|**SendEmailToUserAlias**|此值使用 **DefaultHostName**。<br /><br /> 當**SendEmailToUserAlias**設定為`True`，定義個別的訂用帳戶的使用者會自動指定為報表的收件者。 **[收件者]** 欄位是隱藏的。 如果這個值是`False`，則**至**欄位會顯示。 如果您希望充分控制報表散發，請將此值設定為 `True`。 有效值包括以下的值：<br /><br /> `True`= 用於建立訂用帳戶的使用者電子郵件地址。 這是預設值。<br /><br /> `False`=可以指定任何電子郵件地址。|  
 |**DefaultHostName**|此值使用 **SendEmailToUserAlias**。<br /><br /> 指定當 **SendEmailToUserAlias** 設定為 true 時，表示附加到使用者別名之主機名稱的字串值。 此值可以是網域名稱系統 (DNS) 名稱或 IP 位址。|  
 |**PermittedHosts**|藉由明確地指定哪些主機可以接收電子郵件傳遞，來限制報表散發。 **PermittedHosts**中，將每個主機指定為一個 **HostName** 元素，其值為 IP 位址或 DNS 名稱。<br /><br /> 只有主機所定義的電子郵件帳戶為有效收件者。 如果您指定 **DefaultHostName**，務必要將該主機包含為 **PermittedHosts** 的 **HostName**元素。 此值必須是一或多個 DNS 名稱或 IP 位址。 依預設，未設定此值。 如果未設定此值，便不限制誰可以接收電子郵件報表。|  
   

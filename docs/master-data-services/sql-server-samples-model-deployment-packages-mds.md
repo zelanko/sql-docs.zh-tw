@@ -11,15 +11,14 @@ keywords:
 - Master Data Services
 - 範例
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085646"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
 

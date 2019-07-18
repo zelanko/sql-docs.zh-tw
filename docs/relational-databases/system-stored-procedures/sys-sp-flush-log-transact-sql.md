@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066680"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960135"
 ---
 # <a name="secure-the-publisher"></a>保護發行者
   下列複寫代理程式連接到發行者：  
@@ -60,13 +60,13 @@ ms.locfileid: "54127030"
  若要管理 PAL，請參閱[管理發行集存取清單中的登入](manage-logins-in-the-publication-access-list.md)。  
   
 ## <a name="snapshot-agent"></a>快照集代理程式  
- 每個發行集都有一個「快照集代理程式」。 如需詳細資訊，請參閱 [Create a Publication](../publish/create-a-publication.md)。  
+ 每個發行集都有一個「快照集代理程式」。 如需詳細資訊，請參閱[建立發行集](../publish/create-a-publication.md)。  
   
 ## <a name="ftp-snapshot-delivery"></a>FTP 快照集傳遞  
  如果您將快照集指定為應該透過 FTP 共用而不是 UNC 共用來使用，則在設定 FTP 存取時必須指定登入和密碼。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](../publish/deliver-a-snapshot-through-ftp.md)。  
   
 ## <a name="log-reader-agent"></a>記錄讀取器代理程式  
- 每個為異動複寫發行的資料庫，都會有一個記錄讀取器代理程式。 如需詳細資訊，請參閱 [Create a Publication](../publish/create-a-publication.md)。  
+ 每個為異動複寫發行的資料庫，都會有一個記錄讀取器代理程式。 如需詳細資訊，請參閱[建立發行集](../publish/create-a-publication.md)。  
   
 ## <a name="queue-reader-agent"></a>佇列讀取器代理程式  
  所有與給定「散發者」相關聯的「發行者」和發行集 (允許佇列更新訂閱) 都有一個「佇列讀取器代理程式」。 如需詳細資訊，請參閱[啟用交易式發行集的更新訂閱](../publish/enable-updating-subscriptions-for-transactional-publications.md)。  

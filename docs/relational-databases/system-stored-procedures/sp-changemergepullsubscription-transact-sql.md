@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090855"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @property = ] 'property'` 是要變更名稱。 *屬性*已**sysname**，而且可以是下列其中一個資料表中的值。  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(255)**，而且可以是下列其中一個資料表中的值。  
+`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(255)** ，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||當位置不是預設位置，或在預設位置之外還有其他位置時，快照集資料夾的儲存位置。|  
 |**description**||這個合併提取訂閱的描述。|  
-|**distributor**||散發者的名稱。|  
+|**散發者**||散發者的名稱。|  
 |**distributor_login**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼|  
 |**distributor_password**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**distributor_security_mode**|**1**|當連接到散發者時，使用 Windows 驗證。|  
@@ -66,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||使用這個項目的目的，只是為了與舊版相容。 這是用於連接到 FTP 服務的使用者名稱。|  
 |**ftp_password**||使用這個項目的目的，只是為了與舊版相容。 這是用來連接到 FTP 服務的使用者密碼。|  
 |**ftp_port**||使用這個項目的目的，只是為了與舊版相容。 這是散發者的 FTP 服務通訊埠編號。|  
-|**hostname**||指定在聯結篩選的 WHERE 子句或邏輯記錄關聯性中使用這個函數時的 HOST_NAME() 值。|  
+|**主機名稱**||指定在聯結篩選的 WHERE 子句或邏輯記錄關聯性中使用這個函數時的 HOST_NAME() 值。|  
 |**internet_login**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
 |**internet_password**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**1**|當連接到主控 Web 同步處理的 Web 伺服器時，使用 Windows 驗證。|  
@@ -82,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|當連接到發行者時，使用 Windows 驗證。|  
 ||**2**|同步處理觸發程序會使用靜態**sysservers**項目來執行遠端程序呼叫 (RPC) 和 「 發行者 」 必須定義於**sysservers**資料表做為遠端伺服器或連結的伺服器。|  
 |**sync_type**|**automatic**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
-||**none**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
+||**None**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_ftp**|**true**|利用 FTP 而不是一般通訊協定來擷取快照集。|  
 ||**false**|利用一般通訊協定來擷取快照集。|  
 |**use_web_sync**|**true**|訂閱可以透過 HTTP 來同步處理。|  

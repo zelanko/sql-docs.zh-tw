@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
@@ -13,20 +12,20 @@ ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069225"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>選取來源 Cube 維度 (資料採礦精靈)
-  使用 [選取來源 Cube 維度] 頁面，即可從包含您要分析之案例的 Cube 中選取維度。 例如，如果您要建立根據人口統計分析客戶購買行為的模型，您要選取 [客戶] 維度，其中通常包含每個客戶的唯一記錄，以及表示人口統計的各種屬性，例如性別、居住地或收入。 在此精靈的後半部，您將有機會加入與此案例資料表相關的資料表：例如，您可以加入顯示客戶已購買之產品的巢狀資料表。  
+  使用 [選取來源 Cube 維度]  頁面，即可從包含您要分析之案例的 Cube 中選取維度。 例如，如果您要建立根據人口統計分析客戶購買行為的模型，您要選取 [客戶] 維度，其中通常包含每個客戶的唯一記錄，以及表示人口統計的各種屬性，例如性別、居住地或收入。 在此精靈的後半部，您將有機會加入與此案例資料表相關的資料表：例如，您可以加入顯示客戶已購買之產品的巢狀資料表。  
   
 > [!NOTE]  
->  唯有在精靈的 [選取定義方法] 頁面上選取了 [從現有的 Cube] 之後，才會顯示這個頁面。  
+>  唯有在精靈的 [選取定義方法]  頁面上選取了 [從現有的 Cube]  之後，才會顯示這個頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取來源 Cube 維度**  
  選取提供採礦結構之來源資料的 Cube 維度。  
   

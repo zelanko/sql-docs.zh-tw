@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
@@ -17,12 +16,12 @@ ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5d21e0b5a187fa7b55e104df9b633adc180070c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a3146f5a9f3e22753cc86c07b609d997be580b9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079800"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>使用 SQL Server Profiler 監視 Analysis Services 簡介
   您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
@@ -42,7 +41,7 @@ ms.locfileid: "54128478"
 -   在螢幕上顯示有關擷取事件的資料，或擷取有關每個事件的資料並儲存到檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，以供未來分析或播放使用。 當您重新執行資料時，可以即時或逐步返回儲存的事件，如同最初發生時一般。  
   
 ## <a name="using-sql-server-profiler"></a>使用 SQL Server Profiler  
- 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始] 功能表上的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 程式集啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始]  功能表上的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 程式集啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  當您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，請注意下列事項：  
   

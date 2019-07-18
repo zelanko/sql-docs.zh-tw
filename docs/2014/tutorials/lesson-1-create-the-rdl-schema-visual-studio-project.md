@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018909"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678516"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 課：建立 RDL 結構描述 Visual Studio 專案
   在這個教學課程中，您會建立簡單的主控台應用程式。 本教學課程假設您正在開發中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
@@ -57,7 +57,7 @@ ms.locfileid: "56018909"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 您的專案的摺疊的檢視會顯示在 [方案總管] 中。  
   
-7.  在 [專案] 功能表上，按一下 [新增現有項目]。  
+7.  在 [專案]  功能表上，按一下 [新增現有項目]  。  
   
 8.  巡覽至的位置，為.cs 或.vb 檔案來產生，然後選取檔案，然後按一下 **新增**。  
   

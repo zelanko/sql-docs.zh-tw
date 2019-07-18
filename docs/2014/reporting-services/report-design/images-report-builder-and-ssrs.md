@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5122c0ec8d686befe20dafd86888bf989eab8fdd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d5b7a8add7f890dcd6e273597f1a43d612d6c5af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105694"
 ---
 # <a name="images-report-builder-and-ssrs"></a>影像 (報表產生器及 SSRS)
   影像是一種報表項目，其中包含了內嵌在報表中、儲存在資料庫中、儲存在報表伺服器上或儲存在網路上其他位置之影像的參考。 影像可能是一個隨資料列數重複顯示的圖片。 您也可以將影像當做某些報表項目的背景。  

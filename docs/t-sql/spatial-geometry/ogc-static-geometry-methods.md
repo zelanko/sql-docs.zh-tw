@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OGC Static Geometry Methods [SQL Server]
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 39c21f0591b6777afac7c06df03525ccd24c3cbb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b6f5a055861ea2d3f0a7cab91fbab3e01832ffba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937472"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 靜態幾何方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52520906"
   
  [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
 ## <a name="in-this-section"></a>本節內容  
   

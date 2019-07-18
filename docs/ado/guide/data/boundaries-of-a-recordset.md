@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925917"
 ---
 # <a name="boundaries-of-a-recordset"></a>資料錄集的界限
 **資料錄集**支援**BOF**並**EOF**以框出開頭和結尾，分別將資料集的屬性。 您可以想像**BOF**並**EOF**為位於開頭和結尾的 「 虛設 」 記錄**資料錄集**。 計算**BOF**並**EOF**，我們的範例**資料錄集**現在看起來會像這樣：  

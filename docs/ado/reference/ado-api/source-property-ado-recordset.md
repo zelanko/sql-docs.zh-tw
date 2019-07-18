@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 718124fce3c2ce7a1adf9e6dbdb1d54e8a834fca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f6ac84445272ae3657d4e25691dbbf150f32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930926"
 ---
 # <a name="source-property-ado-recordset"></a>Source 屬性 (ADO Recordset)
 表示的資料來源[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

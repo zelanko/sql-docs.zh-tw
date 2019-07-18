@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035597"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>索引的 SORT_IN_TEMPDB 選項
   當您建立或重建索引時，可將 SORT_IN_TEMPDB 選項設為 ON，以便指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 來儲存用來建立索引的中繼排序結果。 雖然此選項會增加建立索引所使用的暫存磁碟空間數量，但只要 **tempdb** 所在的磁碟集與使用者資料庫不同，該選項就會減少建立或重建索引所需的時間。 如需 **tempdb**的詳細資訊，請參閱 [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
@@ -81,6 +81,6 @@ ms.locfileid: "48145253"
   
  [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
+ [索引 DDL 作業的磁碟空間需求](disk-space-requirements-for-index-ddl-operations.md)  
   
   

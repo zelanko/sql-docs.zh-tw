@@ -16,16 +16,16 @@ helpviewer_keywords:
 - analytic functions, LAST_VALUE
 - LAST_VALUE function
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f145386e82132316484beb6757c47007d8144f11
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 04566cfdaf5fe3bda557d38ca47122ca5dae1814
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948764"
 ---
 # <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 變更資料採礦檢視器中使用的色彩 |Microsoft 文件
+title: 變更資料採礦檢視器中使用的色彩 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9bf7df74e5a247b7608ac603465fe579b4ab68e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670491"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>變更資料採礦檢視器中使用的色彩
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34019975"
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>若要變更資料採礦檢視器中使用的色彩  
   
-1.  在 **或** 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [工具] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能表中，選取 **[選項]**。  
+1.  在 **或** 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [工具] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能表中，選取 **[選項]** 。  
   
-2.  在 **[選項]** 對話方塊中，展開 **[設計師]**，再展開 **[資料採礦檢視器]**。  
+2.  在 **[選項]** 對話方塊中，展開 **[設計師]** ，再展開 **[資料採礦檢視器]** 。  
   
 3.  尋找您想要變更的檢視器屬性，然後按一下目前的色彩選擇。  
   

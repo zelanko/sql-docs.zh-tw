@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530200"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637566"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>拒絕 XML 結構描述集合的權限
   可以拒絕建立新 XML 結構描述集合或使用現有結構描述集合的權限。  

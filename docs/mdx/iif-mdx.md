@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105329"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -34,10 +33,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  條件評估為**真**(1) 或**false** (0)。 它必須是有效的多維度運算式 (MDX) 邏輯運算式。  
   
- *Expression1 提示 [急切 |Strict |延遲]]*  
+ *Expression1 Hint [Eager|Strict|Lazy]]*  
  邏輯運算式評估為時，使用 **，則為 true**。 Expression1 必須是有效的多維度運算式 (MDX) 運算式。  
   
- *Expression2 提示 [急切 |Strict |延遲]]*  
+ *Expression2 Hint [Eager|Strict|Lazy]]*  
  邏輯運算式評估為時，使用**false**。 Expression2 必須是有效的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  

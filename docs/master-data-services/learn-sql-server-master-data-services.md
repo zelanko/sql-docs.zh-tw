@@ -10,15 +10,14 @@ ms.topic: quickstart
 keywords:
 - 學習 SQL
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007183"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 

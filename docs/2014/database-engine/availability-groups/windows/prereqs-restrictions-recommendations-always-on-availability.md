@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789863"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)
   此主題描述部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的考量，包括對於主機電腦、Windows Server 容錯移轉叢集 (WSFC) 叢集、伺服器執行個體和可用性群組的必要條件、限制和建議。 它也會指出這些元件的安全性考量和必要權限 (如果有的話)。  
@@ -63,14 +63,14 @@ ms.locfileid: "59242226"
   
 ||適用於 Windows 2008 SP2|適用於 Windows 2008 R2 SP1|包含在 Windows 2012 中|若要支援...|Hotfix|連結|  
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**設定最佳的 WSFC 仲裁**|在每個 WSFC 節點上，確定已經安裝了知識庫文件 2494036 中所述的 Hotfix。<br /><br /> 此 Hotfix 支援使用非自動容錯移轉目標來設定最佳仲裁。 此功能使您可以選取投票的節點，藉此改善多網站叢集。|KB 2494036：[Hotfix 是可讓您設定沒有仲裁投票，在 Windows Server 2008 和 Windows Server 2008 R2 中的叢集節點](https://support.microsoft.com/kb/2494036)<br /><br /> 如需仲裁投票的相關資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**更有效率地使用網路頻寬**|在每個 WSFC 節點上，確定已經安裝了知識庫文件 2616514 中所述的 Hotfix。<br /><br /> 如果沒有這個 Hotfix，叢集服務就會在叢集節點之間傳送不必要的登錄通知。 這種行為會限制網路頻寬，而這對 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]會造成嚴重問題。|KB 2616514：[在 Windows Server 2008 或 Windows Server 2008 R2 中，叢集服務會傳送在叢集節點之間的不必要的登錄機碼的變更通知](https://support.microsoft.com/kb/2616514)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")||是|不適用|**並非所有 WSFC 節點皆可在磁碟上進行 VPD 儲存測試**|如果 WSFC 節點正在執行 Windows Server 2008 R2 Service Pack 1 (SP1)，而且「驗證 SCSI 裝置重要產品資料 (VPD)」儲存測試在已上線但並非 WSFC 叢集中的所有節點都可使用的磁碟上不正確地執行之後失敗，請安裝知識庫文件 2531907 中所述的 Hotfix。<br /><br /> 此 Hotfix 可排除在磁碟已上線時驗證報告中不正確的警告或錯誤。|KB 2531907：[驗證 SCSI 裝置重要產品資料 (VPD) 測試在您安裝 Windows Server 2008 R2 SP1 之後失敗](https://support.microsoft.com/kb/2531907)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")||是|是|**更快容錯移轉至本機複本**|若 WSFC 節點執行 Windows Server 2008 R2 Service Pack 1 (SP1)，請確定已經安裝了知識庫文件 2687741 中所述的下列 Hotfix。<br /><br /> 此 Hotfix 可以提升 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至本機複本的效能。|KB 2687741：[Hotfix 可提升效能的 SQL Server 2012 中的 「 AlwaysOn 可用性群組 」 功能是適用於 Windows Server 2008 R2](https://support.microsoft.com/KB/2687741)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**非對稱式儲存體-容錯移轉叢集執行個體 (Fci)**|如果任何容錯移轉叢集執行個體 (FCI) 都將啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請安裝 Windows Server 2008 Hotfix 976097。<br /><br /> 此 hotfix 可讓支援僅部分 WSFC 節點上可用的非對稱式儲存體共用的磁碟容錯移轉叢集管理 Microsoft Management Console (MMC) 嵌入式管理單元。|KB 976097：[Hotfix 新增非對稱儲存支援執行 Windows Server 2008 或 Windows Server 2008 R2 的容錯移轉叢集的容錯移轉叢集管理 MMC 嵌入式管理單元](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原方案](https://technet.microsoft.com/library/jj215886.aspx)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|不適用|**Internet Protocol Security (IPsec)**|如果您的環境使用 IPsec 連接，當用戶端電腦重新建立虛擬網路名稱的 IPsec 連接 (在本文中，連接至可用性群組接聽程式) 時，您會遇到長時間的延遲 (大約二或三分鐘)。 如果您使用 IPsec 連接，我們建議您檢閱知識庫文件 (KB 980915) 中詳述的特定案例。|KB 980915：[當您重新連接 IPSec 連接，從執行 Windows Server 2003、 Windows Vista、 Windows Server 2008、 Windows 7 或 Windows Server 2008 R2 的電腦時，就會發生長時間延遲](https://support.microsoft.com/kb/980915)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**IPv6**|如果您使用 IPv6，我們建議您根據自己的 Windows Server 作業系統，檢閱知識庫文件 2578103 或 2578113 中詳述的特定案例。<br /><br /> 如果您的 Windows Server 拓撲使用 IP 第 6 版 (IPv6)，WSFC 叢集服務大約需要 30 秒來容錯移轉 IPv6 IP 位址。 這會導致用戶端大約等候 30 秒，然後再重新連接到 IPv6 IP 位址。|KB 2578103 (Windows Server 2008)：[叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2)：**Windows Server 2008 R2:**[叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 R2 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578113)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**叢集和應用程式伺服器之間沒有路由器**|如果容錯移轉叢集與應用程式伺服器之間不存在任何路由器，叢集服務就會緩慢地容錯移轉網路相關資源。 在可用性群組容錯移轉之後，這會延遲用戶端重新連接。 如果路由器不存在，我們建議您檢閱知識庫文件 2582281 中詳述的特定案例並安裝 Hotfix (如果適用於環境的話)。|KB 2582281：[如果叢集與應用程式伺服器之間不存在任何路由器，就會緩慢地進行容錯移轉作業](https://support.microsoft.com/kb/2582281)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**設定最佳的 WSFC 仲裁**|在每個 WSFC 節點上，確定已經安裝了知識庫文件 2494036 中所述的 Hotfix。<br /><br /> 此 Hotfix 支援使用非自動容錯移轉目標來設定最佳仲裁。 此功能使您可以選取投票的節點，藉此改善多網站叢集。|KB 2494036:[Hotfix 是可讓您設定沒有仲裁投票，在 Windows Server 2008 和 Windows Server 2008 R2 中的叢集節點](https://support.microsoft.com/kb/2494036)<br /><br /> 如需仲裁投票的相關資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**更有效率地使用網路頻寬**|在每個 WSFC 節點上，確定已經安裝了知識庫文件 2616514 中所述的 Hotfix。<br /><br /> 如果沒有這個 Hotfix，叢集服務就會在叢集節點之間傳送不必要的登錄通知。 這種行為會限制網路頻寬，而這對 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]會造成嚴重問題。|KB 2616514:[在 Windows Server 2008 或 Windows Server 2008 R2 中，叢集服務會傳送在叢集節點之間的不必要的登錄機碼的變更通知](https://support.microsoft.com/kb/2616514)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")||是|不適用|**測試並不適用於所有的 WSFC 節點的磁碟上進行 VPD 儲存**|如果 WSFC 節點正在執行 Windows Server 2008 R2 Service Pack 1 (SP1)，而且「驗證 SCSI 裝置重要產品資料 (VPD)」儲存測試在已上線但並非 WSFC 叢集中的所有節點都可使用的磁碟上不正確地執行之後失敗，請安裝知識庫文件 2531907 中所述的 Hotfix。<br /><br /> 此 Hotfix 可排除在磁碟已上線時驗證報告中不正確的警告或錯誤。|KB 2531907:[驗證 SCSI 裝置重要產品資料 (VPD) 測試在您安裝 Windows Server 2008 R2 SP1 之後失敗](https://support.microsoft.com/kb/2531907)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")||是|是|**更快速的容錯移轉至本機複本**|若 WSFC 節點執行 Windows Server 2008 R2 Service Pack 1 (SP1)，請確定已經安裝了知識庫文件 2687741 中所述的下列 Hotfix。<br /><br /> 此 Hotfix 可以提升 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至本機複本的效能。|KB 2687741:[Hotfix 可提升效能的 SQL Server 2012 中的 「 AlwaysOn 可用性群組 」 功能是適用於 Windows Server 2008 R2](https://support.microsoft.com/KB/2687741)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**非對稱式儲存體-容錯移轉叢集執行個體 (Fci)**|如果任何容錯移轉叢集執行個體 (FCI) 都將啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請安裝 Windows Server 2008 Hotfix 976097。<br /><br /> 此 hotfix 可讓支援僅部分 WSFC 節點上可用的非對稱式儲存體共用的磁碟容錯移轉叢集管理 Microsoft Management Console (MMC) 嵌入式管理單元。|KB 976097:[Hotfix 新增非對稱儲存支援執行 Windows Server 2008 或 Windows Server 2008 R2 的容錯移轉叢集的容錯移轉叢集管理 MMC 嵌入式管理單元](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 架構指南：Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx) (Always On 架構指南：使用容錯移轉叢集執行個體和可用性群組，建置高可用性和災害復原解決方案)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|不適用|**網際網路通訊協定安全性 (IPsec)**|如果您的環境使用 IPsec 連接，當用戶端電腦重新建立虛擬網路名稱的 IPsec 連接 (在本文中，連接至可用性群組接聽程式) 時，您會遇到長時間的延遲 (大約二或三分鐘)。 如果您使用 IPsec 連接，我們建議您檢閱知識庫文件 (KB 980915) 中詳述的特定案例。|KB 980915:[當您重新連接 IPSec 連接，從執行 Windows Server 2003、 Windows Vista、 Windows Server 2008、 Windows 7 或 Windows Server 2008 R2 的電腦時，就會發生長時間延遲](https://support.microsoft.com/kb/980915)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**IPv6**|如果您使用 IPv6，我們建議您根據自己的 Windows Server 作業系統，檢閱知識庫文件 2578103 或 2578113 中詳述的特定案例。<br /><br /> 如果您的 Windows Server 拓撲使用 IP 第 6 版 (IPv6)，WSFC 叢集服務大約需要 30 秒來容錯移轉 IPv6 IP 位址。 這會導致用戶端大約等候 30 秒，然後再重新連接到 IPv6 IP 位址。|KB 2578103 (Windows Server 2008):[叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2):**Windows Server 2008 R2:** [叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 R2 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578113)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|是|是|是|**沒有路由器之間叢集和應用程式伺服器**|如果容錯移轉叢集與應用程式伺服器之間不存在任何路由器，叢集服務就會緩慢地容錯移轉網路相關資源。 在可用性群組容錯移轉之後，這會延遲用戶端重新連接。 如果路由器不存在，我們建議您檢閱知識庫文件 2582281 中詳述的特定案例並安裝 Hotfix (如果適用於環境的話)。|KB 2582281:[如果叢集與應用程式伺服器之間不存在任何路由器，就會緩慢地進行容錯移轉作業](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 對裝載可用性複本之電腦的建議 (Windows 系統)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "59242226"
   
 3.  使用 `Get-ClusterResource` 指令程式尋找網路名稱資源，然後使用 `Set-ClusterParameter` 指令程式設定 `HostRecordTTL` 值，如下所示：  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      下列 PowerShell 範例會針對名為 "`SQL Network Name (SQL35)`" 的網路名稱資源將 HostRecordTTL 設定為 300 秒。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "59242226"
 -   [Windows 2008 R2 容錯移轉多站台叢集](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
 ##  <a name="ServerInstance"></a> SQL Server 執行個體的必要條件和限制  
- 每個可用性群組都需要 *執行個體所裝載的一組容錯移轉夥伴，稱為*「可用性複本」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Availability Replica)。 給定的伺服器執行個體可以是「獨立執行個體」或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]「容錯移傳叢集執行個體」 (FCI)。  
+ 每個可用性群組都需要 *執行個體所裝載的一組容錯移轉夥伴，稱為*「可用性複本」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](Availability Replica)。 給定的伺服器執行個體可以是「獨立執行個體」  或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]「容錯移傳叢集執行個體」  (FCI)。  
   
  
   
@@ -138,13 +138,13 @@ ms.locfileid: "59242226"
   
 ||必要條件|連結|  
 |-|------------------|-----------|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|主機電腦必須是 Windows Server 容錯移轉叢集 (WSFC) 節點。 裝載給定可用性群組之可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，必須位於單一 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。|[SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|主機電腦必須是 Windows Server 容錯移轉叢集 (WSFC) 節點。 裝載給定可用性群組之可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，必須位於單一 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。|[SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|若要讓可用性群組使用 Kerberos：<br /><br /> 裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 SQL Server 服務帳戶。<br /><br /> 網域管理員需要針對可用性群組接聽程式之虛擬網路名稱 (VNN) 的 SQL Server 服務帳戶，在 Active Directory 中手動註冊伺服器主體名稱 (SPN)。 如果對 SQL Server 服務帳戶以外的帳戶註冊 SPN，驗證會失敗。<br /><br /> **\*\* 重要 \*\*** 如果您變更 SQL Server 服務帳戶，網域管理員需要手動重新註冊 SPN。|[註冊 Kerberos 連接的服務主體名稱](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡短說明：**<br /><br /> Kerberos 和 SPN 強制執行相互驗證。 SPN 對應到啟動 SQL Server 服務的 Windows 帳戶。 如果不正確地註冊 SPN 或註冊作業失敗，則 Windows 安全層無法判斷與 SPN 相關聯的帳戶，也無法使用 Kerberos 驗證。<br /><br /> 注意:NTLM 沒有此需求。|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本主題稍後)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每個伺服器執行個體都必須執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Enterprise Edition。|[SQL Server 2014 各版本所支援的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序。|[設定或變更伺服器定序](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|在將要裝載任何可用性群組之可用性複本的每個伺服器執行個體上，啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在給定的電腦上，只要 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 安裝有支援，您就可以對多個伺服器執行個體啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。|[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> **\*\* 重要 \*\*** 如果您刪除然後重新建立 WSFC 叢集，則必須在原始 WSFC 叢集中已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的每個伺服器執行個體上，停用然後重新啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每一個伺服器執行個體都需要資料庫鏡像端點。 請注意，伺服器執行個體上的所有可用性複本、資料庫鏡像夥伴和見證都會共用此端點。<br /><br /> 如果您選取來裝載可用性複本的伺服器執行個體在網域使用者帳戶下執行，而且還沒有資料庫鏡像端點， [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md) (或 [新增複本至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 可以建立端點並授與伺服器執行個體服務帳戶 CONNECT 權限。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務是以內建帳戶 (例如本機系統、本機服務或網路服務) 或非網域帳戶的身分執行，您就必須將憑證用於端點驗證，而且精靈無法在此伺服器執行個體上建立資料庫鏡像端點。 在此情況下，我們建議您先手動建立資料庫鏡像端點，然後再啟動精靈。<br /><br /> **\*\* 安全性注意事項 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的傳輸安全性與資料庫鏡像相同。|[資料庫鏡像端點 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每一個伺服器執行個體都需要資料庫鏡像端點。 請注意，伺服器執行個體上的所有可用性複本、資料庫鏡像夥伴和見證都會共用此端點。<br /><br /> 如果您選取來裝載可用性複本的伺服器執行個體在網域使用者帳戶下執行，而且還沒有資料庫鏡像端點， [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md) (或 [新增複本至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 可以建立端點並授與伺服器執行個體服務帳戶 CONNECT 權限。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務是以內建帳戶 (例如本機系統、本機服務或網路服務) 或非網域帳戶的身分執行，您就必須將憑證用於端點驗證，而且精靈無法在此伺服器執行個體上建立資料庫鏡像端點。 在此情況下，我們建議您先手動建立資料庫鏡像端點，然後再啟動精靈。<br /><br /> **\*\* 安全性注意事項 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的傳輸安全性與資料庫鏡像相同。|[資料庫鏡像端點 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果使用 FILESTREAM 的任何資料庫將要加入至可用性群組，請確定即將裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。|[啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果任何自主資料庫將要加入至可用性群組，請確定在即將裝載可用性群組之可用性複本的每個伺服器執行個體，`contained database authentication` 伺服器選項都設為 `1`。|[自主資料庫驗證伺服器組態選項](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [伺服器組態選項 &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -177,7 +177,7 @@ ms.locfileid: "59242226"
   
 |工作|必要權限|  
 |----------|--------------------------|  
-|建立資料庫鏡像端點|需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。  也需要 CONTROL ON ENDPOINT 權限。 如需詳細資訊，請參閱 [GRANT 端點權限和 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。|  
+|建立資料庫鏡像端點|需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。  也需要 CONTROL ON ENDPOINT 權限。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。|  
 |啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|需要本機電腦的 **Administrator** 群組成員資格和 WSFC 叢集的完整控制。|  
   
 ###  <a name="RelatedTasksSI"></a> 相關工作 (伺服器執行個體)  
@@ -185,12 +185,12 @@ ms.locfileid: "59242226"
 |工作|主題|  
 |----------|-----------|  
 |判斷資料庫鏡像端點是否存在|[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)|  
-|建立資料庫鏡像端點 (如果尚未存在)|[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [針對 AlwaysOn 可用性群組建立資料庫鏡像端點 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)|  
+|建立資料庫鏡像端點 (如果尚未存在)|[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [建立資料庫鏡像 AlwaysOn 可用性群組的&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)|  
 |啟用 AlwaysOn 可用性群組|[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
 ###  <a name="RelatedContentSI"></a> 相關內容 (伺服器執行個體)  
   
--   [AlwaysON - HADRON 學習系列：具備 HADRON 功能之資料庫的工作者集區使用方式](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON-HADRON 學習系列：Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
 ##  <a name="NetworkConnect"></a> 網路連線建議  
  我們強烈建議您針對 WSFC 叢集成員之間的通訊及可用性複本之間的通訊使用相同的網路連結。  使用不同的網路連結時，部分連結失敗 (或甚至間歇性失敗) 可能會發生意外的行為。  
@@ -220,7 +220,7 @@ ms.locfileid: "59242226"
   
 ||必要條件|連結|  
 |-|------------------|----------|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|使用 FCI 裝載可用性複本之前，請先確定系統管理員已安裝知識庫文件 KB 976097 中所述的 Windows Server 2008 Hotfix。 此 hotfix 可讓支援僅部分 WSFC 節點上可用的非對稱式儲存體共用的磁碟容錯移轉叢集管理 Microsoft Management Console (MMC) 嵌入式管理單元。|KB 976097：[Hotfix 新增非對稱儲存支援執行 Windows Server 2008 或 Windows Server 2008 R2 的容錯移轉叢集的容錯移轉叢集管理 MMC 嵌入式管理單元](https://support.microsoft.com/kb/976097)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|使用 FCI 裝載可用性複本之前，請先確定系統管理員已安裝知識庫文件 KB 976097 中所述的 Windows Server 2008 Hotfix。 此 hotfix 可讓支援僅部分 WSFC 節點上可用的非對稱式儲存體共用的磁碟容錯移轉叢集管理 Microsoft Management Console (MMC) 嵌入式管理單元。|KB 976097:[Hotfix 新增非對稱儲存支援執行 Windows Server 2008 或 Windows Server 2008 R2 的容錯移轉叢集的容錯移轉叢集管理 MMC 嵌入式管理單元](https://support.microsoft.com/kb/976097)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|依照標準 SQL Server 容錯移轉叢集執行個體安裝，確定每個 SQL Server 容錯移轉叢集執行個體 (FCI) 都擁有必要的共用儲存體。||  
   
 ###  <a name="RelatedTasksFCIs"></a> 相關工作 (FCI)  
@@ -233,16 +233,16 @@ ms.locfileid: "59242226"
   
 ###  <a name="RelatedContentFCIs"></a> 相關內容 (FCIs)  
   
--   [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
+-   [容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原方案](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [AlwaysOn 架構指南：Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx) (Always On 架構指南：使用容錯移轉叢集執行個體和可用性群組，建置高可用性和災害復原解決方案)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性群組的必要條件和限制  
 
   
 ###  <a name="RestrictionsAG"></a> 限制 (可用性群組)  
   
--   **可用性複本都必須由一個 WSFC 叢集中不同節點裝載：** 對於給定的可用性群組而言，可用性複本必須由在相同 WSFC 叢集中不同節點上執行的伺服器執行個體所裝載。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。  
+-   **可用性複本都必須由一個 WSFC 叢集中不同節點裝載：** 對於給定的可用性群組，必須由相同 WSFC 叢集中不同節點上執行的伺服器執行個體裝載可用性複本。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。  
   
     > [!NOTE]  
     >  同一部實體電腦上的虛擬機器可各自裝載相同可用性群組的可用性複本，因為每部虛擬機器都會當做個別的電腦。  
@@ -276,7 +276,7 @@ ms.locfileid: "59242226"
   
     -   完整控制  
   
-         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要完整控制，而於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，可使其對 WSFC 叢集有完整控制 (透過服務 SID).  
+         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要完整控制，而於 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，可使其對 WSFC 叢集有完整控制 (透過服務 SID).  
   
          不能在 WSFC 容錯移轉叢集管理員直接加入或移除伺服器執行個體的安全性。 若要管理 WSFC 安全性工作階段，請使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 WMI 對等工具。  
   
@@ -296,8 +296,8 @@ ms.locfileid: "59242226"
   
 |工作|主題|  
 |----------|-----------|  
-|建立可用性群組|[使用可用性群組 (新增可用性群組精靈)](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [建立可用性群組 (Transact-SQL)](create-an-availability-group-transact-sql.md)<br /><br /> [建立可用性群組 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)<br /><br /> [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
-|修改可用性複本的數目|[將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
+|建立可用性群組|[使用可用性群組 (新增可用性群組精靈)](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [建立可用性群組 (Transact-SQL)](create-an-availability-group-transact-sql.md)<br /><br /> [建立可用性群組 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)<br /><br /> [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
+|修改可用性複本的數目|[將次要複本加入可用性群組中 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |建立可用性群組接聽程式|[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |卸除可用性群組|[移除可用性群組 &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)|  
   
@@ -324,13 +324,13 @@ ms.locfileid: "59242226"
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|將自主資料庫加入至可用性群組之前，請確定在 (將要) 裝載可用性群組之可用性複本的每個伺服器執行個體，`contained database authentication` 伺服器選項都設為 `1`。|[自主資料庫驗證伺服器組態選項](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [伺服器組態選項 &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可搭配任何支援的資料庫相容性層級使用。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可搭配任何支援的資料庫相容性層級使用。  
   
 ###  <a name="RestrictionsDb"></a> 限制 (可用性資料庫)  
   
 -   如果次要資料庫的檔案路徑 (包括磁碟機代號) 不同於對應主要資料庫的路徑，下列限制適用：  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整] 選項 (在[選取初始資料同步處理頁面](select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整]  選項 (在[選取初始資料同步處理頁面](select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
   
     -   **RESTORE WITH MOVE：** 若要建立次要資料庫，在裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，資料庫檔案必須是 RESTORED WITH MOVE。  
   
@@ -357,15 +357,15 @@ ms.locfileid: "59242226"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
--   [AlwaysON - HADRON 學習系列：具備 HADRON 功能之資料庫的工作者集區使用方式](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON-HADRON 學習系列：Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 用戶端連接性 (SQL Server)](always-on-client-connectivity-sql-server.md)  
   
   

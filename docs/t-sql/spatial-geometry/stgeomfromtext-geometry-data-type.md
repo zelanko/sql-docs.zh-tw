@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromText (geometry Data Type)
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1a3e5ac533e7f207b9f7d1079a37baa3ef351104
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 3fe31cbf2e68d291edefcfbec013ecf9d73c99af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938889"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STGeomFromText()` 所傳回之 **geometry** 執行個體的 OGC 類型會設定為對應的 WKT 輸入。  

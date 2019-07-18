@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108703"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  
@@ -45,7 +44,7 @@ ms.locfileid: "56012460"
   
      如果您是重新建立報表伺服器向外延展部署的加密金鑰，請針對部署中的所有執行個體停用這個屬性。  
   
-    1.  開啟 Windows 檔案總管並巡覽至 *drive*:\Program Files\Microsoft SQL Server\\<報表伺服器執行個體>\Reporting Services。 將 *drive* 取代成磁碟機代號並將 <報表伺服器執行個體> 取代成對應至您想要停用 Web 服務和 HTTP 存取之報表伺服器執行個體的資料夾名稱。 例如，C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services。  
+    1.  開啟 Windows 檔案總管並巡覽至 *drive*:\Program Files\Microsoft SQL Server\\<報表伺服器執行個體>  \Reporting Services。 將 *drive* 取代成磁碟機代號並將 <報表伺服器執行個體>  取代成對應至您想要停用 Web 服務和 HTTP 存取之報表伺服器執行個體的資料夾名稱。 例如，C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services。  
   
     2.  開啟 rsreportserver.config 檔案。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "56012460"
   
 2.  啟動 Reporting Services 組態工具，然後連接到您要設定的報表伺服器執行個體。  
   
-3.  在 [加密金鑰] 頁面上，按一下 **[變更]**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  在 [加密金鑰] 頁面上，按一下 **[變更]** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  重新啟動報表伺服器 Windows 服務。 如果是重新建立向外延展部署的加密金鑰，請重新啟動所有執行個體上的服務。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "56012460"
   
 1.  啟動 Reporting Services 組態工具，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  按一下 **[加密金鑰]**，然後按一下 **[刪除]**。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  按一下 **[加密金鑰]** ，然後按一下 **[刪除]** 。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  重新啟動報表伺服器 Windows 服務。 針對向外延展部署，為所有報表伺服器執行個體執行此作業。  
   

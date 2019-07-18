@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011151"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函數會傳回名為 RANK 的資料行，其中包含 0 到 1000 (順位值) 的序數值。 這些值的用途，在根據傳回資料列符合選取準則的程度予以分級。 等級值僅表示結果集中資料列相關性的相對順序，其值越低表示相關性越低。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。  
@@ -37,7 +37,7 @@ ms.locfileid: "52807250"
   
 ##  <a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只有前三個相符項目搜尋  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 a:只搜尋前三個相符項目  
  下列範例會使用 CONTAINSTABLE，以便只傳回前三個相符項目。  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>範例 B：搜尋前十個相符項目  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>範例 b:搜尋前十個相符項目  
  下列範例會使用 CONTAINSTABLE 傳回 `Description` 資料行在 "light" 或 "lightweight" 字附近包含 "aluminum" 一字的前 5 項產品描述。  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  統計資料 (例如 `IndexRowCount`) 可能會有很大的差異。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
   
- `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為這兩個文件的長度介於鄰近資料表值的 32 與 128，因此它們會被視為具有相同長度的文件，也就是 128 (32 < `docLength` <= 128)。  
+ `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為文件長度在相鄰資料表值 32 到 128 之間的範圍，它們會被視為具有相同長度，也就是 128 (32 < `docLength` < = 128)。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -165,7 +165,7 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
   
  **NEAR 的等級**  
   
- CONTAINSTABLE 支援使用 NEAR 選項來查詢彼此相近的兩個或多個搜尋詞彙。 每個傳回之資料列的等級值是以許多參數為基礎。 其中一個主要次序因數是相對於文件長度的符合項目 (或「叫用」) 總數。 因此，例如，如果 100 個字的文件和 900 個字的文件包含完全相同的符合項目，100 個字的文件就會具有較高的等級。  
+ CONTAINSTABLE 支援使用 NEAR 選項來查詢彼此相近的兩個或多個搜尋詞彙。 每個傳回之資料列的等級值是以許多參數為基礎。 其中一個主要次序因數是相對於文件長度的符合項目 (或「叫用」  ) 總數。 因此，例如，如果 100 個字的文件和 900 個字的文件包含完全相同的符合項目，100 個字的文件就會具有較高的等級。  
   
  資料列中每個叫用的總長度也會根據該叫用之第一個和最後一個搜尋詞彙之間的距離影響該資料列的等級。 距離越小，叫用對資料列等級值造成的影響就越大。 如果全文檢索查詢沒有指定整數做為最大距離，只包含距離大於 100 個邏輯詞彙之叫用的文件將具有等級 0。  
   

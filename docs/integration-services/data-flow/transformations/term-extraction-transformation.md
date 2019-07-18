@@ -29,14 +29,18 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725808"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「詞彙擷取」轉換會從轉換輸入資料行的文字中擷取詞彙，然後將這些詞彙寫入轉換輸出資料行。 轉換只適用於英文字，它使用自己的英文字典和有關英文的語言資訊。  
   
  您可以使用「詞彙擷取」轉換來探索資料集的內容。 例如，包含電子郵件訊息的文字可能會提供有關產品的有用意見反應，這樣您可以使用「詞彙擷取」轉換來擷取訊息中討論的主題，做為分析意見反應的方法。  
@@ -150,7 +154,7 @@ ms.locfileid: "58282572"
   
 -   數字、標點符號和字母字元的組合。 例如， *A23B#99* 會傳回詞彙 *A23B*。  
   
--   字元 %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
+-   字元 %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
     > [!NOTE]  
     >  包含一或多個句號 (.) 的縮寫字不會分隔為多個句子。  
@@ -207,10 +211,10 @@ ms.locfileid: "58282572"
  藉由指定包含排除詞彙的資料行，指出是否要在詞彙擷取期間排除特定詞彙。 如果您選擇要排除詞彙，就必須指定下列來源屬性。  
   
  **[無快取]**  
- 選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新的連接。  
+ 選取現有的 OLE DB 連線管理員，或按一下 [新增]  來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊，來建立新的資料庫連接。  
+ 使用 [設定 OLE DB 連線管理員]  對話方塊，來建立新的資料庫連接。  
   
  **資料表或檢視**  
  選取包含排除詞彙的資料表或檢視。  
@@ -222,7 +226,7 @@ ms.locfileid: "58282572"
  使用 [[設定錯誤輸出]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
-  使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
+  使用 [詞彙擷取轉換編輯器]  對話方塊的 [進階]  索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
   
 ### <a name="options"></a>選項。  
  **名詞**  

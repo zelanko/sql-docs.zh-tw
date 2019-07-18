@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -15,12 +13,12 @@ ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ef5ebb45a1b07470add62eed720547e16cdffab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62725482"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>邏輯架構 (Analysis Services - 多維度資料)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 您可以使用伺服器和用戶端元件，提供線上分析處理 (OLAP) 和商業智慧應用程式的資料採礦功能：  
@@ -29,7 +27,7 @@ ms.locfileid: "48091048"
   
 -   用戶端使用公用標準 XML for Analysis (XMLA) 與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 通訊；而 XMLA 是一種用於發出命令和接收回應的 SOAP 型通訊協定，並以 Web 服務的形式公開。 用戶端物件模型也可透過 XMLA 予以提供，且可使用 Managed 提供者 (例如 ADOMD.Net) 或原生 OLE DB 提供者進行存取。  
   
--   可以使用下列語言發出查詢命令：SQL、多維度運算式 (MDX) (進行分析的業界標準查詢語言)，或資料採礦延伸模組 (DMX) (資料採礦導向的業界標準查詢語言)。 也可以使用 Analysis Services 指令碼語言 (ASSL) 來管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫物件。  
+-   可以使用下列語言發出查詢命令：SQL;多維度運算式 (MDX)、 分析、 業界標準查詢語言或資料採礦延伸模組 (DMX)，資料採礦導向的業界標準查詢語言。 也可以使用 Analysis Services 指令碼語言 (ASSL) 來管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫物件。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 也支援本機 Cube 引擎，讓中斷連接之用戶端上的應用程式可瀏覽儲存在本機的多維度資料。 如需詳細資訊，請參閱[Analysis Services 開發的用戶端架構需求](../olap-physical/client-architecture-requirements-for-analysis-services-development.md)  
   
@@ -41,7 +39,7 @@ ms.locfileid: "48091048"
  [伺服器物件&#40;Analysis Services-多維度資料&#41;](server-objects-analysis-services-multidimensional-data.md)  
   
  **資料庫物件**  
- [資料庫物件&#40;Analysis Services-多維度資料&#41;](database-objects-analysis-services-multidimensional-data.md)  
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](database-objects-analysis-services-multidimensional-data.md)  
   
  **維度物件**  
  [維度物件&#40;Analysis Services-多維度資料&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  

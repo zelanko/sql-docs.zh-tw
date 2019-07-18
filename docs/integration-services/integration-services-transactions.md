@@ -16,14 +16,18 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e14d92b18c22d793a71d5337f32383b0b887a85
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723510"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了三種設定交易的選項：**NotSupported**、**Supported** 和 **Required**。  
   
 -   **Required** 指出容器會啟動交易，除非其父容器已經將其啟動。 如果交易已經存在，則容器會聯結交易。 例如，如果未設定為支援交易的封裝包括使用 **Required** 選項的「時序」容器，則「時序」容器會啟動其自己的交易。 如果封裝設定為使用 **Required** 選項，則「時序」容器會聯結封裝交易。  
@@ -57,13 +61,13 @@ ms.locfileid: "58280752"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-5.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Required**。  
+5.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Required**。  
   
-6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
+6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
   
-7.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+7.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -81,20 +85,20 @@ ms.locfileid: "58280752"
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
-4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-5.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+5.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  封裝支援交易，但交易是由封裝中的工作或容器所啟動。  
   
-6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]。  
+6.  在 [控制流程]  索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]  。  
   
-7.  在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Required**。  
+7.  在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Required**。  
   
-8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
+8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]  。  
   
-9. 在 [屬性] 視窗中，將 TransactionOption 屬性設定為 **Supported**。  
+9. 在 [屬性]  視窗中，將 TransactionOption 屬性設定為 **Supported**。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -135,7 +139,7 @@ ms.locfileid: "58280752"
   
  封裝和工作具有下列交易屬性：  
   
--   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**   
+-   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**  
   
 -   在封裝 B 和 D 上，以及在「執行封裝 B」、「執行封裝 D」和「執行封裝 F」工作上，**TransactionOption** 設為 **Supported** 。  
   

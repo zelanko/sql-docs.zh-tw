@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f14fea5c448a4b3cd3dbb0a34ce86b40d1db7835
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128540"
 ---
 # <a name="close-a-solution"></a>關閉方案
   您可以關閉方案，再從 [方案總管] 中移除它。 關閉方案之後，[方案總管] 便無法使用它。  

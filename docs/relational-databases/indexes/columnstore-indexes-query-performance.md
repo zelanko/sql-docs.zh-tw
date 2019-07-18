@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255275"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860714"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 
@@ -25,7 +25,7 @@ ms.locfileid: "54255275"
 
   針對達到資料行存放區索引設計來提供的快速查詢效能的建議。    
     
- 資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。 這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。 本文結尾部分有資料行存放區效能的進一步說明。    
+ 資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。 這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。 此文章結尾部分有資料行存放區效能的進一步說明。    
     
 ## <a name="recommendations-for-improving-query-performance"></a>改善查詢效能的建議    
  以下是針對達到資料行存放區索引設計來提供的高效能的建議。    
@@ -57,7 +57,7 @@ ms.locfileid: "54255275"
     
 -   資料行存放區索引會讀取來自磁碟機的壓縮資料，這表示需要讀取道記憶體中之資料的位元組更少了。    
     
--   資料行存放區索引在記憶體中是以壓縮格式儲存資料，這樣可以減少相同資料讀取到記憶體中的次數，以減少 I/O。 例如，使用 10 倍壓縮，資料行存放區索引可以在記憶體中保存比未壓縮資料格式多 10 倍的資料。 記憶體中的資料越多，資料行存放區索引就越有可能在記憶體中找到所需的資料。    
+-   資料行存放區索引在記憶體中是以壓縮格式儲存資料，這樣可以減少相同資料讀取到記憶體中的次數，以減少 I/O。 例如，使用 10 倍壓縮，資料行存放區索引可以在記憶體中保存比未壓縮資料格式多 10 倍的資料。 記憶體中的資料越多，資料行存放區索引就越有可能在記憶體中找到所需的資料，而不會導致額外的從磁碟讀取次數。    
     
 -   資料行存放區索引是根據資料行來壓縮資料，而不是根據資料列，這樣可以達到高壓縮率並減少磁碟機上儲存的資料大小。 每個資料行都已壓縮並獨立儲存。  資料行內的資料一律具有相同的資料類型，且通常會有類似的值。 當值相似的時候，資料壓縮技術更能夠達到高壓縮率。    
     
@@ -92,7 +92,7 @@ ms.locfileid: "54255275"
     
  並非所有查詢執行操作子都能在批次模式中執行。 例如，Insert、Delete 或 Update 等 DML 作業是以資料列為單位來執行。 批次模式運算子的目標是加速查詢效能的運算子，例如 Scan、Join、Aggregate、Sort 等等。 因為資料行存放區索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進，所以仍需要一些努力來擴增可在批次模式中執行的運算子。 下表根據產品版本顯示在批次模式中執行的運算子。    
     
-|批次模式運算子|何時使用？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|註解|    
+|批次模式運算子|何時使用？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|註解|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 運算子 (insert、delete、update、merge)||否|否|否|DML 不是批次模式運算子，因為它不是平行處理。 即使我們啟用序列模式批次處理，仍看不出允許 DML 以批次模式處理之後能有顯著改善。|    
 |資料行存放區索引掃描|SCAN|NA|是|是|對於資料行存放區索引，我們可以將述詞推送到 SCAN 節點。|    
@@ -111,7 +111,7 @@ ms.locfileid: "54255275"
 |頂端排序||否|否|是||    
 |視窗彙總||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新運算子。|    
     
- ¹適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層、標準層 - S3 及更新版本，和所有 vCore 層，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup>適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層、標準層 - S3 與更新版本，以及所有 vCore 層，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>彙總下推    
  彙總計算從 SCAN 擷取符合之資料列並在「批次模式」中彙總其值的一般執行路徑。 儘管這提供良好的效能，但在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，可將彙總作業推入 SCAN 節點，若符合下列條件，則能夠以依據重要順序提升「批次模式」執行上彙總運算的效能： 
@@ -146,7 +146,7 @@ FROM FactResellerSalesXL_CCI
     
 例如，事實可以是代表特定產品在特定地區之銷售的記錄，而維度則代表地區、產品等集合。 事實和維度資料表示透過主/外部索引鍵關聯性來連線。 最常使用的分析查詢會聯結一或多個維度資料表和事實資料表。    
     
-讓我們考慮維度資料表 `Products`。 一般的主索引鍵通常會是以字串資料類型表示的 `ProductCode`。 為了查詢的效能，最佳做法是建立替代索引鍵 (通常是整數資料行)，以從事實資料表來參照維度資料表中的資料列。    
+讓我們考慮維度資料表 `Products`。 一般的主索引鍵通常會是以字串資料類型表示的 `ProductCode`。 為了查詢的效能，最佳做法是建立替代索引鍵 (通常是整數資料行)，以從事實資料表來參照維度資料表中的資料列。 
     
 資料行存放區索引可以非常有效率地使用包含數字或整數型索引鍵的聯結/述詞執行分析查詢。 不過，在許多客戶工作負載中，我們發現以字串型資料行連結事實/維度資料表的用法，而包含資料行存放區索引的查詢效能結果並沒有作用。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 藉由將包含字串資料行的述詞下推至 SCAN 節點，大幅改善對字串型資料行分析查詢的效能。    
     
@@ -155,6 +155,9 @@ FROM FactResellerSalesXL_CCI
 使用字串述詞下推，查詢執行會依據字典中的值來計算述詞，如果符合，則所有參照該字典值的資料列都會自動符合。 這藉由兩種方法改善效能：
 1.  只傳回符合的資料列，減少需要傳送出 SCAN 節點的資料列數量。 
 2.  大幅減少字串比較的數量。 在此範例中，只需要對 1 百萬個比較項目進行 100 個字串比較。 以下描述一些限制：    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   差異資料列群組沒有字串述詞下推。 差異資料列群組中的資料行沒有字典。    
     -   如果字典超過 64 KB 個項目則沒有字串述詞下推。    
     -   不支援評估 NULL 的運算式。    

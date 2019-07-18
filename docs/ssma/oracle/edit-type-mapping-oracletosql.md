@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808046"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264227"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>編輯類型對應 (OracleToSQL)
 **編輯類型對應**對話方塊可讓您指定類型的來源和目的地的資料庫物件之間的對應方式。  
@@ -35,10 +35,10 @@ ms.locfileid: "47808046"
 下列欄位的可變長度資料類型時，會出現下**來源類型**:  
   
 **來源**  
-指定此對應的最小長度。 例如，對於**nchar**資料類型，您可以輸入 10，以指定此對應是範圍開始**nchar(10)**。  
+指定此對應的最小長度。 例如，對於**nchar**資料類型，您可以輸入 10，以指定此對應是範圍開始**nchar(10)** 。  
   
-**若要**  
-指定此對應的最大長度。 例如，對於**nchar**資料類型，您可以輸入以指定此對應是範圍結束時間的 20 **nchar(20)**。  
+**To**  
+指定此對應的最大長度。 例如，對於**nchar**資料類型，您可以輸入以指定此對應是範圍結束時間的 20 **nchar(20)** 。  
   
 **目標類型**  
 選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所對應至來源資料類型的資料類型。 SSMA 當建立資料表或預存程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，來源資料類型會變更為此資料型別。  
@@ -46,5 +46,5 @@ ms.locfileid: "47808046"
 下列欄位的可變長度資料類型時，會出現下**目標類型**:  
   
 **Replace with**  
-指定此對應的目標長度。 例如，對於**nvarchar**資料類型，您可以輸入來指定指定的來源資料類型都應該對應至 20 **nvarchar(20)**。  
+指定此對應的目標長度。 例如，對於**nvarchar**資料類型，您可以輸入來指定指定的來源資料類型都應該對應至 20 **nvarchar(20)** 。  
   

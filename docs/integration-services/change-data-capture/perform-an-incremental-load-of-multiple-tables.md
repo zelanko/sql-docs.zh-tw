@@ -13,14 +13,18 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c16d757432c964f778b39c8cc4e290faf7711ef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fee01a2531ce405f212c2559d91ec0ea241b9784
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728621"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>執行多個資料表的累加式載入
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在 [利用異動資料擷取改善累加式載入](../../integration-services/change-data-capture/change-data-capture-ssis.md)主題中，圖表會說明只在一個資料表上執行累加式載入的基本封裝。 不過，載入一個資料表不如必須執行多個資料表的累加式載入那麼常見。  
   
  執行多個資料表的累加式載入時，會針對所有資料表執行一次某些步驟，而且必須針對每個來源資料表重複其他步驟。 您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中實作這些步驟時有一個以上的選擇。  

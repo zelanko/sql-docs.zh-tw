@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5654645164acc5352ca99d6732700d7006b4eb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 201218ba5c82b88fabbb26e279f52ce95bb79527
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933021"
 ---
 # <a name="error-ado---wfc-syntax"></a>Error (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  

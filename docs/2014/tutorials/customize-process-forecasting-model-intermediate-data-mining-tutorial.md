@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249397"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>自訂及處理預測模型 (中繼資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法提供會影響模型建立方式以及時間資料分析方式的參數。 變更這些屬性會對採礦模型如何進行預測造成重大的影響。  
@@ -62,7 +62,7 @@ ms.locfileid: "56031679"
     > [!NOTE]  
     >  PREDICTION_SMOOTHING 參數只適用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise。 因此，您無法在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard 之中檢視或變更 PREDICTION_SMOOTHING 參數的值。 不過，預設行為是使用兩種演算法並且平均分配其權重。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 ## <a name="handling-missing-data-optional"></a>處理遺漏資料 (選擇性)  
  在許多情況下，您的銷售資料可能有填滿 Null 的間距，或可能有某分店錯過了報告期限，導致序列結尾處出現空白資料格。 在這種情況下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會發出下列錯誤，而且不處理模型。  

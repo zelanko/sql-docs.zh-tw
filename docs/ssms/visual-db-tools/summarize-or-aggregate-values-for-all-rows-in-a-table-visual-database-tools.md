@@ -11,15 +11,15 @@ helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 49b0e7cdcdf357f163ea577af0289e41bca90ef3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535510"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689680"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>摘要或彙總資料表中所有資料列的值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ FROM titles
   
 1.  請確定您要彙總的資料表已經出現在 [圖表] 窗格中。  
   
-2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [群組依據]。 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會將 [群組依據] 資料行新增至 [準則] 窗格的方格中。  
+2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [群組依據]  。 [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會將 [群組依據]  資料行新增至 [準則] 窗格的方格中。  
   
 3.  將您想彙總的資料行加入至 [準則] 窗格。 務必標記資料行以進行輸出。  
   
     [查詢和檢視表設計工具] 會自動將資料行別名指派給您要加總的資料行。 您可以使用較有意義的別名取代這個別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-4.  在 [群組依據] 方格資料行中，選取適當的彙總函式，例如：[Sum]、[Avg]、[Min]、[Max]、[Count]。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]。 不要選擇 [Group By]、[Expression] 或 [Where]，因為這些選項不適用於彙總所有資料列。  
+4.  在 [群組依據]  格線欄中，選取適當的彙總函式，例如：**Sum**、**Avg**、**Min**、**Max**、**Count**。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]  。 不要選擇 [Group By]  、[Expression]  或 [Where]  ，因為這些選項不適用於彙總所有資料列。  
   
     查詢和檢視表設計工具會使用指定的彙總函式，取代 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中陳述式的資料行名稱。 例如，SQL 陳述式將如下所示：  
   
@@ -70,7 +70,7 @@ FROM titles
   
 5.  若要在查詢中建立一個以上的彙總，請重複步驟 3 和 4。  
   
-    當其他資料行新增至查詢輸出清單或排序依據清單時，查詢和檢視表設計工具會自動將 [群組依據] 一詞填入至方格的 [群組依據] 資料行。 選取適當的彙總函式。  
+    當其他資料行新增至查詢輸出清單或排序依據清單時，查詢和檢視表設計工具會自動將 [群組依據]  一詞填入至方格的 [群組依據] 資料行  。 選取適當的彙總函式。  
   
 6.  加入搜尋條件 (如果有)，以指定要加總的資料列子集。  
   

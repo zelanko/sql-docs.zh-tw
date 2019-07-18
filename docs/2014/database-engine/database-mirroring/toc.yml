@@ -1,150 +1,143 @@
-items:
 - name: 概觀
   href: database-mirroring-sql-server.md
   items:
-  - name: 資料庫鏡像的必要條件、限制和建議事項
-    href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
-  - name: 鏡像狀態 (SQL Server)
-    href: mirroring-states-sql-server.md
-  - name: 資料庫鏡像作業模式
-    href: database-mirroring-operating-modes.md
-  - name: 資料庫鏡像見證
-    href: database-mirroring-witness.md
+    - name: 資料庫鏡像的必要條件、限制和建議事項
+      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+    - name: 鏡像狀態 (SQL Server)
+      href: mirroring-states-sql-server.md
+    - name: 資料庫鏡像作業模式
+      href: database-mirroring-operating-modes.md
+    - name: 資料庫鏡像見證
+      href: database-mirroring-witness.md
 - name: 操作方式
   items:
-  - name: 設定
-    items:
-    - name: 部署
+    - name: 組態
       items:
-      - name: 設定資料庫鏡像
-        href: setting-up-database-mirroring-sql-server.md
-      - name: 準備鏡像資料庫以進行鏡像
-        href: prepare-a-mirror-database-for-mirroring-sql-server.md
-      - name: 設定加密鏡像資料庫
-        href: set-up-an-encrypted-mirror-database.md
-      - name: 設定鏡像資料庫以使用 Trustworthy 屬性
-        href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-      - name: 指定伺服器網路位址
-        href: specify-a-server-network-address-database-mirroring.md
-      - name: 使用 Windows 驗證建立資料庫鏡像工作階段
-        href: establish-database-mirroring-session-windows-authentication.md
-      - name: 移除資料庫鏡像
-        href: removing-database-mirroring-sql-server.md
-    - name: 見證
+        - name: 部署
+          items:
+            - name: 設定資料庫鏡像
+              href: setting-up-database-mirroring-sql-server.md
+            - name: 準備鏡像資料庫以進行鏡像
+              href: prepare-a-mirror-database-for-mirroring-sql-server.md
+            - name: 設定加密鏡像資料庫
+              href: set-up-an-encrypted-mirror-database.md
+            - name: 設定鏡像資料庫以使用 Trustworthy 屬性
+              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+            - name: 指定伺服器網路位址
+              href: specify-a-server-network-address-database-mirroring.md
+            - name: 使用 Windows 驗證建立資料庫鏡像工作階段
+              href: establish-database-mirroring-session-windows-authentication.md
+            - name: 移除資料庫鏡像
+              href: removing-database-mirroring-sql-server.md
+        - name: Witness
+          items:
+            - name: 使用 Windows 驗證加入見證
+              href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+            - name: 新增或取代見證 (SQL Server Management Studio)
+              href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+            - name: 移除見證
+              href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+    - name: 系統管理
       items:
-      - name: 使用 Windows 驗證加入見證
-        href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
-      - name: 新增或取代見證 (SQL Server Management Studio)
-        href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
-      - name: 移除見證
-        href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-  - name: 系統管理
-    items:
-    - name: 檢視鏡像資料庫的狀態
-      href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-    - name: 暫停或繼續資料庫鏡像
-      href: pausing-and-resuming-database-mirroring-sql-server.md
-    - name: 連線用戶端
-      href: connect-clients-to-a-database-mirroring-session-sql-server.md
-    - name: 變更交易安全性
-      href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-    - name: 手動容錯移轉 (T-SQL)
-      href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-    - name: 手動容錯移轉 (SSMS)
-      href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
-    - name: 強制服務進行容錯移轉
-      href: force-service-in-a-database-mirroring-session-transact-sql.md
-    - name: 預估角色切換期間的中斷
-      href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-    - name: 在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
-      href: upgrading-mirrored-instances.md
-    - name: 使用鏡像效能標準的警告臨界值與警示
-      href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-  - name: 安全性
-    items:
-    - name: 設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶
-      href: set-up-login-accounts-database-mirroring-always-on-availability.md
-    - name: 建立 Windows 驗證的端點
-      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-    - name: 允許網路存取端點
-      href: ../database-mirroring-allow-network-access-windows-authentication.md
-    - name: 使用端點的憑證
-      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+        - name: 檢視鏡像資料庫的狀態
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+        - name: 暫停或繼續資料庫鏡像
+          href: pausing-and-resuming-database-mirroring-sql-server.md
+        - name: 連線用戶端
+          href: connect-clients-to-a-database-mirroring-session-sql-server.md
+        - name: 變更交易安全性
+          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+        - name: 手動容錯移轉 (T-SQL)
+          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+        - name: 手動容錯移轉 (SSMS)
+          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+        - name: 強制服務進行容錯移轉
+          href: force-service-in-a-database-mirroring-session-transact-sql.md
+        - name: 預估角色切換期間的中斷
+          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+        - name: 在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
+          href: upgrading-mirrored-instances.md
+        - name: 使用鏡像效能標準的警告臨界值與警示
+          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+    - name: Security
       items:
-      - name: 使用連出連線的憑證
-        href: database-mirroring-use-certificates-for-outbound-connections.md
-      - name: 使用連入連線的憑證
-        href: database-mirroring-use-certificates-for-inbound-connections.md
+        - name: 設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶
+          href: set-up-login-accounts-database-mirroring-always-on-availability.md
+        - name: 建立 Windows 驗證的端點
+          href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+        - name: 允許網路存取端點
+          href: ../database-mirroring-allow-network-access-windows-authentication.md
+        - name: 使用端點的憑證
+          href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+          items:
+            - name: 使用連出連線的憑證
+              href: database-mirroring-use-certificates-for-outbound-connections.md
+            - name: 使用連入連線的憑證
+              href: database-mirroring-use-certificates-for-inbound-connections.md
 - name: 概念
   items:
-  - name: 互通性與共存性
-    href: database-mirroring-interoperability-and-coexistence-sql-server.md
-    items:
-    - name: 資料庫鏡像及 SQL Server 容錯移轉叢集執行個體
-      href: database-mirroring-and-sql-server-failover-cluster-instances.md
-    - name: 資料庫鏡像和記錄傳送
-      href: database-mirroring-and-log-shipping-sql-server.md
-    - name: 資料庫鏡像和全文檢索目錄
-      href: database-mirroring-and-full-text-catalogs-sql-server.md
-    - name: 資料庫鏡像和資料庫快照集
-      href: database-mirroring-and-database-snapshots-sql-server.md
-    - name: 資料庫鏡像和複寫
-      href: database-mirroring-and-replication-sql-server.md
-  - name: 系統管理
-    items:
-    - name: 監視資料庫鏡像
-      href: monitoring-database-mirroring-sql-server.md
-    - name: 仲裁：見證如何影響資料庫可用性
-      href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
-    - name: 資料庫鏡像工作階段期間的角色切換
-      href: role-switching-during-a-database-mirroring-session-sql-server.md
-    - name: 資料庫鏡像期間可能發生的失敗
-      href: possible-failures-during-database-mirroring.md
-    - name: 針對資料庫鏡像設定進行疑難排解
-      href: troubleshoot-database-mirroring-configuration-sql-server.md
-    - name: 在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
-      href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-  - name: 安全性
-    items:
-    - name: 端點
-      href: the-database-mirroring-endpoint-sql-server.md
-    - name: 資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性
-      href: transport-security-database-mirroring-always-on-availability.md
+    - name: 互通性與共存性
+      href: database-mirroring-interoperability-and-coexistence-sql-server.md
+      items:
+        - name: 資料庫鏡像及 SQL Server 容錯移轉叢集執行個體
+          href: database-mirroring-and-sql-server-failover-cluster-instances.md
+        - name: 資料庫鏡像和記錄傳送
+          href: database-mirroring-and-log-shipping-sql-server.md
+        - name: 資料庫鏡像和全文檢索目錄
+          href: database-mirroring-and-full-text-catalogs-sql-server.md
+        - name: 資料庫鏡像和資料庫快照集
+          href: database-mirroring-and-database-snapshots-sql-server.md
+        - name: 資料庫鏡像和複寫
+          href: database-mirroring-and-replication-sql-server.md
+    - name: 系統管理
+      items:
+        - name: 監視資料庫鏡像
+          href: monitoring-database-mirroring-sql-server.md
+        - name: 仲裁：見證如何影響資料庫可用性
+          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+        - name: 資料庫鏡像工作階段期間的角色切換
+          href: role-switching-during-a-database-mirroring-session-sql-server.md
+        - name: 資料庫鏡像期間可能發生的失敗
+          href: possible-failures-during-database-mirroring.md
+        - name: 疑難排解資料庫鏡像組態
+          href: troubleshoot-database-mirroring-configuration-sql-server.md
+        - name: 在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
+          href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
+    - name: Security
+      items:
+        - name: 端點
+          href: the-database-mirroring-endpoint-sql-server.md
+        - name: 資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性
+          href: transport-security-database-mirroring-always-on-availability.md
 - name: 參考
   items:
-  - name: 設定資料庫鏡像安全性精靈
-    href: start-the-configuring-database-mirroring-security-wizard.md
-    items:
-    - name: 包含見證伺服器
-      href: include-witness-server-configure-database-mirroring-security-wizard.md
-    - name: 選擇要設定的伺服器
-      href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
-    - name: 主體伺服器執行個體
-      href: principal-server-instance-configure-database-mirroring-security-wizard.md
-    - name: 鏡像伺服器執行個體
-      href: mirror-server-instance-configure-database-mirroring-security-wizard.md
-    - name: 見證伺服器執行個體
-      href: witness-server-instance-configure-database-mirroring-security-wizard.md
-    - name: 服務帳戶
-      href: service-accounts-configure-database-mirroring-security-wizard.md
-  - name: 資料庫鏡像監視器概觀
-    href: database-mirroring-monitor-overview.md
-    items:
-    - name: 啟動資料庫鏡像監視器 (SQL Server Management Studio)
-      href: start-database-mirroring-monitor-sql-server-management-studio.md
-    - name: 註冊鏡像資料庫
-      href: register-mirrored-database.md
-    - name: 資料庫鏡像監視器 ([狀態] 頁面)
-      href: database-mirroring-monitor-status-page.md
-    - name: 資料庫鏡像記錄
-      href: database-mirroring-history.md
-    - name: 資料庫鏡像監視器 ([警告] 頁面)
-      href: database-mirroring-monitor-warnings-page.md
-    - name: 設定警告臨界值
-      href: set-warning-thresholds.md
-ms.openlocfilehash: 0239489ead1956474a2807b1cf13ae86a580eac7
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457571"
+    - name: 設定資料庫鏡像安全性精靈
+      href: start-the-configuring-database-mirroring-security-wizard.md
+      items:
+        - name: 包含見證伺服器
+          href: include-witness-server-configure-database-mirroring-security-wizard.md
+        - name: 選擇要設定的伺服器
+          href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+        - name: 主體伺服器執行個體
+          href: principal-server-instance-configure-database-mirroring-security-wizard.md
+        - name: 鏡像伺服器執行個體
+          href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+        - name: 見證伺服器執行個體
+          href: witness-server-instance-configure-database-mirroring-security-wizard.md
+        - name: 服務帳戶
+          href: service-accounts-configure-database-mirroring-security-wizard.md
+    - name: 資料庫鏡像監視器概觀
+      href: database-mirroring-monitor-overview.md
+      items:
+        - name: 啟動資料庫鏡像監視器 (SQL Server Management Studio)
+          href: start-database-mirroring-monitor-sql-server-management-studio.md
+        - name: 註冊鏡像資料庫
+          href: register-mirrored-database.md
+        - name: 資料庫鏡像監視器 (狀態頁面)
+          href: database-mirroring-monitor-status-page.md
+        - name: 資料庫鏡像記錄
+          href: database-mirroring-history.md
+        - name: 資料庫鏡像監視器 (警告頁面)
+          href: database-mirroring-monitor-warnings-page.md
+        - name: 設定警告臨界值
+          href: set-warning-thresholds.md

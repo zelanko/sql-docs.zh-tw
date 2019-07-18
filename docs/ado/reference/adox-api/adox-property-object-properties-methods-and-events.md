@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c2ec51480d122f7db92ae4b8c217167cbfdfea2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930359"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX Property 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  
@@ -33,7 +32,7 @@ ms.locfileid: "47657766"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

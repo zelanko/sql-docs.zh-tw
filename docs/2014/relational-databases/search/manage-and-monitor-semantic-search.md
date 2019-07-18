@@ -10,20 +10,20 @@ helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011124"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
   描述語意索引的程序，以及與管理及監視索引相關的工作。  
   
-##  <a name="HowToMonitorStatus"></a> 操作說明：檢查語意索引的狀態  
+##  <a name="HowToMonitorStatus"></a> 如何：檢查語意索引的狀態  
  **語意索引的第一個階段是否已完成？**  
  查詢動態管理檢視 [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) **status** 和 **status_description** 資料行。  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> 操作說明：檢查語意索引的大小  
+##  <a name="HowToCheckSize"></a> 如何：檢查語意索引的大小  
  **語意主要片語索引或語意文件相似度索引的邏輯大小為何？**  
  查詢動態管理檢視 [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql)。  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> 操作說明：強制擴展語意索引  
+##  <a name="HowToForcePopulation"></a> 如何：強制擴展語意索引  
  您可以強制全文檢索索引和語意索引的母體擴展，其方式是使用 START/STOP/PAUSE 或 RESUME POPULATION 子句搭配全文檢索索引所描述的相同語法和行為。 如需詳細資訊，請參閱 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 和[擴展全文檢索索引](../indexes/indexes.md)。  
   
  因為語意索引會依據全文檢索索引，所以只有當關聯的全文檢索索引已擴展時，才會擴展語意索引。  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> 操作說明：停用或重新啟用語意索引  
+##  <a name="HowToDisableIndexing"></a> 如何：停用或重新啟用語意索引  
  您可以啟用或停用全文檢索索引或語意索引，其方式是使用 ENABLE/DISABLE 子句搭配全文檢索索引所描述的相同語法與行為。 如需詳細資訊，請參閱 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)。  
   
  當語意索引已停用且暫停時，語意資料的查詢會持續順利運作，並傳回之前的索引資料。 此行為與全文檢索搜尋的行為不一致。  

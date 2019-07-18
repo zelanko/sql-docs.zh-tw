@@ -22,19 +22,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768407"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
-  在 [指令碼工作編輯器] 中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
+  在 [指令碼工作編輯器]  中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
   
 ## <a name="script-task-development-environment"></a>指令碼工作開發環境  
  指令碼工作使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為指令碼本身的開發環境。  
   
- 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器] 中設定 [ScriptLanguage] 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。  
+ 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器]  中設定 [ScriptLanguage]  屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。  
   
  您在指令碼工作中建立的指令碼會儲存在封裝定義中， 而沒有個別的指令碼檔案。 因此，使用指令碼工作並不會影響封裝部署。  
   
@@ -200,10 +200,10 @@ To open Help, press F1.
  指令碼工作專案可以包含預設 `ScriptMain` 項目以外的項目。 您可以將類別、模組和程式碼檔案加入專案。 您也可以使用資料夾來組織項目的群組。 所有您加入的項目都會保存在封裝內。  
   
 ### <a name="references-in-the-script-task-project"></a>指令碼工作專案中的參考  
- 您可以在 [專案總管] 中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../referencing-other-assemblies-in-scripting-solutions.md)。  
+ 您可以在 [專案總管]  中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]  ，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  您可以在 VSTA IDE 中的 [類別檢視] 或 [專案總管] 中，檢視專案參考。 您可以從 [檢視] 功能表中開啟任一個視窗。 您可以從 [專案] 功能表、[專案總管] 或 [類別檢視] 新增參考。  
+>  您可以在 VSTA IDE 中的 [類別檢視]  或 [專案總管]  中，檢視專案參考。 您可以從 [檢視]  功能表中開啟任一個視窗。 您可以從 [專案]  功能表、[專案總管]  或 [類別檢視]  新增參考。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>與指令碼工作中的封裝互動  
  指令碼工作使用全域 `Dts` 物件 (<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別的執行個體) 及其成員與包含封裝和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段互動。  

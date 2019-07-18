@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078517"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "51673557"
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 保留供日後使用。|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數傳回 SQL，外部寫入的函數傳回 EXTERNAL。<br /><br /> 函數一律是 SQL。|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|如果函數或預存程序未加密，則傳回函數或預存程序之定義文字的前 4000 個字元。 否則，便傳回 NULL。<br /><br /> 若要確保您取得完整定義，請查詢[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函式定義中或資料行[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視。|  
+|ROUTINE_DEFINITION|**nvarchar(** 4000 **)**|如果函數或預存程序未加密，則傳回函數或預存程序之定義文字的前 4000 個字元。 否則，便傳回 NULL。<br /><br /> 若要確保您取得完整定義，請查詢[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函式定義中或資料行[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視。|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL。 保留供日後使用。|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL。 保留供日後使用。|  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 638ce62d8dd12764681c2b65a271d9ae13bb5d83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189334"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>停用或重新啟動警示
   此主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中停用或重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -34,7 +34,7 @@ ms.locfileid: "52821832"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目停用或重新啟動警示：**  
   
@@ -55,13 +55,13 @@ ms.locfileid: "52821832"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您想要停用或重新啟動之警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]。  
+4.  以滑鼠右鍵按一下您想要啟用的警示，然後選取 [啟用]  。若要停用警示，請以滑鼠右鍵按一下您想要停用的警示，然後選取 [停用]  。  
   
-5.  畫面上會顯示 **[停用警示]** 或 **[啟用警示]** 對話方塊，並顯示處理的狀態。 完成後，請按一下 **[關閉]**。  
+5.  畫面上會顯示 **[停用警示]** 或 **[啟用警示]** 對話方塊，並顯示處理的狀態。 完成後，請按一下 **[關閉]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -69,9 +69,9 @@ ms.locfileid: "52821832"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  

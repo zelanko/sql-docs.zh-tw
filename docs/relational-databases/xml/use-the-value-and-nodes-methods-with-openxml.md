@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4dabca94aba07a2d41a70bbee5343fe1eeb61658
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509895"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704656"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>在 OPENXML 中使用 value () 和 nodes () 方法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   您可以在 **SELECT** 子句的 **xml** 資料類型上使用多重 **value()** 方法，以產生擷取值的資料列集。 **nodes()** 方法會針對可用於額外查詢的每個選定節點，各產生一個內部參考。 在產生資料列集時，如果所產生的資料列集會有數個資料行，且用來產生資料列集的路徑運算式很複雜時，合併 **nodes()** 和 **value()** 方法會比較有效率。  
   
- **nodes()** 方法會產生特殊 **xml** 資料類型的執行個體，其中每個執行個體都將其內容設定至不同的選取節點。 這種 XML 執行個體可支援 **query()**、**value()**、**nodes()** 和 **exist()** 方法，並可用於 **count(\*)** 彙總。 所有其他用法都會導致錯誤。  
+ **nodes()** 方法會產生特殊 **xml** 資料類型的執行個體，其中每個執行個體都將其內容設定至不同的選取節點。 這種 XML 執行個體可支援 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，並可用於 **count(\*)** 彙總。 所有其他用法都會導致錯誤。  
   
 ## <a name="example-using-nodes"></a>範例使用 nodes()  
  假設您要擷取作者的姓名，而名字部份不是 "David"。 此外，您還想要將此資訊擷取成包含二個資料行 (FirstName 及 LastName) 的資料列集。 您可以使用 **nodes()** 和 **value()** 方法來完成此作業，如下所示：  

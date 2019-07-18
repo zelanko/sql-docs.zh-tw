@@ -2,18 +2,18 @@
 title: 指定多個形狀圖報表產生器-在 SSRS 中一致的色彩 |Microsoft 文件
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 38ff22fcfdb291c2ac3924985949142006eff812
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578461"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS)
   在分頁報表的非形狀圖上，您可以根據圖表中的數列索引， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 從調色盤選取新的色彩。 例如，圖表上的第一個數列將會對應到調色盤中的第一個色彩。 不過，對於形狀圖來說，這個行為是不同的。 在形狀圖上，調色盤中的每個色彩都會對應到資料集中的資料點。 例如，資料點 1 對應到調色盤中的第一個色彩，資料點 2 對應到調色盤中的第二個色彩等等。  
@@ -31,15 +31,15 @@ ms.locfileid: "56292186"
   
 1.  按一下圖表，即可顯示 [圖表資料] 窗格。  
   
-2.  在 [類別目錄群組] 區域中，以滑鼠右鍵按一下某個類別目錄，然後按一下 [類別目錄群組屬性]。  
+2.  在 [類別目錄群組]  區域中，以滑鼠右鍵按一下某個類別目錄，然後按一下 [類別目錄群組屬性]  。  
   
-3.  在 [一般] 索引標籤的 [將群組同步處理於] 方塊中，按一下您要同步處理其色彩之類別目錄的名稱，然後按一下 [確定]。  
+3.  在 [一般] 索引標籤的 [將群組同步處理於]  方塊中，按一下您要同步處理其色彩之類別目錄的名稱，然後按一下 [確定]  。  
   
 ## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>若要跨多個形狀圖指定一致的色彩  
   
-1.  以滑鼠右鍵按一下報表主體的外面，然後選取 [報表屬性]。  
+1.  以滑鼠右鍵按一下報表主體的外面，然後選取 [報表屬性]  。  
   
-2.  在 [程式碼] 中，將下列程式碼輸入到文字方塊中。  
+2.  在 [程式碼]  中，將下列程式碼輸入到文字方塊中。  
   
     ```  
     Private colorPalette As String() = {"Color1", "Color2", "Color3"}  
@@ -61,11 +61,11 @@ ms.locfileid: "56292186"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  以滑鼠右鍵按一下形狀圖，並選取 [數列屬性]。  
+4.  以滑鼠右鍵按一下形狀圖，並選取 [數列屬性]  。  
   
-5.  在 [填滿] 中，按一下 [運算式]\(*fx*) 按鈕來編輯 [色彩] 屬性的運算式。  
+5.  在 [填滿]  中，按一下 [運算式]  \(*fx*) 按鈕來編輯 [色彩]  屬性的運算式。  
   
-6.  輸入下列運算式，其中 "MyCategoryField" 是顯示在 [類別目錄群組] 區域中的欄位：  
+6.  輸入下列運算式，其中 "MyCategoryField" 是顯示在 [類別目錄群組]  區域中的欄位：  
   
     ```  
     =Code.GetColor(Fields!MyCategoryField)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f43e59ed38dfde8091cb851f75a133c60874a6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919937"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 關閉開啟的物件和任何相依的物件。  
@@ -39,7 +38,7 @@ object.Close
  使用**關閉**方法以關閉[連線](../../../ado/reference/ado-api/connection-object-ado.md)，則[記錄](../../../ado/reference/ado-api/record-object-ado.md)，則[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件若要釋出的任何相關聯的系統資源。 關閉物件不會將它從記憶體中; 中移除您可以變更其屬性設定，然後稍後再重新開啟它。 若要完全消除從記憶體物件，關閉物件，然後將物件變數設*Nothing* （在 Visual Basic)。  
   
 ## <a name="connection"></a>連接  
- 使用**關閉 **方法以關閉**連線**物件也會關閉任何作用**資料錄集**與連接相關聯的物件。 A[命令](../../../ado/reference/ado-api/command-object-ado.md)相關聯的物件**連線**會保存您在關閉的物件，但它不會再相關聯**連接**物件，也就是其[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性會設定為**Nothing**。 此外，**命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合將會清除任何提供者定義的參數。  
+ 使用**關閉** 方法以關閉**連線**物件也會關閉任何作用**資料錄集**與連接相關聯的物件。 A[命令](../../../ado/reference/ado-api/command-object-ado.md)相關聯的物件**連線**會保存您在關閉的物件，但它不會再相關聯**連接**物件，也就是其[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性會設定為**Nothing**。 此外，**命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合將會清除任何提供者定義的參數。  
   
  您可以於稍後呼叫[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)方法，以重新建立在相同的或其他資料來源的連接。 雖然**連線**物件關閉時，需要開啟連接至資料來源之任何方法會產生錯誤。  
   

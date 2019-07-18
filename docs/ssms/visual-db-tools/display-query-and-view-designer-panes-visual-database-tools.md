@@ -15,15 +15,15 @@ helpviewer_keywords:
 - displaying View Designer panes
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21afc4ccdddead6cc16bae2461c00e2cb03453b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: a7aab4bb357e275a409f74dbcc3355274c99c648
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763080"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690316"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>顯示查詢和檢視表設計工具窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47763080"
   
 1.  開啟檢視或建立新的查詢，以開啟查詢和檢視設計工具。  
   
-2.  在 [查詢設計工具] 功能表中指向 [窗格]，然後按一下要開啟的窗格名稱。  
+2.  在 [查詢設計工具]  功能表中指向 [窗格]  ，然後按一下要開啟的窗格名稱。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  

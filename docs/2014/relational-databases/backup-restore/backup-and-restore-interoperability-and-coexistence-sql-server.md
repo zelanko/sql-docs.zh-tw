@@ -1,5 +1,5 @@
 ---
-title: 備份與還原：互通性與共存性 (SQL Server) | Microsoft Docs
+title: 備份與還原：互通性與共存性 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922433"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
-  本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中數個功能的備份和還原考量。 這些功能包括：檔案還原和資料庫啟動、線上還原和停用的索引、資料庫鏡像，以及分次還原和全文檢索索引。  
+  本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中數個功能的備份和還原考量。 這些功能包括：檔案還原和資料庫啟動、線上還原和停用的索引、資料庫鏡像，以及分次還原和全文檢索索引。  
   
  **本主題內容：**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48155568"
   
  如果在資料庫啟動期間發生問題，復原會失敗，且會將資料庫標示為 SUSPECT。 如果將問題隔離到檔案，資料庫管理員就可以使檔案離線，並嘗試重新啟動資料庫。 若要使檔案離線，您可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式：  
   
- ALTER DATABASE *database_name* MODIFY FILE (名稱 **='*`filename`*'**、 離線)  
+ ALTER DATABASE *database_name* MODIFY FILE (名稱 **=' *`filename`* '** 、 離線)  
   
  如果啟動成功，任何包含離線檔案的檔案群組都會保持離線。  
   
@@ -132,6 +132,6 @@ ms.locfileid: "48155568"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料庫的備份與還原](back-up-and-restore-of-sql-server-databases.md)   
  [備份及還原複寫的資料庫](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [使用中次要： 在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [使用中次要：在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

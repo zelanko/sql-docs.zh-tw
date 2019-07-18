@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b1649b95e751a3ea3a93285f480b0ec9b2b04075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480104"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>指派功能區域權限 (Master Data Services)
   指派功能區域權限，授予使用者或群組 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能區域的存取權。  
@@ -30,19 +30,19 @@ ms.locfileid: "52814290"
   
 ### <a name="to-assign-functional-area-permissions"></a>若要指派功能區域權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]**。  
+3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [函數] 索引標籤。  
+4.  按一下 [函數]  索引標籤。  
   
-5.  按一下 **[編輯]**。  
+5.  按一下 **[編輯]** 。  
   
-6.  按一下功能區域，然後按一下 [加入] 箭號。  
+6.  按一下功能區域，然後按一下 [加入]  箭號。  
   
-7.  完成後，按一下 [儲存]。  
+7.  完成後，按一下 [儲存]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   

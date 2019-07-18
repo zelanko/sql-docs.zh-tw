@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abf009296c72c298b77e563f5de5482d298ac2df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012945"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>使用 SQLXMLOLEDB 提供者 (SQLXML 4.0)
   本章節的主題提供了 ADO 範例應用程式來說明 SQLXMLOLEDB 提供者特定之屬性的使用。  

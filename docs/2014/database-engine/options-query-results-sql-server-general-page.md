@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -17,15 +16,15 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089330"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>選項 （查詢結果-SQL Server-一般頁面）
-  使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [查詢結果] 資料夾，選取 [SQL Server]，然後按一下 [一般]。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。  
+  使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具]  功能表上按一下 [選項]  ，展開 [查詢結果]  資料夾，選取 [SQL Server]  ，然後按一下 [一般]  。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢]  功能表上的 [查詢選項]  ，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **結果的預設目的地**  

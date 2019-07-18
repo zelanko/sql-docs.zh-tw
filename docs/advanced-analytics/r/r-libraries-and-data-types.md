@@ -3,19 +3,18 @@ title: R-SQL 資料類型轉換為 SQL Server Machine Learning 服務
 description: 檢閱隱含與明確的資料型別 converstions R 與 SQL Server 之間的資料科學和機器學習服務解決方案中。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 93a0e15d8fdca31971cd16d187ae88a180fb481f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962536"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>資料類型對應 betweenR 和 SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R 與 SQL Server 之間的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server Machine Learning 服務中的 R 整合功能上執行的 R 解決方案，請檢閱清單不支援的資料類型和資料類型轉換的 R 程式庫與 SQL Server 之間傳遞資料時可能會隱含地執行。
@@ -91,7 +90,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 包含資料類型轉
 
 ## <a name="verify-r-and-sql-data-schemas-in-advance"></a>預先驗證 R 和 SQL 資料結構描述 
 
-一般而言，當您不清楚如何在 R 中使用特定的資料類型或資料結構時，皆可使用  `str()` 函數以取得 R 物件的內部結構和類型。 函數的結果會列印到 R 主控台，也會顯示在 **的 [訊息]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]索引標籤查詢結果中。 
+一般而言，當您不清楚如何在 R 中使用特定的資料類型或資料結構時，皆可使用  `str()` 函數以取得 R 物件的內部結構和類型。 函數的結果會列印到 R 主控台，也會顯示在 **的 [訊息]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]索引標籤查詢結果中。 
 
 當從 R 程式碼中使用的資料庫中擷取資料，您應該一律刪除無法用在 R 中的資料行，以及不適合用於分析，例如 GUIDS (uniqueidentifier)、 時間戳記和其他用於稽核的資料行或歷程的資料行ETL 程序所建立的資訊。 
 

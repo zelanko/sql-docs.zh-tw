@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.rptwizardhelp.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Report Wizard
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f481692acf68d84916f11babf10562d0f1d0b9c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102993"
 ---
 # <a name="report-wizard-help"></a>報表精靈說明
   此章節提供報表精靈的 F1 說明。 報表精靈會自動化建立表格式報表和矩陣報表的程序。 下表描述此章節的主題。  

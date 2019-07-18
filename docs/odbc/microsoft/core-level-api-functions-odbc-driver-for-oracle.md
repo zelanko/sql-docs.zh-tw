@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081975"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>核心層級 API 函式 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -41,7 +40,7 @@ ms.locfileid: "54126168"
 |**SQLDescribeCol**|傳回名稱、 類型、 有效位數、 小數位數和指定的結果資料行 null 屬性。 **注意：SQLDescribeCol**報告為 SQL_VARCHAR 的導出資料行。|  
 |**SQLDisconnect**|關閉連接。 如果連接共用已啟用共用的環境，而且應用程式呼叫**SQLDisconnect**在該環境中連接之後，連接傳回連接集區並仍可使用其他元件相同的共用的環境中。|  
 |**SQLError**|傳回最後一個錯誤的錯誤或狀態資訊。 驅動程式會維護的堆疊或可針對傳回的錯誤清單*hstmt*， *hdbc*，並*henv*引數，視呼叫**SQLError**為止。 錯誤佇列中排清每個陳述式之後。 通常擷取 Oracle 錯誤訊息，並為空白。|  
-|**SQLExecDirect**|執行新的、 已取消準備的 SQL 陳述式。 如果陳述式中存在的任何參數，驅動程式會使用參數標記變數的目前值。 如果您的資料表、 檢視或欄位名稱包含空格，括住名稱後引號標記。 比方說，如果您的資料庫包含名為資料表*My Table*和欄位*My Field*，括住識別項的每個項目就像這樣：<br /><br /> 選取 \`表格\`。 \`我 Field1\`，;\`表格\`。\`我 Field2\` FROM\`表格 '|  
+|**SQLExecDirect**|執行新的、 已取消準備的 SQL 陳述式。 如果陳述式中存在的任何參數，驅動程式會使用參數標記變數的目前值。 如果您的資料表、 檢視或欄位名稱包含空格，括住名稱後引號標記。 比方說，如果您的資料庫包含名為資料表*My Table*和欄位*My Field*，括住識別項的每個項目就像這樣：<br /><br /> 選取 \`表格\`。 \`我 Field1\`，;\`表格\`。\`我 Field2\` FROM\`我的資料表\`|  
 |**SQLExecute**|執行已備妥的 SQL 陳述式 (已備妥的陳述式**SQLPrepare**)。 如果陳述式中存在的任何參數，驅動程式會使用參數標記變數的目前值。|  
 |**SQLFetch**|擷取結果集的先前呼叫所指定的位置中的一個資料列**SQLBindCol**。 準備驅動程式呼叫**SQLGetData**未繫結的資料行。|  
 |**SQLFreeConnect**|釋放連接控制代碼，並釋放所有記憶體配置控制代碼。|  
@@ -49,7 +48,7 @@ ms.locfileid: "54126168"
 |**SQLFreeStmt**|停止特定 hstmt 相關聯的處理、 關閉任何開啟的資料指標相關聯的 hstmt、 捨棄暫止的結果，並選擇性地釋放陳述式控制代碼相關聯的所有資源。|  
 |**SQLGetCursorName**|傳回與指定的 hstmt 相關聯的資料指標名稱。|  
 |**SQLNumResultCols**|在結果集資料指標中傳回資料行的數目。|  
-|**SQLPrepare**|規劃如何最佳化和執行陳述式會準備 SQL 陳述式。 執行 SQL 陳述式編譯**SQLExecDirect**。<br /><br /> 如果您的資料表、 檢視或欄位名稱包含空格，括住名稱後引號標記。 例如，如果您的資料庫包含名為資料表*My Table*和欄位*My Field*，括住識別項的每個項目，如下所示：<br /><br /> 選取 \`表格\`。\`My Field\` FROM\`表格 '<br /><br /> 如需使用結果集包含與型式參數的陣列，請參閱[從預存程序傳回陣列參數](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)。|  
+|**SQLPrepare**|規劃如何最佳化和執行陳述式會準備 SQL 陳述式。 執行 SQL 陳述式編譯**SQLExecDirect**。<br /><br /> 如果您的資料表、 檢視或欄位名稱包含空格，括住名稱後引號標記。 例如，如果您的資料庫包含名為資料表*My Table*和欄位*My Field*，括住識別項的每個項目，如下所示：<br /><br /> 選取 \`表格\`。\`My Field\` FROM\`我的資料表\`<br /><br /> 如需使用結果集包含與型式參數的陣列，請參閱[從預存程序傳回陣列參數](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)。|  
 |**SQLRowCount**|Oracle 不提供一個方式來判斷結果集，直到擷取最後一個資料列之後，所以它會傳回-1 中的資料列數目。|  
 |**SQLSetCursorName**|將資料指標名稱關聯到作用中陳述式控制代碼*hstmt*。|  
 |**SQLSetParam**|SQLBindParameter ODBC 2 中被取代。*x*。|  

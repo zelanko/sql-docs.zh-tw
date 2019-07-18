@@ -20,16 +20,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - user IDs [SQL Server]
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 88efca93ef076d726d090c0a4d376ab779cdbfd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56b8c34562c85e1154d01b772a6ba2db1b28ab70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948011"
 ---
 # <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

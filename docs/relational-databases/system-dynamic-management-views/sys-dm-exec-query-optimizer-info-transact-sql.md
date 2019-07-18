@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718636"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255357"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,14 +38,14 @@ ms.locfileid: "47718636"
 |名稱|資料類型|描述|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
-|**相符項目**|**bigint**|這個計數器最佳化事件的出現次數。|  
+|**occurrence**|**bigint**|這個計數器最佳化事件的出現次數。|  
 |**value**|**float**|每一事件發生的平均屬性值。|  
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
     
 ## <a name="remarks"></a>備註  
  **sys.dm_exec_query_optimizer_info**包含下列屬性 （計數器）。 所有發生值會累計並在系統重新啟動時設為 0。 所有值欄位的值於系統重新啟動時設為 NULL。 所有指定平均值的值資料行值會使用來自同一資料列的發生值作為平均值計算中的分母。 所有查詢最佳化時測量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]判斷變更**dm_exec_query_optimizer_info**，包括這兩個使用者和系統產生的查詢。 已快取的計劃的執行不會變更中的值**dm_exec_query_optimizer_info**，只有最佳化是顯著。  
@@ -77,8 +76,8 @@ ms.locfileid: "47718636"
 |UPDATE 陳述式|UPDATE 陳述式的最佳化數目。|不適用|  
 |包含子查詢|包含至少一個子查詢之查詢的最佳化數目。|不適用|  
 |UNNEST 失敗|僅供內部使用|僅供內部使用|  
-|資料表|最佳化的總數。|每一最佳化查詢所參考資料表的平均數。|  
-|提示|指定某個提示的次數。 計數的提示包括：JOIN、GROUP、UNION 和 FORCE ORDER 查詢提示、FORCE PLAN 設定選項，以及聯結提示。|不適用|  
+|tables|最佳化的總數。|每一最佳化查詢所參考資料表的平均數。|  
+|提示|指定某個提示的次數。 計數的提示包括：聯結、 群組、 UNION 和 FORCE ORDER 查詢提示、 FORCE PLAN 設定選項，以及聯結提示。|不適用|  
 |ORDER 提示|指定 FORCE ORDER 提示的次數。|不適用|  
 |聯結提示|聯結提示強制執行聯結演算法的次數。|不適用|  
 |檢視參考|檢視在查詢中被參考的次數。|不適用|  

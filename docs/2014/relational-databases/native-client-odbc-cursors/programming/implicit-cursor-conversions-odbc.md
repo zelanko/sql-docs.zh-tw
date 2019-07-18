@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711566"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>隱含資料指標轉換 (ODBC)
   應用程式可以要求透過資料指標類型[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)然後執行伺服端資料指標要求的類型不支援的 SQL 陳述式。 呼叫**SQLExecute**或是**SQLExecDirect**會傳回 SQL_SUCCESS_WITH_INFO 和**SQLGetDiagRec**傳回：  

@@ -9,16 +9,20 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ab271c79ffdcb43573c8a55680a2695305a96af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012824"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 排程 Azure 中部署的 SSIS 套件執行
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 您可以使用 SQL Server Management Studio (SSMS) 對部署到 Azure SQL Database 的 SSIS 套件進行排程。 內部部署 SQL Server 和 SQL Database 受控執行個體分別有作為首要 SSIS 工作排程器的 SQL Server Agent 和受控執行個體代理程式。 相反地，SQL Database 未內建首要 SSIS 工作排程器。 本文所述的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。
 
@@ -39,31 +43,31 @@ ms.locfileid: "47786236"
 
 ## <a name="schedule-a-package-in-ssms"></a>在 SSMS 中排程套件
 
-1. 在 SSMS 的 [物件總管] 中，依序選取 SSISDB 資料庫、資料夾、專案和套件。 以滑鼠右鍵按一下套件，然後選取 [排程]。
+1. 在 SSMS 的 [物件總管] 中，依序選取 SSISDB 資料庫、資料夾、專案和套件。 以滑鼠右鍵按一下套件，然後選取 [排程]  。
 
     ![選取要排程的套件。](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image1-schedule.png)
 
-2. [新增排程] 對話方塊會隨即開啟。 在 [新增排程] 對話方塊的 [一般] 頁面上，提供新排程工作的名稱和描述。
+2. [新增排程]  對話方塊會隨即開啟。 在 [新增排程]  對話方塊的 [一般]  頁面上，提供新排程工作的名稱和描述。
 
     ![[新增排程] 對話方塊的 [一般] 頁面](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image2-new-schedule.png)
 
-3. 在 [新增排程] 對話方塊的 [套件] 頁面上，選取選擇性執行階段設定和執行階段環境。
+3. 在 [新增排程]  對話方塊的 [套件]  頁面上，選取選擇性執行階段設定和執行階段環境。
 
     ![[新增排程] 對話方塊的 [套件] 頁面](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image3-new-schedule2.png)
 
-4. 在 [新增排程] 對話方塊的 [排程] 頁面上，提供排程設定，例如頻率、一天當中的時間和持續時間。
+4. 在 [新增排程]  對話方塊的 [排程]  頁面上，提供排程設定，例如頻率、一天當中的時間和持續時間。
 
     ![[新增排程] 對話方塊的 [排程] 頁面](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image4-new-schedule3.png)
 
-5. 在 [新增排程] 對話方塊中完成建立工作之後，會出現確認，提醒您 SSMS 即將建立新的 Data Factory 物件。 如果您在確認對話方塊中選取 [是]，則會在 Azure 入口網站中開啟新的 Data Factory 管線，以供您檢閱和自訂。
+5. 在 [新增排程]  對話方塊中完成建立工作之後，會出現確認，提醒您 SSMS 即將建立新的 Data Factory 物件。 如果您在確認對話方塊中選取 [是]  ，則會在 Azure 入口網站中開啟新的 Data Factory 管線，以供您檢閱和自訂。
 
     ![新排程確認](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image5-confirmation.png)
 
-6. 若要自訂排程觸發程序，請從 [觸發程序] 功能表選取 [新增/編輯]。
+6. 若要自訂排程觸發程序，請從 [觸發程序]  功能表選取 [新增/編輯]  。
 
     ![選擇性編輯新管線](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 
-    這會開啟 [編輯觸發程序] 刀鋒視窗，以供您自訂排程選項。
+    這會開啟 [編輯觸發程序]  刀鋒視窗，以供您自訂排程選項。
 
     ![編輯觸發程序](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 

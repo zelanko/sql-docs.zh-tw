@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -14,12 +13,12 @@ ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057784"
 ---
 # <a name="manage-the-integration-services-service"></a>管理 Integration Services 服務
     

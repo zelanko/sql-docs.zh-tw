@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63313014"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
-  您可以選取 [列印] 對話方塊中的選項，藉以指定您要列印文件的方式。  
+  您可以選取 [列印]  對話方塊中的選項，藉以指定您要列印文件的方式。  
   
 ## <a name="printer"></a>印表機  
  **名稱**  
@@ -39,7 +39,7 @@ ms.locfileid: "52768920"
  包含關於所選印表機的其他資訊。  
   
  **屬性**  
- 按一下以開啟 [\<印表機名稱屬性>] 對話方塊。  
+ 按一下以開啟 [\<印表機名稱屬性  >] 對話方塊。  
   
  **列印至檔案**  
  將文件列印到檔案而非印表機。  
@@ -52,7 +52,7 @@ ms.locfileid: "52768920"
  只列印目前的選取範圍。 選取部分或全部文件前，仍然無法使用這個選項。  
   
  **頁面**  
- 列印您在 [頁面] 方塊中輸入的頁面。  
+ 列印您在 [頁面]  方塊中輸入的頁面。  
   
 ## <a name="copies"></a>份數  
  **份數**  

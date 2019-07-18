@@ -31,11 +31,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406005"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63136668"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的 **xml** 資料類型可讓您將 XML 文件和片段儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如果是其他內建類型，當您建立資料表作為變數類型、參數類型、函式傳回型別，或是在 CAST 和 CONVERT 函式中時，可以使用 **xml** 資料類型作為資料行類型。  

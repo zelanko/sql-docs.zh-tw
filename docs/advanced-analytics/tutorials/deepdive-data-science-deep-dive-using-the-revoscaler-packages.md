@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 28f3ebe1887e188513c01881f68d5d7f323e31f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962249"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：使用 RevoScaleR R 函式與 SQL Server 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

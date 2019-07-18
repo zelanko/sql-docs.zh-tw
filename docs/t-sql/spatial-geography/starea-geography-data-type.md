@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STArea method
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 299ccb67b03a654a348492f81ea62f086229efab
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 49919caaf30bb425e90b286cb3c8e7877067ae6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936238"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "56265275"
 ## <a name="return-types"></a>傳回類型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
-CLR 傳回類型：**SqlDouble**  
+CLR 傳回型別：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
 如果 **geography** 執行個體僅包含 0 維度和 1 維度的圖形 (或為空白)，則 STArea() 會傳回 0。  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273280"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在彙總查詢中使用資料行 (Visual Database Tools)
   當您建立彙總查詢時， [查詢和檢視表設計工具](visual-database-tools.md) 會做出特定假設，以便建構有效的查詢。 例如，如果您要建立彙總查詢並標記某資料行進行輸出，查詢和檢視設計師會自動將該資料行變成 GROUP BY 子句的一部分，如此一來您便不會不慎在摘要中顯示個別資料列的內容。  
@@ -36,11 +36,11 @@ ms.locfileid: "52795940"
   
  當您將搜尋條件輸入 [準則] 窗格的 [篩選條件] 資料行時，查詢和檢視設計師將遵守下列規則：  
   
--   如果方格的 [群組依據] 資料行並未顯示 (因為您尚未指定彙總查詢)，則將搜尋條件放入 WHERE 子句。  
+-   如果方格的 [群組依據]  資料行並未顯示 (因為您尚未指定彙總查詢)，則將搜尋條件放入 WHERE 子句。  
   
--   如果您已在彙總查詢中並已選取 [群組依據] 資料行中的 [Where] 選項，則將搜尋條件放入 WHERE 子句。  
+-   如果您已在彙總查詢中並已選取 [群組依據]  資料行中的 [Where]  選項，則將搜尋條件放入 WHERE 子句。  
   
--   如果 [群組依據] 資料行中含有任何 [Where] 以外的值，則將搜尋條件放入 HAVING 子句。  
+-   如果 [群組依據]  資料行中含有任何 [Where]  以外的值，則將搜尋條件放入 HAVING 子句。  
   
 ## <a name="using-the-having-and-where-clauses"></a>使用 HAVING 和 WHERE 子句  
  以下原則說明如何在搜尋條件中參考彙總查詢中的資料行。 通常，您可以使用搜尋條件中的資料行來篩選應進行摘要的資料列 (WHERE 子句)，或決定最後輸出 (HAVING 子句) 中出現的群組結果。  

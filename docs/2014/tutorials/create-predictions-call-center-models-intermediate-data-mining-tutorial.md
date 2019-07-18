@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63217876"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>建立用於撥接中心模型的預測 (中繼資料採礦教學課程)
   現在您已經了解排班、操作員數目、電話，以及服務等級之間的互動關係，接著就可以準備建立一些用來進行商務分析和規劃的預測查詢。 您將先針對探勘模型建立一些預測，以測試一些假設。 接著您將使用羅吉斯迴歸模型建立大量預測。  
@@ -37,7 +37,7 @@ ms.locfileid: "56025409"
   
 5.  展開採礦結構 [撥接中心預設值]，然後選取類神經網路模型 [撥接中心 – LR]。  
   
-6.  從 [採礦模型] 功能表中選取 [單一查詢]。  
+6.  從 [採礦模型]  功能表中選取 [單一查詢]  。  
   
      **單一查詢輸入**對話方塊隨即出現，其中資料行會對應到採礦模型中的資料行。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "56025409"
   
 2.  在 **採礦模型**窗格中，按一下**選取模型**，，然後選擇 撥接中心-LR，從可用模型的清單。  
   
-3.  從**採礦模型**功能表上，清除選項**單一查詢**。 此時會出現一個警告，告知您將會失去單一查詢輸入。 按一下 [確定] 。  
+3.  從**採礦模型**功能表上，清除選項**單一查詢**。 此時會出現一個警告，告知您將會失去單一查詢輸入。 按一下 [確定]  。  
   
      **單一查詢輸入** 對話方塊會取代**選取輸入資料表** 對話方塊。  
   
-4.  按一下 [選取案例資料表] 。  
+4.  按一下 [選取案例資料表]  。  
   
 5.  在 **選取資料表**對話方塊中，從清單中的資料來源的 selectShifts。 在 **資料表/檢視名稱**清單中，選取 Shifts for Call Center （它可能會自動選取） 和  **確定。**  
   
@@ -185,7 +185,7 @@ ms.locfileid: "56025409"
   
 -   [SQL Server 2005 資料採礦增益集適用於 Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx):搜尋目標與假設狀況分析  
   
--   [SQL Server 2008 資料採礦增益集適用於 Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790):搜尋目標狀況分析、假設狀況分析及預測計算器  
+-   [SQL Server 2008 資料採礦增益集適用於 Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790):目標搜尋狀況分析、 假設狀況分析，以及預測計算器  
   
 ## <a name="conclusion"></a>結論  
  您已經學到如何建立、自訂與解譯以 Microsoft 類神經網路演算法和 Microsoft 羅吉斯迴歸演算法為基礎的採礦模型。 這些模型類型相當複雜，在分析方式上也可以有無限的變化，因此可能相當複雜且難以上手。  

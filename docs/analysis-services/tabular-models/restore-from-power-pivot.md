@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472248"
 ---
 # <a name="restore-from-power-pivot"></a>從 PowerPivot 還原
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "53072768"
   
 ### <a name="to-restore-from-power-pivot"></a>從 PowerPivot 還原  
   
-1.  在 SSMS 中，針對您要還原至其上的 Active Directory 執行個體，以滑鼠右鍵按一下 [資料庫]，然後按一下 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原]。  
+1.  在 SSMS 中，針對您要還原至其上的 Active Directory 執行個體，以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原]  。  
   
-2.  在 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原] 對話方塊的 [還原來源] 中，按一下 [備份檔案] 中的 [瀏覽]，然後選取要從中還原的 .abf 或 .xslx 檔案。  
+2.  在 [從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 還原]  對話方塊的 [還原來源]  中，按一下 [備份檔案]  中的 [瀏覽]  ，然後選取要從中還原的 .abf 或 .xslx 檔案。  
   
-3.  在 [還原目標] 的 [還原資料庫] 中，輸入新資料庫或現有資料庫的名稱。 如果您沒有指定名稱，就會使用活頁簿的名稱。  
+3.  在 [還原目標]  的 [還原資料庫]  中，輸入新資料庫或現有資料庫的名稱。 如果您沒有指定名稱，就會使用活頁簿的名稱。  
   
-4.  按一下 [儲存位置] 中的 [瀏覽]，然後選取要儲存資料庫的位置。  
+4.  按一下 [儲存位置]  中的 [瀏覽]  ，然後選取要儲存資料庫的位置。  
   
-5.  在 [選項] 中，保持核取 [包含安全性資訊]。 從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿還原時，這項設定並不適用。  
+5.  在 [選項]  中，保持核取 [包含安全性資訊]  。 從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿還原時，這項設定並不適用。  
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型資料庫](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   

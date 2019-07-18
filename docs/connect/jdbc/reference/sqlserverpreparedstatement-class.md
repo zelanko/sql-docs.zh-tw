@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529f93e136ac2515e13fb69866ff5b570557cd0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7112a20f7811a0796396045c50b1b243ed0c3802
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741266"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796949"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47741266"
   
  **擴充：** SQLServerStatement  
   
- **實作：**[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
+ **實作：** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
 ## <a name="syntax"></a>語法  
   

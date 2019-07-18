@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63186238"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步處理提取訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](agents/replication-agents-overview.md)中的提取訂閱。  
@@ -36,9 +36,9 @@ ms.locfileid: "54125019"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]**。  
+3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-4.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>] 對話方塊中，按一下 [啟動]。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+4.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 5.  按一下 [ **關閉**]。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54125019"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "54125019"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   

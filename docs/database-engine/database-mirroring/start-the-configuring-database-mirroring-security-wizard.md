@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 77a616477592f0d23d24db80714f8667703e19ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a9cd4f9b502f920f2af73e4423dfd5a26805422d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795149"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>啟動設定資料庫鏡像安全性精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "47833556"
   
 1.  連接到主體伺服器執行個體後，在 [物件總管] 中按一下伺服器名稱，以展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後選取要鏡像的資料庫。  
+2.  展開 **[資料庫]** ，然後選取要鏡像的資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，並選取 [工作]，然後按一下 [鏡像]。 這將會開啟 [[資料庫屬性]](../../relational-databases/databases/database-properties-mirroring-page.md) 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，並選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟 [[資料庫屬性]](../../relational-databases/databases/database-properties-mirroring-page.md) 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  按一下 **[設定安全性]**。  
+4.  按一下 **[設定安全性]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

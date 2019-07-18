@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
@@ -13,12 +12,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082182"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定義本地貨幣參考 (商業智慧精靈)
   使用 [定義本地貨幣參考] 頁面，即可定義貨幣轉換功能的本地貨幣，這會涵蓋 [選取轉換類型] 頁面上指定的多對多或多對一轉換類型。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。  
@@ -26,7 +25,7 @@ ms.locfileid: "52507889"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從維度設計師啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中之方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。 如果選取 [選取轉換類型] 頁面上的 [一對多]，這個頁面也不會出現。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **事實資料表中的識別碼**  
  選取即可指定屬性，在包含 [選取量值] 頁面上所選取量值的事實資料表所參考的貨幣維度中，提供本地貨幣的貨幣識別碼 (貨幣維度`Type`屬性設定為*貨幣*。)  
   

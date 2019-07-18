@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919629"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 屬性和三值邏輯比較
   如果您熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，就會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 `System.Data.SqlTypes` 命名空間中找到類似的語意和有效位數。 不過，其中仍有一些差異，而且本主題將涵蓋最重要的差異。  

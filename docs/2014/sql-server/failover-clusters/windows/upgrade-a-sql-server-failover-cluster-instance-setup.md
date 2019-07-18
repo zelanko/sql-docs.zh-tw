@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62680360"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
   您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元，將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
@@ -78,9 +78,9 @@ ms.locfileid: "53363710"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>升級至 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 多重子網路容錯移轉叢集  
  可能的升級案例有兩種：  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集目前設定在單一子網路：您必須先啟動安裝程式，並遵循升級程序進行，以將現有叢集升級至 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 在完成升級現有的容錯移轉叢集之後，使用 AddNode 功能，以加入位在不同子網路上的節點。 請確認叢集網路組態頁面中的 IP 位址資源相依性已變更為 OR。 您現在已擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集目前設定在單一子網路：您必須先升級現有的叢集，以[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]啟動安裝程式並遵循升級程序。 在完成升級現有的容錯移轉叢集之後，使用 AddNode 功能，以加入位在不同子網路上的節點。 請確認叢集網路組態頁面中的 IP 位址資源相依性已變更為 OR。 您現在已擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。  
   
-2.  目前已使用延展 V-LAN 技術，將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集設定在多重子網路中：您必須先將現有的叢集升級到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由於延伸 V-LAN 技術會設定單一子網路網路，網路組態必須變更為多重子網路，而且要使用 Windows 容錯移轉叢集管理工具變更 IP 位址資源相依性，並將 IP 相依性變更為 OR。  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集目前設定在使用延展 V-LAN 技術的多個子網路：您必須先升級現有的叢集，以[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由於延伸 V-LAN 技術會設定單一子網路網路，網路組態必須變更為多重子網路，而且要使用 Windows 容錯移轉叢集管理工具變更 IP 位址資源相依性，並將 IP 相依性變更為 OR。  
   
 ###  <a name="BestPractices"></a> 在升級之前的最佳作法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集  
  若要排除重新啟動所產生的非預期停機時間，請在所有容錯移轉叢集節點上預先安裝 .NET Framework 4.0 的不必重新開機封裝，然後在叢集節點上執行升級。 下面是預先安裝必要元件的建議步驟：  
@@ -116,9 +116,9 @@ ms.locfileid: "53363710"
   
 6.  在 [產品金鑰] 頁面上，針對符合舊產品版本的新版本輸入 PID 金鑰。 例如，若要升級 Enterprise 容錯移轉叢集，您必須提供 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]的 PID 金鑰。 按 **[下一步]** ，繼續進行。 請注意，您針對容錯移轉叢集升級所使用的 PID 金鑰在相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有容錯移轉叢集節點之間必須一致。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../editions-and-components-of-sql-server-2016.md)並[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
-7.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 按一下 [下一步]，繼續進行。 若要結束安裝程式，請按一下 **[取消]**。  
+7.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 按一下 [下一步]  ，繼續進行。 若要結束安裝程式，請按一下 **[取消]** 。  
   
-8.  在 [選取執行個體] 頁面中，指定要升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 執行個體。 按一下 [下一步]，繼續進行。  
+8.  在 [選取執行個體] 頁面中，指定要升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 執行個體。 按一下 [下一步]  ，繼續進行。  
   
 9. 在 [特徵選取] 頁面上，系統會預先選取要升級的功能。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 請注意，您無法變更要升級的功能，而且您無法在升級作業期間加入功能。 若要將功能加入至升級的執行個體[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]升級作業完成之後，請參閱[將功能加入至執行個體 SQL Server 2014 的&#40;安裝&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "53363710"
   
 10. 在 [執行個體組態] 頁面上，系統會根據舊的執行個體自動填入欄位。 您可以選擇指定新的 InstanceID 值。  
   
-     **執行個體識別碼** - 根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 [執行個體識別碼] 核取方塊並提供值。 如果您覆寫預設值，就必須針對在所有容錯移轉叢集節點上升級的執行個體指定相同的執行個體識別碼。 升級之執行個體的執行個體識別碼在這些節點之間必須相符。  
+     **執行個體識別碼** - 根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 [執行個體識別碼]  核取方塊並提供值。 如果您覆寫預設值，就必須針對在所有容錯移轉叢集節點上升級的執行個體指定相同的執行個體識別碼。 升級之執行個體的執行個體識別碼在這些節點之間必須相符。  
   
-     **偵測到執行個體和功能**-此方格會顯示執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式執行所在的電腦上。 按一下 [下一步]，繼續進行。  
+     **偵測到執行個體和功能**-此方格會顯示執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式執行所在的電腦上。 按一下 [下一步]  ，繼續進行。  
   
 11. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
@@ -138,15 +138,15 @@ ms.locfileid: "53363710"
   
 14. 在升級作業開始之前，系統組態檢查會執行一組額外的規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。  
   
-15. [叢集升級報表] 頁面會顯示容錯移轉叢集執行個體中的節點清單以及每個節點上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件的執行個體版本資訊。 它會顯示資料庫指令碼狀態和複寫指令碼狀態。 此外，它也會顯示當您按一下 [下一步] 時所進行之動作的參考用訊息。 安裝程式將會根據已經升級和總計的節點數目的容錯移轉叢集節點數目，顯示當您按一下時所發生的容錯移轉行為**下一步**。 如果您尚未安裝必要元件，它也會發出可能產生不必要停機時間的警告。  
+15. [叢集升級報表] 頁面會顯示容錯移轉叢集執行個體中的節點清單以及每個節點上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 元件的執行個體版本資訊。 它會顯示資料庫指令碼狀態和複寫指令碼狀態。 此外，它也會顯示當您按一下 [下一步]  時所進行之動作的參考用訊息。 安裝程式將會根據已經升級和總計的節點數目的容錯移轉叢集節點數目，顯示當您按一下時所發生的容錯移轉行為**下一步**。 如果您尚未安裝必要元件，它也會發出可能產生不必要停機時間的警告。  
   
-16. [準備升級] 頁面會顯示在安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[升級]**。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，之後再進行功能安裝。  
+16. [準備升級] 頁面會顯示在安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[升級]** 。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，之後再進行功能安裝。  
   
 17. 在升級期間，[進度] 頁面會提供狀態，好讓您可以在安裝程式進行時監視目前節點的升級進度。  
   
 18. 升級目前的節點之後，[叢集升級報表] 頁面就會顯示所有容錯移轉叢集節點的升級狀態資訊、每個容錯移轉叢集節點的功能，以及其版本資訊。 請確認所顯示的版本資訊並且繼續進行其餘節點的升級作業。 如果發生容錯移轉至升級節點的行為，這也會出現在狀態頁面上。 您也可以在 Windows 叢集管理員工具中檢查，然後確認。  
   
-19. 升級之後，[完成] 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]**。  
+19. 升級之後，[完成] 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]** 。  
   
 20. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "53363710"
   
 1.  請遵循步驟 1 到 24 中所述[若要升級 SQL Server 容錯移轉叢集](#UpgradeSteps)一節所述來將叢集升級[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。  
   
-2.  使用 AddNode 安裝程式動作將節點加入到不同的子網路，並在 [叢集網路組態] 頁面確認 IP 位址資源相依性為 OR。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+2.  使用 AddNode 安裝程式動作將節點加入到不同的子網路，並在 [叢集網路組態]  頁面確認 IP 位址資源相依性為 OR。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>若要升級目前使用延展 V-Lan 的多重子網路叢集。  
   

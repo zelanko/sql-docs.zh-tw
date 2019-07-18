@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63460052"
 ---
 # <a name="granting-access-to-a-database"></a>授與資料庫的存取權
   Mary 現在已具有此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的存取權，但是沒有存取資料庫的權限。 必須等到您將她授權為資料庫使用者之後，她才能存取預設的 **TestData** 資料庫。  

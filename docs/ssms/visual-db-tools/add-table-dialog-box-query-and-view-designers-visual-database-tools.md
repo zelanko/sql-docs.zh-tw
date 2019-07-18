@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.dlgbox.query.addtable
 - vdtsql.chm:65565
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d8b46182d226c2753d6b6d7366e47a305fdae28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 3da683d21f7abadd59352ba84483d9e8c566b276
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738786"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686649"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "47738786"
   
 ## <a name="options"></a>選項。  
 **資料表**  
-列出可以新增至 [圖表] 窗格的資料表。 若要新增資料表，請選取資料表，再按 [新增]。 若要一次新增數個資料表，請選取資料表，再按 [新增]。  
+列出可以新增至 [圖表]  窗格的資料表。 若要新增資料表，請選取資料表，再按 [新增]  。 若要一次新增數個資料表，請選取資料表，再按 [新增]  。  
   
 **檢視**  
-列出可以新增至 [圖表] 窗格的檢視表。 若要新增檢視表，請選取檢視表，再按 [新增]。 若要一次新增數個檢視表，請選取檢視表，再按 [新增]。  
+列出可以新增至 [圖表]  窗格的檢視表。 若要新增檢視表，請選取檢視表，再按 [新增]  。 若要一次新增數個檢視表，請選取檢視表，再按 [新增]  。  
   
 **函數**  
-列出可新增至 [圖表] 窗格的使用者定義函數。 若要新增函數，請選取函數，再按 [新增]。 若要一次新增數個函數，請選取函數，再按 [新增]。  
+列出可新增至 [圖表]  窗格的使用者定義函數。 若要新增函數，請選取函數，再按 [新增]  。 若要一次新增數個函數，請選取函數，再按 [新增]  。  
   
 **同義字**  
-列出可新增至 [圖表] 窗格的同義資料表。 若要新增同義資料表，請選取同義資料表，再按 [新增]。 若要一次新增數個同義資料表，請選取同義資料表，再按一下 [新增]。  
+列出可新增至 [圖表]  窗格的同義資料表。 若要新增同義資料表，請選取同義資料表，再按 [新增]  。 若要一次新增數個同義資料表，請選取同義資料表，再按一下 [新增]  。  
   
 **[重新整理]**  
 更新清單以包含自上次擷取清單以來對資料庫所做的任何變更。  

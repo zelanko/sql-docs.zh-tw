@@ -1,5 +1,5 @@
 ---
-title: 'C 到 SQL: GUID |Microsoft Docs'
+title: C 轉換為 SQL：GUID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019319"
 ---
-# <a name="c-to-sql-guid"></a>C 到 SQL：GUID
+# <a name="c-to-sql-guid"></a>C 轉換為 SQL：GUID
 GUID ODBC C 資料類型的識別項是：  
   
  SQL_C_GUID  

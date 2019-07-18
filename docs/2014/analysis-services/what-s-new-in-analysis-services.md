@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 173ca9fbf1fa3e9e2dc9dcb177c45a2ea3849415
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065320"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>什麼&#39;新功能 Analysis Services 和 Business Intelligence
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 維持與舊版相同，但是針對多維度模型加入支援 Power View 報表的功能除外。  

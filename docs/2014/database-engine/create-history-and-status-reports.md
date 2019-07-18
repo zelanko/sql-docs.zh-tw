@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807502"
 ---
 # <a name="create-history-and-status-reports"></a>建立記錄和狀態報表
   您可以在目前載入的方案中，建立一份記錄或檔案目前狀態的報表。 您也可以預覽報表，再將報表傳給印表機、檔案或 [剪貼簿]。 這些報表不是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產生的。 相反地，報表是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 產生的。  
@@ -29,7 +29,7 @@ ms.locfileid: "48192368"
   
 2.  在上**檔案**功能表上，指向**原始檔控制**，然後按一下**歷程記錄**。  
   
-3.  在 **歷程記錄**\<檔案或專案 > 對話方塊中，按一下 **報表**。  
+3.  在 [**歷程記錄**\<檔案或專案 >] 對話方塊中，按一下 [**報表**。  
   
 4.  在 [**歷程記錄報告**] 對話方塊中，選取適當的選項，然後按一下**確定**。  
   

@@ -2,18 +2,18 @@
 title: 將書籤新增至報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 776dfbba57afe73e019a9c1c671e8f2bae63165b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 176d4318cad92d74fb7bfdeeadab5e9690843458
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582248"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>將書籤加入至報表 (報表產生器及 SSRS)
   當您想要在報表中提供自訂內容資料表或是提供自訂內部導覽連結時，請將書籤或書籤連結加入到報表中。 一般來說，您會在報表中想要引導使用者的位置上加入書籤，例如每一個資料表或圖表的書籤，或是資料表或矩陣內顯示之唯一群組值的標籤。 您可以建立自己的字串當做書籤使用，或是針對群組設定群組運算式的標籤。  
@@ -31,18 +31,18 @@ ms.locfileid: "56285486"
   
 1.  在 [報表設計] 檢視中，選取您想要加入書籤的文字方塊、影像、圖表或其他報表項目。 選定項目的屬性會顯示在 [屬性] 窗格中。  
   
-2.  在 **[書籤]** 旁邊的文字方塊內，輸入一個字串當做此書籤的標籤。 例如，您可以輸入 **BikePhoto** 做為報表中影像的書籤。 另外，您也可以按一下運算式 (**fx**) 按鈕開啟 [運算式] 對話方塊，以指定評估為標籤的運算式。 如果是群組，您所輸入的運算式應該是群組運算式。  
+2.  在 **[書籤]** 旁邊的文字方塊內，輸入一個字串當做此書籤的標籤。 例如，您可以輸入 **BikePhoto** 做為報表中影像的書籤。 另外，您也可以按一下運算式 (**fx**) 按鈕開啟 [運算式]  對話方塊，以指定評估為標籤的運算式。 如果是群組，您所輸入的運算式應該是群組運算式。  
   
     > [!NOTE]  
     >  書籤可以是任何字串，但它在報表內必須是唯一的。 如果此書籤不是唯一的，書籤的連結會尋找第一個相符的書籤。  
   
 ### <a name="to-add-a-bookmark-link"></a>加入書籤連結  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下要新增連結的文字方塊、影像或圖表，然後按一下 [屬性]。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下要新增連結的文字方塊、影像或圖表，然後按一下 [屬性]  。  
   
-2.  在該報表項目的 **[屬性]** 對話方塊中，按一下 **[動作]**。  
+2.  在該報表項目的 **[屬性]** 對話方塊中，按一下 **[動作]** 。  
   
-3.  選取 **[移至書籤]**。 此對話方塊中會出現這個選項的其他區段。  
+3.  選取 **[移至書籤]** 。 此對話方塊中會出現這個選項的其他區段。  
   
 4.  在 **[選取書籤]** 方塊中，輸入或選取書籤或評估為書籤的運算式。 使用先前的範例，輸入 **BikePhoto** 來建立報表中影像的連結。  
   

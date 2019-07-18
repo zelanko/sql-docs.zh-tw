@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4444c54df6e3629e7f69e3fe0d54625f66c3e703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921699"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 屬性 (ADO)
 指出的序數位置[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的目前資料錄。  

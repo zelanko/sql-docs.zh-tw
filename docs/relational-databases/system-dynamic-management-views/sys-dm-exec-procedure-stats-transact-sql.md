@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b37266a26d841c463dbb0a62e92d8dbd71ac46e5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418677"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263922"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,13 +76,17 @@ ms.locfileid: "52418677"
 |**min_spills**|**bigint**|這個預存程序的頁面的最小數目曾經有在單次執行期間溢出。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|這個預存程序最大頁數曾經有在單次執行期間溢出。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|這個分佈是在節點的識別碼。<br /><br />**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|編譯以來執行所執行的這個預存程序的網頁伺服器讀取總數。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**last_page_server_reads**|**bigint**|執行預存程序的最後一個時間執行的網頁伺服器讀取數目。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**min_page_server_reads**|**bigint**|所讀取的頁面伺服器最小次數，在單次執行期間曾執行這個預存程序。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
+|**max_page_server_reads**|**bigint**|網頁伺服器的最大數目讀取，在單次執行期間曾執行這個預存程序。<br /><br /> **適用於**：Azure SQL Database 的超大規模|  
   
  <sup>1</sup>原生編譯的預存程序啟用統計資料收集時，會收集的工作者時間 （毫秒）。 若查詢的執行時間少於一毫秒，其值將會是 0。  
   
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
    
 ## <a name="remarks"></a>備註  
  預存程序執行完成時，就會更新檢視中的統計資料。  

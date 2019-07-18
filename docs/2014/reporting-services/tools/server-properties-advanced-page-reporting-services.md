@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099661"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
   您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。  
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、連接至報表伺服器執行個體、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。 按一下 **[進階]** ，即可開啟此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **EnableMyReports**  
  指出 [我的報表] 功能是否已啟用。 值若為 `true` 表示此功能已啟用。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "56041579"
  指出報表伺服器與用戶端瀏覽器通訊時是否應該使用工作階段 Cookie。 預設值是 `true`。  
   
  **ExternalImagesTimeout**  
- 決定在連接逾時之前必須擷取外部影像檔的時間長度。預設值為 `600` 秒。  
+ 決定在連接逾時之前必須擷取外部影像檔的時間長度。預設值是`600`秒。  
   
  **SnapshotCompression**  
  定義快照集的壓縮方式。 預設值是 `SQL`。 有效值如下：  

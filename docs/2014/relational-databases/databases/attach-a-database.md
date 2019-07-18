@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872247"
 ---
 # <a name="attach-a-database"></a>附加資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加資料庫。 您可以使用此功能來複製、移動或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
@@ -41,7 +41,7 @@ ms.locfileid: "53354978"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[升級資料庫之後](#FollowUp)  
+-   **後續操作：** [升級資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -70,9 +70,9 @@ ms.locfileid: "53354978"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[附加]**。  
+2.  以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[附加]** 。  
   
-3.  在 **[附加資料庫]** 對話方塊中，若要指定要附加的資料庫，請按一下 **[加入]**；在 **[尋找資料庫檔案]** 對話方塊中，選取資料庫所在的磁碟機、展開目錄樹狀結構，尋找並選取資料庫的 .mdf 檔案；例如：  
+3.  在 **[附加資料庫]** 對話方塊中，若要指定要附加的資料庫，請按一下 **[加入]** ；在 **[尋找資料庫檔案]** 對話方塊中，選取資料庫所在的磁碟機、展開目錄樹狀結構，尋找並選取資料庫的 .mdf 檔案；例如：  
   
      `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53354978"
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
      **"** *<database_name>* **" 資料庫詳細資料**  
-     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 (**...**)。  
+     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽]  按鈕 ( **...** )。  
   
     > [!NOTE]  
     > 如果檔案不存在， **[訊息]** 資料行就會顯示「找不到」。 如果找不到記錄檔，它就存在於其他目錄中，或是已遭刪除。 您必須更新 **[資料庫詳細資料]** 方格中的檔案路徑，以指向正確的位置，或是從方格中移除該記錄檔。 如果找不到 .ndf 資料檔，您就必須更新該檔案在方格中的路徑，以指向正確的位置。  
@@ -142,11 +142,11 @@ ms.locfileid: "53354978"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  使用[CREATE DATABASE](/sql/t-sql/statements/create-database-sql-server-transact-sql)陳述式搭配`FOR ATTACH`關閉。  
   
-     將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的檔案，並將資料庫重新命名為 `MyAdventureWorks`。  
+     複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的檔案，並將資料庫重新命名為 `MyAdventureWorks`。  
   
     ```sql  
     CREATE DATABASE MyAdventureWorks   
@@ -159,7 +159,7 @@ ms.locfileid: "53354978"
     > 或者，您可以使用 [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) 或 [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql) 預存程序。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本將移除這些程序。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您改用 CREATE DATABASE...FOR ATTACH。  
   
 ##  <a name="FollowUp"></a> 後續操作：升級 SQL Server 資料庫之後  
- fter 使用附加方法升級資料庫，資料庫就會立即可用，且會自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]**，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 **[匯入]** 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
+ fter 使用附加方法升級資料庫，資料庫就會立即可用，且會自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]** ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 **[匯入]** 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
   
 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   

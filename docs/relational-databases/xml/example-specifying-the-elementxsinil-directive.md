@@ -13,12 +13,12 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba689d2135ce7ff2db2ad484f55ec0eb2035aafd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2d2accfbc2c2ca34150ffe0db503dc7f4bf35b72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66175411"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例指定 ELEMENTXSINIL 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "58510865"
   
  以下查詢會建構包括員工地址在內的 XML。 對於 `AddressLine2` 及 `City` 資料行，資料行名稱會指定 `ELEMENTXSINIL` 指示詞。 這會在資料列集中，為 `AddressLine2` 及 `City` 資料行中的 NULL 值產生元素。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT 1    as Tag,  
@@ -60,24 +60,19 @@ FOR XML EXPLICIT;
 ```  
   
  以下是部份結果：  
-  
- `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
-  
- `EmpID="1" AddressID="249">`  
-  
- `<Address AddressID="249">`  
-  
- `<AddressLine1>4350 Minute Dr.</AddressLine1>`  
-  
- `<AddressLine2 xsi:nil="true" />`  
-  
- `<City>Minneapolis</City>`  
-  
- `</Address>`  
-  
- `</Employee>`  
-  
- `...`  
+
+```xml
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          EmpID="1"
+          AddressID="249">
+  <Address AddressID="249">
+    <AddressLine1>4350 Minute Dr.</AddressLine1>
+    <AddressLine2 xsi:nil="true" />
+    <City>Minneapolis</City>
+  </Address>
+</Employee>
+...
+```
   
 ## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 EXPLICIT 模式](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  

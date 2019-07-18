@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr |Microsoft Docs
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128669"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可用於`SQLGetConnectAttr`，而函數用來報告其目前的設定。 針對這些屬性並不保證直到已連線或已設定屬性使用之後，報告的值[SQLSetConnectAttr](sqlsetconnectattr.md)。  
@@ -87,6 +87,6 @@ ms.locfileid: "53375640"
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

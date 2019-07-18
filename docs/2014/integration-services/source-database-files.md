@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
@@ -13,19 +12,19 @@ ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb0f2659323960e58bb70ff2bb36f8367088dd7a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055540"
 ---
 # <a name="source-database-files"></a>來源資料庫檔案
   使用 **[來源資料庫檔案]** 對話方塊，即可檢視來源伺服器上的資料庫檔案名稱和位置，或指定傳送資料庫工作的網路檔案共用位置。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
   
  若要以來源伺服器上的資料庫檔案名稱和位置來擴展此對話方塊，請在 **[傳送資料庫工作編輯器]** 對話方塊的 **[資料庫]** 頁面中，首先指定 **[SourceConnection]** 和 **[SourceDatabaseName]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **來源檔案**  
  在來源伺服器上，將會被傳送的資料庫檔案名稱。 **[來源檔案]** 是唯讀的。  
   

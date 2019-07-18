@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355759"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793428"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 用戶端連接性 (SQL Server)
   本主題描述 AlwaysOn 可用性群組之用戶端連接的考量，包括用戶端組態和設定的必要條件、限制和建議。  
@@ -37,13 +37,13 @@ ms.locfileid: "53355759"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
-|具有連接修補程式的 ADO.NET 與.NET Framework 4.0**<sup>*</sup>**|是|是|是|是|是|  
-|具有連接修補程式的 ADO.NET 與.NET Framework 3.5 SP1 **<sup>**</sup>**|是|是|是|是|是|  
+|具有連接修補程式的 ADO.NET 與.NET Framework 4.0 **<sup>*</sup>** |是|是|是|是|是|  
+|具有連接修補程式的 ADO.NET 與.NET Framework 3.5 SP1 **<sup>** </sup>** |是|是|是|是|是|  
 |Microsoft JDBC Driver 4.0 for SQL Server|是|是|是|是|是|  
   
  **<sup>*</sup>**  下載 ADO.NET 與.NET Framework 4.0 連接修補程式： [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211)。  
   
- **<sup>**</sup>* * 下載 ADO.NET 與.NET Framework 3.5 SP1 連接修補程式： [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)。  
+ **<sup>** </sup>* * 下載 ADO.NET 與.NET Framework 3.5 SP1 連接修補程式： [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)。  
   
 > [!IMPORTANT]  
 >  若要連接到可用性群組接聽程式，用戶端必須使用 TCP 連接字串。  

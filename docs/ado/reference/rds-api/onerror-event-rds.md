@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6db04be0a40a71528e325ca314a9224d1d7c6817
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963849"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 **OnError**每當作業期間發生錯誤，會呼叫事件。  

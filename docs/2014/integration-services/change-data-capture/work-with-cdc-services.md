@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835145"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
   您可以使用 CDC 服務組態主控台來建立新的 CDC 服務並為 CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **準備 SQL Server**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中選取這個選項。  
   
- 您也可以用滑鼠右鍵按一下 [本機 CDC 服務]，並選取 [準備 SQL Server]。  
+ 您也可以用滑鼠右鍵按一下 [本機 CDC 服務]  ，並選取 [準備 SQL Server]  。  
   
  隨即開啟 [為 Oracle CDC 準備 SQL Server 執行個體] 對話方塊。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58376009"
  **建立新的 CDC 服務**  
  從 CDC 服務組態主控台右側的 **[動作]** 窗格中按一下 **[新增服務]** 。  
   
- 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]，然後選取 [新增服務]。  
+ 您也可以用滑鼠右鍵按一下 [Local CDC Services (本機 CDC 服務)]  ，然後選取 [新增服務]  。  
   
  隨即開啟 [新增 Oracle CDC 服務] 對話方塊。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
@@ -18,12 +16,12 @@ ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 807e02a03ada37b17a8c351ed9e535835755e6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117238"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702507"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>維度簡介 (Analysis Services - 多維度資料)
   所有的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度都是根據從資料來源檢視中資料表或檢視的資料行的屬性群組。 維度的存在與 Cube 無關，也可以用於多個 Cube 中、在單一 Cube 中使用多次，也可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之間連結。 存在與 Cube 無關的維度稱為資料庫維度，而 Cube 中的資料庫維度執行個體則稱為 Cube 維度。  
@@ -49,7 +47,7 @@ ms.locfileid: "48117238"
   
  在上圖中， **FactResellerSales**事實資料表沒有外部索引鍵關聯性**DimGeography**維度資料表。 不過， **FactResellerSales**事實資料表有外部索引鍵關聯性**DimReseller**維度資料表，然後依序已使用的外部索引鍵關聯性**DimGeography**維度資料表。 若要定義轉售商 維度，其中包含每個轉售商的地理位置資訊，您必須擷取這些屬性從**DimGeography**並**DimReseller**維度資料表。 然而，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以建立兩個個別的維度，然後在這兩個維度之間定義參考維度關聯性，以在量值群組中連結它們，因而獲得相同的結果。 如需有關參考維度關聯性的詳細資訊，請參閱 <<c0> [ 維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
- 在這個狀況下使用參考維度關聯性的其中一個好處是您可以建立單一地理位置維度，然後根據地理位置維度建立多個 Cube 維度，而完全不需要任何額外的儲存空間。 例如，您可以將一個地理位置 Cube 維度連結至轉售商維度，而將另一個地理位置 Cube 維度連結至客戶維度。 **相關主題：**[維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)，[定義 Referenced Relationship and Referenced Relationship Properties&lt](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ 在這個狀況下使用參考維度關聯性的其中一個好處是您可以建立單一地理位置維度，然後根據地理位置維度建立多個 Cube 維度，而完全不需要任何額外的儲存空間。 例如，您可以將一個地理位置 Cube 維度連結至轉售商維度，而將另一個地理位置 Cube 維度連結至客戶維度。 **相關主題：** [維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)，[定義 Referenced Relationship and Referenced Relationship Properties&lt](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>處理維度  
  建立維度之後，您必須先處理維度，才能檢視屬性的成員與維度中的階層。 變更維度的結構或更新其基礎資料表中的資訊之後，必須再次處理此維度，然後才可以檢視這些變更。 在結構性變更之後處理維度時，也必須處理包含此維度的任何 Cube，否則將無法檢視此 Cube。  

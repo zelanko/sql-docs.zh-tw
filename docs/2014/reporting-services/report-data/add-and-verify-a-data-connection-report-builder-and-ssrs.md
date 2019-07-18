@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107515"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>加入及驗證資料連接或資料來源 (報表產生器及 SSRS)
   在報表產生器中，您可以從報表伺服器加入共用資料來源，或是為您的報表建立內嵌資料來源。 在報表設計師中，您可以建立共用資料來源或內嵌資料來源，並將它部署至報表伺服器。  
@@ -32,16 +31,16 @@ ms.locfileid: "56030559"
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>建立共用資料來源的參考  
   
-1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]** 。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱。  
   
     > [!NOTE]  
     >  這個名稱會儲存在本機報表定義中。 這個名稱不是共用資料來源在報表伺服器上的名稱。  
   
-3.  選取 **[使用共用連接或報表模型]**。 隨即出現最近使用的共用資料來源和報表模型清單。 若要從報表伺服器選取其中一個項目，請按一下 **[瀏覽]** 並瀏覽至報表伺服器上提供共用資料來源的資料夾。  
+3.  選取 **[使用共用連接或報表模型]** 。 隨即出現最近使用的共用資料來源和報表模型清單。 若要從報表伺服器選取其中一個項目，請按一下 **[瀏覽]** 並瀏覽至報表伺服器上提供共用資料來源的資料夾。  
   
-4.  選取該共用資料來源，然後按一下 **[開啟]**。  
+4.  選取該共用資料來源，然後按一下 **[開啟]** 。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,13 +48,13 @@ ms.locfileid: "56030559"
   
 ### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
   
-1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]**，然後按一下 **[資料來源]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
+1.  在 [報表資料] 窗格的工具列上，按一下 **[新增]** ，然後按一下 **[資料來源]** 。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
 2.  在 **[名稱]** 文字方塊中，輸入資料來源的名稱或接受預設值。  
   
 3.  確認已選取 **[使用內嵌於我的報表的連接]** 。  
   
-    1.  從 [選取連線類型] 下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server] 或 [OLE DB]。  
+    1.  從 [選取連線類型]  下拉式清單中，選取資料來源類型，例如 [Microsoft SQL Server]  或 [OLE DB]  。  
   
     2.  使用以下其中一個替代方式來指定連接字串：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "56030559"
   
          依照此資料來源類型適合的情況，填入 **[連接屬性]** 對話方塊中的欄位。 連接屬性包括資料來源的類型、資料來源的名稱以及要使用的認證。 當您在此對話方塊中指定值之後，請按一下 **[測試連接]** 來確認此資料來源確實可用，而且您指定的認證正確無誤。  
   
-4.  按一下 **[認證]**。  
+4.  按一下 **[認證]** 。  
   
      指定用於這個資料來源的認證。 資料來源的擁有者會選擇支援的認證類型。 在某些情況下，資料來源的擁有者會在報表伺服器上維護共用資料來源，並且使用您可以使用的認證來設定資料來源。 如需這項資訊，請連絡資料來源擁有者。 如需詳細資訊，請參閱 [在報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   
@@ -79,13 +78,13 @@ ms.locfileid: "56030559"
   
 1.  在工具列的 [報表資料] 窗格中，按兩下此資料來源。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
-2.  按一下 **[測試連接]**。  
+2.  按一下 **[測試連接]** 。  
   
 3.  如果連線成功，便會出現下列訊息：「 已成功建立連線。 」 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  如果連線不成功，便會出現下列訊息：「 無法連接到資料來源。 」  
   
-5.  按一下 **[詳細資料]**，並使用該資訊來更正問題。  
+5.  按一下 **[詳細資料]** ，並使用該資訊來更正問題。  
   
      如需詳細資訊，請參閱 [在報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   

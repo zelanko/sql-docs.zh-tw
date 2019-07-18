@@ -22,16 +22,16 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a30a6d0212e04edebf7701ce759e726bd4186948
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8f45bc70d56070e9a4b11da9fb8f6d7d3b62e170
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802434"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690151"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "56802434"
  這個視窗用來檢視查詢結果。 這個視窗能夠以方格或文字來顯示結果，或者將結果導向至檔案。 結果方格可以顯示為個別的索引標籤視窗。  
   
  **IntelliSense**  
- 在編輯器的 [編輯] 功能表上，指向 [IntelliSense] 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
+ 在編輯器的 [編輯]  功能表上，指向 [IntelliSense]  來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
   
  **色彩編碼**  
  顯示每種語法元素類型的不同色彩，改進了複雜陳述式的可讀性。  

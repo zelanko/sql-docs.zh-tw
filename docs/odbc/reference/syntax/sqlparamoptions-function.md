@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 631e022e9c424344053153647fcf292c1c3f90db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b3f876993d8c7c334594f11b87cc5d2ed8ff0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947940"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： 已被取代  
+ 導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
  ODBC 2.0 函式**SQLParamOptions**已被取代，在 ODBC 3。*x*藉由呼叫[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
 > [!NOTE]  
->  如需哪些驅動程式管理員的詳細資訊會對應到此函式時 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附錄 g： 驅動程式指導方針，為了與舊版相容。  
+>  如需哪些驅動程式管理員的詳細資訊會對應到此函式時 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
   
 ## <a name="remarks"></a>備註  
  請參閱[ODBC 64 位元資訊](../../../odbc/reference/odbc-64-bit-information.md)，如果您的應用程式會在 64 位元作業系統上執行。  

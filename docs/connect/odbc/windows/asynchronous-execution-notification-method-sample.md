@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25b3fd8ae5c4f63c69200eaec8a736d8c44931f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: bfe68232ef1e2ab9bca2d79b4163f1a71fc4caf2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796801"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同步執行 (通知方法) 範例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

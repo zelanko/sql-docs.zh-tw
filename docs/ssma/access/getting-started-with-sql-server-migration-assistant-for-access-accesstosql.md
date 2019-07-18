@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668666"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259919"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取可讓您快速轉換至 Access 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 物件上傳到產生的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，並將資料從存取移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 如果有必要，您也可以連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 資料表，好讓您可以繼續使用現有存取前端應用程式與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -88,7 +88,7 @@ SSMA 包含兩個中繼資料瀏覽器，您可以使用瀏覽並執行動作的
 如需詳細資訊，請參閱 <<c0> [ 載入轉換的資料庫物件載入 SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)。  
   
 ### <a name="metadata"></a>中繼資料  
-右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 比方說，如果您在存取中繼資料總管 中選取資料表，四個索引標籤會出現：**表格**，**型別對應**，**屬性**，以及**資料**. 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會顯示：**表格**， **SQL**，和**資料**。  
+右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在存取中繼資料總管 中選取資料表，會出現四個索引標籤：**表格**，**類型對應**，**屬性**，和**資料**。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會出現：**表格**， **SQL**，以及**資料**。  
   
 大部分的中繼資料設定是唯讀的。 不過，您可以變更下列中繼資料：  
   

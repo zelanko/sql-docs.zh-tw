@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad0a0c63681be98c962e655af522c00a8416c3dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 716f3868fc8f9e1619f0c8dec1230cecb35f7d5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939049"
 ---
 # <a name="creating-altering-and-removing-tables"></a>建立、改變和移除資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

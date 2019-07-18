@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8337e439f1187857636396f8d07613cca157e846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09f917f326db197fa42aedf9a668134c257af4a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936725"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 指定類型的資料儲存在[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

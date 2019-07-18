@@ -1,5 +1,5 @@
 ---
-title: 工作 7:將 DQS 清理轉換加入資料流程 |Microsoft Docs
+title: 工作 7：將 DQS 清理轉換加入資料流程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65488947"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7:將 DQS 清理轉換加入至資料流程
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7：將 DQS 清理轉換新增至資料流程
   在這項工作中，您將使用 DQS 將 DQS 清理轉換加入至資料流程來清理輸入供應商資料。 請參閱 **[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)** 如需有關轉換的詳細資訊。  
   
 1.  以滑鼠右鍵按一下**DQS 清理**中**資料流程**索引標籤，然後按一下**重新命名**。 型別**清理供應商資料**，然後按**ENTER**。  
@@ -42,13 +42,13 @@ ms.locfileid: "56015659"
   
 9. 若要切換**對應**頂端索引標籤。  
   
-10. 從**可用的輸入資料行**，選取**Supplier Name**， **ContactEmailAddress**，**地址行**， **縣（市)**，**狀態**，**國家/地區**，和**郵遞區號**選取核取方塊。  
+10. 從**可用的輸入資料行**，選取**Supplier Name**， **ContactEmailAddress**，**地址行**， **縣（市)** ，**狀態**，**國家/地區**，和**郵遞區號**選取核取方塊。  
   
      ![DQS 清理轉換編輯器-對應](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "DQS 清理轉換編輯器-對應")  
   
 11. 在底部窗格中，請使用下拉式清單中的，這些資料行對應**網域**資料行：  
   
-    |「資料行」|網域|  
+    |「資料行」|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|Contact Email|  

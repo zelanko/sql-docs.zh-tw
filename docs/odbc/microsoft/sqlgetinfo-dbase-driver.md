@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (dBASE 驅動程式) |Microsoft Docs
+title: SQLGetInfo (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25ee9cd3cf92c61030211c4b00be88d3f14dfd9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7ba029c2f75fc715b1286a950cf11c1658bdab35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003300"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (dBASE 驅動程式)
 > [!NOTE]  
@@ -36,11 +35,11 @@ ms.locfileid: "52507067"
  ODBC 驅動程式會傳回 SQL_FILE_TABLE，因為每個檔案是一個資料表。  
   
 ## <a name="sqlaltertable"></a>SQL_ALTER_TABLE  
- SQL_AT_ADD_COLUMN &AMP;#124; SQL_AT_DROP_COLUMN  
+ SQL_AT_ADD_COLUMN &#124; SQL_AT_DROP_COLUMN  
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
-|ISAM|版本|版本號碼的格式|  
+|ISAM|Version|版本號碼的格式|  
 |----------|-------------|-------------------------------|  
 |DBASE|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
@@ -52,7 +51,7 @@ ms.locfileid: "52507067"
  SQL_DL_DROP_INDEX  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
- SQL_QU_DML_STATEMENTS &AMP;#124; SQL_QU_TABLE_DEFINITION &AMP;#124; SQL_QU_INDEX_DEFINITION  
+ SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION &#124; SQL_QU_INDEX_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
- SQL_FN_TD_DAYOFMONTH &AMP;#124; SQL_FN_TD_DAYOFWEEK &AMP;#124; SQL_FN_TD_DAYOFYEAR &AMP;#124; SQL_FN_TD_HOUR &AMP;#124; SQL_FN_TD_MINUTE &AMP;#124; SQL_FN_TD_MONTH &AMP;#124; SQL_FN_TD_SECOND &AMP;#124; SQL_FN_TD_WEEK &AMP;#124; SQL_FN_TD_YEAR
+ SQL_FN_TD_DAYOFMONTH &#124; SQL_FN_TD_DAYOFWEEK &#124; SQL_FN_TD_DAYOFYEAR &#124; SQL_FN_TD_HOUR &#124; SQL_FN_TD_MINUTE &#124; SQL_FN_TD_MONTH &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_WEEK &#124; SQL_FN_TD_YEAR

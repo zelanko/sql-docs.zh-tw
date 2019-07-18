@@ -11,14 +11,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f0a00d57eae7045e8eb06624115d0814ed5a86f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128829"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 屬性 - 報表伺服器項目屬性
   項目屬性是報表伺服器資料庫中項目特有的屬性。 這類型的項目包括報表、連結報表、資料夾、資源、模型以及資料來源。  

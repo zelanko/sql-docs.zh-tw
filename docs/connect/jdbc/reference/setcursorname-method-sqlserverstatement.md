@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4dc427bf8c12b8e80d0b7d66507d9f0d595e2369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 35039fae2f3e3215a0df254f7b1d4619e97d3634
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837876"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794003"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>setCursorName 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_msx_enlist (Transact-SQL) | Microsoft Docs
+title: sp_msx_enlist (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108035"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="arguments"></a>引數  
 `[ @msx_server_name = ] 'msx_server'` 多伺服器管理 （主要） 伺服器的名稱。 *msx_server*已**sysname**，沒有預設值。  
   
-`[ @location = ] 'location'` 要新增的目標伺服器的位置。 *位置*已**nvarchar(100)**，預設值是 NULL。  
+`[ @location = ] 'location'` 要新增的目標伺服器的位置。 *位置*已**nvarchar(100)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

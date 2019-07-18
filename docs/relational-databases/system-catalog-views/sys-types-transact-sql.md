@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a07c599c484f2efb85905be07e29a0ac89175fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095575"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47733116"
 |**user_type_id**|**int**|類型的識別碼。 在資料庫中，這是唯一的。 系統資料類型，如**user_type_id** = **system_type_id**。|  
 |**schema_id**|**int**|類型所屬的結構描述識別碼。|  
 |**principal_id**|**int**|個別擁有者的識別碼 (如果與結構描述擁有者不同的話)。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定替代的擁有者。<br /><br /> NULL (如果沒有替代的個別擁有者)。|  
-|**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值將會是 16。|  
+|**max_length**|**smallint**|類型的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值將會是 16。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是類型的最大有效位數；否則，便是 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是類型的最大小數位數；否則，便是 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是類型的定序名稱；否則，便是 NULL。|  

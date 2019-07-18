@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62447346"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
-  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
+  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器]  選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具可設定 URL， URL 的所有部分都會定義在這個工具中。 與舊版不同的是，Internet Information Services (IIS) 網站不再提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 應用程式的存取權。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53202487"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到本機報表伺服器執行個體。  
   
-2.  按一下 **[Web 服務 URL]**。  
+2.  按一下 **[Web 服務 URL]** 。  
   
 3.  指定虛擬目錄。 此虛擬目錄名稱會識別哪一個應用程式將接收要求。 由於 IP 位址和通訊埠可由多個應用程式共用，所以此虛擬目錄名稱會指定哪一個應用程式要接收要求。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53202487"
   
      如果是報表伺服器 Web 服務，預設虛擬目錄名稱會是 **ReportServer**。  
   
-4.  指定可唯一識別網路上之報表伺服器電腦的 IP 位址。 如果您想要指定主機標頭，或針對相同的應用程式執行個體定義其他 URL，您必須按一下 **[進階]**。 如需有關如何針對 URL 設定進階屬性的指示，請參閱本主題稍後的指示。 否則，請使用 **[Web 服務 URL]** 頁面，從下列值當中選取：  
+4.  指定可唯一識別網路上之報表伺服器電腦的 IP 位址。 如果您想要指定主機標頭，或針對相同的應用程式執行個體定義其他 URL，您必須按一下 **[進階]** 。 如需有關如何針對 URL 設定進階屬性的指示，請參閱本主題稍後的指示。 否則，請使用 **[Web 服務 URL]** 頁面，從下列值當中選取：  
   
     -   **[全部指派]** 會指定指派給電腦的任何一個 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53202487"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。  
   
-2.  按一下 [入口網站 URL]。  
+2.  按一下 [入口網站 URL]  。  
   
 3.  指定虛擬目錄。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 會接聽與報表伺服器 Web 服務相同的 IP 位址和通訊埠。 如果您設定 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 指向不同的報表伺服器 Web 服務，您必須修改 RSReportServer.config 檔案中的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL 設定。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "53202487"
   **主機標頭**  
  如果您已經在網域名稱伺服器上定義解析為電腦的主機標頭，您可以在設定報表伺服器存取的 URL 中指定該主機標頭。  
   
- 主機標頭是可讓多個網站共用單一 IP 位址和通訊埠的唯一名稱。 主機標頭名稱要比 IP 位址和通訊埠編號更容易記得和輸入。 主機標頭名稱的一個範例為 www.adventure-works.com。  
+ 主機標頭是可讓多個網站共用單一 IP 位址和通訊埠的唯一名稱。 主機標頭名稱要比 IP 位址和通訊埠編號更容易記得和輸入。 主機標頭名稱的一個範例為 www.adventure-works.com 。  
   
  **SSL 通訊埠**  
  為 SSL 連接指定通訊埠。 SSL 的預設通訊埠是 443。  
@@ -147,15 +147,15 @@ ms.locfileid: "53202487"
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>設定 URL 的進階屬性  
   
-1.  在 [Web 服務 URL] 或 [入口網站 URL] 頁面上，按一下 [進階]。  
+1.  在 [Web 服務 URL]  或 [入口網站 URL]  頁面上，按一下 [進階]  。  
   
-2.  按一下 **[加入]**。  
+2.  按一下 **[加入]** 。  
   
 3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括 `https://www` 在內。  
   
 4.  指定通訊埠。 如果您指定自訂通訊埠，應用程式的 URL 一定要包含通訊埠編號。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 6.  開啟瀏覽器視窗，並輸入此 URL 加以測試。  
   

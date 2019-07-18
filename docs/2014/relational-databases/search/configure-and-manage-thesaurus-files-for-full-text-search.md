@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011480"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文檢索查詢可以透過使用同義字 (Thesaurus) 搜尋使用者指定之詞彙的同義字 (Synonym)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「同義字」 (thesaurus) 會針對特定語言定義一組同義字 (synonym)。 系統管理員可以定義兩種同義字形式：展開集和取代集。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 同義字比對會針對所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查詢以及指定 FORMSOF THESAURUS 子句的任何 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查詢進行。  
@@ -77,7 +77,7 @@ ms.locfileid: "52792260"
 ##  <a name="location"></a> 同義字檔案的位置  
  同義字檔案的預設位置為：  
   
- *< SQL_Server_data_files_path >* \mssql12.<instancename>\。MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  這個預設位置包含下列檔案：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52792260"
   
      同義字檔案的預設檔案名稱會使用下列格式：  
   
-     'ts' +\<三個字母的語言縮寫 > + '.xml'  
+     'ts' + \<three-letter language-abbreviation> + '.xml'  
   
      給定語言之同義字檔案的名稱是使用下列值指定於登錄中：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體名稱>\MSSearch\\<語言縮寫>。  
   

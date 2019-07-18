@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: de035b4c8835b9de9ae81e8bd474c0cad6d100f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105029"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_articleview [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
-`[ @view_name = ] 'view_name'` 是定義已發行的發行項之檢視的名稱。 *view_name*已**nvarchar(386)**，預設值是 NULL。  
+`[ @view_name = ] 'view_name'` 是定義已發行的發行項之檢視的名稱。 *view_name*已**nvarchar(386)** ，預設值是 NULL。  
   
 `[ @filter_clause = ] 'filter_clause'` 是一項限制會定義水平篩選 (WHERE) 子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*已**ntext**，預設值是 NULL。  
   

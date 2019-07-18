@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
@@ -13,12 +12,12 @@ ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48a6ef3849e91f606cb94ae7fa1f7c67817bfff7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069625"
 ---
 # <a name="select-creation-method-cube-wizard"></a>選取建立方法 (Cube 精靈)
   使用 **[選取建立方法]** 頁面，即可指定建立 Cube 的方式。  
@@ -49,7 +48,7 @@ ms.locfileid: "48152801"
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

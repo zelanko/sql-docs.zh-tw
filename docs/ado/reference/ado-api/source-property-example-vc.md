@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930881"
 ---
 # <a name="source-property-example-vc"></a>Source 屬性範例 (VC++)
 此範例示範[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)藉由開啟三個屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)不同的資料來源為基礎的物件。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 600d5b5dfc42e52c4d4c04912530bf586fb569f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768170"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482859"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>儲存捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您經常需要存取相同的資料集時，可儲存捷徑查詢檔案。  
@@ -27,13 +27,13 @@ ms.locfileid: "52768170"
   
 ### <a name="to-save-a-shortcut-query-file"></a>若要儲存捷徑查詢檔案  
   
-1.  在 [儲存和傳送] 群組中，按一下 [儲存查詢] 底下的箭頭，然後按一下 [另存成查詢]。  
+1.  在 [儲存和傳送]  群組中，按一下 [儲存查詢]  底下的箭頭，然後按一下 [另存成查詢]  。  
   
-2.  選擇性。 若要重新命名查詢，請按一下 [儲存查詢] 底下的箭頭，然後按一下 [管理查詢]。 選取查詢，並按一下 [重新命名]。  
+2.  選擇性。 若要重新命名查詢，請按一下 [儲存查詢]  底下的箭頭，然後按一下 [管理查詢]  。 選取查詢，並按一下 [重新命名]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   
--   按一下 [儲存查詢] 底下的箭頭，以檢視捷徑查詢並將它開啟。  
+-   按一下 [儲存查詢]  底下的箭頭，以檢視捷徑查詢並將它開啟。  
   
 -   [以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   

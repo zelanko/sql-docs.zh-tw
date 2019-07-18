@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771514"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
   使用 **[進階連接屬性]** 對話方塊可在連接字串中加入其他連接參數。  
@@ -24,7 +24,7 @@ ms.locfileid: "58379186"
   
  您使用 **[進階連接屬性]** 對話方塊所加入的參數會加入至 **[連接到 SQL Server]** 對話方塊中所選取的參數。  
   
- 提供之每一個參數的最後一個執行個體都會覆寫該參數之前的任何執行個體。 使用 **[進階連接參數]** 對話方塊加入的參數會遵循及取代 **[SQL Server 連接]** 對話方塊中所提供的參數。 例如，如果 [SQL Server 連接] 對話方塊指定 SERVER1 當做伺服器名稱，而且 [其他連接參數] 頁面包含 ;SERVER=SERVER2，則會對 SERVER2 進行連接。  
+ 提供之每一個參數的最後一個執行個體都會覆寫該參數之前的任何執行個體。 使用 **[進階連接參數]** 對話方塊加入的參數會遵循及取代 **[SQL Server 連接]** 對話方塊中所提供的參數。 例如，如果 [SQL Server 連接]  對話方塊指定 SERVER1 當做伺服器名稱，而且 [其他連接參數]  頁面包含 ;SERVER=SERVER2，則會對 SERVER2 進行連接。  
   
  使用 **[進階連接屬性]** 對話方塊加入的參數會以純文字格式傳遞。  
   

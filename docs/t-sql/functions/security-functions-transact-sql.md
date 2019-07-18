@@ -16,15 +16,15 @@ helpviewer_keywords:
 - users [SQL Server], security functions
 - security [SQL Server], functions
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1d3d209f67fd2a84920d5890baf9112b88d52603
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: abed63415825fbf3f30800260cf2284205489b74
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696827"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65945315"
 ---
 # <a name="security-functions-transact-sql"></a>安全性函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

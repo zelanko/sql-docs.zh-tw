@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 535881ed3ece30996390af6c9a22568d49bc6d3e
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: a69bf1d98d666b0b4b76be604abc31e28958adb4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736961"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781696"
 ---
 # <a name="handling-errors"></a>處理錯誤
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

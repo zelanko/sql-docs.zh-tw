@@ -2,18 +2,18 @@
 title: SAP NetWeaver BI 連線類型 (SSRS) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3187a7ac06aac6be8d8c6189c8e13322c8c0bdf7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0e377fc94559600a98ee2cd03daadd59a5f3c2eb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812265"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500079"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 連接類型 (SSRS)
   若要在報表中加入來自 SAP NetWeaver® Business Intelligence 外部資料來源的資料，您必須具有以 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型的建構基礎為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]的資料延伸模組。  
@@ -29,7 +29,7 @@ ms.locfileid: "51812265"
 DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Credentials"></a> 認證  
@@ -37,7 +37,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源及連接字串&#40;報表產生器及 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或是[指定的認證及連接資訊，為報表資料來源](specify-credential-and-connection-information-for-report-data-sources.md).</c0>  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -56,7 +56,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 資料來源支援擴充欄位屬性。 擴充欄位屬性是資料集欄位 **Value** 和 **IsMissing** 以外的屬性，由資料處理延伸模組所定義。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
   
 ### <a name="working-with-field-properties"></a>使用欄位屬性  
- 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，將該屬性的父欄位拖曳至報表，然後將預設屬性從 **Value** 變更為想要使用的屬性。 例如，如果 MDX 查詢設計工具中的 [Calendar Year/Month Level 01] 欄位名稱，是藉著從 [中繼資料] 窗格中將層級拖曳至 [查詢] 窗格所建立，則可以使用下列語法參照運算式中的 **Long Name** 自訂擴充屬性：  
+ 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，將該屬性的父欄位拖曳至報表，然後將預設屬性從 **Value** 變更為想要使用的屬性。 例如，如果 MDX 查詢設計工具中的 [Calendar Year/Month Level 01]  欄位名稱，是藉著從 [中繼資料] 窗格中將層級拖曳至 [查詢] 窗格所建立，則可以使用下列語法參照運算式中的 **Long Name** 自訂擴充屬性：  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
@@ -89,7 +89,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |**索引鍵**|**物件**|傳回層級的索引鍵。|  
 |**LevelNumber**|**Integer**|如果是父子式階層，則會傳回層級或維度編號。|  
 |**ParentUniqueName**|**String**|如果是父子式階層，會傳回父層級的完整名稱。|  
-|**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[0D_Company].[10D_Department].[11]*。|  
+|**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[0D_Company].[10D_Department].[11]* 。|  
   
  如需在運算式中使用欄位及欄位屬性的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -116,7 +116,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

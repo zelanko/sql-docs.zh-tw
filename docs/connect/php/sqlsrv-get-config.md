@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_get_config |Microsoft Docs
+title: sqlsrv_get_config | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aa0093405e197e2ad65c3dea5b5eedbd7e9efc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 615acc0ce9e7601b46690f1e2f87b92166a8c2c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802243"
 ---
 # <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_get_config( string $setting )
 ## <a name="return-value"></a>傳回值  
 *$setting* 參數所指定的設定值。 如果指定了無效的設定，則會傳回 **false** 並將一個錯誤加入至錯誤集合。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 **false** config **sqlsrv_get_config**，您必須呼叫 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 以判斷是否發生錯誤，或者 **false** 是否為 *$setting* 參數所指定的設定值。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63131495"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
   啟動指定的 SQL Server Express LocalDB 執行個體。  

@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 055abcc3e4b6f76b1bb6105f81dfe406d1349c57
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669115"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
 

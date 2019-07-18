@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d95d3e67fdcd7159074e2f20ffa558f4c80bbcb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036348"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>對應資料指標 Attributes1 資訊類型
 當 ODBC 3。*x*應用程式會呼叫**SQLGetInfo** ODBC 2 *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 資訊類型的驅動程式 (如動態、 順向的索引鍵集驅動程式，或靜態資料指標），傳回由驅動程式管理員的位元設定會取決於何種 ODBC 2。*x*驅動程式會傳回對應的 ODBC 2。*x*資訊類型。 位元會設定下表所示。  
   
-|位元<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|資料指標類型|ODBC 2。*x*資訊<br /><br /> 型別|  
+|位元<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|資料指標類型|ODBC 2。*x*資訊<br /><br /> type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
 |SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
 |SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|動態的索引鍵集驅動程式靜態|SQL_FETCH_DIRECTION|  

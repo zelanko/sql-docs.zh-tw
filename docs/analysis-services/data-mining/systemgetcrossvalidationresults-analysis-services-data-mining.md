@@ -1,5 +1,5 @@
 ---
-title: SystemGetCrossValidationResults (Analysis Services-資料採礦) |Microsoft 文件
+title: SystemGetCrossValidationResults (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209770"
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -108,7 +108,7 @@ SystemGetCrossValidationResults(
  預設值是 **null**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果您將不會引發錯誤*狀態臨界值*為 0.0，但您應該永遠不會使用此值。 就實際而言，0.0 的臨界值表示機率百分之 0 的預測將會算為正確的。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將不會在將 *狀態臨界值* 設定為 0.0 時引發錯誤，但是您絕對不應該使用這個值。 就實際而言，0.0 的臨界值表示機率百分之 0 的預測將會算為正確的。  
   
  (選擇性)  
   
@@ -124,7 +124,7 @@ SystemGetCrossValidationResults(
   
  下表描述此資料列集中的資料行。  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |ModelName|已測試的模型名稱。|  
 |AttributeName|可預測的資料行名稱。|  
@@ -133,7 +133,7 @@ SystemGetCrossValidationResults(
 |PartitionSize|指示每一個資料分割內包含了多少案例數的整數。|  
 |測試|已執行之測試的類別目錄。 如需類別目錄以及包含在每一個類別目錄中之測試的描述，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值都取決於可預測值的類型。 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱 [交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|Value|指定之測試量值的值。|  
+|值|指定之測試量值的值。|  
   
 ## <a name="remarks"></a>備註  
  若要傳回整個資料集的精確度度量，請使用 [SystemGetAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)。  
@@ -162,7 +162,7 @@ NULL
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|[量值]|值|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|分類|真肯定|144|  
 |Target Mail DT|Bike Buyer|1|1|500|分類|誤判|105|  
@@ -184,8 +184,8 @@ NULL
   
 ## <a name="see-also"></a>另請參閱  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

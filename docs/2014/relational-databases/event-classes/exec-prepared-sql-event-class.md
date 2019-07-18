@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d4559c13091f809cc222128d0f9e991ea424628
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663969"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL 事件類別
   Exec Prepared SQL 事件類別代表 SqlClient、ODBC、OLE DB 或 DB-Library 已經執行備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

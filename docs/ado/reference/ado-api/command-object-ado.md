@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab3348906affc9a1c1a4b5471de861831992dc32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919791"
 ---
 # <a name="command-object-ado"></a>Command 物件 (ADO)
 定義您想要執行對資料來源的特定命令。  

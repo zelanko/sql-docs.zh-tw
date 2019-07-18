@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63021367"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>從發行集中加入和卸除發行項 (SQL Server Management Studio)
   當您在「新增發行集精靈」中建立發行集後，最開始要向其中新增發行項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
- 建立發行集之後，在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面中，新增和刪除發行項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。 如需新增及卸除發行項的詳細資訊，請參閱[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
+ 建立發行集之後，在 [發行集屬性 - \<發行集>]  對話方塊的 [發行項]  頁面中，新增和刪除發行項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。 如需新增及卸除發行項的詳細資訊，請參閱[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>若要在建立發行集之後新增發行項  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面中，清除 [僅顯示清單中已核取的物件] 核取方塊。 這將允許您查看發行集資料庫中的未發行物件。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [發行項]  頁面中，清除 [僅顯示清單中已核取的物件]  核取方塊。 這將允許您查看發行集資料庫中的未發行物件。  
   
 2.  選取您要新增之每一個發行項旁邊的核取方塊。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52761370"
   
 ### <a name="to-delete-an-article"></a>若要刪除發行項  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [發行項] 頁面中，清除您要刪除之每個發行項旁邊的核取方塊。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [發行項]  頁面中，清除您要刪除之每個發行項旁邊的核取方塊。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

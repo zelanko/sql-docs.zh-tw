@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011468"
 ---
 # <a name="encryption-hierarchy"></a>加密階層
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用階層式加密與金鑰管理基礎結構來加密資料。 在某一階層執行加密時，會使用憑證、非對稱金鑰、對稱金鑰的組合來加密該階層下的所有階層。 非對稱金鑰和對稱金鑰可以儲存在可延伸金鑰管理 (EKM) 模組內 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的外部。  
@@ -79,7 +79,7 @@ ms.locfileid: "48093139"
   
 -   有效期間。 憑證在這段期間內都會視為有效。  
   
-     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]與 [有效期限至]日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
+     超過這段期間憑證則無效；每個憑證都包含 [有效期限自]  與 [有效期限至]  日期。 這些日期會指定有效期間。 當憑證的有效期過期時，憑證的主體應該要求取得新憑證。  
   
 -   簽發者識別資訊。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4a55e595f925c8b542f14e34c8c88110472df89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127425"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52822092"
 |**article_id**|**int**|發行項的識別碼。|  
 |**originator_id**|**int**|發起者的識別碼。|  
 |**command_id**|**int**|命令的識別碼。|  
-|**部分指令**|**bit**|指出這是否為部分命令。|  
+|**partial_command**|**bit**|指出這是否為部分命令。|  
 |**command**|**varbinary(1024)**|命令值。|  
 |**hashkey**|**int**|僅供內部使用。|  
 |**originator_lsn**|**varbinary(16)**|識別原始發行集中，該命令的 LSN。 用於點對點異動複寫中。|  

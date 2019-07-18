@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764856"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800164"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
 
@@ -51,7 +51,7 @@ ms.locfileid: "47764856"
 | 讀取未認可 | 是        | 是                 | 是     |
 | 讀取認可   | 否         | 是                 | 是     |
 | 可重複讀取  | 否         | 否                  | 是     |
-| 快照集         | 否         | 否                  | 否      |
+| 快照式         | 否         | 否                  | 否      |
 | 可序列化     | 否         | 否                  | 否      |
   
 交易必須至少在可重複讀取的隔離等級執行，以防在兩個交易個別擷取相同的資料列，然後在稍後根據原始擷取的值更新資料列時可能發生的更新遺失。 如果兩個交易都使用單一 UPDATE 陳述式更新資料列，而且沒有以先前擷取的值做為更新的基礎，就不會在讀取認可的預設隔離等級發生更新的遺失。  

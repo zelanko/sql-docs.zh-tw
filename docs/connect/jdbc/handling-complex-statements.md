@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d44f2c229755c742d5481f3ca427f11fb5586c2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b2b6dd6bb5fb3a0d7b2e9b78dee87f90f05147df
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623926"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781790"
 ---
 # <a name="handling-complex-statements"></a>處理複雜陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

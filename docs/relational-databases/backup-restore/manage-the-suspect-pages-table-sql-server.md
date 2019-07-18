@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621546"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584014"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47621546"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目管理 suspect_pages 資料表：**  
   
@@ -126,23 +126,25 @@ ms.locfileid: "47621546"
   
 #### <a name="to-manage-the-suspectpages-table"></a>若要管理 suspect_pages 資料表  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
+1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫]  。  
   
-2.  依序展開 [系統資料庫] 、[msdb] 、[資料表] 和 [系統資料表] 。  
+2.  依序展開 [系統資料庫]  、[msdb]  、[資料表]  和 [系統資料表]  。  
   
-3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列] 。  
+3.  展開 **dbo.suspect_pages** ，然後以滑鼠右鍵按一下 [編輯前 200 個資料列]  。  
   
 4.  在查詢視窗中，編輯、更新或刪除所要的資料列。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>若要管理 suspect_pages 資料表  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 這個範例會刪除 `suspect_pages` 資料表中的部分資料列。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 這個範例會刪除 `suspect_pages` 資料表中的部分資料列。  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  

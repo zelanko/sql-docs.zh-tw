@@ -1,10 +1,8 @@
 ---
 title: 監視 PolyBase 並進行疑難排解 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - PolyBase, monitoring
@@ -12,19 +10,21 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 3c8c6922aca2d291527412e3384fe6682ba26556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 3f4496d29e5cd1bd5b21853255102b1bbdc29b39
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687506"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731835"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>監視 PolyBase 並進行疑難排解
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。
 
@@ -135,13 +135,13 @@ PolyBase 查詢會分成 sys.dm_exec_distributed_request_steps 內的一系列�
 
 ## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>檢視 PolyBase 查詢計劃 (即將變更) 
 
-1. 在 SSMS 中，啟用 [包括實際執行計畫] \(Ctrl + M) 並執行查詢。
+1. 在 SSMS 中，啟用 [包括實際執行計畫]  \(Ctrl + M) 並執行查詢。
 
-2. 按一下 [執行計劃] 索引標籤。
+2. 按一下 [執行計劃]  索引標籤。
 
    ![PolyBase 查詢計畫](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查詢計畫")  
 
-3. 在 [遠端查詢運算子] 上按一下滑鼠右鍵，然後選取 [屬性]。
+3. 在 [遠端查詢運算子]  上按一下滑鼠右鍵，然後選取 [屬性]  。
 
 4. 複製遠端查詢值，並將其貼至文字編輯器，以檢視 XML 遠端查詢計劃。 下列為範例。
 
@@ -218,7 +218,7 @@ PolyBase 查詢會分成 sys.dm_exec_distributed_request_steps 內的一系列�
 
 PolyBase 不會與名稱節點 HA 服務互動，例如目前的 Zookeeper 或 Knox。 不過，有一個經證實有效的因應措施可以提供這項功能。
 
-因應措施：使用 DNS 名稱，將連線重新路由到作用中的名稱節點。 若要這樣做，您必須確認外部資料來源是使用 DNS 名稱來與名稱節點通訊。 發生名稱節點容錯移轉時，您必須變更與外部資料來源定義中所用的 DNS 名稱建立關聯的 IP 位址。 如此即會將所有新的連線重新路由至正確的名稱節點。 發生容錯移轉時，現有的連線將會失敗。 若要自動化此程序，「活動訊號」可 Ping 到作用中的名稱節點。 如果活動訊號失敗，我們就可以假設發生過容錯移轉，並自動切換至次要的 IP 位址。
+因應措施：使用 DNS 名稱，將連線重新路由到使用中的名稱節點。 若要這樣做，您必須確認外部資料來源是使用 DNS 名稱來與名稱節點通訊。 發生名稱節點容錯移轉時，您必須變更與外部資料來源定義中所用的 DNS 名稱建立關聯的 IP 位址。 如此即會將所有新的連線重新路由至正確的名稱節點。 發生容錯移轉時，現有的連線將會失敗。 若要自動化此程序，「活動訊號」可 Ping 到作用中的名稱節點。 如果活動訊號失敗，我們就可以假設發生過容錯移轉，並自動切換至次要的 IP 位址。
 
 ## <a name="error-messages-and-possible-solutions"></a>錯誤訊息與可能的解決方案
 

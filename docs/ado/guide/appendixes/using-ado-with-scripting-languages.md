@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926483"
 ---
 # <a name="using-ado-with-scripting-languages"></a>搭配使用 ADO 與指令碼語言
 在指令碼環境中，ADO 可讓您公開資料，透過伺服器端指令碼。 在此案例中，ADO，基礎 OLE DB 提供者，它會使用，並參考指定的資料存放區所需的其他任何元件會安裝在執行 Internet Information Services (IIS) 伺服器。 ADO 使用 Active Server Pages (ASP)，是可以產生 HTML，例如指令碼中參考的元件。 此 HTML 內容可以透過 HTTP 傳遞至用戶端 Web 瀏覽器。 使用指令碼，網頁就可以將動作傳送回伺服器端指令碼，可讓您更新、 周遊，或檢視特定的資料。  

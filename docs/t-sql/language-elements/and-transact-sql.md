@@ -19,16 +19,16 @@ helpviewer_keywords:
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ec754bf92dc62650a1f1d7a1d82c07e5a35932e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5629288c66b3d8ae4f93185f35ec1d8cacaf85e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65983220"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>引數  
  *boolean_expression*  
- 這是會傳回下列任一布林值的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)：**TRUE**、**FALSE** 或 **UNKNOWN**。  
+ 這是任何會傳回布林值的有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)：**TRUE**、**FALSE** 或 **UNKNOWN**。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  

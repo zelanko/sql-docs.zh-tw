@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47de7882a6eeeca72ad0da8521ab298c7ea8364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69ed86e55cadf6c594ca764874bc1257c6d1a9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035345"
 ---
 # <a name="cdcindexcolumns-transact-sql"></a>cdc.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +40,6 @@ ms.locfileid: "47704872"
 |**column_id**|**int**|來源資料表中資料行的識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [cdc.change_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

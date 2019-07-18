@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041429"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63312104"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 課：執行購物籃預測
   在這一課，您將使用 DMX`SELECT`陳述式來建立預測，根據關聯模型中建立[第 2 課：將採礦模型加入購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 預測查詢的建立方式是使用 DMX `SELECT` 陳述式並加入 `PREDICTION JOIN` 子句。 在預測聯結之語法的詳細資訊，請參閱[FROM&#60;模型&#62;預測聯結&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  
@@ -140,11 +140,11 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+6.  在 [**檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
 7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Association Prediction.dmx`。  
   
-8.  在工具列上，按一下**Execute**  按鈕。  
+8.  在工具列上，按一下**Execute** ] 按鈕。  
   
      查詢會傳回包含三項產品的資料表：HL Mountain Tire、 Fender Set-Mountain 和 ML Mountain Tire。 此資料表會按照機率的順序列出這些傳回的產品。 最有可能與查詢中指定之三項產品加入同一個購物車的傳回產品會顯示在資料表的最上方。 後面兩項產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確性的統計資料。  
   
@@ -212,11 +212,11 @@ SELECT <select list> FROM [<mining model>]
       UNION SELECT 'Mountain-200' AS [Model]) AS [Products]) AS t  
     ```  
   
-6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+6.  在 [**檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
 7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Modified Association Prediction.dmx`。  
   
-8.  在工具列上，按一下**Execute**  按鈕。  
+8.  在工具列上，按一下**Execute** ] 按鈕。  
   
      查詢會傳回包含三項產品的資料表：HL Mountain Tire、 Water Bottle 和 Fender Set-Mountain。 此資料表會按照機率的順序列出這些產品。 顯示在資料表最上方的產品就是最有可能與查詢中指定之三項產品加入同一個購物車的產品。 其餘產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確度的統計資料。  
   

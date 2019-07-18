@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50e1d85076c2d056d8abdec9668457ca2a29d2fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bc3770140d6ff5befbafefc26cb8936e14b494a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094027"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>安裝及設定 ODBC 軟體
 > [!NOTE]  

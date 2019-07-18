@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - device information settings [Reporting Services]
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], about device information settings
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 56f5540e1bde5ea0a4fee51f445bccd1566fbb7a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62518648"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>將裝置資訊設定傳遞至轉譯延伸模組
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 Report Server Web 服務中的設定會當做 **DeviceInfo** XML 元素傳遞，並由報表伺服器進行處理。 因為裝置資訊設定具有預設值，所以這些值被視為轉譯程序中的選擇性引數。 不過，您可以使用裝置資訊設定來自訂轉譯，並覆寫伺服器所套用的預設值。  

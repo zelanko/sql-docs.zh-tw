@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769304"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,16 +67,16 @@ ms.locfileid: "47827018"
 |11|根據下表，小數秒的位數 (小數位數) 會從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> 不過，如果來源類型為 DBTIMESTAMP 而且小數秒為零，則不會產生任何小數秒位數或小數點。 此行為可確保使用舊版 OLE DB 提供者所開發之應用程式的回溯相容性。<br /><br /> 資料行大小 ~0 在 OLE DB 中隱含為大小無限制 (除非 DBTIMESTAMP 套用 3 位數規則，否則為 9 位數)。|  
 |12|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 小數秒會截斷到零。|  
 |13|系統會針對 DBTYPE_FILETIME 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 如果您使用 Windows FileTimeToSystemTime API，小數秒有效位數會限制為 1 毫秒。|  
-|14|系統會針對 **smalldatetime** 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 秒數會設定為零。|  
-|15|系統會針對 **datetime** 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
+|14|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 維護 **smalldatetime** 之前的轉換語意。 秒數會設定為零。|  
+|15|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 維護 **datetime** 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
 |16|內嵌在 SSVARIANT 用戶端架構中之值 (屬於給定類型) 的轉換行為與未內嵌在 SSVARIANT 用戶端架構時之值和類型的行為相同。|  
   
 ||||  
 |-|-|-|  
 |類型|長度 (以字元為單位)|小數位數|  
-|DBTIME2|8, 10..18|0，1..9|  
-|DBTIMESTAMP|19, 21..29|0，1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0，1..9|  
+|DBTIME2|8, 10..18|0、1..9|  
+|DBTIMESTAMP|19, 21..29|0、1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0、1..9|  
   
 ## <a name="see-also"></a>另請參閱  
  [繫結和轉換 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  

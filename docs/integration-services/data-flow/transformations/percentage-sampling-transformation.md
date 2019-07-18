@@ -22,14 +22,18 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67fb4b94e777a974ff42c59d730a58bb1396f289
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725916"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「百分比取樣」轉換會藉由選取轉換輸入資料列的一部分來建立取樣資料集。 取樣資料集是從轉換輸出隨機選取的資料列，用來製作輸入的結果取樣代表。  
   
 > [!NOTE]  

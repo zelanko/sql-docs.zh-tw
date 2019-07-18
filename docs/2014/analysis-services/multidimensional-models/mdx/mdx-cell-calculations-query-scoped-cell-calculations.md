@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
@@ -14,15 +13,15 @@ ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074417"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>建立查詢範圍資料格計算 (MDX)
-  您可以使用多維度運算式 (MDX) 的 `WITH` 關鍵字，描述查詢內容中的導出資料格。 `WITH`關鍵字的語法如下：  
+  您可以使用多維度運算式 (MDX) 的 `WITH` 關鍵字，描述查詢內容中的導出資料格。 `WITH` 關鍵字有下列語法：  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +29,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `CellCalc_Identifier` 值是導出資料格的名稱。 `String_Expression` 值包含正交、一維的 MDX 集合運算式。 每個集合運算式都必須解析為下表列出的其中一種類別目錄。  
   
-|類別目錄|描述|  
+|Category|描述|  
 |--------------|-----------------|  
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
@@ -55,6 +54,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  另一方面，每當對 Cube (涉及導出資料格定義中包含的資料格) 發出 MDX 查詢時，MDX 就會處理計算公式。 不管建立範圍為何，都會發生這個處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE CELL CALCULATION 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

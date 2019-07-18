@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7185dca3db146e7c17f41cb0f0c5376274fe3634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924938"
 ---
 # <a name="jumping-to-a-record"></a>跳至記錄
 [移動](../../../ado/reference/ado-api/move-method-ado.md)方法可讓您向前或向後在移動**資料錄集**指定的許多的記錄，使用下列語法：  

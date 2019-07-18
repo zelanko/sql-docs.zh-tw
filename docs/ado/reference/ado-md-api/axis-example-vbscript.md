@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 420c8a67d8d0d0cbadcf8263a0921877d1444da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947385"
 ---
 # <a name="axis-example-vbscript"></a>Axis 範例 (VBScript)
 此作用中的 [伺服器] 頁面會顯示 MDX 查詢字串中的 OLAP 資料，並寫入一個 HTML 資料表結構中的結果集中。  

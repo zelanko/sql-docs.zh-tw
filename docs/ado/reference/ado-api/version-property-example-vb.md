@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938748"
 ---
 # <a name="version-property-example-vb"></a>Version 屬性範例 (VB)
 這個範例會使用[版本](../../../ado/reference/ado-api/version-property-ado.md)屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，以顯示目前的 ADO 版本。 它也會使用數個動態屬性顯示：  

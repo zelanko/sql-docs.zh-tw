@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 44f3f5bbfe183136ee8bf1a8d602a50e638b89b1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028407"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 屬性 (ServerSettings 類別)
   取得與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體相關的一般旗標。  

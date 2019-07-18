@@ -1,5 +1,5 @@
 ---
-title: Errorinfo |Microsoft Docs
+title: PDO::errorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16810cbe7ba634661cf7a1e22c44b69144e66769
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c832fae4c62b09a2ee9f928b024cbaa17ea38ae1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762263"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ array PDO::errorInfo();
   
 如果沒有發生錯誤，或如果未設定 SQLSTATE，則驅動程式特定欄位會是 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 PDO::errorInfo 只會針對直接在資料庫上執行的作業擷取錯誤資訊。 使用 PDO::prepare 或 PDO::query 建立 PDOStatement 執行個體時，請使用 PDOStatement::errorInfo。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  

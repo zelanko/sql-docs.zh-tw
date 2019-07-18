@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c727ac0cb783afc10d285a21d8069048d0bfcf7a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c50d242c7528485d5d21aa10f2680094628b484b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105715"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
   帶狀線 (或稱寬帶) 是水平或垂直的範圍，這些範圍會以規則或自訂的間隔來繪製圖表背景的陰影。 您可以使用區域線：  
@@ -34,25 +33,25 @@ ms.locfileid: "56290608"
   
 ### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>在圖表上以固定間隔顯示交錯的帶狀線  
   
-1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]。  
+1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]  。  
   
-     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]。  
+     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]  。  
   
-2.  選取 [使用交錯式] 選項。 灰色帶狀線會出現在圖表上。  
+2.  選取 [使用交錯式]  選項。 灰色帶狀線會出現在圖表上。  
   
-3.  (選擇性) 使用相鄰的 [色彩] 下拉式清單來指定帶狀線的色彩。  
+3.  (選擇性) 使用相鄰的 [色彩]  下拉式清單來指定帶狀線的色彩。  
   
 ### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>在圖表上以自訂間隔顯示交錯的帶狀線  
   
-1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]。  
+1.  若要顯示水平帶狀線，請以滑鼠右鍵按一下垂直圖表軸，然後按一下 [垂直軸屬性]  。  
   
-     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]。  
+     若要顯示垂直帶狀線，請以滑鼠右鍵按一下水平圖表軸，然後按一下 [水平軸屬性]  。  
   
      軸屬性會在 [屬性] 視窗中顯示。  
   
-2.  在 [屬性] 窗格的 [外觀] 區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine 集合編輯器]。  
+2.  在 [屬性] 窗格的 [外觀]  區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine 集合編輯器]  。  
   
-3.  按一下 [新增]，將新的帶狀線新增集合。  
+3.  按一下 [新增]  ，將新的帶狀線新增集合。  
   
 4.  按一下 [StripWidth] 來指定帶狀線的寬度，在報表上是以英吋表示。 如果要反白顯示日期或時間，請按一下 [StripWidthType] 並選取時間間隔。  
   

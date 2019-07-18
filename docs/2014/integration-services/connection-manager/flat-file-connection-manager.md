@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833808"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
   「一般檔案」連接管理員可讓封裝存取一般檔案中的資料。 例如，「一般檔案」來源與目的地可以使用「一般檔案」連接管理員來擷取並載入資料。  
@@ -61,9 +61,9 @@ ms.locfileid: "58386266"
   
  您可以針對一般檔案連接管理員來設定 ConnectionString 屬性，其方式是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中指定運算式。 為避免驗證錯誤，請執行下列操作。  
   
--   當您使用運算式指定檔案時，請在 [一般檔案連接管理員編輯器]  的 [檔案名稱] 方塊中加入檔案路徑。  
+-   當您使用運算式指定檔案時，請在 [一般檔案連接管理員編輯器]  的 [檔案名稱]  方塊中加入檔案路徑。  
   
--   在「一般檔案」連接管理員上將 **DelayValidation** 屬性設定為 [True] 。  
+-   在「一般檔案」連接管理員上將 **DelayValidation** 屬性設定為 [True]  。  
   
  您可以透過具有「一般檔案」目的地的「一般檔案」連接管理員，使用運算式在執行階段建立檔案名稱。  
   

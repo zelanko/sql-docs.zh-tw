@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d70500ddf58bd448ad3df006ad26e9886a2b3712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 87285bffd5136c4ac2a66ae17755edcecd35f065
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193978"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>參考在 RDL 檔案中的組件
   為了支援報表定義檔案中自訂程式碼組件的用法，在 RDL 規格中加入了兩個報表定義語言 (RDL) 項目：**CodeModules** 項目與 **Classes** 項目。  
@@ -32,7 +32,7 @@ ms.locfileid: "47752166"
 </CodeModules>  
 ```  
   
- 請不要從自訂程式碼呼叫 <xref:System.Reflection.Assembly.Load%2A>，而是透過將 **CodeModule** 項目手動新增至 RDL 檔案，或是透過使用 [報表屬性] 對話方塊的 [參考] 索引標籤來註冊自訂組件。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 請不要從自訂程式碼呼叫 <xref:System.Reflection.Assembly.Load%2A>，而是透過將 **CodeModule** 項目手動新增至 RDL 檔案，或是透過使用 [報表屬性]  對話方塊的 [參考]  索引標籤來註冊自訂組件。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  **Classes** 項目支援在報表定義中使用執行個體成員。 **Classes** 是最上層項目，包含類別名稱與執行個體名稱的參考。 支援使用執行個體成員之報表定義中的項目可能如下所示：  
   

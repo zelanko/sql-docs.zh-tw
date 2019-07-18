@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33cb6954cab5777799809b3897a10a8d339d8991
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827280"
 ---
 # <a name="destination-assistant"></a>Destination Assistant
   目的地小幫手元件有助於建立目的地元件和連線管理員。 該元件位於 SSIS 工具箱的 **[我的最愛]** 區段中。  

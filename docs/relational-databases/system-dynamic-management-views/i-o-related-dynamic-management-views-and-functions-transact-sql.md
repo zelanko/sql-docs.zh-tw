@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a94af268647627b5cdc5cf1f5a20e61008177bad
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b864d98ce3c50c0cf858eb1ede9adb5dc389ee9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130704"
 ---
 # <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>I/O 相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

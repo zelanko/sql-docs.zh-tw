@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing SQL queries
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d6c6ce6b2876ac713ad8b71131685e7791f5747
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013180"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>執行 SQL 查詢 (SQLXMLOLEDB 提供者)
   此範例示範如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  

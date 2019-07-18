@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 914947a72035b5df2247eb01358253938f6eded6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62682373"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "47663136"
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
-2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
+2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 **[語言]** 索引標籤上，針對 **[用於功能表和對話方塊的語言]**，從清單中選取一值。  
+3.  在 **[語言]** 索引標籤上，針對 **[用於功能表和對話方塊的語言]** ，從清單中選取一值。  
   
      這項設定將影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者介面語言，因此它必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的當地語系化版本。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "47663136"
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
-2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
+2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 **[地區選項]** 索引標籤上，針對 **[選擇一個項目來符合它的喜好設定]**，從清單中選取一值。  
+3.  在 **[地區選項]** 索引標籤上，針對 **[選擇一個項目來符合它的喜好設定]** ，從清單中選取一值。  
   
      這項設定會影響特定文化專用的資料格式。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "47663136"
   
 1.  如果尚未安裝，請安裝符合當地語系化版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的作業系統 MUI。  
   
-2.  在 [控制台] 中，開啟 **[地區及語言選項]**。  
+2.  在 [控制台] 中，開啟 **[地區及語言選項]** 。  
   
-3.  在 [進階] 索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]，從清單中選取一值。  
+3.  在 [進階]  索引標籤上，針對 [選擇一個符合於您要使用的非 Unicode 程式語言版本的語言]  ，從清單中選取一值。  
   
      這項設定可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝選擇最佳預設定序。  
   

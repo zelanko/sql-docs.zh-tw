@@ -2,7 +2,7 @@
 title: 在 RSReportServer.Config 中自訂轉譯延伸模組參數 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fdd3fb449e43fdfd2877150a50afdc1c29eb6327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571584"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
   您可以在 RSReportServer 組態檔中指定轉譯延伸模組參數，以便覆寫在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上執行之報表的預設報表轉譯行為。 您可以修改轉譯延伸模組參數來達成下列目標：  

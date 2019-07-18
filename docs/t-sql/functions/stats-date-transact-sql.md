@@ -19,16 +19,16 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2755508185aa7c6bd5ddad4f628728ae8bcae71e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f313706aba43b939e267cee8b79deee2b8b80bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947679"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ STATS_DATE ( object_id , stats_id )
  
  如果統計資料對應到索引，[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目錄檢視中的 *stats_id* 值會與 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視中的 *index_id* 值相同。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 db_owner 固定資料庫角色中的成員資格或權限，才能檢視資料表或索引檢視表的中繼資料。  
   
 ## <a name="examples"></a>範例  

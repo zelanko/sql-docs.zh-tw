@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0209c50b19e46e90db3738fc94f5927f8aa619ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611994"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792129"
 ---
 # <a name="getschemas-method-"></a>getSchemas 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

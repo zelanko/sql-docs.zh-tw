@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104407"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  您必須指定這個參數，如果*mapping_id*是 NULL。  
   
-`[ @source_version = ] 'source_version'` 是來源 DBMS 的版本號碼。 *source_version*已**varchar(10)**，預設值是 NULL。  
+`[ @source_version = ] 'source_version'` 是來源 DBMS 的版本號碼。 *source_version*已**varchar(10)** ，預設值是 NULL。  
   
 `[ @source_type = ] 'source_type'` 是來源 DBMS 中的資料類型。 *source_type*已**sysname**。 您必須指定這個參數，如果*mapping_id*是 NULL。  
   
@@ -95,7 +94,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|目的地是一個 Sybase 資料庫。|  
 |NULL (預設值)||  
   
-`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)**，預設值是 NULL。  
+`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)** ，預設值是 NULL。  
   
 `[ @destination_type = ] 'destination_type'` 目的地 DBMS 中列出的資料類型。 *destination_type*已**sysname**，預設值是 NULL。  
   
@@ -120,7 +119,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="see-also"></a>另請參閱  
  [指定 「 Oracle 發行者 」 端的資料類型對應](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_getdefaultdatatypemapping &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

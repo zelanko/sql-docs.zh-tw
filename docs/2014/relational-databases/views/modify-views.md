@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196402"
 ---
 # <a name="modify-views"></a>修改檢視
   定義檢視之後，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定義，不需要卸除和重新建立檢視。  
@@ -31,7 +31,7 @@ ms.locfileid: "54135078"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法修改檢視：**  
   
@@ -60,17 +60,17 @@ ms.locfileid: "54135078"
   
 1.  在 **[物件總管]** 中，按一下檢視表所在之資料庫旁邊的加號，然後按一下 **[檢視表]** 資料夾旁邊的加號。  
   
-2.  以滑鼠右鍵按一下您要修改的檢視，然後選取 [設計]。  
+2.  以滑鼠右鍵按一下您要修改的檢視，然後選取 [設計]  。  
   
 3.  在查詢設計工具的圖表窗格中，以下列一個或多個方式變更檢視：  
   
     1.  對於您要加入或移除的任何元素，選取或清除核取方塊。  
   
-    2.  以滑鼠右鍵按一下圖表窗格，並選取 [新增資料表...]，然後從 [新增資料表] 對話方塊選取要新增檢視中的其他資料行。  
+    2.  以滑鼠右鍵按一下圖表窗格，並選取 [新增資料表...]  ，然後從 [新增資料表]  對話方塊選取要新增檢視中的其他資料行。  
   
-    3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]。  
+    3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]  。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存] _view name_。  
+4.  在 [檔案]  功能表上，按一下 [儲存]  _view name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,9 +78,9 @@ ms.locfileid: "54135078"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例先建立檢視，然後透過使用 ALTER VIEW 修改此檢視。 檢視定義中會加入 WHERE 子句。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例先建立檢視，然後透過使用 ALTER VIEW 修改此檢視。 檢視定義中會加入 WHERE 子句。  
   
     ```  
     USE AdventureWorks2012 ;  

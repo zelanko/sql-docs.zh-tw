@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
@@ -14,12 +13,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062311"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>關聯精靈 (適用於 Excel 的資料採礦用戶端)
   ![資料採礦功能區中的關聯精靈](media/dmc-associate.gif "資料採礦功能區中的關聯精靈")  
@@ -34,7 +33,7 @@ ms.locfileid: "52400471"
   
 1.  在 **資料採礦**功能區中，按一下**關聯**。  
   
-2.  在 [**選取來源資料**頁面上，選擇 Excel 資料表或資料範圍，然後按一下**下一步]**。  
+2.  在 [**選取來源資料**頁面上，選擇 Excel 資料表或資料範圍，然後按一下**下一步]** 。  
   
      [關聯] 索引標籤中的範例資料活頁簿包含交易資料通常如何排列的範例；例如，每筆交易有多項產品或每個客戶有多筆購買記錄需要分析。  
   

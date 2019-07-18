@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5471b641ad261515101aea39b6c51bdf23be14fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967243"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 (ADOX Tables)
 加入新[表格](../../../ado/reference/adox-api/table-object-adox.md)物件[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  
@@ -35,7 +34,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>參數  
- *[資料表]*  
+ *Table*  
  A **Variant**值，包含參考**資料表**来附加或建立並附加至資料表的名稱。  
   
 ## <a name="remarks"></a>備註  

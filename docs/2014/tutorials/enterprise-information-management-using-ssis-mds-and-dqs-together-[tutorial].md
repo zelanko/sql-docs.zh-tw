@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66429031"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>使用 SSIS、MDS 和 DQS 一起管理企業資訊 [教學課程]
   管理企業的資訊通常牽涉到整合整個企業及外部的資料、清理資料、比對資料來移除任何重複項、標準化資料、充實資料，使資料符合法律和規範要求，然後將資料儲存在集中位置，並具有所有必要的安全性設定。  
@@ -62,9 +62,9 @@ ms.locfileid: "56035399"
   
 5.  安裝**Master Data Services 增益集適用於 Excel** （32 位元或 64 位元根據您的電腦必須有的 Excel 的版本） 從[這裡](https://www.microsoft.com/download/details.aspx?id=29064)。 若要尋找的電腦上安裝的 Excel 版本，請執行**Excel**，按一下**檔案**功能表列，然後按一下 **協助**以查看右窗格中的版本。 請注意，您需要安裝 Visual Studio 2010 Tools for Office Runtime，再安裝 Excel 增益集。  
   
-6.  （選擇性）建立具有的帳戶[Windows Azure Marketplace](https://datamarket.azure.com/)。 其中一個教學課程中的工作必須要有**Azure Marketplace** (最初稱為**Data Market**) 帳戶。 如果您想要可以略過此工作，並繼續進行下一項工作。  
+6.  （選擇性）建立具有的帳戶[Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)。 其中一個教學課程中的工作必須要有**Azure Marketplace** (最初稱為**Data Market**) 帳戶。 如果您想要可以略過此工作，並繼續進行下一項工作。  
   
-7.  下載 Suppliers.xls 檔案從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=271504)。  
+7.  下載 Suppliers.xls 檔案從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=50426)。  
   
 8.  DQS 不允許您將清理或比對到 Excel 檔案的結果，如果您使用匯出**64 位元版本的 Excel**。 這是已知的問題。 若要解決此問題，請執行以下步驟：  
   
@@ -83,6 +83,6 @@ ms.locfileid: "56035399"
 |[第 5 課：自動化清理和比對使用 SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|在這一課，您會使用 DQS 來建立可清理輸入資料的 SSIS 解決方案、比對已清理的資料來移除重複項，並以自動化方式將已清理和比對的資料儲存在 MDS 上。|75|  
   
 ## <a name="next-steps"></a>後續步驟  
- 若要開始教學課程，請繼續進行第一課：[第 1 課：建立供應商 DQS 知識庫](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)。  
+ 若要開始本教學課程，請繼續進行第 1 課：[第 1 課：建立供應商 DQS 知識庫](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)。  
   
   

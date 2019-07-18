@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff592c731de82a142ad1babf9d842d2b668cf0e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7bc5c323cb87ab0b5033baf4616a96276c0de2c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769472"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764709"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054068"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox 驅動程式)
 > [!NOTE]  

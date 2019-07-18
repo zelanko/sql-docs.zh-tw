@@ -1,5 +1,5 @@
 ---
-title: sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs
+title: sp_apply_job_to_targets (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 32e9f15dca77a7c99d7d4a9ae314e074876c6274
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117813"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @target_servers = ] 'target_servers'` 所要套用指定的作業的目標伺服器以逗號分隔清單。 *target_servers*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
   
-`[ @operation = ] 'operation'` 指定的工作是否應該套用至或從指定的目標伺服器或目標伺服器群組中移除。 *作業*已**varchar(7)**，預設值是 APPLY。 有效的作業**套用**並**移除**。  
+`[ @operation = ] 'operation'` 指定的工作是否應該套用至或從指定的目標伺服器或目標伺服器群組中移除。 *作業*已**varchar(7)** ，預設值是 APPLY。 有效的作業**套用**並**移除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

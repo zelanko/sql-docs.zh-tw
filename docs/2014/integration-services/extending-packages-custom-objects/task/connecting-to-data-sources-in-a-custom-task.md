@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76625dc956ff36788f52c5da4106b7ac5eb8c2ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896164"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>連接至自訂工作中的資料來源
   工作會利用連接管理員連接至外部資料來源，以擷取或儲存資料。 在設計階段，連接管理員代表邏輯連接，並描述伺服器名稱與任何驗證屬性等主要資訊。 在執行階段，工作會呼叫連接管理員的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法，以建立連至資料來源的實體連接。  

@@ -1,6 +1,6 @@
 ---
 title: 擷取數值資料使用 SQL_NUMERIC_STRUCT |Microsoft Docs
-description: C/c + + 使用 ODBC 藉由使用 SQL_NUMERIC_STRUCT，相關 SQL_C_NUMERIC 擷取 SQL Server 數值資料類型。
+description: C /C++使用 ODBC 藉由使用 SQL_NUMERIC_STRUCT，相關 SQL_C_NUMERIC 擷取 SQL Server 數值資料類型。
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
-manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+author: MightyPen
+ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057194"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
 
@@ -35,7 +34,7 @@ ms.locfileid: "53731935"
 SQL\_數值\_結構中定義 sqltypes.h 標頭檔，如下所示：
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +63,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 >
 > Microsoft 會提供這些程式碼範例，「 現狀 」 不含任何瑕疵責任擔保、 明示或默示擔保，包括但不是限於適售性和/或適合某特定用途之默示擔保責任。
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +216,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>暫時的結果：
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +239,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 實作小小的位元組由小到大模式轉換成放大的整數的程式碼。 它是由應用程式開發人員實作這項功能。 下列程式碼範例是其中一個有許多可能的方法。
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +282,7 @@ long strtohextoval()
 您用來執行此程式的 ODBC 驅動程式必須支援 ODBC 3.0 功能。
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

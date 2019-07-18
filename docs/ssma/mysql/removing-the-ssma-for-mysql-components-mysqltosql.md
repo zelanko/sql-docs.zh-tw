@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ad23c4add9b6e7ea9999a434261a95282f129935
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5d6d1234cc294cc8e8cdd163ce8a9bd6ac3e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929389"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>移除 SSMA for MySQL 元件 (MySQLToSql)
 當您完成移轉的資料庫從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，如果您解除安裝延伸模組套件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後 SSMA 將不再支援從 MySQL 到目標資料庫 (SQL Server/SQL Azure)，使用伺服器端資料移轉引擎中的資料移轉。  
@@ -47,7 +46,7 @@ ms.locfileid: "47604847"
   
 4.  在 公用程式資料庫指令碼頁面的執行個體，請選取執行個體，然後按一下 **下一步**。  
   
-5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]**。  
+5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]** 。  
   
     Windows 驗證將用來嘗試登入的執行個體的 Windows 認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱和密碼。  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62938715"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation 事件類別
-  **Audit Database Principal Impersonation** 事件類別會在資料庫範圍內發生模擬時發生，例如 EXECUTE AS \<使用者> 或 SETUSER。  
+  **Audit Database Principal Impersonation** 事件類別會在資料庫範圍內發生模擬時發生，例如 EXECUTE AS \<使用者  > 或 SETUSER。  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Audit Database Principal Impersonation 事件類別資料行  
   

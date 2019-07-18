@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107238"
 ---
 # <a name="statement-parameters"></a>陳述式參數
 A*參數*是 SQL 陳述式中的變數。 例如，假設組件資料表包含名為 PartID、 描述和價格的資料行。 若要加入的組件不含參數需要建構 SQL 陳述式，例如：  
@@ -37,7 +36,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  如上所示的陳述式可能是硬式編碼在訂單項目應用程式中插入新的資料列。 不過，不一定要垂直應用程式，參數標記。 針對任何應用程式，其可簡化在執行階段建構 SQL 陳述式，藉由避免轉換文字的困難度。 比方說，剛才顯示的部分識別碼是最有可能儲存在應用程式中做為整數。 如果 SQL 陳述式會建構不含參數標記，應用程式必須轉換成文字的部分識別碼和資料來源必須將它轉換回整數。 藉由使用參數標記，應用程式可以部分識別碼傳送至驅動程式通常可以將它傳送至資料來源做為整數的整數。 這會儲存兩種轉換。 Long 資料值，這是很重要，因為這類值的文字形式經常會超過 SQL 陳述式的允許的長度。  
   
- 參數只能在 SQL 陳述式中的特定位置中都有效。 比方說，它們不被允許的選取清單中 (要傳回之資料行清單**選取**陳述式)，也不他們允許等號 （=），這類的二元運算子的兩個運算元為因為它是不可能判斷參數類型。 一般而言，參數會只在資料操作語言 (DML) 陳述式，而不是在資料定義語言 (DDL) 陳述式時才有效。 如需詳細資訊，請參閱 <<c0> [ 參數標記](../../../odbc/reference/appendixes/parameter-markers.md)附錄 c: SQL 文法中。  
+ 參數只能在 SQL 陳述式中的特定位置中都有效。 比方說，它們不被允許的選取清單中 (要傳回之資料行清單**選取**陳述式)，也不他們允許等號 （=），這類的二元運算子的兩個運算元為因為它是不可能判斷參數類型。 一般而言，參數會只在資料操作語言 (DML) 陳述式，而不是在資料定義語言 (DDL) 陳述式時才有效。 如需詳細資訊，請參閱 <<c0> [ 參數標記](../../../odbc/reference/appendixes/parameter-markers.md)附錄 c:SQL 文法。  
   
  可以使用 SQL 陳述式時叫用的程序中，然後再具名參數。 具名的參數是以其名稱識別，不是由在 SQL 陳述式中的位置。 藉由呼叫繫結**SQLBindParameter**，但參數不是識別 ipd （實作參數描述項，） 與 SQL_DESC_NAME 欄位*Sqlbindparameter*引數**SQLBindParameter**。 也可以結合藉由呼叫**SQLSetDescField**或是**SQLSetDescRec**。 如需有關具名參數的詳細資訊，請參閱[依名稱 （具名參數） 的繫結參數](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)稍後這一節。 如需描述項的詳細資訊，請參閱[描述元](../../../odbc/reference/develop-app/descriptors.md)。  
   

@@ -15,14 +15,18 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74bfa46a09968549ef8b11dd21230f8da2e7714f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d04e4be41f72d244ec5cd0c7d2a04e468f871181
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727427"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>單一資料表快速分析表單 (資料分析工作)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用 **[單一資料表快速分析表單]** 來快速地設定資料分析工作，以便使用預設設定分析單一資料表或檢視表。  
   
  如需如何使用資料分析工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
@@ -50,7 +54,7 @@ ms.locfileid: "58274128"
 |**[最多可達 N 個資料行當做行列式資料行]**|選取要在可能的組合中當做行列式資料行進行測試的資料行數目上限。 預設值是 1。 最大值為 1000。 ˥Ƃ，選取 2 種測試組合，其中單一資料行或兩個資料行組合是另一個 (相依) 資料行的行列式資料行。|  
   
 > [!NOTE]  
->  您無法在 [單一資料表快速分析表單] 中使用值包含設定檔類型。  
+>  您無法在 [單一資料表快速分析表單]  中使用值包含設定檔類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分析工作編輯器 &#40;一般頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

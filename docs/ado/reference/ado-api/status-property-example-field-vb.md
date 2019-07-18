@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caf016190e585aa64ee24f81fdcc0c18a4dab93f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916821"
 ---
 # <a name="status-property-example-field-vb"></a>Status 屬性範例 (Field) (VB)
 下列範例從讀取/寫入資料夾，請使用開啟的文件[網際網路發行的提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 [狀態](../../../ado/reference/ado-api/status-property-ado-field.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件[記錄](../../../ado/reference/ado-api/record-object-ado.md)先將設定為**adFieldPendingInsert**，則會更新以**adFieldOk**。  

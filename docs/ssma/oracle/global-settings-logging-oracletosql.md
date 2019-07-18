@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710836"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264434"
 ---
 # <a name="global-settings-logging-oracletosql"></a>全域設定 (記錄) (OracleToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您會在與產品支援人員合作時，才變更這些設定。  
@@ -48,11 +48,11 @@ ms.locfileid: "47710836"
 |**嚴重錯誤**|僅嚴重的錯誤訊息寫入記錄檔。|  
 |**錯誤**|錯誤和嚴重錯誤訊息寫入記錄檔。|  
 |**警告**|寫入記錄檔的警告、 錯誤和嚴重的錯誤訊息。|  
-|**資訊**|寫入記錄檔的資訊、 警告、 錯誤和嚴重的錯誤訊息。|  
+|**Info**|寫入記錄檔的資訊、 警告、 錯誤和嚴重的錯誤訊息。|  
 |**偵錯**|寫入所有的訊息，包括偵錯訊息，記錄檔。|  
   
 **記錄檔路徑**  
-檔案路徑和名稱的 SSMA 記錄檔。 若要指定不同的名稱，按一下目前路徑，然後按一下 瀏覽 (**...**) 按鈕。  
+檔案路徑和名稱的 SSMA 記錄檔。 若要指定不同的名稱，按一下目前路徑，然後按一下 瀏覽 ( **...** ) 按鈕。  
   
 **記錄檔大小**  
 記錄檔，以 kb 為單位的大小上限。 最小的大小為 10 KB。 預設大小為 10240 KB。  

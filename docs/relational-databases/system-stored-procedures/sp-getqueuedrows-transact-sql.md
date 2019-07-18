@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123944"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` 是訂用帳戶擁有者。 *擁有者*已**sysname**，預設值是 NULL。  
   
-`[ @tranid = ] 'transaction_id'` 可讓交易識別碼。 所要篩選輸出 *transaction_id*已**nvarchar(70)**，預設值是 NULL。 如果指定的話，便會顯示佇列命令的相關聯交易識別碼。 如果是 NULL，便會顯示佇列中的所有命令。  
+`[ @tranid = ] 'transaction_id'` 可讓交易識別碼。 所要篩選輸出 *transaction_id*已**nvarchar(70)** ，預設值是 NULL。 如果指定的話，便會顯示佇列命令的相關聯交易識別碼。 如果是 NULL，便會顯示佇列中的所有命令。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -56,7 +55,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |-----------------|---------------|-----------------|  
 |**動作**|**nvarchar(10)**|進行同步處理時所採取的動作類型。<br /><br /> INS= 插入<br /><br /> DEL = 刪除<br /><br /> UPD = 更新|  
 |**tranid**|**nvarchar(70)**|用來執行命令的交易識別碼。|  
-|**table column1...n**||指定的資料表中的每個資料行的值*tablename*。|  
+|**表格欄 1...n**||指定的資料表中的每個資料行的值*tablename*。|  
 |**msrepl_tran_version**|**uniqueidentifier**|這個資料行用來追蹤複寫資料的變更，以及在發行者端執行衝突偵測。 這個資料行會自動加入資料表中。|  
   
 ## <a name="remarks"></a>備註  

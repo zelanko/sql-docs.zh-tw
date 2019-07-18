@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d2fd1ab1363cc56d2029a0d6ecb4218c518dac4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963258"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 使用與 ADO 2.1 搭配使用的連接字串所指定的資料庫，同步處理指定的資料錄集。  
@@ -56,7 +55,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  同步處理資料錄集指標的指標。  
   
  *pStatusArray*  
- 同步處理的 variant，用來傳回受影響的資料列的資料列狀態的安全陣列。 如果沒有任何下列的同步處理選項的設定不會設定： *RefreshWithUpdate*，*重新整理*並*RefreshConflicts*。  
+ 同步處理的 variant，用來傳回受影響的資料列的資料列狀態的安全陣列。 如果未下的同步處理選項的設定，未設定：*RefreshWithUpdate*，*重新整理*並*RefreshConflicts*。  
   
 ## <a name="remarks"></a>備註  
  *HandlerString*參數可以是 null。 在此情況下的情況取決於 RDS 伺服器的設定方式。 處理常式的字串"MSDFMAP.handler"表示應該使用 Microsoft 提供處理常式 (Msdfmap.dll)。 處理常式的字串"MASDFMAP.handler,sample.ini 」 表示，應使用 Msdfmap.dll 處理常式，然後"sample.ini"的引數應該會傳遞至處理常式。 Msdfmap.dll 然後會解譯引數，用以 sample.ini 檢查連接和查詢字串的方向。  

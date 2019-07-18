@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188122"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
   包含 Database Engine Tuning Advisor 的 XML 輸入定義。  

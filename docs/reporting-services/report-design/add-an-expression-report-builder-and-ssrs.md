@@ -2,18 +2,18 @@
 title: 新增運算式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b223198b0b9e262f71579b3ddf001bb5b75d6cc5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 10221560294aa60504a73b607f13b5e159713341
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582118"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>加入運算式 (報表產生器及 SSRS)
   運算式會在整個報表中用來定義報表項目屬性、篩選、群組、排序次序、連接字串和參數值。 運算式是以等號 (=) 當作開頭，而且是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫。 運算式是由報表處理器在執行階段加以評估，這樣會將評估結果與報表配置元素結合。  
@@ -29,7 +29,7 @@ ms.locfileid: "56292066"
   
     -   如果是簡單運算式，請將運算式的顯示文字輸入文字方塊內。 例如，在資料集欄位 Sales 中輸入 `[Sales]`。  
   
-    -   如果是複雜運算式，請以滑鼠右鍵按一下文字方塊，然後選取 **[運算式]**。 **[運算式]** 對話方塊隨即開啟。 在運算式窗格內的 '=' 後面輸入您的運算式或是以互動方式建立運算式，然後按一下 [確定]。  
+    -   如果是複雜運算式，請以滑鼠右鍵按一下文字方塊，然後選取 **[運算式]** 。 **[運算式]** 對話方塊隨即開啟。 在運算式窗格內的 '=' 後面輸入您的運算式或是以互動方式建立運算式，然後按一下 [確定]。  
   
          此運算式會以 `<<Expr>>`形式出現在設計介面上。  
   

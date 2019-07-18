@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
@@ -16,12 +15,12 @@ ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 321e64d62b1ef1a564496366409dc0a5104cedec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 28a7cf6b3a712144daead54d521fb3cc6936c99e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075914"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>建立父子式類型維度的財務帳戶
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的帳戶類型維度，是其屬性代表財務報表用途之帳戶圖表的維度。  

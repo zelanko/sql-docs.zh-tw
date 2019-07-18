@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03ce063437879db5c93ca83e512dc5f807bba40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611736"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769796"
 ---
 # <a name="updating-large-data-sample"></a>更新大型資料範例
 
@@ -35,7 +35,7 @@ ms.locfileid: "47611736"
 若要執行此範例應用程式，您必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 也請將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 此範例會使用 JDBC 4.0 API 中導入的 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取驅動程式特有的回應緩衝方法。 若要編譯並執行此範例，您將需要使用 sqljdbc4.jar 類別庫，以便提供 JDBC 4.0 的支援。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 此範例會使用 JDBC 4.0 API 中導入的 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取驅動程式特有的回應緩衝方法。 若要編譯並執行此範例，您將需要使用 sqljdbc4.jar 類別庫，以便提供 JDBC 4.0 的支援。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC Driver 的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
 
 ## <a name="example"></a>範例
 

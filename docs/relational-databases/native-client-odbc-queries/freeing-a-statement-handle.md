@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c28f3ba81ffbe346572dfba92adb31a7f198af9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6304cbfb0db7204a2bc641d01012c32c727e35fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058726"
 ---
 # <a name="freeing-a-statement-handle"></a>釋放陳述式控制代碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

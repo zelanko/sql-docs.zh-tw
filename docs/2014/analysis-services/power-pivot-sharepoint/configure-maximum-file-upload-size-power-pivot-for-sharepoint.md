@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96e4cf621a1c0f7f701012ed479797fc450d1533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071816"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>設定檔案上傳的大小上限 (PowerPivot for SharePoint)
   PowerPivot 活頁簿經常包含大量的資料，這些資料產生的檔案會超出 SharePoint 上傳所允許的檔案大小上限。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  
@@ -29,15 +28,15 @@ ms.locfileid: "48131568"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>設定 Excel Services 的檔案大小上限  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下 Excel Services 應用程式的名稱。  
   
-3.  按一下 [信任的檔案位置]。  
+3.  按一下 [信任的檔案位置]  。  
   
-4.  按一下此位置來編輯屬性。 根據預設，Excel Services 會將預設 Web 應用程式視為信任的網站。 如果您要使用預設 Web 應用程式，請按一下 [http://] 開啟這個位置的組態頁面。  
+4.  按一下此位置來編輯屬性。 根據預設，Excel Services 會將預設 Web 應用程式視為信任的網站。 如果您要使用預設 Web 應用程式，請按一下 [http://]  開啟這個位置的組態頁面。  
   
-5.  捲動到 [活頁簿內容]。  
+5.  捲動到 [活頁簿內容]  。  
   
 6.  在 [最大活頁簿大小] 中，將檔案大小從 10 (預設值) 增加到 50 或是可容納您所使用之檔案的較大的大小。  
   
@@ -45,11 +44,11 @@ ms.locfileid: "48131568"
   
      您可以指定的最大值是 2 GB (或是管理中心內指定的 2047 MB)。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>設定 SharePoint Web 應用程式的檔案大小上限  
   
-1.  在管理中心的 [應用程式管理] 中，按一下 **[管理 Web 應用程式]**。  
+1.  在管理中心的 [應用程式管理] 中，按一下 **[管理 Web 應用程式]** 。  
   
     > [!NOTE]  
     >  只有當您在 Excel Services 中增加 [最大活頁簿大小] 時，才執行以下步驟。  
@@ -58,12 +57,12 @@ ms.locfileid: "48131568"
   
 3.  在 Web 應用程式功能區中，按一下 [一般設定] 按鈕上的向下箭頭。  
   
-4.  按一下 [一般設定]。  
+4.  按一下 [一般設定]  。  
   
-5.  捲動到 [最大上傳大小]。  
+5.  捲動到 [最大上傳大小]  。  
   
 6.  將此屬性設定為與 Excel Services 中 [最大活頁簿大小] 相同或更大的數字。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
   

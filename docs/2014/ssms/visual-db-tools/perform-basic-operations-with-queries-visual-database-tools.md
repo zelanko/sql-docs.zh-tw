@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280575"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>執行查詢的基本作業 (Visual Database Tools)
   下列的基本操作適用於大部份或所有的查詢。  

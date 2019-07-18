@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: c6427f786de727f22c3dd74b0dcf91d63b36c4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004877"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>引數  
- *database_id* | NULL | 0 | DEFAULT  
+ *database_id* |NULL |0 |預設值  
  資料庫的識別碼。 *database_id*已**smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 NULL *database_id*，您也必須指定，則為 NULL *object_id*， *index_id*，以及*partition_number*。  
@@ -75,7 +74,7 @@ sys.dm_db_index_physical_stats (
   
  請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您指定 NULL *index_id*，您也必須指定，則為 NULL *partition_number*。  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* |NULL |0 |預設值  
  這是物件的分割區編號。 *partition_number*已**int**。有效輸入如下*partion_number*索引或堆積中，NULL，0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回主控物件之所有分割區的相關資訊。  
@@ -95,7 +94,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|在主控物件內，以 1 為基底的分割區編號；資料表、檢視表或索引。<br /><br /> 1 = 非分割區的索引或堆積。|  
 |index_type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 資料行存放區對應的索引 （內部）<br /><br /> 資料行存放區 DELETEBUFFER 索引 （內部）<br /><br /> 資料行存放區 DELETEBITMAP 索引 （內部）|  
 |hobt_id|**bigint**|堆積或 B 型樹狀目錄的索引或分割區的識別碼。<br /><br /> 除了傳回使用者定義索引的 hobt_id，這也會傳回的 hobt_id 的內部資料行存放區索引。|  
-|alloc_unit_type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 如果是 LOB_DATA 配置單位包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，並**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在類型的資料行的資料**varchar （n)**， **nvarchar （n)**， **varbinary**，和**sql_variant**已被推出同資料列。|  
+|alloc_unit_type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 如果是 LOB_DATA 配置單位包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，並**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在類型的資料行的資料**varchar （n)** ， **nvarchar （n)** ， **varbinary**，和**sql_variant**已被推出同資料列。|  
 |index_depth|**tinyint**|索引層級的數目。<br /><br /> 1 = 堆積，或 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位。|  
 |index_level|**tinyint**|索引的目前層級。<br /><br /> 如果是索引分葉層級、堆積和 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為 0。<br /><br /> 如果是非分葉索引層級，則大於 0。 *index_level*會是最高的根層級的索引。<br /><br /> 僅限索引的非分葉層級處理的時機*模式*= DETAILED。|  
 |avg_fragmentation_in_percent|**float**|IN_ROW_DATA 配置單位中，索引的邏輯片段或是堆積的範圍片段。<br /><br /> 其值以百分比表示，而且會考量多個檔案。 如需邏輯和範圍片段的定義，請參閱＜備註＞一節。<br /><br /> 如果是 LOB_DATA 和 ROW_OVERFLOW_DATA 配置單位，則為 0。<br /><br /> NULL 堆積*模式*= SAMPLED。|  
@@ -178,7 +177,7 @@ GO
   
  **邏輯片段**  
   
- 這是索引分葉頁中，失序頁面的百分比。 失序頁面是指配置給索引之下一個實體頁面的頁面，而不是目前分葉頁中下一頁指標所指向的頁面。  
+ 這是索引分葉頁中，失序頁面的百分比。 失序頁面是指配置給索引之下一個實體頁面的頁面，而不是目前分葉頁中下一頁  指標所指向的頁面。  
   
  **範圍片段**  
   

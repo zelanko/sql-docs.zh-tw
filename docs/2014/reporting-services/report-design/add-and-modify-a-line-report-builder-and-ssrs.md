@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 14a1c72d63381a3f93bf312cbdadde9874968d16
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106722"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>加入和修改線條 (報表產生器及 SSRS)
   當您想要使用圖形元素來區隔報表的區段時，可以在報表中加入線條。 您可以編輯線條屬性 (例如色彩或樣式) 來自訂線條的外觀。 例如，您可能要將公司的色彩納入報表中。  
@@ -26,7 +25,7 @@ ms.locfileid: "56291806"
   
 ### <a name="to-add-a-line"></a>加入線條  
   
-1.  在 **[插入]** 索引標籤上，按一下 **[線條]**。  
+1.  在 **[插入]** 索引標籤上，按一下 **[線條]** 。  
   
 2.  在設計介面中，在要放置線條端點的位置上按一下，然後再按一下要放置另一端的位置。  
   

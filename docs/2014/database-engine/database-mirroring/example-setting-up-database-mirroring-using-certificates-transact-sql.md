@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806749"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例使用憑證設定資料庫鏡像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例設定資料庫鏡像使用憑證 & Amp;#40;transact-SQL&AMP;#41
   此範例會顯示使用以憑證為基礎的驗證建立資料庫鏡像工作階段所需的所有階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
@@ -257,7 +257,7 @@ ms.locfileid: "52512184"
     ```  
   
     > [!NOTE]  
-    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並執行第二個 SET PARTNER 後儘快新增見證 **'*`partner_server`*'** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
+    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並執行第二個 SET PARTNER 後儘快新增見證 **' *`partner_server`* '** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

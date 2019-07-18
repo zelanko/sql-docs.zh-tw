@@ -12,15 +12,15 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: debbf9ef55412c2111acf777e3b428bcb250798b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478621"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
   若要存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式，使用者必須擁有 Windows 網域帳戶或安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 之伺服器電腦上的帳戶。 若要授與 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 存取權，您可以執行下列其中一項作業：  
@@ -32,7 +32,7 @@ ms.locfileid: "52814633"
     > [!NOTE]  
     >  如果使用者屬於可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的群組，則在第一次存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 或 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 時，使用者的名稱會自動新增至使用者清單。  
   
- 若要在 UI 的 [總管] 功能區域內執行動作，群組或使用者必須獲得指派 [總管] 功能區域存取權以及模型物件權限。  
+ 若要在 UI 的 [總管]  功能區域內執行動作，群組或使用者必須獲得指派 [總管]  功能區域存取權以及模型物件權限。  
   
  如果使用者或群組需要存取其他功能區域，使用者或群組必須是管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   

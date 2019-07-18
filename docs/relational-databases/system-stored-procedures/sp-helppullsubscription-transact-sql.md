@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914967"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是遠端伺服器的名稱。 *發行者*已**sysname**，預設值是**%**，它會傳回所有發行者的資訊。  
+`[ @publisher = ] 'publisher'` 是遠端伺服器的名稱。 *發行者*已**sysname**，預設值是 **%** ，它會傳回所有發行者的資訊。  
   
-`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**，它會傳回所有發行者資料庫。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 **%** ，它會傳回所有發行者資料庫。  
   
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**，它會傳回所有發行集。 如果這個參數等於 ALL，唯一的 「 提取訂用帳戶 independent_agent = **0**會傳回。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** ，它會傳回所有發行集。 如果這個參數等於 ALL，唯一的 「 提取訂用帳戶 independent_agent = **0**會傳回。  
   
-`[ @show_push = ] 'show_push'` 是是否要傳回所有發送訂閱。 *show_push*已**nvarchar(5)**，預設值是 FALSE，這不會傳回發送訂閱。  
+`[ @show_push = ] 'show_push'` 是是否要傳回所有發送訂閱。 *show_push*已**nvarchar(5)** ，預設值是 FALSE，這不會傳回發送訂閱。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -59,7 +58,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**訂用帳戶類型**|**int**|發行集的訂閱類型。|  
 |**散發代理程式**|**nvarchar(100)**|處理訂閱的散發代理程式。|  
-|**publication description**|**nvarchar(255)**|發行集的描述。|  
+|**發行集描述**|**nvarchar(255)**|發行集的描述。|  
 |**上次更新時間**|**date**|更新訂閱資訊的時間。 這是 ISO 日期 (114) + ODBC 時間 (121) 的 UNICODE 字串。 格式為 yyyymmdd hh:mi:sss.mmm，其中 'yyyy' 是年份，'mm' 是月份，'dd' 是日期，'hh' 是小時，'mi' 是分鐘，'sss' 是秒鐘，'mmm' 是毫秒。|  
 |**訂用帳戶名稱**|**varchar(386)**|訂閱的名稱。|  
 |**上次交易時間戳記**|**varbinary(16)**|最後一次複寫交易的時間戳記。|  
@@ -69,10 +68,10 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**訂用帳戶 guid**|**binary(16)**|發行集訂閱版本的全域識別碼。|  
 |**subid**|**binary(16)**|匿名訂閱的全域識別碼。|  
 |**immediate_sync**|**bit**|每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
-|**publisher login**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
+|**發行者登入**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**發行者密碼**|**nvarchar(524)**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**publisher security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程序利用靜態**sysservers**項目來執行遠端程序呼叫 (RPC)，以及*發行者*必須定義在**sysservers**資料表中做為遠端伺服器或連結的伺服器。|  
-|**distributor**|**sysname**|散發者的名稱。|  
+|**發行者 security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程序利用靜態**sysservers**項目來執行遠端程序呼叫 (RPC)，以及*發行者*必須定義在**sysservers**資料表中做為遠端伺服器或連結的伺服器。|  
+|**散發者**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**distributor_password**|**nvarchar(524)**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
@@ -92,7 +91,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_summary**|**sysname**|上次同步處理結果的描述。|  
 |**last_sync_time**|**datetime**|更新訂閱資訊的時間。 這是 ISO 日期 (114) + ODBC 時間 (121) 的 UNICODE 字串。 格式為 yyyymmdd hh:mi:sss.mmm，其中 'yyyy' 是年份，'mm' 是月份，'dd' 是日期，'hh' 是小時，'mi' 是分鐘，'sss' 是秒鐘，'mmm' 是毫秒。|  
 |**job_login**|**nvarchar(512)**|是 Windows 帳戶散發代理程式執行，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為"**\*\*\*\*\*\*\*\*\*\***」 是一律傳回。|  
+|**job_password**|**sysname**|基於安全性理由，值為" **\*\*\*\*\*\*\*\*\*\*** 」 是一律傳回。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -104,8 +103,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helppullsubscription** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

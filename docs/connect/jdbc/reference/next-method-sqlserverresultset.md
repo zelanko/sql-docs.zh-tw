@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2b5611c9f925c95a49982f8f9c936a6d84952f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8fcd3125f45622ddd167acf06ed91ccffb02a3b5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702838"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779527"
 ---
 # <a name="next-method-sqlserverresultset"></a>next 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

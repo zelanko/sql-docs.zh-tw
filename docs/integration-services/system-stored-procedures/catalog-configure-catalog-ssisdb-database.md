@@ -11,14 +11,18 @@ ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4b093d11e0a54b9e2c744358de82f7d5b09e7c33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8d22165af735fe807149dffb6f5e60a35fc33184
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717027"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   藉由將目錄屬性設定為指定值來設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄。  
@@ -31,10 +35,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>引數  
  [ @property_name = ] *property_name*  
- 目錄屬性的名稱。 *property_name* 是 **nvarchar(255)**。 如需可用屬性的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。  
+ 目錄屬性的名稱。 *property_name* 是 **nvarchar(255)** 。 如需可用屬性的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。  
   
  [ @property_value = ] *property_value*  
- 目錄屬性的值。 *property_value* 是 **nvarchar(255)**。 如需屬性值的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ 目錄屬性的值。 *property_value* 是 **nvarchar(255)** 。 如需屬性值的詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

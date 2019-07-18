@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069947"
 ---
 # <a name="executing-procedures"></a>執行程序
 ODBC 定義標準逸出序列執行程序。 如需此順序和使用它的程式碼範例的語法，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  

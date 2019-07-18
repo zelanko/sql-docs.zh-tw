@@ -17,14 +17,18 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea4d69647f0f3908fe48fa09ac78005f597013d3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9253eca362352a86baeac943eaf524b4b3f4c04f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726146"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DQS 清理轉換會使用 Data Quality Services (DQS) 來更正連接之資料來源的資料，方法是套用針對所連接資料來源或相似資料來源而建立的核准規則。 如需有關資料更正規則的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。 如需有關 DQS 的詳細資訊，請參閱＜ [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)＞。  
   
  為了判斷資料是否必須更正，DQS 清理轉換會在符合下列條件的情況下，處理來自輸入資料行的資料：  

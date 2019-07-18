@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsRing (geometry Data Type)
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: dfe97518539396e53a8b0f051bf80186b85791f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b08d711ed9d0a8016acbf2b438671373b6c62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938766"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47676186"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  如果執行個體不是 **LineString**，這個方法會傳回 Null。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104516"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 是要變更的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
-`[ @property = ] 'property'` 這是要變更之給定發行項和發行集屬性。 *屬性*已**nvarchar(30)**，它可以其中一個值列出資料表中。  
+`[ @property = ] 'property'` 這是要變更之給定發行項和發行集屬性。 *屬性*已**nvarchar(30)** ，它可以其中一個值列出資料表中。  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)**，它可以其中一個值列出資料表中。  
+`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)** ，它可以其中一個值列出資料表中。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
@@ -62,7 +61,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|在發行者端套用訂閱者所建立的 INSERT 陳述式之前，先在發行者端檢查資料表層級權限。|  
 ||**0x20**|在發行者端套用訂閱者所建立的 UPDATE 陳述式之前，先檢查發行者端的資料表層級權限。|  
 ||**0x40**|在發行者端套用訂閱者所建立的 DELETE 陳述式之前，先檢查發行者端的資料表層級權限。|  
-|**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意:發行資料行數目超過 246 行的資料表時，即無法使用資料行層級追蹤。|  
+|**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意:發行資料表與超過 246 個資料行時，無法使用資料行層級追蹤。|  
 ||**false**|關閉資料行層級追蹤，將衝突偵測保留在資料列層級。 只適用於資料表發行項。|  
 |**compensate_for_errors**|**true**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱 < [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 ||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱 < [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\* 重要\* \*** 雖然受影響的資料列中的資料可能會顯示為未聚合的表現，只要解決任何錯誤，可以套用變更，聚合資料。 如果發行項的來源資料表已在另一個發行集，則會將值的*compensate_for_errors*必須是兩個發行項相同。|  
@@ -72,8 +71,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||發行項的描述項目。|  
 |**destination_owner**||在訂閱資料庫中，如果不是物件的擁有者的名稱**dbo**。|  
 |**identity_range**||**bigint** ，指定如果發行項，指派新識別值時要使用的範圍大小**identityrangemanagementoption**設定為**自動**或**auto_identity_範圍**設定為 **，則為 true**。 只適用於資料表發行項。 如需詳細資訊，請參閱的 < 合併式複寫 > 一節[複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-|**identityrangemanagementoption**|**manual**|停用自動識別範圍的管理。 利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動識別範圍的處理。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-||**none**|停用所有識別範圍的管理。|  
+|**identityrangemanagementoption**|**手動**|停用自動識別範圍的管理。 利用 NOT FOR REPLICATION 來標示識別欄位，以啟用手動識別範圍的處理。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+||**None**|停用所有識別範圍的管理。|  
 |**logical_record_level_conflict_detection**|**true**|如果在邏輯記錄的任何位置進行變更，便會偵測到衝突。 要求**logical_record_level_conflict_resolution**設為 **，則為 true**。|  
 ||**false**|會使用預設衝突偵測，依照**column_tracking**。|  
 |**logical_record_level_conflict_resolution**|**true**|用整個優先邏輯記錄來覆寫遺失的邏輯記錄。|  
@@ -82,7 +81,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|資料分割重疊，在訂閱者端進行的 DML 更新並不會變更資料列所屬的資料分割。|  
 ||**2**|發行項的篩選會產生非重疊的資料分割，但多個訂閱者可以接收相同的資料分割。|  
 ||**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意:如果您指定的值**3** for **partition_options**，可以只有單一訂用帳戶每個資料分割的該文章中的資料。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
-|**pre_creation_command**|**none**|如果訂閱者端已有資料表，就不會採取任何動作。|  
+|**pre_creation_command**|**None**|如果訂閱者端已有資料表，就不會採取任何動作。|  
 ||**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
 ||**drop**|在重新建立資料表之前，先卸除資料表。|  
 ||**truncate**|截斷目的地資料表。|  
@@ -90,8 +89,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pub_identity_range**||**bigint** ，指定配置到含主訂閱的訂閱者，如果發行項的範圍大小**identityrangemanagementoption**設定為**自動**或**auto_identity_range**設定為 **，則為 true**。 這個識別範圍保留供重新發行訂閱者配置給自己的訂閱者。 只適用於資料表發行項。 如需詳細資訊，請參閱的 < 合併式複寫 > 一節[複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**published_in_tran_pub**|**true**|發行項也在交易式發行集中發行。|  
 ||**false**|發行項也不在交易式發行集中發行。|  
-|**resolver_info**||這用來指定自訂解析程式所需要的其他資訊。 部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式需要用於當做解析程式輸入的資料行。 **resolver_info**已**nvarchar(255)**，預設值是 NULL。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
-|**schema_option** (bitmap)||如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
+|**resolver_info**||這用來指定自訂解析程式所需要的其他資訊。 部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式需要用於當做解析程式輸入的資料行。 **resolver_info**已**nvarchar(255)** ，預設值是 NULL。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
+|**schema_option** （點陣圖）||如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
 ||**0x00**|停用快照集代理程式指令碼，並使用提供的指令碼**creation_script**。|  
 ||**0x01**|產生物件建立指令碼 (CREATE TABLE、CREATE PROCEDURE 等)。|  
 ||**0x10**|產生對應的叢集索引。|  
@@ -119,7 +118,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|在複寫索引**xml**資料行。|  
 ||**0x8000000**|建立訂閱者目前還沒有的任何結構描述。|  
 ||**0x10000000**|將轉換**xml**資料行**ntext**訂閱者上。|  
-||**0x20000000**|將大型物件資料類型 (**nvarchar （max)**， **varchar （max)**，並**varbinary （max)**) 中所導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支援的資料類型在  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
+||**0x20000000**|將大型物件資料類型 (**nvarchar （max)** ， **varchar （max)** ，並**varbinary （max)** ) 中所導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支援的資料類型在  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
 ||**0x40000000**|複寫權限。|  
 ||**0x80000000**|嘗試卸除對於不在發行集中之任何物件的相依性。|  
 ||**0x100000000**|使用此選項來複寫 FILESTREAM 屬性，如果同時指定**varbinary （max)** 資料行。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 將具有 FILESTREAM 資料行的資料表複寫[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支援訂閱者，不論這個結構描述選項的設定方式。 請參閱相關的選項**0x800000000**。|  

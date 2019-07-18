@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787100"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>設定 recovery interval 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **recovery interval** 選項會定義資料庫的復原時間上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用此選項的指定值，來決定 [automatic checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md) 在給定資料庫上發出自動檢查點的大約頻率。  
@@ -47,7 +47,7 @@ ms.locfileid: "58530910"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 recovery interval 選項之後](#FollowUp)  
+-   **後續操作：** [設定 recovery interval 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -71,7 +71,7 @@ ms.locfileid: "58530910"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要設定復原間隔**  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器執行個體，然後選取 **[屬性]**。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器執行個體，然後選取 **[屬性]** 。  
   
 2.  按一下 **[資料庫設定]** 節點。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "58530910"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `recovery interval` 選項的值設定為 `3` 分鐘。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `recovery interval` 選項的值設定為 `3` 分鐘。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097807"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>引數  
  *\@tsql*  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)** 。  
   
  *\@params*  
- \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
+ \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)** 。  
   
  是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 Stmt 所指定的每個參數必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
@@ -66,7 +65,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|包含下列值：<br /><br /> 如果資料行允許 NULL，則為 1 值。<br /><br /> 如果資料行不允許 NULL，則為 0 值。<br /><br /> 如果無法判別資料行是否允許 NULL，則為 1 值。|  
 |**system_type_id**|**int**|包含 sys.types 中所指定的資料行資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含名稱和引數 (例如長度、有效位數、小數位數)，已指定給資料行的資料類型。<br /><br /> 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。<br /><br /> 如果資料類型是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'**。|  
+|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。<br /><br /> 針對**文字**資料行**max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'** 。|  
 |**有效位數**|**tinyint**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
@@ -171,8 +170,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_first_result_set &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

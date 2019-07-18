@@ -11,14 +11,18 @@ ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37dc6d2623a2efbdf566bdc71f9a5b1c7f33724a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5ba44570e03ef308b850637b58feb7bd0a3730c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716637"
 ---
 # <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案刪除環境參考。  

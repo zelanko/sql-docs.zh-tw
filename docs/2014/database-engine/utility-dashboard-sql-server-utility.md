@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773810"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>公用程式儀表板 (SQL Server 公用程式)
-  若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]。  
+  若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]  。  
   
  如需如何建立公用程式控制點的詳細資訊，請參閱 [建立 SQL Server 公用程式控制點 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。 如需如何將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體加入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的詳細資訊，請參閱 [註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53351658"
   
  若要建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體或資料層應用程式的篩選檢視，請按一下 [公用程式儀表板] 中滑動指標旁的使用量類別連結。 例如，如果您按一下 **[公用程式總管內容]** 窗格中的 **[使用量過高的執行個體 CPU]** ，SSMS 便會建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體的篩選清單檢視，其中包含根據目前原則設定之使用量過高的 CPU。  
   
- 請注意，當您按一下使用量類別連結時，公用程式總管瀏覽窗格中對應的節點後面會加上 [(已篩選)]，意即 [受管理的執行個體] 會標示為 [受管理的執行個體 (已篩選) ]。 若要檢視篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]，再按一下 [篩選設定]。 若要清除篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]，再按一下 [移除篩選]。  
+ 請注意，當您按一下使用量類別連結時，公用程式總管瀏覽窗格中對應的節點後面會加上 [(已篩選)]  ，意即 [受管理的執行個體]  會標示為 [受管理的執行個體 (已篩選) ]  。 若要檢視篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]  ，再按一下 [篩選設定]  。 若要清除篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]  ，再按一下 [移除篩選]  。  
   
  如需檢視個別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的健全狀態或是檢視或變更原則組態設定的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)。  
   

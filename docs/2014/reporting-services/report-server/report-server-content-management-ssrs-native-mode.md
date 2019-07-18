@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11cf069257a0f851794341820994fbb453cb0052
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103514"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  

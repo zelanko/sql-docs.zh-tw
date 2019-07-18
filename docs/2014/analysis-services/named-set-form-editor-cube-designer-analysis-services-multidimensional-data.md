@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
@@ -13,12 +12,12 @@ ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072347"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集表單編輯器 (計算索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師中使用 **[計算]** 索引標籤的 **[命名集表單編輯器]** 窗格，即可建立或修改命名集。  
@@ -26,7 +25,7 @@ ms.locfileid: "48119736"
 > [!NOTE]  
 >  此窗格只會以表單檢視方式顯示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  鍵入命名集的名稱。  
   

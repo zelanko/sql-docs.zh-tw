@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IDs [SQL Server], asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1ae017411f8f988186eb6e0ca7273531e2dcefb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48bb97bdf073026ffdc7cde48eac1b295a06bd75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944962"
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 ## <a name="return-types"></a>傳回類型
  **int**  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要非對稱金鑰上適當的權限，且呼叫端尚未拒絕非對稱金鑰的 VIEW 權限。 如需非對稱金鑰權限的詳細資訊，請參閱 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
   
 ## <a name="examples"></a>範例  

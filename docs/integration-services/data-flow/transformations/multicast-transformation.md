@@ -19,14 +19,18 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ec8eb1970bc1c6ab3933c4cd2b43e810e31b91e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d81de36b6d0e8df65e1b744b284d9c96dec5d9d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725946"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「多點傳送」轉換會將其輸入散發至一個或多個輸出。 此轉換與「條件式分割」轉換類似。 這兩種轉換都會將輸入導向多個輸出， 兩者的差異在於「多點傳送」轉換會將每個資料列導向每個輸出，而「條件式分割」會將一個資料列導向單一輸出。 如需詳細資訊，請參閱 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
  您可加入輸出以設定「多點傳送」轉換。  
@@ -51,7 +55,7 @@ ms.locfileid: "58281452"
  在左方選取輸出，即可在右方檢視其在資料表中的屬性。  
   
  **屬性**  
- 除了 [名稱] 和 [描述] 以外，所有列出的輸出屬性都是唯讀的。  
+ 除了 [名稱]  和 [描述]  以外，所有列出的輸出屬性都是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   

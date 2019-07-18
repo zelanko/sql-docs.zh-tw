@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (Transact-SQL) | Microsoft Docs
+title: sp_stop_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032717"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +48,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` 若要停止作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
-`[ @originating_server = ] 'master_server'` 主要伺服器的名稱。 如果指定的話，會停止所有多伺服器作業。 *master_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 指定此參數只有在呼叫時，才**sp_stop_job**目標伺服器上。  
+`[ @originating_server = ] 'master_server'` 主要伺服器的名稱。 如果指定的話，會停止所有多伺服器作業。 *master_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。 指定此參數只有在呼叫時，才**sp_stop_job**目標伺服器上。  
   
 > [!NOTE]  
 >  您只能指定前三個參數的其中一個。  
   
-`[ @server_name = ] 'target_server'` 若要停止多伺服器作業的特定目標伺服器的名稱。 *target_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 指定此參數只有在呼叫時，才**sp_stop_job**在多伺服器作業的主要伺服器。  
+`[ @server_name = ] 'target_server'` 若要停止多伺服器作業的特定目標伺服器的名稱。 *target_server*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。 指定此參數只有在呼叫時，才**sp_stop_job**在多伺服器作業的主要伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

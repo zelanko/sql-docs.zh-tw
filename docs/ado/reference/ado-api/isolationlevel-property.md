@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2557c5859f10c7651cfc97fc3c849c00c26e985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918445"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 屬性
 指出的隔離等級[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

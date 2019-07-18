@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e6b6cfe2-b7c4-4d41-8e09-c68b5086a503
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f434b15a49b607ad204b0d70c50381177b7743a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7218830d14db7b5c6532c6091aa974c55ed0e69c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66785659"
 ---
 # <a name="getdate-method-int-sqlserverresultset"></a>getDate 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +46,13 @@ public java.sql.Date getDate(int columnIndex)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效日期部分，而時間部分是設定成 Java 基準時間 00:00 (午夜)。  
   
 ## <a name="see-also"></a>另請參閱  
- [getDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
+ [getDate 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

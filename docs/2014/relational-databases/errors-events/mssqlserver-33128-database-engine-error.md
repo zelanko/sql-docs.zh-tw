@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914510"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
     
@@ -58,6 +58,6 @@ ms.locfileid: "48057789"
 ## <a name="user-action"></a>使用者動作  
  請改用較強的演算法，例如其中一種 AES 演算法。 (建議使用)  
   
- 使用 ALTER DATABASE SET COMPATIBILITY_LEVEL 將資料庫相容性層級設定為 100  (不建議使用)。  
+ 使用 ALTER DATABASE SET COMPATIBILITY_LEVEL 將資料庫相容性層級設定為 100 (不建議使用)。  
   
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc3aec9795bd8d002602020e97d061b358ad55c9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1d46915d40388ee5e899a94a80d64ff0ae3361bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65945862"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ CERTENCODED ( cert_id )
 ## <a name="remarks"></a>Remarks  
 搭配使用 **CERTENCODED** 和 **CERTPRIVATEKEY**，以透過二進位格式傳回憑證的不同部分。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 **CERTENCODED** 可以公開使用。
   
 ## <a name="examples"></a>範例  

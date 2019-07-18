@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a81146397fa5c50bd8b74c600d04887ecc99c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096348"
 ---
 # <a name="defining-text-format-text-file-driver"></a>定義文字格式 (文字檔驅動程式)
 使用文字驅動程式時，您可以使用**定義文字格式**對話方塊來定義資料行的格式中選取的檔案。 此對話方塊可讓您指定每個資料表的結構描述。 此資訊會寫入到 Schema.ini 檔案資料來源目錄中。 針對每個文字資料來源目錄建立個別的 Schema.ini 檔案。  
@@ -29,7 +28,7 @@ ms.locfileid: "47697706"
   
  下列選項位於**定義文字格式** 對話方塊中：  
   
-|選項|[資訊]|  
+|選項|Information|  
 |------------|-----------------|  
 |**[加入]**|將使用中的值的資料行**資料型別**，**名稱**，並**寬度**從對話方塊中，且如果適用的話，日期分隔符號值從 Schema.ini。|  
 |**字元**|**ANSI**或是**OEM**。 OEM 獌穧非 ANSI 字元集。 如果在選取之項目的格式，這預設為 OEM**資料表**清單尚未先前定義的這個對話方塊。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
@@ -15,17 +14,17 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092284"
 ---
 # <a name="server-configuration---collation"></a>伺服器組態 - 定序
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [伺服器組態 - 定序] 頁面上，您可以修改 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於排序的定序設定。 選取選項來比對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或另一部電腦之不同安裝的定序設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 而自訂  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供兩組定序：Windows 定序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序。 您可以對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定個別的定序設定，也可以對這兩者指定相同的定序。  
   

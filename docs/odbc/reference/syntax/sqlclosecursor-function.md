@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 912e4d109a9e769442c65d292ff190d79705eb21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 47766dbbb273d9e5e4d42e8df6b5cf3c26bf356a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036039"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53201537"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLCloseCursor(  
      SQLHSTMT     StatementHandle);  

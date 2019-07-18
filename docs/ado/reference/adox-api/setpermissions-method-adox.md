@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965221"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件上。  
@@ -37,7 +36,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  A**字串**值，指定要設定權限的物件名稱。  
   
  *ObjectType*  

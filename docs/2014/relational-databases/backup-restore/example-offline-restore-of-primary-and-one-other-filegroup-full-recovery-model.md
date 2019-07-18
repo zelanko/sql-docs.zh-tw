@@ -1,5 +1,5 @@
 ---
-title: 範例： 離線還原主要與另一個檔案群組 （完整復原模式） |Microsoft Docs
+title: 範例離線還原主要與另一個檔案群組 （完整復原模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fec409bf6f391e14dd5e1a2b8b102df2fd00cfd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62921753"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>範例：離線還原主要檔案群組與另一個檔案群組 (完整復原模式)
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>範例離線還原主要檔案群組與另一個檔案群組 (完整復原模式)
   本主題僅與在完整復原模式下，包含多個檔案群組的資料庫有關。  
   
  在此範例中，名為 `adb` 的資料庫包含三個檔案群組。 檔案群組 `A` 和 `C` 可讀取/寫入，而檔案群組 `B` 則是唯讀的。 主要檔案群組和檔案群組 `B` 損毀，但檔案群組 `A` 和 `C` 完整無缺。 在損毀之前，所有檔案群組都在線上。  
@@ -29,7 +29,7 @@ ms.locfileid: "48060478"
  資料庫管理員決定還原並復原主要檔案群組和檔案群組 `B`。 資料庫使用完整復原模式，因此開始還原之前，必須對資料庫進行結尾記錄備份。 當資料庫上線時，檔案群組 `A` 和 `C` 會自動回到線上。  
   
 > [!NOTE]  
->  離線還原順序的步驟比唯讀檔案的線上還原步驟少。 如需範例，請參閱[範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)。 但是在還原順序期間，整個資料庫都會離線。  
+>  離線還原順序的步驟比唯讀檔案的線上還原步驟少。 如需範例，請參閱[範例：線上還原唯讀檔案&#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)。 但是在還原順序期間，整個資料庫都會離線。  
   
 ## <a name="tail-log-backup"></a>結尾記錄備份  
  還原資料庫之前，資料庫管理員必須備份記錄的結尾。 因為資料庫已損毀，必須使用 NO_TRUNCATE 選項來建立結尾記錄備份：  

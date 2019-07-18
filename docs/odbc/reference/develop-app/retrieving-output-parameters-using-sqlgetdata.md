@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020508"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 擷取輸出參數
 之前符合 ODBC 3.8，應用程式可能只會擷取輸出參數，查詢具有繫結的輸出緩衝區。 不過，很難配置很大的緩衝區，當參數值的大小很大 （例如，大型映像）。 ODBC 3.8 導入了新的方式，來擷取組件中的輸出參數。 應用程式現在可以呼叫**SQLGetData**使用小型緩衝區多次，以便擷取大型參數值。 這是類似於擷取大型資料行資料。  
@@ -30,7 +29,7 @@ ms.locfileid: "47837353"
  這項功能可供 ODBC 3.8 應用程式，或重新編譯 ODBC 3.x 和 ODBC 2.x 應用程式，這些應用程式必須支援擷取輸出參數，使用 ODBC 3.8 驅動程式**SQLGetData**和 ODBC 3.8 驅動程式管理員。 如需如何啟用舊版應用程式使用 ODBC 的新功能的資訊，請參閱[相容性比較表](../../../odbc/reference/develop-app/compatibility-matrix.md)。  
   
 ## <a name="usage-example"></a>使用範例  
- 例如，請考慮執行預存程序， **{呼叫 sp_f(?,?)}**，其中這兩個參數繫結為 SQL_PARAM_OUTPUT_STREAM，而預存程序會傳回任何結果集 （在本主題稍後您會找到更複雜的案例）：  
+ 例如，請考慮執行預存程序， **{呼叫 sp_f(?,?)}** ，其中這兩個參數繫結為 SQL_PARAM_OUTPUT_STREAM，而預存程序會傳回任何結果集 （在本主題稍後您會找到更複雜的案例）：  
   
 1.  針對每個參數，呼叫**SQLBindParameter**具有*了*設 SQL_PARAM_OUTPUT_STREAM 並*ParameterValuePtr*設為 「 語彙基元，例如參數號碼資料指標或應用程式會使用繫結輸入的參數的結構的指標。 此範例會使用序數參數，做為權杖。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "47837353"
   
  應用程式仍然可以使用**SQLSetDescField**或是**SQLSetDescRec**設定繫結資訊。 將不會變更欄位對應。 不過，描述元的欄位，可能會傳回新的值。 比方說，SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM，可能會傳回 SQL_DESC_PARAMETER_TYPE。  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用案例： 將組件中的映像擷取結果集  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用案例：擷取結果集的組件中的映像  
  **SQLGetData**可用來取得組件中的資料，當預存程序傳回結果集，其中包含一個資料列的映像的相關中繼資料和大量的輸出參數中傳回影像。  
   
 ```  
@@ -194,7 +193,7 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用案例： 傳送和接收大型物件做為資料流處理的輸入/輸出參數  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用案例：傳送和接收大型物件做為資料流處理的輸入/輸出參數  
  **SQLGetData**可用來取得和預存程序會將大型物件傳遞為輸入/輸出參數，資料流值進出資料庫時，將資料傳送組件中。 您沒有在記憶體中儲存的所有資料。  
   
 ```  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bbac1370-fbf6-4450-8599-4ed3b4db3fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e39cea97a5e18844229bb492230302dad573af19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b52539f8b97db52e9e42e6f565b3b792b24f6278
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849498"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766551"
 ---
 # <a name="supportsaltertablewithaddcolumn-method-sqlserverdatabasemetadata"></a>supportsAlterTableWithAddColumn 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

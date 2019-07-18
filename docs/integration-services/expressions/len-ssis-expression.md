@@ -14,14 +14,18 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 836be2ee439fa39b433b2c89755e4402bad2e8e3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 83256bfc8b610869b8bbc1938f7846ce41971b1b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725280"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回字元運算式中的字元數。 如果字串包含開頭和尾端空白，則函數會將它們加入計數中。 LEN 會針對單位元組和雙位元組字元的相同字串傳回完全相同的值。  
   
 ## <a name="syntax"></a>語法  

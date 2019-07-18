@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a32e2b54899c8897f3aefbe7ff94f42355114d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d1a3a27bfce0a62aa70d047e221f54ccc33c0c6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717546"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>從命令提示字元使用 DTExec.exe 執行 SSIS 套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本快速入門會示範如何以適當的參數執行 `DTExec.exe`，從命令提示字元執行 SSIS 套件。
 
 > [!NOTE]

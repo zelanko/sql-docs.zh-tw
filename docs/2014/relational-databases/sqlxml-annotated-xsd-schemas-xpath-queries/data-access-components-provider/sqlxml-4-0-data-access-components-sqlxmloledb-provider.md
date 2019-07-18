@@ -14,15 +14,15 @@ helpviewer_keywords:
 - providers [SQLXML]
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b5c08e9387517f737ab7003729a281e5594bc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014346"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 Data Access Components
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包含三個資料提供者，可針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的資料庫插入及擷取 XML 資料：  

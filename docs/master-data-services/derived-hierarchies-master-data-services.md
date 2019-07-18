@@ -12,15 +12,14 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 126ebfadfea6b67c0627984bac34b8925d766771
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084215"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
 

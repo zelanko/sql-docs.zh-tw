@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62743486"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
@@ -48,7 +48,7 @@ ms.locfileid: "58527842"
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>若要使用 SQL Server Management Studio 建立與另一個 SQL Server 執行個體的連結伺服器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，展開 **[伺服器物件]**，以滑鼠右鍵按一下 **[連結的伺服器]**，然後按一下 **[新增連結的伺服器]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，展開 **[伺服器物件]** ，以滑鼠右鍵按一下 **[連結的伺服器]** ，然後按一下 **[新增連結的伺服器]** 。  
   
 2.  在 **[一般]** 頁面的 **[連結的伺服器]** 方塊中，輸入您要連結之 **[SQL Server]** 的執行個體名稱。  
   
@@ -70,20 +70,20 @@ ms.locfileid: "58527842"
      **提供者字串**  
      輸入對應至資料來源之 OLE DB 提供者的唯一程式設計識別碼 (PROGID)。 如需有效提供者字串的範例，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)的資料。  
   
-     **位置**  
+     **Location**  
      依 OLE DB 提供者的解譯，輸入資料庫的位置。  
   
      **目錄**  
      輸入連接到 OLE DB 提供者時，要使用的目錄名稱。  
   
-     若要測試連接到連結伺服器的能力，在 [物件總管] 中，以滑鼠右鍵按一下連結伺服器，然後按一下 **[測試連接]**。  
+     若要測試連接到連結伺服器的能力，在 [物件總管] 中，以滑鼠右鍵按一下連結伺服器，然後按一下 **[測試連接]** 。  
   
     > [!NOTE]  
     >  如果 **[SQL Server]** 的執行個體是預設的執行個體，請輸入裝載 **[SQL Server]** 執行個體之電腦的名稱。 如果 **SQL Server** 是具名執行個體，請輸入電腦的名稱和執行個體的名稱，例如 **Accounting\SQLExpress**。  
   
-3.  在 [伺服器類型] 區域中，選取 [SQL Server] 表示連結的伺服器是 **SQL Server** 的另一個執行個體。  
+3.  在 [伺服器類型]  區域中，選取 [SQL Server]  表示連結的伺服器是 **SQL Server** 的另一個執行個體。  
   
-4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 [使用登入的目前安全性內容建立] 通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]**，然後提供所需的認證在連結的伺服器進行驗證。  
+4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 [使用登入的目前安全性內容建立]  通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]** ，然後提供所需的認證在連結的伺服器進行驗證。  
   
      **本機登入**  
      指定可以連接到連結伺服器的本機登入。 本機登入可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入或 Windows 驗證登入。 使用這份清單可限制與特定登入的連接，或允許某些登入連接成不同的登入。  
@@ -160,7 +160,7 @@ ms.locfileid: "58527842"
      **啟用分散式交易的升級**  
      使用此選項，透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 此選項為 TRUE 時，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)的資料。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 **[確定]** 。  
   
 ##### <a name="to-view-the-provider-options"></a>若要檢視提供者選項  
   
@@ -220,7 +220,7 @@ ms.locfileid: "58527842"
   
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：建立連結的伺服器之後所採取的步驟  
+##  <a name="FollowUp"></a> 後續操作：若要建立連結的伺服器之後所採取的步驟  
   
 #### <a name="to-test-the-linked-server"></a>若要測試連結的伺服器  
   

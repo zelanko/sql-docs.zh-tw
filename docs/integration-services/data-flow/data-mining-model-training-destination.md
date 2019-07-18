@@ -20,14 +20,18 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 113d73aa309e874f026c10d0a9f580c08af45ebb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 195b33c9cac8e9009f2db39d12544e48387da5c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727035"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md) 和 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>設定資料採礦模型培訓目的地  
@@ -55,16 +59,16 @@ ms.locfileid: "58279322"
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增] 按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
+ 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增]  按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
   
  **採礦結構**  
- 從可用的採礦結構清單中選取，或按一下 [新增] 建立新結構。  
+ 從可用的採礦結構清單中選取，或按一下 [新增]  建立新結構。  
   
  **新增**  
- 使用 [資料採礦精靈] 來建立新的採礦結構和採礦模型。  
+ 使用 [資料採礦精靈]  來建立新的採礦結構和採礦模型。  
   
  **採礦模型**  
  檢視與選取的採礦結構相關聯的採礦模型清單。  

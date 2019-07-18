@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916767"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名使用者定義資料庫。 資料庫的名稱可以包含任何依照識別碼規則的字元。  
@@ -37,7 +37,7 @@ ms.locfileid: "58531422"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[在重新命名資料庫之後](#FollowUp)  
+-   **後續操作：** [重新命名資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -58,9 +58,9 @@ ms.locfileid: "58531422"
   
 2.  確定沒有人使用此資料庫，然後[將資料庫設定為單一使用者模式](set-a-database-to-single-user-mode.md)。  
   
-3.  展開 [資料庫]，以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]。  
+3.  展開 [資料庫]  ，以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]  。  
   
-4.  輸入新的資料庫名稱，然後按一下 **[確定]**。  
+4.  輸入新的資料庫名稱，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -68,9 +68,9 @@ ms.locfileid: "58531422"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
   
 ```sql  
 USE master;  

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103790"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLGetDescRec**傳回目前的設定或多個欄位的描述項記錄的值。 傳回的欄位描述的名稱、 資料類型和資料行或參數資料的儲存體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescRec(  
       SQLHDESC        DescriptorHandle,  
@@ -59,7 +58,7 @@ SQLRETURN SQLGetDescRec(
  *RecNumber*  
  [輸入]指出從中應用程式搜尋資訊的描述項記錄。 描述項記錄與記錄編號 0 表示書籤記錄編號從 1。 *RecNumber*引數必須小於或等於 SQL_DESC_COUNT 的值。 如果*RecNumber*小於或等於 SQL_DESC_COUNT，但資料列不包含資料的資料行或參數，呼叫**SQLGetDescRec**會傳回欄位的預設值。 (如需詳細資訊，請參閱 [初始設定的描述元的欄位] 中[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   
- *[名稱]*  
+ *名稱*  
  [輸出]在其中傳回與 SQL_DESC_NAME 欄位的描述項記錄緩衝區的指標。  
   
  如果*名稱*為 NULL，就*StringLengthPtr*仍會傳回 （不含字元資料的 null 終止字元） 的字元總數可用來傳回中指向緩衝區*名稱*。  

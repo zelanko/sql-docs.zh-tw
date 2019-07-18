@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
@@ -16,12 +15,12 @@ ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc9b89f4c1d3a1a44d5a568a47d16276639bb4cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075976"
 ---
 # <a name="create-a-currency-type-dimension"></a>建立貨幣類型維度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，貨幣類型維度是指其屬性代表財務報表所使用之貨幣清單的維度。  
@@ -34,14 +33,14 @@ ms.locfileid: "48140388"
   
  商業智慧精靈可利用此資訊設計一個貨幣轉換程序，來識別適當的目的地貨幣維度 (代表目的地貨幣的貨幣維度)。 視商業智慧方案需要的貨幣轉換數目而定，商業智慧精靈可定義多個目的地貨幣維度。 如需定義貨幣轉換的詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)。  
   
- 若要將維度識別為貨幣維度，將`Type`屬性的維度`Currency`。  
+ 若要將維度識別為貨幣維度，請將維度的 `Type` 屬性設定為 `Currency`。  
   
 ## <a name="dimension-structure"></a>維度結構  
  貨幣維度會包含至少一個索引鍵屬性，來識別貨幣維度之維度資料表中的個別貨幣。 在來源和目的地貨幣維度中，索引鍵屬性的值是不同的：  
   
 -   若要將屬性識別為來源貨幣維度的索引鍵屬性，請將該屬性的 `Type` 屬性設定為 `CurrencySource`。  
   
--   若要將屬性識別為目的地貨幣維度，將`Type`屬性的屬性來`CurrencyDestination`。  
+-   若要將屬性識別為目的地貨幣維度，請將屬性的 `Type` 屬性設定為 `CurrencyDestination`。  
   
  基於報表用途，來源和目的地貨幣維度都可選擇性地包含下列屬性：  
   
@@ -55,12 +54,12 @@ ms.locfileid: "48140388"
   
 -   貨幣國際標準組織 (ISO) 代碼。  
   
-     若要將屬性識別為貨幣 ISO 代碼屬性，設定`Type`屬性的屬性來`CurrencyIsoCode`。  
+     若要將屬性識別為貨幣 ISO 代碼屬性，請將屬性的 `Type` 屬性設定為 `CurrencyIsoCode`。  
   
  如需屬性類型的詳細資訊，請參閱 [設定屬性類型](attribute-properties-configure-attribute-types.md)。  
   
 ## <a name="defining-account-intelligence-with-the-business-intelligence-wizard"></a>使用商業智慧精靈定義帳戶智慧  
- 在定義帳戶維度並將該維度加入至 Cube 之後，您就可以使用商業智慧精靈來加入帳戶智慧功能，例如識別及對應帳戶類型至維度。 如需詳細資訊，請參閱[將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
+ 在定義帳戶維度並將該維度加入至 Cube 之後，您就可以使用商業智慧精靈來加入帳戶智慧功能，例如識別及對應帳戶類型至維度。 如需詳細資訊，請參閱 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

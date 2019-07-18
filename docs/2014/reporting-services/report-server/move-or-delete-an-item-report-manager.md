@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103730"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
   您發行至報表伺服器的報表和報表相關項目會儲存在資料夾中。 您可以將項目移至不同的資料夾，報表伺服器會自動維護這些項目的參考。 刪除某個項目之前，請考慮是否有其他項目相依於該項目。  
@@ -44,37 +43,37 @@ ms.locfileid: "56020149"
   
 1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）。  
   
-2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要移動的項目。  
+2.  在報表管理員中，巡覽至 [內容]  頁面，然後找出您要移動的項目。  
   
 3.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-4.  在下拉式功能表中，按一下 **[移動]**。  
+4.  在下拉式功能表中，按一下 **[移動]** 。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  針對 [位置]，請指定您要移動項目的目標資料夾。 您可以輸入完整資料夾名稱，或使用樹狀目錄控制項導覽至資料夾。  
+6.  針對 [位置]  ，請指定您要移動項目的目標資料夾。 您可以輸入完整資料夾名稱，或使用樹狀目錄控制項導覽至資料夾。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 或者，您可以巡覽至要移動的物件、按一下 [屬性]，然後按一下頁面頂端的 [移動]。  
+ 或者，您可以巡覽至要移動的物件、按一下 [屬性]  ，然後按一下頁面頂端的 [移動]  。  
   
 ## <a name="delete-an-item"></a>刪除項目  
- 刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找的項目相依項目，請參閱 [相依項目 頁面&#40;報表管理員&#41;].../ 相依的項目-頁面-報表-manager.md）。  
+ 刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找的項目相依項目，請參閱 [相依項目頁面&#40;報表管理員&#41;].../ 相依的項目-頁面-報表-manager.md）。  
   
 #### <a name="to-delete-a-report-or-item"></a>若要刪除報表或項目  
   
 1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）。  
   
-2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要刪除的項目。  
+2.  在報表管理員中，巡覽至 [內容]  頁面，然後找出您要刪除的項目。  
   
 3.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-4.  在下拉式功能表中，按一下 [刪除]。  
+4.  在下拉式功能表中，按一下 [刪除]  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [內容 頁面&#40;報表管理員&#41;].../ 內容頁報表-manager.md）   
+ [內容頁面&#40;報表管理員&#41;].../ 內容頁報表-manager.md）   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

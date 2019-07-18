@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB, how-to topics
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 96e262b580614970b801ac4c0b7b0f0cf49a3382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 829ced1eb0fc37a773f67e4fea9834d9c22205de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735106"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791419"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

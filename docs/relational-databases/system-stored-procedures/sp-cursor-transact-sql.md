@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108567"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|這是用來從基礎資料表重新填滿緩衝區，而且在更新或刪除因為開放式並行控制而失敗或者在 UPDATE 之後，可用來重新整理資料列。|  
 |0X10|LOCK|會導致 SQL Server U-lock 包含指定的資料列的頁面上取得。 這個鎖定與 S-Locks 相容，但是與 X-Locks 或其他 U-Locks 不相容。 可用來實作短期鎖定。|  
 |0X20|SETPOSITION|僅當程式即將發出後續的 SQL Server 定位 DELETE 或 UPDATE 陳述式使用。|  
-|0X40|ABSOLUTE|只能搭配 UPDATE 或 DELETE 使用。  ABSOLUTE 只能搭配 KEYSET 資料指標使用 (DYNAMIC 資料指標和 STATIC 資料指標則會忽略，而且無法更新)。<br /><br /> 注意：如果在尚未提取之索引鍵集內的資料列上指定 ABSOLUTE，該作業可能無法通過並行檢查，而且無法保證傳回結果。|  
+|0X40|ABSOLUTE|只能搭配 UPDATE 或 DELETE 使用。  ABSOLUTE 只能搭配 KEYSET 資料指標使用 (DYNAMIC 資料指標和 STATIC 資料指標則會忽略，而且無法更新)。<br /><br /> 注意:如果在尚未提取索引鍵集中的資料列上指定 ABSOLUTE 時，作業可能失敗的並行存取檢查，而且無法保證傳回結果。|  
   
  *rownum*  
  指定資料指標將要運作、更新或刪除提取緩衝區內的哪些資料列。  
@@ -159,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果插入*\<資料表名稱 >* 指定，則指定的任何值*表格*參數將會被忽略。  
+>  如果插入 *\<資料表名稱 >* 指定，則指定的任何值*表格*參數將會被忽略。  
   
  當使用多個參數時，第一個參數必須是以下格式的字串：  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b47ef4c2df8a326d993a95e056b27d331dc649f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005748"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53205597"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedureColumns(  
      SQLHSTMT      StatementHandle,  

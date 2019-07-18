@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874085"
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取
   Common language runtime (CLR) 常式可以輕鬆存取的執行個體中儲存的資料[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]中執行，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 存取資料從 CLR 資料庫物件中的使用.NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從受管理的用戶端和中介層應用程式的資料。 因為這個緣故，您可以將 ADO.NET 和 `SqlClient` 的知識運用在用戶端和中間層應用程式。  

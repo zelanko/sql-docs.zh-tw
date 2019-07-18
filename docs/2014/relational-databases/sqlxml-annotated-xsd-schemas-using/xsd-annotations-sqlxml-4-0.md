@@ -10,15 +10,15 @@ helpviewer_keywords:
 - annotated XSD schemas, annotations listed
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cfb0078672a56ba85692fdb836a17ea9c9db302
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013550"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 註解 (SQLXML 4.0)
   下表列出 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中推出的 XSD 註解，並與 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中推出的 XDR 註解相比較。  
@@ -29,7 +29,7 @@ ms.locfileid: "52758060"
 |`sql:guid`|可讓您指定要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的 GUID 值，還是使用 Updategram 中針對該資料行提供的值。|[使用 sql:identity 和 sql:guid 註解](using-the-sql-identity-and-sql-guid-annotations.md)|不支援|  
 |`sql:hide`|在產生的 XML 文件中，隱藏結構描述中指定的元素或屬性。|[使用 sql:hide 來隱藏項目和屬性](hiding-elements-and-attributes-by-using-sql-hide.md)|不支援|  
 |`sql:identity`|可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上指定。 針對此註解指定的值會定義如何更新資料庫中對應的 IDENTITY 類型資料行。|[使用 sql:identity 和 sql:guid 註解](using-the-sql-identity-and-sql-guid-annotations.md)|不支援|  
-|`sql:inverse`|指引 updategram 邏輯反轉使用指定的父子式關聯性的其解譯 **\<sql: relationship >**。|[Sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支援|  
+|`sql:inverse`|指引 updategram 邏輯反轉使用指定的父子式關聯性的其解譯 **\<sql: relationship >** 。|[Sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支援|  
 |`sql:is-constant`|建立不對應到任何資料表的 XML 元素。 該元素會出現在查詢輸出中。|[建立常數項目使用 sql: is-constant&lt &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|相同|  
 |`sql:key-fields`|可用來指定一或多個資料行，以用來唯一識別資料表中的資料列。|[識別索引鍵資料行使用 sql: key-fields 來-欄位&#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|相同|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|可用來限制根據限制值傳回的值。|[篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|相同|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1b083ab1da347d3aa90b1eff8480b14bac8350c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0021f77134075e18bcae4f3caeea92c1cbcdae73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107201"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 連接類型 (SSRS)
   若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 .NET Framework Managed Provider for Oracle 為基礎，並且需要 Oracle 用戶端軟體元件。  
@@ -49,7 +48,7 @@ Data Source="Oracle9"; Unicode="True"
 ##  <a name="Parameters"></a> 參數  
  如果查詢包含查詢變數，就會自動產生對應的報表參數。 此延伸模組支援具名參數。 若使用 Oracle 9 或更新版本，則支援多重值的參數。  
   
- 報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如，每一個報表參數的資料類型都是 **[文字]**。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
+ 報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如，每一個報表參數的資料類型都是 **[文字]** 。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
 
   
@@ -58,7 +57,7 @@ Data Source="Oracle9"; Unicode="True"
   
  如需詳細資訊，請參閱下列內容：  
   
--   msdn.microsoft.com 上的[使用 Oracle 的 .NET Framework 資料提供者](https://go.microsoft.com/fwlink/?LinkId=112314)   
+-   msdn.microsoft.com 上的[使用 Oracle 的 .NET Framework 資料提供者](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
 -   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://support.microsoft.com/kb/834305)  
   

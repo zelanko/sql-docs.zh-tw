@@ -11,15 +11,15 @@ helpviewer_keywords:
 - summarizing query results
 - custom expressions to aggregate values [SQL Server]
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6764b8702af1323357be42c63f3a278bc096c13f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 61c10185bf0ee14498d9046381f6ceae9cd94d50
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631167"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689626"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自訂運算式摘要或彙總值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "47631167"
   
 1.  為您的查詢指定群組。 如需詳細資訊，請參閱[群組查詢結果中的資料列 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
   
-2.  移至 [準則] 窗格的空白資料列，然後在 [資料行] 資料行輸入運算式。  
+2.  移至 [準則] 窗格的空白資料列，然後在 [資料行]  資料行輸入運算式。  
   
     [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會自動指派資料行別名給運算式，以便在查詢輸出中建立有用的資料行標題。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
-3.  在運算式的 [群組依據] 資料行中，選取 [Expression]。  
+3.  在運算式的 [群組依據]  資料行中，選取 [Expression]  。  
   
 4.  執行查詢。  
   

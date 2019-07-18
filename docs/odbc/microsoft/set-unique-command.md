@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f58eb771245b9820e27ca4d14c2f69035effa44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29598ed97cba8be04a0c08727cffc40e663becba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063608"
 ---
 # <a name="set-unique-command"></a>SET UNIQUE 命令
 指定是否要將具有重複的索引鍵值的記錄維持索引檔案中。  

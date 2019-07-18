@@ -2,20 +2,19 @@
 title: 資料集區有哪些？
 titleSuffix: SQL Server big data clusters
 description: 本文說明在 SQL Server 2019 巨量資料叢集中的資料集區。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 8345ae06280458e7fa479ad95ffa20383e429267
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: f9355508e4d32dd9a6152781fba325ded2fa7425
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958730"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 的巨量資料叢集中的資料集區有哪些？
 

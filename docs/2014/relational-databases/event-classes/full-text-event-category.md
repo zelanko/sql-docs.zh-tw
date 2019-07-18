@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023112"
 ---
 # <a name="full-text-event-category"></a>Full Text 事件類別目錄
   **Full Text** 事件類別目錄包含一般的全文檢索事件。  

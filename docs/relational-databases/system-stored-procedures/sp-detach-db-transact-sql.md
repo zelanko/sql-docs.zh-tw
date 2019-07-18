@@ -1,5 +1,5 @@
 ---
-title: sp_detach_db (Transact-SQL) | Microsoft Docs
+title: sp_detach_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912889"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定全文檢索索引相關聯的檔案與要卸離的資料庫不會捨棄在資料庫卸離作業。 *KeepFulltextIndexFile*已**nvarchar(10**值，預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料已卸除，除非資料庫為唯讀。 如果是 NULL 或 **，則為 true**，全文檢索相關中繼資料會保留。  
   
 > [!IMPORTANT]
->  **@keepfulltextindexfile**的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
+>  **@keepfulltextindexfile** 的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

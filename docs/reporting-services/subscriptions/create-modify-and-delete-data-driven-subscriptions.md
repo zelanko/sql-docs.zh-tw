@@ -1,8 +1,8 @@
 ---
 title: 建立、修改和刪除資料驅動訂閱 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 533391424ab1eeacb52d59e56070f0b874320942
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140272"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>建立、修改和刪除資料驅動訂閱
   資料驅動訂閱是查詢式訂閱，會在執行階段取得用於處理訂閱的資料值。 觸發訂閱時，會處理查詢以取得有關收件者、報表傳遞選項、轉譯格式，以及參數設定的最新資訊。 查詢結果會與訂閱定義結合，以建立動態訂閱，該動態訂閱會使用您已在員工資料庫、客戶資料庫，或包含可做為訂閱者資料之資訊的其他任何資料庫中維護的資料。  
   
- 若要建立新的資料驅動訂閱或修改現有的訂閱，請使用報表管理員中的 [建立資料驅動訂閱] 頁面。 這些頁面會引導您逐步建立或修改訂閱。 若要在訂閱建立之後存取，請使用 [我的訂閱] 頁面和報表的 [訂閱] 清單。 若要了解如何建立資料驅動訂閱，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
+ 若要建立新的資料驅動訂用帳戶，或修改現有的訂用帳戶，請使用**管理** > **訂用帳戶**入口網站中的頁面。 **訂用帳戶**頁面將引導您完成建立或修改訂用帳戶的每個步驟。 若要在訂閱建立之後存取，請使用 [我的訂閱] 頁面或 [訂閱] 清單。 若要了解如何建立資料驅動訂閱，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
   
- 本主題內容：  
+ 本文內容：  
   
 -   [管理和刪除資料驅動訂閱](#bkmk_manage_and_delete)  
   
@@ -36,47 +36,47 @@ ms.locfileid: "50030387"
 -   [執行訂閱](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理和刪除資料驅動訂閱  
- 您無法透過報表管理員的 [管理作業] 頁面，停止或刪除正在進行中的資料驅動訂閱。 因此，建議您使用共用排程來觸發資料驅動訂閱。 這樣一來，如果您想要暫時防止訂閱處理，就可以暫停觸發訂閱的排程。 如需詳細資訊，請參閱 [old_建立及管理原生模式報表伺服器的訂閱](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。  
+ 無法停止或透過入口網站刪除正在進行中的資料驅動訂閱。 因此，建議您使用共用排程來觸發資料驅動訂閱。 這樣一來，如果您想要暫時防止訂閱處理，就可以暫停觸發訂閱的排程。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
- 若要刪除資料驅動訂閱，請從報表的 [我的訂閱] 頁面或 [訂閱] 頁面選取該訂閱，然後按一下 **[刪除]**。  
+ 若要刪除的資料驅動訂閱，選取 上的 報表旁的核取方塊**訂用帳戶**頁面，然後再選取**刪除**。  
   
  如需如何取消資料驅動訂閱的指示，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
 ##  <a name="bkmk_create_and_modify"></a> 建立和修改資料驅動訂閱  
  若要建立資料驅動訂閱，請選取使用預存認證或無認證的報表。 當您建立資料驅動訂閱時，請考慮使用 [描述] 欄位的命名慣例，如此就能輕鬆區分標準訂閱與資料驅動訂閱。  
   
-#### <a name="to-create-a-data-driven-subscription-native-mode"></a>若要建立資料驅動訂閱 (原生模式)  
+### <a name="to-create-a-data-driven-subscription-native-mode"></a>若要建立資料驅動訂閱 (原生模式)  
   
-1.  在報表管理員中，導覽到包含報表的資料夾，將滑鼠停留在報表上方，接著開啟 [選項] 功能表，然後按一下 **[管理]**。  
+1. 在入口網站中，瀏覽至包含報表的資料夾，以滑鼠右鍵按一下報表，然後選取**管理**從下拉式功能表中。  
   
-2.  按一下 **[訂閱]** 索引標籤。  
+2. 選取 **[訂閱]** 索引標籤。  
   
-3.  按一下 **[新增資料驅動訂閱]** 按鈕。  
+3. 選取  **+ 新的訂用帳戶**上**訂用帳戶**頁面。  
   
-#### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>若要建立資料驅動訂閱 (SharePoint 模式)  
+### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>若要建立資料驅動訂閱 (SharePoint 模式)  
   
-1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
+1. 在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
   
-2.  按一下 **[加入資料驅動訂閱]**。  
+2. 按一下 **[加入資料驅動訂閱]**。  
   
-#### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>若要修改現有的資料驅動訂閱 (原生模式)  
+### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>若要修改現有的資料驅動訂閱 (原生模式)  
   
-1.  在報表管理員中，導覽到包含報表的資料夾，將滑鼠停留在報表上方，接著開啟 [選項] 功能表，然後按一下 **[管理]**。  
+1. 在入口網站中，瀏覽至包含報表的資料夾，以滑鼠右鍵按一下報表，然後選取**管理**從下拉式功能表中。  
   
-2.  按一下 **[訂閱]** 索引標籤。或者，按一下報表管理員頂端的 [我的訂閱] 連結。  
+2. 選取 **[訂閱]** 索引標籤。  
   
-3.  選取您要修改的訂閱。 下列圖示代表資料驅動訂閱：![資料驅動訂閱圖示](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "資料驅動訂閱圖示")  
+3. 選取您想要修改，並選取訂用帳戶旁邊的核取方塊**編輯**。 資料驅動訂閱都會在值 「 資料驅動 」**型別**資料行。  
   
-#### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>若要修改現有的資料驅動訂閱 (SharePoint 模式)  
+### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>若要修改現有的資料驅動訂閱 (SharePoint 模式)  
   
 1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
   
 2.  選取您要修改的訂閱。  
   
-> [!NOTE]  
->  您可以修改任何已經指定的值。 所有值均以第一次建立時的方式呈現，除了用來存取訂閱者資料存放區的密碼。 每次修改值的時候，都必須在第二頁或任何後續頁面重新輸入密碼。  
+    > [!NOTE]  
+    > 您可以修改任何已經指定的值。 所有值均以第一次建立時的方式呈現，除了用來存取訂閱者資料存放區的密碼。 每次修改值的時候，都必須在第二頁或任何後續頁面重新輸入密碼。  
   
- 在可以建立資料驅動訂閱之前，請先確定有滿足以下需求：  
+  在可以建立資料驅動訂閱之前，請先確定有滿足以下需求：  
   
 -   **報表需求**。 報表必須使用預存認證或不使用認證，才能在執行階段擷取資料。 如果報表是使用模擬或委派的認證來連接外部資料來源，您便無法訂閱此報表；當處理此訂閱時，將無法使用建立或擁有此訂閱之使用者的認證。 預存認證可以是 Windows 帳戶或資料庫使用者帳戶。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
@@ -101,9 +101,7 @@ ms.locfileid: "50030387"
 ## <a name="see-also"></a>另請參閱  
  [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [old_建立及管理原生模式報表伺服器的訂閱](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [訂閱頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [我的訂閱頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
-  
-  
+ [報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)   
+ [建立及管理原生模式報表伺服器的訂閱](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [使用訂用帳戶 （web 入口網站）](../../reporting-services/working-with-subscriptions-web-portal.md) [使用我的訂閱 （原生模式報表伺服器）](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connecttodatabase.f1
@@ -13,17 +12,17 @@ ms.assetid: e2c62d4b-27d9-4ee0-9d90-a6dd4ca2906d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90db2f04d31ce477644cae99c4313de592797a51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087075"
 ---
 # <a name="connect-to-database-dialog-box"></a>連接到資料庫對話方塊
   使用 **[連接到資料庫]** 對話方塊連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |詞彙|定義|  
 |----------|----------------|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f54be3d11f4870533513f464c1afdae13e04f367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104657"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53214729"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDrivers(  
      SQLHENV         EnvironmentHandle,  

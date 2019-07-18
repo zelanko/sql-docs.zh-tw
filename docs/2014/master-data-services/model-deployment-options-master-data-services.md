@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 263bc590c43899c3b9531549f4e73eefbde81c9c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0dbc88c186e5f8f92c943c3e0d766ab6d8846941
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479018"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您要部署模型封裝檔案時，必須決定要部署新的或複製的模型，還是更新之前複製的模型。  
@@ -27,7 +27,7 @@ ms.locfileid: "52792970"
   
 -   建立模型封裝，並將它做為新模型部署到相同的環境。 在此情況下，您必須指定模型的新名稱。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  在 MDS 資料庫中，每個模型物件都有唯一識別碼 (ID)。 這些識別碼包含在模型部署封裝中。 當您部署封裝時，必須選擇如何處理這些識別碼。  
   
  下表有助於您在使用系統管理模型部署精靈或 MDSModelDeploy 工具部署模型時，決定選擇。  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Aggregate Geography Methods [SQL Server]
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 157347e9eebe108396e908b017b8103cff5b7a9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f92882612ecf3244b88f764f266ae34ac3f752fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937156"
 ---
 # <a name="static-aggregate-geography-methods"></a>靜態彙總地理方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52502307"
   
  [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (OGC 規格，簡易功能存取第二部分 - SQL 選項)  
+ [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
  [OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   

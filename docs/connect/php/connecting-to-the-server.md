@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58357c0316f5b439d3dbac00a79547bd799e27bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 47a894b93a0228782e48116dc3bcc2272e4264c2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601956"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795817"
 ---
 # <a name="connecting-to-the-server"></a>連接到伺服器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本節的主題描述使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選項和程序。  
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 驗證或使用 SQL Server 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試使用 Windows 驗證連接到伺服器。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 驗證或使用 SQL Server 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試使用 Windows 驗證連接到伺服器。  
 
 ## <a name="in-this-section"></a>本節內容  
 

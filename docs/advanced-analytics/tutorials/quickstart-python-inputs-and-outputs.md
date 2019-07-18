@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 80bb86beedf54c29fbe67e2362a4163cb489c05a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962072"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>快速入門：處理輸入及輸出在 SQL Server 中使用 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +55,9 @@ SELECT * FROM PythonTestData
 
 讓我們看看預設值的 sp_execute_external_script 的輸入和輸出變數：`InputDataSet`和`OutputDataSet`。
 
-1. 您可以從資料表取得資料，做為 R 指令碼輸入。 執行以下陳述式。 從資料表取得資料、 進行來回在 R 執行階段，以及傳回的資料行名稱的值*NewColName*。
+1. 您可以從資料表取得資料，做為您的 Python 指令碼輸入。 執行以下陳述式。 從資料表取得資料、 進行來回透過 Python 執行階段，以及傳回的資料行名稱的值*NewColName*。
 
-    查詢所傳回的資料會傳遞至 R 執行階段，傳回的資料到 SQL Database 做為資料框架。 WITH RESULT SETS 子句會定義傳回的資料表的結構描述，SQL database。
+    查詢所傳回的資料會傳遞至 Python 執行階段，傳回至 SQL Database 的資料，當做 pandas 資料框架。 WITH RESULT SETS 子句會定義傳回的資料表的結構描述，SQL database。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +71,7 @@ SELECT * FROM PythonTestData
 
     ![從資料表傳回資料的 Python 指令碼輸出](./media/python-output-pythontestdata.png)
 
-2. 讓我們變更輸入或輸出變數的名稱。 上述指令碼使用預設的輸入和輸出變數名稱， _InputDataSet_並_OutputDataSet_。 若要定義輸入的資料與相關聯_InputDatSet_，您使用*@input_data_1*變數。
+2. 讓我們變更輸入或輸出變數的名稱。 上述指令碼使用預設的輸入和輸出變數名稱， _InputDataSet_並_OutputDataSet_。 若要定義輸入的資料與相關聯_InputDataSet_，您使用 *@input_data_1* 變數。
 
     此指令碼，在預存程序的輸出和輸入的變數名稱已變更為*SQL_out*並*SQL_in*:
 
@@ -88,13 +87,11 @@ SELECT * FROM PythonTestData
 
     中的輸入和輸出變數的大小寫`@input_data_1_name`並`@output_data_1_name`一定要相符的項目中的 Python 程式碼中的大小寫`@script`，因為 Python 是區分大小寫。
 
-    此外，參數的順序很重要的。 若要使用選擇性的參數 *@input_data_1_name* 和 *@output_data_1_name*，您必須先指定必要的參數 *@input_data_1*和 *@output_data_1*。
-
     只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以在您的 Python 程式碼內呼叫從其他資料集，而且您可以傳回其他類型，除了資料集的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。 
 
     `WITH RESULT SETS`陳述式在 SQL Server 中定義資料用的結構描述。 您需要提供 SQL 相容的資料類型，您即可從 Python 傳回每個資料行。 您可以使用的結構描述定義來提供新的資料行名稱太，因為您不需要使用 Python data.frame 的資料行名稱。
 
-3. 您也可以使用 Python 指令碼產生值，並保留中的輸入的查詢字串_@input_data_1_空白。
+3. 您也可以使用 Python 指令碼產生值，並保留中的輸入的查詢字串 _@input_data_1_ 空白。
 
     ```sql
     EXECUTE sp_execute_external_script

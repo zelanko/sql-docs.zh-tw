@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72ff6c430ff3275fb2df7f79ad53333415f85683
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106308"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>變更圖例項目的文字 (報表產生器及 SSRS)
   將欄位放在圖表的 [值] 區域中時，系統會自動產生包含此欄位名稱的圖例項目。 每個圖例項目都會連接到報表上的個別數列，但是形狀圖例外 (其圖例會連接到個別資料點而非個別數列)。  
@@ -32,11 +31,11 @@ ms.locfileid: "56285796"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>在形狀圖上修改出現在圖例中的文字  
   
-1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值] 區域中的欄位，然後選取 [數列屬性]。  
+1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]  區域中的欄位，然後選取 [數列屬性]  。  
   
-2.  按一下 [圖例]，然後在 [自訂圖例文字] 方塊中鍵入關鍵字。  
+2.  按一下 [圖例]  ，然後在 [自訂圖例文字]  方塊中鍵入關鍵字。  
   
- 下表提供用於 [自訂圖例文字] 屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 下表提供用於 [自訂圖例文字]  屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 |關鍵字|描述|在圖例中顯示為文字的範例|  
 |-------------|-----------------|---------------------------------------------------|  
@@ -46,13 +45,13 @@ ms.locfileid: "56285796"
 |`#AXISLABEL (#PERCENT{P0})`|顯示類別目錄欄位的文字表示法，後面接著每個類別目錄顯示在圖表上的百分比。|Michael Blythe (85%)|  
   
 > [!NOTE]  
->  在 [數列群組] 區域中沒有指定任何欄位時，只能在執行階段評估 #AXISLABEL 關鍵字。  
+>  在 [數列群組]  區域中沒有指定任何欄位時，只能在執行階段評估 #AXISLABEL 關鍵字。  
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>在非形狀圖上修改出現在圖例中的文字  
   
-1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值] 區域中的欄位，然後選取 [數列屬性]。  
+1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值]  區域中的欄位，然後選取 [數列屬性]  。  
   
-2.  按一下 [圖例]，然後在 [自訂圖例文字] 方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
+2.  按一下 [圖例]  ，然後在 [自訂圖例文字]  方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
   
 ## <a name="see-also"></a>另請參閱  
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   

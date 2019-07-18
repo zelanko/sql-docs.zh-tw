@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036225"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "52515949"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLBindCol(  
       SQLHSTMT       StatementHandle,  
@@ -184,7 +183,7 @@ SQLRETURN SQLBindCol(
 ## <a name="column-wise-binding"></a>資料行取向的繫結  
  在 資料行取向的繫結，應用程式繫結不同的資料和長度/指標陣列至每個資料行。  
   
- 若要使用資料行取向的繫結，應用程式第一次為 SQL_BIND_BY_COLUMN 設定 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性。 (這是預設值。)每個資料行繫結，應用程式會執行下列步驟：  
+ 若要使用資料行取向的繫結，應用程式第一次為 SQL_BIND_BY_COLUMN 設定 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性。 （這是預設值）。每個資料行繫結，應用程式會執行下列步驟：  
   
 1.  配置資料緩衝區陣列。  
   
@@ -285,7 +284,7 @@ SQLRETURN SQLBindCol(
   
  如需更多的程式碼範例，請參閱 < [SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)， [SQLColumns 函式](../../../odbc/reference/syntax/sqlcolumns-function.md)， [SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)，和[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 // SQLBindCol_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

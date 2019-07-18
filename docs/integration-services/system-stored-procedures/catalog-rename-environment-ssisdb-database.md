@@ -11,14 +11,18 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7fb41e6e3189621b957d12db9c8b13a54651793
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 42d83c5adf9afa268bb7ec6e069731d6f8a05219
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715996"
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   重新命名 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的環境。  
@@ -33,13 +37,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 環境的原始名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 環境的原始名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @new_environment_name = ] *new_environment_name*  
- 環境的新名稱。 *new_environment_name* 是 **nvarchar(128)**。  
+ 環境的新名稱。 *new_environment_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

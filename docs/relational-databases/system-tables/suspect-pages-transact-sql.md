@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112e45b056de0f1915a4ef5419e0e916f1f8d5a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130544"
 ---
 # <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

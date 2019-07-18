@@ -1,5 +1,5 @@
 ---
-title: 不 (MDX) |Microsoft 文件
+title: 不 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088229"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 
@@ -33,10 +32,10 @@ NOT Expression1
  傳回數值的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="return-value"></a>傳回值  
- 布林值，傳回**false**如果引數評估為**true**，否則**true**。  
+ 布林值，傳回**假**如果引數評估為 **，則為 true**，否則 **，則為 true**。  
   
 ## <a name="remarks"></a>備註  
- **不**運算子會將運算式視為布林值 (零 （0) 做為**false**，否則**true**) 運算子執行邏輯否定之前。 下表將說明如何**不**運算子執行邏輯否定。  
+ **不**運算子會將運算式視為布林值 (零 （0) 作為**false**，否則**true**) 運算子執行邏輯否定之前。 下表將說明如何**不**運算子執行邏輯否定。  
   
 |*Expression1*|傳回值|  
 |-------------------|------------------|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dfb1f3ef9dc8bdac81ed7c3a3a490ca91f73ff23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108356"
 ---
 # <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

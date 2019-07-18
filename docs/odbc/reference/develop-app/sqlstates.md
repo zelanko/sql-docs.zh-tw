@@ -1,5 +1,5 @@
 ---
-title: Sqlstate |Microsoft Docs
+title: SQLSTATEs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8213c08e6844003d880129dda4b441a5592bbc86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107339"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate 會提供警告或錯誤的原因的詳細的資訊。 在本手冊中的 Sqlstate 根據在 ISO/IEF CLI 規格中，找到雖然開始 IM 這些 Sqlstate 特有 ODBC。  

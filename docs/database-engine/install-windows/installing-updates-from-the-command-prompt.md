@@ -10,13 +10,13 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794847"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>從命令提示字元安裝更新
 
@@ -27,7 +27,7 @@ ms.locfileid: "51605985"
 ## <a name="sample-syntax-for-installation"></a>安裝的範例語法 
 更新封裝的名稱會有所不同而且可能包含語言、版本及處理器元件。 在命令提示字元中套用更新，並以您的更新封裝名稱取代 <package_name>： 
  
-- 更新單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體及所有共用元件，類似 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具：您可以使用 InstanceName 參數或 InstanceID 參數來指定執行個體。 若要更新備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須指定 InstanceID 參數。
+- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 單一執行個體和所有共用元件，例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具：您可以使用 InstanceName 參數或 InstanceID 參數指定執行個體。 若要更新備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須指定 InstanceID 參數。
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance

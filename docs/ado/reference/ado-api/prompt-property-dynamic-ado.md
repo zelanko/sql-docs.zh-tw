@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc11f2691613848865219f80b82a7d082803fa04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931586"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 動態屬性 (ADO)
 指定的 OLE DB 提供者是否應該提示使用者提供初始化資訊。  
@@ -35,7 +34,7 @@ ms.locfileid: "47752346"
 > [!NOTE]
 >  未指定提供者應該會提示使用者在所在的使用者將無法回應 對話方塊中的案例中。 例如，使用者將無法回應，如果使用者的用戶端，而不是伺服器系統上執行應用程式，或在系統上執行應用程式使用沒有使用者登入。 在這些情況下，將會無限期地等待回應的應用程式，並將其似乎鎖定中。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
   
 ```  
 Set cn = New Connection  

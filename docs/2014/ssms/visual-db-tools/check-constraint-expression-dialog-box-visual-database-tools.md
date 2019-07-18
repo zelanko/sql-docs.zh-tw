@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067884"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
   當附加檢查條件約束至資料表或資料行時，必須包含 SQL 運算式。 在提供的方塊中輸入檢查條件約束運算式。  

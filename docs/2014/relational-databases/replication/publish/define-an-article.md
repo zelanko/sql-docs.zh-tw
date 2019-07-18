@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128711"
 ---
 # <a name="define-an-article"></a>定義發行項
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義發行項。  
@@ -48,13 +48,13 @@ ms.locfileid: "53355970"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? '、 \、 /、 \< ，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
+-   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? , ' , \ , / , \< , >. 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
   
 ##  <a name="Security"></a> 安全性  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  
+ 使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<發行集>]  對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>建立發行集並定義發行項  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53355970"
   
 2.  展開 **[複寫]** 資料夾，然後以滑鼠右鍵按一下 **[本機發行集]** 資料夾。  
   
-3.  按一下 **[新增發行集]**。  
+3.  按一下 **[新增發行集]** 。  
   
 4.  遵循「新增發行集精靈」中的頁面，執行：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53355970"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集定義發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 為 **@publication**指定發行項所屬的發行集名稱、為 **@article**指定發行項名稱、為 **@source_object**指定發行的資料庫物件，以及指定其他任何選擇性參數。 使用 **@source_owner** 來指定此物件的結構描述擁有權 (如果不是 **dbo**＞。 如果此發行項不是記錄式資料表發行項，請為 **@type** 指定發行項類型；如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](specify-article-types-replication-transact-sql-programming.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 為 **@publication** 指定發行項所屬的發行集名稱、為 **@article** 指定發行項名稱、為 **@source_object** 指定發行的資料庫物件，以及指定其他任何選擇性參數。 使用 **@source_owner** 來指定此物件的結構描述擁有權 (如果不是 **dbo**＞。 如果此發行項不是記錄式資料表發行項，請為 **@type** 指定發行項類型；如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  若要以水平方式篩選資料表中的資料列或是檢視發行項，請使用 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 來定義篩選子句。 如需詳細資訊，請參閱 [定義及修改靜態資料列篩選](define-and-modify-a-static-row-filter.md)。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "53355970"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>為合併式發行集定義發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 為 **@publication**指定發行集的名稱、為 **@article**指定發行項的名稱，以及為 **@source_object**＞。 若要以水平方式篩選資料表資料列，請指定 **@subset_filterclause**＞。 如需相關資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [定義及修改靜態資料列篩選](define-and-modify-a-static-row-filter.md)。 如果此發行項不是資料表發行項，請為 **@type**＞。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](specify-article-types-replication-transact-sql-programming.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 為 **@publication** 指定發行集的名稱、為 **@article** 指定發行項的名稱，以及為 **@source_object** ＞。 若要以水平方式篩選資料表資料列，請指定 **@subset_filterclause** ＞。 如需相關資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [定義及修改靜態資料列篩選](define-and-modify-a-static-row-filter.md)。 如果此發行項不是資料表發行項，請為 **@type** ＞。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](define-and-modify-a-join-filter-between-merge-articles.md)。  
   

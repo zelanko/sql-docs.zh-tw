@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019230"
 ---
 # <a name="column-size"></a>資料行大小
 數值資料類型的資料行 （或參數） 大小定義為資料行或參數的資料類型或資料的精確度所使用的數字的最大數目。 字元類型，這是以字元為單位的資料; 長度二進位資料類型資料行大小被定義為資料的位元組長度。 時間、 時間戳記，和所有的間隔資料類型，這是此資料的字元表示法中的字元數。 下表顯示每種精簡的 SQL 資料類型所定義的資料行大小。  
@@ -30,18 +29,18 @@ ms.locfileid: "47665536"
 |-------------------------|-----------------|  
 |所有字元類型 [a]、 [b]。|定義或最大資料行大小以字元為單位的資料行或參數 （如 SQL_DESC_LENGTH 描述項欄位中包含）。 例如，定義為 CHAR(10) 單一位元組字元資料行的資料行大小為 10。|  
 |SQL_DECIMAL SQL_NUMERIC|定義的數字數目。 例如，定義為 NUMERIC(10,3) 的資料行的有效位數是 10。|  
-|SQL_BIT [c]|1|  
-|SQL_TINYINT [c]|3|  
-|SQL_SMALLINT [c]|5|  
-|SQL_INTEGER [c]|10|  
-|SQL_BIGINT [c]|19 （如果帶正負號） 或 20 （如果不帶正負號）|  
-|SQL_REAL [c]|7|  
-|SQL_FLOAT [c]|15|  
-|SQL_DOUBLE [c]|15|  
+|SQL_BIT[c]|1|  
+|SQL_TINYINT[c]|3|  
+|SQL_SMALLINT[c]|5|  
+|SQL_INTEGER[c]|10|  
+|SQL_BIGINT[c]|19 （如果帶正負號） 或 20 （如果不帶正負號）|  
+|SQL_REAL[c]|7|  
+|SQL_FLOAT[c]|15|  
+|SQL_DOUBLE[c]|15|  
 |所有二進位型別 [a]、 [b]。|定義或最大長度以位元組為單位的資料行或參數。 例如，定義為 BINARY(10) 資料行的長度為 10。|  
-|SQL_TYPE_DATE [c]|10 (中的字元數*yyyy-mm-dd 的-* 格式)。|  
-|SQL_TYPE_TIME [c]|8 (中的字元數*hh 分秒*格式)，或 9 + *s* (中的字元數*hh: mm:*[.fff]] 格式，其中*的*的秒數有效位數)。|  
-|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy 為 yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy 為 yyyy-mm-dd* *hh: mm:* 格式)<br /><br /> 中的多個<br /><br /> 20 + *s* (中的字元數*yyyy 為 yyyy-mm-dd hh: mm:*[.fff]] 格式，其中*s*是秒數有效位數)。|  
+|SQL_TYPE_DATE[c]|10 (中的字元數*yyyy-mm-dd 的-* 格式)。|  
+|SQL_TYPE_TIME[c]|8 (中的字元數*hh 分秒*格式)，或 9 + *s* (中的字元數*hh: mm:* [.fff] 格式，其中*的*的秒數有效位數)。|  
+|SQL_TYPE_TIMESTAMP|16 (中的字元數*yyyy 為 yyyy-mm-dd hh: mm*格式)<br /><br /> 19 (中的字元數*yyyy 為 yyyy-mm-dd* *hh: mm:* 格式)<br /><br /> 中的多個<br /><br /> 20 + *s* (中的字元數*yyyy 為 yyyy-mm-dd hh: mm:* [.fff] 格式，其中*s*是秒數有效位數)。|  
 |SQL_INTERVAL_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數*p* (如果*s*= 0) 或*p* + *s*+ 1 (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 9 +*p* (如果*s*= 0) 或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|何處*p*是間隔開頭有效位數並*s*是秒數有效位數 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - command line setup [Reporting Services]
@@ -21,12 +20,12 @@ ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af30ed5d0e275353691e506dd49eeaebcea10d3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 899b202de247a28e4a842c313c32a8b4f57417df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353685"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093662"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>其他 Reporting Services 升級問題
   本主題描述升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時可能遇到的已知問題。 **Upgrade Advisor 不會偵測這些問題。** 如需詳細資訊，請參閱[SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/?LinkID=296445)  

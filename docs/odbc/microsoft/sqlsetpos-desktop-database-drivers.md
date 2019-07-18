@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95117c82c213851d2e0600e65d8061ce532d9933
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d35a282acf3b672113ec71b534b4087aa3549285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905467"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos (桌面資料庫驅動程式)
 大量模式語意**SQLSetPos**具有呼叫*irow*支援等於 0 的引數。  

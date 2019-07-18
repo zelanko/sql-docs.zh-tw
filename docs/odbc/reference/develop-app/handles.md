@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139044"
 ---
 # <a name="handles"></a>處理
 控點是不透明，32 位元的值，識別特定的項目;在 ODBC 中，此項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員] 或 [驅動程式會建立指定型別的新項目和其控制代碼傳回應用程式。 稍後在應用程式會使用控制代碼呼叫 ODBC 函數時，找出該項目。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  
@@ -78,7 +77,7 @@ SQLCloseCursor(hstmtOrder);
   
  稍後，當應用程式會呼叫**SQLExecute**來產生特定的銷售訂單的行號的結果集，它會傳遞相同的控制代碼。 驅動程式會使用控制代碼從結構中擷取的存取 」 計劃識別碼。 它會將識別碼傳送至資料來源，告訴它這還打算執行。  
   
- ODBC 有兩個層級的控制代碼： 驅動程式管理員控制代碼和驅動程式的控制代碼。 呼叫 ODBC 函數，因為它在驅動程式管理員會呼叫這些函式時，應用程式會使用驅動程式管理員控制代碼。 驅動程式管理員會使用此控制代碼來尋找對應的驅動程式控制代碼，並使用驅動程式的控制代碼，驅動程式中呼叫函數時。 如需驅動程式和驅動程式管理員控制代碼的使用方式的範例，請參閱 <<c0> [ 在連線程序中的驅動程式管理員角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
+ ODBC 有兩個層級的控制代碼：驅動程式管理員控制代碼和驅動程式的控制代碼。 呼叫 ODBC 函數，因為它在驅動程式管理員會呼叫這些函式時，應用程式會使用驅動程式管理員控制代碼。 驅動程式管理員會使用此控制代碼來尋找對應的驅動程式控制代碼，並使用驅動程式的控制代碼，驅動程式中呼叫函數時。 如需驅動程式和驅動程式管理員控制代碼的使用方式的範例，請參閱 <<c0> [ 在連線程序中的驅動程式管理員角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
   
  有兩個層級的控制代碼是 ODBC 架構; 的成品在大部分情況下，不相關應用程式或驅動程式。 雖然通常是沒有理由這麼做，就可以判斷驅動程式的控制代碼藉由呼叫應用程式**SQLGetInfo**。  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787196"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>設定 locks 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **locks** 選項會設定可用鎖定的最大數目，藉此限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 用於鎖定的記憶體數量。 預設值為 0，允許 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根據變更系統需求，動態配置與取消配置鎖定結構。  
@@ -39,7 +39,7 @@ ms.locfileid: "58530545"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 locks 選項之後](#FollowUp)  
+-   **後續操作：** [設定鎖定選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -64,7 +64,7 @@ ms.locfileid: "58530545"
   
 #### <a name="to-configure-the-locks-option"></a>若要設定 locks 選項  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -78,9 +78,9 @@ ms.locfileid: "58530545"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 設定 `locks` 選項的值，將可供所有使用者使用的鎖定數目設定為 `20000`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 設定 `locks` 選項的值，將可供所有使用者使用的鎖定數目設定為 `20000`。  
   
 ```sql  
 Use AdventureWorks2012 ;  
@@ -97,7 +97,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定 locks 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定鎖定選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

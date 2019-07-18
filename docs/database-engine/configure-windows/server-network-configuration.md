@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 2166549274f323894e7ba36b9495c56184745557
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771901"
 ---
 # <a name="server-network-configuration"></a>伺服器網路組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

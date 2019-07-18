@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774180"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public int getSQLStateType()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getSQLStateType 方法是由 java.sql.DatabaseMetaData 介面中 getSQLStateType 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

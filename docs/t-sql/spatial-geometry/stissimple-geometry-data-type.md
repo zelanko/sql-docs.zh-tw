@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsSimple (geometry Data Type)
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e974d8cda1a6c21e7b3d568f242d36c96d81b5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 662ead77fe7af659718266ab3518a13536c77e7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938758"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47718296"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  
   
- CLR 傳回類型：**SqlBoolean**  
+ CLR 傳回型別：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** 執行個體必須符合以下所有的需求，才能是簡單的執行個體：  

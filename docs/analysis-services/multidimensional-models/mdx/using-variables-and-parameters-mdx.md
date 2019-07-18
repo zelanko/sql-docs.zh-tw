@@ -1,5 +1,5 @@
 ---
-title: 使用變數和參數 (MDX) |Microsoft 文件
+title: 使用變數和參數 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: deb1f7b4e641dd2347e8629e1e13ad3f4da7788c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027005"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62989363"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>使用變數與參數 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，您可以參數化多維度運算式 (MDX) 陳述式。 您可以使用參數化陳述式，建立可在執行階段自訂的一般陳述式。  
+  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，您可以參數化多維度運算式 (MDX) 陳述式。 您可以使用參數化陳述式，建立可在執行階段自訂的一般陳述式。  
   
- 在建立參數化陳述式時，您可以在名稱前面加上 @ 符號，來識別參數名稱。 例如，@Year會是有效的參數名稱  
+ 在建立參數化陳述式時，您可以在名稱前面加上 @ 符號，來識別參數名稱。 比方說，@Year會是有效的參數名稱  
   
  MDX 只支援常值或純量值的參數。 若要建立參考成員、集合或 Tuple 的參數，您必須使用函數，例如 [StrToMember](../../../mdx/strtomember-mdx.md) 或 [StrToSet](../../../mdx/strtoset-mdx.md)。  
   
- 下列 XML for Analysis (XMLA) 範例中@CountryName參數會包含國家/地區的客戶擷取資料：  
+ 在下列 XML for Analysis (XMLA) 範例中，@CountryName參數會包含哪些客戶擷取資料的國家/地區：  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -54,6 +54,6 @@ from [Adventure Works]
  此功能若要與 OLE DB 搭配使用，您可以使用 **ICommandWithParameters** 介面。 此功能若要與 ADOMD.Net 搭配使用，您可以使用 **AdomdCommand.Parameters** 集合。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 指令碼基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

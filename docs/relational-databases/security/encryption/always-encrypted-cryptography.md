@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted 密碼編譯 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,26 +13,26 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 6e0ec7ce1a9c3a171ea44b23c5fa4a5897ad7de8
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007581"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388371"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本文件描述加密演算法和機制，以衍生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 永遠加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的密碼編譯內容。  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>金鑰、金鑰存放區及金鑰加密演算法  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>金鑰、金鑰存放區及金鑰加密演算法
  Always Encrypted 使用兩種金鑰類型：資料行主要金鑰和資料行加密金鑰。  
   
- 資料行主要金鑰 (CMK) 是以金鑰加密的金鑰 (也就是用來加密其他金鑰的金鑰)，其一律位於用戶端的控制項中，並儲存於外部金鑰存放區中。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [Windows 憑證存放區](/windows/desktop/SecCrypto/using-certificate-stores) 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 金鑰存放區提供者和硬體安全性模組 (HSM)   (如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md))。應用程式開發人員可以針對任意存放區提供自訂提供者。  
+ 資料行主要金鑰 (CMK) 是加密金鑰的金鑰 (也就是用來加密其它金鑰的金鑰)，其一律會由用戶端控制，並儲存於外部金鑰存放區中。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [Windows 憑證存放區](/windows/desktop/SecCrypto/using-certificate-stores) 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 金鑰存放區提供者和硬體安全性模組 (HSM)  (如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md))。應用程式開發人員可以針對任意存放區提供自訂提供者。  
   
- 資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (也就是用來保護資料的金鑰)。  
+ 資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (例如：用來保護資料的金鑰)。  
   
- 所有的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用 RSA 搭配最佳非對稱加密填補 (RSA-OAEP)，並利用 A.2.1 節中 RFC 8017 所指定的預設參數，來加密 CEK。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。  
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用具備最佳非對稱加密填補的 RSA (RSA-OAEP) 來加密 CEK。 支援 Microsoft Cryptography API 的金鑰存放區提供者包括：.NET Framework 中的新一代 (CNG) ([SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) 使用 RFC 8017 在第 A.2.1 節指定的預設參數。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。 所有其它的金鑰存放區提供者都使用 SHA-256。 
   
 ## <a name="data-encryption-algorithm"></a>資料加密演算法  
  「永遠加密」會使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 演算法來加密資料庫中的資料。  
@@ -43,7 +43,7 @@ ms.locfileid: "57007581"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用下列步驟，來計算指定純文字值的加密文字值。  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>步驟 1：產生初始化向量 (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>步驟 1:產生初始化向量 (IV)  
  「永遠加密」支援 **AEAD_AES_256_CBC_HMAC_SHA_256**的兩種變化：  
   
 -   隨機化  
@@ -56,7 +56,7 @@ ms.locfileid: "57007581"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- 如果是具決定性加密，就不會隨機產生 IV，而是使用下列演算法 ，從純文字值中加以衍生︰  
+ 若有具確定性的加密，便不會隨機產生 IV，而是會使用以下演算法從純文字的值衍生：  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -68,12 +68,12 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- 執行 HMAC 值截斷，以符合 IV 所需的 1 個資料區塊。    
+ 執行 HMAC 值截斷以使其可以容納在 IV 所需要的 1 個資料區塊中。
 因此，具決定性加密一律會針對指定的純文字值產生相同加密文字，這樣就能藉由比較兩個純文字值的對應加密文字值，來推斷其是否相等。 這個有限度的資料洩漏，讓資料庫系統能夠支援已加密資料行值上的相等比較。  
   
  相較於替代項目，具決定性加密在隱藏模式中更具效率，例如使用預先定義的 IV 值。  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>步驟 2：計算 AES_256_CBC 加密文字  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>步驟 2:計算 AES_256_CBC 加密文字  
  計算 IV 之後，即會產生 **AES_256_CBC** 加密文字︰  
   
 ```  
@@ -96,12 +96,12 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  其中：  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
 ### <a name="step-4-concatenation"></a>步驟 4：串連  
- 最後，只需串連演算法版本位元組、MAC、IV 和 AES_256_CBC 加密文字，就能產生加密的值︰  
+ 最後，會透過將演算法版本位元組、MAC、IV 和 AES_256_CBC 加密文字串連，來產生加密值：  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  

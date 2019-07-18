@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788413"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>部分可用性複本已中斷連接
     

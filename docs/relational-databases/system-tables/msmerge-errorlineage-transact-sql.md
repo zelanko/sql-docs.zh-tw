@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d07a3fadfd2439c35b9d5255ff94d58c79bbbae5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044766"
 ---
 # <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

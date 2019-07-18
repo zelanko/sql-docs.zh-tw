@@ -1,5 +1,5 @@
 ---
-title: 使用者資料連接無法委派 |Microsoft 文件
+title: 無法委派使用者的資料連接 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208008"
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>無法委派使用者的資料連接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "34028339"
 |||  
 |-|-|  
 |適用對象|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|嘗試使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料提供者時發生連接失敗。|  
-|메시지 텍스트|資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理︰ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料|  
+|訊息文字|資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料|  
   
 ## <a name="explanation"></a>說明  
  這個錯誤訊息有多個原因。 所有原因背後的共同因素就是 Excel Services 無法從 SharePoint 中的宣告 Token 取得有效的 Windows 使用者識別。 如果是包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 活頁簿，下列任何條件存在時就會發生這個錯誤：  
@@ -49,9 +49,9 @@ ms.locfileid: "34028339"
   
 #### <a name="enable-claims-to-windows-token-service"></a>啟用對 Windows Token Service 的宣告  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]** 。  
   
-2.  選取 [對 Windows Token 服務的宣告]，然後按一下 [啟動]。  
+2.  選取 [對 Windows Token 服務的宣告]  ，然後按一下 [啟動]  。  
   
 3.  確認該服務也在服務主控台中執行：  
   

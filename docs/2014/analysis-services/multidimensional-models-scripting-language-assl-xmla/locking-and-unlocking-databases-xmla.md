@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - locking [XML for Analysis]
@@ -17,12 +15,12 @@ ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1f518f846a6e0bb87f858d7a5798eb9a7e9c8d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702226"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>鎖定和解除鎖定資料庫 (XMLA)
   您可以鎖定及解除鎖定資料庫分別使用，則[鎖定](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)並[解除鎖定](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)XML for Analysis (XMLA) 中的命令。 一般而言，其他 XMLA 命令會視需要自動鎖定和解除鎖定物件，以便在執行期間完成命令。 您可以明確地鎖定或解除鎖定資料庫來執行單一交易內的多個命令，例如[批次](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)命令，以防止其他應用程式資料庫將寫入交易認可。  

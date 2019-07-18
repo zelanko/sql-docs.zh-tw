@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316205"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>清除追蹤視窗 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]對執行中的追蹤清除追蹤視窗。  
@@ -27,7 +27,7 @@ ms.locfileid: "52794148"
   
 1.  選取您要清除的追蹤視窗。  
   
-2.  在 [編輯] 功能表上，按一下 [清除追蹤視窗]。  
+2.  在 [編輯]  功能表上，按一下 [清除追蹤視窗]  。  
   
      此追蹤視窗的內容即會被移除。 請注意，如果已儲存追蹤檔或資料表，則檔案或資料表的內容會維持不變。  
   

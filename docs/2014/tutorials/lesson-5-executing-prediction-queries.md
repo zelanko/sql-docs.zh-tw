@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62822310"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>第 5 課：執行預測查詢
   在這一課，您將使用[SELECT FROM\<模型 > 預測 JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 陳述式來建立兩種不同預測基礎的決策樹模型中建立[第 2 課：將採礦模型加入關聯採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 這些預測類型定義如下。  

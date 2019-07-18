@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
@@ -14,12 +13,12 @@ ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ff9d6a44f027de2ef5994ea9a7b29c97175e45b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b0384498d5068171b205bcafdfd28222a86e1bab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069936"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>在 Analysis Services 中編寫管理工作的指令碼
   您可以撰寫或產生可手動執行或透過 SQL Server Agent 排程的指令碼，將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理工作自動化。 下表摘要說明可用的指令碼選項，並提供詳細資訊的連結。  

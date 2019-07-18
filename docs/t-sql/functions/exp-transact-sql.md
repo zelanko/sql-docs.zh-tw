@@ -16,16 +16,16 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3725fccd59dea96571a3f5b1b50338ec2adb2dee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b62046f315c6921a03cdf692561d8336398792ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65946092"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ EXP ( float_expression )
   
  數字的指數，是提升為數字乘冪的常數 **e**。 例如，EXP(1.0) = e^1.0 = 2.71828182845905 和 EXP(10) = e^10 = 22026.4657948067。  
   
- 數字之自然對數的指數就是該數字本身：EXP (LOG (*n*)) = *n*。 數字之指數的自然對數就是該數字本身：LOG (EXP (*n*)) = *n*。  
+ 一個數值的自然對數指數，也是該數值本身：EXP (LOG (*n*)) = *n*。 而一個數值的指數自然對數，也是該數值本身：LOG (EXP (*n*)) = *n*。  
   
 ## <a name="examples"></a>範例  
   

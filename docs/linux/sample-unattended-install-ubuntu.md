@@ -2,20 +2,18 @@
 title: 在 Ubuntu 上的 SQL Server 的自動的安裝
 titleSuffix: SQL Server
 description: SQL Server 指令碼範例-在 Ubuntu 上的自動安裝
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910487"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：適用於 Ubuntu 的自動安裝的 SQL Server 安裝指令碼
 
@@ -26,7 +24,7 @@ ms.locfileid: "57579048"
 > [!TIP]
 > 如果您不需要自動的安裝指令碼，安裝 SQL Server 的最快方式是遵循[快速入門適用於 Ubuntu](quickstart-install-connect-ubuntu.md)。 其他安裝資訊，請參閱[在 Linux 上的 SQL Server 的安裝指引](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 您需要至少 2 GB 的記憶體，在 Linux 上執行 SQL Server。
 - 必須是檔案系統**XFS**或是**EXT4**。 其他檔案系統，例如**BTRFS**，不支援。

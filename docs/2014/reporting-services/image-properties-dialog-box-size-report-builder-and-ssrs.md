@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb37b9da0e0bd51d6fed187abfe870b26603f8e3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108985"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>影像屬性對話方塊、大小 (報表產生器及 SSRS)
   選取 **[影像屬性]** 對話方塊上的 **[大小]** 來格式化欄位或設計區域中顯示之影像的大小，或變更資料格或文字方塊邊緣和資料格或文字方塊內包含之圖片或值之間的額外空間量。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **原始大小**  
  如果選取此選項且影像出現在欄位中，欄位大小便會調整，以容納整個集合中最大的影像。 如果選取此選項且影像出現在設計區域中，影像便會顯示為其原始大小。  
   

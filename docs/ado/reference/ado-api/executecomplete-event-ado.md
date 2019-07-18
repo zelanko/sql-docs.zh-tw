@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec656a49963eb02cb204d5be96d403726bba8c56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918786"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 **ExecuteComplete**命令已完成執行之後，系統會呼叫事件。  
@@ -56,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  A[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。 作業已執行連接。  
   
 ## <a name="remarks"></a>備註  
- **ExecuteComplete**事件可能是由於**連線。**[執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。**[執行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**資料錄集。**[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**資料錄集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或**資料錄集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
+ **ExecuteComplete**事件可能是由於**連線。** [執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。** [執行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**資料錄集。** [開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**資料錄集。** [Requery](../../../ado/reference/ado-api/requery-method.md)，或**資料錄集。** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a81993eff54c38ae0249e5e1dfbdc92f623d08e3
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6977e243173f527617707686369762dde0890fed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111408"
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

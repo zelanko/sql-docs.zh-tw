@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a68a6f66af2f74544f800d7c3786caf4a577d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014625"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
   這個 Active Server Pages (ASP) 應用程式可讓您在 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 AdventureWorks 範例資料庫的 Person.Contact 資料表中更新客戶資訊。 此應用程式會進行下列作業：  
@@ -76,7 +76,7 @@ ms.locfileid: "52806150"
 </ROOT>  
 ```  
   
- 下列程式碼是 ASP 應用程式 (SampleASP.asp)。 請將它儲存在與您使用網際網路服務管理員公用程式所建立之虛擬根目錄相關聯的目錄中  (這個虛擬根目錄並非使用 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公用程式所建立，因為 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 無法存取或識別 ASP 應用程式)。  
+ 下列程式碼是 ASP 應用程式 (SampleASP.asp)。 請將它儲存在與您使用網際網路服務管理員公用程式所建立之虛擬根目錄相關聯的目錄中 (這個虛擬根目錄並非使用 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公用程式所建立，因為 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 無法存取或識別 ASP 應用程式)。  
   
 > [!NOTE]  
 >  在此程式碼中，您必須將 "ServerName" 取代成執行 Microsoft Internet Information Services (IIS) 之伺服器的名稱。  

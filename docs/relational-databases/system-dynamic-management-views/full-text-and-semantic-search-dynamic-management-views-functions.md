@@ -12,15 +12,14 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], full-text search
 - full-text search [SQL Server], dynamic management views
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 255e7d71bef4e56d0a7dfba46e6d4535eb73c79c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130773"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文檢索和語意搜尋動態管理檢視函式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

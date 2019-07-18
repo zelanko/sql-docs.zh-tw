@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3c89eb2e6f810902e28e01c7e5ffbcdcc0375c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127180"
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo (擴充預存程序 API)
     
@@ -89,7 +89,7 @@ pfNull
  如果成功取得參數資訊，則會傳回 SUCCEED，否則會傳回 FAIL。 目前沒有任何遠端預存程序，且沒有第 *n* 個遠端預存程序參數時，會傳回 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **安全性注意事項**：您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+ **安全性注意事項**：您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充預存程序程式設計人員參考](database-engine-extended-stored-procedures-reference.md)  

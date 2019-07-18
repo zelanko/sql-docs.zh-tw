@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7ef3ecf31c0539f3b3cb2cf5a4f04b044e625bd1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095598"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
   本主題說明在 SharePoint 2010 和 SharePoint 2013 環境中安裝 SQL Server 商業智慧功能 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 的常見拓撲。 例如，單一伺服器和三層式安裝。  
@@ -66,14 +65,14 @@ ms.locfileid: "53365760"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**(4)**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
 |**(5)**|執行 **spPowerPivot.msi** ，以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫及排程資料重新整理。|  
 |**(6)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(7)**|SharePoint 內容、組態和服務應用程式資料庫。|  
   
- ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a> PowerPivot for SharePoint 2013 單一伺服器部署  
  單一伺服器部署對於測試很有用，但是不建議用於實際部署。  
@@ -85,7 +84,7 @@ ms.locfileid: "53365760"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|SharePoint 內容、組態和服務應用程式資料庫。|  
 |**(4)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
   
@@ -101,7 +100,7 @@ ms.locfileid: "53365760"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|執行 **spPowerPivot.msi** ，以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫及排程資料重新整理。|  
 |**(4)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(5)**|SharePoint 內容、組態和服務應用程式資料庫。|  
@@ -114,7 +113,7 @@ ms.locfileid: "53365760"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|執行 spPowerPivot.msi，以安裝資料提供者、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫及排程資料重新整理。|  
 |**(4)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(5)**|SharePoint 內容、組態和服務應用程式資料庫。|  
@@ -127,7 +126,7 @@ ms.locfileid: "53365760"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**(4)**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
 |**(5)**|SharePoint 內容、組態和服務應用程式資料庫。|  
@@ -141,7 +140,7 @@ ms.locfileid: "53365760"
 |||  
 |-|-|  
 |**(1)**|Excel 服務應用程式。 此服務應用程式是在 SharePoint 安裝過程中建立。|  
-|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]**。|  
+|**(2)**|PowerPivot 服務應用程式。 預設名稱是 **[預設的 PowerPivot 服務應用程式]** 。|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**(4)**|從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件安裝 SharePoint 的 Reporting Services 增益集。|  
 |**(5)**|執行 **spPowerPivot.msi** 以安裝資料提供者、PowerPivot 組態工具、PowerPivot 圖庫及排程資料重新整理。|  
@@ -169,7 +168,7 @@ ms.locfileid: "53365760"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> 三層向外延展部署  
  此拓撲描述在多部伺服器上執行相同共用服務的向外延展部署，可服務 PowerPivot 資料或 Reporting Services 報表的大量要求，並提供更佳的處理能力。 下圖顯示三個應用程式伺服器叢集，每個叢集執行不同的共用服務組合。 在 SharePoint 環境中，服務探索及可用性會內建於伺服器陣列中。 在執行相同共用服務應用程式之多部實體伺服器之間的平衡負載，是共用服務架構的一部分。  
   
- 部署多伺服器的伺服器陣列時，請務必遵循下列 SharePoint 文章中的指示：[多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)。  
+ 部署多伺服器陣列時，請務必遵循下列 SharePoint 文章中的指示：[多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)。  
   
  ![5 個伺服器拓撲](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 個伺服器拓撲")  
   

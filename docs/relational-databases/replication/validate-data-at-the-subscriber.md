@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508332"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "54135796"
 
  驗證資料是一個三部份式的處理：  
   
-1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱] 、[驗證多個訂閱] 和 [驗證所有訂閱]  對話方塊 (位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [本機發行集]資料夾和 [本機訂閱]資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+1.  *「標示」* 要驗證之發行集的單個或所有訂閱。 在 [驗證單一訂閱]  、[驗證多個訂閱]  和 [驗證所有訂閱]  對話方塊 (位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [本機發行集]  資料夾和 [本機訂閱]  資料夾) 中標示要驗證的訂閱。 您也可以從複寫監視器中的 **[所有訂閱]** 索引標籤、 **[訂閱監看清單]** 索引標籤和發行集節點標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 2.  在下一次由「散發代理程式」(用於異動複寫) 或「合併代理程式」(用於合併式複寫) 進行同步時，將對訂閱進行驗證。 「散發代理程式」通常連續執行，此時可立即進行驗證；「合併代理程式」通常視需要執行，此時驗證將在執行代理程式後進行。  
   
@@ -92,14 +92,14 @@ ms.locfileid: "54135796"
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。    
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。    
-3.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證訂閱]**。    
+3.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證訂閱]** 。    
 4.  在 **[驗證訂閱]** 對話方塊中，選取要驗證的訂閱：   
-    -   選取 **[驗證所有的 SQL Server 訂閱]**。    
-    -   選取 **[驗證下列訂閱]**，然後選取一或多個訂閱。    
-5.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[驗證選項]**，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。  
+    -   選取 **[驗證所有的 SQL Server 訂閱]** 。    
+    -   選取 **[驗證下列訂閱]** ，然後選取一或多個訂閱。    
+5.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[驗證選項]** ，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  在複寫監視器或 **[檢視同步處理的狀態]** 對話方塊中檢視驗證結果。 針對每個訂閱：   
-    1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]**。    
+    1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]** 。    
     2.  如果代理程式尚未執行，請按一下 **[檢視同步處理的狀態]** 對話方塊中的 **[啟動]** 。 對話方塊就會顯示關於驗證的參考用訊息。    
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
 
@@ -107,7 +107,7 @@ ms.locfileid: "54135796"
 
 #### <a name="all-articles"></a>所有發行項 
   
-1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@rowcount_only**值：  
+1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@rowcount_only** 值：  
   
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
@@ -119,7 +119,7 @@ ms.locfileid: "54135796"
   
 #### <a name="single-article"></a>單一發行項  
   
-1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication**、 **@article**的發行項名稱，及 **@rowcount_only**值：  
+1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、 **@article** 的發行項名稱，及 **@rowcount_only** 值：  
   
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
@@ -133,9 +133,9 @@ ms.locfileid: "54135796"
 #### <a name="single-subscriber"></a>單一訂閱者 
   
 1.  在發行集資料庫的發行者端，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) 來開啟明確交易。    
-2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 指定 **@publication**的發行集、 **@subscriber**的「訂閱者」名稱，及 **@destination_db**＞。    
+2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 指定 **@publication** 的發行集、 **@subscriber** 的「訂閱者」名稱，及 **@destination_db** ＞。    
 3.  (選擇性) 針對每個要驗證的訂閱重複步驟 2。    
-4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication**、 **@article**的發行項名稱，及 **@rowcount_only**值：    
+4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、 **@article** 的發行項名稱，及 **@rowcount_only** 值：    
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
   
@@ -152,17 +152,17 @@ ms.locfileid: "54135796"
 ### <a name="using-replication-monitor"></a>使用複寫監視器
   
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。   
-2.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證訂閱]**。   
+2.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證訂閱]** 。   
 3.  在 **[驗證訂閱]** 對話方塊中，選取要驗證的訂閱：  
   
-    -   選取 **[驗證所有的 SQL Server 訂閱]**。    
-    -   選取 **[驗證下列訂閱]**，然後選取一或多個訂閱。    
-4.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[驗證選項]**，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。    
+    -   選取 **[驗證所有的 SQL Server 訂閱]** 。    
+    -   選取 **[驗證下列訂閱]** ，然後選取一或多個訂閱。    
+4.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[驗證選項]** ，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  按一下 **[所有訂閱]** 索引標籤。  
 7.  檢視驗證結果。 針對每個發送訂閱：    
-    1.  如果代理程式未執行，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]**。    
-    2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。   
+    1.  如果代理程式未執行，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]** 。    
+    2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。   
     3.  檢視 **[所選取工作階段中的動作]** 文字區域之 **[散發者到訂閱者記錄]** 索引標籤中的資訊。  
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>針對合併式發行集的單一訂閱
@@ -171,13 +171,13 @@ ms.locfileid: "54135796"
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。    
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。   
-3.  展開要驗證訂閱的發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[驗證單一訂閱]**。    
-4.  在 **[驗證訂閱]** 對話方塊中，選取 **[驗證此訂閱]**。    
-5.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[選項]**，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。    
+3.  展開要驗證訂閱的發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[驗證單一訂閱]** 。    
+4.  在 **[驗證訂閱]** 對話方塊中，選取 **[驗證此訂閱]** 。    
+5.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[選項]** ，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  在「複寫監視器」或 **[檢視同步處理的狀態]** 對話方塊中檢視驗證結果：  
   
-    1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]**。    
+    1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]** 。    
     2.  如果代理程式未執行，請按一下 **[檢視同步處理的狀態]** 對話方塊中的 **[啟動]** 。 對話方塊就會顯示關於驗證的參考用訊息。  
   
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
@@ -187,11 +187,11 @@ ms.locfileid: "54135796"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。    
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。   
-3.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證所有訂閱]**。    
+3.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證所有訂閱]** 。    
 4.  在 **[驗證所有訂閱]** 對話方塊中，指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)。   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  在複寫監視器或 **[檢視同步處理的狀態]** 對話方塊中檢視驗證結果。 針對每個訂閱：    
-    1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]**。    
+    1.  展開發行集，以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]** 。    
     2.  如果代理程式未執行，請按一下 **[檢視同步處理的狀態]** 對話方塊中的 **[啟動]** 。 對話方塊就會顯示關於驗證的參考用訊息。  
   
      如果您未看到任何關於驗證的訊息，則代理程式已經記錄了後續訊息。 在此情況下，請在複寫監視器中檢視驗證結果。 如需詳細資訊，請參閱這個主題中＜複寫監視器＞的如何程序。  
@@ -202,18 +202,18 @@ ms.locfileid: "54135796"
 ### <a name="using-replication-monitor"></a>使用複寫監視器  
 1.  在複寫監視器中，展開左窗格裡的發行者群組，展開發行者，然後按一下發行集。    
 2.  按一下 **[所有訂閱]** 索引標籤。    
-3.  以滑鼠右鍵按一下您要驗證的訂閱，然後按一下 **[驗證單一訂閱]**。    
-4.  在 **[驗證訂閱]** 對話方塊中，選取 **[驗證此訂閱]**。    
-5.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[選項]**，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。    
+3.  以滑鼠右鍵按一下您要驗證的訂閱，然後按一下 **[驗證單一訂閱]** 。    
+4.  在 **[驗證訂閱]** 對話方塊中，選取 **[驗證此訂閱]** 。    
+5.  若要指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)，請按一下 **[選項]** ，然後在 **[訂閱驗證選項]** 對話方塊中指定選項。    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  按一下 **[所有訂閱]** 索引標籤。    
 8.  檢視驗證結果：    
-    1.  如果代理程式未執行，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]**。    
-    2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。    
+    1.  如果代理程式未執行，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]** 。    
+    2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。    
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。  
 
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication**的發行集、 **@subscriber**的「訂閱者」名稱、 **@subscriber_db**的發行項名稱，及 **@level**值：   
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication** 的發行集、 **@subscriber** 的「訂閱者」名稱、 **@subscriber_db** 的發行項名稱，及 **@level** 值：   
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
   
@@ -230,17 +230,17 @@ ms.locfileid: "54135796"
   
 ### <a name="using-replication-monitor"></a>使用複寫監視器    
 1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。    
-2.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證所有訂閱]**。    
+2.  以滑鼠右鍵按一下您要驗證訂閱的發行集，然後按一下 **[驗證所有訂閱]** 。    
 3.  在 **[驗證所有訂閱]** 對話方塊中，指定要執行驗證的類型 (資料列計數，或資料列計數與總和檢查碼)。    
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 5.  按一下 **[所有訂閱]** 索引標籤。    
 6.  檢視驗證結果。 針對每個發送訂閱：    
-    1.  如果代理程式未執行，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]**。    
-    2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。    
+    1.  如果代理程式未執行，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]** 。    
+    2.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。    
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。 
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@level**值：    
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@level** 值：    
     -   **1** - 只驗證列數。   
     -   **3** - 驗證列數二進位總和檢查碼。  
   

@@ -1,7 +1,7 @@
 ---
 title: 保護 SQL Server 的安全 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -18,17 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1c5694fc4fbf2464030eb5fe3104117cfee71eb0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 410fef7965918c69c49585fe282277ccebf01575
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398361"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314011"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
+
+維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
   
  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [網站上找到有關](https://go.microsoft.com/fwlink/?LinkID=31629) 安全性的詳細資訊。 這包括最佳作法指南和安全性檢查清單。 該網站也提供了最新的 Service Pack 資訊和下載檔。  
   
@@ -43,6 +45,7 @@ ms.locfileid: "52398361"
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] 以及從網路存取其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|《 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 線上叢書》中的＜設定與保護伺服器環境安全＞|  
+| &nbsp; | &nbsp; |
   
 ### <a name="operating-system-security"></a>作業系統安全性  
  作業系統的 Service Pack 和升級包含重要的安全性增強功能。 任何更新和升級在經過資料庫應用程式的測試後，請立即套用至作業系統。  
@@ -56,12 +59,14 @@ ms.locfileid: "52398361"
 |設定要搭配使用的防火牆 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |開啟防火牆的特定通訊埠以啟用存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |使用通道繫結與服務繫結，設定驗證擴充保護的支援|[使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
+| &nbsp; | &nbsp; |
   
  介面區縮小是一種停止或停用未使用元件的安全性措施。 介面區縮小可透過提供較少的系統潛在攻擊途徑，以協助提高安全性。 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的介面區設限，重點事項包括僅授與服務和使用者適當權限，以賦予「最少權限」執行必要的服務。 下表包含服務及系統存取的詳細資訊。  
   
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |所需的服務 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
+| &nbsp; | &nbsp; |
   
  如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統使用 Internet Information Services (IIS)，則需要設定其他步驟以保護平台介面的安全。 下表包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Internet Information Services 的相關資訊。  
   
@@ -70,6 +75,7 @@ ms.locfileid: "52398361"
 |IIS 安全性 [!INCLUDE[ssEW](../../includes/ssew-md.md)]|《 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 線上叢書》中的＜IIS 安全性＞|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 驗證|[Reporting Services 中的驗證](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] 與 IIS 存取|《 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 線上叢書》中的＜Internet Information Services 安全性流程圖＞|  
+| &nbsp; | &nbsp; |
   
 ### <a name="sql-server-operating-system-files-security"></a>SQL Server 作業系統檔案安全性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用作業系統檔案執行作業及儲存資料。 檔案安全性的最佳作法要求針對這些檔案設定存取限制。 下表包含這些檔案的詳細資訊。  
@@ -77,14 +83,14 @@ ms.locfileid: "52398361"
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案|[SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
+| &nbsp; | &nbsp; |
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級提供增強的安全性。 如需得知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否已有最新的 Service Pack 可供使用，請瀏覽 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) 網站。  
   
  您可以利用下列指令碼判斷系統上安裝的 Service Pack 版本。  
   
-```  
+```sql
 SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));  
-GO  
 ```  
   
 ## <a name="principals-and-database-object-security"></a>主體與資料庫物件安全性  
@@ -95,6 +101,7 @@ GO
 |伺服器與資料庫使用者、角色和處理序|[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)|  
 |伺服器與資料庫物件安全性|[安全性實體](../../relational-databases/security/securables.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性階層架構|[權限階層 &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)|  
+| &nbsp; | &nbsp; |
   
 ### <a name="encryption-and-certificates"></a>加密和憑證  
  加密並不能解決存取控制問題。 但是，若發生存取控制失靈的罕見情形，加密則可限縮資料遺失的風險以增強安全性。 例如，只要資料已加密，即使資料庫主機電腦設定不當而遭惡意使用者取得敏感性資料 (如信用卡號)，失竊的資訊就可能毫無用處。 下表包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密的詳細資訊。  
@@ -111,12 +118,24 @@ GO
 |---------------------------|---------|  
 |建立使用的憑證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|  
 |搭配資料庫鏡像使用憑證|[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
-  
-## <a name="application-security"></a>應用程式安全性  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性最佳做法包括撰寫安全的用戶端應用程式。  
-  
- 如需如何在網路層維護用戶端應用程式安全的詳細資訊，請參閱 [用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)。  
-  
+| &nbsp; | &nbsp; |
+
+## <a name="application-security"></a>應用程式安全性
+
+### <a name="client-programs"></a>用戶端程式
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性最佳做法包括撰寫安全的用戶端應用程式。 如需如何在網路層維護用戶端應用程式安全的詳細資訊，請參閱 [用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)。
+
+### <a name="windows-defender-application-control-wdac"></a>Windows Defender 應用程式控制 (WDAC)
+
+<!--
+This next live paragraph, about Windows Defender Application Control (WDAC), was requested by Bella Brahm, 2019/06/20. (GeneMi)
+
+WDAC can also prevent the kind of highly sophisticated 'Nansh0u' attacks described in 'https://www.guardicore.com/2019/05/nansh0u-campaign-hackers-arsenal-grows-stronger/'. That webpage recommends this present article.
+-->
+
+Windows Defender 應用程式控制 (WDAC) 會防止未經授權的程式碼執行。 WDAC 能有效減低可執行檔形式的惡意程式碼威脅。 如需詳細資訊，請參閱 [Windows Defender 應用程式控制](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)文件。
+
 ## <a name="sql-server-security-tools-utilities-views-and-functions"></a>SQL Server 安全性工具、公用程式、檢視和函數  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供可用於設定與管理安全性的工具、公用程式、檢視和函數。  
   
@@ -130,7 +149,8 @@ GO
 |網路組態和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)|  
 |使用以原則為基礎的管理來啟用及停用功能|[使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |管理報表伺服器的對稱金鑰|[rskeymgmt 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
-  
+| &nbsp; | &nbsp; |
+
 ### <a name="sql-server-security-catalog-views-and-functions"></a>SQL Server 安全性目錄檢視和函數  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在已針對效能與實用性最佳化的數種檢視和函數中公開安全性資訊。 下表包含安全性檢視和函數的相關資訊。  
   
@@ -139,7 +159,8 @@ GO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性目錄檢視，傳回資料庫層級與伺服器層級的權限、主體、角色等等的相關資訊。 此外，另有若干目錄檢視提供了加密金鑰、憑證與認證的相關資訊。|[安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性函數，可傳回目前使用者、權限和結構描述的相關資訊。|[安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性動態管理檢視。|[安全性相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
-  
+| &nbsp; | &nbsp; |
+
 ## <a name="related-content"></a>相關內容  
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

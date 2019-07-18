@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36ba3cf5fec53024faf83a83d7e9a24116f143be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 65c4a60dbd9dd4d7f0d3ffd59897262679b9a656
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849576"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764702"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream-long"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

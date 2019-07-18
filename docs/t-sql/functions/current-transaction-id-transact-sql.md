@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - CURRENT_TRANSACTION_ID function
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f348eee57b5df86b437a1ebd6a68544e7b4c7c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d81571dbde882d1ec6b91e2a05933aeb178e19d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947920"
 ---
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ CURRENT_TRANSACTION_ID( )
 ## <a name="return-value"></a>傳回值  
 目前工作階段中目前交易的交易識別碼，擷取自 [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md)。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 任何使用者都可傳回目前工作階段的交易識別碼。
   
 ## <a name="examples"></a>範例  

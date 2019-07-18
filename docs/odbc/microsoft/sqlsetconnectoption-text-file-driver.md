@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed5c3230a12e79c79624d69b4714a828a865f1dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32c4a0219b049ee66a38d6c7c10295245dd48ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905478"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (文字檔驅動程式)
 > [!NOTE]  
 >  本主題提供文字檔驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|Sqlfreestmt|註解|  
+|fOption|註解|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，此驅動程式無法防止更新，如果 SQL_ACCESS_MODE 設 SQL_MODE_READ_ONLY。|  
 |SQL_AUTOCOMMIT|文字驅動程式僅支援 SQL_AUTOCOMMIT 設為開啟 （預設狀態），因為它們並不支援交易。|  

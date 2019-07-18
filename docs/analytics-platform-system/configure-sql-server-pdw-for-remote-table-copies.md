@@ -2,19 +2,18 @@
 title: 設定用於遠端資料表複本的 Parallel Data Warehouse |Microsoft Docs
 description: 描述如何設定要使用之遠端資料表複製功能，將資料表複製到非應用裝置伺服器上 SMP SQL Server 資料庫的平行處理資料倉儲。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4f3abd60cb4f87abc5e6cbdc420fc6c551b0ab15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961227"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>設定平行處理資料倉儲用於遠端資料表複本
 描述如何設定要使用之遠端資料表複製功能，將資料表複製到非應用裝置伺服器上 SMP SQL Server 資料庫的 SQL Server PDW。  

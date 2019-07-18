@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7317b6b9a5251c8d104e6c2153ec8c009b2aea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917593"
 ---
 # <a name="prepared-property-ado"></a>Prepared 屬性 (ADO)
 指出是否要儲存已編譯的版本[命令](../../../ado/reference/ado-api/command-object-ado.md)之前執行。  

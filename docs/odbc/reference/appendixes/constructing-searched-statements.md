@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 616e4241c6d28e846a56116a70e79254e13dd5fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8f24fe59da1377ea42900a8f1f0b89eb97125f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019175"
 ---
 # <a name="constructing-searched-statements"></a>建構搜尋的陳述式
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ ms.locfileid: "47834936"
   
  如果定位的 update 或 delete 陳述式會影響多個資料列，資料指標程式庫會更新資料列狀態陣列，只會針對資料列的資料指標的位置，傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 如果陳述式不會識別任何資料列，資料指標程式庫不會更新資料列狀態陣列，並傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01001 （資料指標作業衝突）。 應用程式可以呼叫**SQLRowCount**來判斷已更新或刪除資料列數目。  
   
- 如果**選取 **子句用來定位資料指標來呼叫**SQLGetData**識別一個以上的資料列**SQLGetData**不保證會傳回正確的資料。 如果它不會識別任何資料列， **SQLGetData**傳回 sql_no_data 為止。  
+ 如果**選取** 子句用來定位資料指標來呼叫**SQLGetData**識別一個以上的資料列**SQLGetData**不保證會傳回正確的資料。 如果它不會識別任何資料列， **SQLGetData**傳回 sql_no_data 為止。  
   
  如果應用程式符合下列指導方針中，**其中**資料指標程式庫所建構的子句應專門用於識別目前的資料列，除非這是不可能的例如當資料來源包含重複資料列。  
   

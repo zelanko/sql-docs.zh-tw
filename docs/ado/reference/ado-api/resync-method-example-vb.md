@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8ad898c7a02a46b12c546ae11b2387f8da0479e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917150"
 ---
 # <a name="resync-method-example-vb"></a>Resync 方法範例 (VB)
 此範例示範如何使用[Resync](../../../ado/reference/ado-api/resync-method.md)方法，以重新整理靜態的資料錄集中的資料。  

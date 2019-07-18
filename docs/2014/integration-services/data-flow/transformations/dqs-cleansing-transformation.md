@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900395"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
   DQS 清理轉換會使用 Data Quality Services (DQS) 來更正連接之資料來源的資料，方法是套用針對所連接資料來源或相似資料來源而建立的核准規則。 如需有關資料更正規則的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。 如需有關 DQS 的詳細資訊，請參閱＜ [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)＞。  
@@ -31,7 +31,7 @@ ms.locfileid: "58386156"
   
 -   資料行對應至具有相容資料類型的定義域。  
   
- 轉換還包括您設定來處理資料列層級錯誤的錯誤輸出。 若要設定錯誤輸出，請使用 **[DQS 清理轉換編輯器]**。  
+ 轉換還包括您設定來處理資料列層級錯誤的錯誤輸出。 若要設定錯誤輸出，請使用 **[DQS 清理轉換編輯器]** 。  
   
  您可以在資料流程中包括 [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md) ，用於識別資料中可能重複的資料列。  
   

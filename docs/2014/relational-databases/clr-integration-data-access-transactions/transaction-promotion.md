@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874764"
 ---
 # <a name="transaction-promotion"></a>交易升級
   交易*促銷*說明可以為完全可散發之交易自動升級，視需要的輕量型本機交易。 當 Managed 預存程序在伺服器的資料庫交易內叫用時，Common Language Runtime (CLR) 程式碼會在本機交易的環境中執行。  如果遠端伺服器的連接是在交易資料庫內開啟的，則會將遠端伺服器的連接編列至分散式交易，而且會將本機交易自動升級為分散式交易。 因此，交易升級可以藉由直到需要時才建立分散式交易的方式，將分散式交易的負擔降至最低。 如果您已經使用 `Enlist` 關鍵字啟用交易升級，則交易升級是自動的，無需開發人員從中操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .NET Framework 資料提供者支援交易升級，可透過 .NET Framework `System.Data.SqlClient` 命名空間中的類別來處理。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
@@ -15,18 +14,18 @@ ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2a9a349435c48c3f9c4a9ea4672ec52e83ce01d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058310"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查閱轉換編輯器 (參考資料表索引標籤)
   使用 **[模糊查閱轉換編輯器]** 對話方塊的 **[參考資料表]** 索引標籤，指定來源資料表和用於查閱的索引。 參考資料來源必須是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表。  
   
 > [!NOTE]  
->  模糊查閱轉換會建立參考資料表的工作副本。 下面描述的索引是使用特殊資料表，而非使用一般 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引在此工作資料表上建立的。 除非您選取 **[維護儲存的索引]**，否則轉換不會修改現有的來源資料表。 在此情況下，它會在參考資料表上建立觸發程序，以根據參考資料表的變更來更新工作資料表和查閱索引資料表。  
+>  模糊查閱轉換會建立參考資料表的工作副本。 下面描述的索引是使用特殊資料表，而非使用一般 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引在此工作資料表上建立的。 除非您選取 **[維護儲存的索引]** ，否則轉換不會修改現有的來源資料表。 在此情況下，它會在參考資料表上建立觸發程序，以根據參考資料表的變更來更新工作資料表和查閱索引資料表。  
   
 > [!NOTE]  
 >  `Exhaustive`而`MaxMemoryUsage`模糊查閱 」 轉換的屬性不適用於**模糊查閱轉換編輯器**，但可以透過設定**進階編輯器**。 此外，大於 100 的值`MaxOutputMatchesPerInput`您可以只在指定**進階編輯器**。 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)＞的「模糊查閱轉換」一節。  
@@ -35,10 +34,10 @@ ms.locfileid: "58380766"
   
 ## <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
+ 從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增]  來建立新連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
  **產生新的索引**  
  指定轉換應建立新的索引以用來查閱。  

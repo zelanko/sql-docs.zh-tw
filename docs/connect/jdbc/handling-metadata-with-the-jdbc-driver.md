@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7dc3913728eb2292088af6a2c84141749715c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c479651027429463dc88ae7ddce816a7973ac0d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850016"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781781"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>使用 JDBC Driver 處理中繼資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

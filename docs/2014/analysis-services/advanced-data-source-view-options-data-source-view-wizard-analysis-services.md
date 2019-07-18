@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.advancedoptions.f1
@@ -13,17 +12,17 @@ ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062848"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>進階資料來源檢視選項對話方塊 (資料來源檢視精靈) (Analysis Services)
   **[進階資料來源檢視選項]** 對話方塊會提供其他控制項，讓您控制資料來源檢視如何從資料來源提取結構描述和關聯性以建立檢視。  
   
- 若要開啟 **[進階資料來源檢視選項]** 對話方塊，在資料來源檢視精靈中，於 **[選取資料來源]** 頁面上，按一下 **[進階]**。  
+ 若要開啟 **[進階資料來源檢視選項]** 對話方塊，在資料來源檢視精靈中，於 **[選取資料來源]** 頁面上，按一下 **[進階]** 。  
   
 ## <a name="options"></a>選項。  
  **擷取關聯性**  

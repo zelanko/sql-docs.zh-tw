@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394276"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832953"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [候選索引鍵設定檔要求] 設定選項。 候選索引鍵設定檔會報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。  
@@ -111,7 +111,7 @@ ms.locfileid: "58394276"
  **RequestID**  
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
-### <a name="options"></a>選項。  
+### <a name="options"></a>選項  
  **ThresholdSetting**  
  這個屬性具有下表中所列的選項。 這個屬性的預設值為 [已指定]。  
   

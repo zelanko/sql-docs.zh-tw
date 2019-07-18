@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923988"
 ---
 # <a name="the-field-object"></a>Field 物件
 每個**欄位**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表指標到另一個**資料錄集**，呼叫一章。 例外狀況，例如章節資料行，將本指南稍後會說明。  

@@ -22,12 +22,12 @@ ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b9c8d95cec73c09b59a1d2045961fb1707f0d92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 297ef4c06b88d02e3c1a28829c7223d49c8ecee6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503709"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,7 @@ DROP QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -63,7 +60,7 @@ DROP QUEUE <object>
 ## <a name="remarks"></a>Remarks  
  如果有任何服務參考佇列，您便不能卸除這個佇列。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  卸除佇列的權限預設為佇列的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

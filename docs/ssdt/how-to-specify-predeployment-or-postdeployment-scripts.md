@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65098464"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>HOW TO：指定預先部署或部署後指令碼
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定預先部署或部署後指令碼
 預先部署和部署後指令碼會分別執行主要部署指令碼前後的 Transact\-SQL 陳述式，主要部署指令碼則是從資料庫專案產生。 專案中只能有一個預先部署指令碼和一個部署後指令碼。 這些指令碼有許多用途。 例如：  
   
 -   預先部署指令碼可以從將要變更的資料表複製資料到暫存資料表，之後再由部署後指令碼將資料重新格式化並套用到所變更的資料表。  
@@ -34,7 +34,7 @@ END
   
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>若要加入和修改預先部署或部署後指令碼  
   
-1.  在 [方案總管] 中，展開資料庫專案以顯示 [指令碼] 資料夾。  
+1.  在 [方案總管]  中，展開資料庫專案以顯示 [指令碼] 資料夾。  
   
 2.  以滑鼠右鍵按一下 [指令碼] 資料夾，並選取 [加入]。  
   

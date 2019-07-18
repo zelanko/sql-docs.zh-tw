@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf8f57f65281ad0c7ee2b603e5e35d0f22fb6783
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63065516"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用圖表配置 (Visual Database Tools)
   您可以自訂資料庫圖表的外觀。  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795929"
 ---
 # <a name="stored-procedures---calling"></a>預存程序 - 呼叫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "47740626"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**？ =**]**呼叫**_程序\_名稱_[**(**[*參數*] [[_參數_]]...**)**]}  
+ {[**?=**]**call**_procedure\_name_[**(**[*parameter*][**,**[_parameter_]]...**)**]}  
   
  例如：  
   

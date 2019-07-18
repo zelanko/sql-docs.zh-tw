@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026925"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "54405608"
   
 ||||  
 |-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|**資料行名稱**|**型別**|**描述**|  
 |*class*|**int**|1 = 物件或資料行 (包含模組、XPs、檢視、同義字及資料表)。<br /><br /> 4 = 資料庫主體<br /><br /> 5 = 組件<br /><br /> 6 = 類型<br /><br /> 7 = 索引 (全文檢索索引)<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 19 = 路由<br /><br /> 30 = 稽核規格|  
 |*class_desc*|**nvarchar(120)**|實體類別的描述。 下列一項動作以符合的類別：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|實體的識別碼。<br /><br /> 如果*類別*= 1，則 object_id<br /><br /> 如果*類別*= 4，則 sys.database_principals.principal_id。<br /><br /> 如果*類別*= 5，則 sys.assemblies.assembly_id。<br /><br /> 如果*類別*= 6，則 sys.types.user_type_id。<br /><br /> 如果*類別*= 7，則 sys.indexes.index_id。<br /><br /> 如果*類別*= 12，則 sys.triggers.object_id。<br /><br /> 如果*類別*= 19，則為 sys.routes.route_id。<br /><br /> 如果*類別*= 30，則 sys。 database_audit_specifications.database_specification_id.|  

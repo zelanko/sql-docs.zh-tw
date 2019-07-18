@@ -1,5 +1,5 @@
 ---
-title: 資料採礦工具 |Microsoft 文件
+title: 資料採礦工具 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210083"
 ---
 # <a name="data-mining-tools"></a>資料採礦工具。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015145"
 ## <a name="data-mining-wizard"></a>資料採礦精靈  
  使用資料採礦精靈開始建立資料採礦方案。 此精靈非常快速且容易使用，可引導您建立資料採礦結構和初始相關之採礦模型的程序，並包含選取演算法類型和資料來源以及定義案例資料進行分析的工作。  
   
- **如需詳細資訊︰**[Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md) (資料採礦精靈 (Analysis Services - 資料採礦))。  
+ **如需詳細資訊：** [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>資料採礦設計師  
+## <a name="data-mining-designer"></a>[資料採礦設計師]  
  在您使用資料採礦精靈建立採礦結構和採礦模型之後，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用資料採礦設計師來處理現有的模型與結構。  
   
  此設計師包含適用於以下工作的工具：  
@@ -56,7 +56,7 @@ ms.locfileid: "34015145"
   
 -   針對現有的採礦模型建立預測和內容查詢。 建立一次性查詢，或是設定查詢來針對外部資料的整個資料表產生預測。  
   
-## <a name="sql-server-management-studio"></a>Transact-SQL  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  在您建立並將採礦模型部署到伺服器之後，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您也可以繼續執行使用此模型的工作，例如瀏覽模型、處理新的資料和建立預測。  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也包含查詢編輯器，您可以用來設計及執行資料採礦延伸 (DMX) 查詢，或是透過 XMLA 來處理資料採礦物件。  
@@ -64,7 +64,7 @@ ms.locfileid: "34015145"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 資料採礦工作和轉換  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了許多支援資料採礦的元件。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的一些工具的目的是為了將常見的資料採礦工作自動化，包括預測、模型建立和處理。 例如：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的一些工具的目的是為了將常見的資料採礦工作自動化，包括預測、模型建立和處理。 例如:  
   
 -   建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，每當新的客戶更新資料集時，此封裝都會自動更新模型  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015145"
   
 -   根據傳遞的參數自動產生模型。  
   
- 但是，您也可以在封裝工作流程中使用資料採礦當做其他處理序的輸入。 例如：  
+ 但是，您也可以在封裝工作流程中使用資料採礦當做其他處理序的輸入。 例如:  
   
 -   使用模型產生的機率值，針對文字採礦或其他分類工作的分數來加權。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "34015145"
   
 -   使用羅吉斯迴歸，根據風險區隔送入的客戶。  
   
- **如需詳細資訊：**[Related Projects for Data Mining Solutions](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md) (資料採礦方案的相關專案)  
+ **如需詳細資訊：** [資料採礦方案的相關專案](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組 & #40; DMX & #41;參考](../../dmx/data-mining-extensions-dmx-reference.md)   
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   

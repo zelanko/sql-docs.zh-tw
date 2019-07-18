@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
@@ -15,12 +14,12 @@ ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086305"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
   使用 **[資料採礦精靈]** ，即可建立新的採礦結構和選擇性的相關採礦模型。  
@@ -53,12 +52,12 @@ ms.locfileid: "48087758"
   
 -   將資料分割成培訓集和測試集。  
   
--   完成 **[資料採礦精靈]**。  
+-   完成 **[資料採礦精靈]** 。  
   
  在建立採礦結構和選擇性的採礦模型之後，可以使用 **[資料採礦設計師]** 來修改其屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [資料採礦設計師](data-mining/data-mining-designer.md)   
  [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)   
  [選取定義方法&#40;資料採礦精靈&#41;](select-the-definition-method-data-mining-wizard.md)   

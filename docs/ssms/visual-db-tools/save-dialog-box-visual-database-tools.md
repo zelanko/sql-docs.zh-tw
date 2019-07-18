@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65541
 - vdt.dlgbox.save
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a2a05ecd4156d7ec93f7ae543409cab99044f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: a00b33ababf07ca3a809e386ba7ee8466c758227
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679248"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>儲存對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "47849416"
   
 ## <a name="options"></a>選項。  
 **警告受影響資料表**  
-指定下次儲存選取的資料表時是否出現此對話方塊。 依照預設，此方塊為核取。 如果您清除此選項，可以在 [選項] 對話方塊中重新選取。  
+指定下次儲存選取的資料表時是否出現此對話方塊。 依照預設，此方塊為核取。 如果您清除此選項，可以在 [選項]  對話方塊中重新選取。  
   
 **儲存為文字檔**  
-顯示 [另存新檔] 對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
+顯示 [另存新檔]  對話方塊，提示您輸入儲存列出資料表的文字檔的位置。 此檔案提供一份資料表清單，其中包含受您所做變更影響的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

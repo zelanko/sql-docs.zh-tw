@@ -1,5 +1,5 @@
 ---
-title: sp_defaultdb (Transact-SQL) | Microsoft Docs
+title: sp_defaultdb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085826"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

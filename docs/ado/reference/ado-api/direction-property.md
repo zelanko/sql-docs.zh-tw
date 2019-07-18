@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df2f7cc5eadce7d4f8f61674f4915ec3b1561e02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6135650d3b5cb015fad21d1eac7b350827965ca1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933071"
 ---
 # <a name="direction-property"></a>Direction 屬性
 指出是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 輸入和一個 output 參數，或如果參數是預存程序的傳回值。  

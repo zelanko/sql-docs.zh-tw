@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053109"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_depends [ @objname = ] '<object>'
  這是物件所屬的結構描述名稱。  
   
  *object_name*  
- 這是要檢查相依性的資料庫物件。 這個物件可能是資料表、檢視表、預存程序、使用者定義函數或觸發程序。 o*bject_name*是**nvarchar(776)**，沒有預設值。  
+ 這是要檢查相依性的資料庫物件。 這個物件可能是資料表、檢視表、預存程序、使用者定義函數或觸發程序。 o*bject_name*是**nvarchar(776)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -64,21 +63,21 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果集  
  **sp_depends**會顯示兩個結果集。  
   
- 下列結果集顯示的物件所在*\<物件 >* 而定。  
+ 下列結果集顯示的物件所在 *\<物件 >* 而定。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|相依性存在的項目名稱。|  
+|**name**|**nvarchar(257** **)**|相依性存在的項目名稱。|  
 |**type**|**nvarchar(16)**|項目的類型。|  
 |**更新**|**nvarchar(7)**|是否更新項目。|  
 |**選取**|**nvarchar(8)**|是否在 SELECT 陳述式中使用這個項目。|  
 |**column**|**sysname**|存在相依性的資料行或參數。|  
   
- 下列結果集會顯示相依於物件*\<物件 >*。  
+ 下列結果集會顯示相依於物件 *\<物件 >* 。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|相依性存在的項目名稱。|  
+|**name**|**nvarchar(257** **)**|相依性存在的項目名稱。|  
 |**type**|**nvarchar(16)**|項目的類型。|  
   
 ## <a name="permissions"></a>Permissions  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027934"
 ---
 # <a name="creating-an-assembly"></a>建立組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼叫或參考的組件是在相同的資料庫中所建立。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>建立組件時指定安全性  
- 建立組件時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫中，您可以指定三個不同的安全性層級程式碼可以在其中執行的其中一個：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**. 當**CREATE ASSEMBLY**陳述式執行時，可能會導致無法在伺服器上註冊的組件的程式碼組件上執行某些檢查。 如需詳細資訊，請參閱 「 模擬 」 範例上[CodePlex](https://msftengprodsamples.codeplex.com/)。  
+ 建立組件時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫中，您可以指定三個不同的安全性層級程式碼可以在其中執行的其中一個：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**。 當**CREATE ASSEMBLY**陳述式執行時，可能會導致無法在伺服器上註冊的組件的程式碼組件上執行某些檢查。 如需詳細資訊，請參閱 「 模擬 」 範例上[CodePlex](https://msftengprodsamples.codeplex.com/)。  
   
  **安全**時的預設權限集合和適用於大部分的案例。 若要指定給定的安全性層級，您要修改 CREATE ASSEMBLY 陳述式的語法，如下所示：  
   
@@ -80,7 +79,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 此強式名稱 （或憑證） 建立內部[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]為非對稱金鑰 （或憑證），且具有與對應的登入**EXTERNAL ACCESS ASSEMBLY** （適用於外部存取組件） 的權限或**UNSAFE ASSEMBLY** （適用於不安全的組件） 的權限。  
   
 2.  資料庫擁有者 (DBO) 有**EXTERNAL ACCESS ASSEMBLY** (如**外部存取**組件) 或**UNSAFE ASSEMBLY** (針對**UNSAFE**組件） 權限，而且資料庫[TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md)設為**ON**。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  以上列出的兩個條件也會在組件載入時間 (包括執行) 進行檢查。 若要載入組件，至少必須符合其中一個條件。  
   
  我們建議最好讓[TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md)在資料庫不會設定為**ON**僅執行 common language runtime (CLR) 程式碼中伺服器處理序。 但是，建議從 master 資料庫的組件檔中建立非對稱金鑰。 然後您必須建立對應至這個非對稱金鑰的登入，並登入必須被授與**EXTERNAL ACCESS ASSEMBLY**或是**UNSAFE ASSEMBLY**權限。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageexecute.f1
@@ -14,12 +13,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f019f2a2e3df3cd32ff7e699022f83f5fc84f0eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376276"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059190"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的封裝。  
@@ -52,7 +51,7 @@ ms.locfileid: "58376276"
   
 4.  展開包含您要執行之封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
+5.  以滑鼠右鍵按一下封裝，然後按一下 [執行]  。  
   
 ##  <a name="general"></a> 設定 [一般] 頁面上的 [選項]  
  選取 **[環境]** 來指定適用於執行執行封裝的環境。  
@@ -66,7 +65,7 @@ ms.locfileid: "58376276"
 ##  <a name="advanced"></a> 設定 [進階] 索引標籤上的 [選項]  
  使用 [進階] 索引標籤管理屬性和其他封裝設定。  
   
- [加入]、[編輯]、[移除]  
+ [加入]  、[編輯]  、[移除]   
  按一下可加入、編輯或移除屬性。  
   
  **記錄層級**  
@@ -79,6 +78,6 @@ ms.locfileid: "58376276"
  指定封裝將會在 32 位元系統上執行。  
   
 ##  <a name="script"></a> 編寫執行封裝對話方塊中之選項的指令碼  
- 當您位於 **[執行封裝]** 對話方塊時，也可以使用工具列上的 **[指令碼]** 按鈕來為您撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。 產生的指令碼會使用您在 [執行封裝] 對話方塊中已選取的相同選項來呼叫預存程序 [catalog.start_execution &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)。 指令碼會出現在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的新指令碼視窗中。  
+ 當您位於 **[執行封裝]** 對話方塊時，也可以使用工具列上的 **[指令碼]** 按鈕來為您撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。 產生的指令碼會使用您在 [執行封裝]  對話方塊中已選取的相同選項來呼叫預存程序 [catalog.start_execution &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)。 指令碼會出現在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的新指令碼視窗中。  
   
   

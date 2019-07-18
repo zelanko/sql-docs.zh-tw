@@ -14,15 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_db_rda_schema_update_status dynamic management view
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 930e717767c44f5d8151cd94c29f9b6aaa205fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937011"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database-sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

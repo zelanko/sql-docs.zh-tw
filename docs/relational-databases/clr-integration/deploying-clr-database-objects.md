@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3bad8ec68ddeccd9ad8082b4f7b98422780581b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118553"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,9 @@ ms.locfileid: "51663047"
 2.  解決所有建立錯誤和警告，然後再將組件部署至測試伺服器。  
   
 3.  選取  **Deploy**從**建置**功能表。 然後，系統就會在第一次於 Visual Studio 中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專案時指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料庫中註冊此組件。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>使用 Transact-SQL 來部署組件  
   
 1.  使用 .NET Framework 隨附的命令列編譯器來編譯來源檔案的組件。  
@@ -87,17 +88,17 @@ ms.locfileid: "51663047"
   
 1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接至已註冊要部署之 Managed 組件或資料庫物件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在**物件總管**，展開**\<伺服器名稱 >** 並**資料庫**樹狀結構。 以滑鼠右鍵按一下 受管理的資料庫物件的位置已註冊，請選取的資料庫**任務**，然後選取**產生的指令碼**。 指令碼精靈隨即開啟。  
+2.  在**物件總管**，展開 **\<伺服器名稱 >** 並**資料庫**樹狀結構。 以滑鼠右鍵按一下 受管理的資料庫物件的位置已註冊，請選取的資料庫**任務**，然後選取**產生的指令碼**。 指令碼精靈隨即開啟。  
   
 3.  從清單方塊中選取資料庫，然後按一下**下一步**。  
   
 4.  在 **選擇指令碼選項**窗格中，按一下**下一步**，或變更的選項，然後按一下**下一步**。  
   
-5.  在  **選擇物件類型** 窗格中，選擇要部署的資料庫物件的類型。 按 [下一步] 。  
+5.  在  **選擇物件類型** 窗格中，選擇要部署的資料庫物件的類型。 按一下 [下一步]  。  
   
 6.  選取在每個物件類型**選擇物件類型**窗格中，**選擇\<類型 >** 窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一或多個物件，然後按一下**下一步**。  
   
-7.  **輸出選項**所有所需的資料庫物件已選取型別時，窗格會出現。 選取 **指令碼至檔案**並指定指令碼的檔案路徑。 選取 **[下一步]**。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
+7.  **輸出選項**所有所需的資料庫物件已選取型別時，窗格會出現。 選取 **指令碼至檔案**並指定指令碼的檔案路徑。 選取 [下一步]  。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
   
 ## <a name="post-deployment-scripts"></a>部署後指令碼  
  您可以執行部署後指令碼。  

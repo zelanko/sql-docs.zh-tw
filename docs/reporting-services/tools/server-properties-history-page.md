@@ -2,20 +2,20 @@
 title: 伺服器屬性 (歷程記錄頁面) | Microsoft Docs
 ms.date: 06/10/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 498bc994828c4ed7089a4aa223659f70d1c612b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571353"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 的這個 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 頁面，即可設定要保留之報表記錄副本數目的預設值。 預設值會提供建立所有報表之報表記錄限制的初始設定。 您可以針對個別報表更改這些設定。  
@@ -27,7 +27,7 @@ ms.locfileid: "47663892"
  若要開啟此頁面：
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2) 連接到報表伺服器執行個體。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。
+ 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。
  4) 按一下 **[記錄]** ，即可開啟此頁面。  
   
 ## <a name="options"></a>選項。  

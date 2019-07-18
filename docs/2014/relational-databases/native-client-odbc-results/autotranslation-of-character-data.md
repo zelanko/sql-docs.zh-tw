@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200218"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
   字元資料，例如 ANSI 字元，利用 SQL_C_CHAR 宣告的變數或資料儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文字**資料型別，可以代表只在有限的字元。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 使用儲存的值**char**， **varchar**，或**文字**伺服器上的資料類型會使用伺服器的 ACP 進行評估。  

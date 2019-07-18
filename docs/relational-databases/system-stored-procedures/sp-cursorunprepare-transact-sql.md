@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4427cb2db0169f5cb7a25937e230777318ab9201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bfdcafb37b6ff7b495f1306d5d8339725e55e10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108388"
 ---
 # <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_cursorunprepare handle
  已*處理*備妥的陳述式時，sp_cursorprepare 會傳回的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorprepare &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

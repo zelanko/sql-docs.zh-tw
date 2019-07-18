@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - File element
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 709f355a78ece0db3e52b713f81f9ca2a95c8fe1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: c24484db4d106e236166a2a522a3b038a0b899ec
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727702"
 ---
 # <a name="file-element-dta"></a>File 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

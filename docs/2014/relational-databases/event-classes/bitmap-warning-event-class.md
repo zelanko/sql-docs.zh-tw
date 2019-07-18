@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023445"
 ---
 # <a name="bitmap-warning-event-class"></a>點陣圖警告事件類別
   **點陣圖警告** 事件類別可用來監視查詢中的點陣圖篩選使用情況。 此事件子類別可用來報告何時已經在查詢中停用點陣圖篩選。  
@@ -37,7 +37,7 @@ ms.locfileid: "52753410"
 |**EventSubClass**|`int`|事件子類別的類型。 0 = 點陣圖篩選已停用。|21|是|  
 |**HostName**|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IsSystem**|`int`|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  
-|**LoginName**|`nvarchar`|使用者登入的名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或「網域\使用者名稱」格式的 Windows 登入認證)。|11|是|  
+|**LoginName**|`nvarchar`|使用者登入的名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或「網域\使用者名稱」  格式的 Windows 登入認證)。|11|是|  
 |**LoginSid**|`image`|已登入之使用者的安全性識別碼 (SID)。 您可以在 **sys.server_principals** 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|`nvarchar`|Windows 使用者名稱。|6|是|  

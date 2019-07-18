@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cec0a0378acceef269b17c93cdc0e2f5e816e437
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483008"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>自訂工作流程 XML 描述 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，當工作流程啟動時，SQL Server MDS 工作流程整合服務會呼叫 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法。 此方法會收到有關觸發工作流程商務規則之項目的中繼資料和資料，做為 XML 的區塊。 如需實作工作流程處理常式的範例程式碼，請參閱[自訂工作流程範例 &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)。  
@@ -64,10 +64,10 @@ ms.locfileid: "52789770"
   
 |標記|描述|  
 |---------|-----------------|  
-|\<Type>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程類型] 文字方塊中輸入的文字，用以識別要載入的自訂工作流程組件。|  
-|\<SendData>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，由 [訊息中包含成員資料] 核取方塊所控制的布林值。 值為 1 時，表示傳送 \<MemberData> 區段，否則，不傳送 \<MemberData> 區段。|  
-|<Server_URL>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程網站] 文字方塊中輸入的文字。|  
-|<Action_ID>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程名稱] 文字方塊中輸入的文字。|  
+|\<Type>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程類型]  文字方塊中輸入的文字，用以識別要載入的自訂工作流程組件。|  
+|\<SendData>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，由 [訊息中包含成員資料]  核取方塊所控制的布林值。 值為 1 時，表示傳送 \<MemberData> 區段，否則，不傳送 \<MemberData> 區段。|  
+|<Server_URL>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程網站]  文字方塊中輸入的文字。|  
+|<Action_ID>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程名稱]  文字方塊中輸入的文字。|  
 |\<MemberData>|包含觸發工作流程動作之成員的資料。 只有在 \<SendData> 的值為 1 時，才包含這個標記。|  
 |\<Enter*xxx*>|這組標記包含有關建立成員的中繼資料，例如建立成員的時間以及建立成員者。|  
 |\<LastChg*xxx*>|這組標記包含有關上次對成員所進行之變更的中繼資料，例如進行變更的時間以及進行變更者。|  

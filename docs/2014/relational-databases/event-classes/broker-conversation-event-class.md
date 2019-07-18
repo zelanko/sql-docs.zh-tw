@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804435"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664364"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  

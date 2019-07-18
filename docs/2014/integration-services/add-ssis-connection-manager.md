@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adddtsconnection.f1
@@ -15,21 +14,21 @@ ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061822"
 ---
 # <a name="add-ssis-connection-manager"></a>加入 SSIS 連接管理員
-  使用 [加入 SSIS 連線管理員] 對話方塊來選取要加入封裝的連接類型。  
+  使用 [加入 SSIS 連線管理員]  對話方塊來選取要加入封裝的連接類型。  
   
  若要深入了解連線管理員，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **連線管理員類型**  
- 選取連接類型，然後按一下 [加入]，或按兩下連接類型，以使用每個連接類型的編輯器來指定連接屬性。  
+ 選取連接類型，然後按一下 [加入]  ，或按兩下連接類型，以使用每個連接類型的編輯器來指定連接屬性。  
   
  **[加入]**  
  使用每個連接類型的編輯器，來指定連接屬性。  

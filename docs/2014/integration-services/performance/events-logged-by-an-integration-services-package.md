@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62889831"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會將各種事件訊息記錄至 Windows 應用程式事件記錄檔。 當封裝啟動、停止以及發生特定問題時，此封裝就會記錄這些訊息。  
@@ -35,7 +35,7 @@ ms.locfileid: "58378987"
 > [!NOTE]  
 >  此封裝會記錄下表中的訊息，即使您尚未針對此封裝啟用記錄也一樣。  
   
-|事件識別碼|符號名稱|文字|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|封裝 "" 已啟動。|封裝已開始執行。|  
 |12289|DTS_MSG_PACKAGESUCCESS|封裝 "" 已順利完成。|封裝執行成功，而且不再執行。|  
@@ -55,7 +55,7 @@ ms.locfileid: "58378987"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>封裝執行階段的相關訊息  
   
-|事件識別碼|符號名稱|文字|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|當您將封裝記錄設定為應用程式事件記錄檔時，各種訊息都會使用這個一般格式。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|封裝已啟動。|  
@@ -68,7 +68,7 @@ ms.locfileid: "58378987"
 ### <a name="messages-about-events-that-occur"></a>發生之事件的相關訊息  
  下表只會列出屬於事件結果的某些訊息。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用之錯誤、警告和參考用訊息的更完整清單，請參閱 [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)。  
   
-|事件識別碼|符號名稱|文字|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|工作失敗。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|這則訊息會報告已經發生的錯誤。|  

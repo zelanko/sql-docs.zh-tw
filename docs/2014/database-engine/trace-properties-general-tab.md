@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
@@ -15,17 +14,17 @@ ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35e9ee16ee50d5dc697e862b2777db7f0199970d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089527"
 ---
 # <a name="trace-properties-general-tab"></a>追蹤屬性 (一般索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視或指定追蹤的屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **追蹤名稱**  
  指定追蹤的名稱。  
   

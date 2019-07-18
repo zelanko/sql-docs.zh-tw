@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7396b5c5bf46abcbc60ac9e3a984fb2d7a7a2ee5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078940"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 課：定義和部署 Cube
   在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中定義資料來源檢視之後，您可以開始定義初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube。  

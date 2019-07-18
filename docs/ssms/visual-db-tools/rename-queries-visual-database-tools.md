@@ -11,15 +11,15 @@ helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62b16e94c665113f479a09b184832e22412537ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 5fa611bc85af05351c010694b4c81364f5f4cf72
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658216"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679459"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "47658216"
   
 ### <a name="to-rename-a-query"></a>若要重新命名查詢  
   
-1.  從 [檢視] 功能表選擇 [方案總管]。  
+1.  從 [檢視]  功能表選擇 [方案總管]  。  
   
-2.  在方案總管中，在想要重新命名的查詢上按一下滑鼠右鍵，並在出現的快速鍵功能表上按一下 [重新命名]。  
+2.  在方案總管中，在想要重新命名的查詢上按一下滑鼠右鍵，並在出現的快速鍵功能表上按一下 [重新命名]  。  
   
 3.  為查詢輸入新名稱，然後按下 ENTER。  
   

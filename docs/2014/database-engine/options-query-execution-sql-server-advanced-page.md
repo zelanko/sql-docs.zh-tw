@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
@@ -13,17 +12,17 @@ ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089366"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>選項 (查詢執行：SQL Server：進階頁面)
-  使用 SET 命令有許多選項可用。 使用此頁面來指定 **設定** 選項，以在 SQL Server 查詢編輯器中執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 它們對於其他程式碼編輯器沒有影響。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 **[查詢]** 功能表上的 **[查詢選項]** ，或按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗的快速鍵功能表。 在 **[執行]** 下，按一下 **[進階]**。 如需上述各項目的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
+  使用 SET 命令有許多選項可用。 使用此頁面來指定 **設定** 選項，以在 SQL Server 查詢編輯器中執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 它們對於其他程式碼編輯器沒有影響。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 **[查詢]** 功能表上的 **[查詢選項]** ，或按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗的快速鍵功能表。 在 **[執行]** 下，按一下 **[進階]** 。 如需上述各項目的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **SET NOCOUNT**  
  不會以結果集的訊息傳回資料列數的計數。 依預設，不會勾選此核取方塊。  
   

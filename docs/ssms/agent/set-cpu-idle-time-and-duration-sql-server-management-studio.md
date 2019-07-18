@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent, CPU idle conditions
 - idle time [SQL Server]
 ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9cc0cbb44e2eb54b6c8d1d024f232b7ebf789d6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f33b56f240318a5e9e305891f84d6005bd553fb9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797317"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685130"
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>設定 CPU 閒置與持續時間 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "47797317"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，按一下 [屬性]，然後選取 [進階] 頁面。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，按一下 [屬性]  ，然後選取 [進階]  頁面。  
   
 3.  在 **[閒置 CPU 的條件]** 下方，執行下列步驟：  
   
-    -   核取 **[定義閒置 CPU 的條件]**。  
+    -   核取 **[定義閒置 CPU 的條件]** 。  
   
-    -   在 [平均 CPU 使用量低於]\(所有 CPU) 方塊中指定百分比。 這樣會設定 CPU 必須低於此使用量才會視為閒置。  
+    -   在 [平均 CPU 使用量低於]  \(所有 CPU) 方塊中指定百分比。 這樣會設定 CPU 必須低於此使用量才會視為閒置。  
   
     -   在 **[並且持續低於此狀態達]** 方塊中指定秒數。 這樣會設定此期間必須維持最小 CPU 用量才會視為閒置。  
   

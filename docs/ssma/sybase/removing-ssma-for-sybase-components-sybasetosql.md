@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028637"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>移除 SSMA for Sybase 元件 (SybaseToSQL)
 當您完成移轉的資料庫從 Sybase Adaptive Server Enterprise (ASE) 至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可能想要解除安裝 SSMA 元件。 您可以隨時解除安裝用戶端元件，但您不應該解除安裝延伸模組套件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非您確定您已移轉的資料庫不再使用中的函式**ssma_syb** 結構描述**sysdb**資料庫。  
@@ -44,7 +43,7 @@ ms.locfileid: "47744806"
   
 4.  在 公用程式資料庫指令碼頁面的執行個體，按一下 **下一步**。  
   
-5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]**。  
+5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]** 。  
   
     Windows 驗證會使用您的 Windows 認證來嘗試登入的 SQL Server 執行個體。 如果您選取 SQL Server 驗證時，您必須輸入的 SQL Server 登入名稱和密碼。  
   

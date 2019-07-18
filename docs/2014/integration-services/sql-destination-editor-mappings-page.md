@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.mappings.f1
@@ -15,12 +14,12 @@ ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e69ccbba805040dbc88b04fc91378e1038c5fdb4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055480"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 目的地編輯器 (對應頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至目的地資料行。  

@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212127"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59506515"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "53212127"
   
 -   **原生模式：** 針對已經發行至原生模式報表伺服器的共用資料來源和報表，請使用[!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)]。  
   
--   **SharePoint 模式：** 您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 組態頁面。  
+-   **SharePoint 模式：** 您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 設定頁面。  
   
 -   **報表設計：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
   

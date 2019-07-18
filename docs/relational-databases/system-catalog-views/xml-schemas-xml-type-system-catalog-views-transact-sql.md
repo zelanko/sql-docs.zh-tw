@@ -13,15 +13,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c1049d54dd838b9f5877759392b296f3a86497d3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929770"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 結構描述 (XML 類型系統) 目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

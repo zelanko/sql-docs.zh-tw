@@ -1,5 +1,5 @@
 ---
-title: 相異 (MDX) |Microsoft 文件
+title: 相異 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fc3e4680991f88743bbab8eec1de3bb629c94b66
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999897"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
 
@@ -33,7 +32,7 @@ Distinct(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果**Distinct**函式指定集合中找到重複的 tuple，、 函式時保持不變的集合順序中保留重複 tuple 中的第一個執行個體。  
+ 如果**Distinct**函式中指定的集合中找到重複的 tuple，函數會讓重複的 tuple 中第一個執行個體，同時讓集合的順序保持不變。  
   
 ## <a name="examples"></a>範例  
  下列範例查詢會示範如何搭配命名集使用 Distinct 函數，以及如何搭配 Count 函數用它來尋找集合中相異 Tuple 的數目：  
@@ -61,6 +60,6 @@ Distinct(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

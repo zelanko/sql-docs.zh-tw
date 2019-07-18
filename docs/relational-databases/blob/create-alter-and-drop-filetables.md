@@ -3,7 +3,6 @@ title: 建立、改變及卸除 FileTable | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
@@ -12,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 510da94cb6eb83a208c6135441b5705fdacaa760
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542381"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586335"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,9 @@ ms.locfileid: "52542381"
     2.  如果您未提供 **FILETABLE_COLLATE_FILENAME**的值，或指定 **database_default**，則資料行會繼承目前資料庫的定序。 如果目前的資料庫定序區分大小寫，則會引發錯誤，而且 **CREATE TABLE** 作業會失敗。  
   
 3.  您也可以指定要用於 3 個自動建立的主索引鍵條件約束和唯一條件約束的名稱。 如果您未提供名稱，則系統會產生名稱，如本主題稍後所述。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  
@@ -86,7 +87,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 建立 FileTable**  
- 在物件總管中，展開選取之資料庫底下的物件、以滑鼠右鍵按一下 [資料表] 資料夾，然後選取 [New FileTable (新增 FileTable)]。  
+ 在物件總管中，展開選取之資料庫底下的物件、以滑鼠右鍵按一下 [資料表]  資料夾，然後選取 [New FileTable (新增 FileTable)]  。  
   
  此選項會開啟新的指令碼視窗，其中包含您可以自訂及執行以建立 FileTable 的 Transact-SQL 指令碼範本。 使用 **[查詢]** 功能表上的 **[指定範本參數的值]** 選項，輕鬆地自訂指令碼。  
   
@@ -122,7 +123,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 變更 FileTable 的目錄**  
- 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性] 開啟 [資料表屬性] 對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
+ 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性]  開啟 [資料表屬性]  對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
   
 ###  <a name="ReqAlter"></a> 改變 FileTable 的需求和限制  
   
@@ -177,9 +178,9 @@ GO
 |檢查條件約束|系統定義的檢查條件約束會強制執行下列需求：<br /><br /> 有效的檔案名稱。<br /><br /> 有效的檔案屬性。<br /><br /> 父物件必須是目錄。<br /><br /> 在檔案操作期間，會鎖定命名空間階層。|  
   
  **系統定義之條件約束的命名慣例**  
- 上述之系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>**，其中：  
+ 上述之系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>** ，其中：  
   
--   其中的 <條件約束類型> 是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
+-   其中的 <條件約束類型>  是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
   
 -   *\<唯一碼>* 是讓名稱成為唯一名稱的系統產生字串。 這個字串可能會包含 FileTable 名稱和唯一識別碼。  
   

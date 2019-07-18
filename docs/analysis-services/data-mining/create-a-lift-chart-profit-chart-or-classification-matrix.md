@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62988413"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>建立增益圖、收益圖或分類矩陣
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

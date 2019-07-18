@@ -13,15 +13,15 @@ helpviewer_keywords:
 - customizing database diagram information [SQL Server]
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5245e686c58dfaf93995ac49601703d3f48a82bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 479c2e42f471b4a42b7fe8a3b82dc07ad70a6537
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680108"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自訂圖表中顯示的資料數量 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "47807416"
   
 1.  在 [資料庫圖表設計工具] 中的資料表上按一下滑鼠右鍵。  
   
-2.  從快速鍵功能表中，指向 [資料表檢視] 再按 [修改自訂]。  
+2.  從快速鍵功能表中，指向 [資料表檢視]  再按 [修改自訂]  。  
   
-3.  在 [資料行選取] 對話方塊中，選擇當從 [資料表檢視] 功能表選擇 [自訂] 時，想要顯示的屬性。  
+3.  在 [資料行選取]  對話方塊中，選擇當從 [資料表檢視]  功能表選擇 [自訂]  時，想要顯示的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

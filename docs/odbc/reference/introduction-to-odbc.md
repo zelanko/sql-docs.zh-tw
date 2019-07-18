@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a91a26f46b8722c4114c485a9924a83d5669edd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1792161b472e42c42ea2bfc895bf013802cb656c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093785"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 簡介
 本節提供結構化查詢語言和 ODBC 的簡短歷史，並包含 ODBC 介面的概念性資訊。  

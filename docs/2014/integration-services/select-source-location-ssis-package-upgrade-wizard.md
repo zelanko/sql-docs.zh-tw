@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
@@ -13,12 +12,12 @@ ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b83da069beee9440703b5dc0817668559c469d26
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055936"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
   使用 **[選取來源位置]** 頁面，指定升級封裝的來源。  
@@ -41,7 +40,7 @@ ms.locfileid: "58377636"
 |**Microsoft SQL Server**|指示要升級的封裝是來自現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽] 並尋找資料夾。  
+ 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找包含您要升級之封裝的資料夾。  

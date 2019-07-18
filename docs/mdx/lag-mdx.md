@@ -1,5 +1,5 @@
 ---
-title: Lag (MDX) |Microsoft 文件
+title: 延隔時間 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3c5479aa3ce855b554f34f72c5c86aa86eb04b9f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905770"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 
@@ -38,13 +37,13 @@ Member_Expression.Lag(Index)
 ## <a name="remarks"></a>備註  
  層級內的成員位置是由屬性階層的自然順序決定。 位置的編號是以零為基底。  
   
- 如果指定的落後是零，**延隔**函式會傳回指定的成員本身。  
+ 如果指定的落後是零，**延隔時間**函式會傳回指定的成員本身。  
   
- 如果指定的落後是負數，**延隔**函式會傳回後續成員。  
+ 如果指定的落後是負數，**延隔時間**函式會傳回後續成員。  
   
  `Lag(1)` 相當於[PrevMember](../mdx/prevmember-mdx.md)函式。 `Lag(-1)` 相當於[NextMember](../mdx/nextmember-mdx.md)函式。  
   
- **延隔**函數很相似[導致](../mdx/lead-mdx.md)函式中，不同處在於**導致**函式會以相反的方向，以尋找**延隔**函式。 也就是說，`Lag(n)` 相當於 `Lead(-n)`。  
+ **Lag**函數很相似[會導致](../mdx/lead-mdx.md)函式，不同之處在於**導致**函式會尋找以相反方向**延隔時間**函式。 也就是說，`Lag(n)` 相當於 `Lead(-n)`。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 2001 年 12 月的值：  
@@ -64,6 +63,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

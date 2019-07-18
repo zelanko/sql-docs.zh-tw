@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f001d290237bfb111b321800d79ff3c42921e5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82f3e362643df17d9105ad6987a851211bd22865
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479504"
 ---
 # <a name="edit-a-model-deployment-package"></a>編輯模型部署封裝
   此主題描述如何在 MDS 中部署模型的選定部分，而不是整個模型。 若要這樣做，請使用模型封裝編輯器編輯 MDS 模型封裝。  
@@ -37,15 +37,15 @@ ms.locfileid: "52810620"
   
 2.  執行 ModelPackageEditor.exe。  
   
-3.  在模型封裝編輯器精靈中，按一下 [瀏覽]，並移至包含套件的資料夾，然後選取套件，再按一下 [開啟]。 按 [下一步] 。  
+3.  在模型封裝編輯器精靈中，按一下 [瀏覽]  ，並移至包含套件的資料夾，然後選取套件，再按一下 [開啟]  。 按一下 [下一步]  。  
   
-4.  選取這些實體、衍生階層、訂閱檢視或是您想要部署的商務規則。 取消選取您不想要部署的項目。 按 [下一步] 。  
+4.  選取這些實體、衍生階層、訂閱檢視或是您想要部署的商務規則。 取消選取您不想要部署的項目。 按一下 [下一步]  。  
   
-5.  驗證要部署之選取項目的清單。 若要變更，請按一下 [上一步]，並重複步驟 4。  
+5.  驗證要部署之選取項目的清單。 若要變更，請按一下 [上一步]  ，並重複步驟 4。  
   
-6.  按一下 [瀏覽] 移至您想要用來儲存部分套件的資料夾，然後輸入部分套件的檔案名稱 (副檔名為 .pkg)。 按一下 [儲存] 。  
+6.  按一下 [瀏覽]  移至您想要用來儲存部分套件的資料夾，然後輸入部分套件的檔案名稱 (副檔名為 .pkg)。 按一下 [儲存]  。  
   
-7.  按一下 **[完成]**。  
+7.  按一下 **[完成]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

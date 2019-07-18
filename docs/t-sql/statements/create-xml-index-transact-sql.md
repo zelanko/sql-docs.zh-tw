@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b021451fc0334d931b0321272b23d7ac4100ee3a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502797"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_name  
-}  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }
   
 <xml_index_option> ::=  
 {   
@@ -103,7 +100,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *index_name*  
  這是索引的名稱。 索引名稱在資料表中必須是唯一的，但是在資料庫中不需要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
- 主要 XML 索引名稱的開頭不能是下列字元：**#**、**##**、**@** 或 **@@**。  
+ 主要 XML 索引名稱的開頭不能是下列字元： **#** 、 **##** 、 **@** 或 **@@** 。  
   
  *xml_column_name*  
  這是當做索引根據的 **xml** 資料行。 在單一 XML 索引定義中，只能指定一個 **xml** 資料行；但是在 **xml** 資料行上則可以建立多個次要 XML 索引。  
@@ -151,7 +148,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  只有在指定 FILLFACTOR 時，才能使用 PAD_INDEX 選項，因為 PAD_INDEX 會使用 FILLFACTOR 所指定的百分比。 如果 FILLFACTOR 所指定的百分比不夠，無法允許一個資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部覆寫該百分比以允許最小值。 不論 *fillfactor* 的值設得多低，中繼索引頁面上的資料列數目絕對不能少於兩個。  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 預設值是 0。 如果 *fillfactor* 是 100 或 0， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。  
   
 > [!NOTE]  
@@ -215,7 +212,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用頁面鎖定。  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  針對索引作業期間，覆寫[設定平行處理原則的最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)組態選項。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
 > [!IMPORTANT]  

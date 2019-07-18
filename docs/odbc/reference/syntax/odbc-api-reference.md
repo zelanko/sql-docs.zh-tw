@@ -11,13 +11,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085462"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 參考
 在本節中的主題描述依字母順序的每個 ODBC 函式。 每個函式定義為 C 程式設計語言函式。 描述包含下列各項：  

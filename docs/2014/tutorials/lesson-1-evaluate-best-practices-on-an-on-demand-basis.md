@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185750"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>第 1 課：評估依需求為基礎的最佳作法
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>第 1 課：視需要評估最佳做法
   您可以使用原則評估的視需要 (或「特定」) 方法快速評估最佳作法原則，以判斷 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體是否符合最佳作法指導方針與建議。  
   
  在這一課，您將執行的最佳作法原則的視需要評估[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的一或多個執行個體上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  

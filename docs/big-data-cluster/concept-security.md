@@ -4,19 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的安全性概念。 這包括描述叢集端點和叢集驗證。
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
-manager: craigg
-ms.date: 12/06/2018
+ms.reviewer: mikeray
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958669"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 的巨量資料叢集的安全性概念
 
@@ -34,7 +32,7 @@ ms.locfileid: "58860109"
 
 * HDFS/Spark (Knox) 閘道-這是以 HTTPS 為基礎的端點。 其他端點會透過 proxy 進行此程序。 用於存取 webHDFS 等 Livy 服務會使用 HDFS/Spark 閘道。 只要您看到 Knox 的參考，這會是端點。
 
-* 控制器端點會公開 REST Api 來管理叢集的巨量資料叢集管理服務。 某些工具，例如系統管理員入口網站中，也是透過此端點存取。
+* 控制器端點會公開 REST Api 來管理叢集的巨量資料叢集管理服務。 有些工具也是透過此端點存取。
 
 * 主要執行個體-適用於資料庫工具和應用程式連接到 SQL Server Master 執行個體在叢集中的 TDS 端點。
 

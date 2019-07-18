@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63286542"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
   在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -91,7 +91,7 @@ ms.locfileid: "52823482"
 |**GUID**|54|GUID 值，依據在追蹤內指定的事件類別而定。|  
 |**FileName**|36|所修改之檔案的邏輯名稱。|  
 |**Handle**|33|ODBC、OLE DB 或 DB-Library 用來協調伺服器執行的整數。|  
-|**主機名稱** <sup>1</sup>|8|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|  
+|**HostName** <sup>1</sup>|8|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|  
 |**IndexID**|24|受事件所影響的物件上的索引識別碼。 若要確定物件的索引識別碼，請使用 **sysindexes** 系統資料表的 **indid** 資料行。|  
 |**IntegerData**|25|相依於追蹤所擷取之事件類別的整數值。|  
 |**IntegerData2**|55|相依於追蹤所擷取之事件類別的整數值。|  

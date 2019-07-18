@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930962"
 ---
 # <a name="sort-property-example-vc"></a>Sort 屬性範例 (VC++)
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[排序](../../../ado/reference/ado-api/sort-property.md)屬性，以重新排序的資料列**資料錄集**衍生自***作者***資料表**Pubs**資料庫。 次要的公用程式常式會列印每個資料列。  

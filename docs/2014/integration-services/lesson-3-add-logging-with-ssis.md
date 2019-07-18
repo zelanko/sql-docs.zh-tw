@@ -10,12 +10,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046760"
 ---
 # <a name="lesson-3-adding-logging"></a>第 3 課：新增記錄
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供工作和容器事件的追蹤，包含可讓您進行疑難排解及監視套件執行的記錄功能。 記錄功能很有彈性，可在封裝層級或在封裝內的個別工作和容器上啟用。 您可以選取要記錄的事件，以及針對單一封裝建立多個記錄。  
@@ -35,7 +35,7 @@ ms.locfileid: "58390956"
  在這一課，您將建立一份您在建立封裝的[第 2 課：新增迴圈](lesson-2-adding-looping-with-ssis.md)。 利用這個新的封裝，您可以加入和設定記錄，在封裝執行期間監視特定事件。 如果您尚未完成前面任何一課，您也可以複製此教學課程所包含之已完成的第 2 課封裝。  
   
 > [!IMPORTANT]  
->  這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需有關如何安裝和部署**AdventureWorksDW2012**， [CodePlex 上 Reporting Services 產品範例](https://go.microsoft.com/fwlink/p/?LinkID=52691)。  
+>  這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需有關如何安裝和部署**AdventureWorksDW2012**， [GitHub 上的 Reporting Services 產品範例](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  

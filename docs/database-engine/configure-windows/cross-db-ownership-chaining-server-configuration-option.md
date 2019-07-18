@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c007a9d579c9c0cfb2f071299f09fb29b726b4a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b9be222b517d644cdfbabb0b3457a59450216b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803273"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>跨資料庫擁有權鏈結伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

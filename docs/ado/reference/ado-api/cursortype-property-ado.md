@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8fb037216c851a869cb19013a37fccd48145f284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919249"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 屬性 (ADO)
 表示使用中的資料指標類型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

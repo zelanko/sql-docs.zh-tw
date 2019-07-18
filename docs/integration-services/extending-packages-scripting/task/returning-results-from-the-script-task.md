@@ -19,14 +19,18 @@ ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b5db80c310c7810123d5702b729a227ebe891527
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 59a9ce64016cb4a3b748b504895262bce6be58d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724055"
 ---
 # <a name="returning-results-from-the-script-task"></a>從指令碼工作中傳回結果
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指令碼工作使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> 與選擇性的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> 屬性，將狀態資訊傳回 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段，可用以判斷在完成指令碼工作之後的工作流程路徑。  
   
 ## <a name="taskresult"></a>TaskResult  

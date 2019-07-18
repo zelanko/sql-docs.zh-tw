@@ -1,5 +1,5 @@
 ---
-title: RDS 程式碼的 Visual c + + 中的範例 |Microsoft Docs
+title: RDS 程式碼視覺效果中的範例C++|Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff83bb2f41415d876b89d46bfe8ba1399b940523
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e9c359b20cf790188cf3d6b0b7b7f73de406fb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963716"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++ 中的 RDS 程式碼範例
-若要了解如何使用 RDS 屬性，在 Microsoft Visual c + + 中撰寫時，使用下列程式碼範例。  
+若要了解如何使用 RDS 屬性，在 Microsoft Visual 中撰寫時使用下列程式碼範例C++。  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  

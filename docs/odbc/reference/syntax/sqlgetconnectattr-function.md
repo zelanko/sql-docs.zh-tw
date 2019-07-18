@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 06c158c49c0ce175204bc9738a4f4136db7fe344
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006210"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 函數
 **合規性**  
@@ -39,7 +38,7 @@ ms.locfileid: "53204437"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetConnectAttr(  
      SQLHDBC        ConnectionHandle,  
@@ -51,7 +50,7 @@ SQLRETURN SQLGetConnectAttr(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *Attribute*  
  [輸入]要擷取的屬性。  

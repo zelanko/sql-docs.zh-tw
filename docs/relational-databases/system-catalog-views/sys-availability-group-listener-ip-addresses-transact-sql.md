@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca29b9925de2d2c1c80e18372a8abf6e818edd15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997591"
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回每個 IP 位址與任何 Alwayson 可用性群組接聽程式在 Windows Server 容錯移轉叢集 (WSFC) 叢集中相關聯的資料列。  
+  針對 Windows Server 容錯移轉叢集 (WSFC) 叢集中與任何 Always On 可用性群組接聽程式相關聯的每一個 IP 位址，各傳回一個資料列。  
   
  主索引鍵： **listener_id** + **ip_address** + **ip_sub_mask**  
   

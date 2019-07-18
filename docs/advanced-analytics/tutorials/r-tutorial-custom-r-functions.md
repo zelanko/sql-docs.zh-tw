@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961958"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 的 SQL Server 上執行自訂的 R 函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +125,7 @@ R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教�
   
     + 使用 *timesToRun* 引數來指定函數應執行的次數。  在此案例中，您要擲骰子 20 次。
   
-    + 引數 *RNGseed* 和 *RNGkind* 可以用來控制隨機數字的產生。 當 *RNGseed* 設為 [自動] 時，會在每一個背景工作上平行初始化隨機資料流。
+    + 引數 *RNGseed* 和 *RNGkind* 可以用來控制隨機數字的產生。 當 *RNGseed* 設為 [自動]  時，會在每一個背景工作上平行初始化隨機資料流。
   
 2. **rxExec** 函數會建立一份清單，其中每個回合都有一個項目；不過，在清單未完成時，您都不會察覺到任何影響。 當所有反覆項目都完成時，該行的開頭**長度**會傳回值。
   

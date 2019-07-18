@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_collections catalog view
 ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e891585d5e44c4b2562d5fa704848f7abfa8292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115047"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47632576"
 |xml_collection_id|**int**|XML 結構描述集合的識別碼。 在資料庫中，這是唯一的。|  
 |schema_id|**int**|包含這個 XML 結構描述集合的關聯式結構描述識別碼。|  
 |principal_id|**int**|如果個別擁有者不是結構描述擁有者，這便是個別擁有者的識別碼。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定替代的擁有者。<br /><br /> NULL = 無替代的個別擁有者。|  
-|NAME|**sysname**|XML 結構描述集合的名稱。|  
+|name|**sysname**|XML 結構描述集合的名稱。|  
 |create_date|**datetime**|建立 XML 結構描述集合的日期。|  
 |modify_date|**datetime**|上次變更 XML 結構描述集合的日期。|  
   

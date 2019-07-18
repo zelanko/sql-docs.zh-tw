@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
@@ -17,12 +16,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072855"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>資料來源支援 (SSAS 多維度)
   此主題描述可用於多維度模型的資料來源類型。  
@@ -35,7 +34,7 @@ ms.locfileid: "53349740"
   
 |||||  
 |-|-|-|-|  
-|原始程式檔|版本|檔案類型|提供者<sup>1</sup>|  
+|`Source`|版本|檔案類型|提供者<sup>1</sup>|  
 |Access 資料庫|Microsoft Access 2007、2010、2013。|.accdb 或 .mdb|Microsoft Jet 4.0 OLE DB 提供者|  
 |SQL Server 關聯式資料庫<sup>5</sup>|Microsoft SQL Server 2005、 2008、 2008 R2、 2012、 2014年[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>，SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 11.0 Client OLE DB Provider<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle 關聯式資料庫|Oracle 9i、10g、11g。|(不適用)|Oracle OLE DB Provider<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> MSDAORA OLE DB 提供者<sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  

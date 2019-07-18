@@ -19,14 +19,18 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4073c16f5918b6e9e92431233f2ae7daec475193
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3bc5b6cc425ad04e9ad1f2cafbae2a3d88f8599c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65718240"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便識別其來源。 當您已經使用數位憑證來簽署封裝之後，就可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章，然後再載入封裝。 若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查簽章，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式 (dtexec.exe) 中設定選項，或設定選擇性登錄值。  
   
 ## <a name="sign-a-package-with-a-digital-certificate"></a>使用數位憑證來簽署套件  
@@ -35,7 +39,7 @@ ms.locfileid: "58289284"
 ## <a name="set-an-option-to-check-the-package-signature"></a>設定檢查套件簽章的選項  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 **dtexec** 公用程式都具有一個選項，可設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來檢查已簽署封裝的數位簽章。 您應該使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式，取決於您想要檢查所有封裝或只檢查特定封裝：  
   
--   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章] 選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。
+-   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章]  選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。
   
 -   若要檢查個別封裝的數位簽章，請在您使用 **dtexec** 公用程式來執行封裝時，指定 **/VerifyS[igned]** 選項。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
@@ -49,13 +53,13 @@ ms.locfileid: "58289284"
   
  本主題中的這個程序描述如何將選擇性 **BlockedSignatureStates** DWORD 值加入至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 登錄機碼。 **BlockedSignatureStates** 中的資料值會決定在封裝具有不受信任的簽章、具有無效的簽章或未簽署時，是否應該封鎖它。 關於用來簽署封裝的簽章狀態，**BlockedSignatureStates** 登錄值會使用下列定義：  
   
--   「有效簽章」是指可以成功讀取的簽章。  
+-   「有效簽章」  是指可以成功讀取的簽章。  
   
--   「無效簽章」是指簽章的解密總和檢查碼 (由私密金鑰加密之封裝程式碼的單向雜湊) 與載入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝程序中導出的解密總和檢查碼不符。  
+-   「無效簽章」  是指簽章的解密總和檢查碼 (由私密金鑰加密之封裝程式碼的單向雜湊) 與載入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝程序中導出的解密總和檢查碼不符。  
   
--   「信任簽章」是指使用由信任根憑證授權單位簽署的數位憑證所建立的簽章。 使用此設定時，簽署者不必出現在使用者的「受信任的發行者」清單中。  
+-   「信任簽章」  是指使用由信任根憑證授權單位簽署的數位憑證所建立的簽章。 使用此設定時，簽署者不必出現在使用者的「受信任的發行者」清單中。  
   
--   「不受信任的簽章」是指無法確認為信任根憑證授權單位所發出的簽章，或不是目前的簽章。  
+-   「不受信任的簽章」  是指無法確認為信任根憑證授權單位所發出的簽章，或不是目前的簽章。  
   
  下表列出 DWORD 資料的有效值及其相關聯的原則。  
   
@@ -71,23 +75,23 @@ ms.locfileid: "58289284"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>實作封裝的簽署原則  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [執行] 對話方塊中，輸入 **Regedit**，然後按一下 [確定]。  
+2.  在 [執行] 對話方塊中，輸入 **Regedit**，然後按一下 [確定]  。  
   
 3.  找出登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
-4.  以滑鼠右鍵按一下 [MSDTS]，指向 [新增]，然後按一下 [DWORD 值]。  
+4.  以滑鼠右鍵按一下 [MSDTS]  ，指向 [新增]  ，然後按一下 [DWORD 值]  。  
   
 5.  將新值的名稱更新為 **BlockedSignatureStates**。  
   
-6.  以滑鼠右鍵按一下 [BlockedSignatureStates]，然後按一下 [修改]。  
+6.  以滑鼠右鍵按一下 [BlockedSignatureStates]  ，然後按一下 [修改]  。  
   
-7.  在 [編輯 DWORD 值] 對話方塊中，輸入值 0、1、2 或 3。  
+7.  在 [編輯 DWORD 值]  對話方塊中，輸入值 0、1、2 或 3。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 在 **[檔案]** 功能表上按一下 **[結束]**。    
+9. 在 **[檔案]** 功能表上按一下 **[結束]** 。    
 
 ## <a name="cert"></a> 使用數位憑證來簽署封裝
   此主題描述如何使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 您可以使用數位簽章搭配其他設定，防止無效的封裝載入並執行。  
@@ -118,13 +122,13 @@ ms.locfileid: "58289284"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]**。  
+3.  在 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 **[SSIS]** 功能表上，按一下 **[數位簽章]** 。  
   
-4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]**。  
+4.  在 **[數位簽章]** 對話方塊中，按一下 **[簽署]** 。  
   
 5.  在 **[選取憑證]** 對話方塊中，選取憑證。  
   
-6.  (選擇性) 按一下 [檢視憑證] 檢視憑證資訊。  
+6.  (選擇性) 按一下 [檢視憑證]  檢視憑證資訊。  
   
 7.  按一下 **[確定]** 關閉 **[選取憑證]** 對話方塊。  
   
@@ -141,7 +145,7 @@ ms.locfileid: "58289284"
   
 ### <a name="options"></a>選項。  
  **簽署**  
- 按一下即可開啟 [選取憑證] 對話方塊，並選取要使用的憑證。  
+ 按一下即可開啟 [選取憑證]  對話方塊，並選取要使用的憑證。  
   
  **移除**  
  按一下即可移除數位簽章。  

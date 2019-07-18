@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -16,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389496"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316670"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組豐富的自訂事件，可以為封裝和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
@@ -81,8 +80,8 @@ ms.locfileid: "58389496"
   
 |記錄項目|描述|  
 |---------------|-----------------|  
-|`PackageStart`|指出封裝已經開始執行。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
-|`PackageEnd`|指出封裝已經完成。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
+|`PackageStart`|指出封裝已經開始執行。<br /><br /> 注意:此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
+|`PackageEnd`|指出封裝已經完成。<br /><br /> 注意:此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。<br /><br /> `Diagnostic` 記錄項目也包括呼叫外部資料提供者之前和之後的項目。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
   
 ###  <a name="BulkInsert"></a> 大量插入工作  
@@ -116,7 +115,7 @@ ms.locfileid: "58389496"
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|指出工作已經開始執行 DTS 2000 封裝。|  
-|`ExecuteDTS80PackageTaskEnd`|指出工作已經完成。<br /><br /> 注意：DTS 2000 封裝可能會在工作結束之後繼續執行。|  
+|`ExecuteDTS80PackageTaskEnd`|指出工作已經完成。<br /><br /> 注意:DTS 2000 套件可能會在工作結束後繼續執行。|  
 |`ExecuteDTS80PackageTaskTaskInfo`|提供有關工作的描述性資訊。|  
 |`ExecuteDTS80PackageTaskTaskResult`|報告工作執行之 DTS 2000 封裝的執行結果。|  
   
@@ -259,12 +258,8 @@ ms.locfileid: "58389496"
   
 |記錄項目|描述|  
 |---------------|-----------------|  
-|`XMLOperation`|提供有關工作執行之作業的資訊。|  
-  
-## <a name="related-content"></a>相關內容  
- dougbert.com 上的部落格文章： [記錄 Integration Services 工作的自訂事件](https://go.microsoft.com/fwlink/?LinkId=150580)。  
+|`XMLOperation`|提供有關工作執行之作業的資訊。|   
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](performance/integration-services-ssis-logging.md)  
-  
   

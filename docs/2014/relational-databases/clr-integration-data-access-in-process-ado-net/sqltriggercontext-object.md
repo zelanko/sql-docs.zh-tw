@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874695"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 物件
   `SqlTriggerContext` 類別會提供觸發程序的內容資訊。 此內容相關資訊包括會造成引發觸發程序的動作類型 (已在 UPDATE 作業中修改其資料行)，而且若是資料定義語言 (DDL) 觸發程序，則包括描述觸發作業的 XML `EventData` 結構。 如需詳細資訊和範例，示範如何使用`SqlTriggerContext`類別，請參閱[CLR 觸發程序](../../database-engine/dev-guide/clr-triggers.md)。  

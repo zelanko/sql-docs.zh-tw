@@ -14,34 +14,26 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12a1a9a62a8fa467612bb64ee77f96aff9c23fa9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793339"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 針對可用性群組建立資料庫鏡像端點
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 PowerShell，在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中建立 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 所用的資料庫鏡像端點。  
   
- **本主題內容**  
+
   
--   **開始之前：**[安全性](#Security)  
-  
--   **使用下列項目建立資料庫鏡像端點：**[PowerShell](#PowerShellProcedure)  
-  
-## <a name="before-you-begin"></a>開始之前  
-  
-###  <a name="Security"></a> 安全性  
-  
+##  <a name="Permissions"></a> 權限  
+ 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+
 > [!IMPORTANT]  
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
-  
-####  <a name="Permissions"></a> Permissions  
- 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要建立資料庫鏡像端點**  
@@ -51,7 +43,7 @@ ms.locfileid: "53206377"
 2.  使用 **New-SqlHadrEndpoint** Cmdlet 建立端點，然後使用 **Set-SqlHadrEndpoint** 啟動端點。  
   
 ###  <a name="PShellExample"></a> 範例 (PowerShell)  
- 下列 PowerShell 命令會在 SQL Server 執行個體 (機器\\執行個體) 上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
+ 下列 PowerShell 命令會在 SQL Server 執行個體 (機器  \\執行個體  ) 上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
   
 > [!IMPORTANT]  
 >  這個範例只適用於目前缺少資料庫鏡像端點的伺服器執行個體。  

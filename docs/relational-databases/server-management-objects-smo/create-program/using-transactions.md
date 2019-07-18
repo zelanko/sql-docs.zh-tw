@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d00f22d8e7cf8b01e35dc12482c8fe7dcfcde9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53f5813aac141c82f87f3bec5164e5d617af6cce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098205"
 ---
 # <a name="using-transactions"></a>使用交易
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

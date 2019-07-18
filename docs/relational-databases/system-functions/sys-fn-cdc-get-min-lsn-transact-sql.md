@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_min_lsn (TRANSACT-SQL) |Microsoft Docs
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046398"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 工作 12:加入衍生的資料行轉換，以加入 MDS 所需的資料行 |Microsoft Docs
+title: 工作 12：加入衍生的資料行轉換，以加入 MDS 所需的資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65485244"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12:加入衍生的資料行轉換，以加入 MDS 需要的資料行
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12：新增衍生的資料行轉換來新增 MDS 需要的資料行
   在這項工作中，您會將衍生的資料行轉換加入至資料流程。 新增兩個衍生的資料行**ImportType**並**BatchTag**至記錄傳遞給這項轉換。 您應該先加入這兩個資料行，然後再將資料上傳至 MDS 中的暫存資料表。 這兩個是 MDS 中暫存資料表的必要資料行。 請參閱[分葉成員暫存資料表](../master-data-services/leaf-member-staging-table-master-data-services.md)如需詳細資訊。  
   
 1.  拖放**衍生的資料行轉換**從**常見**一節中**SSIS 工具箱**至**資料流程** 索引標籤。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63209818"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
   `IRowsetFastLoad`介面會公開支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記憶體為基礎的大量複製作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者使用介面來快速將資料加入至現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。  
@@ -30,8 +30,8 @@ ms.locfileid: "48215878"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Irowsetfastload:: Commit &#40;OLE DB&#41;](irowsetfastload-commit-ole-db.md)|標示已插入之資料列批次的結尾，並將資料列寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。|  
-|[Irowsetfastload:: Insertrow &#40;OLE DB&#41;](irowsetfastload-insertrow-ole-db.md)|將資料列加入至大量複製資料列集。|  
+|[IRowsetFastLoad::Commit &#40;OLE DB&#41;](irowsetfastload-commit-ole-db.md)|標示已插入之資料列批次的結尾，並將資料列寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。|  
+|[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](irowsetfastload-insertrow-ole-db.md)|將資料列加入至大量複製資料列集。|  
   
 ## <a name="see-also"></a>另請參閱  
  [介面&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   

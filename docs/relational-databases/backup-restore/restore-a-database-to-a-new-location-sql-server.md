@@ -20,12 +20,12 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69099375a0c56dadef71f999e34db45b0bc64374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d05f6a469649d959e6ba68e6413ee772025a1d45
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590842"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580326"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53590842"
 ###  <a name="Security"></a> 安全性  
  基於安全性的理由，建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，則 RESTORE 權限預設為 **系統管理員** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
@@ -63,7 +63,7 @@ ms.locfileid: "53590842"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，然後在 [物件總管] 中，按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [還原資料庫]。 **[還原資料庫]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [還原資料庫]  。 **[還原資料庫]** 對話方塊隨即開啟。  
   
 3.  在 **[一般]** 頁面上，使用 **[來源]** 區段指定要還原之備份組的來源和位置。 選取下列其中一個選項：  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53590842"
   
     1.  **[裝置]**  
   
-         按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 在 **[備份媒體類型]** 方塊中，選取列出的其中一種裝置類型。 若要選取 **[備份媒體]** 方塊中的一個或多個裝置，請按一下 **[加入]**。  
+         按一下瀏覽 ( **...** ) 按鈕，開啟 [選取備份裝置]  對話方塊。 在 **[備份媒體類型]** 方塊中，選取列出的其中一種裝置類型。 若要選取 **[備份媒體]** 方塊中的一個或多個裝置，請按一下 **[加入]** 。  
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "53590842"
   
 6.  在 **[要還原的備份組]** 方格中，選取要還原的備份。 這個方格會顯示指定位置可用的備份。 依預設，會建議一個復原計畫。 若要覆寫建議的復原計畫，您可以變更方格中的選取項目。 取消選取先前的備份時，會自動取消選取相依於先前備份還原的備份。  
   
-     如需 [要還原的備份組] 方格中各資料行的相關資訊，請參閱[還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)。  
+     如需 [要還原的備份組]  方格中各資料行的相關資訊，請參閱[還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)。  
   
-7.  若要指定資料庫檔案的新位置，請選取 **[檔案]** 頁面，然後按一下 **[將所有檔案重新放置到資料夾]**。 提供 **[資料檔資料夾]** 及 **[記錄檔資料夾]** 的新位置。 如需這個方格的詳細資訊，請參閱[還原資料庫 &#40;檔案頁面&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)。  
+7.  若要指定資料庫檔案的新位置，請選取 **[檔案]** 頁面，然後按一下 **[將所有檔案重新放置到資料夾]** 。 提供 **[資料檔資料夾]** 及 **[記錄檔資料夾]** 的新位置。 如需這個方格的詳細資訊，請參閱[還原資料庫 &#40;檔案頁面&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)。  
   
 8.  在 **[選項]** 頁面上，依需要調整選項。 如需這些選項的詳細資訊，請參閱[還原資料庫 &#40;選項頁面&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)。  
 
@@ -100,15 +100,17 @@ ms.locfileid: "53590842"
  
 1.  (選擇性) 在包含您想要還原之完整資料庫備份的備份組中，決定檔案的邏輯和實體名稱。 這個陳述式會傳回備份組內所自主資料庫和記錄檔清單。 基本語法如下：  
   
-     RESTORE FILELISTONLY FROM <備份裝置> WITH FILE = *backup_set_file_number* 
+     RESTORE FILELISTONLY FROM <備份裝置>  WITH FILE = *backup_set_file_number* 
   
      此處，*backup_set_file_number* 表示媒體集中的備份位置。 您可以使用 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 陳述式來取得備份組的位置。 如需詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的＜指定備份組＞。  
   
      這個陳述式也支援一些 WITH 選項。 如需詳細資訊，請參閱 [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
   
 2.  使用 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式來還原完整資料庫備份。 根據預設，資料和記錄檔會還原到其原始位置。 若要重新放置資料庫，請使用 MOVE 選項來重新放置每個資料庫檔案，避免與現有的檔案發生衝突。  
-  
-     將資料庫還原至新位置和新名稱的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法為：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
   
      RESTORE DATABASE *new_database_name*  
   
@@ -128,40 +130,40 @@ ms.locfileid: "53590842"
   
      ;  
   
-    > **注意！** 準備要在不同的磁碟上重新放置資料庫時，您應該確認有足夠的可用空間，並且識別與現有檔案發生衝突的任何可能性。 這項作業包括使用 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 陳述式，其中指定您打算在 RESTORE DATABASE 陳述式中使用的相同 MOVE 參數。  
+    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
   
-     下表針對將資料庫還原到新位置的作業，描述這個 RESTORE 陳述式的引數。 如需這些引數的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)資料庫還原至新位置，並選擇性地重新命名資料庫。  
+     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
      *new_database_name*  
-     資料庫的新名稱。  
+     The new name for the database.  
   
-    >**注意：** 如果您要將資料庫還原至不同的伺服器執行個體，可以使用原始資料庫名稱而非新名稱。  
+    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
   
      *backup_device* [ **,**...*n* ]  
-     指定一份逗號分隔清單，其中列出要從中還原資料庫備份的 1 到 64 個備份裝置。 您可以指定實體備份裝置，也可以指定對應的邏輯備份裝置 (如果已定義的話)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：  
+     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
   
      { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     如需詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
      { **RECOVERY** | NORECOVERY }  
-     如果資料庫使用完整復原模式，您可能必須在還原資料庫之後套用交易記錄備份。 在此情況下，請指定 NORECOVERY 選項。  
+     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
   
-     否則，請使用 RECOVERY 選項 (預設值)。  
+     Otherwise, use the RECOVERY option, which is the default.  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     識別要還原的備份組。 例如， *backup_set_file_number* 為 **1** ，表示備份媒體的第一個備份組； *backup_set_file_number* 為 **2** ，表示第二個備份組。 您可以使用 *RESTORE HEADERONLY* 陳述式來取得備份組的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
+     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
-     沒有指定這個選項時，預設值是使用備份裝置上的第一個備份組。  
+     When this option is not specified, the default is to use the first backup set on the backup device.  
   
-     如需詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的＜指定備份組＞。  
+     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
      MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     指定 *logical_file_name_in_backup* 所指定的資料或記錄檔要還原至 *operating_system_file_name*所指定的位置。 針對您想要從備份組還原到新位置的每一個邏輯檔案指定 MOVE 陳述式。  
+     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
   
     |選項|Description|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|指定備份組中資料或記錄檔的邏輯名稱。 備份組中資料或記錄檔的邏輯檔案名稱，會與當初建立備份組時資料庫中的邏輯名稱相符。<br /><br /> <br /><br /> 注意：若要取得備份組中的邏輯檔清單，請使用 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。|  
+    |*logical_file_name_in_backup*|指定備份組中資料或記錄檔的邏輯名稱。 備份組中資料或記錄檔的邏輯檔案名稱，會與當初建立備份組時資料庫中的邏輯名稱相符。<br /><br /> <br /><br /> 注意:若要取得備份組中的邏輯檔清單，請使用 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。|  
     |*operating_system_file_name*|針對 *logical_file_name_in_backup*所指定的檔案指定新的位置。 檔案將還原至這個位置。<br /><br /> (選擇性) *operating_system_file_name* 會針對還原的檔案指定新的檔案名稱。 如果您要在相同的伺服器執行個體上建立現有資料庫的副本，這就是必要選項。|  
     |*n*|這是預留位置，表示您可以指定其他 MOVE 陳述式。|  
   

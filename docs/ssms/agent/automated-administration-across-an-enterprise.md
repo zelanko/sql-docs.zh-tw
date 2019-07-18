@@ -18,16 +18,16 @@ helpviewer_keywords:
 - multiple instances of SQL Server
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c186794989d89eff38975ca57908a5da1fcaa987
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206287"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688903"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53206287"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-將多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
+將多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」  (Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
   
 -   管理二或多部伺服器。  
   

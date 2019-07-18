@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211399"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>將目標伺服器編列至主要伺服器
   此主題描述如何將目標伺服器新增至多伺服器管理組態。 從主要伺服器執行這個程序。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理物件 (SMO)。  
@@ -46,7 +46,7 @@ ms.locfileid: "52786210"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[新增目標伺服器]**。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多伺服器管理]** ，然後按一下 **[新增目標伺服器]** 。  
   
 3.  完成「目標伺服器精靈」，精靈將引導您完成此程序。  
   

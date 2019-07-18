@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e4978471f25c1bf38d841e11f560a6bd99dac53e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705321"
 ---
 # <a name="import-a-policy-based-management-policy"></a>匯入原則式管理原則
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中匯入原則式管理原則執行個體。  
@@ -48,16 +48,16 @@ ms.locfileid: "52783700"
   
 #### <a name="to-import-a-policy-instance"></a>若要匯入原則執行個體  
   
-1.  在物件總管中，按一下加號，展開新匯入之原則執行個體所在的伺服器。  
+1.  在物件總管  中，按一下加號，展開新匯入之原則執行個體所在的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
-4.  以滑鼠右鍵按一下 [原則] 資料夾，然後選取 [匯入原則]。  
+4.  以滑鼠右鍵按一下 [原則]  資料夾，然後選取 [匯入原則]  。  
   
-5.  在 [匯入] 對話方塊中，輸入檔案的路徑和名稱，或使用瀏覽 (**...**) 按鈕找出包含原則的 XML 檔案，然後選取此檔案。 如需有關 **[匯入]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Import Policies Dialog Box](import-policies-dialog-box.md)＞。  
+5.  在 [匯入]  對話方塊中，輸入檔案的路徑和名稱，或使用瀏覽 ( **...** ) 按鈕找出包含原則的 XML 檔案，然後選取此檔案。 如需有關 **[匯入]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Import Policies Dialog Box](import-policies-dialog-box.md)＞。  
   
-6.  完成後，請按一下 **[確定]**。  
+6.  完成後，請按一下 **[確定]** 。  
   
   

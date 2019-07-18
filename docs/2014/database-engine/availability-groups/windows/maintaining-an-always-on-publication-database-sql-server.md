@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791981"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  
@@ -32,17 +32,17 @@ ms.locfileid: "54126979"
   
 -   複寫監視器永遠都會在原始發行者底下顯示發行集資訊。 不過，只要加入原始發行者做為伺服器，您就可以在複寫監視器中檢視任何複本的這項資訊。  
   
--   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 `PUBLISHINGSERVERNAME` 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要容錯移轉之後，次要的預存程序設定複寫，而且您想要在不同的複本已啟用的發行集資料庫的提取訂閱，您必須指定的名稱，而不是將原始發行者目前的發行者，作為*@publisher*參數`sp_addpullsubscription`或`sp_addmergepulllsubscription`。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會針對 *@publisher* 參數使用目前主要複本的主機名稱。  
+-   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 `PUBLISHINGSERVERNAME` 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要容錯移轉之後，次要的預存程序設定複寫，而且您想要在不同的複本已啟用的發行集資料庫的提取訂閱，您必須指定的名稱，而不是將原始發行者目前的發行者，作為 *@publisher* 參數`sp_addpullsubscription`或`sp_addmergepulllsubscription`。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會針對 *@publisher* 參數使用目前主要複本的主機名稱。  
   
     > [!NOTE]  
-    >  對於某些程序，例如`sp_addpublication`，則*@publisher*的執行個體的發行者才支援參數[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 在這些情況下，不相關的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
+    >  對於某些程序，例如`sp_addpublication`，則 *@publisher* 的執行個體的發行者才支援參數[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 在這些情況下，不相關的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
   
 -   若要在容錯移轉後同步處理 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中的訂閱，請從訂閱者同步處理提取訂閱，並從使用中發行者同步處理發送訂閱。  
   
 ##  <a name="RemovePublDb"></a> 從可用性群組中移除已發行的資料庫  
  如果您已從可用性群組中移除已發行的資料庫，或者已卸除具有已發行成員資料庫的可用性群組，請考慮下列問題。  
   
--   如果在原始發行者端的發行集資料庫從可用性群組主要複本中移除，您必須執行`sp_redirect_publisher`但未指定的值*@redirected_publisher*若要移除的參數發行者/資料庫配對的重新導向。  
+-   如果在原始發行者端的發行集資料庫從可用性群組主要複本中移除，您必須執行`sp_redirect_publisher`但未指定的值 *@redirected_publisher* 若要移除的參數發行者/資料庫配對的重新導向。  
   
     ```  
     EXEC sys.sp_redirect_publisher   

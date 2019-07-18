@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e2f08868aa581136bc155011671e0b8b1c55e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918661"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-field.md)的[Field 物件](../../../ado/reference/ado-api/field-object.md)。  

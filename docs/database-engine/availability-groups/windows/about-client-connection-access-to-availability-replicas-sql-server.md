@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 977d29b873a247bcd50b14546957364725ab10be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801373"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性群組內複本的用戶端連線類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53206487"
  不允許任何使用者連接。 次要資料庫不適用於讀取。 這是次要角色的預設行為。  
   
  僅讀取意圖連接  
- 次要資料庫僅適用於其 **Application Intent** 連接屬性設為 **ReadOnly** 的連接 (「讀取意圖連接」)。  
+ 次要資料庫僅適用於其 **Application Intent** 連接屬性設為 **ReadOnly** 的連接 (「讀取意圖連接」  )。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   

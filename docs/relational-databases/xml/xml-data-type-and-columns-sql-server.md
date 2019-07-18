@@ -1,7 +1,7 @@
 ---
 title: XML 資料類型和資料行 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511575"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65836153"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   本主題討論 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的優勢和限制，並幫助您選擇儲存 XML 資料的方式。  
   
@@ -175,6 +176,8 @@ ms.locfileid: "58511575"
 -   它無法當作 ISNULL、COALESCE 和 DATALENGTH 以外之任何純量、內建函數的參數。  
   
 -   它無法當作索引中的索引鍵資料行使用。 但是，在建立非叢集索引時使用 INCLUDE 關鍵字，可以將它包含在叢集索引中做為資料，或明確地將它加入非叢集索引中。  
+
+- XML 項目所建立的巢狀結構最多可以有 128 個層級。
   
 ## <a name="see-also"></a>另請參閱  
  [大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

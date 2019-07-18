@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73c1f5576d440cc9c98708882b98c5b6d9ceff42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd6249f11c9026c1ec036d3ccf11b010dafda2e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809976"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771219"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

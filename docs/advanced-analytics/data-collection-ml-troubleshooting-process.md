@@ -6,13 +6,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe383652a63b0972097fc739cf33bd3fcbe2e7e6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3c9d8d6cc8c0a5cfdc697c5daaa3b56631d74116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963022"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>疑難排解適用於 machine learning 的資料收集
 

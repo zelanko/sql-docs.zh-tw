@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 207c4aa417f2063cbdca8fa575b45ea380f1da4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780984"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rpo"></a>疑難排解：可用性群組超過 RPO
+# <a name="troubleshoot-availability-group-exceeded-rpo"></a>疑難排解：可用性群組已超過 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在可用性群組上強制手動容錯移轉至非同步認可次要複本之後，您可能會發現資料遺失比您的復原點目標 (RPO) 還多。 或者，當您使用[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)中的方法計算非同步認可次要複本的潛在資料遺失時，會發現它超過您的 RPO。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52408765"
  一旦記錄區塊在記錄檔上經過強化，就能防止資料遺失。 因此，請務必將記錄檔與資料檔案隔離。 如果記錄檔和資料檔案都對應到相同的硬碟，報告大量讀取資料檔案的工作負載會耗用與記錄強化作業所需的 I/O 資源相同。 慢速的記錄強化可能會轉譯為慢速認可至主要複本，這可能會導致過度啟動流量控制，以及流量控制的等候時間很長。  
   
 ### <a name="diagnosis-and-resolution"></a>診斷和解決方案  
- 如果您確認網路不屬於高度延遲或低輸送量的狀況，則應該調查次要複本是否有 I/O 競爭情形。 [SQL 伺服器：盡可能降低磁碟 I/O](https://technet.microsoft.com/magazine/jj643251.aspx) 中的查詢對於識別競爭很有用。 為了方便起見，該文章的範例衍生如下。  
+ 如果您確認網路不屬於高度延遲或低輸送量的狀況，則應該調查次要複本是否有 I/O 競爭情形。 [SQL Server：盡可能降低磁碟 I/O](https://technet.microsoft.com/magazine/jj643251.aspx)中的查詢對於識別競爭很有幫助。 為了方便起見，該文章的範例衍生如下。  
   
  下列指令碼可讓您查看在 SQL Server 執行個體上執行的每個可用性資料庫，在每個資料檔案和記錄檔的讀取數目和寫入數目。 它會依照平均的 I/O 拖延時間 (毫秒) 排序。 請注意，數字是從上次啟動伺服器執行個體的時間開始累計。 因此，您應該在經過一些時間之後，計算兩個測量值之間的差異。  
   
@@ -116,13 +116,13 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Physical Disk：所有計數器**  
   
--   **Physical Disk: Avg.Disk sec/Transfer**  
+-   **實體磁碟：Avg.Disk sec/Transfer**  
   
--   **SQL Server: Databases > Log Flush Wait Time**  
+-   **SQL Server：Databases > Log Flush Wait Time**  
   
--   **SQL Server: Databases > Log Flush Waits/sec**  
+-   **SQL Server：Databases > Log Flush Waits/sec**  
   
--   **SQL Server: Databases > Log Pool Disk Reads/sec**  
+-   **SQL Server：Databases > Log Pool Disk Reads/sec**  
   
  如果您找到了 I/O 瓶頸，而且將記錄檔和資料檔案放在同一個硬碟上，則應該做的第一件事是將資料檔案和記錄檔放在不同的磁碟上。 這個最佳做法可防止報告工作負載干擾從主要複本到記錄緩衝區的記錄傳送路徑，以及其在次要複本上強化交易的能力。  
   

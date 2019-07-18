@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a3b973d0c09d272e8960b2d5bf0d2b438260b74
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45324642d2f323297ecbe091617fbb14cc5fc785
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922241"
 ---
 # <a name="running-the-address-book-sample-application"></a>執行通訊錄應用程式範例
 > [!IMPORTANT]

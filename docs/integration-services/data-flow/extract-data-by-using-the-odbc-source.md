@@ -11,14 +11,18 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0140a11c9b9b4c161deb01d4439e9fb52eda63af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726828"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此程序描述如何使用 ODBC 來源擷取資料。 若要加入和設定 ODBC 來源，封裝必須至少含有一個「資料流程」工作。  
   
 ### <a name="to-extract-data-using-an-odbc-source"></a>使用 ODBC 來源擷取資料  
@@ -37,7 +41,7 @@ ms.locfileid: "58274547"
   
          此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   
-    -   **SQL 命令**：輸入 SQL 命令，或按一下 [瀏覽] 從文字檔載入 SQL 查詢。  
+    -   **SQL 命令**：輸入 SQL 命令，或按一下 [瀏覽]  從文字檔載入 SQL 查詢。  
   
 6.  您可以按一下 **[預覽]** ，以檢視 ODBC 來源擷取的最多 200 個資料列。  
   
@@ -45,9 +49,9 @@ ms.locfileid: "58274547"
   
 8.  如有需要，藉由編輯 **[輸出資料行]** 清單中的值，更新輸出資料行的名稱。  
   
-9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。  
+9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]** 。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2c5428611c67315407ed31478fbb60ccca1b6dd2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62921868"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>建立認證 - 向 Azure 儲存體驗證
-  使用 [備份至 URL - 建立認證] 對話方塊建立新的 SQL 認證。  
+  使用 [備份至 URL - 建立認證]  對話方塊建立新的 SQL 認證。  
   
  使用此對話方塊建立認證時，您必須提供新增至本機憑證存放區的 Windows Azure 管理憑證或下載到電腦上的發行設定檔，以驗證訂閱和儲存體帳戶資訊。  
   

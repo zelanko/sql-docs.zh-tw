@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068623"
 ---
 # <a name="configuring-data-sources"></a>設定資料來源
 資料來源的相關資訊會儲存在系統登錄中。 使用者修改資料來源資訊，透過管理程式。 這可以是 ODBC 管理員、 ODBC 控制台裝置或應用程式或驅動程式的開發人員所撰寫的系統管理 程式。  

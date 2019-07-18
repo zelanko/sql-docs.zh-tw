@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 660c807d1f7a1844c2fc51983ecc1d13e916c9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cd6c597c79b639b1437e21cbe7f858c100f691
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138216"
 ---
 # <a name="and-predicate-limitations"></a>AND 述詞限制
 支援最多 40 個。

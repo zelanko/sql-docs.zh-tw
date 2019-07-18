@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918699"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
     
@@ -35,28 +35,28 @@ ms.locfileid: "52784000"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]。  
+2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]  。  
   
  **在 [物件總管] 中檢視資料庫的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫] ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]。  
+2.  展開 [資料庫]  ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]  。  
   
  **在 [物件總管] 中檢視資料行的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、特定資料庫及 **[資料表]**。  
+2.  依序展開 **[資料庫]** 、特定資料庫及 **[資料表]** 。  
   
-3.  展開包含資料行的資料表，然後展開 **[資料行]**。  
+3.  展開包含資料行的資料表，然後展開 **[資料行]** 。  
   
-4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]。 如果定序屬性為空白，則資料行不是字元資料類型。  
+4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]  。 如果定序屬性為空白，則資料行不是字元資料類型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **檢視伺服器的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52784000"
   
  **檢視 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52784000"
   
  **檢視資料庫的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 sys.databases 系統目錄檢視的陳述式。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52784000"
   
  **檢視資料行的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 sys.columns 系統目錄檢視的陳述式。  
   

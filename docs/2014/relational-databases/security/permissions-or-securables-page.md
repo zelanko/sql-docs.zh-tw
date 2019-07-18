@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284550"
 ---
 # <a name="permissions-or-securables-page"></a>權限或安全性實體頁面
   使用 **[權限]** 頁面或 **[安全性實體]** 頁面可檢視或設定安全性實體的權限。 您可以從許多位置開啟此頁面。 此頁面的內容會隨著開啟頁面的方式以及頁面中包含的內容而稍有不同。 當頁面開啟時，頁面的上層方格可能會填入資料或是空白。 若要在上方格中加入項目，請按一下 **[搜尋]**。 在上方格中選取項目，然後在 **[明確]** 索引標籤上設定適當的權限。若要檢視彙總的權限，請使用 **[有效]** 索引標籤。  

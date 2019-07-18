@@ -1,5 +1,5 @@
 ---
-title: 變更採礦結構的屬性 |Microsoft 文件
+title: 變更採礦結構的屬性 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670164"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>變更採礦結構的屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014045"
   
 ### <a name="to-change-the-properties-of-a-mining-structure"></a>若要變更採礦結構的屬性  
   
-1.  在資料採礦設計師的 [採礦結構] 索引標籤上，以滑鼠右鍵按一下採礦結構或採礦結構中的資料行，然後選取 [屬性]。  
+1.  在資料採礦設計師的 [採礦結構]  索引標籤上，以滑鼠右鍵按一下採礦結構或採礦結構中的資料行，然後選取 [屬性]  。  
   
      如果 **[屬性]** 視窗還沒有出現，則它會在螢幕的右邊開啟。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "34014045"
      您在設計師中選取其他元素時，新值就會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

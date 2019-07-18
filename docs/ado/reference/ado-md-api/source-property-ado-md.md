@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83c20c90310202a51b5dc0f3e4fb8dcc1bb8232d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af28306ebc8aa1c10d33f3c96d7871e67144ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949147"
 ---
 # <a name="source-property-ado-md"></a>Source 屬性 (ADO MD)
 指示中的資料來源[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

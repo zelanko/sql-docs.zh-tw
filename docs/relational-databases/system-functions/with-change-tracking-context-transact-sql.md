@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62042b08d455d77855a58aece480a84bc653f808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90610b8b93d0d03a41c6dbbae6c2a9a4e9678aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950929"
 ---
 # <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
   
 #### <a name="parameters"></a>參數  
  *context*  
- 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *內容*已**varbinary(128)**。  
+ 藉由呼叫應用程式所提供的內容資訊，而且會與變更的變更追蹤資訊儲存在一起。 *內容*已**varbinary(128)** 。  
   
  這個值可以是常數或變數，但不得為 NULL。  
   

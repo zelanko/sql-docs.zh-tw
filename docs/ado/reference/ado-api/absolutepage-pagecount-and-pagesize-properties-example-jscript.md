@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921869"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、 PageCount、 和 PageSize 屬性範例 (JScript)
 此範例示範 AbsolutePage、 PageCount 和 PageSize 屬性。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AbsolutePageJS.asp**。  
@@ -110,7 +109,7 @@ BODY {
                     if (iRecord == 1)  
                         strMessage += "<td>Page " + i + " of " + rsEmployee.PageCount + "</td>"  
                     else  
-                        strMessage += "<td> </td>";  
+                        strMessage += "<td> </td>";  
   
                     // First and last name are in first column.  
                     strMessage += "<TD>" + rsEmployee.Fields("FirstName") + " ";  

@@ -11,14 +11,18 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1104890dc1ea9a2894d1d32bf6f6d44d546e7569
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e77a6574bafaf743ebcc77721ac7e1b812fec974
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276295"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714612"
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有作業顯示擴充資訊。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5353afae9a07be7dcf5b5df3f1a2ec5442378a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103924"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項**RSClientPrint**，提供在瀏覽器中檢視報表的用戶端列印。 此控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能。 這些功能包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向。 雖然依預設會啟用用戶端列印，但如果您不想提供此功能，也可以停用它。  
@@ -54,29 +53,29 @@ ms.locfileid: "56041279"
   
     2.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接到報表伺服器執行個體。  
   
-    3.  以滑鼠右鍵按一下報表伺服器節點，然後按一下 [屬性]。 如果 **[屬性]** 選項已停用，請確認您已使用系統管理權限來啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
+    3.  以滑鼠右鍵按一下報表伺服器節點，然後按一下 [屬性]  。 如果 **[屬性]** 選項已停用，請確認您已使用系統管理權限來啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
     4.  選取 **啟用 ActiveX 用戶端列印控制項的下載**。  
   
-    5.  按一下 [確定] 。  
+    5.  按一下 [確定]  。  
   
 -   針對 **SharePoint 模式報表伺服器**：  
   
-    1.  在 SharePoint 管理中心內，按一下 **[應用程式管理]**。  
+    1.  在 SharePoint 管理中心內，按一下 **[應用程式管理]** 。  
   
-    2.  按一下 **[管理服務應用程式]**。  
+    2.  按一下 **[管理服務應用程式]** 。  
   
     3.  按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[管理]** 。  
   
-    4.  按一下 **[系統設定]**。  
+    4.  按一下 **[系統設定]** 。  
   
-    5.  選取 **[啟用用戶端列印]**。 **[啟用用戶端列印]** 選項位於靠近頁面底部的位置。  
+    5.  選取 **[啟用用戶端列印]** 。 **[啟用用戶端列印]** 選項位於靠近頁面底部的位置。  
   
-    6.  按一下 [確定] 。  
+    6.  按一下 [確定]  。  
   
 -   撰寫指令碼或程式碼以設定報表伺服器系統屬性**EnableClientPrinting**至 `false.`  
   
- 下列範例指令碼說明停用用戶端列印功能的方法之一。 編譯後執行下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，將 **EnableClientPrinting** 屬性設定為 **[False]**。 執行程式碼之後，請重新啟動 IIS。  
+ 下列範例指令碼說明停用用戶端列印功能的方法之一。 編譯後執行下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，將 **EnableClientPrinting** 屬性設定為 **[False]** 。 執行程式碼之後，請重新啟動 IIS。  
   
 ### <a name="sample-script"></a>範例指令碼  
   

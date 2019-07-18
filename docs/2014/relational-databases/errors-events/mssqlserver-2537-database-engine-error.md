@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c4a2a9c8a49344a581ed85bc714cf4976f9f6b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869228"
 ---
 # <a name="mssqlserver2537"></a>MSSQLSERVER_2537
     
@@ -30,7 +30,7 @@ ms.locfileid: "48145418"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_RECORD_CHECK_FAILED|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，頁面 P_ID，資料列 ROW_ID。 記錄檢查 (CHECK_TEXT) 失敗。 值為 VALUE1 和 VALUE2。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE），頁面 P_ID，資料列 ROW_ID。 記錄檢查 (CHECK_TEXT) 失敗。 值為 VALUE1 和 VALUE2。|  
   
 ## <a name="explanation"></a>說明  
  資料列 ROW_ID (或資料列中的資料行) 無法通過 CHECK_TEXT 所描述的測試或條件。  

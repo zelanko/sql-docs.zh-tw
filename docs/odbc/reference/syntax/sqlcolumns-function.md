@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118668"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 函數
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53207737"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
      SQLHSTMT       StatementHandle,  
@@ -182,7 +181,7 @@ SQLRETURN SQLColumns(
 ## <a name="code-example"></a>程式碼範例  
  在下列範例中，應用程式會宣告所傳回的結果集的緩衝區**SQLColumns**。 它會呼叫**SQLColumns**傳回描述 EMPLOYEE 資料表中的每個資料行的結果集。 然後它會呼叫**SQLBindCol**繫結結果集之緩衝區中的資料行。 最後，應用程式會擷取資料的每個資料列**SQLFetch**並予以處理。  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

@@ -1,5 +1,5 @@
 ---
-title: prepareCall 方法 (java.lang.String) |Microsoft Docs
+title: prepareCall 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cb83b567-4ce5-447a-93cc-895d4eaf3a05
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e6a3178208148488db4beaeacf66b14496b2ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 22dd6c5c559dc58b5c381cabc23210e3eade266f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762453"
 ---
 # <a name="preparecall-method-javalangstring"></a>prepareCall 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
 #### <a name="parameters"></a>參數  
  *sql*  
   
- **String**，包含 SQL 陳述式。  
+ **String**，其中包含 SQL 陳述式。  
   
 ## <a name="return-value"></a>傳回值  
  CallableStatement 物件。  
@@ -46,7 +46,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 prepareCall 方法是由 java.sql.Connection 介面中的 prepareCall 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

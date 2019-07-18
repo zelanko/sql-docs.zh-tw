@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930758"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 屬性範例 (VC++)
 此範例示範如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性可協助存取的資料列，以階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

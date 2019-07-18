@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 39444e0eaf9a44f48fc86b5d7f4595d63d1e9823
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 594c984be10d592246696730dd393efdfc48e259
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029587"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

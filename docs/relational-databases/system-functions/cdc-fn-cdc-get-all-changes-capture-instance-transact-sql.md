@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043056"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對在指定之記錄序號 (LSN) 範圍內套用至來源資料表的每個變更，各傳回一個資料列。 如果來源資料列在間隔期間具有多個變更，就會在傳回的結果集中表示每個變更。 除了傳回變更資料以外，四個中繼資料資料行會提供讓您將變更套用至其他資料來源所需的資訊。 資料列篩選選項會管理結果集中傳回的中繼資料資料行以及資料列內容。 當您指定了 'all' 資料列篩選選項時，每個變更都剛好具有一個資料列來識別變更。 當您指定了 'all update old' 選項時，更新作業會表示成兩個資料列：其中一個資料列包含更新之前擷取資料行的值，而另一個資料列則包含更新之後擷取資料行的值。  
   
- 當來源資料表啟用異動資料擷取時，就會建立此列舉函數。 函數名稱衍生，並使用格式**cdc.fn_cdc_get_all_changes_**_capture_instance_位置*capture_instance*是擷取指定的值來源資料表啟用異動資料擷取時的執行個體。  
+ 當來源資料表啟用異動資料擷取時，就會建立此列舉函數。 函數名稱衍生，並使用格式**cdc.fn_cdc_get_all_changes_** _capture_instance_位置*capture_instance*是擷取指定的值來源資料表啟用異動資料擷取時的執行個體。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +46,16 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>引數  
  *from_lsn*  
- LSN 值，代表要包含在結果集之 LSN 範圍的低端點。 *from_lsn*已**binary(10)**。  
+ LSN 值，代表要包含在結果集之 LSN 範圍的低端點。 *from_lsn*已**binary(10)** 。  
   
  只有當資料列中[cdc。&#91;擷取執行個體&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表中的值 **__ $start_lsn**大於或等於*from_lsn*會包含在結果集中。  
   
  *to_lsn*  
- LSN 值，代表要包含在結果集之 LSN 範圍的高端點。 *to_lsn*已**binary(10)**。  
+ LSN 值，代表要包含在結果集之 LSN 範圍的高端點。 *to_lsn*已**binary(10)** 。  
   
  只有當資料列中[cdc。&#91;擷取執行個體&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)變更資料表中的值 **__ $start_lsn**小於或等於*from_lsn*等於*to_lsn*包含在結果集中。  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option >:: = {所有 | 所有更新舊}  
  管理結果集中傳回之中繼資料資料行以及資料列內容的選項。  
   
  可以是下列其中一個選項：  
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>備註  
  如果指定的 LSN 範圍不在擷取執行個體的變更追蹤時間表內，此函數會傳回錯誤 208 (「提供給程序或函數 cdc.fn_cdc_get_all_changes 的引數數量不足」)。  
   
- 資料類型的資料行**映像**，**文字**，並**ntext**一定會指派 NULL 值時 **__ $operation** = 1 或 **__ $作業**= 3。 資料類型的資料行**varbinary （max)**， **varchar （max)**，或**nvarchar （max)** 都會指派 NULL 值時 **__ $operation** = 3除非在更新期間，變更資料行。 當 **__ $operation** = 1，這些資料行會在刪除時指定其值。 包含在擷取執行個體中的計算資料行，一律使用 NULL 值。  
+ 資料類型的資料行**映像**，**文字**，並**ntext**一定會指派 NULL 值時 **__ $operation** = 1 或 **__ $作業**= 3。 資料類型的資料行**varbinary （max)** ， **varchar （max)** ，或**nvarchar （max)** 都會指派 NULL 值時 **__ $operation** = 3除非在更新期間，變更資料行。 當 **__ $operation** = 1，這些資料行會在刪除時指定其值。 包含在擷取執行個體中的計算資料行，一律使用 NULL 值。  
   
 ## <a name="examples"></a>範例  
  數個[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]範本可示範如何使用異動資料擷取查詢函數。 這些範本都位於**檢視**功能表中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 範本總管](../../ssms/template/template-explorer.md)。  
@@ -110,7 +109,7 @@ GO
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
  [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

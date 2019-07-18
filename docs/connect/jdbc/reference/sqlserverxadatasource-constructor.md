@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a807b460c98c87d9269c9cddbc3b933626029a76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9fe7f706fe099fc0449a8369f1ce1d74b5ccb4e4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669026"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804122"
 ---
 # <a name="sqlserverxadatasource-constructor-"></a>SQLServerXADataSource 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

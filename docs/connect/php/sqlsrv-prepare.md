@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 8029d83fd51d126a4ca6bdc8ae69e61536c2aa3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802359"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,22 +59,22 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     下表說明這些陣列元素：  
   
-    |元素|描述|  
+    |元素|Description|  
     |-----------|---------------|  
     |*&$value*|常值或 PHP 變數的參考。|  
-    |*$direction*[選用]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$phpType*[OPTIONAL]|**SQLSRV_PHPTYPE_\*** 常數，指定傳回值的 PHP 資料類型。|  
     |*$sqlType*[OPTIONAL]|**SQLSRV_SQLTYPE_\*** 常數，指定輸入值的 SQL Server 資料類型。|  
   
-*$options* [選用]：設定查詢屬性的關聯陣列。 下表列出支援的 Key 和對應的值：  
-  
-|索引鍵|支援的值|描述|  
+*$options* [OPTIONAL]：設定<a name="properties">查詢屬性</a>的關聯陣列。 下表列出支援的 Key 和對應的值：
+
+|索引鍵|支援的值|Description|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正整數|設定將保留用戶端資料指標結果集的緩衝區大小。<br /><br />預設值是 10240 KB。 如需詳細資訊，請參閱[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
-|DecimalPlaces|介於 0 到 4 （含） 之間的整數|指定小數位數，格式化時提取貨幣值。<br /><br />將忽略任何負整數或值大於 4。<br /><br />這個選項適用於 FormatDecimals 時才 **，則為 true**。|
-|FormatDecimals|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|指定是否要加入開頭為十進位字串適當時歸零，並可讓`DecimalPlaces`格式化 money 類型的選項。<br /><br />如需詳細資訊，請參閱 <<c0> [ 格式化為十進位字串和貨幣值 （SQLSRV 驅動程式）](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
+|DecimalPlaces|介於 0 和 4 (含) 之間的整數|指定將擷取的貨幣值格式化時的小數位數。<br /><br />將忽略任何大於 4 的負整數或值。<br /><br />這個選項只有當 FormatDecimals 為 **true** 時才能運作。|
+|FormatDecimals|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|指定是否要在適當時於十進位字串中新增前置零，並啟用 `DecimalPlaces` 選項來將貨幣類型格式化。<br /><br />如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (SQLSRV 驅動程式)](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
 |QueryTimeout|正整數|設定查詢逾時 (以秒為單位)。 根據預設，驅動程式會無限期等候結果。|  
-|ReturnDatesAsStrings|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|設定要擷取為字串的日期和時間類型的陳述式 (**，則為 true**)。 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
+|ReturnDatesAsStrings|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|設定陳述式，以使用字串形式來擷取日期和時間類型 (**true**)。 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
 |可捲動|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
 |SendStreamParamsAtExec|**[True]** 或 **[False]**<br /><br />預設值為 **true**。|設定驅動程式在執行時傳送所有資料流資料 (**true**)，或是以區塊傳送資料流資料 (**false**)。 依預設，此值設定為 **true**。 如需詳細資訊，請參閱 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
   
@@ -223,10 +223,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](https://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議在將值繫結至 [decimal 或 numeric 資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
 ## <a name="example"></a>範例  
-此程式碼範例示範如何繫結十進位值做為輸入參數。  
+此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```
 <?php

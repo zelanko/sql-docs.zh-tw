@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922469"
 ---
 # <a name="rds-programming-model-with-objects"></a>具有物件的 RDS 程式設計模型
 RDS 的目標是取得存取權，以及更新資料來源，透過例如 IIS 媒介。 程式設計模型指定完成這個目標所需的活動的序列。 物件模型會指定其方法和屬性會影響程式設計模型的物件。  

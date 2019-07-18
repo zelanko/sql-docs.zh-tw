@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
@@ -14,12 +13,12 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084884"
 ---
 # <a name="data-mining-solutions"></a>資料採礦方案
   資料採礦方案是包含一個或多個資料採礦專案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案。  
@@ -48,7 +47,7 @@ ms.locfileid: "52516546"
 ##  <a name="bkmk_Deploy"></a> 部署資料採礦方案  
  部署方案的目標 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體必須在支援多維度物件和資料採礦物件的模式下執行；也就是說，您不能將資料採礦物件部署到裝載表格式模型或 PowerPivot 資料的執行個體。  
   
- 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案] 範本。  
+ 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案]  範本。  
   
  當您部署方案時，用於資料採礦的物件會在指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中建立 (位於與方案檔同名的資料庫中)。  
   

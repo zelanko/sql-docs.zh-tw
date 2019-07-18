@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10214"
@@ -49,15 +48,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.charttitleproperties.font.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 724515d9a557cd5e6cb329446829b1d8371db57d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: af164d4db9b6439f0634d113652b95939827b0f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105862"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>格式化圖表 (報表產生器及 SSRS)
   在定義了圖表的資料且資料也以所要的方式顯示之後，您就可以加入格式設定，以改善整體外觀並強調關鍵的資料點。 您可以從 [屬性] 對話方塊修改最常見的格式設定選項，當您以滑鼠右鍵按一下圖表元素以顯示其快速鍵功能表時，此對話方塊就會顯示。 每個圖表元素都有它自己的對話方塊。 如需圖表元素的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  

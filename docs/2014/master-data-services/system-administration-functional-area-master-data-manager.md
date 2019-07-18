@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371200"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482738"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  

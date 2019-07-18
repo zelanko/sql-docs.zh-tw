@@ -14,26 +14,26 @@ helpviewer_keywords:
 - Results pane
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7367a3f3ce663966b583f6946923e3c312a5eb41
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 1036fcad90dbd2f9efbf46e30295c75291022598
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213607"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686376"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在查詢和檢視表設計工具中執行查詢之後，您可以清除 [結果] 窗格。 此程序可套用至使用物件總管的 [開啟檢視] 或 [開啟資料表] 選項所建立的查詢。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於 [查詢編輯器] 中執行查詢後，除非關閉 [查詢編輯器] 視窗或執行另一個查詢，否則無法清除 [結果] 窗格。  
+在查詢和檢視表設計工具  中執行查詢之後，您可以清除 [結果] 窗格。 此程序可套用至使用物件總管的 [開啟檢視]  或 [開啟資料表]  選項所建立的查詢。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於 [查詢編輯器] 中執行查詢後，除非關閉 [查詢編輯器] 視窗或執行另一個查詢，否則無法清除 [結果] 窗格。  
   
 > [!NOTE]  
 > 這不會恢復您對資料庫所做的變更。 如需有關 [結果] 窗格如何運作，請參閱 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)。  
   
 ### <a name="to-clear-query-results-of-a-view"></a>清除檢視的查詢結果  
   
--   在[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)上按一下滑鼠右鍵、指向 [窗格]，然後按一下 [清除結果]。  
+-   在[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)上按一下滑鼠右鍵、指向 [窗格]  ，然後按一下 [清除結果]  。  
   
     清除 [結果] 窗格時如果有查詢正在執行，查詢和檢視表設計工具會停止查詢。  
   

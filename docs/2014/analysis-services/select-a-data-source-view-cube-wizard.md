@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourceselection.f1
@@ -13,20 +12,20 @@ ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5f82386128c8b4cac8e8a68719d4ece3f3489ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069753"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>選取資料來源檢視 (Cube 精靈)
   使用 **[選取資料來源檢視]** 頁面，即可針對空白 Cube 選取資料來源檢視。  
   
 > [!NOTE]  
->  只有當您已在 [選取建立方法] 頁面上選取了 [建立空白 Cube] 時，才會顯示這個頁面。  
+>  只有當您已在 [選取建立方法]  頁面上選取了 [建立空白 Cube]  時，才會顯示這個頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料來源檢視**  
  選取用於空白 Cube 的資料來源檢視。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48210018"
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], status
 - logs [SQL Server], jobs
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37077bd03ba42d81e2009c77f1e275712beeea4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04ad610e219f4a65f69c48d9d91041f9ba59d646
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816916"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680510"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47816916"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目，將作業狀態寫入 Windows 應用程式記錄檔：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47816916"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -64,17 +64,17 @@ ms.locfileid: "47816916"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
+2.  展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
   
 3.  選取 **[通知]** 頁面。  
   
-4.  勾選 **[寫入 Windows 應用程式事件記錄檔]**，並選擇下列其中一項：  
+4.  勾選 **[寫入 Windows 應用程式事件記錄檔]** ，並選擇下列其中一項：  
   
-    -   按一下 [當作業成功時]，在作業成功完成時記錄作業狀態。  
+    -   按一下 [當作業成功時]  ，在作業成功完成時記錄作業狀態。  
   
-    -   按一下 [當作業失敗時]，在作業失敗時記錄作業狀態。  
+    -   按一下 [當作業失敗時]  ，在作業失敗時記錄作業狀態。  
   
-    -   按一下 [作業完成時]，不論完成狀態為何，一律記錄作業狀態。  
+    -   按一下 [作業完成時]  ，不論完成狀態為何，一律記錄作業狀態。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要將作業狀態寫入到 Windows 應用程式記錄**  

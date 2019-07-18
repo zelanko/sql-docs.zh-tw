@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724787"
 ---
 # <a name="tracing-and-replaying-events"></a>追蹤及重新執行事件
   在 SMO 中，`Trace` 命名空間中的 `Replay` 和 <xref:Microsoft.SqlServer.Management.Trace> 物件會提供 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 功能的程式設計存取方式，該功能是用來監視 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視實際環境，查看哪些程序由於執行速度過慢而妨礙效能。  

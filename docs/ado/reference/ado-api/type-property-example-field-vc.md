@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936651"
 ---
 # <a name="type-property-example-field-vc"></a>Type 屬性範例 (Field) (VC++)
 此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性的值來顯示對應的常數名稱**型別**屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行此程序。  

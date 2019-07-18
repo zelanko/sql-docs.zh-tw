@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
@@ -13,17 +12,17 @@ ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1cf11c572860815f46e6d20a0cf1a4b82399a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081365"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>錯誤組態 (採礦結構對話方塊) (Analysis Services - 多維度資料)
   在 **SQL Server Management Studio** 中，使用 **[採礦結構屬性]** 對話方塊的 **[錯誤組態]** 頁面，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中採礦結構的錯誤組態屬性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用預設錯誤組態**  
  選取即可針對處理作業中的物件使用預設錯誤組態。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48210908"
  輸入處理停止之前所忽略的錯誤數目。  
   
  **發生錯誤時要執行的動作**  
- 當錯誤數目超出 [錯誤數目] 中的值時，請選擇採取下列動作之一：  
+ 當錯誤數目超出 [錯誤數目]  中的值時，請選擇採取下列動作之一：  
   
 -   **[停止處理]** 會結束處理作業。  
   

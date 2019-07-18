@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639461"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808689"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
   使用`transform noise words`伺服器組態選項來隱藏錯誤訊息，如果非搜尋字，也就是[停用字詞](../../relational-databases/search/full-text-search.md)，造成的布林運算傳回零個資料列的全文檢索查詢。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  

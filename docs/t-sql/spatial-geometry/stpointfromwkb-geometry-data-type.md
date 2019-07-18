@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB (geometry Data Type)
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3cef65b2d51cba199b3a908ee8f71880663aee53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 623e39aed2471f765755bd46f737967c43f4c1cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938386"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- OGC 類型：**Point**  
+ OGC 類型：**點**  
   
 ## <a name="remarks"></a>Remarks  
  如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  

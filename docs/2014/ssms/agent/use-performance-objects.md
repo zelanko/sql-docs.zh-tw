@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245844"
 ---
 # <a name="use-performance-objects"></a>使用效能物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 包含效能物件及計數器，可用來監視服務執行的狀況。 這些效能物件可讓您使用「效能監視器」(一種 Windows 工具)，來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務在背景執行哪些工作。 例如，您可以識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務目前正在執行多少使用中的作業，以找出被封鎖的作業。  
@@ -37,7 +37,7 @@ ms.locfileid: "52787080"
 |執行個體類型|物件名稱|  
 |-------------------|-----------------|  
 |預設|**SQLAgent:** *物件*:*計數器*|  
-|具名|**SQLAgent$**<br /> ***instance_name* :** *物件*:*計數器*|  
+|具名|**SQLAgent$**<br /> ***instance_name* :** *object*:*counter*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的下列效能物件。  
   

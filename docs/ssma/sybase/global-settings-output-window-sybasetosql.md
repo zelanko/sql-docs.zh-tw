@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d28e1a7a69404d76b0d6cecaca08f3e91455ae5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0289407dd24a64733ce0a1abf5182b2370e58a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029034"
 ---
 # <a name="global-settings-output-window--sybasetosql"></a>全域設定 （[輸出] 視窗） (SybaseToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的設定。  

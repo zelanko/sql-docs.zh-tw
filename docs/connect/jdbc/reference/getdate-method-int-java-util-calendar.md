@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 （int，java.util.Calendar） |Microsoft Docs
+title: getDate 方法 (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9d436c323415465f95760a92795e4bace50765c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3106b0ada53fe2ccc096d789538dfea4cfc3e7a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66785711"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public java.sql.Date getDate(int index,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這項 getDate 方法由 java.sql.CallableStatement 介面中的 getDate 方法所指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 或 **smalldatetime** 資料類型中的有效日期部分，而時間部分則會設定成 Java 時間基準 00:00 (午夜)。  

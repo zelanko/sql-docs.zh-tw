@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 425fd1f945995b63b66fa105c96b36629c595941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e12acaaef6e4bbfd4816bea70f8b381ba78691e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794644"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47852066"
   
     2.  新增次要資料庫時，請在 **[次要資料庫設定]** 對話方塊的 **[次要資料庫]** 方塊中，輸入原始的資料庫名稱。  
   
-    3.  在 **[次要資料庫設定]** 對話方中，選取 **[否，次要資料庫已初始化]**。  
+    3.  在 **[次要資料庫設定]** 對話方中，選取 **[否，次要資料庫已初始化]** 。  
   
 4.  如果您先前的記錄傳送組態已啟用記錄傳送監視，請將記錄傳送監視重新設定為監視新的記錄傳送組態。  執行下列命令，以資料庫的名稱取代 *database_name* ：  
   

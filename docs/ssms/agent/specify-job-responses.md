@@ -13,16 +13,16 @@ helpviewer_keywords:
 - actions [SQL Server Agent jobs]
 - responding to jobs
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 928bc7cf9ec193a49b3c98580e1ba4cca0177218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a090460ed8652e1eccba0e8eb8bf7ca43f87f99
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846867"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686759"
 ---
 # <a name="specify-job-responses"></a>指定作業回應
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47846867"
 |-|-|  
 |**說明**|**主題**|  
 |描述如何通知操作員作業狀態。|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|描述如何將作業狀態寫入 Windows 應用程式記錄檔。|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|描述如何將作業狀態寫入 Windows 應用程式記錄檔。|[若要將作業狀態寫入到 Windows 應用程式記錄](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>另請參閱  
 [監視及回應事件](../../ssms/agent/monitor-and-respond-to-events.md)  

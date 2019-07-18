@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef3f22ffa0456c69b7e46f8c5aadfc89f95ccc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022460"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元，提供給 「 散發代理程式。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*已**nvarchar(4000)**，預設值是空字串。  
+`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元，提供給 「 散發代理程式。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*已**nvarchar(4000)** ，預設值是空字串。  
   
 `[ @frequency_type = ] frequency_type` 是用來排程散發代理程式的頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
   
@@ -178,11 +177,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date` 是 「 散發代理程式停止的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是**0**。  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` 是此作業之散發代理程式的識別碼。 *distribution_jobid*已**二進位 （16)**，預設值是 NULL，它是一個 OUTPUT 參數。  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT` 是此作業之散發代理程式的識別碼。 *distribution_jobid*已**二進位 （16)** ，預設值是 NULL，它是一個 OUTPUT 參數。  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password` 設定*encrypted_distributor_password*不受支援。 嘗試將這個**位元**參數來**1**會導致錯誤。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 為訂用帳戶是否可以透過同步[!INCLUDE[msCoName](../../includes/msconame-md.md)]Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 為訂用帳戶是否可以透過同步[!INCLUDE[msCoName](../../includes/msconame-md.md)]Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)** ，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 `[ @ftp_address = ] 'ftp_address'` 基於回溯相容性。  
   
@@ -192,11 +191,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @ftp_password = ] 'ftp_password'` 基於回溯相容性。  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` 指定替代快照集資料夾的位置。 *alternate_snapshot_folder*已**nvarchar(255)**，預設值是 NULL。  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` 指定替代快照集資料夾的位置。 *alternate_snapshot_folder*已**nvarchar(255)** ，預設值是 NULL。  
   
-`[ @working_directory = ] 'working_director'` 是用來儲存發行集的資料和結構描述檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)**，預設值是 NULL。 這個名稱應該用 UNC 格式來指定。  
+`[ @working_directory = ] 'working_director'` 是用來儲存發行集的資料和結構描述檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)** ，預設值是 NULL。 這個名稱應該用 UNC 格式來指定。  
   
-`[ @use_ftp = ] 'use_ftp'` 指定利用 FTP 而不是一般的通訊協定來擷取快照集。 *use_ftp*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @use_ftp = ] 'use_ftp'` 指定利用 FTP 而不是一般的通訊協定來擷取快照集。 *use_ftp*已**nvarchar(5)** ，預設值是 FALSE。  
   
 `[ @publication_type = ] publication_type` 指定發行集的複寫類型。 *publication_type*已**tinyint**預設值是**0**。 如果**0**，發行集是交易類型。 如果**1**，發行集是快照集類型。 如果**2**，發行集是合併類型。  
   
@@ -207,7 +206,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  您必須指定密碼，如果*dts_package_name*指定。  
   
-`[ @dts_package_location = ] 'dts_package_location'` 指定封裝位置。 *dts_package_location*已**nvarchar(12)**，預設值是**訂閱者**。 封裝位置可以是**散發者端**或是**訂閱者**。  
+`[ @dts_package_location = ] 'dts_package_location'` 指定封裝位置。 *dts_package_location*已**nvarchar(12)** ，預設值是**訂閱者**。 封裝位置可以是**散發者端**或是**訂閱者**。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -221,7 +220,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @job_name = ] 'job_name'` 是現有的代理程式作業名稱。 *job_name*已**sysname**，預設值是 NULL。 只有在訂閱將利用現有的作業來同步處理，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*並*job_password*當您指定*job_name*.  
   
-`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 通往訂閱者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)** ，沒有預設值。 通往訂閱者的代理程式連接一律使用這個 Windows 帳戶。  
   
 `[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   
@@ -243,9 +242,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="see-also"></a>另請參閱  
  [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   

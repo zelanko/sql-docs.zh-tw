@@ -2,21 +2,20 @@
 title: 備份與還原的資料庫
 titleSuffix: Azure Data Studio
 description: 了解如何備份和還原資料庫，使用 Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 77679106577cd8f8374f932d8ddd22644beb63d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959105"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>備份和還原資料庫時使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

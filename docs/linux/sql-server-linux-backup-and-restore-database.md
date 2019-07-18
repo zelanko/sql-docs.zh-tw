@@ -1,21 +1,20 @@
 ---
-title: 備份和還原在 Linux 上的 SQL Server 資料庫 |Microsoft Docs
+title: 在 Linux 上的備份和還原 SQL Server 資料庫
 description: 了解如何備份和還原在 Linux 上的 SQL Server 資料庫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 29db423235533a0855f268459c6db379c7f7dfca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077687"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上的備份和還原 SQL Server 資料庫
 
@@ -31,7 +30,7 @@ ms.locfileid: "47690126"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-當您執行命令時，SQL Server 將會提示輸入密碼。 您輸入密碼之後，命令介面會傳回備份進度的結果。 例如：
+當您執行命令時，SQL Server 將會提示輸入密碼。 您輸入密碼之後，命令介面會傳回備份進度的結果。 例如:
 
 ```
 Password:
@@ -88,7 +87,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 
 1. 啟動 SSMS 並連接到您在 Linux 上的 SQL Server 2017 中的伺服器。
 
-1. 在 物件總管 中，以滑鼠右鍵按一下您的資料庫中，按一下**任務**，然後按一下 **備份...**.
+1. 在 物件總管 中，以滑鼠右鍵按一下您的資料庫中，按一下**任務**，然後按一下 **備份...** .
 
 1. 在 **資料庫備份** 對話方塊中，確認參數和選項，然後按一下 **確定**。
  
@@ -98,13 +97,13 @@ SQL Server 完成資料庫備份。
 
 下列步驟會引導您使用 SSMS 將資料庫還原。
 
-1. 在 SSMS 中以滑鼠右鍵按一下**資料庫**，按一下 **還原資料庫...**. 
+1. 在 SSMS 中以滑鼠右鍵按一下**資料庫**，按一下 **還原資料庫...** . 
 
 1. 底下**來源**按一下 **裝置：** ，然後按一下 省略符號 （...）。
 
 1. 找出您的資料庫備份檔案，然後按一下**確定**。 
 
-1. 底下**還原計劃**，確認備份檔案和設定。 按一下 [確定] 。 
+1. 底下**還原計劃**，確認備份檔案和設定。 按一下 [確定]  。 
 
 1. SQL Server 還原資料庫。 
 

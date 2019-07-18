@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482878"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是由 Internet Information Services (IIS) 裝載的 Web 應用程式。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 僅適用於 Internet Explorer (IE) 7 或更新版本。 不支援 IE 7 及更新版本、Microsoft Edge 和 Chrome。  
@@ -40,7 +40,7 @@ ms.locfileid: "53361284"
  若要在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [這裡](https://go.microsoft.com/fwlink/?LinkId=243096)安裝 Silverlight 5。  
   
 ### <a name="role-and-role-services-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>角色和角色服務 (Windows Server 2008 或 Windows Server 2008 R2、Windows 7 作業系統)  
- 在 Windows Server 2008 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 **[伺服器管理員]**，以安裝 **[網頁伺服器 (IIS)]** 角色及下列必要的角色服務。  
+ 在 Windows Server 2008 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 **[伺服器管理員]** ，以安裝 **[網頁伺服器 (IIS)]** 角色及下列必要的角色服務。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 和 Windows 7 作業系統上，使用 [控制台] 內的 **[程式和功能]** ，在 **[Windows 功能]** 對話方塊中啟用這些選項。  
@@ -57,7 +57,7 @@ ms.locfileid: "53361284"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [附註：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
+|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>功能 (Windows Server 2008 或 Windows Server 2008 R2、Windows 7 作業系統)  
  在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或 Windows Server 2008 R2 上，您可以使用 **[伺服器管理員]** 來安裝下列必要的功能。  
@@ -77,7 +77,7 @@ ms.locfileid: "53361284"
   
 ||  
 |-|  
-|.NET Framework 3.5 (包括 .NET 2.0 和 3.0)<br /><br /> .NET Framework 4.5 進階服務<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 啟用 [注意：這是必要的。]<br /><br /> TCP 連接埠共用<br /><br /> Windows 處理序啟用服務<br /><br /> 處理序模型<br /><br /> .NET 環境<br /><br /> 設定 API|  
+|.NET Framework 3.5 (包括 .NET 2.0 和 3.0)<br /><br /> .NET Framework 4.5 進階服務<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 啟用 [注意：這是必要。]<br /><br /> TCP 連接埠共用<br /><br /> Windows 處理序啟用服務<br /><br /> 處理序模型<br /><br /> .NET 環境<br /><br /> 設定 API|  
   
 ### <a name="accounts-and-permissions"></a>帳戶和權限  
   

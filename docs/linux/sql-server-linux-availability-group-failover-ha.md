@@ -1,27 +1,26 @@
 ---
-title: 管理可用性群組容錯移轉-在 Linux 上的 SQL Server |Microsoft Docs
+title: 管理可用性群組容錯移轉-在 Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027226"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>在 Linux 上的 always On 可用性群組容錯移轉
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在可用性群組 (AG) 的內容中，主要角色和次要可用性複本的角色是在稱為容錯移轉的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留您所有的資料。 AG 容錯移轉的可用性複本層級。 也就是 AG 容錯移轉到其中一個次要複本 （目前的容錯移轉目標）。 
+在可用性群組 (AG) 的內容中，主要角色和次要可用性複本的角色是在稱為容錯移轉的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」  。 自動及經過規劃的手動容錯移轉會保留您所有的資料。 AG 容錯移轉的可用性複本層級。 也就是 AG 容錯移轉到其中一個次要複本 （目前的容錯移轉目標）。 
 
 如需容錯移轉的背景資訊，請參閱[容錯移轉和容錯移轉模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
@@ -118,13 +117,13 @@ ms.locfileid: "58657903"
 
 1. 請確認，AG 資源不由管理叢集了。 
 
-      - 在目標叢集節點上，為未受管理的模式設定的資源。 此命令發出訊號停止資源監視和管理的資源代理程式。 例如： 
+      - 在目標叢集節點上，為未受管理的模式設定的資源。 此命令發出訊號停止資源監視和管理的資源代理程式。 例如: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - 如果嘗試將資源模式設定為未受管理的模式失敗，請刪除資源。 例如：
+      - 如果嘗試將資源模式設定為未受管理的模式失敗，請刪除資源。 例如:
 
       ```bash
       sudo pcs resource delete <resourceName>

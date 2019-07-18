@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -16,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064711"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
   **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
@@ -64,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd 中的路徑內容  
  如果您沒有使用 -Database 參數，Invoke-Sqlcmd 的資料庫內容就會由呼叫此指令程式時作用中的路徑所設定。  
   
-|路徑|資料庫內容|  
+|`Path`|資料庫內容|  
 |----------|----------------------|  
 |以磁碟機而非 SQLSERVER: 為開頭|本機電腦上預設執行個體中登入識別碼的預設資料庫。|  
 |SQLSERVER:\SQL|本機電腦上預設執行個體中登入識別碼的預設資料庫。|  
@@ -92,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>比較 Invoke-Sqlcmd 和 sqlcmd 公用程式  
  **Invoke-Sqlcmd** 可用於執行可使用 **sqlcmd** 公用程式執行的許多指令碼。 但是， **Invoke-Sqlcmd** 執行所在的 Windows PowerShell 環境，與 **sqlcmd** 執行所在的命令提示字元環境不同。 **Invoke-Sqlcmd** 的行為已經過修改，可在 Windows PowerShell 環境中工作。  
   
- 並非所有的 **sqlcmd** 命令都實作於 **Invoke-Sqlcmd**中。 未實作的命令包含以下項目： **:!!**、 **:connect**、 **:error**、 **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace**和 **:serverlist**。  
+ 並非所有的 **sqlcmd** 命令都實作於 **Invoke-Sqlcmd**中。 未實作的命令包含以下項目： **:!!** 、 **:connect**、 **:error**、 **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace**和 **:serverlist**。  
   
  **Invoke-Sqlcmd** 不會初始化 **sqlcmd** 環境或指令碼變數，例如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
   
@@ -118,7 +117,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |停用互動式命令、啟動指令碼和環境變數。|-X|-DisableCommands|  
 |停用變數替代。|-X|-DisableVariables|  
 |報表的最小嚴重性層級。|-v|-SeverityLevel|  
-|報表的最小錯誤層級。|-m|-ErrorLevel|  
+|報表的最小錯誤層級。|-M|-ErrorLevel|  
 |登入逾時間隔。|-l|-ConnectionTimeout|  
 |主機名稱。|-H|-HostName|  
 |變更密碼並結束。|-Z|-NewPassword|  
@@ -132,7 +131,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |執行指定的查詢並維持執行中狀態。|-Q|無參數|  
 |用於輸出資料的字碼頁。|-f|無參數|  
 |變更密碼並維持執行中狀態|-Z|無參數|  
-|封包大小|-a|無參數|  
+|封包大小|-A|無參數|  
 |資料行分隔符號|-s|無參數|  
 |控制項輸出標頭|-h|無參數|  
 |指定控制字元|-k|無參數|  
@@ -142,7 +141,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |啟用引號識別碼|-i|無參數|  
 |移除尾端空白|-w|無參數|  
 |列出執行個體|-l|無參數|  
-|將輸出格式化為 Unicode|-U|無參數|  
+|將輸出格式化為 Unicode|-u|無參數|  
 |列印統計資料|-p|無參數|  
 |命令結束|-c|無參數|  
 |使用 Windows 驗證進行連接|-E|無參數|  

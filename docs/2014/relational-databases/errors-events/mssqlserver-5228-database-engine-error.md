@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913746"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
     
@@ -30,7 +30,7 @@ ms.locfileid: "48150939"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，頁面 PG_ID，資料列 R_ID。 DBCC 偵測到線上索引建立作業有不完整清除。 (反物質資料行值為 VALUE)。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE），頁面 PG_ID，資料列 R_ID。 DBCC 偵測到線上索引建立作業有不完整清除。 (反物質資料行值為 VALUE)。|  
   
 ## <a name="explanation"></a>說明  
  偵測到物件 *O_ID*、索引 *I_ID* 和資料分割 *PN_ID* 的線上索引建立作業未完成。 其證據在於資料列 *R_ID* 包含反物質資料行。 線上索引建立期間，反物質資料行用於協調多個來源提供的記錄。 錯誤訊息也指出反物質資料行的值。  

@@ -19,20 +19,24 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dfbfa62ed23dff43aa6177043f269513adcf4c36
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f78f779585f18b3ab3b787424ace83f86dcf987c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727278"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
   
  您可使用 ADO NET 目的地，連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO NET 目的地疑難排解  
- 您可以記錄 ADO NET 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 ADO NET 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ADO NET 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 ADO NET 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 ADO NET 目的地所執行之將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 ADO NET 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷]  事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ado-net-destination"></a>設定 ADO NET 目的地  
  此目的地使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員以連接到資料來源，且連接管理員會指定要使用的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者。 如需詳細資訊，請參閱 [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)。  
@@ -58,34 +62,34 @@ ms.locfileid: "58275511"
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目的地編輯器 (連線管理員頁面)
-  使用 [ADO NET 目的地編輯器] 對話方塊的 [連線管理員] 頁面，即可選取目的地的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
+  使用 [ADO NET 目的地編輯器]  對話方塊的 [連線管理員]  頁面，即可選取目的地的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
   
  **開啟連接管理員頁面**  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 目的地。  
+2.  在 [資料流程]  索引標籤中，按兩下 ADO NET 目的地。  
   
-3.  在 [ADO NET 目的地編輯器] 中，按一下 [連線管理員]。  
+3.  在 [ADO NET 目的地編輯器]  中，按一下 [連線管理員]  。  
   
 ### <a name="static-options"></a>靜態選項  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [設定 ADO.NET 連線管理員] 對話方塊建立新的連線管理員。  
+ 使用 [設定 ADO.NET 連線管理員]  對話方塊建立新的連線管理員。  
   
  **使用資料表或檢視**  
- 從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的資料表。  
+ 從清單中選取現有的資料表或檢視，或按一下 [新增]  來建立新的資料表。  
   
  **新增**  
- 使用 [建立資料表] 對話方塊來建立新的資料表或檢視。  
+ 使用 [建立資料表]  對話方塊來建立新的資料表或檢視。  
   
 > [!NOTE]  
 >  當您按一下 **[新增]** 時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **預覽**  
- 使用 [預覽查詢結果] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+ 使用 [預覽查詢結果]  對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
  **在可用時使用大量插入**  
  指定是否要使用 <xref:System.Data.SqlClient.SqlBulkCopy> 介面來改善大量插入作業的效能。  
@@ -94,7 +98,7 @@ ms.locfileid: "58275511"
   
  您可以使用 .NET Data Provider for SQL Server (SqlClient) 連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤] 選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
+ 如果您選取 [盡可能使用大量插入]  ，並將 [錯誤]  選項設定為 [重新導向資料列]  ，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤]  選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]
 >  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您就必須使用執行 SQL 工作，在 ADO NET 目的地前後啟用及停用 IDENTITY_INSERT 陳述式。 (識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可將來源資料表中的明確值插入至目的地資料表中的識別欄位。)  
@@ -110,15 +114,15 @@ ms.locfileid: "58275511"
  sqlcat.com 上的技術文件： [快速將資料載入 Windows Azure SQL 資料庫的方式](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目的地編輯器 (對應頁面)
-  使用 [ADO NET 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
+  使用 [ADO NET 目的地編輯器]  對話方塊的 [對應]  頁面，即可將輸入資料行對應至目的地資料行。  
   
  **開啟對應頁面**  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 目的地。  
+2.  在 [資料流程]  索引標籤中，按兩下 ADO NET 目的地。  
   
-3.  在 [ADO NET 目的地編輯器] 中，按一下 [對應]。  
+3.  在 [ADO NET 目的地編輯器]  中，按一下 [對應]  。  
   
 ### <a name="options"></a>選項。  
  **可用的輸入資料行**  
@@ -128,7 +132,7 @@ ms.locfileid: "58275511"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將資料表中的可用目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視所選取的輸入資料行。 您可以選取 [\<忽略>] 移除對應，排除輸出的資料行。  
+ 檢視所選取的輸入資料行。 您可以選取 [\<忽略>]  移除對應，排除輸出的資料行。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  
@@ -140,9 +144,9 @@ ms.locfileid: "58275511"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程] 索引標籤中，按兩下 ADO NET 目的地。  
+2.  在 [資料流程]  索引標籤中，按兩下 ADO NET 目的地。  
   
-3.  在 **[ADO NET 目的地編輯器]** 中，按一下 **[錯誤輸出]**。  
+3.  在 **[ADO NET 目的地編輯器]** 中，按一下 **[錯誤輸出]** 。  
   
 ### <a name="options"></a>選項。  
  **輸入或輸出**  
@@ -154,7 +158,7 @@ ms.locfileid: "58275511"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  

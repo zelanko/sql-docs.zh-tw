@@ -17,16 +17,16 @@ helpviewer_keywords:
 - multiplication [SQL Server]
 - multiply operator (*)
 ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0707ee458e073c8a0dc7b04268a336a1452f6fce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bae60f88039181eb69342f91c1cc3c7266f8246
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981945"
 ---
 # <a name="-multiplication-transact-sql"></a>* (乘法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, master servers
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12a799591b0c3af58493e6daad9c5605f715eaf1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a4d0e4d469d605b5e7efafb9f96c839f50c825cf
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685939"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "51697366"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要設為主要伺服器，使用：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -78,9 +78,9 @@ ms.locfileid: "51697366"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多重伺服器管理]**，然後按一下 **[設為主要伺服器]**。 **「主要伺服器精靈」** 會引導您完成設定主要伺服器與新增目標伺服器的步驟。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多重伺服器管理]** ，然後按一下 **[設為主要伺服器]** 。 **「主要伺服器精靈」** 會引導您完成設定主要伺服器與新增目標伺服器的步驟。  
   
-3.  從 [主要伺服器操作員] 頁面設定主要伺服器的操作員。若要使用電子郵件或呼叫器傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來傳送電子郵件。 若要使用 **net send**傳送通知給操作員， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在伺服器上必須執行 Messenger 服務。  
+3.  從 [主要伺服器操作員]  頁面設定主要伺服器的操作員。若要使用電子郵件或呼叫器傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來傳送電子郵件。 若要使用 **net send**傳送通知給操作員， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在伺服器上必須執行 Messenger 服務。  
   
     **電子郵件地址**  
     設定操作員的電子郵件地址。  
@@ -128,9 +128,9 @@ ms.locfileid: "51697366"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
   
 ```  
 USE msdb ;  

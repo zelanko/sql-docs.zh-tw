@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo |Microsoft Docs
+title: SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128647"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   下表顯示所傳回的值**SQLGetInfo**。 這些值可能會根據連接之伺服器的版本號碼而有所不同。  

@@ -1,22 +1,21 @@
 ---
-title: 第 4 課： 定義進階屬性和維度屬性 |Microsoft Docs
+title: 第 4 課：定義進階屬性和維度屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8b81a5d2e8bfe57c1ae8d8464b5af9140dd9dbb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078635"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 課：定義進階屬性和維度屬性
   在這一課，您將會學會如何使用某些屬性 (Attribute) 的進階屬性 (Property)、屬性 (Attribute) 階層和維度屬性 (Property)。  
@@ -41,8 +40,8 @@ ms.locfileid: "48184068"
  [依次要屬性來排序屬性成員](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
  在這項工作中，您會學到如何依據次要屬性來排序維度成員，以達到您想要的排序順序。  
   
- [在使用者定義階層的屬性之間指定屬性關聯性](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- 在這項工作中，您會學到如何定義屬性的成員屬性，以及指定彼此之間的彙總關聯性。 如需詳細資訊，請參閱[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)和[使用者階層屬性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
+ [在使用者自訂階層的屬性之間指定屬性關聯性](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+ 在這項工作中，您會學到如何定義屬性的成員屬性，以及指定彼此之間的彙總關聯性。 如需詳細資訊，請參閱 [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md) 和 [使用者階層屬性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
  [定義未知的成員和 Null 處理屬性](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  在這項工作中，您會設定 UnknownMember 和 UnknownMemberName 屬性，處理 Null 維度成員所造成的錯誤狀況。  

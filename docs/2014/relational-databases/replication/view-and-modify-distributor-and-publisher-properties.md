@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212022"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改「散發者」和「發行者」屬性。  
@@ -31,7 +31,7 @@ ms.locfileid: "54131138"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要檢視及修改「散發者」和「發行者」屬性，請使用：**  
   
@@ -56,11 +56,11 @@ ms.locfileid: "54131138"
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的散發者，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]**。  
+2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[散發者屬性]** 。  
   
-3.  檢視和修改 [散發者屬性 - \<散發者>] 對話方塊中的屬性。  
+3.  檢視和修改 [散發者屬性 - \<散發者>]  對話方塊中的屬性。  
   
-    -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般] 頁面上資料庫的屬性按鈕 (**...**)。  
+    -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般]  頁面上資料庫的屬性按鈕 ( **...** )。  
   
     -   若要檢視和修改與「散發者」相關聯的「發行者」屬性，請按一下對話方塊中 **[發行者]** 頁面上「發行者」的屬性按鈕 ( **[...]** )。  
   
@@ -68,19 +68,19 @@ ms.locfileid: "54131138"
   
     -   若要變更在「發行者」端執行管理預存程序以及在「散發者」端更新資訊時所使用之帳戶的密碼，請在對話方塊中 **[發行者]** 頁面上的 **[密碼]** 和 **[確認密碼]** 方塊內輸入新的密碼。 如需詳細資訊，請參閱[保護散發者](security/secure-the-distributor.md)。  
   
-4.  必要時修改任何屬性，然後按一下 **[確定]**。  
+4.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>檢視和修改發行者屬性  
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的發行者，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[發行者屬性]**。  
+2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[發行者屬性]** 。  
   
 3.  檢視及修改中的屬性**發行者屬性-\<發行者 >**  對話方塊。  
   
     -   **sysadmin** 固定伺服器角色中的使用者能啟用 **[發行集資料庫]** 頁面上複寫的資料庫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫中建立一個或多個發行集。  
   
-4.  必要時修改任何屬性，然後按一下 **[確定]**。  
+4.  必要時修改任何屬性，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式檢視發行者和散發者屬性。  
@@ -204,6 +204,6 @@ ms.locfileid: "54131138"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [散發者與發行者資訊指令碼](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)  
+ [使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

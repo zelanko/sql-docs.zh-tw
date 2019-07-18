@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949606"
 ---
 # <a name="level-object-ado-md"></a>Level 物件 (ADO MD)
 包含一組成員，每個都有相同的陣序，在階層中。  

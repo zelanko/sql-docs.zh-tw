@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
@@ -16,12 +15,12 @@ ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e557807f2371b933896a7855c92ef0241ef3af37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073804"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 指令碼 (MDX)
   多維度運算式 (MDX) 指令碼可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中定義 Cube 的計算處理序。 MDX 指令碼有以下兩種類型：  
@@ -43,7 +42,7 @@ ms.locfileid: "48164374"
   
 -   對於 Cube 中定義的每個導出成員，預設的 MDX 指令碼中會有對應的 CREATE MEMBER 陳述式存在。  
   
- 您可以使用 Cube 設計師的 [計算] 索引標籤，在預設的 MDX 指令碼中、控制指令碼命令、命名集與導出成員的順序。 如需定義預設 MDX 指令碼中儲存之計算的詳細資訊，請參閱[多維度模型中的計算](../calculations-in-multidimensional-models.md)。  
+ 您可以使用 Cube 設計師的 [計算]  索引標籤，在預設的 MDX 指令碼中、控制指令碼命令、命名集與導出成員的順序。 如需定義預設 MDX 指令碼中儲存之計算的詳細資訊，請參閱[多維度模型中的計算](../calculations-in-multidimensional-models.md)。  
   
  如果沒有與 Cube 相關的  MDX 指令碼，Cube 會假設與其相關的是預設的 MDX 指令碼。 因為 Cube 仰賴 MDX 指令碼來決定計算行為，所以 Cube 必須至少與一個 MDX 指令碼相關。 換句話說，沒有與 Cube 相關的 MDX 指令碼，或是與空白 MDX 指令碼相關的 Cube ，無法計算任何資料格。 如果使用 Analysis Services 指令碼語言 (ASSL) 命令，或使用分析管理物件 (AMO)， 透過設計程式的方式建立 Cube，建議您建立會包含該 Cube 的單一 CALCULATE 陳述式的預設 MDX 指令碼。  
   
@@ -53,18 +52,18 @@ ms.locfileid: "48164374"
  所有 MDX 指令碼陳述式  
  在 MDX 指令碼中，MDX 指令碼陳述式可控制計算的內容及範圍，還能管理 MDX 指令碼中其他陳述式的行為。 此類別目錄包括以下陳述式：  
   
--   [計算](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [凍結](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [範圍](/sql/mdx/mdx-scripting-scope)  
+-   [SCOPE](/sql/mdx/mdx-scripting-scope)  
   
  如需 MDX 指令碼陳述式的詳細資訊，請參閱 [MDX 指令碼陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)。  
   
- [建立成員](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  CREATE MEMBER 陳述式可建立導出成員。 如需如何建立導出成員的詳細資訊，請參閱[在 MDX 中建立導出成員 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)。  
   
- [建立集合](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET 陳述式可建立命名集。 如需如何建立命名集的詳細資訊，請參閱[在 MDX 中建立命名集 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)。  
   
  條件陳述式  
@@ -91,7 +90,7 @@ ms.locfileid: "48164374"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX 指令碼基礎觀念&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

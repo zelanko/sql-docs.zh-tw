@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e1b8a5435d6923015c2d3c29eef5031f3d5b2f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 854da2b16cf680ac6ce54ae44a4bf1296cdbfd2c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622786"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796859"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>finalize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

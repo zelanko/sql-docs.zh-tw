@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3ead09886af3ec64c00af06e3919941effd7b234
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638683"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ MESSAGE TYPE *message_type_name*
 指定所傳送之訊息的訊息類型。 這個訊息類型必須包括在這些交談所用的服務合約中。 這些合約必須允許從交談的這一端傳送這個訊息類型。 例如，交談的目標服務只能傳送合約中指定為 SENT BY TARGET 或 SENT BY ANY 的訊息。 如果省略這個子句，訊息的訊息類型便是 DEFAULT。  
   
 *message_body_expression*  
-提供代表訊息主體的運算式。 *message_body_expression* 為選擇性。 不過，如果 *message_body_expression* 存在，則運算式的類型必須能夠轉換成 **varbinary(max)**。 運算式不能是 NULL。 如果省略這個子句，訊息主體就是空白的。  
+提供代表訊息主體的運算式。 *message_body_expression* 為選擇性。 不過，如果 *message_body_expression* 存在，則運算式的類型必須能夠轉換成 **varbinary(max)** 。 運算式不能是 NULL。 如果省略這個子句，訊息主體就是空白的。  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -93,11 +93,11 @@ SEND 陳述式會分別鎖定傳送訊息的每一個交談，以確保每個交
   
 SEND 在使用者自訂函式中無效。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 若要傳送訊息，目前的使用者必須有傳送訊息之每個服務佇列的 RECEIVE 權限。  
   
 ## <a name="examples"></a>範例  
-下列範例會啟動一個對話，且會在對話中傳送一則 XML 訊息。 為了傳送訊息，此範例會將 XML 物件轉換成 **varbinary(max)**。  
+下列範例會啟動一個對話，且會在對話中傳送一則 XML 訊息。 為了傳送訊息，此範例會將 XML 物件轉換成 **varbinary(max)** 。  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070005"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>排程資料重新整理 (PowerPivot for SharePoint)
   您可以排程資料重新整理，以取得已發行到 SharePoint 網站之 Excel 活頁簿內對 PowerPivot 資料的自動更新。  
@@ -78,7 +77,7 @@ ms.locfileid: "53363840"
   
 1.  在包含活頁簿的文件庫中選取活頁簿，然後按一下向下箭號以顯示命令清單。  
   
-2.  按一下 **[管理 PowerPivot 資料重新整理]**。 如果已經定義資料重新整理排程，則會改看到 [檢視資料重新整理] 記錄頁面。 您可以按一下 **[設定資料重新整理]** 以開啟排程定義頁面。  
+2.  按一下 **[管理 PowerPivot 資料重新整理]** 。 如果已經定義資料重新整理排程，則會改看到 [檢視資料重新整理] 記錄頁面。 您可以按一下 **[設定資料重新整理]** 以開啟排程定義頁面。  
   
 3.  在排程定義頁面中，選取 **[啟用]** 核取方塊。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "53363840"
   
 2.  選取文件，然後按一下出現在右邊的向下箭號。  
   
-3.  選取 **[管理 PowerPivot 資料重新整理]**。  
+3.  選取 **[管理 PowerPivot 資料重新整理]** 。  
   
  隨即顯示記錄頁面，以顯示在目前 Excel 活頁簿中為 PowerPivot 資料顯示所有重新整理活動的完整記錄，包含最近的資料重新整理作業狀態。  
   

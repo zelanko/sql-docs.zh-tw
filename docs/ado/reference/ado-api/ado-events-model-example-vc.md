@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921019"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
-Visual c + + 那段[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供如何具現化 ADO 事件模型的一般描述。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
+視覺效果C++一節[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供如何具現化 ADO 事件模型的一般描述。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
   
  一般的描述會使用**adoint.h**方法簽章的參考。 不過，一般的描述中的一些詳細資料而稍微藉由使用 **#import**指示詞：  
   
 -   **#Import**指示詞會解析**typedef**的方法簽章資料類型和修飾詞，以其基本形式。  
   
--   必須覆寫的純虛擬方法都會全部加上"**raw_**"。  
+-   必須覆寫的純虛擬方法都會全部加上"**raw_** "。  
   
  部分程式碼只會反映程式碼撰寫樣式。  
   

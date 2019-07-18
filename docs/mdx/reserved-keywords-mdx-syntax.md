@@ -1,5 +1,5 @@
 ---
-title: 保留的關鍵字 （MDX 語法） |Microsoft 文件
+title: 保留的關鍵字 （MDX 語法） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037064"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>保留的關鍵字 (MDX 語法)
 
 
-  Analysis Services 會保留為專用的特定關鍵字。 如需保留關鍵字的清單，請參閱[MDX 保留字](../mdx/mdx-reserved-words.md)。  
+  Analysis Services 會保留獨佔使用的特定關鍵字。 如需保留關鍵字的清單，請參閱 < [MDX 保留字](../mdx/mdx-reserved-words.md)。  
   
  保留關鍵字會遵循這些指導方針：  
   

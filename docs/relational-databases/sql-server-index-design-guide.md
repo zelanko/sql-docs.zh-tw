@@ -24,11 +24,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985120"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "58872328"
     
  為資料庫選擇正確的索引及工作負載時，往往很難在查詢速度與更新成本之間取得平衡。 範圍較小的索引，或是索引的索引鍵中包含較少的資料行，所需的磁碟空間與維護負擔相對較小。 相反的，如果索引範圍較大，能涵蓋的查詢就更多。 在找到最有效率的索引之前，可能需要先試過數種不同的設計。 索引可以新增、修改和卸除，不會影響資料庫結構描述或應用程式的設計。 所以，不要吝於嘗試各種不同的索引。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查詢最佳化工具可以確實地選擇在大多數情況中最有效率的索引。 整體的索引設計策略應該為查詢最佳化工具提供多樣化的索引，然後信任它會做最恰當的決定。 這可降低分析時間，且會在各種不同狀況下得到相當好的效能。 若要查看查詢最佳化工具用於特定查詢的索引，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢] 功能表中，選取 [包括實際執行計畫]。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查詢最佳化工具可以確實地選擇在大多數情況中最有效率的索引。 整體的索引設計策略應該為查詢最佳化工具提供多樣化的索引，然後信任它會做最恰當的決定。 這可降低分析時間，且會在各種不同狀況下得到相當好的效能。 若要查看查詢最佳化工具用於特定查詢的索引，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢]  功能表中，選取 [包括實際執行計畫]  。  
   
  使用索引不一定就會有良好的效能，良好的效能和有效率地使用索引也不能劃上等號。 如果使用索引對產生最佳效能一定有幫助，查詢最佳化工具的作業就很單純。 但事實上，選擇不正確的索引可能得不到最佳效能。 因此，查詢最佳化工具的工作是只有在提升效能時才選擇索引或索引組合，如果會妨礙效能，就要避免索引式擷取。  
 
@@ -123,7 +123,7 @@ ms.locfileid: "58872328"
   
 -   讓叢集索引保持短小的索引鍵。 此外，對唯一或非 Null 資料行建立叢集索引，會有幫助。  
   
--   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)** 或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
+-   **ntext**、 **text**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
   
 -   **xml** 資料類型只可以是 XML 索引的索引鍵資料行。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 導入了新的 XML 索引類型，稱為「選擇性 XML 索引」。 這個新索引可改善 SQL Server 中儲存為 XML 之資料的查詢效能，讓大型 XML 資料工作負載的索引編製更快速，並透過降低索引本身的儲存成本，改善延展性。 如需詳細資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   頁面上可以放入的索引資料列變少。 這將使得 I/O 的作業增加而降低快取的效率。  
   
--   必須有更多磁碟空間才能儲存索引。 尤其是，新增 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 或 **xml** 資料類型作為非索引鍵之索引資料行，將大幅增加磁碟空間的需求。 這是因為資料行的值複製到索引的分葉層級。 因此，它們會同時存在於索引與基底資料表中。  
+-   必須有更多磁碟空間才能儲存索引。 尤其是，新增 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 或 **xml** 資料類型作為非索引鍵之索引資料行，將大幅增加磁碟空間的需求。 這是因為資料行的值複製到索引的分葉層級。 因此，它們會同時存在於索引與基底資料表中。  
   
 -   維護索引時，會增加修改、插入、更新或刪除基礎資料表或索引檢視的時間。  
   
@@ -584,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  在某些情況下，篩選索引會涵蓋查詢，而不需將資料行以篩選索引定義中的索引鍵或內含資料行方式包含在篩選索引運算式中。 下列指導方針說明篩選索引運算式中的資料行何時應該是篩選索引定義中的索引鍵或內含資料行。 其中的範例會參考先前所建立的篩選索引 `FIBillOfMaterialsWithEndDate` 。  
   
- 如果篩選索引運算式相等於查詢述詞，且查詢並未以篩選索引運算式中的資料行傳回查詢結果，則篩選索引運算式中的資料行不需要是篩選索引定義中的索引鍵或內含資料行。 例如，`FIBillOfMaterialsWithEndDate` 包含下列查詢，因為查詢述詞相當於篩選運算式，且查詢結果未傳回 `EndDate`。 `FIBillOfMaterialsWithEndDate` 不需要在篩選的索引定義中以 `EndDate` 作為索引鍵或內含資料行。  
+ 如果篩選索引運算式相等於查詢述詞，且查詢並未以篩選索引運算式中的資料行傳回查詢結果，則篩選索引運算式中的資料行不需要是篩選索引定義中的索引鍵或內含資料行。 例如， `FIBillOfMaterialsWithEndDate` 包含下列查詢，因為查詢述詞相當於篩選運算式，且查詢結果未傳回 `EndDate` 。 `FIBillOfMaterialsWithEndDate` 不需要在篩選的索引定義中以 `EndDate` 作為索引鍵或內含資料行。  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -645,15 +645,15 @@ WHERE b = CONVERT(Varbinary(4), 1);
 了解這些基本知識，可讓您更容易理解其他說明有效使用方式的資料行存放區文章。
 
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>使用資料行存放區和資料列存放區壓縮的資料儲存
-討論資料行存放區索引時，我們使用「資料列存放區」和「資料行存放區」等字詞強調資料儲存格式。 資料行存放區索引會使用這兩種儲存類型。
+討論資料行存放區索引時，我們使用「資料列存放區」  和「資料行存放區」  等字詞強調資料儲存格式。 資料行存放區索引會使用這兩種儲存類型。
 
  ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
 
-- 「資料行存放區」是以邏輯方式組織成資料表的資料，其中包含資料列和資料行，並且會以資料行取向的資料格式實際儲存。
+- 「資料行存放區」  是以邏輯方式組織成資料表的資料，其中包含資料列和資料行，並且會以資料行取向的資料格式實際儲存。
   
   資料行存放區索引是以資料行存放區格式實際儲存大部分的資料。 在資料行存放區格式中，資料會以資料行的方式進行壓縮和解壓縮。 這樣就不需要解壓縮每個資料列中查詢未要求的其他值。 如此一來，便可快速掃描大型資料表的整個資料行。 
 
-- 「資料列存放區」是以邏輯方式組織成資料表的資料，其中包含資料列和資料行，並且會以資料列取向的資料格式實際儲存。 這是傳統儲存關聯式資料表資料的方式，例如堆積或叢集 B 型樹狀結構索引。
+- 「資料列存放區」  是以邏輯方式組織成資料表的資料，其中包含資料列和資料行，並且會以資料列取向的資料格式實際儲存。 這是傳統儲存關聯式資料表資料的方式，例如堆積或叢集 B 型樹狀結構索引。
 
   資料行存放區索引也會以資料列存放區格式實際儲存某些資料列，其稱為差異存放區。 差異存放區 (也稱為差異資料列群組) 是一種保存空間，用來保存數量太少而沒有資格壓縮到資料行存放區的資料列。 每個差異資料列群組都會實作為叢集 B 型樹狀結構索引。 
 
@@ -764,14 +764,14 @@ WHERE b = CONVERT(Varbinary(4), 1);
 在大部分情況下，值區計數理想情況會介於索引鍵中相異值數目的 1 到 2 倍之間。   
 您不一定能夠預測某個特定索引鍵可能擁有或將會擁有多少個值。 如果 **BUCKET_COUNT** 值在實際索引鍵值數目的 10 倍內，效能通常仍然不錯，高估一般而言會比低估好。  
   
-值區太「少」會有下列缺點︰  
+值區太「少」  會有下列缺點︰  
   
 - 有更多相異索引鍵值的雜湊衝突。  
 - 每個相異值都會強制與不同的相異值共用相同的值區。  
 - 每個值區的平均鏈結長度都會增加。  
 - 值區鏈結越長，索引中的等號比較查閱的速度就越慢。  
   
-值區太「多」會有下列缺點︰  
+值區太「多」  會有下列缺點︰  
   
 - 值區計數過高可能會導致更多的空值區。  
 - 空值區會影響完整索引掃描的效能。 如果是定期執行，請考慮挑選接近相異索引鍵值數目的值區計數。  
@@ -897,7 +897,7 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [資料行存放區索引概觀](../relational-databases/indexes/columnstore-indexes-overview.md)  
 [為記憶體最佳化資料表的雜湊索引進行疑難排解](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
-[經記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
+[記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      

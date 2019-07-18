@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], execution options
 - methods [Reporting Services], rendering
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e70d3e48df832eb8fc3a6661ed9d4b549922a095
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0bc793e9a18e993989563fd3526ff12272f775c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63260791"
 ---
 # <a name="rendering-and-execution-methods"></a>轉譯及執行方法
   您可以使用這些方法來管理項目執行和快取，以及報表轉譯。  

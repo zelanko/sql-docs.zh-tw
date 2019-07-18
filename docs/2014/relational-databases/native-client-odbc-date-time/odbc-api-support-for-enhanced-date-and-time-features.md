@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63210141"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 ODBC API 支援
   下列 ODBC API 支援增強的日期和時間功能：  

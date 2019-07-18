@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250334"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 複寫衝突檢視器和互動解析程式
   此章節包含合併式複寫和異動複寫之複寫衝突檢視器的相關資訊，以及合併式複寫之互動解析程式的相關資訊：  

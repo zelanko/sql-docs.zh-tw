@@ -1,7 +1,7 @@
 ---
 title: 規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63266816"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，您會使用網頁瀏覽器來檢視報表和執行報表管理員。 並非所有瀏覽器都支援所有報表功能。 本主題說明報表管理員管理功能「檢視報表」(Visual Studio 中的報表檢視器控制項) 的支援和需求。 本主題也概述受支援的瀏覽器、驗證需求和指令碼需求的功能可用性。  
@@ -35,7 +35,7 @@ ms.locfileid: "54100933"
   
 ##  <a name="bkmk_powerview"></a> Power View 瀏覽器案例
 
- 支援的瀏覽器和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支援的瀏覽器版本清單取決於開啟的文件類型。 Excel 2013 活頁簿和"**.rdlx**"檔案使用不同的元件。  
+ 支援的瀏覽器和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支援的瀏覽器版本清單取決於開啟的文件類型。 Excel 2013 活頁簿和" **.rdlx**"檔案使用不同的元件。  
   
 |文件類型|環境|瀏覽器支援|  
 |-------------------|-----------------|---------------------|  
@@ -47,11 +47,11 @@ ms.locfileid: "54100933"
   
 - 此表格適用於 SharePoint 2010 和 SharePoint 2013。  
   
-- 如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+- 如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx) 。  
   
-- 如需有關 SharePoint 2010 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃瀏覽器支援 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx)。  
+- 如需有關 SharePoint 2010 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃瀏覽器支援 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx) 。  
   
-|**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 （適用於桌上型電腦）**|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|不支援|不支援|  
 |**Internet Explorer 10 （適用於桌上型電腦）**|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|不支援|不支援|  
@@ -71,9 +71,9 @@ ms.locfileid: "54100933"
 
  下表摘要說明當使用者在執行 Excel Services 的 SharePoint Server 上開啟具有 Power View 工作表的 Excel 2013 活頁簿時， [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 支援的瀏覽器版本：  
   
--   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+-   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx) 。  
   
-|**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 （適用於桌上型電腦）**|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|不支援|不支援|  
 |**Internet Explorer 10 （適用於桌上型電腦）**|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|不支援|不支援|  
@@ -100,7 +100,7 @@ ms.locfileid: "54100933"
 
  以下是報表檢視器目前支援的瀏覽器和功能清單。 報表檢視器支援從 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員和 SharePoint 文件庫檢視報表。  
   
-|**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**適用於 iPad 的 iOS 6-7**|  
+|**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6 -7 for iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 （適用於桌上型電腦）**|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|不支援|不支援|不支援|不支援|  
 |**Internet Explorer 10 （適用於桌上型電腦）**|32 位元、64 位元|32 位元、64 位元|32 位元、64 位元|不支援|不支援|不支援|不支援|  
@@ -169,7 +169,7 @@ ms.locfileid: "54100933"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**瀏覽器**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**注意**|  
+|**瀏覽器**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**注意**|  
 |**（適用於桌面的 Internet Explorer 11**|是|是|是|不支援|不支援|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
 |**Internet Explorer 10 （適用於桌上型電腦）**|是|是|是|不支援|不支援|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
 |**Internet Explorer 9**|不支援|是|不支援|是|是|是|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
@@ -191,9 +191,9 @@ ms.locfileid: "54100933"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```
   
- 如需有關在 Internet Explorer 中的相容性模式的詳細資訊，請參閱[定義的文件相容性](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)。  
+ 如需有關在 Internet Explorer 中的相容性模式的詳細資訊，請參閱[定義的文件相容性](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380) 。  
   
- 如需有關使用 ReportViewer 控制項的詳細資訊，請參閱 <<c0> [ 部署報表和 ReportViewer 控制項](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)。  
+ 如需有關使用 ReportViewer 控制項的詳細資訊，請參閱 <<c0> [ 部署報表和 ReportViewer 控制項](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx) 。  
   
 ## <a name="next-steps"></a>後續步驟
 

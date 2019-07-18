@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddcadb1fe32c61fbab45bbdcfbc18d60d1072d23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092854"
 ---
 # <a name="rename-user-sys"></a>重新命名使用者 sys
   Upgrade Advisor 偵測到的使用者名稱**sys**資料庫中。 這個名稱是保留的。 請在升級之前重新命名使用者。 如果使用者未重新命名，在升級程序之後，資料庫將處於可疑狀態，要等到資料庫連線後才可供使用。  
@@ -64,6 +63,6 @@ ms.locfileid: "48078206"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

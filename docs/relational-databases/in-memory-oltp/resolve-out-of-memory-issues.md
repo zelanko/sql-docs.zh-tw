@@ -1,5 +1,5 @@
 ---
-title: 解決記憶體不足問題 | Microsoft 文件
+title: 解決記憶體不足問題 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518612"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582746"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518612"
   
 |主題|概觀|  
 |-----------|--------------|  
-|[解決由於 OOM 所造成的資料庫還原失敗](#bkmk_resolveRecoveryFailures)|若您收到錯誤訊息：「資料庫 '\<資料庫名稱>' 的還原作業因為資源集區 '\<資源集區名稱>' 中的記憶體不足而失敗」，該怎麼辦。|  
+|[解決由於 OOM 所造成的資料庫還原失敗](#bkmk_resolveRecoveryFailures)|若您收到錯誤訊息：「資料庫 '\<資料庫名稱>  ' 的還原作業因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足而失敗」，該怎麼辦。|  
 |[解決低記憶體或 OOM 狀況對於工作負載的影響](#bkmk_recoverFromOOM)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
-|[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>' 的頁面配置，因為資源集區 '\<資源集區名稱>' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|
+|[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>  ' 的頁面配置，因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|
 |[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)|在虛擬環境中使用記憶體內部 OLTP 的注意事項。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '\<資料庫名稱>' 的還原作業因為資源集區 '\<資源集區名稱>' 中的記憶體不足而失敗」。這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
+ 當您嘗試還原資料庫時可能會收到錯誤訊息：「資料庫 ' *\<databaseName>* ' 的還原作業失敗，因為資源集區 ' *\<resourcePoolName>* ' 中的記憶體不足。」這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
    
 您還原資料庫的目標伺服器針對資料庫備份的記憶體最佳化資料表必須有足夠的可用記憶體，否則資料庫將不會恢復連線，並會標記為可疑。  
   
@@ -77,7 +77,9 @@ ms.locfileid: "52518612"
 1.  [開啟 DAC (專用管理員連接)](#bkmk_openDAC)  
   
 2.  [採取更正動作](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> 開啟 DAC (專用管理員連接)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server 資料庫引擎的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來存取 DAC。  
   

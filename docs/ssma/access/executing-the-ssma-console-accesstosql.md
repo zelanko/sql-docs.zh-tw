@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006566"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項來執行，並控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -51,7 +50,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
   
     預設值為"sql-server-2008"。  
   
-**範例：**  
+**範例:**  
   
 ```xml  
 <create-new-project  
@@ -158,7 +157,7 @@ connect-source-database
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <load-access-database>  
@@ -192,7 +191,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <force-load>  
@@ -218,7 +217,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-連線目標資料庫  
+connect-target-database  
   
 -   連接到目標 SQL Server 或 SQL Azure 資料庫，並完全載入目標資料庫的高等級的中繼資料，但不是的中繼資料。  
   
@@ -305,7 +304,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -377,7 +376,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -394,7 +393,7 @@ convert-schema
 ```  
 **Command**  
   
-移轉資料  
+migrate-data  
   
 1.  將來源資料移轉至目標。  
   
@@ -437,7 +436,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -467,7 +466,7 @@ convert-schema
   
 </link-tables>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <link-tables>  
@@ -493,7 +492,7 @@ convert-schema
   
 </unlink-tables>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <unlink-tables>  
@@ -547,9 +546,9 @@ convert-schema
   
 3.  `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -572,7 +571,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -581,7 +580,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -596,7 +595,7 @@ convert-schema
 ```  
 **Command**  
   
-從資料庫重新整理  
+refresh-from-database  
   
 -   重新整理資料庫的來源物件。  
   
@@ -612,9 +611,9 @@ convert-schema
   
 3.  `on-error:` 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -637,7 +636,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -646,7 +645,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -696,7 +695,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  

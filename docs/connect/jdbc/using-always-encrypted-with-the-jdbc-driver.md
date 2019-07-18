@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790286"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ Microsoft JDBC Driver for SQL Server 通訊金鑰儲存區，使用資料行主�
 ### <a name="using-built-in-column-master-key-store-providers"></a>使用內建資料行主要金鑰存放區提供者
 Microsoft JDBC Driver for SQL Server 隨附於下列內建的資料行主要金鑰存放區提供者。 這些提供者的一些預先註冊使用特定提供者名稱 （用以查閱提供者而定） 和一些需要額外的認證或明確註冊。
 
-| 類別                                                 | Description                                        | 提供者 (查閱) 名稱  | 預先註冊嗎？ |
+| 類別                                                 | 描述                                        | 提供者 (查閱) 名稱  | 預先註冊嗎？ |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure 金鑰保存庫金鑰儲存區提供者。 | AZURE_KEY_VAULT         | 否                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 憑證存放區的提供者。      | MSSQL_CERTIFICATE_STORE | 是                |
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  如果您使用 Azure Key Vault 金鑰儲存區提供者時，JDBC 驅動程式的 Azure 金鑰保存庫實作會有這些程式庫 （從 GitHub) 必須隨附於應用程式的相依性：
 >
->  [azure sdk-針對-java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure active directory-程式庫-針對-java 程式庫](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java 程式庫](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > 如何在 Maven 專案中加入這些相依性的範例，請參閱[下載 ADAL4J 和 AKV 相依性使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -130,7 +130,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 雖然這篇文章中的其他金鑰儲存區提供者可用的所有驅動程式支援的平台上，就有一個 SQLServerColumnEncryptionCertificateStoreProvider 實作 JDBC 驅動程式可在 Windows 作業系統上。 它會相依於所提供的驅動程式套件中的 sqljdbc_auth.dll 時。 若要使用此提供者，請將 sqljdbc_auth.dll 檔案複製到安裝 JDBC 驅動程式之電腦上 Windows 系統路徑中的目錄。 或者，您也可以設定 java.libary.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。 例如，如果您要使用 32 位元 JVM，且 JDBC 驅動程式安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 雖然這篇文章中的其他金鑰儲存區提供者可用的所有驅動程式支援的平台上，就有一個 SQLServerColumnEncryptionCertificateStoreProvider 實作 JDBC 驅動程式可在 Windows 作業系統上。 它會相依於所提供的驅動程式套件中的 sqljdbc_auth.dll 時。 若要使用此提供者，請將 sqljdbc_auth.dll 檔案複製到安裝 JDBC 驅動程式之電腦上 Windows 系統路徑中的目錄。 或者，您也可以設定 java.library.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。 例如，如果您要使用 32 位元 JVM，且 JDBC 驅動程式安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java 金鑰存放區提供者
 JDBC 驅動程式隨附於 Java 金鑰存放區的內建金鑰存放區提供者實作。 如果**keyStoreAuthentication**連接字串屬性中的連接字串和設為"JavaKeyStorePassword"，驅動程式會自動具現化，並註冊 Java 金鑰存放區提供者。 Java 金鑰存放區提供者的名稱是 MSSQL_JAVA_KEYSTORE。 此名稱也可以使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 來查詢。 
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-個別查詢也可以啟用 [永遠加密]。 如需詳細資訊，請參閱 <<c0> [ 控制永遠加密的效能影響](#controlling-the-performance-impact-of-always-encrypted)。 啟用 Always Encrypted 並不足以保證加密或解密成功。 您還需要確定︰
+個別查詢也可以啟用 [永遠加密]。 如需詳細資訊，請參閱[控制 Always Encrypted 的效能影響](#controlling-the-performance-impact-of-always-encrypted)。 啟用 Always Encrypted 並不足以保證加密或解密成功。 您還需要確定︰
 - 應用程式要有 [檢視任何資料行的主要金鑰定義] 和 [檢視任何資料行的加密金鑰定義] 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資料，請參閱 [Always Encrypted (資料庫引擎) 的權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
 - 應用程式可以存取保護資料行加密金鑰的資料行主要金鑰，這些加密金鑰會加密查詢的資料庫資料行。 若要使用的 Java 金鑰存放區提供者，您需要提供額外的認證，連接字串中。 如需詳細資訊，請參閱 < [Using Java 金鑰存放區提供者](#using-java-key-store-provider)。
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>設定 java.sql.Time 值如何傳送給伺服器
 **sendTimeAsDatetime** 連線屬性是用來設定 java.sql.Time 值傳送到伺服器的方式。 設定為 false 時，時間值傳送為 SQL Server 的時間型別。 何時設定為 true 時，值傳送為 datetime 類型的時間。 如果時間資料行已加密，請**sendTimeAsDatetime**屬性必須為 false，因為加密資料行不支援時間轉換成日期時間。 也請注意，此屬性依預設為 true，因此使用加密的時間資料行時您必須將它設定為 false。 否則，此驅動程式將會擲回例外狀況。 SQLServerConnection 類別從驅動程式 6.0 版開始，有兩種方法，以程式設計方式設定這個屬性的值：
  
-* public void setSendTimeAsDatetime (布林 sendTimeAsDateTimeValue)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
 
 如需有關這個屬性的詳細資訊，請參閱 <<c0> [ 如何設定 java.sql.Time 值傳送給伺服器](configuring-how-java-sql-time-values-are-sent-to-the-server.md)。

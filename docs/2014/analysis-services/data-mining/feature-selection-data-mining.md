@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084421"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
   *特徵選取*指的是常用於資料採礦，以描述的工具和技術可供輸入降低至可管理的大小，用於處理和分析。 特徵選取隱含不僅*基數減少*，這表示強加任意或預先定義的截止，可以在建立模型，但也屬性，這表示的選擇時考量的屬性數目分析師或模型化工具主動選取或捨棄屬性根據對分析的實用性。  
@@ -61,9 +60,9 @@ ms.locfileid: "53360140"
 ### <a name="definition-of-feature-selection-methods"></a>特徵選取方法的定義  
  依據您所使用的資料類型以及選擇用來分析的演算法而定，實作特徵選取的方法有許多種。 SQL Server Analysis Services 提供數種常見且妥善建立的方法來為屬性評分。 在任何演算法或資料集中所套用的方法取決於資料類型及資料行的使用方式。  
   
- 「有趣性」(Interestingness) 分數是用來在包含非二進位連續數值資料的資料行中排名及排序屬性。  
+ 「有趣性」  (Interestingness) 分數是用來在包含非二進位連續數值資料的資料行中排名及排序屬性。  
   
- 包含離散和離散化資料的資料行使用「Shannon 熵」(Shannon's Entropy) 和兩個貝氏 (Bayesian) 分數。 但是，如果模型包含任何連續資料行，則會使用有趣性分數評估所有輸入資料行，以確保一致性。  
+ 包含離散和離散化資料的資料行使用「Shannon 熵」  (Shannon's Entropy) 和兩個貝氏  (Bayesian) 分數。 但是，如果模型包含任何連續資料行，則會使用有趣性分數評估所有輸入資料行，以確保一致性。  
   
  下一節將描述每個特徵選取方法。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "53360140"
  這個計分方法可用於分隔和離散化的屬性。  
   
 #### <a name="bayesian-with-k2-prior"></a>使用 K2 優先的貝氏  
- Analysis Services 提供兩種以貝氏網路為基礎的特徵選取分數。 貝氏網路是狀態及狀態間轉換的「導向」或「非循環」圖表，代表某些狀態一定會在目前的狀態之前、某些狀態會在之後，而圖表並不會重複或迴圈。 依照定義，貝氏網路可以使用先前的知識。 不過，在計算稍後狀態的機率時要使用什麼先前狀態的問題，對於演算法的設計、效能和精確度都很重要。  
+ Analysis Services 提供兩種以貝氏網路為基礎的特徵選取分數。 貝氏網路是狀態及狀態間轉換的「導向」  或「非循環」  圖表，代表某些狀態一定會在目前的狀態之前、某些狀態會在之後，而圖表並不會重複或迴圈。 依照定義，貝氏網路可以使用先前的知識。 不過，在計算稍後狀態的機率時要使用什麼先前狀態的問題，對於演算法的設計、效能和精確度都很重要。  
   
  貝氏網路學習的 K2 演算法是由 Cooper 和 Herskovits 所開發，常用於資料採礦中。 這個演算法可以擴充，而且可以分析多個變數，但需要對當做輸入的變數進行排序。 如需詳細資訊，請參閱 Chickering、Geiger 和 Heckerman 所著的 [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) (學習貝氏網路)。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "53360140"
 #### <a name="maximumstates"></a>MAXIMUM_STATES  
  如果模型包含的案例比在 *MAXIMUM_STATES* 參數中所指定的數目多，則會將最不常用的狀態群組在一起，並視為遺漏。 如果其中有任何參數設定為 0，特徵選取就會關閉，且會影響處理時間和效能。  
   
- 除了這些特徵選取方法之外，您也可以透過在模型上設定「模型旗標」，或透過在結構上設定「散發旗標」，來改進演算法識別或提升有意義屬性的能力。 如需這些概念的詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md) 和[資料行散發 &#40;資料採礦&#41;](column-distributions-data-mining.md)。  
+ 除了這些特徵選取方法之外，您也可以透過在模型上設定「模型旗標」  ，或透過在結構上設定「散發旗標」  ，來改進演算法識別或提升有意義屬性的能力。 如需這些概念的詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md) 和[資料行散發 &#40;資料採礦&#41;](column-distributions-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂採礦模型和結構](customize-mining-models-and-structure.md)  

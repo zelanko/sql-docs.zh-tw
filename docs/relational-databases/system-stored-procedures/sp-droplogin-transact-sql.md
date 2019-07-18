@@ -1,5 +1,5 @@
 ---
-title: sp_droplogin (Transact-SQL) | Microsoft Docs
+title: sp_droplogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adaa563fa7142375d357e50d86ad0e33a8ea62e7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056497"
 ---
 # <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

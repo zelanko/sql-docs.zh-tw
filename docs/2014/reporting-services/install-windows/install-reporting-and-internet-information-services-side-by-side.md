@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025369"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285050"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)
   您可以在同一部電腦上安裝和執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 與 Internet Information Services (IIS)。 您所使用的 IIS 版本會決定必須處理的互通性問題。  
@@ -44,13 +43,13 @@ ms.locfileid: "56025369"
   
 |範例|要求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|接收的所有要求傳送至 http://123.234.345.456/reports 或 http://\<電腦名稱 > / 如果網域名稱服務可以解析成該主機名稱的 IP 位址。|  
+|http:\//123.234.345.456:80/reports|接收的所有要求傳送至 http:\//123.234.345.456/reports 或 http://\<電腦名稱 > / 如果網域名稱服務可以解析成該主機名稱的 IP 位址。|  
 |http://+:80/reports|只要此 URL 包含 "reports" 虛擬目錄名稱，便接收傳送至適用於該電腦之任何 IP 位址或主機名稱的任何要求。|  
-|http://123.234.345.456:80|任何指定的要求會收到 http://123.234.345.456 或 http://\<computername > 如果網域名稱服務可以將 IP 位址解析成該主機名稱。|  
+|http:\//123.234.345.456:80|收到的任何要求，指定 http:\//123.234.345.456 或 http://\<computername > 如果網域名稱服務可以將 IP 位址解析成該主機名稱。|  
 |http://+:80|若為對應至 [全部指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
 |http://*:80|若為對應至 [全未指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
   
- 連接埠衝突的其中一個指標是您會看到下列錯誤訊息：' System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (發生例外狀況於 HRESULT：0x80070020)。 '  
+ 連接埠衝突的其中一個指標是您會看到下列錯誤訊息：' System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (來自 HRESULT 的例外狀況：0x80070020)。 '  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>IIS 6.0、7.0、8.0、8.5 與 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 URL 保留項目  
  根據上一節所描述的優先順序規則，您可以開始了解針對 Reporting Services 和 IIS 所定義的 URL 保留項目如何提升互通性。 Reporting Services 會接收明確指定其應用程式之虛擬目錄名稱的要求。IIS 會接收所有其餘要求，然後您可以將這些要求導向至 IIS 處理模型內部執行的應用程式。  
@@ -74,7 +73,7 @@ ms.locfileid: "56025369"
   
  為了確保所有應用程式都會接收要求，請遵循下列指導方針：  
   
--   針對 Reporting Services 安裝，請使用 IIS 網站與 Reporting Services 在相同通訊埠上尚未使用的虛擬目錄名稱。 如果發生衝突，請以「僅限檔案」模式安裝 Reporting Services (使用「安裝」，但不要在安裝精靈中設定伺服器選項)，以便您可以在安裝完成之後設定虛擬目錄。 您的組態有衝突的其中一個指標是您會看到錯誤訊息：System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (發生例外狀況於 HRESULT：0x80070020)。  
+-   針對 Reporting Services 安裝，請使用 IIS 網站與 Reporting Services 在相同通訊埠上尚未使用的虛擬目錄名稱。 如果發生衝突，請以「僅限檔案」模式安裝 Reporting Services (使用「安裝」，但不要在安裝精靈中設定伺服器選項)，以便您可以在安裝完成之後設定虛擬目錄。 您的組態有衝突的其中一個指標是您會看到錯誤訊息：System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (來自 HRESULT 的例外狀況：0x80070020)。  
   
 -   針對手動設定的安裝，請在設定的 URL 中採用預設命名慣例。 如果您將 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 安裝成具名執行個體，請在建立虛擬目錄時加入執行個體名稱。  
   

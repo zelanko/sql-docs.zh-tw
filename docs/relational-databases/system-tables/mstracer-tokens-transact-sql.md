@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 544bf835aaeda98b24169899eb5adfaae4e003e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dc2e7e5b2cf767972ab6531b5f06c2043a3f07fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016458"
 ---
 # <a name="mstracertokens-transact-sql"></a>MStracer_tokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

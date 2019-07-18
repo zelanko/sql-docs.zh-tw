@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a2834652d7a14199ccc4914091a2c8c8b7a99801
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 823cd652537cbba486ffd4e432f9413b43f05b12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085098"
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在 XML 傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geometry_index_xml`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs**. 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
+ 下列範例會使用`sp_help_spatial_geometry_index_xml`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs** . 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
   
  [XQuery](../../xquery/xquery-basics.md)接著會在結果集，傳回特定的屬性上執行。  
   

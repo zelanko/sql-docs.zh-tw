@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484664"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>工作 2：使用適用於 Excel 的 MDS 增益集將供應商資料上傳到 MDS
   在這個工作中，您已清理和供應商將資料發佈至**MDS**使用**MDS 增益集適用於 Excel**。 建立名為實體**供應商**中**供應商**您在上一課中建立的模型。 此實體將會針對 Excel 檔案中的每個資料行具有一個屬性。 Supplier 實體的 Code 和 Name 屬性等於**SupplierID**並**Supplier Name**在 Excel 中的資料行。  
@@ -34,9 +34,9 @@ ms.locfileid: "56025659"
   
     1.  選取 [**建立新的連接**，然後按一下**新增**] 按鈕。  
   
-    2.  中**加入新的連接** 對話方塊中，輸入**本機 MDS 伺服器**for**描述**並**http://localhost/MDS**的**MDS 伺服器位址**，然後按一下**確定**以關閉對話方塊。  
+    2.  中**加入新的連接** 對話方塊中，輸入**本機 MDS 伺服器**for**描述**並 **http://localhost/MDS** 的**MDS 伺服器位址**，然後按一下**確定**以關閉對話方塊。  
   
-6.  在 **管理連接**對話方塊中，選取**本機 MDS 伺服器**(http://localhost/MDS)，按一下 **測試**來測試連線。 按一下 **確定**訊息方塊上。  
+6.  在 **管理連接**對話方塊中，選取**本機 MDS 伺服器**(http://localhost/MDS) ，按一下 **測試**來測試連線。 按一下 **確定**訊息方塊上。  
   
 7.  按一下  **Connect**連接到 MDS 伺服器。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "56025659"
 15. 保持**Excel**開啟。  
   
 ## <a name="next-task"></a>下一項工作  
- [工作 3:驗證資料在主資料管理員](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [工作 3：驗證資料在主資料管理員](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714758"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
   本主題討論不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的計算容量限制以及它們在具有超執行緒處理器的實體和虛擬化環境中有何差異。  

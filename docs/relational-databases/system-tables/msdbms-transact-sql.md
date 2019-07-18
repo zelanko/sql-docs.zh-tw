@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc4cc6f10a48f48cc15e8309794563cd1585bd6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2cd44c5154668513d695071c23619e650497c8a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907480"
 ---
 # <a name="msdbms-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52810370"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**msdbms**|**int**|識別每個唯一的 DBMS 和版本。|  
+|**dbms_id**|**int**|識別每個唯一的 DBMS 和版本。|  
 |**dbms**|**sysname**|DBMS 名稱。<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
 |**version**|**varchar(10)**|DBMS 版本。|  
   

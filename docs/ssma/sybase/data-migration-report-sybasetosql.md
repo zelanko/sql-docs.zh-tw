@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029394"
 ---
 # <a name="data-migration-report-sybasetosql"></a>資料移轉報告 (SybaseToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +26,7 @@ ms.locfileid: "47759536"
 **來源**  
 來源資料表中。  
   
-**若要**  
+**To**  
 目標資料表中。  
   
 **資料列總數**  

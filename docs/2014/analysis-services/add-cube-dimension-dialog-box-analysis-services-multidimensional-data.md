@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.addcubedimensiondialog.f1
@@ -15,21 +14,21 @@ ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062950"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>加入 Cube 維度對話方塊 (Analysis Services - 多維度資料)
-  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入 Cube 維度] 對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度] 對話方塊：  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入 Cube 維度]  對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度]  對話方塊：  
   
--   在 Cube 設計師之 [Cube 結構] 或 [維度使用方式] 索引標籤的 [工具列] 窗格中，按一下 [加入 Cube 維度]。  
+-   在 Cube 設計師之 [Cube 結構]  或 [維度使用方式]  索引標籤的 [工具列]  窗格中，按一下 [加入 Cube 維度]  。  
   
--   在 Cube 設計師的 [Cube 結構] 索引標籤上，以滑鼠右鍵按一下 [維度] 窗格，然後從操作功能表中選取 [加入 Cube 維度]。  
+-   在 Cube 設計師的 [Cube 結構]  索引標籤上，以滑鼠右鍵按一下 [維度]  窗格，然後從操作功能表中選取 [加入 Cube 維度]  。  
   
--   在 Cube 設計師的 [維度使用方式] 索引標籤上，以滑鼠右鍵按一下 [方格] 窗格，然後從操作功能表中選取 [加入 Cube 維度]。  
+-   在 Cube 設計師的 [維度使用方式]  索引標籤上，以滑鼠右鍵按一下 [方格]  窗格，然後從操作功能表中選取 [加入 Cube 維度]  。  
   
 > [!NOTE]  
 >  每個 Cube 維度對量值群組只能有一個關聯性。 不過，如果 Cube 維度所依據的資料庫維度，在資料來源檢視中透過一個以上的關聯性與量值群組相關，則您可以建立一個以上的 Cube 維度並將其加入至 Cube。 此類維度被稱為角色扮演維度，且一般是和時間維度一起發生。  

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 683e96bff8f9067c32c861582c949df0d3e531c0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 628e02b11118dfcb82e6d8eb5d195b40e7d3b1a8
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257163"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343980"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ CREATE TABLE dbo.MyFirstImport (
 
 您也可以執行下列 PowerShell 指令碼以建立並填入資料檔案：
 ```powershell
-cls
+Clear-Host
 # revise directory as desired
 $dir = 'D:\BCP\';
 
@@ -93,7 +93,7 @@ Add-Content -Path $bcpFile -Value '3,Stella,Rosenhain,1992-03-02';
 
 #Review content
 Get-Content -Path $bcpFile;
-Invoke-Item $bcpFile;
+Notepad.exe $bcpfile;
 ```
 
 ## 建立格式檔案<a name="create_format_file"></a>
@@ -156,7 +156,7 @@ Notepad D:\BCP\myFirstImport.xml
 ## 使用格式檔案大量匯入資料<a name="import_data"></a>
 下列範例會使用上面建立的資料庫、資料檔案和格式檔案。
 
-### **使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_nonxml"></a>
+### **使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
 請在命令提示字元之下，輸入下列命令：
 ```cmd
 REM Truncate table (for testing)
@@ -170,7 +170,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### **使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bcp_xml"></a>
+### **使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
 請在命令提示字元之下，輸入下列命令：
 ```cmd
 REM Truncate table (for testing)
@@ -184,7 +184,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### **使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_nonxml"></a>
+### **使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -200,7 +200,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bulk_xml"></a>
+### **使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -216,7 +216,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"></a>    
+### **使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -235,7 +235,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="openrowset_xml"></a>
+### **使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
 請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  

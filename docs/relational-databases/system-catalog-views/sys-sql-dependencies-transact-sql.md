@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb596b4971edb41e406467e1b60a076768fbab3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073181"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

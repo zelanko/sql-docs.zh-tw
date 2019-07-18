@@ -20,16 +20,16 @@ helpviewer_keywords:
 - LTRIM function
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c15aff7212f845631d723dad2b59910f80b07423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6c7a9fde317d0577c1460d947e9f7294dc973e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65949121"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ LTRIM ( character_expression )
   
 ## <a name="arguments"></a>引數  
  *character_expression*  
- 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar**的資料類型，但是 **text****ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
+ 這是字元或二進位資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。 *character_expression* 必須是可隱含地轉換為 **varchar**的資料類型，但是 **text** **ntext** 和 **image** 除外。 否則，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 來明確轉換 *character_expression*。  
   
 ## <a name="return-type"></a>傳回類型  
  **varchar** 或 **nvarchar**  

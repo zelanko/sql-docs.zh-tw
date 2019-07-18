@@ -1,5 +1,5 @@
 ---
-title: 工作 5:匯出清理結果到 Excel 檔案 |Microsoft Docs
+title: 工作 5：匯出清理結果到 Excel 檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489119"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5:將清理結果匯出到 Excel 檔案
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5：將清理結果匯出到 Excel 檔案
   在這項工作中，您會將清理活動的結果匯出到 Excel 檔案。 請參閱[匯出階段](https://msdn.microsoft.com/library/hh213061.aspx#Export)如需詳細資訊。  
   
 1.  在右窗格中，選取**Excel** for**目的型別**。  
@@ -42,7 +42,7 @@ ms.locfileid: "56028919"
   
     3.  搜尋**Los Angeles** ，會看到**狀態**設定為**CA**。  
   
-    4.  確認沒有任何條款**Co.**， **Corp.**，並**Inc.**。  
+    4.  確認沒有任何條款**Co.** ， **Corp.** ，並**Inc.** 。  
   
     5.  刪除**地址驗證**從試算表，並將 excel 檔案儲存的資料行。 此額外資料行對應至「地址驗證」複合定義域。  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40fcb993ddc3894ec44a60c79db463611f4ab1f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479617"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
   此資料庫包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統的所有資訊。 它是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署的核心。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫：  

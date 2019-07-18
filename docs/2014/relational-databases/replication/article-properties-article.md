@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721780"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
   從新增發行集精靈和 **[發行集屬性]** 對話方塊中，可以使用 **[發行項屬性]** 對話方塊。 它可讓您檢視和設定所有類型之發行項的屬性。 某些屬性只有在建立發行集時才能設定，而其他的則只有在發行集沒有使用中的訂閱時才能設定。 無法設定的屬性會以唯讀顯示。  
@@ -49,11 +49,11 @@ ms.locfileid: "54124988"
   
  如果您要將資料複寫到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本：  
   
--   請將此選項設定為 **[False]**，因為舊版並不支援 CREATE SCHEMA。  
+-   請將此選項設定為 **[False]** ，因為舊版並不支援 CREATE SCHEMA。  
   
 -   針對每個結構描述，請使用和結構描述相同的名稱，將使用者加入至訂閱資料庫。  
   
- **[將 XML 轉換為 NTEXT]**、 **[將 MAX 資料類型轉換為 NTEXT 和 IMAGE]**、 **[將新的日期時間轉換為 NVARCHAR]**、 **[將檔案資料流轉換為 MAX 資料類型]**、 **[將大的 CLR 轉換為 MAX 資料類型]**、 **[將 hierarchyId 轉換為 MAX 資料類型]** 和 **[將空間轉換為 MAX 資料類型]**。  
+ **[將 XML 轉換為 NTEXT]** 、 **[將 MAX 資料類型轉換為 NTEXT 和 IMAGE]** 、 **[將新的日期時間轉換為 NVARCHAR]** 、 **[將檔案資料流轉換為 MAX 資料類型]** 、 **[將大的 CLR 轉換為 MAX 資料類型]** 、 **[將 hierarchyId 轉換為 MAX 資料類型]** 和 **[將空間轉換為 MAX 資料類型]** 。  
  決定是否要依照描述的方式轉換資料類型和屬性。 如果您要將這些資料類型複寫至舊版 **，請指定** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值。 這樣做可確保系統會在訂閱者端正確處理它們。  
   
  **目的地物件名稱**  
@@ -75,7 +75,7 @@ ms.locfileid: "54124988"
   
 ## <a name="options-for-transactional-publications"></a>交易式發行集的選項  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  
- 在此對話方塊的 **[陳述式傳遞]** 區段中，如果您選取使用預存程序將變更傳播到訂閱者 (預設值)，請選取是否也要將這些程序複製到每個訂閱者。 如果您選取 **[False]**，則必須手動複製程序，否則散發代理程式在嘗試傳遞變更時將會失敗。  
+ 在此對話方塊的 **[陳述式傳遞]** 區段中，如果您選取使用預存程序將變更傳播到訂閱者 (預設值)，請選取是否也要將這些程序複製到每個訂閱者。 如果您選取 **[False]** ，則必須手動複製程序，否則散發代理程式在嘗試傳遞變更時將會失敗。  
   
  **Statement delivery**  
  本節中的選項適用於所有資料表，包括當做資料表複寫的索引檢視表。 除非您的應用程式需要不同的功能，否則[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用預設選項。 依預設，異動複寫會透過每個訂閱者上所安裝的一組預存程序，將變更傳播到訂閱者。 在發行者端的資料表上進行插入、更新或刪除時，作業會翻譯為對訂閱者端預存程序的呼叫。  
@@ -88,7 +88,7 @@ ms.locfileid: "54124988"
  此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱＜ [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)＞。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
- **發行項屬性**合併式發行集 對話方塊中有兩個索引標籤：**屬性**並**解析程式**。  
+ 合併式發行集的 [發行項屬性]  對話方塊有兩個索引標籤：[屬性]  和 [解析程式]  。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **同步處理方向**  
@@ -96,9 +96,9 @@ ms.locfileid: "54124988"
   
 -   **[雙向]** (預設值)：可以將變更下載至訂閱者，和上傳至發行者。  
   
--   **[僅限下載至訂閱者，禁止訂閱者變更]**：可以將變更下載至訂閱者，但無法上傳至發行者。 觸發程序防止在訂閱者端進行變更。  
+-   **[僅限下載至訂閱者，禁止訂閱者變更]** ：可以將變更下載至訂閱者，但無法上傳至發行者。 觸發程序防止在訂閱者端進行變更。  
   
--   **[僅限下載至訂閱者，允許訂閱者變更]**：可以將變更下載至訂閱者，但無法上傳至發行者。  
+-   **[僅限下載至訂閱者，允許訂閱者變更]** ：可以將變更下載至訂閱者，但無法上傳至發行者。  
   
  如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
@@ -108,10 +108,10 @@ ms.locfileid: "54124988"
  **追蹤層級**  
  決定是否將相同資料列或相同資料行的變更視為衝突。  
   
- **[確認 INSERT 權限]**、 **[確認 UPDATE 權限]** 和 **[確認 DELETE 權限]**  
+ **[確認 INSERT 權限]** 、 **[確認 UPDATE 權限]** 和 **[確認 DELETE 權限]**  
  在同步處理期間，決定是否檢查訂閱者登入在發行集資料庫之已發行的資料表上有 INSERT、UPDATE 或 DELETE 權限。 預設值為 **[False]** ，因為合併式複寫並不需要取得這些權限；存取已發行的資料表是透過發行集存取清單 (PAL) 控制。 如需 PAL 的詳細資訊，請參閱[保護發行者](security/secure-the-publisher.md)。  
   
- 如果您要允許一或多個訂閱者上傳某些變更到已發行的資料，而非其他的資料時，您可以要求檢查權限。 例如，您可以將訂閱者加入至 PAL，但是不在發行集資料庫的資料表上給予訂閱者任何權限。 接著，您可以將 [確認 DELETE 權限] 設定為 **[True]**：訂閱者能夠上傳插入和更新，但無法上傳刪除。  
+ 如果您要允許一或多個訂閱者上傳某些變更到已發行的資料，而非其他的資料時，您可以要求檢查權限。 例如，您可以將訂閱者加入至 PAL，但是不在發行集資料庫的資料表上給予訂閱者任何權限。 接著，您可以將 [確認 DELETE 權限] 設定為 **[True]** ：訂閱者能夠上傳插入和更新，但無法上傳刪除。  
   
  **多重資料行 UPDATE**  
  當合併式複寫執行更新時，它會更新一個 UPDATE 陳述式中所有已變更的資料行，並將未變更的資料行重設為其原始值。 這些案例的替代方法是發出多個 UPDATE 陳述式，針對每個已變更的資料行使用一個 UPDATE 陳述式。 多重資料行 UPDATE 陳述式通常較有效率，但如果資料表上的觸發程序設定為回應特定資料行的更新，且因發生更新時的資料行重設造成回應不正確，則應考慮將此選項設定為 **[False]** 。  
@@ -135,11 +135,11 @@ ms.locfileid: "54124988"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有以 COM 為基礎的解析程式都已簽署。 選取此選項即可驗證同步處理時解析程式是有效的。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 發行集的選項  
- **發行項屬性**Oracle 發行集的對話方塊有兩個索引標籤：**屬性**並**資料對應**。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
+ Oracle 發行集的 [發行項屬性]  對話方塊有兩個索引標籤：[屬性]  和 [資料對應]  。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  
- 在此對話方塊的 **[陳述式傳遞]** 區段中，如果發行項在交易式發行集內，且您選取使用預存程序將變更傳播到訂閱者 (預設值)，請選取是否也要將這些程序複製到每個訂閱者。 如果您選取 **[False]**，則必須手動複製程序，否則散發代理程式在嘗試傳遞變更時將會失敗。  
+ 在此對話方塊的 **[陳述式傳遞]** 區段中，如果發行項在交易式發行集內，且您選取使用預存程序將變更傳播到訂閱者 (預設值)，請選取是否也要將這些程序複製到每個訂閱者。 如果您選取 **[False]** ，則必須手動複製程序，否則散發代理程式在嘗試傳遞變更時將會失敗。  
   
  **目的地物件擁有者**  
  如果您輸入 **[dbo]** 以外的值：  

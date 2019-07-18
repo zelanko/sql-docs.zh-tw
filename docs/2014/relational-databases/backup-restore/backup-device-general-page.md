@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922139"
 ---
 # <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
   使用 **[一般]** 頁面，可指定或檢視邏輯備份裝置的一般屬性。  
@@ -33,7 +33,7 @@ ms.locfileid: "48140688"
  檢視現有邏輯備份裝置的名稱，或是指定新邏輯備份裝置的名稱。  
   
  **磁帶**  
- 在 [磁帶] 清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
+ 在 [磁帶]  清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
   
 > [!NOTE]  
 >  遠端電腦上的磁帶備份裝置並不是有效的備份目的地。  

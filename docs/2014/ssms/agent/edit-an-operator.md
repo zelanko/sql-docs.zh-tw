@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189332"
 ---
 # <a name="edit-an-operator"></a>編輯操作員
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中編輯操作員的可用性，以供接收通知及其電子郵件、呼叫器和 Net Send 位址。  
@@ -31,7 +31,7 @@ ms.locfileid: "54127588"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目編輯操作員：**  
   
@@ -60,13 +60,13 @@ ms.locfileid: "54127588"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要編輯之操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您要編輯的操作員，然後選取 [屬性]  。  
   
-     如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
+     如需 [<操作員名稱> 屬性]   對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性和新的運算子&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54127588"
   
     -   [操作員屬性 &#40;記錄頁面&#41;](operator-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -82,9 +82,9 @@ ms.locfileid: "54127588"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- updates the operator status to enabled, and sets the days   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4413b86a9882087c01c785e5f5bfdb596f7be698
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099400"
 ---
 # <a name="user-role-properties-management-studio"></a>使用者角色屬性 (Management Studio)
   您可以使用這個頁面來檢視項目層級角色定義中包含的工作。 您也可以使用這個頁面來變更工作清單或修改角色描述。  
@@ -30,7 +29,7 @@ ms.locfileid: "56015484"
 > [!NOTE]  
 >  使用者角色指派只會用於以原生模式執行的報表伺服器。 如果報表伺服器是針對 SharePoint 整合所設定，這個頁面就會顯示有關 SharePoint 網站上所定義之角色和權限等級的唯讀資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定角色定義的名稱。  
   

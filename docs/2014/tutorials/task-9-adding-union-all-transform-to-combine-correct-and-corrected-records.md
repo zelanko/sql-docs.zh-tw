@@ -1,5 +1,5 @@
 ---
-title: 工作 9:加入聯集全部轉換來結合正確與更正的記錄 |Microsoft Docs
+title: 工作 9：加入聯集全部轉換來結合正確與更正的記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489639"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>工作 9:加入聯集全部轉換來結合正確和更正的記錄
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>工作 9：新增聯集全部轉換來結合正確和更正的記錄
   在這項工作，您會將聯集全部轉換加入至資料流程。 「聯集全部」轉換會將多項輸入結合至單一輸出。 在您的案例中，它會將正確和已更正的記錄結合到一個資料流中。  
   
 1.  拖放**聯集全部**從轉換**常見**一節**SSIS 工具箱**至**資料流程**索引標籤，並將它放在**挑選正確和更正的記錄**。  

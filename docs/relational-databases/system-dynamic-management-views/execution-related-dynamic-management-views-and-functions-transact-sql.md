@@ -1,7 +1,7 @@
 ---
 title: 執行相關動態管理檢視和函數 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a003aca4fecb9e5bd29725226d04be857a2e411
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130827"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>執行相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0c5878a553895dccc3350ddbae9397d5a48c6349
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a78f0664ea561825bb279db47aa3c01fc98bf7dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036804"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 

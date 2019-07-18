@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754832"
 ---
 # <a name="database-mirroring-history"></a>資料庫鏡像記錄
   使用這個對話方塊，可檢視指定的伺服器執行個體上某個鏡像資料庫的鏡像狀態記錄。  
@@ -26,7 +26,7 @@ ms.locfileid: "48086188"
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **伺服器執行個體**  
  正在報告記錄的伺服器執行個體名稱。  
   

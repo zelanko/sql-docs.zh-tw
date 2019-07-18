@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1ed82ffe497af6393371486440e618c162406a01
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6556602e080587b9be1ff8c02fafb378b4497606
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962462"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>儲存並從 SQL Server 使用 ODBC 載入 R 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

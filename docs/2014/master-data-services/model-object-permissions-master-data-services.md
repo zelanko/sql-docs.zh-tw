@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], model objects
 - models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9e2838e2ba3cfcb713c0353b89054ca549e4e5c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482677"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
   模型物件權限是強制性的。 這些權限會決定使用者可以在此 UI 的 [總管] 功能區域中存取的屬性。  

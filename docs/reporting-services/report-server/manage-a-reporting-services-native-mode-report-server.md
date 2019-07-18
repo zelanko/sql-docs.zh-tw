@@ -1,8 +1,8 @@
 ---
 title: 管理 Reporting Services 原生模式報表伺服器 | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66499588"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
   本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  
@@ -29,14 +29,14 @@ ms.locfileid: "51812701"
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  提供啟動 Reporting Services 組態工具的步驟。  
   
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [設定服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  說明如何指定報表伺服器服務的帳戶和密碼資訊。  
   
  [為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  說明如何手動為報表伺服器註冊 SPN，該伺服器會在使用 Kerberos 驗證之網路的網域使用者帳戶之下執行。  
   
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- 說明如何建立用來存取報表伺服器 Web 服務和報表管理員的一個或多個 URL。  
+ 說明如何建立用來存取報表伺服器 Web 服務和 Web 入口網站的一或多個 URL。  
   
  [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  提供建立報表伺服器資料庫的步驟。 這是部署 Reporting Services 安裝的必要步驟。  
@@ -45,14 +45,14 @@ ms.locfileid: "51812701"
  [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供設定多個報表伺服器來共用報表伺服器資料庫的步驟。  
   
- [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Reporting Services 中的電子郵件傳遞](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  提供有關為電子郵件散發設定報表伺服器的步驟。  
   
  [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
  說明如何開啟用於來自報表伺服器之傳入要求和傳出回應的通訊埠。  
   
  [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 描述使用 `https://localhost` 連線報表管理員或報表伺服器所需的其他步驟。  
+ 描述使用 `https://localhost` 連線到 Web 入口網站或報表伺服器所需的其他步驟。  
   
  [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  說明如何設定遠端報表伺服器執行個體，好讓您可以從其他電腦連接及設定它。  

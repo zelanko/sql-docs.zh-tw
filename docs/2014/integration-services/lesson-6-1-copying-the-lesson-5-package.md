@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：複製第 5 課套件 |Microsoft Docs
+title: 步驟 1:複製第 5 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890754"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的套件
+# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1:複製第 5 課的封裝
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>若要複製第 5 課的封裝  
@@ -48,7 +48,7 @@ ms.locfileid: "58389586"
   
 3.  在 [加入現有封裝的副本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 (...) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]。  
+4.  按一下瀏覽 (...) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]  。  
   
      若要下載此教學課程的所有課程封裝，請執行下列動作。  
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898926"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>使用資料流程中的資料類型
   在 Integration Services 中開發自訂資料流程元件時，您會不斷地處理資料類型、將資料複製到資料流程緩衝區或從其中複製資料，以及轉換值。 在本主題中的資訊可協助您選擇正確的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，以及正確的處理方法。  

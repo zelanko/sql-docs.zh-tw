@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -21,12 +20,12 @@ ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085690"
 ---
 # <a name="classified-columns-data-mining"></a>分類資料行 (資料採礦)
   當您定義分類資料行時，您可以建立目前資料行與採礦結構中另一個資料行之間的關聯性。 您指定為分類資料行之採礦結構資料行中的資料包含類別目錄的資訊，該資訊描述採礦結構中另一個資料行的值。  
@@ -37,7 +36,7 @@ ms.locfileid: "48193748"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的演算法不支援使用分類資料行；此功能是為了用來建立自訂演算法所提供。  
   
 ## <a name="defining-a-classified-column"></a>定義分類資料行  
- 分類資料行的資料類型必須是`Long`或`Double`。  
+ 分類資料行的資料類型必須為 `Long` 或 `Double`。  
   
  下列清單描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援的分類資料行之內容類型。  
   
@@ -60,8 +59,8 @@ ms.locfileid: "48193748"
  資料行中的值是關聯值的加權或案例複寫因數。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型&#40;資料採礦&#41;](content-types-data-mining.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
- [資料型別&#40;資料採礦&#41;](data-types-data-mining.md)  
+ [內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [資料類型 &#40;資料採礦&#41;](data-types-data-mining.md)  
   
   

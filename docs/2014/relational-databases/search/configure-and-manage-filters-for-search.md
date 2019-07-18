@@ -10,18 +10,18 @@ helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eecfb2ef387bb5989f7c25a7bf7493d71899415b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011575"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>設定及管理搜尋的篩選
-  中的文件編製索引`varbinary`， `varbinary(max)`， `image`，或`xml`資料類型資料行需要進行額外處理。 這項處理必須由篩選執行。 篩選會從文件中擷取文字資訊 (移除格式)。 然後，篩選會將文字傳送至與資料表資料行相關聯之語言的斷詞工具元件。  
+  在 `varbinary`、`varbinary(max)`、`image` 或 `xml` 資料類型資料行中索引文件需要進行額外處理。 這項處理必須由篩選執行。 篩選會從文件中擷取文字資訊 (移除格式)。 然後，篩選會將文字傳送至與資料表資料行相關聯之語言的斷詞工具元件。  
   
  給定的篩選是給定文件類型 (.doc、.pdf、.xls 和 .xml 等等) 特有的。 這些篩選會實作 IFilter 介面。 如需這些文件類型的詳細資訊，請查詢 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目錄檢視。  
   

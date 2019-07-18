@@ -11,15 +11,15 @@ helpviewer_keywords:
 - modifying queries
 - queries [SQL Server], modifying
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98495d6362aa723c69a30d40fd419d5ecaffe003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 271c8c3a4d1ec3e98f732112c297aac9d7b1e312
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690220"
 ---
 # <a name="modify-queries-visual-database-tools"></a>修改查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "47785366"
   
 ### <a name="to-open-a-query"></a>若要開啟查詢  
   
-1.  在 [檢視] 功能表上，按一下 [方案總管]。  
+1.  在 [檢視]  功能表上，按一下 [方案總管]  。  
   
-2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 **[開啟]**。  
+2.  在方案總管中，在要開啟的查詢上按一下滑鼠右鍵，然後按一下 **[開啟]** 。  
   
-3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 [在編輯器中設計查詢]  
+3.  若要修改查詢設計工具中的查詢，可反白顯示 SQL 陳述式，在反白顯示的區域上按一下滑鼠右鍵，然後選取 [在編輯器中設計查詢]   
   
 [查詢設計工具] 會開始讓您進行修改。  
   

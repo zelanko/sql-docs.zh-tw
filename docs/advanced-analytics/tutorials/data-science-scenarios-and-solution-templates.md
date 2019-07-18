@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962296"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,14 +79,14 @@ ms.locfileid: "58645490"
 
 [能源需求預測範本與 SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**功能：**:需求預測是重要的問題，包括能源、 零售和服務的各種領域。 精確的需求預測可協助公司進行更好的實際執行計劃，資源配置，並讓其他重要的商業決策。 在能源產業需求預測，對於降低能源儲存體成本和平衡供需重要的。
+**功能：** :需求預測是重要的問題，包括能源、 零售和服務的各種領域。 精確的需求預測可協助公司進行更好的實際執行計劃，資源配置，並讓其他重要的商業決策。 在能源產業需求預測，對於降低能源儲存體成本和平衡供需重要的。
 
 **如何：** 此範本會使用 SQL Server R Services 來預測電力需求。 用於預測的模型為基礎的隨機樹系迴歸模型**rxDForest**、 高效能機器學習演算法，包含在 Microsoft R Server。 此解決方案包含需求模擬器、定型模型需要的所有 R 和 T-SQL 程式碼，以及您可以用來產生及報告預測的預存程序。 
 
 
 ## <a name="bkmk_HowTo"></a>如何使用範本
 
-若要下載每個範本中所包含的檔案，您可以使用 GitHub 命令，或開啟連結，然後按一下 [Download Zip (下載 Zip)] 將所有檔案儲存至您的電腦。  下載後的解決方案通常會包含下列資料夾：
+若要下載每個範本中所包含的檔案，您可以使用 GitHub 命令，或開啟連結，然後按一下 [Download Zip (下載 Zip)]  將所有檔案儲存至您的電腦。  下載後的解決方案通常會包含下列資料夾：
   
 -   **資料**:包含每個應用程式的範例資料。
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc823459c701bd0045e594f753a803a0a092a244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056245"
 ---
 # <a name="extended-events-tables---tracexeeventmap"></a>擴充事件資料表 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

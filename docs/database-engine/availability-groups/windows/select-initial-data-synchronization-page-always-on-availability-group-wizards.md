@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: dbfa8c5acd998fed28546baf8b16af09d3abae07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787709"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>選取初始資料同步頁面 (Always On 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 AlwaysOn [選取初始資料同步處理] 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
+  使用 AlwaysOn [選取初始資料同步處理]  頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
   
- 可能的選項包含 [自動植入]、[完整的資料庫及記錄備份]、[僅加入] 或 [略過初始資料同步處理]。 選取 [自動植入]、[完整] 或 [僅加入] 之前，請確認您的環境符合必要條件。  
+ 可能的選項包含 [自動植入]  、[完整的資料庫及記錄備份]  、[僅加入]  或 [略過初始資料同步處理]  。 選取 [自動植入]  、[完整]  或 [僅加入]  之前，請確認您的環境符合必要條件。  
     
 ##  <a name="Recommendations"></a> 建議  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52545387"
  SQL Server 會自動為群組中的每個資料庫建立次要複本。 自動植入要求參與群組之每個 SQL Server 執行個體上的資料和記錄檔案路徑都必須相同。 適用於 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 和更新版本。 請參閱[自動初始化 AlwaysOn 可用性群組](automatically-initialize-always-on-availability-group.md)。
 
 ##  <a name="Full"></a> 完整的資料庫及記錄備份 
- [完整的資料庫及記錄備份] 選項會在一個工作流程中，對每一個主要資料庫執行數項作業，包括建立主要資料庫的完整和記錄備份；透過還原裝載次要複本之每個伺服器執行個體上的這些備份，建立對應的次要資料庫；以及將每個次要資料庫加入可用性群組。  
+ [完整的資料庫及記錄備份]  選項會在一個工作流程中，對每一個主要資料庫執行數項作業，包括建立主要資料庫的完整和記錄備份；透過還原裝載次要複本之每個伺服器執行個體上的這些備份，建立對應的次要資料庫；以及將每個次要資料庫加入可用性群組。  
   
  只有在環境符合下列使用完整初始資料同步處理的必要條件，且您要精靈自動啟動資料同步處理時，才選取此選項。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52545387"
   
  **若符合必要條件**  
   
- 若符合所有必要條件，且您要精靈執行完整初始資料同步處理，請選取 [完整的資料庫及記錄備份] 選項，並指定網路共用。 如此一來，精靈即會建立完整的資料庫及每個選定資料庫的記錄備份，並將這些備份置於您指定的網路共用。 然後，在裝載其中一個新次要複本的每個伺服器執行個體上，精靈會透過使用 RESTORE WITH NORECOVERY 還原備份來建立次要資料庫。 建立每個次要資料庫之後，精靈會將新次要資料庫聯結至可用性群組。 聯結次要資料庫之後，立即會在該資料庫上啟動資料同步處理。  
+ 若符合所有必要條件，且您要精靈執行完整初始資料同步處理，請選取 [完整的資料庫及記錄備份]  選項，並指定網路共用。 如此一來，精靈即會建立完整的資料庫及每個選定資料庫的記錄備份，並將這些備份置於您指定的網路共用。 然後，在裝載其中一個新次要複本的每個伺服器執行個體上，精靈會透過使用 RESTORE WITH NORECOVERY 還原備份來建立次要資料庫。 建立每個次要資料庫之後，精靈會將新次要資料庫聯結至可用性群組。 聯結次要資料庫之後，立即會在該資料庫上啟動資料同步處理。  
   
  **指定所有複本可存取的共用網路位置**  
  若要建立及還原備份，精靈會要求您指定網路共用。 在將裝載可用性複本的每個伺服器執行個體上，用來啟動 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帳戶必須有網路共用的讀取與寫入檔案系統權限。  
@@ -78,7 +78,7 @@ ms.locfileid: "52545387"
 ##  <a name="Joinonly"></a> [僅聯結]  
  只有在裝載可用性群組之次要複本的每個伺服器執行個體上已經有新次要資料庫時，才選取此選項。 如需有關準備次要資料庫的詳細資訊，請參閱本節稍後的 [手動準備次要資料庫](#PrepareSecondaryDbs)。  
   
- 如果您選取 **[僅聯結]**，精靈會嘗試將每個現有的次要資料庫聯結至可用性群組。  
+ 如果您選取 **[僅聯結]** ，精靈會嘗試將每個現有的次要資料庫聯結至可用性群組。  
   
 ## <a name="Skip"></a> [略過初始資料同步處理]  
  只有在您要對每個主要資料庫執行您自己的資料庫和記錄備份、將它們手動還原到裝載次要複本的每個伺服器執行個體時，才選取此選項。 結束精靈之後，您需要聯結每個次要複本上的每個次要資料庫。  

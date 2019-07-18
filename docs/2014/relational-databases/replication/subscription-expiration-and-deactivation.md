@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62630372"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>訂閱逾期與停用
   如果訂閱在指定 *「保留期限」* 內未執行同步處理，則可以停用訂閱或使訂閱過期。 發生的動作依複寫類型及超過的保留期限而定。  
@@ -61,7 +61,7 @@ ms.locfileid: "52804330"
   
     -   複寫無法在發行集和訂閱資料庫中清除中繼資料，直到到達保留期限為止。 小心指定保留期限的高數值，因為此值可能對複寫效能產生負面影響。 若您能夠確實預測所有訂閱者都會在該時間週期內定期同步處理，建議您使用較低設定。  
   
-    -   可以指定訂閱永不過期 ( **@retention**的值為 0)，但強烈建議您不要使用此值，因為中繼資料無法清除。  
+    -   可以指定訂閱永不過期 ( **@retention** 的值為 0)，但強烈建議您不要使用此值，因為中繼資料無法清除。  
   
 -   任何重新發行者的保留期限必須設定為等於或少於原始「發行者」的設定值。 對所有的「發行者」及其替代性同步處理夥伴，也應該使用相同的發行保留值。 使用不同值可能會導致非交集的情況。 若您需要變更發行集保留值，請重新初始化訂閱者，以避免資料無法聚合。  
   

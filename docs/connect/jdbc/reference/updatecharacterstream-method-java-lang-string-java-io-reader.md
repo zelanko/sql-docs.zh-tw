@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8ec22a9-4bbd-4759-9f21-957304ef3a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e0111b401f43771a15e3e7ae001931039a2ab5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4a44d8a6ea91697c45588c93dfdaf109ac548d75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784074"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>updateCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  UpdateCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 updateCharacterStream 方法。  
   
  這個方法會透過 Reader 物件將 Unicode 字元傳遞到選取的文字和二進位資料行。 這包括所有的文字資料行，以及 **binary**、**varbinary**、**varbinary(max)**、**image** 和 **xml** 等資料行，但是不包含 **udt** 資料行。  

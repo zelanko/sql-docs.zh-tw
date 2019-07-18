@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5be9d4dfdb6760cba13556a1de38db12258c5cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4197b96740685ff9aca98634b2dfd1acfdc92fb8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798856"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797672"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

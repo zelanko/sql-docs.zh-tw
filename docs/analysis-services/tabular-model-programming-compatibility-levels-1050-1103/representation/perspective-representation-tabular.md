@@ -1,5 +1,5 @@
 ---
-title: 檢視方塊表示法 （表格式） |Microsoft 文件
+title: 檢視方塊表示法 （表格式） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee406b4a5f1f9e366457ac150f10da226551f79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63019314"
 ---
 # <a name="perspective-representation-tabular"></a>檢視方塊表示法 (表格式)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   檢視方塊是一種針對用戶端應用程式簡化或聚焦至模型之較小部分的機制。  
   
- 請參閱[檢視方塊表示法 （表格式）](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md)如需如何建立和操作檢視方塊表示法的詳細說明。  
+ 請參閱[檢視方塊表示法 （表格式）](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md)如需如何建立及操作檢視方塊表示法的詳細說明。  
   
 > [!WARNING]  
 >  檢視方塊並非安全性機制。使用者仍然可透過其他介面存取檢視方塊外部的物件。  
@@ -29,7 +29,7 @@ ms.locfileid: "34039862"
  就 AMO 物件而言，檢視方塊表示法與 <xref:Microsoft.AnalysisServices.Perspective> 之間擁有一對一對應關聯性，而且不需要其他主要 AMO 物件。  
   
 ### <a name="perspective-in-amo"></a>AMO 中的檢視方塊  
- 下列程式碼片段示範如何在表格式模型中建立檢視方塊。 這個程式碼片段的主要元素是 perspectiveElements；這個物件是表格式模型中公開給使用者之所有物件的圖形表示法。 *perspectiveElements*包含 4 個資料行，而此案例中只有 1、 2 和 3 的資料行相關。 資料行 1 包含顯示之元素的類型 elementTypeValue；資料行 2 包含元素的完整名稱 (可能需要加以剖析才能進入檢視方塊中的元素)；資料行 3 包含核取方塊項目 checkedElement，此項目會分辨元素是否屬於檢視方塊的一部分。  
+ 下列程式碼片段示範如何在表格式模型中建立檢視方塊。 這個程式碼片段的主要元素是 perspectiveElements；這個物件是表格式模型中公開給使用者之所有物件的圖形表示法。 *perspectiveElements*包含 4 個資料行，但此案例中只有 1、 2 和 3 的資料行相關。 資料行 1 包含顯示之元素的類型 elementTypeValue；資料行 2 包含元素的完整名稱 (可能需要加以剖析才能進入檢視方塊中的元素)；資料行 3 包含核取方塊項目 checkedElement，此項目會分辨元素是否屬於檢視方塊的一部分。  
   
 ```  
   

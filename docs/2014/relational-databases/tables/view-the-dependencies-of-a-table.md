@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196615"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視資料表的相依性。  
@@ -29,7 +29,7 @@ ms.locfileid: "54100743"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列項目來檢視資料表的相依性：**  
   
@@ -48,13 +48,13 @@ ms.locfileid: "54100743"
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>若要檢視資料表的相依性  
   
-1.  在 **[物件總管]** 中，展開 **[資料庫]**、展開其中一個資料庫，再展開 **[資料表]**。  
+1.  在 **[物件總管]** 中，展開 **[資料庫]** 、展開其中一個資料庫，再展開 **[資料表]** 。  
   
-2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
+2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]  。  
   
-3.  在 [物件相依性\<物件名稱>] 對話方塊中，選取 [相依於 \<物件名稱> 的物件] 或 [\<物件名稱> 所相依的物件]。  
+3.  在 [物件相依性  \<物件名稱>]  對話方塊中，選取 [相依於  \<物件名稱>  的物件] 或 [  \<物件名稱> 所相依的物件]   。  
   
-4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
+4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型]  方塊中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -62,9 +62,9 @@ ms.locfileid: "54100743"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -79,9 +79,9 @@ ms.locfileid: "54100743"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  下列範例會傳回相依於 `Production.Product`資料表的物件。 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  下列範例會傳回相依於 `Production.Product`資料表的物件。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   

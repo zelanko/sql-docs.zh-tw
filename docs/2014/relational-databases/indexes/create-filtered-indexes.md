@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155381"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立篩選索引。 篩選索引是最佳化的非叢集索引，特別適合涵蓋從妥善定義的資料子集選取而來的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本和儲存成本。  
@@ -105,19 +105,19 @@ ms.locfileid: "54125508"
   
 3.  按一下加號展開要建立篩選索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
+4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行] 下的 [新增...]。  
+6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 <資料表名稱>  選取資料行]  對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 在 [篩選] 頁面的 [篩選運算式]底下，輸入要用來建立篩選索引的 SQL 運算式。  
+9. 在 [篩選]  頁面的 [篩選運算式]  底下，輸入要用來建立篩選索引的 SQL 運算式。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -125,9 +125,9 @@ ms.locfileid: "54125508"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -167,9 +167,9 @@ ms.locfileid: "54125508"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

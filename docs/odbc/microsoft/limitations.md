@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5912bf4b09a3acd50ae148f642360642fce23277
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054116"
 ---
 # <a name="limitations"></a>限制
 本節說明下列主題之 ODBC 桌面資料庫驅動程式的限制：  
@@ -38,11 +37,11 @@ ms.locfileid: "47828828"
 ||[SELECT 陳述式](../../odbc/microsoft/select-statement-limitations.md)|[FROM 子句](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[UPDATE 陳述式](../../odbc/microsoft/update-statement-limitations.md)|[HAVING 子句](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[LIKE 述詞](../../odbc/microsoft/like-predicate-limitations.md)|  
-|||[不是 NULL](../../odbc/microsoft/not-null-limitations.md)|  
+|||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  
 |||[ORDER BY 子句](../../odbc/microsoft/order-by-clause-limitations.md)|  
 |||[資料表名稱](../../odbc/microsoft/table-name-limitations.md)|  
 |||[資料表參考](../../odbc/microsoft/table-references-limitations.md)|  
 |||[檢視](../../odbc/microsoft/views-limitations.md)|  
 |||[其中子句](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[其中 CURRENT OF 子句](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
-|||[字串](../../odbc/microsoft/string-limitations.md)|
+|||[String](../../odbc/microsoft/string-limitations.md)|

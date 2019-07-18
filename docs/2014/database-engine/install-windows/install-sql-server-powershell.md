@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775438"
 ---
 # <a name="install-sql-server-powershell"></a>安裝 SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式若偵測到您選取了內含 PowerShell 元件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，但卻未安裝 Windows PowerShell 2.0，其將會停止。 您必須使用 Windows Management Framework 安裝 Windows PowerShell 2.0，然後重新執行安裝程式。  

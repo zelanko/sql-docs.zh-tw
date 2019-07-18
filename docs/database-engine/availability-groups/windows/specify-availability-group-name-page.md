@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec4f98310707922abfe32a1fbd771d71da777907
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 10cf78a39c49f608950dbcad174bbe78ced2fcfe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794267"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性群組的 [指定可用性群組選項] 頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

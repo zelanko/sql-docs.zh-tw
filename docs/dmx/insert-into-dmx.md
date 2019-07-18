@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 463bd3ac40a2f90a66457faa9a80b9512b67b53a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937781"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  模型識別碼。  
   
- *結構*  
+ *structure*  
  結構識別碼。  
   
  *對應的模型資料行*  
@@ -47,7 +46,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>備註  
  如果您未指定**採礦模型**或是**採礦結構**，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]搜尋名稱，以基礎物件型別，並處理正確的物件。 如果伺服器包含具有相同名稱的採礦結構與採礦模型，就會傳回錯誤。  
   
- 使用第二種語法形式，INSERT INTO*\<物件 >*。COLUMN_VALUES，您可以將資料直接插入的模型資料行不必定型模型。 這種方法以精簡、已排序的方式提供模型的資料行資料，當您處理包含階層或已排序資料行的資料集時很有用。  
+ 使用第二種語法形式，INSERT INTO *\<物件 >* 。COLUMN_VALUES，您可以將資料直接插入的模型資料行不必定型模型。 這種方法以精簡、已排序的方式提供模型的資料行資料，當您處理包含階層或已排序資料行的資料集時很有用。  
   
  如果您使用**INSERT INTO**與採礦模型或採礦結構，以及保持關閉\<對應模型的資料行 > 並\<來源資料查詢 > 引數，陳述式的行為類似**ProcessDefault**，使用已存在的繫結。 如果繫結不存在，陳述式就會傳回錯誤。 如需詳細資訊**ProcessDefault**，請參閱[處理選項和設定&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。 下列範例會顯示語法：  
   
@@ -59,13 +58,13 @@ INSERT INTO [MINING MODEL] <model>
   
  下表會根據物件的狀態，提供不同陳述式格式之結果的描述。  
   
-|引數|物件的狀態|結果|  
+|陳述式|物件的狀態|結果|  
 |---------------|----------------------|------------|  
-|INSERT INTO MINING MODEL&AMP;LT*\<模型 >*|處理採礦結構。|處理採礦模型。|  
+|INSERT INTO MINING MODEL&AMP;LT *\<模型 >*|處理採礦結構。|處理採礦模型。|  
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
 ||採礦結構包含其他的採礦模型。|處理失敗。 您必須重新處理結構與相關聯的採礦模型。|  
-|INSERT INTO MINING STRUCTURE*\<結構 >*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
-|INSERT INTO MINING MODEL&AMP;LT*\<模型 >* ，其中包含來源查詢<br /><br /> 中的多個<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* ，其中包含來源查詢|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
+|INSERT INTO MINING STRUCTURE *\<結構 >*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
+|INSERT INTO MINING MODEL&AMP;LT *\<模型 >* ，其中包含來源查詢<br /><br /> 或<br /><br /> INSERT INTO MINING STRUCTURE *\<結構 >* ，其中包含來源查詢|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>對應的模型資料行  
  使用\<對應模型的資料行 > 項目，您可以在採礦模型中對應資料來源的資料行的資料行。 \<對應模型的資料行 > 項目具有下列格式：  

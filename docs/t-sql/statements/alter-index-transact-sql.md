@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: af5142fe96cc26bd18f71f8a67a7856950b966b4
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980414"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652705"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -128,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -174,8 +174,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>引數  
+```
+
+## <a name="arguments"></a>引數
+
  *index_name*  
  這是索引的名稱。 在資料表或檢視表內，索引名稱必須是唯一的，但在資料庫內就不一定要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
@@ -184,18 +186,18 @@ ALTER INDEX { index_name | ALL }
   
 |搭配此作業使用關鍵字 ALL|如果資料表有一個或多個下列項目，便告失敗|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
+|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
 |REBUILD PARTITION = *partition_number*|未分割索引、XML 索引、空間索引或停用的索引|  
 |REORGANIZE|ALLOW_PAGE_LOCKS 設定為 OFF 的索引|  
 |REORGANIZE PARTITION = *partition_number*|未分割索引、XML 索引、空間索引或停用的索引|  
-|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
-|ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
+|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
+|ONLINE = ON|XML 索引<br /><br /> 空間索引<br /><br /> 資料行存放區索引：**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
 |RESUMABLE = ON  | **All** 關鍵字不支援可繼續的索引。 <br /><br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  如需有關可以在線上執行之索引作業的詳細資訊，請參閱[線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 
- 如果設定 PARTITION = *partition_number*來指定 ALL，便會對齊所有索引。 這表示它們會根據對等的分割區函數來進行分割。 搭配 PARTITION 子句使用 ALL 時，會重建或重新組織含有相同 *partition_number* 的所有索引分割區。 如需有關分割區索引的詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
+ 如果設定 PARTITION = *partition_number*來指定 ALL，便會對齊所有索引。 這表示它們會根據對等的分割區函數來進行分割。 搭配 PARTITION 子句使用 ALL 時，會重建或重新組織含有相同 *partition_number* 的所有索引分割區。 如需有關分割區索引的詳細資訊，請參閱[分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
  *database_name*  
  這是資料庫的名稱。  
@@ -208,7 +210,7 @@ ALTER INDEX { index_name | ALL }
   
  當 database_name 是目前的資料庫或 database_name 是 tempdb，而且 table_or_view_name 開頭為 # 時，[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 支援三部分名稱格式 database_name.[schema_name].table_or_view_name。  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  指定將利用相同的資料行、索引類型、唯一性屬性和排序次序來重建索引。 這個子句相當於 [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)。 REBUILD 會啟用停用的索引。 除非指定了 ALL 關鍵字，否則重建叢集索引不會重建相關聯的非叢集索引。 如果未指定索引選項，便會套用儲存在 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 中的現有索引選項值。 任何值未儲存在 **sys.indexes** 中的索引選項，都會套用選項引數定義中所指示的預設值。  
   
  如果指定了 ALL，且基礎資料表是堆積，重建作業便不會影響資料表。 與資料表相關聯的任何非叢集索引都會重建。  
@@ -247,7 +249,7 @@ PARTITION
   
  要重建或重新組織之分割區索引的分割區數。 *partition_number* 是一個可以參考變數的常數運算式。 其中包括使用者定義類型變數或函數及使用者定義函數，但無法參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *partition_number*必須存在，否則陳述式將會失敗。  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -300,7 +302,7 @@ LOB_COMPACTION = OFF
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
- **適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+ **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS 可用來將開啟或關閉的差異資料列群組強制移動到資料行存放區中。 使用此選項時，不需要重建資料行存放區索引來清空差異資料列群組。  此功能和其他移除與合併重組功能結合之後，可讓它在大部分情況下都不再需要重建索引。    
 
@@ -308,7 +310,7 @@ COMPRESS_ALL_ROW_GROUPS 可用來將開啟或關閉的差異資料列群組強�
   
 -   OFF 則會將所有關閉的資料列群組強制移動到資料行存放區中。  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  在不重建或重新組織索引的情況下，指定索引選項。 停用的索引不能指定 SET。  
   
 PAD_INDEX = { ON | OFF }  
@@ -466,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  當 ALLOW_PAGE_LOCKS 設為 OFF 時，無法重新組織索引。  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。
+
+指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱 CREATE INDEX 頁面的[循序索引鍵](./create-index-transact-sql.md#sequential-keys)一節以取得詳細資訊。
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -528,7 +536,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 
   
@@ -624,7 +632,7 @@ ABORT
 
 中止已宣告為可繼續的執行中或已暫停的索引作業。 您必須明確地執行 **ABORT** 命令，以終止可繼續的索引重建作業。 失敗或暫停可繼續的索引作業不會終止其執行；相反地，它會使作業進入無限期暫停狀態。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一個檔案群組。 您不能利用這個陳述式來修改索引定義，例如新增或刪除資料行，或變更資料行順序。 請搭配 DROP_EXISTING 子句來使用 CREATE INDEX，以執行這些作業。  
   
 未明確指定選項時，會套用目前的設定。 例如，如果 REBUILD 子句並未指定 FILLFACTOR 設定，在重建過程中，會使用系統目錄中所儲存的填滿因數值。 若要檢視目前的索引選項設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -654,23 +662,28 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
   
 為了重建叢集資料行存放區索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會進行以下作業：  
   
-1.  在進行重建時，取得資料表或分割區上的獨佔鎖定。 在重建期間，資料處於「離線」狀態而且無法使用。  
+1. 在進行重建時，取得資料表或分割區上的獨佔鎖定。 在重建期間，資料處於「離線」狀態而且無法使用。  
   
-2.  藉由實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區，而已刪除的位元組會在實體媒體上回收。  
+1. 藉由實際刪除已經以邏輯方式從資料表刪除的資料列，以重組資料行存放區，而已刪除的位元組會在實體媒體上回收。  
   
-3.  從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。  
+1. 從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。  
   
-4.  進行重建時，實體媒體上需要有空間可儲存資料行存放區索引的兩份副本。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始叢集資料行存放區索引。  
+1. 進行重建時，實體媒體上需要有空間可儲存資料行存放區索引的兩份複本。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始叢集資料行存放區索引。
+
+1. 若為具有已排序叢集資料行存放區索引的 Azure SQL 資料倉儲資料表，則 ALTER INDEX REBUILD 將重新排序資料。 在重建作業期間監視 tempdb。 如果您需要更多 tempdb 空間，可以相應增加資料倉儲。 當索引重建完成之後，請相應減少回來。
   
-## <a name="reorganizing-indexes"></a> 重新組織索引  
+## <a name="reorganizing-indexes"></a> 重新組織索引
 重新組織索引所用的系統資源最少。 它會實際重新排序分葉層級的頁面，使它們由左至右符合分葉節點的邏輯順序，以重新組織資料表和檢視表之叢集和非叢集索引的分葉層級。 重新組織也會壓縮索引頁面。 壓縮是以現有填滿因數值為基礎。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
-當指定 ALL 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱本文＜引數＞一節中的 ALL 定義。  
+當指定 ALL 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱此文章＜引數＞一節中的 ALL 定義。  
   
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
- 
+
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重新組織索引時，不會更新統計資料。
+
+>[!IMPORTANT]
+> 若為具有已排序叢集資料行存放區索引的 Azure SQL 資料倉儲資料表，則 `ALTER INDEX REORGANIZE` 不會重新排序資料。 若要重新排序資料，請使用 `ALTER INDEX REBUILD`。
   
 ## <a name="disabling-indexes"></a> 停用索引  
 停用索引可防止使用者存取索引，如果是叢集索引，則可防止使用者存取基礎資料表的資料。 索引定義會保留在系統目錄中。 停用檢視的非叢集索引或叢集索引時，會實際刪除索引資料。 停用叢集索引可防止存取資料，資料仍會保留在 B 型樹狀目錄中，但不進行維護，直到卸除或重建索引為止。 若要檢視已啟用或已停用索引的狀態，請查詢 **sys.indexes** 目錄檢視中的 **is_disabled** 資料行。  
@@ -680,7 +693,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 請利用 ALTER INDEX REBUILD 陳述式或 CREATE INDEX WITH DROP_EXISTING 陳述式來啟用索引。 當 ONLINE 選項設為 ON 時，無法重建停用的叢集索引。 如需詳細資訊，請參閱 [停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
   
 ## <a name="setting-options"></a>設定選項  
-您可以在不重建或重新組織指定之索引的情況下，設定這個索引的 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE 選項。 修改的值會立即套用在索引上。 若要檢視這些設定，請使用 **sys.indexes**。 如需詳細資訊，請參閱 [設定索引選項](../../relational-databases/indexes/set-index-options.md)。  
+您可以在不重建或重新組織指定索引的情況下，設定該索引的 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE 選項。 修改的值會立即套用在索引上。 若要檢視這些設定，請使用 **sys.indexes**。 如需詳細資訊，請參閱 [設定索引選項](../../relational-databases/indexes/set-index-options.md)。  
   
 ### <a name="row-and-page-locks-options"></a>資料列和頁面鎖定選項  
 如果 ALLOW_ROW_LOCKS = ON 且 ALLOW_PAGE_LOCK = ON，當您存取索引時，允許資料列、頁面和資料表層級的鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會選擇適當的鎖定，且可以將鎖定從資料列或頁面鎖定擴大到資料表鎖定。  
@@ -715,7 +728,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 線上索引重建已使用 RESUMABLE = ON 選項指定為可繼續。 
 -  指定索引的中繼資料中不會保存 RESUMABLE 選項，並且僅適用於目前 DDL 陳述式的持續時間。 因此，必須明確指定 RESUMABLE = ON 子句，才能啟用可繼續性。
 -  RESUMABLE = ON 選項或 **low_priority_lock_wait** 引數選項支援 MAX_DURATION 選項。 
-   -  RESUMABLE 選項的 MAX_DURATION 可指定重建索引時的時間間隔。 使用此時間之後，索引重建就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的重建。 MAX_DURATION 的**時間**是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週i (7 * 24 * 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。 
+   -  RESUMABLE 選項的 MAX_DURATION 可指定重建索引時的時間間隔。 使用此時間之後，索引重建就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的重建。 MAX_DURATION 的**時間**是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週 (7 \* 24 \* 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。 
    -  \<low_priority_lock_wait> 引數選項可讓您決定索引作業在 SCH-M 鎖定上遭到封鎖時可繼續作業的方式。
  
 -  重新執行具有相同參數的原始 ALTER INDEX REBUILD 陳述式，就會繼續已暫停的索引重建作業。 您也可以執行 ALTER INDEX RESUME 陳述式，繼續已暫停的索引重建作業。
@@ -735,8 +748,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
    -    ALTER TABLE 使用索引重建  
    -    "RESUMABLE = ON" 的 DDL 命令無法在明確交易內部執行 (不能是 begin tran ... commit 區塊的一部分)
    -    重建已經計算或以 TIMESTAMP 資料行作為索引鍵資料行的索引。
--   如果基底資料表包含 LOB 資料行，可繼續的叢集索引重建就會在此作業開始時需要 Sch-M 鎖定
-   -    可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項 
+-   如果基底資料表包含 LOB 資料行，可繼續的叢集索引重建就會在此作業開始時需要 Sch-M 鎖定 
 
 > [!NOTE]
 > DDL 命令會執行，直到完成、暫停或失敗為止。 如果命令暫停，將會發出錯誤指出作業已暫停，而且沒有完成索引建立。 您可以從 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) 取得目前索引狀態的詳細資訊。 和以前一樣，如果發生失敗，也會發出錯誤。 
@@ -764,13 +776,13 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 下列限制適用於分割區索引：  
   
 -   使用 ALTER INDEX ALL ... 時，您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
--   ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定資料分割。  
--   ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有資料分割。  
+-   ALTER INDEX \<index> ...REBUILD PARTITION ... 語法會重建此索引的指定分割區。  
+-   ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有分割區。  
   
-## <a name="statistics"></a>Statistics  
+## <a name="statistics"></a>統計資料  
  當您針對資料表執行 **ALTER INDEX ALL ...** 時，只會更新與索引相關聯的統計資料。 針對資料表 (而非索引) 所建立的自動或手動統計資料不會進行更新。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
   
 ## <a name="version-notes"></a>版本資訊  
@@ -883,7 +895,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 將所有開啟和關閉的差異資料列群組壓縮到資料行存放區中  
- **適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+ **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) 命令會以壓縮的資料列群組方式，將每個 OPEN 和 CLOSED 的差異資料列群組壓縮到資料行存放區中。 這會清空差異存放區，並將所有資料列強制壓縮到資料行存放區。 這在執行許多插入作業之後特別有用，因為這些作業會將資料列儲存在一或多個差異資料行群組中。  
   

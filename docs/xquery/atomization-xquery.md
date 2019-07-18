@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985703"
 ---
 # <a name="atomization-xquery"></a>自動化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   在建構 OrignialLaborHours 屬性時，自動化會隱含套用至 (`$WC/@LaborHours`) 所傳回的單一序列。 LaborHours 屬性具類型的值會指派給 OrignialLaborHours。  
   
--   在建構 UpdatedLaborHoursV1 屬性時，算術運算子需要不可部份完成值。 因此， **data （)** 會隱含套用至所傳回的 LaborHours 屬性 (`$WC/@LaborHours`)。 接著就會在屬性中加入不可部份完成值 1。 屬性 UpdatedLaborHoursV2 的建構會顯示明確的應用程式的**data （)**，但並非必要。  
+-   在建構 UpdatedLaborHoursV1 屬性時，算術運算子需要不可部份完成值。 因此， **data （)** 會隱含套用至所傳回的 LaborHours 屬性 (`$WC/@LaborHours`)。 接著就會在屬性中加入不可部份完成值 1。 屬性 UpdatedLaborHoursV2 的建構會顯示明確的應用程式的**data （)** ，但並非必要。  
   
 ```  
 SELECT Instructions.query('  

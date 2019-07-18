@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63410531bcb0af8a254b2d2a5c6c650423cb9a1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057900"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>查閱轉換編輯器 (資料行頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定來源資料表和參考資料表之間的聯結，以及從參考資料表中選取查閱資料行。  
@@ -33,7 +32,7 @@ ms.locfileid: "58382186"
   
  使用拖放作業，即可將可用的輸入資料行對應到查閱資料行。  
   
- 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]**，使用鍵盤將輸入資料行對應到查閱資料行。  
+ 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]** ，使用鍵盤將輸入資料行對應到查閱資料行。  
   
  **可用的查閱資料行**  
  檢視查閱資料行清單。 查閱資料行是參考資料表中的資料行，您可在其中查閱符合輸入資料行的值。  
@@ -42,7 +41,7 @@ ms.locfileid: "58382186"
   
  使用核取方塊即可在參考資料表中，選取要執行查閱作業的查閱資料行。  
   
- 您也可以藉由在 **[可用的查閱資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]**，使用鍵盤將查閱資料行對應到輸入資料行。  
+ 您也可以藉由在 **[可用的查閱資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]** ，使用鍵盤將查閱資料行對應到輸入資料行。  
   
  **查閱資料行**  
  檢視選取的查閱資料行。 您的選擇會反映在 **[可用的查閱資料行]** 資料表的核取方塊選擇中。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7abc69edd0d49264a62ea0c3f65a60b58549d105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2cfe90d0a38cf5e599d82a6208a145daa3a3d1c7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774216"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781822"
 ---
 # <a name="getting-the-driver-version"></a>取得驅動程式版本
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

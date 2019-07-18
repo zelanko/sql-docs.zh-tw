@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcba39dba6f5a9cffa9f6f961d29aa20cebc527b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ca486f3464334c96c3b3874c4dfff71161e978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018853"
 ---
 # <a name="assemblies---implementing"></a>組件 - 實作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85cb08e40ddd98d01216707b954d46b924053fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039909"
 ---
 # <a name="developing-applications"></a>開發應用程式
 本節包含有關開發使用 ODBC 介面和實作它的驅動程式應用程式的資訊。  
@@ -47,7 +46,7 @@ ms.locfileid: "47758896"
   
 -   [描述項](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [交易](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [診斷](../../../odbc/reference/develop-app/diagnostics.md)  
   

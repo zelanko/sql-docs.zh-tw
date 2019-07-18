@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aa5b08a35a2eaf0d82b79145ecacde9d50579ee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057835"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
   使用 [查閱轉換編輯器] 對話方塊的 **[一般]** 頁面來選取快取模式、選取連接類型，及指定如何處理無相符項目的資料列。  
@@ -49,7 +48,7 @@ ms.locfileid: "58374166"
  從 **[指定如何處理無相符項目的資料列]** 清單方塊中選取任何其他選項時，會將資料列當做錯誤處理。 可以使用 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)   
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>另請參閱  
  [Cache Connection Manager](connection-manager/cache-connection-manager.md)   

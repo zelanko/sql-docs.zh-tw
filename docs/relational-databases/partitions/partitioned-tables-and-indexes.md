@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713313"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658292"
   
 -   您可以更快速地對一個或多個分割區執行維護作業。 作業只處理這些資料子集，而非整個資料表，因此會更有效率。 例如，您可以選擇壓縮一個或多個分割區中的資料，或是重建索引的一個或多個分割區。  
   
--   您可以提升查詢效能，不過這要視您經常執行的查詢類型和硬體組態而定。 例如，因為您可以聯結分割區本身，則在資料表中的分割資料行相同時，查詢最佳化工具可以更快速地處理兩個以上資料分割資料表之間的等聯結 (Equi-Join) 查詢。  
+-   您可以提升查詢效能，不過這要視您經常執行的查詢類型和硬體組態而定。 例如，當分割資料行與要在其上聯結資料表的資料行相同時，查詢最佳化工具可以更快速地同等聯結 (equi-join) 兩個或更多資料分割資料表間的查詢。 請參閱以下的[查詢](#queries)以取得進一步資訊。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一次會存取一台磁碟機，而這樣會降低效能。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "58658292"
 將分割區函數的資料分割對應至一組檔案群組的資料庫物件。 將分割區放在不同檔案群組的主要理由是可以確保能夠對分割區獨立執行備份作業。 這是因為您可以對個別檔案群組執行備份。  
   
 ### <a name="partitioning-column"></a>資料分割資料行  
-分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 **timestamp**除外。 無法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)**、 **nvarchar(max)** 或 **varbinary(max)** 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
+分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 **timestamp**除外。 無法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 或 **varbinary(max)** 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
   
 ### <a name="aligned-index"></a>對齊的索引  
 在與對應資料表相同的分割區配置上建立的索引。 資料表與其索引對齊時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在維護資料表及其索引的資料分割結構的同時，可快速且有效地切換資料分割。 索引不需要參與相同的具名分割區函數，即可對齊其基底資料表。 因為下列原因，索引與基底資料表的資料分割函式在本質上必然相同：

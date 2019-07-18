@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5efa101e1b25aaaced837310816ec0d24848e2f3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ce2fcfe65c3b674f89b3174fd1e88421a7bdb853
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106543"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>加入或移除圖表中的邊界 (報表產生器及 SSRS)
   在直條圖和散佈圖類型中，圖表會自動在 X 軸的端點加入側邊界。 在橫條圖類型中，圖表會自動在 Y 軸的端點加入側邊界。 在所有其他圖表類型中，圖表中都不會加入側邊界。 您不可以變更邊界的大小。  
@@ -28,9 +27,9 @@ ms.locfileid: "56292336"
   
 ### <a name="to-enable-or-disable-side-margins"></a>啟用或停用側邊界  
   
-1.  以滑鼠右鍵按一下座標軸，然後選取 [軸屬性]。 [垂直軸屬性] 或 [水平軸屬性] 對話方塊隨即出現。  
+1.  以滑鼠右鍵按一下座標軸，然後選取 [軸屬性]  。 [垂直軸屬性]  或 [水平軸屬性]  對話方塊隨即出現。  
   
-2.  在 [軸選項] 頁面上，設定 [側邊界] 屬性：  
+2.  在 [軸選項]  頁面上，設定 [側邊界]  屬性：  
   
     -   **自動** ：圖表將會判斷是否要根據圖表類型加入側邊界。  
   

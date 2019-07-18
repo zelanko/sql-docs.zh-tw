@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c66cf723f81e6676e991251ea1305bc2005722e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62790184"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>將次要資料庫聯結至可用性群組 (SQL Server)
-  本主題說明如何將次要資料庫聯結至 AlwaysOn 可用性群組中，使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或在 PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 當您準備次要複本的次要資料庫之後，您必須盡快將此資料庫聯結至可用性群組。 這會從對應的主要資料庫開始將資料移動到次要資料庫。  
+  此主題說明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。 當您準備次要複本的次要資料庫之後，您必須盡快將此資料庫聯結至可用性群組。 這會從對應的主要資料庫開始將資料移動到次要資料庫。  
   
 -   **開始之前：**  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48064678"
   
 3.  展開您要變更的可用性群組，然後擴展 **[可用性資料庫]** 節點。  
   
-4.  以滑鼠右鍵按一下資料庫，然後按一下 [加入可用性群組]。  
+4.  以滑鼠右鍵按一下資料庫，然後按一下 [加入可用性群組]  。  
   
-5.  這會開啟 **[將資料庫加入至可用性群組]** 對話方塊。 請確認顯示在標題列上的可用性群組名稱，以及顯示在方格中的資料庫名稱，然後按一下 **[確定]** 或按一下 **[取消]**。  
+5.  這會開啟 **[將資料庫加入至可用性群組]** 對話方塊。 請確認顯示在標題列上的可用性群組名稱，以及顯示在方格中的資料庫名稱，然後按一下 **[確定]** 或按一下 **[取消]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要將次要資料庫聯結至可用性群組**  
@@ -96,9 +96,9 @@ ms.locfileid: "48064678"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要將次要資料庫聯結至可用性群組**  
   
-1.  將目錄變更 (`cd`) 裝載次要複本的伺服器執行個體。  
+1.  將目錄切換到 (`cd`) 裝載次要複本的伺服器執行個體。  
   
-2.  使用`Add-SqlAvailabilityDatabase`cmdlet 來將一或多個次要資料庫聯結至可用性群組。  
+2.  使用 `Add-SqlAvailabilityDatabase` 指令程式，將一個或多個次要資料庫聯結至可用性群組。  
   
      例如，下列命令會將次要資料庫 `Db1`聯結至裝載次要複本之其中一個伺服器執行個體上的可用性群組 `MyAG` 。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48064678"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   

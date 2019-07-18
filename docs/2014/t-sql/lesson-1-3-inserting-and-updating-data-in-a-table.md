@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250128"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>在資料表中插入及更新資料 (教學課程)
   既然您現在建立好 **Products** 資料表，就可以準備使用 INSERT 陳述式，將資料插入資料表。 在插入資料後，您將使用 UPDATE 陳述式來變更資料列的內容。 您將使用 UPDATE 陳述式的 WHERE 子句，限制對單一資料列進行更新。 接下來所述的四個陳述式將輸入下面資料。  
@@ -29,7 +29,7 @@ ms.locfileid: "48217630"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
- 基本語法包括：INSERT、資料表、資料行清單、VALUES 以及要插入的值清單。 程式行前面的兩個連字號表示該程式行是註解，而編譯器會忽略這行文字。 在本案例中，註解說明所允許的語法變化。  
+ 基本語法如下：INSERT、 資料表名稱、 資料行清單、 值，然後一份值要插入。 程式行前面的兩個連字號表示該程式行是註解，而編譯器會忽略這行文字。 在本案例中，註解說明所允許的語法變化。  
   
 ### <a name="to-insert-data-into-a-table"></a>將資料插入資料表  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48217630"
     ```  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [讀取資料表中的資料&#40;教學課程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [讀取資料表的資料 &#40;教學課程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   

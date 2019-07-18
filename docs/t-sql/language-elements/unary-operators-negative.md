@@ -16,16 +16,16 @@ helpviewer_keywords:
 - negative operator (-)
 - negative values
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7a859083f4d9b5aa4a21d3a0815a79f01f09454
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab4143facc0549a52cc271212d273fdf9c906e7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981409"
 ---
 # <a name="unary-operators---negative"></a>一元運算子 - 負
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

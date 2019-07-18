@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05670439a8f14018a999557dd135912e0c2e0159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932259"
 ---
 # <a name="locktype-property-ado"></a>LockType 屬性 (ADO)
 表示在編輯期間鎖定記錄類型。  

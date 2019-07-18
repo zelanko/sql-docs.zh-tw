@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65718284"
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與 Scale Out Worker 服務之間的通訊。 有時，這項通訊會因設定錯誤、沒有存取權限和其他原因而中斷。 本文可協助您針對 Scale Out 設定問題進行疑難排解。
 
@@ -36,7 +40,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 ### <a name="solution"></a>方案
 1.  檢查是否已啟用 Scale Out。
 
-    在 SSMS 中，於 [物件總管] 中的 [SSISDB] 上按一下滑鼠右鍵，然後選取 [已啟用 Scale Out 功能]。
+    在 SSMS 中，於 [物件總管] 中的 [SSISDB]  上按一下滑鼠右鍵，然後選取 [已啟用 Scale Out 功能]  。
 
     ![已啟用 Scale Out](media/isenabled.PNG)
 
@@ -62,7 +66,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 
 ### <a name="symptoms"></a>徵狀
 
-*「System.ServiceModel.EndpointNotFoundException:沒有任何在 https://*[機器名稱]:[連接埠]*/ClusterManagement/ 上進行接聽的端點可以接受該訊息。」*
+*「System.ServiceModel.EndpointNotFoundException:沒有任何在 https://* [機器名稱]:[連接埠] */ClusterManagement/ 上進行接聽的端點可以接受該訊息。」*
 
 ### <a name="solution"></a>方案
 
@@ -154,7 +158,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>徵狀
 
-*「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是用戶端與伺服器之間的安全性繫結不相符所造成。」*
+ 「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是因為用戶端與伺服器之間的安全性繫結不相符所造成。」
 
 ### <a name="solution"></a>方案
 1.  執行下列命令，檢查主要節點上 Scale Out Master 憑證是否正確地繫結至主要端點中的連接埠：
@@ -173,7 +177,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>無法開啟憑證存放區
 
 ### <a name="symptoms"></a>徵狀
-在 Scale Out Manager 中將 Scale Out Worker 連線至 Scale Out Master 時驗證失敗，並出現錯誤訊息：「無法在電腦上開啟憑證存放區」。
+在 Scale Out Manager 中將 Scale Out Worker 連線至 Scale Out Master 時驗證失敗，並出現錯誤訊息：「無法在電腦上開啟憑證存放區」  。
 
 ### <a name="solution"></a>方案
 
@@ -210,7 +214,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ### <a name="solution"></a>方案
 在 `WorkerSettings.config` 中設定的 `TasksRootFolder` 下方，可以找到其他執行記錄。 此資料夾預設為 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`。 *[account]* 是執行 Scale Out Worker 服務的帳戶，預設值為 `SSISScaleOutWorker140`。
 
-若要使用 [執行識別碼] 找出套件執行的記錄，請執行下列 Transact-SQL 命令來取得 [工作識別碼]。 然後，尋找 `TasksRootFolder` 下包含 [工作識別碼] 的子資料夾名稱。
+若要使用 [執行識別碼]  找出套件執行的記錄，請執行下列 Transact-SQL 命令來取得 [工作識別碼]  。 然後，尋找 `TasksRootFolder` 下包含 [工作識別碼]  的子資料夾名稱。
 
 ```sql
 SELECT [TaskId]

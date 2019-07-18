@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1f80198787dd85d8f0c65e9881925641f9f081e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075353"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server 上安裝 SSMA 元件 (MySQLToSql)
 除了安裝 SSMA，您必須也安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些元件包括 SSMA 延伸模組套件，可支援資料移轉和 MySQL 提供者，以啟用伺服器對伺服器連線。  
@@ -27,7 +26,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**，以指定的執行�
   
 此外，當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業，會使用伺服器端資料移轉引擎來移轉資料時。  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
 您在上安裝 SSMA for MySQL 伺服器元件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請確定電腦是否符合下列需求：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
@@ -51,7 +50,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**，以指定的執行�
   
 2.  按兩下 SSMA for MySQL 擴充功能套件。*n*。Install.exe。  
   
-3.  在 [歡迎使用] 對話方塊中，按一下 [**下一步]**。  
+3.  在 [歡迎使用] 對話方塊中，按一下 [**下一步]** 。  
   
 4.  在 [使用者授權合約] 對話方塊中，閱讀授權合約。 如果您同意，請選取**我接受授權合約中的條款**核取方塊，然後按一下**下一步**。  
   
@@ -59,7 +58,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**，以指定的執行�
   
 6.  在 [準備安裝] 對話方塊中，按一下**安裝**。  
   
-7.  在 [已完成安裝的第一個步驟] 對話方塊中，按一下 [**下一步]**。  
+7.  在 [已完成安裝的第一個步驟] 對話方塊中，按一下 [**下一步]** 。  
   
     新的對話方塊隨即出現，您可以在其中選取執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]延伸模組套件安裝。  
   
@@ -67,7 +66,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**，以指定的執行�
   
     預設執行個體具有相同名稱的電腦。 具名執行個體將加上反斜線與執行個體名稱。  
   
-9. 在 [連線] 對話方塊中，選取驗證方法，然後按一下 [**下一步]**。  
+9. 在 [連線] 對話方塊中，選取驗證方法，然後按一下 [**下一步]** 。  
   
     Windows 驗證將用來嘗試登入的執行個體的 Windows 認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱和密碼。  
   
@@ -75,7 +74,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**，以指定的執行�
   
     **Sysdb**資料庫建立的資料表和資料移轉 （使用伺服器端資料移轉引擎） 所需的預存程序會建立該資料庫中。  
   
-11. 若要安裝的另一個執行個體的公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取 **[是]**，然後按一下**下一步**。 或者，若要結束精靈，請按一下**No**。  
+11. 若要安裝的另一個執行個體的公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取 **[是]** ，然後按一下**下一步**。 或者，若要結束精靈，請按一下**No**。  
   
 ## <a name="see-also"></a>另請參閱  
 [安裝 SSMA for MySQL 用戶端&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

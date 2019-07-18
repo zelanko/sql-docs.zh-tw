@@ -2,19 +2,18 @@
 title: 解除安裝 Microsoft 更新-Analytics Platform System |Microsoft Docs 」
 description: 解除安裝 Analytics Platform System (APS) 的 Microsoft 更新。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4739d05b1878c8b7fc9f66f2e0b8145ff1044e54
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f910eeb7f3b38d29f7ae7b084de981c22a6f3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959837"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>解除安裝 Analytics Platform System 中的 Microsoft 更新
 本文說明如何解除安裝先前安裝的 Microsoft update，Analytics Platform System 應用裝置上。  

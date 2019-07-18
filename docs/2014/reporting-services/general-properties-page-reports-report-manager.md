@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109093"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>一般屬性頁面，報表 (報表管理員)
   使用報表的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代報表定義。 您也可以使用此頁面來建立連結報表。 在頁面頂端指出有關建立或修改報表的人員，以及發生變更之時間的詳細資料。  
@@ -32,7 +31,7 @@ ms.locfileid: "56030269"
   
 3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定報表的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : \@ & = + , $ * \< >  
   
@@ -44,7 +43,7 @@ ms.locfileid: "56030269"
  **在清單檢視中隱藏**  
  選取這個選項可以對正在「報表管理員」中使用清單檢視模式的使用者隱藏報表。 清單檢視模式是瀏覽報表伺服器資料夾階層時的預設檢視格式。 在清單檢視中，項目名稱和描述會跨頁排列。 替代格式是詳細資料檢視。 詳細資料檢視會省略描述，但會包括項目的其他相關資訊。 雖然在清單檢視中可以隱藏項目，但在詳細資料檢視中則不行。 如果想要限制項目的存取，您必須建立角色指派。  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

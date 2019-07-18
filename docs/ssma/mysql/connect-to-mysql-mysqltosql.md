@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103236"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊，即可連接至您想要移轉的 MySQL 資料庫。  

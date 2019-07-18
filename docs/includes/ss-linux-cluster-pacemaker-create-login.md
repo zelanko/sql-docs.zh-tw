@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d2519b1cc56081f8a35308ac41e11f46a7f97211
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215612"
+---
 1. **在所有 SQL Server 上，為 Pacemaker 建立 Server 登入**。 下列 Transact-SQL 會建立登入：
 
    ```Transact-SQL

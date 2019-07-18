@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952132"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic 中的 ADOX 程式碼範例
 這些主題提供可協助您了解如何使用 ADOX 程式碼範例。 使用 Microsoft Visual Basic 撰寫所有程式碼範例。  

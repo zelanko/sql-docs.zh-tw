@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f734365cbfd8ca0b2ac1114853b0b412cb0e6d7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590972"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580980"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,12 @@ ms.locfileid: "53590972"
   
 1.  在 **[物件總管]** 中，展開您要部署 DAC 之執行個體的節點。  
   
-2.  以滑鼠右鍵按一下 [資料庫] 節點，然後選取 [部署資料層應用程式…]  
+2.  以滑鼠右鍵按一下 [資料庫]  節點，然後選取 [部署資料層應用程式…]   
   
 3.  完成精靈對話方塊，然後按一下 [完成]。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 進一步了解下面的某些精靈頁面： 
      
 ### <a name="select-dac-package-page"></a>選取 DAC 封裝頁面  
@@ -102,7 +105,7 @@ ms.locfileid: "53590972"
   
  如果您變更資料庫名稱，則資料檔和記錄檔的名稱也會變更，以符合新的值。  
   
- 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式] 節點或是**公用程式總管**中 [部署的資料層應用程式] 節點底下的 DAC 節點上。  
+ 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式]  節點或是**公用程式總管**中 [部署的資料層應用程式]  節點底下的 DAC 節點上。  
   
  下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時顯示。  
   

@@ -18,12 +18,12 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ed0ab606ec5ff41719111f160d5afb30da534bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4f31434f5e210a4c681a3d080824850527c6cbc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721786"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583750"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47721786"
   
      [限制事項](#Restrictions)  
   
--   [Security](#Security)  
+-   [安全性](#Security)  
   
 -   **若要使用下列項目還原檔案和檔案群組：**  
   
@@ -71,11 +71,11 @@ ms.locfileid: "47721786"
   
 1.  連接到適當的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，請在 [物件總管] 中按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開 [資料庫]。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ，再選取系統資料庫。  
+2.   展開 [資料庫]。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫]  ，再選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [還原]。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，然後按一下 [還原]  。  
   
-4.  按一下 **[檔案和檔案群組]**，開啟 **[還原檔案和檔案群組]** 對話方塊。  
+4.  按一下 **[檔案和檔案群組]** ，開啟 **[還原檔案和檔案群組]** 對話方塊。  
   
 5.  在 **[一般]** 頁面上的 **[目的地資料庫]** 清單方塊，輸入要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選擇現有的資料庫。 清單包含伺服器上的所有資料庫，排除系統資料庫 **master** 和 **tempdb**。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "47721786"
   
     -   **來源裝置**  
   
-         按一下 [瀏覽] 按鈕。 在 **[指定備份裝置]** 對話方塊中，選取 **[備份媒體類型]** 清單方塊上列出的其中一個裝置類型。 若要選取 **[備份媒體]** 清單方塊的一個或多個裝置，請按一下 **[加入]**。  
+         按一下 [瀏覽] 按鈕。 在 **[指定備份裝置]** 對話方塊中，選取 **[備份媒體類型]** 清單方塊上列出的其中一個裝置類型。 若要選取 **[備份媒體]** 清單方塊的一個或多個裝置，請按一下 **[加入]** 。  
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
@@ -97,8 +97,8 @@ ms.locfileid: "47721786"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]** 或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
-    |**型別**|執行的備份類型： **[完整]**、 **[差異]** 或 **[交易記錄]**。|  
+    |**檔案類型**|指定備份中的資料類型：[資料]  、[記錄]  或 [Filestream 資料]  。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
+    |**型別**|執行的備份類型：[完整]  、[差異]  或 [交易記錄]  。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
@@ -107,7 +107,7 @@ ms.locfileid: "47721786"
     |**大小**|備份組的大小 (以位元組為單位)。|  
     |**使用者名稱**|執行備份作業的使用者名稱。|  
   
-8.  若要檢視或選取進階選項，請按一下 **[選取頁面]** 窗格中的 **[選項]**。  
+8.  若要檢視或選取進階選項，請按一下 **[選取頁面]** 窗格中的 **[選項]** 。  
   
 9. 在 **[還原選項]** 面板中，您可以選擇下列任何選項 (如果情況適用)。  
   
@@ -134,26 +134,28 @@ ms.locfileid: "47721786"
     |資料行標頭|值|  
     |-----------------|------------|  
     |**原始檔案名稱**|來源備份檔案的完整路徑。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]** 或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
+    |**檔案類型**|指定備份中的資料類型：[資料]  、[記錄]  或 [Filestream 資料]  。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料]  檔案中。|  
     |**還原成**|還原資料庫檔案的完整路徑。 若要指定新的還原檔案，請按一下文字方塊並編輯建議的路徑與檔案名稱。 變更 **[還原成]** 資料行中的路徑或檔案名稱相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中的 MOVE 選項。|  
   
 11. **[復原狀態]** 面板可決定資料庫在還原作業之後的狀態。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
+     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
-     復原資料庫。 這是預設行為。 只有在您要立即還原所有必要的備份時，才選擇這個選項。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH RECOVERY。  
+     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
+     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**  
-     讓資料庫保持在還原狀態。 若要復原資料庫，就必須使用先前的 RESTORE WITH RECOVERY 選項 (請參閱上面說明) 執行另一個還原。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH NORECOVERY。  
+     If you select this option, the **Preserve replication settings** option is unavailable.  
   
-     如果選取此選項，將無法使用 **[保留複寫設定]** 選項。  
+     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
+     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **讓資料庫保持唯讀模式。回復未認可的交易，但是將回復作業儲存在檔案中，以便能夠恢復復原結果。(RESTORE WITH STANDBY)**  
-     讓資料庫處於待命狀態。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH STANDBY。  
+     Choosing this option requires that you specify a standby file.  
   
-     您必須指定待命資料庫檔案，才能選擇此選項。  
-  
-     **回復恢復檔案**  
-     在 [回復恢復檔案] 文字方塊中，指定待命資料庫檔案名稱。 如果您讓資料庫保持唯讀模式 (RESTORE WITH STANDBY)，就需要指定此選項。  
+     **Rollback undo file**  
+     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

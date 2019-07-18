@@ -1,5 +1,5 @@
 ---
-title: 定義自訂成員公式 |Microsoft 文件
+title: 定義自訂成員公式 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666582"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>屬性內容-定義自訂成員公式
+# <a name="attribute-properties---define-custom-member-formulas"></a>屬性內容 - 定義自訂成員公式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   您可以定義多維度運算式 (MDX) 運算式 (稱為自訂成員公式)，來提供所指定屬性之成員的值。 來自資料來源檢視之資料表中的資料行，為屬性的每一個成員提供該運算式，來提供該成員的值。  
   
@@ -31,25 +31,25 @@ ms.locfileid: "34021665"
   
  自訂成員公式覆寫與量值相關聯的彙總函式。 例如，在指定自訂成員公式之前，使用 **Sum** 彙總函式的量值含有 Time 維度下列成員的下列值：  
   
--   2003: 2100  
+-   2003:2100  
   
     -   第 1 季：700  
   
-    -   第 2 季：500  
+    -   季 2:500  
   
-    -   第 3 季：100  
+    -   季 3:100  
   
-    -   第 4 季：800  
+    -   Quarter 4:800  
   
--   2004: 1500  
+-   2004:1500  
   
     -   第 1 季：600  
   
-    -   第 2 季：200  
+    -   季 2:200  
   
-    -   第 3 季：300  
+    -   季 3:300  
   
-    -   第 4 季：400  
+    -   Quarter 4:400  
   
  利用自訂成員公式，成員的值將改由自訂積存公式提供。 例如，可使用以下自訂成員公式，提供 Time 維度之 2004 成員 Quarter 4 子成員的值 450。  
   

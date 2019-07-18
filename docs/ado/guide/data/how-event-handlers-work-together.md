@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a575e4df609430d5dc71517032f4c3da739bba24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925046"
 ---
 # <a name="how-event-handlers-work-together"></a>事件處理常式如何協同運作
 除非您在 Visual Basic 中的所有事件處理常式進行程式設計**連接**並**資料錄集**事件必須實作，不論是否是您實際處理的所有事件。 您只需要實作的工作數量取決於您的程式語言。 如需詳細資訊，請參閱 < [ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  

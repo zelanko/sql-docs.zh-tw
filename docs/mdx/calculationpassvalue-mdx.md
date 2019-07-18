@@ -1,5 +1,5 @@
 ---
-title: CalculationPassValue (MDX) |Microsoft 文件
+title: CalculationPassValue (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016870"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -42,10 +41,10 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  指定計算行程數目的有效數值運算式。  
   
  ABSOLUTE  
- 存取旗標值，它會指定*Pass_Value*參數包含的計算行程的以零為起始的索引。 如果沒有指定存取旗標值，ABSOLUTE 就是預設存取旗標值。  
+ 存取旗標值，指出*Pass_Value*參數包含的計算行程之以零起始的索引。 如果沒有指定存取旗標值，ABSOLUTE 就是預設存取旗標值。  
   
  RELATIVE  
- 存取旗標值，它會指定*Pass_Value*參數包含觸發計算的計算行程相對位移。 如果位移解析成小於 0 的計算行程索引，則會使用計算行程 0 而且不會發生錯誤。  
+ 存取旗標值，指出*Pass_Value*參數包含觸發計算的計算行程相對位移。 如果位移解析成小於 0 的計算行程索引，則會使用計算行程 0 而且不會發生錯誤。  
   
  ALL  
  當設定此旗標時，除了儲存引擎載入的值，所有值都是 Null。 沒有設定時，會在不套用任何計算的情況下彙總值。  
@@ -53,7 +52,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ## <a name="remarks"></a>備註  
  如果提供了數值運算式，此函數會評估指定的計算行程中之指定的 MDX 數值運算式，並且選擇性地存取旗標和存取旗標修飾詞加以修改，來傳回數值。  
   
- 如果提供的字串運算式，則函式藉由評估指定的 MDX 字串運算式，指定的計算行程中，傳回字串值，並選擇性地存取旗標和存取旗標修飾詞加以修改 *。*  
+ 如果提供的字串運算式，則函式藉由評估指定的 MDX 字串運算式，指定的計算行程中，會傳回字串值，並選擇性地存取旗標和存取旗標修飾詞加以修改 *。*  
   
  使用自動遞迴解析功能[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，此函式具有不具實用性。  
   
@@ -63,6 +62,6 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ## <a name="see-also"></a>另請參閱  
  [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

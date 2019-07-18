@@ -10,15 +10,15 @@ helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c62c04ccbfa6e4143277f09950f79e8b59a01f97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ebe093973174fe1e245ced134888d3e10417467
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478844"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>遞迴階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，遞迴階層是包含遞迴關聯性的衍生階層。 當實體有基於實體本身的網域屬性時，就會有遞迴關聯性。  
@@ -46,7 +46,7 @@ ms.locfileid: "52810920"
   
 -   衍生階層不能包含一個以上的遞迴關聯性。 但是可以擁有其他衍生關聯性 (例如，包含遞迴經理與員工關聯性的衍生階層也可以擁有國家 (地區) 與經理及員工與商店的關聯性)。  
   
--   不能指派成員權限 (在 [階層成員] 索引標籤上) 給遞迴階層中的成員。  
+-   不能指派成員權限 (在 [階層成員]  索引標籤上) 給遞迴階層中的成員。  
   
 -   遞迴階層不能包含循環關聯性。 例如，如果 Sandeep 是 Katherine 的經理，Katherine 不能做為 Sandeep 的經理。 此外，Katherine 不能管理她自己。  
   

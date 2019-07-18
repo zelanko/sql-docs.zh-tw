@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10435"
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 369540d7d3c75a781c338cf5d172fa82b16df7c7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa8ae6d36ddd7c23b48ec65f8fab387e690f1d83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107561"
 ---
 # <a name="report-data-pane-report-builder"></a>報表資料窗格 (報表產生器)
   [報表資料] 窗格可用於檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。 [圖表資料] 會以階層檢視來顯示表示報表中資料的項目。 最上層節點代表內建欄位、參數、影像和資料來源參考。 請展開每個節點以檢視資料項目。 例如，當您展開資料來源節點時，為該資料來源所定義的資料集就會顯示。 在展開資料集時，其欄位集合就會顯示。 您可以將項目拖曳至報表設計介面或 [群組] 窗格，以便連結資料與報表頁面上的選取報表項目。 如需詳細資訊，請參閱[報表設計檢視 &#40;報表產生器&#41;](report-builder/report-design-view-report-builder.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **內建欄位**  
  代表報表中的常用欄位，例如：報表名稱或頁碼。 如需詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)。  
   

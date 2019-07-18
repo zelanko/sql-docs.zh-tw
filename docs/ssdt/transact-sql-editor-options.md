@@ -25,18 +25,18 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65102063"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
-本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項] 功能表巡覽至 [選項] 對話方塊。  
+本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項]  功能表巡覽至 [選項]  對話方塊。  
   
 [查詢執行](#QueryExecution)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51667047"
 |**SET CURSOR_CLOSE_ON_COMMIT**|控制是否要在認可交易時關閉資料指標。 如需詳細資訊，請參閱 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)。|  
 |**SET ANSI_PADDING**|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存 **char**、 **varchar**、 **binary**和 **varbinary** 資料含有尾端空格的值。 如需詳細資訊，請參閱 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)。|  
 |**SET ANSI_WARNINGS**|指定數個錯誤狀況的 SQL-92 標準行為。如需詳細資訊，請參閱 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
-|**SET ANSI_NULLS**|等於 (**=**) 和不等於 (**<>**) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
+|**SET ANSI_NULLS**|等於 ( **=** ) 和不等於 ( **<>** ) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
 ## <a name="QueryResults"></a>查詢結果  
   
@@ -79,7 +79,7 @@ ms.locfileid: "51667047"
 |**執行之後捨棄結果**|在螢幕顯示已收到查詢結果後，將查詢結果捨棄以釋放記憶體。|  
 |**在其他索引標籤中顯示結果**|在新的文件視窗中顯示結果集，而非在查詢文件視窗的下方顯示。|  
 |**執行查詢後，切換至結果索引標籤**|自動將螢幕焦點設定為結果集。|  
-|**已擷取的最大字元數**|非 XML 資料：<br /><br />輸入從 1 到 65535 的數字，來指定每個資料格中會顯示的最大字元數。 **注意：** 指定大量字元可能造成結果集內顯示的資料遭截斷。 每個資料格中所顯示的最大字元數，會視字型大小而定。 若傳回了大量的結果集，且此方塊中所設定的值較大，就可能會造成 SQL Server Management Studio 的可用記憶體不足而降低系統的效能。<br /><br />XML 資料：<br /><br />選取 1 MB、2 MB 或 5 MB。 選取 [無限制] 以擷取所有字元。|  
+|**已擷取的最大字元數**|非 XML 資料：<br /><br />輸入從 1 到 65535 的數字，來指定每個資料格中會顯示的最大字元數。 **注意：** 指定大量字元可能造成結果集內顯示的資料截斷。 每個資料格中所顯示的最大字元數，會視字型大小而定。 若傳回了大量的結果集，且此方塊中所設定的值較大，就可能會造成 SQL Server Management Studio 的可用記憶體不足而降低系統的效能。<br /><br />XML 資料：<br /><br />選取 1 MB、2 MB 或 5 MB。 選取 [無限制] 以擷取所有字元。|  
 |**輸出格式**|根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項包括使用逗號、索引標籤，或空格來分隔資料行。 選取 **[自訂分隔符號]** 核取方塊，即可在 **[自訂分隔符號]** 方塊中指定不同的分隔字元。|  
 |**自訂分隔符號**|指定您要用來分隔資料行的字元。 只有當您在 [ **輸出格式** ] 方塊中選取了 [ **自訂分隔符號** ] 核取方塊時，才能使用此選項。|  
 |**在結果集內包含資料行標頭**|如果您不要每個資料行均標示有資料行標題，請清除此核取方塊。|  

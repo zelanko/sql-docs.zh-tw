@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5264807fadf1d4cb343b737ca5bcc71c0edff70b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6412aadf3bca28db229977bec0e96e901584cce0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780177"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>對進行疑難排解有助益的工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

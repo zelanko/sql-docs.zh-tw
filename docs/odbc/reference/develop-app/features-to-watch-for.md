@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069878"
 ---
 # <a name="features-to-watch-for"></a>要監看的功能
 本章節描述一些應用程式開發人員通常需要授與的功能。 事實上，這些功能廣泛的支援與差異的在 Dbms; 之間支援的方式它們的程式碼的失敗很可能會造成可互通的應用程式中的問題。  
   
- 本節不會列出應用程式開發人員需要考慮的所有功能。 如需該資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，並[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函式描述[附錄 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，並討論每項功能本手冊的各節。  
+ 本節不會列出應用程式開發人員需要考慮的所有功能。 如需該資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，並[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函式描述[附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，並討論每項功能本手冊的各節。  
   
  此章節包含下列主題。  
   

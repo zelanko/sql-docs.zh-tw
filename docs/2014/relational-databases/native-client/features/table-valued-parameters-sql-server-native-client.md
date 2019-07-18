@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206619"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>資料表值參數 (SQL Server Native Client)
   資料表值參數是在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中導入，而且會提供有效的方式將資料的多個資料列傳遞至伺服器。 資料表值參數會提供類似參數陣列的功能，但是提供了更多的彈性，並與 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 更緊密地整合在一起，而且時常可以增進效能。 資料表值參數也可以參與以集合為基礎的作業，而參數陣列則不行。  

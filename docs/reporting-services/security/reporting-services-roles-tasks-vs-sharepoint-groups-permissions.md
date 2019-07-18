@@ -2,7 +2,7 @@
 title: Reporting Services 角色工作與SharePoint 群組權限 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e9b7a33cebdfb6772460087a4cd9841f6b859ac1
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 091cdef1316ace27dd2928fb9c263cbc19ea0e61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570841"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作與SharePoint 群組權限
   本主題會比較 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  
@@ -39,7 +39,7 @@ ms.locfileid: "58305896"
 -   [比較原生模式工作和 SharePoint 權限](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 比較權限工具和詞彙  
- **原生模式：**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式權限物件 (角色和工作) 是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立，並為報表管理員的個別使用者設定。  
+ **原生模式：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式權限物件 (角色和工作) 是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立，並為報表管理員的個別使用者設定。  
   
  **SharePoint 模式** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式會使用 SharePoint 權限功能。 SharePoint 群組和權限是從 **[站台設定]** 頁面管理。  
   

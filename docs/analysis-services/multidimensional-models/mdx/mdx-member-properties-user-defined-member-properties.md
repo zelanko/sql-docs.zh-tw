@@ -1,5 +1,5 @@
 ---
-title: 使用者自訂成員屬性 (MDX) |Microsoft 文件
+title: 使用者定義成員屬性 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62740223"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 成員屬性使用者自訂成員屬性
+# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 成員屬性-使用者定義成員屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 階層的 **(All)** 層級或階層本身無法加入使用者定義成員屬性。  
   
@@ -65,7 +65,7 @@ FROM [Adventure Works]
  如需建立導出成員的詳細資訊，請參閱[在 MDX 中建立導出成員 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用成員屬性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [屬性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)  
+ [使用成員屬性 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

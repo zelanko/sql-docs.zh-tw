@@ -2,29 +2,32 @@
 title: 在 URL 內傳遞報表參數 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580833"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  
+
+> [!NOTE]
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
 > [!IMPORTANT]  
 >  請務必讓 URL 包含 `_vti_bin` Proxy 語法，以便透過 SharePoint 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP Proxy 路由傳送要求。 此 Proxy 會將某些內容加入至 HTTP 要求，也就是確保針對 SharePoint 模式報表伺服器正確執行報表所需的內容。  
 >   
->  如果您未包含 Proxy 語法，則需要為參數加上前置詞 *rp:*。  
+>  如果您未包含 Proxy 語法，則需要為參數加上前置詞 *rp:* 。  
   
  所有查詢參數都可以有相對應的報表參數。 您可以傳遞相對應的報表參數，即可傳遞查詢參數。 如需詳細資訊，請參閱[在關聯式查詢設計工具中建立查詢 &#40;報表產生器和 SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   

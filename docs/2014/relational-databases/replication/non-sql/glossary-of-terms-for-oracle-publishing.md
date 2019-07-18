@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022397"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 發行相關術語字彙
   在設定與管理 Oracle 發行時，應熟悉下列 Oracle 術語。 如需完整的 Oracle 術語清單，請參閱 Oracle 線上文件集。  

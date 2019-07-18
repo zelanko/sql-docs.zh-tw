@@ -12,15 +12,15 @@ f1_keywords:
 - vdtsql.chm:69640
 - vdt.dlgbox.querydefinitionsdiffer
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b68ce0b33bd78bbc708abfcb3f39656b7b23c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 24048c7133be74d1ca123614e6f97598ff01081f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762636"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680797"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>查詢定義差異對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47762636"
 -   SQL 陳述式有效，但包含所使用資料連接的特定語法。  
   
 > [!TIP]  
-> 您可以使用 [查詢] 工具列中的 [驗證 SQL 陳述式] 按鈕，檢查陳述式是否有效。  
+> 您可以使用 [查詢]  工具列中的 [驗證 SQL 陳述式]  按鈕，檢查陳述式是否有效。  
   
 此對話方塊會顯示訊息，說明 SQL 陳述式無法顯示的原因，並詢問該如何繼續進行。  
   
 > [!NOTE]  
-> 如果您已經隱藏 [圖表] 和 [準則] 窗格，[查詢定義差異] 對話方塊就不會出現。  
+> 如果您已經隱藏 [圖表] 和 [準則] 窗格，[查詢定義差異]  對話方塊就不會出現。  
   
 ## <a name="options"></a>選項。  
 **忽略按鈕**  

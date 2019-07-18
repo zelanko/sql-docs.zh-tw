@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc17daefbe5e84522fdc46ddf046403260ebf4e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2d8a3c6a47a9f353f44a9ec9c4a0cbb2c3cd3505
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094700"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET
   如果您將 PowerPivot for SharePoint 安裝到具有管理中心拓撲的伺服器陣列中 (沒有 Excel Services 或 PowerPivot for SharePoint)，若要完整存取 PowerPivot 管理儀表板中的內建報表，請下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 PowerPivot 查詢處理和伺服器健全狀況的報告資料。  
@@ -41,7 +40,7 @@ ms.locfileid: "53367850"
   
 2.  以滑鼠右鍵按一下 Microsoft.AnalysisServices.AdomdClient，然後選取**屬性**。  
   
-3.  按一下 **[版本]**。  
+3.  按一下 **[版本]** 。  
   
 4.  請確認該版本包含 12.00。\<組建編號 > 且描述為 Microsoft.AnalysisService.AdomdClient。  
   

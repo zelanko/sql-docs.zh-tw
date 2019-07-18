@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+manager: jroth
+ms.openlocfilehash: 336ef7d2bf0f81994bbd004f60062d98df91eb54
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801138"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "51559616"
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &AMP;#124; DBPROPVAL_UP_DELETE &AMP;#124; DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
   
 ## <a name="property-sets"></a>屬性集  
  下列屬性集支援資料表值參數。  

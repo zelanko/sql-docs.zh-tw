@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - RingN method
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b1f115c4a0e9d210c1f668434986d903c65f70b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14a29f7bfd5d55a634c5ab8be89a1f5e14dd2ccd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936309"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47837376"
 ## <a name="return-value"></a>傳回值  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  如果環形索引 **n** 的值小於 1，則這個方法會擲回 **ArgumentOutOfRangeException**。 環形索引值必須大於或等於 1，而且應該要小於或等於 `NumRings()` 傳回的數字。  

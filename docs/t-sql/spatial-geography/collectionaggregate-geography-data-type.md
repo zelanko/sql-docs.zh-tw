@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CollectionAggregate method (geography)
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3f081e7c3bb990ae28bcd035008719b90e7b7ae6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20c7279bc5b7dae0b8bf80ae86508ea77f9cd83e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935464"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

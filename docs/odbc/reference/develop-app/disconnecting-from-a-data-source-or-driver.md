@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2189c0fcc65fd4192e94da140e2d55ac86826137
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039766"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>從資料來源或驅動程式中斷連線
 當應用程式完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**釋放連接配置的任何陳述式，並從資料來源中斷驅動程式。 如果交易正在處理中，它會傳回錯誤。  

@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8ec316925fcd21a80561750665386a72f096060d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993778"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  「可延伸金鑰管理」提供者的名稱。  
   
  *path_of_DLL*  
- 實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可延伸金鑰管理介面的 .dll 檔路徑。 使用**適用於 Microsoft Azure Key Vault 的 SQL Server 連接器**時，預設位置是 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**。  
+ 實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可延伸金鑰管理介面的 .dll 檔路徑。 使用**適用於 Microsoft Azure Key Vault 的 SQL Server 連接器**時，預設位置是 **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** 。  
   
 ## <a name="remarks"></a>Remarks  
  提供者所建立的所有金鑰都會透過其 GUID 參考提供者。 GUID 會跨所有版本的 DLL 保留。  
@@ -65,7 +65,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限或 **sysadmin** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

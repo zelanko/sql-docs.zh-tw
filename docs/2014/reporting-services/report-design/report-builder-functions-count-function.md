@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2e90a3d1e7b5e00c61be2ed4d1d50db501474e35
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105290"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函數 (報表產生器及 SSRS)
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  

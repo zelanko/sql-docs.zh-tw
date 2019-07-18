@@ -2,7 +2,7 @@
 title: Windows 應用程式記錄檔 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - logs [Reporting Services], Windows application logs
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39a36a2c9c5a43c16d3ca54be9e32f81225eace4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580927"
 ---
 # <a name="windows-application-log"></a>Windows 應用程式記錄檔
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將事件訊息寫入 Windows 應用程式記錄。 您可以利用寫入應用程式記錄檔的訊息資訊，來了解在本機系統上執行的報表伺服器應用程式所產生的事件。  

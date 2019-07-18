@@ -1,5 +1,5 @@
 ---
-title: 識別項 (MDX) |Microsoft 文件
+title: 識別項 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,23 +8,22 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105408"
 ---
 # <a name="identifiers-mdx"></a>識別碼 (MDX)
 
 
-  識別項是 Analysis Services 物件的名稱。 每個物件也必須有識別碼。 這包括 Cube、維度、階層、層級、成員等等。 您可以使用物件的識別碼，以參考多維度運算式 (MDX) 陳述式中的物件。  
+  識別項是 Analysis Services 物件的名稱。 每個物件可以而且必須有識別項。 這包括 Cube、維度、階層、層級、成員等等。 您可以使用物件的識別碼，以參考多維度運算式 (MDX) 陳述式中的物件。  
   
  根據您如何命名物件，物件識別碼的識別碼將會是一般識別碼或是分隔識別碼。  
   
 > [!NOTE]  
->  一般識別碼與分隔識別碼都必須包含 1 到 100 個字元。  
+>  一般和分隔識別碼必須包含 1 到 100 個字元。  
   
 ## <a name="using-regular-identifiers"></a>使用一般識別碼  
  一般識別碼是一個物件名稱，符合以下的一般識別碼格式化規則。 一般識別碼可以搭配或不搭配分隔符號來使用。  
@@ -45,7 +44,7 @@ ms.locfileid: "34740807"
   
     -   底線 (_)。  
   
-3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊，請參閱[保留關鍵字&#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
+3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊，請參閱 <<c0> [ 保留關鍵字&#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。</c0>  
   
 4.  不允許內嵌的空格或特殊字元。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "34740807"
   
 -   當物件名稱或名稱的一部份使用保留關鍵字時。  
   
-     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含在先前的版本中包含不是保留字的識別項，但目前保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
+     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能有些識別碼包含單字不會保留在較早的版本中，但現在會保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
   
 -   當物件名稱使用未列為限定識別碼的字元時。  
   
@@ -124,8 +123,8 @@ ms.locfileid: "34740807"
  此外，前例中的 Measures 識別碼已經進行分隔，以示範如何分隔多個識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

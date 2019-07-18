@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63071466"
 ---
 # <a name="migrating-triggers"></a>移轉觸發程序
   本主題討論 DDL 和 DML 觸發程序以及記憶體最佳化的資料表。  

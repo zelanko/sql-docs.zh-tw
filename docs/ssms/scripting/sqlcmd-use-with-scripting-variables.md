@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e6128e455714f8b5977903646f01d6d8d1584c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cd739c91e328d93c3cf2b28a5b21cd1e0caf1dcd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642923"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679768"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 搭配指令碼變數使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51642923"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -87,7 +87,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 -   變數名稱不能包含空白字元或引號。  
   
--   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)*。  
+-   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)* 。  
   
 -   指令碼變數不區分大小寫。  
   
@@ -129,7 +129,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDEDITOR            |                | R/W | "edit.com"              |
 | SQLCMDINI               |                | R   | ""                      |
 
-* SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
+\* SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
 
 R 表示在程式初始化期間只能設定該值一次。  
   
@@ -190,7 +190,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台] 中按兩下 [系統]。 按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
  下列程式碼是在輸入檔 `c:\testscript.txt` 中：
 

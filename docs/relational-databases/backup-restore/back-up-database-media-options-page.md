@@ -14,12 +14,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e29fe0deaaba673136ee1e1f135e61a8f2b402e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e89089c6f95547f30bc4d99cdecdc38c8fe88957
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66402999"
 ---
 # <a name="back-up-database-media-options-page"></a>備份資料庫 (媒體選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,51 +41,42 @@ ms.locfileid: "53212087"
   
 ### <a name="overwrite-media"></a>覆寫媒體  
  [覆寫媒體] 面板的選項會控制備份寫入媒體的方式。 如果在 [備份資料庫] 對話方塊的 [一般] 頁面中選取 URL (Windows Azure 儲存體) 做為備份目的地，將會停用 [覆寫媒體] 區段下方的選項。 您可以覆寫備份，方法是使用 **BACKUP TO URL.WITH FORMAT** Transact-SQL 陳述式。 如需詳細資訊，請參閱 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+
+ 如果在 [一般] 頁面中選取 [URL] 作為備份目的地，則會停用 [覆寫媒體] 選項。
   
  只有 [Backup to a new media, and erase all existing backup sets (備份至新的媒體，並清除所有現有的備份組)] 選項支援加密選項。 如果您選取 [Back up to existing media (備份至現有媒體)] 區段下的選項，[備份選項] 頁面上的加密選項會停用。  
   
 > [!NOTE]  
 >  如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
   
- **備份至現有的媒體集**  
- 將資料庫備份至現有的媒體集。 選取此選項按鈕來啟動三個選項。  
+**備份至現有的媒體集**：將資料庫備份至現有的媒體集。 選取此選項按鈕來啟動三個選項。  
   
  選擇下列其中一個選項：  
   
- **附加至現有的備份組**  
- 將備份組附加至現有的媒體集，會保留任何先前的備份。  
+ - **附加至現有的備份組**：將備份組附加至現有的媒體集，會保留任何先前的備份。  
   
- **覆寫所有現有的備份組**  
- 以目前的備份來取代現有媒體集上之任何先前的備份。  
+ - **覆寫所有現有的備份組**：以目前的備份來取代現有媒體集上之任何先前的備份。  
   
- **檢查媒體集名稱及備份組是否逾期**  
- 如果選擇性地備份到現有的媒體集，則備份作業必須確認媒體集的名稱以及備份組的到期日。  
+ - **檢查媒體集名稱及備份組是否逾期**：如果選擇性地備份到現有的媒體集，則備份作業必須確認媒體集的名稱以及備份組的到期日。  
   
- **媒體集名稱**  
- 如果選擇性地選取了 [檢查媒體集名稱及備份組是否逾期]，請指定要用於此項備份作業的媒體集名稱。  
+ - **媒體集名稱**：如果選擇性地選取了 [檢查媒體集名稱及備份組是否逾期]，請指定要用於此項備份作業的媒體集名稱。  
   
- **備份至新的媒體集，並清除所有現有的備份組**  
- 使用新的媒體集，清除先前的備份組。  
+ - **備份至新的媒體集，並清除所有現有的備份組**：使用新的媒體集，清除先前的備份組。  
   
  按一下此選項會啟動下列選項：  
   
- **新媒體集名稱**  
- 選擇性地輸入媒體集的新名稱。  
+ - **新媒體集名稱**：選擇性地輸入媒體集的新名稱。  
   
- **新媒體集描述**  
- 選擇性地輸入新媒體集具有意義的描述。 此項描述應該足夠詳實，才能精確地表示內容。  
+ - **新媒體集描述**：選擇性地輸入新媒體集具有意義的描述。 此項描述應該足夠詳實，才能精確地表示內容。  
   
 ### <a name="reliability"></a>可靠性  
  [交易記錄] 面板的選項控制備份作業的錯誤管理。  
   
- **完成後驗證備份**  
- 確認備份組是完整的，且所有磁碟區都可以讀取。  
+ - **完成後驗證備份**：確認備份組是完整的，且所有磁碟區都可以讀取。  
   
- **寫入媒體之前執行總和檢查碼**  
- 寫入備份媒體之前確認總和檢查碼是否正確。 選取此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的 BACKUP 陳述式中指定 CHECKSUM 選項。 選取此選項可能會增加工作負載，並減少備份作業的備份輸送量。 如需有關備份總和檢查碼的資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
+ - **寫入媒體之前執行總和檢查碼**：寫入備份媒體之前確認總和檢查碼是否正確。 選取此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的 BACKUP 陳述式中指定 CHECKSUM 選項。 選取此選項可能會增加工作負載，並減少備份作業的備份輸送量。 如需有關備份總和檢查碼的資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
- **發生錯誤時繼續**  
- 即使發生一或多個錯誤，備份作業也會繼續執行。  
+ - **發生錯誤時繼續**：即使發生一或多個錯誤，備份作業也會繼續執行。  
   
 ### <a name="transaction-log"></a>交易記錄  
  [交易記錄] 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [[一般](../../relational-databases/backup-restore/back-up-database-general-page.md)] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。  
@@ -107,11 +98,9 @@ ms.locfileid: "53212087"
 > [!NOTE]  
 >  如需有關如何使用磁帶裝置的資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
- **備份後卸載磁帶**  
- 備份完成之後再卸載磁帶。  
+ - **備份後卸載磁帶**：備份完成之後再卸載磁帶。  
   
- **卸載之前倒轉磁帶**  
- 卸載磁帶之前先將其釋放及倒轉。 只有在選取 [備份後卸除磁帶] 時才會啟用這個選項。  
+ - **卸載之前倒轉磁帶**：卸載磁帶之前，先將其釋放及倒轉。 只有在選取 [備份後卸除磁帶] 時才會啟用這個選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

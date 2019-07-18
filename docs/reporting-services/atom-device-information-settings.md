@@ -2,18 +2,18 @@
 title: ATOM 裝置資訊設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 34ffe695a79ed0f7c7f71d82238c945723218373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2d04fae8687e31df79d72aec2b41bfe67cc1cc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65504115"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 裝置資訊設定
   Atom 轉譯延伸模組的裝置資訊設定支援提交 Atom 摘要名稱以及要使用的字元編碼。  

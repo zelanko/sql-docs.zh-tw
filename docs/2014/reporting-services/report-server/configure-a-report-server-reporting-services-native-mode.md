@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2097ea745bd9ddb359347ddbbaa41976e636ed4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104072"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)
   根據您在安裝期間選取的選項而定，報表伺服器可能需要其他組態設定才能使用。 報表伺服器組態至少要包含以下項目：  
@@ -30,7 +29,7 @@ ms.locfileid: "56010919"
   
 -   儲存應用程式資料、報表和其他項目的報表伺服器資料庫。  
   
- 如果您選取以下兩個安裝選項的其中一種，安裝程式會進行最小的設定：原生模式預設組態或 SharePoint 整合模式預設組態。 如果您在僅限檔案模式中安裝報表伺服器 (這是安裝精靈中的 **[安裝但不設定伺服器]** 選項)，則只會設定服務帳戶。 在安裝程式完成之後，必須設定 Web 服務 URL 和報表伺服器資料庫。  
+ 如果您選取其中一個下列安裝選項時，安裝程式將會最小的設定：原生模式預設組態或 SharePoint 整合的模式預設組態。 如果您在僅限檔案模式中安裝報表伺服器 (這是安裝精靈中的 **[安裝但不設定伺服器]** 選項)，則只會設定服務帳戶。 在安裝程式完成之後，必須設定 Web 服務 URL 和報表伺服器資料庫。  
   
  報表管理員是適用於原生模式報表伺服器的選擇性功能，但是建議您設定報表管理員，讓您可以授與使用者對報表伺服器的存取權，並管理報表伺服器內容。 如果您在 SharePoint 整合模式中部署報表伺服器，請使用 SharePoint 伺服器的 Web 前端來授與存取權。  
   

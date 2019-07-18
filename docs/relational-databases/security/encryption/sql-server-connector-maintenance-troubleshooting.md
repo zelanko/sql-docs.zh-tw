@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327839"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59241376"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 -   [開始使用 Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   PowerShell [Azure 金鑰保存庫 Cmdlet](https://msdn.microsoft.com/library/dn868052.aspx) 參考  
+-   PowerShell [Azure 金鑰保存庫 Cmdlet](/powershell/module/azurerm.keyvault/) 參考  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Azure Key Vault 進行可延伸金鑰管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   

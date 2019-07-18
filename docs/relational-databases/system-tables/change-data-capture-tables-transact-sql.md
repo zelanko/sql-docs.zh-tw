@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d977843f6fdbe59f382b6dbb39da017453265c5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082678"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>異動資料擷取資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47692696"
  [cdc.index_columns](../../relational-databases/system-tables/cdc-index-columns-transact-sql.md)  
  針對每一個與變更資料表相關聯的索引資料行，各傳回一個資料列。  
   
- [dbo.cdc_jobs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  傳回異動資料擷取代理程式作業的組態參數。  
   
 ## <a name="see-also"></a>另請參閱  

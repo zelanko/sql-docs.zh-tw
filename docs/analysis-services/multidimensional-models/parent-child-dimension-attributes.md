@@ -1,5 +1,5 @@
 ---
-title: 父子式階層中的屬性 |Microsoft 文件
+title: 父子式階層中的屬性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6b6c10c8b1c7f311f7ba5e876c1b8d96c9e9701
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165402"
 ---
 # <a name="parent-child-dimension-attributes"></a>父子式維度屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34023455"
  甚至，每位銷售成員的個別佣金也會不同。 在此情況下，銷售經理的佣金計算方式會採用個別銷售毛額佔其銷售員產生之總銷售毛額的兩個不同比率來計算。 因此，非分葉成員可存取基礎事實資料表資料就變得非常重要。 在提供與成員相關之銷售員的銷售毛額的前提下，MDX **DataMember** 函數可用來擷取 Sales Manager 1 成員的個人銷售毛額，而自訂積存運算式則可用來從 Sales Manager 1 成員的彙總值中排除該資料成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [維度屬性 (attribute) 屬性 (property) 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   

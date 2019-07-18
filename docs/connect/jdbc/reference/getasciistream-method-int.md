@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 1ec7e246-4b91-4420-9a4c-0ebd98e2e38b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a96c4e91c449c6055d960fee13f429867ffddd0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee88066145b42766ebf14f62e438a23e7d70294e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643010"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800014"
 ---
 # <a name="getasciistream-method-int"></a>getAsciiStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列中所指定資料行索引值來作為 ASCII 字元資料流。  
+  從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 ASCII 字元資料流。  
   
 ## <a name="syntax"></a>語法  
   

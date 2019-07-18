@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e8bacc383eba1148c1b357c344bc483e824df99b
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 9bbdaa2d23b5e605eb9e36490536a25ab344c8a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962056"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>快速入門：建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "54046815"
 > * 如何將您的程式碼，透過輸入的輸入傳遞預存程序
 > * 如何讓模型來使用預存程序
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 先前的快速入門中，[確認 Python 存在於 SQL Server](quickstart-python-verify.md)，提供資訊並連結設定本快速入門所需的 Python 環境。
 

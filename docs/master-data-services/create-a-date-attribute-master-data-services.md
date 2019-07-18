@@ -11,15 +11,14 @@ helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8f7c2dece1ac25d99348080c9c6f338c7db8f50c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 65fd9442bc55c229ca20ca81151c84180de85094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079703"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52753450"
 > [!NOTE]  
 >  該屬性稱為 DateTime，但不支援時間值。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -41,15 +40,15 @@ ms.locfileid: "52753450"
   
 ### <a name="to-create-a-date-attribute"></a>若要建立日期屬性  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
 3.  在 [管理實體]  頁面上，選取您要為其建立屬性之實體的資料列。  
   
-4.  按一下 **[屬性]**。  
+4.  按一下 **[屬性]** 。  
   
-5.  在 [管理屬性]  頁面上，執行下列其中一項動作，然後按一下 [加入] 。  
+5.  在 [管理屬性]  頁面上，執行下列其中一項動作，然後按一下 [加入]  。  
   
     -   如果是分葉成員的屬性，請選取 [成員類型]  清單方塊的 [分葉]  。  
   
@@ -63,15 +62,15 @@ ms.locfileid: "52753450"
   
 8.  在 **[顯示像素寬度]** 方塊中，輸入要在 **[總管]** 方格中顯示的屬性資料行寬度。  
   
-9. 從 [屬性類型] 清單中，選取 [自由格式]。  
+9. 從 [屬性類型]  清單中，選取 [自由格式]  。  
   
-10. 從 **[資料類型]** 清單中，選取 **[日期時間]**。  
+10. 從 **[資料類型]** 清單中，選取 **[日期時間]** 。  
   
 11. 從 **[輸入遮罩]** 清單中選取日期格式。  
   
 12. (選擇性) 選取 **[啟用變更追蹤]** 以追蹤屬性群組的變更。 如需詳細資訊，請參閱[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
   
-13. 按一下 **[儲存]**。  
+13. 按一下 [儲存]  。  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>若要顯示日期時間值的時間部分  
  若要讓使用者介面顯示日期時間值的時間部分，您必須選擇適用於屬性的輸入遮罩。 日期時間屬性的內建遮罩都無法執行這項處理，但是您可以加入可讓您顯示時間的新遮罩。 若要這樣做，請在儲存內建遮罩之 MDS 資料庫的 mdm.tblList 資料表中加入資料列。 此資料列應該有下列值：  

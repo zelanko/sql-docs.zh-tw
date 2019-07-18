@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62834640"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
   本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
@@ -56,7 +56,7 @@ ms.locfileid: "58385952"
   
 -   Oracle 11.x 用戶端  
   
- **注意**:您必須使用 32 位元或 64 位元版本的此軟體，根據安裝的 Oracle CDC 設計工具主控台版本而定。  
+ **注意**：您必須使用 32 位元或 64 位元版本的此軟體，根據安裝的 Oracle CDC 設計工具主控台版本而定。  
   
  Oracle CDC 設計工具主控台會使用 Oracle ODBC 提供者與來源 Oracle 資料庫通訊。  
   

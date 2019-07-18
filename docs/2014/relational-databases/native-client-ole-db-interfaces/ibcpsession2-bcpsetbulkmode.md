@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode |Microsoft Docs
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530619"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62989985"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 提供替代[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt IBCPSession2::BCPSetBulkMode 設定所有屬性。  

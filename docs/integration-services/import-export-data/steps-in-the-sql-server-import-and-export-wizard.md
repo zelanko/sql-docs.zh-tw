@@ -10,14 +10,18 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75ab1dd193cd8691166eff42fe30d11c89503dc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dafe47a0a136c7ab5640fc667b46cc496cfdbcb2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290514"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723696"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈中的步驟
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本主題描述使用 [SQL Server 匯入和匯出精靈] 匯入和匯出資料的一系列步驟。 它也會包含個別文件頁面的連結，而這些頁面描述您在精靈中看到的每個頁面或對話方塊。
 
 本主題僅描述精靈中的**步驟**。 如需其他資訊，請參閱[相關的工作及內容](#related)。

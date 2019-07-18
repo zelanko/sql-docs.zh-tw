@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65099655"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：從 Team Foundation Build 執行 SQL Server 單元測試
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
@@ -74,30 +74,30 @@ ms.locfileid: "54226535"
   
 1.  開啟包含您想要進行設定之測試專案的方案。  
   
-2.  在 [方案總管] 的 [方案項目] 資料夾中，按兩下 **Local.testsettings** 檔案。  
+2.  在 [方案總管]  的 [方案項目]  資料夾中，按兩下 **Local.testsettings** 檔案。  
   
-    [測試設定] 對話方塊隨即出現。  
+    [測試設定]  對話方塊隨即出現。  
   
-3.  在清單中，按一下 [主機]。  
+3.  在清單中，按一下 [主機]  。  
   
-4.  在詳細資料窗格的 [主機處理序平台] 中，按一下 [MSIL] 以設定在 x64 組建代理程式上執行測試。  
+4.  在詳細資料窗格的 [主機處理序平台]  中，按一下 [MSIL]  以設定在 x64 組建代理程式上執行測試。  
   
-5.  按一下 **[套用]**。  
+5.  按一下 **[套用]** 。  
   
 ## <a name="CreateATestList"></a>將測試指派給測試分類 (選擇性)  
 一般而言，當您建立組建定義以執行單元測試時，可以指定一個或多個測試分類。 指定之分類中的所有測試都會在組建執行時執行。  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>若要將測試指派給測試分類  
   
-1.  開啟 [測試檢視] 視窗。  
+1.  開啟 [測試檢視]  視窗。  
   
 2.  選取測試。  
   
-3.  在 [屬性] 窗格中，按一下 [測試分類]，然後按一下最右側欄中的省略符號 (...)。  
+3.  在 [屬性] 窗格中，按一下 [測試分類]  ，然後按一下最右側欄中的省略符號 (...)。  
   
-4.  在 [測試分類] 視窗的 [加入新分類] 方塊中，輸入新測試分類的名稱。  
+4.  在 [測試分類]  視窗的 [加入新分類]  方塊中，輸入新測試分類的名稱。  
   
-5.  按一下 [加入]，然後按一下 [確定]。  
+5.  按一下 [加入]  ，然後按一下 [確定]  。  
   
     新的測試分類將會指派給您的測試，而且將透過屬性提供給其他測試。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "54226535"
   
 #### <a name="to-specify-an-appconfig-file-for-team-foundation-build"></a>若要指定 Team Foundation Build 的 app.config 檔案  
   
-1.  在 [方案總管] 中，以滑鼠右鍵按一下 app.config 檔案，然後按一下 [複製]。  
+1.  在 [方案總管]  中，以滑鼠右鍵按一下 app.config 檔案，然後按一下 [複製]  。  
   
-2.  以滑鼠右鍵按一下測試專案，然後按一下 [貼上]。  
+2.  以滑鼠右鍵按一下測試專案，然後按一下 [貼上]  。  
   
-3.  以滑鼠右鍵按一下名為 [複本 - app.config] 的檔案，然後按一下 [重新命名]。  
+3.  以滑鼠右鍵按一下名為 [複本 - app.config]  的檔案，然後按一下 [重新命名]。  
   
-4.  輸入 _BuildComputer_**.sqlunitttest.config** 並按 ENTER，其中 *BuildComputer* 是執行組建代理程式的電腦名稱。  
+4.  輸入 _BuildComputer_ **.sqlunitttest.config** 並按 ENTER，其中 *BuildComputer* 是執行組建代理程式的電腦名稱。  
   
 5.  按兩下 *BuildComputer*.sqlunitttest.config。  
   
@@ -187,17 +187,17 @@ ms.locfileid: "54226535"
   
 1.  在 [方案總管] 中，按兩下 Local.testsettings。  
   
-    [測試設定] 對話方塊隨即出現。  
+    [測試設定]  對話方塊隨即出現。  
   
-2.  在分類目錄清單中，按一下 [部署]。  
+2.  在分類目錄清單中，按一下 [部署]  。  
   
-3.  選取 [啟用部署] 核取方塊。  
+3.  選取 [啟用部署]  核取方塊。  
   
-4.  按一下 [加入檔案]。  
+4.  按一下 [加入檔案]  。  
   
-5.  在 [加入部署檔案] 對話方塊中，指定您建立的 *BuildComputer*.sqlunitttest.config 檔案。  
+5.  在 [加入部署檔案]  對話方塊中，指定您建立的 *BuildComputer*.sqlunitttest.config 檔案。  
   
-6.  按一下 **[套用]**。  
+6.  按一下 **[套用]** 。  
   
 7.  按一下 [ **關閉**]。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "54226535"
   
     如需詳細資訊，請參閱[將專案或方案加入至版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
   
-3.  按一下 [檢視]，然後按一下 [暫止簽入]。  
+3.  按一下 [檢視]  ，然後按一下 [暫止簽入]  。  
   
 4.  簽入方案的所有檔案。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "54226535"
     > [!NOTE]  
     > 您可能會有控管自動化測試之建立與管理方式的特定小組程序。 例如，此程序可能會要求您必須先在本機驗證組建，然後再簽入該程式碼以及將要針對程式碼執行的測試。  
   
-    在 [方案總管] 中，掛鎖圖示會出現在每一個檔案的旁邊，指出它已簽入。 如需詳細資訊，請參閱[檢視版本控制檔案和資料夾屬性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
+    在 [方案總管]  中，掛鎖圖示會出現在每一個檔案的旁邊，指出它已簽入。 如需詳細資訊，請參閱[檢視版本控制檔案和資料夾屬性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
   
     您的測試可用於 Team Foundation Build。 您現在可以建立包含想要執行之測試的組建定義。  
   
@@ -238,33 +238,33 @@ ms.locfileid: "54226535"
   
 #### <a name="to-create-a-build-definition"></a>若要建立組建定義  
   
-1.  在 Team Explorer 中，按一下您的 Team 專案、以滑鼠右鍵按一下 [組建] 節點，然後按一下 [新增組建定義]。  
+1.  在 Team Explorer 中，按一下您的 Team 專案、以滑鼠右鍵按一下 [組建]  節點，然後按一下 [新增組建定義]  。  
   
-    [新增組建定義] 視窗隨即出現。  
+    [新增組建定義]  視窗隨即出現。  
   
-2.  在 [組建定義名稱] 中，輸入您想要用於組建定義的名稱。  
+2.  在 [組建定義名稱]  中，輸入您想要用於組建定義的名稱。  
   
-3.  在巡覽列中，按一下 [組建預設值]。  
+3.  在巡覽列中，按一下 [組建預設值]  。  
   
-4.  在 [將組建輸出複製到下列置放資料夾 (UNC 路徑，例如 \\\server\share)] 中，指定要包含組建輸出的資料夾。  
+4.  在 [將組建輸出複製到下列置放資料夾 (UNC 路徑，例如 \\\server\share)]  中，指定要包含組建輸出的資料夾。  
   
     您可以指定本機電腦上的共用資料夾或是組建處理序將擁有權限的任何網路位置。  
   
-5.  在巡覽列中，按一下 [處理序]。  
+5.  在巡覽列中，按一下 [處理序]  。  
   
-6.  在 [必要項] 群組的 [要建置的項目] 中，按一下瀏覽 (...) 按鈕。  
+6.  在 [必要項]  群組的 [要建置的項目]  中，按一下瀏覽 (...) 按鈕。  
   
-7.  在 [建置專案清單編輯器] 對話方塊中，按一下 [加入]。  
+7.  在 [建置專案清單編輯器]  對話方塊中，按一下 [加入]  。  
   
-8.  指定您先前在本逐步解說中加入至版本控制的方案檔 (.sln)，然後按一下 [確定]。  
+8.  指定您先前在本逐步解說中加入至版本控制的方案檔 (.sln)，然後按一下 [確定]  。  
   
-    此方案就會顯示在 [要建置的專案或方案檔] 清單中。  
+    此方案就會顯示在 [要建置的專案或方案檔]  清單中。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
-10. 在 [基本] 群組的 [自動化測試] 中，指定您要執行的測試。 根據預設，系統將會執行解決方案中名為 \*test\*.dll 之檔案所包含的測試。  
+10. 在 [基本]  群組的 [自動化測試]  中，指定您要執行的測試。 根據預設，系統將會執行解決方案中名為 \*test\*.dll 之檔案所包含的測試。  
   
-11. 在 [檔案] 功能表上，按一下 [儲存 *ProjectName*]。  
+11. 在 [檔案]  功能表上，按一下 [儲存 *ProjectName*]  。  
   
     您已建立組建定義。 接下來，您必須修改測試專案。  
   
@@ -274,13 +274,13 @@ ms.locfileid: "54226535"
   
 1.  在 [Team 總管] 中，展開 Team 專案節點、展開 [組建] 節點、以滑鼠右鍵按一下您想要執行的組建定義，然後按一下 [佇列新組建]。  
   
-    [佇列組建 {_TeamProjectName_}] 對話方塊隨即出現，並列出所有現有的組建類型。  
+    [佇列組建 {_TeamProjectName_}]   對話方塊隨即出現，並列出所有現有的組建類型。  
   
-2.  必要時，請在 [組建定義] 中按一下您的新組建定義。  
+2.  必要時，請在 [組建定義]  中按一下您的新組建定義。  
   
-3.  確認 [組建定義]、[組建代理程式] 和 [此組建的置放資料夾] 欄位中的值都正確無誤，然後按一下 [佇列]。  
+3.  確認 [組建定義]  、[組建代理程式]  和 [此組建的置放資料夾]  欄位中的值都正確無誤，然後按一下 [佇列]  。  
   
-    [Build 總管] 的 [已佇列] 索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
+    [Build 總管]  的 [已佇列]  索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  

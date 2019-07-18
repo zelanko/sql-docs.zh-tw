@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704848"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Facet 屬性對話方塊、一般頁面
   使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 每一個 Facet 都可以套用到一或多個目標類型，例如：伺服器、資料庫或資料表。 使用此頁面可檢視哪些目標類型與這個 Facet 有關。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個頁面加以變更。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **說明**  
  提供此 Facet 的一般描述。  
   

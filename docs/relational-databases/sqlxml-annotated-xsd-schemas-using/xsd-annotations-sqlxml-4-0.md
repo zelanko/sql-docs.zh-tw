@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -12,15 +11,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d2e5b48d3e3be630029ab508d59470fad0f8547
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 583f9803ea7a11384ff0b27a73cfd95be5a24101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066873"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 註解 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56015129"
 |**sql:guid**|可讓您指定要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的 GUID 值，還是使用 Updategram 中針對該資料行提供的值。|[使用 sql:identity 和 sql:guid 註解](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)|不支援|  
 |**sql:hide**|在產生的 XML 文件中，隱藏結構描述中指定的元素或屬性。|[使用 sql:hide 來隱藏項目和屬性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md)|不支援|  
 |**sql:identity**|可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上指定。 針對此註解指定的值會定義如何更新資料庫中對應的 IDENTITY 類型資料行。|[使用 sql:identity 和 sql:guid 註解](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)|不支援|  
-|**sql:inverse**|指引 updategram 邏輯反轉使用指定的父子式關聯性的其解譯 **\<sql: relationship >**。|[Sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支援|  
+|**sql:inverse**|指引 updategram 邏輯反轉使用指定的父子式關聯性的其解譯 **\<sql: relationship >** 。|[Sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支援|  
 |**sql:is-constant**|建立不對應到任何資料表的 XML 元素。 該元素會出現在查詢輸出中。|[建立常數項目使用 sql: is-constant&lt &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|相同|  
 |**sql:key-fields**|可用來指定一或多個資料行，以用來唯一識別資料表中的資料列。|[識別索引鍵資料行使用 sql: key-fields 來-欄位&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|相同|  
 |**sql:limit-field**<br /><br /> **sql:limit-value**|可用來限制根據限制值傳回的值。|[篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)|相同|  
@@ -40,7 +39,7 @@ ms.locfileid: "56015129"
 |**sql:max-depth**|可讓您指定結構描述中指定之遞迴關聯性的深度。|[使用 sql:max-depth 來指定遞迴關聯性的深度](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|不支援|  
 |**sql:overflow-field**|可識別包含溢位資料的資料庫資料行。|[擷取未耗用資料使用 sql: overflow-field-欄位&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)|相同|  
 |**sql:prefix**|建立有效的 XML ID、IDREF 和 IDREFS。 在字串前面加上 ID、IDREF 和 IDREFS 的值。|[有效的 ID、 IDREF 和 IDREFS 類型屬性使用 sql: prefix 建立&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)|相同|  
-|**sql:relationship**|指定 XML 元素之間的關聯性。 **父代**，**子**，**父索引鍵**，以及**子索引鍵**屬性用來建立關聯性。|[關聯性使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|屬性名稱不同：<br /><br /> **key-relation**<br /><br /> **foreign-relation**<br /><br /> **key**<br /><br /> **foreign-key**|  
+|**sql:relationship**|指定 XML 元素之間的關聯性。 **父代**，**子**，**父索引鍵**，以及**子索引鍵**屬性用來建立關聯性。|[關聯性使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|屬性名稱不同：<br /><br /> **key-relation**<br /><br /> **foreign-relation**<br /><br /> **索引鍵**<br /><br /> **foreign-key**|  
 |**sql:use-cdata**|可用來針對 XML 文件中的特定元素指定要使用的 CDATA 區段。|[CDATA 區段使用 sql: use-cdata 建立-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|相同|  
   
 > [!NOTE]  

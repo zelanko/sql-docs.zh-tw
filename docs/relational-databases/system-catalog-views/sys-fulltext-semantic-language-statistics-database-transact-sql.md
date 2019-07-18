@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_semantic_language_statistics_database catalog view
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97631b830acc3babacb5720707722775b4592629
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133785"
 ---
 # <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47708926"
   
 ||||  
 |-|-|-|  
-|**資料行名稱**|**型別**|**說明**|  
+|**資料行名稱**|**型別**|**描述**|  
 |**database_id**|**int**|資料庫的識別碼，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內是唯一的。|  
 |**register_date**|**datetime**|註冊資料庫用於語意處理的日期。|  
 |**registered_by**|**int**|註冊資料庫用於語意處理的伺服器主體識別碼。|  

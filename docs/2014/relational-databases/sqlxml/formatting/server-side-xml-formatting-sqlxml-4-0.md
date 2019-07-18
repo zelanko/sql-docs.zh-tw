@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML clause, formatting
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 664149dd8aa1441e94dfdc4d11033e5d777a75fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012214"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
   本主題提供在伺服器端上，從針對 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫執行之查詢產生的資料列集格式化 XML 文件的相關資訊。  

@@ -1,5 +1,5 @@
 ---
-title: REFRESH CUBE 陳述式 (MDX) |Microsoft 文件
+title: REFRESH CUBE 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dafc13dda1f8ecab1400a88d1ca66eff5f317e43
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 957609573c206b7c3492789c369d0fb2be2398a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038158"
 ---
-# <a name="mdx-data-definition---refresh-cube"></a>重新整理 CUBE 的 MDX 資料定義
+# <a name="mdx-data-definition---refresh-cube"></a>MDX 資料定義 - REFRESH CUBE
 
 
   重新整理 Cube 的用戶端快取。  
@@ -33,7 +32,7 @@ REFRESH CUBECube_Name
  提供 Cube 名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- 用戶端應用程式連接到的執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，此陳述式會導致用戶端應用程式與伺服器同步快取的記憶體。 上述動作一般會自動偵測和更新，但發生前的時間長短相依於用戶端連接字串設定。 REFRESH CUBE 陳述式會立即重新整理資料。  
+ 用戶端應用程式連接到的執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，此陳述式會導致與伺服器同步處理用戶端應用程式快取的記憶體。 上述動作一般會自動偵測和更新，但發生前的時間長短相依於用戶端連接字串設定。 REFRESH CUBE 陳述式會立即重新整理資料。  
   
  對於連接到本機 Cube 的用戶端應用程式，REFRESH CUBE 陳述式會重建本機 Cube 檔案。  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480487"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝，您必須在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，執行 DQSInstaller.exe 檔案。 本主題描述如何從 **[開始]** 畫面、 **[開始]** 功能表、Windows [檔案總管] 或 [命令提示字元] 執行 DQSInstaller.exe。您可以任選一種方法執行 DQSInstaller.exe 檔案。  
@@ -32,11 +32,11 @@ ms.locfileid: "56026319"
   
 1.  在您選擇要安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的電腦上，使用下列任一適用的方法執行 DQSInstaller.exe 檔案：  
   
-    -   **開始畫面**:在 **開始**畫面上，按一下**Data Quality Server 安裝程式。**  
+    -   **開始畫面**：在 [開始]  畫面上，按一下 [資料品質伺服器安裝程式]  。  
   
-    -   **開始 功能表**:在工作列上，按一下**開始**，指向**所有程式**，按一下  **Microsoft SQL Server 2014**。 在 **[Microsoft SQL Server 2014]** 底下按一下 **[Data Quality Services]**，然後按一下 **[Data Quality Server Installer]**。  
+    -   **開始功能表**：在工作列上，按一下**開始**，指向**所有程式**，按一下  **Microsoft SQL Server 2014**。 在 **[Microsoft SQL Server 2014]** 底下按一下 **[Data Quality Services]** ，然後按一下 **[Data Quality Server Installer]** 。  
   
-    -   **Windows 檔案總管**:尋找 DQSInstaller.exe 檔。 如果已經安裝了 SQL Server 的預設執行個體，DQSInstaller.exe 檔案將會位於 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn。 按兩下 DQSInstaller.exe 檔案。  
+    -   **Windows 檔案總管**：找出 DQSInstaller.exe 檔案。 如果已經安裝了 SQL Server 的預設執行個體，DQSInstaller.exe 檔案將會位於 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn。 按兩下 DQSInstaller.exe 檔案。  
   
 2.  命令提示字元視窗會隨即出現，並顯示安裝狀態。 您將發現下列三種情況：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "56026319"
 3.  您會收到提示要求您輸入資料庫主要金鑰的密碼。 稍後當您在 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中設定參考資料庫提供者時，必須使用資料庫主要金鑰加密參考資料服務提供者金鑰，而此金鑰將儲存在 DQS_MAIN 資料庫中。  
   
     > [!IMPORTANT]  
-    >  密碼的長度至少必須是 8 個字元，且必須包含下列四種類別的其中三種字元：英文大寫字母 (A、 B、 C...Z)、英文小寫字母 (a、b、c... z)、數字 (0、1、2...9)，以及非英數或特殊字元 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/)。 例如： P@ssword＞。 如果目前的密碼不符合要求，安裝程式將會提示您輸入其他密碼。  
+    >  密碼必須至少為 8 個字元，且必須包含三個下列四類字元：英文大寫字母 (A、B、C...Z)、英文小寫字母 (a、b、c... z)、數字 (0、1、2...9)，以及非英數或特殊字元 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/)。 例如： P@ssword＞。 如果目前的密碼不符合要求，安裝程式將會提示您輸入其他密碼。  
   
 4.  請提供並確認密碼，然後按 ENTER 繼續安裝。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "56026319"
   
 3.  在命令提示字元中，於使用或不使用命令列參數的情況下執行 DQSInstaller.exe：  
   
-    -   **如果沒有命令列參數**:輸入 `dqsinstaller.exe`，然後按下 ENTER。  
+    -   **不使用命令列參數**：輸入 `dqsinstaller.exe`，然後按 ENTER。  
   
-    -   **使用命令列參數**:輸入上表中所述的必要命令，然後按 ENTER。  
+    -   **使用命令列參數**：輸入必要的命令，將上表中所述，然後按 ENTER 鍵。  
   
 4.  必要的動作會依據指定的命令執行。 如果您剛剛選擇不使用任何命令列參數安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，則其餘步驟與上一節 [從開始畫面、開始功能表或 Windows 檔案總管執行 DQSInstaller.exe](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)中步驟 2-6 所述相同。  
   

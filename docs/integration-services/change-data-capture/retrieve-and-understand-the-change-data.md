@@ -13,14 +13,18 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c48817f8f24cdb9ab0055c3d46e1e9124bcdc9c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a62d94a101a2c62ae21950f6ad25e8f44ad333ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728596"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>擷取與了解變更資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中，第一個工作是執行可擷取變更資料的查詢。 您可以在「資料流程」工作的來源元件內部執行這個查詢。 然後，您可以使用下游轉換和目的地，將變更資料套用到您的目的地。  
   
 > [!NOTE]  
@@ -31,7 +35,7 @@ ms.locfileid: "58277897"
   
 #### <a name="to-add-a-data-flow-task-to-the-package"></a>將資料流程工作加入至封裝  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [控制流程] 索引標籤上，加入「資料流程」工作。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [控制流程]  索引標籤上，加入「資料流程」工作。  
   
 2.  將準備查詢字串的先前工作連接到「資料流程」工作。  
   
@@ -43,21 +47,21 @@ ms.locfileid: "58277897"
   
 #### <a name="to-configure-an-ole-db-source-to-retrieve-the-change-data"></a>設定 OLE DB 來源以擷取變更資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料流程] 索引標籤上，加入 OLE DB 來源。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [資料流程]  索引標籤上，加入 OLE DB 來源。  
   
-2.  在 [OLE DB 來源編輯器] 的 [連線管理員] 頁面上，選取下列選項：  
+2.  在 [OLE DB 來源編輯器]  的 [連線管理員]  頁面上，選取下列選項：  
   
     1.  將有效的連接設定到來源資料庫。  
   
-    2.  針對 [資料存取模式]，選取 [來自變數的 SQL 命令]。  
+    2.  針對 [資料存取模式]  ，選取 [來自變數的 SQL 命令]  。  
   
-    3.  針對 [變數名稱]，選取 [User::SqlDataQuery]。  
+    3.  針對 [變數名稱]  ，選取 [User::SqlDataQuery]  。  
   
-3.  在 [OLE DB 來源編輯器] 的 [資料行] 頁面上，確定您需要的所有資料行都對應到輸出資料行。  
+3.  在 [OLE DB 來源編輯器]  的 [資料行]  頁面上，確定您需要的所有資料行都對應到輸出資料行。  
   
 ## <a name="next-step"></a>下一個步驟  
  設定 OLE DB 來源以擷取變更資料後，下一個步驟是開始在封裝中設計資料流程。  
   
- **下一個主題：**[處理插入、更新與刪除作業](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+ **下一個主題：** [處理插入、更新與刪除作業](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   

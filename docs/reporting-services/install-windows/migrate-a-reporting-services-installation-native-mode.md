@@ -1,18 +1,18 @@
 ---
 title: 移轉 Reporting Services 安裝 (原生模式) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570719"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -38,9 +38,10 @@ ms.locfileid: "52712419"
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 如需遷移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署的資訊，請參閱 [遷移 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
+
+::: moniker-end
   
  移轉的定義是將應用程式資料檔案移至新的 SQL Server 執行個體。 以下是您必須移轉安裝的常見原因：  
   
@@ -89,7 +90,7 @@ ms.locfileid: "52712419"
   
 * 撰寫可呼叫 WMI 提供者的程式碼，以便在資料庫之間複製資料。 如需這種方法的詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
-* 如果您只有少量的項目，可以從報表設計師、模型設計師和報表產生器將報表、報表模型和共用資料來源重新發行到新的報表伺服器。 請重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 如果您執行這些動作，請作好遺失報表記錄和報表執行記錄資料的準備。
+* 如果您只有少量的項目，就可以從報表設計師、模型設計師和報表產生器來將報表和共用資料來源重新發行到新的報表伺服器。 請重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 如果您執行這些動作，請作好遺失報表記錄和報表執行記錄資料的準備。
   
 ## <a name="bkmk_before_you_start"></a> 開始之前
 
@@ -105,13 +106,13 @@ ms.locfileid: "52712419"
   
 * [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 SQL Server Management Studio 已設計成移除重複的功能。 每個工具都支援不同組的工作。
   
-*  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 ISAPI 篩選器。 如果您使用 ISAPI 篩選器，則必須在移轉之前重新設計報表方案。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 ISAPI 篩選器。 如果您使用 ISAPI 篩選器，則必須在移轉之前重新設計報表方案。  
   
-*  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 IP 位址限制。 如果您使用 IP 位址限制，則必須在移轉之前重新設計報表方案，或使用防火牆、路由器或網路位址轉譯 (NAT) 之類的技術來設定受限不得存取報表伺服器的位址。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 IP 位址限制。 如果您使用 IP 位址限制，則必須在移轉之前重新設計報表方案，或使用防火牆、路由器或網路位址轉譯 (NAT) 之類的技術來設定受限不得存取報表伺服器的位址。  
   
-*  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
   
-* 如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 **RSReportServer.config** 檔案中，以受支援的驗證類型更新 `<AuthenticationTypes>` 項目。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
+* 如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 **RSReportServer.config** 檔案中，以受支援的驗證類型更新 `<AuthenticationTypes>` 項目。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
   
 * 如果您在報表環境中使用自訂的階層式樣式表，則這些樣式表無法移轉。 請以手動方式移動它們以進行移轉。
   
@@ -143,7 +144,7 @@ ms.locfileid: "52712419"
 
 ## <a name="bkmk_install_ssrs"></a> 安裝 SQL Server Reporting Services
 
- 在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 針對命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，選取 [安裝但不設定] 選項。  
+ 在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 針對命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，選取 [安裝但不設定]  選項。  
   
  按一下下列其中一個連結，即可檢視有關如何安裝新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體的指示：  
   
@@ -201,9 +202,9 @@ ms.locfileid: "52712419"
 
     * 自訂安全性延伸模組必須使用 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 介面重新撰寫。
   
-    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
   
-    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 HTML 3.2 和 HTML OWC 轉譯器。  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 HTML 3.2 和 HTML OWC 轉譯器。  
   
     * 其他自訂組件應該不需要重新編譯。  
   
@@ -238,7 +239,7 @@ ms.locfileid: "52712419"
 
 您無法利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來刪除向外延展金鑰， 而是必須使用 SQL Server Management Studio，從 **ReportServer** 資料庫中的 **Keys** 資料表刪除舊金鑰。 請刪除 Keys 資料表中的所有資料列。 此動作會清除資料表，使其僅用於還原對稱金鑰，其步驟如下所示。  
 
-刪除金鑰之前，建議您先備份對稱加密金鑰。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來備份金鑰。 請開啟 [設定管理員]，然後按一下 [加密金鑰] 索引標籤，再按一下 [備份] 按鈕。 您也可以編寫 WMI 指令碼命令，備份加密金鑰。 如需 WMI 的詳細資訊，請參閱 [BackupEncryptionKey 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
+刪除金鑰之前，建議您先備份對稱加密金鑰。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來備份金鑰。 請開啟 [設定管理員]，然後按一下 [加密金鑰] 索引標籤，再按一下 [備份]  按鈕。 您也可以編寫 WMI 指令碼命令，備份加密金鑰。 如需 WMI 的詳細資訊，請參閱 [BackupEncryptionKey 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)。  
   
 1. 啟動 Reporting Services 設定管理員，並連線到您安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
@@ -263,7 +264,7 @@ ms.locfileid: "52712419"
 
 ## <a name="bkmk_windowsservice_group"></a> Windows 服務群組和安全性 ACL
 
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name>$\<instance_name> 顯示。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name  >$\<instance_name  > 顯示。  
 
 ## <a name="bkmk_verify"></a> 驗證您的部署
 

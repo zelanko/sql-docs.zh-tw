@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aaa379431395f3f5fbb01d777042118553bd7e18
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 46e9d4d7b7e74a3e3fff1af7428714603ea6d619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963510"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 方法範例 (VBScript)
 > [!IMPORTANT]

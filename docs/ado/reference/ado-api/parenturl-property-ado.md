@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931647"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 屬性 (ADO)
 表示絕對的 URL 字串，指向父代[記錄](../../../ado/reference/ado-api/record-object-ado.md)的目前**記錄**物件。  

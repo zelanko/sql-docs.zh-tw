@@ -11,14 +11,18 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63473b201dd56dd94c628a14070522560c231bb8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716018"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 資料庫
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   將專案從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的某個資料夾移動到另一個資料夾。  
@@ -33,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>引數  
  [ @source_folder = ] *source_folder*  
- 在移動之前，專案所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
+ 在移動之前，專案所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)** 。  
   
  [ @project_name = ] *project_name*  
- 要移動之專案的名稱。 *project_name* 是 **nvarchar(128)**。  
+ 要移動之專案的名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @destination_folder = ] *destination_folder*  
- 在移動之後，專案所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
+ 在移動之後，專案所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818036"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050950"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件類別
   SP:StmtCompleted 事件類別指出已完成預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1273a269004c992f82649f1d79d0c75c862b6f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965049"
 ---
 # <a name="type-property-key-adox"></a>Type 屬性 (Key) (ADOX)
 表示索引鍵的類型。  

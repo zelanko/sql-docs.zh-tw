@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754162"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -27,9 +27,9 @@ ms.locfileid: "53369110"
  您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object 效能計數器和追蹤事件來監視已被取代之功能的使用。 如需詳細資訊，請參閱 [使用 SQL Server 物件](../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 不支援的功能  
- 下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 [功能名稱] 值會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做執行個體名稱。 [功能識別碼] 值會出現在追蹤事件中當做 ObjectId。  
+ 下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 [功能名稱]  值會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做執行個體名稱。 [功能識別碼]  值會出現在追蹤事件中當做 ObjectId。  
   
-|類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
+|Category|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |備份與還原|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD 繼續被取代。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD 已停用。|無。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |相容性層級|從 90 版本升級 ([!INCLUDE[ssDEversion2005](../includes/ssdeversion2005-md.md)])。|相容性層級只適用於最新的兩個版本。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。<br /><br /> 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，您可以升級 SQL Server 2005 資料庫，不過在升級作業期間，相容性層級會從 90 更新為 100。|資料庫相容性層級 90|107|  
@@ -45,7 +45,7 @@ ms.locfileid: "53369110"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本不支援的功能  
  下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可支援下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但會在更新的版本中移除。 確實的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本尚未決定。  
   
-|類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
+|Category|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |相容性層級|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。|sp_dbcmptlevel|80|  
 |相容性層級|資料庫相容性層級 100|請針對將來的版本規劃升級資料庫和應用程式。|資料庫相容性層級 100|108|  
@@ -58,10 +58,10 @@ ms.locfileid: "53369110"
 |定序|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
 |組態|SET ANSI_NULLS OFF 和 ANSI_NULLS OFF 資料庫選項<br /><br /> SET ANSI_PADDING OFF 和 ANSI_PADDING OFF 資料庫選項<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF 和 CONCAT_NULL_YIELDS_NULL OFF 資料庫選項<br /><br /> SET OFFSETS|無。<br /><br /> ANSI_NULLS、ANSI_PADDING 和 CONCAT_NULLS_YIELDS_NULL 一定會設定為 ON。 SET OFFSETS 將無法使用。|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |資料類型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
-|資料類型|`timestamp` 資料類型的 `rowversion` 語法|`rowversion` 資料類型語法|timestamp|158|  
+|資料類型|`timestamp` 資料類型的 `rowversion` 語法|`rowversion` 資料類型語法|TIMESTAMP|158|  
 |資料類型|能夠將 null 值插入 `timestamp` 資料行中。|請改用 DEFAULT。|INSERT NULL 到 TIMESTAMP 資料行中|179|  
 |資料類型|'text in row' 資料表選項|使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料類型。 如需詳細資訊，請參閱 [sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)。|Text in row 資料表選項|9|  
-|資料類型|資料類型：<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料類型。|`text`資料類型：`ntext`、`image` 或 |4|  
+|資料類型|資料類型：<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料類型。|`text`資料類型：`ntext`、`image` 或|4|  
 |資料庫管理|sp_attach_db<br /><br /> sp_attach_single_file_db|具有 FOR ATTACH 選項的 CREATE DATABASE 陳述式。 當一個或多個記錄檔有新位置時，若要重建多個記錄檔，請使用 FOR ATTACH_REBUILD_LOG 選項。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |資料庫物件|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 和 ALTER TABLE 中的 DEFAULT 關鍵字|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |資料庫物件|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 和 ALTER TABLE 中的 CHECK 關鍵字|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -115,7 +115,7 @@ ms.locfileid: "53369110"
 |伺服器組態選項|c2 audit 選項<br /><br /> default trace enabled 選項|[通用條件符合已啟用伺服器組態選項](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [擴充事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 類別|`Microsoft.SQLServer.Management.Smo.Information` 類別<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` 類別<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` 類別<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` 屬性|`Microsoft.SqlServer.Management.Smo.Server` 類別<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` 類別<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` 類別<br /><br /> None|None|None|  
 |SQL Server Agent|**net send** 通知<br /><br /> 呼叫器通知<br /><br /> ActiveX 子系統|電子郵件通知<br /><br /> 電子郵件通知<br /><br /> 命令或 PowerShell 指令碼|None|None|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]| [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的原始檔控制整合||None|None|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的原始檔控制整合||None|None|  
 |系統預存程序|sp_db_increased_partitions|無。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]預設可支援增加的分割區。|sp_db_increased_partitions|253|  
 |系統資料表|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|相容性檢視。 如需詳細資訊，請參閱[相容性檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)。<br /><br /> **\*\* 重要事項 \*\*** 相容性檢視不會公開 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中所引進之功能的中繼資料。 我們建議您升級應用程式來使用目錄檢視。 如需詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |系統資料表|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
@@ -129,7 +129,7 @@ ms.locfileid: "53369110"
 |資料表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Textpointer|TEXTPTR()<br /><br /> TEXTVALID()|None|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 函數呼叫順序|取代為 SELECT *column_list* FROM sys.\<函式名稱>().<br /><br /> 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。|'::' 函數呼叫語法|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 函數呼叫順序|取代為 SELECT *column_list* FROM sys.\<函式名稱  >().<br /><br /> 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。|'::' 函數呼叫語法|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|三部分和四部分資料行參考。|兩部分名稱是符合標準的行為。|兩部分以上的資料行名稱|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|加上引號的字串，在 SELECT 清單中當做運算式的資料行別名使用：<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|當做資料行別名的字串常值|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|編號程序。|無。 請勿使用。|ProcNums|160|  
@@ -146,8 +146,8 @@ ms.locfileid: "53369110"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程。|無。|間接 TVF 提示|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 語法：<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |其他|DB-Library<br /><br /> Embedded SQL for C|雖然 [!INCLUDE[ssDE](../includes/ssde-md.md)] 仍支援使用 DB-Library 和內嵌式 SQL API 之現有應用程式的連接，但它不包含要在使用這些 API 的應用程式上執行程式設計工作所需的檔案或文件集。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的未來版本將卸除對 DB-Library 或內嵌式 SQL 應用程式連接的支援。 請勿使用 DB-Library 或內嵌式 SQL 來開發新的應用程式。 在修改現有的應用程式時，請移除對 DB-Library 或內嵌式 SQL 的相依性。 如果不想要使用這些 API，請使用 SQLClient 命名空間或 API (例如 ODBC)。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 不包含執行這些應用程式所需的 DB-Library DLL。 若要執行 DB-Library 或內嵌式 SQL 應用程式，則您必須可從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]使用 DB-Library DLL。|None|None|  
-|工具|SQL Server Profiler for Trace Capture|請使用 SQL Server Management Studio 內嵌的擴充事件分析工具。<br /><br /> 注意：請針對 Analysis Services 工作負載繼續使用 SQL Server Profiler for Trace Capture。|SQL Server Profiler|None|  
-|工具|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意：請針對 Analysis Services 工作負載繼續使用 SQL Server Profiler for Trace Replay。|SQL Server Profiler|None|  
+|工具|SQL Server Profiler for Trace Capture|請使用 SQL Server Management Studio 內嵌的擴充事件分析工具。<br /><br /> 注意:繼續使用 SQL Server Profiler for Trace Capture Analysis Services 工作負載。|SQL Server Profiler|None|  
+|工具|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意:繼續使用 SQL Server Profiler for Trace Replay，針對 Analysis Services 工作負載。|SQL Server Profiler|None|  
 |追蹤管理物件|Microsoft.SqlServer.Management.Trace 命名空間 (包含 SQL Server 追蹤和重新執行物件的 API)|追蹤組態︰ <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 追蹤讀取︰ <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 追蹤重新執行：None|||  
 |SQL 追蹤預存程序、函數和目錄檢視|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[擴充事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   

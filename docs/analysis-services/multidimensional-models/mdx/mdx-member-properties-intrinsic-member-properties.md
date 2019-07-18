@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62740247"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成員屬性-內建成員屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53206877"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供者可支援其他內建成員屬性。 如需其他提供者支援之內建成員屬性的詳細資訊，請參閱這些提供者提供的文件。  
   
 ## <a name="types-of-member-properties"></a>成員屬性類型  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援的內建成員屬性有兩種類型：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援的內建成員屬性有兩種類型：  
   
  區分內容的成員屬性  
  這些成員屬性必須用於特定階層或層級的內容，而且要將值提供給指定維度或層級的每個成員。  
@@ -105,7 +105,7 @@ ms.locfileid: "53206877"
 |**MEMBER_CAPTION**|與該成員關聯的標籤或標題。 標題主要是供顯示之用。 如果標題不存在，查詢就會傳回 **MEMBER_NAME**。|  
 |**MEMBER_KEY**|原始資料類型的成員索引鍵值。 MEMBER_KEY 是為回溯相容性而提供。  對於非複合索引鍵，MEMBER_KEY 的值與 KEY0 相同，對於複合索引鍵，MEMBER_KEY 屬性為 Null。|  
 |**MEMBER_NAME**|成員的名稱。|  
-|**MEMBER_TYPE**|成員的類型。 此屬性可以有下列其中一個值：<br /><br /> **MDMEMBER_TYPE_REGULAR**<br /><br /> **MDMEMBER_TYPE_ALL**<br /><br /> **MDMEMBER_TYPE_FORMULA**<br /><br /> **MDMEMBER_TYPE_MEASURE**<br /><br /> **MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> 注意：MDMEMBER_TYPE_FORMULA 優先於 MDMEMBER_TYPE_MEASURE。 因此，如果 Measures 維度有一個公式 (導出) 成員，導出成員的 **MEMBER_TYPE** 屬性為 MDMEMBER_TYPE_FORMULA。|  
+|**MEMBER_TYPE**|成員的類型。 此屬性可以有下列其中一個值：<br /><br /> **MDMEMBER_TYPE_REGULAR**<br /><br /> **MDMEMBER_TYPE_ALL**<br /><br /> **MDMEMBER_TYPE_FORMULA**<br /><br /> **MDMEMBER_TYPE_MEASURE**<br /><br /> **MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> 注意:MDMEMBER_TYPE_FORMULA 優先於 MDMEMBER_TYPE_MEASURE。 因此，如果 Measures 維度有一個公式 (導出) 成員，導出成員的 **MEMBER_TYPE** 屬性為 MDMEMBER_TYPE_FORMULA。|  
 |**MEMBER_UNIQUE_NAME**|成員的唯一名稱。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
 |**MEMBER_VALUE**|原始類型的成員值。|  
 |**PARENT_COUNT**|此成員擁有的父系數目。|  
@@ -131,7 +131,7 @@ ms.locfileid: "53206877"
 ### <a name="example"></a>範例  
  下列範例顯示傳回內建屬性的 MDX 查詢。  
   
- **範例 1:在查詢中使用受內容影響的內建屬性**  
+ **範例 1：在查詢中使用受內容影響的內建屬性**  
   
  下列範例會傳回父系識別碼、索引鍵和每項產品類別的名稱。 請注意屬性如何公開為量值。 在您執行查詢時，這可讓您在資料格集中檢視屬性，而非 SSMS 的 [成員屬性] 對話方塊。 您可以執行類似此項目的查詢，以便從已部署的 Cube 擷取成員中繼資料。  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **範例 2:不受內容影響的內建屬性**  
+ **範例 2：不受內容影響的內建屬性**  
   
  下列範例是不受內容影響的內建屬性完整清單。 在 SSMS 執行查詢後，請按一下個別成員，檢視 [成員屬性] 對話方塊中的屬性。  
   

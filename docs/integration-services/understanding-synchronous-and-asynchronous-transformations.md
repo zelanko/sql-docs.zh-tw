@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713602"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。  
   
 ## <a name="synchronous-transformations"></a>同步轉換  
@@ -42,7 +46,7 @@ ms.locfileid: "58283022"
   
 -   輸入資料列和輸出資料列之間有一對一的關係。 彙總轉換就是一個範例，其中的元件必須在輸出中加入資料列，才能保留計算的彙總值。  
   
- 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 **SynchronousInputID** 屬性。 執行個體時提供 SQL Server 登入。 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 **SynchronousInputID** 屬性。 。 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
   
 > [!NOTE]  
 >  由於來源元件也必須明確地將它從資料來源讀取的每一個資料列加入到它的輸出緩衝區內，所以來源類似於具有非同步輸出的轉換。  

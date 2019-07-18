@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049314"
 ---
 # <a name="register-servers"></a>註冊伺服器
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中註冊伺服器可讓您儲存伺服器連接資訊，以供未來連接使用。在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中註冊伺服器的方法有三種。  
@@ -47,7 +47,7 @@ ms.locfileid: "52764010"
   
 -   建立伺服器群組。  
   
--   在有別於 [伺服器名稱] 清單的 [已註冊的伺服器名稱] 方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
+-   在有別於 [伺服器名稱]  清單的 [已註冊的伺服器名稱]  方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
   
 -   提供已註冊的伺服器的詳細說明。  
   

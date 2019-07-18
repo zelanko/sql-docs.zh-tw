@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015280"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>原生編譯預存程序的移轉問題
   本節提供與建立原生編譯預存程序相關的幾個問題。  

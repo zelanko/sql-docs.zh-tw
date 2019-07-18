@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 632df5807e1e857c852807d0088219dee4448b6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946700"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +59,15 @@ sp_update_proxy
   
 `[ @enabled = ] is_enabled` 是 proxy 是否已啟用。 *Is_enabled&lt*旗標**tinyint**，預設值是 NULL。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。 當這個引數是 NULL 時，Proxy 的狀態會維持不變。  
   
-`[ @description = ] 'description'` Proxy 新的描述。 *描述*是**nvarchar(512)**，預設值是 NULL。 當這個引數是 NULL 時，Proxy 的描述會維持不變。  
+`[ @description = ] 'description'` Proxy 新的描述。 *描述*是**nvarchar(512)** ，預設值是 NULL。 當這個引數是 NULL 時，Proxy 的描述會維持不變。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 任一**@proxy_name**或是**@proxy_id**必須指定。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
+ 任一 **@proxy_name** 或是 **@proxy_id** 必須指定。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
   
- 任一**@credential_name**或是**@credential_id**必須指定要變更 proxy 的認證。 如果同時指定了兩個引數，這兩個引數必須參考相同的認證，否則，預存程序會失敗。  
+ 任一 **@credential_name** 或是 **@credential_id** 必須指定要變更 proxy 的認證。 如果同時指定了兩個引數，這兩個引數必須參考相同的認證，否則，預存程序會失敗。  
   
  這個程序會變更 Proxy，但不會變更 Proxy 的存取權。 若要變更的存取權的 proxy，使用**sp_grant_login_to_proxy**並**sp_revoke_login_from_proxy**。  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181305"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "52505216"
 |建立於|\<|支援和行為|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|所有功能|**體驗：** 使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。<br /><br /> **升級：** 如果已啟用自動升級，活頁簿就會自動升級在文件庫[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]系統中的 SharePoint 伺服陣列的服務<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|**體驗：** 使用者可以與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。<br /><br /> **升級：** 無法使用自動升級。 使用者必須手動將其 2008 R2 活頁簿升級為 2012 版本或 Office 2013 版本。<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel**|不支援|所有功能|**體驗：** 使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。 可以使用排程資料重新整理。<br /><br /> **升級：** 不支援自動升級。 使用者可以手動將其活頁簿升級為 Office 2013 版本。<br /><br /> **排程資料重新整理** ：支援。|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|所有功能|**體驗：** 使用者可以與瀏覽器中的活頁簿進行互動，並使用它做為資料來源，為其他方案。<br /><br /> **升級：** 如果已啟用自動升級，活頁簿就會自動升級在文件庫[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]系統中的 SharePoint 伺服陣列的服務<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|**體驗：** 使用者可以與活頁簿進行互動，並使用它做為資料來源，為其他方案。<br /><br /> **升級：** 無法使用自動升級。 使用者必須手動將其 2008 R2 活頁簿升級為 2012 版本或 Office 2013 版本。<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel**|不支援|所有功能|**體驗：** 使用者可以與瀏覽器中的活頁簿進行互動，並使用它做為資料來源，為其他方案。 可以使用排程資料重新整理。<br /><br /> **升級：** 不支援自動升級。 使用者可以手動將其活頁簿升級為 Office 2013 版本。<br /><br /> **排程資料重新整理** ：支援。|  
 |**Excel 2013**|不支援|不支援|所有功能|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> 從 2008 R2 活頁簿升級為 SQL Server 2012 Service Pack 1 (SP1) 活頁簿  
@@ -58,7 +58,7 @@ ms.locfileid: "52505216"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2013。  
   
- **如何升級活頁簿：** 在您將活頁簿升級為 2012 活頁簿之前，排程的資料重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：  
+ **如何升級活頁簿：** 之前將活頁簿升級為 2012年活頁簿排程資料重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：  
   
 -   在已安裝 SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 增益集的 Microsoft Excel 2010 中下載並開啟活頁簿。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52505216"
   
  **如何在資料重新整理期間設定自動升級**  
   
- 若要使用自動升級，您必須在組態工具中選取 [**自動升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便從伺服器進行資料重新整理]** 核取方塊[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。 在此工具中，該核取方塊位於 [升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系統服務] 頁面上，而且位於 [建立 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式] 頁面上 (如果您要設定新安裝的話)。  
+ 若要使用自動升級，您必須在組態工具中選取 [**自動升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿，以便從伺服器進行資料重新整理]** 核取方塊[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。 在此工具中，該核取方塊位於 [升級 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系統服務]  頁面上，而且位於 [建立 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式]  頁面上 (如果您要設定新安裝的話)。  
   
  您可以執行下列指令程式來確認是否已啟用自動升級：  
   
@@ -141,15 +141,15 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
 ###  <a name="bkmk_msolapxslx"></a> 如何檢查 PowerPivot 活頁簿中的 MSOLAP 資料提供者資訊  
  請使用下列指示，檢查 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿中使用哪一個 OLE DB 提供者。 檢查資料連接資訊不需要安裝 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 增益集。  
   
-1.  在 Excel 中的 [資料] 索引標籤上，按一下 **[連接]**。 按一下 **[屬性]**。  
+1.  在 Excel 中的 [資料] 索引標籤上，按一下 **[連接]** 。 按一下 **[屬性]** 。  
   
 2.  在 **[定義]** 索引標籤上，提供者版本會出現在連接字串的開頭。  
   
-     [] 表示活頁簿為 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+     []  表示活頁簿為 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-     [] 則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
+     []  則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
   
-     [] 表示活頁簿是使用內嵌資料庫的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。  
+     []  表示活頁簿是使用內嵌資料庫的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿。  
   
 ###  <a name="bkmk_msolappc"></a> 如何檢查本機電腦上目前的 MSOLAP 資料提供者版本  
  請使用下列指示，檢查哪一個 OLE DB 提供者是目前在伺服器或工作站上執行 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的版本。 得知目前版本可協助您在升級之後針對資料連接錯誤進行疑難排解。  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62893593"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
   使用**選擇資料來源**頁面，即可指定您想要複製的資料來源。  
@@ -55,7 +55,7 @@ ms.locfileid: "58381208"
  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之指定執行個體上的資料庫清單中選取。  
   
  **[重新整理]**  
- 按一下 [重新整理] 來還原可用資料庫的清單。  
+ 按一下 [重新整理]  來還原可用資料庫的清單。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>資料來源 = .NET Framework Data Provider for SQL Server  
  此頁面會依字母順序呈現 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選項清單。 最重要的選項列於下表中。  
@@ -83,10 +83,10 @@ ms.locfileid: "58381208"
 >  選取  **Microsoft Excel**只有當您想要連接到資料來源使用 Excel 2003 或更早版本。 若要連接至使用 Excel 2007 資料來源，請選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**，按一下**屬性**，然後在**所有** 索引標籤**資料連結屬性**對話方塊方塊中，輸入`Excel 12.0`做為值**擴充屬性**。  
   
  **Excel 檔案路徑**  
- 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]。  
+ 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]  。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出試算表。  
+ 使用 [開啟]  對話方塊來找出試算表。  
   
  **Excel 版本**  
  選取儲存來源資料之 Excel 的版本。  
@@ -100,10 +100,10 @@ ms.locfileid: "58381208"
 >  選取  **Microsoft Access**只有當您想要連接至使用 Access 2003 資料庫或更早版本。 若要連線至使用 Access 2007 資料庫，選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**改。  
   
  **檔案名稱**  
- 指定要從中匯入資料之資料庫檔案的路徑和檔案名稱。 例如 **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**。 或按一下 [瀏覽]。  
+ 指定要從中匯入資料之資料庫檔案的路徑和檔案名稱。 例如 **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**。 或按一下 [瀏覽]  。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出資料庫檔案。  
+ 使用 [開啟]  對話方塊來找出資料庫檔案。  
   
  **使用者名稱**  
  當工作群組資訊檔案與資料庫相關聯時，請指定該資料庫連接的有效使用者名稱。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e65928cd078a3f05032f4e4fb400e3e2eb1f27a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077076"
 ---
 # <a name="arrays-of-parameter-values"></a>參數值陣列
 它通常是用於將參數陣列的應用程式。 例如，使用參數和參數化的陣列**插入**陳述式中，應用程式可以一次插入的資料列數目。 有數個優點，來使用陣列。 首先，因為 （如果資料來源原生支援的參數陣列），將會傳送單一封包中的多個陳述式的資料可以降低網路流量。 第二，某些資料來源，可以執行速度比執行相同數目的個別 SQL 陳述式使用陣列的 SQL 陳述式。 最後，當資料儲存在陣列中，通常就是螢幕資料的情況，應用程式可以繫結所有資料列中的單一呼叫的特定資料行**SQLBindParameter**並執行單一陳述式來更新它們。  

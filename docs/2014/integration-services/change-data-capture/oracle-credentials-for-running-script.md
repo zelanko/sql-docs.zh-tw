@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771109"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
   若要從 Oracle CDC 設計工具主控台執行 Oracle 補充記錄指令碼，此程式會提示您輸入執行此指令碼之 Oracle 使用者的認證。 若要執行此指令碼，Oracle 使用者必須擁有要擷取之所有資料表的 ALTER TABLE 權限以及 DBA_LOG_GROUPS 檢視表的 SELECT 權限。  
@@ -29,7 +29,7 @@ ms.locfileid: "58388810"
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取此選項時，您必須輸入**使用者名**並**密碼**如您所連接的來源 Oracle 資料庫中的使用者。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的來源 Oracle 資料庫中輸入使用者的 [使用者名稱]  和 [密碼]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何管理 CDC 執行個體](manage-a-cdc-instance.md)   

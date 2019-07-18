@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f89bd1372735cf6656d2fcf6fc2da82ac69864a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745516"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797851"
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式
 

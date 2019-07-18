@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001815"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tsqlbatch = ] 'tsqlbatch'` 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次參數是您想要的資訊。 *tsqlbatch*已**nvarchar （max)** 或隱含地轉換成**nvarchar （max)**。  
+`[ @tsqlbatch = ] 'tsqlbatch'` 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次參數是您想要的資訊。 *tsqlbatch*已**nvarchar （max)** 或隱含地轉換成**nvarchar （max)** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  

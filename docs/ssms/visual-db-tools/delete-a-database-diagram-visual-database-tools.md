@@ -13,15 +13,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], deleting
 - removing database diagrams
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2af935496249be7182c7843f0d20c423f164a658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 912a8e010ce84b421f5ba12b8a98384b0fb91cf1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674756"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690435"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>刪除資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "47674756"
   
 ### <a name="to-delete-a-database-diagram"></a>若要刪除資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  用滑鼠右鍵按一下準備刪除的資料庫圖表。  
   
-3.  在快速鍵功能表上選擇 [刪除]。  
+3.  在快速鍵功能表上選擇 [刪除]  。  
   
 4.  會出現訊息提示您確認是否刪除。 選擇 [ **是**]。  
   

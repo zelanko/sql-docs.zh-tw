@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text value searches [SQL Server]
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4c15c1d7437597bf9a5f860b2d459d82c8932a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 059677f41d7fb0dc949838543f710538a6993820
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641576"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679347"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>輸入搜尋值的規則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47641576"
   
 -   **引號**：不要用引號括住數字。  
   
--   **非數字字元**：除了小數分隔符號 (在 Windows [控制台] 的 [地區設定] 對話方塊中所定義) 和負號 (-) 以外，不要包含非數字字元。 不要包含數字分位符號 (例如千位用逗號分開) 或貨幣符號。  
+-   **非數字字元**：除了小數分隔符號 (在 Windows [控制台] 的 [地區設定]  對話方塊中所定義) 和負號 (-) 以外，不要包含非數字字元。 不要包含數字分位符號 (例如千位用逗號分開) 或貨幣符號。  
   
 -   **小數符號** ：如果是輸入整數，可以包含小數符號，不論您搜尋的值是整數或實數。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47641576"
   
 [查詢和檢視設計師] 可以使用下列的日期格式：  
   
--   **地區設定特性** (Locale-Specific)：在 [Windows 區域設定內容] 對話方塊中指定的日期格式。  
+-   **地區設定特性** (Locale-Specific)：在 [Windows 區域設定內容]  對話方塊中指定的日期格式。  
   
 -   **資料庫特性**：資料庫能夠辨識的任何格式。  
   

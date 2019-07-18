@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 397c66d85f326819714c497f7efb81d0f91282f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5eaf5b7d4dcf335636d8f8b3d5e3ac9b4b5f481f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909931"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>配置及釋放描述項
 描述項會以隱含或明確配置，如下列各節中所述。  

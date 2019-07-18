@@ -4,19 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
-manager: craigg
-ms.date: 03/27/2018
+ms.reviewer: mikeray
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: e3768ff5bfc01f2068b10ebd8afc18d12fa808c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58871998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958869"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 的巨量資料叢集 （預覽） 上的應用程式
 
@@ -45,7 +43,7 @@ ms.locfileid: "58871998"
 
 ## <a name="capabilities"></a>Capabilities
 
-在 SQL Server 2019 （預覽） CTP 2.4 您可以建立、 刪除、 描述、 初始化，清單會執行，並更新您的應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl**。
+在 SQL Server 2019 （預覽） 您可以建立、 刪除、 描述、 初始化，清單會執行，並更新您的應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl**。
 
 |命令 |描述 |
 |:---|:---|
@@ -68,19 +66,19 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>登入
 
-您部署或應用程式互動之前，先登入您的 SQL Server 使用巨量資料叢集`mssqlctl login`命令。 指定的外部 IP 位址`endpoint-service-proxy`服務 (例如： `https://ip-address:30777`) 以及使用者名稱和密碼，在叢集中。
+您部署或應用程式互動之前，先登入您的 SQL Server 使用巨量資料叢集`mssqlctl login`命令。 指定的外部 IP 位址`controller-svc-external`服務 (例如： `https://ip-address:30080`) 以及使用者名稱和密碼，在叢集中。
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS
 
-如果您使用 AKS，您需要執行下列命令來取得的 IP 位址`endpoint-service-proxy`服務中的 bash 或 cmd 視窗執行下列命令：
+如果您使用 AKS，您需要執行下列命令來取得的 IP 位址`mgmtproxy-svc-external`服務中的 bash 或 cmd 視窗執行下列命令：
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube
@@ -107,7 +105,7 @@ mssqlctl app create --spec <directory containing spec file>
 mssqlctl app create --spec ./addpy
 ```
 
-這是假設您有儲存在您的應用程式`addpy`資料夾。 此資料夾也應包含的應用程式中，然後再呼叫被呼叫的規格檔`spec.yaml`。 請參閱[應用程式部署頁面](concept-application-deployment.md)如需有關`spec.yaml`檔案。
+這是假設您有儲存在您的應用程式`addpy`資料夾。 此資料夾也應包含呼叫的應用程式的規格檔`spec.yaml`。 請參閱[應用程式部署頁面](concept-application-deployment.md)如需有關`spec.yaml`檔案。
 
 若要部署此應用程式範例應用程式，請在呼叫的目錄中建立下列檔案`addpy`:
 

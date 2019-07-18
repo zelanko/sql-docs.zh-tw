@@ -1,6 +1,6 @@
 ---
 title: 建立入口網站品牌形象 | Microsoft Docs
-ms.date: 12/06/2018
+ms.date: 04/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +8,21 @@ description: 在本文中，您將了解如何透過品牌套件建立符合您�
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201038"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59506505"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌套件設計成不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌套件設計成不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## <a name="creating-the-brand-package"></a>建立品牌封裝
   
 Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案。   

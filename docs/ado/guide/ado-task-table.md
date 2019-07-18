@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927021"
 ---
 # <a name="ado-programming-task-table"></a>ADO 程式設計工作表
 下表列出包含在的程式設計工作*ADO 程式設計人員指南*並提供每個工作的參考。 這些參考可以是文字的描述或程式碼範例，您可以在其中找到 ADO 功能之工作的相關資訊。

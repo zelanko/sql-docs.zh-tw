@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122441"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**name**|**nvarchar(100)**|代理程式的名稱。|  
 |**publisher_security_mode**|**smallint**|這是連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證。|  
 |**publisher_login**|**sysname**|當連接到發行者時所用的登入。|  
-|**publisher_password**|**nvarchar(524)**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
+|**publisher_password**|**nvarchar(524)**|基於安全性理由，值為 **\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
 |**job_login**|**nvarchar(512)**|是 Windows 帳戶 「 記錄讀取器代理程式執行，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
+|**job_password**|**sysname**|基於安全性理由，值為 **\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

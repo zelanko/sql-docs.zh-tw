@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3a9ec58379bdee4786b5ceb2bf692001c84fb49f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b54815164693171a54cf10b40a279fe8deb8337a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106799"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>加入分頁符號 (報表產生器及 SSRS)
   您可以在資料區內的矩形、資料區或群組中加入分頁符號，以控制每頁的資料量。 加入分頁符號可以改善已發行報表的效能，因為在檢視報表時，只有每個頁面上的項目需要進行處理。 當整個報表只有單一頁面時，必須先將所有的項目進行處理，才能檢視報表。  
@@ -26,7 +25,7 @@ ms.locfileid: "56298066"
   
 ### <a name="to-add-a-page-break-to-a-data-region"></a>將分頁符號加入至資料區域  
   
-1.  在設計介面上，以滑鼠右鍵按一下資料區域的角控點，然後按一下 [Tablix 屬性]。  
+1.  在設計介面上，以滑鼠右鍵按一下資料區域的角控點，然後按一下 [Tablix 屬性]  。  
   
 2.  在 **[一般]** 索引標籤的 **[分頁符號選項]** 下方，選取下列其中一個選項：  
   
@@ -38,7 +37,7 @@ ms.locfileid: "56298066"
   
 ### <a name="to-add-a-page-break-to-a-rectangle"></a>將分頁符號加入至矩形  
   
-1.  在設計介面上，以滑鼠右鍵按一下要新增分頁符號的矩形，然後按一下 [矩形屬性]。  
+1.  在設計介面上，以滑鼠右鍵按一下要新增分頁符號的矩形，然後按一下 [矩形屬性]  。  
   
 2.  在 **[一般]** 索引標籤的 **[分頁符號選項]** 下方，選取下列其中一個選項：  
   
@@ -52,7 +51,7 @@ ms.locfileid: "56298066"
   
 ### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>若要將分頁符號加入至資料表、矩陣或清單中的資料列群組  
   
-1.  在 [群組] 窗格中，以滑鼠右鍵按一下資料列群組，然後按一下 [群組屬性]。  
+1.  在 [群組] 窗格中，以滑鼠右鍵按一下資料列群組，然後按一下 [群組屬性]  。  
   
     > [!NOTE]  
     >  系統就會忽略資料行群組上的分頁符號。  

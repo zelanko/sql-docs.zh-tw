@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 91b0fb17ae785098e54358132daa91c04c7f3e5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148964"
 ---
 # <a name="create-partitions"></a>建立資料分割
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685695"
 
 在這一課，您建立資料分割來將 FactInternetSales 資料表分割成較小的邏輯部分，可以處理 （重新整理） 其他資料分割。 根據預設，您在模型中包含每個資料表會有一個分割區，其中包含所有資料表的資料行和資料列。 FactInternetSales 資料表中，我們想要將資料依年度;針對每個資料表的五年的一個資料分割。 接著，每個資料分割就可以單獨處理。 若要進一步了解，請參閱[分割區](../tabular-models/partitions-ssas-tabular.md)。 
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -45,13 +45,13 @@ ms.locfileid: "57685695"
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  在 [篩選資料列] 對話方塊中，在**顯示資料列，其中：OrderDate**，保留**之後或等於**，然後在 [日期] 欄位中，輸入**1/1/2010年**。 離開**並**運算子選取，然後選取**之前**，然後在 [日期] 欄位中，輸入**2011 年 1 月 1 日**，然後按一下 **[確定]**。
+6.  在 [篩選資料列] 對話方塊中，在**顯示資料列，其中：OrderDate**，保留**之後或等於**，然後在 [日期] 欄位中，輸入**1/1/2010年**。 離開**並**運算子選取，然後選取**之前**，然後在 [日期] 欄位中，輸入**2011 年 1 月 1 日**，然後按一下 **[確定]** 。
 
     ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     請注意在查詢編輯器 的 APPLIED STEPS 中，您會看到名為 Filtered Rows 的另一個步驟。 此篩選器是從 2010年選取只有訂單日期。
 
-8.  按一下 **[匯入]**。
+8.  按一下 **[匯入]** 。
 
     在 [資料分割管理員] 中，請注意查詢運算式現在有額外的 Filtered Rows 子句。
 
@@ -106,13 +106,13 @@ ms.locfileid: "57685695"
   
 3.  在 [處理資料分割] 對話方塊中，確認**模式**設為**處理預設**。  
   
-4.  在 [處理] 資料行中選取您所建立的五個資料分割各自的核取方塊，然後按一下 [確定]。  
+4.  在 [處理]  資料行中選取您所建立的五個資料分割各自的核取方塊，然後按一下 [確定]  。  
 
     ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     如果系統提示您輸入模擬認證時，輸入 Windows 使用者名稱和您在第 2 課中指定的密碼。  
   
-    [資料處理] 對話方塊隨即出現，並顯示每個資料分割的處理詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 每個分割區包含 SQL 陳述式中的 WHERE 子句中指定之年份的資料列。 處理完成時，請繼續並關閉 [資料處理] 對話方塊。  
+    [資料處理]  對話方塊隨即出現，並顯示每個資料分割的處理詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 每個分割區包含 SQL 陳述式中的 WHERE 子句中指定之年份的資料列。 處理完成時，請繼續並關閉 [資料處理] 對話方塊。  
   
     ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   

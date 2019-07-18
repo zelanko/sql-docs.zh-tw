@@ -2,19 +2,18 @@
 title: 下載 Microsoft Updates-Analytics Platform System |Microsoft Docs
 description: 本主題討論如何以 Windows Server Update Services (WSUS) 從 Microsoft Update Catalog 下載更新，並將這些更新套用至 Analytics Platform System appliance 伺服器。 Microsoft Update 會安裝所有適用的更新，適用於 Windows 和 SQL Server。 VMM 虛擬機器的應用裝置上安裝 WSUS。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78da7bd46282bb42bc3630c71c1cafd1ea0f11bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961042"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下載並套用 Analytics Platform System 的 Microsoft 更新
 本主題討論如何以 Windows Server Update Services (WSUS) 從 Microsoft Update Catalog 下載更新，並將這些更新套用至 Analytics Platform System appliance 伺服器。 Microsoft Update 會安裝所有適用的更新，適用於 Windows 和 SQL Server。 VMM 虛擬機器的應用裝置上安裝 WSUS。  
@@ -65,7 +64,7 @@ ms.locfileid: "52521482"
   
 1.  在左窗格中，WSUS 主控台中，按一下**所有更新**。  
   
-2.  在**所有更新**窗格中，按一下**核准**下拉式選單中，將**核准**至**Any 除了拒絕**。 按一下 **狀態**下拉式選單中，將**狀態**來**任何**。 按一下 **[重新整理]**。  
+2.  在**所有更新**窗格中，按一下**核准**下拉式選單中，將**核准**至**Any 除了拒絕**。 按一下 **狀態**下拉式選單中，將**狀態**來**任何**。 按一下 **[重新整理]** 。  
   
     以滑鼠右鍵按一下**標題**資料行，然後選取**檔案狀態**下載完成之後，請確認檔案狀態。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "52521482"
   
     您可以也在所選的更新，以滑鼠右鍵按一下，然後按一下**核准**。 系統可能會提示您接受 「 Microsoft 軟體授權條款 」。 如果是的話，按一下**我接受**在視窗中，以繼續。  
   
-    ![選取全部套用更新，並按一下 [核准]。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
+    ![選取 全部套用更新，並按一下 [核准]。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
 4.  選取您在中建立的應用裝置伺服器群組[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "52521482"
   
 1.  在開始之前，開啟[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)，按一下 **設備狀態**索引標籤，並確認**叢集**並**網路**欄顯示綠色 （或 NA） 的所有節點。 如果任何警示都存在於這些資料行，設備可能無法正確安裝更新。 位址中的所有現有警示**叢集**並**網路**再繼續進行的資料行。  
   
-2.  登入 _< 網域名稱 >_**-HST01**節點為網狀架構網域系統管理員。  
+2.  登入 _< 網域名稱 >_ **-HST01**節點為網狀架構網域系統管理員。  
   
 3.  若要套用所有適用於 WSUS 中核准的更新，執行更新程式。 請參閱[執行更新程式](#RunUpdateWizard)下方的指示。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "52521482"
   
 8.  在 **所有更新**視窗中，將**狀態**來**失敗或需要**。  
   
-9. 按一下 **[重新整理]**。  
+9. 按一下 **[重新整理]** 。  
   
 10. 如果**所需的更新**大於零，請連絡支援服務，以取得協助。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "52521482"
   
 1.  請確定您已登入 HST01 節點為網狀架構網域系統管理員。  
   
-2.  開啟命令提示字元視窗並輸入下列命令。 取代*<parameter>* 與指定的資訊。  
+2.  開啟命令提示字元視窗並輸入下列命令。 取代 *<parameter>* 與指定的資訊。  
   
 **若要執行 Microsoft Update:**  
   

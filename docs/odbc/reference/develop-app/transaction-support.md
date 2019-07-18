@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086060"
 ---
-# <a name="transaction-support"></a>交易支援
+# <a name="transaction-support"></a>異動支援
 交易支援的程度是驅動程式定義。 ODBC 被設計來在單一使用者或桌面的資料庫具有不需要管理多個更新，其資料上實作。 此外，某些支援交易的資料庫進行只能在將的 SQL、 資料操作語言 (DML) 陳述式有限制或特殊的交易語意，有關使用資料定義語言 (DDL) 的使用中交易時。 也就是可能有多個同時更新資料表但未變更的數目和定義的資料表在交易期間的交易支援。  
   
  應用程式會決定是否支援交易，是否可以在交易中，而任何特殊效果，在交易中，包括 DDL，藉由呼叫包含 DDL **SQLGetInfo** SQL_TXN_CAPABLE 選項。 如需詳細資訊，請參閱 < [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。  

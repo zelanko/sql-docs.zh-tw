@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 007ec645c6a460919498af1a75518dc3ba391170
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b3bed617efc3f2c646f237629ca8d737729915c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850848"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772800"
 ---
 # <a name="datetimeoffset-class"></a>DateTimeOffset 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aed644bec059dadff338711634c6ec7d252498cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 678bbbf02a69de167fd5316c6b917351af5716f4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701846"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687785"
 ---
 # <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51701846"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目建立 WMI 事件警示：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -66,21 +66,21 @@ ms.locfileid: "51701846"
   
 1.  在 **[物件總管]** 中，按一下加號以展開您要建立 WMI 事件警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 **[警示]** ，然後選取 **[新增警示]**。  
+3.  以滑鼠右鍵按一下 **[警示]** ，然後選取 **[新增警示]** 。  
   
 4.  在 **[新增警示]** 對話方塊中的 **[名稱]** 方塊，輸入此警示的名稱。  
   
 5.  選取 **[啟用]** 核取方塊以讓警示得以執行。 根據預設，會選取 **[啟用]** 。  
   
-6.  在 **[類型]** 清單中，選取 **[WMI 事件警示]**。  
+6.  在 **[類型]** 清單中，選取 **[WMI 事件警示]** 。  
   
-7.  在 [WMI 事件警示定義] 底下的 [命名空間] 方塊中，指定 WMI 查詢語言 (WQL) 陳述式的 WMI 命名空間，以識別哪個 WMI 事件將會觸發此警示。  
+7.  在 [WMI 事件警示定義]  底下的 [命名空間]  方塊中，指定 WMI 查詢語言 (WQL) 陳述式的 WMI 命名空間，以識別哪個 WMI 事件將會觸發此警示。  
   
 8.  在 **[查詢]** 方塊中，指定會識別警示所回應之事件的 WQL 陳述式。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -88,9 +88,9 @@ ms.locfileid: "51701846"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  

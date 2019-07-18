@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393026"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62766660"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含三個固定的資料庫層級角色中， `db_ssisadmin`， **db_ssisltduser**，以及**db_ssisoperator**，用於控制封裝的存取權。 只能在儲存至封裝上實作角色`msdb`資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將角色指派給封裝。 角色指派會儲存到`msdb`資料庫。  
@@ -33,7 +33,7 @@ ms.locfileid: "58393026"
   
 |角色|讀取動作|寫入動作|  
 |----------|-----------------|------------------|  
-|`db_ssisadmin`<br /><br /> 中的多個<br /><br /> `sysadmin`|列舉自己的封裝。<br /><br /> 列舉所有封裝。<br /><br /> 檢視自己的封裝。<br /><br /> 檢視所有封裝。<br /><br /> 執行自己的封裝。<br /><br /> 執行所有封裝。<br /><br /> 匯出自己的封裝。<br /><br /> 匯出所有封裝。<br /><br /> 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中的所有封裝。|匯入封裝。<br /><br /> 刪除自己的封裝。<br /><br /> 刪除所有封裝。<br /><br /> 變更自己的封裝角色。<br /><br /> 變更所有封裝角色。<br /><br /> <br /><br /> **\*\* 重要\* \***  db_ssisadmin 角色和 dc_admin 角色的成員可以將其權限提高為系統管理員。 之所以能夠進行此權限提高，是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 sysadmin 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將系統管理員 (sysadmin) 成員加入 db_ssisadmin 和 dc_admin 角色。|  
+|`db_ssisadmin`<br /><br /> 中的多個<br /><br /> `sysadmin`|列舉自己的封裝。<br /><br /> 列舉所有封裝。<br /><br /> 檢視自己的封裝。<br /><br /> 檢視所有封裝。<br /><br /> 執行自己的封裝。<br /><br /> 執行所有封裝。<br /><br /> 匯出自己的封裝。<br /><br /> 匯出所有封裝。<br /><br /> 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中的所有封裝。|匯入封裝。<br /><br /> 刪除自己的封裝。<br /><br /> 刪除所有封裝。<br /><br /> 變更自己的封裝角色。<br /><br /> 變更所有封裝角色。<br /><br /> <br /><br /> **\*\* 重要\* \* ** db_ssisadmin 角色和 dc_admin 角色的成員可以將其權限提高為系統管理員。 之所以能夠進行此權限提高，是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 sysadmin 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將系統管理員 (sysadmin) 成員加入 db_ssisadmin 和 dc_admin 角色。|  
 |**db_ssisltduser**|列舉自己的封裝。<br /><br /> 列舉所有封裝。<br /><br /> 檢視自己的封裝。<br /><br /> 執行自己的封裝。<br /><br /> 匯出自己的封裝。|匯入封裝。<br /><br /> 刪除自己的封裝。<br /><br /> 變更自己的封裝角色。|  
 |**db_ssisoperator**|列舉所有封裝。<br /><br /> 檢視所有封裝。<br /><br /> 執行所有封裝。<br /><br /> 匯出所有封裝。<br /><br /> 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中的所有封裝。|None|  
 |**Windows administrators**|檢視所有正在執行之封裝的執行詳細資料。|停止所有目前正在執行的封裝。|  

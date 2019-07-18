@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
@@ -14,19 +13,19 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4145c76666b1f0da2b50f3a48ae5553a21ba2748
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e939270edd53189f9d8ba77411b8916e94a5ba8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064164"
 ---
 # <a name="color-coding-in-query-editors"></a>查詢編輯器中的色彩編碼
-  在程式碼編輯器中輸入的文字會指派至類別目錄；每一個類別目錄都會以色彩識別。 這些色彩可協助您快速地找到程式碼中的文字。 例如，註解會以深綠色突顯出來。 下表將列出最常見的色彩。 您可以檢視色彩及其類別目錄的完整清單，也可以使用 [工具] 和 [選項] 功能表來設定自訂的色彩配置。 如需如何變更預設色彩的詳細資訊，請參閱[變更字型色彩、大小與樣式](change-font-color-size-and-style.md)。  
+  在程式碼編輯器中輸入的文字會指派至類別目錄；每一個類別目錄都會以色彩識別。 這些色彩可協助您快速地找到程式碼中的文字。 例如，註解會以深綠色突顯出來。 下表將列出最常見的色彩。 您可以檢視色彩及其類別目錄的完整清單，也可以使用 [工具]  和 [選項]  功能表來設定自訂的色彩配置。 如需如何變更預設色彩的詳細資訊，請參閱[變更字型色彩、大小與樣式](change-font-color-size-and-style.md)。  
   
 ## <a name="default-code-colors"></a>預設程式碼色彩  
   
-|Color|類別目錄|  
+|色彩|Category|  
 |-----------|--------------|  
 |紅色|SQL 字串|  
 |深綠色|註解|  

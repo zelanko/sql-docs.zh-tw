@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662916"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件類別
   **Deadlock Graph** 事件類別提供死結的 XML 描述。 此事件與 **Lock:Deadlock** 事件會同時發生。  

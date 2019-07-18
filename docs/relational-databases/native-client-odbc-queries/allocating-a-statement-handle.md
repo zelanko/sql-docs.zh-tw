@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 373e0ab84e4968d1790d1dd9076f82d1ed85d081
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41bf309a1a2b1795f8d642ea7418289e94db4591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937327"
 ---
 # <a name="allocating-a-statement-handle"></a>配置陳述式控制代碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

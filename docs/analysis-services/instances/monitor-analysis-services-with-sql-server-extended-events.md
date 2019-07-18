@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc51c444483dc9a89cf0b9edbd557c3dce11a054
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544407"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62709253"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 擴充事件監視 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52544407"
   
 -   **event_file** 會將工作階段資料儲存於 .xel 檔案中。  
   
--   **event_stream** 可在 Management Studio 中啟用 [監看即時資料] 選項。  
+-   **event_stream** 可在 Management Studio 中啟用 [監看即時資料]  選項。  
   
 -   只要伺服器正在執行中，**ring_buffer** 就會將工作階段資料儲存在記憶體中。 在伺服器重新啟動時，即會擲出工作階段資料  
   
@@ -59,17 +59,17 @@ ms.locfileid: "52544407"
   
  請務必設定包括事件欄位的工作階段，讓您能夠輕鬆地查看感興趣的資訊。  
   
- [設定] 是對話方塊中最右側的選項。  
+ [設定]  是對話方塊中最右側的選項。  
   
  ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
- 在組態中，於 [事件欄位] 索引標籤上選取 [TextData]，如此一來，此欄位會出現在事件相鄰位置並顯示傳回值，其中包括在伺服器上執行的查詢。  
+ 在組態中，於 [事件欄位] 索引標籤上選取 [TextData]  ，如此一來，此欄位會出現在事件相鄰位置並顯示傳回值，其中包括在伺服器上執行的查詢。  
   
  在針對所需的事件和資料存放區設定工作階段之後，您可以按一下指令碼按鈕，將您的組態傳送到其中一個支援的目的地，包括檔案、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的新查詢，以及剪貼簿。  
   
  **重新整理工作階段**  
   
- 一旦建立工作階段之後，請務必重新整理 Management Studio 中的 [工作階段] 資料夾，以查看您剛建立的工作階段。 如果設定了 event_stream，您就能以滑鼠右鍵按一下工作階段名稱，並選擇 [監看即時資料] 來監視即時伺服器活動。  
+ 一旦建立工作階段之後，請務必重新整理 Management Studio 中的 [工作階段] 資料夾，以查看您剛建立的工作階段。 如果設定了 event_stream，您就能以滑鼠右鍵按一下工作階段名稱，並選擇 [監看即時資料]  來監視即時伺服器活動。  
   
 ##  <a name="bkmk_script_start"></a> 用以啟動 Analysis Services 中擴充事件的 XMLA 指令碼  
  您可以使用類似的 XMLA 建立物件指令碼命令來啟用擴充事件追蹤，如下所示：  

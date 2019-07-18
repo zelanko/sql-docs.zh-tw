@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 779cd10fa83fdc4d1ec44079ca08ee8dd480468c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55f13de3ecfb6d78219812734d0c559430a914be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647776"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799093"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>設定 scan for startup procs 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47647776"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 scan for startup procs 選項：**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47647776"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 scan for startup procs 選項之後](#FollowUp)  
+-   **後續操作：**[設定掃描啟動程序選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -88,7 +88,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 待處理：設定 scan for startup procs 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定掃描啟動程序選項之後  
  伺服器必須重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

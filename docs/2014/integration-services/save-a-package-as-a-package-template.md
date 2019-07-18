@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reusing packages
@@ -14,12 +13,12 @@ ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79652d50bb4df2bf80ec9f072e8828db9935368f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056335"
 ---
 # <a name="save-a-package-as-a-package-template"></a>將封裝儲存為封裝範本
   本主題描述當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 Integration Services 封裝時，如何指定及使用自訂封裝做為範本。 根據預設，當您將新封裝加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用可建立空白封裝的封裝範本。 您不能置換這個預設範本，但是可以加入新的範本。  
@@ -40,13 +39,13 @@ ms.locfileid: "58391184"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]，然後按一下 [新增項目]。  
+2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]  ，然後按一下 [新增項目]  。  
   
-3.  在 [新增新項目 -\<專案名稱>] 對話方塊中，按一下要當作範本使用的套件。  
+3.  在 [新增新項目 -\<專案名稱>]  對話方塊中，按一下要當作範本使用的套件。  
   
      範本清單中包含名稱為 [新增 SSIS 封裝] 的預設封裝範本。 封裝圖示識別可當作封裝範本使用的範本。  
   
-4.  按一下 **[加入]**。  
+4.  按一下 **[加入]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)   

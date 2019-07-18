@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32047da9a95190f0099d1a84bceef13540143223
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039026"
 ---
 # <a name="comments-in-xquery"></a>XQuery 中的註解
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  您可以將註解加入到 XQuery。 註解字串是利用 "`(:`" 和 "`:)`" 分隔符號來加入。 例如：  
+  您可以將註解加入到 XQuery。 註解字串是利用 "`(:`" 和 "`:)`" 分隔符號來加入。 例如:  
   
 ```  
 declare @x xml  

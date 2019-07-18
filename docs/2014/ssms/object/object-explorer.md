@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751170"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999833"
 ---
 # <a name="object-explorer"></a>物件總管
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的功能，可用於管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體中的物件。  

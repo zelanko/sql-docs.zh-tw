@@ -21,14 +21,18 @@ ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a20aee1b6c33a6106dd5a1154d2dfe6c7661ef7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e3ccbd04f8d940cbe2ae9ecce3243c8aa8021d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724068"
 ---
 # <a name="raising-events-in-the-script-task"></a>在指令碼工作中引發事件
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   事件會提供向包含封裝報告錯誤、警告和其他資訊 (例如工作進度或狀態) 的方法。 封裝提供管理事件通知的事件處理常式。 指令碼工作可以呼叫 **Dts** 物件之 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 屬性上的方法來引發事件。 如需 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 套件如何處理事件的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 事件處理常式](../../../integration-services/integration-services-ssis-event-handlers.md)。  
   
  事件可以記錄到封裝中啟用的任何記錄提供者。 記錄提供者會在資料存放區中儲存事件的相關資訊。 指令碼工作也可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法將資訊記錄到記錄提供者，而不會引發事件。 如需如何使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法的詳細資訊，請參閱[在指令碼工作中記錄](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f2a3a0515674e5a6a5a9e4cb4788ddcf4a37da8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786941"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>設定 remote login timeout 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote login timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote login timeout** 選項指定登入遠端伺服器的嘗試在傳回失敗前等候的秒數。 例如，如果您嘗試登入遠端伺服器，而該伺服器已關機， **remote login timeout** 有助於確保在您的電腦停止嘗試登入前，您不必無限期等下去。 這個選項的預設值是 10 秒。 將值設定為 0 即可無限期等候。  
@@ -39,7 +39,7 @@ ms.locfileid: "58530870"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定 remote login timeout 選項之後](#FollowUp)  
+-   **後續操作：** [設定 remote login timeout 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58530870"
   
 #### <a name="to-configure-the-remote-login-timeout-option"></a>設定 remote login timeout 選項  
   
-1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "58530870"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote login timeout` 選項的值設定為 `35` 秒。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote login timeout` 選項的值設定為 `35` 秒。  
   
 ```sql  
 USE AdventureWorks2012 ;  

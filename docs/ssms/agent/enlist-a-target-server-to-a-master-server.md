@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, master servers
 - target servers [SQL Server], enlisting
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0042c2f040304de461f50d1a2297e023e527f410
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c4caf0b7b65f084d7810e0d718fae1a402cbb9c3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698136"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687131"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>將目標伺服器編列至主要伺服器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51698136"
   
 -   **若要編列目標伺服器，使用：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "51698136"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[新增目標伺服器]**。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多伺服器管理]** ，然後按一下 **[新增目標伺服器]** 。  
   
 3.  完成「目標伺服器精靈」，精靈將引導您完成此程序。  
   

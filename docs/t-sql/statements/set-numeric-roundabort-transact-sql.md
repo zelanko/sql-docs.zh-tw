@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74b302ba4dcf4637acdcfebaf8c33f1b338cb36a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56853013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942833"
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67d29091ddae26f40dcbea17ef50da7c3b7ae8f8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: cb73c3c46a1b504b3982e11578540f8d0aeee0f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801034"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>搭配使用遠端 Blob 存放區 (RBS) 與 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

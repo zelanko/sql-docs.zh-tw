@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL tertiary collations
 - TERTIARY_WEIGHTS function
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d64d5562c99293894895ad53c034145634b13e49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c1ce066768207f7a04d16e2f4c18666eb231d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823691"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943992"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>定序函式 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 SQL 第 3 定序上定義之 **char**、**varchar** 或 **varchar(max)** 類型的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如需這些定序的清單，請參閱「備註」一節。
   
 ## <a name="return-types"></a>傳回類型
-`TERTIARY_WEIGHTS` 會在 *non_Unicode_character_string_expression* 為 **char** 或 **varchar** 時傳回 **varbinary**，並在 *non_Unicode_character_string_expression* 具有 **varchar(max)** 資料類型時傳回 **varbinary(max)**。
+`TERTIARY_WEIGHTS` 會在 *non_Unicode_character_string_expression* 為 **char** 或 **varchar** 時傳回 **varbinary**，並在 *non_Unicode_character_string_expression* 具有 **varchar(max)** 資料類型時傳回 **varbinary(max)** 。
   
 ## <a name="remarks"></a>Remarks  
 當 SQL 第 3 定序未定義 *non_Unicode_character_string_expression* 時，`TERTIARY_WEIGHTS` 會傳回 NULL。 此表格顯示 SQL 第 3 定序：

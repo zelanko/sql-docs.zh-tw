@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6146c25c64acce0688221df63039b17bff358971
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: e3838b8144baaaa21d1ae5d9d813bded8a161bd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361558"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981499"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ THROW [ { error_number | @local_variable },
  這是代表例外狀況的常數或變數。 *error_number* 是 **int**，必須大於或等於 50000，並小於或等於 2147483647。  
   
  *message*  
- 這是描述例外狀況的字串或變數。 *message* 是 **nvarchar(2048)**。  
+ 這是描述例外狀況的字串或變數。 *message* 是 **nvarchar(2048)** 。  
   
  *state*  
  這是介於 0 和 255 之間的常數或變數，表示要與訊息相關聯的狀態。 *state* 是 **tinyint**。  

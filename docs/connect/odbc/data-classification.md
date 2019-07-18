@@ -14,11 +14,11 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637440"
 ---
 # <a name="data-classification"></a>資料分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -71,7 +71,7 @@ SQLGetDescField 成功呼叫，在緩衝區所指*ValuePtr*會包含下列資料
 > [!NOTE]
 > `nn nn``tt tt`，和`cc cc`是多位元組的整數，會儲存最小顯著性位元組在最低的位址。
 
-*`sensitivitylabel`* 並*`informationtype`* 都屬於表單
+*`sensitivitylabel`* 並 *`informationtype`* 都屬於表單
 
  `nn [n bytes name] ii [i bytes id]`
 
@@ -79,13 +79,13 @@ SQLGetDescField 成功呼叫，在緩衝區所指*ValuePtr*會包含下列資料
 
  `nn nn [n sensitivityprops]`
 
-每個資料行 *(c)*， *n* 4 位元組*`sensitivityprops`* 有：
+每個資料行 *(c)* ， *n* 4 位元組 *`sensitivityprops`* 有：
 
  `ss ss tt tt`
 
-s-指數*`sensitivitylabels`* 陣列，`FF FF`若未加上標籤
+s-指數 *`sensitivitylabels`* 陣列，`FF FF`若未加上標籤
 
-t-指數*`informationtypes`* 陣列，`FF FF`若未加上標籤
+t-指數 *`informationtypes`* 陣列，`FF FF`若未加上標籤
 
 
 <br><br>

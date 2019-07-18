@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205937"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584305"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,12 +83,12 @@ AdventureWorks_snapshot_evening
 
 **注意！** 若要還原為資料庫快照集，您需要刪除該資訊庫中的任何其他快照集。  
   
-####  <a name="Client_Connections"></a> 最佳做法：用戶端連接到資料庫快照集  
+####  <a name="Client_Connections"></a> 最佳做法：用戶端連線到資料庫快照集  
  若要使用資料庫快照集，用戶端需要知道去哪裡尋找。 正在建立或刪除某個資料庫快照集時，使用者仍可讀取其他快照集。 但是，當您以新的快照集取代現有的快照集時，必須將用戶端重新導向至新的快照集。 使用者可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，手動連接到資料庫快照集。 但是，若要支援實際執行環境，您應該建立程式設計方案，將撰寫報表的用戶端明確導向至資料庫最新的資料庫快照集。  
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  能夠建立資料庫的任何使用者都可以建立資料庫快照集，不過若要建立鏡像資料庫的快照集，您必須是 **sysadmin** 固定伺服器角色的成員。  
   
 ##  <a name="TsqlProcedure"></a> 如何建立資料庫快照集 (使用 Transact-SQL)  
@@ -99,7 +99,9 @@ AdventureWorks_snapshot_evening
 1.  根據來源資料庫的目前大小，確定您擁有足夠的磁碟空間可存放資料庫快照集。 資料庫快照集的大小上限為快照集建立時的來源資料庫大小。 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。  
   
 2.  在使用 AS SNAPSHOT OF 子句的檔案上，發出 CREATE DATABASE 陳述式。 建立快照集必須指定來源資料庫之每個資料庫檔案的邏輯名稱。 其語法如下：  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -116,10 +118,10 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中 *source_**database_name* 是來源資料庫，*logical_file_name* 是參考檔案時 SQL Server 中所使用的邏輯名稱，*os_file_name* 是建立檔案時作業系統所使用的路徑和檔案名稱，而 *database_snapshot_name* 是要還原資料庫的目標快照集名稱。 如需此語法的完整描述，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)資料庫快照集的唯一方式。  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  建立資料庫快照集時，CREATE DATABASE 陳述式中不允許記錄檔、離線檔案、還原檔案與無用檔案。  
+    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
   

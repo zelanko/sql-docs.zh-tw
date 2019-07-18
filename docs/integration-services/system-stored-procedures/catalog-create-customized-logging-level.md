@@ -11,14 +11,18 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ec37a6117132024b0a8977ee0f4578019eb1b3b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8b7c145b516bc580858658a81a1e0a76375bd668
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276827"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716958"
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
+# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   建立新的自訂記錄層次。 如需自訂記錄層次的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  

@@ -1,19 +1,19 @@
 ---
 title: 在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 03/01/2017
-ms.openlocfilehash: 8bd2ab9ebfceeb8689dcaa5ce2afe912ecb4b1c6
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
-ms.translationtype: HT
+ms.openlocfilehash: c0cf0e8c98c2a89521c7b59753401fe164a7651d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577844"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
 
@@ -29,17 +29,17 @@ ms.locfileid: "57305316"
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>若要在多個頁面上顯示資料列標頭  
   
-1. 以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
+1. 以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]** 。  
   
-2. 在 **[資料列標頭]** 中，選取 **[在每一頁重複標頭資料列]**。  
+2. 在 **[資料列標頭]** 中，選取 **[在每一頁重複標頭資料列]** 。  
   
 3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>在多個頁面上顯示資料行標頭  
   
-1. 以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
+1. 以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]** 。  
   
-2. 在 **[資料行標頭]** 中，選取 **[在每一頁重複標頭資料行]**。  
+2. 在 **[資料行標頭]** 中，選取 **[在每一頁重複標頭資料行]** 。  
   
 3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,11 +47,11 @@ ms.locfileid: "57305316"
   
 1. 在設計介面上，按一下 Tablix 資料區的資料列或資料行控點來選取它。 [群組] 窗格會顯示資料列和資料行群組。  
   
-2. 在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]**。 [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
+2. 在 [群組] 窗格的右邊按一下向下箭頭，然後按一下 **[進階模式]** 。 [資料列群組] 窗格會顯示資料列群組階層的階層式靜態及動態成員，[資料行群組] 窗格則會為資料行群組階層顯示類似的內容。  
   
 3. 按一下對應至要在捲動時保持可見之靜態成員 (資料列或資料行) 的靜態成員。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
-     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 [檢視] 索引標籤，然後按一下 [屬性]。  
+     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 [檢視]  索引標籤，然後按一下 [屬性]  。  
   
 4. 在 [屬性] 窗格中，將 **[RepeatOnNewPage]** 設定為 [True]。  
   

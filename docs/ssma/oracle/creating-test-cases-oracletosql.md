@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: shamikg
+ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512952"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266128"
 ---
 # <a name="creating-test-cases-oracletosql"></a>建立測試案例 (OracleToSQL)
 使用測試案例精靈以建立測試。 此精靈可讓您建立測試案例，藉由選擇測試並確認物件和測試的參數。  

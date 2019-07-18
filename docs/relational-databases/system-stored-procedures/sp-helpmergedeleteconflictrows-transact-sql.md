@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137753"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** 。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。  
   
-`[ @source_object = ] 'source_object'` 是來源物件的名稱。 *source_object*已**nvarchar(386)**，預設值是 NULL。  
+`[ @source_object = ] 'source_object'` 是來源物件的名稱。 *source_object*已**nvarchar(386)** ，預設值是 NULL。  
   
 `[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。*發行者*是**sysname**，預設值是 NULL。  
   

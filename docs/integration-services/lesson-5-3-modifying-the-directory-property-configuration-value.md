@@ -11,22 +11,26 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274825"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721212"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>第 5-3 課：修改 Directory 屬性設定值
 
-在此工作中，您會修改儲存在 **SSISTutorial.dtsConfig** 檔案中的組態設定，以便設定套件層級變數 `User::varFolderName` 的 **Value** 屬性。 該變數會更新 Foreach 迴圈容器的 **Directory** 屬性。 修改過的值會指向您在上一項工作中建立的 [New Sample Data] 資料夾。 在修改組態設定並執行套件之後，會更新組態檔中變數的 **Directory** 屬性。 之前，**Directory** 屬性值是套件的一部分。  
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
+在此工作中，您會修改儲存在 **SSISTutorial.dtsConfig** 檔案中的組態設定，以便設定套件層級變數 `User::varFolderName` 的 **Value** 屬性。 該變數會更新 Foreach 迴圈容器的 **Directory** 屬性。 修改過的值會指向您在上一項工作中建立的 [New Sample Data]  資料夾。 在修改組態設定並執行套件之後，會更新組態檔中變數的 **Directory** 屬性。 之前，**Directory** 屬性值是套件的一部分。  
   
 ## <a name="modify-the-configuration-setting-of-the-directory-property"></a>修改 Directory 屬性的組態設定  
   
 1.  在 [記事本] 或任何其他文字編輯器中，尋找並開啟您在上一項工作中使用 [套件設定精靈] 所建立的 **SSISTutorial.dtsConfig** 設定檔。  
   
-2.  變更 **[ConfiguredValue]** 元素的值，使它符合您在上一項工作中建立的 **新範例資料** 資料夾的路徑。 請勿用引號括住路徑。 如果 [New Sample Data] 資料夾位於磁碟機的根目錄層級 (例如 **C:\\**)，則更新的 XML 應該類似於下列範例：  
+2.  變更 **[ConfiguredValue]** 元素的值，使它符合您在上一項工作中建立的 **新範例資料** 資料夾的路徑。 請勿用引號括住路徑。 如果 [New Sample Data]  資料夾位於磁碟機的根目錄層級 (例如 **C:\\** )，則更新的 XML 應該類似於下列範例：  
   
     ```
     <?xml version="1.0"?>

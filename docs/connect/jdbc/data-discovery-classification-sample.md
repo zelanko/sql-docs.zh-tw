@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e8711d79b9e67be23c817d3996f451402c17d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ae1ea54ae5f980c84e83922ffcfb9ad6ac83ded9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759066"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782056"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 

@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: 062561d440a276fccf5310731db7503e67f7f43e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118100"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'` 登入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帳戶下執行的代理程式。 *job_login*已**nvarchar(257)**，預設值是 NULL。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'` 登入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帳戶下執行的代理程式。 *job_login*已**nvarchar(257)** ，預設值是 NULL。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
 > [!NOTE]
 >  針對非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這必須是指定的相同登入[sp_adddistpublisher &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。  

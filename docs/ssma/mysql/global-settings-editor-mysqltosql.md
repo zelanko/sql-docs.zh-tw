@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7cfe49aaade3a2854a62c8927102859a7f37ca9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8fd4998a491d17c493588acfa7df9092f66f6e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075416"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>全域設定 (編輯器) (MySQLToSQL)
 使用編輯器頁面**全域設定**對話方塊來指定程式碼編輯器視窗的設定。  

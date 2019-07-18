@@ -2,7 +2,7 @@
 title: 設計檢視 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b419975238a2e6031a8fdc6c2ec67b608dbbcc64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577874"
 ---
 # <a name="design-view"></a>設計檢視
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表設計師中，使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  
@@ -34,7 +34,7 @@ ms.locfileid: "47752366"
  [工具箱] 會列出適用於您報表的資料區域和其他報表項目。 若要從 [工具箱] 加入報表項目，按兩下該項目，或將其拖曳到設計介面上。 接著，您可以使用物件控點來變更形狀和大小。  
   
 ## <a name="report-data-pane"></a>報表資料窗格  
- 若要檢視 [報表資料] 窗格，請按一下 **[檢視]** 功能表上的 **[報表資料]**。 使用此窗格可定義參數、影像、資料來源和資料集，也可參考內建欄位 (例如 ReportName)。 若要加入新項目，按一下 **[新增]** 功能表，然後選取一個項目。 若要將導出欄位加入到現有的資料集，按一下 **[資料集]**，然後在 **[資料集屬性]** 對話方塊中選取 **[欄位]**。 選取一個項目，然後按一下 **[編輯]** 來開啟 **[屬性]** 對話方塊。 您也可以在 [報表資料] 窗格中，以滑鼠右鍵按一下項目來加入項目或更新其屬性。  
+ 若要檢視 [報表資料] 窗格，請按一下 **[檢視]** 功能表上的 **[報表資料]** 。 使用此窗格可定義參數、影像、資料來源和資料集，也可參考內建欄位 (例如 ReportName)。 若要加入新項目，按一下 **[新增]** 功能表，然後選取一個項目。 若要將導出欄位加入到現有的資料集，按一下 **[資料集]** ，然後在 **[資料集屬性]** 對話方塊中選取 **[欄位]** 。 選取一個項目，然後按一下 **[編輯]** 來開啟 **[屬性]** 對話方塊。 您也可以在 [報表資料] 窗格中，以滑鼠右鍵按一下項目來加入項目或更新其屬性。  
   
  將項目從 [報表資料] 窗格拖曳至設計介面上的資料區域和文字方塊，以便將資料和影像加入到報表中。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47752366"
  頁首和頁尾可以分別沿著每個頁面的頂端和底部執行。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩，以及背景影像。 若要將報表項目加入到頁首或頁尾，以滑鼠右鍵按一下設計介面，然後選取 [頁首] 或 [頁尾]。 頁首和頁尾區段就會出現在設計介面上。  
   
 ## <a name="properties-pane"></a>屬性窗格  
- 使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]，為此報表項目或群組開啟對應的 [屬性] 對話方塊。  
+ 使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]  ，為此報表項目或群組開啟對應的 [屬性]  對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   

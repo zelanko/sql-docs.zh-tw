@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107984"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profilename'` 用來傳送訊息的 Database Mail 設定檔的名稱。 *profilename*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果*profilename*未指定，會使用預設 Database Mail 設定檔。  
+`[ @profile_name = ] 'profilename'` 用來傳送訊息的 Database Mail 設定檔的名稱。 *profilename*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果*profilename*未指定，會使用預設 Database Mail 設定檔。  
   
 `[ @id = ] id` 若要傳送訊息給操作員識別碼。 *id*已**int**，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
   
-`[ @name = ] 'name'` 若要傳送訊息給操作員的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
+`[ @name = ] 'name'` 若要傳送訊息給操作員的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
   
-> **注意：** 您必須先定義操作員的電子郵件地址，他們才能接收訊息。  
+> **注意：** 電子郵件地址必須定義運算子，才能接收訊息。  
   
 `[ @subject = ] 'subject'` 電子郵件訊息主旨。 *主旨*已**nvarchar(256)** 沒有預設值。  
   
 `[ @body = ] 'message'` 電子郵件訊息的本文。 *訊息*已**nvarchar （max)** 沒有預設值。  
   
-`[ @file_attachments = ] 'attachment'` 要附加至電子郵件訊息的檔案名稱。 *附件*已**nvarchar(512)**，沒有預設值。  
+`[ @file_attachments = ] 'attachment'` 要附加至電子郵件訊息的檔案名稱。 *附件*已**nvarchar(512)** ，沒有預設值。  
   
-`[ @mail_database = ] 'mail_host_database'` 指定郵件主機資料庫的名稱。 *mail_host_database*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果沒有*mail_host_database*指定，則**msdb**預設會使用資料庫。  
+`[ @mail_database = ] 'mail_host_database'` 指定郵件主機資料庫的名稱。 *mail_host_database*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果沒有*mail_host_database*指定，則**msdb**預設會使用資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

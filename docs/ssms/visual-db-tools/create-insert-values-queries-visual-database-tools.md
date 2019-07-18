@@ -17,15 +17,15 @@ helpviewer_keywords:
 - adding rows
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99948bd6e29a3d578f1db8faaea6724bff33bc52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: f819a9ef1dacf7247c318ff90be5036579e2882d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820356"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687769"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>建立插入值查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,14 +54,14 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
   
 1.  將要更新的資料表加入至 [圖表] 窗格。  
   
-2.  在 [查詢設計工具] 功能表中指向 [變更類型]，然後按一下 [插入值]。  
+2.  在 [查詢設計工具]  功能表中指向 [變更類型]  ，然後按一下 [插入值]  。  
   
     > [!NOTE]  
     > 當啟動 [插入值] 查詢時，[圖表] 窗格中若顯示一個以上之資料表，[查詢和檢視表設計工具] 會顯示[選擇插入值的目標資料表對話方塊](../../ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md)，詢問要更新的資料表名稱。  
   
 3.  在 [圖表] 窗格中，按一下要提供新值之各資料行的核取方塊。 這些資料行將顯示在 [準則] 窗格中。 只有加入查詢中的資料行才會更新。  
   
-4.  在 [準則] 窗格之 [新值] 資料行中，輸入資料行的新值。 您可輸入常值、資料行名稱或運算式。 該值必須符合 (或相容於) 正在更新之資料行的資料類型。  
+4.  在 [準則] 窗格之 [新值]  資料行中，輸入資料行的新值。 您可輸入常值、資料行名稱或運算式。 該值必須符合 (或相容於) 正在更新之資料行的資料類型。  
   
     > [!CAUTION]  
     > 查詢和檢視設計師不會檢查值是否符合要插入之資料行的長度。 如果提供的值太長，它可能會無預警地被截斷。 例如，如果 `name` 資料行的長度是 20 個字元，但是您指定了 25 個字元的插入值，最後 5 個字元可能會被截斷。  

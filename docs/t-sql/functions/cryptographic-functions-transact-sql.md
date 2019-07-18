@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security functions
 - encryption [SQL Server], functions
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7ae9827dd72fc8c3028f4c52e87245ebae4c6cfb
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 2df32344ce2359419f5b0b66b7f5e429f9edebc0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944563"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

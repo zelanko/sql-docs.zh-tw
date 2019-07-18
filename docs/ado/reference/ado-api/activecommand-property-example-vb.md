@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d97f655c89c07f7866fbdee6aab236f942b5499c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921685"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 屬性範例 (VB)
 此範例示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
@@ -93,7 +92,7 @@ End Sub
   
  **ActiveCommandXprint**常式提供只**資料錄集**物件，但它必須列印命令文字和參數，建立**資料錄集**。 因為可以完成這**Recordset**物件的**ActiveCommand**屬性會產生相關聯[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
   
- **命令**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性會產生建立參數化的命令**資料錄集**。 **命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合產生的已取代為命令的參數預留位置的值 ("**？**")。  
+ **命令**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性會產生建立參數化的命令**資料錄集**。 **命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合產生的已取代為命令的參數預留位置的值 (" **？** ")。  
   
  最後，會列印錯誤訊息或作者的名稱和識別碼。  
   

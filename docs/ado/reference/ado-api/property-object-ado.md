@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5abbc13ac3ba9690f341e365ee14b0b72fcc6ca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917548"
 ---
 # <a name="property-object-ado"></a>Property 物件 (ADO)
 表示提供者會定義於 ADO 物件的動態特性。  

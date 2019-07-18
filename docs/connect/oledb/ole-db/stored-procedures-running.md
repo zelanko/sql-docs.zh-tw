@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a016e7c0d6ffb59b01ab679bbe21029558f7966b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830786"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795900"
 ---
 # <a name="stored-procedures---running"></a>預存程序 - 執行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

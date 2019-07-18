@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：新增和設定 Foreach 迴圈容器 | Microsoft Docs
+title: 步驟 2:新增和設定 Foreach 迴圈容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4db32185da7c27d94b0afb52230aa89ff71abf95
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65722738"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 課：新增和設定 Foreach 迴圈容器
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在這個工作中，您要新增在一般檔案的資料夾中形成迴圈的功能，並對每個一般檔案套用第 1 課的資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
   
@@ -39,48 +43,48 @@ ms.locfileid: "58280162"
   
 ## <a name="add-a-foreach-loop-container"></a>新增 Foreach 迴圈容器  
   
-1.  在 **SQL Server Data Tools** 中，選取 [控制流程] 索引標籤。  
+1.  在 **SQL Server Data Tools** 中，選取 [控制流程]  索引標籤。  
   
-2.  在 [SSIS 工具箱] 中，展開 [容器]，然後將 [Foreach 迴圈容器] 拖曳至 [控制流程] 索引標籤的設計介面中。  
+2.  在 [SSIS 工具箱]  中，展開 [容器]  ，然後將 [Foreach 迴圈容器]  拖曳至 [控制流程]  索引標籤的設計介面中。  
   
-3.  以滑鼠右鍵按一下新的 [Foreach 迴圈容器]，並選取 [編輯]。  
+3.  以滑鼠右鍵按一下新的 [Foreach 迴圈容器]  ，並選取 [編輯]  。  
   
-4.  在 [Foreach 迴圈編輯器] 對話方塊的 [一般] 頁面上，對 [名稱] 輸入 **Foreach File in Folder**。 選取 [確定]。  
+4.  在 [Foreach 迴圈編輯器]  對話方塊的 [一般]  頁面上，對 [名稱]  輸入 **Foreach File in Folder**。 選取 [確定]  。  
   
-5.  以滑鼠右鍵按一下 Foreach 迴圈容器，選取 [屬性]，然後在 [屬性] 視窗中，確認 **LocaleID** 屬性是設為 [英文 (美國)]。  
+5.  以滑鼠右鍵按一下 Foreach 迴圈容器，選取 [屬性]  ，然後在 [屬性]  視窗中，確認 **LocaleID** 屬性是設為 [英文 (美國)]  。  
   
 ## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>設定 Foreach 迴圈容器的列舉程式  
   
-1.  按兩下 [Foreach File in Folder]，來重新開啟 [Foreach 迴圈編輯器]。  
+1.  按兩下 [Foreach File in Folder]  ，來重新開啟 [Foreach 迴圈編輯器]  。  
   
-2.  選取 [集合]。  
+2.  選取 [集合]  。  
   
-3.  在 [集合] 頁面上，選取 [Foreach 檔案列舉值]。  
+3.  在 [集合]  頁面上，選取 [Foreach 檔案列舉值]  。  
   
-4.  在 [列舉程式設定] 群組中，選取 [瀏覽]。  
+4.  在 [列舉程式設定]  群組中，選取 [瀏覽]  。  
   
-5.  在 [瀏覽資料夾] 對話方塊中，尋找電腦上包含 Currency_*.txt 檔案 (含有範例資料) 的資料夾。
+5.  在 [瀏覽資料夾]  對話方塊中，尋找電腦上包含 Currency_*.txt 檔案 (含有範例資料) 的資料夾。
 
-6.  在 [檔案] 方塊中，輸入 **Currency_\*.txt**。  
+6.  在 [檔案]  方塊中，輸入 **Currency_\*.txt**。  
   
 ## <a name="map-the-enumerator-to-a-user-defined-variable"></a>將列舉程式對應到使用者定義的變數  
   
-1.  選取 [變數對應]。  
+1.  選取 [變數對應]  。  
   
-2.  在 [變數對應] 頁面的 [變數] 欄位中，選取空白資料格，然後選取 [\<新增變數...>]。  
+2.  在 [變數對應]  頁面的 [變數]  欄位中，選取空白資料格，然後選取 [\<新增變數...>]  。  
   
-3.  在 [新增變數] 對話方塊中，對 [名稱] 輸入 **varFileName**。  
+3.  在 [新增變數]  對話方塊中，對 [名稱]  輸入 **varFileName**。  
   
     > [!NOTE]  
     > 變數名稱會區分大小寫。  
   
-4.  選取 [確定]。  
+4.  選取 [確定]  。  
   
-5.  再次選取 [確定] 來結束 [Foreach 迴圈編輯器] 對話方塊。  
+5.  再次選取 [確定]  來結束 [Foreach 迴圈編輯器]  對話方塊。  
   
 ## <a name="add-the-data-flow-task-to-the-loop"></a>將資料流程工作新增到迴圈  
   
--   將 [擷取範例貨幣資料] 資料流程工作拖曳到 **Foreach File in Folder** 這個 Foreach 迴圈容器。  
+-   將 [擷取範例貨幣資料]  資料流程工作拖曳到 **Foreach File in Folder** 這個 Foreach 迴圈容器。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作  
 [步驟 3：修改一般檔案連線管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  

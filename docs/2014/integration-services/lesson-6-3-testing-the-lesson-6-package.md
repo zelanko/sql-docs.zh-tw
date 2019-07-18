@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890839"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課封裝
+# <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課的封裝
   在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  
   
  若要確認封裝在執行階段使用新值來更新 Directory 屬性，只要執行封裝即可。 因為只有 3 個範例資料檔會複製到新目錄，所以資料流程只會執行 3 次，而不是反覆執行原始資料夾的 14 個檔案。  

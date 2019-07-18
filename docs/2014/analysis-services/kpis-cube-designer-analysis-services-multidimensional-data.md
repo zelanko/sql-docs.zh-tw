@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.f1
@@ -13,15 +12,15 @@ ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079431"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Cube 設計工具) (Analysis Services - 多維度資料)
-  使用 Cube 設計師中的 [KPI] 索引標籤，檢視及編輯所選取之 Cube 檢視的關鍵效能指標 (KPI)。  
+  使用 Cube 設計師中的 [KPI]  索引標籤，檢視及編輯所選取之 Cube 檢視的關鍵效能指標 (KPI)。  
   
 ## <a name="form-view-and-browser-view"></a>表單檢視和瀏覽器檢視  
  檢視或編輯 KPI 時， **[KPI]** 索引標籤支援兩種不同的檢視方式：  
@@ -46,7 +45,7 @@ ms.locfileid: "48089928"
   
 ## <a name="see-also"></a>另請參閱  
  [關鍵效能指標&#40;Kpi&#41;多維度模型中](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [MDX 指令碼基礎觀念&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

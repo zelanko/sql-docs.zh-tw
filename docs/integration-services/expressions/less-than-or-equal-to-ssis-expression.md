@@ -14,14 +14,18 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54e4796f4a4c97dad255dd2e047f184fb8b0b879
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77ce175f9f525e2e65698712b9de6ef11a9ae6d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725257"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行比較來決定第一個運算式是否小於或等於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  
   
 > [!NOTE]  

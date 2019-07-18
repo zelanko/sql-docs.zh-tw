@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f8c58f38f100258ed9c6b0b1a95cbd37273aaa1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c4c34ae8fbfc88bde59b44bc079b1df0dbcdf26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985083"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

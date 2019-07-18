@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078164"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 識別要在其中建立垂直資料分割資料行。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 *資料行*不能是 NULL 時*操作*設定為**卸除**。 若要從發行項排除資料行，請執行**sp_mergearticlecolumn**並指定*資料行*並`@operation = N'drop'`要移除的每一個資料行從指定*文章*.  
   
-`[ @operation = ] 'operation'` 這是複寫狀態。 *作業*已**nvarchar(4)**，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
+`[ @operation = ] 'operation'` 這是複寫狀態。 *作業*已**nvarchar(4)** ，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
   
-`[ @schema_replication = ] 'schema_replication'` 指定合併代理程式執行時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @schema_replication = ] 'schema_replication'` 指定合併代理程式執行時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)** ，預設值是 FALSE。  
   
 > [!NOTE]  
 >  只有**假**支援*schema_replication*。  

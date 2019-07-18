@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786677"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR 已啟用伺服器組態選項
   使用 clr enabled 選項來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否能執行使用者組件。 clr enabled 選項提供下列值。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6d104be53fa742494a3f7dca759df4105e32874
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057614"
 ---
 # <a name="multicast-transformation-editor"></a>多點傳送轉換編輯器
   使用 **[多點傳送轉換編輯器]** 對話方塊檢視和設定每個轉換輸出的屬性。  
@@ -32,7 +31,7 @@ ms.locfileid: "58379086"
  在左方選取輸出，即可在右方檢視其在資料表中的屬性。  
   
  **屬性**  
- 除了 [名稱] 和 [描述] 以外，所有列出的輸出屬性都是唯讀的。  
+ 除了 [名稱]  和 [描述]  以外，所有列出的輸出屬性都是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

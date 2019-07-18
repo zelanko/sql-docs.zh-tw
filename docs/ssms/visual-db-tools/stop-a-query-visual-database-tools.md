@@ -12,15 +12,15 @@ helpviewer_keywords:
 - stopping queries
 - queries [SQL Server], stopping
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 558ab142fba5cec7a4603aaa65d8a64fa6163d5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: a07fad827c7b255bd9f66c1da0acd1ec6ea777ff
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607670"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689721"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>停止查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47607670"
   
 ### <a name="to-stop-a-query"></a>若要停止查詢  
   
--   在[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)的任何位置上按一下滑鼠右鍵，在快速鍵功能表指向 [窗格]，再按 [清除結果]。  
+-   在[結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)的任何位置上按一下滑鼠右鍵，在快速鍵功能表指向 [窗格]  ，再按 [清除結果]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [清除查詢結果 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  

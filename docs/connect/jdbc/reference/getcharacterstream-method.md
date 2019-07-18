@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 70a5a8c8-791a-43f9-8a0e-1c390f30857c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e4ee34cb5206ebcda3134c137d4ba09e5a6a8f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: deed81383c6fc813d971019ee0843b8098f2e400
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789231"
 ---
 # <a name="getcharacterstream-method-"></a>getCharacterStream 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ public java.io.Reader getCharacterStream()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 讀取器物件，其中包含**CLOB**資料。  
+ Reader 物件，包含 **CLOB** 資料。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getCharacterStream 方法是由 java.sql.Clob 介面中的 getCharacterStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

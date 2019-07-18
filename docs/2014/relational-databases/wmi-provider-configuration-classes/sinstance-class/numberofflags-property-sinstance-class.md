@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137238"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 屬性 (SInstance 類別)
   取得旗標數目的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -41,7 +41,7 @@ object
  [SInstance 類別](sinstance-class.md)物件，表示伺服器執行個體。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定 `uint32` 執行個體之旗標數目的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值。  
+ 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之旗標數目的 `uint32` 值。  
   
 ## <a name="remarks"></a>備註  
   

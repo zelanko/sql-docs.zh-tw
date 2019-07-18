@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006579"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>編輯類型對應 (AccessToSQL)
 **編輯類型對應**對話方塊可讓您指定類型的來源和目的地的資料庫物件之間的對應方式。  
@@ -35,10 +34,10 @@ ms.locfileid: "47675406"
 下列欄位的可變長度資料類型時，會出現下**來源類型**:  
   
 **來源**  
-指定此對應的最小長度。 例如，對於**文字**資料類型，您可以輸入 10，以指定此對應是範圍開始**text(10)**。  
+指定此對應的最小長度。 例如，對於**文字**資料類型，您可以輸入 10，以指定此對應是範圍開始**text(10)** 。  
   
-**若要**  
-指定此對應的最大長度。 例如，對於**文字**資料類型，您可以輸入以指定此對應是範圍結束時間的 20 **text(20)**。  
+**To**  
+指定此對應的最大長度。 例如，對於**文字**資料類型，您可以輸入以指定此對應是範圍結束時間的 20 **text(20)** 。  
   
 **目標類型**  
 選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所對應至來源資料類型的資料類型。 SSMA 當建立資料表或預存程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，來源資料類型會變更為此資料型別。  
@@ -46,5 +45,5 @@ ms.locfileid: "47675406"
 下列欄位的可變長度資料類型時，會出現下**目標類型**:  
   
 **Replace with**  
-指定此對應的目標長度。 例如，對於**nvarchar**資料類型，您可以輸入來指定指定的來源資料類型都應該對應至 20 **nvarchar(20)**。  
+指定此對應的目標長度。 例如，對於**nvarchar**資料類型，您可以輸入來指定指定的來源資料類型都應該對應至 20 **nvarchar(20)** 。  
   

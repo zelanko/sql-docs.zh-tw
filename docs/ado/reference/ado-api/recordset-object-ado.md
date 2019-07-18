@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931369"
 ---
 # <a name="recordset-object-ado"></a>Recordset 物件 (ADO)
 代表整個記錄集的基底資料表或執行命令的結果。 在任何時候**資料錄集**物件是指單一資料錄和目前的記錄集內。  

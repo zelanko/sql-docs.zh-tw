@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aa12d4c61f8dae99a948cde69e2370665977227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 526f97ab2427aa6834614c9b31201b780ae25e9e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124668"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860541"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 複寫的快照集初始化選項 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,28 +27,30 @@ ms.locfileid: "54124668"
 [使用快照集來初始化訂閱](initialize-a-subscription-with-a-snapshot.md)時，有幾個要指定的選項。
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>指定快照集格式 (SQL Server Management Studio)
-  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上，指定快照集格式。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上，指定快照集格式。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 ### <a name="to-specify-snapshot-format"></a>若要指定快照集格式  
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上，選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器] 或 [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要]。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上，選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]  或 [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要]  。  
   
     > [!NOTE]  
     >  建議您選取原生格式，除非此發行集必須支援對 SQL Server Compact 資料庫或非 SQL Server 資料庫的訂閱。  
   
-2.  選取 [確定]。   
+2.  選取 [確定]  。   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="snapshot-folder-locations"></a>快照集資料夾位置
 
 ### <a name="default-snapshot-location"></a>預設快照集位置
 在「設定散發精靈」的 **[快照集資料夾]** 頁面中指定預設快照集位置。 如需使用此精靈的詳細資訊，請參閱[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果您在未設定為「散發者」的伺服器上建立發行集，則請在「新增發行集精靈」的 **[快照集資料夾]** 頁面中指定預設快照集位置。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，修改預設快照集位置。 如需詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在 [發行集屬性 - \<發行集>] 對話方塊中為每個發行集設定快照集資料夾。 如需詳細資訊，請參閱 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，修改預設快照集位置。 如需詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在 [發行集屬性 - \<發行集>]  對話方塊中為每個發行集設定快照集資料夾。 如需詳細資訊，請參閱 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>若要修改預設快照集位置  
   
-1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 (**…**)。    
-2.  在 [發行者屬性 - \<發行者>] 對話方塊中，輸入 [預設快照集資料夾] 屬性的值。  
+1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 ( **...** )。    
+2.  在 [發行者屬性 - \<發行者>]  對話方塊中，輸入 [預設快照集資料夾]  屬性的值。  
   
     > [!NOTE]  
     >  快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，您必須指定一個共用目錄作為通用命名慣例 (UNC) 路徑，例如 \\\computername\snapshot。 如需詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。    
@@ -63,24 +65,24 @@ ms.locfileid: "54124668"
 如果您要指定替代快照集的資料夾位置或是壓縮快照集檔，請立即建立發行集 (但不要立刻建立初始快照集)、設定快照集位置的發行集屬性，然後對此發行集執行「快照集代理程式」(Snapshot Agent)。 如果您在建立初始快照集後變更替代位置，則不會將發行集任何產生的快照集重新放置到新的替代位置。 在此狀況下，「合併代理程序」或「散發代理程序」可能無法在新的替代位置找到快照集檔案，這取決於此發行集的設定。  
   
 > [!NOTE]  
->  請勿使用 [發行集屬性] 對話方塊或 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 指定與預設快照集資料夾位置相同的替代位置。  
+>  請勿使用 [發行集屬性]  對話方塊或 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 指定與預設快照集資料夾位置相同的替代位置。  
   
 > [!CAUTION]  
 >  請勿同時使用 WebSync 和替代快照集資料夾位置。  
   
 #### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上：  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上：  
   
-    1.  選取 **[將檔案放在下列資料夾中]**，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
+    1.  選取 **[將檔案放在下列資料夾中]** ，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
   
         > [!NOTE]  
         >  快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，您必須指定一個共用目錄作為通用命名慣例 (UNC) 路徑，例如 \\\computername\snapshot。 如需詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
     2.  除非您需要將快照集檔案寫入兩個位置，否則請清除 **[將檔案放在預設資料夾]** 。  
   
-     若要壓縮快照集檔案，請選取 **[壓縮這個位置中的快照集檔案]**。 壓縮通常用於低頻寬連接和抽取式媒體上的替代快照集位置，例如 CD-ROM。  
+     若要壓縮快照集檔案，請選取 **[壓縮這個位置中的快照集檔案]** 。 壓縮通常用於低頻寬連接和抽取式媒體上的替代快照集位置，例如 CD-ROM。  
   
-2.  選取 [確定]。  
+2.  選取 [確定]  。  
   
 #### <a name="use-transact-sql"></a>使用 Transact-SQL 
 
@@ -97,9 +99,9 @@ ms.locfileid: "54124668"
 >  在某些情況下，壓縮的快照集可以改善網路之間傳送快照集檔案的效能。 不過，壓縮快照集需要由快照集代理程式在產生快照集檔案時，進行其他處理動作；並於套用快照集檔案時，進行散發代理程式或合併代理程式。 如此可能會減緩快照集的產生且在某些情況下會增加套用快照集的時間。 此外，若發生網路失敗，則無法繼續壓縮快照集；因此並不適合不穩定的網路。 透過網路使用壓縮快照集時，仔細考量這些權衡問題。  
   
 ### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上：  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上：  
   
-    1.  選取 **[將檔案放在下列資料夾中]**，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
+    1.  選取 **[將檔案放在下列資料夾中]** ，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
   
         > [!NOTE]  
         >  快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 若是使用提取訂閱，則必須指定一個共用目錄作為通用命名慣例 (UNC) 路徑，例如 \\\computername\snapshot。 如需詳細資訊，請參閱[保護快照集資料夾](security/secure-the-snapshot-folder.md)。  
@@ -109,8 +111,8 @@ ms.locfileid: "54124668"
         > [!NOTE]  
         >  如果選取這個核取方塊，則不會壓縮儲存在預設資料夾中的檔案。 壓縮的檔案只能儲存在上一個步驟中指定的其他位置。  
   
-2.  選取 **[壓縮此資料夾中的快照集檔案]**。    
-3.  選取 [確定]。   
+2.  選取 **[壓縮此資料夾中的快照集檔案]** 。    
+3.  選取 [確定]  。   
 
 ### <a name="use-transact-sql"></a>使用 Transact-SQL
 
@@ -127,7 +129,7 @@ ms.locfileid: "54124668"
 
 ### <a name="execute-a-script"></a>執行指令碼 
 
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上：    
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上：    
     -   若要在套用快照集之前指定要執行的指令碼，請按一下 **[瀏覽]** 以瀏覽到指令碼，或在 **[套用快照前執行此指令碼]** 文字方塊中輸入指令碼的路徑。  
   
         > [!NOTE]  

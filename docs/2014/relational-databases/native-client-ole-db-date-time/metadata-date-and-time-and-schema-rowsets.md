@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63238017"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和時間以及結構描述資料列集
   本主題提供有關 COLUMNS 資料列集和 PROCEDURE_PARAMETERS 資料列集的資訊。 這項資訊與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引進的 OLE DB 日期和時間增強功能相關。  
@@ -25,12 +25,12 @@ ms.locfileid: "52774750"
 ## <a name="columns-rowset"></a>COLUMNS 資料列集  
  系統會傳回日期/時間類型的下列資料行值：  
   
-|資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
+|資料行型別|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |日期|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|將|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|將|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|將|0..7|  
   
@@ -64,9 +64,9 @@ ms.locfileid: "52774750"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 資料列集  
  系統會傳回日期/時間類型的下列資料列：  
   
-|類型 -><br /><br /> 「資料行」|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|類型-><br /><br /> 「資料行」|日期|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|日期|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -78,7 +78,7 @@ ms.locfileid: "52774750"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|日期|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -91,6 +91,6 @@ ms.locfileid: "52774750"
  OLE DB 只會定義數值和十進位類型的 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 對於 time、datetime2 和 datetimeoffset 這些資料行的用法不是標準的。  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

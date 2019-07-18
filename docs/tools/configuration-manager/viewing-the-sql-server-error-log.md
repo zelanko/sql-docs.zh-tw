@@ -15,16 +15,16 @@ helpviewer_keywords:
 - displaying SQL Server error log
 - logs [SQL Server], SQL Server error logs
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 85507ac52f43d3496d73ae2aed88dd7f8b693b99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72a31eba78f2eca2763ce2c07b4c1ed8dcc81991
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718736"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728115"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>檢視 SQL Server 錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

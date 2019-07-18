@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933292"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 建立新[參數](../../../ado/reference/ado-api/parameter-object.md)具有指定之屬性的物件。  
@@ -38,7 +37,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  傳回**參數**物件。  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  選擇性。 A**字串**值，包含名稱**參數**物件。  
   
  *型別*  

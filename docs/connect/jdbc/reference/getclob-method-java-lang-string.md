@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f546a846b96b3c0d518663fbf52edb033631a7ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c070bb12da865d1a5a43d2cb5ddf9a7f6a28fc5c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763681"
 ---
 # <a name="getclob-method-javalangstring"></a>getClob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式設計語言，並配合所指定參數名稱來擷取指定 JDBC BLOB 參數的值作為 Clob 物件。  
+  使用 Java 程式設計語言，並配合指定的參數名稱來擷取所指定 JDBC BLOB 參數值作為 Clob 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ public java.sql.Clob getClob(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getClob 方法是由 java.sql.CallableStatement 介面中的 getClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

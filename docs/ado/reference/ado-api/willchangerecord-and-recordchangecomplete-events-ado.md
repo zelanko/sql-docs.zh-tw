@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938671"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**之前一或多個資料錄 （資料列），會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)變更。 **RecordChangeComplete**事件被呼叫一次之後，或更多記錄變更。  
@@ -62,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  A**資料錄集**物件。 **資料錄集**如發生此事件。  
   
 ## <a name="remarks"></a>備註  
- A **WillChangeRecord**或是**RecordChangeComplete**可能會發生事件之變更的第一個欄位，因為下列資料列中**資料錄集**作業： [更新](../../../ado/reference/ado-api/update-method.md)，[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)， [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，以及[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)。 值**Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)決定哪個作業導致發生的事件。  
+ A **WillChangeRecord**或是**RecordChangeComplete**可能會發生事件之變更的第一個欄位，因為下列資料列中**資料錄集**作業：[更新](../../../ado/reference/ado-api/update-method.md)，[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)， [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，以及[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). 值**Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)決定哪個作業導致發生的事件。  
   
  期間**WillChangeRecord**事件， **Recordset** [篩選](../../../ado/reference/ado-api/filter-property.md)屬性設定為**adFilterAffectedRecords**。 處理事件時，您無法變更此屬性。  
   

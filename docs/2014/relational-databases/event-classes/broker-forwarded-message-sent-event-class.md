@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664004"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 轉寄訊息時，會產生 Broker:Forwarded Message Sent 事件。  

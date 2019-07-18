@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], incremental
@@ -22,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0c5f02329b1975428832bc3f781c2e4e76b9c191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142468"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090373"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
   您可以利用下列方式在文字間移動：  
@@ -38,10 +37,10 @@ ms.locfileid: "48142468"
   
 -   滑鼠和導覽鍵。  
   
--   [移至] 命令。  
+-   [移至]  命令。  
   
 > [!NOTE]  
->  如需完整的鍵盤快速鍵清單，請參閱[SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
+>  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="navigating-with-bookmarks"></a>利用書籤導覽  
  若要在其他位置編輯文件，之後，再返回原始位置，請加入書籤。 您先設定好書籤，再利用鍵盤快速鍵來移到書籤。 請在書籤視窗中檢視書籤。  
@@ -65,11 +64,11 @@ ms.locfileid: "48142468"
 -   利用 CTRL+向上鍵和 CTRL+向下鍵，在不移動插入點的情況下，捲動檢視。  
   
 ## <a name="go-to-command"></a>[移至] 命令  
- 請使用 [移至] 命令移至特定行號。 若要顯示行號，請在 選項 對話方塊中，依序按一下 文字編輯器所有語言一般，然後選取 行號。  
+ 請使用 [移至]  命令移至特定行號。 若要顯示行號，請在 選項  對話方塊中，依序按一下 文字編輯器  所有語言  一般  ，然後選取 行號  。  
   
  **移至特定行號**  
   
-1.  在 [編輯] 功能表上，按一下 [移至]  
+1.  在 [編輯]  功能表上，按一下 [移至]   
   
 2.  輸入您想檢視的行號  
   

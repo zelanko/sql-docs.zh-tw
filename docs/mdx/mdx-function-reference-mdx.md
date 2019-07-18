@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003508"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函數參考 (MDX)
 

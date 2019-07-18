@@ -20,12 +20,12 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae19cf74753b07dba1e6c274f1a102e1fe745f1c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 209f11341fa8825e7c67281a8a58ccb338a1376b
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325521"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463580"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
 
@@ -39,7 +39,7 @@ ms.locfileid: "58325521"
 
 - Analysis Services
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - Reporting Services
 ::: moniker-end
 
@@ -116,7 +116,7 @@ ms.locfileid: "58325521"
 
 ## <a name="preventing-ip-address-conflicts"></a>防止 IP 位址衝突
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的獨立執行個體並行安裝時，務必避免 IP 位址發生 TCP 連接埠號碼衝突。 通常兩個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體同樣設定為使用預設 TCP 通訊埠 (1433) 時，就會發生衝突。 為避免發生衝突，請將其中一個執行個體設定為使用非預設固定通訊埠。 在獨立執行個體上設定固定通訊埠通常最為簡單。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用不同的通訊埠，就能防止發生非預期的 IP 位址/TCP 通訊埠衝突，以免造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體失敗而移轉至待命節點時，執行個體無法啟動。
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的獨立執行個體並行安裝時，務必避免 IP 位址發生 TCP 連接埠號碼衝突。 通常兩個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體同樣設定為使用預設 TCP 通訊埠 (1433) 時，就會發生衝突。 為避免發生衝突，請將其中一個執行個體設定為使用非預設固定通訊埠。 在獨立執行個體上設定固定通訊埠通常最為簡單。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用不同的連接埠，就能防止發生非預期的 IP 位址/TCP 通訊埠衝突，以免造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體失敗而移轉至待命節點時，執行個體無法啟動。
   
 ## <a name="see-also"></a>另請參閱
 

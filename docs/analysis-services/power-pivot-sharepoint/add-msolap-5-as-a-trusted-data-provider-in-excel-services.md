@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164449"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,17 +24,17 @@ ms.locfileid: "38979450"
   
  只需要為每個 Excel Services 服務應用程式執行此步驟一次。  
   
- 電腦上必須已安裝 OLE DB 提供者， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器或 Excel Services 伺服器等實體伺服器才能處理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料要求。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝一律包含 OLE DB 提供者，但是如果在沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的電腦上執行 Excel Services，您必須手動安裝此提供者。 如需詳細資訊，請參閱 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+ 電腦上必須已安裝 OLE DB 提供者， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器或 Excel Services 伺服器等實體伺服器才能處理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料要求。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝一律包含 OLE DB 提供者，但是如果在沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的電腦上執行 Excel Services，您必須手動安裝此提供者。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>將受信任的提供者加入至 Excel Services  
   
-1.  在 [管理中心]，按一下 **[管理服務應用程式]**，然後按一下 Excel Services 服務應用程式。  
+1.  在 [管理中心]，按一下 **[管理服務應用程式]** ，然後按一下 Excel Services 服務應用程式。  
   
-2.  按一下 **[信任的資料提供者]**。  
+2.  按一下 **[信任的資料提供者]** 。  
   
 3.  確認 MSOLAP.5 出現在清單中。 根據您設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的方式，MSOLAP.5 可能已經是受信任的提供者。  
   
-4.  如果未列出，請按一下 **[新增信任的資料提供者]**。  
+4.  如果未列出，請按一下 **[新增信任的資料提供者]** 。  
   
 5.  在 [提供者識別碼] 中，輸入 **MSOLAP.5**。  
   

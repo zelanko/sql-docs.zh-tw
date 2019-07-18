@@ -22,14 +22,18 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a598695807d978df8dd14635f127949e835b9e7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805255"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，您可以根據這些封裝的儲存位置使用數種工具的其中一種。 工具會列在下表中。  
 
 > [!NOTE]

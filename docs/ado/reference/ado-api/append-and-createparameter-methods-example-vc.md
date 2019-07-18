@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: feb3dd4a2e70b48c9f238e36d9cda417f21d29d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920699"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>附加和 CreateParameter 方法範例 （VC + +）
 這個範例會使用[Append](../../../ado/reference/ado-api/append-method-ado.md)並[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)執行預存程序輸入參數的方法。  

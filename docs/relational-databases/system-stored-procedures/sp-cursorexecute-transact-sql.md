@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108536"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_cursorexecute prepared_handle, cursor
 > [!IMPORTANT]  
 >  如果*ccopt*未指定值，預設值為 OPTIMISTIC，不論*ccopt* sp_cursorprepare 中指定的值。  
   
- *資料列計數*  
+ *rowcount*  
  這是選擇性參數，表示要搭配 AUTO_FETCH 使用的提取緩衝區資料列數目。 預設為 20 個資料列。 *資料列計數*時指派輸入值與傳回值為不同的行為。  
   
 |當做輸入值|當做傳回值|  

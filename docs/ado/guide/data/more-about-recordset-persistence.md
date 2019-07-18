@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924919"
 ---
 # <a name="more-about-recordset-persistence"></a>深入了解資料錄集的保存
 ADO 資料錄集物件支援將儲存的內容**Recordset**使用檔案中的物件及其[儲存](../../../ado/reference/ado-api/save-method.md)方法。 持續儲存的檔案可能位於本機磁碟機，伺服器上，或做為 URL，在 Web 上站台。 更新版本中，還原檔案與[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

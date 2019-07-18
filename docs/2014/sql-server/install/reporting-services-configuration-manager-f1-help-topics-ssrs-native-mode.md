@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -13,12 +12,12 @@ ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f31308a08b177e59cad0193b6a4b15a9888d7e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092670"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
   本節提供 Reporting Services 組態管理員的 F1 說明。  
@@ -37,7 +36,7 @@ ms.locfileid: "48193578"
   
 -   [進階多重網站組態](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
--   [[資料庫]](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
+-   [[資料庫備份]](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
 -   [變更資料庫精靈](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
@@ -58,6 +57,6 @@ ms.locfileid: "48193578"
 -   [向外延展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Reporting Services 組態管理員&#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

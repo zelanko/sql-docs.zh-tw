@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ad4ee1957f295bf13d0346590f621ca87dc6387f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 332a212af082b082379f4b1483c3c869cb8c542e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085596"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>測試使用者的權限 (Master Data Services)
 
@@ -26,11 +25,11 @@ ms.locfileid: "52823402"
   
 ### <a name="to-test-a-users-security"></a>測試使用者的安全性  
   
-1.  在 Internet Explorer 7 及更新版本中，依序按一下 **[工具]**、 **[網際網路選項]** 和 **[安全性]** 索引標籤。  
+1.  在 Internet Explorer 7 及更新版本中，依序按一下 **[工具]** 、 **[網際網路選項]** 和 **[安全性]** 索引標籤。  
   
 2.  依序按一下 **[近端內部網路]** 和 **[自訂等級]** 按鈕。  
   
-3.  在 **[使用者驗證]** 區段中，選擇 **[提示輸入使用者名稱及密碼]**。  
+3.  在 **[使用者驗證]** 區段中，選擇 **[提示輸入使用者名稱及密碼]** 。  
   
 4.  下次您開啟瀏覽器視窗時，將提示您輸入使用者名和密碼。  
   

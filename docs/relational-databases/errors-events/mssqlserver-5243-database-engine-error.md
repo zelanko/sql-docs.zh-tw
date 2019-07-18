@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8919457cb10ae9feaa7e1c82eed5a73860fd6d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446118"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47829756"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|5243|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -47,8 +47,8 @@ ms.locfileid: "47829756"
 
 執行 DBCC CHECKDB：如果沒有完好備份可供使用，請執行不含 REPAIR 子句的 DBCC CHECKDB，以判斷損毀的範圍。 DBCC CHECKDB 將建議適用的 REPAIR 子句。 接著，請執行內含適當 REPAIR 子句的 DBCC CHECKDB，以修復損毀的部分。
 
-> **不支援警示標記！！！！**
-> **不支援 tr 標記！！！！**
+> **不支援警示標記！！！！** 
+> **不支援 tr 標記！！！！** 
 > **不支援 tr 標記！！！！**
 
 如果執行含 REPAIR 子句的 DBCC CHECKDB 並未修正這個問題，請與您的主要支援提供者連絡，再執行這個陳述式。

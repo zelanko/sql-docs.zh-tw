@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f04ba82fe1352a7b04c03fe5bdcf757564271035
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ec27caad2ee9241701d23795d57a89af9809ffa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047360"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>變更衍生階層名稱 (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "52790180"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更衍生階層的名稱。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -35,21 +34,21 @@ ms.locfileid: "52790180"
   
 ### <a name="to-change-a-derived-hierarchy-name"></a>若要變更衍生階層名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列指向 [管理]，然後按一下 [衍生階層]。  
+2.  從功能表列指向 [管理]  ，然後按一下 [衍生階層]  。  
   
-3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
   
 4.  選取要重新命名之衍生階層的資料列。  
   
-5.  按一下 **[編輯]**。  
+5.  按一下 **[編輯]** 。  
   
-6.  在 [編輯衍生階層] 頁面上，按一下衍生階層名稱旁邊的鉛筆圖示。  
+6.  在 [編輯衍生階層]  頁面上，按一下衍生階層名稱旁邊的鉛筆圖示。  
   
-7.  在 [衍生階層名稱] 方塊中，輸入階層的更新名稱。  
+7.  在 [衍生階層名稱]  方塊中，輸入階層的更新名稱。  
   
-8.  按一下 [儲存衍生階層]。  
+8.  按一下 [儲存衍生階層]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   

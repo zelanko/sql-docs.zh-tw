@@ -1,7 +1,7 @@
 ---
 title: Windows 事件追蹤目標 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66198318"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 
@@ -60,7 +60,8 @@ ms.locfileid: "58478113"
 |default_etw_session_logfile_size_mb|任何不帶正負號的整數。 此為選擇性的值。|擴充事件工作階段的記錄檔案大小 (以 MB 為單位)。 預設值是 20 MB。|  
 |default_etw_session_buffer_size_kb|任何不帶正負號的整數。 此為選擇性的值。|擴充事件工作階段的記憶體中緩衝區大小 (以 KB 為單位)。 預設值是 128 KB。|  
 |重試次數|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值是 0。|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  這些設定都是選擇性的。 ETW 目標會使用這些設定的預設值。  
   
  ETW 目標負責以下工作：  
@@ -80,19 +81,22 @@ ms.locfileid: "58478113"
     > [!IMPORTANT]  
     >  當第一個工作階段啟動之後，將無法變更檔案路徑。  
   
--   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
-  
+-   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將 ETW 目標加入至擴充事件工作階段，您必須在建立或改變事件工作階段時，加入下列陳述式：  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  如需示範如何使用 ETW 目標 (包括如何檢視資料) 之完整範例的詳細資訊，請參閱 [使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 擴充的事件目標](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

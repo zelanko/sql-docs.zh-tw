@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44a4bb146117dd12fedb8b897811100ebd951a32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 622fbdf67d33972500a5047c3886830ba802796a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101450"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性
   SharePoint 提供內建安全性功能，可用來存取 SharePoint 網站和文件庫中的報表伺服器項目。 如果您已經指定網站和清單權限給使用者，則在設定 SharePoint 和報表伺服器之間的整合設定之後，那些相同的使用者就能立即存取報表伺服器項目和作業。  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84e1a9a26d9fb19224f8e40d32cd98bc534d1b4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a9d4d3f5a0fac3abf7d6f6618d79c9a7c3c5aa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128495"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "47689096"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定所提取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型是以 DBTYPE_SQLVARIANT 傳回，在此種情況下，緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型是以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
+|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W:讀取/寫入<br /><br /> 預設：VARIANT_FALSE<br /><br /> 描述：判斷是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT 提取的資料。<br /><br /> VARIANT_TRUE:資料行類型會傳回為 DBTYPE_SQLVARIANT，在此案例的緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE:資料行類型以 DBTYPE_VARIANT 傳回，緩衝區將具有 VARIANT 結構。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料型別&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

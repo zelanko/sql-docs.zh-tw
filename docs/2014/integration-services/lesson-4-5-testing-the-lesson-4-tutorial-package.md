@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891284"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>步驟 5：測試第 4 課的教學課程封裝
   在執行階段，損毀的檔案 Currency_BAD.txt 將無法在 [貨幣索引鍵查閱] 轉換中產生相符者。 因為 [貨幣索引鍵查閱] 的錯誤輸出現在已設定為將失敗的資料列重新導向至新的失敗資料列目的地，所以該元件不會失敗，且封裝會順利執行。 所有失敗的錯誤資料列會寫入至 ErrorOutput.txt。  
@@ -38,9 +38,9 @@ ms.locfileid: "58377816"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>若要執行第 4 課的教學課程封裝  
   
-1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 ### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>若要驗證 ErrorOutput.txt 檔的內容  
   

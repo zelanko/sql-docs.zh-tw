@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986309"
 ---
 # <a name="aggregate-functions---count"></a>彙總函式 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   **命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義的命名空間前置詞。 之後會在 XQuery 主體中使用前置詞。  
   
--   該查詢建構包含 <`NoOfWorkStations`> 元素的 XML。  
+-   此查詢會建構 XML 包含 <`NoOfWorkStations`> 項目。  
   
 -   **Count （)** 函式在 XQuery 主體計數數目 <`Location`> 項目。  
   

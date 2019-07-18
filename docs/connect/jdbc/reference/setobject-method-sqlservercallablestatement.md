@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 107b130fe6aab9c630d659b154679def6862dc04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ee0bca5c0b92c21aabffe0253a00a0cdb17ae1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793816"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788107"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>setObject 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

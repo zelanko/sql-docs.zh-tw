@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f252bf8a7c4fb7ecac2b226f669f5bd114b90574
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921790"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 屬性範例 (JScript)
 此範例示範如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性可以追蹤列舉的所有記錄迴圈的進度[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性，來啟用**AbsolutePosition**藉由設定資料指標，用戶端資料指標的屬性。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AbsolutePositionJS.asp**。  

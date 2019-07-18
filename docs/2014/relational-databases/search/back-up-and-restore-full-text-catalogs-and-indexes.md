@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], restoring
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 932263934fe7ce93a50caec468d7f1444ccae181
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012815"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>備份並還原全文檢索目錄與索引。
   本主題說明如何備份和還原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中建立的全文檢索索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文檢索目錄，您必須識別包含屬於此目錄之全文檢索索引的每個檔案群組。 然後，您必須逐一備份這些檔案群組。  

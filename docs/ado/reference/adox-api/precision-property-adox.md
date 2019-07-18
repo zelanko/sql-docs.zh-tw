@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 596eaa30b1a46c93db26da976f997b2a0beae8aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965566"
 ---
 # <a name="precision-property-adox"></a>Precision 屬性 (ADOX)
 表示中的資料值的最大有效位數[資料行](../../../ado/reference/adox-api/column-object-adox.md)。  
@@ -42,6 +41,6 @@ ms.locfileid: "47657696"
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOX 程式碼範例： NumericScale 和 Precision 屬性範例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ADOX 程式碼範例：NumericScale 和 Precision 屬性範例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type 屬性 (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

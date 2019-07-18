@@ -2,18 +2,18 @@
 title: 圖表上的多個數列 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d5e77dd2ff54fec6e79724c00dc30fa0f727150e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286026"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580631"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>圖表上的多個數列 (報表產生器及 SSRS)
   當圖表上出現多個數列時，您必須決定比較數列的最好方式。 您可以使用堆疊圖表顯示每個數列的相關比例。 如果您只要比較共用共同類別目錄 (x) 軸的兩個數列，請使用副座標軸。 顯示兩個相關資料數列 (例如，價格和數量，或收入和稅額) 時，這相當實用。 如果圖表變成無法讀取，請考慮使用多個圖表區域，在每個數列之間建立更多視覺上的分隔。  

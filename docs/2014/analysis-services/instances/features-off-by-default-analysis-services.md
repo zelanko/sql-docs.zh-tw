@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4730a1874660faf1421a9de11693135c846a9c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59c27d5f34d6e5a3f33e0f153a9077995bd99650
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080014"
 ---
 # <a name="features-off-by-default-analysis-services"></a>預設關閉的功能 (Analysis Services)
   依預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的設計是安全的。 因此，依預設會停用有可能危及安全性的功能。 下列功能會以停用狀態安裝，如果您想要使用這些功能，必須特地加以啟用：  
   
 ## <a name="feature-list"></a>功能清單  
- 若要啟用下列功能，請使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 以滑鼠右鍵按一下執行個體名稱，然後選擇 [Facet]。 或者，可利用下節中所述的伺服器屬性，啟用這些功能。  
+ 若要啟用下列功能，請使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 以滑鼠右鍵按一下執行個體名稱，然後選擇 [Facet]  。 或者，可利用下節中所述的伺服器屬性，啟用這些功能。  
   
 -   特定資料採礦 (OpenRowset) 查詢  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48160645"
 -   使用者定義的函式  
   
 ## <a name="server-properties"></a>伺服器屬性  
- 其他依預設關閉的功能，均可透過伺服器屬性加以啟用。 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 以滑鼠右鍵按一下執行個體名稱，然後選擇 [屬性]。 按一下 [一般] ，然後按一下 [顯示進階]  即可顯示更大的屬性清單。  
+ 其他依預設關閉的功能，均可透過伺服器屬性加以啟用。 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 以滑鼠右鍵按一下執行個體名稱，然後選擇 [屬性]  。 按一下 [一般]  ，然後按一下 [顯示進階]  即可顯示更大的屬性清單。  
   
 -   特定資料採礦 (OpenRowset) 查詢  
   

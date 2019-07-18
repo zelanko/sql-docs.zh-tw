@@ -16,14 +16,18 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53d4bbc5b87dbbf4586baf6418b52076b95f65a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3ec797c98cd0d18408c511b20313b99ca50f04b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724366"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模擬指令碼元件的錯誤輸出
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   雖然您無法在指令碼元件中將輸出直接設定為錯誤輸出，以自動處理錯誤資料列，不過可以建立其他輸出並使用指令碼中的條件式邏輯，適時地將資料列導向此輸出，以重新產生內建錯誤輸出的功能。 您可能會想要加入兩個額外的輸出資料行，以接收發生錯誤的資料行之錯誤碼與識別碼，來模擬內建錯誤輸出的行為。  
   
  如果您需要加入對應至特定預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼之錯誤描述，可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，這個方法可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性取得。  
@@ -37,7 +41,7 @@ ms.locfileid: "58288854"
   
 2.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。 開啟**指令碼轉換編輯器**。  
   
-3.  在 [指令碼] 頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
+3.  在 [指令碼]  頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
   
 4.  按一下 **[編輯指令碼]** 開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
   
@@ -45,9 +49,9 @@ ms.locfileid: "58288854"
   
 6.  關閉 VSTA。  
   
-7.  在 [輸入資料行] 頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
+7.  在 [輸入資料行]  頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
   
-8.  在 [輸入及輸出] 頁面上，新增新的第二個輸出，並將其 **SynchronousInputID** 值設定為輸入的識別碼，這也是預設輸出的 **SynchronousInputID** 屬性值。 將兩個輸出的 **ExclusionGroup** 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
+8.  在 [輸入及輸出]  頁面上，新增新的第二個輸出，並將其 **SynchronousInputID** 值設定為輸入的識別碼，這也是預設輸出的 **SynchronousInputID** 屬性值。 將兩個輸出的 **ExclusionGroup** 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
   
 9. 將額外輸出資料行加入新錯誤輸出，以擷取所需的錯誤資訊，這可能包含發生錯誤的資料行之錯誤碼與識別碼，以及或許還有錯誤描述。 此範例會建立新資料行 ErrorColumn 與 ErrorMessage。 如果您在自己的實作中擷取預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤，請確定加入錯誤號碼的 ErrorCode 資料行。  
   

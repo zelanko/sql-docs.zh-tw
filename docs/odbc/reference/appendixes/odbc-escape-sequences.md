@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990629"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 逸出序列
 ODBC 中，會使用下列的逸出序列。 在本節中的文法將使用中定義的某些項目[SQL 陳述式中使用的項目](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)。  

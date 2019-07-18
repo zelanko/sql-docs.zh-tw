@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c1e764373b0a8877da8dcdcf967ec8a591f1580
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666586"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796094"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：執行參數化查詢
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -114,7 +114,7 @@ sqlsrv_close( $conn);
 前一個範例使用 **sqlsrv_query** 函數來執行查詢。 此函數非常適合用來執行一次性查詢，因為它會同時進行陳述式準備和執行。 **sqlsrv_prepare**/**sqlsrv_execute** 的組合最適合使用不同的參數值來重新執行查詢。 若要查看以不同的參數值重新執行查詢的範例，請參閱下一個範例。  
   
 ## <a name="example"></a>範例  
-下列範例示範當您使用 **sqlsrv_prepare** 函數時如何隱含繫結變數。 此範例會將數個銷售訂單插入 *Sales.SalesOrderDetail* 資料表中。 *$params* 陣列會在呼叫 **sqlsrv_prepare** 時繫結至陳述式 (*$stmt*)。 在每次執行可在資料表中插入新銷售訂單的查詢之前，都會以對應至銷售訂單詳細資料的新值來更新 *$params* 陣列。 後續的查詢執行會使用新的參數值。  
+下列範例示範當您使用 **sqlsrv_prepare** 函數時如何隱含繫結變數。 此範例會將數個銷售訂單插入 *Sales.SalesOrderDetail* 資料表中。 *$params* 陣列會在呼叫 **sqlsrv_prepare** 時繫結至陳述式 ( *$stmt*)。 在每次執行可在資料表中插入新銷售訂單的查詢之前，都會以對應至銷售訂單詳細資料的新值來更新 *$params* 陣列。 後續的查詢執行會使用新的參數值。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   

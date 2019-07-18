@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0088ef5797b258d3c765a4548e3b1cae9d5e0a14
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62473004"
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>自動啟動 SQL Server Agent (SQL Server Management Studio)
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以在非預期地停止時自動重新啟動。  
@@ -59,8 +59,8 @@ ms.locfileid: "52783000"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要設定 SQL Server Agent 自動重新啟動的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，然後按一下 [屬性]  。  
   
-3.  在 **[一般]** 頁面上，核取 **[如果 SQL Server Agent 非預期地停止，則自動予以重新啟動]**。  
+3.  在 **[一般]** 頁面上，核取 **[如果 SQL Server Agent 非預期地停止，則自動予以重新啟動]** 。  
   
   

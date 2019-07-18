@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c5c6076a672c0f86b290f77e35d750550d0a7c2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109734"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 使用主體替代名稱
   此主題說明如何透過修改 rsreportserver.config 檔案和使用 Netsh.exe 工具來設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)，以使用主體替代名稱 (SAN)。  
@@ -29,7 +28,7 @@ ms.locfileid: "56294416"
   
  如果要使用 SAN，必須在伺服器上註冊 SSL 憑證、必須簽署 SSL 憑證，且 SSL 憑證需有私密金鑰。 您不能使用自我簽署憑證。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可設定為使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，它可以允許 SSL 服務接聽、對許多 URL 皆有效，並可和其他應用程式共用 SSL 通訊埠。 SAN 看起來與下列類似：www.s2.com。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可設定為使用 SSL 憑證。 憑證通常只有一個主體名稱，因此一個 SSL (安全通訊端層) 工作階段只允許一個 URL。 SAN 是憑證中的一個額外欄位，它可以允許 SSL 服務接聽、對許多 URL 皆有效，並可和其他應用程式共用 SSL 通訊埠。 SAN 看起來與下列類似： www.s2.com 。  
   
  如需 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SSL 設定的詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   

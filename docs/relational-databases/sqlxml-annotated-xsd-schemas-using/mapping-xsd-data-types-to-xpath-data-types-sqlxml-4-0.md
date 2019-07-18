@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,21 +17,21 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 158619cadcec1b0133b951bf2ce25445319d7ff4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a7f79a4d756a76dc6b59e76bbbfc28076ba36eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067053"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   當 XPath 查詢針對 XSD 結構描述執行，而且已在指定 XSD 類型**xsd: type**屬性，XPath 會使用處理查詢時指定的資料類型。  
   
- 節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示  (EmployeeID 節點用於提供說明)。  
+ 節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示 (EmployeeID 節點用於提供說明)。  
   
 |XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|[SQL Server]<br /><br /> 所使用的轉換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  

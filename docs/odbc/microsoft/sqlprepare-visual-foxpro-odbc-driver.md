@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3ef083829b1ce322f2cede53f853c80683f01cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835ddaf27d097dcfff608649f50c1f7f41a93df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996312"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 一致性： 核心層級  
+ ODBC API 相容性：核心層級  
   
  規劃如何最佳化和執行陳述式會準備 SQL 陳述式。 執行 SQL 陳述式編譯[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)。  
   

@@ -1,8 +1,8 @@
 ---
 title: ReportingServicesService 設定檔 | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7a3a3456a816769217c4b1e8f89ee9ffd8cfe91d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711709"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506626"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
 
@@ -26,12 +26,17 @@ ms.locfileid: "52711709"
 ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
   
 ## <a name="file-location"></a>檔案位置  
- 此檔案位於 \Reporting Services\Report Server\Bin 資料夾中。  
-  
+這個檔案可能位於其中一個下列路徑：  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>編輯指導方針  
  您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## <a name="example-configuration"></a>範例組態  
+## <a name="example-configuration"></a>範例設定  
  下列範例顯示 ReportingServicesService.exe.config 檔中的設定和預設值。  
   
 ```  
@@ -72,7 +77,7 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
 ## <a name="configuration-settings"></a>組態設定  
  下表提供有關特定設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
-|設定|Description|  
+|設定|描述|  
 |-------------|-----------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。|  
 |**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。 有效值包括：<br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  
@@ -86,7 +91,6 @@ ReportingServicesService.exe.config 檔包括設定追蹤的設定。
 |**執行階段**|指定支援與前版回溯相容的組態設定。 執行階段設定是用來重新導向以新版為前版 Microsoft.ReportingServices.Interfaces 之目標的要求。<br /><br /> 本節中的所有組態設定會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件集中加以描述。 如需詳細資訊，請在 MSDN 網站上或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件集中搜尋「執行階段結構描述設定」。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+[Reporting Services 設定檔](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

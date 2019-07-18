@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049604"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;屬性名稱&gt; 屬性 ([服務] 索引標籤)
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **二進位路徑**  
  顯示這個服務使用之程式檔案的位置。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "52757660"
  **啟動模式**  
  將這個服務設定為下列選擇：  
   
--   手動：電腦啟動時，這項服務不會自動啟動。 您必須使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」或其他工具來啟動服務。  
+-   Manual:這項服務沒有自動啟動的電腦啟動時。 您必須使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」或其他工具來啟動服務。  
   
--   自動：這部電腦啟動時，這項服務會嘗試啟動。  
+-   自動：此服務會嘗試這台電腦啟動時啟動。  
   
--   已停用：這項服務無法啟動。  
+-   已停用：無法啟動此服務。  
   
  **狀態**  
  表示這項服務為執行中、已停止或已停用。  

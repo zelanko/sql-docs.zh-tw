@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107394"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。 共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
@@ -44,7 +43,7 @@ ms.locfileid: "56041479"
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
   
 ## <a name="creating-and-modifying-a-shared-data-source"></a>建立與刪除共用資料來源  
- 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源] 權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
+ 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源]  權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
   
  如需有關建立共用資料來源的詳細資訊，請參閱：  
   

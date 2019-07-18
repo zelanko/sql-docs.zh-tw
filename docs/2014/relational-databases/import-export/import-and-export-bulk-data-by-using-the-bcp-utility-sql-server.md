@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd68505153eb43d826f3854bd4f525ed06ea072a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011924"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)
   本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
@@ -73,7 +73,7 @@ ms.locfileid: "48103348"
 ## <a name="see-also"></a>另請參閱  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [SELECT 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp 公用程式](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [準備大量匯入資料 &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   

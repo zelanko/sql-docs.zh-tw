@@ -12,16 +12,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], master jobs
 - master SQL Server Agent job [SQL Server]
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ef65f70b631a2f3200e670ac2bc6389d57a0900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7c6a4389b554788c3228cab644ff2118fc637c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718406"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685780"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server Agent 主要作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

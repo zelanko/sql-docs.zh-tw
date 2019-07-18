@@ -2,7 +2,7 @@
 title: 轉換 CRI 對話方塊 (報表產生器) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: reference
 f1_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CRI
 - custom report items
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0e1b099d3bd92d5dad8d96f4911585c28f54caa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 16d2e745c923e719699c8295e186d5f91e7462da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580801"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>轉換 CRI 對話方塊 (報表產生器)
 
@@ -31,7 +31,7 @@ ms.locfileid: "56294346"
   
 -   **是** ：選擇 **[是]** ，在可能的情況下轉換報表中的所有 CRI。 在 CRI 中不支援的功能無法升級，而且會從報表定義檔案中移除。 如需不支援的功能清單，請參閱 [升級報表](../../reporting-services/install-windows/upgrade-reports.md)。 檢視報表時，您可能會看到 CRI 在報表中顯示的方式有些差異。  
   
--   **否** ：當您不要轉換報表中的 CRI 時，選擇 **[否]** 。 這些 CRI 無法透過報表處理器顯示在其目前的版本中。 如果您的系統管理員打算安裝軟體協力廠商所提供，而且與新報表定義格式相容的新版 CRI，您應該選擇 **[否]**。 在新版本提供之前，CRI 會在報表中顯示為一個有紅色 X 的空文字方塊。  
+-   **否** ：當您不要轉換報表中的 CRI 時，選擇 **[否]** 。 這些 CRI 無法透過報表處理器顯示在其目前的版本中。 如果您的系統管理員打算安裝軟體協力廠商所提供，而且與新報表定義格式相容的新版 CRI，您應該選擇 **[否]** 。 在新版本提供之前，CRI 會在報表中顯示為一個有紅色 X 的空文字方塊。  
   
  在任一種情況下，報表會升級到新的報表定義格式，並將原始報表的備份複本儲存為 *\<報表名稱>* `-` Backup.rdl。 如果您以報表撰寫工具儲存報表，您就是以新的報表定義格式儲存升級的報表。 如果您發行報表，此報表會先儲存在您的電腦中，然後再發行到報表伺服器。 您會將升級版本的報表發行至報表伺服器。  
   

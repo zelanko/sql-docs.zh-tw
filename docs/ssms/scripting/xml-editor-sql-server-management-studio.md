@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adf261e9abf18bce685a98a55c1128c1a121eba4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b0b8c40cbf40f2e51ac988c2c8e03c8bd0463324
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643028"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683259"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,10 +83,10 @@ ms.locfileid: "51643028"
 ## <a name="data-view"></a>資料檢視  
  資料檢視提供資料方格，可以用來修改 .xml 檔案。 只有 XML 檔案中的內容 (但不包含標記和結構) 可以在資料檢視中編輯。  
   
- 資料檢視中有兩個不同的區域： **[資料表]** 與 **[資料]**。 [資料表] 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
+ 資料檢視中有兩個不同的區域：[資料表]  與 [資料]  。 [資料表]  區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
   
 > [!NOTE]  
->  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，但如果不是結構化資料卻嘗試切換到資料檢視，則會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  
+>  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，如果不是結構化資料卻嘗試切換到資料檢視，便會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  
   
  在資料檢視中，您可以：  
   
@@ -100,7 +100,7 @@ ms.locfileid: "51643028"
  XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 鍵入 < 以起始標記，就會出現於該位置可用的元素清單。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。 在 XML 編輯器中，若要存取選項，請在 **[編輯]** 功能表上，按一下 **[IntelliSense]**。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。 在 XML 編輯器中，若要存取選項，請在 **[編輯]** 功能表上，按一下 **[IntelliSense]** 。  
   
 ## <a name="showplan-view"></a>SHOWPLAN 檢視  
  查詢計畫使用 SET SHOWPLAN_XML ON 選項建立時，就可以將查詢計畫以 XML 格式儲存。 在副檔名為 .showplan 的檔案上按兩下，即可開啟查詢計畫。  

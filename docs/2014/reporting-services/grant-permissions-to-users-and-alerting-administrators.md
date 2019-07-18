@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 829b1bd5069dd8fbeb3c2762d19e6d2d9e3f892d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48311ccaa22878fb5b17be75c3f12c64cb4a67e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109055"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
   使用者和警示系統管理員必須經過 SharePoint 權限的授與，才能建立、編輯、刪除及檢視資料警示。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能沒有特殊權限可供使用，您需使用內建的 SharePoint 權限。  
@@ -31,19 +30,19 @@ ms.locfileid: "56036089"
   
 1.  移至您要授與權限的 SharePoint 網站。  
   
-2.  在工具列上，按一下 **[網站動作]** ，然後按一下 **[網站權限]**。  
+2.  在工具列上，按一下 **[網站動作]** ，然後按一下 **[網站權限]** 。  
   
      如果沒有看到此選項，表示您沒有足夠的權限以將權限授與給其他人。  
   
-3.  按一下 **[授與權限]**。  
+3.  按一下 **[授與權限]** 。  
   
-4.  在 [使用者/群組] 中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
+4.  在 [使用者/群組]  中，輸入要授與權限的使用者名稱、群組名稱或電子郵件地址。  
   
 5.  選取 **[加入使用者至 SharePoint 群組]** 或 **[直接授與使用者權限]** 選項。 根據您選取的是 **[新增使用者至 SharePoint 群組]** 或是 **[直接授與使用者權限]** 而定，執行下列其中一項操作：  
   
-    -   如果您選取了 [新增使用者至 SharePoint 群組]，請選取下拉式清單中的權限等級。  
+    -   如果您選取了 [新增使用者至 SharePoint 群組]  ，請選取下拉式清單中的權限等級。  
   
-    -   如果您選取了 **[直接授與使用者權限]**，請選取權限等級。  
+    -   如果您選取了 **[直接授與使用者權限]** ，請選取權限等級。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

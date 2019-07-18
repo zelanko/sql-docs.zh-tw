@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62921072"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>檢視邏輯備份裝置的屬性和內容 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視邏輯備份裝置的屬性和內容。  
@@ -56,13 +56,13 @@ ms.locfileid: "58535833"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 **[伺服器物件]**，然後展開 **[備份裝置]**。  
+2.  展開 **[伺服器物件]** ，然後展開 **[備份裝置]** 。  
   
-3.  按一下裝置，然後以滑鼠右鍵按一下 [屬性]，這時會開啟 [備份裝置] 對話方塊。  
+3.  按一下裝置，然後以滑鼠右鍵按一下 [屬性]  ，這時會開啟 [備份裝置]  對話方塊。  
   
 4.  **[一般]** 頁面會顯示裝置名稱和目的地 (可能是磁帶裝置或檔案路徑)。  
   
-5.  在 **[選取頁面]** 窗格中，按一下 **[媒體內容]**。  
+5.  在 **[選取頁面]** 窗格中，按一下 **[媒體內容]** 。  
   
 6.  右窗格會顯示在下列屬性面板中：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "58535833"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  使用 [RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql) 陳述式。 此範例會傳回 `AdvWrks2008R2Backup` 邏輯備份裝置的資訊。  
   

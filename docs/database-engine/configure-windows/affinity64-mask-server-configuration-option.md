@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 922658c8f8d7840c443e78989bfb625876a563c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c46d6b866ba8d302f2402884f9c6487d2dfbc87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802572"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

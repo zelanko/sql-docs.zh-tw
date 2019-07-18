@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101745"
 ---
 # <a name="role-definitions"></a>角色定義
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色**定義*是一個具名的工作集合，這些工作會定義可在報表伺服器上執行的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  
@@ -30,7 +29,7 @@ ms.locfileid: "56038109"
  當角色用於角色指派時，角色才成為可以作業。 如需角色如何提供安全性的詳細資訊，請參閱 [角色指派](role-assignments.md)。  
   
 ## <a name="types-of-role-definitions"></a>角色定義的類型  
- 角色定義是項目層級或系統層級定義。 「項目層級角色定義」會描述與報表伺服器上儲存和管理之項目 (例如報表、資料夾和模型) 相關的工作。 管理報表、檢視資料夾和管理個別訂閱都是您可以包含在項目層級角色定義中的工作範例。 「系統角色定義」包含套用至整個網站的工作。 檢視報表伺服器屬性是您可能會包含在系統角色中的工作範例。  
+ 角色定義是項目層級或系統層級定義。 「項目層級角色定義」  會描述與報表伺服器上儲存和管理之項目 (例如報表、資料夾和模型) 相關的工作。 管理報表、檢視資料夾和管理個別訂閱都是您可以包含在項目層級角色定義中的工作範例。 「系統角色定義」  包含套用至整個網站的工作。 檢視報表伺服器屬性是您可能會包含在系統角色中的工作範例。  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括一些對應至不同使用者互動層級的預先定義角色。 下列清單含有您可以使用的預先定義角色：  

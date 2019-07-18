@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d9f144d9d896fb75af5f59850c249b9044d1b781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046155"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'dbname'` 是依名稱指定目的地訂閱資料庫的字串。 *dbname*已**sysname**，沒有預設值。  
   
-`[ @filename = ] 'filename'` 是主要 mdf 的實體位置與名稱 (**主要**資料檔案)。 *檔名*已**nvarchar(260)**，沒有預設值。  
+`[ @filename = ] 'filename'` 是主要 mdf 的實體位置與名稱 (**主要**資料檔案)。 *檔名*已**nvarchar(260)** ，沒有預設值。  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` 是要同步處理時，連接到訂閱者時使用的訂閱者的安全性模式。 *subscriber_security_mode*已**int**，預設值是 NULL。  
   
@@ -91,14 +90,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)** ，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
 `[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。 值*job_password*必須小於 120 個 Unicode 字元。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` 這是密碼的使用者定義資料庫主要金鑰。 *db_master_key_password*已**nvarchar(524)**，預設值是 NULL。 如果*db_master_key_password*未指定，將卸除並重新建立現有的資料庫主要金鑰。  
+`[ @db_master_key_password = ] 'db_master_key_password'` 這是密碼的使用者定義資料庫主要金鑰。 *db_master_key_password*已**nvarchar(524)** ，預設值是 NULL。 如果*db_master_key_password*未指定，將卸除並重新建立現有的資料庫主要金鑰。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  

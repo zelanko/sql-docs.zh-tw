@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - UAC
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - windows server 2008
 - Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 42df5757bab7028acebf5213bda35a7466010c40
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104184"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
   如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您有尚未安裝，或將報表伺服器設定，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)並[管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md).  
@@ -74,41 +73,41 @@ ms.locfileid: "56043349"
   
 ###  <a name="bkmk_site_settings"></a> 瀏覽器中受信任的站台設定  
   
-1.  使用 [以系統管理員身分執行] 權限開啟瀏覽器視窗。 從 **[開始]** 功能表按一下 **[所有程式]**，再以滑鼠右鍵按一下 **[Internet Explorer]**，並選取 **[以系統管理員身分執行]**。  
+1.  使用 [以系統管理員身分執行] 權限開啟瀏覽器視窗。 從 **[開始]** 功能表按一下 **[所有程式]** ，再以滑鼠右鍵按一下 **[Internet Explorer]** ，並選取 **[以系統管理員身分執行]** 。  
   
 2.  按一下 **[允許]** 繼續進行。  
   
 3.  在 URL 網址中，輸入報表管理員 URL。 如需指示，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
-4.  按一下 **[工具]**。  
+4.  按一下 **[工具]** 。  
   
-5.  按一下 **[網際網路選項]**。  
+5.  按一下 **[網際網路選項]** 。  
   
-6.  按一下 **[安全性]**。  
+6.  按一下 **[安全性]** 。  
   
-7.  按一下 **[信任的網站]**。  
+7.  按一下 **[信任的網站]** 。  
   
-8.  按一下 **[網站]**。  
+8.  按一下 **[網站]** 。  
   
 9. 加入 `http://<your-server-name>`。  
   
 10. 如果您並未針對預設網站使用 HTTPS，請清除 **[此區域內的所有網站需要伺服器驗證 (https:)]** 核取方塊。  
   
-11. 按一下 **[加入]**。  
+11. 按一下 **[加入]** 。  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ###  <a name="bkmk_configure_folder_settings"></a> 報表管理員資料夾設定  
   
-1.  在報表管理員的首頁上，按一下 **[資料夾設定]**。  
+1.  在報表管理員的首頁上，按一下 **[資料夾設定]** 。  
   
-2.  在 [資料夾設定] 頁面中，按一下 **[安全性]**。  
+2.  在 [資料夾設定] 頁面中，按一下 **[安全性]** 。  
   
-3.  按一下 **[新增角色指派]**。  
+3.  按一下 **[新增角色指派]** 。  
   
 4.  在 [群組或使用者名稱]  欄位中，使用以下格式輸入您的 Windows 使用者帳戶： `<domain>\<user>`。  
   
-5.  選取 **[內容管理員]**。  
+5.  選取 **[內容管理員]** 。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -121,36 +120,36 @@ ms.locfileid: "56043349"
     > [!TIP]  
     >  **注意：** 如果您看不見**站台設定**選項，請關閉並重新開啟瀏覽器並瀏覽至報表管理員，以系統管理權限。  
   
-3.  按一下 **[安全性]**。  
+3.  按一下 **[安全性]** 。  
   
-4.  按一下 **[新增角色指派]**。  
+4.  按一下 **[新增角色指派]** 。  
   
 5.  在 [群組或使用者名稱]  欄位中，使用以下格式輸入您的 Windows 使用者帳戶： `<domain>\<user>`。  
   
-6.  選取 **[系統管理員]**。  
+6.  選取 **[系統管理員]** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  關閉報表管理員。  
   
-9. 在 Internet Explorer 中重新開啟報表管理員，而不使用 **[以系統管理員身分執行]**。  
+9. 在 Internet Explorer 中重新開啟報表管理員，而不使用 **[以系統管理員身分執行]** 。  
   
 ##  <a name="bkmk_configure_ssms"></a> 若要設定 SQL Server Management Studio (SSMS) 來進行本機報表伺服器管理  
  根據預設，您無法存取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中所提供的所有報表伺服器屬性，除非您使用系統管理權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
  **若要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色屬性和角色指派，好讓您不必每次都使用更高權限啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   在 [開始] 功能表中，依序按一下 [所有程式] 與 [SQL Server 2014]、以滑鼠右鍵按一下 [[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]，然後按一下 [以系統管理員身分執行]。  
+-   在 [開始]  功能表中，依序按一下 [所有程式]  與 [SQL Server 2014]  、以滑鼠右鍵按一下 [[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]  ，然後按一下 [以系統管理員身分執行]  。  
   
 -   連接到本機 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器。  
   
--   在 **[安全性]** 節點中，按一下 **[系統角色]**。  
+-   在 **[安全性]** 節點中，按一下 **[系統角色]** 。  
   
--   以滑鼠右鍵按一下 **[系統管理員]** ，然後按一下 **[屬性]**。  
+-   以滑鼠右鍵按一下 **[系統管理員]** ，然後按一下 **[屬性]** 。  
   
--   在 **[系統角色屬性]** 頁面中，選取 **[檢視報表伺服器屬性]**。 選取您想要與系統管理員角色成員產生關聯的任何其他屬性。  
+-   在 **[系統角色屬性]** 頁面中，選取 **[檢視報表伺服器屬性]** 。 選取您想要與系統管理員角色成員產生關聯的任何其他屬性。  
   
--   按一下 [確定] 。  
+-   按一下 [確定]  。  
   
 -   關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
@@ -167,15 +166,15 @@ ms.locfileid: "56043349"
   
  **若要在每次開啟 SSDT 時都以更高權限執行：**  
   
-1.  從 [開始] 畫面中，輸入`sql server`然後按一下滑鼠右鍵**SQL Server Data Tools for Visual Studio**。 按一下 **[以系統管理員身分執行]**。  
+1.  從 [開始] 畫面中，輸入`sql server`然後按一下滑鼠右鍵**SQL Server Data Tools for Visual Studio**。 按一下 **[以系統管理員身分執行]** 。  
   
      **或者**，在舊版作業系統上：  
   
-     在 [開始]  功能表中，依序按一下 [所有程式] 與 [SQL Server 2014] 、以滑鼠右鍵按一下 [SQL Server Data Tools] ，然後按一下 [以系統管理員身分執行] 。  
+     在 [開始]  功能表中，依序按一下 [所有程式]  與 [SQL Server 2014]  、以滑鼠右鍵按一下 [SQL Server Data Tools]  ，然後按一下 [以系統管理員身分執行]  。  
   
 2.  按一下 [ **繼續**]。  
   
-3.  按一下 **[執行程式]**。  
+3.  按一下 **[執行程式]** 。  
   
  您現在應該能夠將報表和其他項目部署到本機報表伺服器。  
   

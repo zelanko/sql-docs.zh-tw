@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63135613"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
   此主題描述如何使用預存程序來修改現有的追蹤。  
@@ -47,7 +47,7 @@ ms.locfileid: "53591842"
     ||NOT NULL|會針對特定的事件關閉資料行。|  
   
 > [!IMPORTANT]
->  不同於一般預存程序，所有的參數[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]預存程序 (<strong>sp_trace_*xx*</strong>) 都有強制類型，而且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+>  與一般的預存程序不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序 (<strong>sp_trace_*xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型的轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
 
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

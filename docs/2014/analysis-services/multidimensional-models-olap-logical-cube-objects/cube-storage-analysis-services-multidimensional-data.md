@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
@@ -19,12 +17,12 @@ ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88bd86cad9eaf3884b19c6a74f6594d8c71ca25d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727656"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cube 儲存體 (Analysis Services - 多維度資料)
   儲存體可以只包含 Cube 中繼資料，或是包含事實資料表的所有來源資料，以及與量值群組相關之維度所定義的彙總。 儲存的資料量取決於選取的儲存模式和彙總數目。 直接儲存的資料數量會影響查詢效能； [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 cube 資料和彙總的儲存體所需的空間減到最少的數個技術：  

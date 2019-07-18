@@ -15,14 +15,18 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d88d3c6f4b0df9e1ff569ca1b68e9d1cc0405e6f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1d15c7d890901d168d6779d1715cf44f5d9b31ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724898"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回移除開頭和尾端空白之後的字元運算式。  
   
 > [!NOTE]  

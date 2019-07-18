@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374140"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284923"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格式模型中的 DAX (SSAS 表格式)
   資料分析運算式 (DAX) 是公式語言，可用來在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 活頁簿和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
@@ -103,9 +102,9 @@ ms.locfileid: "53374140"
 |整數|64 位元 (八位元組) 整數值 <sup>1、2</sup>|沒有小數位數的數字。 整數可以是正數或負數，但必須是 -9,223,372,036,854,775,808 (-2^63) 到 9,223,372,036,854,775,807 (2^63-1) 之間的整數。|  
 |十進位數字|64 位元 (八位元組) 實數 <sup>1、2</sup>|實數是可以有小數位數的數字。 實數涵蓋極廣的值範圍：<br /><br /> 負值是從 -1.79E + 308 到 -2.23E - 308<br /><br /> 零 (0)<br /><br /> 正值是從 2.23E -308 到 1.79E + 308<br /><br /> 不過，有效位數的數目限制為 17 個小數位數。|  
 |布林|布林|True 或 False 值。|  
-|文字|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
-|date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
-|CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
+|Text|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
+|Date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
+|Currency|Currency|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
 |N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  表格式模型也包含資料表資料類型，做為許多 DAX 函數的輸入或輸出。 例如，FILTER 函數會採用資料表做為輸入，並輸出只包含符合篩選條件之資料列的另一份資料表。 您可以結合資料表函數與彙總函式，透過動態定義的資料集執行複雜的計算。  
@@ -125,7 +124,7 @@ ms.locfileid: "53374140"
   
 -   邏輯運算子，其中會結合兩個或多個運算式以傳回單一結果。  
   
- 如需 DAX 公式中使用的運算子的詳細資訊，請參閱[PowerPivot 的 DAX 運算子參考](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)。  
+ 如需 DAX 公式中使用的運算子的詳細資訊，請參閱[PowerPivot 的 DAX 運算子參考](/dax/dax-operator-reference)。  
   
 ##  <a name="bkmk_DAX_Formulas"></a> DAX 公式  
  DAX 公式對於在導出資料行和量值中建立計算，以及使用資料列層級篩選保護資料安全相當重要。 若要建立導出資料行和量值的公式，您將使用公式列以及模型設計師視窗的頂端。 若要建立資料列篩選的公式，您要使用 [角色管理員] 對話方塊。 本節中的資訊是為了讓您開始了解 DAX 公式的基本概念。  
@@ -175,7 +174,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|量值的名稱。|  
 |`=`|等號 (=) 開始公式。|  
-|`COUNTROWS`|[COUNTROWS 函式&#40;DAX&#41; ](https://msdn.microsoft.com/library/ee634574(v=sql.120).aspx)會計算 Date 資料表中的資料列數目|  
+|`COUNTROWS`|[COUNTROWS 函式&#40;DAX&#41; ](/dax/countrows-function-dax)會計算 Date 資料表中的資料列數目|  
 |`()`|左右括號會指定引數。|  
 |`DATESBETWEEN`|DATESBETWEEN 函數會傳回 Date 資料表的 Date 資料行中，每個值最後一個日期間的日期。|  
 |`'Date'`|指定 Date 資料表。 資料表用單引號括住。|  
@@ -206,7 +205,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 >  為確保效能不受到資料行間相依性所需之多個計算的影響，在量值中巢狀函數有一些限制。  
   
 ##  <a name="bkmk_DAX_functions"></a> DAX 函數  
- 本節提供 DAX 支援之函數類型  的概觀。 如需詳細資訊，請參閱 [DAX Function Reference](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 本節提供 DAX 支援之函數類型  的概觀。 如需詳細資訊，請參閱 [DAX Function Reference](/dax/dax-function-reference)。  
   
  DAX 會提供各種函數，您可以使用這些函數來執行使用日期和時間的計算、建立條件式值、處理字串、根據關聯性執行查閱，而且能夠逐一查看資料表以執行遞迴計算。 如果您熟悉 Excel 公式，這些功能很多似乎非常相似，不過，DAX 公式在以下重要方面不同：  
   
@@ -219,28 +218,28 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   DAX 函數包含各種不同的 *「時間智慧」* (Time Intelligence) 函數。 這些函數可讓您定義或選取日期範圍，並根據這些日期或範圍執行動態計算。 例如，您可以比較平行期間的總和。  
   
 ### <a name="date-and-time-functions"></a>日期和時間函數  
- DAX 中的日期和時間函數與 Microsoft Excel 中的日期和時間函數類似。 不過，DAX 函數會以 Microsoft SQL Server 所使用的 `datetime` 資料類型為基礎。 如需詳細資訊，請參閱 <<c0> [ 日期和時間函數&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)。</c0>  
+ DAX 中的日期和時間函數與 Microsoft Excel 中的日期和時間函數類似。 不過，DAX 函數會以 Microsoft SQL Server 所使用的 `datetime` 資料類型為基礎。 如需詳細資訊，請參閱 <<c0> [ 日期和時間函數&#40;DAX&#41;](/dax/date-and-time-functions-dax)。</c0>  
   
 ### <a name="filter-functions"></a>篩選函數  
- DAX 中的篩選函數會傳回特定的資料類型、查閱相關資料表中的值，以及依相關值篩選。 查閱函數會透過使用資料表和關聯性 (例如資料庫) 運作。 篩選函數可讓您操作資料內容來建立動態計算。 如需詳細資訊，請參閱 <<c0> [ 篩選函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)。</c0>  
+ DAX 中的篩選函數會傳回特定的資料類型、查閱相關資料表中的值，以及依相關值篩選。 查閱函數會透過使用資料表和關聯性 (例如資料庫) 運作。 篩選函數可讓您操作資料內容來建立動態計算。 如需詳細資訊，請參閱 <<c0> [ 篩選函式&#40;DAX&#41;](/dax/filter-functions-dax)。</c0>  
   
 ### <a name="information-functions"></a>資訊函數  
- 資訊函數會查看當做引數提供的資料格或資料列，然後告訴您該值是否符合預期的類型。 例如，如果您參考的值包含錯誤，ISERROR 函數會傳回 TRUE。 如需詳細資訊，請參閱 <<c0> [ 資訊函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634552(v=sql.120).aspx)。</c0>  
+ 資訊函數會查看當做引數提供的資料格或資料列，然後告訴您該值是否符合預期的類型。 例如，如果您參考的值包含錯誤，ISERROR 函數會傳回 TRUE。 如需詳細資訊，請參閱 <<c0> [ 資訊函式&#40;DAX&#41;](/dax/information-functions-dax)。</c0>  
   
 ### <a name="logical-functions"></a>邏輯函數  
- 邏輯函數會在運算式上作用，以傳回運算式中值的相關資訊。 例如，TRUE 函數會讓您知道您所評估的運算式是否會傳回 TRUE 值。 如需詳細資訊，請參閱 <<c0> [ 邏輯函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634365(v=sql.120).aspx)。</c0>  
+ 邏輯函數會在運算式上作用，以傳回運算式中值的相關資訊。 例如，TRUE 函數會讓您知道您所評估的運算式是否會傳回 TRUE 值。 如需詳細資訊，請參閱 <<c0> [ 邏輯函式&#40;DAX&#41;](/dax/logical-functions-dax)。</c0>  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>數學和三角函數  
- DAX 中的數學函數與 Excel 的數學和三角函數非常類似。 在 DAX 函數所使用的數值資料類型中有一些小差異。 如需詳細資訊，請參閱 <<c0> [ 數學與三角函數函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634241(v=sql.120).aspx)。</c0>  
+ DAX 中的數學函數與 Excel 的數學和三角函數非常類似。 在 DAX 函數所使用的數值資料類型中有一些小差異。 如需詳細資訊，請參閱 <<c0> [ 數學與三角函數函式&#40;DAX&#41;](/dax/math-and-trig-functions-dax)。</c0>  
   
 ### <a name="statistical-functions"></a>統計函數  
- DAX 提供執行彙總的統計函數。 在 DAX 中，除了可以建立加總與平均值，或尋找最小與最大值之外，您還可以先篩選資料行再進行彙總，或是根據相關資料表建立彙總。 如需詳細資訊，請參閱 <<c0> [ 統計函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634822(v=sql.120).aspx)。</c0>  
+ DAX 提供執行彙總的統計函數。 在 DAX 中，除了可以建立加總與平均值，或尋找最小與最大值之外，您還可以先篩選資料行再進行彙總，或是根據相關資料表建立彙總。 如需詳細資訊，請參閱 <<c0> [ 統計函式&#40;DAX&#41;](/dax/statistical-functions-dax)。</c0>  
   
 ### <a name="text-functions"></a>文字函數  
- DAX 中的文字函數與其在 Excel 中的對應項目非常類似。 您可以傳回字串的一部分、搜尋字串中的文字，或串連字串值。 DAX 也提供了用來控制日期、時間和數字之格式的函數。 如需詳細資訊，請參閱 <<c0> [ 文字的函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634938(v=sql.120).aspx)。</c0>  
+ DAX 中的文字函數與其在 Excel 中的對應項目非常類似。 您可以傳回字串的一部分、搜尋字串中的文字，或串連字串值。 DAX 也提供了用來控制日期、時間和數字之格式的函數。 如需詳細資訊，請參閱 <<c0> [ 文字的函式&#40;DAX&#41;](/dax/text-functions-dax)。</c0>  
   
 ### <a name="time-intelligence-functions"></a>時間智慧函數  
- DAX 中所提供的時間智慧函數可讓您建立使用行事曆與日期之內建知識的計算。 若將時間和日期範圍與彙總或計算搭配使用，您可以針對銷售量、存貨等等，根據類似的時間範圍建立有意義的比較。 如需詳細資訊，請參閱 <<c0> [ 時間智慧函數&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)。</c0>  
+ DAX 中所提供的時間智慧函數可讓您建立使用行事曆與日期之內建知識的計算。 若將時間和日期範圍與彙總或計算搭配使用，您可以針對銷售量、存貨等等，根據類似的時間範圍建立有意義的比較。 如需詳細資訊，請參閱 <<c0> [ 時間智慧函數&#40;DAX&#41;](/dax/time-intelligence-functions-dax)。</c0>  
   
 ###  <a name="bkmk_TableFunc"></a> 資料表值函式  
  有 DAX 函數可以輸出資料表並 (或) 採用資料表做為輸入。 資料表可能會只有單一資料行，因此資料表值函式也會採用單一資料行做為輸入。 了解如何使用這些資料表值函式對於善用 DAX 公式相當重要。 DAX 包括下列類型的資料表值函式：  
@@ -290,7 +289,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =MAXX(FILTER(Sales,[ProdKey]=EARLIER([ProdKey])),Sales[OrderQty])  
 ```  
   
- 此公式的詳細逐步解說，請參閱[EARLIER 函數](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx)。  
+ 此公式的詳細逐步解說，請參閱[EARLIER 函數](/dax/earlier-function-dax)。  
   
  總而言之，EARLIER 函數會儲存目前運算前之運算中的資料列內容。 函數隨時都會在記憶體中儲存兩組內容：一組內容代表公式內部迴圈的目前資料列，另一組內容代表公式外部迴圈的目前資料列。 DAX 會自動在兩個迴圈之間選取饋入值，讓您能夠建立複雜的彙總。  
   
@@ -315,11 +314,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  在表格式模型中，有多個方式可以建立篩選內容。 在可以取用模型的用戶端內容 (例如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表) 中，使用者可以在資料列和資料行標題上加入交叉分析篩選器或報表篩選來即時建立篩選。 您也可以直接在公式內指定篩選運算式，以便指定相關的值、篩選當做輸入使用的資料表，或是針對計算中使用的值來動態取得內容。 您也可以完全清除或選擇性清除特定資料行上的篩選。 當您建立公式來計算總計時，這樣的方式非常實用。  
   
- 如需如何在公式之中建立篩選的詳細資訊，請參閱[篩選函數](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)。  
+ 如需如何在公式之中建立篩選的詳細資訊，請參閱[篩選函數](/dax/filter-function-dax)。  
   
- 如需如何清除篩選的範例以建立總計，請參閱[ALL 函數](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)。  
+ 如需如何清除篩選的範例以建立總計，請參閱[ALL 函數](/dax/all-function-dax)。  
   
- 如需如何選擇性清除及套用篩選器在公式中的範例，請參閱[ALLEXCEPT 函數](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)。  
+ 如需如何選擇性清除及套用篩選器在公式中的範例，請參閱[ALLEXCEPT 函數](/dax/allexcept-function-dax)。  
   
 ####  <a name="bkmk_determine_context"></a> 決定公式內的內容  
  當您建立 DAX 公式時，會先測試公式的語法是否有效，然後再測試來確定公式內包含的資料行和資料表名稱可以在目前內容中找到。 如果找不到公式所指定的任何資料行或資料表，就會傳回錯誤。  
@@ -332,22 +331,22 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>公式中的內容範例  
   
-1.  [RELATED 函數](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx)函數可擴充目前資料列，在相關的資料行中包含值的內容。 這可以讓您執行查閱。 本主題中的範例說明篩選與資料列內容的互動。  
+1.  [RELATED 函數](/dax/related-function-dax)函數可擴充目前資料列，在相關的資料行中包含值的內容。 這可以讓您執行查閱。 本主題中的範例說明篩選與資料列內容的互動。  
   
-2.  [篩選函數](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx)函式可讓您指定要包含在目前內容中的資料列。 本主題的範例也將說明如何在執行彙總的其他函數中嵌入篩選。  
+2.  [篩選函數](/dax/filter-function-dax)函式可讓您指定要包含在目前內容中的資料列。 本主題的範例也將說明如何在執行彙總的其他函數中嵌入篩選。  
   
-3.  [ALL 函數](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)函式公式之中設定內容。 您可以使用它來覆寫套用為查詢內容結果的篩選。  
+3.  [ALL 函數](/dax/all-function-dax)函式公式之中設定內容。 您可以使用它來覆寫套用為查詢內容結果的篩選。  
   
-4.  [ALLEXCEPT 函數](https://msdn.microsoft.com/library/ee634795(v=sql.120).aspx)函式可讓您移除您所指定以外的所有篩選。 兩個主題都包含範例，可讓您逐步建立公式及了解複雜的內容。  
+4.  [ALLEXCEPT 函數](/dax/allexcept-function-dax)函式可讓您移除您所指定以外的所有篩選。 兩個主題都包含範例，可讓您逐步建立公式及了解複雜的內容。  
   
-5.  [EARLIER 函數](https://msdn.microsoft.com/library/ee634551(v=sql.120).aspx)並[EARLIEST 函數](https://msdn.microsoft.com/library/ee634779(v=sql.120).aspx)函數都可讓您循環使用資料表執行計算，同時參考內部迴圈的值。 如果您很熟悉遞迴的概念以及內部和外部迴圈，將深刻領會 EARLIER 和 EARLIEST 函數所提供的強大效用。 如果您不太熟悉這些概念，應該小心地遵循範例中的步驟執行，以了解內部和外部內容如何運用於計算中。  
+5.  [EARLIER 函數](/dax/earlier-function-dax)並[EARLIEST 函數](/dax/earliest-function-dax)函數都可讓您循環使用資料表執行計算，同時參考內部迴圈的值。 如果您很熟悉遞迴的概念以及內部和外部迴圈，將深刻領會 EARLIER 和 EARLIEST 函數所提供的強大效用。 如果您不太熟悉這些概念，應該小心地遵循範例中的步驟執行，以了解內部和外部內容如何運用於計算中。  
   
 ##  <a name="bkmk_RelModel"></a> 公式與表格式模型  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的模型設計師是一個區域，您可以在其中使用資料的多個資料表，並連接表格式模型中的資料表。 在此模型內，將會透過資料行與一般值 (索引鍵) 的關聯性來聯結資料表。 此表格式模型可讓您將值連結到其他資料表內的資料行，並建立更有趣的計算。 正如在關聯式資料庫中一樣，您可以連接許多層級的相關資料表，並使用結果內任何資料表中的資料行。  
   
  例如，您可以連結銷售資料表、產品資料表和產品類別資料表，而且使用者可以在樞紐分析表和報表內使用各種不同的資料行組合。 相關欄位可以用來篩選連接的資料表，或是用來建立子集的計算 (如果您不熟悉關聯式資料庫但想使用資料表和聯結，請參閱[關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md))。  
   
- 表格式模型支援資料表之間的多個關聯性。 為了避免混淆或結果錯誤，一次只會將一個關聯性指定為作用中的關聯性，但是您可以視需要變更作用中的關聯性，以便周遊計算資料中的不同連接。 [USERELATIONSHIP 函式&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx)可用來指定要用於特定計算中的一或多個關聯性。  
+ 表格式模型支援資料表之間的多個關聯性。 為了避免混淆或結果錯誤，一次只會將一個關聯性指定為作用中的關聯性，但是您可以視需要變更作用中的關聯性，以便周遊計算資料中的不同連接。 [USERELATIONSHIP 函式&#40;DAX&#41; ](/dax/userelationship-function-dax)可用來指定要用於特定計算中的一或多個關聯性。  
   
  在表格式模型中，您應該會看到這些公式設計規則：  
   
@@ -373,7 +372,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =SUM('New Sales'[Amount]) + SUM('Past Sales'[Amount])  
 ```  
   
- 評估公式時，模型設計師會先檢查一般語法，然後對照目前內容中可能的資料行和資料表來檢查您提供的資料行和資料表名稱。 如果名稱模稜兩可，或是找不到資料行或資料表，公式就會出現錯誤 (發生錯誤的資料格將顯示 #ERROR 字串而非資料值)。 多個資料表、 資料行，以及其他物件的命名需求的詳細資訊，請參閱 < 命名需求 >，在[PowerPivot 的 DAX 語法規格](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx)。  
+ 評估公式時，模型設計師會先檢查一般語法，然後對照目前內容中可能的資料行和資料表來檢查您提供的資料行和資料表名稱。 如果名稱模稜兩可，或是找不到資料行或資料表，公式就會出現錯誤 (發生錯誤的資料格將顯示 #ERROR 字串而非資料值)。 多個資料表、 資料行，以及其他物件的命名需求的詳細資訊，請參閱 < 命名需求 >，在[PowerPivot 的 DAX 語法規格](/dax/dax-syntax-reference)。  
   
 ### <a name="table-relationships"></a>資料表關聯性  
  藉由建立資料表之間的關聯性，您能夠查閱其他資料表中的資料，並使用相關聯的值來執行複雜的計算。 例如，您可以使用導出資料行，查閱與目前轉售商相關的所有送貨記錄，然後加總各記錄的送貨成本。 但在許多情況下，關聯性可能沒有必要。 您可以在公式中使用 LOOKUPVALUE 函數，針對符合 *search_column* 和 *search_value* 參數所指定之準則的資料列傳回 *result_columnName* 中的值。  
@@ -398,7 +397,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解公式中的錯誤  
  如果您在定義公式時出現錯誤，該公式可能包含 *「語法錯誤」*(Syntactic Error)、 *「語意錯誤」*(Semantic Error) 或 *「計算錯誤」*(Calculation Error)。  
   
- 語法錯誤最容易解決。 它們通常與遺漏括號或逗號有關。 如需個別函數語法的說明，請參閱 [DAX Function Reference](https://msdn.microsoft.com/library/ee634396.aspx)。  
+ 語法錯誤最容易解決。 它們通常與遺漏括號或逗號有關。 如需個別函數語法的說明，請參閱 [DAX Function Reference](/dax/dax-function-reference)。  
   
  語法正確，但值或參考的資料行在公式的內容中沒有意義時，會發生其他類型的錯誤。 這種語意和計算錯誤可能是由下列任何問題所造成：  
   
@@ -422,7 +421,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [DAX 資源中心](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 會提供關於 DAX 的內外部資訊，包括由主要的 Business Intelligence 專業人員所提交的多個 DAX 解決方案。  
   
 ## <a name="see-also"></a>另請參閱  
- [Data Analysis Expressions &#40;DAX&#41;參考](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
+ [Data Analysis Expressions &#40;DAX&#41;參考](/dax/data-analysis-expressions-dax-reference)   
  [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
  [導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns.md)   
  [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139717"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52779770"
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**publication_type**|**int**|發行集類型：<br /><br /> **0** = 交易式。<br /><br /> **2** = 合併式。|  
 |**publisher_login**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**|**nvarchar(524)**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (已加密)。|  
@@ -57,10 +56,10 @@ ms.locfileid: "52779770"
 |**offload_agent**|**bit**|指定是否能從遠端啟動代理程式。 如果**0**，無法從遠端啟動代理程式。|  
 |**offload_server**|**sysname**|指定遠端啟用所用之伺服器的網路名稱。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定儲存快照集檔案的資料夾路徑。|  
-|**use_web_sync&lt**|**bit**|指定是否能夠利用 HTTP 來同步處理訂閱。 值為**1**表示啟用這項功能。|  
-|**應**|**nvarchar(260)**|代表複寫接聽程式之 Web 同步處理位置的 URL。|  
-|**internet_url**|**sysname**|「 合併代理程式在連接到主控 Web 同步處理使用的 Web 伺服器時所用的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
-|**internet_login**|**nvarchar(524)**|「 合併代理程式在連接到主控 Web 同步處理使用的 Web 伺服器時所用的登入密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**use_web_sync**|**bit**|指定是否能夠利用 HTTP 來同步處理訂閱。 值為**1**表示啟用這項功能。|  
+|**internet_url**|**nvarchar(260)**|代表複寫接聽程式之 Web 同步處理位置的 URL。|  
+|**internet_login**|**sysname**|「 合併代理程式在連接到主控 Web 同步處理使用的 Web 伺服器時所用的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
+|**internet_password**|**nvarchar(524)**|「 合併代理程式在連接到主控 Web 同步處理使用的 Web 伺服器時所用的登入密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_security_mode**|**int**|連接到主控 Web 同步處理，值為 Web 伺服器時使用的驗證模式**1**表示 Windows 驗證，並針對**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**主機名稱**|**sysname**|指定的值**HOST_NAME**中使用此函式時**其中**子句的聯結篩選或邏輯記錄關聯性。|  
@@ -68,7 +67,7 @@ ms.locfileid: "52779770"
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   

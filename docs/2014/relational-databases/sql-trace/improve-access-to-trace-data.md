@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 540a0bd9430a182ef3eda43fd816b4a495dc36b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714615"
 ---
 # <a name="improve-access-to-trace-data"></a>改善追蹤資料的存取
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會使用 **temp** 目錄中的空間，來改進追蹤資料的存取。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 需要至少 10 MB 的可用空間。 如果您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]時，可用空間在 10 MB 以下，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能都會停止運作。  
@@ -30,15 +30,15 @@ ms.locfileid: "52767878"
   
 ### <a name="to-change-the-temp-environment-variable-in-windows-operating-systems"></a>在 Windows 作業系統中變更 TEMP 環境變數  
   
-1.  在 [開始] 功能表上，選擇 [控制台]，然後按一下 [系統]。  
+1.  在 [開始]  功能表上，選擇 [控制台]  ，然後按一下 [系統]  。  
   
-2.  在 [系統內容] 對話方塊中，按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
+2.  在 [系統內容]  對話方塊中，按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
-3.  向下捲動 [系統變數] 清單，選取對應於 **TEMP** 變數的資料列，然後按一下 [編輯]。  
+3.  向下捲動 [系統變數]  清單，選取對應於 **TEMP** 變數的資料列，然後按一下 [編輯]  。  
   
-4.  在 [編輯系統變數] 對話方塊中，輸入 **temp** 目錄要放在其中之磁碟機和目錄的路徑與名稱。  
+4.  在 [編輯系統變數]  對話方塊中，輸入 **temp** 目錄要放在其中之磁碟機和目錄的路徑與名稱。  
   
-5.  按一下 [確定] 來儲存變更。  
+5.  按一下 [確定]  來儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動 SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)   

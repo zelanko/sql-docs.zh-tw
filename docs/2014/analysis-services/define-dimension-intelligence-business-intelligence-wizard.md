@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
@@ -13,12 +12,12 @@ ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082136"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>定義維度智慧 (商業智慧精靈)
   使用 **[定義維度智慧]** 頁面，即可將現有的維度屬性對應到所指定維度類型的屬性類型。  
@@ -30,7 +29,7 @@ ms.locfileid: "48194247"
  **維度屬性**  
  顯示所指定維度類型可用的屬性類型，並讓您指定屬性類型要套用至哪些維度屬性。  
   
- **包含**  
+ **Include**  
  選取即可在維度中包含相對應的屬性類型。  
   
  **屬性類型**  

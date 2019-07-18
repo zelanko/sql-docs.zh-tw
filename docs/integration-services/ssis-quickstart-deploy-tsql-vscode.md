@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa143de9da8694a5a3760962e659899f7ddb93c7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 890fa6b671a3497ae1009813c6486c23a8b9217f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717582"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 部署 SSIS 專案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 此快速入門示範如何使用 Visual Studio Code 連線至 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式將 SSIS 專案部署至 SSIS 目錄。
 
 Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式碼編輯器，包含連線至 Microsoft SQL Server、Azure SQL Database 或 Azure SQL Data Warehouse 的 `mssql` 延伸模組。 如需 VS Code 的詳細資訊，請參閱 [Visual Studio Code](https://code.visualstudio.com/)。
@@ -39,13 +43,13 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中將語言模式設定為 SQL
 
-若要啟用 `mssql` 命令和 T-SQL IntelliSense，請在 Visual Studio Code 中將語言模式設定為 [SQL]。
+若要啟用 `mssql` 命令和 T-SQL IntelliSense，請在 Visual Studio Code 中將語言模式設定為 [SQL]  。
 
 1. 開啟 Visual Studio Code，然後開啟新視窗。 
 
-2. 按一下狀態列右下角的 [純文字]。
+2. 按一下狀態列右下角的 [純文字]  。
  
-3. 在開啟的 [選取語言模式] 下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
+3. 在開啟的 [選取語言模式]  下拉式功能表中，選取或輸入 **SQL**，然後按 **ENTER** 將語言模式設定為 SQL。 
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>連線至 SSIS 目錄資料庫
 
@@ -55,7 +59,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 2. 鍵入 **sqlcon**，並按 **ENTER**。
 
-3. 按 **ENTER** 選取 [Create Connection Profile] (建立連線設定檔)。 此步驟會建立您 SQL Server 執行個體的連線設定檔。
+3. 按 **ENTER** 選取 [Create Connection Profile] (建立連線設定檔)  。 此步驟會建立您 SQL Server 執行個體的連線設定檔。
 
 4. 遵循提示來指定新連線設定檔的連線屬性。 指定每個值之後，請按 **ENTER** 繼續。 
 
@@ -76,7 +80,7 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 ## <a name="run-the-t-sql-code"></a>執行 T-SQL 程式碼
 執行下列 Transact-SQL 程式碼來部署 SSIS 專案。
 
-1. 在 [編輯器] 視窗中，於空白查詢視窗中輸入下列查詢 
+1. 在 [編輯器]  視窗中，於空白查詢視窗中輸入下列查詢
 
 2. 更新 `catalog.deploy_project` 預存程序中您系統的參數值。
 

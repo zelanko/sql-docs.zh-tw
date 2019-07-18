@@ -11,15 +11,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480626"
 ---
 # <a name="dqs-administration"></a>dqs 管理
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 可讓您管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上執行的各種 DQS 活動、設定與 DQS 活動相關的伺服器層級屬性、設定 Reference Data Service 設定，以及設定 DQS 記錄設定。 這些操作是透過 **中的** [管理] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能完成。 根據您在 DQS 中的安全性存取權 (角色) 而定，您會被授與/拒絕對此區域中某些功能的存取。  
@@ -49,11 +49,11 @@ ms.locfileid: "56032779"
 ### <a name="configuration"></a>組態  
  **中的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 畫面可讓 DQS 系統管理員進行下列操作：  
   
--   **參考資料**:設定參考資料服務提供者：Windows Azure Marketplace 或直接參考資料服務提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定連接網際網路所使用的 Proxy 設定，以使用 Windows Azure Marketplace。  
+-   **參考資料**：設定參考資料服務提供者：Windows Azure Marketplace 或直接參考資料提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定連接網際網路所使用的 Proxy 設定，以使用 Windows Azure Marketplace。  
   
--   **一般設定**:指定資料清理和資料比對，以及是否啟用通知在程式碼剖析的臨界值[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
+-   **一般設定**：指定資料清理和資料比對的閾值，以及是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中啟用分析所使用的通知。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
   
--   **記錄設定**:DQS 中的記錄檔會記錄在 DQS 中執行的活動，而且可用於維護和疑難排解期間追蹤運作問題。 您可以篩選您要針對各種 DQS 功能 (定義域管理、知識探索、清理、比對以及 Reference Data Services) 記錄的訊息，也可以根據事件的嚴重性層級篩選 DQS 模組。  
+-   **記錄檔設定**：DQS 中記錄檔會記錄在 DQS 中執行的活動，因此在維護和疑難排解期間追蹤運作問題相當實用。 您可以篩選您要針對各種 DQS 功能 (定義域管理、知識探索、清理、比對以及 Reference Data Services) 記錄的訊息，也可以根據事件的嚴重性層級篩選 DQS 模組。  
   
 > [!NOTE]  
 >  **[組態]** 畫面僅適用於擁有 DQS_MAIN 資料庫之 dqs_administrator 角色的使用者。  
@@ -61,9 +61,9 @@ ms.locfileid: "56032779"
 ##  <a name="AdminOutsideClient"></a> Data Quality Client 外部的管理活動  
  在 Data Quality Client 外部執行的活動包括：  
   
--   **備份與還原 DQS 資料庫**:備份與還原 DQS 資料庫，等於是備份和還原任何 SQL Server 資料庫，有專屬於 DQS 的一些考量。  
+-   **備份和還原 DQS 資料庫**：DQS 資料庫備份和還原與任何 SQL Server 資料庫備份和還原相同，但有 DQS 特定的一些考量。  
   
--   **卸離和附加 DQS 資料庫**:卸離和附加 DQS 資料庫的步驟是相同卸離和附加任何 SQL Server 資料庫，有專屬於 DQS 的一些考量。  
+-   **卸離和附加 DQS 資料庫**：卸離和附加 DQS 資料庫的步驟與卸離和附加任何 SQL Server 資料庫相同，但有 DQS 特定的一些考量。  
   
  如需詳細資訊，請參閱＜ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)＞。  
   

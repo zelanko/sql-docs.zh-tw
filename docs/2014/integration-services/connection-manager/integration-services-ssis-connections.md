@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833775"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會使用連接來執行不同的工作以及實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -112,7 +112,7 @@ ms.locfileid: "58378356"
   
 -   technet.microsoft.com 上的影片： [沿用 Microsoft Attunity Connector for Oracle 來增強封裝效能](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
 -   blogs.msdn.com 上的部落格文章： [從 SSIS 連接至 MySQL](https://go.microsoft.com/fwlink/?LinkId=217669)。  
   

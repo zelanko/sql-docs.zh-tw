@@ -15,14 +15,18 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d2232235b1d89384f269edb3a1632f8ff9db067
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 100dbd947b8b5b8de340bfd45a4d2705a4b0d475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726976"
 ---
 # <a name="data-viewer"></a>資料檢視器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果路徑設定為使用資料檢視器，當資料在資料流程元件之間移動時，資料檢視器會一一顯示緩衝區的資料。  
   
 ## <a name="options"></a>選項。  

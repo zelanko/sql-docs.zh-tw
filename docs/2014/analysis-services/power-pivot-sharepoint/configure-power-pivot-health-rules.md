@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 180be5fee054ff1afff09191ee6a16707b712257
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071794"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 健全狀況規則 - 設定
   PowerPivot for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 PowerPivot for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
@@ -48,7 +47,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_view"></a> 檢視 PowerPivot 健全狀況規則  
   
-1.  在 SharePoint 管理中心按一下 **[監視]**，然後在 **[狀況分析器]** 區段中按一下 **[檢閱規則定義]**。  
+1.  在 SharePoint 管理中心按一下 **[監視]** ，然後在 **[狀況分析器]** 區段中按一下 **[檢閱規則定義]** 。  
   
 2.  在 [組態] 區段中，尋找前置詞為 **PowerPivot:** 的規則。 擁有此前置詞的所有 PowerPivot 相關健全狀況規則可協助您區分 PowerPivot 健全狀況規則與內建的 SharePoint 規則。  
   
@@ -61,13 +60,13 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 ##  <a name="bkmk_HR_SSAS"></a> 設定用於評估伺服器穩定性的健全狀況規則 (SQL Server Analysis Services)  
  Analysis Services 執行個體包括可偵測系統層級 (快取用途的 CPU、記憶體與磁碟空間) 問題的健全狀況規則。 請使用下列指示來修改可觸發健全狀況規則的臨界值。  
   
-1.  在 SharePoint 管理中心內，按一下 **[系統設定]** 區段中的 **[管理伺服器上的服務]**。  
+1.  在 SharePoint 管理中心內，按一下 **[系統設定]** 區段中的 **[管理伺服器上的服務]** 。  
   
 2.  在頁面頂端，擁有 Analysis Services 執行個體的 SharePoint 伺服器陣列中選取伺服器 (在下圖中，伺服器名稱為 AW-SRV033)。 **[SQL Server Analysis Services]** 將會出現在服務清單中。  
   
      ![螢幕擷取畫面管理服務的伺服器 頁面](../media/ssas-centraladmin-servicesonserver.gif "螢幕擷取畫面管理服務的伺服器 頁面")  
   
-3.  按一下 **[SQL Server Analysis Services]**。  
+3.  按一下 **[SQL Server Analysis Services]** 。  
   
 4.  在 [健全狀況規則設定] 中的服務屬性頁上，修改下列設定：  
   
@@ -101,9 +100,9 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_evaluate_application_stability"></a> 設定用來評估 （PowerPivot 服務應用程式） 的應用程式穩定性的健全狀況規則  
   
-1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
-2.  在 [服務應用程式] 頁面中，按一下 **[預設的 PowerPivot 服務應用程式]**。  
+2.  在 [服務應用程式] 頁面中，按一下 **[預設的 PowerPivot 服務應用程式]** 。  
   
      ![螢幕擷取畫面的 ManageService 應用程式頁面](../media/ssas-centraladmin-app.gif "螢幕擷取畫面的 ManageService 應用程式頁面")  
   

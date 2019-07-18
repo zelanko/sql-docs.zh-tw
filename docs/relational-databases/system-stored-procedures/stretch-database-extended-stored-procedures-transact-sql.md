@@ -11,15 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - Stretch Database, stored procedures
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 675695ed3eef8fd5ddd29fa48aa64e30f8fd822c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106637"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 的擴充預存程序 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

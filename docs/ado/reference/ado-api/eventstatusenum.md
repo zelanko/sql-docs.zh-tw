@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932861"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定的事件執行的目前狀態。  

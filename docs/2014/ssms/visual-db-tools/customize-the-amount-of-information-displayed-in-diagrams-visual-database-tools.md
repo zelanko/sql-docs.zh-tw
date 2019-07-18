@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63270554"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>自訂圖表中顯示的資料數量 (Visual Database Tools)
   當您將資料表加入到資料庫圖表時，會顯示一組屬性。 您可以從不同的功能表中選擇要顯示多少資訊，或是建立自訂的屬性集合。  
@@ -49,9 +49,9 @@ ms.locfileid: "52790390"
   
 1.  在 [資料庫圖表設計工具] 中的資料表上按一下滑鼠右鍵。  
   
-2.  從快速鍵功能表中，指向 [資料表檢視] 再按 [修改自訂]。  
+2.  從快速鍵功能表中，指向 [資料表檢視]  再按 [修改自訂]  。  
   
-3.  在 [資料行選取] 對話方塊中，選擇當從 [資料表檢視] 功能表選擇 [自訂] 時，想要顯示的屬性。  
+3.  在 [資料行選取]  對話方塊中，選擇當從 [資料表檢視]  功能表選擇 [自訂]  時，想要顯示的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料庫圖表 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

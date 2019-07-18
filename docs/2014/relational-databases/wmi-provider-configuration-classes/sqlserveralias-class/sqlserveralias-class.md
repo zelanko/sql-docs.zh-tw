@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63223552"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 類別
   [SqlServerAlias 類別](sqlserveralias-class.md)類別代表伺服器連接別名。  
@@ -34,7 +34,7 @@ ms.locfileid: "53377888"
   
 -   用戶端連接的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會接聽替代具名管道。  
   
- **注意：**[SqlServerAlias 類別](sqlserveralias-class.md)繼承`Put`從 Provider 類別的方法。 但是，它不會傳回如 `Provider::Put` 方法指示的任何結果。 如需詳細資訊，請參閱 WMI 文件集。  
+ **注意：** [SqlServerAlias 類別](sqlserveralias-class.md)繼承`Put`從 Provider 類別的方法。 但是，它不會傳回如 `Provider::Put` 方法指示的任何結果。 如需詳細資訊，請參閱 WMI 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  

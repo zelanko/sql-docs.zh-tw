@@ -17,17 +17,21 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 374e977eafce0dcb679997e85655302aa7de0b4d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1488499a710c8e5ab80d46b2c2027cb93e0c54d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719582"
 ---
 # <a name="performance-counters"></a>效能計數器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝一組您可以用於監視資料流程引擎效能的效能計數器。 例如,，您可以監看 "Buffers spooled" 計數器以判斷是否要在封裝執行時，暫時將資料緩衝區寫入到磁碟中。 這種交換會降低效能，並指出電腦的記憶體不足。  
   
-> **注意：**：如果您在執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的電腦上安裝 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然後將該電腦升級到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，則升級程序會從電腦中移除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器。 若要還原電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器，請在修復模式中執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。  
+> **注意：** ：如果您在執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的電腦上安裝 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然後將該電腦升級到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，則升級程序會從電腦中移除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器。 若要還原電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器，請在修復模式中執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。  
   
  下表描述這些效能計數器。  
   
@@ -84,35 +88,35 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ### <a name="to-add-logging-of-performance-counters"></a>若要加入效能計數器的記錄  
   
-1.  在 [控制台] 中，如果使用傳統檢視，請按一下 [系統管理工具]。 如果使用類別檢視，請按一下 [效能及維護]，然後按一下 [系統管理工具]。  
+1.  在 [控制台]  中，如果使用傳統檢視，請按一下 [系統管理工具]  。 如果使用類別檢視，請按一下 [效能及維護]  ，然後按一下 [系統管理工具]  。  
   
-2.  按一下 [效能]。  
+2.  按一下 [效能]  。  
   
-3.  在 [效能] 對話方塊中，展開 [效能記錄檔及警示]，以滑鼠右鍵按一下 [計數器記錄檔]，然後按一下 [新記錄檔設定]。 鍵入記錄檔的名稱。 例如，輸入 **MyLog**。  
+3.  在 [效能]  對話方塊中，展開 [效能記錄檔及警示]  ，以滑鼠右鍵按一下 [計數器記錄檔]  ，然後按一下 [新記錄檔設定]  。 鍵入記錄檔的名稱。 例如，輸入 **MyLog**。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
-5.  在 [MyLog] 對話方塊中，按一下 [加入計數器]。  
+5.  在 [MyLog]  對話方塊中，按一下 [加入計數器]  。  
   
-6.  按一下 [使用本機電腦計數器]，以記錄本機電腦上的效能計數器，或按一下 [從下列電腦選取計數器]，然後從清單選取電腦，以記錄指定之電腦上的效能計數器。  
+6.  按一下 [使用本機電腦計數器]  ，以記錄本機電腦上的效能計數器，或按一下 [從下列電腦選取計數器]  ，然後從清單選取電腦，以記錄指定之電腦上的效能計數器。  
   
-7.  在 [加入計數器] 對話方塊中，選取 [效能物件] 清單中的 [SQL Server:SSIS Pipeline]。  
+7.  在 [加入計數器]  對話方塊中，選取 [效能物件]  清單中的 [SQL Server:SSIS Pipeline]  。  
   
 8.  若要選取效能計數器，請執行下列其中之一：  
   
-    -   選取 [所有計數器]，以記錄所有效能計數器。  
+    -   選取 [所有計數器]  ，以記錄所有效能計數器。  
   
-    -   選取 [從清單選取計數器]，並選取要使用的效能計數器。  
+    -   選取 [從清單選取計數器]  ，並選取要使用的效能計數器。  
   
-9. 按一下 **[加入]**。  
+9. 按一下 **[加入]** 。  
   
 10. 按一下 [ **關閉**]。  
   
-11. 在 [MyLog] 對話方塊中，檢閱 [計數器] 清單中記錄效能計數器的清單。  
+11. 在 [MyLog]  對話方塊中，檢閱 [計數器]  清單中記錄效能計數器的清單。  
   
 12. 若要加入其他計數器，請重複步驟 5 至 10。  
   
-13. 按一下 [確定] 。  
+13. 按一下 [確定]  。  
   
     > [!NOTE]  
     >  您必須使用 Administrators 群組成員的本機帳戶或網域帳戶，啟動「效能記錄檔及警示」服務。  

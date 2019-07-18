@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874514"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 整合的效能
   本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 通用語言執行平台 (CLR)。  

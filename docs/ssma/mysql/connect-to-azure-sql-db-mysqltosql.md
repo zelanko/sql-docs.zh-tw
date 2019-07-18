@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103238"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
 使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  

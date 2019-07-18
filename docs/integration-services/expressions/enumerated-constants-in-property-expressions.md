@@ -18,14 +18,18 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3a0cee0f7aeb5df60c80e23c0ae90af5a066db3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 640127ea0755c12a0e5746e0810017af504028d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725476"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 **LoggingMode** 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
   
  此主題列出相當於列舉值易記名稱的數值，但僅限屬性運算式中常用之成員所屬的列舉值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型包含其他許多列舉值，您在設計物件模型程式以程式設計方式建立封裝，或是對自訂封裝元素 (例如工作和資料流程元件) 進行編碼時，都會使用這些列舉值。  

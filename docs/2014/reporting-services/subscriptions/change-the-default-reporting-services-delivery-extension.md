@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cba433f840f2e2284ed41ca4b87f0fd2bb1410f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101034"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
   您可以修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態設定，以變更訂閱定義頁面的 **[傳遞者]** 清單中所顯示的預設傳遞延伸模組。 例如，您可以修改組態，使得在使用者建立新的訂閱時依預設會選取檔案共用傳遞，而不是電子郵件傳遞。 您也可以變更傳遞延伸模組在使用者介面中列出的順序。  
@@ -88,7 +87,7 @@ ms.locfileid: "56013679"
   
      **事件識別碼：** 109  
   
-     **來源：** 報表伺服器 Windows 服務 (執行個體名稱)  
+     **來源：** 報表伺服器 Windows 服務 （執行個體名稱）  
   
      已修改 RSReportServer.config 檔  
   
@@ -97,7 +96,7 @@ ms.locfileid: "56013679"
   
 #### <a name="configure-the-default-delivery-extension"></a>設定預設傳遞延伸模組  
   
-1.  開啟 **[SharePoint 管理命令介面]**。  
+1.  開啟 **[SharePoint 管理命令介面]** 。  
   
 2.  如果您已知道 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，您可以略過此步驟。 使用下列 PowerShell，列出您 SharePoint 伺服器陣列中的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式。  
   

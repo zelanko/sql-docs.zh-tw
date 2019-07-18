@@ -11,15 +11,14 @@ helpviewer_keywords:
 - version flags [Master Data Services], assigning flags
 - versions [Master Data Services], assigning flags
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97fac59d0b6bd36053a3b1e907af3430bdf83e58
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 553df37cf728b3c48c91d0bf7edc50ac924b1106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047729"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>將旗標指派給版本 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52782980"
 > [!NOTE]  
 >  版本旗標一次只能指派給一個版本。 如果指派的旗標已指派給另一個版本，該旗標會移至選取的版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
@@ -43,14 +42,14 @@ ms.locfileid: "52782980"
   
 ### <a name="to-assign-a-flag-to-a-version"></a>若要將旗標指派給版本  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本] 頁面上，於您要指派旗標之版本的資料列，按兩下 [旗標] 資料行中的資料格。  
+2.  在 [管理版本]  頁面上，於您要指派旗標之版本的資料列，按兩下 [旗標]  資料行中的資料格。  
   
 3.  從清單中選取您要指派的旗標。  
   
     > [!NOTE]  
-    >  如果您要的旗標無法使用，此旗標可能只適用於 [已認可] 版本。 若要確認，請移至 [管理版本旗標] 頁面並檢視旗標的 [僅限認可的版本] 欄位。  
+    >  如果您要的旗標無法使用，此旗標可能只適用於 [已認可]  版本。 若要確認，請移至 [管理版本旗標]  頁面並檢視旗標的 [僅限認可的版本]  欄位。  
   
 4.  按下 ENTER 鍵儲存變更。  
   

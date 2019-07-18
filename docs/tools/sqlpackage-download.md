@@ -1,8 +1,8 @@
 ---
-title: 下載並安裝 sqlpackage |Microsoft Docs
-description: 下載並安裝適用於 Windows、 macOS 或 Linux 的 sqlpackage
+title: 下載並安裝 sqlpackage | Microsoft Docs
+description: 下載並安裝適用於 Windows、macOS 或 Linux 的 sqlpackage
 ms.custom: tools|sos
-ms.date: 06/19/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,40 +10,42 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 809a78130c5bc015114138e678c55522fa556f01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478943"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
-Windows、 macOS 和 Linux 上，執行 sqlpackage。
+sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
-下載並安裝最新的.NET Framework 版本和 macOS 及 Linux 預覽：
+下載並安裝最新的 .NET Framework 版本以及 macOS 和 Linux 預覽：
 
 |平台|下載|發行日期|Version|建置
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2069405)|2019 年 2 月 1 日|18.1|15.0.4316.1|
-|macOS 的.NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2069126)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
-|Linux 的.NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2069122)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
+|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
+|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
 
-## <a name="get-sqlpackage-for-windows"></a>取得 Windows sqlpackage
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-這個版本的 sqlpackage 包括標準的 Windows 安裝程式體驗，以及用.zip 格式： 
+## <a name="get-sqlpackage-for-windows"></a>取得適用於 Windows 的 sqlpackage
 
-1. 下載並執行[DacFramework.msi installer Windows](https://go.microsoft.com/fwlink/?linkid=2069405)。
+此版本的 sqlpackage 包含標準的 Windows 安裝程式體驗，以及 .zip： 
+
+1. 下載並執行[適用於Windows 的 DacFramework.msi 安裝程式](https://go.microsoft.com/fwlink/?linkid=2087429)。
 2. 開啟新的 [命令提示字元] 視窗，然後執行 sqlpackage.exe
-    - sqlpackage 會安裝到```C:\Program Files\Microsoft SQL Server\150\DAC\bin```資料夾
-    - 安裝 x86 x64 版本 sqlpackage 會安裝到電腦，```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```資料夾
+    - sqlpackage 會安裝到 ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` 資料夾中
+    - 在 x64 電腦上安裝 x86 版本，sqlpackage 會安裝在 ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` 資料夾中
 
-## <a name="get-sqlpackage-preview-for-macos"></a>取得適用於 macOS 的 sqlpackage （預覽）
+## <a name="get-sqlpackage-preview-for-macos"></a>取得適用於 macOS 的 sqlpackage (預覽)
 
-1. 下載[適用於 macOS 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069126)。
-2. 若要將檔案解壓縮，並啟動 sqlpackage，開啟新的終端機視窗並輸入下列命令：
+1. 下載[適用於 macOS 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2087247)。
+2. 若要將檔案解壓縮並啟動 sqlpackage，請開啟新的終端機視窗並輸入下列命令：
 
    **.zip 安裝：**
 
@@ -55,10 +57,10 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>取得適用於 Linux 的 sqlpackage （預覽）
+## <a name="get-sqlpackage-preview-for-linux"></a>取得適用於 Linux 的 sqlpackage (預覽)
 
-1. 下載[適用於 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069122)使用其中一種安裝程式或.tar.gz 下載封存：
-2. 若要將檔案解壓縮，並啟動 sqlpackage，開啟新的終端機視窗並輸入下列命令：
+1. 使用其中一種安裝程式或 tar.gz 封存下載[適用於 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2087431)：
+2. 若要將檔案解壓縮並啟動 sqlpackage，請開啟新的終端機視窗並輸入下列命令：
 
    **.zip 安裝：**
 
@@ -73,7 +75,7 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
    ```
 
    > [!NOTE]
-   > 在 Debian、 Redhat 和 Ubuntu 上，您可能有遺失相依性。 若要安裝這些相依性，視您的 Linux 版本而定，使用下列命令：
+   > 在 Debian、Redhat 和 Ubuntu 上，您可能遺失相依性。 使用下列命令，根據您的 Linux 版本安裝這些相依性：
 
    **Debian：**
 
@@ -81,14 +83,14 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
    sudo apt-get install libunwind8
    ```
 
-   **Redhat：**
+   **Redhat:**
 
    ```bash
    yum install libunwind
    yum install libicu
    ```
 
-   **Ubuntu：**
+   **Ubuntu:**
 
    ```bash
    sudo apt-get install libunwind8
@@ -100,15 +102,15 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
    sudo apt-get install libicu60      # for 18.x
    ```
 
-## <a name="uninstall-sqlpackage-preview"></a>解除安裝 sqlpackage （預覽）
+## <a name="uninstall-sqlpackage-preview"></a>解除安裝 sqlpackage (預覽)
 
-如果您安裝使用 Windows installer 的 sqlpackage，然後解除安裝您移除任何 Windows 應用程式的方式相同。
+如果您使用 Windows 安裝程式安裝 sqlpackage，請使用與刪除任何 Windows 應用程式相同的方式解除安裝。
 
-如果您使用.zip 或其他封存安裝 sqlpackage，只要刪除檔案。
+如果您使用 .zip 或其他封存安裝 sqlpackage，則只需刪除這些檔案即可。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
 
-sqlpackage Windows、 macOS 和 Linux 上執行，並支援下列平台：
+sqlpackage 在 Windows、macOS 和 Linux 上執行，並支援下列平台：
 
 ### <a name="windows"></a>Windows
 
@@ -135,6 +137,6 @@ sqlpackage Windows、 macOS 和 Linux 上執行，並支援下列平台：
 
 ## <a name="next-steps"></a>Next Steps
 
-- 深入了解[sqlpackage](sqlpackage.md)
+- 深入了解 [sqlpackage](sqlpackage.md)
 
 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)

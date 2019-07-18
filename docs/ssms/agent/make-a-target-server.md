@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], creating
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7ad55540f04e3892d5e0a583c34a4e4b0a02d2ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 966a0a148352698d014c4e8720f2e87c003f1490
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698416"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685916"
 ---
 # <a name="make-a-target-server"></a>設為目標伺服器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "51698416"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要設定目標伺服器，使用：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51698416"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多重伺服器管理]，然後按一下 [設為目標伺服器]。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多重伺服器管理]  ，然後按一下 [設為目標伺服器]  。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
   
 3.  從 **[選取主要伺服器]** 頁面選取此目標伺服器將接收作業來源的主要伺服器。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "51698416"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
   
     ```  
     USE msdb ;  

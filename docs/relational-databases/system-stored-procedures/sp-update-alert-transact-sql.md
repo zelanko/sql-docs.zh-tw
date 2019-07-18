@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084953"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` 新等待期間，以秒為單位，以警示回應之間。 *delay_between_responses*已**int**，預設值是 NULL。  
   
-`[ @notification_message = ] 'notification_message'` 電子郵件，傳送給操作員之附加訊息的修訂的文字**網路傳送**，或呼叫器通知。 *notification_message*已**nvarchar(512)**，預設值是 NULL。  
+`[ @notification_message = ] 'notification_message'` 電子郵件，傳送給操作員之附加訊息的修訂的文字**網路傳送**，或呼叫器通知。 *notification_message*已**nvarchar(512)** ，預設值是 NULL。  
   
 `[ @include_event_description_in = ] include_event_description_in` 指定是否 popis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 應用程式記錄檔的錯誤應該包含在通知訊息。 *include_event_description_in*已**tinyint**，預設值是 NULL，而且可以是下列其中一個或多個這些值。  
   
@@ -89,7 +88,7 @@ sp_update_alert
   
 `[ @database_name = ] 'database'` 要引發的警示會因發生錯誤的資料庫名稱。 *資料庫*是**sysname。** 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` 必須找到的錯誤訊息記錄檔中的錯誤描述中的字元序列。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword*已**nvarchar(100)**，預設值是 NULL。 此參數可用於篩選的物件名稱 (例如 **%customer_table%**)。  
+`[ @event_description_keyword = ] 'event_description_keyword'` 必須找到的錯誤訊息記錄檔中的錯誤描述中的字元序列。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword*已**nvarchar(100)** ，預設值是 NULL。 此參數可用於篩選的物件名稱 (例如 **%customer_table%** )。  
   
 `[ @job_id = ] job_id` 作業識別碼中。 *job_id*已**uniqueidentifier**，預設值是 NULL。 如果*job_id*指定，則*job_name*必須省略。  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` 保留。  
   
-`[ @performance_condition = ] 'performance_condition'` 值，以表示格式 **'***itemcomparatorvalue***'**。 *performance_condition*已**nvarchar(512)**，預設值是 NULL，這些元素組成。  
+`[ @performance_condition = ] 'performance_condition'` 值，以表示格式 **'***itemcomparatorvalue***'** 。 *performance_condition*已**nvarchar(512)** ，預設值是 NULL，這些元素組成。  
   
 |格式元素|描述|  
 |--------------------|-----------------|  
 |*項目*|計數器的效能物件、效能計數器或具名執行個體|  
-|*Comparator*|是下列運算子之一： **>**， **<**， **=**|  
+|*Comparator*|是下列運算子之一： **>** ， **<** ， **=**|  
 |*值*|計數器的數值|  
   
 `[ @category_name = ] 'category'` 警示類別目錄名稱。 *類別目錄*已**sysname**預設值是 NULL。  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` 進行事件查詢 WMI 命名空間。 *wmi_namespace*已**sysname**，預設值是 NULL。  
   
-`[ @wmi_query = ] 'wmi_query'` 指定警示之 WMI 事件查詢。 *wmi_query*已**nvarchar(512)**，預設值是 NULL。  
+`[ @wmi_query = ] 'wmi_query'` 指定警示之 WMI 事件查詢。 *wmi_query*已**nvarchar(512)** ，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

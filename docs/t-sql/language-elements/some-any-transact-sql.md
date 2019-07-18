@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230945"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981605"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **布林**  
   
 ## <a name="result-value"></a>結果值  
- 若任意組 (_scalar_expression_**,**_x_) 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 **TRUE**；否則，會傳回 **FALSE**。  
+ 若任意組 (_scalar_expression_ **,** _x_) 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 **TRUE**；否則，會傳回 **FALSE**。  
   
 ## <a name="remarks"></a>Remarks  
  SOME 需要正面比較 *scalar_expression* 與至少一個子查詢傳回值。 對於需要以正數來比較 *scalar_expression* 和由子查詢傳回之每個值的陳述式，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* = SOME (子查詢) 會針對值為 2 的 *scalar_express* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  

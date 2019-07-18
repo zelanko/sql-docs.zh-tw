@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee70ddd7b3aa7fc1455eeefbf7913a24f73d0f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965854"
 ---
 # <a name="keys-collection-adox"></a>Keys 集合 (ADOX)
 包含所有[金鑰](../../../ado/reference/adox-api/key-object-adox.md)的物件[資料表](../../../ado/reference/adox-api/table-object-adox.md)。  

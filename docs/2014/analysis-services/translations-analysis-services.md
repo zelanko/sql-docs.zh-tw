@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065874"
 ---
 # <a name="translations-analysis-services"></a>翻譯 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
@@ -54,7 +53,7 @@ ms.locfileid: "50145953"
   
  日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 `FormatString` 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
- Analysis Services 教學課程中的[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 將逐步引導您完成建立及測試翻譯的步驟。  
+ [第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)中 Analysis Services 教學課程將逐步引導您完成建立及測試翻譯的步驟。  
   
 ## <a name="defining-translations"></a>定義翻譯  
  定義翻譯會建立 `Translation` 物件做為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫、維度或 Cube 物件的子系。 使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 開啟方案並定義翻譯。  

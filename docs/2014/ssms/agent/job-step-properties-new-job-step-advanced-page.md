@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62937191"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>作業步驟屬性：新增作業步驟 （進階頁面）
+# <a name="job-step-properties-new-job-step-advanced-page"></a>作業步驟屬性：新增作業步驟 (進階頁面)
   使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性。  
   
 ## <a name="options"></a>選項。  
@@ -52,7 +52,7 @@ ms.locfileid: "52767210"
  將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
  **[檢視]**  
- 至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+ 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
  **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -80,7 +80,7 @@ ms.locfileid: "52767210"
  將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
  **[檢視]**  
- 至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+ 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
  **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -105,7 +105,7 @@ ms.locfileid: "52767210"
  將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
  **[檢視]**  
- 至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+ 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
  **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -137,7 +137,7 @@ ms.locfileid: "52767210"
  將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
  **[檢視]**  
- 至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+ 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
  **將輸出附加至資料表的現有項目**  
  將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  

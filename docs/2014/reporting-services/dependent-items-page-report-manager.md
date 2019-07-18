@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109330"
 ---
 # <a name="dependent-items-page-report-manager"></a>相依項目頁面 (報表管理員)
   您可以使用 [相依項目] 頁面來檢視參考共用資料來源的報表和模型清單。 每一個項目類型的圖示表示該項目是報表或模型。 檢視這個頁面可以使用清單檢視或詳細資料檢視。 使用詳細資料檢視來顯示有關每一個項目的詳細資訊。 詳細資料檢視有其他頁面選項可用。 為了協助您管理共用資料來源，這個頁面提供了使用資料來源之報表和模型的連結、有關上次執行或修改報表或模型之時間的標準，以及 [刪除] 和 [移動] 按鈕，以便您可以輕易地移除不再使用的報表和模型，或在您判斷是否仍然需要它們時，將它們移至不同的位置。  
@@ -34,7 +33,7 @@ ms.locfileid: "56030069"
   
 4.  選取 **[相依項目]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  顯示報表或模型的名稱。 按一下報表名稱將它開啟。 按一下模型的名稱則可開啟它的屬性頁面。  
   

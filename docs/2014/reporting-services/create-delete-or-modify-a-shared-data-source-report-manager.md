@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109607"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>建立、刪除或修改共用資料來源 (報表管理員)
   共用資料來源會指定資料來源的連接屬性。 如果您擁有大量報表、模型或資料驅動訂閱所使用的資料來源，請考慮建立共用資料來源，以便排除必須在多個位置維護相同連接資訊的負擔。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efcb67792eed98caebd541ab7dab3a3fef4cd626
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963867"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 傳回要求的介面指標上能力更強的版本的物件。  

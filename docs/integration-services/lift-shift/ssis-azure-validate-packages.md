@@ -9,18 +9,22 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 434fb03bdb2d93fd5695576ad864df2259a5c972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a323ebdaa6e9fd8b1ce09acc3f8354d536df9701
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014954"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>驗證部署到 Azure 的 SQL Server Integration Services (SSIS) 套件
 
-當您將 SQL Server Integration Services (SSIS) 專案部署到 Azure 伺服器上的 SSIS 目錄 (SSISDB) 時，[套件部署精靈] 會在 [檢閱] 頁面之後新增額外的驗證步驟。 此驗證步驟會檢查專案中的套件，尋找是否存在可能會導致套件無法在 Azure SSIS Integration Runtime 中如期般執行的已知問題。 精靈隨後會在 [驗證] 頁面上顯示任何相關的警告。
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
+當您將 SQL Server Integration Services (SSIS) 專案部署到 Azure 伺服器上的 SSIS 目錄 (SSISDB) 時，[套件部署精靈] 會在 [檢閱]  頁面之後新增額外的驗證步驟。 此驗證步驟會檢查專案中的套件，尋找是否存在可能會導致套件無法在 Azure SSIS Integration Runtime 中如期般執行的已知問題。 精靈隨後會在 [驗證]  頁面上顯示任何相關的警告。
 
 > [!IMPORTANT]
 > 當您部署 SQL Server Data Tools (SSDT) 17.4 版或更新版本的專案時，就會發生本文所述的驗證。 若要取得最新版的 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。
@@ -40,23 +44,23 @@ ms.locfileid: "47767746"
 
 | 連線管理員 | Windows 驗證 | 檔案路徑 | UNC 路徑 | 主機名稱 | 提供者或驅動程式 |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| Ado                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| [匯出]              |          | ✓         | ✓   |           |                   |
-| 檔案               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| Ftp                |          |           |     | ✓         |                   |
-| MsOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| ODBC               | ✓        |           |     | ✓         | ✓                 |
-| OleDb              | ✓        |           |     | ✓         | ✓                 |
-| SmoServer          | ✓        |           |     | ✓         |                   |
-| Smtp               | ✓        |           |     | ✓         |                   |
-| SqlMobile          |          | ✓         | ✓   |           |                   |
-| Wmi                | ✓        |           |     |           |                   |
+| Ado                | âœ“        |           |     | âœ“         | âœ“                 |
+| AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
+| Cache              |          | âœ“         | âœ“   |           |                   |
+| [匯出]              |          | âœ“         | âœ“   |           |                   |
+| 檔案               |          | âœ“         | âœ“   |           |                   |
+| FlatFile           |          | âœ“         | âœ“   |           |                   |
+| Ftp                |          |           |     | âœ“         |                   |
+| MsOLAP100          |          |           |     | âœ“         | âœ“                 |
+| MultiFile          |          | âœ“         | âœ“   |           |                   |
+| MultiFlatFile      |          | âœ“         | âœ“   |           |                   |
+| OData              | âœ“        |           |     | âœ“         |                   |
+| ODBC               | âœ“        |           |     | âœ“         | âœ“                 |
+| OleDb              | âœ“        |           |     | âœ“         | âœ“                 |
+| SmoServer          | âœ“        |           |     | âœ“         |                   |
+| Smtp               | âœ“        |           |     | âœ“         |                   |
+| SqlMobile          |          | âœ“         | âœ“   |           |                   |
+| Wmi                | âœ“        |           |     |           |                   |
 |||||||
 
 ## <a name="validate-sources-and-destinations"></a>驗證來源與目的地

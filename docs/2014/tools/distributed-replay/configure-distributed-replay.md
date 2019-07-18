@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149514"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 組態詳細資料指定於 Distributed Replay Controller、Client 以及安裝管理工具所在的 XML 檔案中。 這些檔案包括下列各項：  
@@ -28,7 +28,7 @@ ms.locfileid: "54124568"
   
 -   [重新執行組態檔](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> 控制器組態檔：DReplayController.config  
+##  <a name="DReplayController"></a> 控制器設定檔：DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務啟動時，會從控制器組態檔 `DReplayController.config`載入記錄層次。 這個檔案位於您安裝 Distributed Replay Controller 服務的資料夾中：  
   
  **\<控制器安裝路徑>\DReplayController.config**  
@@ -49,7 +49,7 @@ ms.locfileid: "54124568"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> 用戶端組態檔：DReplayClient.config  
+##  <a name="DReplayClient"></a> 用戶端設定檔：DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務啟動時，會從用戶端組態檔 ( `DReplayClient.config`) 載入組態設定。 這個檔案位於每個用戶端上您安裝 Distributed Replay Client 服務的資料夾中：  
   
  **\<用戶端安裝路徑>\DReplayClient.config**  
@@ -76,7 +76,7 @@ ms.locfileid: "54124568"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 前置處理組態檔：DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> 前置處理設定檔：DReplay.exe.preprocess.config  
  當您使用管理工具來起始前置處理階段時，管理工具就會從前置處理組態檔 `DReplay.exe.preprocess.config`載入前置處理設定。  
   
  您可以使用預設組態檔，也可以使用管理工具的 **-c** 參數來指定已修改前置處理組態檔的位置。 如需使用管理工具之前置處理選項的詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)。  
@@ -105,7 +105,7 @@ ms.locfileid: "54124568"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> 重新執行組態檔：DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> 重新執行設定檔：DReplay.exe.replay.config  
  當您使用管理工具來起始事件重新執行階段時，管理工具就會從重新執行組態檔 `DReplay.exe.replay.config`載入重新執行設定。  
   
  您可以使用預設組態檔，也可以使用管理工具的 **-c** 參數來指定已修改重新執行組態檔的位置。 如需使用管理工具之重新執行選項的詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "54124568"
   
 |設定|XML 元素|描述|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體 (測試伺服器)|`<Server>`|指定伺服器名稱以及要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|*server_name*[\\*instance_name*]<br /><br /> 您無法使用 "`localhost`" 或 "`.`" 來代表本機主機。|否，如果已經搭配使用 **-s**_目標伺服器_ 參數與管理工具的 [重新執行] 選項來指定伺服器名稱。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體 (測試伺服器)|`<Server>`|指定伺服器名稱以及要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|*server_name*[\\*instance_name*]<br /><br /> 您無法使用 "`localhost`" 或 "`.`" 來代表本機主機。|否，如果已經搭配使用 **-s**_目標伺服器_ 參數與管理工具的 [重新執行]  選項來指定伺服器名稱。|  
 |順序模式|`<SequencingMode>`|指定用於事件排程的模式。|`synchronization` &#124; `stress`|資料分割 根據預設，此值為 `stress`。|  
 |壓力規模粒度|`<StressScaleGranularity>`|指定服務設定檔識別碼 (SPID) 上的所有連接是應該在壓力模式下同時 (SPID) 還是個別 (連接) 調整。|SPID &#124; 連接|是的。 根據預設，此值為 `SPID`。|  
 |連接時間間隔|`<ConnectTimeScale>`|這是用來在壓力模式中設定連接時間的間隔。|介於 `1` 與 `100`之間的整數。|資料分割 根據預設，此值為 `100`。|  

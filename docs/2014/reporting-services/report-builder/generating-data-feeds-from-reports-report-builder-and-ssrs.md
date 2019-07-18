@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107843"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從報表取得的資料摘要，以及來自報表中之資料區的資料摘要。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
@@ -80,13 +79,13 @@ ms.locfileid: "56292256"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>資料區段  
- 資料摘要的資料區段在 Atom 轉譯延伸模組產生之扁平化資料列集的每個資料列中包含一個 <`entry`> 元素。  
+ 資料摘要的 [資料] 區段包含一個 <`entry`> 扁平化的資料列集產生的 Atom 轉譯延伸模組中的每個資料列的項目。  
   
  下列圖表顯示使用群組和總計的報表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下列 XML 顯示來自資料摘要中該報表的 <`entry`> 元素。 請注意，<`entry`> 元素包含群組之銷售量與訂單的總計，以及所有群組之銷售量與訂單的總計。 <`entry`> 元素包含報表上所有的值。  
+ 下列 XML 會說明 <`entry`> 項目從資料摘要中該報表。 請注意，<`entry`> 項目包含銷售量與訂單的所有群組的總計，以及銷售量與訂單群組的總計。 <`entry`> 項目包含報表上的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767750"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>安裝 Microsoft Connector for 1.1 SAP BW
   若要安裝[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW 及其文件中，下載並執行 SQL Server 功能套件網頁上的 Windows installer 套件。  

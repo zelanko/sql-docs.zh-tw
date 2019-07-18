@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4140fe03cb091a119942c563afe7f41ae69c5103
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109895"
 ---
 # <a name="choose-item-location-page-report-manager"></a>選擇項目位置頁面 (報表管理員)
   您可以使用 [選擇項目位置] 頁面，針對新的連結報表或新的模型選取資料夾。 如果您要建立特定使用者群組的連結報表或模型，可能會想要將該項目放入含有它們使用之其他報表和模型的資料夾中。 您必須選擇已經存在且有權新增內容的資料夾。  
@@ -52,8 +51,8 @@ ms.locfileid: "56038529"
   
 4.  在 **[一般]** 索引標籤的屬性頁面上，按一下 **[變更位置]** 開啟 [選擇項目位置] 頁面。  
   
-## <a name="options"></a>選項。  
- **位置**  
+## <a name="options"></a>選項  
+ **Location**  
  指定要包含您所建立之項目的資料夾名稱。 您可以輸入完整名稱，或使用樹狀檢視來瀏覽想要使用的資料夾。  
   
  **樹狀檢視**  

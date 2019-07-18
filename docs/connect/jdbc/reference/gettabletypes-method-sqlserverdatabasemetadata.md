@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ca0e9735935aa0ff4eff38fd076822e7bc01021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6795a84a042a7abaa52fe83f562911c934709f81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700081"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779061"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>getTableTypes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +41,12 @@ public java.sql.ResultSet getTableTypes()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getTableTypes 方法是由 java.sql.DatabaseMetaData 介面中 getTableTypes 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getTableTypes 方法是由 java.sql.DatabaseMetaData 介面中的 getTableTypes 方法指定。  
   
  透過 getTableTypes 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_TYPE|**String**|資料表類型。|  
   

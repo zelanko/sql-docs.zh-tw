@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], inherited
@@ -15,12 +14,12 @@ ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aeb90951cea0b50226c2db87e22268822b58b1b4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058058"
 ---
 # <a name="inherited-transactions"></a>繼承的交易
   封裝可使用「執行封裝」工作執行另一個封裝。 子封裝 (亦即「執行封裝」工作所執行的封裝) 可建立其自己的封裝交易，也可以繼承父封裝交易。  
@@ -38,7 +37,7 @@ ms.locfileid: "58394366"
   
  封裝和工作具有下列交易屬性：  
   
--   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**   
+-   在封裝 A 和 C 上，**TransactionOption** 設為 **Required**  
   
 -   在封裝 B 和 D 上，以及在「執行封裝 B」、「執行封裝 D」和「執行封裝 F」工作上，**TransactionOption** 設為 **Supported** 。  
   

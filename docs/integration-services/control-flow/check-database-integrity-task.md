@@ -20,14 +20,18 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40019c35b3e7b7374b0b0c2066a5ba3e5c2656e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb5be38de88d46a379da31dbe2f570269e4e3a25
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727897"
 ---
 # <a name="check-database-integrity-task"></a>檢查資料庫完整性工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「檢查資料庫完整性」工作會檢查指定資料庫中所有物件的配置及結構完整性。 這項工作可檢查單一資料庫或多個資料庫，而且您可以選擇是否同時檢查資料庫索引。  
   
  「檢查資料庫完整性」工作會封裝 DBCC CHECKDB 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。  

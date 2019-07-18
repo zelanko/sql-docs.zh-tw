@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam |Microsoft Docs'
+title: PDOStatement::bindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 968fcaa992f19b24d928bcb50315d9d2c53468cb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795589"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ $*driver_options*： 選用 （混合） 驅動程式特有的選項。 例如�
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 TRUE，否則為 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 將 Null 資料繫結至屬於 varbinary、binary 或 varbinary(max) 類型的伺服器資料行時，您應使用 $*driver_options* 指定二進位編碼 (PDO::SQLSRV_ENCODING_BINARY)。 如需編碼常數的詳細資訊，請參閱[常數](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
@@ -122,10 +122,10 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](https://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議在將值繫結至 [decimal 或 numeric 資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
 ## <a name="example"></a>範例  
-此程式碼範例示範如何繫結十進位值做為輸入參數。  
+此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```
 <?php  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Url property
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 06a5ec6ec02544354307f426534d583b0cfe8150
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520284"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>設定 Web 服務的 URL 屬性
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式中，您隨時都可以修改目前將應用程式導向的報表伺服器 Web 服務之目標基礎 URL。 若要這樣做，請直接設定服務物件的 **Url** 屬性。 例如：  

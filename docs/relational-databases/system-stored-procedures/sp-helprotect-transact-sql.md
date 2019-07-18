@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997481"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'object_statement'` 是在目前資料庫中，或是具有報表的權限的陳述式，物件的名稱。 *object_statement&lt*已**nvarchar(776)**，預設值是 NULL，它會傳回所有物件和陳述式的權限。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以在表單中包含的擁有者限定詞_擁有者_**。**_物件_。  
+`[ @name = ] 'object_statement'` 是在目前資料庫中，或是具有報表的權限的陳述式，物件的名稱。 *object_statement&lt*已**nvarchar(776)** ，預設值是 NULL，它會傳回所有物件和陳述式的權限。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以在表單中包含的擁有者限定詞_擁有者_ **。** _物件_。  
   
  如果*object_statement&lt*是陳述式，它可以是 CREATE 陳述式。  
   
@@ -56,7 +55,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` 是授與權限名稱。 *另外，grantor*已**sysname**，預設值是 NULL，它會傳回資料庫中任何主體授與的權限的所有資訊。  
   
-`[ @permissionarea = ] 'type'` 這是字元字串，指出是否要顯示物件的權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*已**varchar(10)**，預設值是**os**。 *型別*可以是任意的組合**o**並**s**，不論有無逗號或空格之間**o**並**s**。  
+`[ @permissionarea = ] 'type'` 這是字元字串，指出是否要顯示物件的權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*已**varchar(10)** ，預設值是**os**。 *型別*可以是任意的組合**o**並**s**，不論有無逗號或空格之間**o**並**s**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

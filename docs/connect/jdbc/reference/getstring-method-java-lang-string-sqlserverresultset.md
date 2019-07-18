@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a153811c723875da51e747a4d9cff24a57ace75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 13dd4f2bd18ef3bde6b920be0e5e562dc9aef956
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66773807"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式設計語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列中所指定資料行名稱值來作為 **String** 物件。  
+  使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行名稱的值來作為 **String** 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ public java.lang.String getString(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getString 方法是由 java.sql.ResultSet 介面中的 getString 方法指定。  
   
  SQL Server 中的所有資料行都可以當做字串傳回， 這表示可以傳回所有數字和字元類型的**字串**表示法，以及二進位資料行的十六進位字串表示法，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier。  

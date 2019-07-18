@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e0c7817d37e14ad07b9cc64f59691c27cf665177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070089"
 ---
 # <a name="system-functions"></a>系統函數
 下表列出 ODBC 純量函式集合中包含的系統函數。 藉由呼叫**SQLGetInfo**具有*資訊類型*的 SQL_SYSTEM_FUNCTIONS，應用程式可以判斷驅動程式支援哪些系統函式。  
@@ -32,6 +31,6 @@ ms.locfileid: "53591512"
   
 |函數|描述|  
 |--------------|-----------------|  
-|**資料庫 （)** (ODBC 1.0)|傳回對應至連接控制代碼的資料庫名稱。 (資料庫的名稱，也可以透過呼叫**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 連接選項。)|  
-|**IFNULL (** _exp_，_值_**)** (ODBC 1.0)|如果*exp*為 null，然後*值*會傳回。 如果*exp*不是 null， *exp*會傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
+|**DATABASE( )**  (ODBC 1.0)|傳回對應至連接控制代碼的資料庫名稱。 (資料庫的名稱，也可以透過呼叫**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 連接選項。)|  
+|**IFNULL (** _exp_，_值_ **)** (ODBC 1.0)|如果*exp*為 null，然後*值*會傳回。 如果*exp*不是 null， *exp*會傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
 |**使用者 > （)** (ODBC 1.0)|DBMS 中傳回的使用者名稱。 (使用者名稱也是可透過**SQLGetInfo**藉由指定的資訊類型：SQL_USER_NAME。)這可以是不同的登入名稱。|

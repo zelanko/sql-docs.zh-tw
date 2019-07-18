@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053442"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47709166"
 |**status**|**int**|系統狀態資訊。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|指向第一個頁面或根頁面的指標。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
 |**indid**|**smallint**|索引的識別碼：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引|  
-|**根目錄**|**binary(6)**|針對**indid** > = 1，**根**根頁面的指標。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
+|**root**|**binary(6)**|針對**indid** > = 1，**根**根頁面的指標。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
 |**minlen**|**smallint**|資料列的大小下限。|  
 |**keycnt**|**smallint**|索引鍵數目。|  
 |**groupid**|**smallint**|建立物件的檔案群組識別碼。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  

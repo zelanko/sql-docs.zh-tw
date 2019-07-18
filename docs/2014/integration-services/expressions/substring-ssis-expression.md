@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768727"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 運算式)
   傳回從指定位置開始算起指定長度的字元運算式部分。 *position* 參數和 *length* 參數必須評估為整數。  

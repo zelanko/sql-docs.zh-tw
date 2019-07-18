@@ -12,11 +12,11 @@ author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63221971"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>透過 PowerShell Desired State Configuration 安裝 SQL Server
 
@@ -202,7 +202,7 @@ Running SQLTELEMETRY   SQL Server CEIP service (MSSQLSERVER)
 Running SQLWriter      SQL Server VSS Writer
 ```
 
-### <a name="sql-server"></a>[SQL Server]
+### <a name="sql-server"></a>SQL Server
 
 ```PowerShell
 PS C:\> & sqlcmd -S $env:COMPUTERNAME

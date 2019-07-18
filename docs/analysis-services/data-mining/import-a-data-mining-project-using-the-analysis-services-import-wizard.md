@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52e98d6916b66c4ab26b2791d023d25bffc4cab8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043956"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52525502"
     > [!WARNING]  
     >  您不能指定您想要匯入的物件；當您選擇現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，所有多維度和資料採礦物件都會匯入。  
   
-     按 [下一步] 。  
+     按一下 [下一步] 。  
   
 5.  **[正在完成精靈]** 頁面會顯示匯入作業的進度。 您不能取消此作業或是變更正在匯入的物件。 完成時按一下 **[完成]** 。  
   

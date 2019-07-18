@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361588"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556917"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 伺服器權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  指定可以拒絕的伺服器權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  CASCADE  
- 指出目前受到拒絕的權限，也為這個主體曾授與此權限的其他主體所拒絕。  
+ 表示已對指定主體和對被主體授與權限的所有其他主體拒絕權限。 當主體具有 GRANT OPTION 的權限時，這是必要的。 
   
  TO \<server_principal>  
  指定要拒絕其權限的主體。  
   
  AS \<grantor_principal>  
- 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。  
+ 指定主體，執行這項查詢的主體會從這個主體衍生權限來拒絕權限。
+您可使用 AS principal 子句，來表示記錄為權限拒絕者的主體應為陳述式執行人員以外的主體。 例如，假設使用者 Mary 是 principal_id 12；使用者 Raul 是 principal 15。 Mary 執行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`。現在，即使實際執行陳述式的是使用者 13 (Mary)，sys.database_permissions 資料表仍會指出 deny 陳述式的 grantor_prinicpal_id 是 15 (Raul)。
+  
+在此陳述式中使用 AS 不代表能模擬其他使用者。    
   
  *SQL_Server_login*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
@@ -142,7 +145,7 @@ DENY permission [ ,...n ]
  **SELECT ALL USER SECURABLES** 權限  
  授與此權限時，像是稽核者這類登入就可以檢視使用者可連接之所有資料庫中的資料。 拒絕此權限時，可防止存取不在 **sys** 結構描述中的物件。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要安全性實體的 CONTROL SERVER 權限或擁有權。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的安全性實體。  
   
 ## <a name="examples"></a>範例  

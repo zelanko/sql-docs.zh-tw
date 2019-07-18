@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e547e2cd3c50e020d1164dc2b8aaffb31f4e3cb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bb3f48a9a25b12568497c3583536d8c650a6f702
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962436"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中的 R 效能微調
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

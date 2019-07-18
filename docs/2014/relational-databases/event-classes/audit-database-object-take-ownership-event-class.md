@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14284d0c89037664000ded35e09e4256bfe6a544
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62698979"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership 事件類別
   **Audit Database Object Take Ownership** 事件類別會在資料庫範圍內的物件擁有者有所變更時發生。  

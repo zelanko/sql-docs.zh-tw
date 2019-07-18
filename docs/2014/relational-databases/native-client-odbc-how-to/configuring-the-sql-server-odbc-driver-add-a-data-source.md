@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126072"
 ---
 # <a name="add-a-data-source-odbc"></a>加入資料來源 (ODBC)
   您可以使用 ODBC 管理員，以程式設計方式加入資料來源 (利用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或藉由建立檔案。  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員加入資料來源  
   
-1.  從**控制台中**，存取**系統管理工具**，然後**資料來源 (ODBC)**。 或者，您可以叫用 odbcad32.exe。  
+1.  從**控制台中**，存取**系統管理工具**，然後**資料來源 (ODBC)** 。 或者，您可以叫用 odbcad32.exe。  
   
 2.  按一下 **使用者 DSN**，**系統 DSN**，或**檔案 DSN**索引標籤，然後再按**新增**。  
   

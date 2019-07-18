@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - debugging data processing extensions [Reporting Services]
 - troubleshooting [Reporting Services], data processing extensions
 - data processing extensions [Reporting Services], debugging
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8b7418b2118e42217150605521d121123b8582a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: adecc79256f49aeca9532e50119675515b9939dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164361"
 ---
 # <a name="debugging-data-processing-extension-code"></a>偵錯資料處理延伸模組程式碼
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析資料處理延伸模組程式碼，並尋找其中的錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
@@ -36,13 +34,13 @@ ms.locfileid: "56034059"
   
 4.  導覽到包含資料處理延伸模組專案的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 視窗，並在程式碼中設定某些中斷點。  
   
-5.  當資料處理延伸模組專案視窗仍為使用中時，按一下 [偵錯] 功能表的 [附加至處理序]。  
+5.  當資料處理延伸模組專案視窗仍為使用中時，按一下 [偵錯]  功能表的 [附加至處理序]  。  
   
-     [附加至處理序] 對話方塊隨即開啟。  
+     [附加至處理序]  對話方塊隨即開啟。  
   
-6.  從處理序清單中，選取對應至報表專案的 devenv.exe 處理序，然後按一下 [附加]。  
+6.  從處理序清單中，選取對應至報表專案的 devenv.exe 處理序，然後按一下 [附加]  。  
   
-7.  您可以使用報表專案的 [報表資料] 索引標籤來定義報表資料來源。 您最有可能使用一般查詢設計工具，以針對自訂資料來源來執行查詢。 這應該會叫用偵錯工具並執行對應至中斷點的程式碼。  
+7.  您可以使用報表專案的 [報表資料]  索引標籤來定義報表資料來源。 您最有可能使用一般查詢設計工具，以針對自訂資料來源來執行查詢。 這應該會叫用偵錯工具並執行對應至中斷點的程式碼。  
   
 8.  使用 F11 鍵逐步執行程式碼。 如需有關使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 進行偵錯的詳細資訊，請參閱您的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 文件集。  
   

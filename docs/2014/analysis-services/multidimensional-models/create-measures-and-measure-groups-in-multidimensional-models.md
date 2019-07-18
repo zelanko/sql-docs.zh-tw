@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
@@ -13,12 +12,12 @@ ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8f7e9df6417334b814e71664b2a164dd76a9642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2883a9092f7b84e8dd18954cec631b90a8bbe0e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076244"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
   *「量值」* (measure) 是數值資料值的彙總，包括總和、計數、最小值、最大值、平均值或您建立的自訂 MDX 運算式。 *「量值群組」* (measure group) 是包含一個或多個量值的容器。 所有量值都存在量值群組中，即使只有一個量值。 Cube 必須具有至少一個量值與量值群組。  
@@ -40,9 +39,9 @@ ms.locfileid: "48060361"
   
 |||  
 |-|-|  
-|Cube 精靈|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行 [Cube 精靈]，以建立 Cube。<br /><br /> 在方案總管中，以滑鼠右鍵按一下 [Cube]，然後選擇 [新增 Cube]。 如需這些步驟的說明，請參閱[多維度模型化 &#40;Adventure Works 教學課程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 當您以現有之資料倉儲的資料表為基礎建立 Cube 時，量值和量值群組會在建立 Cube 時具體化。 您會在精靈中選擇事實及事實資料表，以用為 Cube 中之量值及量值群組物件的基礎。|  
+|Cube 精靈|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行 [Cube 精靈]，以建立 Cube。<br /><br /> 在方案總管中，以滑鼠右鍵按一下 [Cube]  ，然後選擇 [新增 Cube]  。 如需這些步驟的說明，請參閱[多維度模型化 &#40;Adventure Works 教學課程&#41;](../multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 當您以現有之資料倉儲的資料表為基礎建立 Cube 時，量值和量值群組會在建立 Cube 時具體化。 您會在精靈中選擇事實及事實資料表，以用為 Cube 中之量值及量值群組物件的基礎。|  
 |[新增量值] 對話方塊|假設 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中已有此 Cube，在 [方案總管] 中按兩下此 Cube 的名稱，即可在 Cube 設計師中開啟此 Cube。 在 [量值] 窗格中，於最上層節點上按一下滑鼠右鍵，以建立新的量值群組，或指定來源資料表、資料行及彙總類型，以建立新的量值。 使用這種方法必須從預先建置的函數固定清單中選擇彙總方法。 如需更常用之彙總方法的討論，請參閱＜ [Use Aggregate Functions](use-aggregate-functions.md) ＞。|  
-|「導出成員」|因為您可以控制導出成員的建立時機及方式，所以導出成員可為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 增加彈性及分析功能。 有時候您可能只是暫時需要量值，在使用者工作階段或調查期間的 Management Studio 階段中使用。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [計算] 索引標籤，以建立新的導出成員。<br /><br /> 當基礎為 MDX 運算式中的量值時，請選擇此方法。 如需詳細資訊，請參閱下列主題︰[Building Measures in MDX](mdx/mdx-building-measures.md) (在 MDX 中建立量值)、[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)、[Calculations in Multidimensional Models](calculations-in-multidimensional-models.md) (多維度模型中的計算) 和 [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md) (MDX 指令碼基礎觀念 (Analysis Services))。|  
+|「導出成員」|因為您可以控制導出成員的建立時機及方式，所以導出成員可為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 增加彈性及分析功能。 有時候您可能只是暫時需要量值，在使用者工作階段或調查期間的 Management Studio 階段中使用。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [計算] 索引標籤，以建立新的導出成員。<br /><br /> 當基礎為 MDX 運算式中的量值時，請選擇此方法。 請參閱這些主題，如需詳細資訊：[建置在 MDX 中的量值](mdx/mdx-building-measures.md)，[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)，[多維度模型中的計算](calculations-in-multidimensional-models.md)並[MDX 指令碼基礎觀念&#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX 或 XMLA|在 SQL Server Management Studio 中，您可以執行 MDX 或 XMLA 來更改資料庫，以加入新的導出量值。 這種方法可在解決方案部署到伺服器之後，於特定的資料測試時使用。 請參閱 [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)。|  
   
 ##  <a name="bkmk_comps"></a> 量值的元件  
@@ -86,7 +85,7 @@ ms.locfileid: "48060361"
  您可以使用 Cube 設計師的 **[維度使用方式]** 索引標籤，來指定與特定維度相關之量值群組的資料粒度。 如需有關維度關聯性的詳細資訊，請參閱＜ [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)   
  [量值和量值群組](measures-and-measure-groups.md)  
   
   

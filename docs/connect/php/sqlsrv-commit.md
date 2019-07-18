@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_commit |Microsoft Docs
+title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a1e1de776485b04c7f5fe63bfc2e8b595eb30ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd620df122c3203a056817f3e9c35667fad433f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796993"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

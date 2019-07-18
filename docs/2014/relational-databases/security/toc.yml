@@ -1,134 +1,128 @@
-items:
 - name: 概觀
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
   items:
-  - name: 保護 SQL Server 的安全
-    href: securing-sql-server.md
+    - name: 保護 SQL Server 的安全
+      href: securing-sql-server.md
 - name: 操作方式
   items:
-  - name: 保護 SQL Server
-    items:
-    - name: 介面區設定
-      href: surface-area-configuration.md
-  - name: 驗證存取
-    items:
-    - name: 建立登入
-      href: authentication-access/create-a-login.md
-    - name: 建立資料庫使用者
-      href: authentication-access/create-a-database-user.md
-    - name: 建立資料庫結構描述
-      href: authentication-access/create-a-database-schema.md
-    - name: 加入角色
-      href: authentication-access/join-a-role.md
-    - name: 為主體授與權限
-      href: authentication-access/grant-a-permission-to-a-principal.md
-    - name: 建立伺服器角色
-      href: authentication-access/create-a-server-role.md
-    - name: 建立應用程式角色
-      href: authentication-access/create-an-application-role.md
-    - name: 建立認證
-      href: authentication-access/create-a-credential.md
-  - name: 加密
-    items:
-    - name: 選擇演算法
-      href: encryption/choose-an-encryption-algorithm.md
-    - name: 使用 EKM 啟用 TDE
-      href: encryption/enable-tde-on-sql-server-using-ekm.md
-    - name: 將受 TDE 保護的資料庫移至另一個 SQL Server
-      href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-    - name: 具備 Azure Key Vault 的 EKM
-      href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-    - name: 備份服務主要金鑰
-      href: encryption/back-up-the-service-master-key.md
-    - name: 還原服務主要金鑰
-      href: encryption/restore-the-service-master-key.md
-    - name: 建立資料庫主要金鑰
-      href: encryption/create-a-database-master-key.md
-    - name: 備份資料庫主要金鑰
-      href: encryption/back-up-a-database-master-key.md
-    - name: 還原資料庫主要金鑰
-      href: encryption/restore-a-database-master-key.md
-    - name: 在兩部伺服器上建立相同的對稱金鑰
-      href: encryption/create-identical-symmetric-keys-on-two-servers.md
-    - name: 加密資料的資料行
-      href: encryption/encrypt-a-column-of-data.md
-  - name: 稽核
-    items:
-    - name: 建立伺服器稽核
-      href: auditing/create-a-server-audit-and-server-audit-specification.md
-    - name: 建立資料庫稽核
-      href: auditing/create-a-server-audit-and-database-audit-specification.md
-    - name: 檢視稽核記錄
-      href: auditing/view-a-sql-server-audit-log.md
-    - name: 將稽核寫入 Windows 記錄檔
-      href: auditing/write-sql-server-audit-events-to-the-security-log.md
+    - name: 保護 SQL Server
+      items:
+        - name: 介面區設定
+          href: surface-area-configuration.md
+    - name: 驗證存取
+      items:
+        - name: 建立登入
+          href: authentication-access/create-a-login.md
+        - name: 建立資料庫使用者
+          href: authentication-access/create-a-database-user.md
+        - name: 建立資料庫結構描述
+          href: authentication-access/create-a-database-schema.md
+        - name: 加入角色
+          href: authentication-access/join-a-role.md
+        - name: 為主體授與權限
+          href: authentication-access/grant-a-permission-to-a-principal.md
+        - name: 建立伺服器角色
+          href: authentication-access/create-a-server-role.md
+        - name: 建立應用程式角色
+          href: authentication-access/create-an-application-role.md
+        - name: 建立認證
+          href: authentication-access/create-a-credential.md
+    - name: 加密
+      items:
+        - name: 選擇演算法
+          href: encryption/choose-an-encryption-algorithm.md
+        - name: 使用 EKM 啟用 TDE
+          href: encryption/enable-tde-on-sql-server-using-ekm.md
+        - name: 將受 TDE 保護的資料庫移至另一個 SQL Server
+          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+        - name: 具備 Azure Key Vault 的 EKM
+          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+        - name: 備份服務主要金鑰
+          href: encryption/back-up-the-service-master-key.md
+        - name: 還原服務主要金鑰
+          href: encryption/restore-the-service-master-key.md
+        - name: 建立資料庫主要金鑰
+          href: encryption/create-a-database-master-key.md
+        - name: 備份資料庫主要金鑰
+          href: encryption/back-up-a-database-master-key.md
+        - name: 還原資料庫主要金鑰
+          href: encryption/restore-a-database-master-key.md
+        - name: 在兩部伺服器上建立相同的對稱金鑰
+          href: encryption/create-identical-symmetric-keys-on-two-servers.md
+        - name: 加密資料的資料行
+          href: encryption/encrypt-a-column-of-data.md
+    - name: 稽核
+      items:
+        - name: 建立伺服器稽核
+          href: auditing/create-a-server-audit-and-server-audit-specification.md
+        - name: 建立資料庫稽核
+          href: auditing/create-a-server-audit-and-database-audit-specification.md
+        - name: 檢視稽核記錄
+          href: auditing/view-a-sql-server-audit-log.md
+        - name: 將稽核寫入 Windows 記錄檔
+          href: auditing/write-sql-server-audit-events-to-the-security-log.md
 - name: 概念
   items:
-  - name: 保護 SQL Server 智慧財產權
-    items:
-    - name: TRUSTWORTHY 資料庫屬性
-      href: trustworthy-database-property.md
-    - name: 密碼原則
-      href: password-policy.md
-    - name: 增強式密碼
-      href: strong-passwords.md
-    - name: 資料列層級安全性
-      href: row-level-security.md
-    - name: 憑證與非對稱金鑰
-      href: sql-server-certificates-and-asymmetric-keys.md
-  - name: 驗證存取
-    items:
-    - name: 主體
-      href: authentication-access/principals-database-engine.md
-    - name: 伺服器層級角色
-      href: authentication-access/server-level-roles.md
-    - name: 資料庫層級角色
-      href: authentication-access/database-level-roles.md
-    - name: 應用程式角色
-      href: authentication-access/application-roles.md
-    - name: 認證
-      href: authentication-access/credentials-database-engine.md
-    - name: '[安全性實體]'
-      href: securables.md
-    - name: 自主資料庫使用者
-      href: contained-database-users-making-your-database-portable.md
-    - name: 驗證模式
-      href: choose-an-authentication-mode.md
-    - name: 中繼資料可見度
-      href: metadata-visibility-configuration.md
-    - name: '[權限]'
-      href: permissions-database-engine.md
-    - name: 權限階層
-      href: permissions-hierarchy-database-engine.md
-  - name: 加密
-    href: encryption/sql-server-encryption.md
-    items:
-    - name: 加密階層
-      href: encryption/encryption-hierarchy.md
-    - name: 服務主要金鑰
-      href: encryption/service-master-key.md
-    - name: SQL Server 與資料庫加密金鑰
-      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
-    - name: 透明資料加密 (TDE)
-      href: encryption/transparent-data-encryption.md
-    - name: Azure SQL Database 提供的 TDE
-      href: dbengine-transparent-data-encryption-with-azure-sql-database.md
-    - name: 可延伸金鑰管理 (EKM)
-      href: encryption/extensible-key-management-ekm.md
-  - name: 稽核
-    href: auditing/sql-server-audit-database-engine.md
-    items:
-    - name: 稽核動作群組和動作
-      href: auditing/sql-server-audit-action-groups-and-actions.md
-    - name: 稽核記錄
-      href: auditing/sql-server-audit-records.md
+    - name: 保護 SQL Server 智慧財產權
+      href: null
+      items:
+        - name: TRUSTWORTHY 資料庫屬性
+          href: trustworthy-database-property.md
+        - name: 密碼原則
+          href: password-policy.md
+        - name: 增強式密碼
+          href: strong-passwords.md
+        - name: 資料列層級安全性
+          href: row-level-security.md
+        - name: 憑證與非對稱金鑰
+          href: sql-server-certificates-and-asymmetric-keys.md
+    - name: 驗證存取
+      items:
+        - name: 主體
+          href: authentication-access/principals-database-engine.md
+        - name: 伺服器層級角色
+          href: authentication-access/server-level-roles.md
+        - name: 資料庫層級角色
+          href: authentication-access/database-level-roles.md
+        - name: 應用程式角色
+          href: authentication-access/application-roles.md
+        - name: 認證
+          href: authentication-access/credentials-database-engine.md
+        - name: '[安全性實體]'
+          href: securables.md
+        - name: 自主資料庫使用者
+          href: contained-database-users-making-your-database-portable.md
+        - name: 驗證模式
+          href: choose-an-authentication-mode.md
+        - name: 中繼資料可見度
+          href: metadata-visibility-configuration.md
+        - name: 權限
+          href: permissions-database-engine.md
+        - name: 權限階層
+          href: permissions-hierarchy-database-engine.md
+    - name: 加密
+      href: encryption/sql-server-encryption.md
+      items:
+        - name: 加密階層
+          href: encryption/encryption-hierarchy.md
+        - name: 服務主要金鑰
+          href: encryption/service-master-key.md
+        - name: SQL Server 與資料庫加密金鑰
+          href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+        - name: 透明資料加密 (TDE)
+          href: encryption/transparent-data-encryption.md
+        - name: Azure SQL Database 提供的 TDE
+          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+        - name: 可延伸金鑰管理 (EKM)
+          href: encryption/extensible-key-management-ekm.md
+    - name: 稽核
+      href: auditing/sql-server-audit-database-engine.md
+      items:
+        - name: 稽核動作群組和動作
+          href: auditing/sql-server-audit-action-groups-and-actions.md
+        - name: 稽核記錄
+          href: auditing/sql-server-audit-records.md
 - name: 參考
   items:
-  - name: 權限或安全性實體頁面
-    href: permissions-or-securables-page.md
-ms.openlocfilehash: 125988518d441b47c40fac72194bd2c1e1f6c7ea
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513828"
+    - name: 權限或安全性實體頁面
+      href: permissions-or-securables-page.md

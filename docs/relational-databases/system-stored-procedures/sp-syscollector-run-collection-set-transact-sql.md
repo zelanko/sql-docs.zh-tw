@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e2ad81b1d92bb45d9ab15ca11897804cc0d333a9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 337697ec5a0ce842d3ade808db885a671b6adcc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010706"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>備註  
  任一*collection_set_id&lt*或是*名稱*必須具有值，兩者都不能是 NULL。  
   
- 此程序會開始收集和上傳作業，針對指定的集合設定，並將在此收集組是否立即啟動收集代理程式作業及其**@collection_mode**設為非快取 (1)。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 此程序會開始收集和上傳作業，針對指定的集合設定，並將在此收集組是否立即啟動收集代理程式作業及其 **@collection_mode** 設為非快取 (1)。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 也可以用來執行沒有排程的收集組。  
   

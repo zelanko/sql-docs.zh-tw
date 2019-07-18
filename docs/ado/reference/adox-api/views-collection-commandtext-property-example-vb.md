@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13dc0a46daa2636dc56cf84f91ad8d014c4a3bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b185bd3c5d42eb6aa9078f842280fe11e1383202
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964769"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Views 集合、CommandText 屬性範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)屬性更新檢視的文字。  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917701"
 ---
 # <a name="database-mail-messaging-objects"></a>Database Mail 訊息物件
   **msdb** 資料庫是 Database Mail 主機資料庫。 這個資料庫包含 Database Mail 的預存程序和訊息物件。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含 [Database Mail 組態精靈]，用以啟用 Database Mail、建立和管理設定檔及帳戶，以及設定 Database Mail 選項。  

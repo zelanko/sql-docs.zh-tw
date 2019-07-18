@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ff1d003f4ddb20adf6ada2899df47c07b16d5bf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daa3dc088a4a448e6b20cdf2ade73e64e86d491d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942190"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>一般擴充預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

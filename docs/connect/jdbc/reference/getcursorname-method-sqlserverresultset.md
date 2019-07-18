@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a299f8505e279cc752670b92338c893aa6b9e13d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 673b8b3d20ce4c378416958ff6b3d6f37cb954b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624826"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763003"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

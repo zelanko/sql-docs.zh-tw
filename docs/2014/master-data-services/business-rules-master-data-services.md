@@ -10,15 +10,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483651"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則是用來確保主要資料品質和正確性的規則。 您可以使用商務規則自動更新資料、傳送電子郵件，或啟動商務程序或工作流程。  

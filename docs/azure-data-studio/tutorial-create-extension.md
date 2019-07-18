@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
-manager: craigg
-ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959089"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教學課程：建立 Azure Data Studio 擴充功能
 

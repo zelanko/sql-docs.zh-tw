@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06e959f6fa9144c62ef79d60c6264ac5445febd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18e05d4707977499cff3864cef34e39f1bd45feb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652216"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797595"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream 方法 (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

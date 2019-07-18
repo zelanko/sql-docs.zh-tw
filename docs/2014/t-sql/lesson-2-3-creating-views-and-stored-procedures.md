@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211185"
 ---
 # <a name="creating-views-and-stored-procedures"></a>建立檢視和預存程序
   既然 Mary 現在能存取 **TestData** 資料庫，您或許想要建立一些資料庫物件，如檢視和預存程序，然後授與 Mary 存取這些物件。 檢視是預存的 SELECT 陳述式，而預存程序是一個或多個批次執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  

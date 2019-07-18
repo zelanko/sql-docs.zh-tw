@@ -15,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63227005"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>檢視聯結屬性 (Visual Database Tools)
   您可以在 [屬性] 視窗中檢視屬性的集合。  
   
 ### <a name="to-view-join-properties"></a>若要檢視聯結屬性  
   
-1.  以滑鼠右鍵按一下 [圖表] 窗格中的聯結。  
+1.  以滑鼠右鍵按一下 [圖表]  窗格中的聯結。  
   
-2.  從捷徑功能表按一下 [屬性]。  
+2.  從捷徑功能表按一下 [屬性]  。  
   
      在 [屬性] 視窗中會顯示聯結的屬性。  
   

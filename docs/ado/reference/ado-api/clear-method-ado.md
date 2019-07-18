@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e69e7d2d2a66ccb9df0e03f6f77849c502f3bf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd13f130966b1830d07e49633842e4154b52b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920068"
 ---
 # <a name="clear-method-ado"></a>Clear 方法 (ADO)
 移除所有[錯誤](../../../ado/reference/ado-api/error-object.md)物件從[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。  

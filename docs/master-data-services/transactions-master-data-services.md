@@ -11,15 +11,14 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 78badeae93c8fbcf7adf03638f22e62f591b56ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102612"
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
 
@@ -42,20 +41,20 @@ ms.locfileid: "52782730"
  當商務規則變更屬性值時，不會記錄交易。  
   
 ## <a name="view-and-manage-transactions"></a>檢視及管理交易  
- 在 [總管] 功能區域中，您可以檢視和註解自己進行的交易。 
+ 在 [總管]  功能區域中，您可以檢視和註解自己進行的交易。 
   
- 在 [版本管理] 功能區域中，系統管理員可以檢視其可存取模型當中所有使用者的全數交易，並反轉任何交易。
+ 在 [版本管理]  功能區域中，系統管理員可以檢視其可存取模型當中所有使用者的全數交易，並反轉任何交易。
  
 > [!NOTE]  
->  只要系統管理員的 [版本管理] 功能區域未套用唯讀權限層級，即可檢視所有使用者的全數交易。 例如，如果系統管理員設定了唯讀權限和更新權限等級，系統管理員就無法查看其他使用者的交易，因為唯讀權限的優先順序高於更新權限。
+>  只要系統管理員的 [版本管理]  功能區域未套用唯讀權限層級，即可檢視所有使用者的全數交易。 例如，如果系統管理員設定了唯讀權限和更新權限等級，系統管理員就無法查看其他使用者的交易，因為唯讀權限的優先順序高於更新權限。
   
- 若要設定交易記錄資料保留的時間長度，您可以設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫系統設定中的 **Log retention in Days** 屬性，或是在建立或編輯模型時設定 [記錄保留天數]。 如需詳細資訊，請參閱[系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) 和[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
+ 若要設定交易記錄資料保留的時間長度，您可以設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫系統設定中的 **Log retention in Days** 屬性，或是在建立或編輯模型時設定 [記錄保留天數]  。 如需詳細資訊，請參閱[系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) 和[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
  SQL Server Agent 工作 MDS_MDM_Sample_Log_Maintenace，會觸發清除交易記錄的程序，並於每晚執行。 您可以使用 SQL Server Agent 來修改此工作的排程。  
   
  也可以呼叫下列預存程序來清除交易記錄檔。  
   
-|預存程序|Description|  
+|預存程序|描述|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|會清除交易記錄|  
 |mdm.udpValidationsCleanup|會清除驗證記錄|  
@@ -85,7 +84,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ## <a name="concurrency"></a>並行  
  如果在多個「檔案總管」工作階段中同時顯示一個特定的實體值，就可以對相同的值進行同時編輯。 MDS 將不會自動偵測到同時編輯。 當多個使用者從多個工作階段 (例如從多部電腦、多個瀏覽器索引標籤或視窗，或多個使用者帳戶) 的網頁瀏覽器中使用 MDS Explorer 時，可能會發生這個情況。  
   
- 即使允許異動，多個使用者還是可以更新相同的實體值而不發生任何錯誤。 通常在時間順序上，對值進行的最後一個編輯，其優先順序最高。 重複編輯衝突可以在異動記錄中手動觀察到，並透過管理員手動保留。 交易記錄將會針對 [先前的值] 顯示個別的交易，並針對每個工作階段的相關屬性顯示 [新值]，但若有多個含相同舊值的 [新值] 存在時，不會自動解決衝突。  
+ 即使允許異動，多個使用者還是可以更新相同的實體值而不發生任何錯誤。 通常在時間順序上，對值進行的最後一個編輯，其優先順序最高。 重複編輯衝突可以在異動記錄中手動觀察到，並透過管理員手動保留。 交易記錄將會針對 [先前的值]  顯示個別的交易，並針對每個工作階段的相關屬性顯示 [新值]  ，但若有多個含相同舊值的 [新值]  存在時，不會自動解決衝突。  
   
 ## <a name="related-tasks"></a>相關工作  
   

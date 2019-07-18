@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
@@ -13,24 +12,24 @@ ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068020"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>建議相關資料行 (資料採礦精靈)
-  使用 **[建議相關資料行]** 頁面，即可檢視您在先前的精靈頁面中選取之 **[建議]** 功能的建議。 會根據輸入資料行與所選取 [可預測] 資料行的關聯，預先選取輸入資料行。 如果您接受此對話方塊中的變更，這些變更就會反映在 **[指定培訓資料]** 頁面上。  
+  使用 **[建議相關資料行]** 頁面，即可檢視您在先前的精靈頁面中選取之 **[建議]** 功能的建議。 會根據輸入資料行與所選取 [可預測]  資料行的關聯，預先選取輸入資料行。 如果您接受此對話方塊中的變更，這些變更就會反映在 **[指定培訓資料]** 頁面上。  
   
- **如需詳細資訊︰**[Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) (資料採礦精靈 (Analysis Services - 資料採礦))、[Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md) (建立關聯式採礦結構)。  
+ **如需詳細資訊：** [資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **資料行名稱**  
- 顯示您在精靈的 [指定培訓資料] 頁面上定義的輸入資料行。  
+ 顯示您在精靈的 [指定培訓資料]  頁面上定義的輸入資料行。  
   
  **分數**  
- 顯示資料行與先前所選取 [可預測] 資料行之間的關聯性。  
+ 顯示資料行與先前所選取 [可預測]  資料行之間的關聯性。  
   
  **輸入**  
  選取即可包含此資料行，以供計算預測使用。  

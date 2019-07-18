@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
@@ -17,12 +16,12 @@ ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e203b75918cad416d97ab7a226f360c1203d69d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061913"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>將列舉加入控制流程
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括 Foreach 迴圈容器，該容器為控制流程項目，可簡化在套件的控制流程中包括列舉檔案及物件的迴圈建構。 如需詳細資訊，請參閱 [Foreach 迴圈容器](control-flow/foreach-loop-container.md)＞。  

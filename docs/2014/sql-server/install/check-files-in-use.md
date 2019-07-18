@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096525"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
   若要避免在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新之後重新啟動 Windows，請使用 [檢查使用中檔案] 頁面來識別正在鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式所需之檔案的處理序。  

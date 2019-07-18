@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
@@ -13,22 +12,22 @@ ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057321"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
   使用 **[OData 來源編輯器]** 對話方塊的 **[連接]** 頁面，選取 OData 來源的 OData 連接管理員。 此頁面也可讓您指定集合或資源路徑及任何查詢選項，以指示需要從 OData 來源擷取哪些資料。 若要深入了解 OData 來源，請參閱＜ [OData Source](data-flow/odata-source.md)＞。  
   
 ## <a name="static-options"></a>靜態選項  
  **OData 連接管理員**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [OData 連線管理員編輯器] 對話方塊建立新的連線管理員。  
+ 使用 [OData 連線管理員編輯器]  對話方塊建立新的連線管理員。  
   
  **使用集合或資源路徑**  
  從來源中指定選取資料的方法。  
@@ -45,7 +44,7 @@ ms.locfileid: "58390460"
  根據您在此對話方塊中選取的選項顯示唯讀摘要 URL。  
   
  **預覽**  
- 使用 [預覽] 對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
+ 使用 [預覽]  對話方塊來預覽結果。 **[預覽]** 最多可顯示 20 個資料列。  
   
 ## <a name="dynamic-options"></a>動態選項  
   

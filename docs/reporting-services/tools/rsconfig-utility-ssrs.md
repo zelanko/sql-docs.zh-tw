@@ -2,7 +2,7 @@
 title: rsconfig 公用程式 (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571515"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -46,18 +46,18 @@ rsconfig {-?}
 |詞彙|選擇性/必要|定義|  
 |----------|------------------------|----------------|  
 |**-?**|選擇性。|顯示 Rsconfig.exe 引數的語法。|  
-|**-c**|如果未使用 **-e** 引數，這就是必要的。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以搭配 **-c** 來指定的引數，包括 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**和 **-t**。|  
+|**-c**|如果未使用 **-e** 引數，這就是必要的。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以搭配 **-c** 來指定的引數，包括 **-m**、 **-s**、 **-i**、 **-d**、 **-a**、 **-u**、 **-p**和 **-t**。|  
 |**-e**|如果未使用 **-c** 引數，這就是必要的。|指定自動報表執行帳戶。<br /><br /> 此引數沒有取得值。 不過，命令列必須包括其他引數，以便指定組態檔中所加密的值。<br /><br /> 您可以搭配 **-e** 來指定的引數，包括 **-u** 和 **-p**。 您也可以設定 **-t**。|  
-|**-m** <電腦名稱>|如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 **localhost**。|  
-|**-s**  <伺服器名稱>|必要。|指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
-|**-i**  <執行個體名稱>|如果您使用具名執行個體，這就是必要的。|如果您使用具名的 Reporting Services 執行個體，這個值會指定 Reporting Services 執行個體的名稱。|  
-|**-d**  <資料庫名稱>|必要。|指定報表伺服器資料庫的名稱。|  
-|**-a**  <驗證方法>|必要。|指定報表伺服器用來連接到報表伺服器資料庫的驗證方法。 有效值如下： **Windows** 或 **SQL** (這個引數不區分大小寫)。<br /><br /> **Windows** 指定報表伺服器使用 Windows 驗證。<br /><br /> **SQL** 指定報表伺服器使用 SQL Server 驗證。|  
-|**-u**  [網域\\]使用者名稱|對 **-e** 而言，這是必要的；對 **-c**而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱> 的格式指定 <網域> 和 <使用者名稱>。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
-|**-p** <密碼>|如果指定 **-u** ，則為必要。|指定要搭配 <使用者名稱> 引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
+|**-m** <電腦名稱> |如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 **localhost**。|  
+|**-s**  <伺服器名稱> |必要。|指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
+|**-i**  <執行個體名稱> |如果您使用具名執行個體，這就是必要的。|如果您使用具名的 Reporting Services 執行個體，這個值會指定 Reporting Services 執行個體的名稱。|  
+|**-d**  <資料庫名稱> |必要。|指定報表伺服器資料庫的名稱。|  
+|**-a**  <驗證方法> |必要。|指定報表伺服器用來連接到報表伺服器資料庫的驗證方法。 有效值如下： **Windows** 或 **SQL** (這個引數不區分大小寫)。<br /><br /> **Windows** 指定報表伺服器使用 Windows 驗證。<br /><br /> **SQL** 指定報表伺服器使用 SQL Server 驗證。|  
+|**-u**  [網域\\]使用者名稱 |對 **-e** 而言，這是必要的；對 **-c**而言，這是選擇性的。|指定報表伺服器資料庫連接或自動帳戶的使用者帳戶。<br /><br /> 若為 **rsconfig -e**，此引數是必要的。 它必須是網域使用者帳戶。<br /><br /> 若為 **rsconfig -c** 及 **-a SQL**，此引數必須指定一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。<br /><br /> 若為 **rsconfig -c** 及 **-a Windows**，此引數可能會指定網域使用者、內建帳戶或服務帳戶認證。 如果您指定網域帳戶，請以 <網域>\<使用者名稱>  的格式指定 <網域>  和 <使用者名稱>  。 如果您是使用內建帳戶，這個引數就是選擇性的。 如果您要使用服務帳戶認證，請省略這個引數。|  
+|**-p** <密碼> |如果指定 **-u** ，則為必要。|指定要搭配 <使用者名稱>  引數使用的密碼。 如果帳戶不需要密碼，您可以將這個引數設為空白值。 網域帳戶的這個值會區分大小寫。|  
 |**-t**|選擇性。|在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  您必須是主控您在設定的報表伺服器之電腦的本機管理員。  
   
 ## <a name="file-location"></a>檔案位置  

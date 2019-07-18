@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769424"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 運算式)
   傳回大於或等於數值運算式的最小整數。  

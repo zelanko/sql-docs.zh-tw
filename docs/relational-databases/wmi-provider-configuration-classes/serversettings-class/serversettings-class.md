@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09c5a68c971b141259d4600cba07abb569dd37e3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 74d2371336a19c04ea42e070f77eb68fa6653c65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052855"
 ---
 # <a name="serversettings-class"></a>ServerSettings 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184261"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>從追蹤檔案或追蹤資料表衍生範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]從現有的追蹤檔案或追蹤資料表建立追蹤範本。  
@@ -27,9 +27,9 @@ ms.locfileid: "52775050"
   
 1.  開啟要做為範本基礎的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 或[開啟追蹤資料表 &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)。  
   
-2.  在 **[檔案]** 功能表中指向 **[另存新檔]**，然後按一下 **[追蹤範本]**。  
+2.  在 **[檔案]** 功能表中指向 **[另存新檔]** ，然後按一下 **[追蹤範本]** 。  
   
-3.  輸入一個名稱，或者從清單中選取一個名稱。 按一下 [確定] 。  
+3.  輸入一個名稱，或者從清單中選取一個名稱。 按一下 [確定]  。  
   
 > [!NOTE]  
 >  如果您選取現有的範本檔案，系統就會詢問您是否要覆寫檔案。  

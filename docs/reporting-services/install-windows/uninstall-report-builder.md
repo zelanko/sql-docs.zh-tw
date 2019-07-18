@@ -2,17 +2,17 @@
 title: 將報表產生器解除安裝 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f543e0c3a12b86eb82ad7cefcdb0dee8e868e218
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502647"
 ---
 # <a name="uninstall-report-builder"></a>將報表產生器解除安裝
 
@@ -24,19 +24,19 @@ ms.locfileid: "56292016"
 
 ### <a name="to-uninstall-report-builder-from-the-control-panel"></a>若要從控制台解除安裝報表產生器
 
-1.  在 **[開始]** 功能表上，按一下 **[控制台]**。  
+1.  在 **[開始]** 功能表上，按一下 **[控制台]** 。  
   
-2.  在 [控制台] 中，按一下 **[程式和功能]**。  
+2.  在 [控制台] 中，按一下 **[程式和功能]** 。  
   
-3.  在 [名稱] 清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 報表產生器，然後按一下它。  
+3.  在 [名稱]  清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 報表產生器，然後按一下它。  
   
-4.  按一下 **[解除安裝]**。  
+4.  按一下 **[解除安裝]** 。  
   
-5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]**。  
+5.  如果出現確認解除安裝報表產生器的提示，請按一下 **[是]** 。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>若要從命令列解除安裝報表產生器  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
 2.  在 [開啟]  文字方塊中，輸入 **cmd.**  
   

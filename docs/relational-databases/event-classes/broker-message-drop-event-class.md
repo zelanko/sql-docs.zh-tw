@@ -1,7 +1,7 @@
 ---
 title: Broker:Message Undeliverable 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f74322f4bd8c3a399da975160f08548320279e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eb3a4c026dc32da21fd3cd8310b15bd72ddd1b1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66265491"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當 Service Broker 無法保留應於此執行個體中傳遞至服務的已接收訊息時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Message Undeliverable** 事件。 對於應該已被轉送的訊息，請參閱 [Broker︰Forwarded Message Dropped 事件類別](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+當 Service Broker 無法保留應於此執行個體中傳遞至服務的已接收訊息時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Message Undeliverable** 事件。 對於應該已被轉送的訊息，請參閱 [Broker︰Forwarded Message Dropped 事件類別](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)。  
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Broker:Message Undeliverable 事件類別資料行  
   

@@ -2,20 +2,19 @@
 title: 在 Oracle 中的查詢外部資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 Oracle 資料。 您會在 Oracle 中的資料建立外部資料表，然後再執行查詢。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58859979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957717"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程：從 SQL Server 的巨量資料叢集查詢 Oracle
 

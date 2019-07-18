@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98ff605c2fb701f2451e3df4ba2068da6729ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967320"
 ---
 # <a name="append-method-adox-columns"></a>Append 方法 (ADOX Columns)
 加入新[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合。  

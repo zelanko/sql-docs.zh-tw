@@ -1,5 +1,5 @@
 ---
-title: 計算內容 |Microsoft 文件
+title: 計算內容 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 340d03ba8d0c5a66d89937627ab9389fc49abcae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807692"
 ---
 # <a name="calculation-context"></a>計算內容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34021765"
   
 5.  每個座標軸上的 Cube 或 Subcube 資料格，刪除座標軸上的空 Tuple 並且套用 HAVING 子句。  
   
-6.  如需詳細資訊，請參閱[查詢 & #40; 在建立 Cube 內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  如需詳細資訊，請參閱 [建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
   
  在下列查詢中，資料列軸的計算內容受到 WHERE 子句中指定之 Country 屬性成員和 Calendar Year 屬性成員限制。  
   
@@ -70,8 +70,8 @@ WHERE (Customer.Country.France,
 >  為了提高查詢效能，您應在解析程序中盡早刪除成員和 Tuple。 如此一來，最終一個成員集合上的複雜查詢階段計算便會在最少資料格上運作。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢 & #40; 中的 Cube 內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

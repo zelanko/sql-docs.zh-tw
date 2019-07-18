@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62920737"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
   本主題介紹使用 Windows Azure BLOB 儲存體服務做為備份目的地所需的概念、需求及元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 這些差異在於許多顯而易見的例外狀況，本主題中將內含某些程式碼範例。  
@@ -44,7 +44,7 @@ ms.locfileid: "53359290"
 ###  <a name="security"></a> 安全性  
  以下是備份至 Windows Azure Blob 儲存體服務或從中還原時的安全性考量和需求。  
   
--   建立 Windows Azure Blob 儲存體服務的容器時，建議您將存取權設為 **[私用]**。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
+-   建立 Windows Azure Blob 儲存體服務的容器時，建議您將存取權設為 **[私用]** 。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要將 Windows Azure 帳戶名稱和存取金鑰驗證儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中。 當 Windows Azure 帳戶執行備份或還原作業時，這項資訊就會用來驗證該帳戶。  
@@ -61,9 +61,9 @@ ms.locfileid: "53359290"
 ###  <a name="Blob"></a> Windows Azure Blob 儲存體服務  
  **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Windows Azure Blob 儲存體服務，請先建立 Windows Azure 儲存體帳戶。 **storage account name** 及其 **access key** 屬性是向 Windows Azure Blob 儲存體服務及其元件驗證的必要項目。  
   
- **容器：** 容器會提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Windows Azure Blob 服務，您至少必須建立根容器。  
+ **容器：** 容器會提供一組 Blob 群組，而且可以儲存無限的數量的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Windows Azure Blob 服務，您至少必須建立根容器。  
   
- **Blob:** 任何類型和大小的檔案。 Windows Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份會使用分頁 Blob 做為 Blob 類型。 使用下列 URL 格式來定址 blob: https://\<儲存體帳戶 >.blob.core.windows.net/\<容器 > /\<blob >  
+ **Blob：** 任何類型和大小的檔案。 Windows Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份會使用分頁 Blob 做為 Blob 類型。 使用下列 URL 格式來定址 blob: https://\<儲存體帳戶 >.blob.core.windows.net/\<容器 > /\<blob >  
   
  ![Azure Blob 儲存體](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
   
@@ -72,14 +72,14 @@ ms.locfileid: "53359290"
  如需有關分頁 Blob 的詳細資訊，請參閱＜ [了解區塊和分頁 Blob](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)＞。  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL:** URL 會指定唯一備份檔案的統一資源識別碼 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 在此實作中，唯一有效的 URL 是指向 Windows Azure 儲存體帳戶中之分頁 Blob 的 URL。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果現有的 Blob 指定，則備份失敗，除非指定"WITH FORMAT"選項。  
+ **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 在此實作中，唯一有效的 URL 是指向 Windows Azure 儲存體帳戶中之分頁 Blob 的 URL。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果現有的 Blob 指定，則備份失敗，除非指定"WITH FORMAT"選項。  
   
 > [!WARNING]  
 >  如果您選擇複製並上傳備份檔案至 Windows Azure Blob 儲存體服務，請使用分頁 Blob 做為儲存體選項。 不支援從區塊 Blob 還原。 從區塊 Blob 類型進行 RESTORE 會失敗，並出現錯誤。  
   
  以下是 URL 值範例： http[s]://ACCOUNTNAME.Blob.core.windows.net/\<容器 > /\<.bak> >。 HTTPS 不是必要項目，但是建議使用。  
   
- **認證：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  此處， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程序會使用認證，向 Windows Azure BLOB 儲存體服務驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+ **認證：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  此處， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程序會使用認證，向 Windows Azure BLOB 儲存體服務驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  如需有關如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證的逐步指示，請參閱本主題稍後的＜ [建立認證](#credential) ＞範例。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53359290"
   
 -   不支援指定備份組選項 - `RETAINDAYS` 和 `EXPIREDATE`。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak'，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak '，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
 ###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   
@@ -214,7 +214,7 @@ ms.locfileid: "53359290"
   
  下列步驟說明對備份資料庫工作進行變更以允許備份至 Windows Azure 儲存體：  
   
-1.  啟動 SQL Server Management Studio 並連接至 SQL Server 執行個體。  選取您想要備份，並以滑鼠右鍵按一下的資料庫**任務**，然後選取**備份...**.如此會開啟 [備份資料庫] 對話方塊。  
+1.  啟動 SQL Server Management Studio 並連接至 SQL Server 執行個體。  選取您想要備份，並以滑鼠右鍵按一下的資料庫**任務**，然後選取**備份...** .這會開啟 [備份資料庫] 對話方塊。  
   
 2.  在一般頁面上， **[URL]** 選項可用以建立備份至 Windows Azure 儲存體。 當您選取此選項時，會在此頁面上看到其他啟用的選項：  
   
@@ -225,11 +225,11 @@ ms.locfileid: "53359290"
         > [!IMPORTANT]  
         >  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 SQL Server 目前支援發行設定檔 2.0 版。 若要下載發行設定檔的支援版本，請參閱＜ [下載發行設定檔 2.0](https://go.microsoft.com/fwlink/?LinkId=396421)＞。  
         >   
-        >  如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼[建立認證](#credential)一節，以使用 TRANSACT-SQL 建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]**、選取 **[新增]**，然後選取 **[認證]**。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
+        >  如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼[建立認證](#credential)一節，以使用 TRANSACT-SQL 建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]** 、選取 **[新增]** ，然後選取 **[認證]** 。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
   
-    3.  **Azure 儲存體容器：** 儲存備份檔案的 Windows Azure 儲存體容器名稱。  
+    3.  **Azure 儲存體容器：** 若要儲存備份檔案的 Windows Azure 儲存體容器名稱。  
   
-    4.  **URL 前置詞：** 這會利用上述步驟中說明欄位內所指定的資訊自動建立。 如果您手動編輯此值，請確定其與您先前提供的其他資訊相符。 例如，如果您修改了儲存體 URL，請確定 SQL 認證已設定為對相同的儲存體帳戶進行驗證。  
+    4.  **URL 前置詞：** 這是自動使用在先前步驟中說明欄位內所指定的資訊所建置的。 如果您手動編輯此值，請確定其與您先前提供的其他資訊相符。 例如，如果您修改了儲存體 URL，請確定 SQL 認證已設定為對相同的儲存體帳戶進行驗證。  
   
  當您選取 URL 做為目的地時， **[媒體選項]** 頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   
@@ -251,7 +251,7 @@ ms.locfileid: "53359290"
   
 2.  當您選取 **[URL]** 並按一下 **[新增]** 時，會開啟 **[連接到 Azure 儲存體]** 對話。 指定 SQL 認證資訊，對 Windows Azure 儲存體進行驗證。  
   
-3.  SQL Server 接著會使用您提供的 SQL 認證資訊連接到 Windows Azure 儲存體，並開啟 **[在 Windows Azure 中尋找備份檔案]** 對話。 位於儲存體中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 如此會讓您回到 **[選取備份裝置]** 對話，而按一下此對話中的 **[確定]** ，會帶您回到您可完成還原的主要 **[還原]** 對話。  如需詳細資訊，請參閱下列主題：  
+3.  SQL Server 接著會使用您提供的 SQL 認證資訊連接到 Windows Azure 儲存體，並開啟 **[在 Windows Azure 中尋找備份檔案]** 對話。 位於儲存體中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]** 。 如此會讓您回到 **[選取備份裝置]** 對話，而按一下此對話中的 **[確定]** ，會帶您回到您可完成還原的主要 **[還原]** 對話。  如需詳細資訊，請參閱下列主題：  
   
      [還原資料庫 &#40;一般頁面&#41;](restore-database-general-page.md)  
   
@@ -279,7 +279,7 @@ ms.locfileid: "53359290"
 ###  <a name="credential"></a> 建立認證  
  下列範例會建立儲存 Windows Azure 儲存體驗證資訊的認證。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -324,7 +324,7 @@ ms.locfileid: "53359290"
 ###  <a name="complete"></a> 完整資料庫備份  
  下列範例會將 AdventureWorks2012 資料庫備份至 Windows Azure Blob 儲存體服務。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -382,7 +382,7 @@ ms.locfileid: "53359290"
 ###  <a name="databaselog"></a> 備份資料庫和記錄檔  
  下列範例會備份 AdventureWorks2012 範例資料庫，依預設採用簡單復原模式。 為了支援記錄備份，AdventureWorks2012 資料庫會修改成使用完整復原模式。 此範例接著會建立 Windows Azure Blob 的完整資料庫備份，並且在更新活動一段時間之後，備份記錄。 這個範例會建立含有日期時間戳記的備份檔案名稱。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -493,7 +493,7 @@ ms.locfileid: "53359290"
 ###  <a name="filebackup"></a> 建立主要檔案群組的完整檔案備份  
  下列範例會建立主要檔案群組的完整檔案備份。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -560,7 +560,7 @@ ms.locfileid: "53359290"
 ###  <a name="differential"></a> 建立主要檔案群組的差異檔案備份  
  下列範例會建立主要檔案群組的差異檔案備份。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -632,7 +632,7 @@ ms.locfileid: "53359290"
 ###  <a name="restoredbwithmove"></a> 將資料庫還原和移動檔案  
  若要還原完整資料庫備份並將還原的資料庫移至 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 目錄，請使用下列步驟。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -749,7 +749,7 @@ ms.locfileid: "53359290"
 ###  <a name="PITR"></a> 使用 STOPAT 還原至時間點  
  下列範例會將資料庫還原至某個時間點的狀態，並且顯示還原作業。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   

@@ -13,14 +13,18 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b57e5b2bf98b60e80bf4eddbf1583a7abd24802
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c4d0fdc777715dc7077fc3396e533c5e6336a675
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728646"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第三個工作 (也就是最後一個工作) 是準備查詢變更資料，並加入「資料流程」工作。  
   
 > [!NOTE]  
@@ -47,7 +51,7 @@ ms.locfileid: "58279992"
   
 #### <a name="to-set-up-package-variables"></a>設定封裝變數  
   
--   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [變數] 視窗中，建立具有字串資料類型的變數，以保存「執行 SQL」工作所傳回的查詢字串。  
+-   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [變數]  視窗中，建立具有字串資料類型的變數，以保存「執行 SQL」工作所傳回的查詢字串。  
   
      這個範例會使用變數名稱 SqlDataQuery。  
   
@@ -55,16 +59,16 @@ ms.locfileid: "58279992"
   
 #### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>使用指令碼工作串連查詢字串  
   
-1.  在 [控制流程] 索引標籤上，將「指令碼」工作加入「For 迴圈」容器後的封裝中，然後將「For 迴圈」容器連接到該工作。  
+1.  在 [控制流程]  索引標籤上，將「指令碼」工作加入「For 迴圈」容器後的封裝中，然後將「For 迴圈」容器連接到該工作。  
   
     > [!NOTE]  
     >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱 [執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
-2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，選取下列選項：  
+2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，選取下列選項：  
   
-    1.  針對 [ReadOnlyVariables]，選取 [User::DataReady]、[User::ExtractStartTime] 和 [User::ExtractEndTime]。  
+    1.  針對 [ReadOnlyVariables]  ，選取 [User::DataReady]  、[User::ExtractStartTime]  和 [User::ExtractEndTime]  。  
   
-    2.  針對 [ReadWriteVariables]，從清單中選取 [User::SqlDataQuery]。  
+    2.  針對 [ReadWriteVariables]  ，從清單中選取 [User::SqlDataQuery]。  
   
 3.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
   
@@ -127,24 +131,24 @@ ms.locfileid: "58279992"
   
 5.  保留從指令碼之執行傳回 **DtsExecResult.Success** 的預設程式碼行。  
   
-6.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
+6.  關閉指令碼開發環境以及 **[指令碼工作編輯器]** 。  
   
 #### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>使用執行 SQL 工作串連查詢字串  
   
-1.  在 [控制流程] 索引標籤上，將「執行 SQL」工作加入「For 迴圈」容器後的封裝中，然後將「For 迴圈」容器連接到此工作。  
+1.  在 [控制流程]  索引標籤上，將「執行 SQL」工作加入「For 迴圈」容器後的封裝中，然後將「For 迴圈」容器連接到此工作。  
   
     > [!NOTE]  
     >  此程序假設封裝會從單一資料表執行累加式載入。 如果封裝從多個資料表載入，而且擁有包含多個子封裝的父封裝，則會將此工作當做第一個元件，加入到每個子封裝中。 如需詳細資訊，請參閱 [執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
 2.  在 **[執行 SQL 工作編輯器]** 的 **[一般]** 頁面上，選取下列選項：  
   
-    1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
+    1.  針對 **[ResultSet]** ，選取 **[單一資料列]** 。  
   
     2.  將有效的連接設定到來源資料庫。  
   
-    3.  針對 **[SQLSourceType]**，選取 **[直接輸入]**。  
+    3.  針對 **[SQLSourceType]** ，選取 **[直接輸入]** 。  
   
-    4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
+    4.  針對 **[SQLStatement]** ，輸入下列 SQL 陳述式：  
   
         ```sql
         declare @ExtractStartTime datetime,  
@@ -173,7 +177,7 @@ ms.locfileid: "58279992"
         > [!NOTE]  
         >  此範例中的 **else** 子句會傳遞開始日期和時間的 Null 值，藉以產生變更資料之初始載入的查詢。 此範例不處理啟用異動資料擷取前所進行之變更也必須上傳到資料倉儲的狀況。  
   
-3.  在 [執行 SQL 工作編輯器] 的 [參數對應] 頁面上，進行下列對應：  
+3.  在 [執行 SQL 工作編輯器]  的 [參數對應]  頁面上，進行下列對應：  
   
     1.  將 DataReady 變數對應到參數 0。  
   
@@ -181,7 +185,7 @@ ms.locfileid: "58279992"
   
     3.  將 ExtractEndTime 變數對應到參數 2。  
   
-4.  在 [執行 SQL 工作編輯器] 的 [結果集] 頁面上，將 [結果名稱] 對應到 SqlDataQuery 變數。  
+4.  在 [執行 SQL 工作編輯器]  的 [結果集]  頁面上，將 [結果名稱] 對應到 SqlDataQuery 變數。  
   
      [結果名稱] 是所傳回之單一資料行的名稱，也就是 SqlDataQuery。  
   
@@ -194,11 +198,11 @@ ms.locfileid: "58279992"
   
 #### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>加入資料流程工作並完成控制流程  
   
--   在 [控制流程] 索引標籤上，加入「資料流程」工作，然後連接串連查詢字串的工作。  
+-   在 [控制流程]  索引標籤上，加入「資料流程」工作，然後連接串連查詢字串的工作。  
   
 ## <a name="next-step"></a>下一個步驟  
  準備查詢字串並設定「資料流程」工作後，下一個步驟是建立將從資料庫擷取變更資料的資料表值函式。  
   
- **下一個主題：**[建立函式以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **下一個主題：** [建立函式以擷取變更資料](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

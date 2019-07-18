@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090089"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的系統層級記憶體取用者。 這些取用者的記憶體來自預設集區 (在使用者執行緒環境中配置時) 或來自內部集區 (在系統執行緒環境中配置時)。  
+  報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的系統層級記憶體取用者。 （如果配置系統執行緒內容中），這些取用者的記憶體來自預設集區 （當配置的使用者執行緒內容中） 或內部集區。  
   
 ```  
 -- system memory consumers @ instance  
@@ -38,12 +37,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|記憶體取用者的內部識別碼。|  
 |memory_consumer_type|**int**|整數，代表類型的記憶體取用者具有下列值之一：<br /><br /> 0-它應該不會顯示。 彙總兩個以上取用者的記憶體使用量。<br /><br /> 1-對應：追蹤系統對應的記憶體耗用量。<br /><br /> 2-VARHEAP:追蹤可變長度堆積的記憶體耗用量。<br /><br /> 4-IO 分頁集區：追蹤用於 IO 作業之系統分頁集區的記憶體耗用量。|  
 |memory_consumer_type_desc|**nvarchar(16)**|記憶體取用者類型的描述：<br /><br /> 0-它應該不會顯示。<br /><br /> 1-對應<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP: <br />系統堆積。 一般用途。 目前只用來配置記憶體回收工作項目。<br />-或-<br />對應堆積。 當對應清單中包含的項目數達到預先決定的上限時 (通常大約 5,000 個項目)，對應就會加以使用。<br /><br /> PGPOOL:針對 IO 系統集區，有三種不同大小：系統 4K 分頁集區、系統 64K 分頁集區和系統 256K 分頁集區。|  
+|memory_consumer_desc|**nvarchar(64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP: <br />系統堆積。 一般用途。 目前只用來配置記憶體回收工作項目。<br />-或-<br />對應堆積。 當對應清單中包含的項目數達到預先決定的上限時 (通常大約 5,000 個項目)，對應就會加以使用。<br /><br /> PGPOOL:針對 IO 系統集區，有會是三個不同的大小：系統 4k 分頁集區、 系統 64 K 分頁集區和系統 256k 分頁集區。|  
 |lookaside_id|**bigint**|執行緒本機、對應記憶體提供者的識別碼。|  
 |pagepool_id|**bigint**|執行緒本機、分頁集區記憶體提供者的識別碼。|  
 |allocated_bytes|**bigint**|保留給此取用者的位元組數。|  

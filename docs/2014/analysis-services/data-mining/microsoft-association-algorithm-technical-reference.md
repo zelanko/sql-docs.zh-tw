@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
@@ -21,12 +20,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084133"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法是有名的 Apriori 演算法的簡單實作。  

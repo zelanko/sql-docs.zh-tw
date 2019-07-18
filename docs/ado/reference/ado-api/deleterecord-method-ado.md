@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23c66eb3ca786df27f856539e8bba026d2b1ea71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919087"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 刪除所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -38,7 +37,7 @@ Record.DeleteRecord Source, Async
  *Source*  
  選擇性。 A**字串**包含識別的實體 （例如，檔案或目錄） 的 URL，要刪除的值。 如果*來源*省略，或者指定空字串，表示由目前的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)會被刪除。 如果記錄集合記錄 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，例如目錄) 也會刪除所有子系 （例如，子目錄）。  
   
- *非同步處理*  
+ *Async*  
  選擇性。 A**布林**值，當 **，則為 True**，指定刪除作業為非同步。  
   
 ## <a name="remarks"></a>備註  

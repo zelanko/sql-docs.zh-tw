@@ -16,14 +16,18 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17c536592b2ea50436d817773e4006526e342fe2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bea0342ef01511621629559cb627447d66340071
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725206"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回將大寫字元轉換為小寫字元之後的字元運算式。  
   
 ## <a name="syntax"></a>語法  

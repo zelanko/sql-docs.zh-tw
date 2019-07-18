@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
@@ -15,27 +14,27 @@ ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057705"
 ---
 # <a name="merge-join-transformation-editor"></a>合併聯結轉換編輯器
-  使用 [合併聯結轉換編輯器] 對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
+  使用 [合併聯結轉換編輯器]  對話方塊，即可指定合併兩個由聯結組合之輸入的聯結類型、聯結資料行以及輸出資料行。  
   
 > [!IMPORTANT]  
 >  合併聯結轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
   
  若要深入了解合併聯結轉換，請參閱 [合併聯結轉換](data-flow/transformations/merge-join-transformation.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **聯結類型**  
  指定要使用內部聯結、左方外部聯結或完整聯結。  
   
  **交換輸入**  
- 使用 [交換輸入] 按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
+ 使用 [交換輸入]  按鈕，來切換輸入之間的順序。 此選取項目對於左方外部聯結選項可能非常有用。  
   
  **輸入**  
  針對您要放入合併輸出中的每個資料行，首先從可用的輸入清單中選取。  

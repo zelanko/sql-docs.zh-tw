@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 528da86b8276b805c6e9f52803a78bfeb7a2a5de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992434"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
 
@@ -36,7 +35,7 @@ ms.locfileid: "56020308"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能執行備份和還原作業。  
   
@@ -62,9 +61,9 @@ ms.locfileid: "56020308"
   
 9. 還原 DQS_STAGING_DATA 資料庫。  
   
-10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
+10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]** 。  
   
-11. 在 [查詢編輯器] 視窗中複製以下 SQL 陳述式，並使用您在 DQS 安裝期間為資料庫主要金鑰提供的密碼來取代 <密碼>*\<*：  
+11. 在 [查詢編輯器] 視窗中複製以下 SQL 陳述式，並使用您在 DQS 安裝期間為資料庫主要金鑰提供的密碼來取代 <密碼> *\<* ：  
   
     ```  
     USE [DQS_MAIN]  

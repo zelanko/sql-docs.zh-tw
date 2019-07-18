@@ -2,17 +2,17 @@
 title: 以 SharePoint 整合模式啟用和停用 Reporting Services 的 RDL 沙箱功能 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 183d7272049c7981a8a3f53a811087866c05c666
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412745"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577764"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>以 SharePoint 整合模式啟用和停用 Reporting Services 的 RDL 沙箱功能
 

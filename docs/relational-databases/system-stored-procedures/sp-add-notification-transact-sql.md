@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (Transact-SQL) | Microsoft Docs
+title: sp_add_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115055"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>範例  
  下列範例會加入指定警示 (`Test Alert`) 的電子郵件通知。  
   
-> **注意：** 這個範例假設 `Test Alert` 已經存在，且 `François Ajenstat` 是有效的操作員名稱。  
+> **注意：** 這個範例假設`Test Alert`已經存在而且`François Ajenstat`是有效的運算子名稱。  
   
 ```  
 USE msdb ;  
@@ -90,7 +89,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_update_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

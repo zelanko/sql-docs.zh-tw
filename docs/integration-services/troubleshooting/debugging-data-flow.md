@@ -17,14 +17,18 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65d62759cff20cb0c41acd7a9955ccea52a5968c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2a67815d20a1275d8ae77042c89f76189748d336
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65713732"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供資料檢視器。  

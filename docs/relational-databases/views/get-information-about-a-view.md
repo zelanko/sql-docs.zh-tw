@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2f413d9f82d128dbff31a8aea02bc2e31022234
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505726"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584998"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "52505726"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法取得檢視的相關資訊：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52505726"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  使用 `sp_helptext` 傳回檢視的定義，需要 **Public** 角色的成員資格。 使用 `sys.sql_expression_dependencies` 尋找檢視的所有相依性，需要資料庫的 VIEW DEFINITION 權限和資料庫之 `sys.sql_expression_dependencies` 的 SELECT 權限。 系統物件定義是公開可見的，就像 SELECT OBJECT_DEFINITION 中傳回的定義一樣。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,48 +62,50 @@ ms.locfileid: "52505726"
   
 1.  在 **[物件總管]** 中，按一下資料庫旁邊的加號，此資料庫包含您要查看其屬性的檢視，然後按一下加號展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[屬性]**。  
+2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[屬性]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties show in the **View Properties** dialog box.  
   
-     下列屬性會在 **[檢視屬性]** 對話方塊中顯示。  
-  
-     **[資料庫備份]**  
-     包含此檢視之資料庫的名稱。  
+     **Database**  
+     The name of the database containing this view.  
   
      **Server**  
-     目前伺服器執行個體的名稱。  
+     The name of the current server instance.  
   
-     **使用者**  
-     這個連接之使用者的名稱。  
+     **User**  
+     The name of the user of this connection.  
   
-     **建立日期**  
-     顯示建立檢視的日期。  
+     **Created date**  
+     Displays the date the view was created.  
   
-     **名稱**  
-     目前檢視的名稱。  
+     **Name**  
+     The name of the current view.  
   
-     **結構描述**  
-     顯示擁有檢視的結構描述。  
+     **Schema**  
+     Displays the schema that owns the view.  
   
-     **系統物件**  
-     指出檢視是否為系統物件。 值為 True 與 False。  
+     **System object**  
+     Indicates whether the view is a system object. Values are True and False.  
   
-     **ANSI NULLS**  
-     指出物件是否使用 ANSI NULLS 選項建立。  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **已加密**  
-     指出檢視表是否已加密。 值為 True 與 False。  
+     **Encrypted**  
+     Indicates whether the view is encrypted. Values are True and False.  
   
-     **引號識別碼**  
-     指出物件是否使用引號識別碼選項建立。  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **結構描述繫結**  
-     指出檢視是否以結構描述繫結。 值為 True 與 False。 如需結構描述繫結檢視的相關資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) 的 SCHEMABINDING 部分。  
+     **Schema bound**  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>透過使用檢視設計工具取得檢視屬性  
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要查看其屬性的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[設計]**。  
+2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[設計]** 。  
   
 3.  在 [圖表] 窗格的空白處按一下滑鼠右鍵，再按 [ **屬性**]。  
   
@@ -140,16 +142,16 @@ ms.locfileid: "52505726"
      顯示選定的檢視是否傳回所有資料行。 這是在建立檢視時設定的。  
   
      **SQL 註解**  
-     顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)**。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
+     顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)** 。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
   
      **Top 規格**  
-     展開以顯示 **[Top]**、 **[運算式]**、 **[百分比]** 屬性，以及 **[WITH TIES]** 屬性。  
+     展開以顯示 **[Top]** 、 **[運算式]** 、 **[百分比]** 屬性，以及 **[WITH TIES]** 屬性。  
   
      **(Top)**  
      指定檢視將包含 TOP 子句，而這個子句只會傳回結果集內的前 n 個資料列，或前百分之 n 的資料列。 預設值是檢視會傳回結果集裡前 10 個資料列。 使用此選項變更傳回的資料列數目，或指定不同的百分比。  
   
      **運算式**  
-     顯示檢視會傳回多少百分比 (如果 **[百分比]** 設定為 **[是]**) 或何種記錄 (如果 **[百分比]** 設定為 **[否]**)。  
+     顯示檢視會傳回多少百分比 (如果 **[百分比]** 設定為 **[是]** ) 或何種記錄 (如果 **[百分比]** 設定為 **[否]** )。  
   
      **Percent**  
      指定查詢將包含 **TOP** 子句，只會傳回結果集內的前百分之 n 的資料列。  
@@ -163,7 +165,7 @@ ms.locfileid: "52505726"
      **(使用檢視規則更新)**  
      指示檢視的所有更新和插入都會由 Microsoft Data Access Components (MDAC) 轉譯為參考檢視的 SQL 陳述式，而不是轉譯為直接參考檢視之基底資料表的 SQL 陳述式。  
   
-     在某些情況下，MDAC 會表示檢視更新和檢視插入作業是針對檢視之基礎基底資料表的更新和插入。 透過選取 **[使用檢視規則更新]**，可以確保 MDAC 會針對檢視本身產生更新和插入作業。  
+     在某些情況下，MDAC 會表示檢視更新和檢視插入作業是針對檢視之基礎基底資料表的更新和插入。 透過選取 **[使用檢視規則更新]** ，可以確保 MDAC 會針對檢視本身產生更新和插入作業。  
   
      **檢查選項**  
      指示當您開啟此檢視並修改 **[結果]** 窗格時，資料來源會檢查加入或修改的資料是否滿足檢視定義的 **WHERE** 子句。 如果您的修改無法滿足 **WHERE** 子句，您將看到錯誤附帶詳細資訊。  
@@ -172,7 +174,7 @@ ms.locfileid: "52505726"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要查看其屬性的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[檢視相依性]**。  
+2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[檢視相依性]** 。  
   
 3.  選取 **[相依於 [檢視名稱] 的物件]** ，以顯示參考檢視的物件。  
   
@@ -184,9 +186,9 @@ ms.locfileid: "52505726"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -214,9 +216,9 @@ ms.locfileid: "52505726"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

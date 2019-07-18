@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4d9e783db5d60c5633026509ffedb831bcbffa42
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208528"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>在資料來源檢視中重新整理結構描述 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52514256"
 ##  <a name="bkmk_DSVrefresh"></a> 在 SQL Server Data Tools 中重新整理 DSV  
  若要重新整理 DSV，請按兩下 [從方案總管] 中的 DSV [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  這會啟動在 DSV 設計工具。  然後按一下 [設計工具中的 [重新整理資料來源檢視] 按鈕，或選擇**重新整理**從資料來源檢視] 功能表。  
   
- 在重新整理期間， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會查詢所有基礎關聯式資料來源，以判斷 DSV 中所包含的資料表/檢視表是否已有變更。 如果可以對所有基礎資料來源建立連接，而且已經有變更，您將會在 [重新整理資料來源檢視] 對話方塊中看到這些變更。  
+ 在重新整理期間， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會查詢所有基礎關聯式資料來源，以判斷 DSV 中所包含的資料表/檢視表是否已有變更。 如果可以對所有基礎資料來源建立連接，而且已經有變更，您將會在 [重新整理資料來源檢視]  對話方塊中看到這些變更。  
   
  ![重新整理資料來源檢視對話方塊](../../analysis-services/multidimensional-models/media/ssas-olapdsv-refresh.gif "重新整理資料來源檢視對話方塊")  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52514256"
  重新整理完全以基礎物件的名稱為基礎。 因此，如果基礎物件重新命名資料來源中，資料來源檢視設計師會將重新命名的物件視為兩個不同作業的刪除和加入。 在此案例中，您必須手動加入已重新命名的物件，讓它回到資料來源檢視中。 您也必須重新建立關聯性或邏輯主索引鍵。  
   
 > [!IMPORTANT]  
->  如果您知道資料表在資料來源中已重新命名，則在您重新整理資料來源檢視之前，您可以使用 [取代資料表] 命令，以重新命名的資料表來取代該資料表。 如需詳細資訊，請參閱[取代資料來源檢視中的資料表或具名查詢 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)。  
+>  如果您知道資料表在資料來源中已重新命名，則在您重新整理資料來源檢視之前，您可以使用 [取代資料表]  命令，以重新命名的資料表來取代該資料表。 如需詳細資訊，請參閱[取代資料來源檢視中的資料表或具名查詢 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)。  
   
  當您檢查報表之後，可以接受變更，或是取消更新來拒絕任何變更。 您必須一起接受或拒絕所有變更。 您無法選擇清單中的個別項目。 您也可以儲存一份含有變更的報表。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023289"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定點更新和刪除陳述式
 應用程式可以更新或刪除目前的資料列結果集定位的 update 或 delete 陳述式。 定位的 update 和 delete 陳述式都受到某些資料來源，但並非全部。 若要判斷是否位於資料來源支援更新，以及 delete 陳述式，呼叫應用程式**SQLGetInfo**搭配 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*資訊類型*（取決於資料指標類型）。 請注意，ODBC 資料指標程式庫會模擬定位的 update 和 delete 陳述式。  
@@ -34,7 +33,7 @@ ms.locfileid: "47777738"
   
  [**何處** *搜尋條件*]  
   
- **FOR UPDATE OF** [*資料行名稱*[**，** *資料行名稱*]...]  
+ **FOR UPDATE OF** [*資料行名稱*[ **，** *資料行名稱*]...]  
   
  接著，應用程式會將游標置於要更新或刪除的資料列。 它可以執行這項操作藉由呼叫**SQLFetchScroll**擷取資料列集包含所需的資料列，然後呼叫**SQLSetPos**將資料列集資料指標置於該資料列上。 接著，應用程式不同的陳述式，比使用結果集的陳述式上，執行定位的 update 或 delete 陳述式。 這些陳述式的語法是：  
   
@@ -42,7 +41,7 @@ ms.locfileid: "47777738"
   
  **設定** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}  
   
- [**，** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}]...  
+ [ **，** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *資料指標名稱*  
   

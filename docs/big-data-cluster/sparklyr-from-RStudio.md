@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 連接到使用 RStudio 從 sparklyr 的巨量資料叢集。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
+ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59291578"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728381"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 巨量資料叢集中使用 sparklyr
 
@@ -22,7 +22,7 @@ ms.locfileid: "59291578"
 
 Sparklyr 提供適用於 Apache Spark 的 R 介面。 Sparklyr 是使用 Spark 的 R 開發人員的熱門方式。 本文說明如何使用 sparklyr 使用 RStudio 的 SQL Server 2019 巨量資料叢集 （預覽）。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [部署 SQL Server 2019 巨量資料叢集](quickstart-big-data-cluster-deploy.md)。
 
@@ -36,17 +36,20 @@ Sparklyr 提供適用於 Apache Spark 的 R 介面。 Sparklyr 是使用 Spark �
 
 1. 安裝完成後，執行下列命令以安裝必要的套件內 RStudio Desktop:
 
-   ```RStudio Desktop install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   ```RStudioDesktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## Connect to Spark in a big data cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>連線到 Spark 中的巨量資料叢集
 
-You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+您可以從用戶端連線到使用 Livy 與 HDFS/Spark 閘道的巨量資料叢集使用 sparklyr。 
 
-In RStudio, create an R script and connect to Spark as in the following example:
+在 RStudio 中，建立 R 指令碼，並連線至 Spark，如下列範例所示：
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> 針對`<USERNAME>`和`<PASSWORD>`值，會使用 （例如根） 的使用者名稱和您在巨量資料叢集部署期間設定的密碼。 針對`<IP>`並`<PORT>`的值，請參閱文件[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
 ```r
 library(sparklyr)

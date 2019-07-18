@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110162"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>啟動 dta 命令提示字元公用程式和微調工作負載
   這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
@@ -29,7 +28,7 @@ ms.locfileid: "48171108"
   
 ### <a name="to-start-the-dta-command-prompt-utility-and-view-help"></a>若要啟動 dta 命令提示字元公用程式和檢視說明  
   
-1.  在 [開始] 功能表上，依序指向 [所有程式] 和 [附屬應用程式]，再按一下 [命令提示字元]。  
+1.  在 [開始]  功能表上，依序指向 [所有程式]  和 [附屬應用程式]  ，再按一下 [命令提示字元]  。  
   
 2.  在命令提示字元之下，輸入下列字串，再按 ENTER 鍵：  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48171108"
 3.  在 Database Engine Tuning Advisor 微調好工作負載之後，它會顯示一則訊息，指出微調工作階段已順利完成。 您可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開啟 MySession2OutputScript.sql 和 MySession2Output.xml 檔，以檢視微調結果。 另外，您也可以在 Database Engine Tuning Advisor GUI 中開啟 MySession2 微調工作階段，依照 [檢視微調建議](lesson-1-2-viewing-tuning-recommendations.md) 和 [檢視微調報表](lesson-1-3-viewing-tuning-reports.md)中的相同方式來檢視其建議和報表。  
   
 ## <a name="summary"></a>總結  
- 您已在命令提示字元之下，利用 **dta** 公用程式完成了簡單工作負載的微調。 這個工具也提供了許多其他微調選項。 如需詳細資訊，請參閱工具說明 (**dta -?**) 和參考主題 [dta 公用程式](dta-utility.md) 。  
+ 您已在命令提示字元之下，利用 **dta** 公用程式完成了簡單工作負載的微調。 這個工具也提供了許多其他微調選項。 如需詳細資訊，請參閱工具說明 (**dta -?** ) 和參考主題 [dta 公用程式](dta-utility.md) 。  
   
 ## <a name="after-you-finish-this-tutorial"></a>完成這個教學課程之後  
  完成這個教學課程中的課程之後，請參閱下列主題，以取得有關 Database Engine Tuning Advisor 的詳細資訊：  
@@ -63,7 +62,7 @@ ms.locfileid: "48171108"
   
 -   ＜[dta Utility](dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
- 若要返回教學課程的開頭，請參閱 [教學課程：Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)。  
+ 若要返回教學課程一開始，請參閱[教學課程：Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 教學課程](../../relational-databases/database-engine-tutorials.md)  

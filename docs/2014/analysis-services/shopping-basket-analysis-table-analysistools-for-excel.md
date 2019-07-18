@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - shopping basket analysis
@@ -17,12 +16,12 @@ ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068683"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>購物籃分析 (適用於 Excel 的資料表分析工具)
   ![購物籃工具](media/tat-shopbskt.gif "購物籃工具")  
@@ -76,9 +75,9 @@ ms.locfileid: "48049748"
 ### <a name="minimum-support"></a>最小支援  
  *最小支援*表示必須包含特定項目集視為重要的項目集的交易數目。 例如，除非已經在至少 10 個交易中購買某個項目集，否則您可能不會有興趣。 有兩種方式可控制項目集重要性的臨界值，而且兩者都使用**的最小支援**參數。  
   
- **絕對值：** 輸入數字，代表包含目標項目之交易的計數。 例如，如果您輸入 10，出現在至少 10 個購物籃中的任何項目集都會包含在結果中。  
+ **為絕對值：** 輸入數字，代表包含目標項目之交易的計數。 例如，如果您輸入 10，出現在至少 10 個購物籃中的任何項目集都會包含在結果中。  
   
- **百分比：** 輸入整個集合的項目集的百分比表示的數字。 例如，如果您指定 10，系統會計算所有項目集，而且鎖定為目標的項目集必須至少顯示為項目集總數的 10%。 如果您有非常大的資料集，使用百分比 (而非計數) 可以協助您將重點放在最重要的項目群組上。  
+ **以百分比表示：** 輸入代表整個集合的項目集的百分比表示的數字。 例如，如果您指定 10，系統會計算所有項目集，而且鎖定為目標的項目集必須至少顯示為項目集總數的 10%。 如果您有非常大的資料集，使用百分比 (而非計數) 可以協助您將重點放在最重要的項目群組上。  
   
 > [!NOTE]  
 >  請記住，項目集的數目與資料中交易的數目不同。 每筆交易都可以包含多個項目集，但是，多數項目集在資料集中會重複出現數次。  

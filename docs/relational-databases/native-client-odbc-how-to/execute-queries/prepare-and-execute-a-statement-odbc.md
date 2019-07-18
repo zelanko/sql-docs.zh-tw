@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e67a239248271720e943ec80eeef6a2cb6f875e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3fd2ff0c2dae01c10b720ed31fee88430a82cbe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898514"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fd09d5d20b2a84050390c3e131265feddc09a409
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63285599"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定特定視窗框架是否可見的屬性。 Helper 方法是從 Managed 程式碼使用。  

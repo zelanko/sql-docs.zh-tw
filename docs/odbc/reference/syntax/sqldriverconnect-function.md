@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104699"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
 **合規性**  
@@ -48,7 +47,7 @@ ms.locfileid: "53212387"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDriverConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -63,7 +62,7 @@ SQLRETURN SQLDriverConnect(
   
 ## <a name="arguments"></a>引數  
  *ConnectionHandle*  
- [輸入]連接控制代碼。  
+ [輸入] 連線控制代碼。  
   
  *WindowHandle*  
  [輸入]視窗控制代碼。 應用程式可以將傳遞的父視窗控制代碼，如果適用的話，或如果是 null 指標的視窗控制代碼不適用或**SQLDriverConnect**將不會顯示任何對話方塊。  
@@ -151,9 +150,9 @@ SQLRETURN SQLDriverConnect(
   
  *屬性關鍵字*:: = DSN &#124; UID &#124; PWD &#124; *驅動程式-定義-屬性-關鍵字*  
   
- *屬性值*:: =*字元字串*  
+ *attribute-value* ::= *character-string*  
   
- *驅動程式-定義-屬性-關鍵字*:: =*識別碼*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  何處*字元字串*有零個或多個字元;*識別碼*有一或多個字元;*屬性關鍵字*不區分大小寫;*屬性值*可能會區分大小寫，而**DSN**關鍵字並沒有包含單獨的空白。  
   
@@ -171,10 +170,10 @@ SQLRETURN SQLDriverConnect(
 |-------------|---------------------------------|  
 |**DSN**|所傳回的資料來源名稱**SQLDataSources**或資料來源對話方塊的**SQLDriverConnect**。|  
 |**FILEDSN**|資料來源的.dsn 檔案內建的連接字串的名稱。 檔案資料來源時，會呼叫這些資料來源。|  
-|**驅動程式**|所傳回的驅動程式的描述**SQLDrivers**函式。 比方說，Rdb 或 SQL Server。|  
+|**DRIVER**|所傳回的驅動程式的描述**SQLDrivers**函式。 比方說，Rdb 或 SQL Server。|  
 |**UID**|使用者識別碼。|  
 |**PWD**|對應到使用者識別碼或空字串，如果沒有任何密碼的使用者識別碼的密碼 (PWD =;）。|  
-|**利用 SAVEFILE**|已儲存的屬性值進行的存在，成功的連接所使用的關鍵字.dsn 檔案的檔案名稱。|  
+|**SAVEFILE**|已儲存的屬性值進行的存在，成功的連接所使用的關鍵字.dsn 檔案的檔案名稱。|  
   
  如需應用程式如何選擇資料來源或驅動程式的資訊，請參閱[選擇資料來源或驅動程式](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)。  
   
@@ -198,7 +197,7 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED:如果應用程式所指定的連接字串包含**DSN**關鍵字，驅動程式管理員會複製應用程式所指定的連接字串。 否則，它會採用相同的動作如會*DriverCompletion*是 SQL_DRIVER_PROMPT。  
   
--   SQL_DRIVER_NOPROMPT 時：驅動程式管理員會將複製的應用程式所指定的連接字串。  
+-   SQL_DRIVER_NOPROMPT:驅動程式管理員會將複製的應用程式所指定的連接字串。  
   
  如果應用程式所指定的連接字串包含**驅動程式**關鍵字，驅動程式管理員會複製應用程式所指定的連接字串。  
   
@@ -261,7 +260,7 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED:如果連接字串包含足夠的資訊，而且該資訊正確無誤，驅動程式會連接至資料來源和複製\* *InConnectionString*要\* *OutConnectionString*. 如果任何資訊遺失或不正確，驅動程式會採用相同的動作會如*DriverCompletion*以外，如果是 SQL_DRIVER_PROMPT *DriverCompletion*是 SQL_DRIVER_COMPLETE_所需，驅動程式會停用不需要連接到資料來源的任何資訊的控制項。  
   
--   SQL_DRIVER_NOPROMPT 時：如果連接字串包含足夠的資訊，此驅動程式會連接到資料來源和複製\* *InConnectionString*要\* *OutConnectionString*。 否則，驅動程式會傳回 SQL_ERROR，如**SQLDriverConnect**。  
+-   SQL_DRIVER_NOPROMPT:如果連接字串包含足夠的資訊，此驅動程式會連接到資料來源和複製\* *InConnectionString*要\* *OutConnectionString*。 否則，驅動程式會傳回 SQL_ERROR，如**SQLDriverConnect**。  
   
  在成功連接到資料來源之後，驅動程式也會設定\* *StringLength2Ptr*可傳回的輸出連接字串的長度 **OutConnectionString*。  
   
@@ -291,7 +290,7 @@ SQLRETURN SQLDriverConnect(
   
  如需詳細資訊，請參閱 <<c0> [ 使用 sqldriverconnect 進行連接](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)。  
   
-```  
+```cpp  
 // SQLDriverConnect_ref.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  

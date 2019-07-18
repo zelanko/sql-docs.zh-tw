@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931669"
 ---
 # <a name="parameter-object"></a>Parameter 物件
 表示參數或相關聯的引數[命令](../../../ado/reference/ado-api/command-object-ado.md)物件根據參數型的查詢或預存程序。  

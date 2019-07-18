@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
@@ -15,19 +14,19 @@ ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060673"
 ---
 # <a name="configure-data-viewer-general-tab"></a>設定資料檢視器 (一般索引標籤)
   在封裝執行期間，當資料移動通過連接兩個資料流程元件的路徑時，資料檢視器會顯示該資料。  
   
  使用 **[設定資料檢視器]** 對話方塊的 **[一般]** 索引標籤，即可命名資料檢視器並指定用來顯示資料的圖表類型。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供資料檢視器的唯一名稱。  
   

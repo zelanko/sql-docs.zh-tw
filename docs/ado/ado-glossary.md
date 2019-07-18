@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927179"
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題會定義與 ADO 的詞彙。
@@ -39,9 +38,9 @@ ms.locfileid: "52528023"
  執行控制權傳回給呼叫的程式，而不需等待作業完成的作業的非同步作業。 表示作業已完成之前，會繼續執行程式碼。 另請參閱*同步作業*。
 
 ## <a name="b"></a>B
- 資料表中的欄位與變數之間的繫結項目的對應。 在 ADO Visual c + + 延伸模組**資料錄集**欄位會對應至 C/c + + 變數。
+ 資料表中的欄位與變數之間的繫結項目的對應。 在 ADO VisualC++延伸模組**資料錄集**欄位會對應至 C /C++變數。
 
- 位元遮罩的數值適用於與其他數字的值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中**&** 並 **&#124;** c + + 中。
+ 位元遮罩的數值適用於與其他數字的值，通常要在參數中的旗標選項或傳回值的位元值比較。 通常這項比較是使用位元的邏輯運算子，例如**和**並**或者**在 Visual Basic 中 **&** 並 **&#124;** 在C++。
 
  例如，ADO **FieldAttributeEnum**值可用來當做位元遮罩來決定欄位的屬性。 假設您想要判斷欄位是否可更新。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`
 
@@ -53,7 +52,7 @@ ms.locfileid: "52528023"
 
  商務規則驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務往來的演算轉換的組合。 也稱為*商務邏輯*。
 
-## <a name="c"></a>c
+## <a name="c"></a>C
  計算運算式不是常數運算式，但其值取決於其他值。 要評估，必須取得的導出的運算式，並將其計算從其他來源，通常是在其他欄位或資料列的值中。
 
  章節的參考一組資料列從資料來源。 在 ADO 中，一整章通常是另一個的參考**資料錄集**。

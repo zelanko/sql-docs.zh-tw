@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917699"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 集合 (ADO)
 包含所有[參數](../../../ado/reference/ado-api/parameter-object.md)的物件[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

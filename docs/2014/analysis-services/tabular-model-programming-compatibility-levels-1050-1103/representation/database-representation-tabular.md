@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4470dc85b33930e136a9c2c1bbf47b1597753be5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757814"
 ---
 # <a name="database-representationtabular"></a>資料庫表示法 (表格式)
   在表格式模式下，資料庫是表格式模型中所有物件的容器。  
@@ -88,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 若想實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱「表格式 AMO 2012」範例的原始程式碼，特別要檢查以下的原始程式檔：Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
+ 實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱表格式 AMO 2012 範例; 中的原始程式碼特別要檢查以下的原始程式檔：Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
   
   

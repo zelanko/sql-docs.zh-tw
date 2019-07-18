@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316843"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
   您可以為目前沒有開啟以供編輯的任何查詢重新命名。 下列的程序假設您要重新命名的查詢已經關閉。  
   
 ### <a name="to-rename-a-query"></a>若要重新命名查詢  
   
-1.  從 [檢視] 功能表選擇 [方案總管]。  
+1.  從 [檢視]  功能表選擇 [方案總管]  。  
   
-2.  在方案總管中，在想要重新命名的查詢上按一下滑鼠右鍵，並在出現的快速鍵功能表上按一下 [重新命名]。  
+2.  在方案總管中，在想要重新命名的查詢上按一下滑鼠右鍵，並在出現的快速鍵功能表上按一下 [重新命名]  。  
   
 3.  為查詢輸入新名稱，然後按下 ENTER。  
   

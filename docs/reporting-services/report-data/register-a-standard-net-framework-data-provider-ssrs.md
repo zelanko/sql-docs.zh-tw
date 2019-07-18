@@ -2,7 +2,7 @@
 title: 註冊標準的 .NET Framework Data Provider (SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 453b31328c732833756a39a56389aa7640346817
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571242"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)
   若要使用協力廠商的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者來擷取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集的資料，您必須在兩個位置部署並註冊 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件：報表撰寫用戶端與報表伺服器。 在報表撰寫用戶端上，您必須註冊資料提供者做為資料來源類型，並將其與查詢設計工具產生關聯。 然後您可以在建立報表資料集時，選取此資料提供者做為資料來源的類型。 相關聯的查詢設計工具便會開啟，協助您建立此資料來源類型的查詢。 在報表伺服器上，您必須註冊資料提供者，做為資料來源類型。 然後您可以處理使用此資料提供者，從資料來源擷取資料的已發行報表。  
@@ -34,7 +34,7 @@ ms.locfileid: "53215637"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>在報表伺服器上安裝資料提供者組件  
   
-1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表伺服器上，巡覽至 bin 目錄的預設位置。 報表伺服器 bin 目錄的預設位置是 \<磁碟機>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
+1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表伺服器上，巡覽至 bin 目錄的預設位置。 報表伺服器 bin 目錄的預設位置是 \<磁碟機>  :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
   
 2.  將組件從您的臨時位置複製到報表伺服器的 bin 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](https://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "53215637"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>在報表設計師用戶端上安裝資料提供者組件  
   
-1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表設計師用戶端上，巡覽至 PrivateAssemblies 目錄的預設位置。 PrivateAssemblies 目錄的預設位置為 \<磁碟機>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
+1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表設計師用戶端上，巡覽至 PrivateAssemblies 目錄的預設位置。 PrivateAssemblies 目錄的預設位置為 \<磁碟機>  :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
 2.  將組件從您的臨時位置複製到報表設計師用戶端的 PrivateAssemblies 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](https://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
   

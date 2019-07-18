@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d2e710bdbe8f026624ea71357afb6d204b333c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130485"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

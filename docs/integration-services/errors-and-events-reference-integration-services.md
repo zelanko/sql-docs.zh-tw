@@ -16,14 +16,18 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f9e6845c7bcaaffc85621338a169cdaa2c10dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e107326e5269cfbd0f9e229bb418b83bc9fbfdb8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725782"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
   
  如需 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的詳細資訊，包括大部分 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤及其描述的清單，請參閱 [Integration Services 錯誤和訊息參考](../integration-services/integration-services-error-and-message-reference.md)。 不過，此清單目前並不包含疑難排解的資訊。  

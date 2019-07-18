@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226149"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>授與、撤銷和拒絕權限
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 物件可用於將一組權限或個別的伺服器權限指派給 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 物件。 如果是伺服器層級權限，被授與者是指登入。 Windows 驗證過的登入會列為 Windows 使用者名稱。 當這個程式碼範例執行時，會從被授與者撤銷權限，並使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 方法確認該權限已經移除。  

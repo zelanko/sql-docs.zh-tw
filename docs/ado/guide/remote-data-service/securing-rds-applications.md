@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d91b8f41c344d45bfde646d24819e73c0cd8f283
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922228"
 ---
 # <a name="securing-rds-applications"></a>保護 RDS 應用程式
 本主題提供 RDS 的安全性資訊  
@@ -42,6 +41,6 @@ ms.locfileid: "51559975"
  因此，IIS Windows NT Challenge/Response 驗證模式允許建立，而不會明確提示使用者登入資料庫所需的使用者識別碼和密碼資訊的 HTML 頁面。 如果已使用 IIS 基本驗證，則這也會需要。  
   
 ## <a name="password-authentication"></a>密碼驗證  
- RDS 可與執行中的三種密碼驗證模式的任何一個 IIS Web 伺服器通訊： 匿名、 基本、 或 NT Challenge/Response 驗證 （Windows 2000 中稱為整合式 Windows 驗證）。 這些設定會定義如何在 Web 伺服器控制透過它，例如要求的用戶端電腦擁有明確的存取權限，NT Web 伺服器上的存取權。
+ RDS 可以與執行中的三種密碼驗證模式的任何一個 IIS Web 伺服器通訊：Anonymous、 Basic 或 NT Challenge/Response 驗證 （Windows 2000 中稱為整合式 Windows 驗證）。 這些設定會定義如何在 Web 伺服器控制透過它，例如要求的用戶端電腦擁有明確的存取權限，NT Web 伺服器上的存取權。
 
 

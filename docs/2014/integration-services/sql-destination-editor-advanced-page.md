@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 751ace509744cdfbaee7b6b4c262988a92652c88
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055455"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
   使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  

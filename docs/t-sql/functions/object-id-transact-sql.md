@@ -23,16 +23,16 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f514bd7b5f18fba37ba8159ee4fe1804b5d8b8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02ad3631a37600b3b3a18af38b90a805fe00af5c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944035"
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,7 +126,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D：傳回指定物件的物件識別碼  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D.傳回指定物件的物件識別碼  
  下列範例會傳回 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]資料庫之 `FactFinance` 資料表的物件識別碼。  
   
 ```  

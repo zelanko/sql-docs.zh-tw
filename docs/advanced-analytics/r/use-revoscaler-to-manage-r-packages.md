@@ -2,24 +2,23 @@
 title: 如何使用 RevoScaleR 函數來尋找或安裝 R 封裝-SQL Server Machine Learning 服務
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 93c46f9165d4fb2aa781242e6552db5f1306eb21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962390"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR 9.0.1 （英文) 和更新版本包含 SQL Server 計算內容的 R 封裝管理函數。 這些函式可供 SQL Server 上安裝封裝，而不需要直接存取伺服器遠端的非系統管理員。
 
-SQL Server 2017 Machine Learning 服務已經包含 RevoScaleR 的較新版本。 必須執行 SQL Server 2016 R Services 的客戶[元件升級](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)若要取得 RevoScaleR 封裝管理函數。 有關如何擷取套件版本和內容，請參閱[取得封裝資訊](determine-which-packages-are-installed-on-sql-server.md)。
+SQL Server 2017 Machine Learning 服務已經包含 RevoScaleR 的較新版本。 必須執行 SQL Server 2016 R Services 的客戶[元件升級](../install/upgrade-r-and-python.md)若要取得 RevoScaleR 封裝管理函數。 有關如何擷取套件版本和內容，請參閱[取得封裝資訊](../package-management/installed-package-information.md)。
 
 ## <a name="revoscaler-functions-for-package-management"></a>RevoScaleR 函式，針對封裝管理
 
@@ -38,7 +37,7 @@ SQL Server 2017 Machine Learning 服務已經包含 RevoScaleR 的較新版本�
 
 + [啟用 SQL Server 上的遠端 R 封裝管理](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR 版本必須是相同的用戶端和伺服器環境。 如需詳細資訊，請參閱 <<c0> [ 取得封裝資訊](determine-which-packages-are-installed-on-sql-server.md)。
++ RevoScaleR 版本必須是相同的用戶端和伺服器環境。 如需詳細資訊，請參閱 <<c0> [ 取得封裝資訊](../package-management/installed-package-information.md)。
 
 + 連接到伺服器和資料庫，以及執行 R 命令的權限。 您必須是可讓您指定的執行個體和資料庫上安裝封裝的資料庫角色的成員。
 
@@ -97,7 +96,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-根據伺服器的位置，與安全性模型，您可能需要提供網域和子網路的規格，在連接字串，或使用 SQL 登入。 例如：
+根據伺服器的位置，與安全性模型，您可能需要提供網域和子網路的規格，在連接字串，或使用 SQL 登入。 例如:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -212,4 +211,4 @@ exec sp_execute_external_script
 + [啟用遠端 R 封裝管理](r-package-how-to-enable-or-disable.md)
 + [同步 R 套件](package-install-uninstall-and-sync.md)
 + [安裝 R 套件的秘訣](packages-installed-in-user-libraries.md)
-+ [預設封裝](installing-and-managing-r-packages.md)
++ [預設封裝](../package-management/default-packages.md)

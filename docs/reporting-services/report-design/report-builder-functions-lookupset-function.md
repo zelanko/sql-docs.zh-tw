@@ -2,18 +2,18 @@
 title: LookupSet 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eef80b349ed067d589759afbdfa98a7c1221726e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577404"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>報表產生器函式 - LookupSet 函式
   從包含名稱/值組的資料集傳回符合指定之名稱的值組。  

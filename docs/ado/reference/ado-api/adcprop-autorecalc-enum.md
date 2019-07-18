@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_AUTORECALC_ENUM |Microsoft Docs
+title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb10b3f4fb563275a8f27a92e41c265336c3cb55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921446"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 指定何時[MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供者重新計算彙總與導出資料行中的階層式資料錄集。  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655693"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>備份和還原資料庫與交易記錄
   在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 A<xref:Microsoft.SqlServer.Management.Smo.Backup>物件表示特定的備份工作所需而不是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器執行個體上的物件。  

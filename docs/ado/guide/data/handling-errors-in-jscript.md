@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925177"
 ---
 # <a name="handling-errors-in-jscript"></a>處理 JScript 的錯誤
 您的 Microsoft® JScript® 程式碼必須檢查**計數**屬性**連線**物件的**錯誤**集合。 如果值大於 0，逐一查看集合，並列印的值，如同在任何其他語言。  

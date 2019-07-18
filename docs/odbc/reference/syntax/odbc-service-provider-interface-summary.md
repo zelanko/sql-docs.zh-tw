@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0a97bed3bb921b9c881a98d8d9a9031ef7630f26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111900"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC 服務提供者介面摘要
 下表描述 ODBC 服務提供者介面函式。 如需語法和語意，每個函式的詳細資訊，請參閱[ODBC 服務提供者介面 (SPI) 參考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  

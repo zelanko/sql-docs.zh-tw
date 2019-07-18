@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71d2eea055276558765d7787e736e74400b2c7a9
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162663"
 ---
 # <a name="process-partitions-in-the-workspace-database"></a>在工作空間資料庫中處理資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "54405908"
   
 ###  <a name="bkmk_create_new"></a> 處理資料分割  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依序按一下 [模型] 功能表、[處理] (重新整理) 及 [處理資料分割]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依序按一下 [模型]  功能表、[處理]  (重新整理) 及 [處理資料分割]  。  
   
 2.  在 **[模式]** 清單方塊，選取下列其中一個處理模式：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54405908"
     |**處理清除**|移除資料分割中的所有資料。|  
     |**處理加入**|以新資料累加地更新資料分割。|  
   
-3.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]**。  
+3.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   

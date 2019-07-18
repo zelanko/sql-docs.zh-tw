@@ -12,12 +12,12 @@ ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb37f1a6d59f8dc7df7dd1cc022fd6e2f6c53e4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a4940b5707e3904c6796765cd4b24a6fc946373
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777836"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582985"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47777836"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8651|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -43,7 +43,7 @@ ms.locfileid: "47777836"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集 **SQL Server: Buffer Manager** 和 **SQL Server: Memory Manager** 的效能監視器計數器。  
+2.  開始收集下列項目的效能監視器計數：**SQL Server：緩衝區管理員**、**SQL Server：記憶體管理員**。  
   
 3.  檢查下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體組態參數：  
   
@@ -56,12 +56,14 @@ ms.locfileid: "47777836"
     注意不尋常的設定， 並且視需要加以更正。 預設值列於《SQL Server 線上叢書》中的＜設定伺服器組態選項＞。  
   
 4.  檢查工作負載 (例如，並行工作階段的數目以及目前正在執行的查詢數)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 下列動作可以為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供更多可用的記憶體：  
   
 -   如果有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的應用程式正在耗用資源，請嘗試停止執行這些應用程式或考慮在不同的伺服器上執行這些應用程式。 這將會移除外部的記憶體壓力。  
   
--   如果已經設定 **max server memory,**，請增加其設定值。  
+-   如果已經設定 **max server memory,** ，請增加其設定值。  
   
 執行下列 DBCC 命令，以便釋放數個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體快取。  
   

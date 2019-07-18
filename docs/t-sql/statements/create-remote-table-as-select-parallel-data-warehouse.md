@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0da82a782dcebeee22e422d5c25b05e17584393c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: e06c94a421076278bcd784e43aeb7924f1bb0e3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503196"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56319199"
   
 ```  
   
-CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name     AT ('<connection_string>')  
+CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
 [;]  
@@ -87,7 +87,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  SELECT \<select_criteria> 指定哪些資料將填入新遠端資料表的查詢述詞。 如需 SELECT 陳述式的相關資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要：  
   
 -   SELECT 子句中每個物件的 SELECT 權限。  

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 23b29d5d7626986c957489249eb570eaa993f8f0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514636"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581686"
 ---
 # <a name="create-views"></a>建立檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "52514636"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立檢視：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52514636"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -63,21 +63,23 @@ ms.locfileid: "52514636"
   
 1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [檢視] 資料夾，然後按一下 [新增檢視…]。  
+2.  以滑鼠右鍵按一下 [檢視]  資料夾，然後按一下 [新增檢視…]  。  
   
-3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 和 [同義字]。  
+3.  在 **[加入資料表]** 對話方塊中，從下列索引標籤選取您要包含在新檢視中的元素：[資料表]、[檢視]、[函數] 與 [同義字]。  
   
-4.  按一下 **[加入]**，然後按一下 **[關閉]**。  
+4.  按一下 **[加入]** ，然後按一下 **[關閉]** 。  
   
 5.  在 **[圖表]** 窗格中，選取要包含在新檢視中的資料行或其他元素。  
   
 6.  在 **[準則]** 窗格中，選擇資料行的其他排序或篩選準則。  
   
-7.  在 [檔案]  功能表上，按一下 [儲存] _view name_。  
+7.  在 [檔案]  功能表上，按一下 [儲存]  _view name_。  
   
-8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]**。  
-  
-     如需查詢和檢視表設計工具的詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
+8.  在 **[選擇名稱]** 對話方塊中，輸入新檢視的名稱，並按一下 **[確定]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -85,9 +87,9 @@ ms.locfileid: "52514636"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012 ;   

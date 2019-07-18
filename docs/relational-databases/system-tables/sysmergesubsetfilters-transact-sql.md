@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6c5eee7cef00d05e2a296fccd527c3df7a119d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029754"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

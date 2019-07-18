@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.steps.f1
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ae1f7b260d5474dddfb285ff26aa560a37952d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44909b25b95bb3b8cdffa19f1afe7967a8434690
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785165"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686848"
 ---
 # <a name="job-properties---new-job-steps-page"></a>作業屬性 - 新增作業 (步驟頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

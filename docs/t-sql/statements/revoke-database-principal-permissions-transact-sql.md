@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033833"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要指定主體的 CONTROL 權限，或需要隱含 CONTROL 權限的更高權限。  
   
  資料庫 CONTROL 權限的承授者 (例如 **db_owner** 固定資料庫角色的成員) 可以授與資料庫中任何安全性實體的任何權限。  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 從應用程式角色撤銷使用者的 IMPERSONATE 權限  
- 下列範例會從 `IMPERSONATE` 應用程式角色 `HamithaL` 撤銷使用者 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的 `AccountsPayable17` 權限。  
+ 下列範例會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 應用程式角色 `IMPERSONATE` 撤銷使用者 `HamithaL` 的 `AccountsPayable17` 權限。  
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

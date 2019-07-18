@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9239ecc56213dad17c4b2641c3a7630ae710bd16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 03d7058e0e378e3848fe51a2df56886cbb51bcd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127875"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>連結伺服器目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

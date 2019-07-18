@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b8648b9166ffa192ca21233ab6add38260a7dea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871145"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>檢視資料庫快照集 (SQL Server)
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料庫快照集。  
@@ -40,16 +40,16 @@ ms.locfileid: "52811550"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 **[資料庫]**。  
+2.  展開 **[資料庫]** 。  
   
-3.  展開 **[資料庫快照集]**，然後選取想要檢視的快照集。  
+3.  展開 **[資料庫快照集]** ，然後選取想要檢視的快照集。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要檢視資料庫快照集**  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  若要列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的資料庫快照集，請查詢 **sys.databases** 目錄檢視的 [source_database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行看看是否有非 NULL 值。  
   

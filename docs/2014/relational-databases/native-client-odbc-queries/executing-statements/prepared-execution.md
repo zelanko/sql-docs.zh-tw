@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207047"
 ---
 # <a name="prepared-execution"></a>備妥的執行
   ODBC API 會定義備妥的執行，將它當做減少與重複執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式有關之剖析和編譯負擔的一個方式。 應用程式會建立一個包含 SQL 陳述式的字元字串，然後在兩個階段執行此字串。 它會呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)一次，好的陳述式剖析和編譯成執行計畫[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 然後它會呼叫**SQLExecute**每次執行已備妥的執行計畫。 這樣會省下每次執行時的剖析和編譯負擔。 應用程式通常會使用備妥的執行來重複執行相同且參數化的 SQL 陳述式。  

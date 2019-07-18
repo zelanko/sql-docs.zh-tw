@@ -15,14 +15,18 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4485a60e816bd6feeb31f7357a87af378d2b6b99
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 36b28f90047bb7d116fffc1564eaecf43858822c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719814"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   當您必須執行許多封裝時，使用其他可用的伺服器會更方便。 當封裝全都受單一父封裝控制時，使用其他伺服器來執行封裝的這種方法，即稱為負載平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，負載平衡是一種必須由封裝擁有者建構的手動程序。 伺服器並不會自動執行負載平衡。 此外，遠端伺服器上執行的封裝也必須是完整的封裝，而不是其他封裝中的個別工作。  
   
  在下列狀況下，負載平衡非常有用：  
@@ -66,7 +70,7 @@ ms.locfileid: "58282642"
   
  設計子封裝時，封裝的設計並無任何限制，您可以放入任何所需的功能。 但是，如果封裝會存取資料，您必須確定執行封裝的伺服器擁有資料的存取權。  
   
- 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]。  
+ 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]  。  
   
  子封裝設計完成之後，下一個步驟是將子封裝部署在遠端伺服器上。  
   
@@ -85,7 +89,7 @@ ms.locfileid: "58282642"
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>偵錯 SQL Server Agent 作業和子封裝  
  您可以使用下列其中一種方法來建立 SQL Server Agent 作業及其子封裝：  
   
--   按一下 [偵錯] / [啟動但不偵錯]，以便在 SSIS 設計師中執行每個子套件。  
+-   按一下 [偵錯]   / [啟動但不偵錯]  ，以便在 SSIS 設計師中執行每個子套件。  
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行遠端電腦上的個別 SQL Server Agent 作業，以確定封裝執行無誤。  
   
@@ -98,10 +102,10 @@ ms.locfileid: "58282642"
 ## <a name="implementation-of-the-parent-package"></a>父封裝的實作
   設定跨越各種伺服器之 SSIS 封裝的負載平衡時，在完成建立、部署子封裝，以及建立執行這些子封裝的遠端 SQL Server Agent 作業之後，下一個步驟就是建立父封裝。 父封裝將包含許多「執行 SQL Server Agent 作業」工作，每一項工作負責呼叫執行其中一個子封裝的不同 SQL Server Agent 作業。 接著父封裝中的「執行 SQL Server Agent 作業」工作會執行各種 SQL Server Agent 作業。 父封裝中的每項工作都包含如何連接到遠端伺服器以及要在該伺服器上執行哪一項作業之類的資訊。 如需詳細資訊，請參閱 [Execute SQL Server Agent Job Task](../../integration-services/control-flow/execute-sql-server-agent-job-task.md)。  
   
- 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [方案總管] 中的封裝，然後按一下 **[進入點封裝]**。  
+ 若要識別執行子封裝的父封裝，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [方案總管] 中的封裝，然後按一下 **[進入點封裝]** 。  
   
 ### <a name="listing-child-packages"></a>列出子封裝  
- 若您將包含父封裝及子封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，可以檢視由父封裝執行的子封裝清單。 當您執行父封裝時，會在 **中自動產生父封裝的 [概觀]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]報告。 該告會列出父封裝中包含的執行封裝工作所執行之子封裝清單，如下圖所示。  
+ 若您將包含父封裝及子封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，可以檢視由父封裝執行的子封裝清單。 當您執行父封裝時，會在 **中自動產生父封裝的 [概觀]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]報告。 該告會列出父封裝中包含的執行封裝工作所執行之子封裝清單，如下圖所示。  
   
  ![含有子套件清單的概觀報表](../../integration-services/packages/media/overviewreport-childpackagelisting.png "含有子套件清單的概觀報表")  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6c2783969aacb7a7dfd86a677d28eb3a4ea1de92
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537286"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803784"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

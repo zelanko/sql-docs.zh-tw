@@ -11,15 +11,14 @@ helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fab92b86d9df1ca0000fb762602280b14e6a1aa7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 239b3b2131dd5da345fe415dcaa0d6846a62e1ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047607"
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
 
@@ -28,19 +27,19 @@ ms.locfileid: "52760430"
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，屬性群組有助於組織實體中的屬性。 當實體包含多個屬性時，屬性群組可改善實體在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中顯示的方式。  
   
 ## <a name="how-attribute-groups-change-the-display"></a>屬性群組如何變更顯示  
- 屬性群組會以方格上方的索引標籤形式顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [總管] 功能區域。  
+ 屬性群組會以方格上方的索引標籤形式顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [總管]  功能區域。  
   
- 如果實體有大量屬性，當您在 [總管] 的方格中檢視該實體時，必須捲動至右方，才能檢視所有屬性。 若要避免此捲動，您可以建立屬性群組。  
+ 如果實體有大量屬性，當您在 [總管]  的方格中檢視該實體時，必須捲動至右方，才能檢視所有屬性。 若要避免此捲動，您可以建立屬性群組。  
   
 -   屬性群組永遠包含 Name 和 Code 屬性。  
   
 -   實體的每個屬性可以屬於一個或多個屬性群組。  
   
--   所有屬性都會自動包含在 [總管] 的 [所有屬性] 索引標籤上。  
+-   所有屬性都會自動包含在 [總管]  的 [所有屬性]  索引標籤上。  
   
--   沒有方法可以隱藏 [所有屬性] 索引標籤。  
+-   沒有方法可以隱藏 [所有屬性]  索引標籤。  
   
- 屬性群組是在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的 [系統管理] 功能區域中管理的。  
+ 屬性群組是在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的 [系統管理]  功能區域中管理的。  
   
 ## <a name="show-or-hide-attribute-groups"></a>顯示或隱藏屬性群組  
  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。 如需如何顯示此群組的詳細資訊，請參閱 [讓使用者看到屬性群組 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)。  

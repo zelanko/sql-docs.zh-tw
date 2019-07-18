@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b771042ca00c9a9a80d7ffa035b100e2c4a6dc0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098134"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   加入給定應用程式的 URL 保留項目。  

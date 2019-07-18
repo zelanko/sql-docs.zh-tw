@@ -21,18 +21,18 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011182"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
-  建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
+  建立和維護全文檢索索引包括使用稱為「母體擴展」  (Population) (也稱為「搜耙」  (Crawl)) 的處理序來擴展索引。  
   
 ##  <a name="types"></a> 母體擴展類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列母體擴展類型： 完整母體擴展、 變更追蹤為基礎自動或手動母體擴展，以及時間戳記為基礎的累加母體擴展。  
@@ -173,13 +173,13 @@ GO
   
 1.  在 [物件總管] 中，展開伺服器。  
   
-2.  展開 [資料庫]，然後展開包含全文檢索索引的資料庫。  
+2.  展開 [資料庫]  ，然後展開包含全文檢索索引的資料庫。  
   
-3.  展開 **[資料表]**。  
+3.  展開 **[資料表]** 。  
   
- 以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]，然後按一下 [全文檢索索引] 內容功能表上的 [屬性]。 這樣就會開啟 [全文檢索索引屬性] 對話方塊。  
+ 以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]  ，然後按一下 [全文檢索索引]  內容功能表上的 [屬性]  。 這樣就會開啟 [全文檢索索引屬性]  對話方塊。  
   
-1.  在 [選取頁面] 窗格中，選取 [排程]。  
+1.  在 [選取頁面]  窗格中，選取 [排程]。  
   
      您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引的基底資料表或索引檢視表啟動累加資料表母體擴展。  
   
@@ -188,21 +188,21 @@ GO
   
      選項如下：  
   
-    -   若要建立新的排程，請按一下 [新增]。  
+    -   若要建立新的排程，請按一下 [新增]  。  
   
-         這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]。  
+         這樣就會開啟 [新增全文檢索索引資料表排程]  對話方塊，可讓您建立排程。 若要儲存排程，請按一下 [確定]  。  
   
         > [!IMPORTANT]  
-        >  在您結束 [全文檢索索引屬性] 對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>.<資料表名稱> 啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對全文檢索索引建立多個排程，它們都會使用相同的作業。  
+        >  在您結束 [全文檢索索引屬性]  對話方塊之後，SQL Server Agent 作業 (針對 <資料庫名稱>  .<資料表名稱>  啟動累加資料表母體擴展) 就會與新的排程相關聯。 如果您針對全文檢索索引建立多個排程，它們都會使用相同的作業。  
   
-    -   若要變更排程，請選取它並按一下 [編輯]。  
+    -   若要變更排程，請選取它並按一下 [編輯]  。  
   
-         這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您修改排程。  
+         這樣就會開啟 [新增全文檢索索引資料表排程]  對話方塊，可讓您修改排程。  
   
         > [!NOTE]  
         >  如需修改作業的詳細資訊，請參閱[修改作業](../../ssms/agent/modify-a-job.md)。  
   
-    -   若要移除排程，請選取它並按一下 [刪除]。  
+    -   若要移除排程，請選取它並按一下 [刪除]  。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> 針對全文檢索母體擴展 （搜耙） 中的錯誤進行疑難排解  
  搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 根據預設指定執行個體的搜耙記錄檔，在此情況下，第一個執行個體，位於 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 資料夾中。 搜耙記錄檔會遵循下列命名結構：  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >。記錄 [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  資料庫的識別碼。 <`dbid`> 是的五位數數字加上前置零。  

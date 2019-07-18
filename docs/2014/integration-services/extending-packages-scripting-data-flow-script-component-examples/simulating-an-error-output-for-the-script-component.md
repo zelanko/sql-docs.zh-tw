@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62895507"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模擬指令碼元件的錯誤輸出
   雖然您無法在指令碼元件中將輸出直接設定為錯誤輸出，以自動處理錯誤資料列，不過可以建立其他輸出並使用指令碼中的條件式邏輯，適時地將資料列導向此輸出，以重新產生內建錯誤輸出的功能。 您可能會想要加入兩個額外的輸出資料行，以接收發生錯誤的資料行之錯誤碼與識別碼，來模擬內建錯誤輸出的行為。  
@@ -36,7 +36,7 @@ ms.locfileid: "58374857"
   
 2.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。 開啟**指令碼轉換編輯器**。  
   
-3.  在 [指令碼] 頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
+3.  在 [指令碼]  頁面上，將 **ScriptLanguage** 屬性設定成您要用以撰寫指令碼的指令碼語言。  
   
 4.  按一下 **[編輯指令碼]** 開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "58374857"
   
 6.  關閉 VSTA。  
   
-7.  在 [輸入資料行] 頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
+7.  在 [輸入資料行]  頁面上，選取您要在指令碼轉換中處理的資料行。 此範例只使用 CountryRegionName 資料行。 您保留未選取的可用輸入資料行，將會在資料流程中傳遞時保持不變。  
   
 8.  在上**輸入和輸出**頁面，加入新、 第二個輸出，並設定其`SynchronousInputID`的輸入，也是值的識別碼值的`SynchronousInputID`預設輸出的屬性。 將兩個輸出的 `ExclusionGroup` 屬性設定為相同的非零值 (例如 1)，以指出將每個資料列導向僅兩個輸出的其中一個。 提供特殊的名稱給新錯誤輸出，例如 "MyErrorOutput"。  
   

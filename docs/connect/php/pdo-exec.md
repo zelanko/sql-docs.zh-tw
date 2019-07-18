@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: exec |Microsoft Docs'
+title: PDO::exec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96b3597c8b8d4fa61b76a96278697f2678b7d9aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5b6d3341dd3ade106495c606896b6496a9bc2f6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762132"
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>傳回值  
 一個整數，報告受影響的資料列數目。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 *$statement* 包含多個 SQL 陳述式，則只會針對最後一個陳述式報告受影響的資料列計數。  
   
 PDO::exec 不會傳回 SELECT 陳述式的結果。  

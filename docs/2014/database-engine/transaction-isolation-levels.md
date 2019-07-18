@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaac46d0fd741e53493903d6fe0bb4656e9499a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774117"
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
   存取記憶體最佳化的資料表的交易，可支援下列隔離等級。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aad8a5ee94f9d4cc2320b8c31a7d32d44dea57f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d7335d16f428af13813cea36de6a7de79e1faf95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795124"
 ---
 # <a name="upgrading-mirrored-instances"></a>升級鏡像執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52515977"
 ## <a name="prerequisites"></a>Prerequisites  
  在開始之前，請檢閱以下重要資訊：  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+-   [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)︰根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
+-   [選擇資料庫引擎升級方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
   
--   [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
+-   [計劃和測試資料庫引擎升級計畫](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
--   [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
+-   [安裝 SQL Server 2016 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
   
 ## <a name="recommended-preparation-best-practices"></a>建議的準備事項 (最佳做法)  
  開始輪流升級之前，我們建議您：  
@@ -83,7 +83,7 @@ ms.locfileid: "52515977"
     > [!IMPORTANT]  
     >  如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流升級可能不適合。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [不具有自動容錯移轉的高安全性 (同步)]。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]  對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]  選項變更為 [不具有自動容錯移轉的高安全性 (同步)]  。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52515977"
   
 ### <a name="to-perform-the-rolling-upgrade"></a>執行輪流升級  
   
-1.  若要讓停機時間減至最少，我們建議您採取以下作法：在所有鏡像工作階段中更新目前為鏡像伺服器的任何鏡像夥伴伺服器，藉以開始輪流升級。 您在此時可能必須更新多個伺服器執行個體。  
+1.  若要讓停機時間減至最少，我們的建議如下：藉由更新所有鏡像工作階段中目前為鏡像伺服器的任何鏡像夥伴伺服器來開始輪流升級。 您在此時可能必須更新多個伺服器執行個體。  
   
     > [!NOTE]  
     >  您可以在輪流升級程序的任何時間升級見證。 例如，如果伺服器執行個體在工作階段 1 為鏡像伺服器，而在工作階段 2 為見證，您可以立刻升級此伺服器執行個體。  
@@ -140,9 +140,9 @@ ms.locfileid: "52515977"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [高效能 (非同步)]。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性]  對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式]  選項變更為 [高效能 (非同步)]  。  
   
-    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中：使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)將交易安全性設定為 OFF。  
+    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) 將交易安全性設定為 OFF。  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>若要將見證加回鏡像工作階段  
   

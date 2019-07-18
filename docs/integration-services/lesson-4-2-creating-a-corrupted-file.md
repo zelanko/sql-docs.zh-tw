@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：建立損毀的檔案 | Microsoft Docs
+title: 步驟 2:建立損毀的檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9805a1d1fd1c6e025ee7ddb83c7241037dbae30b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fd9a0270f4fabdae863ba1c476af9ae10b006bab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721822"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>課程 4-2：建立損毀的檔案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 為了示範設定和轉換錯誤的處理，您需要一個在處理時會造成元件失敗的範例一般檔案。  
   

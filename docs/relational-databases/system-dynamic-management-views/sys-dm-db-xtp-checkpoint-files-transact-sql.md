@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026916"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ ms.locfileid: "52510872"
  如需詳細資訊，請參閱 <<c0> [ 建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_files`，與開頭**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_files`，與開頭 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 與中的 file_id 聯結[sys.master_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|容器，即根、 資料或差異檔案組件的 GUID。 與 file_guid sys.database_files 資料表中的聯結。|  
@@ -65,19 +64,19 @@ ms.locfileid: "52510872"
 |end_checkpoint_id|**bigint**|結束檢查點的識別碼。|  
 |last_updated_checkpoint_id|**bigint**|更新此檔案的最後一個檢查點的識別碼。|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 金鑰 1 加密<br /><br /> 2 = &GT; 使用金鑰 2 加密。 僅適用於使用中的檔案。|  
+|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > 金鑰 1 加密<br /><br /> 2 = > 使用金鑰 2 加密。 僅適用於使用中的檔案。|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_files`，如**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_files`，如 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|type|描述|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|資料或差異檔案所屬之容器的識別碼 (以 sys.database_files 中的 FILESTREAM 類型檔案來表示)。 與中的 file_id 聯結[sys.master_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|資料或差異檔案所屬之容器的 GUID。|  
 |checkpoint_file_id|**GUID**|資料或差異檔案的識別碼。|  
 |relative_file_path|**nvarchar(256)**|資料或差異檔案的路徑 (相對於容器的位置)。|  
 |file_type|**tinyint**|0 代表資料檔案。<br /><br /> 1 代表差異檔案。<br /><br /> 如果 state 資料行設定為 7 則為 NULL。|  
-|file_type_desc|**nvarchar(60)**|檔案類型：DATA_FILE、DELTA_FILE，如果 state 資料行設定為 7 則為 NULL。|  
+|file_type_desc|**nvarchar(60)**|檔案類型：DATA_FILE、 delta_file，如果 state 資料行設定為 7 則為 NULL。|  
 |internal_storage_slot|**int**|內部儲存體陣列中之檔案的索引。 如果 state 資料行不是 2 或 3 則為 NULL。|  
 |checkpoint_pair_file_id|**uniqueidentifier**|對應的資料或差異檔案。|  
 |file_size_in_bytes|**bigint**|使用的檔案大小。 如果 state 資料行設定為 5、6 或 7 則為 NULL。|  

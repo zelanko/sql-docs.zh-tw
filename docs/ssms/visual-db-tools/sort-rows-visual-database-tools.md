@@ -11,15 +11,15 @@ helpviewer_keywords:
 - sorting rows [SQL Server]
 - sorting query results [SQL Server]
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: bacb931c8e61cae2e6f322a73a22e968c7b52d88
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505364"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682937"
 ---
 # <a name="sort-rows-visual-database-tools"></a>排序資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,21 +1,20 @@
 ---
-title: 設定 SQL Server 的 Red Hat Enterprise Linux 共用的叢集 |Microsoft Docs
+title: 設定 SQL Server 的 Red Hat Enterprise Linux 共用的叢集
 description: 設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集，以實作高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032285"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -109,7 +108,7 @@ ms.locfileid: "58306036"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>設定共用存放裝置，並移動資料庫檔案 
 
-有各式各樣的解決方案提供共用存放裝置。 此逐步解說會示範設定 NFS 共用的儲存體。 我們建議您遵循最佳作法，並使用 Kerberos 來保護 NFS (您可以找到範例如下： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)。 
+有各式各樣的解決方案提供共用存放裝置。 此逐步解說會示範設定 NFS 共用的儲存體。 我們建議您遵循最佳作法，並使用 Kerberos 來保護 NFS (您可以找到範例如下： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) 。 
 
 >[!Warning]
 >如果您未保護 NFS，然後可以存取您的網路和詐騙 SQL 節點的 IP 位址的任何人都能夠存取您的資料檔案。 一如往常，請確定您的威脅模型系統在生產環境中使用它之前。 另一個儲存體選項是使用 SMB 檔案共用。
@@ -139,7 +138,7 @@ NFS 伺服器上執行下列作業：
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編輯`/etc/exports`匯出您要共用的目錄。 您需要針對您想要每個共用的 1 行。 例如： 
+1.  編輯`/etc/exports`匯出您要共用的目錄。 您需要針對您想要每個共用的 1 行。 例如: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -276,7 +275,7 @@ NFS 伺服器上執行下列作業：
 
    > 如果您使用其他防火牆沒有內建的高可用性組態，下列連接埠必須開啟 pacemaker 才能與叢集中其他節點通訊
    >
-   > * TCP：連接埠 2224，3121 21064
+   > * TCP:連接埠 2224，3121 21064
    > * UDP:連接埠 5405
 
 1. 在每個節點上安裝 Pacemaker 套件。
@@ -319,7 +318,7 @@ NFS 伺服器上執行下列作業：
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 附加元件沒有針對 VMWare 和 KVM 隔離代理程式。 隔離需要停用所有其他的 hypervisor 上。 不建議在生產環境中停用隔離代理程式。 從開始時間範圍內，沒有隔離代理程式的 HyperV 或雲端環境。 如果您執行其中一個組態，您需要停用隔離。 \**在生產系統中不建議這麼做 ！**
+   > RHEL HA 附加元件沒有針對 VMWare 和 KVM 隔離代理程式。 隔離需要停用所有其他的 hypervisor 上。 不建議在生產環境中停用隔離代理程式。 從開始時間範圍內，沒有隔離代理程式的 HyperV 或雲端環境。 如果您執行其中一個組態，您需要停用隔離。 \**在生產系統中不建議這麼做 ！* *
 
    下列命令會停用隔離代理程式。
 

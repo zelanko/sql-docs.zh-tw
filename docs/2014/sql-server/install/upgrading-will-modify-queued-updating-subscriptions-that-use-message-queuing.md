@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication]
@@ -16,12 +15,12 @@ ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76af35f994413ad1e02bcafaaa8499e42fe232c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091406"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>升級將會修改使用 Message Queuing 的佇列更新訂閱
   Upgrade Advisor 偵測到您可能有一或多個使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (也稱為 MSMQ) 的佇列更新訂閱。 複寫不再支援訊息佇列，因此將會修改訂閱以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列。  

@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.rowvisibility.f1
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2fbe61ee783fa0c762cda3fc2a282296d8df04b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe9af16c34fa70bb8fcda0dcaae64a39786e3cd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102410"
 ---
 # <a name="row-visibility-dialog-box"></a>資料列可見性對話方塊
   使用 **[資料列可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料列，或使用其他報表項目來切換資料列的可見性。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **一開始執行報表時**  
  選擇一個選項以指出報表項目最初顯示在報表中的方式。  
   

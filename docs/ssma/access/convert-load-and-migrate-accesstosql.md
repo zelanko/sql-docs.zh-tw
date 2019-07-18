@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006641"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>轉換、 載入和移轉 (AccessToSQL)
 **轉換、 載入和移轉** 對話方塊中報告的移轉狀態，當您使用的轉換、 載入和移轉的按鈕或 移轉精靈。  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b949e97d39ea5f0e3e1a27d708ead062fbb7d3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c61d02defdd99d508ae1acfff2cda656c20e68c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076657"
 ---
 # <a name="processing-results-odbc"></a>處理結果 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

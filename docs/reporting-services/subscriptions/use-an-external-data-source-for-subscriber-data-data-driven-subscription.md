@@ -2,7 +2,7 @@
 title: 使用外部資料來源以取得訂閱者資料 (資料驅動訂閱) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 98c58da0ba018bc65d8459350f3f8e664587cdc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 39698991ebb6d683944b19966a5712c269c11e88
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578084"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
   在資料驅動訂閱中，動態訂閱資料是由從外部資料來源擷取資料的查詢或命令所提供。 訂閱資料可以從任何支援的資料來源 (符合資料驅動訂閱處理的需求) 中擷取。 查詢或命令語法必須對安裝在您報表伺服器上的資料處理延伸模組有效。  
@@ -78,7 +78,7 @@ ms.locfileid: "47657826"
   
 ## <a name="see-also"></a>另請參閱  
  [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

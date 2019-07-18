@@ -16,15 +16,15 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3196670f21070297b27046ca70878fb94c39d12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d8685db3716ad495581ae64023bfbdd41975e2f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64946628"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>準備大量匯入資料 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47622546"
   
 -   使用大量記錄復原模式。  
   
-     這個指導方針適用於使用完整復原模式的資料庫。 大量記錄復原模式在對未編製索引的資料表 (「堆積」) 執行大量作業時很有用。 因為大量記錄復原不會執行記錄檔資料列插入的作業，所以使用大量記錄復原模式，將有助於防止因記錄交易而用盡空間的情形。 如需大量記錄復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+     這個指導方針適用於使用完整復原模式的資料庫。 大量記錄復原模式在對未編製索引的資料表 (「堆積」  ) 執行大量作業時很有用。 因為大量記錄復原不會執行記錄檔資料列插入的作業，所以使用大量記錄復原模式，將有助於防止因記錄交易而用盡空間的情形。 如需大量記錄復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
      建議您在大量匯入作業之前，立即將資料庫變更為使用大量記錄復原模式。 事後則應立刻將資料庫重設成完整復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093585"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服務安裝概觀
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服務更新，將更新套用至任何已安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件。 如果現有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的版本層級比更新版本層級還新，則安裝程式會將其排除在更新作業外。 如需有關套用服務更新，請參閱[安裝 SQL Server 2014 服務更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "53369060"
 ## <a name="requirements-and-known-issues"></a>需求和已知問題  
  建議的磁碟空間需求大約是用於安裝、下載及擷取封裝之封裝大小的 2.5 倍。 安裝 Service Pack 之後，您可以移除下載的封裝。 任何暫存檔都會自動移除。  
   
- **檢閱已知的問題：** 如需有關目前版本已知問題的詳細資訊，請參閱這裡的對應版本資訊：[SQL Server 版本資訊](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)。  
+ **檢閱已知的問題：** 如需目前版本的已知問題的詳細資訊，請參閱對應版本資訊的說明主題：[SQL Server 版本資訊](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)。  
   
 ## <a name="installation-overview"></a>安裝概觀  
  本節將討論累計更新和 Service Pack 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝，包括如何執行下列作業：  
@@ -88,15 +87,15 @@ ms.locfileid: "53369060"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  若要安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新，請執行自動解壓縮封裝檔案。  
   
- 累計更新封裝 (CU):\<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
+ 累計更新封裝 (CU):\<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- Service pack 封裝 (PCU):\<SQLServer2014 >\<SPx >-KBxxxxxx-PPP-LLL.exe  
+ Service pack 封裝 (PCU):\<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x 表示 Service Pack 號碼  
   
 -   PPP 表示特定的平台  
   
--   LLL 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言的字元縮寫，例如：英文的 LLL 為 ENU。  
+-   LLL 表示的字元縮寫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語言，例如：適用於英文的 LLL 為 ENU。  
   
  若要將更新套用至屬於容錯移轉叢集一部分的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件，請參閱容錯移轉叢集安裝的章節。 如需如何以自動模式中執行更新安裝的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
@@ -129,12 +128,12 @@ ms.locfileid: "53369060"
 3.  在您已加入的節點上執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新安裝程式。  
   
 ## <a name="restart-services-and-applications"></a>重新啟動服務及應用程式  
- 當安裝程式完成時，它可能會提示您重新啟動電腦。 在系統重新啟動或在安裝程式完成 (但未要求重新啟動電腦) 之後，您可以使用 [控制台] 中的 [服務] 節點來重新啟動在套用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新之前所停止的服務。 這包括分散式交易協調器及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 等服務，或執行個體特定的對等服務。  
+ 當安裝程式完成時，它可能會提示您重新啟動電腦。 在系統重新啟動或在安裝程式完成 (但未要求重新啟動電腦) 之後，您可以使用 [控制台] 中的 [服務]  節點來重新啟動在套用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新之前所停止的服務。 這包括分散式交易協調器及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 等服務，或執行個體特定的對等服務。  
   
  重新啟動在執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新安裝程式之前所關閉的應用程式。 您可能還想在安裝成功完成之後，立即為已升級的 `master`、`msdb` 和 `model` 資料庫進行另一次備份。  
   
 ## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的更新  
- 您可以從 [控制台] 中的 [程式和功能] 解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累計更新或 Service Pack。 若要檢視已安裝的更新清單，請依序按一下 [開始] 按鈕、[控制台]、[程式集]，然後按一下 [程式和功能] 下的 [檢視已安裝的更新]，開啟 [已安裝的更新]。 系統會個別列出每個累計更新。 然而，安裝了高於累計更新的 Service Pack 時，累計更新項目會隱藏而且在您解除安裝 Service Pack 時，才會變成可用。  
+ 您可以從 [控制台] 中的 [程式和功能]  解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累計更新或 Service Pack。 若要檢視已安裝的更新清單，請依序按一下 [開始]  按鈕、[控制台]  、[程式集]  ，然後按一下 [程式和功能]  下的 [檢視已安裝的更新]  ，開啟 [已安裝的更新]。 系統會個別列出每個累計更新。 然而，安裝了高於累計更新的 Service Pack 時，累計更新項目會隱藏而且在您解除安裝 Service Pack 時，才會變成可用。  
   
  若要解除安裝任何 Service Pack 及更新，您必須以套用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體最新的更新或 Service Pack 開始並回溯執行。 在下列每個範例中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在解除安裝其他的 Service Pack 或更新完成後，以累計更新 1 結束。  
   

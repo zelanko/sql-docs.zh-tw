@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 648b389adf8af04e0a59365efe8be7108a265435
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055077"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
   使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者自訂的錯誤訊息。 如需這項工作的詳細資訊，請參閱 [傳送錯誤訊息工作](control-flow/transfer-error-messages-task.md)。  

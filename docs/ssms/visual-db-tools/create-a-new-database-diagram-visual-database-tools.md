@@ -11,15 +11,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4a72bf62b50709c516ba3fa8eb1c587b0416b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 5cea594d29b5b1b4f06ddd3cab1e4fa19b1ee9a7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658396"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686100"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>建立新資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "47658396"
   
 ### <a name="to-create-a-new-database-diagram"></a>若要建立新的資料庫圖表  
   
-1.  在物件總管中，在 [資料庫圖表] 資料夾上或該資料夾的任何圖表上按一下滑鼠右鍵。  
+1.  在物件總管中，在 [資料庫圖表]  資料夾上或該資料夾的任何圖表上按一下滑鼠右鍵。  
   
-2.  在快速鍵功能表上選擇 [新增資料庫圖表]。  
+2.  在快速鍵功能表上選擇 [新增資料庫圖表]  。  
   
-    出現 [新增資料表] 對話方塊。  
+    出現 [新增資料表]  對話方塊。  
   
-3.  在 [資料表] 清單中選取必要的資料表，按一下 [新增]。  
+3.  在 [資料表]  清單中選取必要的資料表，按一下 [新增]  。  
   
     資料表以圖形方式顯示於新資料庫圖表中。  
   

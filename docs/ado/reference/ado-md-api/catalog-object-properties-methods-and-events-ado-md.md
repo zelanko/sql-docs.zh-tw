@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41eb6c43a0ddd7e9babf948bbb6135694deadc40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92cf4704858268eb52bd0219d2e6b78afddfc42d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939929"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog 物件屬性、方法和事件 (ADO MD)
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -31,7 +30,7 @@ ms.locfileid: "47723255"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

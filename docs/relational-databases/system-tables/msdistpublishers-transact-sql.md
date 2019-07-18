@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b867e4ffe4b23ee1a7195bb3c201ae05c2b6d075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907418"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52787210"
 |**security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> **1** = Windows 驗證。|  
 |**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**password**|**nvarchar(524)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**使用中**|**bit**|指出本機散發者是否正由遠端發行者所使用。|  
+|**active**|**bit**|指出本機散發者是否正由遠端發行者所使用。|  
 |**受信任**|**bit**|指出遠端發行者所用的密碼，是否與本機散發者一樣：<br /><br /> **0** = A 遠端發行者連接到 「 散發者 」 需要密碼。<br /><br /> **1** = 否需要密碼。|  
 |**third_party**|**bit**|發行者是否為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一項安裝：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。**1** = 異質資料來源。|  
 |**publisher_type**|**sysname**|發行者類型：<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。<br /><br /> **ORACLE** = 標準 Oracle 發行者。<br /><br /> **ORACLE GATEWAY** = Oracle Gateway 發行者。|  

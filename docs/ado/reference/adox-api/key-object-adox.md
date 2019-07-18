@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7365b3ac33f215840a112089523f23e88697a433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965901"
 ---
 # <a name="key-object-adox"></a>Key 物件 (ADOX)
 表示從資料庫資料表的主要、 外部索引鍵，或唯一索引鍵欄位。  

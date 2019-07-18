@@ -19,16 +19,16 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 47f88b65cb7ad746f3e3ab1ab7b0c7ad95de1196
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f70f65bcd2fad16e1f7268406acc9981d8eafd5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715058"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685711"
 ---
 # <a name="monitor-and-respond-to-events"></a>監視及回應事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47715058"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 會監視及自動回應「事件」(Event)，例如：來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的訊息、特定效能狀況與 Windows Management Instrumentation (WMI) 事件。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 會監視及自動回應「事件」(Event)  ，例如：來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的訊息、特定效能狀況與 Windows Management Instrumentation (WMI) 事件。  
   
 ## <a name="in-this-section"></a>本節內容  
 [警示](../../ssms/agent/alerts.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "47715058"
 包含當作業失敗或成功時，如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可用來傳送通知的管理員別名。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>關於監視及回應事件  
-對於事件的自動回應稱之為「警示」。 您可以在一或多個事件上定義警示，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 回應事件的方式。 警示可透過通知管理員或執行作業 (或兩者) 來回應事件。 警示也可以將事件轉送到在另一部電腦上登入的 Microsoft Windows 應用程式。 例如，如果發生嚴重性 19 的事件，您可以指定要立即通知操作員。 透過定義警示，資料庫管理員就可以更有效率地監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+對於事件的自動回應稱之為「警示」  。 您可以在一或多個事件上定義警示，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 回應事件的方式。 警示可透過通知管理員或執行作業 (或兩者) 來回應事件。 警示也可以將事件轉送到在另一部電腦上登入的 Microsoft Windows 應用程式。 例如，如果發生嚴重性 19 的事件，您可以指定要立即通知操作員。 透過定義警示，資料庫管理員就可以更有效率地監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 只會回應已定義警示的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來監視事件的方法會取決於事件的類型。  
   

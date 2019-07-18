@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dfd5f07cafacf5817f6fbef90b140b01c00e622f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942407"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>資料收集器預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf6421fa237333207b090c75d14ea57f9f9e02a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6d41ee2d59e30c2e892f442f680930e535ccba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062353"
 ---
 # <a name="error-messages"></a>錯誤訊息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

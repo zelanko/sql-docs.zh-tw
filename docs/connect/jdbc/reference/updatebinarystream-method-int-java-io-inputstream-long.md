@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f84cfbe6-ebab-4357-8770-f1db34ecb04f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dba109ddb8a2ca4620532c1dc7f8bd165347d3f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1b610372ddf3d435b34ec065b26a35de5f18a000
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761806"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798854"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-long"></a>updateBinaryStream 方法 (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

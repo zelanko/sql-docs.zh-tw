@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2801eb44acca5241ad051904747c370f5ef2b24b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705262"
 ---
 # <a name="device-not-ready-error"></a>裝置未就緒錯誤
   這個規則會檢查系統事件記錄檔中是否有 EventId 15。 這個錯誤是因為 SCSI 主機配接器組態問題或是相關問題所造成。  

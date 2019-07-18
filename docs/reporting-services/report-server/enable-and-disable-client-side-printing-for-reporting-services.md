@@ -2,7 +2,7 @@
 title: 啟用和停用 Reporting Services 的用戶端列印功能 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580346"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
 
@@ -33,10 +33,10 @@ ms.locfileid: "52711940"
   
 |||  
 |-|-|  
-|第一個對話方塊在所有瀏覽器中都相同，並且允許您變更基本版面配置屬性，例如方向。 當您按一下 [列印] ，其體驗會依您使用的瀏覽器而稍有不同。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
+|第一個對話方塊在所有瀏覽器中都相同，並且允許您變更基本版面配置屬性，例如方向。 當您按一下 [列印]  ，其體驗會依您使用的瀏覽器而稍有不同。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |在 Chrome 中，會開啟詳細的瀏覽器列印對話方塊。   您可以變更列印設定、列印和開啟作業系統列印對話方塊。|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |如果您已安裝 PDF 閱讀程式應用程式，列印按鈕將會開啟 PDF 檔案的預覽視窗，您可以儲存或列印。||  
-|如果您沒有安裝 PDF 閱讀程式應用程式，則會有兩種使用者體驗：<br /><br /> 報表將自動轉譯，並使用您的瀏覽器下載程序下載 PDF 檔案。   **注意：** 報表越複雜，則您按下 [列印]  到您看見瀏覽器下載通知之間的延遲就越久。 您也可以按一下 [按一下這裡以檢視報表 PDF。] 強制再次下載。<br /><br /> 按一下 [按一下這裡以檢視報表 PDF。] 強制下載 PDF。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|如果您沒有安裝 PDF 閱讀程式應用程式，則會有兩種使用者體驗：<br /><br /> 報表將自動轉譯，並使用您的瀏覽器下載程序下載 PDF 檔案。   **注意：** 報表越複雜，則您按下 [列印]  到您看見瀏覽器下載通知之間的延遲就越久。 您也可以按一下 [按一下這裡以檢視報表 PDF。]  強制再次下載。<br /><br /> 按一下 [按一下這裡以檢視報表 PDF。]  強制下載 PDF。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 疑難排解用戶端列印功能  
  如果報表檢視器工具列上的列印按鈕已停用，請確認下列項目：  
@@ -58,33 +58,33 @@ ms.locfileid: "52711940"
   
     2.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接到報表伺服器執行個體。  
   
-    3.  以滑鼠右鍵按一下報表伺服器節點，然後按一下 [屬性]。 如果 **[屬性]** 選項已停用，請確認您已使用系統管理權限來啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
+    3.  以滑鼠右鍵按一下報表伺服器節點，然後按一下 [屬性]  。 如果 **[屬性]** 選項已停用，請確認您已使用系統管理權限來啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
-    4.  按一下 **[進階]**。  
+    4.  按一下 **[進階]** 。  
   
     5.  選取 **EnableClientPrinting**中報表伺服器的用戶端列印功能已停用。  
   
-    6.  設為 True 或 False 然後按一下 [確定] 。  
+    6.  設為 True 或 False 然後按一下 [確定]  。  
   
          ![ssrs_ssmsproperties_clientprinting](../../reporting-services/report-server/media/ssrs-ssmsproperties-clientprinting.png "ssrs_ssmsproperties_clientprinting")  
   
 -   針對 **SharePoint 模式報表伺服器**：  
   
-    1.  在 SharePoint 管理中心內，按一下 **[應用程式管理]**。  
+    1.  在 SharePoint 管理中心內，按一下 **[應用程式管理]** 。  
   
-    2.  按一下 **[管理服務應用程式]**。  
+    2.  按一下 **[管理服務應用程式]** 。  
   
     3.  按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[管理]** 。  
   
-    4.  按一下 **[系統設定]**。  
+    4.  按一下 **[系統設定]** 。  
   
-    5.  選取 **[啟用用戶端列印]**。 **[啟用用戶端列印]** 選項位於靠近頁面底部的位置。  
+    5.  選取 **[啟用用戶端列印]** 。 **[啟用用戶端列印]** 選項位於靠近頁面底部的位置。  
   
-    6.  按一下 [確定] 。  
+    6.  按一下 [確定]  。  
   
--   撰寫指令碼或程式碼，將報表伺服器系統屬性 **EnableClientPrinting** 設定為 **false.**。  
+-   撰寫指令碼或程式碼，將報表伺服器系統屬性 **EnableClientPrinting** 設定為 **false.** 。  
   
- 下列範例指令碼說明停用用戶端列印功能的方法之一。 編譯後執行下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，將 **EnableClientPrinting** 屬性設定為 **[False]**。 執行程式碼之後，請重新啟動 IIS。  
+ 下列範例指令碼說明停用用戶端列印功能的方法之一。 編譯後執行下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，將 **EnableClientPrinting** 屬性設定為 **[False]** 。 執行程式碼之後，請重新啟動 IIS。  
   
 ### <a name="sample-script"></a>範例指令碼  
   

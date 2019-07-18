@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63073899"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援異動資料擷取和變更追蹤，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -168,7 +168,7 @@ ms.locfileid: "53351707"
   
 -   [Microsoft Sync Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文件集。 文件中[!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]，本主題 「 如何：使用 SQL Server 變更追蹤 」 包含了詳細的資訊和程式碼範例。  
+     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文件集。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] 的文件中，＜如何：使用 SQL Server 變更追蹤＞主題包含了詳細資訊和程式碼範例。  
   
   
 ## <a name="related-tasks-required"></a>相關工作 (必要)  

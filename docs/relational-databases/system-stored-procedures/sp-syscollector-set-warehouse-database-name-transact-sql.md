@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445d1c0e9d220e4dc9a2d8806bae8d7a7f8bfdc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010620"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @database_name =] '*database_name*'  
+ [ @database_name = ] '*database_name*'  
  這是管理資料倉儲的名稱。 *database_name*已**sysname**預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

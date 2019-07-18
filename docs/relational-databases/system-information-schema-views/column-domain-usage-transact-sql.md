@@ -1,5 +1,5 @@
 ---
-title: COLUMN_DOMAIN_USAGE (TRANSACT-SQL) |Microsoft Docs
+title: COLUMN_DOMAIN_USAGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,28 +18,27 @@ helpviewer_keywords:
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b26f4644c7c922b58f884352ce52b3c572f469f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3cfc7b44672554fc810b54ef0c554d2a570b8325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950866"
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對目前資料庫中具有別名資料類型的每個資料行，各傳回一個資料列。 這個資訊結構描述檢視會傳回目前使用者有權限的物件之相關資訊。  
   
- 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。**_view_name_。  
+ 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。** _view_name_。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|別名資料類型所在的資料庫。|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|包含別名資料類型之結構描述的名稱。<br /><br /> **&#42;&#42;重要&#42; &#42;** 請勿使用 INFORMATION_SCHEMA 檢視來判斷資料類型的結構描述。 尋找類型之結構描述的唯一可靠方式就是使用 TYPEPROPERTY 函數。|  
-|**網域名稱**|**sysname**|別名資料類型。|  
-|**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表限定詞。|  
+|**DOMAIN_NAME**|**sysname**|別名資料類型。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|資料表限定詞。|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|資料表擁有者。<br /><br /> **&#42;&#42;重要&#42; &#42;** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|使用別名資料類型的資料表。|  
 |**COLUMN_NAME**|**sysname**|使用別名資料類型的資料行。|  

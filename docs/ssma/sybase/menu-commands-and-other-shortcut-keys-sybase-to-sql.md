@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028880"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>功能表命令和其他快速鍵 (Sybase 到 SQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於 Sybase 的應用程式。  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4594fadb7c12ac187219c16cf8505dd77fa0c479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119446"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定算術運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "56014409"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查詢中，`child`是軸和`OrderDetail`為節點測試 (TRUE 如果**OrderDetail**會**\<項目節點 >**，因為 **\<項目 >** 節點是主要節點**子**軸)。 針對所有 **\<OrderDetail >** 項目 節點中，套用述詞中的測試，並且會傳回只在符合條件的節點。  
+ 在查詢中，`child`是軸和`OrderDetail`為節點測試 (TRUE 如果**OrderDetail**會 **\<項目節點 >** ，因為 **\<項目 >** 節點是主要節點**子**軸)。 針對所有 **\<OrderDetail >** 項目 節點中，套用述詞中的測試，並且會傳回只在符合條件的節點。  
   
 > [!NOTE]  
 >  XPath 中的數字為雙精確度浮點數，而且在範例中比較浮點數會造成四捨五入。  
@@ -63,8 +62,10 @@ ms.locfileid: "56014409"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

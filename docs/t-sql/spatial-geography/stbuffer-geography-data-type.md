@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 55316e61b2690e56949e7fff3fe209e9b02fa0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 72e7f25c0bdc3ba77e90e8d9384537948efe4b3f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937147"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53979304"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  STBuffer() 會使用與 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同的方式計算緩衝，指定 *tolerance* = abs(distance) \* .001 且 *relative* = **false**。  

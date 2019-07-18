@@ -1,22 +1,21 @@
 ---
-title: 資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理： PowerPivot 資料 |Microsoft Docs
+title: 資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：PowerPivot Data | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332e19287b551341bb9851cf488ccb0b34aa5a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071025"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在無法連接到 SharePoint 中的 PowerPivot 伺服器執行個體時傳回這個錯誤。  
@@ -25,7 +24,7 @@ ms.locfileid: "48154078"
   
 |||  
 |-|-|  
-|適用對象|PowerPivot for SharePoint|  
+|適用於|PowerPivot for SharePoint|  
 |產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|嘗試使用 PowerPivot 資料提供者時發生連接失敗。|  
 |訊息文字|資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：PowerPivot 資料|  
@@ -50,9 +49,9 @@ ms.locfileid: "48154078"
   
 #### <a name="enable-claims-to-windows-token-service"></a>啟用對 Windows Token Service 的宣告  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]**。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]** 。  
   
-2.  選取 [對 Windows Token 服務的宣告]，然後按一下 [啟動]。  
+2.  選取 [對 Windows Token 服務的宣告]  ，然後按一下 [啟動]  。  
   
 3.  確認該服務也在服務主控台中執行：  
   

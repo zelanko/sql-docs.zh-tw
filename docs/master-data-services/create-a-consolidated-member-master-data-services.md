@@ -12,15 +12,14 @@ helpviewer_keywords:
 - members [Master Data Services], creating consolidated members
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 33eea7308e4f2729a14ca1f3a0361b83ac566006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 45c7b5568028a74c806ff4fe39b6b8c48070d41c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079717"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
 
@@ -28,7 +27,7 @@ ms.locfileid: "52780530"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]當您需要明確階層的父節點時，可以在 中建立合併成員。 如果您想要加入大量資料，請改用暫存表格。 如需詳細資訊，請參閱[從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -41,7 +40,7 @@ ms.locfileid: "52780530"
   
 2.  從 **[版本]** 清單中選取版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
 4.  從功能表列指向 **[階層]** ，然後按一下要加入合併成員的階層名稱。  
   
@@ -49,13 +48,13 @@ ms.locfileid: "52780530"
   
 6.  在左窗格中，選取您要在其下建立合併成員的根節點或合併成員。  
   
-7.  按一下 **[加入]**。  
+7.  按一下 **[加入]** 。  
   
 8.  填完右邊窗格中的欄位。  
   
 9. 選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立明確階層 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

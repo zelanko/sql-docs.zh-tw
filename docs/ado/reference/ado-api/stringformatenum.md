@@ -1,5 +1,5 @@
 ---
-title: StringFormatEnum |Microsoft Docs
+title: StringFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2740c7fb25b71e3588bebb924ea9d5f907e3560
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937886"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 擷取時指定的格式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  

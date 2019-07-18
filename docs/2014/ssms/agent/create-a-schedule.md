@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189518"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent 作業的排程。  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目建立排程：**  
   
@@ -48,21 +48,21 @@ ms.locfileid: "53350210"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**、以滑鼠右鍵按一下 **[作業]**，然後選取 **[管理排程]**。  
+2.  展開 **[SQL Server Agent]** 、以滑鼠右鍵按一下 **[作業]** ，然後選取 **[管理排程]** 。  
   
-3.  在 **[管理排程]** 對話方塊中，按一下 **[新增]**。  
+3.  在 **[管理排程]** 對話方塊中，按一下 **[新增]** 。  
   
 4.  在 **[名稱]** 方塊中，輸入新排程的名稱。  
   
 5.  如果您不想要讓排程在建立之後立即生效，請清除 **[已啟用]** 核取方塊。  
   
-6.  針對 **[排程類型]**，選取下列其中一項：  
+6.  針對 **[排程類型]** ，選取下列其中一項：  
   
-    -   若要在 CPU 達到閒置條件時啟動此作業，請按一下 **[只要 CPU 閒置就啟動]**。  
+    -   若要在 CPU 達到閒置條件時啟動此作業，請按一下 **[只要 CPU 閒置就啟動]** 。  
   
-    -   如果您想要重複執行排程，按一下 **[重複執行]**。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]**、 **[每日頻率]** 和 **[持續時間]** 群組。  
+    -   如果您想要重複執行排程，按一下 **[重複執行]** 。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]** 、 **[每日頻率]** 和 **[持續時間]** 群組。  
   
-    -   如果您想要讓排程只執行一次，請按一下 **[執行一次]**。 若要設定 **[執行一次]** 排程，請完成對話方塊上的 **[僅發生一次]** 群組。  
+    -   如果您想要讓排程只執行一次，請按一下 **[執行一次]** 。 若要設定 **[執行一次]** 排程，請完成對話方塊上的 **[僅發生一次]** 群組。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "53350210"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates a schedule named RunOnce.   

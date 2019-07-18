@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31d83b00fd70cd54587a19ebfea7310154167493
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 997604b4376656d36d2bc4bc31f1959aa6c8a229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987824"
 ---
 # <a name="ordinary-arguments"></a>一般引數
 目錄函式的字串引數時的一般引數，則會視為常值的字串。 字串搜尋模式和一份值都不會接受一般引數。 一般的引數的案例是有意義的並在字串中的引號字元會解譯為常值。 這些引數會被視為一般引數如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_FALSE。它們會被視為識別碼引數而如果此屬性設定為 SQL_TRUE。  

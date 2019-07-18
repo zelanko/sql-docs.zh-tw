@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099905"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組圖形和指令碼工具，支援在受管理的環境中開發與使用豐富的報表功能。 此工具集包含開發工具、組態與管理工具，以及報表檢視工具。 本主題提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中各個工具與其存取方式的簡短概觀。  
@@ -39,7 +38,7 @@ ms.locfileid: "56016029"
   
 |工具|描述|如何存取|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|互動式的資料探索和視覺呈現體驗設計為可讓您建立以及與依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型的報表進行互動。<br /><br /> 注意：需要 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|Sliverlight 瀏覽器|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|互動式的資料探索和視覺呈現體驗設計為可讓您建立以及與依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型的報表進行互動。<br /><br /> 注意:需要[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以 SharePoint 模式。|Sliverlight 瀏覽器|  
 |報表設計師|使用此工具設計報表並部署至原生模式或 SharePoint 報表伺服器。<br /><br /> 裝載於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 報表資料窗格可組織用於報表的資料<br /><br /> 互動式報表設計之 [設計] 和 [預覽] 的索引標籤式檢視<br /><br /> 查詢設計工具可協助您指定要從資料來源擷取的資料，且此資料來源與 [RSReportDesigner 組態檔](../report-server/rsreportdesigner-configuration-file.md)中資料來源類型相關聯。<br /><br /> 使用智慧感知的運算式編輯器可建立自訂報表內容和外觀的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 運算式<br /><br /> 支援自訂報表項目和自訂查詢設計工具<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](reporting-services-in-sql-server-data-tools-ssdt.md)。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |報表產生器|使用此工具設計報表並部署至原生模式或 SharePoint 報表伺服器。<br /><br /> 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 相似的撰寫環境<br /><br /> 將報表項目儲存為報表組件的能力<br /><br /> 建立地圖精靈<br /><br /> 彙總的彙總<br /><br /> 增強的運算式支援<br /><br /> 查詢設計工具可協助您指定要從內建資料來源類型擷取的資料<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <<c0> [ 報表產生器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。</c0>|下載 MSI 或從報表管理員/SharePoint 開啟|  
   
@@ -53,7 +52,7 @@ ms.locfileid: "56016029"
 |----------|-----------------|-------------------|  
 |Reporting Services 組態管理員|請使用此工具設定 Reporting Services 安裝。 請注意，Reporting Services 組態管理員無法幫您管理報表伺服器內容、 啟用其他功能，或授與伺服器的存取權。 可用的工作包括：<br /><br /> 設定本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器服務帳戶。<br /><br /> 建立及設定一個或多個 Web 服務 URL。<br /><br /> 設定報表管理員 URL。<br /><br /> 建立及設定報表伺服器資料庫。<br /><br /> 設定向外延展部署。<br /><br /> 備份、還原或取代用於加密已儲存之連接字串和認證的對稱金鑰。<br /><br /> 設定自動執行帳戶。<br /><br /> 設定電子郵件傳遞的 SMTP 伺服器。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。|開始功能表|  
 |SQL Server Management Studio|使用此工具即可在單一環境中管理一個或多個報表伺服器執行個體，包括：<br /><br /> 管理本機和遠端報表伺服器執行個體<br /><br /> 設定報表伺服器屬性<br /><br /> 修改角色定義<br /><br /> 關閉您不要使用的報表伺服器功能<br /><br /> 管理作業<br /><br /> 管理共用排程|開始功能表|  
-|SQL Server 組態管理員|使用此工具可以：<br /><br /> 啟動及停止 Reporting Services Windows 服務<br /><br /> 設定客戶回函報表、傾印目錄位置和錯誤報告<br /><br /> <br /><br /> **\*\* 警告\* \*** 請勿使用此工具來設定服務帳戶。 請改用 Reporting Services 組態工具。<br /><br /> 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。|開始功能表|  
+|SQL Server 組態管理員|使用此工具可以：<br /><br /> 啟動及停止 Reporting Services Windows 服務<br /><br /> 設定客戶回函報表、傾印目錄位置和錯誤報告<br /><br /> <br /><br /> **\*\* 警告\* \* **請勿使用此工具來設定服務帳戶。 請改用 Reporting Services 組態工具。<br /><br /> 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。|開始功能表|  
 |Rsconfig 公用程式|使用此工具可設定及管理連線到報表伺服器資料庫的報表伺服器。 您也可以使用它來指定自動執行報表處理所使用的使用者帳戶。<br /><br /> 如需詳細資訊，請參閱[報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)。|命令提示字元|  
 |Rskeymgmt 公用程式|使用此工具可以：<br /><br /> 擷取、還原、建立及刪除用於加密報表伺服器資料的對稱金鑰<br /><br /> 在向外延展部署中加入報表伺服器執行個體<br /><br /> <br /><br /> 如需詳細資訊，請參閱[報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)。|命令提示字元|  
 |Windows Management Instrumentation (WMI) 類別|使用這些類別可自動化 Reporting Services 組態管理員中的組態工作，且無須使用圖形化使用者介面。<br /><br /> 如需詳細資訊，請參閱 [以程式設計方式存取 WMI 提供者](../accessing-the-wmi-provider-programmatically.md)。|Visual Basic 指令碼|  

@@ -1,5 +1,5 @@
 ---
-title: '* （交叉聯集）(MDX) |Microsoft 文件'
+title: '* （交叉聯集）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047146"
 ---
-# <a name="crossjoin----mdx-operator-reference"></a>交叉聯結的 MDX 運算子參考
+# <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 運算子參考
 
 
   執行集合運算，傳回兩個集合的交叉乘積。  
@@ -36,7 +35,7 @@ Set_Expression * Set_Expression
  包含兩個指定參數的交叉乘積的集合。  
   
 ## <a name="remarks"></a>備註  
- **\* (Crossjoin)** 運算子在功能上等於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
+ **\* (Crossjoin)** 運算子相當於[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
   
 ## <a name="examples"></a>範例  
  以下範例示範此運算子的用法。  

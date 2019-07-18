@@ -11,14 +11,18 @@ ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c14320079573ffe63980a4ee0d27a0562b45333
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db68e2b9d24c60378e94436652d3e5daead94369
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283054"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726927"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>維度處理目的地自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   維度處理目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是維度處理目的地的自訂屬性。 所有屬性都是可讀寫的。  

@@ -3,19 +3,18 @@ title: 連線到 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 description: 這篇文章說明如何連接到 Alwayson 可用性群組
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f05bc51f587723414d3b0a4090fe2b27ad5fb837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952608"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>連接到 SQL Server Always On 可用性群組在 Kubernetes 上
 
@@ -52,7 +51,7 @@ kubectl get services
 
 若要連線到 SQL 驗證的主要複本，請使用`sa`帳戶、 值`sapassword`您所建立的密碼與此 IP 位址。
 
-例如：
+例如:
 
 ```cmd
 sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"

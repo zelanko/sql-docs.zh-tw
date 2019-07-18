@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012170"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
   開頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 XML 輸入資料使用`xml`資料型別。 本主題提供有關 SQLXML 4.0 如何識別 `xml` 資料類型之執行個體與實作其支援的資訊。  

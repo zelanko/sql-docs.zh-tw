@@ -11,15 +11,15 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ae74640557f7906ed237341d147926eb3296614
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014050"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
   空間資料有兩種類型： `geometry` 資料類型支援平面或 Euclidean (扁平表面) 資料。 `geometry` 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。  
@@ -30,7 +30,7 @@ ms.locfileid: "58526680"
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
   
 ##  <a name="objects"></a> 空間資料物件  
- `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從其區分為其父資料類型衍生某些屬性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或多個`geometry`或是`geography`執行個體在`GeometryCollection`。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。  
+ `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」  ；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從其區分為其父資料類型衍生某些屬性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或多個`geometry`或是`geography`執行個體在`GeometryCollection`。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。  
   
  下圖說明 `geometry` 和 `geometry` 資料類型所根據的 `geography` 階層。 可具現化的類型`geometry`和`geography`以藍色標示。  
   
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` 執行個體同時允許 `LineString` 和 `CircularString` 元件，因此只需要知道圓形圖配量之直線線段的兩個點。  此程式碼範例會示範如何使用 `CompoundCurve` 來儲存相同的圖形：  
+ `CompoundCurve` 執行個體同時允許`LineString`和`CircularString`元件因此只需要兩個點的圓形圖配量之直線線段為已知。  此程式碼範例會示範如何使用 `CompoundCurve` 來儲存相同的圖形：  
   
 ```sql  
 DECLARE @g geometry;  

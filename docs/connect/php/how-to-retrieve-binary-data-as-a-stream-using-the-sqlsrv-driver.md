@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aefee98fefc5ae0b47ce3ea734580799c8abe57c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e4bf2ae4330a98d810d0d3291f0045834b8927d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799331"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

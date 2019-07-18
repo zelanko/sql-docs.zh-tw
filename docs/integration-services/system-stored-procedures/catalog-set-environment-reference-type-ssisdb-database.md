@@ -11,14 +11,18 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64527208458ec53e9f7014ae09eca253ecf22998
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 55dc0c5b3cbfb51e15cd0813c87c66e840e592a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715919"
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案，設定與現有環境參考相關聯之參考類型和環境名稱。  
@@ -36,10 +40,10 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  要更新之環境參考的唯一識別碼。 *reference_id* 是 **bigint**。  
   
  [ @reference_type = ] *reference_type*  
- 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_type* 是 **char(1)**。  
+ 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_type* 是 **char(1)** 。  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- 環境所在的資料夾。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)**。  
+ 環境所在的資料夾。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

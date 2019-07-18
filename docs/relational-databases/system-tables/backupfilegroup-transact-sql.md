@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122916"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47832976"
 |**filegroup_id**|**int**|檔案群組的識別碼，它在資料庫中是唯一的。 對應至**data_space_id**中**sys.filegroups**。|  
 |**filegroup_guid**|**uniqueidentifier**|檔案群組的全域唯一識別碼。 可以是 NULL。|  
 |**type**|**char(2)**|這是內容類型，它有下列幾種：<br /><br /> FG = "Rows" 檔案群組<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔案群組|  
-|**type_desc**|**nvarchar(60)**|這是函數類型的描述，它有下列幾種：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
+|**type_desc**|**nvarchar(60)**|這是函數類型的描述，它有下列幾種：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|在 CREATE TABLE 或 CREATE INDEX 中未指定檔案群組時，所使用的預設檔案群組。|  
 |**is_readonly**|**bit**|1 = 檔案群組是唯讀的。|  
 |**log_filegroup_guid**|**uniqueidentifier**|可以是 NULL。|  

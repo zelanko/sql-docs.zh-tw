@@ -45,13 +45,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918358"
 ---
 # <a name="item-property-ado"></a>Item 屬性 (ADO)
 依名稱或序數數字，指出集合中的特定成員。  

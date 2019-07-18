@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085676"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
 
@@ -35,7 +34,7 @@ ms.locfileid: "52751911"
   
 -    在 [總管] 功能區域中存取資料的使用者。  
   
--   可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-    可在 [總管] 以外的區域中執行管理工作的使用者。 這些使用者即稱為[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ## <a name="how-to-set-security"></a>如何設定安全性  
  若要提供存取 MDS 之資料或功能的使用者或群組權限，您必須指派：  

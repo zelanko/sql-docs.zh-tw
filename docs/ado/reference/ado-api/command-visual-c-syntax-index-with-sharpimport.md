@@ -1,5 +1,5 @@
 ---
-title: '命令 （Visual c + + 語法索引與 #import） |Microsoft Docs'
+title: '命令 (VisualC++含 #import 語法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 874c22fa4625ba78af44f19ad328a39d854eb8de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919773"
 ---
-# <a name="command-visual-c-syntax-index-with-import"></a>命令 （Visual c + + 語法索引與 #import）
+# <a name="command-visual-c-syntax-index-with-import"></a>命令 (VisualC++含 #import 語法索引)
 ## <a name="methods"></a>方法  
   
 ```  

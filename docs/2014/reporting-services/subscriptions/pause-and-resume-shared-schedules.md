@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a1bc66e2d415b9f46193e1fce0b18a58bc570d34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100784"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   您可以暫停並繼續使用中的共用排程。 暫停共用排程提供暫時凍結用於觸發報表處理與訂閱排程的方法。 只有共用排程可以暫停並繼續。 您無法暫停報表特定排程。  
@@ -44,24 +43,24 @@ ms.locfileid: "56042959"
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
-1.  從報表管理員中，按一下 **[站台設定]**。  
+1.  從報表管理員中，按一下 **[站台設定]** 。  
   
-2.  按一下 **[排程]**。  
+2.  按一下 **[排程]** 。  
   
-3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
+3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
 ##  <a name="bkmk_sharepoint"></a> 暫停及繼續共用排程 (SharePoint 模式)  
  若要暫停及繼續共用排程，請使用 [站台設定] 頁面或 PowerShell。 排程是以每個 SharePoint 網站為單位管理。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
-1.  按一下 **[網站動作]**。  
+1.  按一下 **[網站動作]** 。  
   
-2.  按一下 **[站台設定]**。  
+2.  按一下 **[站台設定]** 。  
   
-3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]**。  
+3.  在 [Reporting Services] 區段中，按一下 **[管理共用排程]** 。  
   
-4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]**。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]**。  
+4.  選取排程，然後按一下 **[暫停選取的排程]** 或 **[執行選取的排程]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [[排程]](schedules.md)   

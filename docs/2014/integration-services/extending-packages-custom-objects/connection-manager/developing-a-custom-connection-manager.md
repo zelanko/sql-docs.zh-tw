@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fee544578a24f47e662645a0d5cd576a74fb0496
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768885"
 ---
 # <a name="developing-a-custom-connection-manager"></a>開發自訂連接管理員
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會使用連接管理員封裝連接至外部資料來源所需的資訊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各種連接管理員，可以連接到最常使用的資料來源，包括企業資料庫、文字檔案與 Excel 工作表等。 如果 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支援的連接管理員和外部資料來源無法完全符合您的需求，可以建立自訂連接管理員。  

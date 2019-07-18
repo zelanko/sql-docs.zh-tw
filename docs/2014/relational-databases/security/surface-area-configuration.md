@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184534"
 ---
 # <a name="surface-area-configuration"></a>介面區組態
   在新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設組態中，許多功能都不會啟用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了將可能會遭受惡意使用者攻擊的功能數目最小化，因此會選擇性地只安裝與啟動主要的服務與功能。 系統管理員可在安裝期間變更這些預設值，也可以選擇性地啟用或停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之執行中執行個體的功能。 此外，從其他電腦連接時，某些元件可能要等到設定通訊協定之後才能使用。  
@@ -35,7 +35,7 @@ ms.locfileid: "48180648"
   
 #### <a name="to-start-sql-server-configuration-manager"></a>啟動 SQL Server 組態管理員  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
     -   使用 **SQL Server 服務** 區域來啟動元件並設定自動啟動選項。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "48180648"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的元件。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 [Facets]。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 [Facets]  。  
   
-3.  在 [檢視 Facets] 對話方塊中，展開 [Facet] 清單，並選取適當的 [介面區組態] Facet ([介面區組態]、[Analysis Services 的介面區組態]，或 [Reporting Services 介面區組態])。  
+3.  在 [檢視 Facets]  對話方塊中，展開 [Facet]  清單，並選取適當的 [介面區組態]  Facet ([介面區組態]  、[Analysis Services 的介面區組態]  ，或 [Reporting Services 介面區組態]  )。  
   
 4.  在 **Facet 屬性**區域中，選取您想要用於每個屬性的值。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48180648"
   
  您也可以使用 `sp_configure` 預存程序來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
- 變更 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的 **EnableIntegrated Security** 屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的屬性設定。 若要變更 [排程事件和報表傳遞] 屬性以及 [Web 服務和 HTTP 存取] 屬性時，請編輯 **RSReportServer.config** 組態檔。  
+ 變更 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的 **EnableIntegrated Security** 屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的屬性設定。 若要變更 [排程事件和報表傳遞]  屬性以及 [Web 服務和 HTTP 存取]  屬性時，請編輯 **RSReportServer.config** 組態檔。  
   
 ## <a name="command-prompt-options"></a>命令提示字元選項  
  您可以使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell Cmdlet 以叫用介面區組態原則。 如需詳細資訊，請參閱 [使用 Database Engine Cmdlet](../../database-engine/use-the-database-engine-cmdlets.md)。  

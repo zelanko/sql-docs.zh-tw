@@ -1,5 +1,5 @@
 ---
-title: 步驟 3：加入封裝和其他檔案 |Microsoft Docs
+title: 步驟 3：加入套件和其他檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892076"
 ---
-# <a name="step-3-adding-packages-and-other-files"></a>步驟 3：加入封裝和其他檔案
+# <a name="step-3-adding-packages-and-other-files"></a>步驟 3：新增封裝和其他檔案
   在這項工作中，您會將現有的封裝、支援個別封裝的輔助檔案以及讀我檔案，加入至前一項工作所建立的「部署教學課程」專案中。 例如，您將會加入包含封裝資料的 XML 資料檔，還會加入一個文字檔，以提供有關專案中所有封裝的讀我資訊。  
   
  當您將封裝部署到測試或實際執行環境時，通常不會將資料檔包含在部署中，而是利用組態來更新資料來源的路徑，以存取資料檔或資料庫的測試版本或實際執行版本。 為了教學上的目的，這個教學課程會將資料檔包含在封裝部署中。  
@@ -43,32 +43,32 @@ ms.locfileid: "58384226"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>若要將封裝加入至部署教學課程專案中  
   
-1.  如果 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 尚未開啟，請按一下 [開始]，依序指向 [所有程式] 和 [Microsoft SQL Server]，然後按一下 [SQL Server Data Tools]。  
+1.  如果 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 尚未開啟，請按一下 [開始]  ，依序指向 [所有程式]  和 [Microsoft SQL Server]  ，然後按一下 [SQL Server Data Tools]  。  
   
-2.  在 [檔案] 功能表上，依序按一下 [開啟]、[專案/方案] 和 [部署教學課程] 資料夾，然後按一下 [開啟]，再按兩下 [Deployment Tutorial.sln]。  
+2.  在 [檔案]  功能表上，依序按一下 [開啟]  、[專案/方案]  和 [部署教學課程]  資料夾，然後按一下 [開啟]  ，再按兩下 [Deployment Tutorial.sln]  。  
   
-3.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]，然後按一下 [現有的封裝]。  
+3.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]  ，然後按一下 [現有的封裝]  。  
   
-4.  在 [加入現有封裝的複本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
+4.  在 [加入現有封裝的複本]  對話方塊的 [封裝位置]  中，選取 [檔案系統]  。  
   
-5.  按一下瀏覽 **(…)** 按鈕，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，選取 [DataTransfer.dtsx]，然後按一下 [開啟]。  
+5.  按一下瀏覽 **(…)** 按鈕，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，選取 [DataTransfer.dtsx]  ，然後按一下 [開啟]  。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 7.  重複步驟 3 到 6，這次請加入 LoadXMLData.dtsx，您可以在 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages 中找到此檔案。  
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>若要將輔助檔案加入至部署教學課程專案中  
   
-1.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]，然後按一下 [現有項目]。  
+1.  在方案總管中，以滑鼠右鍵按一下 [部署教學課程]，按一下 [加入]  ，然後按一下 [現有項目]  。  
   
-2.  在 [加入現有項目 - 部署教學課程] 對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data，選取 orders.xml、orders.xsd 和 NewCustomers.txt，然後按一下 [加入]。  
+2.  在 [加入現有項目 - 部署教學課程]  對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data，選取 orders.xml、orders.xsd 和 NewCustomers.txt，然後按一下 [加入]  。  
   
-3.  在 [加入現有項目 - 部署教學課程] 對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\，選取 Readme.txt，然後按一下 [加入]。  
+3.  在 [加入現有項目 - 部署教學課程]  對話方塊中，巡覽至 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\，選取 Readme.txt，然後按一下 [加入]  。  
   
-4.  按一下 [檔案] 功能表上的 [全部儲存]。  
+4.  按一下 [檔案] 功能表上的 [全部儲存]  。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 4：加入封裝組態](../integration-services/lesson-1-4-adding-package-configurations.md)  
+ [步驟 4：新增套件設定](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 ![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   

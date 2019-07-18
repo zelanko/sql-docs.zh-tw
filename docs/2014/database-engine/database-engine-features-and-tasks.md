@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], development
@@ -14,12 +13,12 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064982"
 ---
 # <a name="database-engine-features-and-tasks"></a>Database Engine 功能及工作
   尋找資訊，該人-設計工具、 開發人員、 分析師或管理員-建立[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫。  

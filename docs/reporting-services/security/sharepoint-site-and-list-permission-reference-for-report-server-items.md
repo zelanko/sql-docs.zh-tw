@@ -2,7 +2,7 @@
 title: 報表伺服器項目的 SharePoint 網站和清單權限參考 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a51a863a36562d7be1ef242ca9ad680e9149c73b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570688"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>報表伺服器項目的 SharePoint 網站和清單權限參考
   本文中提供 SharePoint 權限的參考，可用來針對以 SharePoint 整合式模式執行的報表伺服器，授與報表伺服器作業的存取權。 如果您要建立自訂的權限等級，本主題可幫助您選擇適用的權限。  

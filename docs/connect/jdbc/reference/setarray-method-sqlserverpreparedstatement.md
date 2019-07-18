@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b7fb66d4-6a42-43d0-ba68-8514816917cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fd6a0b0b0e60543beb6a943d80d5cf0cf40c7b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ff6cfceb24d89778f974aa47b636a7b0e26f26d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765280"
 ---
 # <a name="setarray-method-sqlserverpreparedstatement"></a>setArray 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public final void setArray(int i,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setArray 方法是由 java.sql.PreparedStatement 介面中的 setArray 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

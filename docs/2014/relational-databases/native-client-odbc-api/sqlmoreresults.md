@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046723"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults**允許應用程式擷取多個結果資料列集。 包含 COMPUTE 子句或是已提交之 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式產生多個結果集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許建立伺服器資料指標來處理任一案例中的結果。 因此，開發人員必須確保 ODBC 陳述式正在封鎖中。 開發人員必須用完傳回的資料或是取消 ODBC 陳述式，然後才能處理連接上其他作用中陳述式的資料。  

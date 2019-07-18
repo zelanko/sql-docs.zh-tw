@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029016"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安裝 SSMA 元件 (SybaseToSQL)
 除了安裝 SSMA，適用於使用伺服器端資料移轉，您必須也安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些元件包括資料移轉以及若要啟用伺服器對伺服器連線的 Sybase 提供者所支援的 SSMA 延伸模組組件。  
@@ -45,7 +44,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb_syb**
   
 6.  在 [準備安裝] 頁面上，按一下**安裝**。  
   
-7.  在 [已完成安裝的第一個步驟] 頁面上，按一下 [**下一步]**。  
+7.  在 [已完成安裝的第一個步驟] 頁面上，按一下 [**下一步]** 。  
   
     新的對話方塊隨即出現，您可以在其中選取執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]延伸模組套件安裝。  
   
@@ -53,7 +52,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb_syb**
   
     預設執行個體具有相同名稱的電腦。 具名執行個體將加上反斜線與執行個體名稱。  
   
-9. 在 [連接參數] 頁面中，選取的驗證方法，然後按一下 [**下一步]**。  
+9. 在 [連接參數] 頁面中，選取的驗證方法，然後按一下 [**下一步]** 。  
   
     Windows 驗證將用來嘗試登入的執行個體的 Windows 認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱和密碼。  
   
@@ -63,7 +62,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb_syb**
   
     如果**安裝的軟體測試人員資料庫**選項會檢查軟體測試人員**ssmatesterdb_syb**就會建立資料庫。  
   
-11. 若要安裝公用程式的另一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取**回到 執行個體**，然後按一下 **下一步]**。 或者，若要結束精靈，請按一下**結束**。  
+11. 若要安裝公用程式的另一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，選取**回到 執行個體**，然後按一下 [**下一步]** 。 或者，若要結束精靈，請按一下**結束**。  
   
 ### <a name="sql-server-database-objects"></a>SQL Server 資料庫物件  
 安裝延伸模組組件之後，您將會，請參閱**ssma_syb.bcp_migration_packages**資料表中**sysdb**資料庫。 您也會看到下列的預存程序：  
@@ -88,7 +87,7 @@ SSMA 延伸模組組件會加入資料庫中， **sysdb**並**ssmatesterdb_syb**
   
 -   **stop_agent_process**  
   
-每當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業。 這些工作會命名為**ssma_syb 資料移轉套件 {GUID}**，而且會出現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 資料夾中。  
+每當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業。 這些工作會命名為**ssma_syb 資料移轉套件 {GUID}** ，而且會出現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs 資料夾中。  
   
 ## <a name="sybase-providers"></a>Sybase 提供者  
 當您從 ASE，會在移轉資料時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE 之間的直接的 SQL Azure 資料移轉和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure。 它不會進出 SSMA 因為這可能會降低資料移轉速度。  

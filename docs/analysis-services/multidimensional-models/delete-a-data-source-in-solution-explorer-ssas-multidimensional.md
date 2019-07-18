@@ -1,5 +1,5 @@
 ---
-title: 刪除資料來源，在 [方案總管] (SSAS 多維度) |Microsoft 文件
+title: 刪除資料來源，在 方案總管 (SSAS 多維度) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51510891524b77ee0a2edaa33f024c538dcd4b81
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023735"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043973"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>在方案總管中刪除資料來源 (SSAS 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "34023735"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟您想要從中刪除資料來源的專案，或是連接到您想要從中刪除資料來源的資料庫。  
   
-2.  在**方案總管**中，展開 [資料來源] 資料夾。  
+2.  在**方案總管**中，展開 [資料來源]  資料夾。  
   
-3.  以滑鼠右鍵按一下該資料來源，然後按一下 [刪除]。 [刪除物件] 對話方塊隨即出現，其中顯示刪除資料來源之後將失效的物件。 按一下 [確定] 刪除資料來源之前，請先仔細檢閱這份清單。  
+3.  以滑鼠右鍵按一下該資料來源，然後按一下 [刪除]  。 [刪除物件]  對話方塊隨即出現，其中顯示刪除資料來源之後將失效的物件。 按一下 [確定]  刪除資料來源之前，請先仔細檢閱這份清單。  
   
 4.  儲存專案。  
   

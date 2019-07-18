@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61707b6ca955ee137cbbc93a6a108dc3930e1b12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010689"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>查詢參數對話方塊 (Visual Database Tools)
   這對話方塊可以讓您輸入查詢中定義的參數值。 執行查詢時，如果查詢中包含在執行階段期間需要使用者輸入的參數，此對話方塊就會出現。  
@@ -28,7 +28,7 @@ ms.locfileid: "52770150"
  列出針對正在執行之查詢所定義的參數。 如果查詢包含具名參數，名稱會出現在清單中。 如果查詢包含未命名的參數，則查詢中會針對每個參數列出系統定義的參數名稱。  
   
  **值**  
- 請輸入 [Name] 下方列出的每個參數值。 最近使用的值將顯示為預設參數值。  
+ 請輸入 [Name]  下方列出的每個參數值。 最近使用的值將顯示為預設參數值。  
   
 ## <a name="example"></a>範例  
  在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中執行下列 [SQL 窗格] 中的查詢時，會開啟 [查詢參數] 對話方塊。  

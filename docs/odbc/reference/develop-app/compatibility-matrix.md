@@ -18,36 +18,35 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083269"
 ---
 # <a name="compatibility-matrix"></a>相容性矩陣
 下表描述的相容性應用程式和驅動程式先前在這一節中定義的類型。  
   
-|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> 2.*x*驅動程式|ODBC 3。*x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和規範開啟群組的驅動程式|  
+|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> *2.x*驅動程式|ODBC *3.x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和規範開啟群組的驅動程式|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16 位元應用程式，任何版本|相容|相容|相容|相容|  
-|純 2。*x*應用程式|相容|相容|相容|不相容 [3]|  
-|純 2。*x*重新編譯應用程式|相容|相容性 [1]|相容性 [1]|不相容 [3]|  
-|純 2。*x* Unicode 應用程式|相容|相容性 [1]|相容性 [1]|不相容 [3]|  
-|純的 Open Group 和 ISO 相容的應用程式|不相容|相容性 [2]|相容性 [2]|相容性 [2]|  
-|純 3.0 的應用程式|不相容|相容|相容|不相容 [4]|  
-|純 3.5 的應用程式|不相容|相容|相容|不相容 [4]|  
+|純*2.x*應用程式|相容|相容|相容|Not compatible[3]|  
+|純*2.x*重新編譯應用程式|相容|Compatible[1]|Compatible[1]|Not compatible[3]|  
+|純*2.x* Unicode 應用程式|相容|Compatible[1]|Compatible[1]|不相容 [3]|  
+|純的 Open Group 和 ISO 相容的應用程式|不相容|Compatible[2]|Compatible[2]|Compatible[2]|  
+|純 3.0 的應用程式|不相容|相容|相容|Not compatible[4]|  
+|純 3.5 的應用程式|不相容|相容|相容|Not compatible[4]|  
 |純 3.8 （或更新版本） 的應用程式|不相容 [5]|不相容 [5]|相容|不相容 [4]|  
-|已取代的應用程式|相容|相容|相容|不相容 [3]|  
+|已取代的應用程式|相容|相容|相容|Not compatible[3]|  
   
  [1] 的應用程式必須重新編譯 ODBC 3.5 （或更新版本） 的標頭使用 UNICODE 選項 （如果它是在 Unicode 應用程式），必須將 ODBCVER 設 0x0250。  
   
  [2] 的應用程式必須使用 ODBC 3.5 （或更新版本） 的標頭進行編譯，並連結與 ODBC 驅動程式管理員。 它也必須設定標頭旗標 ODBC_STD。  
   
- [3] 這項設定可能無法正常運作，因為 ODBC 2 沒有功能。*x*不在標準，例如書籤。  
+ [3] 這項設定可能無法正常運作，因為在 ODBC 中有功能*2.x*不在標準，例如書籤。  
   
- [4] 這項設定可能無法正常運作，因為有功能，在 ODBC 3 *.x*不在標準，例如書籤。  
+ [4] 這項設定可能無法正常運作，因為在 ODBC 中有功能*3.x*不在標準，例如書籤。  
   
  [5] 這項設定可以可能失敗，因為有不在 ODBC 2.x 或 3.x 驅動程式，例如驅動程式特有的功能中符合 ODBC 3.8 [ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   

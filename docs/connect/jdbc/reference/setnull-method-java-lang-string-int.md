@@ -1,5 +1,5 @@
 ---
-title: setNull 方法 （java.lang.String，int） |Microsoft Docs
+title: setNull 方法 (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e19b094ff82c5e0d71aed0031ac5f119e18b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fefddb1f1e412c411be1156ac5b7e188a03b6244
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800310"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,14 +41,14 @@ public void setNull(java.lang.String sCol,
   
  包含參數名稱的**字串**。  
   
- *n*  
+ *nType*  
   
  java.sql.Types 所定義的 JDBC 型別程式碼。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此 setNull 方法由 java.sql.CallableStatement 介面中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

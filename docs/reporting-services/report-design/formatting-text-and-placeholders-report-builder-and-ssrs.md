@@ -2,7 +2,7 @@
 title: 格式化文字和預留位置 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a3358a543c01622b6cb7b320399a914dc0d73682
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 59e78e1c11b18d71e20c054f69979d3f3679bce2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298516"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580293"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>格式化文字和預留位置 (報表產生器及 SSRS)
   文字方塊可以是資料區內包含文字的報表項目或個別資料格、導出欄位、資料庫中欄位的指標，或是所有這三個項目的組合。 您可以混合字型和色彩、加入粗體和斜體樣式，以及使用對齊和首行縮排等段落樣式。 您可以格式化整個文字方塊，也可以格式化文字方塊內的特定文字、數字、運算式或欄位。  
@@ -31,26 +31,26 @@ ms.locfileid: "56298516"
   
  在此圖中，文字方塊本身有框線，而且所有文字都位於相同的文字方塊中，但文字則有各種不同的格式。  
   
- 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="creating-placeholder-text-in-a-text-box"></a>在文字方塊中建立預留位置文字  
- 在文字方塊內定義簡單或複雜運算式時，所產生的運算式 UI 表示法稱為 *「預留位置」*(Placeholder)。 您可以在單一文字方塊內任何數目的預留位置或文字區段上，定義色彩、字型、動作和其他行為。  
+ 在文字方塊內定義簡單或複雜運算式時，所產生的運算式 UI 表示法稱為 *「預留位置」* (Placeholder)。 您可以在單一文字方塊內任何數目的預留位置或文字區段上，定義色彩、字型、動作和其他行為。  
   
  預留位置的值永遠是簡單或複雜運算式。 您可以使用下列其中一個方法建立運算式，將預留位置加入至文字方塊：  
   
 -   從 **[報表資料]** 窗格拖曳欄位，並將其放置到文字方塊中。 如果您拖曳報表主體上任何其他位置的運算式，就會建立包含預留位置的新文字方塊。 這個預留位置的值，將是對應至已卸除之欄位的欄位運算式。  
   
--   以滑鼠右鍵按一下文字方塊中的任一處，然後選取 [插入預留位置]。 您可以在 **[預留位置屬性]** 對話方塊中，指定運算式做為預留位置的值。 如需詳細資訊，請參閱 [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
+-   以滑鼠右鍵按一下文字方塊中的任一處，然後選取 [插入預留位置]  。 您可以在 **[預留位置屬性]** 對話方塊中，指定運算式做為預留位置的值。 如需詳細資訊，請參閱 [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
   
 -   將任何簡單或複雜的運算式輸入至文字方塊。 例如，如果您在文字方塊中輸入 **Name: [Name]** ， **[Name]** 文字將會顯示為代表運算式 `=Fields!Name.Value`的預留位置。  
   
 -   以等號 (=) 開始，在空白的文字方塊中輸入運算式。 當您將焦點從文字方塊移出時，所產生的運算式會轉換成您可以編輯的預留位置。 如果文字方塊不是空白的，或者文字方塊中的等號是插入第一個字元以外的位置，則系統會將等號視為字串常值而不會建立預留位置。 如需定義簡單與複雜運算式的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>在文字方塊中格式化預留位置和靜態文字  
- 您可以使用 **[預留位置屬性]** 對話方塊來格式化預留位置。 您只能格式化整個預留位置，而不能格式化預留位置的區段。 如果想要查看基礎運算式，可以將指標暫停在預留位置上。 您可以藉由按兩下預留位置，或以滑鼠右鍵按一下預留位置後選取 [預留位置屬性]，來變更基礎運算式。 也可以在 **[預留位置屬性]** 對話方塊，使用 **[一般]** 中的 **[標籤]** 屬性來指定 UI 標籤。 這將是在設計階段為預留位置所顯示的文字。  
+ 您可以使用 **[預留位置屬性]** 對話方塊來格式化預留位置。 您只能格式化整個預留位置，而不能格式化預留位置的區段。 如果想要查看基礎運算式，可以將指標暫停在預留位置上。 您可以藉由按兩下預留位置，或以滑鼠右鍵按一下預留位置後選取 [預留位置屬性]  ，來變更基礎運算式。 也可以在 **[預留位置屬性]** 對話方塊，使用 **[一般]** 中的 **[標籤]** 屬性來指定 UI 標籤。 這將是在設計階段為預留位置所顯示的文字。  
   
  ![rs_MixedTextnPlaceholder](../../reporting-services/report-design/media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56298516"
  如需混合格式化的詳細資訊，請參閱[格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
 ## <a name="aligning-horizontal-text-using-general"></a>使用一般對齊水平文字  
- 在 **[文字方塊屬性]** 對話方塊的 **[對齊]** 中，您可以指定文字應該如何水平對齊。 如果沒有指定對齊值，則對齊的預設值為 **[預設]**。 這代表文字會根據預留位置值的欄位類型來對齊。 如果您指定的運算式會評估為非字串值 (即非數字)，則文字會靠右對齊。 如果運算式會評估為字串值 (如數字)，則文字會靠左對齊。  
+ 在 **[文字方塊屬性]** 對話方塊的 **[對齊]** 中，您可以指定文字應該如何水平對齊。 如果沒有指定對齊值，則對齊的預設值為 **[預設]** 。 這代表文字會根據預留位置值的欄位類型來對齊。 如果您指定的運算式會評估為非字串值 (即非數字)，則文字會靠右對齊。 如果運算式會評估為字串值 (如數字)，則文字會靠左對齊。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

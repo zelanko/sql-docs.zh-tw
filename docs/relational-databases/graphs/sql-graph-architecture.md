@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035983"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ ms.locfileid: "57579348"
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` 現在已擴充到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義的屬性。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|節點和邊緣資料表可以改變關聯式資料表，使用的相同方式`ALTER TABLE`。 使用者可以新增或修改使用者定義資料行、 索引或條件約束。 不過，改變內部圖形資料行，例如`$node_id`或`$edge_id`，將會產生錯誤。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在虛擬資料行和節點和邊緣資料表中的 使用者定義資料行上建立索引。 支援所有的索引類型，包括叢集和非叢集資料行存放區索引。  |
-|建立邊緣條件約束    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |使用者可以現在建立邊緣條件約束，強制執行特定的語意的 edge 資料表上，同時又維持資料完整性  |
+|建立邊緣條件約束    |[邊緣條件約束&#40;Transact SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |使用者可以現在建立邊緣條件約束，強制執行特定的語意的 edge 資料表上，同時又維持資料完整性  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點和邊緣資料表卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援的邊緣節點或節點資料表的刪除時的串聯的刪除。 我們建議如果除節點資料表時，使用者會捨棄任何連接到該節點資料表，以手動方式來維護圖形的完整性中節點的邊緣。  |
 
 

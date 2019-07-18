@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributiondb (Transact-SQL) | Microsoft Docs
+title: sp_adddistributiondb & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: d48a41218a35e072e374e3cf99bf362397fbad23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072788"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +55,15 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>引數  
 `[ @database = ] database'` 是要建立散發資料庫的名稱。 *資料庫*已**sysname**，沒有預設值。 如果指定的資料庫已經存在，且尚未標示為散發資料庫，便會安裝啟用散發所需要的物件，且會將資料庫標示為散發資料庫。 如果指定的資料庫已啟用為散發資料庫，就會傳回錯誤。  
   
-`[ @data_folder = ] 'data_folder'_` 是用來儲存散發資料庫資料檔案名稱。 *data_folder*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
+`[ @data_folder = ] 'data_folder'_` 是用來儲存散發資料庫資料檔案名稱。 *data_folder*已**nvarchar(255)** ，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
-`[ @data_file = ] 'data_file'` 是資料庫檔案的名稱。 *data_file*已**nvarchar(255)**，預設值是**資料庫**。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
+`[ @data_file = ] 'data_file'` 是資料庫檔案的名稱。 *data_file*已**nvarchar(255)** ，預設值是**資料庫**。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
   
 `[ @data_file_size = ] data_file_size` 是初始資料檔大小 (mb)。 *data_file_size 我*s **int**，預設值是 5 MB。  
   
-`[ @log_folder = ] 'log_folder'` 是資料庫記錄檔目錄的名稱。 *log_folder*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄 (例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
+`[ @log_folder = ] 'log_folder'` 是資料庫記錄檔目錄的名稱。 *log_folder*已**nvarchar(255)** ，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄 (例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
   
-`[ @log_file = ] 'log_file'` 是記錄檔的名稱。 *log_file*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
+`[ @log_file = ] 'log_file'` 是記錄檔的名稱。 *log_file*已**nvarchar(255)** ，預設值是 NULL。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
   
 `[ @log_file_size = ] log_file_size` 是初始記錄檔案大小 (mb)。 *log_file_size*已**int**，預設值是 0 MB，的表示檔案大小會建立使用的最小記錄檔案所允許的大小[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

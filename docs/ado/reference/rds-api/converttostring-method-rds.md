@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 426fd1fdcd3931981037b346b048de816e8596d0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964571"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 將轉換[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)MIME 字串，表示資料錄集資料。  

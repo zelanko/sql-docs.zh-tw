@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811200"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150756"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
   因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 應用程式中的資料會變更。 使用者需要的存取類型會變更。 使用者的連接方式會變更。 甚至存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式類型也可能變更，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動管理系統層級的資源，例如記憶體和磁碟空間，以便將系統層級的密集手動微調需求降到最低。 監視可讓管理員識別效能趨勢，以決定是否需要變更。  

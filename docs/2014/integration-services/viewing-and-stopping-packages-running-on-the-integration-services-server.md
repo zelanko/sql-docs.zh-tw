@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -16,12 +15,12 @@ ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054602"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>檢視及停止在 Integration Services 伺服器上執行的封裝
   `SSISDB` 資料庫會將執行記錄儲存在不會對使用者顯示的內部資料表中。 不過，它會透過可供您查詢的公用檢視來公開您需要的資訊。 另外，它也會提供預存程序，讓您可以加以呼叫，以執行與封裝相關的一般工作。  
@@ -51,7 +50,7 @@ ms.locfileid: "58387816"
  請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>檢視已執行封裝的記錄  
- 若要檢視已在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行] 報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md) (Integration Services 伺服器的報表)。  
+ 若要檢視已在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中執行之封裝的記錄，請使用 **[所有執行]** 報表。 如需 [所有執行]  報表和其他標準報表的詳細資訊，請參閱 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md) (Integration Services 伺服器的報表)。  
   
  如需有關可用來檢視執行中封裝記錄之其他方法的詳細資訊，請參閱下列主題。  
   

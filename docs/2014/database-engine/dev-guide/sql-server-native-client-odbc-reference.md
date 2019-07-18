@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, ODBC
@@ -17,12 +15,12 @@ ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce534f3667aaa9c42b1fa12820d5bdbd20728b8b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 27c46e8e186f0e8424e679e9c023854e7887e232
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780547"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client (ODBC) 參考
   開放式資料庫連接 (Open Database Connectivity，ODBC) 是應用程式用來在 ODBC 資料來源中存取資料的 Microsoft Win32 應用程式開發介面。  

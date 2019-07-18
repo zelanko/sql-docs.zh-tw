@@ -1,5 +1,5 @@
 ---
-title: 建立查詢 (MDX) 中的 Cube 內容 |Microsoft 文件
+title: 建立查詢 (MDX) 中的 Cube 內容 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2efdfc74bf45f4e8e6b913e651b0be5fa4511034
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807603"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>建立查詢中的 Cube 內容 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,6 +53,6 @@ FROM [Adventure Works]
  您可以使用 MDX [LookupCube](../../../mdx/lookupcube-mdx.md) 函數來擷取 Cube 內容之外的 Cube 資料。 此外，例如可用的 [Filter](../../../mdx/filter-mdx.md) 函數，允許在評估查詢時暫時限制內容。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], catalog views
 - full-text indexes [SQL Server], catalog views
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19686e7fa747e1cf21e74686f5ed4e16e29990b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: 3c10554183501019f00c4f7877fabc102ee44108
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016565"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>全文檢索搜尋和語意搜尋目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

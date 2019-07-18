@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484300"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以將清理程序期間，於資料品質清理專案或 Integration Services 封裝 (包含 DQS 清理元件) 中所收集的資料品質知識，匯入定義域中。 如此可確保可靠的知識不會遺失，而且會持續改良知識庫。  
@@ -43,7 +43,7 @@ ms.locfileid: "56020009"
   
 3.  如果您要將值加入至現有的定義域，請在定義域清單中選取定義域。  
   
-4.  按一下 **[定義域值]** 索引標籤、按一下圖示列中的 **[匯入值]** 圖示，然後按一下 **[匯入專案值]**。 **[匯入專案值]** 對話方塊隨即顯示，並提供使用定義域進行清理之資料品質專案和 Integration Services 封裝的清單。  
+4.  按一下 **[定義域值]** 索引標籤、按一下圖示列中的 **[匯入值]** 圖示，然後按一下 **[匯入專案值]** 。 **[匯入專案值]** 對話方塊隨即顯示，並提供使用定義域進行清理之資料品質專案和 Integration Services 封裝的清單。  
   
     > [!NOTE]  
     >  如果尚未使用定義域或是其連結的任何定義域建立任何專案，或者專案尚未完成，將無法使用 **[匯入專案值]** 選項。  
@@ -56,22 +56,22 @@ ms.locfileid: "56020009"
   
     -   選取 **[加入 [新增] 索引標籤中的值]** ，除了 **[正確]** 和 **[更正]** 索引標籤中的值以外，也匯入 [新增] 索引標籤中的值。  
   
-    -   按一下 [確定] 。  
+    -   按一下 [確定]  。  
   
 6.  當您返回 **[定義域值]** 索引標籤之後，成功匯入值的訊息隨即顯示。 已經匯入所以對定義域而言為新增的值將會顯示在 **[值]** 資料表中。  
   
 7.  取消選取 **[只顯示新值]** ，顯示定義域中的所有值。  
   
-8.  選取 **[正確]**、 **[錯誤]** 或 **[無效]** ，只顯示所選類型的值。  
+8.  選取 **[正確]** 、 **[錯誤]** 或 **[無效]** ，只顯示所選類型的值。  
   
 9. 若要搜尋特定字串，請在 **[尋找]** 文字方塊中輸入此字串。 按一下向上或向下箭號，逐步瀏覽符合搜尋準則的值。 這些值將會以黃色反白顯示。  
   
-10. 按一下 **[完成]**。  
+10. 按一下 **[完成]** 。  
   
     > [!NOTE]  
     >  如需有關使用 **[定義域值]** 索引標籤中之值的詳細資訊，請參閱＜ [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)＞。  
   
-##  <a name="FollowUp"></a> 後續操作：專案值匯入定義域之後  
+##  <a name="FollowUp"></a> 後續操作：將專案值匯入定義域之後  
  在您將清理程序期間所收集的資料品質知識匯入定義域之後，您可以針對定義域和值執行其他定義域管理工作。 如需詳細資訊，請參閱[管理定義域](../../2014/data-quality-services/managing-a-domain.md)。  
   
 ##  <a name="Values"></a> 將會匯入的值  

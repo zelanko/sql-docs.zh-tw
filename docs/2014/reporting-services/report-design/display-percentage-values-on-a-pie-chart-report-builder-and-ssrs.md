@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 724a4d423e0e2ed517467c7a2e710ce6138fc194
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106029"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖上顯示百分比值 (報表產生器及 SSRS)
   根據預設，圖例中會顯示類別目錄來識別每個值。 如果您已使用類別目錄標籤做為圓形圖的標籤，則可能會想在圖例中顯示百分比。  
@@ -28,9 +27,9 @@ ms.locfileid: "56291296"
   
 1.  將圓形圖加入到報表中。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。  
   
-2.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [顯示資料標籤]。 資料標籤會顯示在圓形圖的每個扇區內。  
+2.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [顯示資料標籤]  。 資料標籤會顯示在圓形圖的每個扇區內。  
   
-3.  在設計介面上，以滑鼠右鍵按一下標籤，然後選取 [數列標籤屬性]。 [數列標籤屬性] 對話方塊便會出現。  
+3.  在設計介面上，以滑鼠右鍵按一下標籤，然後選取 [數列標籤屬性]  。 [數列標籤屬性]  對話方塊便會出現。  
   
 4.  型別`#PERCENT`for**標籤資料**選項。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "56291296"
   
 ### <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>若要在圓形圖的圖例中顯示百分比值  
   
-1.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [數列屬性]。 [數列屬性] 對話方塊隨即顯示。  
+1.  在設計介面上，以滑鼠右鍵按一下圓形圖，然後選取 [數列屬性]  。 [數列屬性]  對話方塊隨即顯示。  
   
 2.  在 **圖例**，型別`#PERCENT`如**自訂圖例文字**屬性。  
   

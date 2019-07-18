@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 73848e88639fe158e631953670129179c717a4e2
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: d8fb8518e3e46839402ecb3615a83e3c47a0bc24
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290774"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730744"
 ---
 # <a name="name-element-for-table-dta"></a>資料表的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

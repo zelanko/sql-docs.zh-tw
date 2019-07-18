@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
@@ -13,12 +12,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072108"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>資料分割 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [資料分割] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定本機資料分割的還原位置和是否還原遠端資料分割，以及指定還原遠端資料分割時所使用的遠端備份檔案。  
@@ -31,9 +30,9 @@ ms.locfileid: "51639865"
   
  **若要在還原資料庫 對話方塊中顯示資料分割頁面**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫] 資料夾或物件總管中的資料庫，按一下 [還原]，然後按一下 [選取頁面] 底下的 [資料分割]。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]  資料夾或物件總管  中的資料庫，按一下 [還原]  ，然後按一下 [選取頁面]  底下的 [資料分割]  。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指令碼**  
  根據在對話方塊中選取的選項，建立還原指令碼。 此還原指令碼是以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 撰寫而成。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "51639865"
 |**資料分割**|顯示本機資料分割的名稱。|  
 |**大小 (MB)**|顯示本機資料分割的大小，以 MB 為單位。|  
 |**原始資料夾**|顯示儲存本機資料分割之原始資料夾的名稱。|  
-|**還原資料夾**|輸入本機資料分割的還原資料夾名稱，或按一下省略符號按鈕 (**...**)，以顯示 [瀏覽遠端資料夾] 對話方塊並選取要使用的資料夾路徑。 如需 [瀏覽遠端資料夾] 對話方塊的詳細資訊，請參閱[瀏覽遠端資料夾對話方塊 &#40;Analysis Services - 多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**還原資料夾**|輸入本機資料分割的還原資料夾名稱，或按一下省略符號按鈕 ( **...** )，以顯示 [瀏覽遠端資料夾]  對話方塊並選取要使用的資料夾路徑。 如需 [瀏覽遠端資料夾]  對話方塊的詳細資訊，請參閱[瀏覽遠端資料夾對話方塊 &#40;Analysis Services - 多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  
   
  **還原遠端資料分割**  
  選取即可還原遠端備份檔案中儲存的遠端資料分割。  
@@ -81,8 +80,8 @@ ms.locfileid: "51639865"
 |------------|-----------------|  
 |**Server**|顯示管理遠端資料分割的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體名稱。|  
 |**資料來源**|顯示備份檔案中的資料來源名稱，此資料來源代表包含遠端資料分割的資料庫。|  
-|**備份檔案**|輸入要使用之遠端備份檔案的完整路徑和檔案名稱，或按一下省略符號按鈕 (**...**)，以顯示 [尋找資料庫檔案] 對話方塊並選取要使用之遠端備份檔案的路徑和檔案名稱。 如需 [尋找資料庫檔案] 對話方塊的詳細資訊，請參閱[尋找資料庫檔案對話方塊 &#40;Analysis Services - 多維度資料&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。|  
-|**...**|按一下即可顯示 [遠端資料分割 - 進階設定] 對話方塊，並修改還原遠端資料分割的進階選項，例如資料來源的連接字串。 如需 [遠端資料分割 - 進階設定] 對話方塊的詳細資訊，請參閱[遠端資料分割 - 進階設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)。|  
+|**備份檔案**|輸入要使用之遠端備份檔案的完整路徑和檔案名稱，或按一下省略符號按鈕 ( **...** )，以顯示 [尋找資料庫檔案]  對話方塊並選取要使用之遠端備份檔案的路徑和檔案名稱。 如需 [尋找資料庫檔案]  對話方塊的詳細資訊，請參閱[尋找資料庫檔案對話方塊 &#40;Analysis Services - 多維度資料&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。|  
+|**...**|按一下即可顯示 [遠端資料分割 - 進階設定]  對話方塊，並修改還原遠端資料分割的進階選項，例如資料來源的連接字串。 如需 [遠端資料分割 - 進階設定]  對話方塊的詳細資訊，請參閱[遠端資料分割 - 進階設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [還原資料庫對話方塊 &#40;Analysis Services - 多維度資料&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   

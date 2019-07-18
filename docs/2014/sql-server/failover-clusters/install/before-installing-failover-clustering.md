@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190354"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
   安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之前，您必須先選取硬體以及要執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
@@ -47,7 +47,7 @@ ms.locfileid: "53355788"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新套件如下：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式會要求在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新封裝：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式要求電腦上必須已安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
   
     -   .NET Framework 4：安裝程式會在叢集作業系統上安裝 .NET Framework 4。 若要縮短安裝時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4。  
   

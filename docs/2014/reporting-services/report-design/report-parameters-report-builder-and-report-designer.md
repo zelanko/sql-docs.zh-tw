@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -15,20 +14,20 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105070"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
   本主題說明 SSRS 報表參數的一般用法、您可以設定的屬性，以及有關參數的詳細資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint 模式與原生模式
+[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint 模式和原生模式
   
  如需如何將參數加入至報表的示範，請參閱[教學課程：將參數加入至報表 (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
@@ -205,7 +204,7 @@ ms.locfileid: "59241816"
 ##  <a name="bkmk_How_To_Topics"></a> 如何主題  
  本節列出的程序，為您逐步示範如何使用參數和篩選。  
   
--   [加入、變更或刪除報表參數 &#40;報表產生器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
 -   [為報表參數加入、變更或刪除可用的值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
@@ -227,9 +226,9 @@ ms.locfileid: "59241816"
 ##  <a name="bkmk_Related_Topics"></a> 相關內容  
  [設定 SSRS 報表參數 (測驗)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [揭開 Reporting Service 中 InvalidReportParameterException 的神秘面紗](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [負載平衡 Reporting service 中 InvalidReportParameterException 的神秘面紗謎](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

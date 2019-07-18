@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917725"
 ---
 # <a name="create-a-database-mail-account"></a>建立 Database Mail 帳戶
   您可以使用 **「Database Mail 組態精靈」** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，建立 Database Mail 帳戶。  
   
--   **開始之前：**[必要條件](#Prerequisites)  
+-   **開始之前：** [必要條件](#Prerequisites)  
   
--   **建立 Database Mail 帳戶，使用：**[Database Mail 組態精靈](#SSMSProcedure)， [Transact SQL](#TsqlProcedure)  
+-   **建立 Database Mail 帳戶，使用：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[若要設定 Database Mail 的後續步驟](#FollowUp)  
+-   **後續操作：** [若要設定 Database Mail 的後續步驟](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -46,9 +46,9 @@ ms.locfileid: "52798360"
   
 -   按兩下 Database Mail，開啟 [Database Mail 組態精靈]。  
   
--   在 **[選取組態工作]** 頁面上，選取 **[管理 Database Mail 帳戶和設定檔]**，並按 **[下一步]**。  
+-   在 **[選取組態工作]** 頁面上，選取 **[管理 Database Mail 帳戶和設定檔]** ，並按 **[下一步]** 。  
   
--   在 **[管理設定檔和帳戶]** 頁面上，選取 **[建立新帳戶]** ，並按 **[下一步]**。  
+-   在 **[管理設定檔和帳戶]** 頁面上，選取 **[建立新帳戶]** ，並按 **[下一步]** 。  
   
 -   在 **[新增帳戶]** 頁面上，指定帳戶名稱、描述、郵件伺服器資訊和驗證類型。 按 **[下一步]**  
   

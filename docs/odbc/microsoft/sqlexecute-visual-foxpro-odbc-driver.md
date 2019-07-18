@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94211a63c65c2b796714da5c79e78da3944b1e47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9151ed5bbd02cce20ebd0c817197b8921a391c16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053835"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 一致性： 核心層級  
+ ODBC API 相容性：核心層級  
   
  執行已備妥的 SQL 陳述式 (已備妥的陳述式[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md))。 如果陳述式中存在的任何參數，驅動程式會使用參數標記變數的目前值。  
   

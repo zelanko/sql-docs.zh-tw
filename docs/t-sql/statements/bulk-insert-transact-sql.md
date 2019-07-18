@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503246"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "56802882"
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   
@@ -101,15 +101,15 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 可位於 Azure Blob 儲存體中。 在此情況下，您必須指定 **data_source_name** 選項。
 
 > [!IMPORTANT]
 > Azure SQL Database 不支援從 Windows 檔案讀取。
 
 
-**'** _data_source_name_ **'**   
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**'** _data_source_name_ **'**    
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 這是具名的外部資料來源，指向將匯入之檔案的 Azure Blob 儲存體位置。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。    
  
 ```sql
@@ -118,7 +118,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=**_batch_size_  
+ BATCHSIZE **=** _batch_size_  
  指定批次中的資料列數。 每個批次都會當做一筆交易複製到伺服器中。 如果失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會認可或回復每個批次的交易。 依預設，指定之資料檔中的所有資料都是單一批次。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
  CHECK_CONSTRAINTS  
@@ -134,7 +134,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  MAXERRORS 選項不適用於條件約束檢查。  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
+ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }  
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。  
 
 ```sql
@@ -157,7 +157,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |*code_page*|特定字碼頁編號，如 850。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|  
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }  
 指定 BULK INSERT 利用指定的資料檔案類型值來執行匯入作業。  
 
 &nbsp;
@@ -170,15 +170,15 @@ DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'
 |**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='**_file_name_**'**  
+ERRORFILE **='** _file_name_ **'**  
 指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
 
 當執行命令時，便會建立這個錯誤檔。 如果檔案已經存在，會發生一則錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。  
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
 
 'errorfile_data_source_name'   
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該檔案將包含在匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
  
  FIRSTROW **=** _first_row_  
@@ -193,7 +193,7 @@ ERRORFILE **='**_file_name_**'**
  如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。  
 
 FORMATFILE_DATASOURCE **=** 'data_source_name'   
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
 這是具名的外部資料來源，指向格式檔案的 Azure Blob 儲存體位置，該檔案將定義所匯入資料的結構描述。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
   
  KEEPIDENTITY  
@@ -215,7 +215,7 @@ LASTROW **=** _last_row_ 指定要載入之最後一個資料列的號碼。 預
 > [!NOTE]  
 >  MAX_ERRORS 選項不適用於條件約束檢查，或是轉換 **money** 和 **bigint** 資料類型。  
   
- ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
+ ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] )  
  指定如何排序資料檔案中的資料。 如果匯入資料時是依照資料表的叢集索引來排序，將可提升大量匯入的效能。 如果資料檔案是依據不同於叢集索引鍵順序的其他順序來進行排序，或是資料表上沒有任何叢集索引，便會略過 ORDER 子句。 提供的資料行名稱必須是目的地資料表中的有效資料行名稱。 依預設，大量插入作業會假設資料檔案沒有排序。 為了達到最佳的大量匯入效果， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會驗證匯入的資料是否已排序。  
   
  *n*  
@@ -224,7 +224,7 @@ LASTROW **=** _last_row_ 指定要載入之最後一個資料列的號碼。 預
  ROWS_PER_BATCH **=** _rows_per_batch_  
  指出資料檔案中大約有多少資料列。  
   
- 依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (利用 > 0 的值)，伺服器會利用這個值來最佳化大量匯入作業。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
+ 依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (值 > 0)，伺服器會使用這個值將大量匯入作業最佳化。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
  
  TABLOCK  
@@ -235,7 +235,7 @@ LASTROW **=** _last_row_ 指定要載入之最後一個資料列的號碼。 預
 ### <a name="input-file-format-options"></a>輸入檔案格式選項
   
 FORMAT **=** 'CSV'   
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 規範的逗點分隔值檔案。
 
 ```sql
@@ -245,7 +245,7 @@ WITH ( FORMAT='CSV');
 ```
 
 FIELDQUOTE **=** 'field_quote'   
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
   
  FORMATFILE **=** '_format_file_path_'  
@@ -259,13 +259,13 @@ FIELDQUOTE **=** 'field_quote'
   
 -   資料格式有其他變更。 格式檔通常是利用 **bcp** 公用程式來建立的，您可以視需要利用文字編輯器來修改它。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
 
-**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，format_file_path 可位於 Azure Blob 儲存體中。
 
- FIELDTERMINATOR **='**_field_terminator_**'**  
+ FIELDTERMINATOR **='** _field_terminator_ **'**  
  指定要用於 **char** 和 **widechar** 資料檔案的欄位結束字元。 預設欄位結束字元是 \t (定位字元)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
- ROWTERMINATOR **='**_row_terminator_**'**  
+ ROWTERMINATOR **='** _row_terminator_ **'**  
  指定要用於 **char** 和 **widechar** 資料檔案的資料列結束字元。 預設的資料列結束字元是 **\r\n** (新行字元)。  如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
   
@@ -380,7 +380,7 @@ GO
   
  如需有關此安全性考量及其他使用 BULK INSERT 之安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
 
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   
@@ -446,7 +446,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  由於 Microsoft Windows 處理文字檔的方式，**(\n** 會自動被取代為 **\r\n)**。  
+>  由於 Microsoft Windows 處理文字檔的方式， **(\n** 會自動被取代為 **\r\n)** 。  
 
 > [!IMPORTANT]
 > Azure SQL Database 不支援從 Windows 檔案讀取。

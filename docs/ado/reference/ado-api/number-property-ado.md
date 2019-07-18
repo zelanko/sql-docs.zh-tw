@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917990"
 ---
 # <a name="number-property-ado"></a>Number 屬性 (ADO)
 表示唯一識別的數字[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
@@ -34,7 +33,7 @@ ms.locfileid: "51602898"
 ## <a name="remarks"></a>備註  
  使用**數字**屬性來判斷是否發生錯誤。 屬性的值是對應到錯誤狀況的唯一號碼。  
   
- [錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合以十六進位格式 (例如 0x80004005) 或長數值 (例如，2147467259) 會傳回 HRESULT。 這些 Hresult 可能引發基礎元件，例如 OLE DB 或甚至是 OLE 本身。 如需有關這些數字的詳細資訊，請參閱 <<c0> [ 錯誤 (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd)中[OLE DB 程式設計人員參考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*。*  
+ [錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合以十六進位格式 (例如 0x80004005) 或長數值 (例如，2147467259) 會傳回 HRESULT。 這些 Hresult 可能引發基礎元件，例如 OLE DB 或甚至是 OLE 本身。 如需有關這些數字的詳細資訊，請參閱 <<c0> [ 錯誤 (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd)中[OLE DB 程式設計人員參考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) *。*  
   
 ## <a name="applies-to"></a>適用於  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d95226e9d895bf78e15176744f651b7e830a1a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901348"
 ---
 # <a name="executing-a-statement"></a>執行陳述式
 有四種方法執行陳述式，在編譯 （預備） 資料庫引擎和使用者定義它們時，取決於：  

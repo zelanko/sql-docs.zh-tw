@@ -15,29 +15,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999546"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
   在對話方塊中找不到一或多個物件名稱。 選取一個選項以繼續進行。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **更正此資訊並再次搜尋**  
- 選取以允許使用 [選取此物件類型]、[物件類型] 和 [輸入物件名稱] 區域。  
+ 選取以允許使用 [選取此物件類型]  、[物件類型]  和 [輸入物件名稱]  區域。  
   
  **選取此物件類型**  
- 顯示使用 [物件類型] 按鈕所選取的物件類型。  
+ 顯示使用 [物件類型]  按鈕所選取的物件類型。  
   
  **物件類型**  
- 按一下以開啟 [選取物件類型] 對話方塊，並從清單中選取物件類型。  
+ 按一下以開啟 [選取物件類型]  對話方塊，並從清單中選取物件類型。  
   
  **輸入物件名稱**  
  包含找不到之物件的名稱。 請更正物件的名稱，或鍵入新的物件名稱。  
   
- **移除***\<物件名稱 >***從選取範圍**  
- 選取以關閉 [找不到名稱] 對話方塊，並從 [選取物件] 對話方塊中移除項目。  
+ **移除** *\<物件名稱 >* **從選取範圍**  
+ 選取以關閉 [找不到名稱]  對話方塊，並從 [選取物件]  對話方塊中移除項目。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+title: 概觀：匯入資料，從 Excel （MDS 增益集適用於 Excel） |Microsoft Docs
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 1da9e1876995f81fd2b40b9ef1bb4b509b4c848d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074480"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集)
 

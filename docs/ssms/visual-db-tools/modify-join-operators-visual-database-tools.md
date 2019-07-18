@@ -12,15 +12,15 @@ helpviewer_keywords:
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e22d55490c9149a857d74b7719d88fd7b25ea9a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 102f8156bfb221c4bef61c3f75a5b67a82745759
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504625"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690218"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改聯結運算子 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "52504625"
   
 ### <a name="to-modify-join-operators"></a>若要修改聯結運算子  
   
-1.  在 [[圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)] 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]。  
+1.  在 [[圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)] 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]。   
   
-2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，然後按一下屬性右側的**省略符號 (...)**。  
+2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]  ，然後按一下屬性右側的**省略符號 (...)** 。  
   
-3.  在 [聯結] 對話方塊中選取新的運算子。  
+3.  在 [聯結]  對話方塊中選取新的運算子。  
   
 ## <a name="see-also"></a>另請參閱  
 [自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  

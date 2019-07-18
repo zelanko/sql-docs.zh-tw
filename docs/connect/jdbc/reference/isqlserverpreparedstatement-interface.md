@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d1e33b3775e6aaafa3951cb38de286694f203c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6defd8b451089c70969f7b8efca5fec41d6af258
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615146"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796440"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

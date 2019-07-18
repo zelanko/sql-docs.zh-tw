@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
@@ -16,12 +15,12 @@ ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077275"
 ---
 # <a name="define-custom-member-formulas"></a>定義自訂成員公式
   您可以定義多維度運算式 (MDX) 運算式 (稱為自訂成員公式)，來提供所指定屬性之成員的值。 來自資料來源檢視之資料表中的資料行，為屬性的每一個成員提供該運算式，來提供該成員的值。  
@@ -37,25 +36,25 @@ ms.locfileid: "48186018"
   
  自訂成員公式覆寫與量值相關聯的彙總函式。 例如，在指定自訂成員公式之前，使用 `Sum` 彙總函式的量值含有 Time 維度下列成員的下列值：  
   
--   2003: 2100  
+-   2003:2100  
   
     -   第 1 季：700  
   
-    -   第 2 季：500  
+    -   季 2:500  
   
-    -   第 3 季：100  
+    -   季 3:100  
   
-    -   第 4 季：800  
+    -   Quarter 4:800  
   
--   2004: 1500  
+-   2004:1500  
   
     -   第 1 季：600  
   
-    -   第 2 季：200  
+    -   季 2:200  
   
-    -   第 3 季：300  
+    -   季 3:300  
   
-    -   第 4 季：400  
+    -   Quarter 4:400  
   
  利用自訂成員公式，成員的值將改由自訂積存公式提供。 例如，可使用以下自訂成員公式，提供 Time 維度之 2004 成員 Quarter 4 子成員的值 450。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48186018"
 Time.[Quarter 3] * 1.5  
 ```  
   
- 自訂成員公式儲存在維度資料表的一個資料行中。 藉由設定啟用自訂積存公式`CustomRollupColumn`屬性的屬性。  
+ 自訂成員公式儲存在維度資料表的一個資料行中。 您可以在屬性上設定 `CustomRollupColumn` 屬性，來啟用自訂積存公式。  
   
  若要將單一 MDX 運算式套用至屬性的所有成員，請在維度資料表上建立具名計算，以常值字串傳回 MDX 運算式。 然後，以您要設定之屬性上的 `CustomRollupColumn` 屬性設定，來指定具名計算。 具名計算是資料來源檢視資料表中的一個資料行，它傳回 SQL 運算式所定義的資料列值。 如需建構具名計算的詳細資訊，請參閱[在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

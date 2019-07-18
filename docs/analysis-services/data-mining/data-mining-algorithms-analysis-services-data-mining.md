@@ -1,5 +1,5 @@
 ---
-title: 資料採礦演算法 (Analysis Services-資料採礦) |Microsoft 文件
+title: 資料採礦演算法 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55b46feab1170d5db9689e9347a37f7353263791
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183798"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>資料採礦演算法 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  資料採礦中的「演算法」(或機器學習服務) 是一組可從資料建立模型的啟發學習法和計算。 若要建立模型，演算法首先會分析您提供的資料，尋找特定模式和趨勢類型。 此演算法會使用此分析的結果進行反覆運算，以尋找建立採礦模型的最佳參數。 然後這些參數會套用到整個資料集以擷取可付諸行動的模式與詳細的統計資料。  
+  資料採礦中的「演算法」  (或機器學習服務) 是一組可從資料建立模型的啟發學習法和計算。 若要建立模型，演算法首先會分析您提供的資料，尋找特定模式和趨勢類型。 此演算法會使用此分析的結果進行反覆運算，以尋找建立採礦模型的最佳參數。 然後這些參數會套用到整個資料集以擷取可付諸行動的模式與詳細的統計資料。  
   
  演算法從資料建立的採礦模型可以有各種形式，包括：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34017885"
 |**技術參考**|提供有關演算法實作的技術詳細資料，並視需要提供學術參考。 列出您可以設定的參數，用於控制演算法的行為，並自訂模型中的結果。 描述資料需求，並盡可能提供效能提示。|  
 ||[Microsoft 關聯分析演算法技術參考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 貝氏機率分類演算法技術參考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |**模型內容**|說明每種資料採礦模型類型中的資訊結構化方式，並說明如何解譯儲存在每個節點中的資訊。|  
-||[關聯模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [線性迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [時序群集模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**資料採礦查詢**|提供多項可用於每種模型類型的查詢。 例如，可讓您深入了解模型中模式的內容查詢，以及可協助您根據這些模式建立預測的預測查詢。|  
 ||[關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [群集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [羅吉斯迴歸模型查詢範例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [貝式機率分類模型查詢範例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [類神經網路模型查詢範例](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [時序群集模型查詢範例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "34017885"
 |建立自訂外掛程式演算法|[外掛程式演算法](../../analysis-services/data-mining/plugin-algorithms.md)|  
 |使用演算法特定的檢視器瀏覽模型|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |檢視使用一般資料表格式的模型內容|[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|了解如何設定資料及使用演算法來建立模型|[採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
+|了解如何設定資料及使用演算法來建立模型|[採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)  

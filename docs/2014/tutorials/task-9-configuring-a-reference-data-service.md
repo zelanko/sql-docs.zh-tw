@@ -1,5 +1,5 @@
 ---
-title: 工作 9:設定參考資料服務 |Microsoft Docs
+title: 工作 9：設定參考資料服務 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 08ead4185051ad90f53e904b55e541e9bb2edd2f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489577"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>工作 9:設定參考資料服務
+# <a name="task-9-configuring-a-reference-data-service"></a>工作 9：設定參考資料服務
   在這項工作中，您會設定 DQS 使用 Windows Azure Marketplace 上的參考資料服務。 在下一個工作中，您會設定**地址驗證**網域以使用這項服務。 在執行階段，清理活動期間，DQS 會將值傳遞中的網域**地址驗證**網域服務以進行清理。 請參閱[設定 DQS 使用參考資料](https://msdn.microsoft.com/library/hh213070.aspx)如需詳細資訊。  
   
 1.  中的主頁面**DQS 用戶端**，請在**管理**窗格中，按一下  **Configuration**。  

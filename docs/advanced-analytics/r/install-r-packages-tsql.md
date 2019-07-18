@@ -3,17 +3,16 @@ title: 若要安裝 R 封裝-SQL Server Machine Learning 服務中使用 T-SQL �
 description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: b59f15ace1dc96af537486336e76a209f1c85da7
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7d858cbc34ef614c5b84ed7543ceaa837d136a4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962611"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>SQL Server 上安裝 R 封裝中使用 T-SQL （建立外部程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,6 +67,5 @@ EXEC sp_execute_external_script
 
 ## <a name="see-also"></a>另請參閱
 
-+ [取得封裝資訊](determine-which-packages-are-installed-on-sql-server.md)
++ [取得封裝資訊](../package-management/installed-package-information.md)
 + [R 教學課程](../tutorials/sql-server-r-tutorials.md)
-+ [使用說明指南](sql-server-machine-learning-tasks.md)

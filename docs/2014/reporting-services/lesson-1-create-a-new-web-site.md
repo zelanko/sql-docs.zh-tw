@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108544"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新的網站
+# <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新網站
   在本課中，您將學習如何使用 Visual C# 的 ASP.NET 網站範本來建立新網站專案。  
   
 ### <a name="to-create-a-new-website"></a>建立新網站  
   
 1.  開啟 Microsoft Visual Studio 2010 或 Microsoft Visual Studio 2012。  
   
-2.  在 [檔案] 功能表上，指向 [開新檔案]，然後選取 [網站]。  
+2.  在 [檔案]  功能表上，指向 [開新檔案]  ，然後選取 [網站]  。  
   
 3.  在**New Web Site**對話方塊中，於**已安裝的範本**窗格中，選取**Visual C#** ，然後選擇**ASP.NET 網站**。  
   

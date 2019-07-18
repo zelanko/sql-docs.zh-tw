@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d83ee924a1df8db92b74be5a3282bd7b4d16cf11
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029469"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500056"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   從 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計方式，將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 訂閱的擁有權，從某位使用者轉移到另一位使用者。 本主題提供數個 Windows PowerShell 指令碼，供您可變更或單純列出訂閱擁有權時使用。 每項範例均包含原生模式和 SharePoint 模式的範例語法。 當您變更訂閱擁有者之後，便會在新擁有者的安全性內容中執行訂閱，且報表中的 [User!UserID] 欄位會顯示新擁有者的值。 如需 PowerShell 範例呼叫的物件模型詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -25,7 +24,7 @@ ms.locfileid: "56029469"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
  **本主題內容：**  
   
@@ -60,21 +59,21 @@ ms.locfileid: "56029469"
   
 -   列出訂閱：(HYPERLINK"https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx"ReadSubscription，而且使用者是訂閱擁有者) 或 ReadAnySubscription  
   
--   變更訂閱：使用者必須是 BUILTIN\Administrators 群組的成員  
+-   變更訂用帳戶：使用者必須是 BUILTIN\Administrators 群組的成員  
   
--   列出子系：項目的 ReadProperties  
+-   列出子系：目的 ReadProperties  
   
--   引發事件：GenerateEvents (系統)  
+-   觸發事件：GenerateEvents （系統）  
   
  **SharePoint 模式：**  
   
 -   列出訂閱：ManageAlerts 或 (HYPERLINK"https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx"CreateAlerts 使用者訂用帳戶擁有者且訂閱為定時的訂閱)。  
   
--   變更訂閱：ManageWeb  
+-   變更訂用帳戶：ManageWeb  
   
 -   列出子系：ViewListItems  
   
--   引發事件：ManageWeb  
+-   觸發事件：ManageWeb  
   
  如需詳細資訊，請參閱 [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "56029469"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> 指令碼：列出所有訂閱的擁有權  
+##  <a name="bkmk_list_ownership_all"></a> 指令碼：列出所有訂用帳戶的擁有權  
  此指令碼會列出網站的所有訂閱。 您可以使用此指令碼測試您的連接，或是確認其他指令碼中使用的報表路徑及訂閱識別碼。 若要單純稽核有哪些訂閱以及誰擁有這些訂閱，這會是很實用的指令碼。  
   
  **原生模式語法：**  
@@ -136,7 +135,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  若要以 SharePoint 模式確認網站 URL，請使用 SharePoint Cmdlet **Get-SPSite**。 如需詳細資訊，請參閱 [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx)。  
   
-##  <a name="bkmk_list_all_one_user"></a> 指令碼：列出特定使用者擁有的所有訂閱  
+##  <a name="bkmk_list_all_one_user"></a> 指令碼：列出特定使用者所擁有的所有訂用帳戶  
  此指令碼會列出特定使用者所擁有的所有訂閱。 您可以使用此指令碼測試您的連接，或是確認其他指令碼中使用的報表路徑及訂閱識別碼。 當您組織中有人離開而您想要確認該人員擁有那些訂閱，好讓您變更擁有者或刪除訂閱時，此指令碼相當實用。  
   
  **原生模式語法：**  
@@ -173,7 +172,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> 指令碼：針對特定使用者擁有的所有訂閱變更擁有權  
+##  <a name="bkmk_change_all"></a> 指令碼：變更特定使用者所擁有的所有訂用帳戶的擁有權  
  此指令碼會將特定使用者擁有的所有訂閱擁有權變更至新擁有者參數。  
   
  **原生模式語法：**  
@@ -214,7 +213,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  
@@ -243,7 +242,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> 指令碼：列出與特定報表相關聯的所有訂閱  
+##  <a name="bkmk_list_for_1_report"></a> 指令碼：列出所有與特定報表相關聯的訂用帳戶  
  此指令碼會列出與特定報表相關聯的所有訂閱。 不同之處在於 SharePoint 模式的報表路徑語法，需要完整的 URL。 在語法範例中，使用的報表名稱是 "title only"，其中包含空格，因此需要以單引號將報表名稱括住。  
   
  **原生模式語法：**  
@@ -281,7 +280,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> 指令碼：變更特定訂閱的擁有權  
+##  <a name="bkmk_change_all_1_subscription"></a> 指令碼：變更特定訂用帳戶的擁有權  
  此指令碼會變更特定訂閱的擁有權。 訂閱由您傳遞至指令碼中的 SubscriptionID 所識別。 您可以使用其中一個列出訂閱的指令碼，以判斷正確的 SubscriptionID。  
   
  **原生模式語法：**  
@@ -327,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> 指令碼：執行 (觸發) 單一訂閱  
+##  <a name="bkmk_run_1_subscription"></a> 指令碼：執行 （觸發） 單一訂閱  
  此指令碼會使用 FireEvent 方法執行特定訂閱。 無論為訂閱的設定排程為何，指令碼都會立即執行該訂閱。 EventType 會根據定義在報表伺服器組態檔 **rsreportserver.config** 中已知的事件集合進行比對。此指令碼會為標準訂閱使用下列事件類型：  
   
  `<Event>`  

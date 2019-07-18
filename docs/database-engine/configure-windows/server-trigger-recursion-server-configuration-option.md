@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e5ae4e8696a70146f956de173a8f245f720db75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 115d9dde071579c196b115cbe93779145c20a43e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794114"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>伺服器觸發程序遞迴伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

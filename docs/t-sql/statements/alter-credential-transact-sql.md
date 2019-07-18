@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32df63456e46fd8f522d897cd6068967bbb785b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ec9f609ed3687106ca65152496cbb20b2ff1b8f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051593"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  您可以在 **sys.credentials** 目錄檢視中，看到認證的相關資訊。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 ALTER ANY CREDENTIAL 權限。 如果認證是系統認證，則需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

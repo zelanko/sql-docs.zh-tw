@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3118a814d18013a4360dd9afdcd1e09dcc483545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e89e67b49498320e4500b99332fc5584d5f38d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066675"
 ---
 # <a name="cdclsntimemapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +40,6 @@ ms.locfileid: "47822050"
   
 ## <a name="see-also"></a>另請參閱  
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [cdc。&#60;capture_instance&#62;_CT &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
+ [cdc.&#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
   
   

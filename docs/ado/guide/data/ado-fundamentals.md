@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926066"
 ---
 # <a name="ado-fundamentals"></a>ADO 基本概念
 ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方式存取、 編輯和更新資料從各種資料來源，透過系統的 OLE DB 介面。 ADO 的最常見的用法是查詢關聯式資料庫中資料表或資料表，請擷取和結果顯示在應用程式，並可能讓使用者進行變更和儲存的資料。 其他工作包括下列各項：  
@@ -59,7 +58,7 @@ ADO 提供開發人員一種功能強大的邏輯物件模型以程式設計方�
   
 -   [ADO 物件和集合](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData：簡易 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData:簡易 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [OLE DB 提供者](../../../ado/guide/data/ole-db-providers-ado.md)  
   

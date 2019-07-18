@@ -2,25 +2,25 @@
 title: 設定報表產生器的預設選項 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577912"
 ---
 # <a name="set-default-options-for-report-builder"></a>設定報表產生器的預設選項
   在報表產生器中，您可以設定許多實用的預設值，來更輕鬆快速地撰寫報表。  例如，如果您設定或變更預設報表伺服器，除非您另外指定，否則報表產生器會自動將您的報表儲存到相同的報表伺服器。  
   
--   在報表產生器中，按一下 [檔案] > [選項]。  
+-   在報表產生器中，按一下 [檔案]   > [選項]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **預設使用此報表伺服器或 SharePoint 網站**  
@@ -34,10 +34,10 @@ ms.locfileid: "56295976"
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
  **顯示下列數量之最近使用的網站和伺服器**  
- 指定要顯示在 [開啟報表] 和 [另存為報表] 對話方塊中的最近使用之網站和連接的數目。  
+ 指定要顯示在 [開啟報表]  和 [另存為報表]  對話方塊中的最近使用之網站和連接的數目。  
   
  **顯示下列數量之最近使用的共用資料集和資料來源連接**  
- 指定要顯示在 [資料集屬性] 對話方塊和資料區域精靈之 [選擇與資料來源的連接] 頁面中的最近使用之共用資料集和資料來源連接的數目。  
+ 指定要顯示在 [資料集屬性]  對話方塊和資料區域精靈之 [選擇與資料來源的連接]  頁面中的最近使用之共用資料集和資料來源連接的數目。  
   
  **顯示下列數量之最近使用的文件**  
  指定要在您按一下 [報表產生器] 按鈕時顯示的最近使用之文件的數目。  

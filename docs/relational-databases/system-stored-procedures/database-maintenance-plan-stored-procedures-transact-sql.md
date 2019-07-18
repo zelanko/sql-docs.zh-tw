@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d5444565caff1dcaf6b5b18b3d2de83124b8da31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942301"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>資料庫維護計畫預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

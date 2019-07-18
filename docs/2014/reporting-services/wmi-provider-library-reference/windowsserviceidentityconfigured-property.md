@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityConfigured
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dc4532b3b7afadf4049fc99296b83c8ae04511a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb9b782aece15cf9aaf49b2bc427d34fa3d86525
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096964"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回上次設定報表伺服器 Windows 服務執行時所使用的識別。 唯讀。  

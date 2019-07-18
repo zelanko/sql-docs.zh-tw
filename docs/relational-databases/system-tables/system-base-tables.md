@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029565"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47833626"
 |**sys.sysnsobjs**|存在於每個資料庫中。 每個命名空間範圍的實體都包含一個資料列。 此資料表用於儲存 XML 集合實體。|  
 |**sys.syscolpars**|存在於每個資料庫中。 資料表、檢視或資料表值函數中的每個資料行都包含一個資料列。 對於程序或函數的每個參數，它也包含資料列。|  
 |**sys.systypedsubobjs**|存在於每個資料庫中。 每個輸入的子實體都包含一個資料列。 只有資料分割函數的參數屬於這個類別目錄。|  
-|**sys.sysidxstats**|存在於每個資料庫中。 針對資料表和索引檢視的每個索引或統計資料，各包含一個資料列。<br /><br /> 注意： 每個索引 （堆積除外） 都具有相同名稱做為索引的統計相關聯。|  
+|**sys.sysidxstats**|存在於每個資料庫中。 針對資料表和索引檢視的每個索引或統計資料，各包含一個資料列。<br /><br /> 注意:每個索引 （堆積除外） 都具有相同名稱做為索引的統計資料與相關項目。|  
 |**sys.sysiscols**|存在於每個資料庫中。 每個保存的索引和統計資料資料行都包含一個資料列。|  
 |**sys.sysscalartypes**|存在於每個資料庫中。 每個使用者自訂或系統類型都包含一個資料列。|  
 |**sys.sysdbreg**|存在於**主要**只有資料庫。 每個註冊的資料庫都包含一個資料列。|  
@@ -61,7 +60,7 @@ ms.locfileid: "47833626"
 |**sys.sysxlgns**|存在於**主要**只有資料庫。 每個伺服器主體都包含一個資料列。|  
 |**sys.sysdbfiles**|存在於每個資料庫中。 如果資料行**dbid**為零，資料列代表屬於這個資料庫的檔案。 在 **主要**資料庫、 資料行**dbid**可以是非零。 如果是這個情況，資料列代表主檔案。|  
 |**sys.sysusermsg**|存在於**主要**只有資料庫。 每個資料列都代表一個使用者自訂的錯誤訊息。|  
-|**sys.sysprivs**|存在於每個資料庫中。 每個資料庫或伺服器層級的權限都包含一個資料列。<br /><br /> 注意： 伺服器層級權限會儲存在**主要**資料庫。|  
+|**sys.sysprivs**|存在於每個資料庫中。 每個資料庫或伺服器層級的權限都包含一個資料列。<br /><br /> 注意:伺服器層級權限會儲存在**主要**資料庫。|  
 |**sys.sysowners**|存在於每個資料庫中。 每個資料列都代表一個資料庫主體。|  
 |**sys.sysobjkeycrypts**|存在於每個資料庫中。 與物間相關聯的每個對稱金鑰、加密或密碼編譯屬性都包含一個資料列。|  
 |**sys.syscerts**|存在於每個資料庫中。 資料庫中的每個憑證都包含一個資料列。|  

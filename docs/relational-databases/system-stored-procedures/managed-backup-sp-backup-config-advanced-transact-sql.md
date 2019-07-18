@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942141"
 ---
-# <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   設定進階的設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
@@ -66,7 +65,7 @@ EXEC managed_backup.sp_backup_config_advanced
  如需有關加密演算法的詳細資訊，請參閱＜ [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)＞。  
   
  @encryptor_type  
- 加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已**nvarchar(32)**。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
+ 加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已**nvarchar(32)** 。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
   
  @encryptor_name  
  用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name已**SYSNAME**。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  

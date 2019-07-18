@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10426"
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - dialog boxes
 - Help, dialog boxes
 - user interface, dialog boxes
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c58aa549ab0fb1ce196eae5d8566e144f1adaca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107727"
 ---
 # <a name="report-builder-f1-help"></a>報表產生器 F1 說明
   本章節包含報表產生器精靈、 檢視、 窗格和對話方塊的說明。 按下 F1 或按一下 [說明] 按鈕，在對話方塊中，您也可以開啟說明。  

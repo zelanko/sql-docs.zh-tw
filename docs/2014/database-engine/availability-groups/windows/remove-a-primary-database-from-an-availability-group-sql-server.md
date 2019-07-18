@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62813985"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>將主要資料庫從可用性群組移除 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，將主要資料庫和對應的次要資料庫從 AlwaysOn 可用性群組中移除。  
@@ -41,7 +41,7 @@ ms.locfileid: "48098008"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **待處理：**[從可用性群組中移除可用性資料庫之後](#FollowUp)  
+-   **後續操作：** [從可用性群組中移除可用性資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48098008"
   
     -   若要移除單一資料庫，請在 **[物件總管]** 窗格或 **[物件總管詳細資料]** 窗格中選取它。  
   
-5.  以滑鼠右鍵按一下選取的一或多個資料庫，然後在命令功能表中選取 [從可用性群組移除資料庫]。  
+5.  以滑鼠右鍵按一下選取的一或多個資料庫，然後在命令功能表中選取 [從可用性群組移除資料庫]  。  
   
-6.  在 **[從可用性群組移除資料庫]** 對話方塊中，若要移除所有列出的資料庫，請按一下 **[確定]**。 如果您不要移除所有列出的資料庫，請按一下 **[取消]**。  
+6.  在 **[從可用性群組移除資料庫]** 對話方塊中，若要移除所有列出的資料庫，請按一下 **[確定]** 。 如果您不要移除所有列出的資料庫，請按一下 **[取消]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除可用性資料庫**  
@@ -105,13 +105,13 @@ ms.locfileid: "48098008"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：從可用性群組中移除可用性資料庫之後  
+##  <a name="FollowUp"></a> 後續操作：從可用性群組中移除可用性資料庫之後  
  從可用性群組中移除可用性資料庫，會結束先前主要資料庫和對應的次要資料庫之間的資料同步處理。 先前主要資料庫會保持上線狀態。 每個對應的次要資料庫處於 RESTORING 狀態。  
   
  此時有替代方法可處理移除的次要資料庫：  

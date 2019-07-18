@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210949"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>使用物件總管執行視需要評估
   在這項工作中，您將使用 [物件總管]，針對 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的單一執行個體，為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行最佳作法原則的視需要評估。  
@@ -38,13 +38,13 @@ ms.locfileid: "56028279"
     > [!NOTE]  
     >  根據預設，本機執行個體會當做原則來源使用。 如果您先前已匯入最佳做法原則，則會列出這些原則以及您已經建立的其他所有原則。 您可以選取任何匯入的最佳做法原則，，然後按一下**Evaluate**。 如果您尚未匯入最佳做法原則，請繼續此程序。  
   
-3.  在 [**評估原則**] 對話方塊中的 [下一步**來源**方塊中，按一下省略符號 (**...**)] 按鈕。  
+3.  在 [**評估原則**] 對話方塊中的 [下一步**來源**方塊中，按一下省略符號 ( **...** )] 按鈕。  
   
 4.  在 [**選取來源**] 對話方塊中，您可以選取**檔案**或**Server**做為評估之原則檔案的來源。 如果您按一下**Server**，您可以執行任何先前已匯入至本機或遠端伺服器上的原則式管理的最佳作法原則的視需要評估。 在本教學課程中，您不需要按**檔案**，然後選取您想要評估的個別原則檔案。 若要這樣做，請遵循下列步驟：  
   
     1.  按一下 **檔案**。  
   
-    2.  旁**檔案**，按一下省略符號 (**...**) 按鈕。  
+    2.  旁**檔案**，按一下省略符號 ( **...** ) 按鈕。  
   
     3.  在 [**選取原則**] 對話方塊中，瀏覽至下列資料夾，其中包含最佳作法原則：  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff71bc42e77a1f5a0f55875b7fdddb13a3e3964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abe6a9bf7f2f336ffe612057dd6db05f74b4adea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044959"
 ---
 # <a name="odbc-component-files"></a>ODBC 元件檔案
 ODBC 桌面資料庫驅動程式 4.0 的每個元件所需的 ODBC 驅動程式檔案。  

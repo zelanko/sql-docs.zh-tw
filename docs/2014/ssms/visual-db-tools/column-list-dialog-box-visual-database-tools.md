@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62936443"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>資料行清單對話方塊 (Visual Database Tools)
   撰寫查詢時，如果能夠看到您在資料表值物件中選取的可用資料行清單會相當有用。  
   
- 若要存取這個對話方塊，在 [查詢設計工具] 功能表中，以滑鼠右鍵按一下 [圖表] 窗格中的資料表值物件的標頭，再按一下 [屬性]。 在 [屬性] 視窗中，按一下 [資料表清單] 欄位。 然後按一下欄位右邊的省略符號 **(...)**。  
+ 若要存取這個對話方塊，在 [查詢設計工具]  功能表中，以滑鼠右鍵按一下 [圖表] 窗格中的資料表值物件的標頭，再按一下 [屬性]  。 在 [屬性]  視窗中，按一下 [資料表清單]  欄位。 然後按一下欄位右邊的省略符號 **(...)** 。  
   
  此對話方塊提供所選取資料值物件和基本屬性的資料行清單，例如類型，以及資料行是否允許 Null 值。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  顯示所選取資料值物件的資料行名稱。  
   

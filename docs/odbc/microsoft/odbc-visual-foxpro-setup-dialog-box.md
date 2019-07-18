@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915667"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 設定對話方塊
 **ODBC Visual FoxPro 設定**對話方塊可讓您新增或變更 Visual FoxPro 資料來源。  
@@ -31,7 +30,7 @@ ms.locfileid: "52501756"
  **資料來源名稱**  
  輸入您想要使用資料來源的名稱。  
   
- **說明**  
+ **描述**  
  輸入資料來源的描述。  
   
  **資料庫類型**  

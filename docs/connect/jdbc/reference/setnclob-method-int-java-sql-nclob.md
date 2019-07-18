@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81510a7c888db7f8375df365d03ead3fbe3f30b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3120c101a8c57225bc709da3066080987943d3c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800415"
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>setNClob 方法 (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setNClob 方法是由 java.sql.PreparedStatement 介面中的 setNClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

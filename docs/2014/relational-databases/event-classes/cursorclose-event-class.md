@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663784"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 事件類別
   當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 關閉並取消配置資料指標時，就會發生資料指標關閉事件。 **CursorClose** 事件類別會描述應用程式開發介面 (API) 資料指標中所發生的資料指標關閉事件。 當 ODBC、OLE DB 或 DB-Library 開啟的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標陳述式關閉時，就會發生這個事件類別。  

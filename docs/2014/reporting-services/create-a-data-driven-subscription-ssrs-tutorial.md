@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109686"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了資料驅動訂閱，讓您可以依據動態訂閱者資料來自訂報表的散發。 資料驅動訂閱適用於下列狀況：  
@@ -56,7 +55,7 @@ ms.locfileid: "56017910"
   
 -   SQL Server Agent 服務必須在執行中。  
   
--   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
+-   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫，它會將資料提供給範例報表。  
   

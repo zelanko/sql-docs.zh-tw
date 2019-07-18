@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], naming
@@ -14,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65979965"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
   本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
@@ -72,9 +70,9 @@ ms.locfileid: "57578410"
 |------------|------------------------|  
 |`Server`|在命名伺服器物件時要遵守 Windows 伺服器命名慣例。 請參閱[命名慣例 (Windows)](/windows/desktop/DNS/naming-conventions)如需詳細資訊。|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` 或 `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
-|`Dimension` 或 `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
-|所有其他物件|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
+|`Level` 或 `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
+|`Dimension` 或 `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
+|所有其他物件|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
  **例外狀況：當允許保留的字元**  
   

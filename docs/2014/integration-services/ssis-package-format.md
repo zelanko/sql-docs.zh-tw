@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b7288952ce9b57b0825f20d1a93fcbcd20d3c37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055344"
 ---
 # <a name="ssis-package-format"></a>SSIS 封裝格式
   在目前的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本中，已經對封裝格式 (.dtsx 檔案) 做了重大變更，讓您更輕鬆地讀取此格式及比較封裝。 您也可以更可靠地合併不包含衝突的變更或變更以二進位格式儲存的封裝。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815108"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265795"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "47815108"
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以稱為記憶體快取的結構，將資訊儲存在記憶體中。 快取中的資訊可以是資料、索引項目、編譯程序計畫，以及各種其他類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 為了避免重建資訊，記憶體快取會盡可能長期保存，並且通常是因資訊太舊而無法使用、或是必須挪出記憶體空間供新資訊使用等情形，才從快取中移除。 移除舊資訊的處理序稱為記憶體清除。 記憶體清除屬於常執行的活動，但是非持續性活動。 時鐘演算法會控制記憶體快取的清除。 每個時鐘都會控制數個記憶體清除，即所謂的指針。 記憶體快取時鐘指針，就是指其中一個記憶體清除指針的目前位置。  

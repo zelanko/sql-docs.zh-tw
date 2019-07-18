@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+manager: jroth
+ms.openlocfilehash: 7abd7c83f5f6259ad9415f1e790088f98567f06c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767446"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "56955979"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 角色的成員可以使用 DAC 進行連接。  
   
- DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在執行個體名稱前面加上 **admin:** 來連線，其格式為 **sqlcmd -S admin:<執行個體名稱>**。 您也可以連線到 **admin:\<執行個體名稱>**，以便從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器起始 DAC。  
+ DAC 的存取與支援是使用特殊的系統管理員參數 ( **-A** )，透過**sqlcmd**命令提示字元公用程式來執行。 如需使用 **sqlcmd** 的詳細資訊，請參閱[以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 您也可以在執行個體名稱前面加上 **admin:** 來連線，其格式為 **sqlcmd -S admin:<*執行個體名稱*>** 。 您也可以連線到 **admin:\<執行個體名稱  >** ，以便從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器起始 DAC。  
   
 ## <a name="restrictions"></a>限制  
  由於 DAC 僅在少數的情況下才會為了診斷伺服器問題而建立，因此這項連接有某些限制：  
@@ -76,7 +76,7 @@ ms.locfileid: "56955979"
   
 -   基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 及 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 請勿執行需要大量資源的命令，例如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 命令。 根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的狀態而定，KILL 命令可能不會每次都成功，這時只能選擇重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是部分一般方針：  
   
     -   藉由查詢 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`，來確認是否已確實清除 SPID。 若未傳回資料列，表示已清除工作階段。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56955979"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在啟動期間動態指定 DAC 通訊埠。 連接到預設執行個體時，DAC 會在連接時避免對 SQL Server Browser 服務使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析通訊協定 (SSRP) 要求。 它會先透過 TCP 通訊埠 1434 連接。 若失敗，則會發出 SSRP 呼叫以取得通訊埠。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 並未接聽 SSRP 要求，則連接要求會傳回錯誤。 請參閱錯誤記錄檔，以了解 DAC 接聽時所使用的通訊埠編號。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組態可接受遠端管理連接，DAC 就必須以明確的通訊埠編號起始：  
   
- **sqlcmd -S tcp:**_\<server>,\<port>_  
+ **sqlcmd -S tcp:** _\<server>,\<port>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會列出 DAC 的通訊埠編號，依預設為 1434。 若將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為只接受本機 DAC 連接，請利用下列命令使用回送配接器進行連接：  
   

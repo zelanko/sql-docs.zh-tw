@@ -17,14 +17,18 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0cdbaa7d265720cc85966180811221d5883ffc66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727539"
 ---
 # <a name="maintenance-cleanup-task"></a>維護清除工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「維護清除」工作會移除與維護計畫相關的檔案，包括資料庫備份檔案以及維護計畫所建立的報表。 如需詳細資訊，請參閱 [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md) 和 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  封裝可以使用「維護清除」工作來移除指定伺服器上的備份檔案或維護計畫報表。 「維護清除」工作包含一個選項，可用來移除某個特定檔案或移除資料夾中的某個檔案群組。 您也可以選擇指定要刪除之檔案的副檔名。  
@@ -33,7 +37,7 @@ ms.locfileid: "58289394"
   
  通常您會想移除已經不需要的舊檔案，而且可以設定「維護清除」工作，以刪除已經到達指定存在時間的檔案。 例如，您可以設定工作以刪除存在時間已超過四週的檔案。 您可以使用天數、週數、月數或年數來指定要刪除之檔案的存在時間。 如果沒有指定要刪除之檔案的最低存在時間，則會刪除指定類型的所有檔案。  
   
- 與舊版的「維護清除」工作不同， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版的工作並不會自動刪除指定目錄之子目錄中的檔案。 此條件約束會縮小任何可能利用「維護清除」工作功能惡意刪除檔案之攻擊的介面區。 若要刪除第一層子資料夾，您必須選取 [維護清除工作] 對話方塊中的 [包含第一層的子資料夾] 選項，明確選擇要執行此動作。  
+ 與舊版的「維護清除」工作不同， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版的工作並不會自動刪除指定目錄之子目錄中的檔案。 此條件約束會縮小任何可能利用「維護清除」工作功能惡意刪除檔案之攻擊的介面區。 若要刪除第一層子資料夾，您必須選取 [維護清除工作]  對話方塊中的 [包含第一層的子資料夾]  選項，明確選擇要執行此動作。  
   
 ## <a name="configuration-of-the-maintenance-cleanup-task"></a>設定維護清除工作  
  您可以透過 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  

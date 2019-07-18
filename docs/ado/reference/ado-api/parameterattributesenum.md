@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c43697cad7682f23fdf9def8f961d550192aff67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917748"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定的屬性[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  

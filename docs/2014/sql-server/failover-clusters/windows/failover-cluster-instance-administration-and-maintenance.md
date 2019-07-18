@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049435"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>容錯移轉叢集執行個體管理及維護
-  加入或移除節點從現有 AlwaysOn 容錯移轉叢集執行個體 (FCI) 這類的維護工作使用來完成[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式。 其他管理工作 (例如變更 IP 位址資源、從特定 FCI 案例復原) 則是使用容錯移轉叢集管理員嵌入式管理單元 (Windows Server 容錯移轉叢集 (WSFC) 服務的嵌入式管理單元) 來完成。  
+  從現有 AlwaysOn 容錯移轉叢集執行個體 (FCI) 中加入或移除節點這類的維護工作是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式來完成。 其他管理工作 (例如變更 IP 位址資源、從特定 FCI 案例復原) 則是使用容錯移轉叢集管理員嵌入式管理單元 (Windows Server 容錯移轉叢集 (WSFC) 服務的嵌入式管理單元) 來完成。  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>維護容錯移轉叢集執行個體  
  安裝 FCI 之後，您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式變更或修復該叢集。 例如，您可以將額外的節點新增到 FCI、執行 FCI 做為獨立的執行個體，或從 FCI 組態中移除節點。  
@@ -50,14 +50,14 @@ ms.locfileid: "48110538"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶與 WSFC 服務帳戶請不要使用相同的帳戶。 如果變更 WSFC 服務帳戶的密碼， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝將會失敗。  
   
- 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]上，服務 SID 用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]上，服務 SID 用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
 ## <a name="administering-a-failover-cluster-instance"></a>管理容錯移轉叢集執行個體  
   
 |工作描述|主題連結|  
 |----------------------|----------------|  
 |描述如何加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的相依性。|[加入 SQL Server 資源的相依性](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos 是一種網路驗證通訊協定，可為用戶端/伺服器應用程式提供強大的驗證功能。 Kerberos 可做為交互操作的基礎，並且協助提升整個企業的網路驗證安全性。 您可以使用 Kerberos 驗證搭配[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]獨立執行個體或搭配 AlwaysOn Fci。|[註冊 Kerberos 連接的服務主體名稱](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。|  
+|Kerberos 是一種網路驗證通訊協定，可為用戶端/伺服器應用程式提供強大的驗證功能。 Kerberos 可做為交互操作的基礎，並且協助提升整個企業的網路驗證安全性。 您可以將 Kerberos 驗證搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立執行個體或搭配 AlwaysOn FCI 使用。|[註冊 Kerberos 連接的服務主體名稱](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。|  
 |提供描述如何啟用 Kerberos 驗證之內容的連結||  
 |描述用以從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集失敗中復原的程序。|[從容錯移轉叢集執行個體失敗的狀況復原](recover-from-failover-cluster-instance-failure.md)|  
 |描述用於變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體之 IP 位址資源的程序。|[變更容錯移轉叢集執行個體的 IP 位址](change-the-ip-address-of-a-failover-cluster-instance.md)|  

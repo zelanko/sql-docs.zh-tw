@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
+title: sp_addextendedproc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072747"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @functname = ] 'procedure'` 是動態連結程式庫 (DLL) 內所要呼叫的函式的名稱。 *程序*已**nvarchar(517)**，沒有預設值。 *程序*可以選擇性地包括擁有者名稱形式*owner.function*。  
+`[ @functname = ] 'procedure'` 是動態連結程式庫 (DLL) 內所要呼叫的函式的名稱。 *程序*已**nvarchar(517)** ，沒有預設值。 *程序*可以選擇性地包括擁有者名稱形式*owner.function*。  
   
-`[ @dllname = ] 'dll'` 是包含此函式的 DLL 名稱。 *dll*已**varchar(255)**，沒有預設值。 建議您指定 DLL 的完整路徑。  
+`[ @dllname = ] 'dll'` 是包含此函式的 DLL 名稱。 *dll*已**varchar(255)** ，沒有預設值。 建議您指定 DLL 的完整路徑。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

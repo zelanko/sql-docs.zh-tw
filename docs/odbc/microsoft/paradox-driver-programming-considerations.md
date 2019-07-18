@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 574246d7587a15d5d13efcbc2f2cb48108907c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52ef0cfa67e476110097ae5cf3a4680acbd0377b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043709"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Paradox 驅動程式的程式設計詳細資料
 本節包含下列主題：  

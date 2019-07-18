@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792421"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63066476"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
   大多數的情形下，您可以更新 [結果窗格](visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  

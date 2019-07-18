@@ -14,11 +14,11 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e59fa518c4682c77548cb5b408b4856e7096ed6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683789"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON 如何將 SQL Server 資料類型轉換為 JSON 資料類型 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "56033199"
 |位元類型|bit|布林值 (true 或 false)|  
 |日期和時間類型|date、datetime、datetime2、time、datetimeoffset|string|  
 |二進位類型|varbinary、binary、image、timestamp、rowversion|BASE64 編碼字串|  
-|CLR 類型|geometry、geography、 他 CLR 類型|不支援。 這些類型傳回錯誤。<br /><br /> 在 SELECT 陳述式中，使用 CAST 或 CONVERT，或使用 CLR 屬性或方法，將來源資料轉換成可以順利轉換成 JSON 類型的 SQL Server 資料類型。 例如，針對幾何類型使用 **STAsText()**，或針對任何 CLR 類型使用 **ToString()**。 之後 JSON 輸出值的類型會衍生自您在 SELECT 陳述式中套用的轉換傳回類型。|  
+|CLR 類型|geometry、geography、 他 CLR 類型|不支援。 這些類型傳回錯誤。<br /><br /> 在 SELECT 陳述式中，使用 CAST 或 CONVERT，或使用 CLR 屬性或方法，將來源資料轉換成可以順利轉換成 JSON 類型的 SQL Server 資料類型。 例如，針對幾何類型使用 **STAsText()** ，或針對任何 CLR 類型使用 **ToString()** 。 之後 JSON 輸出值的類型會衍生自您在 SELECT 陳述式中套用的轉換傳回類型。|  
 |其他類型|uniqueidentifier、money|string|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>深入了解 SQL Server 和 Azure SQL Database 中的 JSON  

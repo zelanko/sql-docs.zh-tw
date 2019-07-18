@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933268"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定哪些功能[支援](../../../ado/reference/ado-api/supports-method.md)方法應該先進行測試。  

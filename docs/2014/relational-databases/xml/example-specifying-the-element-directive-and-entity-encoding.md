@@ -1,5 +1,5 @@
 ---
-title: 範例指定 ELEMENT 指示詞及實體編碼 |Microsoft Docs
+title: 範例指定 ELEMENT 指示詞及實體編碼 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287243"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例指定 ELEMENT 指示詞及實體編碼
   此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  

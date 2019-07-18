@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62955841"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>複寫加密資料行中的資料 (SQL Server Management Studio)
   複寫讓您可以發行加密的資料行資料。 若要在訂閱者端解密及使用此資料，於發行者端用來加密資料的金鑰也必須存在訂閱者端。 複寫並不會提供用於傳輸加密金鑰的安全機制。 您必須以手動方式於訂閱者端重新建立加密金鑰。 本主題示範如何於發行者端加密資料行，並確定訂閱者端可使用加密金鑰。  
@@ -56,11 +56,11 @@ ms.locfileid: "54127168"
   
 4.  執行 [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) 關閉金鑰。  
   
-5.  發行包含加密資料行的資料表。 如需詳細資訊，請參閱 [Create a Publication](../publish/create-a-publication.md)。  
+5.  發行包含加密資料行的資料表。 如需詳細資訊，請參閱[建立發行集](../publish/create-a-publication.md)。  
   
 6.  訂閱發行集。 如需詳細資訊，請參閱[建立提取訂閱](../create-a-pull-subscription.md)或[建立發送訂閱](../create-a-push-subscription.md)。  
   
-7.  初始化訂閱。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+7.  初始化訂閱。 如需詳細資訊，請參閱 [建立和套用初始快照集](../create-and-apply-the-initial-snapshot.md)。  
   
 8.  在訂閱者端，使用與步驟 1 相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值來執行 [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) 。 您可以針對 ENCRYPTION BY 指定不同的值。  
   

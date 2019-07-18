@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923607"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 進行網際網路發佈
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)顯示存取搭配 ADO 的異質資料的特定範例。 雖然會專用於網際網路發佈提供者搭配使用這一節中的範例，示範的原則應該類似使用 ADO 與其他異質資料，例如電子郵件存放區提供者的提供者時。  

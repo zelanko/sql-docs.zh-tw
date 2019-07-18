@@ -1,5 +1,5 @@
 ---
-title: HelloData： 簡易 ADO 應用程式 |Microsoft Docs
+title: HelloData：簡易 ADO 應用程式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925132"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：簡易 ADO 應用程式
 這個簡單的應用程式會逐步引導每四個主要的 ADO 作業： 取得、 檢查、 編輯和更新資料。 這些作業將會對 Microsoft® SQL Server 隨附 Northwind 範例資料庫。 若要專注於 ADO 的基本概念，並防止程式碼雜亂，此範例中的錯誤處理非常少。  

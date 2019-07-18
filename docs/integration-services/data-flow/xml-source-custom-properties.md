@@ -11,14 +11,18 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1bd4c6866f7090a00567240350f1355f5c7f5e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d65cabf9e0dad9e6c3ee5824a59ce33815722042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725673"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML 來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是 XML 來源的自訂屬性。 所有屬性都是可讀寫的。  

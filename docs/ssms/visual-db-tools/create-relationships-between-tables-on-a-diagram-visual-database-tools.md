@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aedefdb9234279a3be93bcfb4705e227e0badebd
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 8e62bf6708674185c5afe9a0f527058e5075d9e0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590393"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690529"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "56590393"
   
 2.  將選取的資料行拖曳到關聯的資料表。  
   
-3.  會出現兩個對話方塊：[外部索引鍵關聯性] 和 [資料表與資料行]，而後者會顯示在前景中。  
+3.  會出現兩個對話方塊：[外部索引鍵關聯性]  和 [資料表與資料行]  ，而後者會顯示在前景中。  
   
-4.  [關聯性名稱] 具有系統提供的名稱，其格式為 FK_*localtable*\_*foreigntable*。 您可以變更這個值。  
+4.  [關聯性名稱]  具有系統提供的名稱，其格式為 FK_*localtable*\_*foreigntable*。 您可以變更這個值。  
   
-5.  確認 [主索引鍵資料表] 是否指定正確的資料表。  
+5.  確認 [主索引鍵資料表]  是否指定正確的資料表。  
   
 6.  方格會列出本地資料行及其對應的外部資料行。 您可以加入或移除資料表資料行，或變更對應。  
   
-7.  選擇 [確定]。  
+7.  選擇 [確定]  。  
   
-    [外部索引鍵關聯性] 對話方塊便會出現。 [選取的關聯性] 會顯示您所建立的關聯性。  
+    [外部索引鍵關聯性]  對話方塊便會出現。 [選取的關聯性]  會顯示您所建立的關聯性。  
   
 8.  變更方格中關聯性的屬性。  
   

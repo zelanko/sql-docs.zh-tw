@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c996ad6f-e790-40f4-a962-843422496149
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5d27a09715259bf6adf08cb9b9de1d01ffa228a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d778f53f2d82be88aa62489f49712048991b579f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909964"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (桌面資料庫驅動程式)
 **SQLProcedures**只會傳回這些程序有至少一個引數的資料列。 沒有引數的程序會被視為檢視。  

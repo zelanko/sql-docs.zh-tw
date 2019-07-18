@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907165"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型 (AccessToSQL)
 存取資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型。 當您轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您必須指定如何從存取的資料類型對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
@@ -86,7 +85,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
     1.  在 [類型對應] 窗格中，選取包含您想要移除的資料類型對應的類型對應清單中的資料列。  
   
-    2.  按一下 **[移除]**。  
+    2.  按一下 **[移除]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉程序的下一個步驟是[將 access 資料庫物件轉換成 SQL Server 物件](converting-access-database-objects-accesstosql.md)  

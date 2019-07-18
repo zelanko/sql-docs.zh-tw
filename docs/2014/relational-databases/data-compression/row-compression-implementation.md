@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873009"
 ---
 # <a name="row-compression-implementation"></a>資料列壓縮實作
   本主題摘要說明 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何實作資料列壓縮。 這個摘要提供協助您計畫資料所需之儲存空間的基本資訊。  

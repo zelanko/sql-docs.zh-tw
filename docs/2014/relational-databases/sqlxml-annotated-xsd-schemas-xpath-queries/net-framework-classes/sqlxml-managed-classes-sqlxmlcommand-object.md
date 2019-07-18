@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010740"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
   這是 SqlXmlCommand 物件的建構函式：  
@@ -53,7 +53,7 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>方法  
  TheSqlXmlCommand 物件支援數種方法，包括下列方法來執行命令：  
   
- void executenonquery （)  
+ void ExecuteNonQuery()  
  執行命令，但不會傳回任何東西。 如果您要執行非查詢命令 (也就是不會傳回任何東西的命令)，此方法相當實用。 例如，執行更新記錄但不會傳回任何東西的 Updategram 或 DiffGram。  
   
  Stream executestream （)  
@@ -67,10 +67,10 @@ public SqlXmlCommand(string cnString)
   
  TheSqlXmlCommand 物件也支援這些額外的方法：  
   
- SqlXmlParameter createparameter （)  
+ SqlXmlParameter CreateParameter()  
  建立 SqlXmlParameter 物件。 您可以設定的值*名稱*並*值*這個物件的參數。 如果您要將參數傳遞到命令，這個方法相當實用。 如需實用範例，請參閱 <<c0> [ 執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。</c0>  
   
- void clearparameters （)  
+ void ClearParameters()  
  清除針對給定命令物件建立的參數。 如果您要在相同的命令物件上執行多個查詢，這個方法相當實用。  
   
 ## <a name="properties"></a>屬性  
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  命令的文字。 此屬性對於指定您要執行之命令的文字相當實用。 如需實用範例，請參閱 <<c0> [ 執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。</c0>  
   
  CommandStream  
- 命令資料流。 如果您要從檔案 (例如，XML 範本) 執行命令，此屬性相當實用。 當您只使用 CommandStream， **「 範本 」**， **"UpdateGram"** 並 **"DiffGram"CommandType**支援值。 如需實用範例，請參閱 <<c0> [ 利用 CommandStream 屬性執行範本檔案](executing-template-files-by-using-the-commandstream-property.md)。  
+ 命令資料流。 如果您要從檔案 (例如，XML 範本) 執行命令，此屬性相當實用。 當您只使用 CommandStream， **「 範本 」** ， **"UpdateGram"** 並 **"DiffGram"CommandType**支援值。 如需實用範例，請參閱 <<c0> [ 利用 CommandStream 屬性執行範本檔案](executing-template-files-by-using-the-commandstream-property.md)。  
   
  CommandType  
  識別命令的類型。 此屬性對於指定您要執行之命令的類型相當實用。 下表中的值會決定命令的類型。 如需實用範例，請參閱 <<c0> [ 存取.NET 環境中的 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  

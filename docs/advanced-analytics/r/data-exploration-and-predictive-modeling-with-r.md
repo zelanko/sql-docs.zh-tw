@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: de293cd7caf481c51e4195a82ac036526c477739
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f83dc9fb698a57280f71e345f05e90ef3916bd95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962677"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>資料探索和使用 SQL Server 中 R 的預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "58511395"
 
 **RevoScaleR** 封裝包含某些熱門 R 函數的實作，這些函數經過重新設計，而得以提供平行處理原則與規模。 如需詳細資訊，請參閱 <<c0> [ 分散式運算使用 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
 
-RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這表示對於整個解決方案或一個函數，您都可以指定使用裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦資源來執行計算，而不使用您的本機工作站。 這樣做有多項優點：您可以避免不必要的資料移動，也可以運用伺服器電腦上更多的計算資源。
+RevoScaleR 封裝也支援變更 *「執行內容」* (execution context)。 這表示對於整個解決方案或一個函數，您都可以指定使用裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦資源來執行計算，而不使用您的本機工作站。 這樣做有多項優點：您可以避免不必要的資料移動，也可以運用伺服器電腦上更多的計算資源。
 
 ## <a name="r-environment-and-packages"></a>R 環境和封裝
 
@@ -80,9 +79,9 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
 
 + **RxSqlServerData** 是 RevoScaleR 封裝中提供的函數，可改進 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]隨附的可調式新封裝和 R 函數來克服這些挑戰。
   
-     您可以在 R 程式碼中使用此函數來定義 *「資料來源」*(data source)。 資料來源物件會指定資料所在的伺服器和資料表，並管理從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讀取資料及寫入其中的工作。
+     您可以在 R 程式碼中使用此函數來定義 *「資料來源」* (data source)。 資料來源物件會指定資料所在的伺服器和資料表，並管理從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讀取資料及寫入其中的工作。
   
--   **RxInSqlServer** 可用來指定「計算內容」。  也就是說，您可以指定要在您的本機工作站還是裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上執行 R 程式碼。  如需詳細資訊，請參閱 < [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+-   **RxInSqlServer** 可用來指定「計算內容」  。  也就是說，您可以指定要在您的本機工作站還是裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上執行 R 程式碼。  如需詳細資訊，請參閱 < [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
   
      當您設定計算內容時，只會影響到支援遠端執行內容的計算，也就是 RevoScaleR 套件及相關函數所提供的 R 作業。 一般而言，以標準 CRAN 套件為基礎的 R 方案無法在遠端計算內容中執行，但如果是由 T-SQL 啟動，則可以在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 電腦上執行。 不過，您可以使用 `rxExec` 函數來呼叫個別的 R 執行階段，然後從遠端在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中執行它們。
 

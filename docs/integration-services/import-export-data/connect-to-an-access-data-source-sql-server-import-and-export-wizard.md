@@ -10,14 +10,18 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b211885f68be72dbcb03f959aaa1f79307658805
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 790ffc531244e3a1b757b8809e7ca09e737e87b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723867"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Access** 資料來源。
 
 下列螢幕擷取畫面顯示 Microsoft Access 資料庫的連接範例。 在此範例中，您不需要輸入使用者名稱和密碼，因為目標資料庫不會使用工作群組資訊檔案。

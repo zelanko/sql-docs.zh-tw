@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c39d19807cfe01ca9c96b47de020abb9227c43a0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4092de07d19d4d33bd56025076e606269c2b04e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962159"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R （SQL Server 和 RevoScaleR 教學課程） 的 SQL Server 資料視覺化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "58513075"
 到目前為止，所做的修改只會影響資料來源物件在 R;沒有新資料就已寫入至資料庫資料表尚未。 不過，您可以使用 sumOut 變數中擷取的資料建立視覺效果和摘要。 
 
 > [!TIP]
-> 如果您忘記您使用哪種計算內容，請執行**rxGetComputeContext()**。 傳回值的 「 RxLocalSeq 計算內容 」 表示您在本機計算內容執行。
+> 如果您忘記您使用哪種計算內容，請執行**rxGetComputeContext()** 。 傳回值的 「 RxLocalSeq 計算內容 」 表示您在本機計算內容執行。
 
 ## <a name="visualize-data-using-rxhistogram"></a>使用 rxHistogram 將資料視覺化
 
@@ -123,7 +122,7 @@ ms.locfileid: "58513075"
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    **RxCube**函式包含選擇性的引數*returnDataFrame* = **TRUE**，可用來將結果直接轉換成資料框架。 例如：
+    **RxCube**函式包含選擇性的引數*returnDataFrame* = **TRUE**，可用來將結果直接轉換成資料框架。 例如:
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

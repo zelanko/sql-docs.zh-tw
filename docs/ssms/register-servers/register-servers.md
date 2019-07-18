@@ -16,15 +16,15 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ae686101049c554a10813da69d8f3d4382110ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 28a49239a5e53eb25b6b9238f7ed4fde2aafa63c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805946"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683977"
 ---
 # <a name="register-servers"></a>註冊伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47805946"
   
 -   建立伺服器群組。  
   
--   在有別於 [伺服器名稱] 清單的 [已註冊的伺服器名稱] 方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
+-   在有別於 [伺服器名稱]  清單的 [已註冊的伺服器名稱]  方塊中提供一個值，以提供已註冊的伺服器之使用者易讀的名稱。  
   
 -   提供已註冊的伺服器的詳細說明。  
   

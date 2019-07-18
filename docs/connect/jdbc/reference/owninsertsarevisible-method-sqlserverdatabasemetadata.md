@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70c1e91c37954414b199e3edd15393a055ab5d47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 851074a7b9eb930dcb2f94d3e45a1aa055e8c606
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727886"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789067"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>ownInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

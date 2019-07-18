@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 676bbf12efa9b8640ef244f6dd57325b047d79ba
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108856"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
-  使用報表管理員或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。 如果您擁有一個設定成使用 SharePoint 整合模式的報表伺服器，而且您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來更新報表伺服器 Web 服務 URL，也必須在 SharePoint 管理中心內更新此 URL。  
+  使用報表管理員或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器]  選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。 如果您擁有一個設定成使用 SharePoint 整合模式的報表伺服器，而且您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來更新報表伺服器 Web 服務 URL，也必須在 SharePoint 管理中心內更新此 URL。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具可設定 URL， URL 的所有部分都會定義在這個工具中。 與舊版不同的是，Internet Information Services (IIS) 網站不再提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 應用程式的存取權。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "56018919"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到本機報表伺服器執行個體。  
   
-2.  按一下 **[Web 服務 URL]**。  
+2.  按一下 **[Web 服務 URL]** 。  
   
 3.  指定虛擬目錄。 此虛擬目錄名稱會識別哪一個應用程式將接收要求。 由於 IP 位址和通訊埠可由多個應用程式共用，所以此虛擬目錄名稱會指定哪一個應用程式要接收要求。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "56018919"
   
      如果是報表伺服器 Web 服務，預設虛擬目錄名稱會是 **ReportServer**。  
   
-4.  指定可唯一識別網路上之報表伺服器電腦的 IP 位址。 如果您想要指定主機標頭，或針對相同的應用程式執行個體定義其他 URL，您必須按一下 **[進階]**。 如需有關如何針對 URL 設定進階屬性的指示，請參閱本主題稍後的指示。 否則，請使用 **[Web 服務 URL]** 頁面，從下列值當中選取：  
+4.  指定可唯一識別網路上之報表伺服器電腦的 IP 位址。 如果您想要指定主機標頭，或針對相同的應用程式執行個體定義其他 URL，您必須按一下 **[進階]** 。 如需有關如何針對 URL 設定進階屬性的指示，請參閱本主題稍後的指示。 否則，請使用 **[Web 服務 URL]** 頁面，從下列值當中選取：  
   
     -   **[全部指派]** 會指定指派給電腦的任何一個 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "56018919"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。  
   
-2.  按一下 **[報表管理員 URL]**。  
+2.  按一下 **[報表管理員 URL]** 。  
   
 3.  指定虛擬目錄。 報表管理員會接聽與報表伺服器 Web 服務相同的 IP 位址和通訊埠。 如果您設定報表管理員指向不同的報表伺服器 Web 服務，您必須修改 RSReportServer.config 檔案中的報表管理員 URL 設定。 如需相關指示，請參閱 <<c0> [ 設定報表管理員&#40;原生模式&#41;](../report-server/configure-web-portal.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。</c0>  
   
@@ -125,15 +124,15 @@ ms.locfileid: "56018919"
   
 #### <a name="to-set-advanced-properties-on-a-url"></a>設定 URL 的進階屬性  
   
-1.  在 **[Web 服務 URL]** 或 **[報表管理員 URL]** 頁面上，按一下 **[進階]**。  
+1.  在 **[Web 服務 URL]** 或 **[報表管理員 URL]** 頁面上，按一下 **[進階]** 。  
   
-2.  按一下 **[加入]**。  
+2.  按一下 **[加入]** 。  
   
 3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括 http://www 在內。  
   
 4.  指定通訊埠。 如果您指定自訂通訊埠，應用程式的 URL 一定要包含通訊埠編號。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
 6.  開啟瀏覽器視窗，並輸入此 URL 加以測試。  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a22148e21a8a4efd451bb7dac2a9a05ea2873229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05007c8145cc9c5b01b5513a34a5dcbcdfc9fe80
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763703"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +46,8 @@ public java.sql.Clob getClob(java.lang.String colName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- GetClob 方法 java.sql.ResultSet 介面中所指定這個 getClob 方法。  
+## <a name="remarks"></a>備註  
+ 這個 getClob 方法是由 java.sql.ResultSet 介面中的 getClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   

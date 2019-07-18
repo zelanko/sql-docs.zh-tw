@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f91fcb7033dfe2944e863d67a6c6bf53434e6db
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380786"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831921"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>執行 SQL Server Agent 作業工作
   「執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業」工作會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服務，可執行 SQL Server 執行個體中所定義的作業。 您可以建立執行 Transact-SQL 陳述式和 ActiveX 指令碼的作業、執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和「複寫維護」工作，或執行封裝。 您也可以設定作業來監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及引發警示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業通常可用來自動化重複執行的工作。 如需詳細資訊，請參閱 [實作作業](../../ssms/agent/implement-jobs.md)。  

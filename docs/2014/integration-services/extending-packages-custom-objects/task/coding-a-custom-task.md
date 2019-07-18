@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896104"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -57,7 +57,7 @@ ms.locfileid: "58386666"
 #### <a name="user-interface-considerations-during-validation"></a>在驗證期間的使用者介面考量  
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 包含 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面以做為 `Validate` 方法的參數。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面包含工作向執行階段引擎引發事件所呼叫的方法。 當警告或是錯誤狀況在驗證期間發生時，會呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法。 這兩個警告方法都需要相同的參數，包含錯誤碼、來源元件、描述、說明檔以及說明內容資訊。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用此資訊在設計介面上顯示視覺提示。 設計師提供的視覺提示包括出現在設計師介面上工作旁邊的驚嘆號圖示。 此視覺提示提醒使用者工作需要其他組態，執行才可以繼續。  
   
- 驚嘆號圖示也會顯示包含錯誤訊息的工具提示。 工作會在事件的描述參數中提供錯誤訊息。 錯誤訊息也會顯示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [工作清單] 窗格中，這個窗格為使用者提供檢視所有驗證錯誤的集中位置。  
+ 驚嘆號圖示也會顯示包含錯誤訊息的工具提示。 工作會在事件的描述參數中提供錯誤訊息。 錯誤訊息也會顯示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [工作清單]  窗格中，這個窗格為使用者提供檢視所有驗證錯誤的集中位置。  
   
 #### <a name="validation-example"></a>驗證範例  
  下列程式碼範例顯示使用 `UserName` 屬性的工作。 已指定此屬性為成功驗證所需。 如果未設定此屬性，工作會公佈錯誤，並從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 列舉傳回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>。 `Validate` 方法會包裝在 Try/Catch 區塊中，而且會在發生例外狀況時失敗。  

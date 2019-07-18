@@ -1,5 +1,5 @@
 ---
-title: '集合 （Visual c + + 語法索引與 #import） |Microsoft Docs'
+title: '集合 (VisualC++含 #import 語法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919890"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>集合 （Visual c + + 語法索引與 #import）
+# <a name="collections-visual-c-syntax-index-with-import"></a>集合 (VisualC++含 #import 語法索引)
 您最好知道集合繼承某些常用的方法和屬性。  
   
  所有集合都繼承**計數**屬性並**重新整理**方法，以及所有集合加入**項目**屬性。 **錯誤**集合加入**清除**方法。 **參數**集合繼承**附加**並**刪除**方法，而**欄位**集合加入**Append**，**刪除**，和**更新**方法。  

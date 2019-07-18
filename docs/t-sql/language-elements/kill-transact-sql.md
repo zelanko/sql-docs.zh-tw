@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982141"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +123,7 @@ KILL 命令可用來解決不確定的分散式交易。 這些交易是未解�
 
 您可以重複使用不含 WITH STATUSONLY 選項的相同 KILL _session ID_|_UOW_ 陳述式來取得相同狀態報告。 不過，不建議您透過此方式重複該選項。 如果復原已完成，且在執行新的 KILL 陳述式之前已將工作階段識別碼重新指派給新工作，則如果您重複 KILL _session ID_ 陳述式，新處理序可能會停止。 指定 WITH STATUSONLY 以避免新處理序停止。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 需要 ALTER ANY CONNECTION 權限。 ALTER ANY CONNECTION 隨附在系統管理員 (sysadmin) 或處理序管理員 (processadmin) 固定伺服器角色的成員資格中。  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：** 需要 KILL DATABASE CONNECTION 權限。 伺服器層級主體登入具備 KILL DATABASE CONNECTION。  

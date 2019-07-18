@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+manager: jroth
+ms.openlocfilehash: 65d7c56f399a9bd8ba6fb4d68311fe7823fa2eab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794530"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58872308"
 
 #### <a name="try-it-out"></a>現在就試試看
 
-- 若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往 **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![下載](../analysis-services/media/download.png "下載")。
+- 若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往 **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![下載](../analysis-services/media/download.png "下載")。
 
 - 有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。
 
@@ -41,7 +41,7 @@ ms.locfileid: "58872308"
 > 如需目前的版本資訊，請參閱 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)。
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` 語法現在適用於[程序](../t-sql/statements/create-procedure-transact-sql.md)、[檢視](../t-sql/statements/create-view-transact-sql.md)、[函式](../t-sql/statements/create-function-transact-sql.md)和[觸發程序](../t-sql/statements/create-trigger-transact-sql.md)。
+-  [程序](../t-sql/statements/create-procedure-transact-sql.md)、[檢視](../t-sql/statements/create-view-transact-sql.md)、[函式](../t-sql/statements/create-function-transact-sql.md)和[觸發程序](../t-sql/statements/create-trigger-transact-sql.md)現在可以使用 `CREATE OR ALTER <object>` 語法。
 -   已新增更一般的查詢提示模型支援︰ `OPTION (USE HINT('<hint1>', '<hint2>'))`。 如需詳細資訊，請參閱 [查詢提示 (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)。  
 - [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) DMV 已新增至清單提示。  
 - 已新增 [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV 來傳回 showplan XML 暫時性統計資料。  
@@ -176,7 +176,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 
 如需整體資訊，請參閱：
 
-- [記憶體中的 OLTP 不支援 Transact-SQL 建構](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
+- [記憶體內部 OLTP 不支援的 Transact-SQL 建構](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
 - [記憶體內部 OLTP 不支援的 SQL Server 功能](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
@@ -202,7 +202,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 
 - 支援使用暫時系統版本設定功能搭配記憶體內部 OLTP。 如需詳細資訊，請參閱[系統版本設定時態表與記憶體最佳化資料表](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 
-- 對記憶體內部 OLTP 工作負載中原生編譯程式碼的查詢存放區支援。 如需詳細資訊，請參閱[使用含有記憶體內部 OLTP 的查詢存放區](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)。
+- 對記憶體內部 OLTP 工作負載中原生編譯程式碼的查詢存放區支援。 如需詳細資訊，請參閱 [使用含有記憶體內部 OLTP 的查詢存放區](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)。
 
 - [記憶體最佳化資料表中的資料列層級安全性](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
@@ -219,7 +219,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 ### <a name="trace-flag-4199"></a>追蹤旗標 4199
 一般而言，您不需要在 SQL Server 2016 中使用追蹤旗標 4199，因為在 SQL Server 2016 中的最新相容性層級 (130) 下已無條件地啟用此追蹤旗標所控制的大部分查詢最佳化工具行為。
 ### <a name="new-referential-integrity-operator"></a>新的參考完整性運算子
-一個資料表最多可以參考其他 253 個資料表和資料行作為外部索引鍵 (連出參考)。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 將可參考單一資料表中資料行的其他資料表和資料行數目限制 (傳入的參考) 從 253 提高至 10,000。 相關限制，請參閱 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。 引進的新參考完整性運算子 (相容性層級 130) 會就地執行參考完整性檢查。 對有大量內送參考的資料表，這會改善 UPDATE 和 DELETE 作業的整體效能，讓它可容納大量的傳入參考。 如需詳細資訊，請參閱 [Query Optimizer Additions in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/23/query-optimizer-additions-in-sql-server/)(SQL Server 2016 的查詢最佳化工具新增項目)。
+一個資料表最多可以參考其他 253 個資料表和資料行作為外部索引鍵 (連出參考)。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 將單一資料表中資料行可以參考的其他資料表和資料行數目限制 (連入參考) 從 253 提高至 10,000。 相關限制，請參閱 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。 引進的新參考完整性運算子 (相容性層級 130) 會就地執行參考完整性檢查。 對有大量內送參考的資料表，這會改善 UPDATE 和 DELETE 作業的整體效能，讓它可容納大量的傳入參考。 如需詳細資訊，請參閱 [Query Optimizer Additions in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/23/query-optimizer-additions-in-sql-server/)(SQL Server 2016 的查詢最佳化工具新增項目)。
 ### <a name="parallel-update-of-sampled-statistics"></a>取樣統計資料的平行更新
 取樣資料建立統計資料現在可以平行方式完成 (相容性層級 130)，改善統計資料集合的效能。 如需詳細資訊，請參閱[更新統計資料](../t-sql/statements/update-statistics-transact-sql.md)。
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>統計資料更新的次線性閾值
@@ -361,7 +361,7 @@ SQL Server 2016 新增對匯入和匯出 JSON 以及使用 JSON 字串的內建�
 如需整體資訊，請參閱：
 
 - [原生編譯的 T-SQL 模組支援的功能](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [更改原生編譯的 T-SQL 模組](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+- [改變原生編譯的 T-SQL 模組](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 ## <a name="system-view-enhancements"></a>系統檢視表增強功能
 - 有兩個新檢視支援資料列層級安全性。 如需詳細資訊，請參閱 [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) 和 [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)。
@@ -414,7 +414,7 @@ SQL Server 2016 Standard Edition 現在支援 AlwaysOn 基本可用性群組。 
 
  支援自動容錯移轉的複本數目已從 2 增加到 3。
 
- AlwaysOn 容錯移轉叢集現在支援群組受管理的服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/) (在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
+ AlwaysOn 容錯移轉叢集現在支援群組受管理的服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
 
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 在 Windows Server 2016 上支援分散式交易和 DTC。 如需詳細資訊，請參閱[分散式交易支援](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)。
 
@@ -444,11 +444,11 @@ AlwaysOn 現在支援加密的資料庫。 當您建立新的可用性群組時�
 ### <a name="upgrade-advisor"></a>Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview 是獨立的工具，可讓舊版使用者對其 SQL Server 資料庫執行一組升級規則，以指出重大行為變更和已被取代的功能，以及協助新功能 (例如 Stretch Database) 採用。
 
- 您可以在 [這裡](https://www.microsoft.com/download/details.aspx?id=48119) 下載 Upgrade Advisor Preview，或使用 Web Platform Installer 進行安裝。
+ 您可以在 [這裡](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) 下載 Upgrade Advisor Preview，或使用 Web Platform Installer 進行安裝。
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md) 
  
-[使用 SSMS 安裝 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[安裝 SQL Server 管理工具與 SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

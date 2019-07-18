@@ -12,16 +12,16 @@ helpviewer_keywords:
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd6e43157f8b822f62b915a5f09079ee8368cf25
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6ae2115d9e7207c5c2c448f04e77040647ae5c72
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699836"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685111"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>在目標伺服器上設定加密選項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51699836"
 
 如果您無法在主要伺服器與部分或全部的目標伺服器之間，使用安全通訊端層 (SSL) 加密通訊的憑證，但是您想要加密它們之間的通道，請將目標伺服器設定為使用所需的安全性層級。  
   
-若要設定特定主要伺服器/目標伺服器通訊通道所需的適當安全性層級，請在目標伺服器上將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** 設定為下列值之一。 \<*instance_name*> 的值是 **MSSQL.**_n_。 例如， **MSSQL.1** 或 **MSSQL.3**。  
+若要設定特定主要伺服器/目標伺服器通訊通道所需的適當安全性層級，請在目標伺服器上將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** 設定為下列值之一。 \<*instance_name*> 的值是 **MSSQL.** _n_。 例如， **MSSQL.1** 或 **MSSQL.3**。  
   
 |ReplTest1|Description|  
 |---------|---------------|  
@@ -45,5 +45,5 @@ ms.locfileid: "51699836"
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
+[操作說明：啟用資料庫引擎的加密連線 (SQL Server 組態管理員)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162701"
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View-設定報表的預設欄位集
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "53072055"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，按一下您要設定預設欄位清單的資料表 (索引標籤)。  
   
-2.  在 [屬性] 視窗中，於 [預設欄位集] 屬性上按一下 [按一下可編輯]。  
+2.  在 [屬性]  視窗中，於 [預設欄位集]  屬性上按一下 [按一下可編輯]  。  
   
 3.  在 [預設欄位集] 對話方塊中，選取一個或多個欄位。 您可以選擇資料表中的任何欄位，包括量值在內。 按住 SHIFT 鍵選取範圍，或按 CTRL 鍵選取個別欄位。  
   
-4.  按一下 [加入] 將它們加入預設欄位集。  
+4.  按一下 [加入]  將它們加入預設欄位集。  
   
 5.  使用向上箭號與向下箭號按鈕，指定欄位清單中的順序。 欄位會依欄位集定義的順序加入至報告。  
   

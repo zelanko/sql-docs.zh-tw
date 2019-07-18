@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d05e69dd4a094e3f361098583adf3aed7899a018
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011570"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
   當必須從某個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝將資訊複製到其他安裝時，Unicode 原生格式很有用。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
   
- 建議使用 Unicode 原生格式，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充字元或 DBCS 字元的資料檔，大量傳送資料。 若是非字元資料，Unicode 原生格式會使用原生 (資料庫) 資料類型。 若是字元資料，例如`char`， `nchar`， `varchar`， `nvarchar`， `text`， `varchar(max)`， `nvarchar(max)`，以及`ntext`，Unicode 原生格式會使用 Unicode 字元資料格式。  
+ 建議使用 Unicode 原生格式，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充字元或 DBCS 字元的資料檔，大量傳送資料。 若是非字元資料，Unicode 原生格式會使用原生 (資料庫) 資料類型。 若是字元資料，如 `char`、`nchar`、`varchar`、`nvarchar`、`text`、`varchar(max)`、`nvarchar(max)` 及 `ntext`，Unicode 原生格式會使用 Unicode 字元資料格式。  
   
- 以 SQLVARIANT 儲存在 Unicode 原生格式資料檔的 `sql_variant` 資料，會以它在原生格式資料檔的相同方式操作，不同處是 `char` 及 `varchar` 值會轉換為 `nchar` 及 `nvarchar`，這會讓受影響資料行所需的儲存體數量加倍。 原始中繼資料會保留，而這些值會轉換回其原始`char`和`varchar`資料型別時大量匯入資料表資料行。  
+ 以 SQLVARIANT 儲存在 Unicode 原生格式資料檔的 `sql_variant` 資料，會以它在原生格式資料檔的相同方式操作，不同處是 `char` 及 `varchar` 值會轉換為 `nchar` 及 `nvarchar`，這會讓受影響資料行所需的儲存體數量加倍。 原始中繼資料會加以保留，而且在大量匯入資料表資料行時，這些值會轉換回它們的原始 `char` 及 `varchar` 資料類型。  
   
 ## <a name="command-options-for-unicode-native-format"></a>Unicode 原生格式的命令選項  
  您可以將 Unicode 原生格式資料匯入資料表，方法是使用 **bcp**、BULK INSERT 或 INSERT ...SELECT \* FROM OPENROWSET(BULK...)。若是 **bcp** 命令或 BULK INSERT 陳述式，您可以在命令列上指定資料格式。 針對 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  

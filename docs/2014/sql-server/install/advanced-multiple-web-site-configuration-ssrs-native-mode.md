@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
@@ -13,12 +12,12 @@ ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096833"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
   使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
@@ -27,11 +26,11 @@ ms.locfileid: "48185368"
   
  如果您想要設定不同的方式來存取報表伺服器，建立多個 URL 將會非常實用。 例如，透過內部網路和外部網路連接的報表伺服器存取，通常需要對每一種連接類型都有不同的 URL。  
   
- 若要開啟 [**進階多重網站組態**] 對話方塊中，按一下**進階**上**Web 服務 URL**或**報表管理員 URL**頁面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager。 當 **[進階多重網站組態]** 對話方塊開啟之後，您可以按一下 **[加入]** 或 **[編輯]** ，以定義新的 URL 或是修改或刪除現有的 URL。  
+ 若要開啟 **[進階多重網站組態]** 對話方塊，請在 **組態管理員的** [Web 服務 URL] **或** [報表管理員 URL] **頁面上按一下** [進階] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 當 **[進階多重網站組態]** 對話方塊開啟之後，您可以按一下 **[加入]** 或 **[編輯]** ，以定義新的 URL 或是修改或刪除現有的 URL。  
   
  按一下 **[確定]** 儲存您的變更。 如果您加入或移除 URL，然後沒有先按一下 **[確定]** 就關閉此對話方塊，您的變更將會遺失。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **IP 位址**  
  識別 TCP/IP 網路上的報表伺服器電腦。 有效值包括：  
   
@@ -46,12 +45,12 @@ ms.locfileid: "48185368"
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
  **通訊埠**  
- 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如 http://localhost:8181/reports)。  
+ 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如 http://localhost:8181/reports) 。  
   
  **主機標頭**  
  如果您已經在網域名稱伺服器上定義解析為電腦的主機標頭，您可以在設定報表伺服器存取的 URL 中指定該主機標頭。  
   
- 主機標頭是可讓多個網站共用單一 IP 位址和通訊埠的唯一名稱。 主機標頭名稱要比 IP 位址和通訊埠編號更容易記得和輸入。 主機標頭名稱的一個範例為 www.adventure-works.com。  
+ 主機標頭是可讓多個網站共用單一 IP 位址和通訊埠的唯一名稱。 主機標頭名稱要比 IP 位址和通訊埠編號更容易記得和輸入。 主機標頭名稱的一個範例為 www.adventure-works.com 。  
   
  **SSL 通訊埠**  
  為 SSL 連接指定通訊埠。 SSL 的預設通訊埠是 443。  
@@ -76,7 +75,7 @@ ms.locfileid: "48185368"
  從清單中清除 URL 項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員&#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b3971c156dc20d7f24f73009f1920cf10a06631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e532985c10c5fd53e4f041a2c72b675efc9d8794
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65945072"
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 可被授與資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫者必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函數。
   
 '*resource_name*'  
-用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。 *resource_name* 是沒有預設值的 **nvarchar(255)**。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
+用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。 *resource_name* 是沒有預設值的 **nvarchar(255)** 。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 '*lock_owner*'  
-為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)** ，而且此值可以是**交易** (預設值) 或**工作階段**。
   
 ## <a name="return-types"></a>傳回型別
 **nvarchar(32)**

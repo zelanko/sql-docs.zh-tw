@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 993f45dfda53e3b13fd4069017d6e25e42618e77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941827"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

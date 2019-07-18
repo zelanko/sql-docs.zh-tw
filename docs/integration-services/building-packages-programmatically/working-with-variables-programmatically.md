@@ -23,14 +23,18 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d46d8b70e22422b821190db5717b0c22062ea75d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13543306533afaf22bbfd12a283d6a6a3e8bdef1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729254"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   變數是在封裝、容器、工作及事件處理常式中動態設定值和控制處理序的方式。 優先順序條件約束也可以使用變數，以控制資料流向不同工作的方向。 變數有各種不同的用途：  
   
 -   在執行階段更新封裝的屬性。  

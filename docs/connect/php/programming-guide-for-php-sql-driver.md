@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 程式設計指南 |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 的程式設計指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780995"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47776496"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[連線到伺服器](../../connect/php/connecting-to-the-server.md)|說明用來連接到 SQL Server 的選項和程序。|  
 |[比較執行函式](../../connect/php/comparing-execution-functions.md)|藉由查看每個函數不同的使用案例，來比較用以執行查詢的函數。 具體來說，這份文件會比較執行單一查詢和執行備妥的查詢多次有何不同。|  

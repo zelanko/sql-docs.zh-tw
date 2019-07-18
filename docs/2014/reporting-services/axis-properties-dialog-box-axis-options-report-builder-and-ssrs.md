@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb65c421d1e79a6bdd625ad627aca841dbc410bc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109954"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>軸屬性對話方塊、軸選項 (報表產生器及 SSRS)
   選取 **軸選項**上**水平**或是**垂直軸屬性**對話方塊來定義圖表之指定軸的外觀。 在舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，圖表預設會顯示 X 軸上的所有標籤。 不過，在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，圖表會略過標籤，以便產生較清晰的圖表影像並避免標籤互相衝突。 如需詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **啟用刻度斷層**  
  選擇此選項讓圖表在必要時，繪製刻度斷層。 啟用此選項時，圖表會先自動計算資料集的高低點之間是否有足夠的差距，然後才繪製刻度斷層。  
   
@@ -55,10 +54,10 @@ ms.locfileid: "56286497"
  針對軸標籤之間的間隔輸入運算式或值。 例如，輸入 1，即可顯示軸上的每個類別目錄標籤。 輸入 2，即可每隔一個類別目錄標籤進行顯示。 如果忽略此值，系統就會自動根據資料集的值計算標籤。  
   
  **間隔類型**  
- 輸入運算式或值當做指定之間隔的間隔類型。 例如，如果您希望間隔為兩天，您要將間隔指定為 [2]，並將間隔類型指定為 [天]。  
+ 輸入運算式或值當做指定之間隔的間隔類型。 例如，如果您希望間隔為兩天，您要將間隔指定為 [2]  ，並將間隔類型指定為 [天]  。  
   
  **側邊界**  
- 輸入運算式或選取值，即可在圖表元素和圖表側邊之間加入或移除邊界。 如果此選項設定為 [自動]，則會加入側邊界。  
+ 輸入運算式或選取值，即可在圖表元素和圖表側邊之間加入或移除邊界。 如果此選項設定為 [自動]  ，則會加入側邊界。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

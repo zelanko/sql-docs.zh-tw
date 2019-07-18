@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcf999e47189ee55a97f954d9c0e31aaf3176985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ea12e36463212117353284fb0543e00af8f2a1ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774089"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getSQLXML 方法是由 java.sql.ResultSet 介面中的 getSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

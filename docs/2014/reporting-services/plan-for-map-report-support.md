@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293917"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108074"
 ---
 # <a name="plan-for-map-report-support"></a>對應報表支援規劃
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支援使用空間資料來源的地圖報表。 空間資料可以來自 SQL Server 資料庫、ESRI 形狀檔，或是隨著 Reporting Services 或報表產生器一起安裝的地圖庫。 地圖也可以顯示 Bing 地圖底圖的背景。 報表作者可以建立報表，做為動態，在執行階段擷取或為 static 並內嵌在報表定義中指定空間資料或 Bing 地圖底圖。  
@@ -51,6 +50,6 @@ ms.locfileid: "56293917"
  如需詳細資訊， [Maps&#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
@@ -17,12 +16,12 @@ ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084714"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
   資料採礦程序的最後一個步驟就是將模型部署到實際執行環境。 部署作業非常重要，因為可將模型提供給使用者，好讓您可以執行以下任何工作：  
@@ -51,14 +50,14 @@ ms.locfileid: "48087638"
 ##  <a name="bkmk_Reqs"></a> 部署資料採礦方案的需求  
  部署方案的目標 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體必須在支援多維度物件和資料採礦物件的模式下執行；也就是說，您不能將資料採礦物件部署到裝載表格式模型或 PowerPivot 資料的執行個體。  
   
- 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案] 範本。  
+ 因此，當您在 Visual Studio 中建立資料採礦方案時，請務必使用 [Analysis Services 多維度和資料採礦專案]  範本。  
   
  當您部署方案時，用於資料採礦的物件會在指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中建立 (位於與方案檔同名的資料庫中)。  
   
 ###  <a name="bkmk_RelationalSltn"></a> 部署關聯式方案  
- 當您部署關聯式資料採礦方案時，將會在新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中建立必要的資料採礦物件，而且預設會處理這些物件。 您可以使用 [處理選項] 組態屬性來變更處理選項。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+ 當您部署關聯式資料採礦方案時，將會在新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中建立必要的資料採礦物件，而且預設會處理這些物件。 您可以使用 [處理選項]  組態屬性來變更處理選項。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
- 根據預設，每次只會部署累加變更。 換句話說，您可以修改採礦模型，而且當您重新部署專案時，只會更新該採礦模型。 但是，如果您有多個用戶端正在編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，這可能會導致錯誤發生。 若要變更預設部署模式，好讓您部署方案時重新整理整個資料庫，請變更 [部署模式] 屬性  
+ 根據預設，每次只會部署累加變更。 換句話說，您可以修改採礦模型，而且當您重新部署專案時，只會更新該採礦模型。 但是，如果您有多個用戶端正在編輯 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，這可能會導致錯誤發生。 若要變更預設部署模式，好讓您部署方案時重新整理整個資料庫，請變更 [部署模式]  屬性  
   
  在關聯式資料採礦方案中，必須部署的物件只有資料來源定義、任何已使用的資料來源檢視、採礦結構，以及所有相依的採礦模型。  
   
@@ -78,13 +77,13 @@ ms.locfileid: "48087638"
   
  當模型使用 Cube 當做資料來源時，請參考本主題，以取得有關如何移動模型及其支援 Cube 資料的詳細資訊。  
   
- [部署 Analysis Services 專案&#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  提供有關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署的一般資訊，並描述可當作專案組態之一部分設定的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型物件處理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [資料採礦查詢介面](data-mining-query-tools.md)   
- [處理需求和考量&#40;資料採礦&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 (資料採礦)](processing-requirements-and-considerations-data-mining.md)  
   
   

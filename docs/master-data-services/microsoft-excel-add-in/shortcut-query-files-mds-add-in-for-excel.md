@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15796a0783bd181e95df725de39f10802c5ed089
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 3028682669ae1a7e33cb85847fbf6e9456c11d42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074369"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
 
@@ -41,7 +40,7 @@ ms.locfileid: "52411395"
 ## <a name="queryopener-application"></a>QueryOpener 應用程式  
  所有安裝 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 的使用者都已安裝稱為 QueryOpener 的應用程式。 此應用程式是用來在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中開啟捷徑查詢檔案。 如果您按兩下捷徑查詢檔案，便會自動使用此應用程式在增益集中開啟檔案。  
   
- 當您使用這個應用程式開啟捷徑查詢檔案時，系統會提示您讓連線成為「安全」連線，這表示您信任這個位置的內容。 (您可以在提示視窗中選取 [Always allow connection to this address (一律允許連接到這個地址)] 來保障連線安全。)每當您將連接標示為安全時，它就會加入至清單中。 如果您想要清除此清單，請開啟 **[設定]** 對話方塊，並按一下 **[加入至安全清單的伺服器]** 區段中的 **[全部清除]**。  
+ 當您使用這個應用程式開啟捷徑查詢檔案時，系統會提示您讓連線成為「安全」連線，這表示您信任這個位置的內容。 (您可以在提示視窗中選取 [Always allow connection to this address (一律允許連接到這個地址)]  來保障連線安全。)每當您將連接標示為安全時，它就會加入至清單中。 如果您想要清除此清單，請開啟 **[設定]** 對話方塊，並按一下 **[加入至安全清單的伺服器]** 區段中的 **[全部清除]** 。  
   
  應用程式的預設位置為 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe。  
   

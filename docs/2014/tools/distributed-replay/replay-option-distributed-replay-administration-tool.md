@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149477"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是命令列工具，可用來與 distributed 的 replay controller 通訊。 此主題描述 **replay** 命令列選項與對應的語法。  
@@ -58,7 +58,7 @@ ms.locfileid: "53375100"
  未指定 **-o** 參數時，不會產生結果追蹤檔案。 主控台輸出會在重新執行結尾時傳回摘要資訊，但不會提供其他重新執行統計資料。  
   
  **-s** *target_server*  
- 指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]**。  
+ 指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]** 。  
   
  不可使用 "`localhost`" 或 "`.`" 當做目標伺服器。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53375100"
   
 -   **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。  
   
--   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：`<ResultTrace>`組態檔中的項目可用來指定是否記錄資料列計數與結果集。  
+-   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意:設定檔中的 `<ResultTrace>` 元素可用來指定是否要記錄資料列計數和結果集。  
   
 -   **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。  
   

@@ -4,30 +4,29 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cf5c9b37fbf6e5d213d35ec9837943e2dfb95ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099383"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相關之錯誤的原因和解決方案資訊。 本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|錯誤|訊息|  
+|錯誤|Message|  
 |-----------|-------------|  
 |[rsAccessedDenied - Reporting Services 錯誤](rsaccesseddenied-reporting-services-error.md)|授與使用者 'mydomain\myAccount' 的權限不足，無法執行此作業。 (rsAccessDenied) (ReportingServicesLibrary)。|  
 |[rsInternalError - Reporting Services 錯誤](rsinternalerror-reporting-services-error.md)|報表伺服器發生內部錯誤。 請參閱錯誤記錄以取得更多詳細資料。|  

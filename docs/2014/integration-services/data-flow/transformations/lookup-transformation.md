@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900221"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
@@ -53,7 +53,7 @@ ms.locfileid: "58386546"
   
 -   DB2  
   
- 「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join)  (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
+ 「查閱」轉換會嘗試在轉換輸入的值與參考資料集的值之間執行等聯結 (Equi-Join) (等聯結表示轉換輸入中的各資料列，必須至少符合參考資料集中的某個資料列)。如果無法執行等聯結，則「查閱」轉換會執行下列其中一項動作：  
   
 -   如果參考資料集中沒有相符的項目，則不會發生聯結。 根據預設，「查閱」轉換會將沒有相符項目的資料列視為錯誤； 不過，您可以設定「查閱」轉換，以將這些資料列重新導向至無相符結果輸出。 如需詳細資訊，請參閱[查閱轉換編輯器 &#40;一般頁面&#41;](../../lookup-transformation-editor-general-page.md) 和[查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../lookup-transformation-editor-error-output-page.md)。  
   
@@ -129,11 +129,11 @@ ms.locfileid: "58386546"
   
 ## <a name="related-content"></a>相關內容  
   
--   影片，[如何：在完整快取模式實作查閱轉換](https://go.microsoft.com/fwlink/?LinkId=131031)，msdn.microsoft.com 上  
+-   影片，[如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031) \(位於msdn.microsoft.com\)  
   
 -   位於 blogs.msdn.com 的部落格項目： [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(使用查閱轉換快取模式的最佳做法)  
   
--   部落格文章[查閱模式：不區分大小寫](https://go.microsoft.com/fwlink/?LinkId=157782)，blogs.msdn.com 上  
+-   位於 blogs.msdn.com 的部落格項目：[查閱模式：不區分大小寫](https://go.microsoft.com/fwlink/?LinkId=157782) \(英文\)  
   
 -   位於 msftisprodsamples.codeplex.com 上的範例： [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(查閱轉換)。  
   

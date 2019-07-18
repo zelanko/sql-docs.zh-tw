@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Me.Value references
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109925"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 的重大變更
   本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您進行升級或是在自訂指令碼或報表內時，可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
@@ -48,7 +47,7 @@ ms.locfileid: "56040169"
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>SharePoint 模式命令列安裝的變更  
- 輸入設定 **/RSINSTALLMODE** 只能搭配原生模式安裝運作，無法針對 SharePoint 模式安裝運作。 例如，下列不支援[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE ="DefaultSharePointMode"**。 為取代該輸入設定，請使用 **/RSSHPINSTALLMODE="DefaultSharePointMode"**。  
+ 輸入設定 **/RSINSTALLMODE** 只能搭配原生模式安裝運作，無法針對 SharePoint 模式安裝運作。 例如，下列不支援[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE ="DefaultSharePointMode"** 。 為取代該輸入設定，請使用 **/RSSHPINSTALLMODE="DefaultSharePointMode"** 。  
   
  下列陳述式是完整安裝命令與參數集的範例： **setup /ACTION = install /FEATURES = SQL，RS / = instancename=denali_inst1.../RSSHPINSTALLMODE ="DefaultSharePointMode"**  
   
@@ -63,7 +62,7 @@ ms.locfileid: "56040169"
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態管理員、rskeymgmt.exe 和 rsconfig.exe。 請使用 SharePoint 管理中心和 PowerShell，而非使用這些公用程式進行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的組態設定。  
   
--   SQL Server Management Studio：客戶無法使用類似 <machine_name>/<instance_name> 的語法參考伺服器。 從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版開始，建議的方法是使用 SharePoint 網站 URL。 例如， **http://<sharepoint_server>/<sharePoint_site&gt**。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，SharePoint 網站 URL 是唯一支援的語法。  
+-   SQL Server Management Studio:客戶不能參考 「 server 含語法類似於 < 電腦名稱 > / < 執行個體名稱 >。 從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版開始，建議的方法是使用 SharePoint 網站 URL。 例如， **http://<sharepoint_server>/<sharePoint_site&gt**。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，SharePoint 網站 URL 是唯一支援的語法。  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>SQL Server Data Tools 沒有提供報表模型設計師  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 不再支援報表模型專案。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]沒有提供報表模型設計師。 您無法在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的報表模型專案或開啟現有的專案，而且無法建立或更新報表模型。 若要更新報表模型，您可以使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或舊版工具。 在使用報表產生器和報表設計師等 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 工具所撰寫的報表中，您可以繼續使用報表模型做為資料來源。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 將繼續提供查詢設計工具，讓您用來建立查詢，以便從報表模型中擷取報表資料。  

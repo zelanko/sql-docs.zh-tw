@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee3dc240d56e3ca9de53e65e08541097dedd6600
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90e61107f4f552e6a871c953f0dd5874d42a4a71
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772306"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>針對特定工作負載最佳化伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

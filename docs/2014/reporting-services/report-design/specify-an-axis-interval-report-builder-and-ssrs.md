@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd2b4d8d8b883fd5cb4dd22aca9d64537d1bcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104853"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
   軸間隔定義軸上的標籤數及隨附的刻度。 在值軸上，軸間隔會為圖表上的資料點提供一致的量值； 不過，在類別目錄軸上，這項功能則可能導致類別目錄無法顯示軸標籤。 您可以在軸 Interval 屬性中指定所需間隔數。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會根據結果集中的資料，在執行階段計算間隔數。 如需如何計算軸間隔的詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
@@ -35,7 +34,7 @@ ms.locfileid: "56291836"
   
 ### <a name="to-show-all-category-labels-on-the-x-axis"></a>若要在 X 軸上顯示所有類別目錄標籤  
   
-1.  以滑鼠右鍵按一下類別目錄軸，然後按一下 **[軸屬性]**。 **[軸屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下類別目錄軸，然後按一下 **[軸屬性]** 。 **[軸屬性]** 對話方塊隨即開啟。  
   
 2.  在 **軸選項**，將`Interval`要**1**。 每個類別目錄群組標籤隨即顯示。 如果想要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "56291836"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>在軸上啟用可變間隔計算  
   
-1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]**。 **[軸屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]** 。 **[軸屬性]** 對話方塊隨即開啟。  
   
 2.  在 **軸選項**，將`Interval`要**自動**。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   

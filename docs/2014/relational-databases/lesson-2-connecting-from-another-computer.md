@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：從另一部電腦連接 |Microsoft Docs
+title: 第 2 課：從另一部電腦連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144797"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
+# <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
   為了加強安全性，初始安裝時，您不能從另一部電腦存取 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 這一課教您如何啟用通訊協定、設定通訊埠以及設定 Windows 防火牆，以便從其他電腦連接。  
   
  這一課包含下列工作：  
@@ -39,16 +39,16 @@ ms.locfileid: "54127208"
   
 #### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>如何從其他電腦啟用 TCP/IP 連接  
   
-1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
     > [!NOTE]  
     >  您必須同時能夠使用 32 位元和 64 位元選項。  
   
-2.  在  **SQL Server 組態管理員**，展開**SQL Server 網路組態**，然後按一下**通訊協定** _\<執行個體名稱>_。  
+2.  在  **SQL Server 組態管理員**，展開**SQL Server 網路組態**，然後按一下**通訊協定** _\<執行個體名稱>_ 。  
   
      預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER**列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
   
-3.  在通訊協定清單中，以滑鼠右鍵按一下要啟用的通訊協定 ([TCP/IP])，然後按一下 [啟用]。  
+3.  在通訊協定清單中，以滑鼠右鍵按一下要啟用的通訊協定 ([TCP/IP]  )，然後按一下 [啟用]  。  
   
     > [!NOTE]  
     >  變更網路通訊協定之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。不過，此步驟會在下一項工作中完成。  
@@ -61,19 +61,19 @@ ms.locfileid: "54127208"
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>設定 SQL Server 在特定通訊埠接聽  
   
-1.  在 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員] 中，展開 [SQL Server 網路組態]，然後按一下您要設定的伺服器執行個體。  
+1.  在 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員] 中，展開 [SQL Server 網路組態]  ，然後按一下您要設定的伺服器執行個體。  
   
-2.  在右窗格中，按兩下 [TCP/IP]。  
+2.  在右窗格中，按兩下 [TCP/IP]  。  
   
-3.  在 [TCP/IP 屬性] 對話方塊中，按一下 [IP 位址] 索引標籤。  
+3.  在 [TCP/IP 屬性]  對話方塊中，按一下 [IP 位址]  索引標籤。  
   
-4.  在 [IPAll] 區段的 [TCP 通訊埠] 方塊中，輸入可用的通訊埠號碼。 本教學課程中，我們將使用`49172`。  
+4.  在 [IPAll]  區段的 [TCP 通訊埠]  方塊中，輸入可用的通訊埠號碼。 本教學課程中，我們將使用`49172`。  
   
-5.  按一下 [確定] 關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]。  
+5.  按一下 [確定]  關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]  。  
   
-6.  在左窗格中，按一下 **[SQL Server 服務]**。  
+6.  在左窗格中，按一下 **[SQL Server 服務]** 。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]。 當[!INCLUDE[ssDE](../includes/ssde-md.md)]重新啟動時，它會接聽連接埠`49172`。  
+7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]  。 當[!INCLUDE[ssDE](../includes/ssde-md.md)]重新啟動時，它會接聽連接埠`49172`。  
   
 ##  <a name="firewall"></a> 在防火牆中開啟通訊埠  
  防火牆系統有助於預防未經授權存取電腦資源。 若要在防火牆開啟時從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您必須在防火牆中開啟通訊埠。  
@@ -85,19 +85,19 @@ ms.locfileid: "54127208"
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>若要在 Windows 防火牆中開啟通訊埠供 TCP 存取 (Windows 7)  
   
-1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
+1.  在 **[開始]** 功能表上、按一下 **[執行]** ，輸入 **WF.msc**，然後按一下 **[確定]** 。  
   
-2.  在 [具有進階安全性的 Windows 防火牆] 的左窗格中，以滑鼠右鍵按一下 [輸入規則]，再從動作窗格按一下 [新增規則]。  
+2.  在 [具有進階安全性的 Windows 防火牆]  的左窗格中，以滑鼠右鍵按一下 [輸入規則]  ，再從動作窗格按一下 [新增規則]  。  
   
-3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
+3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]** ，然後按 **[下一步]** 。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 型別`49172`如果您要設定具名執行個體，而且在先前的工作已設定固定通訊埠。 按 [下一步] 。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]** 。 選取 [特定本機連接埠]  ，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 型別`49172`如果您要設定具名執行個體，而且在先前的工作已設定固定通訊埠。 按一下 [下一步]  。  
   
-5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
+5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]** ，然後按 **[下一步]** 。  
   
-6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]**。  
+6.  在 **[設定檔]** 對話方塊中，選取您想要連線至 [!INCLUDE[ssDE](../includes/ssde-md.md)]時，描述電腦連線環境的設定檔，然後按 **[下一步]** 。  
   
-7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]**。  
+7.  在 **[名稱]** 對話方塊中，輸入此規則的名稱和描述，然後按一下 **[完成]** 。  
   
  如需防火牆設定 (包括 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]的指示) 的詳細資訊，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。 如需預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -110,12 +110,12 @@ ms.locfileid: "54127208"
   
 1.  在包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具的第二部電腦上，使用經授權連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的帳戶登入，並開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
-2.  在 [連接到伺服器] 對話方塊中，確認 [伺服器類型] 方塊中的 [Database Engine]。  
+2.  在 [連接到伺服器]  對話方塊中，確認 [伺服器類型]  方塊中的 [Database Engine]  。  
   
-3.  在 [伺服器名稱] 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連接到預設執行個體，通訊埠 1433 是內定通訊埠而且可省略，因此只要輸入 **tcp:**_<computer_name>_ 即可。 在我們的具名執行個體範例中，請輸入 **tcp:**_<computer_name>_**,49172**。  
+3.  在 [伺服器名稱]  方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連接到預設執行個體，通訊埠 1433 是內定通訊埠而且可省略，因此只要輸入 **tcp:** _<computer_name>_ 即可。 在我們的具名執行個體範例中，請輸入 **tcp:** _<computer_name>_ **,49172**。  
   
     > [!NOTE]  
-    >  如果 [伺服器名稱] 方塊中省略了 **tcp:**，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  
+    >  如果 [伺服器名稱]  方塊中省略了 **tcp:** ，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  
   
 4.  在 **驗證**方塊中，確認**Window 驗證**，然後按一下**Connect**。  
   
@@ -127,6 +127,6 @@ ms.locfileid: "54127208"
  以上總結這個簡短的基本連接教學課程。  
   
 ## <a name="return-to-tutorials-portal"></a>返回教學課程入口網站  
- [教學課程：Database Engine 使用者入門](tutorial-getting-started-with-the-database-engine.md)  
+ [教學課程：資料庫引擎使用者入門](tutorial-getting-started-with-the-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SystemGetAccuracyResults (Analysis Services-資料採礦) |Microsoft 文件
+title: SystemGetAccuracyResults (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209669"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,21 +97,21 @@ SystemGetAccuracyResults(<mining structure>,
   
  下表列出 **GetValidationResults**傳回的資料行。  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|模型|已測試的模型名稱。 [全部] 表示結果是所有模型的彙總。|  
+|[模型]|已測試的模型名稱。 [全部]  表示結果是所有模型的彙總。|  
 |AttributeName|可預測的資料行名稱。|  
 |AttributeState|可預測資料行內的目標值。<br /><br /> 如果這個資料行包含值，只會針對指定的狀態收集度量。<br /><br /> 如果未指定這個值，或是指定了 null，將會針對每一項預測最有可能的狀態來計算度量。|  
 |PartitionIndex|代表套用結果的磁碟分割。<br /><br /> 對於此程序而言，一定是 0。|  
-|PartitionCases|整數，表示在案例集，根據資料列數目*\<資料集 >* 參數。|  
+|PartitionCases|指示案例集中，為基礎的資料列數目的整數 *\<資料集 >* 參數。|  
 |測試|已執行的測試類型。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值取決於模型類型及可預測值的類型。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
-|Value|指定之量值的值。|  
+|值|指定之量值的值。|  
   
 ## <a name="remarks"></a>備註  
  下表提供您可以在用於交叉驗證的採礦結構內指定資料的值範例。 如果您想要將測試案例用於交叉驗證，採礦結構必須已經包含測試資料集。 如需在建立採礦結構時如何定義測試資料集的相關資訊，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
-|整數值|Description|  
+|整數值|描述|  
 |-------------------|-----------------|  
 |1|只會使用定型案例。|  
 |2|只會使用測試案例。|  
@@ -141,7 +141,7 @@ CALL SystemGetAccuracyResults (
   
  範例結果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|量值|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|測試|[量值]|值|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|分類|真肯定|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|分類|誤判|177|  
@@ -157,7 +157,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>另請參閱  
  [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

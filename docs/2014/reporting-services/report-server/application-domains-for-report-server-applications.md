@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104224"
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表伺服器會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 每個應用程式都會在單一報表伺服器處理序內部的應用程式網域中執行。 在大部分情況下，應用程式網域是在內部建立、設定和管理的。 不過，如果您要調查效能或記憶體問題或者疑難排解服務中斷，了解報表伺服器應用程式網域的回收作業如何發生可能會很有用。  
@@ -39,7 +38,7 @@ ms.locfileid: "56012669"
   
  下表將摘要列出為了回應這些事件所發生的應用程式網域回收行為：  
   
-|事件|事件描述|適用於|可設定|回收作業描述|  
+|Event - 事件|事件描述|適用於|可設定|回收作業描述|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |以預先定義間隔發生的排程回收作業|根據預設，應用程式網域每隔 12 小時會回收一次。<br /><br /> 排程回收作業是提升整體處理序健全狀況之 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的常見作法。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|是的。 RSReportServer.config 檔中的 `RecycleTime` 組態設定會決定回收間隔。<br /><br /> `MaxAppDomainUnloadTime` 會設定允許背景處理完成的等候時間。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理 Web 服務和報表管理員的回收作業。<br /><br /> 若為背景處理應用程式，報表伺服器會針對從排程起始的新作業建立新的應用程式網域。 系統會允許已經在進行中的作業在目前的應用程式網域中完成，直到等候時間過期為止。|  
 |報表伺服器的組態變更|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將回收應用程式網域，以便回應 RSReportServer.config 檔中的變更。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|您無法阻止回收作業發生。 不過，為了回應組態變更所發生之回收作業的處理方式與排程回收作業相同。 當目前的要求和作業在目前的應用程式網域中完成時，系統會針對新的要求建立新的應用程式網域。|  

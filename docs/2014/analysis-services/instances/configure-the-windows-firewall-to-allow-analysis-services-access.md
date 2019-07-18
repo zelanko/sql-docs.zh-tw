@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080265"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>設定 Windows 防火牆以允許 Analysis Services 存取
   讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在網路上可供使用的第一個必要步驟為判斷您是否需要在防火牆中解除封鎖通訊埠。 大部分安裝都要求您至少建立一個傳入防火牆規則來允許連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
@@ -79,7 +78,7 @@ ms.locfileid: "53371160"
 ##  <a name="bkmk_default"></a> 為 Analysis Services 的預設執行個體設定 Windows 防火牆  
  預設的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會接聽 TCP 通訊埠 2383。 如果您安裝了預設執行個體，並要使用此連接埠，只需要在 Windows 防火牆中，解除封鎖對 TCP 通訊埠 2383 的傳入存取，即可從遠端存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的預設執行個體。 如果您安裝了預設執行個體，但要將服務設定為接聽固定連接埠，請參閱本主題中的 [針對 Analysis Services 的預設或具名執行個體使用固定連接埠](#bkmk_fixed) 。  
   
- 若要確認服務是否做為預設執行個體 (MSSQLServerOLAPService) 在運作，請檢查 [SQL Server 組態管理員] 中的服務名稱。 Analysis Services 的預設執行個體一律會顯示為 **SQL Server Analysis Services (MSSQLSERVER)**。  
+ 若要確認服務是否做為預設執行個體 (MSSQLServerOLAPService) 在運作，請檢查 [SQL Server 組態管理員] 中的服務名稱。 Analysis Services 的預設執行個體一律會顯示為 **SQL Server Analysis Services (MSSQLSERVER)** 。  
   
 > [!NOTE]  
 >  不同的 Windows 作業系統可提供替代工具來設定 Windows 防火牆。 這些工具大部分都能讓您選擇要開啟指定通訊埠還是程式可執行檔。 除非有指定程式可執行檔的需求，否則建議您指定通訊埠。  
@@ -88,21 +87,21 @@ ms.locfileid: "53371160"
   
 #### <a name="windows-firewall-with-advanced-security"></a>具有進階安全性的 Windows 防火牆  
   
-1.  在 Windows 7 或 Windows Vista 的 [控制台] 中按一下 [系統及安全性]，然後選取 [Windows 防火牆]，再按一下 [進階設定]。 在 Windows Server 2008 或 2008 R2，開啟 [系統管理工具]，然後按一下 [具有進階安全性的 Windows 防火牆]。 在 Windows Server 2012 上，開啟 [應用程式] 頁面並輸入 **Windows Firewall**。  
+1.  在 Windows 7 或 Windows Vista 的 [控制台] 中按一下 [系統及安全性]  ，然後選取 [Windows 防火牆]  ，再按一下 [進階設定]  。 在 Windows Server 2008 或 2008 R2，開啟 [系統管理工具]，然後按一下 [具有進階安全性的 Windows 防火牆]  。 在 Windows Server 2012 上，開啟 [應用程式] 頁面並輸入 **Windows Firewall**。  
   
-2.  以滑鼠右鍵按一下 [輸入規則]，然後選取 [新增規則]。  
+2.  以滑鼠右鍵按一下 [輸入規則]  ，然後選取 [新增規則]  。  
   
-3.  在 [規則類型] 中按一下`Port`，然後按一下 [**下一步]**。  
+3.  在 [規則類型] 中按一下`Port`，然後按一下 [**下一步]** 。  
   
 4.  在 通訊協定和連接埠，請選取**TCP** ，然後輸入`2383`中**特定本機連接埠**。  
   
-5.  在 [執行動作] 中按一下 [允許連線]，然後按一下 [下一步]。  
+5.  在 [執行動作] 中按一下 [允許連線]  ，然後按一下 [下一步]  。  
   
-6.  在 [設定檔] 中，清除不適用的所有網路位置，然後按一下 [下一步]。  
+6.  在 [設定檔] 中，清除不適用的所有網路位置，然後按一下 [下一步]  。  
   
 7.  在 [名稱] 中，輸入此規則的描述性名稱 (例如`SQL Server Analysis Services (tcp-in) 2383`)，然後按一下**完成**。  
   
-8.  如果要確認有無啟用遠端連接，請在不同的電腦上開啟 SQL Server Management Studio 或 Excel，然後在 [伺服器名稱] 中指定伺服器的網路名稱，以連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+8.  如果要確認有無啟用遠端連接，請在不同的電腦上開啟 SQL Server Management Studio 或 Excel，然後在 [伺服器名稱]  中指定伺服器的網路名稱，以連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
     > [!NOTE]  
     >  您必須先授與其他使用者此伺服器的權限，才可存取此伺服器。 如需詳細資訊，請參閱[物件和作業的存取權授權 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
@@ -141,17 +140,17 @@ ms.locfileid: "53371160"
   
 #### <a name="windows-firewall-with-advanced-security"></a>具有進階安全性的 Windows 防火牆  
   
-1.  在 Windows 7 或 Windows Vista 的 [控制台] 中按一下 [系統及安全性]，然後選取 [Windows 防火牆]，再按一下 [進階設定]。 在 Windows Server 2008 或 2008 R2，開啟 [系統管理工具]，然後按一下 [具有進階安全性的 Windows 防火牆]。 在 Windows Server 2012 上，開啟 [應用程式] 頁面並輸入 **Windows Firewall**。  
+1.  在 Windows 7 或 Windows Vista 的 [控制台] 中按一下 [系統及安全性]  ，然後選取 [Windows 防火牆]  ，再按一下 [進階設定]  。 在 Windows Server 2008 或 2008 R2，開啟 [系統管理工具]，然後按一下 [具有進階安全性的 Windows 防火牆]  。 在 Windows Server 2012 上，開啟 [應用程式] 頁面並輸入 **Windows Firewall**。  
   
-2.  如果要解除對 SQL Server Browser 服務存取的封鎖，請以滑鼠右鍵按一下 [輸入規則]，然後選取 [新增規則]。  
+2.  如果要解除對 SQL Server Browser 服務存取的封鎖，請以滑鼠右鍵按一下 [輸入規則]  ，然後選取 [新增規則]  。  
   
-3.  在 [規則類型] 中按一下`Port`，然後按一下 [**下一步]**。  
+3.  在 [規則類型] 中按一下`Port`，然後按一下 [**下一步]** 。  
   
 4.  在 通訊協定和連接埠，請選取**TCP** ，然後輸入`2382`中**特定本機連接埠**。  
   
-5.  在 [執行動作] 中按一下 [允許連線]，然後按一下 [下一步]。  
+5.  在 [執行動作] 中按一下 [允許連線]  ，然後按一下 [下一步]  。  
   
-6.  在 [設定檔] 中，清除不適用的所有網路位置，然後按一下 [下一步]。  
+6.  在 [設定檔] 中，清除不適用的所有網路位置，然後按一下 [下一步]  。  
   
 7.  在 [名稱] 中，輸入此規則的描述性名稱 (例如`SQL Server Browser Service (tcp-in) 2382`)，然後按一下**完成**。  
   
@@ -165,17 +164,17 @@ ms.locfileid: "53371160"
   
 #### <a name="windows-firewall-with-advanced-security"></a>具有進階安全性的 Windows 防火牆  
   
-1.  在 Windows 7 或 Windows Vista 的 [控制台] 中按一下 [系統及安全性]，然後選取 [Windows 防火牆]，再按一下 [進階設定]。 在 Windows Server 2008 或 2008 R2，開啟 [系統管理工具]，然後按一下 [具有進階安全性的 Windows 防火牆]。 在 Windows Server 2012 上，開啟 [應用程式] 頁面並輸入 [Windows 防火牆]。  
+1.  在 Windows 7 或 Windows Vista 的 [控制台] 中按一下 [系統及安全性]  ，然後選取 [Windows 防火牆]  ，再按一下 [進階設定]  。 在 Windows Server 2008 或 2008 R2，開啟 [系統管理工具]，然後按一下 [具有進階安全性的 Windows 防火牆]  。 在 Windows Server 2012 上，開啟 [應用程式] 頁面並輸入 [Windows 防火牆]  。  
   
-2.  若要解除封鎖對 Analysis Services 的存取，請以滑鼠右鍵按一下 [輸入規則]，然後選取 [新增規則]。  
+2.  若要解除封鎖對 Analysis Services 的存取，請以滑鼠右鍵按一下 [輸入規則]  ，然後選取 [新增規則]  。  
   
-3.  在 [規則類型] 中按一下`Port`，然後按一下 [**下一步]**。  
+3.  在 [規則類型] 中按一下`Port`，然後按一下 [**下一步]** 。  
   
-4.  在 [通訊協定及連接埠] 中選取 [TCP]，然後在 [特定本機連接埠] 中輸入固定連接埠號碼。  
+4.  在 [通訊協定及連接埠] 中選取 [TCP]  ，然後在 [特定本機連接埠]  中輸入固定連接埠號碼。  
   
-5.  在 [執行動作] 中按一下 [允許連線]，然後按一下 [下一步]。  
+5.  在 [執行動作] 中按一下 [允許連線]  ，然後按一下 [下一步]  。  
   
-6.  在 [設定檔] 中，清除不適用的所有網路位置，然後按一下 [下一步]。  
+6.  在 [設定檔] 中，清除不適用的所有網路位置，然後按一下 [下一步]  。  
   
 7.  在 [名稱] 中，輸入此規則的描述性名稱 (例如`SQL Server Analysis Services on port 54321`)，然後按一下**完成**。  
   

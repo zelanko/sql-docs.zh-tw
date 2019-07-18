@@ -1,7 +1,7 @@
 ---
 title: 快速入門：SQL Server 中的擴充事件 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2016
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66354575"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
@@ -553,10 +553,11 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
     - CREATE EVENT SESSION 子句。
     - SSMS UI 控制項。
 
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>適用於 Azure SQL Database 的程式碼範例可能有所不同
 
-<a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>附錄：使用 SELECT 事先確認權限擁有者
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a> 附錄：使用 SELECT 事先確認權限擁有者
 
 本文中提到的權限包括：
 

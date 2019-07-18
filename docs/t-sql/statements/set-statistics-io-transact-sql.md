@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760121"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65983080"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ SET STATISTICS IO { ON | OFF }
 |**邏輯讀取**|從資料快取中讀取的頁數。|  
 |**實體讀取**|從磁碟中讀取的頁數。|  
 |**讀取前讀取**|放入查詢快取中的頁數。|  
-|**LOB 邏輯讀取**|從資料快取讀取的 **text**、**ntext**、**image** 或大數值類型 (**varchar(max)**、**nvarchar(max)**、**varbinary(max)**) 分頁的數目。|  
-|**LOB 實體讀取**|從磁碟讀取的 **text**、**ntext**、**image** 或大數值類型頁面的數目。|  
-|**LOB 讀取前讀取**|放置到快取中供查詢之 **text**、**ntext**、**image** 或大數值類型頁面的數目。|  
-  
- SET STATISTICS IO 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
-  
+|**LOB 邏輯讀取**|從資料快取中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|  
+|**LOB 實體讀取**|從磁碟中讀取的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|  
+|**LOB 讀取前讀取**|放入查詢快取中的頁數。 包含 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 或資料行存放區索引頁。|
+
+ SET STATISTICS IO 的設定是在執行階段進行設定，而不是在剖析階段進行設定。
+
 > [!NOTE]  
->  當 Transact-SQL 陳述式擷取 LOB 資料行時，有些 LOB 擷取作業可能需要往返 LOB 樹狀結構多次。 這可能造成 SET STATISTICS IO 報告的數字高於預期的邏輯讀取次數。  
-  
-## <a name="permissions"></a>[權限]  
+> 當 Transact-SQL 陳述式擷取 LOB 資料行時，有些 LOB 擷取作業可能需要往返 LOB 樹狀結構多次。 這可能造成 SET STATISTICS IO 報告的數字高於預期的邏輯讀取次數。
+
+## <a name="permissions"></a>權限  
  若要使用 SET STATISTICS IO，使用者必須有執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的適當權限。 不需要 SHOWPLAN 權限。  
   
 ## <a name="examples"></a>範例  

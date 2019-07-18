@@ -24,15 +24,15 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4201be08286e90848eeafcb3732cfdc198d059ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: be4d9a8be28f84bb401a5895be479c1e90cb3a67
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682066"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689940"
 ---
 # <a name="object-explorer"></a>物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

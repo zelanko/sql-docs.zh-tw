@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d4093321edfca7d1176c4b5be18ee876888b1a2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963221"
 ---
 # <a name="url-property-rds"></a>URL 屬性 (RDS)
 表示字串，包含相對或絕對的 URL。  

@@ -16,22 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670441"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>刪除資料庫圖表 (Visual Database Tools)
   若您不再需要某資料庫圖形時，即可將它刪除。  
   
 ### <a name="to-delete-a-database-diagram"></a>若要刪除資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  用滑鼠右鍵按一下準備刪除的資料庫圖表。  
   
-3.  在快速鍵功能表上選擇 [刪除]。  
+3.  在快速鍵功能表上選擇 [刪除]  。  
   
 4.  會出現訊息提示您確認是否刪除。 選擇 [ **是**]。  
   

@@ -3,19 +3,18 @@ title: 部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 description: 這篇文章說明 SQL Server Kubernetes Always On 可用性群組運算子全球需求的參數
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a5bc7dfcfd36c16b6f281db8eb57e74e97601b6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952620"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 

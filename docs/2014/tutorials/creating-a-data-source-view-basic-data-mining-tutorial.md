@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273402"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>建立資料來源檢視 (基本資料採礦教學課程)
   資料來源檢視建立在資料來源之上，而且會定義一個資料子集，然後您可以在採礦結構中使用該資料子集。 您也可以使用資料來源檢視加入資料行、建立導出資料行與彙總，以及加入具名檢視。 您可以使用資料來源檢視，在不修改原始資料來源的情況下，選取與專案相關的資料、建立資料表之間的關聯性，以及修改資料的結構。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -24,9 +24,9 @@ ms.locfileid: "56042761"
   
 1.  中**方案總管**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
   
-2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
+2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按一下 [下一步]  。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按一下 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按一下 [下一步]  。  
   
     > [!NOTE]  
     >  如果您想要建立資料來源，以滑鼠右鍵按一下**資料來源**，然後按一下**新的資料來源**來啟動資料來源精靈。  
@@ -37,7 +37,7 @@ ms.locfileid: "56042761"
   
     -   **vTargetMail (dbo)** -有關過去自行車買主的歷程記錄資料檢視  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**完成精靈]** 頁面上，預設的資料來源檢視名為 Adventure Works DW 2012。 將名稱變更為`Targeted Mailing`，然後按一下**完成**。  
   

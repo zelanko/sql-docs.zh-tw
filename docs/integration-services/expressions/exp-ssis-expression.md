@@ -14,14 +14,18 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6374e8b33c678f418ee456021ef739bde5ac22d9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ffe52a392dfec79afa301df7650cf73f2ad35ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725444"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回做為數值運算式中 e 之基底的指數。 EXP 函數會補充 LN 函數的動作，有時亦稱為反對數 (Antilogarithm)。  
   
 ## <a name="syntax"></a>語法  

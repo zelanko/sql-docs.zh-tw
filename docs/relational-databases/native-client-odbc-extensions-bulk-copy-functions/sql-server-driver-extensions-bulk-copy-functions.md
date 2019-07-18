@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccc6027b9afacd0b23c873637fea41fa7679e609
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4e448675621b77fc79089e651daa5c822a5b87e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099423"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server 驅動程式延伸模組 - 大量複製函式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

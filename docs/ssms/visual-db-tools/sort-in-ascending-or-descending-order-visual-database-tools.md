@@ -11,15 +11,15 @@ helpviewer_keywords:
 - descending sorts
 - ascending sorts
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37e81aef5c27f6302bfec677fdeff44ad2d59acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0154016bfcc8d94b94166f11e8778bdb25114edc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612958"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681349"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "47612958"
   
 ### <a name="to-specify-or-change-the-order-in-which-results-are-sorted"></a>指定或變更已經排序結果的順序  
   
-1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型] 欄位。  
+1.  在 [準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 中，對要重新排序的資料行按一下 [排序類型]  欄位。  
   
-2.  選擇 [遞增] 或 [遞減]以指定資料行的排序順序。  
+2.  選擇 [遞增]  或 [遞減]  以指定資料行的排序順序。  
   
 請注意，使用 [準則窗格] 時，查詢的 UNION 子句會變更，以符合您最近的動作。  
   

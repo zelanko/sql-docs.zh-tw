@@ -11,15 +11,14 @@ helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4030351db122190636292ccc84c574af95df76fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051979"
 ---
 # <a name="entity-permissions-master-data-services"></a>實體權限 (Master Data Services)
 
@@ -36,9 +35,9 @@ ms.locfileid: "52819010"
  當您擁有實體的權限時，您可從實體、實體的明確階層和集合中加入及移除成員。  
   
 > [!NOTE]  
->  這些權限只適用於使用者介面的 [總管] 功能區域。  
+>  這些權限只適用於使用者介面的 [總管]  功能區域。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取成員、屬性、階層成員資格或集合成員資格。|  
 |**建立**|使用者可以建立成員，並在建立期間指派屬性值。|  

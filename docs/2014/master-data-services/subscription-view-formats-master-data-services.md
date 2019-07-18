@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8cc4bcad1ca9cd5407cd4b4692fefc41b6922f50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478873"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)
   根據您選取的實體或衍生階層，訂閱檢視可以使用下列格式。  

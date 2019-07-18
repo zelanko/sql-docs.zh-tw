@@ -8,31 +8,28 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017224"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
   本主題摘要 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中變更及更新。 
   
  如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
   
- 若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱 [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
+ 若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱  [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
   
  **下載**  
   
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**。  
+-   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
 -   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
   
@@ -229,12 +226,12 @@ ms.locfileid: "52764600"
  **已更新模型部署封裝範例**  
   
  為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署套件 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [取代的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)   
- [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
+ [取代的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)  
+ [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)

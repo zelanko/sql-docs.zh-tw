@@ -15,15 +15,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d782a7863d8e6ed029a201b4b309817d2e2a12c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047586"
 ---
 # <a name="attributes-master-data-services"></a>屬性 (Master Data Services)
 

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079840"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -109,7 +108,7 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- 結果包含了根據支援值所排序的前三項預測。 您可以使用 $PROBABILITY 或 $ADJUSTED_PROBABILITY 來取代 $SUPPORT，以傳回根據機率或調整過的機率所排名的預測。 如需詳細資訊，請參閱 <<c0>  **預測 (DMX)**。  
+ 結果包含了根據支援值所排序的前三項預測。 您可以使用 $PROBABILITY 或 $ADJUSTED_PROBABILITY 來取代 $SUPPORT，以傳回根據機率或調整過的機率所排名的預測。 如需詳細資訊，請參閱 <<c0>  **預測 (DMX)** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.alert.f1
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cca0a8eb824423c1194e474a4745dda037b13069
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 038434c125ba980e726e5efad0b51161ef75ec99
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790253"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681819"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47790253"
 > 在變更電子郵件系統之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，才能使變更生效。  
   
 **郵件設定檔**  
-設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取 [\<新增 Database Mail 設定檔>]，以建立新的設定檔。  
+設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取 [\<新增 Database Mail 設定檔>]  ，以建立新的設定檔。  
   
 **呼叫器電子郵件**  
 本節中的選項可以讓您設定傳送到呼叫器號碼的電子郵件訊息，以搭配呼叫系統使用。  
@@ -52,37 +52,37 @@ ms.locfileid: "47790253"
 此章節可以讓您指定位址格式，以及呼叫器電子郵件中所包含的主旨。  
   
 **收件者**  
-指定訊息之 [收件者] 的選項  
+指定訊息之 [收件者]  的選項  
   
 **Prefix**  
-在傳送到呼叫器的訊息之 [收件者] 的開頭處，輸入系統要求的任何固定文字。  
+在傳送到呼叫器的訊息之 [收件者]  的開頭處，輸入系統要求的任何固定文字。  
   
 **呼叫器**  
 在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
 **後置詞**  
-在傳送到呼叫器的訊息之 [收件者] 的結尾處，輸入呼叫器系統要求的任何固定文字。  
+在傳送到呼叫器的訊息之 [收件者]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
 **副本**  
-指定訊息之 [副本] 的選項。  
+指定訊息之 [副本]  的選項。  
   
 **Prefix**  
-在傳送到呼叫器的訊息之 [副本] 的開頭處，輸入系統要求的任何固定文字。  
+在傳送到呼叫器的訊息之 [副本]  的開頭處，輸入系統要求的任何固定文字。  
   
 **呼叫器**  
 在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
 **後置詞**  
-在傳送到呼叫器的訊息之 [副本] 的結尾處，輸入呼叫器系統要求的任何固定文字。  
+在傳送到呼叫器的訊息之 [副本]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
 **主旨**  
 指定訊息主旨的選項。  
   
 **Prefix**  
-在傳送到呼叫器的訊息之 [主旨] 的開頭處，輸入呼叫器系統要求的任何固定文字。  
+在傳送到呼叫器的訊息之 [主旨]  的開頭處，輸入呼叫器系統要求的任何固定文字。  
   
 **後置詞**  
-在傳送到呼叫器的訊息之 [主旨] 的結尾處，輸入呼叫器系統要求的任何固定文字。  
+在傳送到呼叫器的訊息之 [主旨]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
 **在通知訊息中包含主體**  
 在傳送給呼叫器的訊息中，包含電子郵件訊息的主體。  
@@ -103,7 +103,7 @@ ms.locfileid: "47790253"
 此章節可讓您啟動作業步驟 Token，這些 Token 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所執行的作業中使用。 如需有關作業步驟 Token 的詳細資訊，請參閱 [在作業步驟中使用 Token](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
-> 在 Windows 事件記錄檔上具有寫入權限的任何 Windows 使用者，可以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)** 和 **$(A-MSG)**。  
+> 在 Windows 事件記錄檔上具有寫入權限的任何 Windows 使用者，可以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **$(A-DBN)** 、 **$(A-SVR)** 、 **$(A-ERR)** 、 **$(A-SEV)** 和 **$(A-MSG)** 。  
 >   
 > 如果您需要使用這些 Token，在啟用之前，請確定只有信任的 Windows 安全性群組的成員，例如 Administrators 群組，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的電腦的事件記錄檔上才具有寫入權限。  
   

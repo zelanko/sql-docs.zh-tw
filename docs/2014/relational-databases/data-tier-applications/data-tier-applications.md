@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873099"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
   資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，例如資料表、檢視表，以及包括登入的執行個體物件。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署的自主單位，可讓資料層開發人員和資料庫管理員將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件包裝為可攜式成品，稱為 DAC 封裝，又稱為 DACPAC。  
@@ -108,7 +108,7 @@ ms.locfileid: "52540123"
   
 -   **IMPORT** - 使用者可以將結構描述和資料匯入主機伺服器中的新資料庫。  
   
- 這兩個功能都受到資料庫管理工具：Server Management Studio、 SQL Azure 管理入口網站和 DACFx API。  
+ 下列資料庫管理工具支援這兩個功能：Server Management Studio、 SQL Azure 管理入口網站和 DACFx API。  
   
 ## <a name="permissions"></a>Permissions  
  您必須是 `dbmanager` 角色的成員或被指派 `CREATE DATABASE` 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 您必須是 `dbmanager` 角色的成員或被指派 `DROP DATABASE` 權限，才能卸除資料庫。  

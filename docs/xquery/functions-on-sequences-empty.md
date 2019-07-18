@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d9afc542b8d743c3e4e0ae35bb87f10e2f0835f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004669"
 ---
 # <a name="functions-on-sequences---empty"></a>序列的相關函式 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

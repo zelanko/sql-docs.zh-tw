@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070433"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@tabid =** ] '*tabid*'  
+ [ **@tabid =** ] '*tabid*'  
  這是要檢查立即更新觸發程序之資料表的物件識別碼。 *tabid*已**int**沒有預設值。  
   
- [**@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
+ [ **@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
  指定輸出參數是否要傳回呼叫它之觸發程序的類型。 *trigger_output_parameters*已**char(10)** 而且可以是下列值之一。  
   
 |值|描述|  
@@ -56,7 +55,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher` 指定預存程序執行所在的位置。 *fonpublisher&lt*已**元**，預設值為 0。 如果為 0，則是在訂閱者端執行，如果為 1，則是在發行者端執行。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 表示並非在立即更新觸發程序的內容中呼叫預存程序。 1 表示它立即更新觸發程序的內容中被呼叫，而且是觸發程序中所傳回的型別*@trigger_op*。  
+ 0 表示並非在立即更新觸發程序的內容中呼叫預存程序。 1 表示它立即更新觸發程序的內容中被呼叫，而且是觸發程序中所傳回的型別 *@trigger_op* 。  
   
 ## <a name="remarks"></a>備註  
  **sp_check_for_sync_trigger**用於快照式複寫和異動複寫。  

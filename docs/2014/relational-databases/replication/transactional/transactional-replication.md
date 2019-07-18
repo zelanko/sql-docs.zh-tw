@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655428"
 ---
 # <a name="transactional-replication"></a>異動複寫
   通常以發行集資料庫物件和資料的快照集啟動異動複寫。 使用初始快照集後，在「發行者」端進行的後續資料變更和結構描述修改，通常會立即 (近乎即時) 傳遞到「訂閱者」。 資料變更會以相同的順序，並且在相同於「發行者」端發生之變更的交易界限內套用到「訂閱者」；因此，在發行集內會保證交易的一致性。  
@@ -75,8 +75,8 @@ ms.locfileid: "54127678"
 |發行集類型|描述|  
 |----------------------|-----------------|  
 |標準交易式發行集|適合於「訂閱者」端的所有資料均為唯讀狀態 (異動複寫並不在「訂閱者」端強制這個屬性) 的拓撲。<br /><br /> 當使用 Transact-SQL 或 Replication Management Objects (RMO) 時，依預設，會建立標準交易式發行集。 當使用「新增發行集精靈」時，它們會透過選取 **[發行集類型]** 頁面上的 **[交易式發行集]** 來建立。<br /><br /> 如需建立發行集的詳細資訊，請參閱 [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
-|具有可更新訂閱的交易式發行集|這個發行集類型的特性為：<br /><br /> -每個位置具有相同的資料，一個 「 發行者 」 與 「 訂閱者 」。 <br /> -您可更新訂閱者端的資料列<br /> -此拓撲最適合用於需要高可用性的伺服器環境，和讀取延展性。<br /><br />如需詳細資訊，請參閱 <<c0> [ 可更新訂閱](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
-|對等項目-拓撲|這個發行集類型的特性為：<br /> -每個位置具有相同的資料，並做為發行者 」 和 「 訂閱者。<br /> 為一次，可以只在一個位置變更相同的資料列。<br /> -支援[衝突偵測](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-此拓撲最適合用於需要高可用性的伺服器環境，和讀取延展性。<br /><br />如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
-|雙向異動複寫|這個發行集類型的特性為：<br />雙向複寫對等複寫類似，不過，它不提供衝突解決。 此外，雙向複寫僅限於 2 部伺服器。 <br /><br /> 如需詳細資訊，請參閱[雙向異動複寫](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|具有可更新訂閱的交易式發行集|這個發行集類型的特性為：<br /><br /> -每個位置具有相同的資料，一個 「 發行者 」 與 「 訂閱者 」。 <br /> -您可更新訂閱者端的資料列<br /> -此拓撲最適合需要高可用性和讀取延展性的伺服器環境。<br /><br />如需詳細資訊，請參閱[可更新訂閱](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
+|點對點拓撲|這個發行集類型的特性為：<br /> -每個位置都有相同的資料，並同時充當「發行者」與「訂閱者」。<br /> -若要變更同一資料行，一次只能在一個位置變更。<br /> -支援[衝突偵測](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-此拓撲最適合需要高可用性和讀取延展性的伺服器環境。<br /><br />如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
+|雙向異動複寫|這個發行集類型的特性為：<br />雙向複寫類似於點對點複寫，不過，它並不提供衝突解決。 此外，雙向複寫僅限於 2 部伺服器。 <br /><br /> 如需詳細資訊，請參閱[雙向異動複寫](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

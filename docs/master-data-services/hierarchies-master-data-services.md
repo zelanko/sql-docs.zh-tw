@@ -11,15 +11,14 @@ helpviewer_keywords:
 - hierarchies [Master Data Services]
 - hierarchies [Master Data Services], about hierarchies
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4c2247dc5015088cdb492667c7a470aedba1647
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: ec9d1ce1e665abf0ce8f61218051e41e795b6441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945236"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
 

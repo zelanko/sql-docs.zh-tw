@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763153"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638205"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>繫結和轉換 (OLE DB)
   本節討論如何在 `datetime` 和 `datetimeoffset` 值之間轉換。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  
@@ -28,7 +28,7 @@ ms.locfileid: "52763153"
   
 -   `datetime` 和 `datetimeoffset` 字串的格式為：  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [?? *hh*:*公釐*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ?? *hh*:*mm*]]  
   
 -   `time` 字串的格式為：  
   

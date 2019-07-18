@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d2556b358ea1689a5b2c647d62b2d116b67cff4
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 0f6396b591733b6142dc2946040e06d902ad075b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064096"
 ---
 # <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

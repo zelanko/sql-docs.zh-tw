@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 90a47a7586d0f3c6b5bd0fee28ed01f3b292a92e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929420"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>專案設定 （載入物件） (AccessToSQL)
 正在載入物件的專案設定可讓您設定如何存取資料庫物件進行同步處理使用 SQL Server 資料庫物件。  

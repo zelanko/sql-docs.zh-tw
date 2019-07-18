@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088486"
 ---
 # <a name="browsing-a-forecasting-model"></a>瀏覽預測模型
   當您開啟預測模型 using**瀏覽**，會顯示此模型中的互動式檢視器，類似於時間序列模型檢視器中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 此檢視器可協助您探索趨勢、比較序列、建立預測，以及取得有關模型和基礎資料的資訊。  

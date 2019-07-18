@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Parse method
 - Parse (geography Data Type)
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0b2e42f61e3926845930b1bd0d3429f2f83c9685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 023af0279bdb848e299ec1dbe31ff82305ad109a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935913"
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Parse ( 'geography_tagged_text' )
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  `Parse()` 傳回之 **geography** 執行個體的 OGC 型別會設定為對應的 WKT 輸入。  

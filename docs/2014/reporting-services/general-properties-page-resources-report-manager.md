@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109119"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
   使用資源的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代資源。 有關誰新增資源或修改屬性的資訊顯示在頁面上方。  
@@ -32,9 +31,9 @@ ms.locfileid: "56032419"
   
 2.  將滑鼠停留在該資源上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該資源的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該資源的 [一般] 屬性頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定資源的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "56032419"
  **型別**  
  指定資源的 MIME 類型。 此屬性是唯讀的。  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9d82d7a24c032be93ebdd4d9cef1239f3d1b511b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 2e3208d3a70c0970e34e84723c5a95e85c55e859
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937268"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ _relative_
 ## <a name="return-types"></a>傳回類型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-CLR 傳回類型：**SqlGeography**  
+CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
 如果 _distance_ 不是數字 (NAN)，或如果 _distance_ 是正或負的無限值，則這個方法會擲回 **ArgumentException**。  如果 _tolerance_ 是零 (0) 而不是數字 (NaN) 或正的或負的無限值，則這個方法也會擲回 **ArgumentException**。  

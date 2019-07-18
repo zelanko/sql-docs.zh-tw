@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081297"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id` 是發送訂閱之散發代理程式的作業識別碼。 *job_id*已**varbinary(16)**，沒有預設值。 若要尋找散發作業識別碼，請執行**sp_helpsubscription**或是**sp_helppullsubscription**。  
+`[ @job_id = ] job_id` 是發送訂閱之散發代理程式的作業識別碼。 *job_id*已**varbinary(16)** ，沒有預設值。 若要尋找散發作業識別碼，請執行**sp_helpsubscription**或是**sp_helppullsubscription**。  
   
 `[ @dts_package_name = ] 'dts_package_name'` 指定 DTS 封裝的名稱。 *dts_package_name*已**sysname**，預設值是 NULL。 例如，若要指定封裝名為**DTSPub_Package**，您會指定`@dts_package_name = N'DTSPub_Package'`。  
   
@@ -50,7 +49,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 > [!NOTE]  
 >  DTS 封裝必須有密碼。  
   
-`[ @dts_package_location = ] 'dts_package_location'` 指定封裝位置。 *dts_package_location*已**nvarchar(12)**，預設值是 NULL，其中指定封裝位置維持不變。 封裝的位置可以變更為**散發者端**或是**訂閱者**。  
+`[ @dts_package_location = ] 'dts_package_location'` 指定封裝位置。 *dts_package_location*已**nvarchar(12)** ，預設值是 NULL，其中指定封裝位置維持不變。 封裝的位置可以變更為**散發者端**或是**訂閱者**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

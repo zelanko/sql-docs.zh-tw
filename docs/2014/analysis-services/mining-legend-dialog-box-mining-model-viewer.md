@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
@@ -15,12 +14,12 @@ ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5366db29a8e3fbfc286684b372c9f71d0cf6a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077770"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>採礦圖例對話方塊 (採礦模型檢視器)
   可以使用 **[採礦圖例]** 對話方塊，取得有關採礦模型檢視器中所選節點或項目的詳細資訊。  
@@ -54,8 +53,8 @@ ms.locfileid: "48218718"
  [使用 Microsoft 樹狀檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

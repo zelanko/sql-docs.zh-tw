@@ -21,14 +21,18 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bc51d3b3a1f7265d73e43526da6b70e70f35978
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7219499b05a3e0229d685fdf518eea41a734daba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270435"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724686"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>執行計劃和緩衝區配置
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在執行之前，資料流程工作會檢查其元件並為元件的每個順序產生執行計劃。 本節提供有關執行計劃的詳細資料、如何檢視計劃以及輸入與輸出緩衝區如何根據執行計劃配置。  
   
 ## <a name="understanding-the-execution-plan"></a>了解執行計劃  

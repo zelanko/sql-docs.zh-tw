@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c1b3696612ab9d0693b3c0135b6aff34137906b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107304"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數 (報表產生器及 SSRS)
   若要將 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源的 MDX 查詢參數化，您必須將查詢參數加入查詢中。 在 MDX 查詢設計工具中，您可以透過指定篩選，在 [設計] 模式和 [查詢] 模式中加入查詢參數。 在您使用查詢參數來定義查詢之後，Reporting Services 會自動建立報表參數和資料集來提供有效值的清單。 如此可讓使用者指定直接傳遞給查詢的值。  
@@ -32,7 +31,7 @@ ms.locfileid: "56039679"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>在設計模式下定義 MDX 中的查詢參數  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 [查詢]。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 [查詢]  。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
   
 2.  將維度拖曳到篩選區域，然後將它放在 **[維度]** 資料行的第一個資料格上。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "56039679"
   
 6.  在 **[參數]** 資料行中，選取可建立報表參數的核取方塊。  
   
-7.  按一下 **[執行]**。  
+7.  按一下 **[執行]** 。  
   
      在您執行查詢之後，按一下工具列上的 **[設計]** 可切換至 [查詢] 模式，以檢視已經建立的 MDX 查詢。 如果您想要繼續使用 [設計] 模式來開發查詢，請不要在 [查詢] 模式中變更查詢文字。 按一下 **[設計]** 可切換回到 [設計] 模式。  
   
@@ -52,19 +51,19 @@ ms.locfileid: "56039679"
   
      在 [報表資料] 窗格中，展開 [參數] 節點來顯示之前自動為篩選建立的報表參數。  
   
-     若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]**。 [報表資料] 窗格會顯示報表中的所有資料集。  
+     若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]** 。 [報表資料] 窗格會顯示報表中的所有資料集。  
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查詢模式下定義 MDX 中的查詢參數  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 **[查詢]**。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 **[查詢]** 。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
   
 2.  在工具列上按一下 **[設計]** ，切換至 [查詢] 模式。  
   
-3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數] (![查詢參數對話方塊圖示](../../analysis-services/media/iconqueryparameter.gif "查詢參數對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
+3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![查詢參數對話方塊圖示](../../analysis-services/media/iconqueryparameter.gif "查詢參數對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
   
-4.  在 [參數] 資料行中，按一下 [\<輸入參數>]，然後鍵入參數名稱。  
+4.  在 [參數]  資料行中，按一下 [\<輸入參數>]  ，然後鍵入參數名稱。  
   
-5.  在 [維度] 資料行中，從下拉式清單選擇一個值。  
+5.  在 [維度]  資料行中，從下拉式清單選擇一個值。  
   
 6.  在 **[階層]** 資料行中，從下拉式清單選擇一個值。  
   
@@ -74,13 +73,13 @@ ms.locfileid: "56039679"
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-10. 在查詢設計工具工具列上，按一下 **[執行]**。  
+10. 在查詢設計工具工具列上，按一下 **[執行]** 。  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
      在 [報表資料] 窗格中，展開 [參數] 節點來顯示之前自動為篩選建立的報表參數。  
   
-     若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]**。 [報表資料] 窗格會顯示報表中的所有資料集。  
+     若要檢視可為報表參數提供可用值的資料集，請以滑鼠右鍵按一下 [報表資料] 窗格中的空白區，然後按一下 **[顯示隱藏的資料集]** 。 [報表資料] 窗格會顯示報表中的所有資料集。  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   

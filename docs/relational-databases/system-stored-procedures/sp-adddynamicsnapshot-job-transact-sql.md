@@ -1,5 +1,5 @@
 ---
-title: sp_adddynamicsnapshot_job (Transact-SQL) | Microsoft Docs
+title: sp_adddynamicsnapshot_job & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: d725b9cbec3d00bf8536954caf423edeae628764
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072738"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 855c1e51b165cb625110972709b2d02ba9e7ae05
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 049f66133f2b67ed7c64165845d5e38dbdfbbfff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794518"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server Database Engine 回溯相容性
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

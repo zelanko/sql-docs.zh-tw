@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
@@ -13,15 +12,15 @@ ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081440"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>編輯資料表屬性對話方塊 (SSAS)
-  **[編輯資料表屬性]** 對話方塊可讓您檢視與修改使用 [資料表匯入精靈] 匯入至模型設計師之資料表的屬性。 若要存取此對話方塊，請在模型設計師中選取資料表，然後按一下 **[資料表]** 功能表，再按一下 **[資料表屬性]**。  
+  **[編輯資料表屬性]** 對話方塊可讓您檢視與修改使用 [資料表匯入精靈] 匯入至模型設計師之資料表的屬性。 若要存取此對話方塊，請在模型設計師中選取資料表，然後按一下 **[資料表]** 功能表，再按一下 **[資料表屬性]** 。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  依您一開始是透過從清單中選取資料表或使用 SQL 查詢匯入資料，此對話方塊的選項都不同。  
@@ -39,7 +38,7 @@ ms.locfileid: "48229278"
  **來源名稱**  
  顯示或變更從中取得資料的資料表。  
   
- 如果您將來源變更為具有與目前資料表不同之資料行的資料表，就會顯示資料行不同的警告訊息。 然後，您必須選取要放入目前資料表中的資料行，並按一下 **[儲存]**。 您可以選取資料表左邊的核取方塊，以取代整個資料表。  
+ 如果您將來源變更為具有與目前資料表不同之資料行的資料表，就會顯示資料行不同的警告訊息。 然後，您必須選取要放入目前資料表中的資料行，並按一下 **[儲存]** 。 您可以選取資料表左邊的核取方塊，以取代整個資料表。  
   
 > [!NOTE]  
 >  當您變更資料表的資料來源時，基本上是以新來源資料表的內容取代目前資料表的內容。  
@@ -100,6 +99,6 @@ ms.locfileid: "48229278"
  按一下以套用所做的全部變更，包括取代資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行&#40;SSAS 表格式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

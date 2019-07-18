@@ -2,18 +2,18 @@
 title: 在圖表中放置標籤 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 38d643ebb10c425ee6ce66027fae13b7e75cc799
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 16b851d3967d6fdf65a459d3f7b2f2226308b579
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576632"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>在圖表中放置標籤 (報表產生器及 SSRS)
   因為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 每種圖表類型都有不同的形狀，所以資料點標籤會放置於最佳位置，避免影響圖表。 標籤的預設位置會因圖表類型而不同：  
@@ -35,9 +35,9 @@ ms.locfileid: "56298526"
   
 1.  建立圓形圖。  
   
-2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]。  
+2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]  。  
   
-3.  開啟 [屬性] 窗格。 在 [檢視] 索引標籤上，按一下 [屬性]。  
+3.  開啟 [屬性] 窗格。 在 [檢視]  索引標籤上，按一下 [屬性]  。  
   
 4.  在設計介面上，按一下圖表。 圖表的屬性會顯示在 [屬性] 窗格中。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "56298526"
   
 1.  建立漏斗圖或金字塔圖。  
   
-2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]。  
+2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]  。  
   
-3.  開啟 [屬性] 窗格。 在 [檢視] 索引標籤上，按一下 [屬性]  
+3.  開啟 [屬性] 窗格。 在 [檢視]  索引標籤上，按一下 [屬性]   
   
 4.  在設計介面上，按一下圖表。 圖表的屬性會顯示在 [屬性] 窗格中。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "56298526"
   
 1.  建立橫條圖。  
   
-2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]。  
+2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]  。  
   
-3.  開啟 [屬性] 窗格。 在 [檢視] 索引標籤上，按一下 [屬性]  
+3.  開啟 [屬性] 窗格。 在 [檢視]  索引標籤上，按一下 [屬性]   
   
 4.  在設計介面上，按一下圖表。 圖表的屬性會顯示在 [屬性] 窗格中。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "56298526"
   
 1.  建立區域圖、直條圖、折線圖或散佈圖。  
   
-2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]。  
+2.  在設計介面上，以滑鼠右鍵按一下圖表，然後選取 [顯示資料標籤]  。  
   
-3.  開啟 [屬性] 窗格。 在 [檢視] 索引標籤上，按一下 [屬性]  
+3.  開啟 [屬性] 窗格。 在 [檢視]  索引標籤上，按一下 [屬性]   
   
 4.  在設計介面上，按一下數列。 數列的屬性會顯示在 [屬性] 窗格中。  
   
-5.  在 [資料] 區段中，展開 [DataPoint] 節點，然後展開 [Label] 節點。  
+5.  在 [資料]  區段中，展開 [DataPoint]  節點，然後展開 [Label]  節點。  
   
 6.  選取 Position 屬性的值。  
   

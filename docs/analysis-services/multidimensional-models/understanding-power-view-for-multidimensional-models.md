@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165081"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -94,10 +94,10 @@ ms.locfileid: "52543526"
  ![Power View 中的非彙總階層](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
   
 ### <a name="implicit-measures"></a>隱含量值  
- 表格式模型讓使用者能夠建立「隱含」量值，例如欄位的計數、加總或平均。 針對多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能會花費很長的時間。 因此，Power View 中無法使用隱含量值。  
+ 表格式模型讓使用者能夠建立「隱含」  量值，例如欄位的計數、加總或平均。 針對多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能會花費很長的時間。 因此，Power View 中無法使用隱含量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>維度、屬性和階層  
- Cube 維度在表格式中繼資料中公開為資料表。 在 Power View 欄位清單中，維度屬性會顯示為顯示資料夾中的資料行。  AttributeHierarchyEnabled 屬性設為 false 的維度屬性；例如：Customer 維度中的 Birth Date 屬性，或是 AttributeHierarchyVisible 屬性設為 false 的維度屬性都不會出現在 Power View 欄位清單中。 多層級階層或使用者階層，例如 Customer 維度中的 Customer Geography，在 Power View 欄位清單中公開為階層。 維度屬性的隱藏 UnknownMembers 會在 DAX 查詢和 Power View 中公開。  
+ Cube 維度在表格式中繼資料中公開為資料表。 在 Power View 欄位清單中，維度屬性會顯示為顯示資料夾中的資料行。  AttributeHierarchyEnabled 屬性設為 false，將維度屬性例如：在 [客戶] 維度中，或是 AttributeHierarchyVisible 屬性設為 false 的出生日期屬性不會出現在 Power View 欄位清單。 多層級階層或使用者階層，例如 Customer 維度中的 Customer Geography，在 Power View 欄位清單中公開為階層。 維度屬性的隱藏 UnknownMembers 會在 DAX 查詢和 Power View 中公開。  
   
  **SQL Server Data Tools (SSDT) 和 Power View 欄位清單中的維度、屬性和階層**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52543526"
  多維度模型透過角色支援維度和資料格層級安全性。 透過使用 Power View 連接到 Cube 的使用者，會經過驗證並評估是否具備適當權限。 套用維度安全性時，使用者不會看到 Power View 中的個別維度成員，不過如果使用者的資料格層級安全性已定義為限制某些資料格，該使用者就無法透過 Power View 連接到 Cube。 在某些情況下，當該資料的部分是從安全資料計算出來時，使用者可以看到彙總資料。  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>非彙總屬性/階層  
- 在多維度模型中，維度屬性 (Attribute) 的 IsAggregatable 屬性 (Property) 可設定為 false。 這表示，模型作者已經指定用戶端應用程式在查詢資料時不應該跨階層 (屬性或多層級) 彙總資料。 在 Power View 中，此維度屬性是公開為沒有小計的資料行。 在下圖，您可以看到非彙總階層範例：帳戶。 Accounts 父子式階層的最頂層為非彙總，其他層級為可彙總的。 在 Accounts 階層的矩陣視覺效果 (前兩個層級) 中，您可以看到 Account Level 02 的小計，但是最頂層 Account Level 01 則沒有小計。  
+ 在多維度模型中，維度屬性 (Attribute) 的 IsAggregatable 屬性 (Property) 可設定為 false。 這表示，模型作者已經指定用戶端應用程式在查詢資料時不應該跨階層 (屬性或多層級) 彙總資料。 在 Power View 中，此維度屬性是公開為沒有小計的資料行。 在下圖中，您可以看到非彙總階層範例：帳戶。 Accounts 父子式階層的最頂層為非彙總，其他層級為可彙總的。 在 Accounts 階層的矩陣視覺效果 (前兩個層級) 中，您可以看到 Account Level 02 的小計，但是最頂層 Account Level 01 則沒有小計。  
   
  **Power View 中的非彙總階層**  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52543526"
  如需詳細資訊，請參閱 [建立報表資料來源](../../analysis-services/multidimensional-models/create-a-report-data-source.md)。  
   
 ## <a name="power-view-pinned-filters"></a>Power View 固定的篩選  
- Power View 報表可以包含多個檢視。 在此版本中，適用於表格式和多維度模型的「固定篩選」功能，提供了建立套用到報表中所有檢視之篩選的功能。 下圖顯示檢視篩選的 [固定篩選] 切換按鈕。 根據預設，檢視篩選為取消固定，只套用到該檢視。 固定檢視篩選，會將篩選套用到所有檢視，取消固定篩選則會從其他檢視移除篩選。  
+ Power View 報表可以包含多個檢視。 在此版本中，適用於表格式和多維度模型的「固定篩選」  功能，提供了建立套用到報表中所有檢視之篩選的功能。 下圖顯示檢視篩選的 [固定篩選] 切換按鈕。 根據預設，檢視篩選為取消固定，只套用到該檢視。 固定檢視篩選，會將篩選套用到所有檢視，取消固定篩選則會從其他檢視移除篩選。  
   
  **固定的篩選**  
   
@@ -221,7 +221,7 @@ ms.locfileid: "52543526"
 |----------|--------------|-----------------|  
 |CATALOG_NAME|是|目錄\資料庫名稱。|  
 |PERSPECTIVE_NAME|是，如果 Cube 包含一個以上的檢視方塊。 如果只有一個 Cube 或有預設檢視方塊，則為選擇性。|多維度資料庫中的 Cube 名稱或檢視方塊名稱。|  
-|VERSION|是|用戶端要求的 CSDL 版本。 2.0 版中支援多維度功能和建構。|  
+|VERSION|是|用戶端要求的 CSDL 版本。 2\.0 版中支援多維度功能和建構。|  
   
  傳回的 CSDL 輸出文件將模型表示為命名空間，其中包含實體、關聯和屬性。  
   

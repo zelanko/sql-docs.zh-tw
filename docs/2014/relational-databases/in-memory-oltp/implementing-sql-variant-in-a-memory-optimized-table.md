@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157953"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 SQL_VARIANT
   請考量具有 `SQL_VARIANT` 資料行的資料表範例：  

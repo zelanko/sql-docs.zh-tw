@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.general.f1
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ba6b2700ca49b1b649dae2b1c05320d8cf4a001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb07909f1776684039f0cec6aaa22a1e9ef0cb66
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676126"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686905"
 ---
 # <a name="job-properties---new-job-general-page"></a>作業屬性 - 新增作業 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ ms.locfileid: "47676126"
 啟用作業。 未啟用作業時，則不會執行作業以回應排程或警示，但是您仍可以使用 **sp_start_job** 預存程序來啟動作業。  
   
 **Source**  
-顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
 **建立日期**  
-顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
 **上次修改**  
-顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
 **上次執行**  
-顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
 **檢視作業記錄**  
-檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般] 頁面使用。  
+檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般]  頁面使用。  
   
 ## <a name="see-also"></a>另請參閱  
 [實作作業](../../ssms/agent/implement-jobs.md)  

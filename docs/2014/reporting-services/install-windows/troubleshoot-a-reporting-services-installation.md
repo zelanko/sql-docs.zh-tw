@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108670"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>疑難排解 Reporting Services 安裝
   如果您因為安裝期間發生的錯誤而無法安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請使用本主題的指示來處理最有可能造成安裝錯誤的狀況。  
@@ -84,18 +83,18 @@ ms.locfileid: "56043329"
 -   [您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息](#bkmk_RS_SHP_notsupported)  
   
 ###  <a name="bkmk_configmanager_notstart"></a> Reporting Services 組態管理員未啟動  
- **描述：** 這個問題在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中是預設行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 現在的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
+ **描述：** 此問題，請在設計[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 現在的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
   
  **因應措施：** 您可以使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式安裝 SQL Server 2012 SSRS 之後不看 SQL Server Reporting Services 服務，在 SharePoint 管理中心內  
  **描述：** 已成功安裝之後，如果[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集適用於 SharePoint 2010，您看不見"SQL Server Reporting Services"下列兩個功能表中，則[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務尚未註冊：  
   
--   SharePoint 2010 管理中心 -> [應用程式管理] -> [管理伺服器上的服務] 頁面  
+-   SharePoint 2010 管理中心-> [應用程式管理]-> [管理服務的伺服器] 頁面  
   
--   SharePoint 2010 管理中心 -> [應用程式管理] -> [管理服務應用程式] -> [新增] 功能表  
+-   SharePoint 2010 管理中心-> [應用程式管理]-> [管理服務應用程式]-> [新增] 功能表  
   
- **因應措施：** 若要註冊並啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services，請完成下列步驟：  
+ **因應措施：** 若要註冊並啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint Services，完成下列步驟：  
   
 1.  在執行 SharePoint 2010 管理中心的電腦上  
   
@@ -116,11 +115,11 @@ ms.locfileid: "56043329"
 2.  確認[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務的顯示狀態為 「**已啟動**」 頁面上：SharePoint 2010 管理中心->"**應用程式管理**]-> [**管理伺服器上的服務**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell 指令程式無法使用，而且無法辨識命令  
- **描述：** 當您嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式時，看到類似下列的錯誤訊息：  
+ **描述：** 當您嘗試執行[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]PowerShell cmdlet，您會看到類似下列的錯誤訊息：  
   
--   **無法辨識** 'Install-SPRSServiceInstall-SPRSService' 詞彙是否為 Cmdlet、函數、指令檔或可執行程式的名稱。 請檢查名稱拼字是否正確，如果包含路徑的話，請確認路徑是否正確，然後再試一次。於行: 1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          :ObjectNotFound.：(Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   **無法辨識** 'Install-SPRSServiceInstall-SPRSService' 詞彙是否為 Cmdlet、函數、指令檔或可執行程式的名稱。 請檢查名稱的拼字，或如果包含路徑的話，確認路徑正確，然後再試一次。在行： 1 char:39+ 是否-Install-sprsservice <<<< + CategoryInfo:ObjectNotFound:(Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
- **因應措施：** 完成下列其中一項作業：  
+ **因應措施：** 完成下列其中一項：  
   
 -   執行適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 **rssharepoint.msi**。  
   
@@ -137,13 +136,13 @@ ms.locfileid: "56043329"
 -   [安裝適用於 SharePoint 2013 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
 ###  <a name="bkmk_URL_not_configured"></a> 您看見一則錯誤訊息，指出 URL 未設定  
- **描述：** 您會看到類似下列的錯誤訊息：  
+ **描述：** 您看見錯誤訊息如下所示：  
   
  系統不支援這項 SQL Server Reporting Services (SSRS) 功能。 請使用管理中心來確認並修正下列一個或多個問題：•報表伺服器 URL 未設定。 請使用 SSRS 整合頁面來設定它。•SSRS 服務應用程式 Proxy 未設定。 請使用 SSRS 服務應用程式頁面來設定 Proxy。•SSRS 服務應用程式並未對應至此 Web 應用程式。 請使用 SSRS 服務應用程式頁面，將 SSRS 服務應用程式 Proxy 關聯至此 Web 應用程式的應用程式 Proxy 群組。  
   
- **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 'URL 未設定報表伺服器...」 訊息中的第一項建議 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定] 頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)] 來完成。  
+ **因應措施：** 錯誤訊息包含更正這個問題的三個建議的步驟。 'URL 未設定報表伺服器...」 訊息中的第一項建議 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定]  頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)]  來完成。  
   
- **詳細資訊：** 當您嘗試使用任何需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之連接的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，就會看見這則錯誤訊息。 這包括：  
+ **詳細資訊：** 當您嘗試使用任何一個時，您會看到此錯誤訊息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能所需的連接[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務。 這包括：  
   
 -   從 SharePoint 文件庫開啟 SQL Server 報表產生器。  
   
@@ -152,18 +151,18 @@ ms.locfileid: "56043329"
 -   管理服務應用程式。  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> 在已安裝 SharePoint 但尚未進行設定的電腦上，安裝程式會失敗  
- **描述：** 若您在已安裝 SharePoint 但尚未進行設定的電腦上，選擇安裝 Reporting Services SharePoint 模式，將會看到類似下列的訊息，且安裝程式將會停止：  
+ **描述：** 如果您選取具有 SharePoint 的電腦上安裝 Reporting Services SharePoint 模式安裝，但尚未設定 SharePoint，您會看到類似下列且安裝程式的訊息將會停止：  
   
  SQL Server 安裝程式已停止運作  
   
  **因應措施：** 設定 SharePoint，然後執行 SQL Server 安裝。  
   
- **詳細資訊：** 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝至現有的 SharePoint 安裝時，安裝程式會嘗試安裝並啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服務。 若尚未設定 SharePoint，服務安裝將會失敗並會導致安裝程式失敗。  
+ **詳細資訊：** 安裝時[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]至現有的 SharePoint 安裝，安裝程式會嘗試安裝並啟動和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 服務。 若尚未設定 SharePoint，服務安裝將會失敗並會導致安裝程式失敗。  
   
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint 管理中心頁面是空白的  
- **描述：** 您可以順利安裝 SharePoint 2010，且未出現安裝錯誤。 但當您瀏覽至管理中心時，只看到了空白頁面：  
+ **描述：** 您仍可順利安裝 SharePoint 2010，且未出現安裝錯誤。 但當您瀏覽至管理中心時，只看到了空白頁面：  
   
- **因應措施：** 此問題不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所特有的問題，而是與整體 SharePoint 安裝中的權限組態相關。 下列是建議的清單：  
+ **因應措施：** 這個問題並非專屬於[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]而與整體 SharePoint 安裝中的權限組態相關。 下列是建議的清單：  
   
 -   請檢閱開發環境上的 SharePoint 主題。 [適用於 SharePoint 2010 的開發環境上設定 Windows Vista、 Windows 7 和 Windows Server 2008](https://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
   
@@ -172,18 +171,18 @@ ms.locfileid: "56043329"
 -   為 SharePoint 服務 (如 SharePoint 2010 管理中心服務) 所使用的服務帳戶，應具有本機作業系統中的管理員權限。  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> 嘗試建立新的報表產生器報表時看到錯誤訊息  
- **描述：** 嘗試在文件庫中建立報表產生器報表時，會看到類似下列的錯誤訊息：  
+ **描述：** 當您嘗試建立文件庫的報表產生器報表時，您會看到類似下面的錯誤訊息：  
   
  尚未支援此功能，因為 SQL Server Reporting Services 服務應用程式不存在，或是未於管理中心設定報表伺服器 URL。  
   
- **因應措施：** 確認您具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，且已正確設定。 如需詳細資訊，請參閱區段建立 Reporting Services 服務應用程式 中[安裝 Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **因應措施：** 請確認您有[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式，且已正確設定。 如需詳細資訊，請參閱區段建立 Reporting Services 服務應用程式 中[安裝 Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> 您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息  
- **描述：** 嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 PREPAREIMAGE 時，會看到類似下列的錯誤訊息：  
+ **描述：** 當您嘗試執行的 PREPAREIMAGE[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]您會看到類似下面的錯誤訊息：  
   
  「執行 PREPAREIMAGE 動作時不支援指定的功能 'RS_SHP'，因為此動作不支援 SysPrep。 請移除與 SysPrep 不相容的功能，然後重新執行安裝程式。」  
   
- **因應措施：** 沒有因應措施。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式支援 SYSPREP。  
+ **因應措施：** 沒有任何因應措施。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式支援 SYSPREP。  
   
 ##  <a name="bkmk_tshoot_native"></a> 疑難排解原生模式安裝的問題  
   
@@ -213,13 +212,13 @@ ms.locfileid: "56043329"
   
 1.  開啟登錄編輯程式：  
   
-    1.  按一下 **[開始]**，並按一下 **[執行]**。  
+    1.  按一下 **[開始]** ，並按一下 **[執行]** 。  
   
     2.  在 **執行**對話方塊中，於**開放**方塊中，輸入`regedit`。  
   
 2.  在 [登錄編輯程式] 中，選取下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
-3.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
+3.  以滑鼠右鍵按一下 [Performance]  節點，並指向 [新增]  ，然後按一下 [多字串值]  。  
   
 4.  輸入 `Counter Names`，然後按 ENTER。  
   
@@ -227,7 +226,7 @@ ms.locfileid: "56043329"
   
 6.  瀏覽到以下的登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
-7.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
+7.  以滑鼠右鍵按一下 [Performance]  節點，並指向 [新增]  ，然後按一下 [多字串值]  。  
   
 8.  輸入 `Counter Names`，然後按 ENTER。  
   
@@ -274,10 +273,10 @@ ms.locfileid: "56043329"
 ##  <a name="bkmk_additional"></a> 其他資源  
  下列為您可檢閱以協助您進行問題疑難排解的其他資源：  
   
--   TechNet Wiki：疑難排解主題[疑難排解 SQL Server Reporting Services (SSRS) 在 SharePoint 整合模式中](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki:疑難排解主題[疑難排解 SQL Server Reporting Services (SSRS) 在 SharePoint 整合模式中](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [論壇：SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) 。  
   
   

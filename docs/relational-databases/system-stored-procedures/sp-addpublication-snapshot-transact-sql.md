@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061836"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  請勿將驗證資訊儲存在指令碼檔案中。 若要改善安全性，我們建議您在執行階段提供登入名稱和密碼。  
   
-`[ @job_login = ] 'job_login'` 是執行代理程式帳戶的登入。 Azure SQL Database 受控執行個體，使用 SQL Server 帳戶。 *job_login*已**nvarchar(257)**，預設值是 NULL。 代理程式連接到 「 散發者 」 一律使用此帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。  
+`[ @job_login = ] 'job_login'` 是執行代理程式帳戶的登入。 Azure SQL Database 受控執行個體，使用 SQL Server 帳戶。 *job_login*已**nvarchar(257)** ，預設值是 NULL。 代理程式連接到 「 散發者 」 一律使用此帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。  
   
 > [!NOTE]
 >  針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這必須是指定的相同登入[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。  
@@ -149,8 +148,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [建立並套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_startpublication_snapshot &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

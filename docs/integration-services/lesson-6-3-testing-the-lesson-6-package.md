@@ -11,14 +11,18 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bf96ba0d5c6fb244f9979054be8228ce4a38d34
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 001ba5fc56393cbbcdbc8b5379abc8390dc05e0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721242"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>第 6-3 課：測試第 6 課套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在執行階段，您的套件會從 **VarFolderName** 參數取得 **Directory** 屬性值。  
   
 若要確認套件會更新 **Directory** 屬性，請執行套件。 因為您已將三個範例資料檔案複製到新目錄，所以資料流程會執行三次。

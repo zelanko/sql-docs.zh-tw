@@ -2,18 +2,18 @@
 title: 內建的全域和使用者參考 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1bdfb2cfca82df57d76c321957bbcb565fb2b058
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581843"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>內建集合 - 內建的全域和使用者參考 (報表產生器)
   內建欄位集合包含 **Globals** 和 **User** 集合，代表在處理報表時 Reporting Services 所提供的全域值。 **Globals** 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 **User** 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  

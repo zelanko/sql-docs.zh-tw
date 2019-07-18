@@ -11,14 +11,18 @@ ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70b018f595f5db67e2674dd0488a81798306c080
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728915"
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用屬性編輯器，在您建立初始組態之後變更 CDC 執行個體。 您可以在屬性編輯器中執行以下動作。  
   
 -   [編輯 Oracle 資料庫屬性](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
@@ -39,9 +43,9 @@ ms.locfileid: "58272728"
   
 2.  選取您要編輯屬性的 CDC 執行個體。  
   
-3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]**。  
+3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]** 。  
   
-     您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]。  
+     您也可以用滑鼠右鍵按一下左窗格中的服務，然後選取 [屬性]  。  
   
 ### <a name="or"></a>或  
   
@@ -49,8 +53,8 @@ ms.locfileid: "58272728"
   
 2.  從 CDC 設計工具主控台中央的清單中，選取您要編輯屬性的 CDC 執行個體。  
   
-3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]**。  
+3.  從 CDC 設計工具主控台右側的 **[動作]** 窗格中，按一下 **[屬性]** 。  
   
-     您也可以在 CDC 設計工具主控台中央的清單中，以滑鼠右鍵按一下服務，然後選取 [屬性]。  
+     您也可以在 CDC 設計工具主控台中央的清單中，以滑鼠右鍵按一下服務，然後選取 [屬性]  。  
   
   

@@ -2,19 +2,18 @@
 title: 監視作用中查詢-Parallel Data Warehouse |Microsoft Docs
 description: 您可以使用管理主控台和平行處理資料倉儲系統檢視表來監視 Analytics Platform System 上的作用中查詢。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960498"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>監視作用中查詢的平行處理資料倉儲
 這篇文章會示範如何使用管理主控台和 SQL Server PDW 系統檢視表來監視使用中的查詢。 請參閱[使用管理主控台來監視設備](monitor-the-appliance-by-using-the-admin-console.md)並[系統檢視表](tsql-system-views.md)如需這些工具。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0126337fb1f871a4d89354bd65cbfd11932bf5c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066370"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格式模型方案部署 (SSAS 表格式)
   撰寫表格式模型專案之後，您必須部署專案，以便讓使用者可以使用報表用戶端應用程式來瀏覽模型。 此主題描述在您的環境中部署表格式模型方案時可使用的各種屬性和方法。  
@@ -41,7 +40,7 @@ ms.locfileid: "52502918"
 ##  <a name="bkmk_deploying_bism"></a> 從 SQL Server 資料工具 (SSDT) 部署表格式模型  
  部署是一個簡單的程序，不過，必須採取某些步驟來確認您的模型已使用正確的組態選項，部署到正確的 Analysis Services 執行個體。  
   
- 表格式模型是由數個部署特定屬性所定義。 部署時，會建立在 [伺服器] 屬性中指定之 Analysis Services 執行個體的連接。 接著會在該執行個體上建立具有 [資料庫] 屬性中指定之名稱的新模型資料庫 (如果尚未存在)。 從模型專案之 Model.bim 檔案的中繼資料用來設定部署伺服器上的模型資料庫中的物件。 透過 [處理選項]，您可以指定是否只要部署模型中繼資料，並建立模型資料庫；或者如果指定 [預設] 或 [完整]，用來連接到資料來源的模擬認證就會從記憶體中的模型工作空間資料庫傳遞到已部署的模型資料庫。 接著，Analysis Services 會執行處理，以便將資料擴展到已部署的模型中。 一旦部署程序完成，用戶端應用程式就可以使用資料連接或 SharePoint 中的 .bism 連接檔案，來連接模型。  
+ 表格式模型是由數個部署特定屬性所定義。 部署時，會建立在 [伺服器]  屬性中指定之 Analysis Services 執行個體的連接。 接著會在該執行個體上建立具有 [資料庫]  屬性中指定之名稱的新模型資料庫 (如果尚未存在)。 從模型專案之 Model.bim 檔案的中繼資料用來設定部署伺服器上的模型資料庫中的物件。 透過 [處理選項]  ，您可以指定是否只要部署模型中繼資料，並建立模型資料庫；或者如果指定 [預設]  或 [完整]  ，用來連接到資料來源的模擬認證就會從記憶體中的模型工作空間資料庫傳遞到已部署的模型資料庫。 接著，Analysis Services 會執行處理，以便將資料擴展到已部署的模型中。 一旦部署程序完成，用戶端應用程式就可以使用資料連接或 SharePoint 中的 .bism 連接檔案，來連接模型。  
   
 ##  <a name="bkmk_deploy_props"></a> 部署屬性  
  專案的 [部署選項] 與 [部署伺服器] 屬性會指定將模型部署到暫存或實際執行之 Analysis Services 環境的方式和位置。 針對所有模型專案定義預設的屬性設定時，您可以根據特定部署需求，變更每個專案的這些屬性設定。 如需設定預設部署屬性的詳細資訊，請參閱[設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)。  
@@ -83,7 +82,7 @@ ms.locfileid: "52502918"
 |**部署精靈**|使用 [部署精靈]，即可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的 XMLA 輸出檔來部署專案的中繼資料至目的地伺服器。 使用 [部署精靈] 時，您可以直接從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 檔案進行部署，如同由專案建置的輸出目錄所建立的一樣。<br /><br /> 使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 的主要優點在於其便利性。 就像是您可以儲存 XMLA 指令碼以供 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]稍後使用一樣，您也可以儲存 [部署精靈] 指令碼。 您可以透過部署公用程式，在命令提示字元處以互動方式執行 [部署精靈]。|[Deploy Model Solutions Using the Deployment Wizard](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**部署公用程式**|部署公用程式可讓您在命令提示字元之下啟動 Analysis Services 部署引擎。|[使用部署公用程式的部署模型方案](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
 |**同步處理資料庫精靈**|使用 [同步處理資料庫精靈]，即可同步處理任何兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫之間的中繼資料和資料。<br /><br /> [同步處理精靈] 可以從來源伺服器，將資料和中繼資料複製到目的地伺服器。 如果目的地伺服器沒有您要部署的資料庫複本，則會將新資料庫複製到目的地伺服器。 如果目的地伺服器已經有相同資料庫的複本，則會更新目的地伺服器上的資料庫，以使用來源資料庫的中繼資料和其他資料。|[同步處理 Analysis Services 資料庫](../multidimensional-models/synchronize-analysis-services-databases.md)|  
-|**備份與還原**|備份提供傳送 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫最簡單的方式。 從 [備份] 對話方塊，您可以設定選項的組態，並可隨後從對話方塊本身來執行備份。 或者，您可建立可依需求頻率來儲存和執行的指令碼。<br /><br /> 備份和還原不像其他部署方法一般常用，但卻是可在最小基礎結構需求內快速完成部署的方法。|[備份與還原 Analysis Services 資料庫](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)|  
+|**備份與還原**|備份提供傳送 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫最簡單的方式。 從 [備份]  對話方塊，您可以設定選項的組態，並可隨後從對話方塊本身來執行備份。 或者，您可建立可依需求頻率來儲存和執行的指令碼。<br /><br /> 備份和還原不像其他部署方法一般常用，但卻是可在最小基礎結構需求內快速完成部署的方法。|[備份與還原 Analysis Services 資料庫](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)|  
   
 ##  <a name="bkmk_connecting"></a> 設定部署伺服器並連接至已部署的模型  
  部署模型之後，保護模型資料存取、備份，以及可透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在 Analysis Services 伺服器上設定的處理作業會有其他考量。 雖然這些屬性和組態設定超出本主題的範圍，但儘管如此，它們在確保已部署之模型資料安全、維持最新狀態上非常重要，而且會針對組織中的使用者，提供寶貴的資料分析資源。  

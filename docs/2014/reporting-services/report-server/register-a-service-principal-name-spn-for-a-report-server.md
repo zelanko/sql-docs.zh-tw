@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ea63ef515b1caa524ebc72a87996d1d1d610d63a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103605"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
   如果您在使用 Kerberos 通訊協定進行相互驗證的網路中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當您想要將報表伺服器服務設定為以網域使用者帳戶的身分執行時，必須為此服務建立服務主要名稱 (SPN)。  
@@ -26,9 +25,9 @@ ms.locfileid: "56023449"
   
  若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列內容：  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx)。  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
   
--   [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)。  
+-   [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
  您必須是網域管理員，才能在網域控制站上執行此公用程式。  
   
@@ -43,7 +42,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  `HTTP` 為服務類別。 報表伺服器 Web 服務會在 HTTP.SYS 中執行。 依據產品建立適用於 HTTP 的 SPN 就是指相同電腦上在 HTTP.SYS 中執行的所有 Web 應用程式 (包括 IIS 內主控的應用程式) 都將根據網域使用者帳戶來被授與票證。 如果這些服務在不同的帳戶下執行，驗證要求將會失敗。 為了避免這個問題，請務必在相同的帳戶下設定所有要執行的 HTTP 應用程式，或是考慮為每一個應用程式建立主機標頭，然後再為每一個主機標頭建立個別的 SPN。 當您設定主機標頭時，不論 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態為何，都需要進行 DNS 變更。  
   
- 您為 \<電腦名稱>、\<網域名稱> 和 \<連接埠> 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用連接埠 80，即可在命令列中省略 \<網域名稱> 和 \<連接埠>。 \<網域使用者帳戶> 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
+ 您為 \<電腦名稱  >、\<網域名稱  > 和 \<連接埠  > 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用連接埠 80，即可在命令列中省略 \<網域名稱  > 和 \<連接埠  >。 \<網域使用者帳戶  > 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>為網域使用者帳戶註冊 SPN  
   

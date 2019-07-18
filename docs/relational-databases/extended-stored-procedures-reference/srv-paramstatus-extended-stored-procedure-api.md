@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ca1e260e49efcc91a8a4aca471e06b8a7ed23448
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005569"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ n
  這指出參數的數目。 第一個參數是數字 1。  
   
 ## <a name="returns"></a>傳回值  
- 包含參數之狀態旗標的 **int**。 目前只有一個旗標：如果位元 0 設定為 1，參數為傳回參數。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。  
+ 包含參數之狀態旗標的 **int**。 目前，只有一個旗標：若位元 0 設定為 1，則該參數是一個傳回參數。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，其會傳回 -1。  
   
 ## <a name="remarks"></a>Remarks  
  此常式會傳回遠端預存程序呼叫參數的狀態旗標。  

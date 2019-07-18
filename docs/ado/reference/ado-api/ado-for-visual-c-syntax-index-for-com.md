@@ -1,5 +1,5 @@
 ---
-title: ADO for Visual c + + 語法索引 com |Microsoft Docs
+title: 視覺效果的 ADOC++語法索引 com |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,22 +16,21 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920983"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>適用於 COM 的 ADO for Visual C++ 語法索引
-此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照。  
+這個索引是根據 Microsoft Visual ADO 語言參考的交互參照C++。  
   
- 如果您使用 **#import**指示詞會在您的應用程式中，標頭檔將會產生可讓您使用類似到 Microsoft Visual Basic 語法。 屬性名稱的表單**get_**_PropertyName_並**put_**_PropertyName_可以視為如同它們宣告只是為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
+ 如果您使用 **#import**指示詞會在您的應用程式中，標頭檔將會產生可讓您使用類似到 Microsoft Visual Basic 語法。 屬性名稱的表單**get_** _PropertyName_ 並 **put_** _PropertyName_可以視為如同它們宣告只是為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
   
  所有方法、 屬性和事件都傳回的函式**HRESULT**，您可以測試會判斷如果函式執行成功。  
   
- 在 Visual c + + 中的方法和屬性語法會列出下列項目：  
+ 在視覺效果的方法和屬性語法C++會列出下列項目：  
   
 -   [集合](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
@@ -52,5 +51,5 @@ ms.locfileid: "52529634"
 -   [Stream 物件](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO #import Visual c + + 語法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [視覺效果的 ADOC++含 #import 語法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

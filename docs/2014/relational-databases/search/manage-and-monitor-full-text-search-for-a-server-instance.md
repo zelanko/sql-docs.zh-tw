@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 23dd1efa80cab8301c0a361c4e8486f036baf6f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011173"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
   伺服器執行個體的全文檢索管理包括：  
@@ -34,9 +34,9 @@ ms.locfileid: "48906368"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>檢視與變更全文檢索搜尋的伺服器屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
-2.  在 [伺服器屬性] 對話方塊中，按一下 [進階] 頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
+2.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
   
     -   **預設全文檢索語言**  
   

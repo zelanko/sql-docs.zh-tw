@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
@@ -13,12 +12,12 @@ ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072399"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名稱比對 (資料來源檢視精靈) (Analysis Services)
   使用 **[名稱比對]** 頁面並選取要使用的準則，即可偵測您為資料來源檢視所選取的資料表，與結構描述中的其他資料表是否有關聯性。 如果兩個資料表之間不存在實體外部索引鍵的關聯性，此準則可以幫助您識別相關的資料表，並將資料表加入資料來源檢視。 由名稱比對識別的邏輯關聯性，也會加入到資料來源檢視中。  
@@ -26,7 +25,7 @@ ms.locfileid: "48217768"
 > [!NOTE]  
 >  只有當您選取的資料來源有多個資料表，但各個資料表間沒有任何外部索引鍵關聯性時，才會顯示這個頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **比對資料行來建立邏輯關聯性**  
  選取即可使用名稱比對準則，來偵測您選取要包含在資料來源檢視中的資料表，與結構描述中的其他資料表是否有邏輯相依性和關聯性。 如果您清除此核取方塊，就不會在資料來源中使用名稱比對準則來識別資料表之間的邏輯關聯性。  
   

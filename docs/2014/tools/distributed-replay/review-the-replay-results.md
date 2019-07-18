@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149699"
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "52792830"
 ## <a name="event-classes-captured-in-result-trace-files"></a>結果追蹤檔案中擷取的事件類別  
  下表列出結果追蹤資料中擷取的所有事件類別。  
   
-|類別目錄|EventClass 名稱|擷取頻率|擷取點|  
+|Category|EventClass 名稱|擷取頻率|擷取點|  
 |--------------|---------------------|-----------------------|----------------------|  
 |可重新執行的事件|稽核登入|原始追蹤資料中每個 Audit Login 事件一次|在事件成功完成或失敗時。|  
 ||稽核登出|原始追蹤資料中每個 Audit Logout 事件一次|在事件成功完成或失敗時。|  

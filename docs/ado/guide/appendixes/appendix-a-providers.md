@@ -1,5 +1,5 @@
 ---
-title: 附錄 a： 提供者 |Microsoft Docs
+title: 附錄 A：提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926974"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>附錄 a： 資料和服務提供者
+# <a name="appendix-a-data-and-service-providers"></a>附錄 A：資料和服務提供者
 本節說明三種類型的提供者： 資料提供者、 服務提供者，以及服務元件。 提供者分為兩類： 提供與資料提供服務。 A*資料提供者*擁有它自己的資料，且會公開在表格式的格式，您的應用程式。 A*服務提供者*封裝所產生和取用資料，擴充功能，ADO 應用程式中的服務。 服務提供者可能也會進一步定義成*服務元件*，這必須與其他服務提供者或元件搭配運作。
 
 ## <a name="data-providers"></a>資料提供者

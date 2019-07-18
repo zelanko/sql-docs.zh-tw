@@ -24,14 +24,18 @@ ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb1b49bed3d8f3b9a839060bfe5480e9574e12ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 75522733a4054bd0a827913fee3cca060c2bdbdc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724398"
 ---
 # <a name="developing-a-custom-task"></a>開發自訂工作
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 利用工作執行工作單位，以支援擷取、轉換及載入資料。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各種可以執行最常使用之動作的工作，包括執行 SQL 陳述式、從 FTP 站台下載檔案等。 如果包含的工作與支援的動作未完全符合您的需求，可以建立自訂工作。  
   
  若要建立自訂工作，您必須建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別、將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (Attribute) 套用至新類別，以及覆寫基底類別的重要方法與屬性 (Property)，包括 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法。  

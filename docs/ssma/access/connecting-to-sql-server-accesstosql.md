@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006644"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>連接到 SQL Server (AccessToSQL)
 若要將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須連接到目標執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SSMA 連線時，取得執行個體中之資料庫相關的中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管。 SSMA 會將哪一個執行個體的相關資訊儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要連線，但不會儲存密碼。  
@@ -59,13 +58,13 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
 2.  在 **伺服器名稱**方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
-    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如： MyServer\MyInstance。  
+    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如: MyServer\MyInstance。  
   
-    -   若要連接到作用中使用者執行個體[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用具名管道連接通訊協定和指定管道名稱，例如\\ \\.\pipe\sql\query。 如需詳細資訊，請參閱 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 文件。  
+    -   若要連接到作用中使用者執行個體[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用具名管道連接通訊協定和指定管道名稱，例如\\ \\.\pipe\sql\query。 如需詳細資訊，請參閱[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]文件。  
   
 3.  如果您的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定為在非預設連接埠上接受連線中，輸入用於連接埠號碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的連線**伺服器連接埠** 方塊中。 預設執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，預設連接埠號碼為 1433年。 具名執行個體，SSMA 會嘗試取得連接埠號碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器服務。  
   
@@ -81,7 +80,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
 6.  安全的連線，會新增兩個控制項，**加密連接**核取方塊並**TrustServerCertificate**核取方塊。 只有當**加密連接**核取方塊**TrustServerCertificate**核取方塊會顯示。 當**加密連接**是 checked(true) 並**TrustServerCertificate** unchecked(false)，將會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保此行為，以及伺服器端上的用戶端必須安裝憑證。  
   
-7.  按一下 **[連接]**。  
+7.  按一下 **[連接]** 。  
   
 **較高的版本相容性**  
   
@@ -97,7 +96,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**專案類型與目標伺服器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (版本： 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (版本： 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
+|**專案類型與目標伺服器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (版本：9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (版本：10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||

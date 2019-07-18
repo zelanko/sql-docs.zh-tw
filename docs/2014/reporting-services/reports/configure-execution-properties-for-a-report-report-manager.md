@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - reports [Reporting Services], properties
 - reports [Reporting Services], execution options
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d4052b6e330bab1c32650b7cdeae7ecb5c7b21f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031079"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102704"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>設定報表的執行屬性 (報表管理員)
   您可以設定報表處理選項，以便指定擷取報表資料的時間。 如果外部資料來源是在特定時間重新整理 (例如，每日或每週重新整理的資料倉儲)，而且您想要避免每次要求報表都擷取相同資料的負擔，排程報表的資料處理就很有用。 此外，如果您想要控制外部資料庫伺服器的處理負載，或者當您想要針對必須使用相同資料集的多位使用者提供一致的結果時，排程資料處理也很有用。 若為變動資料，視需要報表可能會在不同的時間產生不同的結果。 相對地，報表快照集可讓您針對包含相同時間資料的其他報表或分析工具，進行有效的比較。  
@@ -37,15 +36,15 @@ ms.locfileid: "56031079"
   
  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-1.  在下拉式功能表中，按一下 [管理]，然後選取 [處理選項] 索引標籤。  
+1.  在下拉式功能表中，按一下 [管理]  ，然後選取 [處理選項]  索引標籤。  
   
-2.  按一下 [從報表執行快照集轉譯此報表]，然後選取下列其中一個選項：  
+2.  按一下 [從報表執行快照集轉譯此報表]  ，然後選取下列其中一個選項：  
   
-    -   如果想要建立快照集，請選取 [使用下列排程建立報表執行快照集]，然後定義報表特定的排程或從 [共用排程] 清單中選取。  
+    -   如果想要建立快照集，請選取 [使用下列排程建立報表執行快照集]  ，然後定義報表特定的排程或從 [共用排程]  清單中選取。  
   
-    -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]。  
+    -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]  。  
   
-3.  按一下 **[套用]**。  
+3.  按一下 **[套用]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../report-server/set-report-processing-properties.md)   

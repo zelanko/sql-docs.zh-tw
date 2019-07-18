@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874814"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 整合和交易
   `System.Transactions` 命名空間會提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合完全整合的交易架構。 `System.Transactions` 和 ADO.NET 能搭配使用，以擴充並簡化本機和分散式交易在 Managed 應用程式中的使用。  

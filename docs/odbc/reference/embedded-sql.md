@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a7fa2b3105aedee6cb054c5d5dfa76f3c430f35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915419"
 ---
 # <a name="embedded-sql"></a>內嵌 SQL
 將 SQL 陳述式傳送至 DBMS 的第一個技巧內嵌 SQL。 因為 SQL 不會使用變數和流程控制陳述式，它通常作為資料庫次語言，可以加入至以傳統的程式設計語言，例如 C 或 COBOL 撰寫的程式。 這是內嵌的 SQL 的中心概念： 將 SQL 陳述式放在以許多程式設計語言撰寫的程式。 簡單地說，下列技術用來內嵌在主應用程式語言中的 SQL 陳述式：  

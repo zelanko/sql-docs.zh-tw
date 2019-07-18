@@ -2,21 +2,21 @@
 title: 報表伺服器 ExecutionLog 和 ExecutionLog3 檢視 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65619696"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -51,23 +51,23 @@ ms.locfileid: "52414096"
   
  **若要啟用執行記錄：**  
   
-1.  從 SharePoint 管理中心，按一下 [應用程式管理] 群組中的 [管理服務應用程式]。  
+1.  從 SharePoint 管理中心，按一下 [應用程式管理]  群組中的 [管理服務應用程式]  。  
   
 2.  按一下您想要設定之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。  
   
-3.  按一下 **[系統設定]**。  
+3.  按一下 **[系統設定]** 。  
   
-4.  選取 [記錄] 區段中的 [啟用執行記錄]。  
+4.  選取 [記錄]  區段中的 [啟用執行記錄]  。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
  **若要啟用詳細資訊記錄：**  
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定] 頁面中，尋找 [使用者定義] 區段。  
+1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定]  頁面中，尋找 [使用者定義]  區段。  
   
-2.  將 [ExecutionLogLevel] 變更為 [verbose]。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose] 和 [normal]。  
+2.  將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
 ##  <a name="bkmk_native"></a> 原生模式報表伺服器的組態設定  
  您可以從 SQL Server Management Studio 的 [伺服器屬性] 頁面開啟或關閉報表執行記錄。 **EnableExecutionLogging** 是進階屬性。  
@@ -82,19 +82,19 @@ ms.locfileid: "52414096"
   
 2.  連接到所需的報表伺服器。  
   
-3.  以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。 如果 [屬性] 選項已停用，請確認您已使用系統管理權限來啟動 SQL Server Management Studio。  
+3.  以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 如果 [屬性] 選項已停用，請確認您已使用系統管理權限來啟動 SQL Server Management Studio。  
   
-4.  按一下 [記錄] 頁面。  
+4.  按一下 [記錄]  頁面。  
   
-5.  選取 [啟用報表執行記錄]。  
+5.  選取 [啟用報表執行記錄]  。  
   
  **若要啟用詳細資訊記錄：**  
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [伺服器屬性] 對話方塊中，按一下 [進階] 頁面。  
+1.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面。  
   
-2.  在 [使用者定義] 區段中，將 [ExecutionLogLevel] 變更為 [verbose]。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose] 和 [normal]。  
+2.  在 [使用者定義]  區段中，將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
 ##  <a name="bkmk_executionlog3"></a> 記錄欄位 (ExecutionLog3)  
  這個檢視已在 XML 架構的 **AdditionalInfo** 資料行內加入其他效能診斷節點。 AdditionalInfo 資料行包含的 XML 結構是由 1 至多個其他資訊欄位所組成。 下面是可從 ExecutionLog3 檢視中擷取資料列的範例 Transact SQL 陳述式。 此範例會假設報表伺服器資料庫名為 **ReportServer**：  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     加入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      此值會以毫秒來表示。 此資料可用來診斷效能問題。 從外部 Web 伺服器擷取影像所需的時間可能會讓整體報表執行變慢。  
   
     ```  
@@ -272,9 +270,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **連接**  
-  
-     加入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+-   **連線**  
   
      多層結構  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  下表描述在報表執行記錄中擷取的資料。  
   
 |「資料行」|Description|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
-|ReportPath|報表的路徑結構。  例如，名為 "test" 且位於報表管理員根資料夾中報表會具有 "/test" 的 ReportPath。<br /><br /> 名為 "test" 且儲存在報表管理員 "samples" 資料夾中報表會具有 "/Samples/test/" 的 ReportPath|  
+|ReportPath|報表的路徑結構。 儲存在根資料夾中名為 "test" 的轉貼包含 "/test" 的 ReportPath。<br /><br /> 儲存在資料夾 "samples" 中名為 "test" 的報表，可能包含 "/Samples/test/" 的 ReportPath|  
 |UserName|使用者識別碼。|  
 |ExecutionID||  
 |RequestType|要求類型 (使用者或系統)。|  

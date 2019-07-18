@@ -2,25 +2,25 @@
 title: 資料表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f6d7b6081950e06af35852a2c9eeef1ca0827845
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287996"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574727"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]分頁報表中，您可以使用資料表顯示詳細資料、群組資料，或兩者的組合。   
    
  您可以依單一欄位、多個欄位或透過撰寫自己的運算式來分組資料。 您可以建立巢狀群組或獨立、相鄰的群組。 若要顯示群組資料的彙總值，將總計加入到群組中。 格式化資料列和資料行以反白顯示您要強調的資料。 您可以一開始隱藏詳細資料或群組資料並加入向下鑽研切換，以便讓使用者以互動方式選擇要顯示多少資料。  
   
- 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速地開始使用資料表，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
 > [!NOTE]  
 >  您可以將資料表當做報表組件，與報表分開發行。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  

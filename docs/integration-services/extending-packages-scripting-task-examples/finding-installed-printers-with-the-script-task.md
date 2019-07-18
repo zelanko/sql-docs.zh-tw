@@ -22,27 +22,31 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac26a89f7f49dfe19c25e9be54a0543c20a3b571
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8a89e4aa9364db4901f85e4ed2452514eea72f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724326"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>以指令碼工作尋找安裝的印表機
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝轉換的資料通常有列印的報表，做為其最終的目的地。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 **System.Drawing.Printing** 命名空間提供使用印表機的類別。  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>Description  
- 下列範例找到安裝在伺服器上支援 Legal Size 紙張 (用於美國) 的印表機。 檢查支援紙張大小的程式碼是封裝在私用函數中。 為了讓您在指令碼檢查每台印表機的設定時，追蹤指令碼的進度，指令碼使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法，來針對使用 Legal Size 紙張的印表機引發參考用訊息，並為沒有 Legal Size 紙張的印表機引發警告。 當您在設計工具中執行封裝時，這些訊息會出現在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 的 [輸出] 視窗中。  
+ 下列範例找到安裝在伺服器上支援 Legal Size 紙張 (用於美國) 的印表機。 檢查支援紙張大小的程式碼是封裝在私用函數中。 為了讓您在指令碼檢查每台印表機的設定時，追蹤指令碼的進度，指令碼使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法，來針對使用 Legal Size 紙張的印表機引發參考用訊息，並為沒有 Legal Size 紙張的印表機引發警告。 當您在設計工具中執行封裝時，這些訊息會出現在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 的 [輸出]  視窗中。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  建立名為 `PrinterList` 且類型為 **Object** 的變數。  
   
-2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將此變數加入 ReadWriteVariables 屬性。  
+2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，將此變數加入 ReadWriteVariables 屬性。  
   
 3.  在指令碼專案中，加入 **System.Drawing** 命名空間的參考。  
   

@@ -1,5 +1,5 @@
 ---
-title: 離散化方法 （資料採礦） |Microsoft 文件
+title: 離散化方法 （資料採礦） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 610108ce4edb6e3beb5c13398d0a79eca200bdba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467759"
 ---
 # <a name="discretization-methods-data-mining"></a>分隔方法 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34016975"
   
  下表描述您可用於分隔 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中之資料的方法。  
   
-|分隔方法|Description|  
+|分隔方法|描述|  
 |---------------------------|-----------------|  
 |**AUTOMATIC**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會決定要使用的分隔方法。|  
 |**CLUSTERS**|演算法會將資料分成群組，流程是先取樣定型資料、初始化為一些隨機點，然後使用 Expectation Maximization (EM) 群集方法來執行 Microsoft 群集演算法的數次反覆運算。 **CLUSTERS** 方法很有用，因為它在任何分佈曲線上都可以運作。 不過，它比其他分隔方法需要更多的處理時間。<br /><br /> 這個方法只能用於數值資料行。|  
@@ -47,12 +47,12 @@ ms.locfileid: "34016975"
   
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [內容類型 & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [資料類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [內容類型 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [資料類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)   
- [資料行分佈 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
+ [資料行散發 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
   

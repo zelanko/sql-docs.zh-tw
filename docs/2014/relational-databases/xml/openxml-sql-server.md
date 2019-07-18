@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195640"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。  

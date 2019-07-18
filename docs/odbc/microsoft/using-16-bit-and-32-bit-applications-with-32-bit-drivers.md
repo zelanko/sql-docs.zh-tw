@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8540983b84d4d39fe5a02b92a1e3a3606350d36d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 941c821d7622b2364ec1cd417dd9b50302540b95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088176"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>搭配使用 16 位元和 32 位元應用程式與 32 位元驅動程式
 > [!IMPORTANT]  

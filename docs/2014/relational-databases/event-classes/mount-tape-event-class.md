@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023453"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件類別
   收到磁帶掛載要求時，就會發生 Mount Tape 事件類別。 使用此事件類別來監視磁帶掛載要求，以及要求的成功或失敗。  

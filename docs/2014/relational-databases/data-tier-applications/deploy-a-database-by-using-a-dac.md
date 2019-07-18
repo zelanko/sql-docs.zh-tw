@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873029"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
   使用 [將資料庫部署到 SQL Azure]  精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
@@ -66,7 +66,7 @@ ms.locfileid: "53362810"
   
 3.  展開 **[資料庫]** 節點。  
   
-4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]，然後選取 [將資料庫部署到 SQL Azure...]  
+4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]  ，然後選取 [將資料庫部署到 SQL Azure...]   
   
 5.  完成精靈對話方塊：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "53362810"
   
  **本機主機：**  
   
--   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接] 來驗證連接。  
+-   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接]  來驗證連接。  
   
 -   **新資料庫名稱** - 指定新資料庫的名稱。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53362810"
 -   指定暫存檔 (即 BACPAC 封存檔案) 的本機目錄。 請注意，檔案將在指定的位置上建立，而且作業完成之後，將保留在該位置。  
   
 ##  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束精靈，請按一下 **[取消]**。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]** 。 若要取消部署作業並結束精靈，請按一下 **[取消]** 。  
   
 ##  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  

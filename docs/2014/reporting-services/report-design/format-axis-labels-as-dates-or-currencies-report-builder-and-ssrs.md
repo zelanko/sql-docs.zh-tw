@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 444d02709a25334893a5d5741ac08dbf9ee40dea
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d328f58da2be026046fc2688a4959b37f5ff7d65
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105875"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>將軸標籤格式化成日期或貨幣 (報表產生器及 SSRS)
   當您在座標軸上顯示適當格式化的日期時間值時，圖表會自動將這些值顯示為天。 若要為 X 軸指定日期/時間間隔 (例如月份或小時的間隔)，您必須格式化軸標籤，並將軸間隔的類型設定為有效的日期或時間間隔。  
@@ -33,15 +32,15 @@ ms.locfileid: "56291954"
   
 ### <a name="to-format-x-axis-labels-as-monthly-intervals"></a>將 X 軸標籤格式化成月份間隔  
   
-1.  以滑鼠右鍵按一下圖表的水平軸 ( X 軸)，然後選取 [水平軸屬性]。  
+1.  以滑鼠右鍵按一下圖表的水平軸 ( X 軸)，然後選取 [水平軸屬性]  。  
   
-2.  在 [水平軸屬性] 對話方塊中，選取 [數字]。  
+2.  在 [水平軸屬性]  對話方塊中，選取 [數字]  。  
   
-3.  從 [類別目錄] 清單中，選取 [日期]。 從 [類型] 清單中，選取要套用到 X 軸標籤的日期格式。  
+3.  從 [類別目錄]  清單中，選取 [日期]  。 從 [類型]  清單中，選取要套用到 X 軸標籤的日期格式。  
   
-4.  選取 [軸選項]。  
+4.  選取 [軸選項]  。  
   
-5.  在 [間隔] 中，鍵入 **1**。 在 [間隔類型] 屬性中，選取 [月]。  
+5.  在 [間隔]  中，鍵入 **1**。 在 [間隔類型]  屬性中，選取 [月]  。  
   
     > [!NOTE]  
     >  如果您未指定間隔類型，圖表將會以日來計算間隔。  
@@ -50,11 +49,11 @@ ms.locfileid: "56291954"
   
 ### <a name="to-format-y-axis-labels-using-a-currency-format"></a>使用貨幣格式格式化 Y 軸標籤  
   
-1.  以滑鼠右鍵按一下圖表的垂直軸 (Y 軸)，然後選取 [垂直軸屬性]。  
+1.  以滑鼠右鍵按一下圖表的垂直軸 (Y 軸)，然後選取 [垂直軸屬性]  。  
   
-2.  在 [垂直軸屬性] 對話方塊中，選取 [數字]。  
+2.  在 [垂直軸屬性]  對話方塊中，選取 [數字]  。  
   
-3.  從 [類別目錄] 清單中，選取 [貨幣]。 從 [符號] 清單中，選取要套用到 Y 軸標籤的貨幣格式。  
+3.  從 [類別目錄]  清單中，選取 [貨幣]  。 從 [符號]  清單中，選取要套用到 Y 軸標籤的貨幣格式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

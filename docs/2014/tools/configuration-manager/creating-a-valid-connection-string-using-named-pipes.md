@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63065546"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用具名管道建立有效的連接字串
   除非經使用者變更，否則當預設的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體接聽具名管道通訊協定時，會使用 `\\.\pipe\sql\query` 做為管道名稱。 其中句點表示該電腦為本機電腦， `pipe` 表示連接是具名管道，而 `sql\query` 則是管道的名稱。 若要連接到預設管道，別名必須用 `\\<computer_name>\pipe\sql\query` 做為管道名稱。 若將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為接聽其他管道，則管道名稱必須使用該管道。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以 `\\.\pipe\unit\app` 做為管道，則別名必須以 `\\<computer_name>\pipe\unit\app` 做為管道名稱。  
@@ -39,7 +39,7 @@ ms.locfileid: "56407588"
  在連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 元件會讀取伺服器、 通訊協定，和管道名稱值從登錄中指定之別名名稱，並且建立管道名稱格式`np:\\<computer_name>\pipe\<pipename>`或`np:\\<IPAddress>\pipe\<pipename>`。具名的執行個體的預設管道名稱是`\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`。  
   
 > [!NOTE]  
->  根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火牆會關閉通訊埠 445。 由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過通訊埠 445 來進行通訊，因此如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為使用具名管道來接聽內送的用戶端連接，您就必須重新開啟該連接埠。 如需設定防火牆的相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 SQL Server 存取＞，或請檢閱您的防火牆文件集。  
+>  根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火牆會關閉通訊埠 445。 由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過通訊埠 445 來進行通訊，因此如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為使用具名管道來接聽內送的用戶端連接，您就必須重新開啟該連接埠。 如需設定防火牆的詳細資訊，請參閱 「 如何：中的設定防火牆供 SQL Server 存取 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》，或是檢閱您的防火牆文件。  
   
 ## <a name="connecting-to-the-local-server"></a>連接到本機伺服器  
  連接到與用戶端在同一部電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可以使用 `(local)`做為伺服器名稱。 但不建議您使用 `(local)` ，因為這會造成混淆，但是若確實知道用戶端正在預期的電腦上執行，這就很有用。 例如，為行動式、非連接的使用者 (例如銷售人員) 建立應用程式 (亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在膝上型電腦上執行並儲存專案資料) 時，連接到 (local) 的用戶端一律會連接到在膝上型電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用 `localhost` 或句點 (.) 來取代 `(local)`。  
@@ -116,7 +116,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  若要指定網路通訊協定做**sqlcmd**參數，請參閱 「 如何：《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：使用 sqlcmd.exe 連接至 Database Engine＞。  
+>  若要指定網路通訊協定做**sqlcmd**參數，請參閱 「 如何：連接到 Database Engine 使用 sqlcmd.exe 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用共用記憶體通訊協定建立有效的連接字串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

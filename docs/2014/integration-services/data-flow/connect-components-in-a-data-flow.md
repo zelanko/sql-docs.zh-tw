@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827920"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
   此程序描述如何將資料流程中的元件輸出，連接到同一資料流程中的其他元件。  
@@ -29,9 +29,9 @@ ms.locfileid: "58390236"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [控制流程] 索引標籤，然後按兩下包含您要在其中連接元件之資料流程的「資料流程」工作。  
+3.  按一下 [控制流程]  索引標籤，然後按兩下包含您要在其中連接元件之資料流程的「資料流程」工作。  
   
-4.  在 [資料流程] 索引標籤的設計介面上，選取您要連接的轉換或來源。  
+4.  在 [資料流程]  索引標籤的設計介面上，選取您要連接的轉換或來源。  
   
 5.  將轉換或來源的綠色輸出箭頭拖曳至另一轉換或目的地。 某些資料流程元件有錯誤輸出，您可以使用相同方式加以連接。  
   

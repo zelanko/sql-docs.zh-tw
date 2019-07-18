@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 835580a8c08712035776eb37432d10730363d417
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 62428860419dd42b263b9408bb2c0d39514ca0e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101190"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint 清單查詢設計工具
   報表設計師同時提供了圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，以便指定要從報表資料集之 SharePoint 網站中擷取的資料。 您可以使用圖形化查詢設計工具來瀏覽 SharePoint 清單中繼資料、以互動方式建立查詢以及檢視查詢的結果。 您可以使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢、修改查詢，或輸入查詢命令。 您也可以從檔案或報表匯入現有的查詢。  

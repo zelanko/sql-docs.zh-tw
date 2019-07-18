@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
@@ -17,12 +16,12 @@ ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521024"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073880"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>基本 MDX 查詢 (MDX)
   基本的多維度運算式 (MDX) 查詢是在 MDX SELECT 陳述式最常使用的查詢。 了解 MDX SELECT 陳述式必須指定結果集的方式、SELECT 陳述式的語法為何，以及如何使用 SELECT 陳述式建立簡單查詢之後，您將完全了解如何使用 MDX 來查詢多維度資料。  

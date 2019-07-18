@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c0ac65e0973ac9e862a73dd9c04a916156c8a314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de6df03f894d43819cf9d27be3fd35a977631f29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989636"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>全域設定 （對話方塊） (DB2ToSQL)
 使用對話方塊頁面**全域設定**對話方塊來指定預設使用者動作和 SSMA 的警告設定。  

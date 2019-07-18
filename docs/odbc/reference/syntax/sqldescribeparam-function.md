@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 337ed5808b8eb3cf964977fcba70307984d1b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104709"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLDescribeParam**傳回已備妥的 SQL 陳述式相關聯的參數標記的描述。 這項資訊也會在 IPD 欄位中提供。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -51,17 +50,17 @@ SQLRETURN SQLDescribeParam(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Sqlbindparameter*  
+ *ParameterNumber*  
  [輸入]參數的標記編號排序依序遞增的參數順序，從 1 開始。  
   
  *DataTypePtr*  
- [輸出]在其中傳回參數的 SQL 資料類型的緩衝區指標。 這個值是讀取自 SQL_DESC_CONCISE_TYPE 記錄的欄位 IPD 中。 這會在值的其中一個[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節的附錄 d： 資料類型或驅動程式專屬的 SQL 資料型別。  
+ [輸出]在其中傳回參數的 SQL 資料類型的緩衝區指標。 這個值是讀取自 SQL_DESC_CONCISE_TYPE 記錄的欄位 IPD 中。 這會在值的其中一個[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節的附錄 d:資料類型或驅動程式專屬的 SQL 資料型別。  
   
  在 ODBC 3。*x*中,，則會傳回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP  *\*DataTypePtr*日期、 時間或時間戳記資料的 ODBC 2 中分別;。*x*、 SQL_DATE、 SQL_TIME、 或 SQL_TIMESTAMP 會傳回。 驅動程式管理員會執行必要的對應時的 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式正在使用的 ODBC 2。*x*驅動程式。  
   
  當*ColumnNumber*等於為 0 （表示書籤資料行中），傳回 SQL_BINARY  *\*DataTypePtr*可變長度的書籤。 （如果書籤由 ODBC 3，則傳回 SQL_INTEGER。*x*應用程式使用 ODBC 2。*x*驅動程式或 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式。)  
   
- 如需詳細資訊，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料型別中。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。  
+ 如需詳細資訊，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d:資料類型。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。  
   
  *ParameterSizePtr*  
  [輸出]若要在其中傳回的大小，以字元為單位的資料行或運算式的對應參數標記，資料來源所定義的緩衝區的指標。 如需有關資料行大小的詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
@@ -72,11 +71,11 @@ SQLRETURN SQLDescribeParam(
  *NullablePtr*  
  [輸出]若要在其中傳回值，指出參數是否允許 NULL 值的緩衝區的指標。 這個值會從 IPD SQL_DESC_NULLABLE 欄位讀取。 它有下列幾種：  
   
--   SQL_NO_NULLS: 參數不允許 NULL 值 （這是預設值）。  
+-   SQL_NO_NULLS:參數不允許 NULL 值 （這是預設值）。  
   
--   SQL_NULLABLE： 參數允許 NULL 值。  
+-   SQL_NULLABLE:此參數允許 NULL 值。  
   
--   SQL_NULLABLE_UNKNOWN： 驅動程式無法判斷參數是否允許 NULL 值。  
+-   SQL_NULLABLE_UNKNOWN:驅動程式無法判斷參數是否允許 NULL 值。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -111,7 +110,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="code-example"></a>程式碼範例  
  下列範例會提示使用者輸入 SQL 陳述式，並接著準備該陳述式。 接著，它會呼叫**SQLNumParams**來判斷該陳述式是否包含任何參數。 如果陳述式包含參數，它會呼叫**SQLDescribeParam**來描述這些參數與**SQLBindParameter**來繫結它們。 最後，它會提示使用者提供任何參數的值，並接著執行陳述式。  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

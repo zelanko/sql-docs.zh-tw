@@ -30,18 +30,18 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014810"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
-  當記錄執行個體中出現時，updategram 代表插入作業**\<之後 >** 區塊但不是在對應**\<之前 >** 區塊。 在此情況下，updategram 會插入在資料錄**\<之後 >** 區塊至資料庫。  
+  當記錄執行個體中出現時，updategram 代表插入作業 **\<之後 >** 區塊但不是在對應 **\<之前 >** 區塊。 在此情況下，updategram 會插入在資料錄 **\<之後 >** 區塊至資料庫。  
   
  下列是插入作業的 Updategram 格式：  
   
@@ -64,13 +64,13 @@ ms.locfileid: "53365850"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<之前 > 區塊  
- **\<之前 >** 區塊，則可以省略插入作業。 如果選擇性`mapping-schema`未指定屬性，則**\<項目名稱 >** ，則 updategram 會對應至資料庫資料表和子元素中指定，或屬性對應到資料表中的資料行。  
+## <a name="before-block"></a>\<before> Block  
+ **\<之前 >** 區塊，則可以省略插入作業。 如果選擇性`mapping-schema`未指定屬性，則 **\<項目名稱 >** ，則 updategram 會對應至資料庫資料表和子元素中指定，或屬性對應到資料表中的資料行。  
   
 ## <a name="after-block"></a>\<之後 > 區塊  
- 您可以指定在一或多個資料錄**\<之後 >** 區塊。  
+ 您可以指定在一或多個資料錄 **\<之後 >** 區塊。  
   
- 如果**\<之後 >** 區塊不會提供特定的資料行的值，updategram 會使用預設值 （如果已指定結構描述），會將註解式結構描述中指定。 如果結構描述未指定資料行的預設值，updategram 未指定任何明確的值，這個資料行，而是會將指派[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到這個資料行預設值 （如果有指定）。 如果沒有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設值，而資料行接受 NULL 值，則 Updategram 會將資料行值設定為 NULL。 如果資料行沒有預設值，也不接受 NULL 值，則命令會失敗，而 Updategram 傳回錯誤。 選擇性的 `updg:returnid` 屬性會用來傳回識別值，此值會在以 IDENTITY 類型的資料行將記錄加入至資料表時產生。  
+ 如果 **\<之後 >** 區塊不會提供特定的資料行的值，updategram 會使用預設值 （如果已指定結構描述），會將註解式結構描述中指定。 如果結構描述未指定資料行的預設值，updategram 未指定任何明確的值，這個資料行，而是會將指派[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到這個資料行預設值 （如果有指定）。 如果沒有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設值，而資料行接受 NULL 值，則 Updategram 會將資料行值設定為 NULL。 如果資料行沒有預設值，也不接受 NULL 值，則命令會失敗，而 Updategram 傳回錯誤。 選擇性的 `updg:returnid` 屬性會用來傳回識別值，此值會在以 IDENTITY 類型的資料行將記錄加入至資料表時產生。  
   
 ## <a name="updgid-attribute"></a>updg:id 屬性  
  如果 Updategram 只插入記錄，就不需要 `updg:id` 屬性。 如需詳細資訊`updg:id`，請參閱 <<c2> [ 更新資料使用 XML Updategram &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)。</c2>  
@@ -79,7 +79,7 @@ ms.locfileid: "53365850"
  當 Updategram 在具有 IDENTITY 類型之資料行的資料表中插入記錄時，就可以使用選擇性的 `updg:at-identity` 屬性來擷取系統指派值。 Updategram 接著可以在後續作業中使用此值。 在執行 Updategram 時，您可以指定 `updg:returnid` 屬性以傳回產生的識別值。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 屬性  
- `updg:guid` 屬性是選擇性的屬性，會產生全域唯一識別碼。 此值保持在範圍內，整個**\<同步 >** 中指定位置所在的區塊。 您可以使用此值隨處**\<同步 >** 區塊。 該屬性會呼叫`NEWGUID()`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函式來產生的唯一識別碼。  
+ `updg:guid` 屬性是選擇性的屬性，會產生全域唯一識別碼。 此值保持在範圍內，整個 **\<同步 >** 中指定位置所在的區塊。 您可以使用此值隨處 **\<同步 >** 區塊。 該屬性會呼叫`NEWGUID()`[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函式來產生的唯一識別碼。  
   
 ## <a name="examples"></a>範例  
  若要建立使用下列範例的實用範例，您必須符合指定的需求[如需執行 SQLXML 範例的需求](../../sqlxml/requirements-for-running-sqlxml-examples.md)。  
@@ -157,7 +157,7 @@ ms.locfileid: "53365850"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. 使用 Updategram 插入多筆記錄  
- 這個 Updategram 會將兩筆新的值班記錄加入至 HumanResources.Shift 資料表。 Updategram 沒有指定選擇性**\<之前 >** 區塊。  
+ 這個 Updategram 會將兩筆新的值班記錄加入至 HumanResources.Shift 資料表。 Updategram 沒有指定選擇性 **\<之前 >** 區塊。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -285,7 +285,7 @@ ms.locfileid: "53365850"
 </ROOT>  
 ```  
   
- 如果想要傳回 `updg:at-identity` 屬性所產生的識別值，可以使用 `updg:returnid` 屬性。 下列是經過修改的 Updategram，會傳回這個識別值  (此 Updategram 會加入兩筆訂單記錄和兩筆訂單詳細資料的記錄，以稍微增加範例的複雜度)。  
+ 如果想要傳回 `updg:at-identity` 屬性所產生的識別值，可以使用 `updg:returnid` 屬性。 下列是經過修改的 Updategram，會傳回這個識別值 (此 Updategram 會加入兩筆訂單記錄和兩筆訂單詳細資料的記錄，以稍微增加範例的複雜度)。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -501,7 +501,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Updategram 會指定`xsi:nil`for  **\<fname >** 中的項目**\<之後 >** 區塊。 因此，這個 Updategram 在執行時，會為資料表中的 first_name 資料行插入 NULL 值。  
+ Updategram 會指定`xsi:nil`for **\<fname >** 中的項目 **\<之後 >** 區塊。 因此，這個 Updategram 在執行時，會為資料表中的 first_name 資料行插入 NULL 值。  
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   

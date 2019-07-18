@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a5846f45a2919bf5d2de2e94e205bfd59b0fe94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43433aeaa1583d6aa66b1862e10c07158f21645e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027096"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,10 +66,12 @@ ms.locfileid: "56036262"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
-  
-     結果如下：  
+     Here is the result:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -92,13 +93,13 @@ ms.locfileid: "56036262"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有**\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有 **\<客戶 >** 的內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 此查詢會傳回**\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
+ 此查詢會傳回 **\<客戶 >** 滿足述詞中指定這兩個條件的項目。  
   
  捷徑**屬性**軸 (@) 可以指定，而且因為**子**軸是預設值，它可以從查詢省略：  
   
@@ -106,7 +107,7 @@ ms.locfileid: "56036262"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有**\<客戶 >** 包含的子元素的內容節點**\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有 **\<客戶 >** 包含的子元素的內容節點 **\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -169,7 +170,7 @@ ms.locfileid: "56036262"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回**\<客戶 >** 子項目節點的內容節點為具有**\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回 **\<客戶 >** 子項目節點的內容節點為具有 **\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  

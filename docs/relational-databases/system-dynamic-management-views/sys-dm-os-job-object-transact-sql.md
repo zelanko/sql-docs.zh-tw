@@ -16,16 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900139"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "56022199"
 |peak_job_memory_used_mb|**bigint**|已建立之記憶體尖峰數量，以 mb 為單位，因為工作物件累積使用工作物件中的所有處理程序。|
   
 ## <a name="permissions"></a>Permissions  
-SQL Database 受控執行個體，需要`VIEW SERVER STATE`權限。 在 SQL Database 上需要`VIEW DATABASE STATE`資料庫的權限。  
+SQL Database 受控執行個體，需要`VIEW SERVER STATE`權限。 在 SQL Database 上，資料庫需要 `VIEW DATABASE STATE` 權限。  
  
 ## <a name="see-also"></a>另請參閱  
 

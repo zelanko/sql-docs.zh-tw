@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097702"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,9 +52,9 @@ ms.locfileid: "52413407"
 |**max_used_memory_kb**|**bigint**|到目前為止使用的最大實體記憶體 (以 KB 為單位)。|  
 |**query_cost**|**float**|估計的查詢成本。|  
 |**timeout_sec**|**int**|此查詢放棄記憶體授權要求之前的逾時秒數。|  
-|**resource_semaphore_id**|**smallint**|此查詢正在等候之資源信號的非唯一識別碼。<br /><br /> **注意：** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本中，此識別碼是唯一的。 這項變更可以影響疑難排解的查詢執行。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
+|**resource_semaphore_id**|**smallint**|此查詢正在等候之資源信號的非唯一識別碼。<br /><br /> **注意：** 此識別碼是唯一的版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 這項變更可以影響疑難排解的查詢執行。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**queue_id**|**smallint**|此查詢等候記憶體授權時所在的等候中佇列識別碼。 如果已經授與記憶體，則為 NULL。|  
-|**wait_order**|**int**|等候中查詢內指定的循序順序**queue_id**。 如果其他查詢取得記憶體授權或逾時，則給定查詢的此值可能會變更。如果已經授與記憶體，則為 NULL。|  
+|**wait_order**|**int**|等候中查詢內指定的循序順序**queue_id**。 如果其他查詢取得記憶體授權或逾時，這個值可以變更指定的查詢。如果已經授與記憶體，則為 NULL。|  
 |**is_next_candidate**|**bit**|下一個記憶體授權的候選。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已經授與記憶體。|  
 |**wait_time_ms**|**bigint**|等候時間 (以毫秒為單位)。 如果已經授與記憶體，則為 NULL。|  
 |**plan_handle**|**varbinary(64)**|此查詢計畫的識別碼。 使用**sys.dm_exec_query_plan**擷取實際的 XML 計劃。|  
@@ -69,7 +68,7 @@ ms.locfileid: "52413407"
 ## <a name="permissions"></a>Permissions  
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。   
    
 ## <a name="remarks"></a>備註  
  查詢逾時的一般偵錯狀況可能如下所示：  

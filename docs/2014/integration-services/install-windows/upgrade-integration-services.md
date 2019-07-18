@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768066"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前有安裝 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -50,7 +50,7 @@ ms.locfileid: "53365390"
 ## <a name="upgrading-integration-services"></a>升級 Integration Services  
  您可以使用以下其中一個方法來升級：  
   
--   執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝程式並選取選項**從 SQL Server 2005，SQL Server 2008 或 SQL Server 2008 R2 升級**，或**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**。  
+-   執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝程式並選取選項**從 SQL Server 2005，SQL Server 2008 或 SQL Server 2008 R2 升級**，或 **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 。  
   
 -   執行**setup.exe**在命令提示字元，並指定`/ACTION=upgrade`選項。 如需詳細資訊，請參閱 區段中，「 安裝指令碼 > [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，「 在[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "53365390"
   
 -   為了控制封裝的存取權，建立三個新的固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 雖然不會移除 db_dtsadmin、db_dtsltduser 和 db_dtsoperator 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色，但是它們會成為對應新角色的成員。  
   
--   如果[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區 (也就是檔案系統所管理的位置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務) 是底下的預設位置**\SQL Server\90**， **\SQL Server\100**，或**\SQL Server\110**將這些封裝移至下新的預設位置**\SQL Server\120**。  
+-   如果[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區 (也就是檔案系統所管理的位置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務) 是底下的預設位置 **\SQL Server\90** ， **\SQL Server\100** ，或 **\SQL Server\110** 將這些封裝移至下新的預設位置 **\SQL Server\120** 。  
   
 -   將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔更新為指向升級的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
   

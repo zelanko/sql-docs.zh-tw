@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905daf01b919e3e661b4c93302418c418cf7b69
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668361"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 將命名空間加入至查詢
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 只有 xml 命名空間前置詞，不用在 WITH XMLNAMESPACES 中明確定義就可以使用，如以下 PATH 模式查詢中所示。 同時，若前置詞已經宣告了，就必須將它繫結到命名空間 http://www.w3.org/XML/1998/namespace。 SELECT 子句中指定的名稱會參考不是使用 WITH XMLNAMESPACES 明確定義的 xml 命名空間前置詞。  
+ 只有 xml 命名空間前置詞，不用在 WITH XMLNAMESPACES 中明確定義就可以使用，如以下 PATH 模式查詢中所示。 同時，若前置詞已經宣告了，就必須將它繫結到命名空間 http://www.w3.org/XML/1998/namespace 。 SELECT 子句中指定的名稱會參考不是使用 WITH XMLNAMESPACES 明確定義的 xml 命名空間前置詞。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

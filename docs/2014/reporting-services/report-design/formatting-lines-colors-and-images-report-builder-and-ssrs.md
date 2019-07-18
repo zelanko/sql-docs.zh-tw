@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
@@ -21,15 +20,15 @@ f1_keywords:
 - "10066"
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4465621f2c46322a3c6ce3a5e0c97c04e3cffea9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 681ff6b46f692804aef5c7cbbc16e5abe99dbb2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105795"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 讓您能夠格式化線條、色彩、資料區、影像和其他報表項目。  
@@ -40,14 +39,14 @@ ms.locfileid: "56294836"
 ## <a name="borders-lines-and-gridlines"></a>框線、線條和格線  
  框線、線條和格線可透過視覺方式將項目一起繫結在頁面上，並協助您的報表讀者輕鬆地閱讀報表的內容。 使用預先定義的框線樣式，可以快速地在一個文字方塊、一組文字方塊或影像的周圍加入框線。 此外，您也可以變更框線、線條和格線的樣式、寬度和色彩。 整個選取的項目周圍或是此項目邊緣框線的周圍會加入框線，例如，文字方塊底部的框線。  
   
- 若要格式化文字方塊中、報表配置中或影像周圍的框線和格線，請使用報表項目之 **[屬性]** 對話方塊的 **[框線]** 索引標籤。 例如，如果您想在影像周圍加上框線，請以滑鼠右鍵按一下影像，然後在 **[影像屬性]** 對話方塊中，按一下 **[框線]**。  
+ 若要格式化文字方塊中、報表配置中或影像周圍的框線和格線，請使用報表項目之 **[屬性]** 對話方塊的 **[框線]** 索引標籤。 例如，如果您想在影像周圍加上框線，請以滑鼠右鍵按一下影像，然後在 **[影像屬性]** 對話方塊中，按一下 **[框線]** 。  
   
  除了標準邊框以外，還可以將其他邊框套用到圖表。 如需詳細資訊，請參閱[將邊框新增至圖表 &#40;報表產生器及 SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)。  
   
  您也可以在報表本身加上框線。 如需詳細資訊，請參閱 [在報表中加入框線 &#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
   
 ## <a name="applying-background-colors"></a>套用背景色彩  
- 純色可以加入至整個報表的背景、報表內的文字方塊，或是加入至資料區內的一個資料格或一組資料格。 依預設，背景色彩為白色，不過您可以從報表項目之 **[屬性]** 對話方塊的 **[填滿]** 索引標籤選取色彩。 例如，如果您想要變更文字方塊的背景色彩，請以滑鼠右鍵按一下此文字方塊，並選取 **[文字方塊屬性]**。 按一下 **[填滿]** ，然後再選取您想要的色彩。 在此對話方塊中，您可以針對選取的項目選取背景色彩，或是加入出現在背景中的影像。  
+ 純色可以加入至整個報表的背景、報表內的文字方塊，或是加入至資料區內的一個資料格或一組資料格。 依預設，背景色彩為白色，不過您可以從報表項目之 **[屬性]** 對話方塊的 **[填滿]** 索引標籤選取色彩。 例如，如果您想要變更文字方塊的背景色彩，請以滑鼠右鍵按一下此文字方塊，並選取 **[文字方塊屬性]** 。 按一下 **[填滿]** ，然後再選取您想要的色彩。 在此對話方塊中，您可以針對選取的項目選取背景色彩，或是加入出現在背景中的影像。  
   
  當您使用圖表時，也可以為背景色彩指定漸層和圖樣樣式。 如需詳細資訊，請參閱[格式化圖表 &#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)。  
   

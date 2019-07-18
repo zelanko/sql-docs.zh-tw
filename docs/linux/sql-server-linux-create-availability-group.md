@@ -1,20 +1,19 @@
 ---
-title: 建立和設定 Linux 上的 SQL Server 可用性群組 |Microsoft Docs
+title: 建立和設定 Linux 上的 SQL Server 可用性群組
 description: 本教學課程會示範如何建立和設定 Linux 上的 SQL Server 可用性群組。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077438"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立和設定 Linux 上的 SQL Server 可用性群組
 
@@ -243,7 +242,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-10.  還原 LinAGN1_Cert 和 LinAGN3_Cert LinAGN2 上。 
+10. 還原 LinAGN1_Cert 和 LinAGN3_Cert LinAGN2 上。
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +256,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. 授與連接到 LinAGN2 上的端點的 LinAG1 和 LinAGN3 權限相關聯的登入。
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +270,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-12.  建立執行個體層級登入和 LinAGN1 和 LinAGN2 LinAGN3 上的相關聯的使用者。
+12. 建立執行個體層級登入和 LinAGN1 和 LinAGN2 LinAGN3 上的相關聯的使用者。
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +284,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-13.  還原 LinAGN1_Cert 和 LinAGN2_Cert LinAGN3 上。 
+13. 還原 LinAGN1_Cert 和 LinAGN2_Cert LinAGN3 上。 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +298,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. 授與連接到 LinAGN3 上的端點的 LinAG1 和 LinAGN2 權限相關聯的登入。
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -321,17 +322,17 @@ sudo systemctl restart mssql-server
 
 1.  在 SSMS 中，依序展開**Always On 高可用性**，以滑鼠右鍵按一下**可用性群組**，然後選取**新增可用性群組精靈**。
 
-2.  在 [簡介] 對話方塊中，按一下 [**下一步]**。
+2.  在 [簡介] 對話方塊中，按一下 [**下一步]** 。
 
-3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後選取叢集類型 EXTERNAL 或 NONE 的下拉式清單中。 將部署 Pacemaker 時，應該使用外部。 都不是特殊的情況下，例如讀取向外延展。選取的資料庫層級的健全狀況偵測選項是選擇性的。 如需有關這個選項的詳細資訊，請參閱 <<c0> [ 可用性群組資料庫層級健全狀況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步] 。
+3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後選取叢集類型 EXTERNAL 或 NONE 的下拉式清單中。 將部署 Pacemaker 時，應該使用外部。 都不是特殊的情況下，例如讀取向外延展。選取的資料庫層級的健全狀況偵測選項是選擇性的。 如需有關這個選項的詳細資訊，請參閱 <<c0> [ 可用性群組資料庫層級健全狀況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按一下 [下一步]  。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  在 選取資料庫 對話方塊中，選取 將參與 AG 中的資料庫。 每個資料庫必須有完整備份，才能將它加入至 AG。 按 [下一步] 。
+4.  在 選取資料庫 對話方塊中，選取 將參與 AG 中的資料庫。 每個資料庫必須有完整備份，才能將它加入至 AG。 按一下 [下一步]  。
 
 5.  在 [指定複本] 對話方塊中，按一下**將複本加入**。
 
-6.  在 [連線到伺服器] 對話方塊中，輸入 Linux 執行個體名稱[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，就會在次要複本，以及要連接的認證。 按一下 **[連接]**。
+6.  在 [連線到伺服器] 對話方塊中，輸入 Linux 執行個體名稱[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，就會在次要複本，以及要連接的認證。 按一下 **[連接]** 。
 
 7.  重複前兩個步驟將包含僅設定的複本或另一個次要複本之執行個體。
 
@@ -357,19 +358,19 @@ sudo systemctl restart mssql-server
 
     b.  輸入 Url，唯讀複本。 這些 Url 可端點，類似，但它們要使用的執行個體，而不需將端點的連接埠。
 
-    c.   選取每個 URL，然後從底部，選取 可讀取的複本。 多重選取時，請按住 shift 鍵或按一下拖曳。
+    c.  選取每個 URL，然後從底部，選取 可讀取的複本。 多重選取時，請按住 shift 鍵或按一下拖曳。
 
-12. 按 [下一步] 。
+12. 按一下 [下一步]  。
 
-13. 選擇將初始化次要複本的方式。 若要使用的預設值是[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 中的所有伺服器上相同的路徑。 您也可以讓精靈進行備份、 複製和還原 （第二個選項）;如果您有手動備份、 複製和還原項目上的資料庫加入它 （第三個選項）;或更新版本加入資料庫 （最後一個選項）。 使用憑證，如果您是以手動方式進行備份，並將它們複製，因為備份檔案的權限必須設定其他項目上。 按 [下一步] 。
+13. 選擇將初始化次要複本的方式。 若要使用的預設值是[自動植入](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，這需要參與 AG 中的所有伺服器上相同的路徑。 您也可以讓精靈進行備份、 複製和還原 （第二個選項）;如果您有手動備份、 複製和還原項目上的資料庫加入它 （第三個選項）;或更新版本加入資料庫 （最後一個選項）。 使用憑證，如果您是以手動方式進行備份，並將它們複製，因為備份檔案的權限必須設定其他項目上。 按一下 [下一步]  。
 
-14. 在 [驗證] 對話方塊中，如果所有項目不會不回來為成功，調查。 某些警告是可接受和不嚴重，例如，如果您未建立接聽程式。 按 [下一步] 。
+14. 在 [驗證] 對話方塊中，如果所有項目不會不回來為成功，調查。 某些警告是可接受和不嚴重，例如，如果您未建立接聽程式。 按一下 [下一步]  。
 
 15. 在 摘要 對話方塊中，按一下 **完成**。 建立 AG 的程序將立即開始。
 
 16. AG 建立完畢後，按一下**關閉**結果。 您現在可以看到 AG 複本中的動態管理檢視，以及在 SSMS 中的 [Alwayson 高可用性] 資料夾底下。
 
-### <a name="use-transact-sql"></a>使用 Transact SQL
+### <a name="use-transact-sql"></a>使用 Transact-SQL
 
 本節說明建立使用 Transact SQL AG 的範例。 建立 AG 之後，可以設定接聽程式和唯讀路由。 可以使用修改 AG 本身`ALTER AVAILABILITY GROUP`，但無法進行變更的叢集類型[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 如果您不打算建立的外部叢集類型 AG，您必須刪除它，並重新建立它的叢集類型為 None。 詳細資訊和其他選項可在下列連結：
 
@@ -416,7 +417,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  在查詢視窗中連線到僅限設定的複本，請將它加入 AG 中。
+3. 在查詢視窗中連線到僅限設定的複本，請將它加入 AG 中。
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +540,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
 1.  在查詢視窗中連接到第一個複本，執行下列作業︰
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

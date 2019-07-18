@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762840"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
   適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會公開類似於檔案系統路徑之路徑中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件階層。 您可以使用路徑來尋找物件，然後使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型中的方法來針對物件執行動作。  
@@ -46,7 +46,7 @@ ms.locfileid: "52752378"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件，例如專案、封裝和環境。|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件，例如 Cube、彙總和維度。|  
   
- 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」或「檢視」) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
+ 例如，您可以使用 SQLSERVER:\SQL 資料夾來當做可代表 SMO 物件模型所支援之任何物件的路徑開頭。 SQLSERVER:\SQL 路徑的前置部分是 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*。 執行個體名稱之後的節點會在物件集合 (例如「資料庫」  或「檢視」  ) 和物件名稱 (例如 AdventureWorks2012) 之間輪替。 結構描述不會表示為物件類別。 當您在結構描述中指定最上層物件的節點 (如資料表或檢視表) 時，必須使用 *SchemaName.ObjectName*格式來指定物件名稱。  
   
  這是本機電腦上預設 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體中 AdventureWorks2012 資料庫之 Purchasing 結構描述的 Vendor 資料表路徑：  
   
@@ -58,7 +58,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  路徑中的集合節點會與相關聯物件模型中的集合類別產生關聯。 物件名稱節點會與相關聯物件模型中的物件類別產生關聯，如下表所示。  
   
-|路徑|SMO 類別|  
+|`Path`|SMO 類別|  
 |----------|---------------|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  

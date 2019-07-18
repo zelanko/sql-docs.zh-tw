@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
@@ -15,12 +14,12 @@ ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51afb2516da54ce63d170619edd4c5429fd85144
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410945"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065716"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Visio 資料採礦圖表的疑難排解 (SQL Server 資料採礦增益集)
   本主題包含一些額外的資訊，供您在進行 Visio 資料採礦圖表的疑難排解時使用。  

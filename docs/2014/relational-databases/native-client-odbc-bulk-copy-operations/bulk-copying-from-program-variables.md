@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206837"
 ---
 # <a name="bulk-copying-from-program-variables"></a>從程式變數中大量複製
   您可以直接從程式變數大量複製。 在配置變數來保存資料列的資料及呼叫 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 開始大量複製之後，請針對每一個資料行呼叫 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以指定要與此資料行產生關聯之程式變數的位置與格式。 然後針對每一個包含資料的變數，呼叫 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 將一個資料列傳送給伺服器。 重複填入變數及呼叫 **bcp_sendrow** 的程序，直到所有資料列都已傳送給伺服器為止，然後呼叫 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 來指定此作業已完成。  

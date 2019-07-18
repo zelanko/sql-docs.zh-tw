@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 657d7b6cc21c573d2d9535d36392f9b7eb94200f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083729"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  這是與來源資料表相關聯之擷取執行個體的名稱。 *capture_instance*已**sysname**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

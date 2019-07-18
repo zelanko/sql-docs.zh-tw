@@ -2,18 +2,18 @@
 title: 從報表產生資料摘要 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1ba2b73ba98111274a255040adb396c6983a6659
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a94df8959adf40edfe2e78c7c281dd5d57f90266
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292848"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580767"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
 
@@ -49,7 +49,7 @@ ms.locfileid: "56292848"
     > [!NOTE]  
     >  依預設，文件名稱就是報表名稱。  
   
-7.  確認文件類型為 **[ATOMSVC 檔]**，然後按一下 **[儲存]**。  
+7.  確認文件類型為 **[ATOMSVC 檔]** ，然後按一下 **[儲存]** 。  
   
 8.  或者，在瀏覽器或者文字或 XML 編輯器中開啟 .atomsvc 檔。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56292848"
     > [!NOTE]  
     >  依預設，文件名稱就是報表名稱。 如果 Atom 服務文件有多個摘要，預設全部都使用相同的名稱，也就是報表名稱。 若要區別這些摘要，請加以重新命名以使用有意義的名稱。  
   
-7.  確認文件類型為 **[ATOM 檔]**，然後按一下 **[儲存]**。  
+7.  確認文件類型為 **[ATOM 檔]** ，然後按一下 **[儲存]** 。  
   
 8.  或者，在瀏覽器或者文字編輯器或 XML 編輯器中開啟 .atom 檔。  
 

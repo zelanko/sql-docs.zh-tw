@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db9cda0558f2d43aa8921428f87a08f826a05afe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: c529e8723cc11831fe3e70d1e4bacf3ab21fcc78
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099832"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688402"
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

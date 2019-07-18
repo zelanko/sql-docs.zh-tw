@@ -1,7 +1,7 @@
 ---
-title: index_option (Transact-SQL) | Microsoft Docs
+title: " | Microsoft Docs"
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 176ab35da4eacd55062fcfb1e452e19c6b733649
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 01ecbe3af3aea9453306deea9408541012fe254b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591292"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412810"
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,8 @@ ms.locfileid: "53591292"
   | IGNORE_DUP_KEY = { ON | OFF }  
   | STATISTICS_NORECOMPUTE = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF }  
-  | ALLOW_PAGE_LOCKS = { ON | OFF }  
+  | ALLOW_PAGE_LOCKS = { ON | OFF } 
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } 
   | SORT_IN_TEMPDB = { ON | OFF }   
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -78,7 +79,7 @@ ms.locfileid: "53591292"
  OFF 或未指定 *fillfactor*  
  在中繼頁面上提供索引鍵組之後，中繼層級頁面容量的填滿程度會保留至少足以容納一個資料列的空間，且該資料列的大小上限是索引所能擁有的大小上限。  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定一個百分比來指出在建立或改變索引期間，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該使各索引頁面之分葉層級填滿的程度。 指定的值必須是 1 至 100 之間的整數值。 預設值是 0。  
@@ -131,7 +132,13 @@ ms.locfileid: "53591292"
   
  OFF  
  不使用頁面鎖定。  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本。
+
+指定是否要最佳化最後一頁的插入競爭。 預設值為 OFF。 請參閱 CREATE INDEX 頁面的[循序索引鍵](./create-index-transact-sql.md#sequential-keys)一節以取得詳細資訊。
+ 
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -165,7 +172,7 @@ ms.locfileid: "53591292"
 > [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  在索引作業期間，覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
@@ -207,7 +214,7 @@ ms.locfileid: "53591292"
   
  如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此資料表，ON PARTITIONS 引數會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區資料表的所有分割區。  
   

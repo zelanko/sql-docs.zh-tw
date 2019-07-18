@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63217747"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>在時序群集模型上建立預測 (中繼資料採礦教學課程)
   了解時序群集檢視器中瀏覽它更好的模型之後，您可以使用預測查詢產生器上建立預測查詢**採礦模型預測**資料採礦設計師中的索引標籤。 若要建立預測，請先選取時序群集模型，然後再選取輸入資料。 對於輸入而言，您可以使用外部資料來源，或是建立單一查詢，並在對話方塊中提供值。  
@@ -37,7 +37,7 @@ ms.locfileid: "56041299"
   
      **選取採礦模型**對話方塊隨即開啟。  
   
-4.  展開代表採礦結構的節點**Sequence Clustering with Region**，並選取模型**Sequence Clustering with Region**。 按一下 [確定] 。 現在請先忽略輸入窗格；當您設定完預測函數之後，您將會指定輸入。  
+4.  展開代表採礦結構的節點**Sequence Clustering with Region**，並選取模型**Sequence Clustering with Region**。 按一下 [確定]  。 現在請先忽略輸入窗格；當您設定完預測函數之後，您將會指定輸入。  
   
 5.  在方格中，按一下下方的空白儲存格**來源**，然後選取**預測函數。** 底下的資料格中**欄位**，選取**PredictSequence**。  
   
@@ -151,7 +151,7 @@ NATURAL PREDICTION JOIN
   
 4.  在 [**巢狀資料表輸入**] 對話方塊中，按一下**新增**。  
   
-5.  在新的資料列中，按一下 底下的方塊`Model`，並從清單中選取 Touring Tire。 按一下 [確定] 。  
+5.  在新的資料列中，按一下 底下的方塊`Model`，並從清單中選取 Touring Tire。 按一下 [確定]  。  
   
 6.  按一下 **結果**按鈕，以檢視預測。  
   

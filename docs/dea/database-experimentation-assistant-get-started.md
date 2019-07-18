@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.reviewer: mathoma
+ms.openlocfilehash: 2e5affa5310c4443cd8458dfc987a506ada5982d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058955"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>開始使用資料庫測試助理
 

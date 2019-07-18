@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9e38b9e58bcfb9d9d75b62e73850cb4e72370e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 995b8ae8affbd04349013724bb43101040e27ebb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637406"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778115"
 ---
 # <a name="securing-connection-strings"></a>保護連接字串的安全
 

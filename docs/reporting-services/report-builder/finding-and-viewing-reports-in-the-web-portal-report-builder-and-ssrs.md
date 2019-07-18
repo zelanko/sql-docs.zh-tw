@@ -2,18 +2,18 @@
 title: 在入口網站中尋找和檢視報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6eb56d90c86397de22926f84083b26d754ca1eff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508437"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492843"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在入口網站中尋找和檢視報表 (報表產生器及 SSRS)
   報表管理員是以網路為基礎的工具，其中包含檢視和管理報表的功能。 這是報表伺服器安裝的一部分。 若要開啟「報表管理員」，請在瀏覽器視窗中輸入「報表管理員」的 URL。 如需瀏覽器需求的詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。 如需有關如何在報表伺服器上設定「報表管理員」URL 的詳細資訊，請連絡您的系統管理員。 如需詳細資訊，請參閱[設定報表管理員 &#40;原生模式&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)。  
@@ -38,15 +38,15 @@ ms.locfileid: "52508437"
 -   若要向上導覽資料夾階層，請在頁面上方的連結列中，按一下要查看其內容的資料夾名稱。 上圖中的 **(1)** 。  
   
 ## <a name="opening-a-report"></a>開啟報表  
- 找到報表之後，按一下報表名稱即可開啟報表。 該報表會在 HTML 中轉譯，並出現在「報表管理員」的 [內容] 頁面中。 瀏覽器工作階段一律會快取報表，因此如果您開啟報表，按一下 [上一頁] 按鈕通常可以返回至該報表。 即使需要提供使用者名稱和密碼才可以執行報表也是如此。 在關閉瀏覽器之前，您無法完全關閉已轉譯的報表。  
+ 找到報表之後，按一下報表名稱即可開啟報表。 該報表會在 HTML 中轉譯，並出現在「報表管理員」的 [內容] 頁面中。 瀏覽器工作階段一律會快取報表，因此如果您開啟報表，按一下 [上一頁]  按鈕通常可以返回至該報表。 即使需要提供使用者名稱和密碼才可以執行報表也是如此。 在關閉瀏覽器之前，您無法完全關閉已轉譯的報表。  
   
- 並非資料夾階層中可見的所有報表都可以立即存取。 有些報表可能會提示您輸入使用者名稱和密碼，以決定您是否可以存取報表的資料來源。 如需在報表管理員開啟報表的詳細資訊，請參閱[開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
-  
+ 並非資料夾階層中可見的所有報表都可以立即存取。 有些報表可能會提示您輸入使用者名稱和密碼，以決定您是否可以存取報表的資料來源。 
+
  您也可以從報表產生器用瀏覽的方式直接從報表伺服器開啟報表。 
   
 ## <a name="to-search-for-items"></a>搜尋項目  
   
--   若要在報表管理員中搜尋項目，請在頁首的 [搜尋] 文字方塊中鍵入搜尋字串。 上圖中的 **(2)** 。 搜尋會由資料夾階層的最上層節點開始，然後沿著每一個分支繼續搜尋。 如果您沒有存取特定分支的權限，則會略過該分支。 這適用於其他使用者專屬的 [我的報表] 資料夾，以及通常無法使用的其他資料夾。 只有您有權檢視的報表和項目，才會包含在搜尋結果中。  
+-   若要在報表管理員中搜尋項目，請在頁首的 [搜尋]  文字方塊中鍵入搜尋字串。 上圖中的 **(2)** 。 搜尋會由資料夾階層的最上層節點開始，然後沿著每一個分支繼續搜尋。 如果您沒有存取特定分支的權限，則會略過該分支。 這適用於其他使用者專屬的 [我的報表] 資料夾，以及通常無法使用的其他資料夾。 只有您有權檢視的報表和項目，才會包含在搜尋結果中。  
   
 -   若要依名稱或描述來搜尋項目，請指定想要符合的完整或部分文字。 搜尋字串不區分大小寫。 您不可以使用搜尋運算子，例如加號 (+) 或減號 (-)，來要求或排除搜尋準則。  
   

@@ -10,21 +10,21 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 57544d391da6a9df58baf7cc9189afe3a7db19dc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515384"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686299"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>資料行清單對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 撰寫查詢時，如果能夠看到您在資料表值物件中選取的可用資料行清單會相當有用。  
   
-若要存取這個對話方塊，在 [查詢設計工具] 功能表中，以滑鼠右鍵按一下 [圖表] 窗格中的資料表值物件的標頭，再按一下 [屬性]。 在 [屬性] 視窗中，按一下 [資料表清單] 欄位。 然後按一下欄位右邊的省略符號 **(...)**。  
+若要存取這個對話方塊，在 [查詢設計工具]  功能表中，以滑鼠右鍵按一下 [圖表] 窗格中的資料表值物件的標頭，再按一下 [屬性]  。 在 [屬性]  視窗中，按一下 [資料表清單]  欄位。 然後按一下欄位右邊的省略符號 **(...)** 。  
   
 此對話方塊提供所選取資料值物件和基本屬性的資料行清單，例如類型，以及資料行是否允許 Null 值。  
   

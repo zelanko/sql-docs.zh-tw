@@ -15,36 +15,23 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803443"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用物件總管詳細資料監視可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [物件總管詳細資料] 窗格來監視及管理現有的 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [物件總管詳細資料]  窗格來監視及管理現有的 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
   
 > [!NOTE]  
->  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱[物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  
+>  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱 [物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
--   **開始之前：**  [必要條件](#Prerequisites)  
   
--   **若要使用下列項目監視可用性群組：**[SQL Server Management Studio](#SSMSProcedure)  
-  
--   **物件總管詳細資料：**  
-  
-     [可用性群組詳細資料](#AvGroupsDetails)  
-  
-     [可用性複本詳細資料](#AvReplicaDetails)  
-  
-     [可用性資料庫詳細資料](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -54,9 +41,9 @@ ms.locfileid: "47824986"
   
 2.  在 [物件總管] 中，連接到您要監視可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
   
-3.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+3.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
-4.  **[物件總管詳細資料]** 窗格會顯示連接之伺服器執行個體裝載複本的每個可用性群組。 對於每個可用性群組，[伺服器執行個體 (主要)] 資料行會顯示目前裝載主要複本的伺服器執行個體名稱。  若要顯示有關給定之可用性群組的詳細資訊，請在 [物件總管] 中選取它。  
+4.  **[物件總管詳細資料]** 窗格會顯示連接之伺服器執行個體裝載複本的每個可用性群組。 對於每個可用性群組，[伺服器執行個體 (主要)]  資料行會顯示目前裝載主要複本的伺服器執行個體名稱。  若要顯示有關給定之可用性群組的詳細資訊，請在 [物件總管] 中選取它。  
   
 5.  接著 **[物件總管詳細資料]** 窗格會顯示此可用性群組的 **[可用性複本]** 和 **[可用性資料庫]** 節點：  
   
@@ -72,7 +59,7 @@ ms.locfileid: "47824986"
  **[可用性群組]** 詳細資料畫面顯示下列資料行：  
   
  **名稱**  
- 列出所選可用性群組的 [可用性複本]、[可用性資料庫] 和 [可用性群組接聽程式] 資料夾。  
+ 列出所選可用性群組的 [可用性複本]  、[可用性資料庫]  和 [可用性群組接聽程式]  資料夾。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性複本詳細資料  
  **[可用性複本]** 詳細資料畫面顯示下列資料行：  
@@ -109,7 +96,7 @@ ms.locfileid: "47824986"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**[未同步處理]**|資料庫未同步處理或者尚未聯結至可用性群組。|  
-|**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意：在效能模式中，資料庫永遠不會處於同步處理狀態。|  
+|**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意:在效能模式中，資料庫永遠不會處於同步處理狀態。|  
 |**NULL**|未知的狀態。 當本機伺服器執行個體無法與 WSFC 容錯移轉叢集通訊 (亦即，本機節點不屬於 WSFC 仲裁的一部分) 時，就會出現這個值。|  
   
 > [!NOTE]  
@@ -128,7 +115,7 @@ ms.locfileid: "47824986"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意：在非同步認可模式中，同步處理模式一律為 **正在同步處理**。|  
+|正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意:在非同步認可模式中，同步處理模式一律為 [正在同步處理]  。|  
 |||  
   
  **已暫停**  

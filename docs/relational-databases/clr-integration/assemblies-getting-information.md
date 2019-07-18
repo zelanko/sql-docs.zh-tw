@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 723b35023a4404b6e5afff6efbfed86fc230af35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcdd4c8c834d8c250716b6c887c3b08248fac67d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028019"
 ---
 # <a name="assemblies---getting-information"></a>組件 - 取得資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47600577"
   
  **若要取得個別的組件的相關資訊**  
   
--   [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
+-   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
  **若要取得資料庫中的所有組件的相關資訊**  
   
@@ -35,15 +34,15 @@ ms.locfileid: "47600577"
   
  **若要取得組件檔案，包括組件的二進位檔的資訊來源檔案及偵錯檔案**  
   
--   [sys.assembly_files &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
+-   [sys.assembly_files &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
  **若要取得跨組件參考的相關資訊**  
   
--   [sys.assembly_references &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
+-   [sys.assembly_references &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
  **若要取得使用者定義類型的組件資訊**  
   
--   [sys.assembly_types &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
+-   [sys.assembly_types &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
 -   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   

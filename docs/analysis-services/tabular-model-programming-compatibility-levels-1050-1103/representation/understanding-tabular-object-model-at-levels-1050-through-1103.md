@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526787"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025354"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>了解 1050 到 1103 層級的表格式物件模型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

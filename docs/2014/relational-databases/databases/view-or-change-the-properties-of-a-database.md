@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528461"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870948"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>檢視或變更資料庫的屬性
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的屬性。 變更資料庫屬性之後，修改會立即生效。  
@@ -56,7 +56,7 @@ ms.locfileid: "58528461"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]。  
+2.  展開 [資料庫]  ，並以滑鼠右鍵按一下要檢視的資料庫，然後按一下 [屬性]  。  
   
 3.  在 **[資料庫屬性]** 對話方塊中，選取一個頁面以檢視對應的資訊。 例如，選取 **[檔案]** 頁面以檢視資料和記錄檔資訊。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "58528461"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例使用 [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) 系統函數傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 AUTO_SHRINK 資料庫選項的狀態。 傳回值為 1 表示選項設定為 ON，傳回值為 0 表示選項設定為 OFF。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例使用 [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) 系統函數傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之 AUTO_SHRINK 資料庫選項的狀態。 傳回值為 1 表示選項設定為 ON，傳回值為 0 表示選項設定為 OFF。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,9 +82,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會查詢 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目錄檢視，以查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的數個屬性。 這個範例會傳回資料庫識別碼 (`database_id`)、資料庫是唯讀還是讀寫 (`is_read_only`)、資料庫定序 (`collation_name`)，以及資料庫相容性層級 (`compatibility_level`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會查詢 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目錄檢視，以查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的數個屬性。 這個範例會傳回資料庫識別碼 (`database_id`)、資料庫是唯讀還是讀寫 (`is_read_only`)、資料庫定序 (`collation_name`)，以及資料庫相容性層級 (`compatibility_level`)。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -99,15 +99,15 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  將下列範例複製並貼入查詢視窗中。 此範例判斷 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上快照集隔離的狀態、變更屬性狀態，然後驗證變更。  
   
-     若要判斷快照集隔離的狀態，請選取第一個 `SELECT` 陳述式並按一下 **[執行]**。  
+     若要判斷快照集隔離的狀態，請選取第一個 `SELECT` 陳述式並按一下 **[執行]** 。  
   
-     若要變更快照集隔離的狀態，請選取 `ALTER DATABASE` 陳述式並按一下 **[執行]**。  
+     若要變更快照集隔離的狀態，請選取 `ALTER DATABASE` 陳述式並按一下 **[執行]** 。  
   
-     若要驗證變更，請選取第二個 `SELECT` 陳述式並按一下 **[執行]**。  
+     若要驗證變更，請選取第二個 `SELECT` 陳述式並按一下 **[執行]** 。  
   
  [!code-sql[DatabaseDDL#AlterDatabase9](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase9)]  
   

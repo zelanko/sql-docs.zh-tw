@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63036193"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中線上建立、重建或卸除索引。 在這些索引作業期間，ONLINE 選項可讓並行使用者存取基礎資料表或叢集索引資料，以及任何關聯的非叢集索引。 例如，當某個使用者正在重建叢集索引時，此使用者和其他人可以繼續更新和查詢基礎資料。 當您離線執行資料定義語言 (DDL) 作業 (例如建立或重建叢集索引) 時，這些作業會保有基礎資料和關聯索引的獨佔鎖定。 這可避免在索引作業完成之前對基礎資料進行修改和查詢。  
@@ -76,17 +76,17 @@ ms.locfileid: "48165288"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]  。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   
-7.  選取 **[允許線上 DML 處理]**，然後從清單中選取 **[True]** 。  
+7.  選取 **[允許線上 DML 處理]** ，然後從清單中選取 **[True]** 。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
-9. 以滑鼠右鍵按一下要線上重建的索引，然後選取 [重建]。  
+9. 以滑鼠右鍵按一下要線上重建的索引，然後選取 [重建]  。  
   
-10. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
+10. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48165288"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會線上重建現有索引  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會線上重建現有索引  
   
     ```  
     USE AdventureWorks2012;  

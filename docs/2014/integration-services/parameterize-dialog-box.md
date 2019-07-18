@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.parameter.f1
@@ -13,15 +12,15 @@ ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c6391e739f4a7f2556ad75acf377a2e68db8151
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056866"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-  [參數化] 對話方塊可讓您將新的或現有的參數與工作屬性產生關聯。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，以滑鼠右鍵按一下工作或 [控制流程] 索引標籤，然後按一下 [參數化] 即可開啟此對話方塊。 下列清單描述對話方塊中的 UI 元素。 如需參數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)。  
+  [參數化]  對話方塊可讓您將新的或現有的參數與工作屬性產生關聯。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，以滑鼠右鍵按一下工作或 [控制流程] 索引標籤，然後按一下 [參數化]  即可開啟此對話方塊。 下列清單描述對話方塊中的 UI 元素。 如需參數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **屬性**  
@@ -46,7 +45,7 @@ ms.locfileid: "58382475"
  指定參數的預設值。 這也稱作設計預設值，以後在部署時可以覆蓋該值。  
   
  **範圍**  
- 選取 [專案] 或 [封裝] 選項來指定參數的範圍。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
+ 選取 [專案]  或 [封裝]  選項來指定參數的範圍。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
  **區分**  
  透過檢查或清除該核取方塊來指定參數是否敏感。 敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。  

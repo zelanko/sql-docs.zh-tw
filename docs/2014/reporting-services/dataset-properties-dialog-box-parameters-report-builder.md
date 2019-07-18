@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109385"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>資料集屬性對話方塊、參數 (報表產生器)
   選取 **參數**上**資料集屬性**對話方塊，即可加入、 變更與刪除查詢參數。  
@@ -29,7 +28,7 @@ ms.locfileid: "56298006"
   
  如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **[加入]**  
  將新的參數加入到清單中。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "56298006"
  將清單中所選取的參數向下移動。  
   
  **參數名稱**  
- 在 [資料集屬性] 對話方塊的 [查詢] 索引標籤上，輸入您要加入到資料集之查詢參數的名稱。  
+ 在 [資料集屬性]  對話方塊的 [查詢]  索引標籤上，輸入您要加入到資料集之查詢參數的名稱。  
   
  **參數值**  
  僅適用於內嵌資料集。  
@@ -80,7 +79,7 @@ ms.locfileid: "56298006"
  [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [資料集屬性對話方塊、 查詢&#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

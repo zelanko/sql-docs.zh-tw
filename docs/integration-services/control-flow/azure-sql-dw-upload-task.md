@@ -14,14 +14,18 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727928"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 **Azure SQL DW 上傳工作**可讓 SSIS 套件將表格式資料從檔案系統或 Azure Blob 儲存體複製到 Azure SQL 資料倉儲 (DW)。
 該工作會利用 PolyBase 來改善效能，如 [Azure SQL 資料倉儲上傳模式及策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)一文所述。
@@ -36,7 +40,7 @@ ms.locfileid: "47710616"
 
 **SourceType** 指定來源資料存放區的類型。 選取下列其中一種類型：
 
-* **檔案系統：** 來源資料所在的本機檔案系統。
+* **FileSystem：** 來源資料所在的本機檔案系統。
 * **BlobStorage：** 來源資料所在的 Azure Blob 儲存體。
 
 以下是每個來源類型的屬性。
@@ -58,7 +62,7 @@ RetainFiles|指定是否要保留上傳到 Azure 儲存體的檔案。
 CompressionType|指定在將檔案上傳到 Azure 儲存體時要使用的壓縮格式。 本機來源不會受到影響。
 CompressionLevel|指定要用於壓縮格式的壓縮層級。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...> 建立新的資料表。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...>  建立新的資料表。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 
@@ -73,11 +77,11 @@ RowDelimiter|指定標示各資料列結尾的字元。
 ColumnDelimiter|指定一或多個標示各資料行結尾的字元。 例如 &#124; (縱線字元)、\t (定位字元)、' (單引號)、" (雙引號) 和 0x5c (反斜線)。
 CompressionType|指定來源資料使用的壓縮格式。
 AzureDwConnection|指定 Azure SQL DW 的 ADO.NET 連線管理員。
-TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...> 建立新的資料表。
+TableName|指定目的資料表的名稱。 選擇現有的資料表名稱，或選擇 \<新增資料表...>  建立新的資料表。
 TableDistribution|指定新資料表的發佈方法。 如果為 **TableName**指定了新的資料表名稱即適用。
 HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistribution** 指定了 **HASH**即適用。
 
-根據您複製到新資料表或現有資料表，看到的 [對應] 頁面會有所不同。
+根據您複製到新資料表或現有資料表，看到的 [對應]  頁面會有所不同。
 如果是前者，請設定要對應哪些來源資料行，及其在要建立的目的資料表中對應名稱為何。
 如果是後者，請設定來源與目的資料行之間的對應關係。
 

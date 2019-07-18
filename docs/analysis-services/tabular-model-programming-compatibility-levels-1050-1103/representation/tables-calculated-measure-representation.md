@@ -1,5 +1,5 @@
 ---
-title: 導出量值表示法 （表格式） |Microsoft 文件
+title: 導出量值表示法 （表格式） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041931"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63019290"
 ---
-# <a name="tables---calculated-measure-representation"></a>資料表的導出量值表示法
+# <a name="tables---calculated-measure-representation"></a>資料表 - 導出量值表示法
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   導出量值是每次使用時都會進行評估的具名 DAX 運算式。  
   
 ## <a name="calculated-measure-representation"></a>導出量值表示法  
   
 ### <a name="calculated-measure-in-amo"></a>AMO 中的導出量值  
- 當您使用 AMO 管理表格式模型導出量值時，邏輯導出量值物件與 <xref:Microsoft.AnalysisServices.Command> 物件的 <xref:Microsoft.AnalysisServices.MdxScript> 物件中所定義的量值之間會有一對一的相符關係。 每個**導出量值**定義為**建立量值**內運算式<xref:Microsoft.AnalysisServices.Command>物件，並以分號隔開。 所有導出的表格式模型中的量值都會對應至集合**建立量值**字串中的一個命令物件中<xref:Microsoft.AnalysisServices.MdxScript>物件。 每一個導出量值與 <xref:Microsoft.AnalysisServices.CalculationProperty> 之間都有一對一的對應。  
+ 當您使用 AMO 管理表格式模型導出量值時，邏輯導出量值物件與 <xref:Microsoft.AnalysisServices.Command> 物件的 <xref:Microsoft.AnalysisServices.MdxScript> 物件中所定義的量值之間會有一對一的相符關係。 每個**導出量值**指**CREATE MEASURE**內的運算式<xref:Microsoft.AnalysisServices.Command>物件，並以分號隔開。 所有導出的表格式模型中的量值都會對應至集合**CREATE MEASURE**中的某一個命令物件的字串<xref:Microsoft.AnalysisServices.MdxScript>物件。 每一個導出量值與 <xref:Microsoft.AnalysisServices.CalculationProperty> 之間都有一對一的對應。  
   
  下列程式碼片段示範如何建立導出量值。  
   

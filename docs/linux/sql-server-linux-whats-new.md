@@ -1,21 +1,19 @@
 ---
-title: 有關 Linux 上的 SQL Server 2017 的新功能 |Microsoft Docs
+title: 在 Linux 上的 SQL Server 2017 的最新消息
 description: 這篇文章強調有關 Linux 上的 SQL Server 2017 的新功能。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/21/2018
+author: VanMSFT
+ms.author: vanto
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 3f3f51716acf69368ae2554446c47d125b500e03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032164"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的最新消息
 
@@ -23,7 +21,7 @@ ms.locfileid: "53160526"
 
 這篇文章描述在 Linux 上執行的 SQL Server 2017 的主要功能和可用的服務。
 
-SQL Server 2019 預覽已發行。 這篇文章並未涵蓋 SQL Server 2019 預覽版本。 若要深入了解 SQL Server 2019 預覽，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
+SQL Server 2019 預覽已發行。 這篇文章並未涵蓋 SQL Server 2019 預覽版本。 若要深入了解 SQL Server 2019 預覽，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)。
 
 > [!NOTE]
 > 除了這篇文章中的這些功能，累計更新會定期發行後 GA 版本。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本資訊，請參閱[ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu)。 下載套件及已知的問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
@@ -66,7 +64,7 @@ SQL Server 2019 預覽已發行。 這篇文章並未涵蓋 SQL Server 2019 預�
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上執行](quickstart-install-connect-docker.md)
-- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 若要查看其他 SQL Server 2017 中導入的增強功能，請參閱[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
 

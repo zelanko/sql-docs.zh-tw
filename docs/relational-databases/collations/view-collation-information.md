@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d03fde715ba1f7edcfa89d6f5b6955e0543c121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88bb389da837501b2ab724a505b43a57e339e90
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765818"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732302"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,28 +37,28 @@ ms.locfileid: "47765818"
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]。  
+2.  在執行個體上按一下滑鼠右鍵，然後選取 [屬性]  。  
   
  **在 [物件總管] 中檢視資料庫的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫] ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]。  
+2.  展開 [資料庫]  ，然後在資料庫上按一下滑鼠右鍵，再選取 [屬性]  。  
   
  **在 [物件總管] 中檢視資料行的定序設定**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、特定資料庫及 **[資料表]**。  
+2.  依序展開 **[資料庫]** 、特定資料庫及 **[資料表]** 。  
   
-3.  展開包含資料行的資料表，然後展開 **[資料行]**。  
+3.  展開包含資料行的資料表，然後展開 **[資料行]** 。  
   
-4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]。 如果定序屬性為空白，則資料行不是字元資料類型。  
+4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]  。 如果定序屬性為空白，則資料行不是字元資料類型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **檢視伺服器的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47765818"
   
  **檢視 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47765818"
   
  **檢視資料庫的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 sys.databases 系統目錄檢視的陳述式。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47765818"
   
  **檢視資料行的定序設定**  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]**。  
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
   
 2.  在查詢視窗中，輸入下列使用 sys.columns 系統目錄檢視的陳述式。  
   
@@ -108,13 +108,27 @@ ms.locfileid: "47765818"
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
+ **檢視資料表與資料行的定序設定**  
+
+1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  
+  
+2.  在查詢視窗中，輸入下列使用 sys.columns 系統目錄檢視的陳述式。  
+  
+    ```sql  
+    SELECT t.name TableName, c.name ColumnName, collation_name  
+    FROM sys.columns c  
+    inner join sys.tables t on c.object_id = t.object_id;  
+    ```  
+
+
+
 ## <a name="see-also"></a>另請參閱  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
+ [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

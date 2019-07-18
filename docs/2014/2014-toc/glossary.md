@@ -4,17 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +13,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519477"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412699"
 ---
 # <a name="glossary"></a>詞彙
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>詞彙  
   
 |詞彙|定義|  
@@ -460,8 +465,8 @@ ms.locfileid: "52519477"
 |清除佇列|從佇列中移除。|  
 |衍生的資料行|將運算式套用至轉換輸入資料行，藉此建立新資料行值的轉換。|  
 |還原序列化|將物件從序列儲存格式轉換為二進位格式 (應用程式可以使用的物件形式) 的程序。 當使用 Get client API 從快取叢集擷取物件時，就會發生這個情況。|  
-|目的地|SSIS 資料流程元件，可將資料載入資料存放區或是建立記憶體中資料集。|  
-|目的地|同步處理提供者，可提供其目前的知識、接受來源提供者的變更清單、偵測該清單與其自己的項目之間的任何衝突，並將變更套用到其資料存放區。|  
+|destination|SSIS 資料流程元件，可將資料載入資料存放區或是建立記憶體中資料集。|  
+|destination|同步處理提供者，可提供其目前的知識、接受來源提供者的變更清單、偵測該清單與其自己的項目之間的任何衝突，並將變更套用到其資料存放區。|  
 |目的地配接器|將資料載入資料存放區的資料流程元件。|  
 |目的地提供者|同步處理提供者，可提供其目前的知識、接受來源提供者的變更清單、偵測該清單與其自己的項目之間的任何衝突，並將變更套用到其資料存放區。|  
 |偵測|尋找某個東西。|  
@@ -469,7 +474,7 @@ ms.locfileid: "52519477"
 |變音符號|在字元上方、下方或中間所放置的標記，通常是為了指示未標記狀態中的拼音值變更。|  
 |變音符號|在字元上方、下方或中間所放置的標記，通常是為了指示未標記狀態中的拼音值變更。|  
 |方言|用來剖析字串或查詢陳述式的語法與一般規則。|  
-|鑽石形狀關係|分割並重新聯結之屬性關聯性的鏈結，但是其中不包含任何重複的關聯性。 例如，Day->Month->Year 和 Day->Quarter->Year 具有相同的起始點和結束點，但是沒有任何相同的關聯性。|  
+|鑽石形狀關係|分割並重新聯結之屬性關聯性的鏈結，但是其中不包含任何重複的關聯性。 例如，日期-> 月 day->month->year 和-> 年-> 年有相同的開始和結束點，但並沒有任何一般的關聯性。|  
 |差異因數|建立 DifferencingService 物件之工具的介面。|  
 |差異備份|一種備份，其中僅包含自從差異備份所依據的先前資料備份以來，對資料庫所做的變更。|  
 |差異基底|資料庫或資料庫之檔案或檔案群組子集中所有資料的最新完整備份。|  
@@ -543,7 +548,7 @@ ms.locfileid: "52519477"
 |dump|程式、磁碟或資料的複本，其目的是為了封存或保護檔案。|  
 |傾印裝置|包含備份媒體的磁帶機或磁碟機。|  
 |動態資料指標|當資料指標是開啟時，能夠反映基礎資料之資料修改的資料指標。|  
-|動態篩選|合併式複寫所能使用的資料列篩選器，它可讓您依據系統函數或使用者定義函數 (例如：SUSER_SNAME()) 來限制複寫到訂閱者的資料。|  
+|動態篩選|適用於合併式複寫，可讓您限制複寫到訂閱者資料的資料列篩選會依據系統函數或使用者定義函數 (例如：SUSER_SNAME())。|  
 |動態鎖定|SQL Server 用於判斷在任何時候使用效益最好之鎖定的程序。|  
 |動態管理函數|一組內建函數的其中一個，可傳回 SQL Server 中有關值、物件和設定的伺服器狀態資訊。|  
 |動態管理檢視|一組會針對 SQL Server 中的值、物件和設定傳回相關伺服器狀態資訊的內建檢視。|  
@@ -737,7 +742,7 @@ ms.locfileid: "52519477"
 |最高鬚值|盒狀圖上不是極端值的最高值。|  
 |提示|由 SQL Server 查詢處理器在 SELECT、INSERT、UPDATE 或 DELETE 陳述式指定要強制執行的選項或策略。 此提示會覆寫查詢最佳化工具可能會針對查詢而選取的任何執行計畫。|  
 |記錄|使用者在程式內的動作清單，例如輸入作業系統 Shell 中的命令、透過使用 Gopher 所傳遞的功能表，或者使用 Web 瀏覽器追蹤的連結。|  
-|保留性|指的是將已經處理而且通常之後會關閉的結果集保留在開放 (「擱置」) 狀態的機率。 例如：「SQL Server 只會在連接層級支援保留性」。|  
+|保留性|指的是將已經處理而且通常之後會關閉的結果集保留在開放 (「擱置」) 狀態的機率。 例如：「 SQL Server 支援連接層級的保留性 」。|  
 |鑑效組|保留供測量資料採礦模型結構精確度使用之定型資料的百分比。|  
 |鑑效組資料|保留供測量資料採礦模型結構精確度使用之定型資料的百分比。|  
 |鑑效組儲存區|用來快取鑑效組資料的資料採礦結構。 其中包含鑑效組資料的參考。|  
@@ -831,10 +836,10 @@ ms.locfileid: "52519477"
 |聯結路徑|指示如何聯結兩份資料表的一系列聯結。|  
 |聯合資料表|建立其他資料表間之關聯性的資料表。|  
 |Kagi 圖|用來追蹤價格變動及做出購買股票決策的圖表 (大多與時間無關)。|  
-|索引鍵|識別快取中物件的字串。 這個字串在區域內必須是唯一的。 當加入物件然後使用索引鍵擷取時，物件便會與相同的索引鍵產生關聯。|  
-|索引鍵|在加密、驗證和數位簽章中，用來搭配演算法使用以加密或解密資訊的值。|  
-|索引鍵|在陣列中，組織及存取儲存的資料所依據的欄位。|  
-|索引鍵|用於唯一識別資料列 (主索引鍵)、定義兩個資料表之間的關聯性 (外部索引鍵)，或是用於建立索引的資料行或資料行群組。|  
+|key|識別快取中物件的字串。 這個字串在區域內必須是唯一的。 當加入物件然後使用索引鍵擷取時，物件便會與相同的索引鍵產生關聯。|  
+|key|在加密、驗證和數位簽章中，用來搭配演算法使用以加密或解密資訊的值。|  
+|key|在陣列中，組織及存取儲存的資料所依據的欄位。|  
+|key|用於唯一識別資料列 (主索引鍵)、定義兩個資料表之間的關聯性 (外部索引鍵)，或是用於建立索引的資料行或資料行群組。|  
 |索引鍵屬性|維度的屬性，會將維度中的非索引鍵屬性與相關的量值連結。|  
 |索引鍵資料行|內容可唯一識別資料表中每一個資料列的資料行。|  
 |索引鍵產生器|用來產生加密金鑰內容的硬體或軟體元件。|  
@@ -969,7 +974,7 @@ ms.locfileid: "52519477"
 |Microsoft SQL Server|Microsoft 關聯式資料庫管理和分析系統的系列，用於電子商務、特定商務和資料倉儲解決方案。|  
 |Microsoft SQL Server 2008 Express|可內嵌的輕量版 Microsoft SQL Server 2008。|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Microsoft 關聯式資料庫設計和管理系統，用於電子商務、特定商務和資料倉儲解決方案。|  
-|Microsoft SQL Server 2008 Express with Tools|簡單好用的免費 SQL Server Express 資料平台版本，其中包含圖形化管理工具：SQL Server Management Studio (SMSS) Express。|  
+|Microsoft SQL Server 2008 Express with Tools|免費、 簡單易用的版本包含圖形化管理工具的 SQL Server Express 資料平台：SQL Server Management Studio (SMSS) Express。|  
 |Microsoft SQL Server 線上叢書|電子文件集集合，其中包含 Microsoft SQL Server 隨附的完整文件集。|  
 |Microsoft SQL Server Business Intelligence|以 Microsoft SQL Server 為基礎的資料基礎結構和商業智慧平台，其中包含 Microsoft SQL Server Integration Services、關聯式引擎、Master Data Services、Reporting Services，以及 Analysis Services。|  
 |Microsoft SQL Server Compact|Microsoft 關聯式資料庫管理和分析系統，用於電子商務、特定商務和資料倉儲解決方案。|  
@@ -1091,7 +1096,7 @@ ms.locfileid: "52519477"
 |平行處理|處理方法，只能在同步執行兩個或多個處理器的電腦上執行。 平行處理與多重處理的差異在於，前者的工作會分散至可用的處理器。 在多重處理中，處理序可能會分成序列區塊，其中某一個處理器管理資料庫存取、第二個分析資料，而第三個處理畫面的圖形輸出。 程式設計師若採用執行平行處理的系統，則必須找出劃分工作的方式，將該工作大致平均分配給可用的處理器。|  
 |參數化查詢|接受以參數做為輸入值的查詢。|  
 |參數化報表 (parameterized report)|已發行的報表，可透過參數接受輸入值。|  
-|參數化資料列篩選器|合併式複寫所能使用的資料列篩選器，它可讓您依據系統函數或使用者定義函數 (例如：SUSER_SNAME()) 來限制複寫到訂閱者的資料。|  
+|參數化資料列篩選器|適用於合併式複寫，可讓您限制複寫到訂閱者資料的資料列篩選會依據系統函數或使用者定義函數 (例如：SUSER_SNAME())。|  
 |部分備份|主要檔案群組、每個讀取-寫入檔案群組以及任何選擇性指定之檔案中所有資料的備份。 唯讀資料庫的部分備份只包含主要檔案群組。|  
 |部分資料庫還原|只包含一部分資料庫的還原，包括其主要檔案群組，以及一個或多個次要檔案群組。 其他檔案群組會永遠保持離線狀態，不過之後可以將其還原。|  
 |部分差異備份|相對於先前的單一部分備份 (基底備份) 而言，差異的部分備份。 若為唯讀資料庫，則是指只包含主要檔案群組的部分差異備份。|  
@@ -1393,7 +1398,7 @@ ms.locfileid: "52519477"
 |結構描述快照集|包括複寫所需之已發行資料表及物件 (觸發程序、中繼資料資料表等) 之結構描述的快照集，但不含使用者資料。|  
 |結構描述感知|指的是以結構描述為基礎的處理方法，該方法會定義用來驗證輸入和輸出文件的元素、屬性和類型。|  
 |範圍 (scope)|識別碼 (例如物件或屬性) 可在程式內供參考的程度。 這可以是擴及應用程式的全域範圍，或者是僅侷限於使用中文件的本機範圍。|  
-|範圍 (scope)|正在進行同步處理的資料集。|  
+|scope|正在進行同步處理的資料集。|  
 |指令碼記憶體|PHP 指令碼所使用的本機記憶體 (用戶端 RAM)。|  
 |指令碼窗格|資料表設計工具的文字編輯器部分。|  
 |指令碼|指的是藉由指令碼在電腦上將使用者動作或設定標準狀態自動化的過程。|  
@@ -1424,7 +1429,7 @@ ms.locfileid: "52519477"
 |循序關聯性|在儲存機制中，用於指定目的地物件集合內每個目的地物件之明確位置的關聯性。|  
 |序號|指派給特定存貨項目做為識別的號碼，藉此與相同項目編號的類似項目加以區別。|  
 |序列化|將物件的狀態資訊轉換成可以存放或傳輸的表單之程序。 在序列化期間，物件將其目前的狀態寫入暫時或永久的儲存區， 之後可透過讀取或是還原序列化儲存區中的物件狀態，以重新建立該物件。|  
-|伺服器|對網路使用者提供共用資源 (例如檔案或印表機) 的電腦。|  
+|server|對網路使用者提供共用資源 (例如檔案或印表機) 的電腦。|  
 |伺服器定序|SQL Server 執行個體的定序。|  
 |伺服器資料指標|在伺服器實作的資料指標。|  
 |伺服器名稱 (server name)|用於唯一識別網路中伺服器電腦的名稱。|  
@@ -1785,7 +1790,7 @@ ms.locfileid: "52519477"
 |X 軸 (x-axis)|具有水平和垂直維度的方格、圖表或圖形上的水平參考線。|  
 |XML for Analysis|描述一套開放標準的規格，可支援對位於全球資訊網上的資料來源進行資料存取。|  
 |XMLA|描述一套開放標準的規格，可支援對位於全球資訊網上的資料來源進行資料存取。|  
-|XQuery|功能查詢語言，可廣泛運用到衍生自 Quilt、XPath 和 XQL 的各種不同 XML 資料類型。 Ipedo 和 Software AG 都實作自己的版本，並採用 W3C 建議的 XQuery 語言規格。 也稱為XML Query、XQL。|  
+|XQuery|功能查詢語言，可廣泛運用到衍生自 Quilt、XPath 和 XQL 的各種不同 XML 資料類型。 Ipedo 和 Software AG 都實作自己的版本，並採用 W3C 建議的 XQuery 語言規格。 也稱為：XML Query、 XQL。|  
 |XSL|利用定義呈現規則的樣式表，將 XML 資料轉換成另一種形式 (例如 HTML) 時所使用的 XML 詞彙。|  
 |XSL 轉換|宣告式 XML 架構語言，用於呈現或轉換 XML 資料。|  
 |XSLT|宣告式 XML 架構語言，用於呈現或轉換 XML 資料。|  

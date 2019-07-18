@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211581"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
   管理應用程式可藉由發出 WMI 查詢語言 (WQL) 陳述式，使用 WMI Provider for Server Events 來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是結構化查詢語言 (SQL) 的簡化子集，具有一些 WMI 特定的延伸模組。 在使用 WQL 時，應用程式會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體、資料庫或資料庫物件 (目前唯一支援的物件是佇列) 來擷取事件類型。 伺服器事件的 WMI 提供者會將查詢轉譯為資料庫範圍或物件範圍的事件通知，或在目標資料庫中建立的事件通知**主要**資料庫的伺服器範圍的事件通知。  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  WMI Provider for Server Events 會使用由下而上 (Bottom-Up)、最先合適 (First-Fit) 演算法，針對基礎 EVENT NOTIFICATION 產生最小的可能範圍。 此種演算法會嘗試將伺服器上的內部活動以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 WMI 主機處理序之間的網路傳輸量降至最低。 提供者會檢查*event_type* FROM 子句和 WHERE 子句中，在條件中指定，並嘗試使用最少的可能範圍註冊基礎的事件通知。 如果提供者不能以最窄的範圍註冊，就會嘗試以連續的較高範圍註冊，直到註冊終於成功為止。 如果在達到最高的範圍 (伺服器層級) 時仍舊失敗，就會對取用者傳回錯誤。  
   
- 例如，如果資料庫名稱 =**'** AdventureWorks **'** 在 WHERE 子句中，提供者會嘗試註冊事件通知中的指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫存在，而且呼叫用戶端具有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中建立事件通知的必要權限，註冊作業就會成功， 否則系統會嘗試在伺服器層級註冊事件通知。 如果 WMI 用戶端擁有必要的權限，註冊就會成功。 不過，在此種情況下，在建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之前，不會對用戶端傳回事件。  
+ 例如，如果資料庫名稱 = **'** AdventureWorks **'** 在 WHERE 子句中，提供者會嘗試註冊事件通知中的指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫存在，而且呼叫用戶端具有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中建立事件通知的必要權限，註冊作業就會成功， 否則系統會嘗試在伺服器層級註冊事件通知。 如果 WMI 用戶端擁有必要的權限，註冊就會成功。 不過，在此種情況下，在建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之前，不會對用戶端傳回事件。  
   
  *Where_condition*也可以做為篩選，將此外限制至特定的資料庫、 結構描述或物件查詢。 例如，請看下列的 WQL 查詢：  
   
@@ -116,7 +116,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-querying-for-events-at-the-server-scope"></a>A. 查詢伺服器範圍的事件  
- 下列 WQL 查詢會針對任何發生於 `SERVER_MEMORY_CHANGE` 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤事件，擷取所有的事件屬性。  
+ 下列 WQL 查詢會針對任何發生於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 `SERVER_MEMORY_CHANGE` 追蹤事件，擷取所有的事件屬性。  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  

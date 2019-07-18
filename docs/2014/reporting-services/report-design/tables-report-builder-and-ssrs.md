@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a6b1802f45183f862a5ab6a9cf5c892383e3cbe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104734"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
   使用資料表顯示詳細資料、群組資料，或兩者的組合。 您可以依單一欄位、多個欄位或透過撰寫自己的運算式來分組資料。 您可以建立巢狀群組或獨立、相鄰的群組。 若要顯示群組資料的彙總值，將總計加入到群組中。 格式化資料列和資料行以反白顯示您要強調的資料。 您可以一開始隱藏詳細資料或群組資料並加入向下鑽研切換，以便讓使用者以互動方式選擇要顯示多少資料。  
@@ -24,7 +23,7 @@ ms.locfileid: "56286646"
 > [!NOTE]  
 >  您可以將資料表當做報表組件，與報表分開發行。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)或是[建立基本資料表報表&#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用資料表的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解資料表。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "56286646"
   
  ![在設計介面上選取的資料表範本](../media/rs-tabletemplatenewselected.gif "在設計介面上選取的資料表範本")  
   
- 資料列的資料列控制代碼會顯示詳細資料符號 (![具有詳細資料列之三條平行線的資料列代碼](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示這些欄位的資料表資料區域：日期、 訂單、 產品、 Qty 和行總計。  
+ 資料列的資料列控制代碼會顯示詳細資料符號 (![具有詳細資料列之三條平行線的資料列代碼](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示包含這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
   
  ![設計、具有粗體資料行標頭的資料表](../media/rs-basictabledetailsformatteddesign.gif "設計、具有粗體資料行標頭的資料表")  
   

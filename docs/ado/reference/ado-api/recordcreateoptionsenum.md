@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917347"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否將現有**記錄**應該開啟或新**記錄**建立[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 值可以與 AND 運算子結合。  

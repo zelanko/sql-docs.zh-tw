@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 958514adc02452cdc75a05e7ad28cd31f4e8e0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091657"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新資料
 應用程式可以執行大量更新、 刪除、 提取時或插入作業，在資料來源，藉由呼叫基礎資料表上的**SQLBulkOperations**。 呼叫**SQLBulkOperations**是方便的替代建構及執行 SQL 陳述式。 它可讓 ODBC 驅動程式支援定位的更新，即使資料來源不支援定位的 SQL 陳述式。 它是達到完整的資料庫存取透過函式呼叫範例的一部分。  

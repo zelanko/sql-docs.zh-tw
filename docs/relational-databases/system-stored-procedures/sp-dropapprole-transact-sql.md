@@ -1,5 +1,5 @@
 ---
-title: sp_dropapprole (Transact-SQL) | Microsoft Docs
+title: sp_dropapprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ helpviewer_keywords:
 - sp_dropapprole
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001039"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從目前資料庫移除應用程式角色。  
@@ -37,7 +38,6 @@ ms.locfileid: "58533380"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_dropapprole [@rolename = ] 'role'  
 ```  
   
@@ -58,7 +58,7 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="examples"></a>範例  
  下列範例會從目前資料庫移除 `SalesApp` 應用程式角色。  
   
-```  
+```sql
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   
@@ -66,7 +66,7 @@ EXEC sp_dropapprole 'SalesApp';
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_changeobjectowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
+ [sp_changeobjectowner &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

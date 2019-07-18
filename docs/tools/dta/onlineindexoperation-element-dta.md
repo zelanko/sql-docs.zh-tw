@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OnlineIndexOperation element
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6832df1d7940f71770b8f691c9b26b911c435d50
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f852149379edc74e36de09b01a60e0ec73f41fdb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291594"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733521"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

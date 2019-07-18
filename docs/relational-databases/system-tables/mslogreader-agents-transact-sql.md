@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 301aecad91702c1b851488e70f4de77858439d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 802d2075a0146febc4521fb17b65f236533596bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907304"
 ---
 # <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52823243"
 |**name**|**nvarchar(100)**|記錄讀取器代理程式的名稱。|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**local_job**|**bit**|指出本機散發者是否有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|  
 |**job_id**|**binary(16)**|作業識別碼。|  
 |**profile_id**|**int**|設定識別碼，從[MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表。|  

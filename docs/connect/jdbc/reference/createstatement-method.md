@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a36cae30e7a32b6045756eabb76d8d55daf2f030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 340c37a2e5e162af3ab2ae80813b14c6bab7a0f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658786"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772885"
 ---
 # <a name="createstatement-method-"></a>createStatement 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  建立 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件，以便將 SQL 陳述式傳送到資料庫。  
+  建立 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件，以便將 SQL 陳述式傳送至資料庫。  
   
 ## <a name="syntax"></a>語法  
   

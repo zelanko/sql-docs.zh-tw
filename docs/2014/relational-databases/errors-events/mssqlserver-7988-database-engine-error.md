@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7912da245a04f2f62086e9ef08f0077aaac0196f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762860"
 ---
 # <a name="mssqlserver7988"></a>MSSQLSERVER_7988
     
@@ -30,7 +30,7 @@ ms.locfileid: "48072618"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|訊息文字|統資料表預先檢查: 物件識別碼 O_ID。 於 P_ID 偵測到資料鍊迴圈。 由於無法修復的錯誤，檢查陳述式已經結束。|  
+|訊息文字|系統資料表預先檢查:物件識別碼 O_ID。 於 P_ID 偵測到資料鍊迴圈。 由於無法修復的錯誤，檢查陳述式已經結束。|  
   
 ## <a name="explanation"></a>說明  
  DBCC CHECKDB 的第一階段是針對關鍵的系統資料表，執行資料頁的基本檢查。 如果找到任何錯誤，由於無法修復錯誤，因此 DBCC CHECKDB 會立即結束。 已經在頁面 *P_ID* 上偵測到頁面連結迴圈。 若某個頁面的下一頁指標最後會返回該頁面，便會發生頁面連結迴圈。  

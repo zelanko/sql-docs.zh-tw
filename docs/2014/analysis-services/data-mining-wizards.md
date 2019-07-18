@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
@@ -14,12 +13,12 @@ ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086310"
 ---
 # <a name="data-mining-wizards"></a>資料採礦精靈
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
@@ -39,8 +38,8 @@ ms.locfileid: "48099228"
  如需協助您設計及使用多維度資料之精靈的相關資訊，請參閱 [Analysis Services 精靈 &#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦工具](data-mining/data-mining-tools.md)   
- [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [資料採礦工具。](data-mining/data-mining-tools.md)   
+ [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [建立 OLAP 採礦結構](data-mining/create-an-olap-mining-structure.md)   
  [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)   
  [建立新的關聯式採礦結構](data-mining/create-a-new-relational-mining-structure.md)   

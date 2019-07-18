@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a2c01750ac0cb1a743e6961cc693f9912857d8b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8e99bb7348177d10e22e4c40585597a31aad570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031798"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

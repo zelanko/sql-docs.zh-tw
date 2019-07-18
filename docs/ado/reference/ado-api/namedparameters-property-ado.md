@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c63fb598630a30fd2616722146bb6737f17b82b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932067"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters 屬性 (ADO)
 指出參數名稱是否應該傳遞給提供者。  

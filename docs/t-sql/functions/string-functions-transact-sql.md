@@ -15,16 +15,16 @@ helpviewer_keywords:
 - string functions
 - strings [SQL Server]
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c0233c8c6ea09c6f582055e2059f7fef30b6e3
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5a9b03570df8ffd1a6837fd9196f50497ca1e371
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947491"
 ---
 # <a name="string-functions-transact-sql"></a>字串函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

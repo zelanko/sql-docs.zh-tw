@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b681d06ab2ebb7c26d57fcef3bc34b070d30269e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 571ac34ad836bf25ad98f973f9fc33c9de499ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024648"
 ---
 # <a name="purge-version-members-master-data-services"></a>清除版本成員 [Master Data Services]
 
@@ -24,7 +23,7 @@ ms.locfileid: "52753200"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除成員只會停用或虛刪除該名成員。 資料仍然位於資料庫中。 本主題說明如何清除 (永久刪除) 模型版本中所有已虛刪除的成員。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序。  
   
 -   您必須擁有存取 [版本管理] 功能區域的權限。  
@@ -33,13 +32,13 @@ ms.locfileid: "52753200"
   
 ## <a name="to-purge-soft-deleted-members"></a>清除虛刪除的成員  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本] 頁面上，選取要清除之版本的模型。 模型版本清單隨即顯示。  
+2.  在 [管理版本]  頁面上，選取要清除之版本的模型。 模型版本清單隨即顯示。  
   
 3.  選取要清除之版本的資料列。  
   
-4.  按一下 [清除成員]。  
+4.  按一下 [清除成員]  。  
   
 5.  在確認提示中按一下 [確定]。  
   

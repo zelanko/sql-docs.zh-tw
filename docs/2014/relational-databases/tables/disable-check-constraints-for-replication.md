@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762191"
 ---
 # <a name="disable-check-constraints-for-replication"></a>停用複寫的檢查條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用檢查條件約束。 您也可以明確停用複製的檢查條件約束，當您從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行資料時，這會相當實用。  
@@ -41,7 +41,7 @@ ms.locfileid: "52807520"
   
 1.  在 **[物件總管]** 中，展開包含您要修改之檢查條件約束的資料表，然後展開 **[條件約束]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要修改的檢查條件約束，然後按一下 **[修改]**。  
+2.  以滑鼠右鍵按一下您要修改的檢查條件約束，然後按一下 **[修改]** 。  
   
 3.  在 **[檢查條件約束]** 對話方塊中的 **[資料表設計工具]** 底下，針對 **[強制複寫]** 選取 **[否]** 值。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "52807520"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會建立包含 IDENTITY 資料行及 CHECK 條件約束的資料表。 接著範例會卸除條件約束再重新建立，並指定 NOT FOR REPLICATION 子句。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立包含 IDENTITY 資料行及 CHECK 條件約束的資料表。 接著範例會卸除條件約束再重新建立，並指定 NOT FOR REPLICATION 子句。  
   
     ```  
     USE AdventureWorks2012;  

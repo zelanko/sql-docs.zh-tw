@@ -1,24 +1,23 @@
 ---
-title: 新的排程：編輯排程頁面 （報表管理員） |Microsoft Docs
+title: 新增排程：編輯排程頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108152"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新的排程：編輯排程頁面 （報表管理員）
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新增排程：編輯排程頁面 （報表管理員）
   使用 [新增排程 / 編輯排程] 頁面，即可建立報表的排程。 排程可用於訂閱、重新整理快取報表，以及建立將快照集建立成獨立項目，或建立在報表歷程記錄中。  
   
 > [!NOTE]  
@@ -39,11 +38,11 @@ ms.locfileid: "56034542"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該模型的 [一般] 屬性頁面。  
   
 4.  選取 **[執行]** 索引標籤。  
   
-5.  選取 **[從報表執行快照集轉譯此報表]** 選項。 接著，選取 **[使用下列排程將快照集加入至報表記錄]** 並選取 **[報表特定排程]**。 然後，按一下 **[設定]**。  
+5.  選取 **[從報表執行快照集轉譯此報表]** 選項。 接著，選取 **[使用下列排程將快照集加入至報表記錄]** 並選取 **[報表特定排程]** 。 然後，按一下 **[設定]** 。  
   
 ### <a name="to-open-the-new-schedule-or-edit-schedule-page-from-the-history-properties-page-of-a-report"></a>若要從報表的記錄屬性頁面開啟新增排程或編輯排程頁面  
   
@@ -51,11 +50,11 @@ ms.locfileid: "56034542"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該模型的 [一般] 屬性頁面。  
   
 4.  選取 **[記錄]** 索引標籤。  
   
-5.  選取 **[使用下列排程將快照集加入至報表記錄]** 並選取 **[報表特定排程]**。 然後，按一下 **[設定]**。  
+5.  選取 **[使用下列排程將快照集加入至報表記錄]** 並選取 **[報表特定排程]** 。 然後，按一下 **[設定]** 。  
   
 ### <a name="to-open-the-new-schedule-or-edit-schedule-page-from-the-subscriptions-page"></a>若要從訂閱頁面開啟新增排程或編輯排程頁面  
   
@@ -65,15 +64,15 @@ ms.locfileid: "56034542"
   
 3.  在下拉式功能表中，  
   
-    -   按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。 然後，選取 **[訂閱]** 索引標籤。  
+    -   按一下 **[管理]** 。 這樣就會開啟該報表的 [一般] 屬性頁面。 然後，選取 **[訂閱]** 索引標籤。  
   
-    -   按一下 **[訂閱]**。 這樣就會開啟該報表的 **[訂閱]** 屬性頁面。  
+    -   按一下 **[訂閱]** 。 這樣就會開啟該報表的 **[訂閱]** 屬性頁面。  
   
 4.  在工具列中，按一下 **[新增訂閱]** 或選取要編輯的現有訂閱。  
   
-5.  在 **[訂閱處理選項]** 底下，按一下 **[新增排程]**。  
+5.  在 **[訂閱處理選項]** 底下，按一下 **[新增排程]** 。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **排程詳細資料**  
  選取決定何時執行報表及其執行頻率的選項。 頻率選項有層次之分。 第一組選項指定頻率的類別 (每小時、每日、每週等)。 顯示的第二組選項是以您的初始選擇為基礎。  
   

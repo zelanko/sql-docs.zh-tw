@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126907"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>設定警示以便向原則管理員通知原則失敗
   當原則式管理原則在其中一種自動評估模式中執行時，如果發生原則違規，系統就會在事件記錄檔中寫入一則訊息。 若要在這則訊息寫入事件記錄檔時收到通知，您可以建立偵測訊息並執行動作的警示。 此警示應該會偵測到下表所列的訊息。  
@@ -45,7 +45,7 @@ ms.locfileid: "52803595"
 ## <a name="additional-considerations-about-alerts"></a>關於警示的其他考量  
  請注意下列關於警示的其他考量：  
   
--   系統只會針對啟用的原則引發警示。 由於無法啟用 [視需要] 原則，因此無法針對視需要執行的原則引發警示。  
+-   系統只會針對啟用的原則引發警示。 由於無法啟用 [視需要]  原則，因此無法針對視需要執行的原則引發警示。  
   
 -   如果您想要採取的動作包含傳送電子郵件訊息，就必須設定郵件帳戶。 我們建議您使用 Database Mail。 如需設定 Database Mail 的詳細資訊，請參閱 [建立 Database Mail 帳戶](../database-mail/create-a-database-mail-account.md)。  
   

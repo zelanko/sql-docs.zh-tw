@@ -1,5 +1,5 @@
 ---
-title: Microsoft 時序群集演算法 |Microsoft 文件
+title: Microsoft 時序群集演算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d231e1c11e53650b7e76c0c7070bcbc0e0a7fa70
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182899"
 ---
-# <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序群集演算法
+# <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序叢集演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是結合時序分析和叢集的獨特演算法。 您可以使用此演算法來瀏覽資料，其中包含可在 [時序] 中連結的事件。 此演算法會尋找最常見的時序，並執行叢集以尋找類似的時序。 下列範例描述您可能擷取作為機器學習資料的時序類型，以深入了解常見的問題或商務案例：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是結合時序分析和叢集的獨特演算法。 您可以使用此演算法來瀏覽資料，其中包含可在 [時序]  中連結的事件。 此演算法會尋找最常見的時序，並執行叢集以尋找類似的時序。 下列範例描述您可能擷取作為機器學習資料的時序類型，以深入了解常見的問題或商務案例：  
   
 -   使用者巡覽或瀏覽網站時所產生的點選流或點選路徑  
   
@@ -54,9 +54,9 @@ ms.locfileid: "34016455"
  如需時序叢集模型所支援內容類型和資料類型的詳細資訊，請參閱 [Microsoft 時序叢集演算法技術參考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)的＜需求＞一節。  
   
 ## <a name="viewing-a-sequence-clustering-model"></a>檢視時序叢集模型  
- 此演算法所建立的採礦模型會包含資料中最常見時序的描述。 若要瀏覽此模型，您可以使用 **[Microsoft 時序群集檢視器]**。 當您檢視時序叢集模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會顯示包含多項轉換的叢集。 您也可以檢視相關的統計資料。 如需詳細資訊，請參閱 [使用 Microsoft 時序叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
+ 此演算法所建立的採礦模型會包含資料中最常見時序的描述。 若要瀏覽此模型，您可以使用 **[Microsoft 時序群集檢視器]** 。 當您檢視時序叢集模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會顯示包含多項轉換的叢集。 您也可以檢視相關的統計資料。 如需詳細資訊，請參閱 [使用 Microsoft 時序叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
- 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個節點中所有值的分佈、每個群集的機率，以及有關轉換的詳細資料。 如需詳細資訊，請參閱[時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
+ 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個節點中所有值的分佈、每個群集的機率，以及有關轉換的詳細資料。 如需詳細資訊，請參閱 [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
   
 ## <a name="creating-predictions"></a>建立預測  
  在此模型已定型之後，結果會儲存成一組模式。 您可以使用資料中最常見時序的描述來預測新時序的下一個可能步驟。 不過，因為此演算法包含其他資料行，所以您可以使用產生的模型來識別時序資料與非循序輸入之間的關聯性。 例如，如果您將人口統計資料加入至模型，就可以針對特定客戶群組進行預測。 您可以自訂預測查詢，以便傳回變動數目的預測或傳回描述性統計資料。  
@@ -72,9 +72,9 @@ ms.locfileid: "34016455"
 -   支援 OLAP 採礦模型的使用和資料採礦維度的建立。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 時序群集演算法技術參考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [時序群集模型查詢範例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [瀏覽模型，使用 Microsoft 時序群集檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [時序叢集模型查詢範例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [使用 Microsoft 時序叢集檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

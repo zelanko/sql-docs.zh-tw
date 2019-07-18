@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041027"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將合併訂閱重新同步處理到您指定的已知驗證狀態。 這可讓您將訂閱資料庫強制聚合或同步處理到某個特定的時間點，如上次驗證成功或指定的日期。 當利用這個方法來重新同步處理訂閱時，不會重新套用快照集。 快照式複寫訂閱或異動複寫訂閱不使用這個預存程序。  這個預存程序執行於發行集資料庫的發行者端，或訂閱資料庫的訂閱者端。  
+  將合併訂閱重新同步處理到您指定的已知驗證狀態。 這可讓您將訂閱資料庫強制聚合或同步處理到某個特定的時間點，如上次驗證成功或指定的日期。 當利用這個方法來重新同步處理訂閱時，不會重新套用快照集。 快照式複寫訂閱或異動複寫訂閱不使用這個預存程序。 這個預存程序執行於發行集資料庫的發行者端，或訂閱資料庫的訂閱者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +61,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|從上次驗證成功之後開始同步處理。 訂閱者會重新套用上次驗證成功之後所引發的所有新的或不完整的層代 (Generation)。|  
 |**2**|從所提供的日期開始同步處理*resync_date_str*。 訂閱者會重新套用這個日期之後所引發的所有新的或不完整的層代 (Generation)。|  
   
-`[ @resync_date_str = ] resync_date_string` 定義何時應該開始重新同步的日期。 *resync_date_string*已**nvarchar(30)**，預設值是 NULL。 使用這個參數時*resync_type*的值**2**。 指定的資料會轉換成其對等**datetime**值。  
+`[ @resync_date_str = ] resync_date_string` 定義何時應該開始重新同步的日期。 *resync_date_string*已**nvarchar(30)** ，預設值是 NULL。 使用這個參數時*resync_type*的值**2**。 指定的資料會轉換成其對等**datetime**值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

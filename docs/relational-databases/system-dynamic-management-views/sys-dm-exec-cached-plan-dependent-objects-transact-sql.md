@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cached_plan_dependent_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: ca4499645846dacc762d8d3bf130ccc44a7f3155
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097904"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>引數  
 *plan_handle*  
-用來唯一識別已經執行且其計畫在計畫快取中批次的查詢執行計畫。 *plan_handle*已**varbinary(64)**。   
+可唯一識別查詢執行計畫，該批次已經執行的語彙基元且其計畫位於計畫快取。 *plan_handle*已**varbinary(64)** 。   
 
 *Plan_handle*可以從下列動態管理物件取得：  
   
@@ -53,7 +52,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 
 -   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -64,7 +63,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 |**cacheobjtype**|**nvarchar(50)**|計劃快取的物件型別。 資料行不可為 Null。 可能的值為<br /><br /> 可執行的計畫<br /><br /> CLR 編譯的函數<br /><br /> CLR 編譯的程序<br /><br /> 資料指標|  
   
 ## <a name="permissions"></a>Permissions  
- 需要伺服器的 VIEW SERVER STATE 權限。  
+ 需要伺服器的 `VIEW SERVER STATE` 權限。  
   
 ## <a name="physical-joins"></a>實體聯結  
  ![關聯性圖表](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "關聯性圖表")  
@@ -78,6 +77,6 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 ## <a name="see-also"></a>另請參閱  
  [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.syscacheobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)  
+ [sys.syscacheobjects &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)  
   
   

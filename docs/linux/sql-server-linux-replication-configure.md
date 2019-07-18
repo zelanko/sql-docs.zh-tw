@@ -1,22 +1,21 @@
 ---
-title: 在 Linux 上設定 SQL Server 複寫 |Microsoft Docs
+title: 在 Linux 上設定 SQL Server 複寫
 description: 本文說明如何在 Linux 上設定 SQL Server 複寫。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ab482a9c2a4bce9da7dc2b0a68cae6391759b92
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895930"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上設定 SQL Server 複寫
 
@@ -72,21 +71,21 @@ ms.locfileid: "52754450"
 
 1. 在 SSMS 中，連接到您的 [物件總管] 中的 SQL Server 執行個體。
 
-1. 以滑鼠右鍵按一下**複寫**，然後按一下**設定散發...**.
+1. 以滑鼠右鍵按一下**複寫**，然後按一下**設定散發...** .
 
-1. 遵循上的指示**設定散發精靈 」**。
+1. 遵循上的指示**設定散發精靈 」** 。
 
 ### <a name="create-publication-and-articles"></a>建立發行集和文件
 
 若要建立發行集和發行項：
 
-1. 在 [物件總管] 中，按一下**複寫** > **本機發行集**> **新增發行集...**.
+1. 在 [物件總管] 中，按一下**複寫** > **本機發行集**> **新增發行集...** .
 
 1. 依照指令**新的發行集精靈 」** 設定複寫，以及屬於發行集之發行項的類型。
 
 ### <a name="configure-the-subscription"></a>設定訂用帳戶
 
-若要在 [物件總管] 中設定訂用帳戶，請按一下**複寫** > **本機訂用帳戶**> **新訂用帳戶...**.
+若要在 [物件總管] 中設定訂用帳戶，請按一下**複寫** > **本機訂用帳戶**> **新訂用帳戶...** .
 
 ### <a name="monitor-replication-jobs"></a>監視複寫作業
 

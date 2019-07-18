@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78ee14838b467cfe6e555c97f1e74c65cccf98ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e39b70f92f7b239b011cdd4fdd6abd36c27561c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076798"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 刪除資料列集中的資料列
 刪除作業**SQLSetPos**刪除一或多個選取的資料列的資料表的資料來源。 若要刪除的資料列**SQLSetPos**，應用程式會呼叫**SQLSetPos**具有*作業*設定為 SQL_DELETE 並*RowNumber*設為若要刪除的資料列數目。 如果*RowNumber*是 0，則會刪除資料列集中的所有資料列。  

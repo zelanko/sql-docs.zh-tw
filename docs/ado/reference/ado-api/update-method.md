@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae2645057670ba65a33bb8b5da238c7e01790ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938846"
 ---
 # <a name="update-method"></a>Update 方法
 儲存您對目前資料列的任何變更[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，或有[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。  

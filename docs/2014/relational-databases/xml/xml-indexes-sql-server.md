@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62631365"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   XML 索引可建立在 `xml` 資料類型資料行上。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
@@ -53,7 +53,7 @@ ms.locfileid: "58533970"
   
 -   次要 XML 索引  
   
- 在 `xml` 類型資料行上的第一個索引必須是主要的 XML 索引。 使用主要 XML 索引，支援下列類型的次要索引：路徑、 值和屬性。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
+ 在 `xml` 類型資料行上的第一個索引必須是主要的 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 和 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
   
 > [!NOTE]  
 >  除非您已正確設定資料庫選項來處理 `xml` 資料類型一起運作，否則無法建立或修改 XML 索引。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](use-full-text-search-with-xml-columns.md)。  

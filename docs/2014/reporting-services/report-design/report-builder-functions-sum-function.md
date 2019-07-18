@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f12ede17d4724194ca59cf32c1ceeff26948d868
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b0a9bc891fc85fd948e78119056744f4d74718ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105125"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Sum 函數 (報表產生器及 SSRS)
   傳回運算式指定之所有非 Null 數值的總和 (在給定範圍中評估)。  

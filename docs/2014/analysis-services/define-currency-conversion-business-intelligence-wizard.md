@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.existingscriptpage.f1
@@ -13,15 +12,15 @@ ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7cca289615e94cd4ccfbcee038e002c33700be8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099238"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082144"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>定義貨幣轉換 (商業智慧精靈)
-  使用 [定義貨幣轉換] 頁面來檢閱多維度運算式 (MDX) 指令碼，該指令碼包含 [商業智慧精靈] 所產生的貨幣轉換功能。 然後，您可以使用此精靈產生的 MDX 指令碼，在 Cube 的 MDX 指令碼中覆寫或附加之前定義的貨幣轉換功能。  
+  使用 [定義貨幣轉換]  頁面來檢閱多維度運算式 (MDX) 指令碼，該指令碼包含 [商業智慧精靈] 所產生的貨幣轉換功能。 然後，您可以使用此精靈產生的 MDX 指令碼，在 Cube 的 MDX 指令碼中覆寫或附加之前定義的貨幣轉換功能。  
   
 > [!NOTE]  
 >  只有商業智慧精靈在 Cube 的 MDX 指令碼中偵測到至少有一個之前定義的貨幣轉換時，才會出現此頁面。 在 Cube 的 MDX 指令碼中，利用下列註解包覆貨幣轉換：  
@@ -38,15 +37,15 @@ ms.locfileid: "48099238"
 >   
 >  如果您變更或移除這些註解，商業智慧精靈可能無法偵測到任何之前定義的貨幣轉換。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新增貨幣轉換指令碼**  
  顯示由目前商業智慧精靈工作階段產生的 MDX 指令碼。  
   
  **覆寫現有的貨幣轉換指令碼**  
- 選取以使用 [新增貨幣轉換指令碼] 中所顯示的 MDX 指令碼，來覆寫 [現有的貨幣轉換指令碼] 中所顯示的 MDX 指令碼。  
+ 選取以使用 [新增貨幣轉換指令碼]  中所顯示的 MDX 指令碼，來覆寫 [現有的貨幣轉換指令碼]  中所顯示的 MDX 指令碼。  
   
  **附加於後面**  
- 選取即可將 [新增貨幣轉換指令碼] 中所顯示的 MDX 指令碼，附加至 [現有的貨幣轉換指令碼] 中所顯示之 MDX 指令碼的結尾處。 附加的指令碼會顯示為新的區段。  
+ 選取即可將 [新增貨幣轉換指令碼]  中所顯示的 MDX 指令碼，附加至 [現有的貨幣轉換指令碼]  中所顯示之 MDX 指令碼的結尾處。 附加的指令碼會顯示為新的區段。  
   
  **現有的貨幣轉換指令碼**  
  選取現有 MDX 指令碼的區段，其中包含要覆寫或附加的之前定義的貨幣轉換功能。  

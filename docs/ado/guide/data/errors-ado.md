@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8079c2f49fe64aa94ce061fc47a324087b92f0d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925444"
 ---
 # <a name="errors-ado"></a>錯誤 (ADO)
 任何涉及 ADO 物件的作業可能會產生一或多個提供者錯誤。 每個錯誤發生時，一或多個**錯誤**物件置於**錯誤**集合**連接**物件。 如需處理警告和 ADO 應用程式中的錯誤的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。  

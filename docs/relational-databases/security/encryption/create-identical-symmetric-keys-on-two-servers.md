@@ -1,7 +1,7 @@
 ---
 title: 在兩部伺服器上建立相同的對稱金鑰 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66428829"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53997560"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY SYMMETRIC KEY 權限。 如果指定了 AUTHORIZATION，則需要資料庫使用者的 IMPERSONATE 權限或應用程式角色的 ALTER 權限。 如果是利用憑證或非對稱金鑰來加密，則需要憑證或非對稱金鑰的 VIEW DEFINITION 權限。 只有 Windows 登入、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入，以及應用程式角色可以擁有對稱金鑰。 群組和角色無法擁有對稱金鑰。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -43,7 +43,7 @@ ms.locfileid: "53997560"
   
 1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2. 在標準列上，按一下 **[新增查詢]**。  
+2. 在標準列上，按一下 **[新增查詢]** 。  
   
 3. 執行下列 CREATE MASTER KEY、CREATE CERTIFICATE 和 CREATE SYMMETRIC KEY 陳述式，建立金鑰。  
   
@@ -90,9 +90,23 @@ ms.locfileid: "53997560"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- 如需詳細資訊，請參閱下列內容：  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>SQL Server 2017 CU2 中的加密變更
+
+SQL Server 2016 使用 SHA1 雜湊演算法進行加密工作。 從 SQL Server 2017 開始，已改為使用 SHA2。 這表示可能需要額外的步驟，才能使您的 SQL Server 2017 安裝將 SQL Server 2016 所加密的項目解密。 額外的步驟如下：
+
+- 確定您的 SQL Server 2017 至少已更新為累積更新 2 (CU2)。
+  - 如需重要的詳細資料，請參閱 [SQL Server 2017 的累積更新 2 (CU2)](https://support.microsoft.com/help/4052574) \(機器翻譯\)。
+- 安裝 CU2 之後，在 SQL Server 2017 中開啟追蹤旗標 4631：`DBCC TRACEON(4631, -1);`
+  - 追蹤旗標 4631 是 SQL Sewrver 2017 的新功能。 您必須在全域中將追蹤旗標 4631 設定為 `ON`，然後才能在 SQL Server 2017 中建立主要金鑰、憑證或對稱金鑰。 這樣即可讓這些建立的項目能夠與 SQL Server 2016 及舊版進行相互操作。
+
+如需詳細指引，請參閱：
+
+- [修正：SQL Server 2017 無法使用相同的對稱金鑰來將舊版 SQL Server 所加密的資料解密](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions) \(機器翻譯\)
+- [相同的對稱金鑰無法在 SQL Server 2017 和其他 SQL Server 版本之間運作](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) \(英文\) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>如需詳細資訊
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

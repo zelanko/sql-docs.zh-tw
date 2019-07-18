@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], properties
 - properties [Reporting Services]
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e2b7495edef06da522112932c75d5f35684313f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 36a105d3220755dd03ff05a50dd403d4bac25d3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703840"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services 屬性
   報表伺服器會定義一組對於報表伺服器是全域的系統屬性，以及一組與報表伺服器資料庫中儲存的個別項目相關聯的項目屬性。 報表伺服器所定義的屬性無法刪除，而且在某些情況下，它們是唯讀的。 應用程式可以將其他使用者定義的屬性加入系統與項目屬性，以擴充系統屬性與項目屬性。  

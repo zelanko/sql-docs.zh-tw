@@ -11,15 +11,14 @@ helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 73c216905034da7bd3d0bb499245bf3674344db7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910037"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>遞迴階層 (Master Data Services)
 
@@ -50,7 +49,7 @@ ms.locfileid: "52749140"
   
 -   衍生階層不能包含一個以上的遞迴關聯性。 但是可以擁有其他衍生關聯性 (例如，包含遞迴經理與員工關聯性的衍生階層也可以擁有國家 (地區) 與經理及員工與商店的關聯性)。  
   
--   不能指派成員權限 (在 [階層成員] 索引標籤上) 給遞迴階層中的成員。  
+-   不能指派成員權限 (在 [階層成員]  索引標籤上) 給遞迴階層中的成員。  
   
 -   遞迴階層不能包含循環關聯性。 例如，如果 Sandeep 是 Katherine 的經理，Katherine 不能做為 Sandeep 的經理。 此外，Katherine 不能管理她自己。  
   

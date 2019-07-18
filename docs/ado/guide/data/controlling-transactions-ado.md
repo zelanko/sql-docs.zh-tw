@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925770"
 ---
 # <a name="controlling-transactions-ado"></a>控制交易 (ADO)
 ADO 支援的協助下連接內處理的交易**BeginTrans**， **CommitTrans**，並**RollbackTrans**上的方法**連接**物件。 實作在 ADO 中處理的交易的一般概念是以下列簡單的程式碼片段所示。  

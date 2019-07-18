@@ -28,15 +28,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013287"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型是由 SQLXMLBulkLoad 物件所組成。 這個物件支援下列方法和屬性。  
@@ -46,7 +46,7 @@ ms.locfileid: "52750470"
  使用當做參數提供的結構描述檔案和資料檔案 (或資料流) 大量載入資料。  
   
 ## <a name="properties"></a>屬性  
- 大量載入  
+ BulkLoad  
  指定是否應該執行大量載入。 這個屬性就很有用，如果您想要產生 （請參閱遵循 SchemaGen、 SGDropTables 和 SGUseID 屬性） 的結構描述，並不會執行大量載入。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會執行。 設定為 FALSE 時，XML 大量載入則不會執行。  
   
  預設值為 TRUE。  
@@ -137,7 +137,7 @@ ms.locfileid: "52750470"
  預設值為 FALSE。  
   
  TempFilePath  
- 針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑  (此屬性只有在 Transaction 屬性設定為 TRUE 時才有用)。您必須確定用於 XML 大量載入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
+ 針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑 （這個屬性很有用的只有在 Transaction 屬性設定為 TRUE 時，才函式）。您必須確定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用於 XML 大量載入的帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
   
  Transaction  
  指定大量載入是否應該當做交易完成，在此情況下，保證會在大量載入失敗時回復。 這是布林屬性。 如果屬性設定為 TRUE，大量載入會在交易內容中發生。 交易設定為 TRUE 時才有用 TempFilePath 屬性。  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1b1cdefab8f244a7800b66bc85872d752184e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a6dd7e55ec7474dae0936624a0bdf0cb6bae379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128744"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

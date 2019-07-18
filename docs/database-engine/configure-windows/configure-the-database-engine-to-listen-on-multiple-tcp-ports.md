@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 2fa73136dfc026f158cbe7a81a08d68cf9142114
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803337"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>設定 Database Engine 接聽多個 TCP 通訊埠
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,22 +76,22 @@ ms.locfileid: "54125958"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>設定 SQL Server Database Engine 接聽其他 TCP 通訊埠。  
   
-1.  在 SQL Server 組態管理員中，展開 [SQL Server 網路組態]，然後按一下 [<執行個體名稱> 的通訊協定]。  
+1.  在 SQL Server 組態管理員中，展開 [SQL Server 網路組態]  ，然後按一下 [<執行個體名稱>  的通訊協定]  。  
   
-2.  展開 [<執行個體名稱> 的通訊協定]，然後按一下 [TCP/IP]。  
+2.  展開 [<執行個體名稱>  的通訊協定]  ，然後按一下 [TCP/IP]  。  
   
-3.  在右窗格中，以滑鼠右鍵按一下您要啟用之已停用的 IP 位址，然後按一下 [啟用]。  
+3.  在右窗格中，以滑鼠右鍵按一下您要啟用之已停用的 IP 位址，然後按一下 [啟用]  。  
   
-4.  以滑鼠右鍵按一下 [IPAll]，然後按一下 [內容]。  
+4.  以滑鼠右鍵按一下 [IPAll]  ，然後按一下 [內容]  。  
   
-5.  在 **[TCP 通訊埠]** 方塊中，輸入想要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽的通訊埠，並以逗號分隔。 在此範例中，如果列出預設通訊埠 1433，請輸入 **,1500** ，如此該方塊會讀為 **1433,1500**，然後按一下 [確定] 。  
+5.  在 **[TCP 通訊埠]** 方塊中，輸入想要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽的通訊埠，並以逗號分隔。 在此範例中，如果列出預設通訊埠 1433，請輸入 **,1500** ，如此該方塊會讀為 **1433,1500**，然後按一下 [確定]  。  
   
     > [!NOTE]  
-    >  如果未啟用所有 IP 位址上的通訊埠，請只有在想要的位址，以內容方塊設定其他通訊埠。 接著在主控台窗格中，以滑鼠右鍵按一下 [TCP/IP]，按一下 [內容]，然後在 [全部接聽] 方塊中選取 [否]。  
+    >  如果未啟用所有 IP 位址上的通訊埠，請只有在想要的位址，以內容方塊設定其他通訊埠。 接著在主控台窗格中，以滑鼠右鍵按一下 [TCP/IP]  ，按一下 [內容]  ，然後在 [全部接聽]  方塊中選取 [否]  。  
   
-6.  在左窗格中，按一下 **[SQL Server 服務]**。  
+6.  在左窗格中，按一下 **[SQL Server 服務]** 。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [SQL Server <執行個體名稱>]，然後按一下 [重新啟動]。  
+7.  在右窗格中，以滑鼠右鍵按一下 [SQL Server <執行個體名稱>  ]  ，然後按一下 [重新啟動]  。  
   
      當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動時，錯誤記錄檔將會列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽的通訊埠。  
   

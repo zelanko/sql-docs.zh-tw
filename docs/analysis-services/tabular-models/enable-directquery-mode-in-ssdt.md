@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206297"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162883"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>在 SSDT 中啟用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "53206297"
   
 ### <a name="enable-directquery"></a>啟用 DirectQuery  
   
-在 SSDT 中，於 **Model.bim** 檔案的 [屬性] 窗格中，將屬性 **DirectQuery Mode** 變更為 **On**。  
+在 SSDT 中，於 **Model.bim** 檔案的 [屬性]  窗格中，將屬性 **DirectQuery Mode** 變更為 **On**。  
 
 ![在 SSDT 中啟用 DirectQuery 模式](../../analysis-services/tabular-models/media/enable-directquery-mode-in-ssdt.png)
   
 如果模型已有與資料來源和現有資料的連接，系統會提示您輸入用來連接到關聯式資料庫的資料庫認證。 模型內所有現成的資料都會從記憶體內部快取中予以移除。  
   
-如果您的模型在啟用 DirectQuery 模式之前已部分或完全完成，您可能會收到不相容功能的錯誤。 請在 Visual Studio 中開啟 [錯誤清單]，並且解決阻礙模型切換為 DirectQuery 模式的任何問題。  
+如果您的模型在啟用 DirectQuery 模式之前已部分或完全完成，您可能會收到不相容功能的錯誤。 請在 Visual Studio 中開啟 [錯誤清單]  ，並且解決阻礙模型切換為 DirectQuery 模式的任何問題。  
 
 
 ### <a name="whats-next"></a>下一步 
@@ -42,7 +42,7 @@ ms.locfileid: "53206297"
 您可以建立每個資料表的範例資料分割，以及加入範例資料，以便在建置模型時驗證其行為。 您加入的任何範例資料都是用於 **Excel 分析** 或其他可以連接到工作空間資料庫的用戶端工具。 如需詳細資訊，請參閱 [在設計模式中將範例資料加入 DirectQuery 模型中](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 。  
   
 > [!TIP]
->  即使是在空模型的 DirectQuery 模式中，您一律可以檢視每個資料表的小型內建資料列集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [資料表] > [資料表屬性] 以檢視 50 列的資料集。  
+>  即使是在空模型的 DirectQuery 模式中，您一律可以檢視每個資料表的小型內建資料列集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [資料表]   > [資料表屬性]  以檢視 50 列的資料集。  
   
   
 ## <a name="see-also"></a>另請參閱  

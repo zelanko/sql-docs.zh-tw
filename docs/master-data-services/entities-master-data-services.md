@@ -11,15 +11,14 @@ helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 920ca38ae50975bfb187bbcf3d3a0bb14dfa917e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052037"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
 

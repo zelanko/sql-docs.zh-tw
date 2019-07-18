@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843097"
 ---
 # <a name="solution-explorer-source-control"></a>方案總管原始檔控制
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 方案總管可以整合到不同的原始檔控制系統中。 將方案或專案整合為原始檔控制系統之後，就可以控制專案中指令碼和查詢的檔案存取權和版本設定。  
@@ -39,7 +39,7 @@ ms.locfileid: "48154978"
   
 1.  安裝原始檔控制提供者的用戶端部份。  
   
-2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]**。  
+2.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 **[工具]** 功能表上，按一下 **[選項]** 。  
   
 3.  在**選項**對話方塊方塊中，展開**原始檔控制**，然後按一下**外掛程式選取範圍**頁面。  
   

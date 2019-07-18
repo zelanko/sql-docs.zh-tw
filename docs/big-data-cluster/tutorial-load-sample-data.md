@@ -2,20 +2,19 @@
 title: 載入範例資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將範例資料載入 SQL Server 的巨量資料叢集。 範例資料包含在 SQL Server 的主要執行個體中的關聯式資料。 它也會包含在存放集區中的 HDFS 資料。 這項資料會支援其他教學課程，這一節。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58859989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957781"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 的巨量資料叢集
 
@@ -26,7 +25,7 @@ ms.locfileid: "58859989"
 > [!TIP]
 > 您可以在中找到其他範例可供 SQL Server 2019 巨量資料叢集 （預覽） [sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub 存放庫。 它們位於**sql-server-samples/samples/features/sql-big-data-cluster/** 路徑。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -71,7 +70,7 @@ ms.locfileid: "58859989"
    | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**端點主要集區**) 和 Knox (**端點安全性**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-big-data-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。 在叢集的預設名稱是**mssql 叢集**。
 
 1. 執行啟動程序的指令碼。
 
@@ -107,7 +106,7 @@ ms.locfileid: "58859989"
    | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**端點主要集區**) 和 Knox (**端點安全性**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-big-data-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。 在叢集的預設名稱是**mssql 叢集**。
 
 1. 執行啟動程序的指令碼。
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e9322a16f680bc29fbbc3a98a932df1aaccc2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 409e8c9a7639c3de4febdc6aadf2fac635c20089
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785386"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682837"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47785386"
   
 1.  如果尚未這麼做，請將想要在搜尋條件中使用的資料行或運算式加入至 [準則] 窗格中。  
   
-    如果您正在建立選取查詢，而不想讓搜尋資料行或運算式出現在查詢輸出中，請清除每一個搜尋資料行或運算式的 [輸出] 欄位，將它們當成輸出資料行而加以移除。  
+    如果您正在建立選取查詢，而不想讓搜尋資料行或運算式出現在查詢輸出中，請清除每一個搜尋資料行或運算式的 [輸出]  欄位，將它們當成輸出資料行而加以移除。  
   
-2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件] 欄位中輸入搜尋條件。  
+2.  尋找包含想要搜尋之資料行或運算式的資料列，然後在 [篩選條件]  欄位中輸入搜尋條件。  
   
     > [!NOTE]  
     > 如果尚未輸入運算子，[查詢和檢視設計師] 會自動插入相等運算子「=」。  

@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788725"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
-  資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  
+  資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  
   
 -   選擇手動容錯移轉的複本。  
   
@@ -65,16 +65,16 @@ ms.locfileid: "49120365"
   
 1.  在 [物件總管] 中，連接到您想要執行 AlwaysOn 儀表板的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  展開 **[AlwaysOn 高可用性]** 節點、以滑鼠右鍵按一下 **[可用性群組]** 節點，然後按一下 **[顯示儀表板]**。  
+2.  展開 **[AlwaysOn 高可用性]** 節點、以滑鼠右鍵按一下 **[可用性群組]** 節點，然後按一下 **[顯示儀表板]** 。  
   
 ###  <a name="DashboardOptions"></a> 若要變更 AlwaysOn 儀表板選項  
- 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [選項] 對話方塊來設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 儀表板行為，以便進行自動重新整理並且啟用自動定義的 AlwaysOn 原則。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [選項]  對話方塊來設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 儀表板行為，以便進行自動重新整理並且啟用自動定義的 AlwaysOn 原則。  
   
-1.  在 **[工具]** 功能表中，按一下 **[選項]**。  
+1.  在 **[工具]** 功能表中，按一下 **[選項]** 。  
   
-2.  若要自動重新整理儀表板，請在 **[選項]** 對話方塊中，選取 **[開啟自動重新整理]**、輸入重新整理間隔 (以秒為單位)，然後輸入您想要重試連接的次數。  
+2.  若要自動重新整理儀表板，請在 **[選項]** 對話方塊中，選取 **[開啟自動重新整理]** 、輸入重新整理間隔 (以秒為單位)，然後輸入您想要重試連接的次數。  
   
-3.  若要啟用使用者定義的原則，請選取 **[啟用使用者定義 AlwaysOn 原則]**。  
+3.  若要啟用使用者定義的原則，請選取 **[啟用使用者定義 AlwaysOn 原則]** 。  
   
 ##  <a name="AvGroupsView"></a> 可用性群組摘要  
  可用性群組畫面會針對連接之伺服器執行個體裝載複本的每個可用性群組顯示摘要行。 這個窗格會顯示下列資料行。  
@@ -93,7 +93,7 @@ ms.locfileid: "49120365"
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **問題**  
- 按一下 [問題] 連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 按一下 [問題]  連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  按一下資料行標題可依照可用性群組、主要執行個體、容錯移轉模式或問題的名稱排序可用性群組資訊。  
@@ -204,7 +204,7 @@ ms.locfileid: "49120365"
 >  如需可用性複本效能計數器的相關資訊，請參閱 [SQLServer，可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
 ##  <a name="AvDbDetails"></a> 若要將可用性群組資訊分組  
- 若要將資訊分組，請按一下 **[群組依據]**，然後選取下列其中一項：  
+ 若要將資訊分組，請按一下 **[群組依據]** ，然後選取下列其中一項：  
   
 -   **可用性複本**  
   
@@ -280,7 +280,7 @@ ms.locfileid: "49120365"
  如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已暫停**  
- 指出資料庫 **[已暫停]** 或 **[已繼續]**。 預設隱藏此值。  
+ 指出資料庫 **[已暫停]** 或 **[已繼續]** 。 預設隱藏此值。  
   
  **暫停原因**  
  指出暫停狀態的原因。 預設隱藏此值。  

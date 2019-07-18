@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7375dff31cb9cd0f092315b9a53e57e2f0ecd1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6a067c02b9ec9b8f662dab2ada0de537243fe0a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029581"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "52748242"
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **0** = 傳回。<br /><br /> **1** = 不傳回。|  
 |**queued_reinit**|**bit**|指定發行項是否標示初始化或重新初始化。 值為**1**指定標示初始化或重新初始化訂閱之發行項。|  
-|**nosync_type**|**tinyint**|訂閱初始化的類型：<br /><br /> **0** = 自動 （快照集）<br /><br /> **1** = 僅支援複寫<br /><br /> **2** = 以備份初始化<br /><br /> **3** = 從記錄序號 (LSN) 初始化<br /><br /> 如需詳細資訊，請參閱 < **@sync_type**參數[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。|  
+|**nosync_type**|**tinyint**|訂閱初始化的類型：<br /><br /> **0** = 自動 （快照集）<br /><br /> **1** = 僅支援複寫<br /><br /> **2** = 以備份初始化<br /><br /> **3** = 從記錄序號 (LSN) 初始化<br /><br /> 如需詳細資訊，請參閱 < **@sync_type** 參數[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。|  
 |**srvname**|**sysname**|訂閱者的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

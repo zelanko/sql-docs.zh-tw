@@ -15,15 +15,15 @@ helpviewer_keywords:
 - result sets [SQL Server], duplicate values
 - excluding rows
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db0e9de67c06ef5a11bf2a33a8d9259bc687979c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ebf4db69052620f7504c06b788d91d9e3d9a3a44
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609296"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682403"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重複的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "47609296"
   
 ### <a name="to-exclude-duplicate-rows-from-the-result-set"></a>若要從結果集排除重複資料列  
   
-1.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [屬性]。  
+1.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [屬性]  。  
   
-2.  在 [屬性] 視窗中，按一下 [重複資料僅顯示一筆]，並且將值設定為 [是]。  
+2.  在 [屬性] 視窗中，按一下 [重複資料僅顯示一筆]  ，並且將值設定為 [是]  。  
   
     [查詢和檢視設計師] 會將關鍵字 DISTINCT 插入至 SQL 陳述式中顯示資料行清單的前面。  
   

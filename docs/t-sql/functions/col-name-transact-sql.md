@@ -18,16 +18,16 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e75290606c524aadd1ff4d11d16cb17a650fa61e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7750eab9dd1e5ff24ee94f38979df03275091964
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944073"
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

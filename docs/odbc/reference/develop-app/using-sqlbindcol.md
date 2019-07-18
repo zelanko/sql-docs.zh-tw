@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022159"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
 藉由呼叫應用程式繫結的資料行**SQLBindCol**。 此函式會將一個資料行繫結一次。 有了它，應用程式則指定下列項目：  
   
 -   資料行編號。 資料行 0 是書籤資料行中;此資料行不會納入一些結果集。 所有其他資料行編號從數字 1 開始。 它會多於可用資料行的結果集; 繫結的編號較高的資料行發生錯誤此錯誤無法偵測到之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。  
   
--   C 資料類型、 位址和位元組長度的變數繫結至資料行。 它會指定 C 資料類型的資料行的 SQL 資料類型無法轉換; 發生錯誤此錯誤可能無法偵測之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。 如需支援的轉換，請參閱[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d： 資料型別中。 如需位元組長度的資訊，請參閱[的資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
+-   C 資料類型、 位址和位元組長度的變數繫結至資料行。 它會指定 C 資料類型的資料行的 SQL 資料類型無法轉換; 發生錯誤此錯誤可能無法偵測之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。 如需支援的轉換，請參閱[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d:資料類型。 如需位元組長度的資訊，請參閱[的資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
   
 -   長度/指標緩衝區的位址。 長度/指標緩衝區是選擇性的。 它用來傳回二進位或字元資料或傳回 SQL_NULL_DATA 的位元組長度，如果資料為 NULL。 如需詳細資訊，請參閱 <<c0> [ 使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "47776406"
   
  例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*SalesPerson*並*CustID*。 因為*業務員*是字元的緩衝區中，應用程式指定的位元組長度 (11)，好讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的連結，或者是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
   
- 因為*CustID*是一個整數變數，並有固定的長度，則不需要指定它的位元組長度; 驅動程式會假設它是**sizeof (** SQLUINTEGER **)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為永遠是位元組長度**sizeof (** SQLUINTEGER **)**。  
+ 因為*CustID*是一個整數變數，並有固定的長度，則不需要指定它的位元組長度; 驅動程式會假設它是**sizeof (** SQLUINTEGER **)** 。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為永遠是位元組長度**sizeof (** SQLUINTEGER **)** 。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

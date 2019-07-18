@@ -11,19 +11,19 @@ f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5fecc39eb41cc39c9879c1f68f778575cde04fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b230110cae8bfe1d11bcf847d64faeaa3a00f000
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763522"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682068"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>製成資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-讓您命名為複製資料列所建立的資料表。 這個對話方塊會在將查詢的類型變更為 MAKE TABLE 查詢時出現。 若要變更查詢類型，請在 [查詢設計工具] 功能表中指向 [變更類型]，然後按一下 [製成資料表]。  
+讓您命名為複製資料列所建立的資料表。 這個對話方塊會在將查詢的類型變更為 MAKE TABLE 查詢時出現。 若要變更查詢類型，請在 [查詢設計工具]  功能表中指向 [變更類型]  ，然後按一下 [製成資料表]  。  
   
 ## <a name="options"></a>選項。  
 **資料表名稱**  
@@ -32,7 +32,7 @@ ms.locfileid: "47763522"
 若要在其他資料庫中建立目的資料表，請指定完整的資料表名稱，包括目標資料庫名稱、擁有人 (必要時) 和資料表名稱。  
   
 > [!NOTE]  
-> 您可以在執行查詢之前，在 [屬性] 視窗中修改屬性，以變更要建立之資料表的屬性。 如需詳細資訊，請參閱＜[查詢屬性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)＞。  
+> 您可以在執行查詢之前，在 [屬性]  視窗中修改屬性，以變更要建立之資料表的屬性。 如需詳細資訊，請參閱＜[查詢屬性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立製成資料表查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  

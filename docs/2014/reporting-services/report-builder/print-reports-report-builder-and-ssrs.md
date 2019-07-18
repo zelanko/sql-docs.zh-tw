@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1292fffcbfbce4ba92775737eeda4326b50fdbc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107700"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
   將報表儲存至報表伺服器之後，您就可以從瀏覽器、報表管理員或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
@@ -47,7 +46,7 @@ ms.locfileid: "56290456"
  描述如何列印已匯出至另一個應用程式的報表。  
   
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- 如何列印報表，提供逐步指示如何控制 [邊界] 頁面上，以及如何指定將由硬分頁轉譯器轉譯的報表的紙張大小：PDF、 影像或列印。  
+ 提供逐步指示，說明如何列印報表、如何控制頁面邊界，以及如何指定強制分頁轉譯器轉譯的報表紙張大小：PDF、影像或列印。  
   
 ## <a name="see-also"></a>另請參閱  
  [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

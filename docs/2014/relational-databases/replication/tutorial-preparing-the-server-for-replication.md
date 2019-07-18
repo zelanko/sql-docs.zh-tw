@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63199062"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>教學課程：準備伺服器進行複寫
   在設定複寫拓撲之前，規劃安全性是很重要的步驟。 此教學課程為您示範：如何讓複寫拓撲有更強固的保護，以及如何設定散發，這是複寫資料的第一步。 您必須完成此教學課程，才能進行任何其他教學課程。  
@@ -35,7 +35,7 @@ ms.locfileid: "54125378"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。 為了加強安全性，依預設，不會安裝範例資料庫。  
   
- **完成這個教學課程的估計時間：30 分鐘。**  
+ **估計的時間才能完成本教學課程：30 分鐘。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
   

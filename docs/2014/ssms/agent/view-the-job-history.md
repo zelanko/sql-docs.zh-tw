@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211286"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄。  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目檢視作業記錄：**  
   
@@ -49,13 +49,13 @@ ms.locfileid: "53364280"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
+2.  展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]**。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]** 。  
   
 4.  在 [記錄檔檢視器] 中檢視作業記錄。  
   
-5.  若要更新作業記錄，請按一下 **[重新整理]**。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
+5.  若要更新作業記錄，請按一下 **[重新整理]** 。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -63,9 +63,9 @@ ms.locfileid: "53364280"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- lists all job information for the NightlyBackups job.  

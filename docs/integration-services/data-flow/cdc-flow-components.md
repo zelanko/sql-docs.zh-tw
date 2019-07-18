@@ -11,14 +11,18 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727207"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  
   
  SSIS CDC 元件的設計目的是要搭配來源資料表為相同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫或 Oracle 資料庫 (使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 Oracle CDC 服務時) 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CDC 功能運作。 支援分割資料表。  
@@ -40,7 +44,7 @@ ms.locfileid: "58271184"
 ## <a name="installation"></a>安裝  
  本節描述 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]CDC 元件的安裝程序。  
   
- SSIS 的 CDC 元件隨附於 Attunity 所提供適用於 Microsoft SQL Server® 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle。 此下載是 SQL Server Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+ SSIS 之 CDC 元件隨附於適用於 Microsoft SQL ServerÂ® 的 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity 中。 此下載是 SQL Server Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
   
 ### <a name="version-support"></a>版本支援
 
@@ -63,7 +67,7 @@ ms.locfileid: "58271184"
 ### <a name="restart-ssis-service"></a>重新啟動 SSIS 服務 
 安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中開發封裝時，這些元件可正確運作。  
   
-安裝元件之後，系統會顯示一則訊息。 出現提示時，請按一下 [是]。  
+安裝元件之後，系統會顯示一則訊息。 出現提示時，請按一下 [是]  。  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>解除安裝 Microsoft CDC 元件  
  您可以使用解除安裝精靈來解除安裝 CDC 來源、CDC 分隔器或 CDC 控制工作。 如果您正在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 進行封裝開發，請確定 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 已關閉，然後再執行解除安裝精靈。  
@@ -80,11 +84,11 @@ ms.locfileid: "58271184"
   
  ![Trickle 摘要處理封裝控制流程](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle 摘要處理封裝控制流程")  
   
- 這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」的第一項工作會針對在名為「處理變更」之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
+ 這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」  的第一項工作會針對在名為「處理變更」  之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
   
  如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)和 [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)。  
   
- 下圖顯示「處理變更」資料流程，就概念上說明變更的處理方式。  
+ 下圖顯示「處理變更」  資料流程，就概念上說明變更的處理方式。  
   
  ![處理變更資料流程](../../integration-services/data-flow/media/processchangesdataflow.gif "處理變更資料流程")  
   

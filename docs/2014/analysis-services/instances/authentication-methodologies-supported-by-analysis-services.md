@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080337"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
   從用戶端應用程式到 Analysis Services 執行個體的連接需要 Windows 驗證 (整合式)。 您可以使用下列任何一種方法來提供 Windows 使用者識別：  

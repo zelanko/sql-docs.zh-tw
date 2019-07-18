@@ -1,5 +1,5 @@
 ---
-title: SQLCancel |Microsoft Docs
+title: SQLCancel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1758088319a712564fe2f11a136f5833b12111f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5eb5f86d73166976e18b10f5bcf8e319ebfe18ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132006"
 ---
 # <a name="sqlcancel"></a>SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

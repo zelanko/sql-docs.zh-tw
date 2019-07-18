@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062254"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析關鍵影響因數 (適用於 Excel 的資料表分析工具)
   ![功能區中的 [分析關鍵影響因數] 按鈕](media/tat-aki.gif "功能區中的 [分析關鍵影響因數] 按鈕")  
@@ -41,13 +40,13 @@ ms.locfileid: "52415555"
   
 4.  （選擇性） 按一下**選擇要用於分析的資料行**。 在 **進階資料行選取**對話方塊方塊中，選擇最有可能包含相關資料的資料行。 若要提升效能和精確度，請取消選取對於模式分析不重要的資料行，如識別碼或名稱。 按一下 [ **[確定]** 以關閉**進階資料行選取**] 對話方塊。  
   
-5.  按一下 **[執行]**。  
+5.  按一下 **[執行]** 。  
   
      **分析關鍵影響因數**工具進行分析的資料，以判斷最佳的設定，並自動設定所有參數。  
   
 6.  如果未偵測到任何模式，此精靈便會建立包含問題描述的新工作表。  
   
-7.  如果偵測到模式，此精靈會在新的工作表上建立報表來顯示模式。 此報表稱為**針對關鍵影響因數\<資料行 >**。 您可以自訂此報表，如下列程序所述。  
+7.  如果偵測到模式，此精靈會在新的工作表上建立報表來顯示模式。 此報表稱為**針對關鍵影響因數\<資料行 >** 。 您可以自訂此報表，如下列程序所述。  
   
 #### <a name="create-a-custom-report"></a>建立自訂報表  
   
@@ -75,7 +74,7 @@ ms.locfileid: "52415555"
   
  此垂直線的長度表示此因數造成結果發生的機率；因此，當陰影垂直線越長，就表示關聯性越強。  
   
- **喜好**  
+ **Favors**  
  在第二個報表中，您比較的目標值會列在兩個資料行中，其中相關因素會依照信心的遞減順序列出。  
   
 -   **藍色**垂直線顯示影響結果，「 否 」 的屬性 (= 未購買)。  

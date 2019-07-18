@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae0350a239414b4e20299cf42d46ebc5b9a69023
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010623"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
   下列範例顯示如何在 XPath 查詢中指定布林運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "52807190"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布林運算子  
- 此 XPath 查詢會傳回**\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
+ 此 XPath 查詢會傳回 **\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "52807190"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 述詞中`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是**\<屬性 >** 節點，因為 **\<屬性 >** 節點是主要節點`attribute`軸)。 述詞篩選條件**\<客戶 >** 項目，並傳回只有符合條件的述詞中指定。  
+ 述詞中`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是 **\<屬性 >** 節點，因為 **\<屬性 >** 節點是主要節點`attribute`軸)。 述詞篩選條件 **\<客戶 >** 項目，並傳回只有符合條件的述詞中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

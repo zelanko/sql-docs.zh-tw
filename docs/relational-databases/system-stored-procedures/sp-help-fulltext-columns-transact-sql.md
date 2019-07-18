@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 60968c70a6b47b53ad0edb38d8245cbcc883bf26
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 8009c9d2aa5f4b8f8be873633420bd1b088ece16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055087"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @table_name = ] 'table\_name'` 是全文檢索索引資訊要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)**，預設值是 NULL。 如果*table_name*省略，則每個全文檢索索引的資料表擷取全文檢索索引資料行資訊。  
+`[ @table_name = ] 'table\_name'` 是全文檢索索引資訊要求的一或兩部分資料表名稱。 *table_name*已**nvarchar(517)** ，預設值是 NULL。 如果*table_name*省略，則每個全文檢索索引的資料表擷取全文檢索索引資料行資訊。  
   
 `[ @column_name = ] 'column\_name'` 是全文檢索索引中繼資料要求的資料行的名稱。 *column_name*已**sysname**，預設值是 NULL。 如果*column_name*省略或是 NULL，傳回的每個全文檢索索引資料行的全文檢索資料行資訊*table_name*。 如果*table_name*也會省略，則為 NULL，每個全文檢索索引資料行的資料庫中的所有資料表傳回全文檢索索引資料行資訊。  
   

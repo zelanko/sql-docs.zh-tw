@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 38d85e88e8095cc5e2f41af045c36f230fbd43de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9fce6bcc5b77f33d8c901f897dd2a017a1fcd6a9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810156"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772940"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "47810156"
   
  **套件：** com.microsoft.sqlserver.jdbc  
   
- **實作：**[ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ **實作：** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
- **擴充：**[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ **擴充：** [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
 ## <a name="syntax"></a>語法  
   

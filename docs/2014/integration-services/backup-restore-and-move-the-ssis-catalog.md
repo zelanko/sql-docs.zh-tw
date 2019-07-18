@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061270"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>備份、 還原和移動的 SSIS 目錄
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB] 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB]  目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
   
  **SSISDB** 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](catalog/ssis-catalog.md)。  
   
@@ -39,27 +38,27 @@ ms.locfileid: "58393626"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫]  對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  執行下列操作，產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)。  
   
-    1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的物件總管中，展開 [安全性] 節點，然後展開 [登入] 節點。  
+    1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的物件總管中，展開 [安全性]  節點，然後展開 [登入]  節點。  
   
-    2.  以滑鼠右鍵按一下 [##MS_SSISServerCleanupJobLogin##]，然後按一下 [編寫登入的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 [##MS_SSISServerCleanupJobLogin##]  ，然後按一下 [編寫登入的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   
 5.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，藉以產生 sp_ssis_startup 的 CREATE PROCEDURE 指令碼。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
-    1.  在物件總管中，展開 [資料庫] 節點，然後展開 [master] > [可程式性] > [預存程序] 節點。  
+    1.  在物件總管中，展開 [資料庫]  節點，然後展開 [master]   > [可程式性]   > [預存程序]  節點。  
   
-    2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]，然後按一下 [編寫預存程序的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]  ，然後按一下 [編寫預存程序的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   
 6.  確認已啟動 SQL Server Agent  
   
 7.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，藉以產生 SSIS 伺服器維護作業的指令碼。 當您建立 SSISDB 目錄時，系統就會自動在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 中建立指令碼。 此作業有助於清除保留週期外部的清除作業，並移除舊版專案。  
   
-    1.  在物件總管中，展開 [SQL Server Agent] 節點，然後展開 [作業] 節點。  
+    1.  在物件總管中，展開 [SQL Server Agent]  節點，然後展開 [作業]  節點。  
   
-    2.  以滑鼠右鍵按一下 SSIS 伺服器維護作業，然後按一下 [編寫作業的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 SSIS 伺服器維護作業，然後按一下 [編寫作業的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
@@ -90,7 +89,7 @@ ms.locfileid: "58393626"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫] 對話方塊，從備份還原 SSISDB 資料庫。 如需詳細資訊，請參閱下列主題。  
+3.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫]  對話方塊，從備份還原 SSISDB 資料庫。 如需詳細資訊，請參閱下列主題。  
   
     -   [還原資料庫 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)  
   
@@ -106,7 +105,7 @@ ms.locfileid: "58393626"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [登入屬性] 對話方塊，將 SSISDB 使用者 ##MS_SSISServerCleanupJobUser## (SSISDB 資料庫) 對應至 ##MS_SSISServerCleanupJobLogin##。  
+6.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [登入屬性]  對話方塊，將 SSISDB 使用者 ##MS_SSISServerCleanupJobUser## (SSISDB 資料庫) 對應至 ##MS_SSISServerCleanupJobLogin##。  
   
 7.  使用下列其中一種方法來還原主要金鑰。 如需加密的詳細資訊，請參閱 [加密階層](../relational-databases/security/encryption/encryption-hierarchy.md)。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
@@ -16,12 +15,12 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074270"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函數 (MDX)
   多維度運算式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [指令碼搜尋和取代] 函式彙總的子系的成員，將不同的一元運算子套用至每個子系，並傳回此彙總套件的數字的值。 一元運算子可由與子成員相關的成員屬性提供，或者可能是字串運算式直接將運算子提供給函數。  
@@ -74,6 +73,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  MDX 陳述式會檢查子成員的一元運算子。 如果一元運算子用於減法 (如同在處理國內外退貨量成員的情況下)，則 `IIf` 函數會取代波狀符號 (~) 一元運算子。 否則，`IIf` 函數會使用子成員的一元運算子。 最後，傳回的積存總計會乘以 1.1，做為國內外銷售總額的預測值。  
   
 ## <a name="see-also"></a>另請參閱  
- [操作資料&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [操作資料 &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

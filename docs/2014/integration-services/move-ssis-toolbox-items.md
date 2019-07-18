@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057563"
 ---
 # <a name="move-ssis-toolbox-items"></a>移動 SSIS 工具箱項目
   新的 SSIS 工具箱包含新的類別目錄，並可依據您的喜好設定組織項目。 工具箱底部的資訊視窗會提供選定工具箱項目的描述以及指向《線上叢書》主題的連結。  
@@ -39,6 +38,6 @@ ms.locfileid: "58390912"
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>若要重新整理 SSIS 工具箱  
   
-1.  在 SSIS 工具箱中按一下滑鼠右鍵，然後按一下 [重新整理工具箱]。  
+1.  在 SSIS 工具箱中按一下滑鼠右鍵，然後按一下 [重新整理工具箱]  。  
   
   

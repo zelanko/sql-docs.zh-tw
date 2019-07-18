@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f64909bbb56f3a1bae683f5dafbaf2924b163aa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129626"
 ---
 # <a name="spresetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

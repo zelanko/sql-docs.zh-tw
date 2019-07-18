@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f56200ca5df9e0eca7cafc6c7a99ed9bf7ca019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3ca2b8afe197c2509f0a2633266ea21c619bdeb1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773666"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764693"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

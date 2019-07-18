@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989678"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>執行 SSMA 主控台 (DB2ToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。 主控台應用程式會使用某些標準的指令碼檔命令為列舉這一節。  
@@ -25,7 +24,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 **Command**  
   
-建立新專案間的  
+create-new-project  
   
 建立新的 SSMA 專案。  
   
@@ -39,7 +38,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 -   `project-type:`選擇性屬性。 表示專案類型也就是 「 sql-server 2005 的 「 專案或 「 sql-server 2008 的 「 專案或 「 sql-server 2012 的 「 專案或 「 sql-server 2014 的 「 專案或 [sql azure]。 預設值為"sql-server-2014"。  
   
-**範例：**  
+**範例:**  
   
 ```xml  
 <create-new-project  
@@ -85,7 +84,7 @@ SSMA for DB2 主控台應用程式支援回溯相容性。 您可以在 若要�
   
 **Command**  
   
-儲存專案  
+save-project  
   
 儲存移轉的專案。  
   
@@ -159,7 +158,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <force-load>  
@@ -185,7 +184,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-連線目標資料庫  
+connect-target-database  
   
 -   連接到目標 SQL Server 資料庫，並完全載入目標資料庫的高等級的中繼資料，但不是的中繼資料。  
   
@@ -272,7 +271,7 @@ generate-assessment-report
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -344,7 +343,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -410,7 +409,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -495,9 +494,9 @@ convert-schema
   
 -   `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -520,7 +519,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -529,7 +528,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -544,7 +543,7 @@ convert-schema
 ```  
 **Command**  
   
-從資料庫重新整理  
+refresh-from-database  
   
 -   重新整理資料庫的來源物件。  
   
@@ -560,9 +559,9 @@ convert-schema
   
 -   `on-error:` 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -585,7 +584,7 @@ convert-schema
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -594,7 +593,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -644,7 +643,7 @@ save-as-script
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -720,7 +719,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -743,7 +742,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  

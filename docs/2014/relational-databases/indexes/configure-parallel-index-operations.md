@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157475"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
   本主題定義平行處理原則的最大程度，並說明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]修改此設定。 在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更新版本的多處理器電腦上，索引陳述式可能會如同其他查詢般，使用多個處理器來執行與索引陳述式相關聯的掃描、排序和索引作業。 執行單一索引陳述式所用的處理器數目，取決於 [平行處理原則的最大程度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 組態選項、目前的工作負載以及索引統計資料。 max degree of parallelism 選項會決定用於執行平行計畫的最大處理器數目。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到系統忙碌中，在陳述式執行開始之前，會先自動降低索引作業之平行處理原則的程度。 如果非資料分割索引的前端索引鍵資料行具有有限的相異值數目，或者每個相異值的頻率具有大幅差異， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能會降低平行處理原則的程度。  
@@ -90,13 +90,13 @@ ms.locfileid: "48142618"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]  。  
   
-6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]** 。  
   
-7.  選取 **[平行處理原則的最大程度]**，然後輸入介於 1 和 64 之間的一些值。  
+7.  選取 **[平行處理原則的最大程度]** ，然後輸入介於 1 和 64 之間的一些值。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -104,9 +104,9 @@ ms.locfileid: "48142618"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   
@@ -124,9 +124,9 @@ ms.locfileid: "48142618"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

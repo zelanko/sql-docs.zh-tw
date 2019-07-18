@@ -10,15 +10,14 @@ ms.topic: conceptual
 keywords:
 - Master Data Services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0665b6f7d54b7f83f3edda224be4e9efad670e90
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6572f8a72dbbd4b4c197db82819ad7a372cedf78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052055"
 ---
 # <a name="entity-dependencies-explorer"></a>Entity Dependencies (實體相依性) 總管
 

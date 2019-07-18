@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019043"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774572"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升級為不同的 SQL Server 2014 版本 (安裝程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](supported-version-and-edition-upgrades.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的版本升級之前，請檢閱以下主題：  
@@ -29,7 +29,7 @@ ms.locfileid: "51019043"
 -   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集的其中一個節點上執行版本升級便已足夠。 這個節點可以是主動或被動節點，而且引擎不會在版本升級期間讓資源離線。 版本升級之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或容錯移轉至不同的節點。  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在叢集環境中：** 其中一個節點上執行版本升級[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]叢集就已足夠。 這個節點可以是主動或被動節點，而且引擎不會在版本升級期間讓資源離線。 版本升級之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或容錯移轉至不同的節點。  
   
 ## <a name="prerequisites"></a>先決條件  
  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
@@ -43,23 +43,23 @@ ms.locfileid: "51019043"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中按兩下 setup.exe，或從 [組態工具] 啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心]。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  若要將現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體升級至不同的版本，請在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心] 中，按一下 **[維護]**，然後選取 **[版本升級]**。  
+2.  若要將現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體升級至不同的版本，請在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心] 中，按一下 **[維護]** ，然後選取 **[版本升級]** 。  
   
 3.  如果需要安裝程式支援檔案， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式就會安裝這些檔案。 如果系統指示您重新啟動電腦，請先重新啟動，然後再繼續進行。  
   
-4.  系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。  
+4.  系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]** 。  
   
 5.  在 [產品金鑰] 頁面上，選取選項按鈕，指出您要升級至免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
   
-6.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要繼續進行，請按 **[下一步]**。 若要結束安裝程式，請按一下 **[取消]**。  
+6.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要繼續進行，請按 **[下一步]** 。 若要結束安裝程式，請按一下 **[取消]** 。  
   
 7.  在 [選取執行個體] 頁面中，指定要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 8.  [版本升級規則] 頁面會驗證您的電腦組態，然後版本升級作業才會開始。  
   
-9. [已完成升級版本的準備工作] 頁面會顯示在安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[升級]**。  
+9. [已完成升級版本的準備工作] 頁面會顯示在安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[升級]** 。  
   
-10. 在版本升級程序期間，您必須重新啟動這些服務，才能挑選新的設定。 版本升級之後，[完成] 頁面會提供版本升級之摘要記錄檔的連結。 若要關閉精靈，請按一下 **[關閉]**。  
+10. 在版本升級程序期間，您必須重新啟動這些服務，才能挑選新的設定。 版本升級之後，[完成] 頁面會提供版本升級之摘要記錄檔的連結。 若要關閉精靈，請按一下 **[關閉]** 。  
   
 11. [完成] 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。  
   

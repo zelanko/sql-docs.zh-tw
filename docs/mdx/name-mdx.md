@@ -1,5 +1,5 @@
 ---
-title: 名稱 (MDX) |Microsoft 文件
+title: 名稱 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 143fb6409e430b8fcbda7c073b8614cd0ecfcbe2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088383"
 ---
 # <a name="name-mdx"></a>Name (MDX)
 
@@ -82,6 +81,6 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

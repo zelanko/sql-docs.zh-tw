@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741764"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>使用 SOAP 整合 Reporting Services - Windows 應用程式
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 SOAP API 是一種 Web 服務，因此可以輕易地存取，以提供企業報表功能給自訂商務應用程式。 您只要撰寫呼叫服務的程式碼，即可在 Windows 應用程式中存取 Web 服務。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建立以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  

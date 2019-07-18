@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e881f0087bb3f4a6ae6e29d20b0f9103c4576be1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137631"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server Browser 屬性 (登入索引標籤)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 程式會以伺服器服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。  
@@ -24,7 +24,7 @@ ms.locfileid: "52757380"
   
  帳戶密碼的變更會立即生效，不需要重新啟動服務。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **本機系統帳戶**  
  在本機系統帳戶的安全性內容執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如果可能的話，請另外使用權限較低的帳戶來執行。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52757380"
  確認安全性主體的密碼。  
   
  **服務狀態**  
- 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 " **...** " 表示狀態變更已暫止。  
   
  **啟動**  
  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器服務。  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7024f4214388f77edc2f97e402db8da71e9c857c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8b255f03070bffb289184a1dbf6ec9fdedbbec4a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799523"
 ---
 # <a name="clr-strict-security"></a>CLR 嚴格安全性   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53205254"
 > [!IMPORTANT]
 >  啟用嚴格安全性之後，將無法載入任何未簽署的組件。 您必須改變或置放並重新建立每個組件，以使用憑證或非對稱金鑰進行簽署，該金鑰有具有伺服器 `UNSAFE ASSEMBLY` 權限的對應登入。
 
-## <a name="permissions"></a>[權限] 
+## <a name="permissions"></a>權限 
 
 ### <a name="to-change-this-option"></a>變更此選項  
 需要 `CONTROL SERVER` 權限或系統管理員 `sysadmin` 固定伺服器角色中的成員資格。

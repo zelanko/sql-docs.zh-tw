@@ -11,14 +11,18 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: afcaf6f62c697c50dbf40bfaa822c1a685af745e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f7427a85fa3e8b6f65bb899d008a13f48008e4c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65715795"
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的驗證或執行執行個體。  

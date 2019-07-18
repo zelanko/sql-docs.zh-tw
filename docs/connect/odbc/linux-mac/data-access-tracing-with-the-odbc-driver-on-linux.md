@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81ff6d637b28a55d45c8be02de24832b0cbc27ea
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
+ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306196"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152215"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>透過 Linux 和 macOS 上的 ODBC 驅動程式進行資料存取追蹤
 
@@ -30,6 +30,7 @@ ms.locfileid: "58306196"
 若要追蹤您的應用程式的 ODBC 行為，請編輯`odbcinst.ini`檔案的`[ODBC]`一節，以設定值`Trace=Yes`和`TraceFile`也就是包含輸出; 追蹤檔案的路徑，例如：
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

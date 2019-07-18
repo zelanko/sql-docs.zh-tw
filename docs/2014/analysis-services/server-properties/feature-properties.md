@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
@@ -20,19 +19,19 @@ ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c9047bc6bae67b005d8ed93e4831557a0dac9b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069044"
 ---
 # <a name="feature-properties"></a>功能屬性
   與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用於：** 僅限於多維度伺服器模式  
+ **適用於：** 僅限多維度伺服器模式  
   
 ## <a name="properties"></a>屬性  
   

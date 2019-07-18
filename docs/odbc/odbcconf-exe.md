@@ -1,5 +1,5 @@
 ---
-title: ODBCCONF。EXE |Microsoft Docs
+title: ODBCCONF.EXE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 33688a46be5e5e33aa940f3553c98db5091b159d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7934226ec489af0ac0b1f655c7d27660cb6a928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996265"
 ---
-# <a name="odbcconfexe"></a>ODBCCONF。EXE
+# <a name="odbcconfexe"></a>ODBCCONF.EXE
 ODBCCONF.exe 是命令列工具，可讓您設定 ODBC 驅動程式和資料來源的名稱。  
   
 > [!NOTE]  
@@ -28,12 +27,12 @@ ODBCCONF.exe 是命令列工具，可讓您設定 ODBC 驅動程式和資料來�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 ODBCCONF [switches] action  
 ```  
   
 ## <a name="arguments"></a>引數  
- *參數*  
+ *switches*  
  零或多個參數的選項。 如需可用參數的清單，請參閱備註 」 一節中，本主題稍後的。  
   
  *action*  
@@ -56,15 +55,15 @@ ODBCCONF [switches] action
   
  可使用下列動作：  
   
-|動作|描述|  
+|Action|描述|  
 |------------|-----------------|  
-|CONFIGDRIVER *driver_name * * 驅動程式專屬的組態參數*|載入適當的驅動程式安裝程式 DLL 並呼叫**ConfigDriver**函式。<br /><br /> 相當於[SQLConfigDriver 函式](../odbc/reference/syntax/sqlconfigdriver-function.md)。<br /><br /> 例如：<br /><br /> / A {CONFIGDRIVER [驅動程式名稱]"CPTimeout = 60"}<br /><br /> / A {CONFIGDRIVER [驅動程式名稱]"DriverODBCVer = 03.80"}|  
-|CONFIGDSN *driver_name* DSN =*名稱* &#124; *屬性*|新增或修改系統資料來源。<br /><br /> 相當於[SQLConfigDataSource 函式](../odbc/reference/syntax/sqlconfigdatasource-function.md)。<br /><br /> 例如：<br /><br /> / A {CONFIGDSN"SQL Server""DSN = 名稱&#124;Server = srv"}|  
-|CONFIGSYSDSN *driver_name* DSN =*名稱* &#124; *屬性*|新增或修改系統資料來源。<br /><br /> 相當於[SQLConfigDataSource 函式](../odbc/reference/syntax/sqlconfigdatasource-function.md)。<br /><br /> 例如：<br /><br /> / A {CONFIGSYSDSN"SQL Server""DSN = 名稱&#124;Server = srv"}|  
-|/INSTALLDRIVER|相當於[SQLInstallDriverEx 函式](../odbc/reference/syntax/sqlinstalldriverex-function.md)。<br /><br /> 傳遞至 /INSTALLDRIVER 關鍵字-值配對語法的詳細資訊，請參閱[驅動程式規格子機碼](../odbc/reference/install/driver-specification-subkeys.md)。<br /><br /> 例如：<br /><br /> / A {/INSTALLDRIVER 」 驅動程式&#124;Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1"}|  
-|INSTALLTRANSLATOR *translator configuration * * 驅動程式路徑*|將轉譯程式，以相關資訊加入**HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST。INI\ODBC 轉譯器**登錄機碼。<br /><br /> 相當於[SQLInstallTranslatorEx 函式](../odbc/reference/syntax/sqlinstalltranslatorex-function.md)。<br /><br /> 傳遞至 /INSTALLDRIVER 關鍵字-值配對語法的詳細資訊，請參閱[轉譯程式規格子機碼](../odbc/reference/install/translator-specification-subkeys.md)。<br /><br /> 例如：<br /><br /> / A {INSTALLTRANSLATOR 「 我的轉譯器&#124;Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
-|REGSVR *dll*|註冊 DLL。<br /><br /> 相當於 regsvr32.exe。<br /><br /> 例如：<br /><br /> / {REGSVR c:\my.dll} A|  
-|SETFILEDSNDIR|當 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC。INI\ODBC 檔案 DSN\DefaultDSNDir 不存在，SETFILEDSNDIR 動作會加以建立，並將它指派 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir，加上 \ODBC\Data 來源處的值。<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC 處的值。INI\ODBC 檔案 DSN\DefaultDSNDir 指定建立的檔案為基礎的資料來源時，所使用的 ODBC 資料來源管理員 」 中的預設位置。<br /><br /> 例如：<br /><br /> / {SETFILEDSNDIR} A|  
+|CONFIGDRIVER *driver_name * * 驅動程式專屬的組態參數*|載入適當的驅動程式安裝程式 DLL 並呼叫**ConfigDriver**函式。<br /><br /> 相當於[SQLConfigDriver 函式](../odbc/reference/syntax/sqlconfigdriver-function.md)。<br /><br /> 例如:<br /><br /> / A {CONFIGDRIVER [驅動程式名稱]"CPTimeout = 60"}<br /><br /> / A {CONFIGDRIVER [驅動程式名稱]"DriverODBCVer = 03.80"}|  
+|CONFIGDSN *driver_name* DSN =*名稱* &#124; *屬性*|新增或修改系統資料來源。<br /><br /> 相當於[SQLConfigDataSource 函式](../odbc/reference/syntax/sqlconfigdatasource-function.md)。<br /><br /> 例如:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|CONFIGSYSDSN *driver_name* DSN =*名稱* &#124; *屬性*|新增或修改系統資料來源。<br /><br /> 相當於[SQLConfigDataSource 函式](../odbc/reference/syntax/sqlconfigdatasource-function.md)。<br /><br /> 例如:<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|/INSTALLDRIVER|相當於[SQLInstallDriverEx 函式](../odbc/reference/syntax/sqlinstalldriverex-function.md)。<br /><br /> 傳遞至 /INSTALLDRIVER 關鍵字-值配對語法的詳細資訊，請參閱[驅動程式規格子機碼](../odbc/reference/install/driver-specification-subkeys.md)。<br /><br /> 例如:<br /><br /> / A {/INSTALLDRIVER 」 驅動程式&#124;Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1"}|  
+|INSTALLTRANSLATOR *translator configuration * * 驅動程式路徑*|將轉譯程式，以相關資訊加入**HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST。INI\ODBC 轉譯器**登錄機碼。<br /><br /> 相當於[SQLInstallTranslatorEx 函式](../odbc/reference/syntax/sqlinstalltranslatorex-function.md)。<br /><br /> 傳遞至 /INSTALLDRIVER 關鍵字-值配對語法的詳細資訊，請參閱[轉譯程式規格子機碼](../odbc/reference/install/translator-specification-subkeys.md)。<br /><br /> 例如:<br /><br /> / A {INSTALLTRANSLATOR 「 我的轉譯器&#124;Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
+|REGSVR *dll*|註冊 DLL。<br /><br /> 相當於 regsvr32.exe。<br /><br /> 例如:<br /><br /> /A {REGSVR c:\my.dll}|  
+|SETFILEDSNDIR|當 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC。INI\ODBC 檔案 DSN\DefaultDSNDir 不存在，SETFILEDSNDIR 動作會加以建立，並將它指派 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir，加上 \ODBC\Data 來源處的值。<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC 處的值。INI\ODBC 檔案 DSN\DefaultDSNDir 指定建立的檔案為基礎的資料來源時，所使用的 ODBC 資料來源管理員 」 中的預設位置。<br /><br /> 例如:<br /><br /> /A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 開放式資料庫連接 (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

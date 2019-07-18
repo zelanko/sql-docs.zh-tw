@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183218"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,14 +76,14 @@ ms.locfileid: "50145683"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **限制** ：無。  
+ **限制：** 無。  
   
 ### <a name="data-mining-extensions-dmx"></a>資料採礦延伸模組 (DMX)  
  資料採礦延伸模組 (DMX) 可搭配其他的命令介面 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADOMD.Net) 來建立、刪除和查詢採礦結構和採礦模型。  
   
 -   [資料採礦延伸模組 &#40;DMX&#41; 資料定義陳述式](../../dmx/dmx-statements-data-definition.md)  
   
- **限制** ：有些屬性無法使用 DMX 變更。  
+ **限制：** 有些屬性無法使用 DMX 變更。  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) 是適用於所有 Analysis Services 的資料定義語言。 XMLA 讓您能夠控制大多數的資料採礦物件和伺服器作業。 用戶端和伺服器之間的所有管理作業都可以使用 XMLA 執行。 為了便利起見，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 來包裝 XML。  

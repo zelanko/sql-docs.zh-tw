@@ -10,19 +10,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b17a161964e47d6603af5d369e6dd448ca858602
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 67fe081e5520eeab908d3a5a624104d2002cf6e4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327798"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679938"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[工具列] 索引標籤可以讓您建立、重新命名、移除和重設工具列。 您可以在 [工具] 功能表上按一下 [自訂]，然後按一下 [工具列] 來存取此索引標籤。  
+[工具列]  索引標籤可以讓您建立、重新命名、移除和重設工具列。 您可以在 [工具]  功能表上按一下 [自訂]  ，然後按一下 [工具列]  來存取此索引標籤。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **工具列**  
@@ -32,16 +32,16 @@ ms.locfileid: "53327798"
 > 無法隱藏功能表列。 只能重設它。  
   
 **新增**  
-顯示 [新增工具列] 對話方塊，讓您能夠建立和命名自訂工具列。  
+顯示 [新增工具列]  對話方塊，讓您能夠建立和命名自訂工具列。  
   
 **Rename**  
-顯示 [重新命名工具列] 對話方塊，讓您僅能變更自訂工具列的名稱。  
+顯示 [重新命名工具列]  對話方塊，讓您僅能變更自訂工具列的名稱。  
   
 **刪除**  
-刪除 [工具列] 清單中所選取的自訂工具列。  
+刪除 [工具列]  清單中所選取的自訂工具列。  
   
 **重設**  
-移除 [工具列] 清單中所選之預先定義工具列的變更，然後將其重設為原始狀態。 只有選取內建工具列時才可以使用此選項。  
+移除 [工具列]  清單中所選之預先定義工具列的變更，然後將其重設為原始狀態。 只有選取內建工具列時才可以使用此選項。  
   
 **大圖示**  
 增加工具列圖示的大小以便於查看。  
@@ -53,4 +53,4 @@ ms.locfileid: "53327798"
 指定工具列上命令的工具提示中是否出現快速鍵組合。  
   
 **鍵盤**  
-顯示 [選項] 對話方塊的 [鍵盤] 窗格，讓您能夠變更和定義命令的快速鍵組合。  
+顯示 [選項]  對話方塊的 [鍵盤]  窗格，讓您能夠變更和定義命令的快速鍵組合。  

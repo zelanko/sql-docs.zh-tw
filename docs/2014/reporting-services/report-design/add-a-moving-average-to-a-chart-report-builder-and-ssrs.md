@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7114291f64190207a48526a42976580b09933282
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 016eeebb679ee16e07a99e44a3740efaae413483
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106833"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>將移動平均加入至圖表 (報表產生器及 SSRS)
   移動平均是數列中資料的平均，是根據定義的一段時間而計算。 您可以在圖表上顯示移動平均以識別明顯的趨勢。  
@@ -32,7 +31,7 @@ ms.locfileid: "56297192"
   
 ### <a name="to-add-a-calculated-moving-average-to-a-series-on-the-chart"></a>將導出的移動平均加入至圖表上的數列  
   
-1.  以滑鼠右鍵按一下 **[值]** 區域中的欄位，然後按一下 **[加入導出數列]**。 **[導出數列屬性]** 對話方塊隨即開啟。  
+1.  以滑鼠右鍵按一下 **[值]** 區域中的欄位，然後按一下 **[加入導出數列]** 。 **[導出數列屬性]** 對話方塊隨即開啟。  
   
 2.  從 **[公式]** 下拉式清單中，選取 **[移動平均]** 選項。  
   

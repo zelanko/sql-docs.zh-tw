@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary method
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 10a3c61b4fa5d261b35ca2f8fe57c73ec06dd66e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 463b76f05f0b5bf3ad14a10382140436ea33c596
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936215"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47813456"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**varbinary(max)**  
   
- CLR 傳回類型：**SqlBytes**  
+ CLR 傳回型別：**SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
  可以叫用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 來判斷 **geography** 執行個體的 OGC 型別。  

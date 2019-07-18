@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1
@@ -13,12 +12,12 @@ ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088d53d1257c4b0d4b141b1e090ab1174416d397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068216"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>指定查詢準則 (基於使用方式的最佳化精靈)
   使用 **[指定查詢準則]** 頁面選擇一個或多個篩選選項來識別要最佳化的查詢。  
@@ -41,16 +40,16 @@ ms.locfileid: "48088378"
  依據開始日期和時間篩選查詢記錄中的查詢。 在下拉式清單中選擇或輸入日期。  
   
 > [!NOTE]  
->  如果未選取 [結束日期]，則會考量查詢記錄中，符合此選項指定的日期和時間或之後的所有查詢。  
+>  如果未選取 [結束日期]  ，則會考量查詢記錄中，符合此選項指定的日期和時間或之後的所有查詢。  
   
  **結束日期**  
  依據結束日期和時間篩選查詢記錄中的查詢。 在下拉式清單中選擇或輸入日期。  
   
 > [!NOTE]  
->  如果未選取 [開始日期]，則會考量查詢記錄中，符合在此選項指定的日期和時間或之前的所有查詢。  
+>  如果未選取 [開始日期]  ，則會考量查詢記錄中，符合在此選項指定的日期和時間或之前的所有查詢。  
   
  **使用者**  
- 依據指定的使用者集合篩選查詢記錄中的查詢。 按一下省略符號 (**...**) 按鈕，即可顯示 [使用者選取] 對話方塊，並選擇用來篩選查詢的使用者。 如需 [使用者選取] 對話方塊的詳細資訊，請參閱[使用者選取對話方塊 &#40;Analysis Services - 多維度資料&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
+ 依據指定的使用者集合篩選查詢記錄中的查詢。 按一下省略符號 ( **...** ) 按鈕，即可顯示 [使用者選取]  對話方塊，並選擇用來篩選查詢的使用者。 如需 [使用者選取]  對話方塊的詳細資訊，請參閱[使用者選取對話方塊 &#40;Analysis Services - 多維度資料&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **最常使用查詢**  
  依據所選取資料分割最常執行之相異查詢的最高百分比，篩選查詢記錄中的查詢。 選擇或在文字方塊輸入百分比值。  

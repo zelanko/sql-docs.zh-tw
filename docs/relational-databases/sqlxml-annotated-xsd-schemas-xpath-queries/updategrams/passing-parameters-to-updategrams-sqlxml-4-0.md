@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c557c96701ce9587125acccbb12f408d465a07b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018493"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56041569"
  Updategrams 可讓您將 NULL 當做參數值來傳遞。 若要傳遞 NULL 參數值，指定**nullvalue**屬性。 值，指派給**nullvalue**屬性則提供做為參數值。 Updategrams 將此值視為 NULL。  
   
 > [!NOTE]  
->  在 **\<sql:header >** 並 **\<updg:header >**，您應該指定**nullvalue**為不合格; 但是，請在**\<updg:sync >**，您指定**nullvalue**為合格 (例如**updg: nullvalue**)。  
+>  在 **\<sql:header >** 並 **\<updg:header >** ，您應該指定**nullvalue**為不合格; 但是，請在 **\<updg:sync >** ，您指定**nullvalue**為合格 (例如**updg: nullvalue**)。  
   
 ## <a name="examples"></a>範例  
  若要建立使用下列範例的實用範例，您必須符合指定的需求[如需執行 SQLXML 範例的需求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
@@ -66,7 +65,9 @@ ms.locfileid: "56041569"
 1.  將上述的 updategram 複製到 [記事本] 中，並將它儲存為 UpdategramWithParameters.xml 檔。  
   
 2.  準備中的 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) [Ba6e326154d2"&gt;using ADO to Execute SQLXML 4.0 Queries&lt](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以加入下列幾行之後執行 updategram `cmd.Properties("Output Stream").Value = outStream`:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     cmd.NamedParameters = True  
     ' CreateParameter arguments: Name, Type, Direction, Size, Value  

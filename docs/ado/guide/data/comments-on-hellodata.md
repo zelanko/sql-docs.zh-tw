@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925801"
 ---
 # <a name="comments-on-hellodata"></a>HelloData 的註解
 HelloData 應用程式會逐步引導一般的 ADO 應用程式的基本作業： 取得、 檢查、 編輯和更新資料。 當您啟動應用程式時，按一下第一個按鈕中，**取得資料**。 這會執行**GetData**副程式。  

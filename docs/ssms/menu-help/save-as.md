@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0bb404256c0cc8b36005eb071be573e01cab599b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201437"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682638"
 ---
 # <a name="save-as"></a>另存新檔
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔] *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
+此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔]  *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
   
 ## <a name="central-panel"></a>中央面板  
 **儲存於**  
@@ -34,13 +34,13 @@ ms.locfileid: "53201437"
 使用此選項來檢視目前的檔案名稱、變更檔案名稱，或篩選顯示的檔案和資料夾。 若要篩選顯示的檔案和資料夾，請輸入要篩選的完整或部份的檔案名稱。 您可以使用星號 (`*`) 作為萬用字元。  
   
 > [!TIP]
-> 若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱] 方塊中輸入 URL 或網路路徑。 例如，"<https://mywebsite>" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
+> 若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱]  方塊中輸入 URL 或網路路徑。 例如，"<https://mywebsite>" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
   
 **存檔類型**  
 使用此選項為所選項目選取新的檔案類型。 顯示的檔案類型都是適用於所選取項目進行轉換的可用檔案類型。  
   
 **進階儲存選項**  
-若要存取 [進階儲存選項] 對話方塊，請選取 [儲存] 按鈕右方的小矩形，然後按一下 [使用編碼方式儲存]。 使用此對話方塊來指定檔案的編碼方式和用於行尾的字元。  
+若要存取 [進階儲存選項]  對話方塊，請選取 [儲存]  按鈕右方的小矩形，然後按一下 [使用編碼方式儲存]  。 使用此對話方塊來指定檔案的編碼方式和用於行尾的字元。  
   
 ## <a name="left-panel"></a>左面板  
 **桌面**  

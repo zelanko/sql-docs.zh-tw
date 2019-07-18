@@ -1,5 +1,5 @@
 ---
-title: 範例:使用 OPENXML |Microsoft Docs
+title: 範例:使用 OPENXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205112"
 ---
 # <a name="examples-using-openxml"></a>範例:使用 OPENXML
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](specify-metaproperties-in-openxml.md)。  
@@ -474,11 +474,11 @@ EXEC sp_xml_removedocument @docHandle
   
  在 WITH 子句內的 *SchemaDeclaration* 中，亦使用 *ColName* 與 *ColType* 參數來指定 *ColPattern* 。 選用的 *ColPattern* 是指定的 XPath 模式，它表示下列各項：  
   
--   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 (**.**) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
+-   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 ( **.** ) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
   
--   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern*、**../\@Quantity**，識別內容節點 \<ProductID> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
+-   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern*、 **../\@Quantity**，識別內容節點 \<ProductID> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
   
--   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern*、**../../\@OrderID**，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
+-   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern*、 **../../\@OrderID**，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   

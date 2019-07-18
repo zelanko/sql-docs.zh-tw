@@ -1,5 +1,5 @@
 ---
-title: Error (ADO for Visual c + + 語法) |Microsoft Docs
+title: 錯誤 (ADO for VisualC++語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21b9527105eeb78fb7e62bd344af1775f2cbfac7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f71246fa641f74579f181f93da46333e2ffe3f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933035"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>Error (ADO for Visual C++ 語法)
 ## <a name="properties"></a>屬性  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72c49b9bb1b7d018f6650b8042e306234fd74caf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100913"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
@@ -28,7 +27,7 @@ ms.locfileid: "56036889"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
  本主題內容：  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56036889"
   
  您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者也可以建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
- 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請新增`@timestamp`變數加入檔案名稱 (例如*CompanySales@timestamp*)。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
+ 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請新增`@timestamp`變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、 修改及刪除標準訂用帳戶&#40;Reporting Services 原生模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

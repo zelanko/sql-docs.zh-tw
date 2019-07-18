@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8815f7e5bf0192222a0dfdf9917a39606642da1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: be1bac9878bb2fd9d4d76b5cca4475cd97d63621
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716647"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679314"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

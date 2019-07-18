@@ -8,22 +8,22 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9c087ed280233cadc67abc8cf0160b1c36664bc0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65090195"
 ---
-# <a name="how-to-debug-database-objects"></a>HOW TO：偵錯資料庫物件
+# <a name="how-to-debug-database-objects"></a>如何：針對資料庫物件進行偵錯
 SQL Server 單元測試是由以下項目組成：  
   
 -   以 Visual C\# 或 Visual Basic 撰寫的單元測試程式碼。 此程式碼是由 SQL Server 單元測試設計工具產生，負責提交構成測試本文的 Transact\-SQL 指令碼。  
   
--   以 Visual C \#或 Visual Basic 撰寫的一或多個測試條件。 若要對測試條件進行偵錯，請遵循對單元測試進行偵錯的程序來進行，如[如何：在執行測試時偵錯 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) \(機器翻譯\) 或[如何：在執行測試時偵錯 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) \(機器翻譯\) 中所述。  
+-   以 Visual C \#或 Visual Basic 撰寫的一或多個測試條件。 若要對測試條件進行偵錯，請遵循對單元測試進行偵錯的程序來進行，如[如何：在執行測試時偵錯 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) 或[如何：在執行測試時偵錯 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) 中所述。  
   
 -   一個或多個 Transact\-SQL 指令碼 (這些指令碼會在您要測試之資料庫的物件上執行)。 您無法對這些 Transact\-SQL 指令碼進行偵錯。  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5643f9795d702aeab95ed92d796c93df3ffcd133
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183291"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>從採礦模型排除資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52397432"
   
 1.  在 **中之資料採礦設計師的** [採礦模型] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤中，在適當的採礦模型之下，選取對應至您要排除之資料行的資料格。  
   
-2.  從下拉式清單方塊中選取 [忽略]。  
+2.  從下拉式清單方塊中選取 [忽略]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3f3b6bfdb766ab2007591ed661fe89e81b813c04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799505"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>將伺服器設定為在特定 TCP 連接埠上接聽
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "54132798"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>若要為 SQL Server Database Engine 指派 TCP/IP 通訊埠編號  
   
-1.  在 SQL Server 組態管理員的主控台窗格中，依序展開 [SQL Server 網路組態] 和 [\<執行個體名稱> 的通訊協定]，然後按兩下 [TCP/IP]。  
+1.  在 SQL Server 組態管理員的主控台窗格中，依序展開 [SQL Server 網路組態]  和 [\<執行個體名稱> 的通訊協定]  ，然後按兩下 [TCP/IP]  。  
   
     > [!NOTE]  
     >  如果您無法開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
-2.  在 [TCP/IP 內容] 對話方塊的 [IP 位址] 索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 (您可能會看到 IP 第 4 版和 IP 第 6 版位址)。以滑鼠右鍵按一下每個位址，然後按一下 [屬性] 以識別要設定的 IP 位址。  
+2.  在 [TCP/IP 內容]  對話方塊的 [IP 位址]  索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 (您可能會看到 IP 第 4 版和 IP 第 6 版位址)。以滑鼠右鍵按一下每個位址，然後按一下 [屬性]  以識別要設定的 IP 位址。  
   
 3.  如果 **[TCP 動態通訊埠]** 對話方塊包含 **0**，代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在接聽動態通訊埠，請將 0 刪除。  
   
@@ -59,12 +59,12 @@ ms.locfileid: "54132798"
 4.  在 **IP**_n_ **內容** 區域方塊的 **TCP 通訊埠** box, type the port number you want this IP address to listen on, and then click **確定**。 請以逗號分隔來指定多個連接埠。
 
     > [!NOTE] 
-    > 如果 [通訊協定] 索引標籤上的 [全部接聽] 設定設為 [是]，則只會使用 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 值，而完全略過個別 **IP**_n_ 區段。 如果 [全部接聽] 設定設為 [否]，則會略過 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 設定，而改用個別 **IP**_n_ 區段上的 [TCP 連接埠]、[TCP 動態連接埠] 和 [已啟用] 設定。
-    > 每個 **IP**_n_ 區段都有一個 [已啟用] 設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
+    > 如果 [通訊協定]  索引標籤上的 [全部接聽]  設定設為 [是]，則只會使用 [IPAll]  區段下的 [TCP 連接埠]  和 [TCP 動態連接埠]  值，而完全略過個別 **IP**_n_ 區段。 如果 [全部接聽]  設定設為 [否]，則會略過 [IPAll]  區段下的 [TCP 連接埠]  和 [TCP 動態連接埠]  設定，而改用個別 **IP**_n_ 區段上的 [TCP 連接埠]  、[TCP 動態連接埠]  和 [已啟用]  設定。
+    > 每個 **IP**_n_ 區段都有一個 [已啟用]  設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
   
-5.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
+5.  在主控台窗格中，按一下 **[SQL Server 服務]** 。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]   ，然後按一下 [重新啟動]  ，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="connecting"></a>Connecting  
 設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽特定通訊埠之後，有三種方式可利用用戶端應用程式連接到特定通訊埠：  

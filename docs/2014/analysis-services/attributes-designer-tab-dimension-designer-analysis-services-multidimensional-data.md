@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributes.f1
@@ -13,19 +12,19 @@ ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2ac25046df8c346ac68c8ffe4623f37d4637f66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064482"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 **[屬性]** 清單，即可在屬性關聯性圖表中找到特定屬性，或定義新的屬性關聯性。 這個窗格會緊鄰在包含屬性關聯性圖表的窗格底下。  
   
  **若要檢視 [屬性] 窗格**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性] 索引標籤。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的方案總管中，按兩下維度即可開啟 [維度設計師]，然後按一下 [屬性關聯性]  索引標籤。  
   
 2.  在工具列上，按一下 **[顯示清單檢視]** 圖示。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48048708"
   
 ### <a name="shortcut-menu-options"></a>快速鍵功能表選項  
  **新增屬性關聯性**  
- 開啟 [建立屬性關聯性] 對話方塊，而且您可以在其中定義新的屬性關聯性。  
+ 開啟 [建立屬性關聯性]  對話方塊，而且您可以在其中定義新的屬性關聯性。  
   
  如需詳細資訊，請參閱[建立屬性關聯性和編輯屬性關聯性對話方塊 &#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services - 多維度資料&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) 和[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48048708"
  在清單中反白顯示屬性的名稱，然後讓您修改此文字。  
   
  **屬性**  
- 在 [屬性] 視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
+ 在 [屬性]  視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性關聯性&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   

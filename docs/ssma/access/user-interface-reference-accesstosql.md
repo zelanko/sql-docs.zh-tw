@@ -13,12 +13,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617478"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266957"
 ---
 # <a name="user-interface-reference-accesstosql"></a>使用者介面參考 (AccessToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) 進行存取。  

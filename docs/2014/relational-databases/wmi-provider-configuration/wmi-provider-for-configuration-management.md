@@ -16,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211627"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>組態管理的 WMI 提供者概念
   WMI 提供者是與搭配使用的發行的層[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員嵌入式管理單元[!INCLUDE[msCoName](../../includes/msconame-md.md)]Management Console (MMC) 並[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 它會提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員所要求之登錄作業的 API 呼叫，並在選取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上，提供增強的控制和操作功能。  

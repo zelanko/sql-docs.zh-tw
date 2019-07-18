@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -21,12 +20,12 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd17b4422db80e66d5784fb7de1326903dfddf42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e53e2f756ad7161cc6df91b8146945e60b0c91c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090223"
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
   在您開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  
@@ -52,11 +51,11 @@ ms.locfileid: "48124908"
   
  [查詢編輯器] 視窗會保持在偵錯模式中，直到 [查詢編輯器] 視窗中的最後一個陳述式完成或是您停止偵錯模式為止。 您可以使用下列任何一種方法來停止偵錯模式和陳述式執行：  
   
--   在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+-   在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
 -   在 **[偵錯]** 工具列上，按一下 **[停止偵錯]** 按鈕。  
   
--   在 **[查詢]** 功能表上，按一下 **[取消執行查詢]**。  
+-   在 **[查詢]** 功能表上，按一下 **[取消執行查詢]** 。  
   
 -   在 **[查詢]** 工具列上，按一下 **[取消執行查詢]** 按鈕。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48124908"
 |**視窗/區域變數**|無法使用|**中斷點/區域變數**|CTRL+ALT+V、L|顯示 **[區域變數]** 視窗。|  
 |**視窗/呼叫堆疊**|無法使用|**中斷點/呼叫堆疊**|CTRL+ALT+C|顯示 **[呼叫堆疊]** 視窗。|  
 |**視窗/執行緒**|無法使用|**中斷點/執行緒**|CTRL+ALT+H|顯示 **[執行緒]** 視窗。|  
-|**Continue**|無法使用|**Continue**|ALT+F5|執行到下一個中斷點。 在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點之前，**[繼續]** 是處於非使用中狀態。|  
+|**Continue**|無法使用|**Continue**|ALT+F5|執行到下一個中斷點。 在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點之前， **[繼續]** 是處於非使用中狀態。|  
 |**[偵錯]**|無法使用|**[偵錯]**|ALT+F5|讓 [查詢編輯器] 視窗進入偵錯模式，並且執行到第一個中斷點。 如果您在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點， **[開始偵錯]** 就會由 **[繼續]** 所取代。|  
 |**全部中斷**|無法使用|**全部中斷**|CTRL+ALT+BREAK|[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不會使用這項功能。|  
 |**停止偵錯**|無法使用|**[停止偵錯]**|SHIFT+F5|讓 [查詢編輯器] 視窗離開偵錯模式，並且返回一般模式。|  

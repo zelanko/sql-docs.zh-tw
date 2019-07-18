@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_column_store_row_group_physical_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e5e421935a9642c42a525fe8a25c4c8c9504c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005012"
 ---
-# <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   提供有關所有目前資料庫中的資料行存放區索引的目前資料列群組層級資訊。  
@@ -43,19 +43,20 @@ ms.locfileid: "52510846"
 |**row_group_id**|**int**|此資料列群組的識別碼。 對於資料分割的資料表，這是資料分割內唯一的。<br /><br /> -1 代表一個記憶體中的尾端。|  
 |**delta_store_hobt_id**|**bigint**|差異存放區中資料列群組的 hobt_id。<br /><br /> 如果資料列群組不在差異存放區，則為 NULL。<br /><br /> 記憶體中資料表的結尾是 NULL。|  
 |**state**|**tinyint**|相關聯的識別碼編號*state_description*。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 標記<br /><br /> 壓縮是唯一適用於記憶體中資料表的狀態。|  
-|**state_desc**|**nvarchar(60)**|資料列群組狀態的描述：<br /><br /> 正在建置不可見的資料列群組。 例如： <br />在 資料行存放區中的資料列群組時，看不進行壓縮的資料。 壓縮完成中繼資料參數變更資料行存放區資料列的狀態群組從看不見壓縮，並標記從 已關閉的差異存放區資料列群組的狀態。<br /><br /> 開啟-已接受新的資料列的差異存放區資料列群組。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> 已關閉-在差異存放區，其中包含的資料列數目上限，並將其壓縮到資料行存放區 tuple mover 程序正在等候中的資料列群組。<br /><br /> 壓縮的壓縮資料行存放區壓縮並儲存在資料行存放區中的資料列群組。<br /><br /> 標記為資料列群組，先前在差異存放區中，且不能使用。|  
+|**state_desc**|**nvarchar(60)**|資料列群組狀態的描述：<br /><br /> 正在建置不可見的資料列群組。 例如: <br />在 資料行存放區中的資料列群組時，看不進行壓縮的資料。 壓縮完成中繼資料參數變更資料行存放區資料列的狀態群組從看不見壓縮，並標記從 已關閉的差異存放區資料列群組的狀態。<br /><br /> 開啟-已接受新的資料列的差異存放區資料列群組。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> 已關閉-在差異存放區，其中包含的資料列數目上限，並將其壓縮到資料行存放區 tuple mover 程序正在等候中的資料列群組。<br /><br /> 壓縮的壓縮資料行存放區壓縮並儲存在資料行存放區中的資料列群組。<br /><br /> 標記為資料列群組，先前在差異存放區中，且不能使用。|  
 |**total_rows**|**bigint**|資料列數目實體儲存在資料列群組。 壓縮的資料列群組，這包括標示為刪除的資料列。|  
 |**deleted_rows**|**bigint**|實際儲存在壓縮的資料列群組資料列標示為刪除的數目。<br /><br /> 差異存放區中的資料列群組為 0。|  
 |**size_in_bytes**|**bigint**|合併的大小，以位元組為單位，此資料列群組中的所有頁面。 這個大小不包括所需儲存中繼資料或共用的字典的大小。|  
-|**trim_reason**|**tinyint**|觸發 COMPRESSED 資料列群組擁有的原因小於資料列數目上限。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-大量載入<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-溢出|  
+|**trim_reason**|**tinyint**|觸發 COMPRESSED 資料列群組擁有的原因小於資料列數目上限。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-大量載入<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7  -  STATS_MISMATCH<br /><br /> 8-溢出|  
 |**trim_reason_desc**|**nvarchar(60)**|Popis *trim_reason*。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION:從舊版升級時，發生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 1-NO_TRIM:已不會修剪資料列群組。 資料列群組壓縮的 1,048,476 的資料列的最大值。  如果關閉差異資料列群組後，已刪除的資料列的 subsset，資料列數目可能會小於<br /><br /> 2-大量載入：大量載入批次大小限制資料列的數目。<br /><br /> 3-REORG:強制壓縮 REORG 命令的一部分。<br /><br /> 4-DICTIONARY_SIZE:字典大小成長過大而無法壓縮所有資料列在一起。<br /><br /> 5-MEMORY_LIMITATION:沒有足夠的記憶體可壓縮所有資料列在一起。<br /><br /> 6-RESIDUAL_ROW_GROUP:關閉的最後一個資料列群組一部分的資料列 < 1 百萬個索引建立作業期間<br /><br /> STATS_MISMATCH:只會針對資料行存放區的記憶體中資料表上。 如果統計資料不正確地指定 > = 1 百萬個結尾中的合格資料列，但我們發現較少，壓縮的資料列群組會有 < 1 百萬個資料列<br /><br /> 溢出：只會針對資料行存放區的記憶體中資料表上。 如果結尾具有 > 1 百萬個合格的資料列，將最後一個批次的其餘資料列，壓縮如果計數為 1 百萬個 100 k 之間|  
 |**transition_to_compressed_state**|TINYINT|示範如何這個資料列群組已移動從差異存放區中的資料行存放區的壓縮狀態。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-大量載入<br /><br /> 7-合併|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE-作業不適用於差異存放區。 或者，您也可以在升級至之前壓縮資料列群組[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]不在此情況下會保留歷程記錄。<br /><br /> INDEX_BUILD-索引建立或重建索引會壓縮資料列群組。<br /><br /> TUPLE_MOVER-在背景執行 tuple mover 壓縮資料列群組。 會發生這種情況後資料列群組從 已開啟狀態變更為 已關閉。<br /><br /> REORG_NORMAL-重組作業，ALTER INDEX...REORG，從差異存放區的 CLOSED 資料列群組移到資料行存放區。 此 tuple mover 已開始移動資料列群組之前發生。<br /><br /> REORG_FORCED-此資料列群組已在差異存放區中開啟，並已強制到資料行存放區中，它具有完整的數字的資料列之前。<br /><br /> BULKLOAD-大量載入作業不直接使用差異存放區壓縮資料列群組。<br /><br /> 合併-合併作業會合併到此資料列群組的一或多個資料列群組，並接著執行 資料行存放區壓縮。|  
 |**has_vertipaq_optimization**|bit|Vertipaq 最佳化會改善重新排列資料列群組中的資料列才能達到更高的壓縮的資料行存放區壓縮。 在大部分情況下，此最佳化會自動進行。 有兩種情況下，不使用 Vertipaq 最佳化：<br/>  a. 當差異資料列群組移到資料行存放區，並有一或多個非叢集索引的資料行存放區索引-在此情況下 Vertipaq 最佳化會略過以對應索引的變更降至最低<br/> b. 記憶體最佳化資料表上的資料行存放區索引。 <br /><br /> 0 = 否<br /><br /> 1 = 是|  
-|**產生**|BIGINT|此資料列群組相關聯的資料列群組產生。|  
+|**generation**|BIGINT|此資料列群組相關聯的資料列群組產生。|  
 |**created_time**|datetime2|建立此資料列群組時的時鐘時間。<br /><br /> NULL-資料行存放區索引在記憶體中的資料表。|  
 |**closed_time**|datetime2|關閉這個資料列群組時的時鐘時間。<br /><br /> NULL-資料行存放區索引在記憶體中的資料表。|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="results"></a>結果  
  傳回目前資料庫中的每個資料列群組的一個資料列。  
   
@@ -80,7 +81,7 @@ SELECT i.object_id,
     i.index_id,   
     i.type_desc,   
     CSRowGroups.*,  
-    100*(ISNULL(deleted_rows,0))/total_rows AS 'Fragmentation'  
+    100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0) AS 'Fragmentation'
 FROM sys.indexes AS i  
 JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups  
     ON i.object_id = CSRowGroups.object_id AND i.index_id = CSRowGroups.index_id   

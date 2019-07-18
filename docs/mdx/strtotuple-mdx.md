@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 054786440afaf2b7ab458b4704bd5f8e2e26c135
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036710"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 

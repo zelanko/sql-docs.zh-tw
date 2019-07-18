@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207005"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用兩個方法將結果集傳回給取用者：  

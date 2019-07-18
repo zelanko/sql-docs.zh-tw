@@ -12,20 +12,20 @@ helpviewer_keywords:
 - language references [SQL Server]
 - IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1815e6f1560edc5f6805e55fc442cc888ed87ab7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5b5dcb3c74c263faaeafd2667ae16d1acbd7c54
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643035"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690179"
 ---
 # <a name="parameter-info-intellisense"></a>參數資訊 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [參數資訊] 選項會開啟一個參數清單，為您提供函數或預存程序所需之參數數目、名稱和類型的相關資訊。 粗體的參數表示當您輸入函數或預存程序時所需的下一個參數。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [參數資訊]  選項會開啟一個參數清單，為您提供函數或預存程序所需之參數數目、名稱和類型的相關資訊。 粗體的參數表示當您輸入函數或預存程序時所需的下一個參數。  
   
  巢狀函數也有參數清單。 如果您將函數當作參數輸入到另一個函數中，參數清單會顯示內部函數的參數。 之後，當內部函數參數清單完成時，參數清單會回復成顯示外部函數參數。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "51643035"
   
 #### <a name="to-manually-start-parameter-info"></a>手動啟動參數資訊  
   
-1.  按一下 [編輯] 功能表，選取 [IntelliSense]，然後選取 [參數資訊]。  
+1.  按一下 [編輯]  功能表，選取 [IntelliSense]  ，然後選取 [參數資訊]  。  
   
 2.  按下 CTRL+SHIFT+SPACE 鍵盤快速鍵。  
   
  如需詳細資訊，請參閱[設定 IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)。  
   
 > [!NOTE]  
->  [參數資訊] 選項僅適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器和 XML 查詢編輯器。  
+>  [參數資訊]  選項僅適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器和 XML 查詢編輯器。  
   
   

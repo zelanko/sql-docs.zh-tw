@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6d215fe6a1b0c41868816e09e64927b8f736f8c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8e700942f9cebc08241cf4e159dceedc7d515a94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480119"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
   當您想要追蹤屬性值變更時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將屬性新增至變更追蹤群組。  
@@ -38,7 +38,7 @@ ms.locfileid: "52772536"
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>若要將屬性加入至變更追蹤群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
 2.  在上**模型總管**頁面上，從功能表列指向**管理**，按一下 **實體**。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52772536"
   
 4.  針對要追蹤屬性值的實體選取資料列。  
   
-5.  按一下 **[編輯選取的實體]**。  
+5.  按一下 **[編輯選取的實體]** 。  
   
 6.  在 **[編輯實體]** 頁面上：  
   
@@ -56,13 +56,13 @@ ms.locfileid: "52772536"
   
     -   如果屬性是集合，在**集合屬性**窗格中，選取屬性，然後按一下**編輯集合屬性**。  
   
-7.  選取 [啟用變更追蹤] 核取方塊。  
+7.  選取 [啟用變更追蹤]  核取方塊。  
   
-8.  在 [變更追蹤群組] 方塊中，輸入群組的編號。  
+8.  在 [變更追蹤群組]  方塊中，輸入群組的編號。  
   
-9. 按一下 **[儲存屬性]**。  
+9. 按一下 **[儲存屬性]** 。  
   
-10. 按一下 **[實體維護]** 頁面上的 **[儲存實體]**。  
+10. 按一下 **[實體維護]** 頁面上的 **[儲存實體]** 。  
   
 11. 重複此程序，加入要包含在群組中的所有屬性。 對群組中的每個屬性，使用相同的變更追蹤群組編號。  
   

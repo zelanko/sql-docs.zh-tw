@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901197"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
   當您以滑鼠右鍵按一下資料流程中的 [OData 來源] 並按一下 [屬性] 時，您將會看到 [OData 來源] 元件的屬性出現在 [屬性] 視窗中。  

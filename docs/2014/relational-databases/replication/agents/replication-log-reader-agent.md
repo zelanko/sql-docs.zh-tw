@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127009"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
   「複寫記錄讀取器代理程式」是一個可執行檔，它會監視針對異動複寫所設定之每個資料庫的交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。  
@@ -68,8 +68,8 @@ ms.locfileid: "54126568"
  **-?**  
  顯示使用方式資訊。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>  。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
@@ -80,8 +80,8 @@ ms.locfileid: "54126568"
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令列引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-DistributorLogin** _distributor_login_  
  這是散發者登入名稱。  
@@ -110,7 +110,7 @@ ms.locfileid: "54126568"
  指定擴充的事件 XML 組態檔的路徑和檔案名稱。 擴充的事件組態檔可讓您設定工作階段以及啟用事件追蹤。  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
- 指定在記錄讀取器作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
+ 指定在記錄讀取器作業期間記錄的記錄量。  您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
 |HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
@@ -163,7 +163,7 @@ ms.locfileid: "54126568"
  **-ProfileName** _profile_name_  
  指定要用於代理程式參數的代理程式設定檔。 如果 **ProfileName** 為 NULL，就會停用代理程式設定檔。 如果沒有指定 **ProfileName** ，就會使用該代理程式類型的預設設定檔。 如需資訊，請參閱[複寫代理程式設定檔](replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  

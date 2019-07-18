@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3da927ec00fe6402a9c7612beae90453e30c4e26
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f980157f057f8e7916eb7b87dd2cedb2ec5fd14d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210397"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582453"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53210397"
  新增發行項涉及的動作包括：在發行集中新增發行項、建立發行集的新快照集、同步處理訂閱以套用新發行項的結構描述和資料。  
   
 > [!NOTE]
->  如果您將發行項加入至合併式發行集且現有的某發行項相依於新的發行項，您必須使用 **@processing_order** 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 [@processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)參數，來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函數加入至發行集時：將 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；將 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，指定 **@article**＞。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+>  如果您將發行項加入至合併式發行集且現有的某發行項相依於新的發行項，您必須使用 **@processing_order** 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 [@processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)參數，來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函數加入至發行集時：將 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；將 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，指定 **@article** ＞。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 1.  透過下列方法之一新增一或多個發行項：  
   
@@ -50,7 +50,9 @@ ms.locfileid: "53210397"
     -   若要使用參數化篩選建立合併式發行集的新快照集，請參閱[使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 3.  建立快照集後，同步處理訂閱，以複製新發行項的結構描述和資料。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   若要同步處理發送訂閱，請參閱[同步處理發送訂閱](../../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
     -   若要同步處理提取訂閱，請參閱[同步處理提取訂閱](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  

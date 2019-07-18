@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a98ac1b5c0a5ee51865a6b18d63efff55e12907
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b1bdcdcd0f2128a08546e8b322449ec0b28cc29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129775"
 ---
 # <a name="sprepltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +48,8 @@ sp_repltrans
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_repltrans**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_repldone &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

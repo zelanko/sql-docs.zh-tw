@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823275"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>將羅吉斯迴歸模型加入到撥接中心結構 (中繼資料採礦教學課程)
   除了分析可能會影響撥接中心作業的因數之外，您還必須提供有關員工如何改進服務品質的一些特定建議。 在這個工作中，您將使用和探勘模型相同的採礦結構，並加入一個採礦模型用於建立預測。  
@@ -36,7 +36,7 @@ ms.locfileid: "56015509"
   
 4.  在**新的採礦模型** 對話方塊中，如**模型名稱**，型別`Call Center - LR`。  針對**演算法名稱**，選取**Microsoft 羅吉斯迴歸**。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
      新的採礦模型會顯示在**採礦模型** 索引標籤。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56015509"
   
 1.  在 **採礦模型**索引標籤，以滑鼠右鍵按一下資料行的模型名稱為撥接中心-LR，然後選取**設定演算法參數**。  
   
-2.  在 HOLDOUT_SEED 參數的資料列，按一下 底下的空資料格**值**，然後輸入`1`。 按一下 [確定] 。  
+2.  在 HOLDOUT_SEED 參數的資料列，按一下 底下的空資料格**值**，然後輸入`1`。 按一下 [確定]  。  
   
     > [!NOTE]  
     >  只要您將相同的種子用於所有相關的模型，您選擇做為種子的值就不重要了。  

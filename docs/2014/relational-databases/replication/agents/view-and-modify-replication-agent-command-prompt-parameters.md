@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192895"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>檢視並修改複寫代理程式命令提示字元參數 (SQL Server Management Studio)
   複寫代理程式為可接受命令行參數的可執行檔。 根據預設，代理程式會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業步驟下執行，因此這些參數便可透過 [作業屬性 - \<作業>] 對話方塊進行檢視並修改。 **的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾及複寫監視器的 **[代理程式]** 索引標籤會提供此對話方塊。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "52758340"
   
 3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
   
-4.  在 **訂用帳戶\<SubscriptionName >**  視窗中，按一下**動作**，然後按一下  **\<代理程式名稱 > 作業屬性**。  
+4.  在 [**訂用帳戶\<SubscriptionName >** ] 視窗中，按一下**動作**，然後按一下 [ **\<代理程式名稱 > 作業屬性**。  
   
 5.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
   

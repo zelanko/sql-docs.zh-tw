@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057216"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
 以下是 ODBC 函數呼叫所用的保留字。 這些字並限制基礎的最小的 SQL 文法;不過，若要確保與支援核心 SQL 文法的驅動程式的相容性，應用程式應該避免使用任何這些關鍵字。 #**定義**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
@@ -84,20 +83,20 @@ ms.locfileid: "47626336"
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|DECIMAL|RIGHT|  
+|Decimal|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Delete|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE |  
+|DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
-|DOUBLE|SOME|  
+|Double|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -112,7 +111,7 @@ ms.locfileid: "47626336"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  

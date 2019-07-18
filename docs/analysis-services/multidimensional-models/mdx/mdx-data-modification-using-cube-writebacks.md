@@ -1,5 +1,5 @@
 ---
-title: 使用 Cube 回寫 (MDX) |Microsoft 文件
+title: 使用 Cube 回寫 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62740118"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 資料修改為使用 Cube 回寫
+# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 資料修改 - 使用 Cube 回寫
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   您可以使用 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 陳述式更新 Cube。 您可以使用此陳述式，來更新具有特定值的 Tuple。 若要有效地使用 UPDATE CUBE 陳述式更新 Cube，您必須了解陳述式的語法、可能發生的錯誤狀況，以及更新在 Cube 上所會產生的影響。  
   
@@ -40,7 +40,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
 ## <a name="example"></a>範例  
  您可以在 Adventure Works Cube 中，使用銷售目標量值群組來測試 UPDATE CUBE。 此量值群組包含 SUM 彙總的量值，這是 UPDATE CUBE 的需求。  
   
-1.  啟用 Adventure Works 資料庫中銷售目標量值群組的回寫功能。 在 Management Studio 中，以滑鼠右鍵按一下量值群組，指向 [回寫選項]，然後選擇 [啟用回寫]。  
+1.  啟用 Adventure Works 資料庫中銷售目標量值群組的回寫功能。 在 Management Studio 中，以滑鼠右鍵按一下量值群組，指向 [回寫選項]  ，然後選擇 [啟用回寫]  。  
   
      您應該會在 [回寫] 資料夾中看到新的回寫資料表。 資料表名稱為 WriteTable_Fact Sales Quota。  
   
@@ -65,7 +65,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
   
 4.  重新執行 SELECT 陳述式。 您現在應該會看到配額為零。  
   
- 回寫值受限於目前的工作階段。 若要跨使用者和工作階段持續使用此值，請處理回寫資料表。 在 Management Studio 中，以滑鼠右鍵按一下 WriteTable_Fact Sales Quota，然後選擇 [處理]。  
+ 回寫值受限於目前的工作階段。 若要跨使用者和工作階段持續使用此值，請處理回寫資料表。 在 Management Studio 中，以滑鼠右鍵按一下 WriteTable_Fact Sales Quota，然後選擇 [處理]  。  
   
  若要指定配置方法，新值必須大於零。 在此範例中，銷售量配額的新值為兩百萬，而配置方法會將此數量分配給所有銷售代表。  
   
@@ -106,11 +106,11 @@ USE_EQUAL_ALLOCATION
   
 -   刪除回寫中包含的量值。  
   
--   新增一個屬性，而回寫中包含的維度沒有 [(全部)] 層級。  
+-   新增一個屬性，而回寫中包含的維度沒有 [(全部)]  層級。  
   
 -   變更回寫中包含之維度的維度資料粒度。  
   
 ## <a name="see-also"></a>另請參閱  
- [修改資料 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [修改資料 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

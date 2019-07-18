@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483007"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，明確階層可以您指定的任何方式組織來自單一實體的成員。 衍生階層可以是不完全的，而且明確階層不像衍生階層，前者不是以網域屬性關聯性為基礎。  
@@ -39,7 +39,7 @@ ms.locfileid: "52809270"
  強制的明確階層是一種階層，其中的所有分葉成員都必須包括在階層樹狀結構中。 根據預設，所有成員都會包含在樹狀結構的根。 您可以視需要重新排列成員。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非強制的明確階層  
- 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用] 節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用] 節點中。  
+ 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用]  節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用]  節點中。  
   
  當您使用非強制的明確階層時，在此階層上所做的任何報告或分析可能不會符合強制的階層上所做的報告或分析。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52809270"
 |可以是不完全的|永遠包含固定數目的層級|  
   
 ## <a name="explicit-hierarchy-example"></a>明確階層範例  
- 在下列範例中，Product 實體會包含這些分葉成員：BK-M101 {Mountain-100}、 BK-M201 {Mountain-200}、 BK-M301 {Mountain-300}、 BK-R150 {Road-150}、 BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
+ 在下列範例中，Product 實體包含這些分葉成員：BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
   
  若要摘要列出在特定合併點上的分葉成員，您可以在 Product 實體中建立合併成員。 在階層樹狀結構中，於您想要摘要列出分葉成員的層級上插入合併成員。 您可以插入合併成員的位置並沒有任何限制，但是每一個成員 (分葉或合併成員) 只能使用一次。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_proxy (Transact-SQL) | Microsoft Docs
+title: sp_add_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088482"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_proxy
   
 `[ @enabled = ] is_enabled` 指定是否啟用 proxy。 *Is_enabled&lt*旗標**tinyint**，預設值是 1。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。  
   
-`[ @description = ] 'description'` Proxy 的描述。 描述**nvarchar(512)**，預設值是 NULL。 您可以利用這項描述來建立 Proxy 的文件，但並不供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 因此，這個引數是選擇性的。  
+`[ @description = ] 'description'` Proxy 的描述。 描述**nvarchar(512)** ，預設值是 NULL。 您可以利用這項描述來建立 Proxy 的文件，但並不供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 因此，這個引數是選擇性的。  
   
 `[ @credential_name = ] 'credential_name'` Proxy 認證的名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
   

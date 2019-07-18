@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094345"
 ---
 # <a name="sending-long-data"></a>傳送長資料
 定義 Dbms*長資料*為任何字元或二進位資料超過特定大小，例如 254 個字元。 它可能無法儲存在記憶體中，例如當項目所表示的長文字文件或點陣圖的長資料的整個項目。 因為這類資料無法儲存在單一緩衝區中，資料來源就會將它傳送至使用組件中驅動程式**SQLPutData**陳述式執行時。 參數的資料會在執行階段傳送稱為*資料在執行中參數*。  
@@ -43,6 +42,6 @@ ms.locfileid: "47616086"
   
 7.  呼叫**SQLParamData**以表示它已傳送所有參數的資料。 如果有任何資料在執行中參數的資料尚未傳送，驅動程式會傳回 SQL_NEED_DATA 和識別下一個參數; 的值應用程式會傳回至步驟 6。 如果資料已傳送的所有資料在執行中參數，則會執行陳述式。 **SQLParamData**傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，而且可以傳回任何傳回值或診斷所**SQLExecute**或是**SQLExecDirect**可以傳回。  
   
- 在後**SQLExecute**或是**SQLExecDirect**會傳回 SQL_NEED_DATA 且資料已完全傳送最後一個資料在執行中參數之前，陳述式中需要的資料狀態。 應用程式需要的資料狀態的陳述式時，可以只呼叫**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式，並傳回其先前的狀態。 如需詳細資訊，請參閱 <<c0> [ 附錄 b: ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 在後**SQLExecute**或是**SQLExecDirect**會傳回 SQL_NEED_DATA 且資料已完全傳送最後一個資料在執行中參數之前，陳述式中需要的資料狀態。 應用程式需要的資料狀態的陳述式時，可以只呼叫**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函式會傳回 SQLSTATE HY010 （函數順序錯誤）。 呼叫**SQLCancel**取消執行陳述式，並傳回其先前的狀態。 如需詳細資訊，請參閱[附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  如需在執行階段傳送資料的範例，請參閱[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)函式描述。

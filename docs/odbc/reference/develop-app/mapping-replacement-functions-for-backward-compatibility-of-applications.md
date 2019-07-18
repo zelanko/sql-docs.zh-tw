@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036396"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>應用程式回溯相容性的取代函式對應
-ODBC 3 *.x*應用程式使用 ODBC 3 透過 *.x*驅動程式管理員能針對 ODBC 2。*x*只要使用任何新功能的驅動程式。 同時複製功能和行為的變更，不過，會影響的方式，ODBC 3。*x*應用程式適用於 ODBC 2。*x*驅動程式。 使用時的 ODBC 2。*x*驅動程式，則驅動程式管理員會對應下列 ODBC 3。*x*函式，已取代一個或多個 ODBC 2。*x*函式，到對應的 ODBC 2。*x*函式。  
+ODBC *3.x*透過 ODBC 使用的應用程式*3.x*驅動程式管理員能針對 ODBC *2.x*只要使用任何新功能的驅動程式。 同時複製功能和行為的變更，不過，會影響的方式，ODBC *3.x*應用程式適用於 ODBC *2.x*驅動程式。 使用 ODBC 時*2.x*驅動程式，則驅動程式管理員會對應下列 ODBC *3.x*函式，已取代一個或多個 ODBC *2.x*函式，到對應的 ODBC *2.x*函式。  
   
-|ODBC 3。*x*函式|ODBC 2。*x*函式|  
+|ODBC *3.x*函式|ODBC *2.x*函式|  
 |-------------------------|-------------------------|  
 |**SQLAllocHandle**|**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
@@ -102,7 +101,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY091 （無效的描述項欄位識別碼）。 本節中的任何其他規則不套用。  
   
-2.  驅動程式管理員對應 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE SQL_DESC_COUNT、 與 SQL_DESC_NAME，或 SQL_DESC_NULLABLE，分別。 (ODBC 2 *.x*驅動程式必須僅支援 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，和 SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 與 SQL_DESC_NAME，以及 SQL_DESC_NULLABLE。)SQLColAttribute 的呼叫會對應至：  
+2.  驅動程式管理員對應 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE SQL_DESC_COUNT、 與 SQL_DESC_NAME，或 SQL_DESC_NULLABLE，分別。 (ODBC *2.x*驅動程式必須僅支援 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，和 SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 與 SQL_DESC_NAME，以及 SQL_DESC_NULLABLE。)SQLColAttribute 的呼叫會對應至：  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -219,7 +218,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  將會導致下列一連串步驟：  
   
-1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是 ODBC 2 中所定義的屬性。*x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 （無效的屬性/選項識別碼）。 在本節中的任何其他規則不套用。  
+1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是定義在 ODBC 中的一個屬性*2.x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 (無效的屬性 /選項識別項）。 在本節中的任何其他規則不套用。  
   
 2.  如果*屬性*等於 SQL_ATTR_AUTO_IPD 或 SQL_ATTR_METADATA_ID，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 （無效的屬性/選項識別碼）。  
   
@@ -234,7 +233,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      請注意， *Columnsize*並*StringLengthPtr*都會被忽略。  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- 當 ODBC 3。*x*應用程式使用 ODBC 2 *.x*驅動程式呼叫**SQLGetData**具有*ColumnNumber*等於 0，而 ODBC 3引數 *.x*驅動程式管理員將其對應至呼叫**SQLGetStmtOption**具有*選項*屬性設為 SQL_GET_BOOKMARK。  
+ 當 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式呼叫**SQLGetData**具有*ColumnNumber*引數等於 0，ODBC *3.x*驅動程式管理員將其對應至呼叫**SQLGetStmtOption**具有*選項*屬性設為 SQL_GET_BOOKMARK。  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  驅動程式管理員會對應至這**SQLGetStmtOption**。 下列呼叫來**SQLGetStmtAttr**:  
@@ -245,7 +244,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  將會導致下列一連串步驟：  
   
-1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是 ODBC 2 中所定義的屬性。*x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 （無效的屬性/選項識別碼）。 在本節中的任何其他規則不套用。  
+1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是定義在 ODBC 中的一個屬性*2.x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 (無效的屬性 /選項識別項）。 在本節中的任何其他規則不套用。  
   
 2.  如果*屬性*是下列其中之一：  
   
@@ -304,7 +303,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  將會導致下列一連串步驟：  
   
-1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是 ODBC 2 中所定義的屬性。*x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 （無效的屬性/選項識別碼）。 在本節中的任何其他規則不套用。  
+1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是定義在 ODBC 中的一個屬性*2.x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 (無效的屬性 /選項識別項）。 在本節中的任何其他規則不套用。  
   
 2.  如果*屬性*等於 SQL_ATTR_AUTO_IPD，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 （無效的屬性/選項識別碼）。  
   
@@ -319,7 +318,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
      何處*hdbc*， *fOption*，和*vParam*將會設定為值*ConnectionHandle*，*屬性*，並*ValuePtr*分別。 *StringLengthPtr*會被忽略。  
   
 > [!NOTE]  
->  能夠在連接層級上設定陳述式屬性已被取代。 陳述式屬性絕對不應該設定在連接層級上中，但會由 ODBC 3。*x*應用程式。  
+>  能夠在連接層級上設定陳述式屬性已被取代。 陳述式屬性絕對不會在連接層級上設定 ODBC 所*3.x*應用程式。  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  驅動程式管理員會對應至這**SQLSetStmtOption**。 下列呼叫來**SQLSetStmtAttr**:  
@@ -330,7 +329,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  將會導致下列一連串步驟：  
   
-1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是 ODBC 2 中所定義的屬性。*x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 （無效的屬性/選項識別碼）。 在本節中的任何其他規則不套用。  
+1.  如果*屬性*不是驅動程式定義的連接或陳述式屬性，並不是定義在 ODBC 中的一個屬性*2.x*，驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY092 (無效的屬性 /選項識別項）。 在本節中的任何其他規則不套用。  
   
 2.  如果*屬性*是下列其中之一：  
   
@@ -382,7 +381,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      何處*hstmt*， *fOption*，和*vParam*將會設定為值*StatementHandle*，*屬性*，並*ValuePtr*分別。 *StringLength*引數會被忽略。  
   
-     如果 ODBC 2。*x*驅動程式支援的字元字串、 驅動程式特有的陳述式選項，而 ODBC 3。*x*應用程式應該呼叫**SQLSetStmtOption**來設定這些選項。  
+     如果 ODBC *2.x*驅動程式支援的字元字串、 驅動程式特有的陳述式選項，ODBC *3.x*應用程式應該呼叫**SQLSetStmtOption**來設定這些選項。  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>對應處理參數陣列  
  當應用程式呼叫：  
@@ -399,23 +398,23 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
   
  驅動程式管理員更新版本會傳回指標給這個變數時應用程式會呼叫**SQLGetStmtAttr**擷取 SQL_ATTR_PARAMS_PROCESSED_PTR。 驅動程式管理員無法變更此內部變數，直到陳述式控制代碼傳回至已備妥或已配置的狀態。  
   
- ODBC 3。*x*應用程式可以呼叫**SQLGetStmtAttr**取得 SQL_ATTR_PARAMS_PROCESSED_PTR 的值，即使它已明確設定 SQL_DESC_ARRAY_SIZE 欄位在 APD 中。 這種情況可能發生，例如，如果應用程式會檢查目前的 「 資料列 」 參數的泛型常式正在處理時**SQLExecute**會傳回 SQL_NEED_DATA。 這個常式會叫用，不論是否 SQL_DESC_ARRAY_SIZE 為 1 或大於 1。 為了說明這一點，驅動程式管理員必須定義此內部變數是否已呼叫應用程式**SQLSetStmtAttr**設 APD 中的 SQL_DESC_ARRAY_SIZE 欄位。 如果尚未設定 SQL_DESC_ARRAY_SIZE，驅動程式管理員必須確定此變數包含之前從傳回的值 1 **SQLExecDirect**或是**SQLExecute**。  
+ ODBC *3.x*應用程式可以呼叫**SQLGetStmtAttr**取得 SQL_ATTR_PARAMS_PROCESSED_PTR 的值，即使它已明確設定 SQL_DESC_ARRAY_SIZE 欄位在 APD 中。 這種情況可能發生，例如，如果應用程式會檢查目前的 「 資料列 」 參數的泛型常式正在處理時**SQLExecute**會傳回 SQL_NEED_DATA。 這個常式會叫用，不論是否 SQL_DESC_ARRAY_SIZE 為 1 或大於 1。 為了說明這一點，驅動程式管理員必須定義此內部變數是否已呼叫應用程式**SQLSetStmtAttr**設 APD 中的 SQL_DESC_ARRAY_SIZE 欄位。 如果尚未設定 SQL_DESC_ARRAY_SIZE，驅動程式管理員必須確定此變數包含之前從傳回的值 1 **SQLExecDirect**或是**SQLExecute**。  
   
 ## <a name="error-handling"></a>錯誤處理  
- 在 ODBC 3。*x*，則呼叫**SQLFetch**或是**SQLFetchScroll**於其中填入在 IRD 和指定的診斷記錄的 SQL_DIAG_ROW_NUMBER 欄位 SQL_DESC_ARRAY_STATUS_PTR包含這個記錄相關的資料列集中的資料列數目。 使用這種情況，應用程式可以與相互關聯的錯誤訊息的給定資料列位置。  
+ 在 ODBC *3.x*，則呼叫**SQLFetch**或是**SQLFetchScroll**於其中填入在 IRD 和 SQL_DIAG_ROW_NUMBER 欄位的指定診斷 SQL_DESC_ARRAY_STATUS_PTR記錄包含這個記錄相關的資料列集中的資料列數目。 使用這種情況，應用程式可以與相互關聯的錯誤訊息的給定資料列位置。  
   
- ODBC 2。*x*驅動程式將無法提供這項功能。 不過，它會提供與 SQLSTATE 01S01 錯誤分界 （資料列中的錯誤）。 ODBC 3。*x*使用應用程式**SQLFetch**或是**SQLFetchScroll**同時會針對 ODBC 2。*x*驅動程式必須要瞭解這個情況。 也請注意，這類應用程式將無法呼叫**SQLGetDiagField**實際上還是取得 SQL_DIAG_ROW_NUMBER 欄位。 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式將能夠呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield* SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_ 的引數SQLSTATE。 ODBC 3 *.x*驅動程式管理員會使用 ODBC 2 時，維護的診斷資料結構。*x*驅動程式，但是 ODBC 2。*x*驅動程式會傳回只這四個欄位。  
+ ODBC *2.x*驅動程式將無法提供這項功能。 不過，它會提供與 SQLSTATE 01S01 錯誤分界 （資料列中的錯誤）。 ODBC *3.x*使用應用程式**SQLFetch**或**SQLFetchScroll**同時會針對 ODBC *2.x*需要留意的驅動程式這項事實。 也請注意，這類應用程式將無法呼叫**SQLGetDiagField**實際上還是取得 SQL_DIAG_ROW_NUMBER 欄位。 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式將能夠呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield*SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE，還是 SQL_DIAG_SQLSTATE 的引數。 ODBC *3.x*驅動程式管理員會使用 ODBC 時，會維護的診斷資料結構*2.x*驅動程式，但是 ODBC *2.x*驅動程式會傳回只這四個欄位。  
   
- 當 ODBC 2。*x*應用程式正在使用的 ODBC 2。*x*驅動程式，如果作業會導致多個錯誤，要傳回的驅動程式管理員 中，不同的錯誤可能會傳回 ODBC 3 *.x*比 ODBC 2 的驅動程式管理員。*x*驅動程式管理員。  
+ 當 ODBC *2.x*應用程式使用 ODBC *2.x*驅動程式，如果作業會導致多個錯誤，要傳回的驅動程式管理員 中，不同的錯誤可能會傳回 ODBC *3.x*比 ODBC 驅動程式管理員*2.x*驅動程式管理員。  
   
 ## <a name="mappings-for-bookmark-operations"></a>書籤作業的對應  
- ODBC 3 *.x*驅動程式管理員執行下列的對應時 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式會執行書籤的作業。  
+ ODBC *3.x*驅動程式管理員執行下列的對應時 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式會執行書籤的作業。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLBindCol**繫結至資料行 0 *fCType*等於 SQL_C_VARBOOKMARK，ODBC 3 *.x*驅動程式管理員會檢查是否*Columnsize*引數是小於 4 或大於 4，而且如果是的話，會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度）。 如果*Columnsize*引數等於 4，驅動程式管理員會呼叫**SQLBindCol**驅動程式，取代後*fCType* SQL_C_BOOKMARK 使用。  
+ 當 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式呼叫**SQLBindCol**繫結至資料行 0 *fCType*等於 SQL_C_VARBOOKMARK、 ODBC *3.x*驅動程式管理員會檢查以查看是否*Columnsize*引數是小於 4 或大於 4，而且如果是的話，會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度）。 如果*Columnsize*引數等於 4，驅動程式管理員會呼叫**SQLBindCol**驅動程式，取代後*fCType* SQL_C_BOOKMARK 使用。  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLColAttribute**具有*ColumnNumber*引數設定為 0，則驅動程式管理員會傳回*FieldIdentifier*值下表所列。  
+ 當 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式呼叫**SQLColAttribute**具有*ColumnNumber*引數設定為 0，驅動程式管理員會傳回*FieldIdentifier*下表中列出的值。  
   
 |*FieldIdentifier*|值|  
 |-----------------------|-----------|  
@@ -442,24 +441,24 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_TABLE_NAME|"" (空字串)|  
 |SQL_DESC_TYPE|SQL_BINARY|  
 |SQL_DESC_TYPE_NAME|"" (空字串)|  
-|SQL_DESC_UNNAMED|SQL_UNNAMED 時|  
+|SQL_DESC_UNNAMED|SQL_UNNAMED|  
 |SQL_DESC_UNSIGNED|SQL_FALSE|  
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLDescribeCol**具有*ColumnNumber*引數設定為 0，則驅動程式管理員會傳回下表所列的值。  
+ 當 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式呼叫**SQLDescribeCol**具有*ColumnNumber*引數設定為 0，驅動程式管理員會傳回下表所列的值。  
   
 |緩衝區|值|  
 |------------|-----------|  
 |ColumnName|"" (空字串)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式會進行下列呼叫來**SQLGetData**擷取書籤：  
+ 當 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式會進行下列呼叫來**SQLGetData**擷取書籤：  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -473,9 +472,9 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  其中*hstmt*並*pvParam*設定中的值為*StatementHandle*並*TargetValuePtr*分別。 書籤會傳回中所指向的緩衝區*pvParam* (*TargetValuePtr*) 引數。 緩衝區中的值所指向*StrLen_or_IndPtr*呼叫中的引數**SQLGetData**設為 4。  
   
- 此對應是必要的情況中的帳戶**SQLFetch**的呼叫之前已呼叫**SQLGetData**和 ODBC 2。*x*驅動程式不支援**SQLExtendedFetch**。 在此情況下， **SQLFetch**會傳遞到 ODBC 2。*x*驅動程式，不支援大小寫的書籤擷取所在。  
+ 此對應是必要的情況中的帳戶**SQLFetch**的呼叫之前已呼叫**SQLGetData**和 ODBC *2.x*驅動程式不支援**SQLExtendedFetch**。 在此情況下， **SQLFetch**會傳遞到 ODBC *2.x*驅動程式，不支援大小寫的書籤擷取所在。  
   
- **SQLGetData**中的 ODBC 2 無法多次呼叫。*x*驅動程式，以擷取因此，呼叫組件中的書籤**SQLGetData**具有*BufferLength*引數設定為小於 4 的值和*ColumnNumber*設為 0 的引數會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度）。 **SQLGetData**不過，可以呼叫多次，以擷取同一個書籤。  
+ **SQLGetData**不能在 ODBC 呼叫多次*2.x*驅動程式，以擷取因此，呼叫組件中的書籤**SQLGetData**具有*Columnsize*引數設定為小於 4 的值而*ColumnNumber*設為 0 的引數會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度）。 **SQLGetData**不過，可以呼叫多次，以擷取同一個書籤。  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLSetStmtAttr**設為 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARKS 屬性，驅動程式管理員將屬性設定為基礎的 ODBC 2 中的 SQL_UB_ON。*x*驅動程式。
+ 當 ODBC *3.x*應用程式使用 ODBC *2.x*驅動程式呼叫**SQLSetStmtAttr**設 SQL_ATTR_USE_BOOKMARKS 屬性 SQL_UB_VARIABLE，驅動程式Manager 會將屬性設定為基礎的 ODBC 中的 SQL_UB_ON *2.x*驅動程式。

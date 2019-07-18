@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a9ecac73840636e1ddf089f53ead61504767a61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029742"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "52808690"
 |**time**|**datetime**|插入記錄的時間。|  
 |**發行者**|**sysname**|與引發這項警示之代理程式相關聯的發行者名稱。|  
 |**publisher_db**|**sysname**|與引發這項警示之代理程式相關聯的發行者資料庫。|  
-|**發行集**|**sysname**|與引發這項警示之代理程式相關聯的發行集。|  
+|**publication**|**sysname**|與引發這項警示之代理程式相關聯的發行集。|  
 |**publication_type**|**int**|發行集類型：<br /><br /> **0** = 快照集。<br /><br /> **1** = 交易式。<br /><br /> **2** = 合併式。|  
 |**訂閱者**|**sysname**|與引發這項警示之代理程式相關聯的訂閱者名稱。|  
 |**subscriber_db**|**sysname**|與引發這項警示之代理程式相關聯的訂閱者資料庫名稱。|  

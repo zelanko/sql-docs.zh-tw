@@ -1,5 +1,5 @@
 ---
-title: sp_invalidate_textptr (Transact-SQL) | Microsoft Docs
+title: sp_invalidate_textptr & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113187"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @TextPtrValue = ] textptr_value` 在 資料列文字指標是即將失效。 *textptr_value*已**varbinary (** 16 **)**，預設值是 NULL。 如果是 NULL， **sp_invalidate_textptr**讓交易中所有的資料列文字指標失效。  
+`[ @TextPtrValue = ] textptr_value` 在 資料列文字指標是即將失效。 *textptr_value*已**varbinary (** 16 **)** ，預設值是 NULL。 如果是 NULL， **sp_invalidate_textptr**讓交易中所有的資料列文字指標失效。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

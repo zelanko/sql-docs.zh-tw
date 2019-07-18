@@ -13,18 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871208"
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定
   您可以使用此對話方塊，來設定和修改記錄傳送組態中，次要資料庫的屬性。  
   
  如需記錄傳送概念的說明，請參閱 [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **次要伺服器執行個體**  
  顯示目前在記錄傳送組態中設定為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52816400"
  讓 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用主要資料庫的現有備份，以初始化次要資料庫。 在 **[備份檔案]** 方塊中輸入該備份的位置。 如果您在 [次要資料庫] 方塊中輸入新的資料庫名稱，進行還原作業時就會建立此資料庫。  
   
  **[備份檔案]**  
- 如果您選擇 [是，將主要資料庫的現有備份還原到次要資料庫] 選項，請輸入要用來初始化次要資料庫之完整資料庫備份的路徑與檔案名稱。  
+ 如果您選擇 [是，將主要資料庫的現有備份還原到次要資料庫]  選項，請輸入要用來初始化次要資料庫之完整資料庫備份的路徑與檔案名稱。  
   
  **還原選項**  
  請參閱本主題稍早有關此按鈕的描述。  
@@ -74,7 +74,7 @@ ms.locfileid: "52816400"
  顯示用以將交易記錄備份檔案，從主要伺服器複製至次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業名稱。 第一次建立此作業時，您可以在方塊中輸入新的名稱。  
   
  **[排程]**  
- 顯示用來從主要伺服器複製交易記錄備份至次要伺服器的 SQL Server Agent 複製作業的目前排程。 按一下 **[排程...]**，即可修改此排程。  
+ 顯示用來從主要伺服器複製交易記錄備份至次要伺服器的 SQL Server Agent 複製作業的目前排程。 按一下 **[排程...]** ，即可修改此排程。  
   
  **[排程...]**  
  修改用來從主要伺服器複製交易記錄備份至次要伺服器的 SQL Server Agent 作業的參數。  
@@ -95,7 +95,7 @@ ms.locfileid: "52816400"
  讓次要資料庫維持 STANDBY 模式。 此模式僅允許針對資料庫執行唯讀作業。  
   
 > [!IMPORTANT]  
->  例如，如果將現有的次要資料庫的復原模式從 [不復原模式] 變更為 [待命模式]，則該變更只有在下次記錄備份還原到資料庫之後才會生效。  
+>  例如，如果將現有的次要資料庫的復原模式從 [不復原模式]  變更為 [待命模式]  ，則該變更只有在下次記錄備份還原到資料庫之後才會生效。  
   
  **延遲還原備份至少**  
  選擇還原交易記錄備份至次要資料庫的延遲 (如果有的話)。  
@@ -107,7 +107,7 @@ ms.locfileid: "52816400"
  顯示用來還原交易記錄備份至次要資料庫的 SQL Server Agent 作業的名稱。 第一次建立此作業時，您可以在方塊中輸入新的名稱。  
   
  **[排程]**  
- 顯示用來還原交易記錄備份至次要資料庫的 SQL Server Agent 作業的目前排程。 按一下 **[排程...]**，即可修改此選項。  
+ 顯示用來還原交易記錄備份至次要資料庫的 SQL Server Agent 作業的目前排程。 按一下 **[排程...]** ，即可修改此選項。  
   
  **[排程...]**  
  修改與 SQL Server Agent 還原作業相關的參數。  

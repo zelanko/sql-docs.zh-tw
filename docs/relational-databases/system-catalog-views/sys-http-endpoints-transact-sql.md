@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122726"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

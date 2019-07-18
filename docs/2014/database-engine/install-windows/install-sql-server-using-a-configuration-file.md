@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775281"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用組態檔安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可供您根據系統預設值與執行階段輸入，產生組態檔。 您可以使用相同的設定，於整個企業中利用組態檔部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您也可以透過建立啟動 Setup.exe 的批次檔，在企業中將手動安裝標準化。  
@@ -77,17 +77,17 @@ FEATURES=SQL,Tools
   
 1.  若要在同一部電腦上準備一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並進行設定。  
   
-    -   從安裝中心的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，並擷取備妥的映像組態檔。  
+    -   從安裝中心的 [進階]  頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，並擷取備妥的映像組態檔。  
   
     -   使用相同的準備映像組態檔當做範本，以便準備其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-    -   從 [安裝中心] 的 [進階] 頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，在電腦上設定備妥的執行個體。  
+    -   從 [安裝中心] 的 [進階]  頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，在電腦上設定備妥的執行個體。  
   
 2.  若要使用 Windows SysPrep 工具來準備作業系統的映像，包括未設定的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-    -   從 [安裝中心] 的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，並擷取備妥的映像組態檔。  
+    -   從 [安裝中心] 的 [進階] 頁面執行 [準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，並擷取備妥的映像組態檔。  
   
-    -   從 [安裝中心] 的 [進階] 頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]，但在擷取完成的組態檔之後，在 [準備開始完成] 頁面上取消它。  
+    -   從 [安裝中心] 的 [進階]  頁面執行 [完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像]  ，但在擷取完成的組態檔之後，在 [準備開始完成]  頁面上取消它。  
   
     -   完成映像組態檔可以與 Windows 映像儲存在一起，以便自動化已備妥執行個體的組態設定作業。  
   

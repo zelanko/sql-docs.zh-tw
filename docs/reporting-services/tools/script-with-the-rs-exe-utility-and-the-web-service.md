@@ -2,7 +2,7 @@
 title: 利用 rs.exe 公用程式與 Web 服務編寫指令碼 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028697"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571421"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>利用 rs.exe 公用程式與 Web 服務編寫指令碼
   開發人員與報表伺服器管理員可以在報表伺服器上，透過使用 **rs** 公用程式 (RS.exe) 來執行作業。 利用這個公用程式，您可以使用以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫的指令碼，透過程式設計方式管理報表伺服器。  

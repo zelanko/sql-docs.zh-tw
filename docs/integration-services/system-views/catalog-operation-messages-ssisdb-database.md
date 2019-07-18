@@ -14,14 +14,18 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6dd9ed869034959484427c063e101fe12d8f3d39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a45ce170d7965ca8358dd6a442a25a67190651cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65714383"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中之作業期間所記錄的訊息。  

@@ -2,7 +2,7 @@
 title: 發行資料來源與報表 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dc1e2462b33bbd85dc32fa98ed68fcf514788ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579964"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
   發行報表前，您應該預覽報表以查看報表執行時的外觀。 您可以持續精簡設計，直到您滿意其結果為止。  
   
- 設計並測試報表之後，您可能想要與其他人共用該報表。 若要共用報表，您必須將其發行或 *「部署」*(Deploy) 至報表伺服器或 SharePoint 網站。 報表經過發行之後，具備報表伺服器或 SharePoint 網站之權限的使用者都可以執行您的報表。 此外，具備報表伺服器之管理員權限的使用者可以訂閱報表，讓報表可以定期更新並傳送給使用者。  
+ 設計並測試報表之後，您可能想要與其他人共用該報表。 若要共用報表，您必須將其發行或 *「部署」* (Deploy) 至報表伺服器或 SharePoint 網站。 報表經過發行之後，具備報表伺服器或 SharePoint 網站之權限的使用者都可以執行您的報表。 此外，具備報表伺服器之管理員權限的使用者可以訂閱報表，讓報表可以定期更新並傳送給使用者。  
   
  如果您使用共用資料來源來建立報表，您需要將報表發行到與該報表相同的位置。 共用資料來源跟報表一樣，可以在報表伺服器上個別管理。  
   

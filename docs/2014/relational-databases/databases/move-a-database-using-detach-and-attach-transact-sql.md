@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136098"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917081"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
   此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](move-user-databases.md)。  
@@ -60,12 +60,12 @@ ms.locfileid: "54136098"
     GO  
     ```  
   
-2.  使用您選擇的方法，將資料庫檔案 （AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log） 複製到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf 分別。  
+2.  使用您選擇的方法，將資料庫檔案 (AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log) 分別複製到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf。  
   
     > [!IMPORTANT]  
     >  針對實際執行的資料庫，將資料庫與交易記錄放在不同的磁碟上。  
   
-     若要經由網路將檔案複製到遠端電腦的磁碟，請使用遠端位置的通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_。 如同將檔案寫入本機硬碟一樣，您必須將在遠端磁碟讀取或寫入檔案所需的適當權限，授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所用的使用者帳戶。  
+     若要經由網路將檔案複製到遠端電腦的磁碟，請使用遠端位置的通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_。 如同將檔案寫入本機硬碟一樣，您必須將在遠端磁碟讀取或寫入檔案所需的適當權限，授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所用的使用者帳戶。  
   
 3.  若要附加已移動的資料庫和記錄檔 (選擇性)，請執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "54136098"
     GO  
     ```  
   
-     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的資料庫無法立即在 [物件總管] 中可見。 若要檢視資料庫，請在 [物件總管] 中按一下 **[檢視]** ，然後按一下 **[重新整理]**。 在 [物件總管] 中展開 **[資料庫]** 節點時，剛才附加的資料庫就會出現在資料庫清單中。  
+     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的資料庫無法立即在 [物件總管] 中可見。 若要檢視資料庫，請在 [物件總管] 中按一下 **[檢視]** ，然後按一下 **[重新整理]** 。 在 [物件總管] 中展開 **[資料庫]** 節點時，剛才附加的資料庫就會出現在資料庫清單中。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  

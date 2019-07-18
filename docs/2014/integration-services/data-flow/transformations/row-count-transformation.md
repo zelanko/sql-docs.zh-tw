@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386786"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900208"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
   「資料列計數」轉換會在資料列通過資料流程時計算其數目，並將最後計數儲存到變數中。  

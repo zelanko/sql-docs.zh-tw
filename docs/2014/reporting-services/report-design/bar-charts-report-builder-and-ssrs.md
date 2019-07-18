@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6a6e14bbabdab808ed81011ad5877ba180055f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106484"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>橫條圖 (報表產生器及 SSRS)
   橫條圖是以數條水平橫條來顯示數列。 一般橫條圖與直條圖相當有關聯，後者會將數列顯示為數條垂直線，而範圍橫條圖則會將數列顯示為數條水平橫條，其中包含各種起點與終點。  
@@ -68,7 +67,7 @@ ms.locfileid: "56291877"
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教學課程：將橫條圖加入至報表 （報表產生器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [教學課程：將橫條圖加入至報表](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [教學課程：將橫條圖新增至報表 (報表產生器)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教學課程：將橫條圖新增至報表](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

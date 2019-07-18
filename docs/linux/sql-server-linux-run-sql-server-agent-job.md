@@ -1,21 +1,19 @@
 ---
-title: 建立並在 Linux 上的 SQL Server 執行作業 |Microsoft Docs
+title: 建立並執行適用於 SQL Server 的作業，在 Linux 上
 description: 本教學課程會示範如何在 Linux 上執行 SQL Server Agent 作業。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fa24fc0f36ab007ea8b16fadf9a9d06dc9c48314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065147"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
 
@@ -191,7 +189,7 @@ SQL Server 作業用來定期執行您的 SQL Server 資料庫中的 相同的�
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已了解如何：
+在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
 > * 在 Linux 上安裝 SQL Server 代理程式

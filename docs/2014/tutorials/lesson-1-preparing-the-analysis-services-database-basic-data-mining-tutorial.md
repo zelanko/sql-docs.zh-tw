@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185760"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>第 1 課：準備 Analysis Services 資料庫 （基本資料採礦教學課程）
   您是新的員工[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]人員負責設計商業智慧應用程式中的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 借重您[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料採礦經驗，探索有趣且可採取動作的資訊，關於已購買自行車的人。 然後，還希望您預測未來最有可能購買自行車的潛在客戶。  

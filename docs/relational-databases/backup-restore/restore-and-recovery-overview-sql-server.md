@@ -1,7 +1,7 @@
 ---
 title: 還原和復原概觀 (SQL Server) | Microsoft 文件
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,27 +21,27 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65461820"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   若要從失敗復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，資料庫管理員必須依邏輯正確和有意義的還原順序來還原一組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原及復原，可從一整個資料庫、單一資料檔或資料頁面的備份還原資料，如下所示：  
   
--   資料庫 ( *「完整資料庫還原」*(Complete database restore))  
+-   資料庫 ( *「完整資料庫還原」* (Complete database restore))  
   
      將會還原並復原整個資料庫，且在還原與復原作業期間，資料庫會離線。  
   
--   資料檔 ( *「檔案還原」*)  
+-   資料檔 ( *「檔案還原」* )  
   
      還原與復原一個資料檔或一組檔案。 在檔案還原過程中，包含該檔案的檔案群組會在還原的持續時間內自動離線。 任何存取離線檔案群組的嘗試都會產生錯誤。  
   
--   資料頁 ( *「分頁還原」*(Page restore))  
+-   資料頁 ( *「分頁還原」* (Page restore))  
   
      在完整復原模式或大量記錄復原模式下，您可以還原各個資料庫。 不論檔案群組的數目為何，在任何資料庫上都可以執行分頁還原。  
   
@@ -91,9 +91,9 @@ ms.locfileid: "54242039"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |資料復原|完整復原 (如果有記錄可以使用)。|有損失部分資料的風險。|自上次完整或差異備份之後的任何資料，都會遺失。|  
 |時間點還原|記錄備份涵蓋的任何時間。|如果記錄備份含有大量記錄變更，則不允許。|不支援。|  
-|File restore **\***|完整支援。|有時。**\*\***|僅適用於唯讀的次要檔案。|  
-|Page restore **\***|完整支援。|有時。**\*\***|無。|  
-|分次 (檔案群組-等級) 還原 **\***|完整支援。|有時。**\*\***|僅適用於唯讀的次要檔案。|  
+|File restore **\***|完整支援。|有時。 **\*\***|僅適用於唯讀的次要檔案。|  
+|Page restore **\***|完整支援。|有時。 **\*\***|無。|  
+|分次 (檔案群組-等級) 還原 **\***|完整支援。|有時。 **\*\***|僅適用於唯讀的次要檔案。|  
   
  **\*** 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -155,7 +155,22 @@ ms.locfileid: "54242039"
 -   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx) \(英文\)  
   
 -   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx) \(英文\)  
-  
+
+## <a name="adr"></a> 加速資料庫復原
+
+SQL Server 2019 Preview CTP 2.3 引進適用於內部部署 SQL Server 的[加速資料庫復原](/azure/sql-database/sql-database-accelerated-database-recovery/)。 加速資料庫復原藉由重新設計 SQL Server 的資料庫引擎復原處理序來大幅提升資料庫可用性，尤其是針對長時間執行的交易。 [資料庫復原](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)是一項 SQL Server 為了讓每個資料庫都能以交易一致 (或正常) 狀態啟動所使用的處理序。 啟用加速資料庫復原的資料庫，其在容錯移轉或其他非正常關機之後完成復原的速度會大幅加快。 
+
+您可以可以使用下列語法，為 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 或更新版本上的每個資料庫啟用加速資料庫復原：
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> 無須在 Azure SQL DB 中使用此語法也能利用這項功能，因為它預設為開啟。
+
+若您有可能進行大型交易的重要資料庫，請在預覽期間實驗這項功能。 請將意見反應提供給 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]小組](<https://aka.ms/sqlfeedback>)。
+
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  
   

@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527590"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400051"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527590"
   
 **SqlPackage.exe** 命令列可讓您指定這些動作以及動作特有的參數和屬性。  
 
-**[下載最新版本](sqlpackage-download.md)**。 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
+**[下載最新版本](sqlpackage-download.md)** 。 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
   
 ## <a name="command-line-syntax"></a>命令列語法
 
@@ -602,4 +602,10 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在無法修改的物件中發現差異時 (例如檔案的檔案大小或檔案路徑不同) 是否應該產生警告。|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否驗證定序相容性。
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定是否應該在發行前執行檢查，以便在出現阻止發行成功的問題時停止發行動作。 例如，如果目標資料庫的外部索引鍵不存在資料庫專案中，因而在您發行時造成錯誤，則發行動作可能會停止。|
-  
+
+## <a name="exit-codes"></a>結束代碼
+
+會傳回下列結束代碼的命令：
+
+- 0 = 成功
+- 非零 = 失敗

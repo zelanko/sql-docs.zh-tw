@@ -1,21 +1,19 @@
 ---
-title: 連線程式庫和架構 |Microsoft Docs
+title: 連線程式庫和架構
 description: 列出用戶端應用程式可以使用從各種不同的語言來連線到內部部署上執行的 Microsoft SQL Server，或在雲端、 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲中的連線能力驅動程式。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: cbbd10ce9bc41ef7149f319077030e982ae6fcc0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dd2a70cefd0e094b53656dde99af81afca2894c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077464"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>連線程式庫和 Microsoft SQL server 的架構
 

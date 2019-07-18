@@ -16,14 +16,18 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab05ec317c7c2b653dd965f1420e4097f84e3a51
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727815"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
   
 > [!IMPORTANT]  

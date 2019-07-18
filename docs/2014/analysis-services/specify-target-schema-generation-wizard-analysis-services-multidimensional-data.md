@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.generationtarget.f1
@@ -13,17 +12,17 @@ ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d27db6fab4536a5f703a1f6b7ba7cc6b5405f817
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068246"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目標 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[指定目標]** 頁面，來識別在其中建立關聯式結構描述的資料來源檢視。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **建立新的資料來源檢視**  
  選取即可建立新的資料來源檢視，以包含精靈所產生的關聯式結構描述。  
   
@@ -31,13 +30,13 @@ ms.locfileid: "48201448"
  鍵入新的資料來源檢視名稱。  
   
 > [!NOTE]  
->  唯有選取 [建立新的資料來源檢視] 時，才會啟用此選項。  
+>  唯有選取 [建立新的資料來源檢視]  時，才會啟用此選項。  
   
  **資料來源**  
  選取要與新的資料來源檢視相關聯的資料來源。  
   
 > [!NOTE]  
->  唯有選取 [建立新的資料來源檢視] 時，才會啟用此選項。  
+>  唯有選取 [建立新的資料來源檢視]  時，才會啟用此選項。  
   
  **新增**  
  按一下即可顯示資料來源精靈，並定義要與新的資料來源檢視相關聯的新資料來源。  

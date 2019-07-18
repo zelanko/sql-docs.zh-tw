@@ -2,7 +2,7 @@
 title: 在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4b543c79ade78fe62b5484926d20e876c251b9ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816991"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579414"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性
   SharePoint 提供內建安全性功能，可用來存取 SharePoint 網站和文件庫中的報表伺服器項目。 如果您已經指定網站和清單權限給使用者，則在設定 SharePoint 和報表伺服器之間的整合設定之後，那些相同的使用者就能立即存取報表伺服器項目和作業。  
@@ -35,7 +35,7 @@ ms.locfileid: "47816991"
   
  排程、訂閱和報表記錄都不是安全性實體項目。 您可以在網站或程式庫上設定權限，決定使用者是否可以建立或使用排程、訂閱和報表記錄，但無法直接保護這些項目的安全。  
   
- 若要保護個別項目的安全，請在文件庫中選取該項目，按一下向下箭號，然後選取 **[管理權限]**。 在 **[動作]** 功能表上，選取 **[編輯權限]**。  
+ 若要保護個別項目的安全，請在文件庫中選取該項目，按一下向下箭號，然後選取 **[管理權限]** 。 在 **[動作]** 功能表上，選取 **[編輯權限]** 。  
   
 ## <a name="using-built-in-groups-and-permission-levels-to-access-report-server-items"></a>使用內建群組和權限等級存取報表伺服器項目  
  當您使用權限繼承和標準 SharePoint 群組時，可以在設定報表伺服器和 SharePoint 執行個體上的整合設定之後，立即存取大部分的報表伺服器作業。  
@@ -53,7 +53,7 @@ ms.locfileid: "47816991"
 ## <a name="see-also"></a>另請參閱  
  [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [設定 SharePoint Web 應用程式中報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

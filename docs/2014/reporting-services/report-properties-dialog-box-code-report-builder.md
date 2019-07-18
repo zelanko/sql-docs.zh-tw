@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5d2460e4a7aca8c413858df00c4d6c4d08859e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104452"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>報表屬性對話方塊、程式碼 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[程式碼]** ，即可定義報表內之運算式要使用的自訂程式碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **自訂程式碼**  
  輸入報表內要使用的方法。 程式碼必須以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]撰寫。  
   

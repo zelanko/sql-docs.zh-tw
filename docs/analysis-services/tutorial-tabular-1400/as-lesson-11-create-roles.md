@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6466eca2be66a20dfcab23f2097b71a2d0fc1cec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148942"
 ---
 # <a name="create-roles"></a>建立角色
 
@@ -36,7 +36,7 @@ ms.locfileid: "57685455"
   
 由於組織中的 Windows 使用者和群組帳戶是唯一的，因此您可以將帳戶從特定組織加入至成員。 不過，針對此教學課程，您也可以將成員留空。 您稍後在第 12 課測試每個角色的效果：在 Excel 中進行分析。  
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -52,11 +52,11 @@ ms.locfileid: "57685455"
   
 3.  按一下新角色，然後在**名稱**資料行中，重新命名角色**銷售經理**。  
   
-4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。 
+4.  按一下 [權限]  資料行中的下拉式清單，然後選取 [讀取]  權限。 
 
     ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
-5.  選擇性:按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+5.  選擇性：按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組]  對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>若要建立 Sales Analyst US 使用者角色  
   
@@ -75,17 +75,17 @@ ms.locfileid: "57685455"
     資料列篩選公式必須解析布林 (TRUE/FALSE) 值。 使用此公式，就指定的資料列的 Country Region Code 值為"US"會顯示給使用者。  
     ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
-6.  選擇性:按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+6.  選擇性：按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組]  對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
 #### <a name="to-create-an-administrator-user-role"></a>若要建立的系統管理員使用者角色  
   
-1.  按一下 **[新增]**。  
+1.  按一下 **[新增]** 。  
   
 2.  重新命名角色，才能**系統管理員**。  
   
 3.  授與此角色**系統管理員**權限。  
   
-4.  選擇性:按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。 
+4.  選擇性：按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組]  對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。 
   
   
 ## <a name="whats-next"></a>下一步

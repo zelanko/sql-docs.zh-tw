@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - rendering extensions [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5efb71a33e1b840eecd4503f47e64d3d661c0101
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 03deb7c818de8d875f69b585ae6015fc178e707d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62986757"
 ---
 # <a name="implementing-a-rendering-extension"></a>實作轉譯延伸模組
   轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 SQL Server Reporting Services 包含六個轉譯延伸模組：HTML、 Excel、 Word、 CSV 或文字、 XML、 影像和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  

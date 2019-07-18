@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f13332d63fb592238f21b744f9e6c5833659980
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba14712d80e970c9abb995ddbf6d172951c3d414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105097"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

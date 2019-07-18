@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
@@ -13,24 +12,24 @@ ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a16319b01c6555aa3bf299da201d9662cd59f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088365"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>導出成員表單編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[計算]** 索引標籤上的 **[導出成表單編輯器]** 窗格，即可建立或修改導出成員。  
   
  **請注意** 這個窗格只會在表單檢視中顯示。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  鍵入導出成員的名稱。  
   
  **父屬性**  
- 展開以檢視 [父階層]、[父成員] 和 [變更] 選項。  
+ 展開以檢視 [父階層]  、[父成員]  和 [變更]  選項。  
   
  **父階層**  
  在選取的 Cube 中，選取要包含導出成員的維度和階層。 選取 MEASURES 即可定義導出量值。  
@@ -41,7 +40,7 @@ ms.locfileid: "48049108"
  **請注意** 如果 **[父階層]** 指定 MEASURES 以外的階層，才可以使用此選項。  
   
  **變更**  
- 選取即可顯示 [選取父成員] 對話方塊，然後選擇 [父成員] 的成員。 如需 [選取父成員] 對話方塊的詳細資訊，請參閱[選取父成員對話方塊 &#40;Analysis Services - 多維度資料&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)。  
+ 選取即可顯示 [選取父成員]  對話方塊，然後選擇 [父成員]  的成員。 如需 [選取父成員]  對話方塊的詳細資訊，請參閱[選取父成員對話方塊 &#40;Analysis Services - 多維度資料&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **運算式**  
  展開以檢視或編輯導出成員的多維度運算式 (MDX) 運算式。  
@@ -52,7 +51,7 @@ ms.locfileid: "48049108"
 >  建議將此運算式評估為字串或數值。  
   
  **其他屬性**  
- 展開以檢視 [格式字串]、[可見]、[非空白行為]、[色彩運算式] 和 [字型運算式] 選項。  
+ 展開以檢視 [格式字串]  、[可見]  、[非空白行為]  、[色彩運算式]  和 [字型運算式]  選項。  
   
  **格式字串**  
  鍵入用來將導出成員所傳回值格式化的 MDX 格式字串，或是選取預先定義的格式字串。  
@@ -60,7 +59,7 @@ ms.locfileid: "48049108"
  如需 MDX 格式字串的詳細資訊，請參閱 [FORMAT_STRING 內容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)。  
   
  **Visible**  
- 選取 [True] 即可讓用戶端應用程式看見導出成員。  
+ 選取 [True]  即可讓用戶端應用程式看見導出成員。  
   
  **非空白行為**  
  為導出成員選取用來解析 MDX 中之 NON EMPTY 查詢的量值名稱。 如果 **[非空白行為]** 屬性為空白，就必須重複評估導出成員來決定成員是否為空白。 如果 **[非空白行為]** 屬性包含量值的名稱，且指定的量值是空白的，就會將導出成員視為空白。  
@@ -69,24 +68,24 @@ ms.locfileid: "48049108"
 >  此屬性已被取代。 請勿設定。 請參閱[SQL Server 2014 中已被取代 Analysis Services 功能](deprecated-analysis-services-features-in-sql-server-2014.md)如需詳細資訊。  
   
  **色彩運算式**  
- 展開以檢視 [前景色彩] 和 [背景色彩] 選項。  
+ 展開以檢視 [前景色彩]  和 [背景色彩]  選項。  
   
  **前景色彩**  
  鍵入會提供導出成員之前景色彩的 MDX 運算式。  
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- 按一下色彩選擇按鈕即可顯示 [色彩] 對話方塊，並將指定色彩的 RGB (紅-綠-藍) 值插入 MDX 運算式。 如需 RGB 值的詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。  
+ 按一下色彩選擇按鈕即可顯示 [色彩]  對話方塊，並將指定色彩的 RGB (紅-綠-藍) 值插入 MDX 運算式。 如需 RGB 值的詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。  
   
  **背景色彩**  
  鍵入會提供導出成員之背景色彩的 MDX 運算式。  
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- 按一下色彩選擇按鈕即可顯示 [色彩] 對話方塊，並將指定色彩的 RGB (紅-綠-藍) 值插入 MDX 運算式。 如需 RGB 值的詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。  
+ 按一下色彩選擇按鈕即可顯示 [色彩]  對話方塊，並將指定色彩的 RGB (紅-綠-藍) 值插入 MDX 運算式。 如需 RGB 值的詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。  
   
  **字型運算式**  
- 展開以檢視 [字型名稱]、[字型大小] 和 [字型旗標] 選項。  
+ 展開以檢視 [字型名稱]  、[字型大小]  和 [字型旗標]  選項。  
   
  **字型名稱**  
  鍵入會提供用於導出成員之字型名稱的 MDX 運算式。  

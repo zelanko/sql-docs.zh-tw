@@ -15,15 +15,15 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41cdf947d16cc5dc2366ae27c9008fe4d53c158f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 1a60cc8071184151ba869e90f4de4faf63bd33d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65980515"
 ---
 # <a name="operator-precedence-transact-sql"></a>運算子優先順序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

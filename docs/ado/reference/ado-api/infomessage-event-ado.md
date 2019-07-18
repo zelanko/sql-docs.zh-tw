@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 516e6a95ba98f1b8d66ddf9f417460ef2a6b7dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932337"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
 **InfoMessage**期間發生警告時，會呼叫事件**ConnectionEvent**作業。  

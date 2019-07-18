@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912595"
 ---
 # <a name="mssqlserver8680"></a>MSSQLSERVER_8680
     
@@ -30,7 +30,7 @@ ms.locfileid: "48066798"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|REMOTE_ERR|  
-|訊息文字|內部查詢處理器錯誤: 查詢處理器在處理遠端查詢階段時發現意外的錯誤。|  
+|訊息文字|內部查詢處理器錯誤:查詢處理器在處理遠端查詢階段時發現意外的錯誤。|  
   
 ## <a name="explanation"></a>說明  
  內部查詢處理錯誤。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb1a04f0-111b-412e-b2fb-090b62e74d59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c6ffe2c197d8e46688326086aa25e934523c326
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a58b1d328bb658c714e4f98ffc4243ca4c7eb13a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915850"
 ---
 # <a name="not-null-limitations"></a>NOT NULL 限制
 不支援在 CREATE TABLE 陳述式中的 NOT NULL 條件約束。

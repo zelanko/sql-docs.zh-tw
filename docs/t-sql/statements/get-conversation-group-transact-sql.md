@@ -25,12 +25,12 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 997334b76a2f07d5e9c9b7a06cc5499838251e7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503436"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,7 @@ ms.locfileid: "47665077"
 [ ; ]  
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ] queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -80,7 +78,7 @@ ms.locfileid: "47665077"
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  如果 GET CONVERSATION GROUP 陳述式不是批次或預存程序中的第一個陳述式，就必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元 (也就是分號 (**;**)) 來結束前一個陳述式。  
+>  如果 GET CONVERSATION GROUP 陳述式不是批次或預存程序中的第一個陳述式，就必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元 (也就是分號 ( **;** )) 來結束前一個陳述式。  
   
  如果 GET CONVERSATION GROUP 陳述式中指定的佇列無法使用，陳述式便會發生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤而失敗。  
   
@@ -98,7 +96,7 @@ ms.locfileid: "47665077"
   
  在使用者自訂函數中，GET CONVERSATION GROUP 無效。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要從佇列取得交談群組識別碼，目前使用者必須有佇列的 RECEIVE 權限。  
   
 ## <a name="examples"></a>範例  

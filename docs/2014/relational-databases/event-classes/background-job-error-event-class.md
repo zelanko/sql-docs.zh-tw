@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b95db663ea56f8dd43ed1091169f8117292033c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012336"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件類別
   當背景作業異常中止時，就會發生 **Background Job Error** 事件類別。 這種狀況可能需要系統管理員注意。  

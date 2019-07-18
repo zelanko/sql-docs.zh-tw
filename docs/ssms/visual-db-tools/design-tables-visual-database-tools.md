@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: b120156f0bfc7a69112697869e2efbbbd83af63c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267853"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690368"
 ---
 # <a name="create-and-update-database-tables"></a>建立及更新資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52267853"
   
 ## <a name="create-a-table"></a>建立資料表  
   
-1. 以滑鼠右鍵按一下資料庫中的 [資料表] 節點，然後選取 [新增] > [資料表]：  
+1. 以滑鼠右鍵按一下資料庫中的 [資料表]  節點，然後選取 [新增]   > [資料表]  ：  
   
     ![新增資料表](../media/design-tables/new-table.png)
   
@@ -44,7 +44,7 @@ ms.locfileid: "52267853"
   
 ## <a name="update-a-table"></a>更新資料表  
   
-1. 以滑鼠右鍵按一下資料庫中，[資料表] 節點下的資料表，然後選取 [設計]：  
+1. 以滑鼠右鍵按一下資料庫中，[資料表]  節點下的資料表，然後選取 [設計]  ：  
   
    ![更新資料表](../media/design-tables/update-table.png)
 

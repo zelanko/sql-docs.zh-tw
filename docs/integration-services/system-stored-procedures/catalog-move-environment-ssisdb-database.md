@@ -11,14 +11,18 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa3db05644d582574bad2fd04bdca55b8a9c174d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04ced3ce325755f465aaf203f08ed08e38d99f62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716156"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   將環境從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的某個資料夾移動到另一個資料夾。  

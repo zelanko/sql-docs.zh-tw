@@ -1,5 +1,5 @@
 ---
-title: 課程 1：SQL Server Management Studio 基本導覽 | Microsoft Docs
+title: 第 1 課：SQL Server Management Studio 中的基本導覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143628"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151516"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>第 1 課：SQL Server Management Studio 中的基本導覽
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一個功能強大且靈活的工具。 不過，Microsoft Visual Studio 初學者在尋找存取正確功能的最快方法時，會有困難。 這個課程說明各個視窗如何協同運作來提供一個設計介面，使您的工作更容易進行。 在這個課程結束之後，您將知道如何清除不必要的視窗，如何快速呼叫含有所需資訊的視窗，以及如何設定預設介面來支援您最常執行的工作。  

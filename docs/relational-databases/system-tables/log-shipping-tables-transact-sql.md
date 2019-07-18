@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7c52b665dcf8ec7c7a945a4e75f3b44564ddee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095746"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>記錄傳送資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

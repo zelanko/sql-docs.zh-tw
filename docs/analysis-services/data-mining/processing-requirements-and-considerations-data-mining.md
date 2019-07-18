@@ -1,5 +1,5 @@
 ---
-title: 處理需求和考量 （資料採礦） |Microsoft 文件
+title: 處理需求和考量 （資料採礦） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182465"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>處理需求和考量 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "34016145"
   
  當您處理模型時，模型並不會從資料來源重新讀取資料，而是從採礦結構取得資料摘要。 使用所建立的 Cube，連同快取索引及快取的案例資料之後，伺服器就會建立獨立的執行緒來定型模型。  
   
- 如需有關版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援平行模型處理，請參閱[支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+ 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援平行模型處理，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ##  <a name="bkmk_ProcessStructures"></a> 處理採礦結構  
  採礦結構可以與所有相依模型一起處理，也可以單獨處理。 在預期某些模型需要長時間來處理並且您想要延遲該作業時，分開處理採礦結構與模型可能會很有用。  
   
  如需詳細資訊，請參閱 [處理採礦結構](../../analysis-services/data-mining/process-a-mining-structure.md)。  
   
- 如果您希望節省硬碟空間，請注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在本機保留採礦結構快取。 亦即，它會將所有培訓資料寫出至本機硬碟。 如果不要快取資料，您可以設定採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性，將預設值變更為 **ClearAfterProcessing**。 這會在處理模型之後終結快取，但是，它也會在採礦結構上停用鑽研。 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如果您希望節省硬碟空間，請注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在本機保留採礦結構快取。 亦即，它會將所有培訓資料寫出至本機硬碟。 如果不要快取資料，您可以設定採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性，將預設值變更為 **ClearAfterProcessing**。 這會在處理模型之後終結快取，但是，它也會在採礦結構上停用鑽研。 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
  同時，如果您清除快取，將無法使用鑑效組測試集；如果已經定義一個鑑效組測試集，將會遺失該測試集資料分割的定義。 如需鑑效組測試集的詳細資訊，請參閱 [定型和測試資料集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34016145"
   
  在以下案例中也會處理採礦模型：  
   
- **專案部署**：視專案設定和專案的目前狀態而定，在部署專案時通常會完整處理專案中的採礦模型。  
+ **部署專案**:根據專案設定和專案的目前狀態，在專案中會處理採礦模型通常是完整部署專案時。  
   
- 除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上已有先前處理的版本，且尚無任何結構性變更，否則，起始部署時會自動開始處理。 您可以從下拉式清單中選取 [部署方案]，或按 F5 鍵來部署專案。 您可以  
+ 除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上已有先前處理的版本，且尚無任何結構性變更，否則，起始部署時會自動開始處理。 您可以從下拉式清單中選取 [部署方案]  ，或按 F5 鍵來部署專案。 您可以  
   
  如需如何設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署屬性來控制採礦模型部署方式的詳細資訊，請參閱 [部署資料採礦方案](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)。  
   
- **移動採礦模型**：在您透過使用 EXPORT 命令移動採礦模型時，只會匯出模型定義，其中包含應該向模型提供資料的採礦結構名稱。  
+ **移動採礦模型**:當您使用 EXPORT 命令移動採礦模型時，會匯出模型的定義，其中包含所要提供資料給模型的採礦結構的名稱。  
   
  針對以下案例使用 EXPORT 和 IMPORT 命令進行重新處理的需求：  
   
@@ -83,8 +83,8 @@ ms.locfileid: "34016145"
  如需詳細資訊，請參閱 [匯出和匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

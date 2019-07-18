@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1c10ec2282e5e7870ec05de356b0d2f1461e95f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65090169"
 ---
 # <a name="how-to-execute-a-partial-query"></a>如何：執行部分查詢
 Transact\-SQL 編輯器可讓您反白顯示指令碼的特定區段，並且將它執行成單一查詢。 這樣可以讓您輕鬆地偵錯複雜查詢的區段。  
@@ -26,9 +26,9 @@ Transact\-SQL 編輯器可讓您反白顯示指令碼的特定區段，並且將
   
 ### <a name="to-partially-execute-a-query"></a>若要部分執行查詢  
   
-1.  在 [SQL Server 物件總管] 中，按兩下 [檢視表] 下的 **PerishableFruits**，在 Transact\-SQL 編輯器中打開它。  
+1.  在 [SQL Server 物件總管]  中，按兩下 [檢視表]  下的 **PerishableFruits**，在 Transact\-SQL 編輯器中打開它。  
   
-2.  反白顯示程式碼中的 `SELECT p.Id, p.Name FROM dbo.Product p` 區段，按一下滑鼠右鍵選取 [執行查詢]。  
+2.  反白顯示程式碼中的 `SELECT p.Id, p.Name FROM dbo.Product p` 區段，按一下滑鼠右鍵選取 [執行查詢]  。  
   
-3.  請注意，`Products` 資料表中具有指定之欄位的所有資料列傳回於 [結果] 窗格中。  
+3.  請注意，`Products` 資料表中具有指定之欄位的所有資料列傳回於 [結果]  窗格中。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937860"
 ---
 # <a name="type-property-ado"></a>Type 屬性 (ADO)
 表示作業的類型或資料類型的[參數](../../../ado/reference/ado-api/parameter-object.md)，[欄位](../../../ado/reference/ado-api/field-object.md)，或[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  

@@ -11,14 +11,18 @@ ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27fcf2f52a91464643ddac7e16b64df5ff34f692
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5115d9c66dd7baf091635b06ff413aa8c4ca736
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716901"
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中建立資料夾。  
@@ -31,7 +35,7 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
   
 ## <a name="arguments"></a>引數  
  [@folder_name =] *folder_name*  
- 新資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 新資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [@folder_name =] *folder_id*  
  資料夾的唯一識別碼 (ID)。 *folder_id* 是 **bigint**。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074787"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
   在舊版，子選擇或 Subcube 中不允許使用導出成員。 但是從 SQL Server 2008 開始，您可以使用導出成員，並透過連接屬性啟用。 此外，SQL Server 2008 R2 也導入了子選擇和 Subcube 中導出成員的新行為。  

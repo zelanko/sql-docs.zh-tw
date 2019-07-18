@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62792144"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本聯結至可用性群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本聯結至 AlwaysOn 可用性群組。 當次要複本加入至 AlwaysOn 可用性群組之後，此次要複本必須聯結至可用性群組。 聯結複本作業必須在裝載次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行。  
@@ -40,7 +40,7 @@ ms.locfileid: "48136218"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **待處理：**[設定次要資料庫](#FollowUp)  
+-   **後續操作：** [設定次要資料庫](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48136218"
   
 3.  選取所連接之次要複本的可用性群組。  
   
-4.  以滑鼠右鍵按一下次要複本，然後按一下 [加入可用性群組]。  
+4.  以滑鼠右鍵按一下次要複本，然後按一下 [加入可用性群組]  。  
   
 5.  這會開啟 **[將複本加入至可用性群組]** 對話方塊。  
   
-6.  若要將次要複本聯結至可用性群組，請按一下 **[確定]**。  
+6.  若要將次要複本聯結至可用性群組，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要將可用性複本聯結至可用性群組**  
@@ -82,9 +82,9 @@ ms.locfileid: "48136218"
   
 2.  使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 陳述式，如下所示：  
   
-     ALTER AVAILABILITY GROUP <群組名稱> JOIN  
+     ALTER AVAILABILITY GROUP <群組名稱>  JOIN  
   
-     其中 <群組名稱> 是可用性群組的名稱。  
+     其中 <群組名稱>  是可用性群組的名稱。  
   
      下列範例會將次要複本加入至 `MyAG` 可用性群組。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48136218"
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 提供者內：  
   
-1.  將目錄變更 (`cd`) 裝載次要複本的伺服器執行個體。  
+1.  將目錄切換到 (`cd`) 裝載次要複本的伺服器執行個體。  
   
 2.  使用可用性群組的名稱執行 **Join-SqlAvailabilityGroup** Cmdlet，將次要複本聯結至可用性群組。  
   
@@ -111,16 +111,16 @@ ms.locfileid: "48136218"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：設定次要資料庫  
+##  <a name="FollowUp"></a> 後續操作：設定次要資料庫  
  對於可用性群組中的每個資料庫而言，您需要在裝載次要複本的伺服器執行個體上擁有次要資料庫。 在您將次要複本加入可用性群組之前或之後，您都可以設定次要資料庫，如下所示：  
   
-1.  針對每一個還原作業使用 RESTORE WITH NORECOVERY，將每一個主要資料庫的最新資料庫和記錄備份還原到裝載次要複本的伺服器執行個體上。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
+1.  針對每一個還原作業使用 RESTORE WITH NORECOVERY，將每一個主要資料庫的最新資料庫和記錄備份還原到裝載次要複本的伺服器執行個體上。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中建立和設定 AlwaysOn 可用性群組。  
   
 2.  將每一個次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   

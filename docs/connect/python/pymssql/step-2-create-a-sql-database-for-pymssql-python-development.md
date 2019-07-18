@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 75117d76-6396-493e-862a-0e9a6de26bfa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d55adeb8f3ba353b5b04e26005526c49ad783abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8ff248fc77e02e5578752ae1b1585f65b893e4e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803861"
 ---
 # <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>步驟 2︰建立供 pymssql Python 開發使用的 SQL 資料庫
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

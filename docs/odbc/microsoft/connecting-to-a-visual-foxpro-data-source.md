@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eacb57e4db5d312d04fdcd1e3b06b446f62635cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15765d0aaf10c268a0aed864dc497c8a000eedc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082028"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>連線到 Visual FoxPro 資料來源
 您可以連接到 Visual FoxPro 資料來源使用您的 Microsoft Office 應用程式，或使用 SQL API。  
@@ -27,5 +26,5 @@ ms.locfileid: "47817797"
 |若要從連接|請參閱|  
 |---------------------|---------|  
 |Microsoft Access、 Microsoft Excel 或 Microsoft Word|[從 Microsoft Office 存取 Visual FoxPro 資料](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
-|C 或 c + + 應用程式|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
+|您的 C 或C++應用程式|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
 |Visual Basic 應用程式|[使用 Visual FoxPro ODBC Driver 與 Visual Basic 應用程式](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|

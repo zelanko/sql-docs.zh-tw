@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 890fd41c919e0911eef0257ae21fbcea72129249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2c2dbe6af2a50fc2507a9ade92d83e0502f2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966917"
 ---
 # <a name="column-object-adox"></a>Column 物件 (ADOX)
 從資料表、 索引或索引鍵代表的資料行。  
@@ -66,7 +65,7 @@ ms.locfileid: "47731426"
  [Columns 和 Tables Append 方法、 Name 屬性範例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Connection Close 方法、 Table Type 屬性範例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Keys Append 方法、 索引鍵的型別、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ADOX 程式碼範例： NumericScale 和 Precision 屬性範例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ADOX 程式碼範例：NumericScale 和 Precision 屬性範例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder 屬性範例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   

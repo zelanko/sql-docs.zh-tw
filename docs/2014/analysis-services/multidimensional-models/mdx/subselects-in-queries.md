@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073895"
 ---
 # <a name="subselects-in-queries"></a>查詢中的子選擇
   子選擇運算式是巢狀 SELECT 運算式，用於限制評估外部 SELECT 的 Cube 空間。 子選擇可讓您定義評估所有計算的新空間。  
@@ -256,7 +255,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|元件|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(Null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
 |United States|$9,389,789.51|$217,168.79|(Null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(Null)|$443,607.98|$565,372.10|$131,498.29|  
@@ -281,7 +280,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|元件|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |United States|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(Null)|$945,219.38|$1,155,880.07|$303,485.97|  

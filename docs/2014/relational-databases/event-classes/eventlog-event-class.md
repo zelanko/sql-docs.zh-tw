@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662541"
 ---
 # <a name="eventlog-event-class"></a>EventLog 事件類別
   EventLog 事件類別指出已將事件記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中。  

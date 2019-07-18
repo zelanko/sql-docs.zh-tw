@@ -1,7 +1,7 @@
 ---
 title: Broker:Activation 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67578d83b1845086186cc791fd6750115842c9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 71f3b7d8dd6f5e52cf37582c1a6d1fc974c48c48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66265571"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當佇列監視器啟動一個啟用預存程序、傳送 QUEUE_ACTIVATION 通知或佇列監視器所啟動的一個啟用預存程序結束時，會產生 **Broker:Activation** 事件。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當佇列監視器啟動一個啟用預存程序、傳送 QUEUE_ACTIVATION 通知或佇列監視器所啟動的一個啟用預存程序結束時，會產生 **Broker:Activation** 事件。  
   
 ## <a name="brokeractivation-event-class-data-columns"></a>Broker:Activation 事件類別資料行  
   
@@ -32,7 +34,7 @@ ms.locfileid: "47701196"
 |**DatabaseID**|**int**|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database*陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 對於 **Broker:Activation** ，一律為 **163**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|此事件報告的特定動作。 為下列其中一個值：<br /><br /> **start**：   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已開始啟用預存程序。<br /><br /> **ended**：啟用預存程序已正常結束。<br /><br /> **aborted**：啟用預存程序已結束並發生錯誤。|21|否|  
+|**EventSubClass**|**nvarchar**|此事件報告的特定動作。 為下列其中一個值：<br /><br /> **start**：   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已開始啟用預存程序。<br /><br /> **ended**：啟用預存程序已正常結束。<br /><br /> **aborted**： 啟用預存程序已結束並發生錯誤。|21|否|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IntegerData**|**int**|此佇列上作用中的工作數。|25|否|  
 |**IsSystem**|**int**|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|否|  
@@ -44,5 +46,4 @@ ms.locfileid: "47701196"
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
-  
-  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

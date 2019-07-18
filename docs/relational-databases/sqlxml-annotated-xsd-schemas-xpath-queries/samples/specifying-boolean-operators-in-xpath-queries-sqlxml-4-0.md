@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95650960bebc93bdd8afed0789ee8fb54c40216e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c57742e1fe2c11c7e81518384f72b2acbab7a925
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027078"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56012899"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布林運算子  
- 此 XPath 查詢會傳回**\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
+ 此 XPath 查詢會傳回 **\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -44,7 +43,7 @@ ms.locfileid: "56012899"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 述詞中`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是**\<屬性 >** 節點，因為 **\<屬性 >** 節點是主要節點**屬性**軸)。 述詞篩選條件**\<客戶 >** 項目，並傳回只有符合條件的述詞中指定。  
+ 述詞中`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是 **\<屬性 >** 節點，因為 **\<屬性 >** 節點是主要節點**屬性**軸)。 述詞篩選條件 **\<客戶 >** 項目，並傳回只有符合條件的述詞中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

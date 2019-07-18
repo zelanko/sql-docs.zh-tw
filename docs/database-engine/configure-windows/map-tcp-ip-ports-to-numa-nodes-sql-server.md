@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40834c6e6ce705b025e2d4b0b3b3ec974bfebd49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5179b48634aae9a55e2670ddb0a0055861ffa31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66783261"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

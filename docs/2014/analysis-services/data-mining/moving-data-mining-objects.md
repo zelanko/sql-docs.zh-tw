@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
@@ -17,12 +16,12 @@ ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071848"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083302"
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
   移動資料採礦物件的最常見情形是將模型從測試或分析環境部署到實際執行環境，或者與其他使用者共用模型。  
@@ -50,9 +49,9 @@ ms.locfileid: "48071848"
 ### <a name="scripting"></a>指令碼  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了數種語言，可用於編寫物件的指令碼。  
   
--   **XMLA**：您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中以滑鼠右鍵按一下物件，使用 XMLA 編寫物件的指令碼。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢] 視窗中開啟指令碼。  
+-   **XMLA**:您可以使用 XMLA，以滑鼠右鍵按一下物件中的物件編寫指令碼[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢]  視窗中開啟指令碼。  
   
--   **DMX**：您可以透過使用範本或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的其中一個查詢產生器建立指令碼。  
+-   **DMX**:您可以使用範本來建立指令碼，或在提供的其中一個查詢產生器[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  但請注意，各指令碼語言可執行的工作之間有些差異：  
   
@@ -74,9 +73,9 @@ ms.locfileid: "48071848"
 ### <a name="exporting-and-importing"></a>匯出和匯入  
  利用 DMX 陳述式匯出採礦模型與結構，然後重新匯入，是移動或備份個別關聯式資料採礦物件最方便的方式。 如需有關這些作業之 DMX 語法的詳細資訊，請參閱下列主題：  
   
--   [匯出&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)  
+-   [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)  
   
--   [匯入&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
+-   [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)  
   
  如果您指定了 INCLUDE DEPENDENCIES 選項， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會匯出任何所需資料來源檢視的定義，而且當您匯入模型或結構時，它將在目標伺服器上重新建立資料來源檢視。 在您已經完成匯入模型的作業之後，請務必針對此物件設定必要的採礦權限。  
   

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805934"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>設定公用程式控制點資料倉儲 (SQL Server 公用程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Managed 執行個體所收集的資料會儲存在公用程式管理資料倉儲 (UMDW) 中；UMDW 檔案名稱為 sysutility_mdw。  
@@ -28,7 +28,7 @@ ms.locfileid: "52804040"
   
 -   收集組上傳頻率：每隔 15 分鐘。  
   
- UMDW 目錄是可設定：\<系統磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< 也就是 > \MSSQL\Data\\，其中\<系統磁碟機 > 通常是 C:\ 磁碟機。 記錄檔 Sysutility_mdw_\<GUID>_LOG 位於相同的目錄中。  
+ UMDW 目錄是可設定：\<系統磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< 也就是 > \MSSQL\Data\\，其中\<系統磁碟機 > 通常是 C:\磁碟機。 記錄檔 Sysutility_mdw_\<GUID>_LOG 位於相同的目錄中。  
   
 > [!NOTE]  
 >  可以使用卸離/附加或 ALTER DATABASE 來變更 UMDW (sysutility_mdw) 檔案的位置。 我們建議使用 ALTER DATABASE。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  

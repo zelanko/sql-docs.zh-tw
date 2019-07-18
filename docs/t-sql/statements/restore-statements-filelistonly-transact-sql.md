@@ -19,16 +19,16 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1a7e8edbe841ddf4ef53f8a6d93dbedc7ca34c36
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: b9480fc29339d0cd33d063c24f19c083804d1ae0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948371"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -115,7 +115,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保護備份的最佳作法是將備份磁帶存放在安全位置，或備份至適當的存取控制清單 (ACL) 所保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，取得有關備份組或備份裝置的資訊需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  

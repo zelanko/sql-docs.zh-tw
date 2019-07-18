@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d06874d3bdef4954c6cfc3c2037f9971ce610b80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a00f2c9f9e0b59e0e77f765d08b8e57709c33729
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765695"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +46,8 @@ public byte getByte(int columnIndex)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- GetByte 方法 java.sql.ResultSet 介面中所指定這個 getByte 方法。  
+## <a name="remarks"></a>備註  
+ 這個 getByte 方法是由 java.sql.ResultSet 介面中的 getByte 方法指定。  
   
  只有可安全傳回位元組值 (如 tinyint 和 bit) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型支援這項方法。 所有其他資料類型將會擲回例外狀況。  
   

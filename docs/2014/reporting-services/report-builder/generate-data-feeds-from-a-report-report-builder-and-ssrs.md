@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 270b2783f53d1fe0704dd504bbaa4004466dd115
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107853"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
   您可以從報表產生符合 Atom 的資料摘要，然後在可取用資料摘要的應用程式 (例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端) 中使用資料摘要。  
@@ -51,7 +50,7 @@ ms.locfileid: "56295056"
     > [!NOTE]  
     >  依預設，文件名稱就是報表名稱。  
   
-7.  確認文件類型為 **[ATOMSVC 檔]**，然後按一下 **[儲存]**。  
+7.  確認文件類型為 **[ATOMSVC 檔]** ，然後按一下 **[儲存]** 。  
   
 8.  或者，在瀏覽器或者文字或 XML 編輯器中開啟 .atomsvc 檔。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "56295056"
     > [!NOTE]  
     >  依預設，文件名稱就是報表名稱。 如果 Atom 服務文件有多個摘要，預設全部都使用相同的名稱，也就是報表名稱。 若要區別這些摘要，請加以重新命名以使用有意義的名稱。  
   
-5.  確認文件類型為 **[ATOM 檔]**，然後按一下 **[儲存]**。  
+5.  確認文件類型為 **[ATOM 檔]** ，然後按一下 **[儲存]** 。  
   
 6.  或者，在瀏覽器或者文字編輯器或 XML 編輯器中開啟 .atom 檔。  
   

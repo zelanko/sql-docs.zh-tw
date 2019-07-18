@@ -1,5 +1,5 @@
 ---
-title: 註解 (MDX) |Microsoft 文件
+title: 註解 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006269"
 ---
 # <a name="comment-mdx"></a>註解 (MDX)
 

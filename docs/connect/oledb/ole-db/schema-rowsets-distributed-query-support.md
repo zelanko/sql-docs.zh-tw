@@ -17,13 +17,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+manager: jroth
+ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864156"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795959"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>結構描述資料列集 - 分散式查詢支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47864156"
 
   為了支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢，OLE DB Driver for SQL Server 的 **IDBSchemaRowset** 介面會針對連結的伺服器傳回中繼資料。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 依照目錄來限制結構描述資料列集輸出時，OLE DB Driver for SQL Server 會辨識包含連結伺服器和目錄名稱的兩部分名稱。 針對下表中的結構描述資料列集，將兩部分目錄名稱指定為 _linked\_server_**.**_catalog_ 就會將輸出限制為具名連結伺服器的適用目錄。  
+ 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 依照目錄來限制結構描述資料列集輸出時，OLE DB Driver for SQL Server 會辨識包含連結伺服器和目錄名稱的兩部分名稱。 針對下表中的結構描述資料列集，將兩部分目錄名稱指定為 _linked\_server_ **.** _catalog_ 就會將輸出限制為具名連結伺服器的適用目錄。  
   
 |結構描述資料列集|目錄限制|  
 |-------------------|-------------------------|  

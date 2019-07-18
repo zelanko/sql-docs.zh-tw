@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ef447758c5a2d9f48e36759b43a4d797ad2c6641
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526714"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583255"
 ---
 # <a name="load-files-into-filetables"></a>載入檔案至 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52526714"
 |檔案的目前位置|移轉選項|  
 |-------------------------------|---------------------------|  
 |檔案目前儲存在檔案系統中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有檔案的知識。|因為 FileTable 會顯示成 Windows 檔案系統中的資料夾，所以您可以使用任何移動或複製檔案的可用方法，輕鬆地將檔案載入新的 FileTable。 這些方法包括 Windows 檔案總管、命令列選項 (包括 xcopy 與 robocopy)，以及自訂指令碼或應用程式。<br /><br /> 您無法將現有的資料夾轉換為 FileTable。|  
-|檔案目前儲存在檔案系統中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含內有指向檔案之指標的中繼資料資料表。|第一個步驟是使用上述其中一種方法移動或複製檔案。<br /><br /> 第二個步驟是將中繼資料的現有資料表，更新為指向該檔案的新位置。<br /><br /> 如需詳細資訊，請參閱本文中的[範例：將檔案從檔案系統移轉至 FileTable](#HowToMigrateFiles)。|  
+|檔案目前儲存在檔案系統中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含內有指向檔案之指標的中繼資料資料表。|第一個步驟是使用上述其中一種方法移動或複製檔案。<br /><br /> 第二個步驟是將中繼資料的現有資料表，更新為指向該檔案的新位置。<br /><br /> 如需詳細資訊，請參閱[範例：將檔案從檔案系移轉至 FileTable](#HowToMigrateFiles)。|  
   
 ###  <a name="HowToLoadNew"></a> 如何：將檔案載入 FileTable  
 您可使用下列方法將檔案載入 FileTable：  
@@ -43,7 +43,7 @@ ms.locfileid: "52526714"
   
 -   在 C# 或 Visual Basic.NET 中撰寫自訂應用程式，來移動或複製檔案。 從 **System.IO** 命名空間呼叫方法。  
   
-###  <a name="HowToMigrateFiles"></a> 範例：從檔案系統移轉檔案至 FileTable  
+###  <a name="HowToMigrateFiles"></a> 範例：將檔案從檔案系移轉至 FileTable  
  在此案例中，您的檔案儲存在檔案系統中，而且您在擁有內含指向該檔案之指標的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，具有中繼資料表。 您想要將檔案移入 FileTable，然後使用 FileTable UNC 路徑來取代中繼資料內每個檔案的原始 UNC 路徑。 [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函式可協助您達成此目標。  
   
  在此範例中，假設存在現有的資料庫資料表 **PhotoMetadata**，其中包含相片的相關資料。 這個資料表中有一個 **varchar** (512) 類型的 **UNCPath**資料行，其中包含對應至 .jpg 檔案的實際 UNC 路徑。  
@@ -55,7 +55,9 @@ ms.locfileid: "52526714"
 2.  使用 xcopy 或類似的工具，將 .jpg 檔案及其目錄結構複製到 FileTable 的根目錄中。  
   
 3.  使用類似下例的程式碼，修正 **PhotoMetadata** 資料表中的中繼資料：  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  

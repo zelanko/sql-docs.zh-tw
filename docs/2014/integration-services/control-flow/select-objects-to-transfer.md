@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62830402"
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
   使用此對話方塊，即可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳輸工作，選取要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體傳輸到其他執行個體的物件。  

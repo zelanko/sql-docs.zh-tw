@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 609246d2a41ea8d1b6737ffd485bc9989ebd2b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 34a8e6ac8d40e23e1ccf99eacff9d391e79a48a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074577"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>比對相似資料 (適用於 Excel 的 MDS 增益集)
 
@@ -28,9 +27,9 @@ ms.locfileid: "47656526"
   
 -   使用預設 Data Quality Services 知識庫。  
   
--   建立您自己的自訂 DQS 知識庫和比對原則。 如需相關資訊，請參閱 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
+-   建立您自己的自訂 DQS 知識庫和比對原則。 如需相關資訊，請參閱 [建立訂閱](../../data-quality-services/create-a-matching-policy.md)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱 [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)(將資料從 Master Data Services 匯入 Excel)。  
   
@@ -38,25 +37,25 @@ ms.locfileid: "47656526"
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>若要使用預設知識庫尋找相似度  
   
-1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質] 群組中的 [比對資料]。  
+1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質]  群組中的 [比對資料]  。  
   
-2.  在 [比對資料] 對話方塊中，從 [DQS 知識庫] 清單中選取 [DQS 資料 (預設值)]。  
+2.  在 [比對資料]  對話方塊中，從 [DQS 知識庫]  清單中選取 [DQS 資料 (預設值)]  。  
   
 3.  為包含要比對之資料的每個資料行，在對話方塊中加入一個資料列。 如需此對話方塊中的欄位資訊，請參閱[如何設定比對規則參數](../../data-quality-services/create-a-matching-policy.md#MatchingRules)。  
   
-4.  當所有加權值的總和等於 100% 時，按一下 [確定]。  
+4.  當所有加權值的總和等於 100% 時，按一下 [確定]  。  
   
 ### <a name="to-find-similarities-by-using-a-custom-knowledge-base"></a>若要使用自訂知識庫尋找相似度  
   
-1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質] 群組中的 [比對資料]。  
+1.  從包含 MDS 管理之資料的工作表中，按一下 [資料品質]  群組中的 [比對資料]  。  
   
-2.  從 [DQS 知識庫] 清單中，選取自訂知識庫的名稱。  
+2.  從 [DQS 知識庫]  清單中，選取自訂知識庫的名稱。  
   
 3.  為工作表中的每個資料行，選取 DQS 定義域。  
   
-4.  當所有 DQS 定義域都對應到工作表中的資料行時，請按一下 [確定]。  
+4.  當所有 DQS 定義域都對應到工作表中的資料行時，請按一下 [確定]  。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   檢視其他資訊來判斷哪些資料是相似。 如需詳細資訊，請參閱[資料品質比對資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md)。  
   

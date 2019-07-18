@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQLXML], annotated schemas
 - XSD schemas [SQLXML], security
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bebdc1f62e95af43ccedf71087a817cff8e502e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 635c5c433f583ecad9f8dda1e35e4c981742212e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010582"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>註解式結構描述安全性考量 (SQLXML 4.0)
   下面是使用註解式結構描述的安全性指導方針：  

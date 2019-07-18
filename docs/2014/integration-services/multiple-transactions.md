@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
@@ -14,12 +13,12 @@ ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6c66d64d7dc7117c5903f1eb3ac2e2ad97178af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057402"
 ---
 # <a name="multiple-transactions"></a>多個交易
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，封裝可以包含不相關的交易。 任何時候如果巢狀容器階層中間的容器不支援交易，而階層中其上面或下面的容器設定為支援交易，則這些容器就會啟動分別的交易。 交易會從巢狀容器階層中最內層的工作到封裝依序進行認可或回復。 不過，內部交易認可後，如果外部交易已中止，則不會回復該交易。  

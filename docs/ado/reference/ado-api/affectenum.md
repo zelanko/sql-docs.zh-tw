@@ -1,5 +1,5 @@
 ---
-title: AffectEnum |Microsoft Docs
+title: AffectEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920750"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定的記錄會受到影響的作業。  

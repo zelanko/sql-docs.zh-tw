@@ -15,13 +15,13 @@ helpviewer_keywords:
 - InsertRow method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6119e1c6d646d77105824fe9fcb2072416250e1a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8acbcf78a7f8e3e108b93076d5596c0f09edd226
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761489"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  指定的存取子不是資料列存取子，或未指定取用者所擁有的記憶體。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  將取用者資料轉換成資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型時發生的錯誤會導致 OLE DB Driver for SQL Server 傳回 E_FAIL。 您可在任何 **InsertRow** 方法或僅在 **Commit** 方法上將資料傳輸至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 取用者應用程式可能會在使用錯誤的資料呼叫 **InsertRow** 方法很多次後，才收到發生了資料類型轉換錯誤的通知。 因為 **Commit** 方法會確保所有資料都由取用者正確指定，所以取用者可依需要適當地使用 **Commit** 方法來驗證資料。  
   
  OLE DB Driver for SQL Server 大量複製資料列集是唯寫。 OLE DB Driver for SQL Server 會公開允許取用者資料列集的查詢沒有任何方法。 若要終止處理，取用者可以不必呼叫 **Commit** 方法，即釋放它在 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面上的參考。 沒有功能可用來存取資料列集中取用者插入的資料列並變更其值，或將該資料列從資料列集個別地移除。  

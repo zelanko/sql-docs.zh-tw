@@ -14,14 +14,18 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d26385e50f26e2cc494db2729727ee7358acd5f2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aa21219ef5946ec4d4b95aff1a201aca9b453a2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724594"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>開發 Integration Services 的自訂物件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的控制流程與資料流程物件無法完全滿足您的需求時，您可以自行開發許多類型的自訂物件，包括：  
   
 -   **自訂工作**。  
@@ -53,7 +57,7 @@ ms.locfileid: "58271236"
   
 5.  選擇性地為您的元件建立自訂使用者介面。 為了便於部署，您可能會想要以相同方案中的獨立專案開發使用者介面，並將它建立成個別的組件。  
   
-6.  選擇性地在 [SSIS 工具箱] 中顯示範例和自訂物件說明內容的連結。  
+6.  選擇性地在 [SSIS 工具箱]  中顯示範例和自訂物件說明內容的連結。  
   
 7.  依[建置、部署和偵錯自訂物件](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中所述，建置與部署新的自訂物件，並進行偵錯。  
   
@@ -64,12 +68,12 @@ ms.locfileid: "58271236"
 |-------------------|----------------|---------------|-----------------------|  
 |工作|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |[ODBC 來源編輯器]|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
-|記錄提供者|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>、 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
+|記錄提供者|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |列舉值|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
-|資料流程元件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
+|資料流程元件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
   
 ## <a name="providing-links-to-samples-and-help-content"></a>提供範例和說明內容的連結  
- 若要在 [SSIS 工具箱] 中顯示範例和自訂物件 (以受控碼撰寫) 的說明內容連結，請使用下列屬性。  
+ 若要在 [SSIS 工具箱]  中顯示範例和自訂物件 (以受控碼撰寫) 的說明內容連結，請使用下列屬性。  
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>  
   
@@ -95,7 +99,7 @@ ms.locfileid: "58271236"
  在自訂使用者介面專案或是組件中，通常有兩個類別：針對特定類型的自訂物件之使用者介面實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 介面的類別，以及它所顯示的 Windows Form，以蒐集使用者資訊。 您實作的介面只有一些方法，而且自訂使用者介面並不難開發。  
   
 > [!NOTE]  
->  許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，並將 [設定] 文字方塊取代為可用的連線管理員篩選下拉式清單。 不過，在這個版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。 指定 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性值將沒有任何作用。  
+>  許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 記錄提供者都有自訂使用者介面，以實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，並將 [設定]  文字方塊取代為可用的連線管理員篩選下拉式清單。 不過，在這個版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中並未實作自訂記錄提供者的自訂使用者介面。 指定 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 屬性值將沒有任何作用。  
   
  下表提供您在為每個類型的自訂物件開發自訂使用者介面時，必須實作的介面之便利參考。 它也說明在下列情況下使用者會看到的內容：當您選擇不要為物件開發自訂使用者介面，或當您無法使用物件屬性 (Attribute) 中的 **UITypeName** 屬性 (Property) 將物件連結到其使用者介面時。 雖然強大的 [進階編輯器] 可能可以滿足資料流程元件，不過，[屬性] 視窗對於工作與連接管理員而言較缺乏使用者親和性，而且如果沒有自訂表單，根本無法設定自訂 ForEach 列舉值。  
   
@@ -103,7 +107,7 @@ ms.locfileid: "58271236"
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
 |工作|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|僅 [屬性] 視窗|  
 |[ODBC 來源編輯器]|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|僅 [屬性] 視窗|  
-|記錄提供者|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (尚未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中實作)|[設定] 資料行中的文字方塊|  
+|記錄提供者|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (尚未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中實作)|[設定]  資料行中的文字方塊|  
 |列舉值|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|僅 [屬性] 視窗。 編輯器的 [列舉值組態] 區域是空的。|  
 |資料流程元件|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|進階編輯器|  
   

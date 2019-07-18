@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 288168b2a4b47c8a73612bd89a6f1987e2808475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931142"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 指定檔案是否要建立或覆寫時從儲存[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以是**adSaveCreateNotExist**或是**adSaveCreateOverWrite**...  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1748e8b483eecee43da921bd268d419408924af3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62868959"
 ---
 # <a name="mssqlserver2511"></a>MSSQLSERVER_2511
     
@@ -30,7 +30,7 @@ ms.locfileid: "48062015"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_KEYS_OUT_OF_ORDER|  
-|訊息文字|資料表錯誤: 物件識別碼 %d，索引識別碼 %d，分割區識別碼 %I64d，配置單位識別碼 %I64d (類型 %.*ls)。 頁面 %S_PGID，位置 %d 和 %d 的索引鍵次序不對。|  
+|訊息文字|資料表錯誤：物件識別碼 %d，索引識別碼 %d，分割區識別碼 %I64d，配置單位識別碼 %I64d (類型 %.*ls)。 頁面 %S_PGID，位置 %d 和 %d 的索引鍵次序不對。|  
   
 ## <a name="explanation"></a>說明  
  在指定的索引中偵測到次序不對的索引鍵。 包含索引鍵的頁面可能已損毀。  

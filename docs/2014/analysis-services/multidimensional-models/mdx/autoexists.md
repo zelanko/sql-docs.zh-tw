@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074733"
 ---
 # <a name="autoexists"></a>自動存在
-  「自動存在」的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
+  「自動存在」  的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
   
  例如，假設您正在使用來自 Geography 維度的屬性。 如果您所擁有的其中一個運算式會從 City 屬性傳回所有成員，而另一個運算式會將 Country 屬性的成員限制為歐洲所有國家 (地區)，這將會使得 City 成員限制為只有屬於歐洲國家 (地區) 的城市。 這是因為 Analysis Services 的自動存在特性所致。 「自動存在」僅適用於相同維度的屬性的原因是，它會嘗試防止某個屬性運算式加入其他屬性運算式中排除的維度記錄。 您也可以將「自動存在」視為不同之屬性運算式在維度資料列上所產生的交集。  
   

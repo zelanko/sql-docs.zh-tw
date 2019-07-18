@@ -9,16 +9,20 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 129b2b760f755985028de214a1f18b00be004cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b91a1572e5c7cd477d8e112b68b8f9a46fb1153
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012331"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>執行部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 您可以選擇本文中所述的其中一個方法，來執行部署到 Azure SQL Database 伺服器上 SSISDB 目錄的 SSIS 套件。 您可以直接執行套件，或將套件當作 Azure Data Factory 管線的一部分來執行。 如需 Azure 上 SSIS 的概觀，請參閱[在 Azure 中部署和執行 SSIS 套件](ssis-azure-lift-shift-ssis-packages-overview.md)。
 
@@ -41,17 +45,17 @@ ms.locfileid: "47758146"
 
 ## <a name="ssms"></a> 使用 SSMS 執行套件
 
-在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [執行] 以開啟 [執行套件] 對話方塊。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件](../ssis-quickstart-run-ssms.md)。
+在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [執行]  以開啟 [執行套件]  對話方塊。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件](../ssis-quickstart-run-ssms.md)。
 
 ## <a name="sproc"></a> 使用預存程序執行套件
 
 在您可以連線到 Azure SQL Database 並執行 Transact-SQL 程式碼的任何環境中，您可以藉由呼叫下列預存程序來執行套件：
 
-1. **[catalog].[create_execution]**。 如需詳細資訊，請參閱 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。
+1. **[catalog].[create_execution]** 。 如需詳細資訊，請參閱 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。
 
-2. **[catalog].[set_execution_parameter_value]**。 如需詳細資訊，請參閱 [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。
+2. **[catalog].[set_execution_parameter_value]** 。 如需詳細資訊，請參閱 [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。
 
-3. **[catalog].[start_execution]**. 如需詳細資訊，請參閱 [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)。
+3. **[catalog].[start_execution]** . 如需詳細資訊，請參閱 [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)。
 
 如需詳細資訊，請參閱下列範例：
 

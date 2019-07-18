@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: affa8825053f1123c3fae5518f006e2172b9be39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010675"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @cache_directory = ] 'cache_directory'` 收集的資料會暫時儲存在檔案系統中的目錄。 *cache_directory*已**nvarchar(255)**，預設值是 NULL。 如果沒有指定任何值，則會使用預設暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。  
+`[ @cache_directory = ] 'cache_directory'` 收集的資料會暫時儲存在檔案系統中的目錄。 *cache_directory*已**nvarchar(255)** ，預設值是 NULL。 如果沒有指定任何值，則會使用預設暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

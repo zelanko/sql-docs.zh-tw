@@ -15,16 +15,16 @@ helpviewer_keywords:
 - notifications [SQL Server], job status
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 3aaee1f92cacd3d529e8b739ad52edd371a37c56
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256393"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680639"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "54256393"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要檢視之操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]  。  
   
-    如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
+    如需 [<操作員名稱> 屬性]   對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性 - 新增操作員 &#40;一般頁面&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "54256393"
   
     -   [操作員屬性 &#40;記錄頁面&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -89,9 +89,9 @@ ms.locfileid: "54256393"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- reports information about operator François Ajenstat   

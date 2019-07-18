@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62830180"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>單一資料表快速分析表單 (資料分析工作)
   您可以使用 **[單一資料表快速分析表單]** 來快速地設定資料分析工作，以便使用預設設定分析單一資料表或檢視表。  
@@ -49,7 +49,7 @@ ms.locfileid: "58379140"
 |**[最多可達 N 個資料行當做行列式資料行]**|選取要在可能的組合中當做行列式資料行進行測試的資料行數目上限。 預設值為 1。 最大值為 1000。 ˥Ƃ，選取 2 種測試組合，其中單一資料行或兩個資料行組合是另一個 (相依) 資料行的行列式資料行。|  
   
 > [!NOTE]  
->  您無法在 [單一資料表快速分析表單] 中使用值包含設定檔類型。  
+>  您無法在 [單一資料表快速分析表單]  中使用值包含設定檔類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分析工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   

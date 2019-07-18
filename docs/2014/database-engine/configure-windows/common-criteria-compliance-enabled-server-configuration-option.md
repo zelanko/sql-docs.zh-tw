@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786637"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>通用條件符合已啟用伺服器組態選項
   common criteria compliance enabled 選項會啟用通用條件所需的下列元素。  

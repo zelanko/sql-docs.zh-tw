@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118737"
 ---
 # <a name="buffers"></a>緩衝區
 緩衝區是記憶體的任何應用程式所使用的應用程式和驅動程式之間傳遞資料。 例如，應用程式緩衝區可以與其產生關聯，或 *，繫結*結果集資料行**SQLBindCol**。 擷取每個資料列，因為在這些緩衝區中的每個資料行就會傳回資料。 *輸入緩衝區*用來將資料傳遞至驅動程式; 應用程式*輸出緩衝區*用來從驅動程式應用程式將資料傳回。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef3dfb97299616bcf0dbb22fca87dceb201f0643
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967113"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection 屬性範例 (VB)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性，以有效的開啟連接的 「 開啟 」 目錄。 從開啟的目錄中，您可以存取包含在該目錄內的結構描述物件。  

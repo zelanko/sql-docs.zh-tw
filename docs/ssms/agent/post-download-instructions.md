@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.post.f1
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 599534c1760c3753f91371de5f237ac0c2de6f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b7c9ef16a2c1031ca4d1b7afed93d1abf8ef67
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735576"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685440"
 ---
 # <a name="post-download-instructions"></a>公佈下載指示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47735576"
 檢視下載指示的描述。  
   
 **輪詢間隔**  
-設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔] 指示。  
+設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]  指示。  
   
 **所有目標伺服器**  
 選取此選項將下載指示公佈到所有目標伺服器。  

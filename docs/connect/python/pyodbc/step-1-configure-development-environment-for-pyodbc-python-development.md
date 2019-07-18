@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9119883fb96c2ef635cd971f5f598ea625e15d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 549118445c3aaac0f08328074dad412d8c257a49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732876"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780428"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1︰設定 pyodbc Python 開發的開發環境
 

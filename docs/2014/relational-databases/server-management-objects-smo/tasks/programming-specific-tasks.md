@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63158716"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
   使用 SMO 物件的程式設計特有工作包含只有具備特定功能之程式所需要的複雜主題，例如，備份、監視統計資料、複寫、管理執行個體物件，以及設定組態選項。  

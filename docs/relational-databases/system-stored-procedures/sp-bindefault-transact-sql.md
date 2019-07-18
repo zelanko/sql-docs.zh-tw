@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046051"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @defname = ] 'default'` 是 CREATE DEFAULT 所建立的預設名稱。 *預設值*已**nvarchar(776)**，沒有預設值。  
+`[ @defname = ] 'default'` 是 CREATE DEFAULT 所建立的預設名稱。 *預設值*已**nvarchar(776)** ，沒有預設值。  
   
-`[ @objname = ] 'object_name'` 是資料表和資料行或別名資料類型的預設值是繫結的名稱。 *object_name*已**nvarchar(776)** 沒有預設值。 *object_name*能以定義**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR使用者定義型別。  
+`[ @objname = ] 'object_name'` 是資料表和資料行或別名資料類型的預設值是繫結的名稱。 *object_name*已**nvarchar(776)** 沒有預設值。 *object_name*能以定義**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**，或 CLR使用者定義型別。  
   
- 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部份或三部份的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*預設*，除非您已繫結直接到資料行的預設值。 無法繫結至的預設值**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**，**varbinary （max)**， **xml**，**時間戳記**，或 CLR 使用者自訂類型資料行、 具有 IDENTITY 屬性的資料行、 計算資料行或資料行，已經有預設條件約束。  
+ 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部份或三部份的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*預設*，除非您已繫結直接到資料行的預設值。 無法繫結至的預設值**文字**， **ntext**，**映像**， **varchar （max)** ， **nvarchar （max)** ，**varbinary （max)** ， **xml**，**時間戳記**，或 CLR 使用者自訂類型資料行、 具有 IDENTITY 屬性的資料行、 計算資料行或資料行，已經有預設條件約束。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括號 **[]** 作為分隔識別碼。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
@@ -117,7 +116,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

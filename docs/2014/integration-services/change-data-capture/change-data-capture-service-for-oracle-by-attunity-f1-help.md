@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2d9e58d622efd5951f95d3e3b9907a4289df9e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835819"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle Change Data Capture (CDC) 服務 F1 說明
   您可以使用 CDC 服務組態主控台來定義本機 Oracle CDC 服務，並加以更新和刪除。  

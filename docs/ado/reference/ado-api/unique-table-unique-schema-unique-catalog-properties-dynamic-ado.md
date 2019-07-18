@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcca3701807ebb591a0c083c4f4762b7597b9856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911671"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一資料表、 唯一的結構描述，唯一目錄動態屬性 (ADO)
 可讓您以緊密控制特定的基底資料表中的修改[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而形成多個基底資料表的聯結作業。  

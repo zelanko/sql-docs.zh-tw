@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 46e1bdc5b9fdfbbe9c804b4bf2214b9c04b6cdac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927783"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>進階的物件選取項目 (DB2ToSQL)
 **進階物件部分**對話方塊可讓您使用在 物件名稱的字串與子字串篩選資料庫物件，然後選取或取消選取這些物件。 SSMA 會執行轉換和移轉作業選取的物件。  

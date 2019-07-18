@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4661104c1254dd7b3cf58a5e8be1dbe7c598fd6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193768"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署傳遞延伸模組
   傳遞延伸模組以 XML 組態檔的形式提供其組態資訊。 XML 檔案符合為傳遞延伸模組定義的 XML 結構描述。 傳遞延伸模組提供設定和修改組態檔的基礎結構。  

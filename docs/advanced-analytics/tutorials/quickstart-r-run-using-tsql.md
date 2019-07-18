@@ -7,13 +7,12 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961981"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門：SQL Server 中的"Hello world"R 指令碼 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

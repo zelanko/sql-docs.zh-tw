@@ -1,5 +1,5 @@
 ---
-title: 定義域管理：定義域清單 |Microsoft Docs
+title: 定義域管理：定義域清單 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dc815c0f53db54371d24078f13089246976e63ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480638"
 ---
-# <a name="domain-management-domain-list"></a>定義域管理：網域清單
+# <a name="domain-management-domain-list"></a>定義域管理：定義域清單
   此主題描述 **(DQS) 中** [定義域管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 頁面上定義域清單中的控制項。 使用此窗格可選取執行管理作業所在的定義域。 相同的窗格會用於 **[定義域管理]** 頁面上的所有索引標籤式頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="domains-list"></a>定義域清單  
  **網域**  
@@ -35,13 +35,13 @@ ms.locfileid: "56036869"
  在知識庫中建立新的定義域。 此命令將會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立定義域](../../2014/data-quality-services/create-a-domain.md)。  
   
  **建立選取之定義域的複本**  
- 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「- 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]**，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
+ 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「- 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]** ，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
   
  **從資料檔匯入定義域**  
  從 .dqs 檔案匯入定義域。 這個命令會顯示 **[從資料檔匯入]** 對話方塊，好讓您瀏覽檔案系統，並針對單一定義域或複合定義域選取 .dqs 檔案。 若要使用此命令，請按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [從 .dqs 檔案匯入定義域](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)。  
   
  **刪除定義域**  
- 從知識庫中刪除選取的定義域。 此命令會顯示 **[SQL Server Data Quality Services]** 對話方塊。 如果您按一下 **[是]**，將永久刪除此定義域及其所有資料。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。  
+ 從知識庫中刪除選取的定義域。 此命令會顯示 **[SQL Server Data Quality Services]** 對話方塊。 如果您按一下 **[是]** ，將永久刪除此定義域及其所有資料。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。  
   
  **建立連結的定義域**  
  建立與選取之定義域連結的定義域。 此命令會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立連結的定義域]** (連結到選取的定義域)。 您所連結的定義域會顯示在 [建立定義域] 對話方塊中。 此命令無法提供給複合定義域使用。 沒有任何命令可用來取消連結兩個定義域；若要這樣做，請刪除連結的定義域。 無法針對連結的定義域建立連結的定義域。 如需相關資訊，請參閱 [建立連結的定義域](../../2014/data-quality-services/create-a-linked-domain.md)。  

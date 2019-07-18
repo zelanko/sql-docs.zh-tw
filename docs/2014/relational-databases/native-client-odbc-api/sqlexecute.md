@@ -1,5 +1,5 @@
 ---
-title: SQLExecute |Microsoft Docs
+title: SQLExecute | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad659cfb929ac5a489b069db0b6a5f2b8abdae7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067494"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   如果陳述式屬性 SQL_SOPT_SS_PARAM_FOCUS 不會設定為 0，SQLExecute 將會傳回 SQL_ERROR 並產生一個診斷記錄 = 其中包含 sqlstate=hy024 及 「 無效的屬性值 SQL_SOPT_SS_PARAM_FOCUS （必須在執行階段的零） 」 的訊息。 如需有關 SQL_SOPT_SS_PARAM_FOCUS 的詳細資訊，請參閱 < [SQLSetStmtAttr](sqlsetstmtattr.md)。  

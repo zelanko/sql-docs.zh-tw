@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390907"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771744"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以程式設計方式選取輸入資料行
   在您以程式設計方式連接元件之後，請從您要轉換或是傳遞到下游元件的上游元件中選取資料行。 如果您不為元件選取輸入資料行，元件不會從資料流程工作收到任何資料列。  

@@ -1,5 +1,5 @@
 ---
-title: PeriodsToDate (MDX) |Microsoft 文件
+title: PeriodsToDate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e33ac5562e7304b71779134b02488733b9d576a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055636"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -36,7 +35,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 指定的層級的範圍內**PeriodsToDate**函式會傳回一組期間，作為第一個週期開始，並以指定的成員作為結束的指定成員位於同一層級。  
+ 指定的層級的範圍內**PeriodsToDate**函式會傳回一組期間，為指定的成員，第一個週期開始和結束與指定成員位於同一層級。  
   
 -   如果指定層級，階層的目前成員推斷*階層*。**CurrentMember**，其中*階層*是指定層級的階層。  
   
@@ -47,7 +46,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的 sum`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中所包含的彙總`Date`維度中，從**Adventure Works** cube。  
+ 下列範例會傳回的總和`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中包含在彙總`Date`維度中，從**Adventure Works** cube。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -87,6 +86,6 @@ WHERE
   
 ## <a name="see-also"></a>另請參閱  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

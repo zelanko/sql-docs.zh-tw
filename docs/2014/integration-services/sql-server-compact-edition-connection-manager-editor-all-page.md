@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlmobileconnection.all.f1
@@ -15,19 +14,19 @@ ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70cc046320d978779016bae7277cdb2b26c2431e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055473"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 連接管理員編輯器 (全部頁面)
   使用 [SQL Server Compact Edition 連線管理員] 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
   
  若要深入了解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition 連線管理員，請參閱 [SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **AutoShrink 臨界值**  
  以百分比指定在執行自動壓縮處理序之前， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫允許的可用空間數量。  
   

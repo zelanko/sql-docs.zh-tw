@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], Quick Info
 - identifier declarations [IntelliSense]
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 745b24dc88e40e2cc3a83dd4493d4b0831d3c4e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4b268d88ea57da6da2807716753efffa9808a401
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642849"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690166"
 ---
 # <a name="quick-info-intellisense"></a>快速資訊 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51642849"
 ## <a name="transact-sql-quick-info"></a>Transact-SQL 快速諮詢  
  **[快速諮詢]** 會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中顯示兩種資訊。 不是處於偵錯模式時， **[快速諮詢]** 會顯示運算式宣告。 處於偵錯模式時， **[快速諮詢]** 會改為顯示運算式的名稱及其目前值。  
   
- 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中， **[快速資訊]** 僅適用於 IntelliSense 支援的這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法部分。 例如，如果您將滑鼠指標移到某個物件的識別碼上方，但是該物件具有 IntelliSense 不支援的資料類型，[快速資訊] 快顯視窗就會包含表示不支援此資料類型的訊息。  
+ 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中， **[快速資訊]** 僅適用於 IntelliSense 支援的這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法部分。 例如，如果您將滑鼠指標移到某個物件的識別碼上方，但是該物件具有 IntelliSense 不支援的資料類型，[快速資訊]  快顯視窗就會包含表示不支援此資料類型的訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [IntelliSense 所支援的 Transact-SQL 語法](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)  

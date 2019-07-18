@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61b3f81a23c3bb35921e0374eea44e58a31dcd4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964841"
 ---
 # <a name="view-object-adox"></a>View 物件 (ADOX)
 代表已篩選的一份記錄或一份虛擬資料表。 當搭配 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，**檢視**物件可以用於加入、 刪除或修改檢視。  

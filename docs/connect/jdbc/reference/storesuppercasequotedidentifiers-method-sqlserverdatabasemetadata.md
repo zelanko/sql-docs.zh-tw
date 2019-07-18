@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 936ec140-2597-44e6-82d3-3994a676ee35
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0747ac6317a64603d104869b71cc19affd3a671
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d767f9758862859fcdfa9f563bf3a2e6a2f4e8b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676586"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766656"
 ---
 # <a name="storesuppercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

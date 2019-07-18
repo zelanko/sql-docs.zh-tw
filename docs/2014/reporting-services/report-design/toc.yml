@@ -445,5 +445,3 @@
           href: built-in-collections-report-and-group-variables-references-report-builder.md
         - name: ReportItems 集合參考
           href: built-in-collections-reportitems-collection-references-report-builder.md
-    - name: 報表模型查詢中的公式
-      href: formulas-in-report-model-queries-report-builder-and-ssrs.md

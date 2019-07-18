@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
@@ -13,12 +12,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521043"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062881"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>將模型加入結構 (適用於 Excel 的資料採礦增益集)
   ![將模型加入到結構按鈕](media/dmc-addmodel.gif "將模型加入結構 按鈕")  
@@ -35,7 +34,7 @@ ms.locfileid: "52521043"
   
 2.  在 **選取結構**對話方塊方塊中，選擇包含您想要使用此項目，然後按一下 的資料結構**下一步**。  
   
-     **提示**:如果您不確定哪個採礦結構包含所需的資料，使用**文件模型**檢視資料行和資料的相關基本統計資料的精靈。  
+     **提示**：如果您不確定哪個採礦結構包含所需的資料，使用**文件模型**檢視資料行和資料的相關基本統計資料的精靈。  
   
      如果找不到採礦結構，請檢查您目前使用的連接。 您可能需要開啟與另一部伺服器的連接。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "52521043"
   
 4.  我們建議您也按一下**參數** 按鈕以開啟**演算法參數**對話方塊方塊中，並自訂演算法的參數。 這個選項是建立自訂採礦模型的最簡單的方式。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**選取資料行**] 對話方塊中，檢閱資料行清單，並如有必要，將使用資料行變更為下列值之一：  
   

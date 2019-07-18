@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e6565d727ad6fd3f11e2332f53e32fb2c942687
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115621"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073771"
 ---
 # <a name="tuples"></a>Tuples
   Tuple 可以唯一識別 Cube 中的資料配量。 Tuple 是由維度成員的組合所構成，只要沒有兩個以上的成員屬於相同階層即可。  
@@ -64,9 +63,9 @@ FROM [Adventure Works]
 >  屬性成員可以其成員名稱或成員索引鍵代表。 在上述範例中，您可以將參考值從 [CY 2004] 取代成 &[2004]。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Cube 空間](cube-space.md)   
- [「 自動存在 」](autoexists.md)   
+ [自動存在](autoexists.md)   
  [使用成員、 Tuple 及集合 &#40;MDX &#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

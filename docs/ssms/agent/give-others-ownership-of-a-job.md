@@ -12,16 +12,16 @@ helpviewer_keywords:
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7afd973875cd32a7df28a4c9f9ecb775a855c31d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7e9ef3752e4828ccff0578172cccc293b3b97c1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695816"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687072"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51695816"
 
 此主題描述如何將 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
 -   **若要使用下列項目賦予作業擁有權給其他人：**  
   
@@ -57,14 +57,14 @@ ms.locfileid: "51695816"
 > 如果將作業擁有權變更給非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，而且作業正在執行要求 Proxy 帳戶的作業步驟 (例如， [!INCLUDE[ssIS](../../includes/ssis_md.md)] 套件執行)，請確定使用者擁有該 Proxy 帳戶的存取權，否則作業將會失敗。  
   
 #### <a name="Permissions"></a>Permissions  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMSProc2"></a>使用 SQL Server Management Studio  
 **若要賦予作業擁有權給其他人**  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下作業，然後按一下 [屬性]。  
+2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下作業，然後按一下 [屬性]  。  
   
 3.  在 **[擁有者]** 清單選取登入。 您必須是系統管理員，才能夠變更作業的擁有者。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51695816"
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  在工具列上，按一下 **[新增查詢]**。  
+2.  在工具列上，按一下 **[新增查詢]** 。  
   
 3.  在查詢視窗中，輸入下列使用 [sp_manage_jobs_by_login (Transact-SQL)](https://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) 系統預存程序的陳述式。 下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  
   

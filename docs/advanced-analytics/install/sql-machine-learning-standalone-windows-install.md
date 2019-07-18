@@ -7,19 +7,18 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f721a840b6fba4a840484fccb1cafb334b1ba438
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962850"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>安裝 Machine Learning Server （獨立式） 或使用 SQL Server 安裝的 R Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 安裝程式包含**共用的功能**非感知執行個體，安裝選項執行 SQL Server 外部的獨立 machine learning 伺服器。 在 SQL Server 2016 中，這項功能稱為**R Server （獨立式）**。 在 SQL Server 2017 中，它會呼叫**Machine Learning Server （獨立式）** ，其中包括 R 和 Python。 
+SQL Server 安裝程式包含**共用的功能**非感知執行個體，安裝選項執行 SQL Server 外部的獨立 machine learning 伺服器。 在 SQL Server 2016 中，這項功能稱為**R Server （獨立式）** 。 在 SQL Server 2017 中，它會呼叫**Machine Learning Server （獨立式）** ，其中包括 R 和 Python。 
 
 為 SQL Server 安裝程式已安裝在獨立伺服器和非 SQL 品牌版本的功能上相當[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用案例和案例，包括：
 
@@ -84,11 +83,11 @@ SQL Server 2016 的只有：Microsoft 發現特定版本的 Microsoft VC++ 2013 
     > 
     > 基於這些理由，我們通常建議您在 SQL Server Machine Learning 服務的不同電腦上安裝 Machine Learning Server （獨立式）。
 
-5.  接受授權條款，下載並安裝基底語言散發套件。 無法使用 [接受]  按鈕時，您可以按一下 [下一步] 。 
+5.  接受授權條款，下載並安裝基底語言散發套件。 無法使用 [接受]  按鈕時，您可以按一下 [下一步]  。 
 
      ![Python 授權協議](media/2017setup-python-license.png "Python 授權合約")
 
-6.  在 [準備安裝]  頁面上，確認您的選項並按一下 [安裝] 。
+6.  在 [準備安裝]  頁面上，確認您的選項並按一下 [安裝]  。
 
 安裝完成時，請參閱[SQL Server R services 的自訂報告](../r/monitor-r-services-using-custom-reports-in-management-studio.md)因任何錯誤或警告的協助，請參閱[升級及安裝常見問題集-Machine Learning 服務](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 ::: moniker-end
@@ -121,9 +120,9 @@ SQL Server 2016 的只有：Microsoft 發現特定版本的 Microsoft VC++ 2013 
     > 
     > 我們通常建議您安裝 R Server （獨立式） 不同的電腦上從 SQL Server R Services （資料庫）。
 
-5.  接受授權條款，下載並安裝基底語言散發套件。 無法使用 [接受]  按鈕時，您可以按一下 [下一步] 。 
+5.  接受授權條款，下載並安裝基底語言散發套件。 無法使用 [接受]  按鈕時，您可以按一下 [下一步]  。 
 
-6.  在 [準備安裝]  頁面上，確認您的選項並按一下 [安裝] 。
+6.  在 [準備安裝]  頁面上，確認您的選項並按一下 [安裝]  。
 
 安裝完成時，請參閱[SQL Server R services 的自訂報告](../r/monitor-r-services-using-custom-reports-in-management-studio.md)因任何錯誤或警告的協助，請參閱[升級及安裝常見問題集-Machine Learning 服務](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 ::: moniker-end
@@ -149,7 +148,7 @@ R 和 Python 開發常會在同一部電腦上有多個版本。 安裝 SQL Serv
 
 下表列出 Microsoft 安裝程式所建立的 R 和 Python 散發套件的路徑。 為求完整性，資料表會包含 SQL Server 安裝程式，以及 Microsoft Machine Learning Server 的獨立安裝程式所產生的路徑。
 
-|版本| 安裝方法 | 預設資料夾|
+|Version| 安裝方法 | 預設資料夾|
 |----|----|----|
 |SQL Server 2017 Machine Learning 伺服器 （獨立式） |  SQL Server 2017 安裝程式精靈 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server （獨立式） |  Windows 的獨立安裝程式 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|

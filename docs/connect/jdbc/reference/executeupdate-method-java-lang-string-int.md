@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d7baa2edfdc1d8583dbea5bf16ea05db2e3afad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86906a5c0c31f29b77fc899a3553e01adc822e46
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786689"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

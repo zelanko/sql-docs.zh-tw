@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, viewing
 - displaying job activity
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1ce3fe6aec1612eff8d9560801119894de15e16
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a098a7ae1b1dbfca75049ef01ae5491d67548dc5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702978"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680648"
 ---
 # <a name="view-job-activity"></a>檢視作業活動
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,18 +38,18 @@ ms.locfileid: "51702978"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目檢視作業活動：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
 ## <a name="before-you-begin"></a>開始之前  
   
 ### <a name="Security"></a>Security  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -57,15 +57,15 @@ ms.locfileid: "51702978"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**。  
+2.  展開 **[SQL Server Agent]** 。  
   
-3.  在 [作業活動監視器]一，然後按一下 [檢視作業活動]。  
+3.  在 [作業活動監視器]  一，然後按一下 [檢視作業活動]  。  
   
 4.  您可以在 **[作業活動監視器]** 中檢視為此伺服器定義之每項作業的詳細資訊。  
   
 5.  以滑鼠右鍵按一下作業以啟動、停止、啟用或停用作業，重新整理其顯示在「作業活動監視器」中的狀態，將其刪除，或是檢視其記錄或屬性。  若要啟動、停止、啟用或停用，或是重新整理多個作業，請在「作業活動監視器」中選取數個資料列，並以滑鼠右鍵按一下選取範圍。  
   
-6.  若要更新「作業活動監視器」，請按一下 **[重新整理]**。 若不要檢視那麼多資料列，請按一下 **[篩選]** ，並輸入篩選參數。  
+6.  若要更新「作業活動監視器」，請按一下 **[重新整理]** 。 若不要檢視那麼多資料列，請按一下 **[篩選]** ，並輸入篩選參數。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -73,9 +73,9 @@ ms.locfileid: "51702978"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- lists activity for all jobs that the current user has permission to view.  

@@ -24,14 +24,18 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724220"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   產品或是使用者的資料庫除了文字與數值資料之外經常包括影像。 Microsoft .NET Framework 中的 **System.Drawing** 命名空間提供操作影像的類別。  
   
  [範例 1：將影像轉換為 JPEG 格式](#example1)  
@@ -48,7 +52,7 @@ ms.locfileid: "58270587"
   
 1.  建立名為 `CurrentImageFile` 的字串變數，並將其值設定為現有影像檔的路徑與檔案名稱。  
   
-2.  在 [指令碼工作編輯器] 的 [指令碼] 頁面上，將 `CurrentImageFile` 變數加入 **ReadOnlyVariables** 屬性。  
+2.  在 [指令碼工作編輯器]  的 [指令碼]  頁面上，將 `CurrentImageFile` 變數加入 **ReadOnlyVariables** 屬性。  
   
 3.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   
@@ -58,9 +62,9 @@ ms.locfileid: "58270587"
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器** 的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
+2.  在 **Foreach 迴圈編輯器** 的 [集合]  頁面上，將 [Foreach 檔案列舉值]  選取為列舉值，以及指定來源檔案的路徑與檔案遮罩，例如 "*.bmp"。  
   
-3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應]  頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  
@@ -159,7 +163,7 @@ End Function
   
 2.  另外建立 `MaxThumbSize` 整數變數並指派以像素為單位的值，例如 100。  
   
-3.  在**指令碼工作編輯器**的 [指令碼] 頁面上，將兩個變數都新增至 **ReadOnlyVariables** 屬性。  
+3.  在**指令碼工作編輯器**的 [指令碼]  頁面上，將兩個變數都新增至 **ReadOnlyVariables** 屬性。  
   
 4.  在指令碼專案中，設定 **System.Drawing** 命名空間的參考。  
   
@@ -169,9 +173,9 @@ End Function
   
 1.  在 Foreach 迴圈容器中置放指令碼工作。  
   
-2.  在 **Foreach 迴圈編輯器**的 [集合] 頁面上，將 [Foreach 檔案列舉值] 選取為 [列舉值]，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
+2.  在 **Foreach 迴圈編輯器**的 [集合]  頁面上，將 [Foreach 檔案列舉值]  選取為 [列舉值]  ，以及指定來源檔案的路徑與檔案遮罩，例如 "*.jpg"。  
   
-3.  在 [變數對應] 頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
+3.  在 [變數對應]  頁面上，將 `CurrentImageFile` 變數對應至索引 0。 這個變數會在每次反覆運算列舉值時，將目前的檔案名稱傳遞給指令碼工作。  
   
     > [!NOTE]  
     >  除了列在用於單一影像檔之程序的步驟之外，這是額外的步驟。  

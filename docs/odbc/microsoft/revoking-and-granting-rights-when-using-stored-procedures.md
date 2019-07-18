@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91fcf722554fe1840465329e707c792a6bbab6db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987950"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>在使用預存程序時撤銷和授與權限
 > [!IMPORTANT]  
@@ -27,7 +26,7 @@ ms.locfileid: "47792226"
   
  Microsoft ODBC Driver for Oracle 授與且然後撤銷預存程序所存取的資料表上的使用者權限時，會傳回下列錯誤訊息：  
   
- SQL_ERROR = 1  
+ SQL_ERROR=-1  
   
  szErrorMsg ="[Microsoft] [ODBC driver for Oracle] 參數數目不正確 」  
   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_adddistributor
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072758"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +67,8 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_dropdistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [設定散發](../../relational-databases/replication/configure-distribution.md)  

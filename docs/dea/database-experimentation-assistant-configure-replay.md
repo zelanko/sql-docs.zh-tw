@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 76516c02b03443ca6c7642f75c16cf53b07b3e8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.reviewer: mathoma
+ms.openlocfilehash: 9166265dad077d4a3e83cc300868607d001ef233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058965"
 ---
 # <a name="configure-replay-in-database-experimentation-assistant"></a>設定重新執行在資料庫測試助理
 

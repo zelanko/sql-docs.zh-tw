@@ -13,15 +13,14 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 11d553d22388b981ddc539e822fa7b98eaee4e67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017323"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
 

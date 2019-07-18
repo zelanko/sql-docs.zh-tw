@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947606"
 ---
 # <a name="interval-data-type-precision"></a>間隔資料類型精確度
 間隔資料類型的有效位數，其中包括間隔開頭有效位數、 間隔精確度和秒數有效位數。  

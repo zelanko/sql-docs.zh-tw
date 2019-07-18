@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788095"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556953"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [請提供您對 SQL Docs 中樞頁面的意見反應！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 本主題提供各種 SQL Server 2017 版本支援的功能的詳細資料。 
 
@@ -156,7 +158,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |AlwaysOn 可用性群組 <sup>3</sup>|是|否|否|否|否|
 |基本可用性群組 <sup>4</sup>|否|是|否|否|否|
 |線上頁面和檔案還原|是|否|否|否|否|
-|線上檢索索引|是|否|否|否|否|
+|線上索引建立與重建|是|否|否|否|否|
 |繼續線上索引重建|是|否|否|否|否|
 |線上結構描述變更|是|否|否|否|否|
 |快速復原|是|否|否|否|否|
@@ -165,7 +167,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |資料庫復原建議程式|是|是|是|是|是|
 |加密的備份|是|是|否|否|否|
 |混合式備份至 Windows Azure (備份至 URL)|是|是|否|否|否|
-|無叢集的可用性群組|是|是|否|否|否|否|
+|讀取級別可用性群組|是|是|否|否|否|否|
 |最小複本認可可用性群組|是|是|是|否|否|否|
   
 
@@ -196,7 +198,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |多個檔案資料流容器|是|是|是|是|是|
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否|否|否|否|
 |緩衝集區擴充|是|是|否|否|否|
-|IO 資源管理|是|否|否|否|否|  
+|I/O 資源管理|是|否|否|否|否|  
 |預先讀取|是|否|否|否|否|
 |進階掃描|是|否|否|否|否|
 |延遲持久性|是|是|是|是|是|

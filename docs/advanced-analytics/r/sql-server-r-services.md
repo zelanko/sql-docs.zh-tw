@@ -7,13 +7,13 @@ ms.date: 09/10/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: efc1b939f3231aeca18e0b6547970af6b8eb39cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962421"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,10 +22,10 @@ R Services 是 SQL Server 2016 資料庫引擎執行個體，用於執行 SQL Se
 
 R Services 包含基底散發套件的 R，重疊與來自 Microsoft 的企業 R 套件，讓您可以載入和處理多個核心上大量的資料和彙總成單一的彙總輸出的結果。 Microsoft 的 R 函式和演算法設計成可調整和公用程式： 提供預測性分析、 統計模型、 資料視覺效果，與頂尖的機器學習演算法中設計商業 server 產品和Microsoft 支援。 
 
-R 程式庫包含[ **RevoScaleR**](ref-r-revoscaler.md)， [ **MicrosoftML (R)**](ref-r-microsoftml.md)，和其他人。 因為 R Services 會與 database engine 整合，您可以讓分析貼近資料，並排除與移動資料相關聯的安全性風險與成本。
+R 程式庫包含[ **RevoScaleR**](ref-r-revoscaler.md)， [ **MicrosoftML (R)** ](ref-r-microsoftml.md)，和其他人。 因為 R Services 會與 database engine 整合，您可以讓分析貼近資料，並排除與移動資料相關聯的安全性風險與成本。
 
 > [!Note]
-> 以 SQL Server 2017 中已重新命名為 R Services [SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)，反映的 Python。
+> R Services 已重新命名 SQL Server 2017 和更新版本，才能[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)，反映的 Python。
 
 ## <a name="components"></a>元件
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045777"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 這是要變更屬性。 *屬性*已**sysname**。  
   
-`[ @value = ] 'value'` 是新屬性的值。 *值*已**nvarchar(1000)**，沒有預設值。  
+`[ @value = ] 'value'` 是新屬性的值。 *值*已**nvarchar(1000)** ，沒有預設值。  
   
 `[ @publication_type = ] publication_type` 指定發行集的複寫類型。 *publication_type*已**int**，而且可以是下列值之一。  
   
@@ -81,11 +80,11 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||只是為了與舊版相容。|  
 |**ftp_password**||只是為了與舊版相容。|  
 |**ftp_port**||只是為了與舊版相容。|  
-|**hostname**||連接到發行者時所用的主機名稱。|  
+|**主機名稱**||連接到發行者時所用的主機名稱。|  
 |**internet_login**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
 |**internet_password**||當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的密碼。|  
 |**internet_security_mode**|**1**|Web 同步處理使用 Windows 整合式驗證。 我們建議您搭配 Web 同步處理來使用基本驗證。 如需詳細資訊，請參閱 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。|  
-||**0**|Web 同步處理使用基本驗證。<br /><br /> 注意:Web 同步處理需要 Web 伺服器的 SSL 連接。|  
+||**0**|Web 同步處理使用基本驗證。<br /><br /> 注意:Web 同步處理需要 Web 伺服器的 SSL 連線。|  
 |**internet_timeout**||Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**internet_url**||代表 Web 同步處理之複寫接聽程式位置的 URL。|  
 |**merge_job_login**||用來執行代理程式之 Windows 帳戶的登入。|  
@@ -117,7 +116,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

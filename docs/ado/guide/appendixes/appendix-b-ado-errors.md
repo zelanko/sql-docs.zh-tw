@@ -1,5 +1,5 @@
 ---
-title: 附錄 B:ADO 錯誤 |Microsoft Docs
+title: 附錄 B：ADO 錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 392b14a057c42091acb6b92e0c64d41d94b8eb10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926952"
 ---
-# <a name="appendix-b-ado-error-codes"></a>附錄 b: ADO 錯誤碼
+# <a name="appendix-b-ado-error-codes"></a>附錄 B：ADO 錯誤碼
 請參閱下列主題中的特定錯誤訊息的詳細資訊：
 
 -   [ADO 錯誤碼](../../../ado/guide/appendixes/ado-error-codes.md)

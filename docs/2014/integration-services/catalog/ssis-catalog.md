@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771574"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   `SSISDB`目錄是使用的中央點[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 專案，您已部署至[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -87,14 +87,14 @@ ms.locfileid: "58377471"
 -   後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (_)。  
   
 ## <a name="catalog-configuration"></a>目錄組態  
- 您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性] 對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 您可在 [物件總管] 中以滑鼠右鍵按一下 `SSISDB` 來存取此對話方塊。  
+ 您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性]  對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 您可在 [物件總管] 中以滑鼠右鍵按一下 `SSISDB` 來存取此對話方塊。  
   
 ### <a name="operations-and-project-version-cleanup"></a>作業和專案版本清除  
  目錄中許多作業的狀態資料會儲存在內部資料庫資料表中。 例如，目錄會追蹤封裝執行和專案部署的狀態。 為了維護作業資料的大小， **中的** [SSIS Server 維護作業] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會用來移除舊的資料。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時會建立此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent 作業。  
   
  若要更新或重新部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請使用相同名稱將它部署到目錄中的相同資料夾。 根據預設，每次您重新部署專案時，`SSISDB`目錄都會保留舊版的專案。 為了維護作業資料的大小， **[SSIS Server 維護作業]** 會用來移除專案的舊版。  
   
- 下列`SSISDB`目錄屬性會定義如何將這個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業的行為模式。 您可以使用 [目錄屬性] 對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) 檢視及修改屬性。  
+ 下列`SSISDB`目錄屬性會定義如何將這個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業的行為模式。 您可以使用 [目錄屬性]  對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) 檢視及修改屬性。  
   
  **定期清除記錄檔**  
  當這個屬性設定為 `True` 時，便會執行作業清除的作業步驟。  
@@ -139,7 +139,7 @@ ms.locfileid: "58377471"
   
  下表列出 **[目錄屬性]** 對話方塊中所顯示的屬性名稱，以及資料庫檢視中的對應屬性。  
   
-|屬性名稱 (**[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
+|屬性名稱 ( **[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLED|  

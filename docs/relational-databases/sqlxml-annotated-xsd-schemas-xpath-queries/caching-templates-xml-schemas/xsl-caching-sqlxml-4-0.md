@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74369a033f3fc454855284f9bf267591b2b24314
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 46c11054b4f3681a6bd0184ff77c2353b2201f57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093228"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 快取 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f4b4714a6863f4a103ca00c151bc4209467e890
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105665"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -36,7 +35,7 @@ ms.locfileid: "56292395"
 ## <a name="supported-html-tags"></a>支援的 HTML 標籤  
  下列是在定義為預留位置文字時，會轉譯為 HTML 的標記完整清單：  
   
--   標頭、樣式和區塊元素：\<H {n} >， \<d i v >， \<s p a n >，\<P >， \<l i >  
+-   標頭、 樣式和區塊元素：\<H {n} >， \<d i v >， \<s p a n >，\<P >， \<l i >  
   
  所以其他的 HTML 標記都會在處理報表時遭到忽略。 如果預留位置文字中的運算式所代表的 HTML 沒有採用正確格式，則預留位置會轉譯為純文字。 所有 HTML 標記都不區分大小寫。  
   
@@ -71,9 +70,9 @@ ms.locfileid: "56292395"
   
 -   格式不正確的 CSS 值會像格式不正確的 HTML 一樣遭到忽略。  
   
--   同一標記中同時存在屬性和 CSS 樣式屬性時，CSS 屬性擁有較高的優先權。 例如，如果文字是 **\<p style="text-align: right" align="left">**，則只會套用 text-align 屬性而且文字會靠右對齊。  
+-   同一標記中同時存在屬性和 CSS 樣式屬性時，CSS 屬性擁有較高的優先權。 例如，如果文字是 **\<p style="text-align: right" align="left">** ，則只會套用 text-align 屬性而且文字會靠右對齊。  
   
--   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是 **\<p align="left" align="right">**，則會靠右對齊文字。  
+-   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是 **\<p align="left" align="right">** ，則會靠右對齊文字。  
   
 ## <a name="see-also"></a>另請參閱  
  [轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  

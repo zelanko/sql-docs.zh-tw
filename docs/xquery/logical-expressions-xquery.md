@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004501"
 ---
 # <a name="logical-expressions-xquery"></a>邏輯運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- 測試運算式`expression1,``expression2`，請在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可能會導致空的序列、 一或多個節點的序列或單一布林值。 根據結果而定，將以下列方式來決定有效的布林值：   
+ 測試運算式`expression1,``expression2`，請在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可能會導致空的序列、 一或多個節點的序列或單一布林值。 根據結果而定，將以下列方式來決定有效的布林值：  
   
 -   如果測試運算式產生空白時序，運算式的結果即為 False。  
   
@@ -48,7 +47,7 @@ expression1 or expression2
   
  邏輯**並**並**或**運算子則會套用至產生的布林值，與標準語意之運算式。  
   
- 下列查詢會從產品目錄擷取特定產品型號正面角度的小型圖片，即  <`Picture`> 元素。 請注意對於每個產品描述文件，目錄可以儲存具有不同屬性的一或多個產品圖片，例如大小與角度。  
+ 下列查詢會從產品目錄擷取正面角度的小型圖片，<`Picture`> 項目，針對特定產品型號。 請注意對於每個產品描述文件，目錄可以儲存具有不同屬性的一或多個產品圖片，例如大小與角度。  
   
 ```  
 SELECT CatalogDescription.query('  

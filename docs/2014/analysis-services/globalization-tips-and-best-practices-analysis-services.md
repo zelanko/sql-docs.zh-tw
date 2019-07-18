@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
@@ -17,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080855"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
@@ -69,7 +68,7 @@ ms.locfileid: "53357315"
   
      在中國和新加坡，Microsoft 支援通常會以簡體中文顯示，並以拼音做為慣用的排序次序。 建議的定序為 Chinese_PRC (適用於 SQL Server 2000)、Chinese_PRC_90 (適用於 SQL Server 2005) 或 Chinese_Simplified_Pinyin_100 (適用於 SQL Server 2008 及更新版本)。  
   
-     在台灣，則較常看到繁體中文，且建議的排序次序是依據筆劃數：Chinese_Taiwan_Stroke (適用於 SQL Server 2000)、Chinese_Taiwan_Stroke_90 (適用於 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 (適用於 SQL Server 2008 及更新版本)。  
+     在台灣，它是較常看到繁體中文，且建議的排序次序依據筆劃數：Chinese_Taiwan_Stroke （適用於 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （適用於 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （適用於 SQL Server 2008 及更新版本）。  
   
      其他地區 (例如香港特別行政區和澳門特別行政區) 也會使用繁體中文。 在香港特別行政區，還很常會看到 Chinese_Hong_Kong_Stroke_90 (在 SQL Server 2005 上) 的定序。 在澳門特別行政區，也經常會使用 Chinese_Traditional_Stroke_Count_100 (在 SQL Server 2008 及更新版本上)。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "53357315"
   
 |字集|區分大小寫|  
 |---------------------|----------------------|  
-|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**、 54321**ABCDEF**、 54321**AbCdEf**。 Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
+|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
 |**斯拉夫文、希臘文、科普特文、亞美尼亞文**|非拉丁文複合字集的物件識別碼 (例如斯拉夫文) 則一律會區分大小寫。 例如，Измерение 和 измерение 的唯一差異是第一個字母的大小寫，即便如此，這兩個字仍會視為兩個相異值。|  
   
  **物件識別碼的區分大小寫含意**  
@@ -103,7 +102,7 @@ ms.locfileid: "53357315"
   
 -   將 `Locale Identifier=1036` 新增至連接字串。 儲存並關閉檔案。  
   
--   開啟 Excel | [資料] | [現有連接]。 將清單篩選到只剩下這部電腦上的連接檔案。 尋找 Adventure Works 的連接 (請仔細查看名稱；您可能會有一個以上的連接)。 開啟連接。  
+-   開啟 Excel | [資料]   | [現有連接]  。 將清單篩選到只剩下這部電腦上的連接檔案。 尋找 Adventure Works 的連接 (請仔細查看名稱；您可能會有一個以上的連接)。 開啟連接。  
   
      您應該會看到 Adventure Works 範例資料庫中的法文翻譯。  
   
@@ -113,9 +112,9 @@ ms.locfileid: "53357315"
   
  在 Management Studio 中，您可以指定伺服器連接的地區設定識別碼。  
   
--   在物件總管 中，選取 [連接]  |  | ，然後按一下 [其他連接參數] **Additional ion Parameters** 索引標籤。  
+-   在物件總管 中，選取 [連接]   |    |   ，然後按一下 [其他連接參數] **Additional ion Parameters** 索引標籤。  
   
--   輸入 `Local Identifier=1036` ，然後按一下 [連接] 。  
+-   輸入 `Local Identifier=1036` ，然後按一下 [連接]  。  
   
 -   對 Adventure Works 資料庫執行 MDX 查詢。 查詢結果應該是法文翻譯。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "53357315"
   
 3.  **針對通用的日期和時間資訊使用 ISO 日期格式**  
   
-     一[Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx)有這項建議：「針對要傳入 SQL 或 MDX 查詢的任何日期字串，我一律會使用 ISO 日期格式 yyyy-mm-dd，這樣做不僅可避免模擬兩可，且不論用戶端或伺服器的地區設定為何都有效。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
+     一[Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx)有這項建議：「 我一律使用 ISO 日期格式為 yyyy-mm-dd 的傳入 SQL 或 MDX 查詢因為它是模稜兩可，不管用戶端或伺服器的地區設定的任何日期字串。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

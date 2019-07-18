@@ -13,18 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808249"
 ---
 # <a name="continue-with-restore"></a>繼續還原
-  使用 **[繼續還原]** 對話方塊指出您是否要還原下一個備份組。 若要延遲此還原作業 (例如，交換磁帶)，請等到您準備好繼續後，才按一下 **[確定]**。  
+  使用 **[繼續還原]** 對話方塊指出您是否要還原下一個備份組。 若要延遲此還原作業 (例如，交換磁帶)，請等到您準備好繼續後，才按一下 **[確定]** 。  
   
  按一下 **[否]** 即可結束還原順序，讓資料庫保持在還原狀態。 稍後若要繼續還原，請適當地使用 **[還原資料庫]** 或 **[還原交易記錄]** 工作。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **媒體集**  
  顯示下一個媒體集名稱 (如果有的話)。  
   

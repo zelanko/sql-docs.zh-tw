@@ -19,14 +19,13 @@ helpviewer_keywords:
 - status information [ODBC]
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 603eb8682b69a5f2abc3cd0f46adbd735de05170
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 42652efb0f95d48cec070a2ba558fae176b09375
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062390"
 ---
 # <a name="diagnostic-records-and-fields"></a>診斷記錄和欄位
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

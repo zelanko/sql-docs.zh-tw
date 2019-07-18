@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090054"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>以指令碼變數使用 sqlcmd
   用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
@@ -50,7 +49,7 @@ ms.locfileid: "48113778"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -80,7 +79,7 @@ ms.locfileid: "48113778"
   
 -   變數名稱不能包含空白字元或引號。  
   
--   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)*。  
+-   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)* 。  
   
 -   指令碼變數不區分大小寫。  
   
@@ -188,7 +187,7 @@ ms.locfileid: "48113778"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台] 中按兩下 [系統]。 按一下 [進階] 索引標籤，然後按一下 [環境變數]。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
  下列程式碼是在輸入檔 `c:\testscript.txt`中：  
   

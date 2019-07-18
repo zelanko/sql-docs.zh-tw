@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ed31af-2fa9-4a0c-9639-08b63199b092
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0af5c392045316b692164a1dce16a5e90c960901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ffe0e5f8932dc4ef53d7fac3fd0ea580892eb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898773"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (桌面資料庫驅動程式)
 所傳回的書籤*fOption* SQL_GETBOOKMARK 的有效期僅開啟查詢時，會重新發出查詢時，會失效。 不支援持續性的書籤。

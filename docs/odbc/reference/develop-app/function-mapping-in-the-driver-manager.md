@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bfa535d4175c109e96098dd1e40e93be9521de2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069693"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>驅動程式管理員中的函式對應
 驅動程式管理員支援採用字串引數的函式的兩個進入點。 未裝飾的函式 (**SQLDriverConnect**) 是 ANSI 格式的函式。 以 Unicode 格式以裝飾*W* (**SQLDriverConnectW**。)  

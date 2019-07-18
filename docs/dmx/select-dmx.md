@@ -1,5 +1,5 @@
 ---
-title: 選取 (DMX) |Microsoft Docs
+title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928429"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED  
  某些資料採礦用戶端不能接受資料採礦提供者所提供的階層式格式結果集。 用戶端可能缺少處理階層的能力，或者可能必須將結果儲存在單一反正規化資料表中。 若要將巢狀資料表中的資料轉換到扁平化資料表，必須要求查詢結果扁平化。  
   
- 若要將查詢結果扁平化，使用**選取 **語法搭配**FLATTENED**選項，如下列範例所示：  
+ 若要將查詢結果扁平化，使用**選取** 語法搭配**FLATTENED**選項，如下列範例所示：  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
@@ -77,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以限制傳回查詢所使用的案例**其中**子句。 **何處**子句會指定該資料行中的參考**位置**運算式必須有相同的語意中的資料行參考*\<選取清單 >* 的**選取**陳述式，而且只能傳回布林運算式。 語法**其中**子句如下所示  
+ 您可以限制傳回查詢所使用的案例**其中**子句。 **何處**子句會指定該資料行中的參考**位置**運算式必須有相同的語意中的資料行參考 *\<選取清單 >* 的**選取**陳述式，而且只能傳回布林運算式。 語法**其中**子句如下所示  
   
 ```  
 WHERE < condition expression >  
@@ -94,7 +93,7 @@ WHERE < condition expression >
   
 -   [SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  第一種類型的預測可以讓您即時或批次建立複雜的預測。  
   
@@ -111,19 +110,19 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>子句語法  
  由於與瀏覽的複雜性**選取**陳述式、 詳細的語法元素與引數會依子句說明。 如需有關每個子句的詳細資訊，請按一下以下清單中的主題：  
   
- [SELECT DISTINCT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
  [SELECT FROM&#60;模型&#62;。內容&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
  [SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
  [SELECT FROM&#60;模型&#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
  [SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  [SELECT FROM&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)  
   

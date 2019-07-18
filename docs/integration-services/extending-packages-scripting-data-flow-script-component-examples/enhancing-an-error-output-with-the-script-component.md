@@ -16,14 +16,18 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67807b396e61c0c2085fcdeab20d44e5a0b33bb5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3c9a7827c70f99db24c50704f2591b8288124d45
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66469673"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤輸出中的兩個額外資料行 ErrorCode 和 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤之資料行的識別碼。 這些數值若無對應的錯誤描述和資料行名稱，則用途有限。  
   
  此主題描述如何使用指令碼元件，將錯誤描述和資料行名稱新增至資料流程現有的錯誤輸出資料。 此範例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法 (可透過指令碼元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性取得)，加入對應至特定預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼之錯誤描述。 然後，本例會使用相同介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法新增資料行名稱，此名稱對應至擷取的歷程識別碼。  
@@ -44,15 +48,15 @@ ms.locfileid: "58279142"
   
 3.  從上游元件將錯誤輸出連接至新指令碼元件。  
   
-4.  開啟**指令碼轉換編輯器**，然後在 [指令碼] 頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
+4.  開啟**指令碼轉換編輯器**，然後在 [指令碼]  頁面上選取 **ScriptLanguage** 屬性的指令碼語言。  
   
-5.  按一下 [編輯指令碼] 開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
+5.  按一下 [編輯指令碼]  開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，並新增以下所示的範例程式碼。  
   
 6.  關閉 VSTA。  
   
-7.  在指令碼轉換編輯器的 [輸入資料行] 頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
+7.  在指令碼轉換編輯器的 [輸入資料行]  頁面上，選取 ErrorCode 和 ErrorColumn 資料行。  
   
-8.  在 [輸入及輸出] 頁面上新增兩個新的資料行。  
+8.  在 [輸入及輸出]  頁面上新增兩個新的資料行。  
   
     -   新增新的輸出資料行，類型為**字串**名稱為 **ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
   
@@ -76,9 +80,12 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If 0 = Row.ErrorColumn Then
+            If Row.ErrorColumn = 0 Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            ELSE If Row.ErrorColumn = -1 Then
+                ' -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables."
             Else
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
             End If
@@ -102,6 +109,11 @@ public class ScriptMain:      // C#
             if (Row.ErrorColumn == 0)
             {
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            // -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+            else if (Row.ErrorColumn == -1)
+            {
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables.";
             }
             else
             {

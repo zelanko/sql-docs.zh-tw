@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b6fdc0b8267f1e995812d573ae80f0f24ee11843
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064725"
 ---
 # <a name="import-the-sqlps-module"></a>匯入 SQLPS 模組
   從 PowerShell 管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的建議方式是將 `sqlps` 模組匯入 Windows PowerShell 2.0 環境中。 此模組會載入及註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 嵌入式管理單元和管理能力組件。  
   
-1.  **開始之前：**[Security](#Security)  
+1.  **開始之前：**[安全性](#Security)  
   
 2.  **若要載入的模組：**[載入 sqlps 模組](#LoadSqlps)  
   

@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898790"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 相容性： 層級的其中一個  
+ ODBC API 相容性：層級一個  
   
  傳回目前的陳述式選項的設定。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "47646996"
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|32 位元整數值，是目前的記錄數目的書籤|  
 |SQL_ROW_NUMBER|32 位元整數，指定目前的資料列，結果中的位置設定|  
-|SQL_TRANSLATE_DLL|錯誤: 「 驅動程式不支援 」|  
+|SQL_TRANSLATE_DLL|錯誤：「 驅動程式不支援 」|  
   
  Visual FoxPro ODBC Driver 已轉譯的 Dll。  
   

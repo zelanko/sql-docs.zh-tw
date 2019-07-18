@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef90025a129bc624377bfe7891f122a838180a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 062894547aca57ca01ca105f4060f2dcd39e942f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086446"
 ---
 # <a name="sqlfreeconnect-mapping"></a>SQLFreeConnect 對應
-當應用程式呼叫**SQLFreeConnect**透過 ODBC 3 *.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLFreeConnect**透過 ODBC *3.x*驅動程式，會呼叫  
   
 ```  
 SQLFreeConnect(hdbc)   

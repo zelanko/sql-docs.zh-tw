@@ -11,15 +11,15 @@ helpviewer_keywords:
 - annotations [SQL Server]
 - database diagrams [SQL Server], annotations
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9dadc8b2aadfbf00b67a3ae697336124f53ddcdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 3ad87f41f583a7a3c83b30fef39acf53713897c5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612726"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683026"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>將文字附註加入至圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "47612726"
   
 2.  在 [圖表] 視窗的空白空間上按一下滑鼠右鍵。  
   
-3.  從快速鍵功能表按一下 [新增文字附註]。  
+3.  從快速鍵功能表按一下 [新增文字附註]  。  
   
 4.  將註記輸入至出現的文字欄位。  
   
 > [!NOTE]  
-> 若要變更字型，請在文字欄位按一下滑鼠右鍵，再按一下 [設定文字附註的字型]。  
+> 若要變更字型，請在文字欄位按一下滑鼠右鍵，再按一下 [設定文字附註的字型]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQLStatistics |Microsoft Docs
+title: SQLStatistics | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351053"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188613"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics**可以在靜態資料指標上執行。 嘗試執行**SQLStatistics**上可更新 （索引鍵集驅動或動態） 會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  

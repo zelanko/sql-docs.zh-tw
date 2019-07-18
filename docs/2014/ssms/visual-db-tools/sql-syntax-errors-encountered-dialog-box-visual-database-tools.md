@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204573"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>發生 SQL 語法錯誤對話方塊 (Visual Database Tools)
   這個對話方塊會通知您，設計工具無法在 [SQL] 窗格中剖析 SQL 陳述式。  
@@ -32,9 +32,9 @@ ms.locfileid: "52781800"
 -   SQL 陳述式有效，但包含所使用資料連接的特定語法。  
   
 > [!TIP]  
->  您可以使用 [查詢] 工具列上的 [驗證 SQL 語法] 按鈕，檢查陳述式是否有效。  
+>  您可以使用 [查詢]  工具列上的 [驗證 SQL 語法]  按鈕，檢查陳述式是否有效。  
   
- 對話方塊會顯示 SQL 陳述式無法剖析的原因訊息。 按一下 [確定] 繼續進行。  
+ 對話方塊會顯示 SQL 陳述式無法剖析的原因訊息。 按一下 [確定]  繼續進行。  
   
 ## <a name="see-also"></a>另請參閱  
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](visual-database-tools.md)  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044064"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>測試篩選過的模型 (基本資料採礦教學課程)
   既然您判斷出`TM_Decision_Tree`模型最為正確，您要自訂的模型，使其更符合需求的[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]目標郵寄促銷活動。 具體而言，行銷部門想要知道男性和女性客戶之間是否有任何差異。 資訊可協助他們決定要用於廣告使用哪些雜誌和哪些產品當做郵寄活動的特色。  
@@ -37,7 +37,7 @@ ms.locfileid: "56011139"
   
 4.  在 **模型名稱**欄位中，輸入`TM_Decision_Tree_Male`。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
  接下來，建立一個篩選來選取此模型的客戶 (根據客戶的性別)。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "56011139"
   
      -或-  
   
-     選取此模型。 在 **[採礦模型]** 功能表上，選取 **[設定模型篩選器]**。  
+     選取此模型。 在 **[採礦模型]** 功能表上，選取 **[設定模型篩選器]** 。  
   
-2.  在 [模型篩選器] 對話方塊的 [採礦結構資料行] 文字方塊中，按一下方格中的上方資料列。  
+2.  在 [模型篩選器]  對話方塊的 [採礦結構資料行]  文字方塊中，按一下方格中的上方資料列。  
   
      下拉式清單只會顯示該資料表中的資料行名稱。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56011139"
   
 #### <a name="to-test-the-lift-of-the-filtered-models"></a>若要測試篩選過之模型的增益  
   
-1.  切換至 **[採礦精確度圖表**] 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
+1.  切換至 **[採礦精確度圖表** 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
   
 2.  在 **選取要用於精確度圖表的資料集**群組方塊中，選取**使用採礦結構測試案例**。  
   

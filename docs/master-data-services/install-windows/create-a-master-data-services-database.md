@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 449cf64468f7dcb3925b09af08fd0661f23b1cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: b94e7e34bb53d15bbb7466a5ff3e32df634e0f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945046"
 ---
 # <a name="create-a-master-data-services-database"></a>建立 Master Data Services 資料庫
 
@@ -24,7 +23,7 @@ ms.locfileid: "47818586"
 
   當您需要新的資料庫支援 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 應用程式及 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務時，請建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   如需主控資料庫之電腦需求的相關資訊，請參閱[資料庫需求 &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   
@@ -32,13 +31,13 @@ ms.locfileid: "47818586"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 [資料庫組態]。  
+2.  按一下左窗格中的 [資料庫組態]  。  
   
-3.  在 [資料庫組態] 頁面上，按一下 [建立資料庫]。  
+3.  在 [資料庫組態]  頁面上，按一下 [建立資料庫]  。  
   
-4.  完成 [建立資料庫] 精靈，建立及設定此資料庫。 如需精靈中之使用者介面 (UI) 選項的相關資訊，請參閱 [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) (建立資料庫精靈 (Master Data Services 組態管理員))。  
+4.  完成 [建立資料庫]  精靈，建立及設定此資料庫。 如需精靈中之使用者介面 (UI) 選項的相關資訊，請參閱 [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) (建立資料庫精靈 (Master Data Services 組態管理員))。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   設定資料庫及 Web 應用程式的系統設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md)。  
   

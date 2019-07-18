@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774226"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263799"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "47774226"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|識別這項連接的相關工作階段。 可為 Null。|  
-|most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 (SOAP 連接可由其他工作階段重複使用)可為 Null。|  
+|most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 （SOAP 連線可以重複使用另一個工作階段。）可為 Null。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|net_transport|**nvarchar(40)**|一律會傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：** 說明這項連接所用的實體傳輸通訊協定。 不可為 Null。|  
+|net_transport|**nvarchar(40)**|一律會傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：** 描述這個連接所用的實體傳輸通訊協定。 不可為 Null。|  
 |protocol_type|**nvarchar(40)**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
 |protocol_version|**int**|這項連接的相關資料存取通訊協定的版本。 可為 Null。|  
 |endpoint_id|**int**|描述其為何種連接類型的識別碼。 這個 endpoint_id 可用來查詢 sys.endpoints 檢視。 可為 Null。|  
@@ -53,7 +52,7 @@ ms.locfileid: "47774226"
 |last_read|**datetime**|這項連接期間最後一次讀取的時間戳記。 可為 Null。|  
 |last_write|**datetime**|這項連接期間最後一次寫入的時間戳記。 不可設為 Null。|  
 |net_packet_size|**int**|用來傳送資訊和資料的網路封包大小。 可為 Null。|  
-|client_net_address|**varchar(48)**|連接到這部伺服器之用戶端的主機位址。 可為 Null。<br /><br /> 在 V12 之前的版本[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
+|client_net_address|**varchar(48)**|連接到這部伺服器之用戶端的主機位址。 可為 Null。<br /><br /> 在 V12 之前的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此資料行一律會傳回 NULL。|  
 |client_tcp_port|**int**|與這項連接相關聯的用戶端電腦上的通訊埠編號。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
 |local_net_address|**varchar(48)**|代表這項連接的目標伺服器的 IP 位址。 只適用於使用 TCP 傳輸提供者的連接。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
 |local_tcp_port|**int**|當這項連接是使用 TCP 傳輸的連接時，代表這項連接的目標伺服器 TCP 埠。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
@@ -65,7 +64,7 @@ ms.locfileid: "47774226"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
 
 ## <a name="physical-joins"></a>實體聯結  
  ![Sys.dm_exec_connections 的聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的聯結")  

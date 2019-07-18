@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 609896357845aa4f466e874524b8136b34e32b9a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5a17eb0c39e45080de83e39d002d8f6693131688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961792"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server （逐步解說） 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "58511695"
 
 目標是要建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包含的原始資料行，再加上新的數值特徵的資料集*direct_distance*。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 這個步驟會假設根據先前在本逐步解說的步驟進行中的 R 工作階段。 它會使用連接字串和資料來源中建立的物件執行這些步驟。 下列工具和套件來執行指令碼。
 

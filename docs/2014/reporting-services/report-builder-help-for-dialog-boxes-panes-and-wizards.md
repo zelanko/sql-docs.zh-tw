@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10426"
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e01b814bad72c5ff8a481fd361b2409b9adbda99
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3f9f6fa990aa3c976565968ccb69bb3d18c25f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107963"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>對話方塊、窗格和精靈的報表產生器說明
   本節包含許多報表產生器精靈、檢視、窗格和對話方塊的說明。 或者，您也可以按下 F1 或按一下對話方塊中顯示的 [說明] 按鈕，以開啟說明。  

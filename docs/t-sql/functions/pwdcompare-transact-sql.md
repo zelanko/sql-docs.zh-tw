@@ -17,15 +17,15 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943280"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>引數  
  **'** *clear_text_password* **'**  
- 這是未加密的密碼。 *clear_text_password* is **sysname** (**nvarchar(128)**)。  
+ 這是未加密的密碼。 *clear_text_password* is **sysname** (**nvarchar(128)** )。  
   
  *password_hash*  
- 這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)**。  
+ 這是密碼的加密雜湊。 *password_hash* 為 **varbinary(128)** 。  
   
  *version*  
  如果 *password_hash* 代表的登入值早於已經移轉到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本，但從未轉換為 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系統的 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]，則是可以設定為 1 的已淘汰參數。 *version* 為 **int**。  
@@ -66,7 +66,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  **PWDCOMPARE** 無法與自主資料庫使用者的密碼搭配使用。 沒有任何自主資料庫對等項目。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  PWDENCRYPT 可以公開使用。  
   
  若要檢查 sys.sql_logins 的 password_hash 資料行，需要有 CONTROL SERVER 權限。  

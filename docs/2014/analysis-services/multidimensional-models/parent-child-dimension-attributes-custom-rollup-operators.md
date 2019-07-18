@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - child rollup operations
@@ -17,12 +16,12 @@ ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 444c67248da2ade5db322fcf6630f6230e46c032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073457"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>父子式維度中的自訂 ROLLUP 運算子
   自訂積存運算子提供簡易的方法，控制在父子式階層中成員值如何積存到父系值中。 在包含父子式關聯性的維度中，您可指定包含一元運算子的資料行，為父屬性的所有非導出成員指定積存。 只要評估父成員的值時，就會將一元運算子套用至成員。  

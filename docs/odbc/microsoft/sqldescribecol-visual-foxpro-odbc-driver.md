@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d823defd67d4b9cb95d01e3ffdf0cad7c2c6b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c78e75981031b1e91dbb31ba0c07ccbee3ac26e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054046"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 一致性： 核心層級  
+ ODBC API 相容性：核心層級  
   
  傳回名稱、 類型、 有效位數、 小數位數和指定的結果資料行 null 屬性。  
   

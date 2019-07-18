@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23234a490f664c4be0811152b2b77ae7c0b73761
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069827"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>以檔案為基礎的驅動程式診斷範例
 檔案為基礎的驅動程式會做為 ODBC 驅動程式和資料來源。 在 ODBC 連接，並做為資料來源，它會因此產生錯誤和警告，同時做為元件。 此外，它會是介面驅動程式管理員使用的元件，因為它格式化，並傳回引數**SQLGetDiagRec**。  

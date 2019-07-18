@@ -18,15 +18,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d1db0287c0876c80d5353657c525f4e0597c5f0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013814"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
   針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定 `sql:key-fields` 註解是確保產生適當階層的方式。  
@@ -44,11 +44,11 @@ ms.locfileid: "52795640"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 產生適當巢狀結構時\<sql: relationship > 不會提供足夠的資訊  
  這則範例會顯示必須指定 `sql:key-fields` 的位置。  
   
- 請考慮下列結構描述。 結構描述指定的階層之間**\<順序 >** 並**\<客戶 >** 中的項目**\<順序 >** 元素是父系和**\<客戶 >** 項目是子系。  
+ 請考慮下列結構描述。 結構描述指定的階層之間 **\<順序 >** 並 **\<客戶 >** 中的項目 **\<順序 >** 元素是父系和 **\<客戶 >** 項目是子系。  
   
-  **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有 `sql:key-fields` 註解，產生的階層就會不正確。  
+ **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有 `sql:key-fields` 註解，產生的階層就會不正確。  
   
- 具有`sql:key-fields`上指定**\<順序 >**、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示在其父代。  
+ 具有`sql:key-fields`上指定 **\<順序 >** 、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示在其父代。  
   
  這是結構描述：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52795640"
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields1.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 在範本中的 XPath 查詢會傳回所有**\<順序 >** customerid 小於 3 的項目。  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 在範本中的 XPath 查詢會傳回所有 **\<順序 >** customerid 小於 3 的項目。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +125,7 @@ ms.locfileid: "52795640"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 在結果中產生適當的巢狀結構  
- 在下列結構描述中，沒有使用指定的階層 **\<sql: relationship >**。 此結構描述仍然需要指定 `sql:key-fields` 註解，才能唯一識別 HumanResources.Employee 資料表中的員工。  
+ 在下列結構描述中，沒有使用指定的階層 **\<sql: relationship >** 。 此結構描述仍然需要指定 `sql:key-fields` 註解，才能唯一識別 HumanResources.Employee 資料表中的員工。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

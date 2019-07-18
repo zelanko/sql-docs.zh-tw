@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a209fe7fbd62082d467077a147b52a3f142b8214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003541"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 資料操作 - SELECT
 

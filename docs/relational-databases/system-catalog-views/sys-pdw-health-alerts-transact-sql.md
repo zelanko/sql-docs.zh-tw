@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_alerts (Transact-SQL) | Microsoft Docs
+title: sys.pdw_health_alerts (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41ae6d70399dea79a92cbc4fd77ba6e08f660d7c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c47bcc342bf8a052aed93649ca0ad8475d937608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127535"
 ---
 # <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "56025449"
 |alert_name|**nvarchar(255)**|警示的名稱。|NOT NULL|  
 |state|**nvarchar(32)**|警示的狀態。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> ' Operational'<br /><br /> '為' 非作業的狀態。<br /><br /> 「 已降級 」<br /><br /> 「 失敗 」|  
 |severity|**nvarchar(32)**|警示的嚴重性。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> 「 資訊 」<br /><br /> 「 警告 」<br /><br /> 「 錯誤 」|  
-|型別|**nvarchar(32)**|警示類型。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> StatusChange-已變更裝置狀態。<br /><br /> 閾值-值已超過臨界值。|  
+|type|**nvarchar(32)**|警示類型。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> StatusChange-已變更裝置狀態。<br /><br /> 閾值-值已超過臨界值。|  
 |description|**nvarchar(4000)**|警示的描述。|NOT NULL|  
 |condition (條件)|**nvarchar(255)**|輸入時，使用 = 臨界值。 定義警示的臨界值的計算方式。|NULL|  
 |status|**nvarchar(32)**|警示狀態|NULL|  

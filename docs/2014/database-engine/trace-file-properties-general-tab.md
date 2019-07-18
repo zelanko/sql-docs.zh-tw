@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.general.f1
@@ -15,17 +14,17 @@ ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2c9c57a69f4ee16d614add0e9bfb92129ce429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089615"
 ---
 # <a name="trace-file-properties-general-tab"></a>追蹤檔案屬性 (一般索引標籤)
   使用 **[追蹤檔案屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視追蹤檔案的屬性。  
   
- 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**。  
+ 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]** 。  
   
 ## <a name="options"></a>選項。  
  **檔案名稱**  
@@ -51,7 +50,7 @@ ms.locfileid: "48212418"
   
 ## <a name="see-also"></a>另請參閱  
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
- [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

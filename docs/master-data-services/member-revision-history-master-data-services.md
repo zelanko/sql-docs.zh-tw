@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18d788e78a58f171a9a6ead5afbe7706eed2111b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092583"
 ---
 # <a name="member-revision-history-master-data-services"></a>成員修訂歷程記錄 (Master Data Services)
 
@@ -39,7 +38,7 @@ ms.locfileid: "52813000"
   
  **若要檢視及管理修訂歷程記錄**  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，選取模型和版本，然後按一下 [Explorer] 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，選取模型和版本，然後按一下 [Explorer]  。  
   
 2.  從 [實體]  功能表中，選取實體。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "52813000"
 ## <a name="view-and-manage-revision-history-by-member"></a>依成員檢視及管理修訂歷程記錄  
  如果您擁有成員的讀取權限，即可在 Explorer 功能區域中，檢視實體中成員的修訂。 如果您有更新的權限，即可將成員復原回先前的修訂版本或加入修訂註解。  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，選取模型和版本，然後按一下 [Explorer] 。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，選取模型和版本，然後按一下 [Explorer]  。  
   
 2.  從 [實體]  功能表中，選取實體。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "52813000"
 4.  按一下右窗格中的 [檢視歷程記錄]  。  
   
 ## <a name="log-retention-setting"></a>記錄保留設定  
- 您可以設定 **資料庫系統設定中的 [Log retention in Days]**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] (記錄保留天數) 屬性，以及在建立或編輯模型時設定 [Log Retention Days]  (記錄保留天數)，以設定歷程記錄資料保留的時間長度。  
+ 您可以設定 **資料庫系統設定中的 [Log retention in Days]** [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] (記錄保留天數) 屬性，以及在建立或編輯模型時設定 [Log Retention Days]  (記錄保留天數)，以設定歷程記錄資料保留的時間長度。  
   
 ## <a name="related-task"></a>相關工作  
   

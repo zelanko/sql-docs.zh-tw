@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1bd0fd55824edfde8f3216516f9e93a7ec385baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a780172818bd41fa3cff4804437b4d26ad8c95c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937745"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

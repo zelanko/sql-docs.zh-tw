@@ -13,14 +13,18 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 124d7c0aec844b1a600f051473835e0be667824f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805178"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  
   
  若要在封裝中使用 MERGE 陳述式，請遵循下列步驟進行：  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97c7159682e421005385fd830ceed4380086089c
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: f57fc3ea1a677a2655f5358a1d5c4b27045ea6ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098025"
 ---
 # <a name="installing-smo"></a>安裝 SMO
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108885"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
@@ -36,7 +35,7 @@ ms.locfileid: "56012069"
  自動報表處理是指由事件觸發 (不論是排程驅動事件或資料重新整理事件)，而非由使用者要求觸發的任何報表執行處理。 報表伺服器使用自動報表處理帳戶，來登入主控外部資料來源的電腦。 因為報表伺服器服務帳戶的認證絕不會用來連接到其他電腦，所以需要此帳戶。  
   
 > [!IMPORTANT]  
->  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 特別是，如果您讓密碼過期或者 Active Directory 中的帳戶資訊變更，則下次在處理報表時，您將遇到下列的錯誤訊息：「登入失敗 (rsLogonFailed) 登入失敗：未知的使用者名稱或密碼錯誤。」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
+>  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 具體來說，如果您讓密碼過期或者 Active Directory 中變更帳戶資訊，就會發生下列錯誤的下次在處理報表：「 登入失敗 (rsLogonFailed) 登入失敗： 未知的使用者名稱或密碼不正確。 」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
   
 ## <a name="how-to-configure-the-account"></a>如何設定帳戶  
  您必須使用網域使用者帳戶。 為了提供原先預期的用途，此帳戶應該與用來執行報表伺服器服務的帳戶不同。 請務必使用符合下列條件的帳戶：擁有最小權限 (具有網路連接的唯讀存取權限就足夠)，而且僅擁有提供資料來源和資源給報表伺服器之電腦的有限存取權。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
@@ -45,9 +44,9 @@ ms.locfileid: "56012069"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。 如需指示，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在 [執行帳戶] 頁面上，選取 [指定執行帳戶]。  
+2.  在 [執行帳戶] 頁面上，選取 [指定執行帳戶]  。  
   
-3.  鍵入帳戶和密碼，重新鍵入密碼，然後按一下 [套用]。  
+3.  鍵入帳戶和密碼，重新鍵入密碼，然後按一下 [套用]  。  
   
 ### <a name="using-rsconfig-utility"></a>使用 RSCONFIG 公用程式  
  設定此帳戶的另一個方法是使用 **rsconfig** 公用程式。 若要指定帳戶，請使用 **rsconfig** 的 **-e**引數。 指定 **rsconfig** 的 **-e** 引數，會引導公用程式將帳戶資訊寫入組態檔。 您不需要指定 RSreportserver.config 的路徑。請遵循以下步驟來設定帳戶。  
@@ -76,7 +75,7 @@ ms.locfileid: "56012069"
  您設定了值之後，就不能將值解密，以純文字檢視這些值。 如果您輸入錯誤的值，或者忘記自己指定的值，就必須使用 Reporting Services 組態工具，或執行 **rsconfig -e** 以重新開始。  
   
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>如何使用自動報表處理帳戶  
- 為了擷取影像檔，報表伺服器會自動使用此帳戶，而且您不需要採取特定的動作。 若要使用此帳戶連線到提供資料給報表的外部資料來源，您必須在報表資料來源或共用資料來源的資料來源屬性頁面上指定 [認證類型] 選項：  
+ 為了擷取影像檔，報表伺服器會自動使用此帳戶，而且您不需要採取特定的動作。 若要使用此帳戶連線到提供資料給報表的外部資料來源，您必須在報表資料來源或共用資料來源的資料來源屬性頁面上指定 [認證類型]  選項：  
   
 -   在報表管理員或 SharePoint 網站上，選取**不需要認證**選項。  
   
@@ -89,18 +88,18 @@ ms.locfileid: "56012069"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [執行帳戶] 頁面上，確認已經選取 [指定執行帳戶]。  
+2.  在 [執行帳戶] 頁面上，確認已經選取 [指定執行帳戶]  。  
   
-3.  鍵入新帳戶和密碼，重新鍵入密碼，然後按一下 [套用]。  
+3.  鍵入新帳戶和密碼，重新鍵入密碼，然後按一下 [套用]  。  
   
 ## <a name="how-to-delete-the-unattended-report-processing-account"></a>如何刪除自動報表處理帳戶  
  如果沒有使用此帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [執行帳戶] 頁面上，清除 [指定執行帳戶]。  
+2.  在 [執行帳戶] 頁面上，清除 [指定執行帳戶]  。  
   
-3.  按一下 **[套用]**。  
+3.  按一下 **[套用]** 。  
   
  帳戶資訊會隨即從 RSReportServer.config 檔案中移除。  
   

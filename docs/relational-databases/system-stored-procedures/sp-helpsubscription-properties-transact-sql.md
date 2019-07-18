@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e9da98ffc01d7ee62ac89a516a7eabe52cae3df1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048383"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是**%**，傳回所有發行者的資訊。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 **%** ，傳回所有發行者的資訊。  
   
-`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**，表示傳回所有發行者資料庫的相關資訊。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 **%** ，表示傳回所有發行者資料庫的相關資訊。  
   
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**，表示傳回所有發行集的相關資訊。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** ，表示傳回所有發行集的相關資訊。  
   
 `[ @publication_type = ] publication_type` 是發行集的類型。*publication_type*是**int**，預設值是 NULL。 如果提供， *publication_type*必須是下列值之一：  
   
@@ -66,7 +65,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publisher_login**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**|**nvarchar(524)**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證 (加密) 的密碼。|  
 |**publisher_security_mode**|**int**|發行者端所用的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
-|**distributor**|**sysname**|散發者的名稱。|  
+|**散發者**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|散發者登入。|  
 |**distributor_password**|**nvarchar(524)**|散發者密碼 (加密)。|  
 |**distributor_security_mode**|**int**|散發者端所用的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
@@ -89,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar(524)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**int**|連接到主控 Web 同步處理，值為 Web 伺服器時使用的驗證模式**1**表示 Windows 驗證，並針對**0**表示基本驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
-|**hostname**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
+|**主機名稱**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

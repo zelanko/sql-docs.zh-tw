@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c11f414bded0c0b927579eb5dbec4664584a055e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204961"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
   您可建立自反關聯性 (Reflexive Relationship)，將資料表中的一或多個資料行與相同資料表中的其他資料行連結。 例如，假設 `employee` 資料表包含 `emp_id` 資料行和 `mgr_id` 資料行。 由於每位經理同時兼具員工的身分，您可繪製一條從資料表至其本身的關聯線，將這兩個資料行相關聯。 此關聯性可確保每個加入資料表的經理識別碼，都與現有員工識別碼相符。  
@@ -32,11 +32,11 @@ ms.locfileid: "52750490"
   
 2.  將線條拖曳回選取的資料表。  
   
-3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行] 對話方塊。  
+3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行]  對話方塊。  
   
 4.  選取要用來形成關聯性的外部索引鍵資料行及主索引鍵資料表與資料行。  
   
-5.  選擇兩次 [確定] 以建立關聯性。  
+5.  選擇兩次 [確定]  以建立關聯性。  
   
  當您對資料表執行查詢時，可使用自反關聯性來建立自我聯結 (Self-Join)。 如需使用聯結查詢資料表的相關資訊，請參閱 [使用聯結查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   

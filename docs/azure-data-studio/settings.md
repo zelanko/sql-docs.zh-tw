@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959275"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改使用者和工作區設定
 
@@ -31,7 +30,7 @@ ms.locfileid: "55689851"
 
 功能表命令**檔案** > **喜好設定** > **設定**(**程式碼** >  **偏好** > **設定**Mac 上) 提供使用者和工作區設定的進入點。 您會提供一份預設設定。 複製任何您想要將變更為適當的設定`settings.json`檔案。 在右邊的索引標籤可讓您快速切換使用者和工作區的設定檔。
 
-您也可以開啟使用者和工作區設定**命令調色盤**(**Ctrl + Shift + P**) 與**喜好設定：開啟 使用者設定**和**喜好設定：開啟 設定 工作區**或使用鍵盤快速鍵 (**Ctrl +，**)。
+您也可以開啟使用者和工作區設定**命令調色盤**(**Ctrl + Shift + P**) 與**喜好設定：開啟 使用者設定**和**喜好設定：開啟 設定 工作區**或使用鍵盤快速鍵 (**Ctrl +，** )。
 
 下列範例會停用 在編輯器中的行號，並設定自動縮排的程式碼行。
 
@@ -55,7 +54,7 @@ ms.locfileid: "55689851"
 
 Azure Data Studio 會記住未儲存的變更至檔案，當您在預設情況下結束。 這是 Visual Studio Code 中的 [最忙碌的結束] 功能相同。
 
-根據預設，熱結束已關閉。 藉由編輯啟用熱結束`files.hotExit`設定。 如需詳細資訊，請參閱 Visual Studio Code 文件中的[熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。 
+根據預設，熱結束已關閉。 藉由編輯啟用熱結束`files.hotExit`設定。 如需詳細資訊，請參閱 Visual Studio Code 文件中的[熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 
 
 ## <a name="tab-color"></a>索引標籤色彩

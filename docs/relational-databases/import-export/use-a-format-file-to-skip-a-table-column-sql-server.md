@@ -11,16 +11,16 @@ helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 904bc5edeb805d3c4d780bfe4595d3dff98bf962
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f9c4bbcb901aca307d0dce9ed7d4a724778392c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256363"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579613"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,6 +60,8 @@ GO
 
 2.   修改文字編輯器中的預設格式檔案。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 修改後的格式檔案必須將每個現有欄位對應到目的地資料表中相應的資料行。 其也必須指出要跳過哪些資料表資料行或資料行。 
 
 例如，若要將資料從 `myTestSkipCol2.dat` 大量匯入 `myTestSkipCol` 資料表，格式檔案必須將第一個資料欄位對應到 `Col1`、跳過 `Col2`，然後將第二個欄位對應到 `Col3`。  
@@ -76,7 +78,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 > [!IMPORTANT]  
 >  您可能需要以 `-S` 引數來指定您連線至的伺服器執行個體名稱。 另外，也可能需要以 `-U` 和 `-P` 引數來指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
 
-上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
+上述命令會建立非 XML 格式檔案 `myTestSkipCol_Default.fmt`。 這個格式檔案稱為「預設格式檔案」  (Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
   
  下列螢幕擷取畫面顯示了這個範例預設格式檔案中的值。 
   
@@ -150,7 +152,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!IMPORTANT]  
 >  您可能需要以 `-S` 引數來指定您連線至的伺服器執行個體名稱。 另外，也可能需要以 `-U` 和 `-P` 引數來指定使用者名稱和密碼。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
  
-上述命令會建立 XML 格式檔案 `myTestSkipCol_Default.xml`。 這個格式檔案稱為「預設格式檔案」(Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
+上述命令會建立 XML 格式檔案 `myTestSkipCol_Default.xml`。 這個格式檔案稱為「預設格式檔案」  (Default Format File)，因為它是 **bcp** 所產生的格式。 預設格式檔案描述資料檔案欄位與資料表資料行之間的一對一對應。  
   
 ```xml
 <?xml version="1.0"?>  

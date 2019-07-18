@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], attributes
@@ -14,12 +13,12 @@ ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c763eba5a1908e2ee55844dc137af7ddf675e8f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075189"
 ---
 # <a name="dimension-attribute-properties-reference"></a>維度屬性 (attribute) 屬性 (property) 參考
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，有許多屬性 (property) 可用來決定維度和維度屬性 (attribute) 如何運作。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  

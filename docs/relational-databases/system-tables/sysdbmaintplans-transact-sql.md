@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0525a50b30036470336dafe10c78a42218486c63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47ae49ab640b18cbcd7286bc5d95bdc74143aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029967"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47774666"
 |**plan_id**|**uniqueidentifier**|資料庫維護計畫識別碼。|  
 |**plan_name**|**sysname**|資料庫維護計畫名稱。|  
 |**date_created**|**datetime**|資料庫維護計畫的建立日期。|  
-|**擁有者**|**sysname**|資料庫維護計畫的擁有者。|  
+|**owner**|**sysname**|資料庫維護計畫的擁有者。|  
 |**max_history_rows**|**int**|用來將資料庫維護計畫的記錄記載到系統資料表中，所配置的最大資料列數。|  
 |**remote_history_server**|**sysname**|可寫入記錄報表之遠端伺服器的名稱。|  
 |**max_remote_history_rows**|**int**|在遠端伺服器系統資料表中，可寫入記錄報表的資料列最大配置列數。|  

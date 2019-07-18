@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137551"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
   本節包含  組態管理員中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對話方塊的 F1 說明主題。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用戶端電腦用來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的網路程式庫，從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始。  

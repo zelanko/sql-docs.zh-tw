@@ -19,14 +19,18 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 295c5156c1f3b27f5030c27d70311e34f0141f18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274081"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727825"
 ---
 # <a name="data-flow-task"></a>資料流程工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  
   
  資料流程至少要包含一個資料流程元件，但通常資料流程是一組連接的資料流程元件：擷取資料的來源；修改、路由或摘要資料的轉換；載入資料的目的地。  
@@ -100,9 +104,9 @@ ms.locfileid: "58274081"
 |**RowsSent**|已傳送至「排序」轉換之輸入的資料列數目。|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>資料流程工作的組態  
- 您可以在 [屬性] 視窗中或以程式設計方式設定屬性。  
+ 您可以在 [屬性]  視窗中或以程式設計方式設定屬性。  
   
- 如需如何在 [屬性] 視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
+ 如需如何在 [屬性]  視窗中設定這些屬性的詳細資訊，請按一下下列主題：  
   
 -   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   

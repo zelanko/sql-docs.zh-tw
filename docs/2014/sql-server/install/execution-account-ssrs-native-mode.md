@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
@@ -13,12 +12,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352974"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095343"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>執行帳戶 (SSRS 原生模式)
   使用此頁面，即可設定自動處理所使用的帳戶。 當其他認證來源無法使用的特殊情況下，請使用此帳戶：  
@@ -40,12 +39,12 @@ ms.locfileid: "53352974"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並選取導覽窗格中的 **[執行帳戶]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **指定執行帳戶**  
  選取此項目來指定帳戶。  
   
  **帳戶**  
- 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域\\<使用者帳戶\>。  
+ 輸入 Windows 網域使用者帳戶。 請使用此格式：\<網域\\<使用者帳戶\>  。  
   
  **密碼**  
  輸入密碼。  

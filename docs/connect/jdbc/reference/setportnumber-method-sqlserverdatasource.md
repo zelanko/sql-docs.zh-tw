@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15e0ff764637869428945ab3eb4b6c44b055b436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 304d63f7822990c4d8e4a9c0787c9e688c222580
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728196"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799633"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

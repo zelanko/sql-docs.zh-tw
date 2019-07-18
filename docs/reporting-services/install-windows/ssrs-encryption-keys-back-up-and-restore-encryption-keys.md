@@ -10,14 +10,14 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502855"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "58306156"
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+
+> [!NOTE]
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
  發生下列任何事件時，就必須還原加密金鑰的備份副本。  
   
@@ -44,23 +47,27 @@ ms.locfileid: "58306156"
  備份對稱金鑰的程序是將金鑰寫入您指定的檔案，然後使用您提供的密碼將金鑰加密。 對稱金鑰絕不能以未加密的狀態儲存，因此您將金鑰儲存到磁碟時，必須提供密碼將其加密。 檔案建立之後，您必須將其儲存在安全的位置，並 **記住用來解除檔案鎖定的密碼** 。 若要備份對稱金鑰，您可以使用下列工具：  
   
  **原生模式** ：Reporting Services 組態管理員或 **rskeymgmt** 公用程式。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint 模式** ：SharePoint 管理中心頁面或 PowerShell。  
   
 ##  <a name="bkmk_backup_sharepoint"></a> 備份 SharePoint 模式報表伺服器  
  對於 SharePoint 模式報表伺服器，您可以使用 PowerShell 命令，或使用適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
   
 1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
-2.  按一下 [加密金鑰]，然後選取 [備份]。  
+2.  按一下 [加密金鑰]  ，然後選取 [備份]  。  
   
 3.  輸入增強式密碼。  
   
 4.  指定要包含儲存之金鑰的檔案。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將 .snk 副檔名附加到這個檔案。 可以考慮將檔案儲存到磁碟上，使其與報表伺服器分開。  
   
-5.  選取 [確定]。  
+5.  選取 [確定]  。  
   
 ###  <a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 - rskeymgmt (原生模式)  
   
@@ -87,13 +94,13 @@ ms.locfileid: "58306156"
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
-2.  在 [加密金鑰] 頁面上，選取 [還原]。  
+2.  在 [加密金鑰] 頁面上，選取 [還原]  。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   
 4.  輸入解除檔案鎖定的密碼。  
   
-5.  選取 [確定]。 
+5.  選取 [確定]  。 
   
 ###  <a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 - rskeymgmt (原生模式)  
   

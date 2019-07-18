@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 04c097e6b38d3631d2fdb97efbd5decdac1af8d6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106603"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
   資料區會顯示報表資料集中的資料。 資料區包括資料表、矩陣、清單、圖表和量測計。 若要讓某個資料區以巢狀結構的方式置於另一個資料區內，請個別加入每一個資料區，然後將子資料區拖曳到父資料區。  
@@ -31,7 +30,7 @@ ms.locfileid: "56291955"
   
 ### <a name="to-add-a-table-or-matrix-to-a-report-by-using-the-new-table-or-new-matrix-wizard"></a>若要使用新增資料表或新增矩陣精靈，將資料表或矩陣加入至報表  
   
-1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]**，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]**。  
+1.  在 **[插入]** 索引標籤上，按一下 **[資料表]** 或 **[矩陣]** ，然後按一下 **[資料表精靈]** 或 **[矩陣精靈]** 。  
   
 2.  請依照下列中的步驟**NewTable**或是**新的矩陣**精靈。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "56291955"
   
      隨即出現選取控點和八個調整大小的控點。  
   
-     若為巢狀資料區，請在巢狀資料區中按一下滑鼠右鍵、按一下 [選取]，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
+     若為巢狀資料區，請在巢狀資料區中按一下滑鼠右鍵、按一下 [選取]  ，然後選取您想要的報表項目。 若要確認哪一個報表項目已選取，請使用 [屬性] 窗格。 設計介面上選取的項目名稱會出現在 [屬性] 窗格的工具列中。  
   
 ### <a name="to-move-a-data-region"></a>若要移動資料區  
   
@@ -65,7 +64,7 @@ ms.locfileid: "56291955"
   
 ### <a name="to-delete-a-data-region"></a>若要刪除資料區  
   
--   選取資料區，在資料區中按一下滑鼠右鍵，然後按一下 [刪除]。  
+-   選取資料區，在資料區中按一下滑鼠右鍵，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

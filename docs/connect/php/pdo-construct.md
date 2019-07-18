@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91b4edcd65f972adb98cf1a4f6c62a81ebb184f8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600139"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772792"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dcdbc24f817ec618b0d89ec8c9a4128bbd604f33
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 054c6e51747cdc6764ce99672f041b4e65746f30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085113"
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geometry_index`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs**. 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用`sp_help_spatial_geometry_index`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs** . 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geometry  

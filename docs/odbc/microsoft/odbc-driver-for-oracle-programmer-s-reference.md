@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915786"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程式設計&#39;參考
 > [!IMPORTANT]  

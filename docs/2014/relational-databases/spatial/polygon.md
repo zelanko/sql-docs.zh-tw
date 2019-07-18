@@ -9,15 +9,15 @@ helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6ef33d1331621b248295327a6e6fd266b8dd6242
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014074"
 ---
 # <a name="polygon"></a>多邊形
   `Polygon` 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  

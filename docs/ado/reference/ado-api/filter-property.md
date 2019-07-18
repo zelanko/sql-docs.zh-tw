@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918634"
 ---
 # <a name="filter-property"></a>Filter 屬性
 表示資料的篩選條件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -30,9 +29,9 @@ ms.locfileid: "47762738"
 
 設定或傳回**Variant**值，其中可包含下列項目之一：  
   
--   **準則字串：** 串連在一起的一或多個個別的子句所組成的字串**AND**或是**OR**運算子。  
+-   **準則字串：** 字串串連在一起的一或多個個別的子句組成**AND**或是**OR**運算子。  
   
--   **書籤的陣列︰** 值中的記錄該點的唯一的書籤的陣列**資料錄集**物件。  
+-   **書籤的陣列︰** 值的唯一的書籤的陣列中的記錄當時**資料錄集**物件。  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)值。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47762738"
   
 -   運算子必須是下列其中之一： \<，>， \<=、 > =、 <>、 =、 或**像**。  
   
--   值是與您將會比較欄位值的值 (例如，'Smith'，#8/24/95 # 12.345 或 $50.00)。 使用單引號字串與日期的井字號 （#）。 對於數字，您可以使用小數位數、 貨幣符號和科學記號標記法。 運算子是否**像**，值可以使用萬用字元。 允許的星號 （*） 和百分比符號 （%） 萬用字元，而且必須在字串中的最後一個字元。 值不可以是 null。  
+-   值是與您將會比較欄位值的值 (例如，'Smith'，#8/24/95 # 12.345 或 $50.00)。 使用單引號字串與日期的井字號 （#）。 對於數字，您可以使用小數位數、 貨幣符號和科學記號標記法。 運算子是否**像**，值可以使用萬用字元。 只有星號 （*） 和百分比符號 （%）可以使用萬用字元，而且必須在字串中的最後一個字元。 值不可以是 null。  
   
 > [!NOTE]
 >  若要在篩選值中包含單引號 （'），使用兩個單引號來代表其中一個。 例如，若要篩選 O'Malley，準則字串應該是`"col1 = 'O''Malley'"`。 若要包含在開頭和結尾的篩選值的單一引號，括住字串加上井字符號 （#）。 例如，若要篩選 '1'，準則字串應該是`"col1 = #'1'#"`。  
@@ -57,7 +56,7 @@ ms.locfileid: "47762738"
 -   相反地，您會建構為此篩選器  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在 **像**子句中，您可以使用萬用字元的開頭和結尾的模式。 例如，您可以使用`LastName Like '*mit*'`。 或使用**像**您只能在模式結尾使用萬用字元。 例如， `LastName Like 'Smit*'` 。  
+-   在 **像**子句中，您可以使用萬用字元的開頭和結尾的模式。 例如，您可以使用`LastName Like '*mit*'`。 或使用**像**您只能在模式結尾使用萬用字元。 例如： `LastName Like 'Smit*'` 。  
   
  篩選條件常數讓您更輕鬆地解決個別記錄的衝突，在批次更新模式，可讓您檢視，比方說，這些記錄，僅影響在最後一[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法呼叫。  
   
@@ -94,8 +93,8 @@ ms.locfileid: "47762738"
 ||非索引鍵|單一索引鍵|多個索引鍵|
 |-|--------------|----------------|-------------------|
 |**非索引鍵**|+|+|+|
-|**單一索引鍵**|+|-|不適用|
-|**多個索引鍵**|+|不適用|+|
+|**單一索引鍵**|+|-|N/A|
+|**多個索引鍵**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>適用於

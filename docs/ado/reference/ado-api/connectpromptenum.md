@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919448"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否應該顯示對話方塊中開啟資料來源的連接時，遺漏的參數提示。  

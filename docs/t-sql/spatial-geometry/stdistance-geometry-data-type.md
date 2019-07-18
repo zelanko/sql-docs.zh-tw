@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDistance (geometry Data Type)
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6a983ca188da201bf18e407eaf3a84328a7abf29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47caf3acbbdfd663dcfc507279a4b41ce134ad01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938966"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47596048"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**float**  
   
- CLR 傳回類型：**SqlDouble**  
+ CLR 傳回型別：**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，`STDistance()` 一定會傳回 Null。  

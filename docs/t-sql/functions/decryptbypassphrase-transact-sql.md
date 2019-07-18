@@ -17,15 +17,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a0cecfdf5aa6e8ab6dd90bb975c0a89fd360afc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55721b2b1f843ee78e8b69e4a1b99e39737ebb64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948940"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

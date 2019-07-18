@@ -20,16 +20,16 @@ helpviewer_keywords:
 - disabling operators
 - operators (users) [Database Engine], changing availability with Management Studio
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f1ef4382c49ed30e8792c504e3cd554bf1535cf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 092a2d0029f2561cc8860919f61cfe87b201dcc9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701796"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688793"
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "51701796"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目變更操作員的可用性：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -64,15 +64,15 @@ ms.locfileid: "51701796"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您要啟用或停用操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]，然後按一下 [一般] 索引標籤。  
+4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]  ，然後按一下 [一般]  索引標籤。  
   
-5.  在 [_operator\_name_ 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
+5.  在 [_operator\_name_ 屬性]  對話方塊中，選取或清除 [已啟用]  核取方塊。  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -80,9 +80,9 @@ ms.locfileid: "51701796"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- disables the 'François Ajenstat' operator  

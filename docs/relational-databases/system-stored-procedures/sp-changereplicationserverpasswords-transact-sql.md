@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e138a8845336c41a031bd6e25b92138ae03ed63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099058"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證  
   
-`[ @login = ] 'login'` 是 Windows 帳戶的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在變更的登入。 *登入*已**nvarchar(257)**，沒有預設值  
+`[ @login = ] 'login'` 是 Windows 帳戶的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在變更的登入。 *登入*已**nvarchar(257)** ，沒有預設值  
   
 `[ @password = ] 'password'` 是新的密碼，以儲存指定之*登入*。 *密碼*已**sysname**，沒有預設值。  
   
@@ -58,7 +57,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 |值|描述|  
 |-----------|-----------------|  
-|**distributor**|所有與散發者的代理程式連接。|  
+|**散發者**|所有與散發者的代理程式連接。|  
 |**發行者**|所有與發行者的代理程式連接。|  
 |**訂閱者**|所有與訂閱者的代理程式連接。|  
 |**%** （預設值）|所有與複寫拓撲中所有伺服器的代理程式連接。|  

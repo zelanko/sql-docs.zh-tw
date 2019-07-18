@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9493f0f4b4ff782e14fadf3c366c95e7d91efd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33eb5a1c4176041d64ba60a3a684b75bc4816350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091933"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ ms.locfileid: "47843396"
 |**object_id**|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
 |**parent_class**|**tinyint**|觸發程序父系的類別。<br /><br /> 0 = DDL 觸發程序的資料庫。<br /><br /> 1 = DML 觸發程序的物件或資料行。|  
 |**parent_class_desc**|**nvarchar(60)**|觸發程序父類別的描述。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**sys.internal_tables**|**int**|觸發程序父系的識別碼，如下所示：<br /><br /> 0 = 以資料庫為父系的觸發程序。<br /><br /> 若為 DML 觸發程序，則**object_id**的資料表或檢視定義的 DML 觸發程序。|  
+|**parent_id**|**int**|觸發程序父系的識別碼，如下所示：<br /><br /> 0 = 以資料庫為父系的觸發程序。<br /><br /> 若為 DML 觸發程序，則**object_id**的資料表或檢視定義的 DML 觸發程序。|  
 |**type**|**char(2)**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
 |**type_desc**|**nvarchar(60)**|物件類型的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|建立觸發程序的日期。|  
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改物件的日期。|  
 |**is_ms_shipped**|**bit**|利用內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件來代表使用者所建立的觸發程序。|  
-|**sys.indexes**|**bit**|觸發程序已停用。|  
+|**is_disabled**|**bit**|觸發程序已停用。|  
 |**is_not_for_replication**|**bit**|觸發程序是建立為 NOT FOR REPLICATION。|  
 |**is_instead_of_trigger**|**bit**|1 = INSTEAD OF 觸發程序<br /><br /> 0 = AFTER 觸發程序。|  
   

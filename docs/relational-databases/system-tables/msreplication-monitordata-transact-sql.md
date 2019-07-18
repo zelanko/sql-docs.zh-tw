@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898990152a86380ae9ba28e9766ae47675a39706
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079146"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52775530"
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_srvid**|**int**|發行者的伺服器識別碼。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**publication_type**|**int**|發行集的類型，它可以是下列值之一：<br /><br /> **0** = 交易式發行集<br /><br /> **1** = 快照式發行集<br /><br /> **2** = 合併式發行集|  
 |**agent_type**|**int**|複寫代理程式的類型，它可以是下列值之一：<br /><br /> **1** = 快照集代理程式<br /><br /> **2** = 記錄讀取器代理程式<br /><br /> **3** = 散發代理程式<br /><br /> **4** = 合併代理程式<br /><br /> **9** = 佇列讀取器代理程式|  
 |**agent_id**|**int**|複寫代理程式的識別碼。|  
@@ -50,7 +49,7 @@ ms.locfileid: "52775530"
 |**last_distsync**|**datetime**|上次執行散發代理程式的日期和時間。|  
 |**agentstoptime**|**datetime**|停止代理程式的日期和時間。|  
 |**distdb**|**sysname**|訂閱的散發資料庫名稱。|  
-|**保留期**|**int**|發行集的保留期限。|  
+|**retention**|**int**|發行集的保留期限。|  
 |**time_stamp**|**datetime**|僅供內部使用。|  
 |**worst_latency**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最高延遲 (以秒為單位)。|  
 |**best_latency**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最低延遲 (以秒為單位)。|  

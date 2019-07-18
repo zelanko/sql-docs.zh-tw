@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930856"
 ---
 # <a name="state-property-ado"></a>State 屬性 (ADO)
 物件的狀態是否已開啟或關閉，則表示所有適用的物件。 如果物件執行非同步方法，指出是否連接、 執行，或擷取物件的目前狀態。  

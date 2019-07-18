@@ -12,15 +12,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011291"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫預設會啟用全文檢索。 不過，若要針對資料表使用全文檢索索引，您必須在要以全文檢索引擎存取的資料表資料行中設定全文檢索索引功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "52541394"
   
     4.  選擇您想要針對全文檢索索引使用的變更追蹤機制，以便追蹤基底資料表及其資料行中的變更。  
   
- 全文檢索搜尋會透過使用下列「語言元件」(Linguistic Component) 支援多國語言：斷詞工具和字幹分析器、包含停用字詞 (也稱為非搜尋字) 的停用字詞表，以及同義字檔案。 同義字檔案和停用字詞表 (在某些情況下) 會要求資料庫管理員進行組態設定。 給定的同義字檔案支援所有使用對應語言的全文檢索索引，而且給定的停用字詞表可以與任意數目的全文檢索索引相關聯。  
+ 全文檢索搜尋會透過使用下列「語言元件」  (Linguistic Component) 支援多國語言：斷詞工具和字幹分析器、包含停用字詞 (也稱為非搜尋字) 的停用字詞表，以及同義字檔案。 同義字檔案和停用字詞表 (在某些情況下) 會要求資料庫管理員進行組態設定。 給定的同義字檔案支援所有使用對應語言的全文檢索索引，而且給定的停用字詞表可以與任意數目的全文檢索索引相關聯。  
   
 ##  <a name="setup"></a> 設定全文檢索目錄和索引  
  這項作業包含下列基本步驟：  
@@ -58,7 +58,7 @@ ms.locfileid: "52541394"
 |全文檢索索引|一般 SQL Server 索引|  
 |------------------------|--------------------------------|  
 |每個資料表只允許有一個全文檢索索引。|每個資料表允許有多個一般索引。|  
-|將資料加入至全文檢索索引的作業稱為「母體擴展」(Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
+|將資料加入至全文檢索索引的作業稱為「母體擴展」  (Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
 |在相同的資料庫中分組為一個或多個全文檢索目錄。|沒有分組。|  
   
   

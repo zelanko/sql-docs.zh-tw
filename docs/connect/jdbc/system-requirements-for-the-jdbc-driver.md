@@ -1,7 +1,7 @@
 ---
-title: JDBC 驅動程式的系統需求 |Microsoft Docs
+title: JDBC Driver 的系統需求 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82fd5ac5bea29b5022e1af9c0523a64f6e5406c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+manager: jroth
+ms.openlocfilehash: 244f5383add437b8bd4985045bd9edc8538805e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154903"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798287"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驅動程式的系統需求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "56154903"
   
  從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，JDBC 驅動程式的 Java Database Connectivity (JDBC) Spec API 支援已經過擴充，可包含 JDBC 4.0 API。 Sun Java SE 開發套件 (JDK) 6.0 及 Java Runtime Environment (JRE) 6.0 同時引進了 JDBC 4.0 API。 JDBC 4.0 是 JDBC 3.0 API 的超集。
   
- 當您在 Windows 及 UNIX 作業系統上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，必須分別使用安裝套件 *sqljdbc_\<版本>_enu.exe* 及 *sqljdbc_\<版本>_enu.tar.gz*。 如需如何部署 JDBC 驅動程式的詳細資訊，請參閱[部署 JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md)主題。  
+ 當您在 Windows 及 UNIX 作業系統上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，必須分別使用安裝套件 *sqljdbc_\<版本>_enu.exe* 及 *sqljdbc_\<版本>_enu.tar.gz*。 如需如何部署 JDBC Driver 的詳細資訊，請參閱[部署 JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md) 主題。  
 
 **Microsoft JDBC Driver 7.2 for SQL Server：**  
 
-  JDBC Driver 7.2 在每個安裝套件中，包含了兩個 JAR 類別庫：**mssql-jdbc-7.2.1.jre8.jar** 與 **mssql-jdbc-7.2.1.jre11.jar**。
+  JDBC Driver 7.2 會在每個安裝套件中包括兩個 JAR 類別庫：**mssql-jdbc-7.2.2.jre8.jar** 與 **mssql-jdbc-7.2.2.jre11.jar**。
 
   JDBC Driver 7.2 專為搭配所有主要 Java 虛擬機器運作而設計，而且所有 Java 虛擬機器皆能支援，但此驅動程式只在 OpenJDK 8.0、OpenJDK 11.0、Azul Zulu JRE 8.0 與 Azul Zulu JRE 11.0 上測試過。
   
@@ -52,17 +52,17 @@ ms.locfileid: "56154903"
   
   |JAR|JDBC 版本相容性|建議的 Java 版本|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.1.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或較低的擲回例外狀況。<br /><br /> 7.2 的新功能包括： JDK 11 支援、 Active Directory 受控服務識別 (MSI) 驗證、 OSGi 支援 SQLServerError Api。 |    
-|mssql-jdbc-7.2.1.jre11.jar|4.3|10|需要 Java Runtime Environment (JRE) 11.0。 使用 JRE 10.0 或更低的擲回例外狀況。<br /><br /> 7.2 的新功能包括： JDK 11 支援、 Active Directory 受控服務識別 (MSI) 驗證、 OSGi 支援 SQLServerError Api。 |    
+|mssql-jdbc-7.2.2.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更舊版本會擲回例外狀況。<br /><br /> 7\.2 的新功能包括：JDK 11 支援、Active Directory 受控服務識別 (MSI) 驗證、OSGi 支援、SQLServerError API。 |    
+|mssql-jdbc-7.2.2.jre11.jar|4.3|10|需要 Java Runtime Environment (JRE) 11.0。 使用 JRE 10.0 或更舊版本會擲回例外狀況。<br /><br /> 7\.2 的新功能包括：JDK 11 支援、Active Directory 受控服務識別 (MSI) 驗證、OSGi 支援、SQLServerError API。 |    
 
 
-  JDBC 驅動程式 7.2 Maven 中央儲存機制位於也可用，且可以 POM 中加入下列程式碼新增至 Maven 專案。XML:  
+  JDBC Driver 7.2 也可在 Maven 中央存放庫上取得，而且可在 POM.XML 中新增下列程式碼，藉以新增至 Maven 專案：  
   
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
 </dependency>
 ```
  
@@ -76,11 +76,11 @@ ms.locfileid: "56154903"
   
   |JAR|JDBC 版本相容性|建議的 Java 版本|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或較低的擲回例外狀況。<br /><br /> 在 7.0 中的新功能包括： JDK 10 支援、 JDBC 4.2 規格、 空間資料類型支援、 cancelQueryTimeout 連接屬性，要求界限的方法、 useBulkCopyForBatchInsert 連接屬性，資料更新的預設相容性層級探索與分類的資訊、 utf-8 功能延伸模組和 CityHash 支援。 |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|需要 Java Runtime Environment (JRE) 10.0。 使用 JRE 9.0 或較低的擲回例外狀況。<br /><br /> 在 7.0 中的新功能包括： JDK 10 支援、 JDBC 4.2 規格、 空間資料類型支援、 cancelQueryTimeout 連接屬性，要求界限的方法、 useBulkCopyForBatchInsert 連接屬性，資料更新的預設相容性層級探索與分類的資訊、 utf-8 功能延伸模組和 CityHash 支援。 |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更舊版本會擲回例外狀況。<br /><br /> 7\.0 的新功能包括：JDK 10 支援、已將預設的 合規性層級更新為 JDBC 4.2 規格、空間資料類型支援、cancelQueryTimeout 連線屬性、要求界限方法、useBulkCopyForBatchInsert 連線屬性、資料探索與分類資訊、UTF-8 功能擴充，以及 CityHash 支援。 |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|需要 Java Runtime Environment (JRE) 10.0。 使用 JRE 9.0 或更舊版本會擲回例外狀況。<br /><br /> 7\.0 的新功能包括：JDK 10 支援、已將預設的 合規性層級更新為 JDBC 4.2 規格、空間資料類型支援、cancelQueryTimeout 連線屬性、要求界限方法、useBulkCopyForBatchInsert 連線屬性、資料探索與分類資訊、UTF-8 功能擴充，以及 CityHash 支援。 |    
 
 
-  JDBC 驅動程式 7.0 也會提供在 Maven 中央儲存機制，並可以 POM 中加入下列程式碼新增至 Maven 專案。XML:  
+  JDBC Driver 7.0 也可在 Maven 中央存放庫上取得，而且可在 POM.XML 中新增下列程式碼，藉以新增至 Maven 專案：  
   
  ```xml
 <dependency>
@@ -100,11 +100,11 @@ ms.locfileid: "56154903"
   
   |JAR|JDBC 版本相容性|建議的 Java 版本|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或較低的擲回例外狀況。<br /><br /> 6.4 中的新功能包括： 適用於 Linux，主體/密碼方法 kerberos SPN 中的 REALM 自動偵測跨網域驗證，Kerberos 限制委派、 查詢逾時、 通訊端逾時，Azure AD 驗證和已備妥陳述式控制代碼重複使用。 |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或較低的擲回例外狀況。<br /><br /> 6.4 中的新功能包括： 適用於 Linux，主體/密碼方法 kerberos SPN 中的 REALM 自動偵測跨網域驗證，Kerberos 限制委派、 查詢逾時、 通訊端逾時，Azure AD 驗證和已備妥陳述式控制代碼重複使用。 |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或較低的擲回例外狀況。<br /><br /> 6.4 中的新功能包括： 適用於 Linux，主體/密碼方法 kerberos SPN 中的 REALM 自動偵測跨網域驗證，Kerberos 限制委派、 查詢逾時、 通訊端逾時，Azure AD 驗證和已備妥陳述式控制代碼重複使用。 |
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.4 的新功能包括：適用於 Linux 的 Azure AD 驗證、適用於 Kerberos 的主體/密碼方法、在 SPN 中自動偵測領域以進行跨網域驗證、Kerberos 限制委派、查詢逾時、通訊端逾時，以及重複使用備妥的陳述式控制代碼。 |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.4 的新功能包括：適用於 Linux 的 Azure AD 驗證、適用於 Kerberos 的主體/密碼方法、在 SPN 中自動偵測領域以進行跨網域驗證、Kerberos 限制委派、查詢逾時、通訊端逾時，以及重複使用備妥的陳述式控制代碼。 |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|需要 Java Runtime Environment (JRE) 9.0。 使用 JRE 8.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.4 的新功能包括：適用於 Linux 的 Azure AD 驗證、適用於 Kerberos 的主體/密碼方法、在 SPN 中自動偵測領域以進行跨網域驗證、Kerberos 限制委派、查詢逾時、通訊端逾時，以及重複使用備妥的陳述式控制代碼。 |
 
-JDBC Driver 6.4 Maven 中央儲存機制位於也可用，且可以 POM 中加入下列程式碼新增至 Maven 專案。XML 
+JDBC Driver 6.4 也可在 Maven 中央存放庫上取得，而且可在 POM.XML 中新增下列程式碼，藉以新增至 Maven 專案： 
 
  ```xml
 <dependency>
@@ -124,10 +124,10 @@ JDBC Driver 6.4 Maven 中央儲存機制位於也可用，且可以 POM 中加�
   
 |JAR|JDBC 版本相容性|建議的 Java 版本|Description|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或較低的擲回例外狀況。<br /><br /> 6.2 中的新功能包括： 適用於 Linux，主體/密碼方法 kerberos SPN 中的 REALM 自動偵測跨網域驗證，Kerberos 限制委派、 查詢逾時、 通訊端逾時，Azure AD 驗證和已備妥陳述式控制代碼重複使用。 |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或較低的擲回例外狀況。<br /><br /> 6.2 中的新功能包括： 適用於 Linux，主體/密碼方法 kerberos SPN 中的 REALM 自動偵測跨網域驗證，Kerberos 限制委派、 查詢逾時、 通訊端逾時，Azure AD 驗證和已備妥陳述式控制代碼重複使用|    
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.2 的新功能包括：適用於 Linux 的 Azure AD 驗證、適用於 Kerberos 的主體/密碼方法、在 SPN 中自動偵測領域以進行跨網域驗證、Kerberos 限制委派、查詢逾時、通訊端逾時，以及重複使用備妥的陳述式控制代碼。 |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.2 的新功能包括：適用於 Linux 的 Azure AD 驗證、適用於 Kerberos 的主體/密碼方法、在 SPN 中自動偵測領域以進行跨網域驗證、Kerberos 限制委派、查詢逾時、通訊端逾時，以及重複使用備妥的陳述式控制代碼。|    
 
-  JDBC Driver 6.2 Maven 中央儲存機制位於也可用，且可以 POM 中加入下列程式碼新增至 Maven 專案。XML 
+  JDBC Driver 6.2 也可在 Maven 中央存放庫上取得，而且可在 POM.XML 中新增下列程式碼，藉以新增至 Maven 專案： 
   
  ```xml
 <dependency>
@@ -139,7 +139,7 @@ JDBC Driver 6.4 Maven 中央儲存機制位於也可用，且可以 POM 中加�
 
  **Microsoft JDBC Driver 6.0 與 4.2 for SQL Server：**  
   
-  JDBC 驅動程式 6.0 與 4.2 中每個安裝套件中包含兩個 JAR 類別庫： **sqljdbc41.jar**，並**sqljdbc42.jar**。 
+  JDBC Drivers 6.0 和 4.2 會在每個安裝套件中包括兩個 JAR 類別庫：**sqljdbc41.jar** 和 **sqljdbc42.jar**。 
   
  JDBC Driver 6.0 與 4.2 專為搭配所有主要 Java 虛擬機器運作而設計，而且所有 Java 虛擬機器皆能支援，但這兩個驅動程式只經過 Sun JRE 5.0、6.0、7.0 及 8.0 的測試。
   
@@ -147,16 +147,16 @@ JDBC Driver 6.4 Maven 中央儲存機制位於也可用，且可以 POM 中加�
   
 |JAR|JDBC 版本相容性|建議的 Java 版本|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或較低的擲回例外狀況。<br /><br /> 6.0 與 4.2 套件中的新功能包括：JDBC 4.1 相容性與大量複製<br /><br /> 此外，包含 6.0 套件中的新功能： Always Encrypted，資料表值參數，Azure Active Directory 驗證，Always On 可用性群組，針對擷取參數中繼資料中的改進的透明連接備妥查詢和國際化網域名稱 (IDN)|  
-|sqljdbc42.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或較低的擲回例外狀況。<br /><br /> 6.0 與 4.2 套件中的新功能包括：JDBC 4.1 相容性、JDBC 4.2 相容性以及大量複製<br /><br /> 此外，包含 6.0 套件中的新功能： Always Encrypted，資料表值參數，Azure Active Directory 驗證，Always On 可用性群組，針對擷取參數中繼資料中的改進的透明連接備妥查詢和國際化網域名稱 (IDN)|  
+|sqljdbc41.jar|4.1|7|需要 Java Runtime Environment (JRE) 7.0。 使用 JRE 6.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.0 與 4.2 套件的新功能包括：JDBC 4.1 合規性與大量複製<br /><br /> 此外，僅 6.0 套件的新功能：Always Encrypted、資料表值參數、Azure Active Directory 驗證、以透明方式連線至 Always On 可用性群組、改進針對備妥查詢和國際化網域名稱 (IDN) 所擷取的參數中繼資料|  
+|sqljdbc42.jar|4.2|8|需要 Java Runtime Environment (JRE) 8.0。 使用 JRE 7.0 或更舊版本會擲回例外狀況。<br /><br /> 6\.0 與 4.2 套件的新功能包括：JDBC 4.1 合規性、JDBC 4.2 合規性及大量複製<br /><br /> 此外，僅 6.0 套件的新功能：Always Encrypted、資料表值參數、Azure Active Directory 驗證、以透明方式連線至 Always On 可用性群組、改進針對備妥查詢和國際化網域名稱 (IDN) 所擷取的參數中繼資料|  
   
  **Microsoft JDBC Driver 4.1 for SQL Server：**  
   
- JDBC Driver 4.1 中每個安裝套件包含一個 JAR 類別庫： **sqljdbc41.jar**。  
+ JDBC Driver 4.1 會在每個安裝套件中包括一個 JAR 類別庫：**sqljdbc41.jar**。  
     
 |JAR|Description|  
 |---------|-----------------|  
-|sqljdbc41.jar|**sqljdbc41.jar** 類別庫會提供 JDBC 4.0 API 的支援。 它包含 JDBC 4.0 驅動程式的所有功能，以及 JDBC 4.0 API 方法。 不支援 JDBC 4.1 (會擲回例外狀況 "SQLFeatureNotSupportedException")。<br /><br /> **sqljdbc41.jar** 類別庫需要使用 Java Runtime Environment (JRE) 7.0。 使用**sqljdbc41.jar**在 JRE 6.0 與 5.0 上就會擲回例外狀況。<br /><br /> 
+|sqljdbc41.jar|**sqljdbc41.jar** 類別庫會提供 JDBC 4.0 API 的支援。 它包含 JDBC 4.0 驅動程式的所有功能，以及 JDBC 4.0 API 方法。 不支援 JDBC 4.1 (會擲回例外狀況 "SQLFeatureNotSupportedException")。<br /><br /> **sqljdbc41.jar** 類別庫需要使用 Java Runtime Environment (JRE) 7.0。 在 JRE 6.0 與 5.0 上使用 **sqljdbc41.jar** 就會擲回例外狀況。<br /><br /> 
   
  JDBC 驅動程式專為搭配所有主要 Java 虛擬機器運作而設計，而且所有 Java 虛擬機器皆能支援，但此驅動程式只經過 Sun JRE 5.0、6.0 及 7.0 的測試。
   
@@ -173,7 +173,7 @@ JDBC Driver 6.4 Maven 中央儲存機制位於也可用，且可以 POM 中加�
  JDBC Driver 設計為可以在支援使用 JAVA 虛擬機器 (JVM) 的任何作業系統上運作。 不過，僅在 Sun Solaris、SUSE Linux 及 Windows 作業系統上正式測試過。  
   
 ## <a name="supported-languages"></a>支援的語言  
- JDBC 驅動程式支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行定序。 如需有關 JDBC 驅動程式支援的定序的詳細資訊，請參閱 < [JDBC Driver 的國際功能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)。  
+ JDBC 驅動程式支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行定序。 如需有關 JDBC 驅動程式所支援的定序詳細資訊，請參閱 [JDBC Driver 的國際功能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)。  
   
  如需定序的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的＜使用定序＞。  
   

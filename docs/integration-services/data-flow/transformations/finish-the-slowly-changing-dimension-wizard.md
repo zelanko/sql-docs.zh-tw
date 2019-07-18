@@ -13,15 +13,19 @@ ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ffe94079514d25b49cae9e792aa3e3b8e5a6e74
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6b46ba1015cac981a08c156add837c2fe295e96e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726115"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>完成緩時變維度精靈
-  使用 [完成緩時變維度精靈] 對話方塊，即可在精靈為緩時變維度建立支援之前，先確認您的選擇。  
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  使用 [完成緩時變維度精靈]  對話方塊，即可在精靈為緩時變維度建立支援之前，先確認您的選擇。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)＞。  
   

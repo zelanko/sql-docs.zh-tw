@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbdd231bb7785eda6bca4771579916b7e3cc7a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63313778"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用資料庫圖表 (Visual Database Tools)
   您可以使用 [資料庫設計工具] 建立您資料庫的視覺化圖表。 下列主題包含了使用設計工具設計資料庫圖表的基本概念。  

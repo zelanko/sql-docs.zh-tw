@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a34d69fe4d8d8de6668e804bc574c18196f0aa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc2a41cb5f7bbd8e5b0b76ed7b571ffdf80a939f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132881"
 ---
 # <a name="sysservicecontractusages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

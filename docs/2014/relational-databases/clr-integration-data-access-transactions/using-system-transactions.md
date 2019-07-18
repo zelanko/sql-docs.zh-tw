@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919541"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
   `System.Transactions` 命名空間會提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合完全整合的交易架構。 `System.Transactions.TransactionScope` 類別可藉由在分散式交易中隱含地編列連接，讓程式碼區塊可進行交易。 您必須呼叫 `Complete` 所標示之程式碼區塊結尾的 `TransactionScope` 方法。 當程式執行離開程式碼區塊時，會叫用 `Dispose` 方法，如果不呼叫 `Complete` 方法，則會讓交易停止。 如果已擲回造成程式碼離開範圍的例外狀況，則會將交易視為停止。  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6b5a0a656693d66e701642c9c2202c2862136a54
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005079"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

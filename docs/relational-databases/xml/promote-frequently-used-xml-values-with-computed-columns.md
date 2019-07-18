@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 920fe0f3e450448a1d8c9a262d2ae0e372e6769f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510545"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584439"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   在 XML 資料行上建立觸發程序，以維護屬性資料表。 在觸發程序中執行下列其中之一：  
   
-    -   使用 **xml** 資料類型方法，例如： **nodes()** 和 **value()**，進而插入及刪除屬性資料表的資料列。  
+    -   使用 **xml** 資料類型方法，例如： **nodes()** 和 **value()** ，進而插入及刪除屬性資料表的資料列。  
   
     -   在 Common Language Runtime (CLR) 中建立資料流資料表值函式，以插入及刪除屬性資料表的資料列。  
   
@@ -173,7 +173,9 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  建立組件及 Transact-SQL 使用者自訂函數，以啟動 CLR 類別。  
   
 3.  使用使用者自訂函數來定義插入、更新及刪除觸發程序，以維護屬性資料表。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  若要執行此作業，您要先建立資料流 CLR 函數。 **xml** 資料類型在 ADO.NET 中公開為 Managed 類別 SqlXml，並支援傳回 XmlReader 的 **CreateReader()** 方法。  
   
 > [!NOTE]  

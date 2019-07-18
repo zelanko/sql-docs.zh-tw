@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212137"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>讓資料庫訂閱或取消訂閱原則類別目錄
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中讓資料庫訂閱或取消訂閱原則類別目錄。  
@@ -26,7 +26,7 @@ ms.locfileid: "52753740"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列方法讓資料庫訂閱或取消訂閱原則類別目錄：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52753740"
   
 2.  按一下加號展開 **[資料庫]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則] 並選取 [類別目錄]。  
+3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則]  並選取 [類別目錄]  。  
   
      **[類別目錄]** 對話方塊有下列選項：  
   
@@ -74,9 +74,9 @@ ms.locfileid: "52753740"
      **記錄**  
      按一下 [檢視記錄] 超連結可開啟記錄檔檢視器，以查看原則記錄。  
   
-4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱] 資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
+4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱]  資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -84,9 +84,9 @@ ms.locfileid: "52753740"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -101,9 +101,9 @@ ms.locfileid: "52753740"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

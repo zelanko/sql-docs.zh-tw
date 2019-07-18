@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63154699"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中的專案項目有「查詢」、「連接」及「其他」檔案。 您可以在 [方案總管] 中的各專案之間移動「查詢」和「其他」檔案，不過，不能移動「連接」。  
@@ -28,11 +28,11 @@ ms.locfileid: "52795710"
   
 1.  在 [方案總管] 中，選取您要移動的項目。  
   
-2.  在 [編輯] 功能表上，按一下 [剪下]。  
+2.  在 [編輯]  功能表上，按一下 [剪下]  。  
   
 3.  在 [方案總管] 中，選取目的地。  
   
-4.  在 [編輯] 功能表上，按一下 [貼上]。  
+4.  在 [編輯]  功能表上，按一下 [貼上]  。  
   
  您可以在 [方案總管] 內拖曳「查詢」和「其他」檔案來移動項目。 拖曳可讓您查看拖曳作業的結果。 在專案類型之間移動查詢，可能會造成在目標專案中，將查詢視為其他檔案。  
   

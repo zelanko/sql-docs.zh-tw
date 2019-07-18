@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: ac4c00830c9f678c467a75c1531b97fd3723c0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962716"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換 R 程式碼，以便在 SQL Server （資料庫內） 執行個體中執行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "58511255"
 
 + 您使用 R 程式庫，存取網路或無法在 SQL Server 上安裝的。
 + 程式碼會個別呼叫 SQL Server 外部的資料來源，例如 Excel 工作表、 共用上的檔案和其他資料庫。 
-+ 您想要執行程式碼*@script*參數[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)並也參數化預存程序。
++ 您想要執行程式碼 *@script* 參數[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)並也參數化預存程序。
 + 與原始方案包含多個步驟，可能會在生產環境中執行資料準備或特徵工程設計與模型定型、 評分或報告等的各自獨立地如果更有效率。
 + 您想要改善效能發揮到程式庫，是使用平行執行，或變更某些將處理卸載至 SQL Server。 
 

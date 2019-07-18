@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.enablecustommemberformula.selectdimension.f1
@@ -13,17 +12,17 @@ ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086946"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>建立自訂成員公式 (維度) (商業智慧精靈)
   使用**建立自訂成員公式**頁面，即可選取維度的商業智慧精靈將之間建立關聯的屬性和自訂成員公式資料行集資料行包含多維度運算式 (MDX)定義該屬性成員值的陳述式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Dimension**  
  選取維度，讓精靈在此維度包含的屬性和自訂成員公式之間建立關聯。  
   

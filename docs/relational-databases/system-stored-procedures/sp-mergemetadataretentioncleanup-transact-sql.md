@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1797200ce5369f49035f1a950d606e34e584edc2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019968"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

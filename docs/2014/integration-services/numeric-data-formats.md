@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - integer data types [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a89b37f2210b2a80d22747a816e4f937cbc54ee1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057390"
 ---
 # <a name="numeric-data-formats"></a>數值資料格式
   快速剖析提供一組快速、簡易且區分區域設定的常式集，以剖析資料。 快速剖析僅支援整數資料類型的有限格式集。  

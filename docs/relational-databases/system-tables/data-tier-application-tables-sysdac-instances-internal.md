@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084737"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>資料層應用程式資料表 - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +48,6 @@ ms.locfileid: "47827376"
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe7a90ac2d2d19a77aaad7e3b989907685c4a724
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7cbbcac1d911cf45b58d3219c542d3242ea98f67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787731"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>部分可用性複本已中斷連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

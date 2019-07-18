@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
@@ -13,12 +12,12 @@ ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cc27106e3aa749f9462659190f006bcc8f5627b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054740"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>升級封裝 (SSIS 封裝升級精靈)
   使用 **[正在升級封裝]** 頁面，即可檢視封裝升級的進度，並在必要時中斷升級程序。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈會逐一升級選取的封裝。  
@@ -31,7 +30,7 @@ ms.locfileid: "58388076"
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 [方案總管] 中，開啟 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後展開 **[SSIS 封裝]** 節點，查看升級的封裝。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **訊息窗格**  
  在升級進行期間顯示進度訊息和摘要資訊。  
   

@@ -11,14 +11,18 @@ ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a72e4f786809c5e977f2bb005bf9780e3c9ee192
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d70e2bc12642df0c07c3f280df7187ef68ab3b02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65716298"
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 資料庫)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 啟用處理此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄之 Scale Out Master 的 Scale Out Worker。

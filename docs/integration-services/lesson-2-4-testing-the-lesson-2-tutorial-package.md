@@ -11,14 +11,18 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65722464"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>課程 2-4：測試第 2 課教學課程套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在現已設定好「Foreach 迴圈」容器和「一般檔案」連線管理員的情況下，第 2 課套件可逐一查看「範例資料」資料夾中的 14 個一般檔案。 每當某個檔案名稱與指定的準則相符時，「Foreach 迴圈」容器就會以該檔案名稱填入使用者定義的變數。 此變數會接著更新「一般檔案」連線管理員的 ConnectionString 屬性，以連線至該一般檔案。 然後，「Foreach 迴圈」容器會對該一般檔案中的資料執行未修改過的資料流程工作。  
   

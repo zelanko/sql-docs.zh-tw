@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6940e9e40a09e5bd0c7afc591b34c17129350d74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62813438"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-alwayson-availability-groups"></a>疑難排解失敗的加入檔案作業 (AlwaysOn 可用性群組)
   在某些 AlwaysOn 可用性群組部署中，在裝載主要複本的系統和裝載次要複本的系統之間會有檔案路徑差異。 如果加入檔案作業的檔案路徑不存在於次要複本，則加入檔案作業將會在主要資料庫上成功完成。 但是加入檔案作業會造成次要資料庫暫停。 而這又會導致次要複本進入 NOT SYNCHRONIZING 狀態。  

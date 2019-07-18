@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139834"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +48,9 @@ sp_linkedservers
 |**SRV_NAME**|**sysname**|連結伺服器的名稱。|  
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|管理指定連結伺服器存取權之 OLE DB 提供者的易記名稱。|  
 |**SRV_PRODUCT**|**nvarchar(** 128 **)**|連結伺服器的產品名稱。|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|對應於指定連結伺服器的 OLE DB 資料來源屬性。|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|對應於連結伺服器的 OLE DB 提供者字串屬性。|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|對應於指定連結伺服器的 OLE DB 位置屬性。|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|對應於指定連結伺服器的 OLE DB 資料來源屬性。|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|對應於連結伺服器的 OLE DB 提供者字串屬性。|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|對應於指定連結伺服器的 OLE DB 位置屬性。|  
 |**SRV_CAT**|**sysname**|對應於指定連結伺服器的 OLE DB 目錄屬性。|  
   
 ## <a name="permissions"></a>Permissions  

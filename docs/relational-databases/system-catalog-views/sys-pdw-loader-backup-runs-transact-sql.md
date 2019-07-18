@@ -11,16 +11,15 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127474"
 ---
-# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含進行中和已完成的備份和還原作業中的相關資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，以及有關進行中和已完成的備份、 還原及載入作業中的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 此資訊在系統重新啟動之後會持續存留。  
@@ -28,13 +27,13 @@ ms.locfileid: "56014506"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|特定的備份、 還原或負載測試的唯一識別碼。<br /><br /> 此檢視的索引鍵。||  
-|NAME|**nvarchar(255)**|負載是 null。 備份或還原的選擇性名稱。||  
+|name|**nvarchar(255)**|負載是 null。 備份或還原的選擇性名稱。||  
 |submit_time|**datetime**|已提交要求的時間。||  
 |start_time|**datetime**|作業開始的時間。||  
 |end_time|**datetime**|作業已完成、 失敗或已取消的時間。||  
 |total_elapsed_time|**int**|經過的時間總計 start_time 和目前的時間，或之間的 start_time 和 end_time 完成、 已取消，或失敗的執行。|如果 total_elapsed_time 超過整數 （以毫秒為單位的 24.8 天） 的最大值，它會具體化失敗，因為溢位。<br /><br /> 以毫秒為單位的最大值相當於 24.8 天。|  
 |operation_type|**nvarchar(16)**|載入型別。|[備份]，'LOAD'，' RESTORE'|  
-|mode|**nvarchar(16)**|在執行的型別中模式。|Operation_type =**備份**<br />**差異**<br />**FULL**<br /><br /> Operation_type =**負載**<br />**附加**<br />**RELOAD**<br />**UPSERT**<br /><br /> Operation_type =**還原**<br />**DATABASE**<br />**HEADER_ONLY**|  
+|mode|**nvarchar(16)**|在執行的型別中模式。|Operation_type =**備份**<br />**差異**<br />**FULL**<br /><br /> Operation_type =**負載**<br />**附加**<br />**重新載入**<br />**更新插入**<br /><br /> Operation_type =**還原**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|這項作業的內容資料庫的名稱||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|要求作業的使用者識別碼。||  

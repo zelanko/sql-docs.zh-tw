@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 847bec408d0b3999c550bbfa533b6bf92ebf670d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea95066a8fecbf96c8f6b14b42486d4d62264ae2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757720"
 ---
 # <a name="hierarchy-representation-tabular"></a>階層表示法 (表格式)
   在表格式模型中，階層是根據使用者選取的值從一個屬性到另一個屬性的導覽路徑。  

@@ -14,20 +14,20 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64946167"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
+  針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」  標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」  標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
   
 > [!IMPORTANT]
 >  在使用原生或 Unicode 原生格式時，請使用長度前置詞，而不使用欄位結束字元。 由於原生格式資料檔案存放格式為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部二進位資料格式，因此原生格式資料可能會與結束字元相衝突。  
@@ -70,12 +70,12 @@ ms.locfileid: "53215474"
   
     -   使用 **-t** 參數，對資料列中最後一個欄位以外的所有欄位，指定欄位結束字元，並使用 **-r** 參數指定資料列結束字元。  
   
-    -   使用字元格式參數 (**-c** 或 **-w**) 但不使用 **-t** 參數，會將欄位結束字元設定為定位字元 \t。 這與指定 **-t**\t 相同。  
+    -   使用字元格式參數 ( **-c** 或 **-w**) 但不使用 **-t** 參數，會將欄位結束字元設定為定位字元 \t。 這與指定 **-t**\t 相同。  
   
         > [!NOTE]  
         >  如果您指定 **-n** (原生資料) 或 **-N** (Unicode 原生) 參數，則不會插入結束字元。  
   
-    -   如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不使用格式檔案參數 (**-f**) 或資料格式參數 (**-n**、 **-c**、 **-w**，或 **-N**)，而且您選擇不指定前置長度與欄位長度，則該命令會提示輸入每個欄位的欄位結束字元 (預設是無)：  
+    -   如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不使用格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w**，或 **-N**)，而且您選擇不指定前置長度與欄位長度，則該命令會提示輸入每個欄位的欄位結束字元 (預設是無)：  
   
          `Enter field terminator [none]:`  
   
@@ -187,8 +187,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |選項|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|指定以字元資料載入資料欄位。|  
-|FIELDTERMINATOR **='**`,`**'**|指定逗號 (`,`) 作為欄位結束字元。|  
-|ROWTERMINATOR **='**`\n`**'**|指定資料列結束字元為新行字元。|  
+|FIELDTERMINATOR **='** `,` **'**|指定逗號 (`,`) 作為欄位結束字元。|  
+|ROWTERMINATOR **='** `\n` **'**|指定資料列結束字元為新行字元。|  
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中，執行下列程式碼：  
   

@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662922"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556945"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 
@@ -76,18 +76,18 @@ ms.locfileid: "56662922"
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對記憶體管理進行的變更
 
 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，使用了五種不同的機制配置記憶體：
--  **單一頁面配置器 (SPA)**，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理程中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單一分頁配置的最大取用者。
--  **多頁配置器 (MPA)**，適用於要求超過 8KB 的記憶體配置。
+-  **單一頁面配置器 (SPA)** ，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)]  與 [最小伺服器記憶體 (MB)]  設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單一分頁配置的最大取用者。
+-  **多頁配置器 (MPA)** ，適用於要求超過 8KB 的記憶體配置。
 -  **CLR 配置器**，包括 SQL CLR 堆積，及其在 CLR 初始化期間所建立的全域配置。
 -  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中 **[執行緒堆疊](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的記憶體配置。
--  **直接 Windows 配置 (DWA)**，適用於直接向 Windows 提出的記憶體配置要求。 這些包括使用 Windows 堆積，以及載入至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理之模組所做的直接虛擬配置。 這類的記憶體配置要求範例，包括擴充預存程序 DLL 的配置、使用「自動」處理序 (sp_OA 呼叫) 所建立的物件，以及連結伺服器提供者的配置。
+-  **直接 Windows 配置 (DWA)** ，適用於直接向 Windows 提出的記憶體配置要求。 這些包括使用 Windows 堆積，以及載入至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理之模組所做的直接虛擬配置。 這類的記憶體配置要求範例，包括擴充預存程序 DLL 的配置、使用「自動」處理序 (sp_OA 呼叫) 所建立的物件，以及連結伺服器提供者的配置。
 
-從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，單頁配置、多頁配置及 CLR 配置皆一併整合為 **「任何大小」分頁配置器**，且包含在 [最大伺服器記憶體 (MB)] 及 [最小伺服器記憶體 (MB)] 設定選項所控制的記憶體限制之中。 這些變更為經由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員的所有記憶體需求，提供了更準確的調整大小功能。 
+從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，單頁配置、多頁配置及 CLR 配置皆一併整合為 **「任何大小」分頁配置器**，且包含在 [最大伺服器記憶體 (MB)]  與 [最小伺服器記憶體 (MB)]  設定選項所控制的記憶體限制之中。 這些變更為經由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員的所有記憶體需求，提供了更準確的調整大小功能。 
 
 > [!IMPORTANT]
-> 請在升級到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]之後，仔細檢閱目前的 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定。 這是因為從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，這類設定目前所包含且納入記憶體配置，較舊版來得多。 這些變更適用 32 位元及 64 位元版本的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 與 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，以及 64 位元版本的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。
+> 請在升級到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]之後，仔細檢閱目前的 [最大伺服器記憶體 (MB)]  與 [最小伺服器記憶體 (MB)]  設定。 這是因為從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，這類設定目前所包含且納入記憶體配置，較舊版來得多。 這些變更適用 32 位元及 64 位元版本的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 與 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，以及 64 位元版本的 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。
 
-下表指出特定類型的記憶體配置是否受 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定選項的控制：
+下表指出特定類型的記憶體配置是否受 [最大伺服器記憶體 (MB)]  與 [最小伺服器記憶體 (MB)]  設定選項的控制：
 
 |記憶體配置類型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始|
 |-------|-------|-------|
@@ -97,9 +97,9 @@ ms.locfileid: "56662922"
 |執行緒堆疊記憶體|否|否|
 |Windows 直接配置|否|否|
 
-從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置的記憶體可能會超過最大伺服器記憶體設定中所指定的值。 當 [總伺服器記憶體 (KB)] 值已經超過 [目標伺服器記憶體 (KB)] 設定 (由最大伺服器記憶體指定) 時，即可能出現此行為。 如因記憶體分散而導致連續的可用記憶體不足以符合多頁記憶體要求的需求 (大於 8 KB)，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仍可超額配置而不拒絕記憶體要求。 
+從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置的記憶體可能會超過最大伺服器記憶體設定中所指定的值。 當 [總伺服器記憶體 (KB)]  值已經超過 [目標伺服器記憶體 (KB)]  設定 (由最大伺服器記憶體指定) 時，即可能出現此行為。 如因記憶體分散而導致連續的可用記憶體不足以符合多頁記憶體要求的需求 (大於 8 KB)，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仍可超額配置而不拒絕記憶體要求。 
 
-執行配置之後，*資源監視器*背景工作會開始對所有記憶體取用者要求釋放配置的記憶體，並會嘗試將 [總伺服器記憶體 (KB)] 值降至 [目標伺服器記憶體 (KB)] 規格之下。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的記憶體使用量可能會短時間超過伺服器記憶體設定的上限。 在此情況下，[總伺服器記憶體 (KB)] 效能計數器會讀取超過最大伺服器記憶體及 [目標伺服器記憶體 (KB)] 設定。
+執行配置之後，*資源監視器*背景工作會開始對所有記憶體取用者要求釋放配置的記憶體，並會嘗試將 [總伺服器記憶體 (KB)]  值降至 [目標伺服器記憶體 (KB)]  規格之下。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的記憶體使用量可能會短時間超過伺服器記憶體設定的上限。 在此情況下，[總伺服器記憶體 (KB)]  效能計數器會讀取超過最大伺服器記憶體及 [目標伺服器記憶體 (KB)]  設定。
 
 下列作業期間通常會觀察到此行為： 
 -  大型資料行存放區索引查詢。
@@ -109,9 +109,9 @@ ms.locfileid: "56662922"
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
-在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)**、**CLR 配置器**、SQL Server 處理序中 **執行緒堆疊** 的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
+在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)** 、**CLR 配置器**、SQL Server 處理序中 **執行緒堆疊** 的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
 
-為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]*-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
+為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
 
 因為從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，新的「任何大小」分頁配置器也會處理大於 8 KB 的配置，所以 *memory_to_reserve* 值不會包含多頁配置。 除此變更之外，此設定選項的其餘項目皆維持原狀。
 
@@ -182,12 +182,12 @@ FROM sys.dm_os_process_memory;
 
 如果為最小伺服器記憶體和最大伺服器記憶體指定相同的值，則一旦配置給 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的記憶體達到該值，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 就會停止動態釋放及取得緩衝集區的記憶體。
 
-如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體正在電腦上執行，而且電腦上有其他應用程式頻繁地停止或啟動，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體配置和取消配置記憶體，可能會延遲其他應用程式啟動的時間。 此外，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在單一電腦上執行的數個伺服器應用程式之一，系統管理員可能需要控制配置給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的記憶體數量。 在這些情況下，您可以使用最小伺服器記憶體和最大伺服器記憶體選項，來控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用的記憶體數量。 [最小伺服器記憶體] 與 [最大伺服器記憶體] 選項以 MB 指定。 如需詳細資訊，請參閱 [伺服器記憶體組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)。
+如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體正在電腦上執行，而且電腦上有其他應用程式頻繁地停止或啟動，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體配置和取消配置記憶體，可能會延遲其他應用程式啟動的時間。 此外，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在單一電腦上執行的數個伺服器應用程式之一，系統管理員可能需要控制配置給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的記憶體數量。 在這些情況下，您可以使用最小伺服器記憶體和最大伺服器記憶體選項，來控制 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用的記憶體數量。 [最小伺服器記憶體]  與 [最大伺服器記憶體]  選項以 MB 指定。 如需詳細資訊，請參閱 [伺服器記憶體組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)。
 
 ## <a name="memory-used-by-sql-server-objects-specifications"></a>SQL Server 物件使用記憶體的規格
 下列清單將描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中不同物件所使用的記憶體大約數量。 所列的數量為估計值，且會因環境及建立物件的方式而有所不同：
 
-* 鎖定 (由鎖定管理員保留)：64 位元組 + 每個擁有者 32 位元組   
+* 鎖定 (由鎖定管理員保留)：64 位元組 + 每位擁有者 32 位元組   
 * 使用者連線：大約是 (3 \* network_packet_size + 94 KB)    
 
 **網路封包大小**是表格式資料配置 (TDS) 封包的大小，用於在應用程式和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫引擎之間進行通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。
@@ -236,8 +236,8 @@ FROM sys.dm_os_process_memory;
 ### <a name="supported-features"></a>支援的功能
 緩衝區管理員支援下列功能：
 
-* 緩衝區管理員可知曉**非統一記憶體存取 (NUMA)**。 緩衝快取頁面會分散到硬體 NUMA 節點，這可讓執行緒存取本機 NUMA 節點上配置的緩衝區頁面，而不是從外部記憶體中存取。 
-* 緩衝區管理員支援 [熱新增記憶體]，讓使用者無須重新啟動伺服器即可增加實體記憶體。 
+* 緩衝區管理員可知曉**非統一記憶體存取 (NUMA)** 。 緩衝快取頁面會分散到硬體 NUMA 節點，這可讓執行緒存取本機 NUMA 節點上配置的緩衝區頁面，而不是從外部記憶體中存取。 
+* 緩衝區管理員支援 [熱新增記憶體]  ，讓使用者無須重新啟動伺服器即可增加實體記憶體。 
 * 緩衝區管理員在 64 位元平台上支援**大型分頁**。 Windows 的不同版本各有特定的頁面大小。
 
   > [!NOTE]

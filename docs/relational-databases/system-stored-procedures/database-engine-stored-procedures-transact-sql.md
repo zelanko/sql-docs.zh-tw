@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: be9aa514bd7bb98dc2209d0e3d84131895f93f83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942419"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Database Engine 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

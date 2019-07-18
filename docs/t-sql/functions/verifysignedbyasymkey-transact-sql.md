@@ -20,15 +20,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0b932435b65d7c3638e575b9ee3a86fd709f2985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6044ff3c8626a4daeee30f100082a8884457fc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65946282"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ## <a name="remarks"></a>Remarks  
  **VerifySignedByAsymKey** 會使用指定之非對稱金鑰的公開金鑰解密資料的簽章，並比較解密值與新計算的資料 MD5 雜湊。 如果值相符，簽章將確認為有效。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要非對稱金鑰的 VIEW DEFINITION 權限。  
   
 ## <a name="examples"></a>範例  

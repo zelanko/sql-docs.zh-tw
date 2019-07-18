@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9496be167ae092df8737dffec723daf77147f496
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211137"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 屬性 (FILESTREAM 索引標籤)
   您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝啟用 FILESTREAM。  

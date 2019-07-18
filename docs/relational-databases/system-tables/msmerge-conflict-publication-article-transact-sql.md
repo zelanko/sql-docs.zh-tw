@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78036e91dd87b3295c9b8c4e6d0a39311133bbdd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dfae18a55ddb8b1c95aad25e27f006b28fde79af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895107"
 ---
 # <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>MSmerge_conflict_&lt;出版物&gt;_&lt;文章&gt;& Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GROUPING function
 - CUBE operator
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 018d8de6b8e5fd50109b8e55186c88bda058ea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01272dedee424cb50c3c0e8e40c9ac92c95ec070
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943011"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

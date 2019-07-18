@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42bde038458e817ad572e8b5049e13acb60a49af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013045"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別執行 DiffGram
   此範例示範如何執行 DiffGram 檔案，在[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 的環境，以將資料套用更新至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表使用 SQLXML Managed 類別 (Microsoft.Data.SqlXml)。  
@@ -52,7 +52,7 @@ ms.locfileid: "52806010"
 </ROOT>  
 ```  
   
- **\<之前 >** 區塊包含**\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。  **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
+ **\<之前 >** 區塊包含 **\<客戶 >** 項目 (**diffgr: id ="Customer1"** )。 **\<DataInstance >** 區塊包含對應 **\<客戶 >** 具有相同的項目 **識別碼**。 **\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定 **diffgr: haschanges ="modified"** 。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
   
  以下是 C# 教學課程應用程式程式碼示範如何使用 SQLXML Managed 類別來執行上述的 DiffGram，並更新兩個資料表 (Cust、 Ord) 也會建立在**tempdb**資料庫。  
   

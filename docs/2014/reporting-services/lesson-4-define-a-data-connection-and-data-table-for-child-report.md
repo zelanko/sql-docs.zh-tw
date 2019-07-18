@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c04fdad5e53e9d50f6d910f16c8f86b0218f35be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108469"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 課：定義子報表的資料連接和資料表
   設計父報表之後，下一步是要建立子報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2008 資料庫。 您也可以選擇連接到 AdventureWorks2012 資料庫。  
@@ -33,25 +32,25 @@ ms.locfileid: "56012779"
   
 4.  在 **選擇資料連接**頁面上，按一下**新的連接**。  
   
-5.  在 [新增連線] 對話方塊中，執行下列步驟：  
+5.  在 [新增連線]  對話方塊中，執行下列步驟：  
   
     1.  在 **伺服器名稱**方塊中，輸入伺服器位置**AdventureWorks2008**資料庫所在。  
   
          預設的 SQL Server Express 執行個體為 **(local)\sqlexpress**。  
   
-    2.  在 [登入伺服器] 區段中，選取提供資料存取的選項。 [使用 Windows 驗證] 是預設值。  
+    2.  在 [登入伺服器]  區段中，選取提供資料存取的選項。 [使用 Windows 驗證]  是預設值。  
   
     3.  從**選取或輸入資料庫名稱**下拉式清單中，按一下**AdventureWorks2008**。  
   
-    4.  按一下 [確定]，然後按一下 [下一步]。  
+    4.  按一下 [確定]  ，然後按一下 [下一步]  。  
   
-6.  如果您已在步驟 5 (b) 中選取 [使用 SQL Server 驗證]，請選取在字串中包含機密資料或在應用程式程式碼中設定資訊的選項。  
+6.  如果您已在步驟 5 (b) 中選取 [使用 SQL Server 驗證]  ，請選取在字串中包含機密資料或在應用程式程式碼中設定資訊的選項。  
   
-7.  在 **儲存連接字串儲存到應用程式組態檔**頁面上，輸入連接字串的名稱或接受預設值**AdventureWorks2008ConnectionString**。 按一下 [下一步] 。  
+7.  在 **儲存連接字串儲存到應用程式組態檔**頁面上，輸入連接字串的名稱或接受預設值**AdventureWorks2008ConnectionString**。 按一下 [下一步]  。  
   
-8.  在 [**選擇命令類型**頁面上，選取**使用 SQL 陳述式**，然後按一下**下一步]**。  
+8.  在 [**選擇命令類型**頁面上，選取**使用 SQL 陳述式**，然後按一下**下一步]** 。  
   
-9. 在 [**輸入 SQL 陳述式**頁面上，輸入下列 TRANSACT-SQL 查詢，以從中擷取資料**AdventureWorks2008**資料庫，然後再按**下一步]**。  
+9. 在 [**輸入 SQL 陳述式**頁面上，輸入下列 TRANSACT-SQL 查詢，以從中擷取資料**AdventureWorks2008**資料庫，然後再按**下一步]** 。  
   
     ```  
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  

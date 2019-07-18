@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926002"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 指派給包含的資料行的章節，以操作的名稱是*章別名*。  
@@ -44,7 +43,7 @@ ms.locfileid: "47625926"
   
 |新的關鍵字|描述|  
 |-----------------|-----------------|  
-|新*欄位型別*[(*寬度* &#124; *擴展* &#124; *精確度* &#124; *錯誤*[，*擴展* &#124; *錯誤*])]|加入空白資料行指定型別的**資料錄集**。|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|加入空白資料行指定型別的**資料錄集**。|  
   
  *欄位類型*傳遞包含新的關鍵字可以是任何下列資料類型。  
   

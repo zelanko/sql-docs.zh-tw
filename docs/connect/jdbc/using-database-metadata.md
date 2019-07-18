@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58e5e403bb33663654c3cd5f0f884c13957d04f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711267"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798672"
 ---
 # <a name="using-database-metadata"></a>使用資料庫中繼資料
 

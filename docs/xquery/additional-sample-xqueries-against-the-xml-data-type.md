@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 276bdadfdc485c9d1fabf864b34764402de7e5b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2284f499dce30462b468dc385944ba19f0dbb88e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986063"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>針對 xml 資料類型的其他範例 XQueries
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

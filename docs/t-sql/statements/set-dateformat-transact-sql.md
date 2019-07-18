@@ -29,11 +29,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759971"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638301"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,8 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>引數  
- *format* | **@**_format_var_  
- 這是日期部分的順序。 有效的參數為 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 U.S.美國英文的預設值是 **mdy**。 如需所有支援語言的預設 DATEFORMAT，請參閱 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
+ *format* |  **@** _format_var_  
+ 這是日期部分的順序。 有效的參數為 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 美國美國英文的預設值是 **mdy**。 如需所有支援語言的預設 DATEFORMAT，請參閱 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
   
 ## <a name="remarks"></a>Remarks  
  **date**、**datetime2** 和 **datetimeoffset** 資料類型不支援 DATEFORMAT **ydm**。  
@@ -65,7 +65,7 @@ SET DATEFORMAT { format | @format_var }
   
  SET DATEFORMAT 會覆寫 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 的隱含日期格式設定。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  

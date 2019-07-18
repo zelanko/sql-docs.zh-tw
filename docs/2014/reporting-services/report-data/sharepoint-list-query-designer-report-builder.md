@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc4f228030574cbcd38acd4b42a15a5275b48d02
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e16dc91040596b1d083226683abe76a7e2e2c4ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107066"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 清單查詢設計工具 (報表產生器)
   報表產生器同時提供了圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，以便指定要從 SharePoint 網站中針對報表資料集擷取的資料。 您可以使用圖形化查詢設計工具來瀏覽 SharePoint 清單中繼資料、以互動方式建立查詢以及檢視查詢的結果。 您可以使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢、修改查詢，或輸入查詢命令。 您也可以從檔案或報表匯入現有的查詢。  

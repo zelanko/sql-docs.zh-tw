@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949699"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 物件 (ADO MD)
 提供一種方法，在其中的成員[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以彙總或 「 彙總 」。 維度可以加以彙總一或多個階層。  

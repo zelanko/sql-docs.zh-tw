@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080540"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>從文字檔匯入 (SSAS 表格式)
   您可以使用 [資料表匯入精靈]，從 Microsoft Excel 檔案和文字檔匯入資料。  
@@ -25,14 +24,14 @@ ms.locfileid: "48055766"
   
 ### <a name="to-import-data-from-a-text-file"></a>從文字檔匯入資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取 **[文字檔]** 底下的 **[Excel 檔案]** 或 **[文字檔]**，然後按 **[下一步]**。  
+2.  在 **[連接到資料來源]** 頁面上，選取 **[文字檔]** 底下的 **[Excel 檔案]** 或 **[文字檔]** ，然後按 **[下一步]** 。  
   
 3.  請遵循 [資料表匯入精靈] 中的步驟來進行。 在後續頁面中，您將可以選取特定的資料表，並使用 **[選取資料表和檢視表]** 頁面以套用篩選。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
+ [匯入資料 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798170"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762349"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
   針對 SQL Server PowerShell 提供者指定的路徑必須識別 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體及其執行所在的電腦。 用來指定電腦和執行個體的語法必須符合 SQL Server 識別碼和 Windows PowerShell 路徑的規則。  
   
-1.  **開始之前：**[限制事項](#LimitationsRestrictions)  
+1.  **開始之前：** [限制事項](#LimitationsRestrictions)  
   
-2.  **若要指定執行個體：**[範例](#Examples)  
+2.  **若要指定執行個體：** [範例](#Examples)  
   
 ## <a name="before-you-begin"></a>開始之前  
  SQL Server 提供者路徑中接在 SQLSERVER:\SQL 後面的第一個節點是執行 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體的電腦名稱。例如：  

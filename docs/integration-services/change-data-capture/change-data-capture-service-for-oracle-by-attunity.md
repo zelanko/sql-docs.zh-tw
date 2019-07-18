@@ -11,18 +11,23 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e24cb57b7bc9e0a5addbde4c0249448bb84e905
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cbce8f29b2c623102d0e9f7dad749c784a3764ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290654"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66354354"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並將相關 Oracle 資料表的變更擷取到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更資料表中。 用來儲存從 Oracle 擷取之變更的 SQL 變更資料表與原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取功能中所使用的變更資料表類型相同。 如此一來，取用這些變更就像取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫變更一樣輕鬆。  
   
 ## <a name="installation"></a>安裝  
- Microsoft® Change Data Capture 設計工具及 Service for Oracle by Attunity for Microsoft SQL Server® 2016 屬於 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+
+適用於 Microsoft SQL Server 2016 的 Microsoft Change Data Capture Designer and Service for Oracle by Attunity 是 SQL Server 2016 Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。
   
  Oracle CDC 服務可以安裝在任何支援的 Windows 電腦上，該電腦可存取正在擷取的來源 Oracle 資料庫以及目標 CDC 資料庫所在的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 CDC 服務不需要 Oracle 資料庫或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的本機安裝，而只需要其支援的用戶端。 如需有關要在何處安裝必要資料庫元件的詳細資訊，請參閱本主題的＜ **資料庫必要條件** ＞。  
   

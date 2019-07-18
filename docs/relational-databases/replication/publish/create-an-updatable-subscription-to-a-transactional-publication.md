@@ -14,12 +14,12 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 690e84fb754f7a50137ff6879bb8866127e2ed7e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 683e916810766430d9fe1c26f5473b709bb82d0b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128629"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580136"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>建立交易式發行集的可更新訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,24 +28,24 @@ ms.locfileid: "54128629"
 
 異動複寫可使用立即或佇列更新訂閱，讓訂閱者上所做的變更傳播回到發行者。 您可以使用複寫預存程序以程式設計的方式建立更新訂閱。 
  
-在 [新增訂閱精靈] 的 [可更新訂閱] 頁面上設定可更新訂閱。 此頁面僅在為可更新訂閱啟用了交易式發行集之後才可用。 如需啟用可更新訂閱的詳細資訊，請參閱[啟用交易式發行集的可更新訂閱](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。   
+在 [新增訂閱精靈]  的 [可更新訂閱]  頁面上設定可更新訂閱。 此頁面僅在為可更新訂閱啟用了交易式發行集之後才可用。 如需啟用可更新訂閱的詳細資訊，請參閱[啟用交易式發行集的可更新訂閱](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。   
   
 ## <a name="configure-an-updatable-subscription-from-the-publisher"></a>從發行者設定可更新訂閱  
 
 1. 連線到 Microsoft SQL Server Management Studio 中的發行者，然後展開伺服器節點。
 2. 展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。
-3. 以滑鼠右鍵按一下為更新訂閱啟用的交易式發行集，然後按一下 [新增訂閱]。
+3. 以滑鼠右鍵按一下為更新訂閱啟用的交易式發行集，然後按一下 [新增訂閱]  。
 4. 遵循精靈中的頁面來指定訂閱的選項，例如散發代理程式應在何處執行。
-5. 在 [新增訂閱精靈] 的 [可更新的訂閱] 頁面上，確定已選取 [複寫]。
-6. 從 [在發行者端認可] 下拉式清單中選取一個選項：
+5. 在 [新增訂閱精靈]  的 [可更新的訂閱]  頁面上，確定已選取 [複寫]  。
+6. 從 [在發行者端認可]  下拉式清單中選取一個選項：
 
-    * 若要使用立即更新訂閱，請選取 [同時認可變更]。 如果您選取這個選項，而且發行集允許佇列更新訂閱 (使用 [新增發行集精靈] 所建立之發行集的預設值)，訂閱屬性 **update_mode** 會設定為 **failover**。 如有必要，這個模式允許您以後可切換至佇列更新。
+    * 若要使用立即更新訂閱，請選取 [同時認可變更]  。 如果您選取這個選項，而且發行集允許佇列更新訂閱 (使用 [新增發行集精靈] 所建立之發行集的預設值)，訂閱屬性 **update_mode** 會設定為 **failover**。 如有必要，這個模式允許您以後可切換至佇列更新。
 
-    * 若要使用佇列更新訂閱，請選取 [佇列變更且盡可能認可]。 如果您選取這個選項，而發行集允許立即更新訂閱 (使用 [新增發行集精靈] 建立之發行集的預設值)，而且訂閱者執行的是 SQL Server 2005 或更新版本，則訂閱屬性 **update_mode** 會設定為 queued failover。 如有必要，這個模式允許您以後可切換至立即更新。
+    * 若要使用佇列更新訂閱，請選取 [佇列變更且盡可能認可]  。 如果您選取這個選項，而發行集允許立即更新訂閱 (使用 [新增發行集精靈] 建立之發行集的預設值)，而且訂閱者執行的是 SQL Server 2005 或更新版本，則訂閱屬性 **update_mode** 會設定為 queued failover。 如有必要，這個模式允許您以後可切換至立即更新。
 
     如需切換更新模式的資訊，請參閱[切換可更新之交易式訂閱的更新模式](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。
 
-7. 針對使用立即更新或將 **update_mode** 設定為 **queued failover**，會顯示 [可更新訂閱的登入] 頁面。 在 [可更新訂閱的登入] 頁面上，指定連線到發行者之連結的伺服器，以立即更新訂閱。 在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 選取下列其中一個選項：
+7. 針對使用立即更新或將 **update_mode** 設定為 **queued failover**，會顯示 [可更新訂閱的登入]  頁面。 在 [可更新訂閱的登入]  頁面上，指定連線到發行者之連結的伺服器，以立即更新訂閱。 在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 選取下列其中一個選項：
 
     * **建立使用 SQL Server 驗證來連線的連結伺服器。** 若您已透過尚未定義遠端伺服器或訂閱者與發行者之間連結的伺服器，請選取此選項。 複寫會為您建立連結伺服器。 您必須指定已存在於發行者的帳戶。
 
@@ -55,26 +55,28 @@ ms.locfileid: "54128629"
 
 8. 完成精靈。
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>從訂閱者設定可更新訂閱
 
 
 1. 連線到 SQL Server Management Studio 中的訂閱者，然後展開伺服器節點。
 2. 展開 **[複寫]** 資料夾。
-3. 以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]**。
-4. 在 [新增訂閱精靈] 的 [發行集] 頁面上，從 [發行者] 下拉式清單中選取 [<尋找 SQL Server 發行者>]。
+3. 以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]** 。
+4. 在 [新增訂閱精靈]  的 [發行集]  頁面上，從 [發行者]  下拉式清單中選取 [<尋找 SQL Server 發行者>]  。
 5. 連接到 **[連接到伺服器]** 對話方塊中的發行者。
-6. 在 [發行集] 頁面上選取為更新訂閱啟用的交易式發行集。
+6. 在 [發行集]  頁面上選取為更新訂閱啟用的交易式發行集。
 7. 遵循精靈中的頁面來指定訂閱的選項，例如散發代理程式應在何處執行。
-8. 在 [新增訂閱精靈] 的 [可更新的訂閱] 頁面上，確定已選取 [複寫]。
-9. 從 [在發行者端認可] 下拉式清單中選取一個選項：
+8. 在 [新增訂閱精靈] 的 [可更新的訂閱]  頁面上，確定已選取 [複寫]  。
+9. 從 [在發行者端認可]  下拉式清單中選取一個選項：
 
-    * 若要使用立即更新訂閱，請選取 [同時認可變更]。 如果您選取這個選項，而且發行集允許佇列更新訂閱 (使用 [新增發行集精靈] 所建立之發行集的預設值)，訂閱屬性 **update_mode** 會設定為 **failover**。 如有必要，這個模式允許您以後可切換至佇列更新。
+    * 若要使用立即更新訂閱，請選取 [同時認可變更]  。 如果您選取這個選項，而且發行集允許佇列更新訂閱 (使用 [新增發行集精靈] 所建立之發行集的預設值)，訂閱屬性 **update_mode** 會設定為 **failover**。 如有必要，這個模式允許您以後可切換至佇列更新。
 
-    * 若要使用佇列更新訂閱，請選取 [佇列變更且盡可能認可]。 如果您選取這個選項，而發行集允許立即更新訂閱 (使用 [新增發行集精靈] 建立之發行集的預設值)，而且訂閱者執行的是 SQL Server 2005 或更新版本，則訂閱屬性 **update_mode** 會設定為 **queued failover**。 如有必要，這個模式允許您以後可切換至立即更新。
+    * 若要使用佇列更新訂閱，請選取 [佇列變更且盡可能認可]  。 如果您選取這個選項，而發行集允許立即更新訂閱 (使用 [新增發行集精靈] 建立之發行集的預設值)，而且訂閱者執行的是 SQL Server 2005 或更新版本，則訂閱屬性 **update_mode** 會設定為 **queued failover**。 如有必要，這個模式允許您以後可切換至立即更新。
 
     如需切換更新模式的資訊，請參閱[切換可更新之交易式訂閱的更新模式](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。
 
-10. 針對使用立即更新或將 **update_mode** 設定為 **queued failover**，會顯示 [可更新訂閱的登入] 頁面。 在 [可更新訂閱的登入] 頁面上，指定連線到發行者之連結的伺服器，以立即更新訂閱。 在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 選取下列其中一個選項：
+10. 針對使用立即更新或將 **update_mode** 設定為 **queued failover**，會顯示 [可更新訂閱的登入]  頁面。 在 [可更新訂閱的登入]  頁面上，指定連線到發行者之連結的伺服器，以立即更新訂閱。 在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 選取下列其中一個選項：
 
     * **建立使用 SQL Server 驗證來連線的連結伺服器。** 若您已透過尚未定義遠端伺服器或訂閱者與發行者之間連結的伺服器，請選取此選項。 複寫會為您建立連結伺服器。 您必須指定已存在於發行者的帳戶。
 
@@ -228,10 +230,10 @@ ms.locfileid: "54128629"
     * 此訂閱之散發代理程式作業的排程。
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>設定佇列更新衝突解決選項 
-在 [發行集屬性 - \<發行集>] 對話方塊的 [訂閱選項] 頁面中，為支援佇列更新訂閱的發行集設定衝突解決選項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面中，為支援佇列更新訂閱的發行集設定衝突解決選項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
   
-1.  在 [發行集屬性 - \<發行集>] 對話方塊的 [訂閱選項] 頁面中，選取下列 [衝突解決原則] 選項的其中一個值︰  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面中，選取下列 [衝突解決原則]  選項的其中一個值︰  
   
     -   **[保留發行者變更]**    
     -   **[保留訂閱者變更]**    
@@ -243,7 +245,7 @@ ms.locfileid: "54128629"
 此範例會建立發行集的立即更新提取訂閱，此發行集可支援立即更新訂閱。 登入和密碼值是在執行階段使用 sqlcmd 指令碼變數提供的。
 
 > [!NOTE]  
->  此指令碼使用 sqlcmd 指令碼變數。 它們的格式為 `$(MyVariable)`。 如需如何在命令列和 SQL Server Management Studio 中，使用指令碼變數的詳細資訊，請參閱[複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)主題中的＜執行複寫指令碼＞一節。
+>  此指令碼使用 sqlcmd 指令碼變數。 它們的格式為 `$(MyVariable)`。 如需如何在命令列和 SQL Server Management Studio 中，使用指令碼變數的詳細資訊，請參閱[複寫系統預存程序概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)主題中的＜執行複寫指令碼＞  一節。
 
 ```sql
 -- Execute this batch at the Subscriber.

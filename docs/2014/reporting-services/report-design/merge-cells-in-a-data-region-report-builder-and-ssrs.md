@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3abc7ec29f6f032d9590664d7a63995941d67a10
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105570"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)
   您可以在資料區域中合併資料格來結合資料格、增進資料區域外觀，或為資料行群組與資料列群組提供橫跨的標籤。  
@@ -31,7 +30,7 @@ ms.locfileid: "56291086"
   
 1.  在報表設計介面的資料區中，按一下要合併的第一個資料格。 按住滑鼠左鍵，以垂直或水平方向拖曳來選取相鄰的資料格。 選取的資料格就會反白顯示。  
   
-2.  以滑鼠右鍵按一下選取的資料格，然後選取 [合併資料格]。 選取的資料格就會結合到單一的資料格中。  
+2.  以滑鼠右鍵按一下選取的資料格，然後選取 [合併資料格]  。 選取的資料格就會結合到單一的資料格中。  
   
 3.  重複步驟 1 和 2，在資料區域中合併其他相鄰的資料格。  
   

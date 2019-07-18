@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62864945"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
   此程序描述如何使用 ODBC 來源擷取資料。 若要加入和設定 ODBC 來源，封裝必須至少含有一個「資料流程」工作。  
@@ -32,11 +32,11 @@ ms.locfileid: "58376116"
   
 5.  選取資料存取方法。  
   
-    -   **資料表名稱**:在資料庫中選取資料表或檢視表，或是輸入可識別資料表的 ODBC 連接管理員所連接的規則運算式。  
+    -   **資料表名稱**：選取 ODBC 連線管理員連線之資料庫中的資料表或檢視，或輸入規則運算式以識別資料表。  
   
          此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   
-    -   **SQL 命令**:輸入 SQL 命令，或按一下**瀏覽**從文字檔載入 SQL 查詢。  
+    -   **SQL 命令**：輸入 SQL 命令，或按一下 [瀏覽]  從文字檔載入 SQL 查詢。  
   
 6.  您可以按一下 **[預覽]** ，以檢視 ODBC 來源擷取的最多 200 個資料列。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "58376116"
   
 8.  如有需要，藉由編輯 **[輸出資料行]** 清單中的值，更新輸出資料行的名稱。  
   
-9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。  
+9. 若要設定錯誤輸出，請按一下 **[錯誤輸出]** 。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

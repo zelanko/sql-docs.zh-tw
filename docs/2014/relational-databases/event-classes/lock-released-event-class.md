@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023838"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 事件類別
   Lock:Released 事件類別指出已釋放資源 (例如頁面) 的鎖定。  

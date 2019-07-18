@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 487aaee17be13727f2c23de42b95afcc27b0b939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662192"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All 事件類別
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan All 事件類別。 包含的資訊是 Showplan XML Statistics Profile 或 Showplan XML 事件類別中可用資訊的子集。  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b88ad1a7e048495f80d43234cb4e085bae515fa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071006"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
   
  *XML 字串*  
- (僅限進階使用)。XML 編碼的模型 (PMML)。 字串必須使用單引號 (') 括住。  
+ （僅供進階使用。）XML 編碼的模型 (PMML)。 字串必須使用單引號 (') 括住。  
   
  **工作階段**子句可讓您建立的採礦模型，會在連接關閉或是工作階段逾時自動從伺服器移除。**工作階段**採礦模型非常實用，因為它們不需要使用者必須為資料庫管理員，而且它們只會使用磁碟空間，只要連接已開啟。  
   

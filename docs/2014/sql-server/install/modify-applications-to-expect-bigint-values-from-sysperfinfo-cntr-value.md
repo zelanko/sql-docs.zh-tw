@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sysperfinfo
@@ -14,12 +13,12 @@ ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4f7945a5657cefb43af402523a6aee3e12eb63a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093946"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>修改應用程式以接受來自 sysperfinfo.cntr_value 的 bigint 值
   sysperfinfo 會傳回`bigint`cntr_value 資料行的值。  
@@ -35,6 +34,6 @@ ms.locfileid: "48137528"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XML output file format [ssbdiagnose], banner element
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 26882b39f9f3dfdd8b565b02794ade0bf7cb65c0
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 2846f35b8cd8f99d61a70fe355ac5077fcb00eb9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291495"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732035"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

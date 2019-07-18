@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Restore.f1
@@ -13,15 +12,15 @@ ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091028"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070255"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>還原資料庫對話方塊 (Analysis Services - 多維度資料)
-  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫] 對話方塊，即可從使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 備份檔案 (.abf) 格式的備份檔案還原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
+  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫]  對話方塊，即可從使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 備份檔案 (.abf) 格式的備份檔案還原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
   
 > [!IMPORTANT]  
 >  對於每個備份檔案，執行還原命令的使用者必須擁有從針對每個檔案所指定之備份位置讀取的權限。 若要還原沒有安裝在伺服器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，使用者也必須是該 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員。 若要覆寫 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，使用者必須具有下列其中一個角色： [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將還原之資料庫上擁有完整控制權 (管理員) 權限的資料庫角色成員。  
@@ -31,7 +30,7 @@ ms.locfileid: "48091028"
   
  **若要顯示 還原資料庫對話方塊**  
   
--   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫] 資料夾或**物件總管**中的資料庫，然後按一下 [還原]。  
+-   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫]  資料夾或**物件總管**中的資料庫，然後按一下 [還原]  。  
   
  **[還原資料庫]** 對話方塊包含下列頁面。  
   

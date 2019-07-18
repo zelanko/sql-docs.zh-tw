@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62519223"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>在 Visual Basic 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName |CounterName |執行個體 |ComparisionOp |CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 Visual Basic 關鍵字。  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>在 Visual C# 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName |CounterName |執行個體 |ComparisionOp |CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>在 PowerShell 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName |CounterName |執行個體 |ComparisionOp |CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   

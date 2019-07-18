@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62932416"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner 事件類別
   **Audit Change Database Owner** 事件類別會在您使用 ALTER AUTHORIZATION 陳述式來變更資料庫擁有者，而且已檢查完成此作業所需的權限時發生。  

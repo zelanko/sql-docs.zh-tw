@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2612fdc52bde6b199080bcdd7b67a8e8401e6805
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964569"
 ---
 # <a name="connect-property-rds"></a>Connect 屬性 (RDS)
 指出從中執行的查詢和更新作業的資料庫名稱。  

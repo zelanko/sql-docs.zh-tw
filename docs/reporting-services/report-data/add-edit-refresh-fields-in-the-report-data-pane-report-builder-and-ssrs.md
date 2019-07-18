@@ -2,18 +2,18 @@
 title: 新增、編輯、重新整理報表資料窗格中的欄位 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e63393549db4601a8956e7a3c7b14248c069937
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d22a5971d2becebec841c5e343e2361cbe2f26a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500498"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>加入、編輯、重新整理報表資料窗格中的欄位 (報表產生器及 SSRS)
   資料集欄位是欄位名稱的內建集合，代表資料集查詢在外部資料來源上執行時所傳回的資料。  
@@ -29,12 +29,12 @@ ms.locfileid: "50021912"
   
 ### <a name="to-add-a-query-field"></a>若要加入查詢欄位  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [新增查詢欄位]。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [新增查詢欄位]  。  
   
     > [!NOTE]  
-    >  如果您看不到 [報表資料] 窗格，請按一下 [檢視] 功能表上的 [報表資料]。  
+    >  如果您看不到 [報表資料] 窗格，請按一下 [檢視]  功能表上的 [報表資料]  。  
   
-2.  在 **[資料集屬性]** 對話方塊的 **[欄位]** 頁面上，按一下 **[加入]**，然後按一下 **[查詢欄位]**。 新的資料列就會加入方格的底部。  
+2.  在 **[資料集屬性]** 對話方塊的 **[欄位]** 頁面上，按一下 **[加入]** ，然後按一下 **[查詢欄位]** 。 新的資料列就會加入方格的底部。  
   
 3.  在 **[欄位名稱]** 文字方塊中，輸入欄位的名稱。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50021912"
   
 ### <a name="to-add-a-calculated-field"></a>加入導出欄位  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [新增導出欄位]。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [新增導出欄位]  。  
   
-2.  在 **[資料集屬性]** 對話方塊的 **[欄位]** 頁面上，按一下 **[加入]**，然後按一下 **[導出欄位]**。 新的資料列就會加入方格的底部。  
+2.  在 **[資料集屬性]** 對話方塊的 **[欄位]** 頁面上，按一下 **[加入]** ，然後按一下 **[導出欄位]** 。 新的資料列就會加入方格的底部。  
   
 3.  在 **[欄位名稱]** 文字方塊中，輸入欄位的名稱。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "50021912"
   
 ### <a name="to-edit-a-query-field-or-a-dataset-field"></a>編輯查詢欄位或資料集欄位  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下欄位，然後按一下 [欄位屬性]。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下欄位，然後按一下 [欄位屬性]  。  
   
 2.  在 **[資料集屬性]** 對話方塊的 **[欄位]** 頁面上，按一下現有的欄位來選取資料列。  
   
@@ -77,13 +77,13 @@ ms.locfileid: "50021912"
   
 1.  在 [報表資料] 窗格中，展開資料集來顯示欄位集合。  
   
-2.  以滑鼠右鍵按一下您要移除的欄位，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下您要移除的欄位，然後按一下 [刪除]  。  
   
 ### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>若要在 [報表資料] 窗格中重新整理共用資料集的欄位集合  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [查詢]。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料集，然後按一下 [查詢]  。  
   
-2.  按一下 **[重新整理欄位]**。  
+2.  按一下 **[重新整理欄位]** 。  
   
      在報表伺服器上，共用資料集查詢會執行並傳回目前的欄位集合。  
   
@@ -92,6 +92,6 @@ ms.locfileid: "50021912"
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services 查詢設計工具](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查詢設計工具 &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

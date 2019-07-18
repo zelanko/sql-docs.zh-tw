@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
@@ -13,12 +12,12 @@ ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 167e8deb4009e7bf9398f89665cad9b3d368b1eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056013"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>選取目的地位置 (SSIS 封裝升級精靈)
   使用 **[選取目的地位置]** 頁面，指定用來儲存升級封裝的目的地。  
@@ -32,7 +31,7 @@ ms.locfileid: "58378029"
   
 ## <a name="static-options"></a>靜態選項  
  **儲存至來源位置**  
- 將升級封裝儲存到此精靈之 [選取來源位置] 頁面上所指定的相同位置。  
+ 將升級封裝儲存到此精靈之 [選取來源位置]  頁面上所指定的相同位置。  
   
  如果原始封裝儲存在檔案系統中，而且您希望精靈備份這些封裝，請選取 **[儲存至來源位置]** 選項。 如需詳細資訊，請參閱 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "58378029"
 |**Microsoft SQL Server**|指示升級封裝要儲存到現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入將用來儲存升級封裝的資料夾名稱，或是按一下 [瀏覽] 並尋找資料夾。  
+ 輸入將用來儲存升級封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找將儲存升級封裝的資料夾。  

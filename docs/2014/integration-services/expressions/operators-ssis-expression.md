@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897357"
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
   本節描述運算式語言提供的運算子，以及運算式評估工具使用的運算子優先順序和關聯性。  

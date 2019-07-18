@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916706"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
   如果線上資料庫中的資料已經損毀，在某些情況下，將資料庫還原成發生損毀之前的資料庫快照集可能是從備份還原資料庫的正確替代方式。 例如，還原資料庫可用於反轉最近發生的嚴重使用者錯誤，例如誤將資料表卸除。 不過，在快照集之後進行的所有變更都將遺失。  
@@ -31,7 +31,7 @@ ms.locfileid: "54125648"
   
      [Security](#Security)  
   
--   **若要將資料庫還原成資料庫快照集，使用：**[Transact-SQL](#TsqlProcedure)  
+-   **若要將資料庫還原成資料庫快照集，請使用下列方式：** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -99,7 +99,7 @@ ms.locfileid: "54125648"
   
      還原作業需要來源資料庫上的 RESTORE DATABASE 權限。 若要還原資料庫，請使用下列 Transact-SQL 陳述式：  
   
-     RESTORE DATABASE *資database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *資database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      其中 *database_name* 是來源資料庫，而 *database_snapshot_name* 是要用來還原資料庫的快照集名稱。 請注意，在此陳述式中，您必須指定快照名稱，而非備份裝置。  
   

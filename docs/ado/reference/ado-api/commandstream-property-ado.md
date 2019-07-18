@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1048e8d243bd19d86d60c3c4f92e4e4b9d137a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919740"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 屬性 (ADO)
 表示用做為輸入的資料流[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

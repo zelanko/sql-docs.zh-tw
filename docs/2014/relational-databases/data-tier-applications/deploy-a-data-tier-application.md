@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918182"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
   您可以使用精靈或 PowerShell 指令碼，將 DAC 封裝中的資料層應用程式 (DAC) 部署到現有的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 部署程序會將 DAC 定義儲存到 **msdb** 系統資料庫 (**中則是** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) 來註冊 DAC 執行個體並建立資料庫，然後使用 DAC 內定義的所有資料庫物件來擴展資料庫。  
   
--   **開始之前：**[SQL Server 公用程式](#SQLUtility)，[資料庫選項及設定](#DBOptSettings)，[限制事項](#LimitationsRestrictions)，[必要條件](#Prerequisites)，[安全性](#Security)，[權限](#Permissions)  
+-   **開始之前：** [SQL Server 公用程式](#SQLUtility)，[資料庫選項及設定](#DBOptSettings)，[限制事項](#LimitationsRestrictions)，[必要條件](#Prerequisites)，[安全性](#Security)，[權限](#Permissions)  
   
--   **若要部署的 DAC，使用：**[部署資料層應用程式精靈](#UsingDeployDACWizard)， [PowerShell](#DeployDACPowerShell)  
+-   **若要部署的 DAC，使用：** [部署資料層應用程式精靈](#UsingDeployDACWizard)， [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> 開始之前  
  可以將相同的 DAC 封裝部署到單一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體多次，但是一次只能執行一個部署。 針對每個部署指定的 DAC 執行個體名稱在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中必須是唯一的。  
@@ -68,7 +68,7 @@ ms.locfileid: "52529540"
   
 1.  在 **[物件總管]** 中，展開您要部署 DAC 之執行個體的節點。  
   
-2.  以滑鼠右鍵按一下 [資料庫] 節點，然後選取 [部署資料層應用程式…]  
+2.  以滑鼠右鍵按一下 [資料庫]  節點，然後選取 [部署資料層應用程式…]   
   
 3.  完成精靈對話方塊：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52529540"
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
   
- **下一步 >** - 繼續進行 [Select DAC Package (選取 DAC 封裝)] 頁面。  
+ **下一步 >** - 繼續進行 [Select DAC Package (選取 DAC 封裝)]  頁面。  
   
  **取消** - 結束精靈，不部署 DAC。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "52529540"
   
  **\< 先前**-回到 的初始狀態**選取封裝**頁面。  
   
- **下一步 >** - 繼續進行最終版本的 [選取封裝] 頁面。  
+ **下一步 >** - 繼續進行最終版本的 [選取封裝]  頁面。  
   
  **取消** - 結束精靈，不部署 DAC。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "52529540"
   
  **\< 先前**-回到**選取封裝**頁面。  
   
- **下一步 >** - 繼續進行 [更新組態] 頁面。  
+ **下一步 >** - 繼續進行 [更新組態]  頁面。  
   
  **取消** - 結束精靈，不部署 DAC。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "52529540"
   
  如果您變更資料庫名稱，則資料檔和記錄檔的名稱也會變更，以符合新的值。  
   
- 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式] 節點或是**公用程式總管**中 [部署的資料層應用程式] 節點底下的 DAC 節點上。  
+ 資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式]  節點或是**公用程式總管**中 [部署的資料層應用程式]  節點底下的 DAC 節點上。  
   
  下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時顯示。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "52529540"
   
  **\< 先前**-回到**選取 DAC 封裝**頁面。  
   
- **下一步 >** - 繼續進行 [摘要] 頁面。  
+ **下一步 >** - 繼續進行 [摘要]  頁面。  
   
  **取消** - 結束精靈，不部署 DAC。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "52529540"
   
  **\< 先前**-會讓您回到**更新設定**頁面，即可變更您的選擇。  
   
- **下一步 >** - 部署 DAC，並在 [部署 DAC] 頁面中顯示結果。  
+ **下一步 >** - 部署 DAC，並在 [部署 DAC]  頁面中顯示結果。  
   
  **取消** - 結束精靈，不部署 DAC。  
   

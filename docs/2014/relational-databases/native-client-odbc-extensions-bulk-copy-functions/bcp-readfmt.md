@@ -1,5 +1,5 @@
 ---
-title: bcp_readfmt |Microsoft Docs
+title: bcp_readfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62688664"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   從指定的格式檔案讀取資料檔格式定義。  

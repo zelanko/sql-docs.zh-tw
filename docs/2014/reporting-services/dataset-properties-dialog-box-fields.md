@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.fields.f1
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4c0f4f06dd9d61b7a53b39f2ebcf3085029b233
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109400"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>資料集屬性對話方塊、欄位
   選取 **[資料集屬性]** 對話方塊上的 **[欄位]** ，即可變更報表資料集的欄位集合。 欄位清單會自動擴展，但您可以使用 **[欄位]** 來加入、編輯和刪除查詢與導出欄位。  

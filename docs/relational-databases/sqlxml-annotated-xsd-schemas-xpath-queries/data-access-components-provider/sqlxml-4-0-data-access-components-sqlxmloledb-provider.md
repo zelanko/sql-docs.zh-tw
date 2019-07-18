@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9c20beeb3cbe189910d8f84cccae2e185b66b29
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: db74c46f6d627f209b6c17a8eb8b25194c4b4f47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058686"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 資料存取元件 - SQLXMLOLEDB 提供者
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

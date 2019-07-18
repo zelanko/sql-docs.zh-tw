@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035380"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
   `sqlcmd`公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序與指令碼檔案在命令提示字元中，在**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或的作業系統 (Cmd.exe) 作業步驟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式作業。 這個公用程式利用 ODBC 執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批次。  
@@ -95,7 +95,7 @@ ms.locfileid: "53591922"
  這是工作站名稱。 這個選項會設定 `sqlcmd` 指令碼變數 SQLCMDWORKSTATION。 工作站名稱列在 **sys.processes** 目錄檢視的 **hostname** 資料行中，而且可以使用預存程序 **sp_who** 傳回名稱。 如果未指定這個選項，預設值為目前的電腦名稱。 這個名稱可用來識別不同的 `sqlcmd` 工作階段。  
   
  **-K** _application_intent_  
- 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，sqlcmd 公用程式將無法支援 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[作用中次要複本：可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，sqlcmd 公用程式將無法支援 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
  在連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，永遠指定 `-M`。 `-M` 提供目前使用中伺服器的更快速偵測與連接。 如果未指定 `-M`，`-M` 為關閉。 如需詳細資訊[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[作用中次要複本：</c2>可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
@@ -135,10 +135,10 @@ ms.locfileid: "53591922"
   
  如果 **-P** 選項後面有多個引數，便會產生錯誤訊息，而且程式將會結束。  
   
- **-S** [*protocol*:]*server*[**\\**_instance_name_][**,**_port_]  
+ **-S** [*protocol*:]*server*[ **\\** _instance_name_][ **,** _port_]  
  指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 它會設定 `sqlcmd` 指令碼變數 SQLCMDSERVER。  
   
- 指定 *server_name*，即可連接至該伺服器電腦上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name* [ **\\**_instance_name_ ]，即可連接至該伺服器電腦上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 如果未指定伺服器電腦，`sqlcmd` 會連接到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 當您從網路的遠端電腦執行 `sqlcmd` 時，需要這個選項。  
+ 指定 *server_name*，即可連接至該伺服器電腦上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name* [ **\\** _instance_name_ ]，即可連接至該伺服器電腦上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 如果未指定伺服器電腦，`sqlcmd` 會連接到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 當您從網路的遠端電腦執行 `sqlcmd` 時，需要這個選項。  
   
  *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "53591922"
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **輸入/輸出選項**  
-  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
+  **-f** _codepage_ | **i:** _codepage_[ **,o:** _codepage_] | **o:** _codepage_[ **,i:** _codepage_]  
  指定輸入和輸出字碼頁。 字碼頁碼是一個數值，指定已安裝的 Windows 字碼頁。  
   
  字碼頁轉換規則：  
@@ -183,20 +183,20 @@ ms.locfileid: "53591922"
   
  在命令提示字元下輸入 `chcp`，以驗證 Cmd.exe 的字碼頁。  
   
- **-i** _input_file_[**、**_input_file2_...]  
+ **-i** _input_file_[ **、** _input_file2_...]  
  識別包含 SQL 陳述式或預存程序的批次之檔案。 您可以指定多個檔案，它們會依照順序加以讀取和處理。 檔案名稱之間不能有空格。 `sqlcmd` 會先檢查指定的檔案是否全部存在。 如果有一個或多個檔案不存在，`sqlcmd` 會結束作業。 -i 和 -Q/-q 為互斥選項。  
   
  路徑範例：  
   
- **-i** c:\\< 檔案名稱\>  
+ **-i** C:\\<filename\>  
   
- **-i** \\ \\< 伺服器\>\\< >\<share$ >\\< 檔案名稱\>  
+ **-i** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-i** "C:\Some Folder\\<檔案名稱\>"  
   
  包含空格的檔案路徑必須用引號括住。  
   
- 這個選項可以使用一次以上：**-i**_input_file_ **-I**_I input_file_。  
+ 這個選項可以使用一次以上： **-i**_input_file_ **-I**_I input_file_。  
   
  **-o** _output_file_  
  識別用來接收 `sqlcmd` 輸出的檔案。  
@@ -207,7 +207,7 @@ ms.locfileid: "53591922"
   
  **-o** C:\\< filename>  
   
- **-o** \\ \\< 伺服器\>\\< >\<share$ >\\< 檔案名稱\>  
+ **-o** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-o "** C:\Some Folder\\<檔案名稱\>"  
   
@@ -260,13 +260,13 @@ ms.locfileid: "53591922"
  如果使用此選項時指定了 `-b`，`sqlcmd` 會發生錯誤，並結束作業。 本主題稍後將說明 `-b`。  
   
  **-t** _query_timeout_  
- 指定命令 (或 SQL 陳述式) 逾時之前的秒數。這個選項會設定 `sqlcmd` 指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。*query**time_out* 必須是介於 1 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`sqlcmd` 就會產生錯誤訊息。  
+ 指定命令 (或 SQL 陳述式) 逾時之前的秒數。這個選項會設定`sqlcmd`指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。*query**time_out* 必須是介於 1 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`sqlcmd` 就會產生錯誤訊息。  
   
 > [!NOTE]  
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
   
- **-vvar =** _值_[ **var =** _值_...]  
- 會建立`sqlcmd`指令碼變數可以用於`sqlcmd`指令碼。 如果值包含空格，請用引號括住該值。 您可以指定多個 **_var_**=**"*`values`*"** 值。 如果指定的任何值發生錯誤，`sqlcmd` 會產生一則錯誤訊息，並結束作業。  
+ **-vvar =** _value_[ **var =** _value_...]  
+ 會建立`sqlcmd`指令碼變數可以用於`sqlcmd`指令碼。 如果值包含空格，請用引號括住該值。 您可以指定多個 **_var_** = **" *`values`* "** 值。 如果指定的任何值發生錯誤，`sqlcmd` 會產生一則錯誤訊息，並結束作業。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -423,7 +423,7 @@ ms.locfileid: "53591922"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
   
@@ -460,11 +460,11 @@ ms.locfileid: "53591922"
 |||  
 |-|-|  
 |**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
+|[ **:** ] **RESET**|**:Error**|  
+|[ **:** ] **ED**|**:Out**|  
+|[ **:** ] **!!**|**:Perftrace**|  
+|[ **:** ] **QUIT**|**:Connect**|  
+|[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -474,7 +474,7 @@ ms.locfileid: "53591922"
 -   除了 GO 之外的所有 `sqlcmd` 命令開頭都必須加上冒號 (:)。  
   
     > [!IMPORTANT]  
-    >  為了顧及與現有 **osql** 指令碼的回溯相容性，也會辨識部分沒有冒號的命令。 [**:**] 表示這一點。  
+    >  為了顧及與現有 **osql** 指令碼的回溯相容性，也會辨識部分沒有冒號的命令。 [ **:** ] 表示這一點。  
   
 -   `sqlcmd` 命令必須在行首，才能夠辨識。  
   
@@ -485,21 +485,21 @@ ms.locfileid: "53591922"
 -   命令會立即執行， 不會像 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一樣放在執行緩衝區中。  
   
  **編輯命令**  
-  [**:**] **ED**  
+  [ **:** ] **ED**  
  啟動文字編輯器。 您可以利用這個編輯器編輯目前的 [!INCLUDE[tsql](../includes/tsql-md.md)] 批次，或上次執行的批次。 若要編輯上次執行的批次，在上一個批次執行完成之後，必須立即輸入 **ED** 命令。  
   
  文字編輯器由 SQLCMDEDITOR 環境變數來定義。 預設編輯器是 'Edit'。 若要變更編輯器，請設定 SQLCMDEDITOR 環境變數。 例如，若要將編輯器設為 [!INCLUDE[msCoName](../includes/msconame-md.md)] Notepad，請在命令提示字元之下，輸入：  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [**:**] **RESET**  
+ [ **:** ] **RESET**  
  清除陳述式快取。  
   
  **:List**  
  列印陳述式快取內容。  
   
  **變數**  
-  **: Setvar** \< **var**> [ **」*`value`*"** ]  
+  **:Setvar** \<**var**> [ **" *`value`* "** ]  
  定義 `sqlcmd` 指令碼變數。 指令碼變數的格式如下： `$(VARNAME)`。  
   
  變數名稱不區分大小寫。  
@@ -531,7 +531,7 @@ ms.locfileid: "53591922"
   
  **輸出命令**  
   **:Error**   
- **_\<_** _檔名_**_>|_ STDERR |STDOUT**  
+ ** _\<_ ** _filename_  ** _>|_ STDERR|STDOUT**  
  將所有錯誤輸出重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 在指令碼中， **Error** 命令可以重複出現。 根據預設，錯誤輸出會傳送到 **stderr**。  
   
  *file name*  
@@ -543,10 +543,10 @@ ms.locfileid: "53591922"
  **STDOUT**  
  將錯誤輸出切換到 **stdout** 資料流。 如果它已重新導向，資料流所重新導向的目標會接收這個錯誤輸出。  
   
- **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
  建立並將所有查詢結果重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 根據預設，輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Out** 命令可以重複出現。  
   
- **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
  建立並將所有效能追蹤資訊重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 根據預設，效能追蹤輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Perftrace** 命令可以重複出現。  
   
  **執行控制命令**  
@@ -557,10 +557,10 @@ ms.locfileid: "53591922"
   
  使用 `ignore` 選項時，`sqlcmd` 會忽略錯誤，並繼續執行批次或指令碼。 依預設，會列印一則錯誤訊息。  
   
- [**:**] **QUIT**  
+ [ **:** ] **QUIT**  
  讓 `sqlcmd` 結束作業。  
   
- [**:**]**結束**[ **(*`statement`*)** ]  
+ [ **:** ] **EXIT**[ **( *`statement`* )** ]  
  可讓您使用 SELECT 陳述式的結果做為 `sqlcmd` 的傳回值。 如果為數值，最後一個結果資料列的第一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 200x 會傳遞完整的 4 位元組整數。 其語法為：  
   
  `:EXIT(query)`  
@@ -609,7 +609,7 @@ ms.locfileid: "53591922"
  GO 會發出批次結束及執行任何快取的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的信號。 指定 *count*的值時，快取的陳述式將以單一批次執行 *count* 次。  
   
  **其他命令**  
-  **:r \<** 檔名**>**  
+  **:r \<** 檔名  **>**  
  其他剖析[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式並`sqlcmd`命令所指定的檔案 **< *`filename`* >** 到陳述式快取。  
   
  如果檔案包含的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式後面沒有緊接著 **GO**，您必須在 **:r** 之後的一行輸入 **GO**。  
@@ -625,7 +625,7 @@ ms.locfileid: "53591922"
  **:Serverlist**  
  列出設定在本機的伺服器，以及在網路中進行廣播的伺服器名稱。  
   
- **: Connect** _server_name_[**\\**_instance_name_] [-l*逾時*] [-U *user_名稱*[-P*密碼*]]  
+ **:Connect** _server_name_[ **\\** _instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。 此外也會關閉目前的連接。  
   
  逾時選項：  
@@ -651,8 +651,8 @@ ms.locfileid: "53591922"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!** \< *命令*>  
- 執行作業系統命令。 若要執行作業系統命令，請在行首輸入兩個驚歎號 (**!!**)，後面再接著作業系統命令。 例如：  
+ [ **:** ] **!!** \< *command*>  
+ 執行作業系統命令。 若要執行作業系統命令，請在行首輸入兩個驚歎號 ( **!!** )，後面再接著作業系統命令。 例如：  
   
  `:!! Dir`  
   
@@ -668,11 +668,11 @@ ms.locfileid: "53591922"
 ### <a name="sqlcmd-file-names"></a>sqlcmd 檔案名稱  
  `sqlcmd` 您可以使用指定的輸入的檔 **-i**選項或 **: r**命令。 輸出檔則可以使用 **-o** 選項或 **:Error**、 **:Out** 和 **:Perftrace** 命令予以指定。 以下列出使用這些檔案的幾項指導方針：  
   
--   **: Error**， **: Out**並 **: Perftrace**應該使用不同**< *`filename`* >**. 如果相同**< *`filename`* >** 是使用輸入的命令可能會混合。  
+-   **: Error**， **: Out**並 **: Perftrace**應該使用不同 **< *`filename`* >** . 如果相同 **< *`filename`* >** 是使用輸入的命令可能會混合。  
   
 -   如果從本機電腦的 `sqlcmd` 呼叫位於遠端伺服器上的輸入檔，且檔案中包含磁碟機檔案路徑 (例如 :out c:\OutputFile.txt)， 便會在本機電腦建立輸出檔案，而不是在遠端伺服器建立。  
   
--   有效的檔案路徑包括：C:\\**<*`filename`*>**， \\ \\< 伺服器\>\\< >\<share$ >\\**< *`filename`* >** 和"C:\Some Folder\\  **<  *`file name`*>**". 如果路徑中有空格，請使用引號。  
+-   有效的檔案路徑包括：C:\\ **< *`filename`* >** ， \\ \\< 伺服器\>\\< >\<share$ >\\ **< *`filename`* >** 和"C:\Some Folder\\  **<  *`file name`* >** ". 如果路徑中有空格，請使用引號。  
   
 -   每個新的 `sqlcmd` 工作階段都會覆寫現有的同名檔案。  
   

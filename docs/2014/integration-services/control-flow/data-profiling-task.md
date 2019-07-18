@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831880"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -133,10 +133,10 @@ ms.locfileid: "58392116"
  您可以使用 **[資料分析工作編輯器]** 來設定資料分析工作。 此編輯器有兩個頁面：  
   
  [一般頁面](../general-page-of-integration-services-designers-options.md)  
- 在 [一般] 頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](data-profiling-task.md)。  
+ 在 [一般]  頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](data-profiling-task.md)。  
   
  [設定檔要求頁面](data-profiling-task-editor-profile-requests-page.md)  
- 在 [設定檔要求] 頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
+ 在 [設定檔要求]  頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
   
 -   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   

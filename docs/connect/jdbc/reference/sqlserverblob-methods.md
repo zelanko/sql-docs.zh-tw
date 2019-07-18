@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0d57940a-90bc-4f1b-a20f-5a97d7d20b61
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6789ce75ef2a9ab0f974636279896a2610368a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d47f267851d89ad146a74db7e7d93c7e940d41d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616986"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772980"
 ---
 # <a name="sqlserverblob-methods"></a>SQLServerBlob 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

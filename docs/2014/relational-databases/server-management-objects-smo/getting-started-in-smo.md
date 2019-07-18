@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753155"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
   本主題包含有關開始使用資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO)。 SMO 段落是針對開發人員所寫的。 下列清單將可幫助您尋找 SMO 物件階層、如何準備在 SMO 中撰寫程式、如何開始使用不同程式語言撰寫 SMO 程式以及一般和特定程式設計工作的相關資訊。  

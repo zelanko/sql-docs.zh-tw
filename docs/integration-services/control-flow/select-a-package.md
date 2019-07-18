@@ -15,14 +15,18 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f9919b376a6487ea87ef193c7a577feeeb01a160
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8cc976451c29c6d0b1656fec456b2a46b1f4f5f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727477"
 ---
 # <a name="select-a-package"></a>選取封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[選取封裝]** 對話方塊，即可指定訊息佇列工作可以接收訊息的來源封裝。  
   
 ## <a name="static-options"></a>靜態選項  
@@ -31,8 +35,8 @@ ms.locfileid: "58276710"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]**、 **[使用 Windows 驗證]**、 **[使用 SQL Server 驗證]**、 **[使用者名稱]** 和 **[密碼]**。|  
-|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]**。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位置。 選取此值會顯示動態選項 **[伺服器]** 、 **[使用 Windows 驗證]** 、 **[使用 SQL Server 驗證]** 、 **[使用者名稱]** 和 **[密碼]** 。|  
+|DTSX 檔案|設定 DTSX 檔案的位置。 選取此值會顯示動態選項 **[檔案名稱]** 。|  
   
 ## <a name="location-dynamic-options"></a>位置動態選項  
   
@@ -57,7 +61,7 @@ ms.locfileid: "58276710"
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 檔案  
  **檔案名稱**  
- 提供封裝的路徑，或按一下瀏覽按鈕 ([...]) 並尋找封裝。  
+ 提供封裝的路徑，或按一下瀏覽按鈕 ([...])  並尋找封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../../integration-services/control-flow/message-queue-task.md)  

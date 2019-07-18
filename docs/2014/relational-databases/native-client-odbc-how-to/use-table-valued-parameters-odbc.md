@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200274"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用資料表值參數 (ODBC)
   此範例示範如何使用資料表值參數插入多個資料列、搭配多個資料行使用資料表值參數、搭配一個伺服器的呼叫使用資料表值參數。  

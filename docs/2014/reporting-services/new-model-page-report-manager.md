@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108213"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
   您可以使用這個頁面，從共用資料來源產生預設報表模型。 您只能從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料來源、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料來源和 Oracle 關聯式資料來源產生報表模型。  
@@ -38,7 +37,7 @@ ms.locfileid: "56010789"
   
     -   按一下 **[管理]** 開啟報表的 [一般] 屬性頁面。 然後，按一下 **[產生報表模型]** 開啟 [新增模型] 頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   

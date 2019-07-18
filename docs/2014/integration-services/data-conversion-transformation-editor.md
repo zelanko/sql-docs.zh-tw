@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontransformation.f1
@@ -15,22 +14,22 @@ ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060046"
 ---
 # <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
-  使用 [資料轉換編輯器] 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
+  使用 [資料轉換編輯器]  對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
   
 > [!NOTE]  
 >  `FastParse`的 「 資料轉換 」 轉換之輸出資料行的屬性不適用於**資料轉換編輯器**，但可以透過設定**進階編輯器**。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
   
  若要深入了解資料轉換，請參閱 [資料轉換](data-flow/transformations/data-conversion-transformation.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的輸入資料行**  
  使用核取方塊選取要轉換的資料行。 您的選取範圍會將輸入資料行加入下列資料表中。  
   

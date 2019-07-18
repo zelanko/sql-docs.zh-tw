@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663451"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件類別
   **CursorOpen** 事件類別描述應用程式開發介面 (API) 資料指標中發生的資料指標開啟事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定義要與資料指標建立關聯的 SQL 陳述式、定義資料指標選項，並擴展資料指標時，就會發生資料指標開啟事件。  

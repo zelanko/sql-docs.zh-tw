@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808396"
 ---
 # <a name="connection-properties-dialog-box"></a>連接屬性對話方塊
-  使用此對話方塊來檢視目前的連接屬性。 當您在各個物件總管對話方塊中按一下 [檢視連接屬性]，就會出現此對話方塊。 此頁面上顯示的屬性是唯讀的。  
+  使用此對話方塊來檢視目前的連接屬性。 當您在各個物件總管對話方塊中按一下 [檢視連接屬性]  ，就會出現此對話方塊。 此頁面上顯示的屬性是唯讀的。  
   
- 若要變更屬性 (例如 [資料庫])，請在開啟 [連接屬性] 對話方塊之前，先使用物件總管連接到想要的資料庫。  
+ 若要變更屬性 (例如 [資料庫]  )，請在開啟 [連接屬性]  對話方塊之前，先使用物件總管連接到想要的資料庫。  
   
  請注意，SQL Azure 的查詢逾時期限是 30 分鐘。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48155898"
  用於連接驗證之登入的使用者名稱。  
   
 ## <a name="connection-category"></a>連接類別目錄  
- 檢視目前連接的連接屬性。 在連接處理期間，大部份的連接屬性都已在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上選取。  
+ 檢視目前連接的連接屬性。 在連接處理期間，大部份的連接屬性都已在 [連接到伺服器]  對話方塊的 [連接屬性]  索引標籤上選取。  
   
  **[資料庫備份]**  
  目前連接的資料庫名稱。 若要變更此設定，請使用 SQL 編輯器工具列。  

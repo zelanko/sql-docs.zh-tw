@@ -1,5 +1,5 @@
 ---
-title: 建立工作階段範圍導出資料格 |Microsoft 文件
+title: 建立工作階段範圍導出資料格 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62799543"
 ---
-# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>MDX 資料格計算工作階段範圍導出資料格
+# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>MDX 資料格計算-工作階段範圍導出資料格
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  `String_Expression` 值包含正交、一維的 MDX 集合運算式的清單，其中的每一項都必須解析成下表列出集合的其中一個類別目錄  
   
-|類別目錄|說明|  
+|Category|描述|  
 |--------------|-----------------|  
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
@@ -81,6 +81,6 @@ FOR String_Expression AS 'MDX_Expression'
 |下階集合|解析為指定成員之下階的 MDX 集合運算式。 **Descendants**(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX 函數即為一例。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](../../../mdx/descendants-mdx.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [在 MDX & #40; 建立資料格計算MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+ [在 MDX 中建立資料格計算 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   

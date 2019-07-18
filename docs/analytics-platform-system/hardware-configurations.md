@@ -2,19 +2,18 @@
 title: 硬體組態]-[Analytics Platform System |Microsoft Docs
 description: Analytics Platform System (APS) 設備硬體方法具有結構性，與可調整的單位，讓您購買根據業務需求的正確數量的處理和儲存體。 應用裝置儲存體的平行處理資料倉儲從幾 tb 調整至 6 pb 以上的資料。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960899"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>硬體組態]-[Analytics Platform System
 Analytics Platform System (APS) 硬體的架構可調整的單位，以便您購買根據業務需求的正確數量的處理和儲存體。 設備調整儲存體的 SQL Server Parallel Data Wareouse (PDW) 從幾 tb 擴充到超過 6 Pb 的資料。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
@@ -13,12 +12,12 @@ ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b70305d832c06388bc5977cdbcc560c3c8be8860
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: e331c8dfd533a99d2938633fe7dae5654f5c0ce3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327628"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063735"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定中斷點條件
   中斷點條件是指偵錯工具在到達中斷點時所評估的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 如果已滿足條件，而且到達任何指定的叫用次數，偵錯工具就會中斷或執行為中斷點指定的動作。  
@@ -30,18 +29,18 @@ ms.locfileid: "53327628"
   
 #### <a name="to-specify-a-condition"></a>若要指定條件  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]  。  
   
      -或-  
   
-     在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]。  
+     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點圖像，然後按一下快速鍵功能表上的 [條件]  。  
   
-2.  在 [中斷點條件] 對話方塊的 [條件] 方塊中，輸入有效的布林值運算式。  
+2.  在 [中斷點條件]  對話方塊的 [條件]  方塊中，輸入有效的布林值運算式。  
   
 3.  選擇**成立**如果您想要在運算式評估為時中斷`true`，或選擇**已變更**如果您想要變更運算式的值時中斷。  
   
     > [!NOTE]  
-    >  在第一次到達中斷點之前，偵錯工具不會評估布林運算式。 如果您選擇 [已變更]，偵錯工具不會將第一次評估視為變更，因此偵錯工具不會在第一次評估時中斷。  
+    >  在第一次到達中斷點之前，偵錯工具不會評估布林運算式。 如果您選擇 [已變更]  ，偵錯工具不會將第一次評估視為變更，因此偵錯工具不會在第一次評估時中斷。  
   
 ## <a name="see-also"></a>另請參閱  
  [指定叫用計數](specify-a-hit-count.md)   

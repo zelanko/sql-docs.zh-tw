@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd79404d5a9a128e259f7efbc48d2c426ad3752e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 6baa98196d0d1d3af4db2eab69751aa202664166
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776176"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689781"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 編輯器 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ SQL 編輯器提供許多實用的 SQL 文字編輯功能，包括：
   
 -   提供有用的編輯功能，包括剪下、複製、貼上和拖曳作業。  
   
--   變更編輯器的行為 (藉由選取 [工具] 功能表上的 [選項])，以修改虛擬空間、自動換行、行號，以及定位點大小。  
+-   變更編輯器的行為 (藉由選取 [工具]  功能表上的 [選項]  )，以修改虛擬空間、自動換行、行號，以及定位點大小。  
   
 -   協助管理偵錯時的中斷點。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b1c8e61d66dbbf2eeeaf6f23f031f27f46e5069
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107906"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將報表轉譯成 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 的原生格式。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
@@ -254,13 +253,13 @@ ms.locfileid: "56295657"
 -   由於 Excel 的限制，大綱所建立的巢狀結構最多只能有 7 個層級。  
   
 ### <a name="document-map"></a>文件引導模式  
- 如果報表中有任何文件引導模式標籤，就會轉譯文件引導模式。 文件引導模式會轉譯為插入活頁簿第一個索引標籤位置的 Excel 工作表封面。 此工作表的名稱為 **「文件引導模式」**(Document Map)。  
+ 如果報表中有任何文件引導模式標籤，就會轉譯文件引導模式。 文件引導模式會轉譯為插入活頁簿第一個索引標籤位置的 Excel 工作表封面。 此工作表的名稱為 **「文件引導模式」** (Document Map)。  
   
  顯示在文件引導模式中的文字取決於報表項目或群組的 DocumentMapLabel 屬性。 文件引導模式標籤會以報表中出現的順序列出，從第一個資料行的第一個資料列開始。 每個文件引導模式標籤資料格都會縮排報表中出現的層級深度。 系統會在接續的資料行中放置標籤來表示每個縮排層級。 Excel 最多支援 256 層的大綱巢狀層級。  
   
  文件引導模式大綱會轉譯為可折疊的 Excel 大綱。 大綱結構會與文件引導模式的巢狀結構相符。 大綱的展開和折疊狀態會從第二層級開始。  
   
- 地圖的根節點即為報表名稱 \<報表名稱>.rdl，且無法互動。 文件引導模式連結字型為 Arial，10pt。  
+ 地圖的根節點即為報表名稱 \<報表名稱  >.rdl，且無法互動。 文件引導模式連結字型為 Arial，10pt。  
   
 ### <a name="drillthrough-links"></a>鑽研連結  
  系統會將文字方塊中出現的鑽研連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的鑽研連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下鑽研連結時，用戶端的預設瀏覽器會開啟，並巡覽至目標的 HTML 檢視。  

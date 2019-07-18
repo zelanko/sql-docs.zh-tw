@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 這篇文章介紹 SQL Server 容器上的可用性群組
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b3d01538df675149a3cc7f555774c8d27bf4e14
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3910c74be803b7fc63c8bf560fc637387e06ee15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910472"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性群組的 SQL Server 容器
 
@@ -67,9 +66,9 @@ SQL Server 2019 支援可用性群組上的 Kubernetes 叢集中的容器。 針
 
 StatfulSet 包含：
 
-* mssql-server container
+* mssql server 容器
 
-* mssql-ha-supervisor container
+* mssql ha-監督員容器
 
 運算子、 HA 監督員和 SQL Server 的程式碼封裝在 Docker 映像呼叫`mcr.microsoft.com/mssql/ha`。 此映像會包含下列二進位檔：
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791563"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51600078"
   
 -   如何提取資料行的群組 (依序)。  
   
--   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果 **pData** 為 NULL，而 **cbMaxLen** 為 0，**IRow**-**>GetColumns()** 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 **IRow->GetColumns()** 來擷取實際的資料。  
+-   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果 **pData** 為 NULL，而 **cbMaxLen** 為 0，**IRow**- **>GetColumns()** 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 **IRow->GetColumns()** 來擷取實際的資料。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  

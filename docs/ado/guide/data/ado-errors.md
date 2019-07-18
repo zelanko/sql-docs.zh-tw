@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c357384a3de683c05b2922149e2b61630881922
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926206"
 ---
 # <a name="ado-run-time-errors"></a>執行階段錯誤
-ADO 錯誤會回報到您的程式中，為執行階段錯誤。 您可以使用您的程式語言的錯誤捕捉機制來攔截並處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 Visual c + + 中，這取決於您用來存取 ADO 程式庫的方法。 有了 #import，使用**try / catch**區塊。 否則，c + + 程式設計人員必須明確地呼叫以擷取物件時發生錯誤**GetErrorInfo**。 下列 Visual Basic sub 程序示範如何捕捉 ADO 錯誤：
+ADO 錯誤會回報到您的程式中，為執行階段錯誤。 您可以使用您的程式語言的錯誤捕捉機制來攔截並處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 在視覺效果C++，這取決於您用來存取 ADO 程式庫的方法。 有了 #import，使用**try / catch**區塊。 否則，C++程式設計人員必須明確地擷取物件時發生錯誤，藉由呼叫**GetErrorInfo**。 下列 Visual Basic sub 程序示範如何捕捉 ADO 錯誤：
 
 ```
 ' BeginErrorHandlingVB01

@@ -1,5 +1,5 @@
 ---
-title: SQLServerSavepoint 成員 |Microsoft Docs
+title: SQLServerSavepoint 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c15755e2099f96a1fccc8fbf6c5dcdbdd25a751
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802704"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47632756"
   
 ## <a name="constructors"></a>建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|根據指定的連接和名稱，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47632756"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|取得儲存點標籤的名稱。|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|取得儲存點的識別碼。|  

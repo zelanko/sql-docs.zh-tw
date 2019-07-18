@@ -19,15 +19,15 @@ helpviewer_keywords:
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d6146d1890f69c5f3c2e17b5af22fee2c33bffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 662aaa76f7af8a45513219af63c66fe3a65bede6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65981655"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜線星形 (區塊註解) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

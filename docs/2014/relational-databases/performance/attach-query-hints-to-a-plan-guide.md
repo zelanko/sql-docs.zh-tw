@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89af21c2c591db2dff678be7aaf8c064e728b9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151069"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>將查詢提示附加至計畫指南
   在計畫指南中所使用的有效查詢提示組合。 當計畫指南能配合查詢時，系統會先將計畫指南之提示子句中指定的 OPTION 子句加入查詢中，然後再編譯和最佳化查詢。 如果配合計畫指南的查詢已經有 OPTION 子句，在計畫指南中所指定的查詢提示將會取代查詢中的提示。 不過，若要讓計畫指南配合已經有 OPTION 子句的查詢，您必須在指定查詢文字以符合 sp_create_plan_guide 陳述式時，包含查詢的 OPTION 子句。 如果您要將計畫指南中所指定的提示加入查詢中已存在的提示，您不應該取代它們，而是必須在計畫指南的 OPTION 子句中同時指定原始提示和其他提示。  

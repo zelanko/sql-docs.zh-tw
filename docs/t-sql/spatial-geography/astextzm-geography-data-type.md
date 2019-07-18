@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM method
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f8a147ff48d0436c51519532af3485e0bde11ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b4d5e834faa455eeb62e67f396447d44a176f55
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65936382"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47713016"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型：**SqlChars**  
+ CLR 傳回型別：**SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   

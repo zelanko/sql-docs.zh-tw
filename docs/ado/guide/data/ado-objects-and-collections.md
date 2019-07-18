@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5743e04b402302cc53b7694d8160edfb11769e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926046"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
 ADO 是由下列九個物件和四個集合所組成。  

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721019"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 課：準備快照集資料夾
   在這一課，您將學習設定用於建立及儲存發行集快照集的快照集資料夾。  

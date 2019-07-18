@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -22,26 +21,26 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102820"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   本主題概略說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器，這是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝的主要元件。 其中包含一組處理引擎，加上一組可處理驗證、資料處理、轉譯和傳遞作業的特殊用途延伸模組。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器會在兩種部署模式的其中一個模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  
   
- **安裝：** 如需有關 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝的詳細資訊，請參閱以下主題：  
+ **安裝：** 如需[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安裝，請參閱下列：  
   
 -   [安裝 Reporting Services 原生模式報表伺服器](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [安裝具有 SharePoint 的 SQL Server BI 功能&#40;PowerPivot 和 Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**:如需有關將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 與 Windows Azure 虛擬機器搭配使用的詳細資訊，請參閱下列主題：  
+ **Windows Azure**:如需使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]使用 「 Windows Azure 虛擬機器 」 中，請參閱下列：  
   
 -   [Windows Azure 虛擬機器中的 SQL Server Business Intelligence](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)。  
   
@@ -51,11 +50,11 @@ ms.locfileid: "59241626"
   
 -   [報表伺服器模式概觀](#bkmk_overview)  
   
--   [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport)  
+-   [SharePoint 和原生模式的功能比較](#bkmk_featuresupport)  
   
--   [原生模式](#bkmk_nativemode)  
+-   [Native Mode](#bkmk_nativemode)  
   
--   [附隨 SharePoint Web 組件的原生模式](#bkmk_nativewithwebparts)  
+-   [SharePoint Web 組件的原生模式](#bkmk_nativewithwebparts)  
   
 -   [SharePoint 模式](#bkmk_sharepointmode)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "59241626"
   
 -   [報表伺服器資料庫](#bkmk_reportdatabase)  
   
--   [驗證、轉譯、資料和傳遞延伸模組](#bkmk_authentication)  
+-   [驗證、 轉譯、 資料和傳遞延伸模組](#bkmk_authentication)  
   
 -   [相關工作](#bkmk_relatedtasks)  
   

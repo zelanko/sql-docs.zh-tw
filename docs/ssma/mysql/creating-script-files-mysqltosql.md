@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103056"
 ---
 # <a name="creating-script-files-mysqltosql"></a>建立指令檔 (MySQLToSQL)
 第一個步驟是啟動 SSMA 主控台應用程式建立的指令碼檔案之前，並在必要時建立的變數值檔案和伺服器連線檔案。  
@@ -50,7 +49,7 @@ ms.locfileid: "52540905"
   
     -   隱藏訊息：抑制在主控台上的訊息。 這是預設的 ' false'。  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -91,9 +90,9 @@ ms.locfileid: "52540905"
   
     - 來源-使用-上次使用 ="true"（預設值） 或來源伺服器 ="source_servername 」  
   
-    - 目標-使用-上次使用 ="true"（預設值） 或目標伺服器 ="target_servername 」  
+    - target-use-last-used="true" (default) or target-server="target_servername"  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -128,7 +127,7 @@ ms.locfileid: "52540905"
   
     預設模式是**錯誤**。  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -159,7 +158,7 @@ ms.locfileid: "52540905"
   
     預設模式是**產生的-錯誤**。  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -199,7 +198,7 @@ ms.locfileid: "52540905"
   
 5.  **轉換器會覆寫提供者：** 這可讓使用者處理物件已存在於目標 metabase。 可能的動作包括：  
   
-    -   error:主控台會顯示錯誤，並終止執行。  
+    -   錯誤：主控台會顯示錯誤，並終止執行。  
   
     -   覆寫：會覆寫現有的物件值。 依預設進行此動作。  
   
@@ -207,7 +206,7 @@ ms.locfileid: "52540905"
   
     -   詢問使用者：會提示使用者輸入 ('yes '/' no')  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -228,7 +227,7 @@ ms.locfileid: "52540905"
   
 6.  **未通過的必要條件的提供者：** 這可讓使用者處理所需的處理命令的任何先決條件。 根據預設，strict 模式為 'false'。 如果設定為 'true'，例外狀況會產生符合必要條件的失敗。  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -256,7 +255,7 @@ ms.locfileid: "52540905"
   
     -   每 20%  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -291,7 +290,7 @@ ms.locfileid: "52540905"
   
     -   嚴重錯誤：嚴重錯誤的訊息只會記錄。  
   
-    -   error:唯一的錯誤和嚴重錯誤訊息會記錄。  
+    -   錯誤：唯一的錯誤和嚴重錯誤訊息會記錄。  
   
     -   警告：偵錯和資訊訊息以外的所有層級會記錄。  
   
@@ -302,7 +301,7 @@ ms.locfileid: "52540905"
     > [!NOTE]  
     > 必要的訊息會記錄在任何層級。  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -329,7 +328,7 @@ ms.locfileid: "52540905"
   
     2.  如果覆寫選項是 **，則為 true**，將會搜尋的順序指令碼檔案-&gt;伺服器連線檔案-&gt;提示使用者。  
   
-    **範例：**  
+    **範例:**  
   
     ```xml  
     <output-providers>  
@@ -353,7 +352,7 @@ ms.locfileid: "52540905"
   
 指令碼檔案中的所有命令都執行成功時結束 SSMA 主控台應用程式，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值檔案](creating-variable-value-files-mysqltosql.md)或變數值的指令碼檔案內的個別區段中。  
   
-**範例：**  
+**範例:**  
   
 ```xml  
 <!--Sample of script file commands -->  

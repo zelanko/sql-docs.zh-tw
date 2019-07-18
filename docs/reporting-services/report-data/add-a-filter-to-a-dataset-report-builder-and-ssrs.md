@@ -2,18 +2,18 @@
 title: 將篩選新增至資料集 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec72f42975b7c81d50f58f0dc0a9ef141757e47d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c42f6cf00329129ea1137ecba4228a92f9665319
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571758"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  
@@ -31,9 +31,9 @@ ms.locfileid: "47660962"
   
 2.  在 **[主資料夾]** 索引標籤的 **[共用資料集]** 群組中，按一下 [資料集]。 **[資料集屬性]** 對話方塊隨即開啟。  
   
-3.  按一下 **[篩選]**。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
+3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
+4.  按一下 **[加入]** 。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "47660962"
   
 1.  在報表設計模式下，開啟報表。  
   
-2.  以滑鼠右鍵按一下 [報表資料] 窗格中的資料集，然後按一下 [資料集屬性]。 **[資料集屬性]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下 [報表資料]  窗格中的資料集，然後按一下 [資料集屬性]  。 **[資料集屬性]** 對話方塊隨即開啟。  
   
-3.  按一下 **[篩選]**。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
+3.  按一下 **[篩選]** 。 這樣就會顯示目前的篩選方程式清單。 根據預設，此清單是空的。  
   
-4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
+4.  按一下 **[加入]** 。 新的空白篩選方程式隨即顯示。  
   
 5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "47660962"
 ## <a name="see-also"></a>另請參閱  
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [新增篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
+ [加入篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   

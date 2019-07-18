@@ -11,14 +11,18 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24e34745d8562f5e990855f1e67526684d171383
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726419"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP BW 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目的地元件。 因此，SAP BW 目的地會將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中資料流程的資料載入 SAP Netweaver BW 版本 7 系統中。  
   
  這個目的地具有一個輸入和一個錯誤輸出。  
@@ -42,9 +46,9 @@ ms.locfileid: "58280922"
   
 1.  建立新的來源系統：  
   
-    1.  選取 [協力廠商/暫存 BAPI] 類型。  
+    1.  選取 [協力廠商/暫存 BAPI]  類型。  
   
-    2.  針對 [目標系統的通訊類型]，選取 [非 Unicode (非使用中 MDMP 設定)]。  
+    2.  針對 [目標系統的通訊類型]  ，選取 [非 Unicode (非使用中 MDMP 設定)]  。  
   
     3.  指派適當的程式識別碼。  
   
@@ -80,7 +84,7 @@ ms.locfileid: "58280922"
   
 -   使用您已選取的選項來測試資料的載入。  
   
- 您也可以針對目的地的 RFC 函數呼叫啟用記錄  (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。您可以在設定目的地將使用的 SAP BW 連接管理員時啟用 RFC 函數呼叫的記錄。 如需有關如何設定 SAP BW 連接管理員的詳細資訊，請參閱＜ [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)＞。  
+ 您也可以針對目的地的 RFC 函數呼叫啟用記錄 (這項記錄與您針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝啟用的選擇性記錄是分開的)。您可以在設定目的地將使用的 SAP BW 連接管理員時啟用 RFC 函數呼叫的記錄。 如需有關如何設定 SAP BW 連接管理員的詳細資訊，請參閱＜ [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)＞。  
   
  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
   

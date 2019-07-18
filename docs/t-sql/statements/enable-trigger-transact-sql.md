@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652517"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681483"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ALL SERVER
 ## <a name="remarks"></a>Remarks  
 啟用觸發程序並不會重新建立它。 停用的觸發程序仍然是目前資料庫中的一個物件，但不會引發。 若要啟用觸發程序，在執行原先已程式化的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，便會引發該觸發程序。 您可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 停用觸發程序。 您也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)，來停用或啟用資料表上定義的 DML 觸發程序。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 若要啟用 DML 觸發程序，使用者在建立此觸發程序的資料表或檢視上至少需要有 ALTER 權限。  
   
 若要啟用伺服器範圍 (ON ALL SERVER) 的 DDL 觸發程序或登入觸發程序，使用者在伺服器上需要有 CONTROL SERVER 權限。 若要啟用資料庫範圍 (ON DATABASE) 的 DDL 觸發程序，使用者在目前資料庫中至少需要有 ALTER ANY DATABASE DDL TRIGGER 權限。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b5532a5c9dfba03a0e2b9b2fe649912cd0535cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123915"
 ---
 # <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

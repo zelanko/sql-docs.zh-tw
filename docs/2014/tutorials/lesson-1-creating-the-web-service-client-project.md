@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676051"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 課：建立 Web 服務用戶端專案
   在這個逐步解說中，您會建立存取報表伺服器 Web 服務的簡單主控台應用程式。 這個逐步解說假設您是在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中進行開發工作。  

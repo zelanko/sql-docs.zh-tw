@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056208"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ ms.locfileid: "52802610"
 |**filter_clause**|**ntext**|用來進行水平篩選且寫在非 SQL 發行者所能解譯的標準 Transact-SQL 中的發行項 WHERE 子句。|  
 |**ins_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫插入時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
 |**pre_creation_cmd**|**tinyint**|當訂閱者端已有同名物件存在時，在套用初始快照集之前所執行的命令。<br /><br /> **0** = 無-不執行命令。<br /><br /> **1** = DROP-卸除目的地資料表。<br /><br /> **2** = DELETE-刪除目的地資料表中的資料。<br /><br /> **3** = TRUNCATE-截斷目的地資料表。|  
-|**status**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一個或多個這些值的位元邏輯 OR 結果：<br /><br /> **0** = 無其他內容。<br /><br /> **1** = 作用。<br /><br /> **8** = 包含 INSERT 陳述式中的資料行名稱。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
+|**status**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0** = 無其他內容。<br /><br /> **1** = 作用。<br /><br /> **8** = 包含 INSERT 陳述式中的資料行名稱。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
 |**type**|**tinyint**|發行項的類型：<br /><br /> **1** = 記錄式發行項。|  
 |**upd_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫更新時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**schema_option**|**binary(8)**|給定發行項之結構描述產生選項的點陣圖，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0x00** = 停用快照集代理程式的指令碼，並使用所提供的 CreationScript。<br /><br /> **0x01** = 產生物件的建立 （CREATE TABLE、 CREATE PROCEDURE 等等）。<br /><br /> **0x10** = 產生對應的叢集索引。<br /><br /> **0x40** = 產生對應的非叢集索引。<br /><br /> **0x80** = 包含宣告式參考完整性的主索引鍵。<br /><br /> **0x1000** = 複寫資料行層級定序。 注意：依預設，會設定 Oracle 發行者的這個選項來啟用區分大小寫的比較。<br /><br /> **0x4000** = 複寫唯一索引鍵，如果資料表發行項上定義。<br /><br /> **0x8000** = 主索引鍵和唯一索引鍵的資料表發行項作為使用 ALTER TABLE 陳述式條件約束的複寫。|  
+|**schema_option**|**binary(8)**|給定發行項之結構描述產生選項的點陣圖，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0x00** = 停用快照集代理程式的指令碼，並使用所提供的 CreationScript。<br /><br /> **0x01** = 產生物件的建立 （CREATE TABLE、 CREATE PROCEDURE 等等）。<br /><br /> **0x10** = 產生對應的叢集索引。<br /><br /> **0x40** = 產生對應的非叢集索引。<br /><br /> **0x80** = 包含宣告式參考完整性的主索引鍵。<br /><br /> **0x1000** = 複寫資料行層級定序。 注意:此選項來啟用區分大小寫的比較的 Oracle 發行者的預設設定。<br /><br /> **0x4000** = 複寫唯一索引鍵，如果資料表發行項上定義。<br /><br /> **0x8000** = 主索引鍵和唯一索引鍵的資料表發行項作為使用 ALTER TABLE 陳述式條件約束的複寫。|  
 |**dest_owner**|**sysname**|目的地資料庫的資料表擁有者。|  
 |**dest_table**|**sysname**|目的地資料表的名稱。|  
 |**tablespace_name**|**nvarchar(255)**|識別發行項之記錄資料表所用的資料表空間。|  
@@ -70,7 +69,7 @@ ms.locfileid: "52802610"
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

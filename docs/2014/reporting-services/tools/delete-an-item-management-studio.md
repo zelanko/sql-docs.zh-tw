@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], deleting
 - deleting report items
 - report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a2dd1ecf333c452e2f1e2710a7ad16782a1a3628
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013609"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100415"
 ---
 # <a name="delete-an-item-management-studio"></a>刪除項目 (Management Studio)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中連接至報表伺服器執行個體時，您可以刪除角色定義和共用排程。 但是，您無法刪除報表伺服器上的報表、模型或其他項目。 若要刪除報表伺服器內容，請改用報表管理員。 或者，如果報表伺服器是針對 SharePoint 整合模式所設定，請在包含內容的 SharePoint 文件庫中使用項目管理功能。  
@@ -31,7 +30,7 @@ ms.locfileid: "56013609"
   
 2.  展開資料夾。  
   
-3.  以滑鼠右鍵按一下項目，然後按一下 [刪除]。  
+3.  以滑鼠右鍵按一下項目，然後按一下 [刪除]  。  
   
 4.  出現提示時， [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

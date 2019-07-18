@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b002fb0c6dcfa17a01f42c65f1946536a915c210
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a74f69947d6d1a1d730d39875f32a0cfc7286705
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963360"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法範例 (VBScript)
 > [!IMPORTANT]

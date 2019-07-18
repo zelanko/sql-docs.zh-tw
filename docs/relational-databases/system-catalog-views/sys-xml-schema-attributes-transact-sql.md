@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_attributes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,15 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ac0f23e73f67c3d95744d974366ab547d50672ea
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 1d9c4ebe7b997ae9ba72249bd431b37ff0fee2f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037415"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

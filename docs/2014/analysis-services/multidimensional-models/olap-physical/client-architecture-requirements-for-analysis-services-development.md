@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - local mining models [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2fd3e4bb2804595db0bd219af0d116fee9192f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62699425"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開發的用戶端架構需求
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援精簡型用戶端架構。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算引擎是整個伺服器為基礎，因此所有的查詢會在伺服器上解析。 所以，每一個查詢只需要用戶端和伺服器之間單次往返，使得查詢越來越複雜時可擴充效能。  
@@ -53,7 +51,7 @@ ms.locfileid: "48093670"
  用戶端和中介層應用程式兩者都可以直接與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 進行通訊，而毋需使用提供者。 用戶端和中介層應用程式可經由 TCP/IP、HTTP 或 HTTPS，在 SOAP 封包中傳送 XML for Analysis。 可使用任何支援 SOAP 的語言，撰寫用戶端程式碼。 此案例中的通訊由 Internet Information Services (IIS) 使用 HTTP 來管理最簡單，不過，也需要撰寫程式碼來使用 TCP/IP 直接連接到伺服器。 這是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的最精簡型用戶端方案。  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>表格式或 SharePoint 模式下的 Analysis Services  
- 在  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，伺服器可以用於表格式資料庫與 xVelocity 記憶體中分析引擎 (VertiPaq) 模式中啟動[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]已經發行至 SharePoint 網站的活頁簿。  
+ 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，伺服器可以在表格式資料庫及發行至 SharePoint 網站之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的 xVelocity 記憶體內部分析引擎 (VertiPaq) 模式下啟動。  
   
  [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是建立及查詢分別使用 SharePoint 或表格式模式之記憶體中資料庫唯一支援的用戶端環境。 您使用 Excel 建立的內嵌的 PowerPivot 資料庫和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具包含在 Excel 活頁簿，並儲存為 Excel.xlsx 檔案的一部分。  
   
@@ -63,7 +61,7 @@ ms.locfileid: "48093670"
 >  當您使用 Cube 做為 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 活頁簿的資料來源時，從 Cube 取得的資料是定義為 MDX 查詢；不過資料是以扁平化快照集方式匯入。 您無法以互動方式使用資料或從 Cube 重新整理資料。  
   
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot 用戶端的介面  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 透過已建立的介面和語言的 Analysis Services xVelocity 記憶體中分析引擎 (VertiPaq) 儲存引擎，在活頁簿內與互動： AMO 和 ADOMD.NET 和 MDX 和 XMLA。 在增益集內，透過類似 Excel 的公式語言，即資料分析運算式 (DAX)，來定義量值。 DAX 運算式內嵌於傳送至同處理序伺服器的 XMLA 訊息。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 互動 xVelocity 記憶體中分析引擎 (VertiPaq) 儲存引擎，在活頁簿中的所使用的 Analysis Services 建立的介面和語言：AMO 和 ADOMD.NET 和 MDX 和 XMLA。 在增益集內，透過類似 Excel 的公式語言，即資料分析運算式 (DAX)，來定義量值。 DAX 運算式內嵌於傳送至同處理序伺服器的 XMLA 訊息。  
   
 ### <a name="providers"></a>提供者  
  之間的通訊[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]和 Excel 會使用 MSOLAP OLEDB 提供者 （11.0 版）。 在 MSOLAP 提供者內，有四個不同的模組 (或傳輸) 可用於用戶端和伺服器之間傳送訊息。  

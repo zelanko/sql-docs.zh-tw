@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a248250c1f5584a12bc40444d27c96ccc7e69416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194034"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>將資料處理延伸模組部署到報表設計師
   報表設計工具在您設計報表時，使用資料處理延伸模組來擷取和處理資料。 您應該將資料處理延伸模組組件部署到報表設計師做為私用組件， 您也需要在報表設計師組態檔 RSReportDesigner.config 中建立項目。  

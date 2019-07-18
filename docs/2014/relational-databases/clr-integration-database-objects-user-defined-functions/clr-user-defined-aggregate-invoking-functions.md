@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919598"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>叫用 CLR 使用者定義彙總函式
   您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中叫用 Common Language Runtime (CLR) 使用者定義彙總，依套用至系統彙總函式的所有規則而定。  

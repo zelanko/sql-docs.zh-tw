@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963147"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>監視 SQL Server Machine Learning 服務使用動態管理檢視 (Dmv)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "53645547"
 
 監視 SQL Server 中的機器學習工作負載時，可以使用下列動態管理檢視。 若要查詢 Dmv，您需要`VIEW SERVER STATE`執行個體上的權限。
 
-| 動態管理檢視 | 類型 | 描述 |
+| 動態管理檢視 | type | 描述 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 執行 | 逐資料列傳回正在執行外部指令碼的每個使用中背景工作帳戶。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 執行 | 逐資料列傳回各種類型的外部指令碼要求。 |
@@ -167,7 +166,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 計數器 | 描述 |
 |---------|-------------|
 | 執行總計 | 本機或遠端呼叫所啟動的外部處理序數目。 |
-| 平行執行 | 包含指令碼次數_@parallel_規格且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能夠產生及使用平行查詢計畫。 |
+| 平行執行 | 包含指令碼次數 _@parallel_ 規格且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能夠產生及使用平行查詢計畫。 |
 | 串流執行 | 已叫用的串流處理功能的次數的數目。 |
 | SQL CC 執行 | 執行位置呼叫具現化遠端及 SQL Server 的外部指令碼已用作為計算內容。 |
 | 隱含驗證登入 | 使用隱含的驗證; 進行 ODBC 回送呼叫的次數也就是[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]執行代表傳送指令碼要求的使用者呼叫。 |
@@ -196,7 +195,7 @@ FROM sys.dm_os_sys_info;
 |--------|-------------|
 | physical_memory_kb | 在電腦上的實體記憶體總數量。 |
 | committed_kb&lt | 記憶體管理員中的千位元組 (KB) 中認可的記憶體。 不包含記憶體管理員中的保留記憶體。 |
-| external_pool_peak_memory_kb | 加總記憶體，以 kb 為單位，所有外部資源集區的最大數量。 |
+| external_pool_peak_memory_kb | 最大記憶體總和使用，以 kb 為單位，所有外部資源集區。 |
 
 ## <a name="memory-configuration"></a>記憶體組態
 
@@ -223,7 +222,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 | 「資料行」 | 描述 |
 |--------|-------------|
-| NAME | 外部資源集區或 SQL Server 的名稱。 |
+| name | 外部資源集區或 SQL Server 的名稱。 |
 | max_memory_percent | SQL Server 或外部資源集區可用的記憶體上限。 |
 
 ## <a name="resource-pools"></a>資源集區
@@ -277,8 +276,8 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 | 「資料行」 | 描述 |
 |--------|-------------|
-| 封裝 | 已安裝封裝的名稱。 |
-| 版本 | 封裝的版本。 |
+| 套件 | 已安裝封裝的名稱。 |
+| Version | 封裝的版本。 |
 | 相依 | 列出已安裝的套件相依的套件。 |
 | 使用權 | 已安裝套件的授權。 |
 | LibPath | 您可以在其中找到封裝的目錄。 |
@@ -303,9 +302,9 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 | 「資料行」 | 描述 |
 |--------|-------------|
-| 封裝 | 已安裝封裝的名稱。 |
-| 版本 | 封裝的版本。 |
-| 位置 | 您可以在其中找到封裝的目錄。 |
+| 套件 | 已安裝封裝的名稱。 |
+| Version | 封裝的版本。 |
+| Location | 您可以在其中找到封裝的目錄。 |
 
 ## <a name="next-steps"></a>後續步驟
 

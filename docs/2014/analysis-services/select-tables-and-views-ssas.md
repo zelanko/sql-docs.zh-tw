@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.seltablesviews.f1
@@ -13,12 +12,12 @@ ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f341940849a1e3152048f8eea87ff946de4a02e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069243"
 ---
 # <a name="select-tables-and-views-ssas"></a>選取資料表和檢視表 (SSAS)
   [資料表匯入精靈] 的這個頁面可讓您選取您要匯入資料的來源資料表和檢視表。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

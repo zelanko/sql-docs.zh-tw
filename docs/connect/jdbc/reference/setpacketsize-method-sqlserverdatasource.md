@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d2346b1d64db708a94c45ac1a643d2dfcaf5fed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694929"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788121"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

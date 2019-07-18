@@ -3,22 +3,21 @@ title: 教學課程：針對 Linux 上的 SQL Server 使用 AD 驗證
 titleSuffix: SQL Server
 description: 本教學課程提供在 Linux 上的 SQL Server 的 AD 驗證的設定步驟。
 author: Dylan-MSFT
-ms.author: Dylan.Gray
-ms.reviewer: rothja
+ms.author: dygray
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027336"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：使用 Linux 上的 SQL Server 的 Active Directory 驗證
 
@@ -54,7 +53,7 @@ ms.locfileid: "59240776"
 ## <a id="createuser"></a> 建立 AD 使用者 （或 MSA）[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和設定的 SPN
 
 > [!NOTE]
-> 下列步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在**Azure**，您必須**[建立一個](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 再繼續進行。
+> 下列步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在**Azure**，您必須 **[建立一個](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 再繼續進行。
 
 1. 在您的網域控制站上執行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令來建立新的 AD 使用者與密碼永不過期。 下列範例會命名為帳戶`mssql`，但帳戶名稱可以是任何您喜歡的項目。 系統會提示您輸入帳戶的新密碼。
 
@@ -102,7 +101,7 @@ ms.locfileid: "59240776"
 
    ```bash
    kinit user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
+   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]
@@ -117,9 +116,9 @@ ms.locfileid: "59240776"
 1. 使用下列命令的每個 spn 新增 keytab 項目：
 
    ```bash
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
    addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
    addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
    ```
 
@@ -315,11 +314,11 @@ systemctl restart mssql-server
 如果您的網域控制站支援 LDAPS，您可以強制從 SQL Server 的所有連線到網域控制站，要透過 LDAPS。 若要檢查您的用戶端可以連絡網域控制站，透過 ldaps，執行下列 bash 命令， `ldapsearch -H ldaps://contoso.com:3269`。 若要設定 SQL Server，僅使用 LDAPS，執行下列命令：
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-這將會透過 SSSD 使用 LDAPS，如果在加入 AD 網域主機已透過 SSSD 封裝及**disablesssd**未設定為 true。 如果**disablesssd**設為 true，連同**forceldaps**設為 true，則它將在 SQL Server 所做的 openldap 程式庫呼叫上使用 LDAPS 通訊協定。
+這將會透過 SSSD 使用 LDAPS，如果在加入 AD 網域主機已透過 SSSD 封裝及**disablesssd**未設定為 true。 如果**disablesssd**設為 true，連同**forcesecureldap**設為 true，則它將在 SQL Server 所做的 openldap 程式庫呼叫上使用 LDAPS 通訊協定。
 
 ### <a name="post-sql-server-2017-cu14"></a>將 SQL Server 2017 CU14 張貼
 
@@ -361,4 +360,4 @@ CONTOSO.COM = {
 接下來，瀏覽其他安全性案例適用於 SQL Server on Linux。
 
 > [!div class="nextstepaction"]
->[將 Linux 上的 SQL Server 連線加密](sql-server-linux-encrypted-connections.md)
+> [將 Linux 上的 SQL Server 連線加密](sql-server-linux-encrypted-connections.md)

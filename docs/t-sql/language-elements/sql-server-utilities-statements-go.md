@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c6bb6632bfccc0874d77835dcef07fbede1cec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765466"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832960"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 公用程式陳述式 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "47765466"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  如果以 ODBC 或 OLE DB API 為基礎的應用程式試圖執行 GO 命令，就會收到語法錯誤。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式永遠不會將 GO 命令傳給伺服器。  
   
- 請勿在 GO 之後以分號做為陳述式結束字元。  
-  
-## <a name="permissions"></a>[權限]  
- GO 是不需要任何權限的公用程式命令。 任何使用者都可以執行它。  
-  
-```  
+ 請勿在 GO 之後以分號做為陳述式結束字元。
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>權限  
+ GO 是不需要任何權限的公用程式命令。 任何使用者都可以執行它。    
   
 ## <a name="examples"></a>範例  
  下列範例會建立兩個批次。 第一個批次只包含用來設定資料庫內容的 `USE AdventureWorks2012` 陳述式。 其餘陳述式使用本機變數。 因此，所有本機變數宣告都必須分組在單一批次中。 方式是將 `GO` 命令放在參考變數的最後一個陳述式之後。  

@@ -11,14 +11,18 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9ebfb17a69abbaf8482999d3435bbdea11e0822
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 54fb96d23fb02be01068ce5c2206913a0e6716f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721056"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 課：在 SSIS 中搭配專案部署模型使用參數
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server 2012 引進了新的部署模型，讓您可以將專案部署到 Integration Services 伺服器。 Integration Services 伺服器可讓您管理及執行封裝，以及設定封裝的執行值。  
   

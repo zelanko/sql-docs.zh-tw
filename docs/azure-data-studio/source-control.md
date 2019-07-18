@@ -2,21 +2,20 @@
 title: 原始檔控制
 titleSuffix: Azure Data Studio
 description: 了解如何在 Azure 資料 Studio 中設定原始檔控制
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5fb3c8dea11e570bba4452e181626625e31acbe0
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959283"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用原始檔控制
 
@@ -31,8 +30,8 @@ ms.locfileid: "53030672"
 
 ## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 存放庫
 
-1. 在 [檔案] 功能表下方，選取 [開啟資料夾]
-2. 瀏覽包含由 Git 追蹤之檔案的資料夾，然後按一下 [選取資料夾]。 您可以選擇本機存放庫中的子資料夾。
+1. 在 [檔案]  功能表下方，選取 [開啟資料夾] 
+2. 瀏覽包含由 Git 追蹤之檔案的資料夾，然後按一下 [選取資料夾]  。 您可以選擇本機存放庫中的子資料夾。
 
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新的 git 儲存機制

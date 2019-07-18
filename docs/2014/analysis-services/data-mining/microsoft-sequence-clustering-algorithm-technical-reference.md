@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
@@ -17,12 +16,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083841"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
   Microsoft 時序叢集演算法是一種混合式演算法，它使用 Markov 鏈結分析來識別已排序的時序，並結合此分析的結果與叢集技術，根據模型中的時序和其他屬性產生叢集。 本主題描述演算法的實作、如何自訂演算法，以及時序叢集模型的特殊需求。  
@@ -42,7 +41,7 @@ ms.locfileid: "53367760"
   
  Microsoft 時序叢集演算法支援模型額外的非循序屬性。 也就是說，這些額外的屬性會結合時序屬性，就像在一般叢集模型般建立具有類似屬性之案例的群集。  
   
- 時序群集模型傾向於建立比一般叢集模型還要更多的叢集。 因此，Microsoft 時序群集演算法會根據時序及其他屬性執行 *「群集分解」*(Cluster Decomposition) 來分割群集。  
+ 時序群集模型傾向於建立比一般叢集模型還要更多的叢集。 因此，Microsoft 時序群集演算法會根據時序及其他屬性執行 *「群集分解」* (Cluster Decomposition) 來分割群集。  
   
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>時序叢集模型中的特徵選取  
  特徵選取不會在建立時序時叫用，但是特徵選取會在群集階段套用。  
@@ -137,7 +136,7 @@ ms.locfileid: "53367760"
   
 ## <a name="remarks"></a>備註  
   
--   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
+-   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   

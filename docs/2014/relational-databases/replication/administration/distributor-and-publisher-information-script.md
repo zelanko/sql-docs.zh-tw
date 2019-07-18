@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63186986"
 ---
 # <a name="distributor-and-publisher-information-script"></a>散發者與發行者資訊指定碼
   此指令碼使用系統資料表與複寫預存程序來回答關於「散發者」與「發行者」端物件的常見問題。 指令碼能以其現狀使用，也能提供自訂指令碼的基準。 在您的環境下，指令碼可能需要進行兩項修改：  

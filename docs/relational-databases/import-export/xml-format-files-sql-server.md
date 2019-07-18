@@ -12,16 +12,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8c29bf1705343972bf8921bad1523f2ad5b19a8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9b65b89ea70d48991af89190c7577cd7dee2043a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64946348"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "54256113"
  您可以搭配使用 XML 格式檔案與 **bcp**命令、BULK INSERT 陳述式或 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式。 **bcp** 命令可讓您自動產生資料表的 XML 格式檔案；如需詳細資訊，請參閱＜ [bcp Utility](../../tools/bcp-utility.md)＞。  
   
 > [!NOTE]  
->  有兩種類型的格式檔案支援大量匯出和匯入：「非 XML 格式檔案」和「XML 格式檔案」。 相較於非 XML 格式檔案而言，XML 格式檔案是較彈性且功能強大的替代方案。 如需非 XML 格式檔案的相關資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)＞。  
+>  有兩種類型的格式檔案支援大量匯出和匯入：「非 XML 格式檔案」  和「XML 格式檔案」  。 相較於非 XML 格式檔案而言，XML 格式檔案是較彈性且功能強大的替代方案。 如需非 XML 格式檔案的相關資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)＞。  
   
  **本主題內容：**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54256113"
   
      每一個 \<欄位> 項目描述特定資料欄位的內容。 一個欄位只能對應到資料表的一個資料行。 並非所有欄位都需要對應到資料行。  
   
-     資料檔中的欄位可以是固定/可變長度或以字元終止。 「欄位值」可以如此表示：一個字元 (使用單一位元組表示法)、一個寬字元 (使用 Unicode 雙位元組表示法)、原生資料庫格式或一個檔案名稱。 如果欄位值是以檔案名稱表示，則檔案名稱指向包含目標資料表中 BLOB 資料行的值的檔案。  
+     資料檔中的欄位可以是固定/可變長度或以字元終止。 「欄位值」  可以如此表示：一個字元 (使用單一位元組表示法)、一個寬字元 (使用 Unicode 雙位元組表示法)、原生資料庫格式或一個檔案名稱。 如果欄位值是以檔案名稱表示，則檔案名稱指向包含目標資料表中 BLOB 資料行的值的檔案。  
   
 -   \<資料列> 描述當資料檔案中的資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。  
   
@@ -182,19 +182,19 @@ ms.locfileid: "54256113"
   
  <FIELD  
   
- ID **="**_fieldID_**"**  
+ ID **="** _fieldID_ **"**  
   
- xsi **:** type **="**_fieldType_**"**  
+ xsi **:** type **="** _fieldType_ **"**  
   
- [ LENGTH **="**_n_**"** ]  
+ [ LENGTH **="** _n_ **"** ]  
   
- [ PREFIX_LENGTH **="**_p_**"** ]  
+ [ PREFIX_LENGTH **="** _p_ **"** ]  
   
- [ MAX_LENGTH **="**_m_**"** ]  
+ [ MAX_LENGTH **="** _m_ **"** ]  
   
- [ COLLATION **="**_collationName_**"** ]  
+ [ COLLATION **="** _collationName_ **"** ]  
   
- [ TERMINATOR **="**_terminator_**"** ]  
+ [ TERMINATOR **="** _terminator_ **"** ]  
   
  />  
   
@@ -202,13 +202,13 @@ ms.locfileid: "54256113"
   
 |FIELD 屬性|說明|選擇性 /<br /><br /> 必要項|  
 |---------------------|-----------------|------------------------------|  
-|ID **="**_fieldID_**"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<欄位識別碼 **="**_fieldID_**"**/> 對應到 \<資料行來源 **="**_fieldID_**"**/>|必要項|  
-|xsi:type **="**_fieldType_**"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
-|LENGTH **="**_n_**"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
-|PREFIX_LENGTH **="**_p_**"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p* 必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
-|MAX_LENGTH **="**_m_**"**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選擇性|  
-|COLLATION **="**_collationName_**"**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|選擇性|  
-|TERMINATOR **= "**_terminator_**"**|此屬性會指定資料欄位的結束字元。 結束字元可以是任何字元。 結束字元必須是不包含於資料之任何部分的唯一字元。<br /><br /> 根據預設，欄位結束字元是定位字元 (以 \t 表示)。 若要表示段落標記，請使用 \r\n。|只能搭配字元資料的 xsi:type 使用，字元資料需要此屬性。|  
+|ID **="** _fieldID_ **"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<欄位識別碼 **="** _fieldID_ **"** /> 對應到 \<資料行來源 **="** _fieldID_ **"** />|必要項|  
+|xsi:type **="** _fieldType_ **"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
+|LENGTH **="** _n_ **"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
+|PREFIX_LENGTH **="** _p_ **"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p* 必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
+|MAX_LENGTH **="** _m_ **"**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選擇性|  
+|COLLATION **="** _collationName_ **"**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|選擇性|  
+|TERMINATOR **= "** _terminator_ **"**|此屬性會指定資料欄位的結束字元。 結束字元可以是任何字元。 結束字元必須是不包含於資料之任何部分的唯一字元。<br /><br /> 根據預設，欄位結束字元是定位字元 (以 \t 表示)。 若要表示段落標記，請使用 \r\n。|只能搭配字元資料的 xsi:type 使用，字元資料需要此屬性。|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> \<欄位> 項目的 xsi:type 值  
  xsi:type 值是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 如需有關使用「將 xsi:type 值放入資料集」的資訊，請參閱本節稍後的部分。  
@@ -255,12 +255,12 @@ ms.locfileid: "54256113"
   
 |COLUMN 屬性|Description|選擇性 /<br /><br /> 必要項|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="**_fieldID_**"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源 **="**_fieldID_**"**/> 對應到 \<欄位識別碼 **="**_fieldID_**"**/>|必要項|  
+|SOURCE **="** _fieldID_ **"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源 **="** _fieldID_ **"** /> 對應到 \<欄位識別碼 **="** _fieldID_ **"** />|必要項|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  
-|xsi **:** type **="**_ColumnType_**"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意：[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選擇性|  
-|LENGTH **="**_n_**"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
-|PRECISION **="**_n_**"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
-|SCALE **="**_int_**"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
+|xsi **:** type **="** _ColumnType_ **"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意:[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選擇性|  
+|LENGTH **="** _n_ **"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
+|PRECISION **="** _n_ **"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
+|SCALE **="** _int_ **"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指定資料行是否可指定 NULL 值。 此屬性完全與 FIELDS 無關。 然而，若資料行並非 NULLABLE 且欄位指定 NULL (未指定任何值)，則會導致執行階段錯誤。<br /><br /> 只有當您執行一般的 SELECT FROM OPENROWSET(BULK...) 陳述式時，才會使用 NULLABLE 屬性。|選用 (可用於任何資料類型)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> \<資料行> 項目的 xsi:type 值  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 904919bfac6dc9fc0c5bf638605d363eba5a68f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026710"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Stdev 函數 (MDX) |Microsoft 文件
+title: Stdev 函數 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a1ef1d720928298e8a44e075f45937903d178ef6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036859"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
 
@@ -53,6 +52,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

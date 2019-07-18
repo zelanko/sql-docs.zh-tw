@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0767cdbd57a481ebe82993f3be4ae3e8e1738c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab17d9e60752b1aea747b03947d235b7d5f91605
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683196"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801812"
 ---
 # <a name="national-character-set-support"></a>國家字元集支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

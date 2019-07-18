@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070743"
 ---
-# <a name="divide-dmx"></a>（除法）(DMX)
+# <a name="divide-dmx"></a>(除) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   執行算術運算，將一個數字除以另一個數字。  

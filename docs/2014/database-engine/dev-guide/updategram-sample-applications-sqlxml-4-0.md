@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6eaf2e0143b3f9ddcdc0c33757647b24d53b70a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780406"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Updategram 範例應用程式 (SQLXML 4.0)
   本節提供使用 Updategram 的範例。  

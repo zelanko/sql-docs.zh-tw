@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 376211f7d6a61712c70ea7ad7889adc15735c414
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56d5426b0b05793106724b576f9f012938393d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028994"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>將測試案例初始化 (SybaseToSQL)
 在此步驟中，您指定新的測試案例的初始資訊。  

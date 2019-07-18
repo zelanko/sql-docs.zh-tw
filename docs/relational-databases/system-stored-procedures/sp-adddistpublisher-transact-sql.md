@@ -1,5 +1,5 @@
 ---
-title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
+title: sp_adddistpublisher & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: 5c9cab9530a67b01274bf5d1bafa579199f0a4d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072787"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。  
   
-`[ @working_directory = ] 'working_directory'` 是用來儲存發行集的資料和結構描述檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)**，預設值是 ReplData 資料夾，這個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 這個名稱應該用 UNC 格式來指定。  
+`[ @working_directory = ] 'working_directory'` 是用來儲存發行集的資料和結構描述檔案的工作目錄的名稱。 *working_directory*已**nvarchar(255)** ，預設值是 ReplData 資料夾，這個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 這個名稱應該用 UNC 格式來指定。  
 
  針對 Azure SQL Database，使用`\\<storage_account>.file.core.windows.net\<share>`。
 
@@ -74,7 +73,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` 這個參數已被取代，並提供回溯相容性。 *受信任*是**nvarchar(5)**，並設定為任何內容，不過**false**會導致錯誤。  
+`[ @trusted = ] 'trusted'` 這個參數已被取代，並提供回溯相容性。 *受信任*是**nvarchar(5)** ，並設定為任何內容，不過**false**會導致錯誤。  
   
 `[ @encrypted_password = ] encrypted_password` 設定*encrypted_password*不受支援。 嘗試將這個**位元**參數來**1**會導致錯誤。  
   
@@ -110,7 +109,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [設定散發](../../relational-databases/replication/configure-distribution.md)  

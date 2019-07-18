@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011270"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改善全文檢索查詢的效能
   以下是有助於提升全文檢索查詢效能的建議事項清單。  
@@ -34,7 +34,7 @@ ms.locfileid: "53353014"
   
 -   如果您只需要全文檢索索引鍵或次序資訊，請分別使用 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) ，而不要使用 CONTAINS 或 FREETEXT。  
   
--   若要限制結果並提升效能，請使用 FREETEXTTABLE 和 CONTAINSTABLE 函數的 *top_n_by_rank* 參數。 *top_n_by_rank* 可讓您僅重新叫用最相關的叫用。 只有當您的商務狀況不需要重新叫用所有可能的叫用 (亦即，不需要「全部重新叫用」) 時，才應該使用這個參數。  
+-   若要限制結果並提升效能，請使用 FREETEXTTABLE 和 CONTAINSTABLE 函數的 *top_n_by_rank* 參數。 *top_n_by_rank* 可讓您僅重新叫用最相關的叫用。 只有當您的商務狀況不需要重新叫用所有可能的叫用 (亦即，不需要「全部重新叫用」  ) 時，才應該使用這個參數。  
   
     > [!NOTE]  
     >  全部重新叫用通常是法律狀況的必要項目，但是其重要性可能低於商務狀況的效能，例如電子商務。  

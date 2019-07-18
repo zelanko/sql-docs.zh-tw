@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd171495bb8dde28a30299b0107d91cce9dd472e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e78a745e908399efa25e6f72faff9daec2cbd8ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799787"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream 方法 (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getBinaryStream 方法是由 java.sql.Blob 介面中 getBinaryStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

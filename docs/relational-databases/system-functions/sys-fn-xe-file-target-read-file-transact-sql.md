@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059098"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>引數  
  *path*  
- 要讀取之檔案的路徑。 *路徑*可以包含萬用字元，並將包含檔案的名稱。 *路徑*已**nvarchar(260)**。 沒有預設值。 在 Azure SQL Database 的內容中，這個值會是 HTTP URL 至 Azure 儲存體中的檔案。
+ 要讀取之檔案的路徑。 *路徑*可以包含萬用字元，並將包含檔案的名稱。 *路徑*已**nvarchar(260)** 。 沒有預設值。 在 Azure SQL Database 的內容中，這個值會是 HTTP URL 至 Azure 儲存體中的檔案。
   
  *mdpath*  
- 對應至所指定的檔案中繼資料檔案的路徑*路徑*引數。 *mdpath*已**nvarchar(260)**。 沒有預設值。 從 SQL Server 2016 開始，這個參數可以指定為 null。
+ 對應至所指定的檔案中繼資料檔案的路徑*路徑*引數。 *mdpath*已**nvarchar(260)** 。 沒有預設值。 從 SQL Server 2016 開始，這個參數可以指定為 null。
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 不需要*mdpath*參數。 但是，維護它是為了保留與舊版 SQL Server 產生之記錄檔之間的相容性。  
   
  *initial_file_name*  
- 要讀取的第一個檔案*路徑*。 *initial_file_name*已**nvarchar(260)**。 沒有預設值。 如果**null**指定為引數中找到的所有檔案*路徑*讀取。  
+ 要讀取的第一個檔案*路徑*。 *initial_file_name*已**nvarchar(260)** 。 沒有預設值。 如果**null**指定為引數中找到的所有檔案*路徑*讀取。  
   
 > [!NOTE]  
 >  *initial_file_name*並*initial_offset*是成對的引數。 如果您指定任何一個引數的值，就必須指定另一個引數的值。  

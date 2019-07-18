@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029120"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>開始使用 SSMA for SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的 SAP ASE 可讓您快速轉換至 SAP Adaptive Server Enterprise (ASE) 的資料庫結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database 的結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database，並將資料從SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database。  
@@ -64,7 +63,7 @@ Sybase 中繼資料總管 會顯示來源執行個體的 SAP ASE 上的資料庫
 如需詳細資訊，請參閱 <<c0> [ 載入轉換的資料庫物件載入 SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md)。</c0>  
   
 ### <a name="metadata"></a>中繼資料  
-右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您是在 Sybase 中繼資料總管 中選取資料表，六個索引標籤會出現：**表格**， **SQL**，**型別對應**，**資料**， **屬性**，並**報表**。 **報表** 索引標籤包含的資訊，只有在您建立包含所選的物件的報表之後，才。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管，三個索引標籤會顯示：**表格**， **SQL**，和**資料**。  
+右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您是在 Sybase 中繼資料總管 中選取資料表，會出現六個索引標籤：**表格**， **SQL**，**類型對應**，**資料**，**屬性**，以及**報表**。 **報表** 索引標籤包含的資訊，只有在您建立包含所選的物件的報表之後，才。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管 會顯示三個索引標籤：**表格**， **SQL**，以及**資料**。  
   
 大部分的中繼資料設定是唯讀的。 不過，您可以變更下列中繼資料：  
   

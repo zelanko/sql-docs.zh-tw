@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63019291"
 ---
 # <a name="define-partitions-in-directquery-models"></a>在 DirectQuery 模式中定義分割區
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53072275"
   
  快取表格式模型中資料分割有相同的行為。 如果您使用記憶體中的模型，在存取快取時，會對每個資料分割評估 DAX 公式，並且合併結果。 但是當表格式模型使用 DirectQuery 模式時，無法評估多個資料分割、合併結果，以及將其轉換為 SQL 陳述式以傳送到關聯式資料存放區。 這樣做可能會導致無法接受的效能損失，以及在彙總結果時可能發生的不精確性。  
   
- 因此，對於在 DirectQuery 模式中回答的查詢，伺服器會使用已標示為主要資料分割的單一資料分割來存取 DirectQuery，稱為「DirectQuery 資料分割」。  在這個分割區定義中指定的 SQL 查詢，會定義一組完整的資料，用來回答 DirectQuery 模式中的查詢。  
+ 因此，對於在 DirectQuery 模式中回答的查詢，伺服器會使用已標示為主要資料分割的單一資料分割來存取 DirectQuery，稱為「DirectQuery 資料分割」  。  在這個分割區定義中指定的 SQL 查詢，會定義一組完整的資料，用來回答 DirectQuery 模式中的查詢。  
   
  如果您未明確定義資料分割，則引擎只是發出 SQL 查詢至整個關聯式資料來源、執行 DAX 公式規定的任何以集合為基礎的作業，並且傳回查詢結果。  
   
@@ -44,32 +44,32 @@ ms.locfileid: "53072275"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，於模型設計師中按一下包含分割資料表的資料表 (標籤)。  
   
-2.  按一下 **[資料表]** 功能表，然後按一下 **[資料分割]**。  
+2.  按一下 **[資料表]** 功能表，然後按一下 **[資料分割]** 。  
   
-3.  在 [資料分割管理員] 中，作為目前直接查詢資料分割的資料分割是由資料分割名稱上的前置詞 **(DirectQuery)** 所表示。  
+3.  在 [資料分割管理員]  中，作為目前直接查詢資料分割的資料分割是由資料分割名稱上的前置詞 **(DirectQuery)** 所表示。  
   
-     從 [資料分割] 清單中選取其他資料分割，然後按一下 [設為 DirectQuery]。 選取目前的 DirectQuery 資料分割時，[設為 DirectQuery] 按鈕不會啟用，而且在模型尚未啟用直接查詢模式時，看不到此按鈕。  
+     從 [資料分割]  清單中選取其他資料分割，然後按一下 [設為 DirectQuery]  。 選取目前的 DirectQuery 資料分割時，[設為 DirectQuery]  按鈕不會啟用，而且在模型尚未啟用直接查詢模式時，看不到此按鈕。  
   
-4.  如果需要，請變更處理選項，然後按一下 [確定]。  
+4.  如果需要，請變更處理選項，然後按一下 [確定]  。  
   
 #### <a name="change-the-directquery-partition-for-a-deployed-tabular-model"></a>變更已部署的表格式模型的 DirectQuery 資料分割  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，開啟模型資料庫。  
   
-2.  展開 [資料表] 節點，然後以滑鼠右鍵按一下資料分割資料表，再選取 [資料分割]。  
+2.  展開 [資料表]  節點，然後以滑鼠右鍵按一下資料分割資料表，再選取 [資料分割]  。  
   
      指定用於 DirectQuery 模式的資料分割在資料分割名稱上具有前置詞 (DirectQuery)。  
   
-3.  若要變更為其他資料分割，請按一下 [直接查詢] 工具列圖示以開啟 [設定 DirectQuery 資料分割] 對話方塊。 在尚未啟用直接查詢的模型上，無法使用 DirectQuery 工具列圖示。  
+3.  若要變更為其他資料分割，請按一下 [直接查詢]  工具列圖示以開啟 [設定 DirectQuery 資料分割]  對話方塊。 在尚未啟用直接查詢的模型上，無法使用 DirectQuery 工具列圖示。  
   
-4.  從 [資料分割名稱] 下拉式清單中選擇其他資料分割，然後視需要變更該資料分割的處理選項。  
+4.  從 [資料分割名稱]  下拉式清單中選擇其他資料分割，然後視需要變更該資料分割的處理選項。  
   
 ## <a name="partitions-in-cached-models-and-in-directquery-models"></a>快取模型和 DirectQuery 模型中的資料分割  
  當您設定 DirectQuery 資料分割時，您必須為此資料分割指定處理選項。  
   
- DirectQuery 資料分割有兩個處理選項。 若要設定這個屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [資料分割管理員]，然後選取 [處理選項] 屬性。 下表列出這個屬性的值，並描述當每個值在連接字串上結合 DirectQueryUsage 屬性使用時的影響：  
+ DirectQuery 資料分割有兩個處理選項。 若要設定這個屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [資料分割管理員]  ，然後選取 [處理選項]  屬性。 下表列出這個屬性的值，並描述當每個值在連接字串上結合 DirectQueryUsage 屬性使用時的影響：  
   
-|[連接字串] 屬性|[處理選項] 屬性|注意|  
+|[連接字串]  屬性|[處理選項]  屬性|注意|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|永不處理這個資料分割|當模型使用僅限 DirectQuery 時，不需要進行處理。<br /><br /> 在混合模型中，您可以將 DirectQuery 資料分割設定為永遠不會處理。 例如，如果您正在對一個非常大的資料集進行操作，並且不想要將完整結果新增至快取，則可以指定 DirectQuery 資料分割包含資料表中所有其他資料分割結果的聯集，然後永遠不處理聯集。 傳送至關聯式資料來源的查詢不會受到影響，並且對快取資料執行的查詢會合併來自其他資料分割的資料。|  
 |DataView=Sample<br /><br /> 適用於使用範例資料檢視的表格式模型|允許處理資料分割|如果模型使用範例資料，您可以處理資料表，在模型設計期間傳回提供視覺提示的篩選資料集。|  

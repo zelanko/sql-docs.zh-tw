@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62987142"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>實作 IRenderingExtension 介面
   轉譯延伸模組會從與實際資料結合的報表定義取得結果，並將產生的資料轉譯成可用的格式。 結合的資料與格式之轉換是利用實作 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的 Common Language Runtime (CLR) 類別來完成。 這可將物件模型轉換為檢視器、印表機或是其他輸出目標可取用的輸出格式。  
@@ -38,7 +36,7 @@ ms.locfileid: "56040039"
 ## <a name="render-method"></a>Render 方法  
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 方法包含代表下列物件的引數：  
   
--   您要轉譯的「報表」。 這個物件包含報表的屬性、資料與配置資訊。 報表是報表物件模型樹狀結構的根目錄。  
+-   您要轉譯的「報表」  。 這個物件包含報表的屬性、資料與配置資訊。 報表是報表物件模型樹狀結構的根目錄。  
   
 -   包含字串字典物件的 *ServerParameters*，含報表伺服器的參數 (如果有的話)。  
   

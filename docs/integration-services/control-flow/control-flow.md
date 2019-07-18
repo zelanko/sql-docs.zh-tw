@@ -15,14 +15,18 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a023b8a1a24c8e98856d1540574e1c3c99f87c7d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ac6b4018d24d3ee94d50482295541c36cbafe14
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727855"
 ---
 # <a name="control-flow"></a>控制流程
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   封裝由控制流程及選擇性的一個或多個資料流程所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的控制流目程項目，分別是提供套件中結構的容器、提供功能的工作，以及將可執行檔、容器與工作連線成一個排序控制流程的優先順序條件約束。  
   
  如需相關資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)、 [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)及 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  

@@ -1,20 +1,20 @@
 ---
 title: 設定 PolyBase 存取 Azure Blob 儲存體中的外部資料 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 981824bc93708759970f026f1e930ce5ac33ccfb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 22f990c1b4bd9203fea5a375ce6ebed9517fad27
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415393"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729559"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
 
@@ -188,7 +188,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>在 SSMS 中檢視 PolyBase 物件  
 
-在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表] 中。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
+在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表]  中。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
   
 ![SSMS 中的 PolyBase 物件](media/polybase-management.png)  
 

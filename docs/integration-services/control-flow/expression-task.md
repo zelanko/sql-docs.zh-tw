@@ -13,14 +13,18 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b542d886c20ef0560e92565106d72d8e1303e2b8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 781f734ac394ffa1374c6bc93861c552dc32618a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727667"
 ---
 # <a name="expression-task"></a>運算式工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   運算式工作會使用運算式產生器，建立及評估在執行階段設定變數值的運算式。 當您編輯工作時，會啟動 [Expression Builder](../../integration-services/expressions/expression-builder.md) 。  
   
 ## <a name="expression-examples"></a>運算式範例  

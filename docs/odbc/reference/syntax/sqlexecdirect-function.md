@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 0fa34020478308c1e0d5c5fe112bbeb04920f07e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003117"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53590702"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecDirect(  
      SQLHSTMT     StatementHandle,  
@@ -109,7 +108,7 @@ SQLRETURN SQLExecDirect(
 |HY010|函數順序錯誤|(DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍在執行時**SQLExecDirect**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可使用。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
 |HY090|字串或緩衝區長度無效|(DM) 引數*TextLength*小於或等於 0，但不是等於 SQL_NTS。<br /><br /> 參數值時，設定**SQLBindParameter**、 為 null 指標，以及參數長度值不是 0，SQL_NULL_DATA，SQL_DATA_AT_EXEC，SQL_DEFAULT_PARAM，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 參數值時，設定**SQLBindParameter**、 不是 null 指標; C 資料類型 SQL_C_BINARY 或 SQL_C_CHAR;，參數長度值小於 0，但不是 SQL_NTS、 SQL_NULL_DATA、 SQL_DATA_AT_EXEC、 SQL_DEFAULT_參數，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 參數長度值受限於**SQLBindParameter**是設定為 SQL_DATA_AT_EXEC; 的 SQL 型別是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型; 以及 SQL_NEED_LONG_DATA_LEN 資訊在中輸入**SQLGetInfo**是"Y"。|  
-|包含 SQLSTATE=HY105|無效的參數類型|指定的引數的值*了*中**SQLBindParameter**是 SQL_PARAM_OUTPUT，而參數是輸入的參數。|  
+|HY105|無效的參數類型|指定的引數的值*了*中**SQLBindParameter**是 SQL_PARAM_OUTPUT，而參數是輸入的參數。|  
 |HY109|無效的資料指標位置|\**StatementText*定位的 update 或 delete 陳述式，以及指標置於自主 (由**SQLSetPos**或**SQLFetchScroll**) 已刪除或無法擷取的資料列。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未實作選擇性功能|驅動程式或資料來源不支援陳述式屬性 SQL_ATTR_CONCURRENCY 和 SQL_ATTR_CURSOR_TYPE 的目前設定的組合。<br /><br /> SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_VARIABLE，且 SQL_ATTR_CURSOR_TYPE 陳述式屬性已設定為驅動程式不支援書籤的資料指標類型。|  
@@ -124,7 +123,7 @@ SQLRETURN SQLExecDirect(
   
  應用程式可以包含一或多個參數標記中的 SQL 陳述式。 若要包含的參數標記，應用程式會嵌入在適當的位置上的 SQL 陳述式的問號 （？）。 如需參數的資訊，請參閱[陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。  
   
- 如果 SQL 陳述式**選取 **陳述式，如果應用程式會呼叫**SQLSetCursorName**陳述式相關聯的資料指標，則驅動程式會使用指定的資料指標。 否則，此驅動程式會產生資料指標名稱。  
+ 如果 SQL 陳述式**選取** 陳述式，如果應用程式會呼叫**SQLSetCursorName**陳述式相關聯的資料指標，則驅動程式會使用指定的資料指標。 否則，此驅動程式會產生資料指標名稱。  
   
  如果資料來源是在手動認可模式 （需要明確的交易初始），而且已經尚未起始交易，此驅動程式傳送的 SQL 陳述式之前，就會起始交易。 如需詳細資訊，請參閱 <<c0> [ 手動認可模式](../../../odbc/reference/develop-app/manual-commit-mode.md)。  
   

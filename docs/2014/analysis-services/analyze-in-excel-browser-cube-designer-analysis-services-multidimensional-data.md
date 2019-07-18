@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
@@ -14,12 +13,12 @@ ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062370"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   **[在 Excel 中進行分析]** 提供 Cube 開發人員一種方式，可快速檢閱使用者所看到的專案外觀。 **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  
@@ -34,7 +33,7 @@ ms.locfileid: "48075088"
   
 4.  按一下功能表列上的 Excel 圖示。  
   
-5.  當系統要求您啟用資料連接時，按一下 **[啟用]**。 Excel 會使用目前的資料連接來開啟，並將樞紐分析表加入工作表中，讓您可以開始瀏覽資料。  
+5.  當系統要求您啟用資料連接時，按一下 **[啟用]** 。 Excel 會使用目前的資料連接來開啟，並將樞紐分析表加入工作表中，讓您可以開始瀏覽資料。  
   
  您現在可透過將事實資料表中的量值拖曳至 [值] 區域，並將維度屬性拖曳至 [資料列] 和 [資料行] 區域，以互動方式建立樞紐分析表。 如果您有階層，可將它們加入至 [資料列] 或 [資料行] 區域。 您可以積存或向下鑽研階層，瀏覽不同層級的事實資料。  
   
@@ -45,9 +44,9 @@ ms.locfileid: "48075088"
   
  如需有關 **[在 Excel 中進行分析]** 功能的詳細資訊，請參閱以下資源：  
   
- [在 Excel 中分析&#40;SSAS 表格式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [分析表格式模型在 Excel 中的&#40;SSAS 表格式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析表格式模型 &#40;SSAS 表格式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [瀏覽 Cube 中的資料和中繼資料](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

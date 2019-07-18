@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccdc8529bb62e4e1db15f0a5ea85a64c5b679abf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124122"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_get_distributor
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**安裝**|**int**|**0** = 否;**1** = yes|  
+|**installed**|**int**|**0** = 否;**1** = yes|  
 |**發佈伺服器**|**sysname**|散發者伺服器的名稱|  
 |**安裝的散發資料庫**|**int**|**0** = 否;**1** = yes|  
 |**散發發行者**|**int**|**0** = 否;**1** = yes|  

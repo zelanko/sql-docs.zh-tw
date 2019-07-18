@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b4129ebee2be0ca043be349dc57ca8612ab7d0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66792188"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas 方法 (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public ResultSet getSchemas(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getSchemas 方法是由 java.sql.DatabaseMetaData 介面中的 getSchemas 方法指定。  
   
  透過 getSchemas 方法所傳回的結果集將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|結構描述的名稱。|  
 |TABLE_CATALOG|**String**|結構描述的目錄名稱。|  

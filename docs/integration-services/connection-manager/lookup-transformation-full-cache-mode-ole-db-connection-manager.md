@@ -13,14 +13,18 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ed0f4852fb347a13d3b92e10cedce29cbf2a8cf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 280351a1f4703c8b04138e70ddacbea2ef5d5122
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728185"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   您可以將查閱轉換設定為使用完整快取模式以及 OLE DB 連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
   
  查閱轉換會藉由聯結已連接資料來源輸入資料行中的資料與參考資料集中的資料行來執行查閱。 如需相關資訊，請參閱 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)。  
@@ -40,9 +44,9 @@ ms.locfileid: "58275285"
   
 4.  按兩下來源或前一個轉換以設定元件。  
   
-5.  按兩下查閱轉換，然後在 [查閱轉換編輯器] 的 [一般] 頁面上，選取 [完整快取]。  
+5.  按兩下查閱轉換，然後在 [查閱轉換編輯器]  的 [一般]  頁面上，選取 [完整快取]  。  
   
-6.  在 **[連接類型]** 區域中，選取 **[OLE DB 連接管理員]**。  
+6.  在 **[連接類型]** 區域中，選取 **[OLE DB 連接管理員]** 。  
   
 7.  在 **[指定如何處理無相符項目的資料列]** 清單中，針對沒有相符項目的資料列選取錯誤處理選項。  
   
@@ -50,19 +54,19 @@ ms.locfileid: "58275285"
   
 9. 執行下列其中一項工作：  
   
-    -   按一下 **[使用資料表或檢視]**，然後選取資料表或檢視，或按一下 **[新增]** 建立資料表或檢視。  
+    -   按一下 **[使用資料表或檢視]** ，然後選取資料表或檢視，或按一下 **[新增]** 建立資料表或檢視。  
   
          -或-  
   
-    -   按一下 **[使用 SQL 查詢的結果]**，然後在 **[SQL 命令]** 視窗中建立查詢，或是按一下 **[建立查詢]** ，使用 **[查詢產生器]** 提供的圖形工具來建立查詢。  
+    -   按一下 **[使用 SQL 查詢的結果]** ，然後在 **[SQL 命令]** 視窗中建立查詢，或是按一下 **[建立查詢]** ，使用 **[查詢產生器]** 提供的圖形工具來建立查詢。  
   
          -或-  
   
     -   或者，按一下 **[瀏覽]** ，從檔案匯入 SQL 陳述式。  
   
-     若要驗證 SQL 查詢，請按一下 **[剖析查詢]**。  
+     若要驗證 SQL 查詢，請按一下 **[剖析查詢]** 。  
   
-     若要檢視資料範例，按一下 **[預覽]**。  
+     若要檢視資料範例，按一下 **[預覽]** 。  
   
 10. 按一下 **[資料行]** 頁面，然後從 **[可用的輸入資料行]** 清單，拖曳至少一個資料行至 **[可用的查閱資料行]** 清單中的資料行。  
   

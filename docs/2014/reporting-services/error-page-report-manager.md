@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109215"
 ---
 # <a name="error-page-report-manager"></a>錯誤頁面 (報表管理員)
   使用 [錯誤] 頁面即可檢視錯誤狀況的詳細資料。 伺服器或工作階段為基礎的錯誤會出現此頁面上。 有關特定頁面控制項的驗證錯誤，則會內嵌顯示於該控制項旁。  
@@ -27,7 +26,7 @@ ms.locfileid: "56029229"
   
 -   如果您看見類似下面的錯誤訊息，請參閱＜ [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md)＞。  
   
-     找不到電腦。 *RPC 伺服器無法使用。 (發生例外狀況於 HRESULT：0x800706BA) 」。  
+     找不到電腦。 *RPC 伺服器無法使用。 (來自 HRESULT 的例外狀況：0x800706BA) 」。  
   
 -   您可以在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含文字，「 如需有關此錯誤的詳細資訊，請瀏覽至報表伺服器的本機伺服器電腦上，或啟用遠端錯誤 」，請參閱[啟用遠端錯誤&#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)。  
   

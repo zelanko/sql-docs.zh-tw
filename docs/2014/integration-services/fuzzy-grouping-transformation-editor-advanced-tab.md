@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058373"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
@@ -30,7 +29,7 @@ ms.locfileid: "58389018"
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **輸入索引鍵資料行名稱**  
  針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 `_key_in` 資料行具有能唯一識別每個資料列的值。  
   

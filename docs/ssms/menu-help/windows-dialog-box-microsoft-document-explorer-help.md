@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 004ac3bc70ca52efbd13336067bc958a0e975cde
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 0b6ac5938daa04a229817f32fbf564ccdf9f9b08
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328069"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690070"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗] 功能表上按一下 [視窗] 來顯示此對話方塊。  
+此對話方塊可以讓您顯示、關閉以及排列在編輯器和設計師中開啟的文件。 您可以在 [視窗]  功能表上按一下 [視窗]  來顯示此對話方塊。  
   
 ## <a name="options"></a>選項。  
 **名稱**  

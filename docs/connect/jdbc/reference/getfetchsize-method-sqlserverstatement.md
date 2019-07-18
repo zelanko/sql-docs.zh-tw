@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc43780fc7864614c550a0192f363219823376c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 54869f3c689b0c493cdaf19b86f5d95a43835929
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776256"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802015"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取結果集資料列數目，這個數目是從這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生的結果集物件預設提取大小。  
+  擷取結果集資料列數目，這個數目是從這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所產生結果集物件的預設提取大小。  
   
 ## <a name="syntax"></a>語法  
   

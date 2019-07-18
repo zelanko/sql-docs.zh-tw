@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36746a2a6001380e091bbd522777f22af646fda8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326f1634c19939c1d6044a2842474c4c7dd1c547
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942378"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Database Mail 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

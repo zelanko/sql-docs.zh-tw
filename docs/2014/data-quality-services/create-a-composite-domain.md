@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480947"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域。 複合定義域是由套用至單一資料欄位的一個或多個單一定義域所組成。 如需複合定義域的詳細資訊，請參閱[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)。  
@@ -79,11 +79,11 @@ ms.locfileid: "56034089"
   
 4.  針對 **[剖析方法]** 選取下列其中一項：  
   
-    -   **參考資料**:根據來剖析欄位的值如何格式化資料的參考資料服務 (RDS)。 Data Quality Services 會將複合定義域中的值傳送給 RDS，而 RDS 會根據複合定義域中的定義域來傳回更正及剖析的資料。  
+    -   **參考資料**：根據參考資料服務 (RDS) 設定資料格式的方式來剖析欄位值。 Data Quality Services 會將複合定義域中的值傳送給 RDS，而 RDS 會根據複合定義域中的定義域來傳回更正及剖析的資料。  
   
-    -   **為了**:剖析欄位的值，根據複合定義域中的順序。 第一個值將會併入第一個定義域，第二個值將會併入第二個定義域，依此類推。  
+    -   **依照順序**：根據複合定義域中的定義域順序來剖析欄位值。 第一個值將會併入第一個定義域，第二個值將會併入第二個定義域，依此類推。  
   
-    -   **分隔符號**:欄位的值會根據從選項按鈕所選取的分隔符號剖析顯示時選取的分隔符號。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]** 或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
+    -   **分隔符號**：根據選取 [分隔符號] 時從所顯示選項按鈕選取的分隔符號來剖析欄位值。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]** 或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
   
 5.  如果您選取 **[分隔符號]** 當做剖析方法，您也可以選取 **[使用知識庫剖析]**。 如需詳細資訊，請參閱 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   

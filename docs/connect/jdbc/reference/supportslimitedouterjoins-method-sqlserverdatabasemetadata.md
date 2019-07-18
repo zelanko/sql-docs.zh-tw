@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 06225a1a-a58d-4bff-b2ef-be303f051644
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da044b8a5b9383cac3b0e2e485bf59f3c3223523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58d7cc10464098c6ae2c628819a05211236190aa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743676"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764218"
 ---
 # <a name="supportslimitedouterjoins-method-sqlserverdatabasemetadata"></a>supportsLimitedOuterJoins 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

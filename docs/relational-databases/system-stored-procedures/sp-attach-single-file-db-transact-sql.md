@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
+title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046176"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'dbname'` 是要連接到伺服器之資料庫的名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
   
-`[ @physname = ] 'physical_name'` 是實體的名稱，包括路徑之資料庫檔案。 *physical_name*已**nvarchar(260)**，預設值是 NULL。  
+`[ @physname = ] 'physical_name'` 是實體的名稱，包括路徑之資料庫檔案。 *physical_name*已**nvarchar(260)** ，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  

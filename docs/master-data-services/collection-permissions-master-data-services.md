@@ -11,15 +11,14 @@ helpviewer_keywords:
 - collections [Master Data Services], permissions
 - permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8bb926515be3cd16a5ae1ce9dd1b2694f4bc55a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7e2e1dbbf51533e03d3e1f5a6930dd0a022cf215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941091"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合權限 (Master Data Services)
 
@@ -28,9 +27,9 @@ ms.locfileid: "52759270"
   集合權限會套用至某個實體的所有集合。 您不能提供權限給特定集合，權限會套用到所有的集合。  
   
 > [!NOTE]  
->  這些權限只適用於使用者介面的 [總管] 功能區域。  
+>  這些權限只適用於使用者介面的 [總管]  功能區域。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取集合成員和成員屬性。|  
 |**建立**|使用者可以建立集合成員及指派屬性值。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -14,22 +13,22 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3304506d1898123161bf226f8396f05cee7db10d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100755"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
  **本主題內容：**  
   
@@ -50,12 +49,12 @@ ms.locfileid: "56295449"
 |------------|-----------------|  
 |新增訂閱|出現在第一次建立訂閱時。|  
 |非使用中|出現在無法處理訂閱時。 如需詳細資訊，請參閱此主題稍後的＜管理非使用中訂閱＞。|  
-|完成：已處理 \<數目> 個 (總共 \<數目> 個)；\<數目> 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
-|已處理 \<數目> 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
-|總共 \<數目> 個|訂閱最後一次傳遞所產生的通知總數。|  
-|\<數目> 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
+|完成：已處理 \<數目  > 個 (總共 \<數目  > 個)；\<數目  > 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
+|已處理 \<數目  > 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
+|總共 \<數目  > 個|訂閱最後一次傳遞所產生的通知總數。|  
+|\<數目  > 個錯誤|排程與傳遞處理器無法傳遞或已不再嘗試傳遞的通知數目。|  
 |傳送郵件失敗：傳輸無法連接到伺服器。|指出報表伺服器未連接到郵件伺服器；此訊息來自電子郵件傳遞延伸模組。|  
-|檔案 \<檔案名稱> 已寫入 \<路徑>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
+|檔案 \<檔案名稱  > 已寫入 \<路徑>。|指出已成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |寫入檔案時發生未知的錯誤。|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |無法連線到目的資料夾，\<路徑>。 請確認目的資料夾或檔案共用存在。|指出找不到所指定的資料夾；此訊息來自檔案共用傳遞延伸模組。|  
 |檔案 \<檔案名稱> 無法寫入 \<路徑>。 正在嘗試重試。|指出無法以較新版本進行檔案更新；此訊息來自檔案共用傳遞延伸模組。|  
@@ -79,7 +78,7 @@ ms.locfileid: "56295449"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:將 EnableExecutionLogging 初始化至 'True' 所指定的伺服器系統 properties.emailextension ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:41:: e ERROR:**傳送電子郵件時發生錯誤**。 Exception:System.Net.Mail.SmtpException:The SMTP server requires a secure connection or the client was not authenticated. The server response was:5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:將 EnableExecutionLogging 初始化至 'True' 如同 Server 系統中所示 Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e 錯誤:**傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException:SMTP 伺服器需要安全連線，或未驗證用戶端。 伺服器回應為：5.7.1 用戶端未經認證於 System.Net.Mail.MailCommand.CheckResponse （SmtpStatusCode statusCode，String response） 驗證  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -88,9 +87,9 @@ ms.locfileid: "56295449"
   
 1.  瀏覽至包含報表的文件庫  
   
-2.  開啟報表的內容功能表 (**…**)。  
+2.  開啟報表的內容功能表 ( **…** )。  
   
-3.  選取展開的功能表選項 (**…**)。  
+3.  選取展開的功能表選項 ( **…** )。  
   
 4.  選取 [管理訂閱]   
   
@@ -99,8 +98,8 @@ ms.locfileid: "56295449"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|處理|區域|類別目錄|層級|Correlation|訊息|  
-|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** Exception:System.Net.Mail.SmtpException:Mailbox unavailable. The server response was:5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|Date|處理|區域|Category|層級|Correlation|Message|  
+|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.Net.Mail.SmtpException:信箱無法使用。 伺服器回應為：5.7.1 用戶端沒有傳送於 System.Net.Mail.DataStopCommand.CheckResponse （SmtpStatusCode statusCode，String serverResponse） 以此寄件者的權限於 System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) 於System.Net.Mail.SmtpClient.Send (MailMessage message) 於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
  例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)。  

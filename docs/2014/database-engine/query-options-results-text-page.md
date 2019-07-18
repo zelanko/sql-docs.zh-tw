@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
@@ -13,12 +12,12 @@ ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088978"
 ---
 # <a name="query-options-results-text-page"></a>查詢選項結果 (文字頁面)
   使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 選取 **[將結果存檔]** 時，此頁面上的設定也適用。  

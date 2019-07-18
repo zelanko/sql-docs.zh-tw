@@ -16,16 +16,16 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64776265"
 ---
 # <a name="identity-and-access-control-replication"></a>識別和存取控制 (複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  驗證是某一實體 (在本文中通常是某台電腦) 驗證另一個實體 (通常是另一台電腦或使用者) 的身分或所代表身分的處理，實體也稱為 *「主體」*。 授權是向已驗證的主體授與資源 (例如檔案系統中的檔案或是資料庫中的資料表) 存取權的處理。  
+  驗證是某一實體 (在本文中通常是某台電腦) 驗證另一個實體 (通常是另一台電腦或使用者) 的身分或所代表身分的處理，實體也稱為 *「主體」* 。 授權是向已驗證的主體授與資源 (例如檔案系統中的檔案或是資料庫中的資料表) 存取權的處理。  
   
  複寫安全性使用驗證與授權來控制對複寫資料庫物件，以及複寫處理所涉及的電腦和代理程式的存取權限。 這可透過三種機制來完成：  
   
@@ -50,6 +50,8 @@ ms.locfileid: "54135978"
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>管理複寫的登入與密碼
 設定複寫時請指定複寫代理程式的登入與密碼。 設定複寫後，您可以變更登入與密碼。 如需詳細資訊，請參閱 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。 若要變更複寫代理程式使用之帳戶的密碼，請執行 [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。  
+
+SQL Server 2014 中引進了使用群組受控服務帳戶 (gMSA) 的支援。 如需詳細資訊，請參閱 [Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/) (複寫和群組受控的服務帳戶) 部落格。
   
 ## <a name="see-also"></a>另請參閱  
  [威脅和弱點安全防護 &#40;複寫&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [複寫代理程式安全性模型](../../../relational-databases/replication/security/replication-agent-security-model.md)   

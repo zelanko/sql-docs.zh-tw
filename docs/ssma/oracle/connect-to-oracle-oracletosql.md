@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681106"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264476"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>連線到 Oracle (OracleToSQL)
 使用**連接到 Oracle**對話方塊連接到您想要移轉的 Oracle 資料庫。  

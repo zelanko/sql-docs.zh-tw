@@ -11,14 +11,18 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 046ec13269181eedda2d9fcfd891e7dd823db372
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 960c172b5634ba081fdcec404f13d0314e512f91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726714"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [查閱 RFC 目的地] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
   
  SAP BW 來源和 SAP BW 目的地都會使用 [查閱 RFC 目的地] 對話方塊。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 這些元件的詳細資訊，請參閱 [SAP BW 來源](../../integration-services/data-flow/sap-bw-source.md)和 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  

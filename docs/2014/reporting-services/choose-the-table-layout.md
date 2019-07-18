@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eda73eb52e99a24811e55ae89b703db1d9a2e7e9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109845"
 ---
 # <a name="choose-the-table-layout"></a>選擇資料表配置
   使用報表精靈的這個頁面，即可選取報表中的資料表配置。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **Stepped**  
  建立每個欄位包含一個資料行的報表，讓群組欄位顯示在詳細資料欄位資料行左邊的群組首中。 這種資料表沒有群組尾。  
   

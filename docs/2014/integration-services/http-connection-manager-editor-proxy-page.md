@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
@@ -15,19 +14,19 @@ ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0783f096db469c27a7f820f1a4594673ffe7e48f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058254"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 連接管理員編輯器 (Proxy 頁面)
   使用 **[HTTP 連接管理員編輯器]** 對話方塊的 **[Proxy]** 索引標籤，來設定 HTTP 連接管理員使用 Proxy 伺服器。 HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。  
   
  若要深入了解 HTTP 連接管理員，請參閱＜ [HTTP Connection Manager](connection-manager/http-connection-manager.md)＞。 若要深入了解 HTTP 連接管理員的常見使用案例，請參閱＜ [Web Service Task](control-flow/web-service-task.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **使用 Proxy**  
  指定 HTTP 連接管理員是否要透過 Proxy 伺服器連接。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "58378866"
  輸入您想要針對它略過 Proxy 伺服器的位址。  
   
  **移除**  
- 選取一個位址，然後按一下 [移除] 來移除它。  
+ 選取一個位址，然後按一下 [移除]  來移除它。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

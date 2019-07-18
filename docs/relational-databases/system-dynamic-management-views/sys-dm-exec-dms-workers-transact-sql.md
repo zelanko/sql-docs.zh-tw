@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a31b03208eba573fc6bd50f2348733ef0a07c2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3728fddb26d45107b0e695453bef6eeb9fa5de63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097785"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "52418359"
 |dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|Worker 執行所在的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
-|型別|**nvarcha(32)**|||  
+|type|**nvarcha(32)**|||  
 |status|**nvarchar(32)**|此步驟的狀態|'暫止'、 'Running'，'Complete'、 'Failed'、 'UndoFailed'、 'PendingCancel'，' 已取消 '，'復原'、 '中止'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  

@@ -1,20 +1,20 @@
 ---
 title: 改善 Windows 上的 PolyBase 相應放大群組 | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: polybase
 ms.topic: tutorial
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: dde914af4ecb6ab342aa2cdfabfc161cf7dbabbb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417479"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730180"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改善 Windows 上的 PolyBase 相應放大群組
 
@@ -42,6 +42,8 @@ ms.locfileid: "52417479"
 
 5. 選擇性。 使用 [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md) 移除運算節點。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-walk-through"></a>範例逐步解說
 
 這會使用下列項目逐步設定 PolyBase 群組︰  
@@ -52,17 +54,17 @@ ms.locfileid: "52417479"
   
    - PQTH4A-CMP02  
   
-2. 網域帳戶︰*PQTH4A\PolyBaseUse*r  
+2. 網域帳戶：*PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>在所有電腦上安裝包含 PolyBase 的 SQL Server
 
 1. 執行 setup.exe。
   
-2. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。
+2. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。
   
 3. 在 [伺服器設定] 頁面上，針對 SQL Server PolyBase 引擎和 SQL Server PolyBase 資料移動服務，請使用**網域帳戶** PQTH4A\PolyBaseUser。
   
-4. 在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。
+4. 在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]  。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。
   
 5. 安裝程式完成之後，執行 **services.msc**。 確認 SQL Server、PolyBase Engine 和 PolyBase Data Movement Service 正在執行中。
   

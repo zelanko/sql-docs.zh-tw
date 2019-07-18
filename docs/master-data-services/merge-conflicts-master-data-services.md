@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 927990916440cc33c56a362b17b77adbb726620e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092572"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合併衝突 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52779560"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您嘗試發佈已由另一位使用者變更的資料，則該發佈將會失敗並會出現衝突錯誤。 若要解決此錯誤，可以執行合併衝突，然後重新發佈所做的變更。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -33,19 +32,19 @@ ms.locfileid: "52779560"
   
 ### <a name="to-merge-conflicts"></a>合併衝突  
   
-1.  在 [總管] 頁面上，更新成員屬性。  
+1.  在 [總管]  頁面上，更新成員屬性。  
   
-2.  如果另一位使用者已變更同一個成員屬性，[合併衝突] 對話方塊隨即會出現。  
+2.  如果另一位使用者已變更同一個成員屬性，[合併衝突]  對話方塊隨即會出現。  
   
-3.  在 [合併衝突] 對話方塊中，您可以︰  
+3.  在 [合併衝突]  對話方塊中，您可以︰  
   
-    -   選擇 [最新]，並按一下 [套用] 復原暫止的變更，然後重新載入來自伺服器的最新版本。  
+    -   選擇 [最新]  ，並按一下 [套用]  復原暫止的變更，然後重新載入來自伺服器的最新版本。  
   
-    -   選擇 [原始]，並按一下 [套用] 套用工作表中的原始版本。  
+    -   選擇 [原始]  ，並按一下 [套用]  套用工作表中的原始版本。  
   
-    -   選擇 [您的]，並按一下 [套用] 保留現有的本機變更。  
+    -   選擇 [您的]  ，並按一下 [套用]  保留現有的本機變更。  
   
-4.  按一下 [套用] 之後，您可以進行其他變更，並重新發佈。 或是按一下 [取消] 取消更新，並重新載入來自伺服器的最新版本。  
+4.  按一下 [套用]  之後，您可以進行其他變更，並重新發佈。 或是按一下 [取消]  取消更新，並重新載入來自伺服器的最新版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  

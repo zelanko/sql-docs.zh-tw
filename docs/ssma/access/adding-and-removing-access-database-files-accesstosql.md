@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104207"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>新增和移除 Access 資料庫檔案 (AccessToSQL)
 若要將 Access 資料移至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須將一或多個 Access 資料庫加入 SSMA 專案。 這些資料庫必須是 Access 97 或更新版本。 如果您的資料庫從舊版的存取權，您必須將資料庫轉換為較新版本。 您可以開啟和儲存在 Access 97 或更新版本的資料庫，才將它們新增至 SSMA。  
@@ -85,7 +84,7 @@ ms.locfileid: "51655637"
   
     您可以使用**全選**並**全部清除**来選取或清除所有資料庫的清單頂端的按鈕。 您可以按住 CTRL 鍵以選取多個資料庫，或按住 SHIFT 鍵，向下選取範圍的資料庫。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步]  。  
   
 8.  在 確認 頁面中，按一下 **完成**。  
   
@@ -102,7 +101,7 @@ Access 資料庫加入至專案之後，專案中繼資料會出現在存取中�
   
 3.  依序展開**資料表**，然後選取資料表。  
   
-    請注意，會出現四個索引標籤：**資料表**，**型別對應**，**屬性**，以及**資料**。  
+    請注意，會出現四個索引標籤：**表格**，**類型對應**，**屬性**，和**資料**。  
   
 4.  展開資料表，再展開**金鑰**，然後選取 索引鍵。  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e363de8799a068c1ed874553b0aeed2b25b74d66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f722d457bd56184df4d8dea3e0616e7a4370c94d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796946"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794209"
 ---
 # <a name="supportscorrelatedsubqueries-method-sqlserverdatabasemetadata"></a>supportsCorrelatedSubqueries 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

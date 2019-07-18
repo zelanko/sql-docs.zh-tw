@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2cd2e4f3e5ee16c02ba48c6cd8ced98c06133dfb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761079"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>停用複寫的外部索引鍵條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用複寫的外部索引鍵條件約束。 這有助於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行資料。  
@@ -52,7 +52,7 @@ ms.locfileid: "52798876"
   
 1.  在 **[物件總管]** 中，展開您要修改其外部索引鍵條件約束的資料表，然後展開 **[索引鍵]** 資料夾。  
   
-2.  以滑鼠右鍵按一下外部索引鍵條件約束，然後按一下 [修改]。  
+2.  以滑鼠右鍵按一下外部索引鍵條件約束，然後按一下 [修改]  。  
   
 3.  在 **[外部索引鍵關聯性]** 對話方塊中，針對 **[強制複寫]** 選取 **[否]** 值。  
   

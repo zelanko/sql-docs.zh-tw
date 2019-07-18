@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ad2ccc2505c3bb72b8d2efc02afbc5ef5aebaf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b23525dc9762d012948e6eba0b41156b45ac69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056286"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,6 +42,6 @@ ms.locfileid: "47806827"
  只有成員的使用者的**sysadmin**固定的伺服器角色可以存取這份資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysjobactivity &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+ [dbo.sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

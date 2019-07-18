@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact-SQL) | Microsoft Docs
+title: sp_server_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104449"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
 |**10**|OWNER_TERM|owner|  
-|**11**|TABLE_TERM|資料表|  
+|**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> 指定資料表名稱的最大字元數目。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定資料表限定詞 (三部份資料表名稱的第一部份) 名稱的最大長度。|128|  
@@ -72,7 +71,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**20**|MULTI_RESULT_SETS<br /><br /> 指定基礎資料庫或閘道本身是否支援多個結果集 (可以透過閘道傳送多個陳述式，將多個結果集傳回用戶端)。|Y|  
 |**22**|ACCESSIBLE_TABLES<br /><br /> 指定無論**sp_tables**，閘道會傳回唯一的資料表、 檢視和等等，供目前使用者 （也就是擁有資料表的最少選取權限的使用者）。|Y|  
 |**100**|USERID_LENGTH<br /><br /> 指定使用者名稱的最大字元數目。|128|  
-|**101**|QUALIFIER_TERM<br /><br /> 指定資料表限定詞的 DBMS 供應商詞彙 (三部份名稱的第一部份)。|[資料庫]|  
+|**101**|QUALIFIER_TERM<br /><br /> 指定資料表限定詞的 DBMS 供應商詞彙 (三部份名稱的第一部份)。|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 指定基礎 DBMS 是否支援具名交易。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 指定預存程序是否可作為語言事件來執行。|Y|  
 |**104**|ACCESSIBLE_SPROC<br /><br /> 指定無論**sp_stored_procedures**，閘道會傳回只預存程序目前的使用者所能執行。|Y|  

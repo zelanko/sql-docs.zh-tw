@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947952"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  這是用來測試權限之安全性實體的類別名稱。 *securable_class* 為 **nvarchar(60)** 類型的純量運算式。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 引數必須設為下列其中一項：**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA** 或 **USER**。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 引數必須設定為下列其中一項：**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA** 或 **USER**。  
   
  *permission*  
  類型為 **sysname**，不可為 Null 的純量運算式，表示要檢查的權限名稱。 沒有預設值。 權限名稱 ANY 是萬用字元。  
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  **sysname** 類型的選擇性純量運算式，表示用來測試權限之安全性實體的子實體名稱。 預設值是 NULL。  
   
 > [!NOTE]  
->  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全性實體不能使用格式為 **'[**_sub name_**]'** 的括弧。 請改為使用 **'**_sub name_**'**。  
+>  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全性實體不能使用格式為 **'[** _sub name_ **]'** 的括弧。 請改為使用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
  **nvarchar(60)** 類型的選擇性純量運算式，表示測試權限的安全性實體之子實體的類別。 預設值是 NULL。  
@@ -98,7 +98,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   目前資料庫定序：包含結構描述未包含之安全性實體的資料庫層級安全性實體；一或兩部分結構描述範圍的安全性實體；使用三部分名稱時的目標資料庫。  
   
--   master 資料庫定序：伺服器層級安全性實體。  
+-   Master 資料庫定序：伺服器層級安全性實體。  
   
 -   資料行層級檢查不支援 'ANY'。 您必須指定適當的權限。  
   

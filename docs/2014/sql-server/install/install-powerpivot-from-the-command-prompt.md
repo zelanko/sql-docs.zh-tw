@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e6da1b23bd23634e3edb8d92093cab6ce71a2783
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094563"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>從命令提示字元安裝 PowerPivot
   您可以從命令列執行安裝程式來安裝 SQL Server PowerPivot for SharePoint。 您可以在命令中包含 `/ROLE` 參數並排除 `/FEATURES` 參數。  

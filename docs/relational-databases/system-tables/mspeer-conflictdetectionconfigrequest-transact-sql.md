@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5489a2135882415b27bbe5dd7c62c7759a0f71bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2ecd4ef541422b1241689f17ab5c4f1a53bcc0a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115037"
 ---
 # <a name="mspeerconflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e3e491ccb659d8739cb93d72e0c923fce480015
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927162"
 ---
 # <a name="ado-features-for-each-release"></a>針對每個發行項 ADO 功能
 
@@ -52,7 +51,7 @@ ms.locfileid: "54206434"
 
  **CubDef.GetSchemaObject**_方法_從 ADO 2.6 開始，ADO MD 物件可以擷取使用唯一的名稱，必須按照[UniqueName 屬性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。 不需要知道，父物件的名稱和父集合不需要填入，以擷取結構描述物件。 請參閱[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
 
- *命令資料流***命令**物件使用的替代方式為資料流格式支援命令**CommandText**屬性。 [CommandStream 屬性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用來指定 XML 範本或 updategram 做**命令**輸入 Microsoft OLE DB provider for SQL Server。
+ *命令資料流* **命令**物件使用的替代方式為資料流格式支援命令**CommandText**屬性。 [CommandStream 屬性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用來指定 XML 範本或 updategram 做**命令**輸入 Microsoft OLE DB provider for SQL Server。
 
  **方言**_屬性_[方言](../../ado/reference/ado-api/dialect-property.md)是新的屬性，定義的語法和一般規則提供者會使用來剖析字串或資料流。
 

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916944"
 ---
 # <a name="model-database"></a>Model 資料庫
   **model** 資料庫可做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。 因為每次 **啟動時，都會建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 資料庫一定要存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統中。 **model** 資料庫的完整內容 (包括資料庫選項) 都會複製到新的資料庫。 在啟動期間， **model** 的某些設定也會用於建立新的 **tempdb** ，所以 **model** 資料庫必須一直存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統上。  

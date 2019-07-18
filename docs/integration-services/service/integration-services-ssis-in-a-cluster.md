@@ -11,14 +11,18 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66b5b6c36b167507397a0a5b33e16dea6b6a8dd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7332f70144194bcddca0c2729b4615252a39e7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717902"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
  雖然 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並非叢集服務，但在叢集的每個節點上個別安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之後，您可以手動設定該服務，把它當做叢集資源來運作。  
@@ -87,7 +91,7 @@ ms.locfileid: "58283192"
   
 ### <a name="to-configure-integration-services-as-a-cluster-resource"></a>將 Integration Services 設定為叢集資源  
   
-1.  開啟 [叢集管理員]。  
+1.  開啟 [叢集管理員]  。  
   
 2.  在主控台樹狀目錄中，選取 [Groups] 資料夾。  
   
@@ -97,21 +101,21 @@ ms.locfileid: "58283192"
   
     -   若要將 Integrations Services 當做叢集資源加入至與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同的群組，請選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所屬群組以外的群組。  
   
-4.  在 [檔案] 功能表上，指向 [開新檔案]，然後按一下 [資源]。  
+4.  在 [檔案]  功能表上，指向 [開新檔案]  ，然後按一下 [資源]  。  
   
-5.  在 [資源精靈] 的 [新資源] 頁面上鍵入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
+5.  在 [資源精靈] 的 [新資源]  頁面上鍵入名稱，然後選取 [一般服務]  作為 [服務類型]  。 請不要變更 [群組]  的值。 按 [下一步]  。  
   
-6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步] 。  
+6.  在 [可能的擁有者]  頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步]  。  
   
-7.  若要在 [相依性] 頁面上加入相依性，請選取 [可用的資源] 之下的資源，然後按一下 [加入]。 在容錯移轉時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和儲存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的共用磁碟會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連線之前重新連線。 選取相依性之後，請按一下 [下一步]。  
+7.  若要在 [相依性]  頁面上加入相依性，請選取 [可用的資源]  之下的資源，然後按一下 [加入]  。 在容錯移轉時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和儲存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的共用磁碟會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連線之前重新連線。 選取相依性之後，請按一下 [下一步]  。  
   
      如需詳細資訊，請參閱[加入 SQL Server 資源的相依性](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
-8.  在 [一般服務參數] 頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按 [下一步] 。  
+8.  在 [一般服務參數]  頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按 [下一步]  。  
   
-9. 在 [機碼複寫] 頁面上，按一下 [加入] 以加入用來識別 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔位置的登錄機碼。 此檔案必須位在與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務相同的資源群組中的共用磁碟上。  
+9. 在 [機碼複寫]  頁面上，按一下 [加入]  以加入用來識別 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔位置的登錄機碼。 此檔案必須位在與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務相同的資源群組中的共用磁碟上。  
   
-10. 在 [登錄機碼] 對話方塊中，輸入 **SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**。 按一下 [確定]，然後按一下 [完成]。  
+10. 在 [登錄機碼]  對話方塊中，輸入 **SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**。 按一下 [確定]  ，然後按一下 [完成]  。  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務現在已加入成叢集資源。  
   
@@ -129,6 +133,6 @@ ms.locfileid: "58283192"
   
 ### <a name="to-bring-the-integration-services-service-online"></a>將 Integration Services 服務連線  
   
--   請在 [叢集管理員] 中，選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並按一下滑鼠右鍵，然後從快顯功能表中選取 [上線]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務現在已連線成叢集資源。  
+-   請在 [叢集管理員]  中，選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並按一下滑鼠右鍵，然後從快顯功能表中選取 [上線]  。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務現在已連線成叢集資源。  
   
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127925"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>訊息 （錯誤） 目錄檢視-sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

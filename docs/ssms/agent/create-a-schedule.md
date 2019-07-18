@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], scheduling
 - schedules [SQL Server], jobs
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 867c17d9b4b2cc1c324df936ca90dccc3b1fda03
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0c0ba0792ef3789ca3ca19445e3184155b21d48a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703116"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681236"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51703116"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要使用下列項目建立排程：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51703116"
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Security"></a>安全性  
-如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
+如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -55,21 +55,21 @@ ms.locfileid: "51703116"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**、以滑鼠右鍵按一下 **[作業]**，然後選取 **[管理排程]**。  
+2.  展開 **[SQL Server Agent]** 、以滑鼠右鍵按一下 **[作業]** ，然後選取 **[管理排程]** 。  
   
-3.  在 **[管理排程]** 對話方塊中，按一下 **[新增]**。  
+3.  在 **[管理排程]** 對話方塊中，按一下 **[新增]** 。  
   
 4.  在 **[名稱]** 方塊中，輸入新排程的名稱。  
   
 5.  如果您不想要讓排程在建立之後立即生效，請清除 **[已啟用]** 核取方塊。  
   
-6.  針對 **[排程類型]**，選取下列其中一項：  
+6.  針對 **[排程類型]** ，選取下列其中一項：  
   
-    -   若要在 CPU 達到閒置條件時啟動此作業，請按一下 **[只要 CPU 閒置就啟動]**。  
+    -   若要在 CPU 達到閒置條件時啟動此作業，請按一下 **[只要 CPU 閒置就啟動]** 。  
   
-    -   如果您想要重複執行排程，按一下 **[重複執行]**。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]**、 **[每日頻率]** 和 **[持續時間]** 群組。  
+    -   如果您想要重複執行排程，按一下 **[重複執行]** 。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]** 、 **[每日頻率]** 和 **[持續時間]** 群組。  
   
-    -   如果您想要讓排程只執行一次，請按一下 **[執行一次]**。 若要設定 **[執行一次]** 排程，請完成對話方塊上的 **[僅發生一次]** 群組。  
+    -   如果您想要讓排程只執行一次，請按一下 **[執行一次]** 。 若要設定 **[執行一次]** 排程，請完成對話方塊上的 **[僅發生一次]** 群組。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "51703116"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- creates a schedule named RunOnce.   

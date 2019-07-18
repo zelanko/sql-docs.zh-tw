@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a5bcf05ccb3876ab22227ea2f5a5e5c9d7bbbbc6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705246"
 ---
 # <a name="device-driver-control-error"></a>裝置驅動程式控制項錯誤
   這個規則會檢查系統事件記錄檔中是否有 EventId 11。 這可能是因為裝置驅動程式損毀、硬體問題、纜線不良或連接問題所造成。  

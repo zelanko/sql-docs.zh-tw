@@ -11,16 +11,15 @@ dev_langs:
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 61824058d90b7a922f6bd2d288a85b4923c0975e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088753"
 ---
-# <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (Transact-SQL)
+# <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留所有相關資訊的等候執行要求期間發生的狀態，或查詢，其中包括鎖定等候傳輸佇列等等。  
@@ -29,7 +28,7 @@ ms.locfileid: "56042869"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|等候狀態相關聯的唯一數值識別碼。<br /><br /> 此檢視的索引鍵。|跨所有等候系統中是唯一的。|  
 |session_id|**nvarchar(32)**|等候狀態發生所在之工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|型別|**nvarchar(255)**|此項目所代表的等候類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(255)**|此項目所代表的等候類型。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|等候受影響的物件型別。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar(386)**|指定等候受影響之物件的 GUID 或名稱。||  
 |request_id|**nvarchar(32)**|等候狀態發生所在之要求的識別碼。|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
@@ -40,6 +39,6 @@ ms.locfileid: "56042869"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
+ [sys.dm_pdw_wait_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
   

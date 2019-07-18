@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198949"
 ---
 # <a name="change-resource-pool-settings"></a>變更資源集區設定
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來變更資源集區設定。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要變更資源集區中，設定使用：**[SQL Server Management Studio](#ChgRPProp)， [Transact SQL](#ChgRPTSQL)  
+-   **若要變更資源集區的設定，請使用下列方式：** [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -40,15 +40,15 @@ ms.locfileid: "52763310"
 ##  <a name="ChgRPProp"></a> 使用 SQL Server Management Studio 變更資源集區設定  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理]  節點至 [資源集區] 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 [管理]  節點至 [資源集區]  。  
   
-2.  以滑鼠右鍵按一下要修改的資源集區，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下要修改的資源集區，然後按一下 [屬性]  。  
   
 3.  在 **[資源管理員屬性]** 頁面的 **[資源集區]** 方格中，選取資源集區的資料列 (如果系統沒有自動選取的話)。  
   
 4.  在資料列中按一下或按兩下要變更的資料格，然後輸入新值。  
   
-5.  若要儲存變更，請按一下 **[確定]**。  
+5.  若要儲存變更，請按一下 **[確定]** 。  
   
 ##  <a name="ChgRPTSQL"></a> 使用 Transact-SQL 變更資源集區設定  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

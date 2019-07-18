@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2cb100265cdb49fba1728900829344e024190db1
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 38d845e9864535e8e0fb308d1dc2ed42030ff340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052457"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 屬性 (SqlServerAlias 別名)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

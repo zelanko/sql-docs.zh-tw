@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039744"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函式
 
@@ -140,12 +139,12 @@ SQLRETURN SQLSetDescField(
   
  下表概述標頭欄位的初始化。  
   
-|標頭欄位名稱|類型|R/W|預設|  
+|標頭欄位名稱|type|R/W|預設|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD:R APD 中：R IRD:R IPD:R|ARD:針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> APD 中：針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> IRD:SQL_DESC_ALLOC_AUTO<br /><br /> IPD:SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD: [1] APD: [1] 的 IRD:未使用的 IPD:未使用|  
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:R/W APD 中：R/W IRD:R/W IPD:R/W|ARD:Null ptr APD:Null ptr IRD:Null ptr IPD:Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD 中：SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
 |SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:0 APD:0 IRD:D IPD:0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ARD:未使用的 APD:未使用的 IRD:R/W IPD:R/W|ARD:未使用的 APD:未使用的 IRD:Null ptr IPD:Null ptr|  
@@ -154,7 +153,7 @@ SQLRETURN SQLSetDescField(
   
  記錄欄位的初始化是下表所示。  
   
-|記錄欄位名稱|類型|R/W|預設|  
+|記錄欄位名稱|type|R/W|預設|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
@@ -204,7 +203,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_ALLOC_TYPE [All]**  
  這個唯讀 SQLSMALLINT 標頭欄位會指定是否描述項配置會自動由驅動程式或明確的應用程式。 應用程式可以取得，但不是能修改此欄位。 欄位是設為 SQL_DESC_ALLOC_AUTO 驅動程式所驅動程式會自動配置描述元。 它是如果設定為 SQL_DESC_ALLOC_USER 驅動程式應用程式所明確配置描述元。  
   
- **SQL_DESC_ARRAY_SIZE [Application descriptors]**  
+ **SQL_DESC_ARRAY_SIZE [應用程式描述項]**  
  ARDs，在此 SQLULEN 標頭欄位會指定資料列集中的資料列數目。 這是藉由呼叫傳回資料列數目**SQLFetch**或是**SQLFetchScroll** ，或藉由呼叫來操作**SQLBulkOperations**或**SQLSetPos**.  
   
  Apd，在此 SQLULEN 標頭欄位會指定每個參數的值數目。  
@@ -275,7 +274,7 @@ SQLRETURN SQLSetDescField(
   
  APD 中的這個欄位也可以藉由呼叫設定**SQLSetStmtAttr** SQL_ATTR_PARAM_OPERATION_PTR 屬性。  
   
- **SQL_DESC_BIND_OFFSET_PTR [Application descriptors]**  
+ **SQL_DESC_BIND_OFFSET_PTR [應用程式描述項]**  
  這是 SQLLEN * 標頭欄位會指向繫結位移。 根據預設，它會設定為 null 指標。 如果此欄位不是 null 指標，驅動程式會取值指標，並將已取值的值加入至每個延遲欄位 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 描述項記錄中具有非 null 值在擷取的時間，並使用新的指標值繫結時。  
   
  繫結位移是一律直接新增至 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 欄位中的值。 如果位移變更為不同的值，新的值是仍然直接新增至每個描述項欄位中的值。 新的位移不會加入至欄位值，加上任何先前的位移。  
@@ -286,7 +285,7 @@ SQLRETURN SQLSetDescField(
   
  如需詳細資訊，請參閱中的資料列取向繫結的描述[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)並[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。  
   
- **SQL_DESC_BIND_TYPE [Application descriptors]**  
+ **SQL_DESC_BIND_TYPE [應用程式描述項]**  
  此 SQLUINTEGER 標頭欄位會設定要用於繫結資料行或參數的繫結方向。  
   
  ARDs，在此欄位會指定繫結方向時**SQLFetchScroll**或是**SQLFetch**相關聯的陳述式控制代碼上呼叫。  
@@ -377,15 +376,15 @@ SQLRETURN SQLSetDescField(
 |SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
 |SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
 |SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-|SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MINUTE_TO_SECOND / SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
 |SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-|SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
-|SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
+|SQL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
  如需有關資料間隔，而此欄位的詳細資訊，請參閱[資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)。  
@@ -399,7 +398,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_FIXED_PREC_SCALE [實作描述元]**  
  此唯讀 SQLSMALLINT 記錄欄位設為 SQL_TRUE，如果資料行是精確數值資料行，且具有固定有效位數和非零值的小數位數或 SQL_FALSE 如果資料行不是確切的數值資料行具有固定有效位數和小數位數。  
   
- **SQL_DESC_INDICATOR_PTR [Application descriptors]**  
+ **SQL_DESC_INDICATOR_PTR [應用程式描述項]**  
  在 ARDs，這是 SQLLEN * 記錄欄位會指向指標變數。 如果資料行的值是 NULL，此變數會包含 SQL_NULL_DATA。 Apd，如這個指標變數來指定 NULL 的動態引數將設定為 SQL_NULL_DATA。 否則，變數會是零 （除非 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 中的值都是相同的指標）。  
   
  如果 ARD SQL_DESC_INDICATOR_PTR 欄位會是 null 指標，驅動程式無法傳回資料行是否為 NULL 的相關資訊。 如果資料行為 NULL 和 SQL_DESC_INDICATOR_PTR 為 null 指標，SQLSTATE 22002 （指標變數所需但未提供） 時，會傳回驅動程式會嘗試在呼叫之後填入緩衝區**SQLFetch**或**SQLFetchScroll**。 如果在呼叫**SQLFetch**或是**SQLFetchScroll**未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容為未定義。  
@@ -434,7 +433,7 @@ SQLRETURN SQLSetDescField(
   
  在 Ipd，這個欄位是未定義的如果驅動程式不支援具名的參數。 如果驅動程式支援具名的參數，而且能夠描述參數，參數名稱會傳回此欄位中。  
   
- **SQL_DESC_NULLABLE [Implementation descriptors]**  
+ **SQL_DESC_NULLABLE [實作描述元]**  
  IRDs，在此唯讀 SQLSMALLINT 記錄欄位會是 SQL_NULLABLE，如果資料行可以有 NULL 值，SQL_NO_NULLS 如果資料行不具有 NULL 值或 SQL_NULLABLE_UNKNOWN，如果不知道資料行是否接受 NULL 值。 此欄位屬於結果集資料行，不是基底的資料行。  
   
  在 Ipd，這個欄位是一律設定為 SQL_NULLABLE 因為動態參數都可為 null，而且無法設定應用程式。  
@@ -445,7 +444,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_OCTET_LENGTH [All]**  
  這是 SQLLEN 記錄欄位包含的長度，以位元組為單位的字元字串或二進位資料類型。 固定長度的字元或二進位類型，這是以位元組為單位的實際長度。 可變長度的字元或二進位類型，這是以位元組為單位的最大長度。 這個值一律會排除實作描述項之 null 結束字元的空間，而且永遠會包含應用程式描述項之 null 結束字元的空間。 應用程式資料，此欄位會包含緩衝區的大小。 Apd，這個欄位被定義僅適用於輸出或輸入/輸出參數。  
   
- **SQL_DESC_OCTET_LENGTH_PTR [Application descriptors]**  
+ **SQL_DESC_OCTET_LENGTH_PTR [應用程式描述項]**  
  這是 SQLLEN * 記錄欄位，將包含的總長度以位元組為單位的動態引數 （參數描述項） 或 （適用於資料列描述項） 的繫結的資料行值的變數會指向。  
   
  APD 中，是會忽略這個值的字元字串和二進位檔; 以外的所有引數如果此欄位會指向 SQL_NTS，動態引數必須以 null 結束。 若要表示繫結的參數是資料在執行中參數，應用程式設定此欄位中適當的記錄 APD 中的變數，，請在執行階段，將會包含值 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果. 如果有多個這類欄位，可以用來唯一識別參數的值設定 SQL_DESC_DATA_PTR，以協助判斷哪一個參數所要求的應用程式。  
@@ -504,10 +503,10 @@ SQLRETURN SQLSetDescField(
   
 |SQL_DESC_TYPE 值|隱含地設定其他欄位|  
 |------------------------------|---------------------------------|  
-|SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH 設為 1。 SQL_DESC_PRECISION 設為 0。|  
+|SQL_CHAR、 SQL_VARCHAR、 SQL_C_CHAR SQL_C_VARCHAR|SQL_DESC_LENGTH 設為 1。 SQL_DESC_PRECISION 設為 0。|  
 |SQL_DATETIME|SQL_DESC_DATETIME_INTERVAL_CODE 設 SQL_CODE_DATE 或 SQL_CODE_TIME，SQL_DESC_PRECISION 設為 0。 當它設定為 SQL_DESC_TIMESTAMP 時，SQL_DESC_PRECISION 設為 6。|  
-|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|SQL_DESC_SCALE 設為 0。 SQL_DESC_PRECISION 會設定為個別的資料類型的實作定義的有效位數。<br /><br /> 請參閱[SQL 到 c:數值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)如需有關如何以手動方式將繫結 SQL_C_NUMERIC 值資訊。|  
-|SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 是設定為實作定義的預設有效位數。|  
+|SQL_DECIMAL，SQL_NUMERIC，SQL_C_NUMERIC|SQL_DESC_SCALE 設為 0。 SQL_DESC_PRECISION 會設定為個別的資料類型的實作定義的有效位數。<br /><br /> 請參閱[SQL 到 c:數值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)如需有關如何以手動方式將繫結 SQL_C_NUMERIC 值資訊。|  
+|SQL_FLOAT、 SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 是設定為實作定義的預設有效位數。|  
 |SQL_INTERVAL|當 SQL_DESC_DATETIME_INTERVAL_CODE 設定間隔資料類型時，會將 SQL_DESC_DATETIME_INTERVAL_PRECISION 設定為 2 （預設間隔開頭有效位數）。 時的間隔秒數元件，則會將 SQL_DESC_PRECISION 設定為 6 （預設間隔秒數有效位數）。|  
   
  當應用程式呼叫**SQLSetDescField**來設定欄位的描述元，而不是呼叫**SQLSetDescRec**，應用程式必須先宣告的資料類型。 載入時，會隱含地設定，如上表所示的其他欄位。 值的隱含集是否有任何無法接受，應用程式接著可以呼叫**SQLSetDescField**或是**SQLSetDescRec**明確地設定無法接受的值。  

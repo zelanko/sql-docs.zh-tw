@@ -202,13 +202,13 @@
       href: deferred-transactions-sql-server.md
     - name: 移除無用的檔案群組 (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: 範例：線上還原讀取/寫入檔案 (完整復原模式)
+    - name: 範例線上還原讀取/寫入檔案 (完整復原模式)
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: 範例：線上還原唯讀檔案 (完整復原模式)
+    - name: 範例線上還原讀取/寫入檔案 (完整復原模式)
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: 範例：線上還原唯讀檔案 (簡單復原模式)
+    - name: 範例線上還原讀取/寫入檔案 (簡單復原模式)
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: 範例：離線還原主要檔案群組與另一個檔案群組 (完整復原模式)
+    - name: 範例離線還原主要檔案群組與另一個檔案群組 (完整復原模式)
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: 還原頁面
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: 分次還原
   href: piecemeal-restores-sql-server.md
   items:
-    - name: 範例：分次還原資料庫 (完整復原模式)
+    - name: 範例分次還原資料庫 (完整復原模式)
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: 範例：分次還原資料庫 (簡單復原模式)
+    - name: 範例分次還原資料庫 (簡單復原模式)
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: 範例：僅限於部份檔案群組的分次還原 (完整復原模式)
+    - name: 範例僅對部分檔案群組分次還原 (完整復原模式)
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: 範例：僅限於某些檔案群組的分次還原 (簡單復原模式)
+    - name: 範例僅對部分檔案群組分次還原 (簡單復原模式)
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: 在不還原資料的情況下復原資料庫 (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md

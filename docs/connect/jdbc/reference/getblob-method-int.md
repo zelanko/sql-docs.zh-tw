@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef2ab07997f052a8ae97bd1f654fab08e51e02dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 452ab23f278ed0c7c3f25af5d1be38d35681c230
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619206"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799725"
 ---
 # <a name="getblob-method-int"></a>getBlob 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

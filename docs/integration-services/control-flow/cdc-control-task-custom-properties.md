@@ -11,14 +11,18 @@ ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db93ad1d3f838e82c03b3512ea25c39c0dc1e2de
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d207f253b3604cfc15b5cf5cc792eeba4e668fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727915"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   下表描述 CDC 控制工作的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性名稱|資料類型|Description|  

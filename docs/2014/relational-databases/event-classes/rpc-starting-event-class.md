@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a5f427d9430c38b129b7cef6fb2e1cf7ab19e9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044249"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件類別
   RPC:Starting 事件類別表示已經啟動遠端程序呼叫。  

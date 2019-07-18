@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133030"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

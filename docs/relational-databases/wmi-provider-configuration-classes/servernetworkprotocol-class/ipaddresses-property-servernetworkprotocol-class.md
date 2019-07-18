@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a461963f0d6ff8873d33cbd0439d03d5f9f2e8f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f1962af350c7349b58c2a617f23017a70309d7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933736"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

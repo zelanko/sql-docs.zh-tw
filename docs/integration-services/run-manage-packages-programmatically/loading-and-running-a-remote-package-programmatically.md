@@ -15,14 +15,18 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2b44c9abc97032e1f3c11b20e25cbffbd5bff7f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719441"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   若要從沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本機電腦執行遠端封裝，請啟動封裝，讓它們在已安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端電腦上執行。 完成這項工作的方法是讓本機電腦使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、Web 服務或遠端元件來啟動遠端電腦上的封裝。 如果您嘗試直接從本機電腦啟動遠端封裝，該封裝將載入並嘗試從本機電腦執行。 如果本機電腦沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，封裝將不會執行。  
   
 > [!NOTE]  
@@ -165,7 +169,7 @@ namespace LaunchSSISPackageAgent_CS
   
 2.  新增 **Microsoft.SqlServer.ManagedDTS** 的參考，並將 **Imports** 或 **using** 陳述式新增至 **Microsoft.SqlServer.Dts.Runtime** 命名空間的程式碼檔案。  
   
-3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中  (範例顯示程式碼視窗的整個內容)。  
+3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中 (範例顯示程式碼視窗的整個內容)。  
   
 4.  藉由為 LaunchPackage 方法的輸入引數提供一組指向現有封裝的有效值，建立並測試 Web 服務。 例如，如果 package1.dtsx 是儲存在伺服器上的 C:\My Packages 中，則傳遞 "file" 以做為 sourceType 的值，傳遞 "C:\My Packages" 做為 sourceLocation 的值，並傳遞 "package1" (沒有副檔名) 做為 packageName 的值。  
   
@@ -340,7 +344,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 3.  加入 Web 服務專案的 Web 參考。 若有需要，請在範例程式碼中，為指派到 Web 服務 Proxy 物件的名稱，調整變數宣告。  
   
-4.  將 Main 常式與私用列舉的範例程式碼貼到程式碼中  (範例顯示程式碼視窗的整個內容)。  
+4.  將 Main 常式與私用列舉的範例程式碼貼到程式碼中 (範例顯示程式碼視窗的整個內容)。  
   
 5.  編輯呼叫 LaunchPackage 方法的程式碼行，為其輸入引數提供一組指向現有封裝的有效值。 例如，如果 package1.dtsx 是儲存在伺服器上的 C:\My Packages 中，則傳遞 "file" 以做為 `sourceType` 的值，傳遞 "C:\My Packages" 做為 `sourceLocation` 的值，並傳遞 "package1" (沒有副檔名) 做為 `packageName` 的值。  
   

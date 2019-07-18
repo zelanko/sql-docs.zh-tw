@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 02c2443d-44e1-4f16-a0d5-08d197838214
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5520e84dc049a3aa395e62b4df94331d50fd8d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71467c99e486e04ea9ba707821ed011ecdd61f13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765108"
 ---
 # <a name="setasciistream-method-int-javaioinputstream"></a>setAsciiStream 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將設定指定的參數編號為給定的 java.io.InputStream 物件。  
+  將指定的參數號碼設定為所指定 java.io.InputStream 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ public final void setAsciiStream(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setAsciiStream 方法是由 java.sql.PreparedStatement 介面中的 setAsciiStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -2,19 +2,18 @@
 title: 'Analytics Platform System 中設定 TLS 1.2 |Microsoft Docs '
 description: 若要設定 TLS 1.2 中 AP 的建議
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: e77e1de7ccc3894d9356821a95139835ceb52caa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961183"
 ---
 # <a name="configure-tls-12-in-aps"></a>在 AP 中設定 TLS 1.2
 

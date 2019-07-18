@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406465"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583577"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 執行這項操作的方法有三種：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是藉由使用 **sp_recompile** 系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 有三種方式可以執行此動作：程序定義中或呼叫程序時的 **WITH RECOMPILE** 選項、個別陳述式上的 **RECOMPILE** 查詢提示，或是透過使用 **sp_recompile** 系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
   
  **本主題內容**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "52406465"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法重新編譯預存程序：**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52406465"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  **WITH RECOMPILE** 選項  
  如果在建立程序定義時使用此選項，則需要資料庫的 CREATE PROCEDURE 權限以及建立程序所在結構描述的 ALTER 權限。  
   
@@ -73,10 +73,12 @@ ms.locfileid: "52406465"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立程序定義。  
-  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立程序定義。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -101,11 +103,11 @@ AS
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
   
-     接著將第二個程式碼範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
+     接著將第二個程式碼範例複製並貼到查詢視窗中，然後按一下 **[執行]** 。 這樣就會執行程序，並重新編譯程序的查詢計劃。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -119,11 +121,11 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例所建立的簡單程序會從檢視表傳回所有員工 (所提供的姓氏和名字)、工作職稱及部門名稱。  
   
-     接著將下列範例複製並貼到查詢視窗中，並按一下 **[執行]**。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
+     接著將下列範例複製並貼到查詢視窗中，並按一下 **[執行]** 。 這樣並不會執行程序，但會標示要重新編譯的程序，以便在下一次執行程序時更新其查詢計畫。  
   
 ```sql  
 USE AdventureWorks2012;  

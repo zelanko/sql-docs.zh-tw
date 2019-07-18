@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
@@ -13,12 +12,12 @@ ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67cd89f4cf857f11f08f69769ff54a22fd83760f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077735"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>採礦模型檢視器 (資料採礦模型設計師)
   使用 **[採礦模型檢視器]** 索引標籤，即可瀏覽採礦結構所包含的採礦模型。  
@@ -34,7 +33,7 @@ ms.locfileid: "48152800"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型將會先在其關聯的自訂檢視器中開啟。  
   
- **檢視器**  
+ **Viewer**  
  選擇用來瀏覽選取之採礦模型的檢視器。 這份清單包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為每個採礦模型提供的檢視器、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器，以及任何外掛程式檢視器。  
   
  下圖顯示相同模型的自訂檢視器和一般檢視器。  

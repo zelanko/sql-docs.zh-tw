@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2d7370b9b219c43bab4bfdc45377795edf148fc9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948540"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>連線到 SQL Server (SybaseToSQL)
 若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須連接到任何目標執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SSMA 連線時，取得執行個體中的所有資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管。 SSMA 會將哪一個執行個體的相關資訊儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要連線，但不會儲存密碼。  
@@ -55,7 +54,7 @@ ms.locfileid: "53204707"
   
 2.  在 [連線] 對話方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "53204707"
   
 6.  安全的連線，會新增兩個控制項，**加密連接**並**TrustServerCertificate**核取方塊。 只有當**加密連接**會檢查**TrustServerCertificate**核取方塊會顯示。 當**加密連接**核取 (true) 及**TrustServerCertificate**未核取 (false)，它將會驗證 SQL Server SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要確保此行為，以及伺服器端上的用戶端必須安裝憑證。  
   
-7.  按一下 **[連接]**。  
+7.  按一下 **[連接]** 。  
   
 **較高的版本相容性**  
   
@@ -94,7 +93,7 @@ ms.locfileid: "53204707"
 |SQL Azure||||||是|  
   
 > [!IMPORTANT]
-> 根據專案類型，但不是根據版本的資料庫物件的轉換會執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您已連線到。 中的案例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年專案中，轉換會論及依照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使您已連線到較高版本的 2005年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年)  
+> 根據專案類型，但不是根據版本的資料庫物件的轉換會執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您已連線到。 中的案例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年專案中，轉換會論及依照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使您已連線到較高版本的 2005年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年)  
   
 ## <a name="reconnecting-to-sql-server"></a>重新連接到 SQL Server  
 連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會保持作用中，直到您關閉專案為止。 當您重新開啟專案時，您必須重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果您想使用中的連接到伺服器。 您可以離線直到更新中繼資料，將資料庫物件載入到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並移轉資料。  

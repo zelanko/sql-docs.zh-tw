@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925526"
 ---
 # <a name="determining-what-is-supported"></a>判斷支援的項目
 **支援**方法來判斷是否指定**資料錄集**物件支援特定類型的功能。 它有下列語法：  

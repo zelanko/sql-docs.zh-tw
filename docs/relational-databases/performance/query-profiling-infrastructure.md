@@ -1,7 +1,7 @@
 ---
 title: 查詢分析基礎結構 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645560"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559466"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "58645560"
 
 ## <a name="the-standard-query-execution-statistics-profiling-infrastructure"></a>標準查詢執行統計資料分析基礎結構
 
-「查詢執行統計資料分析基礎結構」 (或標準分析) 必須啟用，才能收集執行計畫的相關資訊，也就是資料列計數、CPU 和 I/O 使用量。 下列針對**目標工作階段**收集執行計畫資訊的方法會利用標準分析基礎結構：
+「查詢執行統計資料分析基礎結構」  (或標準分析) 必須啟用，才能收集執行計畫的相關資訊，也就是資料列計數、CPU 和 I/O 使用量。 下列針對**目標工作階段**收集執行計畫資訊的方法會利用標準分析基礎結構：
 
 - [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
 - [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
 - [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用即時查詢統計資料，會利用標準分析基礎結構。    
-> 在更新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果啟用了[輕量型分析基礎結構](#lwp)，則即時查詢統計資料就會利用它而非標準分析。
+> 按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [包含即時查詢統計資料]  按鈕，即會利用標準分析基礎結構。    
+> 在更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果已啟用[輕量型分析基礎結構](#lwp)，則在透過[活動監視器](../../relational-databases/performance-monitor/activity-monitor.md)檢視或直接查詢 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV 時，就會由即時查詢統計資料而不是標準分析加以利用。 
 
 下列針對**所有工作階段**全域收集執行計畫資訊的方法，會利用標準分析基礎結構：
 
@@ -91,7 +91,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 至 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])。 
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包含額外負荷最低的輕量型分析修訂版。 針對上方「適用於」中所述的版本，也可以使用[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 全域啟用輕量型分析。 已引進新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)，針對進行中的要求傳回查詢執行計畫。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包含額外負荷最低的輕量型分析修訂版。 針對上方「適用於」  中所述的版本，也可以使用[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 全域啟用輕量型分析。 已引進新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)，針對進行中的要求傳回查詢執行計畫。
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始，如果未全域啟用輕量型分析，則可使用新的 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引數 **QUERY_PLAN_PROFILE**，針對任何工作階段啟用查詢層級的輕量型分析。 當包含這個新提示的查詢完成時，也會輸出新的 ***query_plan_profile*** 擴充事件，以提供類似 *query_post_execution_showplan* 擴充事件的實際執行計畫 XML。 
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 輕量型分析預設會在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上啟用，而追蹤旗標 7412 不會有任何作用。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 輕量型分析預設會在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上啟用，而追蹤旗標 7412 不會有任何作用。 可以在資料庫層級使用 LIGHTWEIGHT_QUERY_PROFILING [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來停用輕量級分析：`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`。
 
-現已導入新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)，它在大多數的查詢中，會傳回最後一個已知實際執行計畫的對等項目。 不同於使用標準分析的 *query_post_execution_showplan*，新的 *query_post_execution_plan_profile* 擴充事件會根據輕量型分析收集實際執行計畫的對等項目。 
+現已引進新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)，它在大多數查詢中會傳回最後一個已知實際執行計畫的對等項目，稱為「最後一個執行計畫統計資料」  。 可以在資料庫層級使用 LAST_QUERY_PLAN_STATS [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來啟用最後一個查詢計畫統計資料：`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`。
 
-使用 *query_post_execution_plan_profile* 擴充事件的範例工作階段可依照下列範例進行設定：
+不同於使用標準分析的 *query_post_execution_showplan*，新的 *query_post_execution_plan_profile* 擴充事件會根據輕量型分析收集實際執行計畫的對等項目。 使用 *query_post_execution_plan_profile* 擴充事件的範例工作階段可依照下列範例進行設定：
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -144,7 +144,47 @@ WITH (MAX_MEMORY=4096 KB,
   STARTUP_STATE=OFF);
 ```
 
-## <a name="remarks"></a>Remarks
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>範例 1 - 使用標準分析的擴充事件工作階段
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>範例 2 - 使用輕量型分析的擴充事件工作階段
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>查詢分析基礎結構使用方式指導方針
+下表摘要說明啟用標準分析或輕量型分析 (全域 (在伺服器層級) 或在單一工作階段中) 的動作。 也包括支援動作的最新版本。 
+
+|範圍。|標準分析|輕量型分析|
+|---------------|---------------|---------------|
+|全域|具有 `query_post_execution_showplan` XE 的 xEvent 工作階段，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始|追蹤旗標 7412；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始|
+|全域|具有 `Showplan XML` 追蹤事件的 SQL 追蹤與 SQL Server Profiler；從 SQL Server 2000 開始|具有 `query_thread_profile` XE 的 xEvent 工作階段；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|
+|全域|-|具有 `query_post_execution_plan_profile` XE 的 xEvent 工作階段；從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|
+|Session|使用 `SET STATISTICS XML ON`；從 SQL Server 2000 開始|使用 `query_plan_profile` XE 搭配 xEvent 工作階段使用 `QUERY_PLAN_PROFILE` 查詢提示；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始|
+|Session|使用 `SET STATISTICS PROFILE ON`；從 SQL Server 2000 開始|-|
+|Session|按一下 SSMS 中的[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)按鈕；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|-|
+
+## <a name="remarks"></a>備註
 
 > [!IMPORTANT]
 > 由於執行參考 [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 的監視預存程序時可能會產生隨機 AV，因而請確保會在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中安裝 [KB 4078596](http://support.microsoft.com/help/4078596)。

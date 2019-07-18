@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IDs [SQL Server], modules
 - module object identifiers [SQL Server]
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 32a67fb7c0d98322f67fe9bb72c2104bf82bc886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa443bae7a8268cb8d19f35ded23ecb6fa251668
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943326"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

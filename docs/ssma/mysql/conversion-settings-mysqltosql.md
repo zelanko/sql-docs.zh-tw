@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103117"
 ---
 # <a name="conversion-settings-mysqltosql"></a>轉換設定 (MySQLToSQL)
 **[設定]** 索引標籤可讓使用者設定節點層級設定。 [] 索引標籤會位於下列 Metabase 節點：  
@@ -71,7 +70,7 @@ ms.locfileid: "52400042"
   
         -   根據專案設定轉換  
   
-    2.  如果 **'Yes'**，這項設定會禁止 ROWID 輔助的資料行建立在目標資料表上建立。  
+    2.  如果 **'Yes'** ，這項設定會禁止 ROWID 輔助的資料行建立在目標資料表上建立。  
   
     3.  使用者所做的設定會儲存在串聯的喜好設定檔案，方法是按一下**套用** 按鈕。  
   

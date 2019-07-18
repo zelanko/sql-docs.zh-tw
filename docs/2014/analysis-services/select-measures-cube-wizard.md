@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.measureselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e37d532bd669474e4e91cfcdb0942b691ba3234
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197628"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069453"
 ---
 # <a name="select-measures-cube-wizard"></a>選取量值 (Cube 精靈)
   使用 **[選取量值]** 頁面，即可選取要建立的量值群組和量值。  
@@ -34,7 +33,7 @@ ms.locfileid: "48197628"
 ## <a name="see-also"></a>另請參閱  
  [Cube 精靈 F1 說明](cube-wizard-f1-help.md)   
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

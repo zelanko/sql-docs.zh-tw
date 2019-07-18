@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing events
@@ -14,12 +13,12 @@ ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a57f978f4be3a8e4ec163b7bb5bcef2bb300aa6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089625"
 ---
 # <a name="view-the-events-for-registered-packages"></a>檢視已註冊之封裝的事件
   在您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 擴充的事件工作階段之前，找出註冊之封裝中可用的事件會非常有用。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)＞。  

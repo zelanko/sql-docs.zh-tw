@@ -10,14 +10,18 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 261f29d8cebfcb9837bae0640df50913d96f05ea
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723942"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **ODBC** 資料來源。
 
 您可能必須從 Microsoft 或協力廠商下載所需的 ODBC 驅動程式。
@@ -142,7 +146,7 @@ ms.locfileid: "58222055"
     TrustServerCertificate=No  
     DATABASE=WideWorldImporters    
     WSID=<local computer name>  
-    APP=Microsoft® Windows® Operating System  
+    APP=MicrosoftÂ® WindowsÂ® Operating System  
     Trusted_Connection=Yes  
     SERVER=localhost   
     ```

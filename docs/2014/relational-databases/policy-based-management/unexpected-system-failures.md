@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 951b49c0356ae27cb58041af5186becfd12853bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62677060"
 ---
 # <a name="unexpected-system-failures"></a>非預期的系統失敗
   這個規則會檢查電腦事件記錄檔中是否有 SYSTEM 事件 6008。 此事件表示非預期的系統關機。 系統可能不穩定，而且可能無法提供主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所需的穩定性和完整性。  

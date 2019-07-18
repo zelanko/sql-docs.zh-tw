@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.stepadvanced.f1
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18924b7b6ccdf7e54782e575a265c8961f38397a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea71d3b9ec4d45cded2c0a0d26c6ca794c768dc0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762688"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686790"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作業步驟屬性 - 新增作業步驟 (進階頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47762688"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **[檢視]**  
-至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -87,7 +87,7 @@ ms.locfileid: "47762688"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **[檢視]**  
-至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -112,7 +112,7 @@ ms.locfileid: "47762688"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **[檢視]**  
-至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -144,7 +144,7 @@ ms.locfileid: "47762688"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **[檢視]**  
-至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  

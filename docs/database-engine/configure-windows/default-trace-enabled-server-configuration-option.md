@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6feb0ba5881dc327ecefc23db5d6ed3276ed593d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f4d21984f0e91cba610d89c4a4f71c3abf25ea07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767938"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>預設追蹤已啟用伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ GO
 ## <a name="configuring"></a>進行設定  
  設為 1 時， **default trace enabled** 選項會啟用 **「預設的追蹤」** 功能。 這個選項的預設值是 1 (ON)。 設為 0 則會關閉追蹤功能。  
   
- **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項] 設定為 1 時，才能變更 [預設追蹤已啟用] 選項。 設定會立即生效，伺服器不必重新啟動。  
+ **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項]  設定為 1 時，才能變更 [預設追蹤已啟用]  選項。 設定會立即生效，伺服器不必重新啟動。  
   
 ## <a name="see-also"></a>另請參閱  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

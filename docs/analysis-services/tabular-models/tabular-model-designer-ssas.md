@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072565"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207484"
 ---
 # <a name="tabular-model-designer"></a>表格式模型設計師
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53072565"
  您可以在上述任一檢視中，執行大部分的模型撰寫工作。  
   
 ### <a name="view-code-window"></a>檢視程式碼視窗  
- 當您在方案總管中以滑鼠右鍵按一下檔案並選取 [檢視程式碼] 時，即可檢視 Model.bim 檔案背後的程式碼。 針對 1200年及更新版本的相容性層級的表格式模型，模型定義是以 JSON 表示。  
+ 當您在方案總管中以滑鼠右鍵按一下檔案並選取 [檢視程式碼]  時，即可檢視 Model.bim 檔案背後的程式碼。 針對 1200年及更新版本的相容性層級的表格式模型，模型定義是以 JSON 表示。  
   
  請注意，您需要提供 JSON 編輯器的完整版 Visual Studio。 如果您不需要商業版本中的額外功能，您可以下載並安裝 [免費的 Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) 。  
   
@@ -63,12 +63,12 @@ ms.locfileid: "53072565"
   
  表格式模型方案通常只包含一個專案；但是，方案也可以包含其他專案，例如 Integration Services 或 Reporting Services 專案。 您可以加入任意數目的檔案，但是這些檔案的類型不得與表格式模型專案檔案的類型相同，且其 [建置動作] 屬性設為 [無] 或 [複製到輸出] 屬性設為 [不要複製]。  
   
- 若要檢視方案總管，請按一下 [檢視] 功能表，然後按一下方案總管。  
+ 若要檢視方案總管，請按一下 [檢視]  功能表，然後按一下方案總管  。  
 
 ### <a name="tabular-model-explorer"></a>表格式模型總管
   第一個在 2016 年 8 月版本 (14.0.60812.0) 中的可用[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)，表格式模型總管 可協助您瀏覽表格式模型中的中繼資料物件。
 
- 若要顯示表格式模型總管，請按一下 [檢視] > [其他視窗]，然後按一下 [Tabular Model Explorer (表格式模型總管)]。
+ 若要顯示表格式模型總管，請按一下 [檢視]   > [其他視窗]  ，然後按一下 [Tabular Model Explorer (表格式模型總管)]  。
    
   ![表格式模型總管](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
@@ -89,11 +89,11 @@ ms.locfileid: "53072565"
   
 -   [量值]  
   
- 專案屬性會在 [屬性] 視窗中顯示只有專案名稱和專案資料夾。 專案也具有您可以使用強制回應屬性對話方塊設定的其他部署選項和部署伺服器設定。 若要檢視這些屬性，請以滑鼠右鍵按一下方案總管中的專案，然後按一下 [屬性]。  
+ 專案屬性會在 [屬性] 視窗中顯示只有專案名稱和專案資料夾。 專案也具有您可以使用強制回應屬性對話方塊設定的其他部署選項和部署伺服器設定。 若要檢視這些屬性，請以滑鼠右鍵按一下方案總管  中的專案，然後按一下 [屬性]  。  
   
  [屬性] 視窗中的欄位包含內嵌控制項，當您按一下欄位時，即會開啟這些控制項。 編輯控制項的類型會隨著特定屬性而不同。 這些控制項包含編輯方塊、下拉式清單和自訂對話方塊的連結。 呈暗灰色的屬性是唯讀的。  
   
- 若要檢視 [屬性] 視窗，請按一下 [檢視] 功能表，然後按一下 [屬性視窗]。  
+ 若要檢視 [屬性]  視窗，請按一下 [檢視]  功能表，然後按一下 [屬性視窗]  。  
   
 ### <a name="error-list"></a>錯誤清單  
  [錯誤清單] 視窗包含模型狀態的訊息：  
@@ -106,13 +106,13 @@ ms.locfileid: "53072565"
   
 -   DirectQuery 驗證錯誤。  
   
- 依預設，除非傳回錯誤，否則不會顯示 [錯誤清單]。 但是，您可以隨時檢視 [錯誤清單] 視窗。 若要檢視 [錯誤清單] 視窗，請按一下 [檢視] 功能表，然後按一下 [錯誤清單]。  
+ 依預設，除非傳回錯誤，否則不會顯示 [錯誤清單]  。 但是，您可以隨時檢視 [錯誤清單]  視窗。 若要檢視 [錯誤清單]  視窗，請按一下 [檢視]  功能表，然後按一下 [錯誤清單]  。  
   
-### <a name="output"></a>輸出  
- 建置和部署資訊會顯示在 [輸出] 視窗中 (以及模型進度對話方塊)。 若要檢視 [輸出] 視窗，請按一下 [檢視] 功能表，然後按一下 [輸出]。  
+### <a name="output"></a>Output  
+ 建置和部署資訊會顯示在 [輸出]  視窗中 (以及模型進度對話方塊)。 若要檢視 [輸出]  視窗，請按一下 [檢視]  功能表，然後按一下 [輸出]。  
   
 ### <a name="menu-items"></a>功能表項目  
- 當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，特別用來撰寫表格式模型的額外功能表項目會加入至 Visual Studio 功能表列。 [模型] 功能表可用來啟動資料匯入精靈、檢視現有連接、處理工作空間資料，以及在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中瀏覽模型工作空間。 [資料表] 功能表用來建立及管理資料表之間的關聯性、建立及管理量值、指定資料表設定、指定計算選項，以及指定其他資料表屬性。 您可以使用 [資料行] 功能表在資料表中加入及刪除資料行、隱藏及取消隱藏資料行，以及指定其他資料行屬性，例如資料類型和篩選。 您可以在 [建立] 功能表上建立及部署表格式模型方案。 複製/貼上功能包含在 [編輯] 功能表中。  
+ 當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，特別用來撰寫表格式模型的額外功能表項目會加入至 Visual Studio 功能表列。 [模型]  功能表可用來啟動資料匯入精靈、檢視現有連接、處理工作空間資料，以及在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中瀏覽模型工作空間。 [資料表]  功能表用來建立及管理資料表之間的關聯性、建立及管理量值、指定資料表設定、指定計算選項，以及指定其他資料表屬性。 您可以使用 [資料行]  功能表在資料表中加入及刪除資料行、隱藏及取消隱藏資料行，以及指定其他資料行屬性，例如資料類型和篩選。 您可以在 [建立]  功能表上建立及部署表格式模型方案。 複製/貼上功能包含在 [編輯]  功能表中。  
   
  除了這些功能表項目之外，也會將其他設定加入至 [工具] 功能表項目的 Analysis Services 選項。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "53072565"
  Analysis Services 專案會與選取的原始檔控制外掛程式整合。 如果您已設定 Visual Studio 使用原始檔控制，則可以從 [方案總管] 使用簽入/簽出。 若要設定使用 Team Foundation Server，請參閱 [Configure Visual Studio with Team Foundation Version Control](http://msdn.microsoft.com/library/ms253064.aspx)(使用 Team Foundation 版本控制設定 Visual Studio)。 此外，也支援許多協力廠商原始檔控制外掛程式。  
   
  **字型**  
- 表格式模型使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境字型來控制顯示的字型。 如果預設 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 字型不含您的語言所需的全部 Unicode 字元，您可能必須變更此字型。 若要變更字型，請依序按一下 [工具] 功能表、[選項] 及 [字型和色彩]。  
+ 表格式模型使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境字型來控制顯示的字型。 如果預設 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 字型不含您的語言所需的全部 Unicode 字元，您可能必須變更此字型。 若要變更字型，請依序按一下 [工具]  功能表、[選項]  及 [字型和色彩]  。  
   
  **鍵盤快速鍵**  
  您可以透過 [工具] -> [選項] -> [鍵盤] 對話方塊，設定/重新對應 Analysis Services 鍵盤快速鍵。 表格式模型設計師內容支援如建立、儲存、偵錯、新增專案等一些通用的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 快速鍵。 其他表格式模型設計師的特定快速鍵則會在 Analysis Services 內容中。  

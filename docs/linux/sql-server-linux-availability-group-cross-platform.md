@@ -1,22 +1,21 @@
 ---
-title: 設定 SQL Server Always On Windows 和 Linux 上的可用性群組 |Microsoft Docs
+title: 設定 SQL Server Always On 可用性群組，在 Windows 和 Linux 上
 description: 設定 SQL Server 可用性群組與在 Windows 和 Linux 上的複本。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045193"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>設定 SQL Server Always On 可用性群組上 Windows 和 Linux （跨平台）
 
@@ -197,7 +196,7 @@ ms.locfileid: "51947572"
    GO
    ```
    
-   如需詳細資訊，請參閱 < [CREATE AVAILABILITY GROUP & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-availability-group-transact-sql.md)。
+   如需詳細資訊，請參閱 < [CREATE AVAILABILITY GROUP & Amp;#40;transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md)。
 
 1. 在次要複本加入 AG。
 

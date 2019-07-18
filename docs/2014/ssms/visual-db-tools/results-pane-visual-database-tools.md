@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067804"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
   [結果] 窗格顯示的是最近執行 SELECT 查詢的結果 (其他查詢類型的結果則顯示在訊息方塊中)。若要開啟結果窗格、開啟或建立查詢或檢視，或傳回資料表的資料。 如果結果窗格未預設顯示，可從 [ **查詢設計工具** ] 功能表，指向 [ **窗格**]，然後按一下 [ **結果**]。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - location path for XPath query
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb5b6e03ae96aa6022eff74c66bdff6ef1beed6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012653"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
     
@@ -33,7 +33,7 @@ ms.locfileid: "52794110"
   
      包含內容節點的子系。  
   
-     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 子系：  
+     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取 **\<客戶 >** 子系：  
   
     ```  
     child::Customer  
@@ -45,7 +45,7 @@ ms.locfileid: "52794110"
   
      包含內容節點的父系。  
   
-     下列 XPath 運算式會選取所有**\<客戶 >** 父系**\<順序 >** 子系：  
+     下列 XPath 運算式會選取所有 **\<客戶 >** 父系 **\<順序 >** 子系：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +67,7 @@ ms.locfileid: "52794110"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式會選取目前的節點才**\<順序 >** 節點：  
+     下列 XPath 運算式會選取目前的節點才 **\<順序 >** 節點：  
   
     ```  
     self::Order  

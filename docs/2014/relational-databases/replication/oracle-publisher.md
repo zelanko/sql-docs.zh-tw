@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022033"
 ---
 # <a name="oracle-publisher"></a>Oracle 發行者
   從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您使用快照式和異動複寫來發行 Oracle 資料庫的資料。 如需詳細資訊，請參閱 [Oracle 發行概觀](non-sql/oracle-publishing-overview.md)。  
@@ -29,10 +29,10 @@ ms.locfileid: "54130248"
   
 ## <a name="options"></a>選項。  
  **Oracle 發行者**  
- 從清單中選取 Oracle 發行者。 此清單包含先前已設定執行此精靈之伺服器為其散發者的 Oracle 發行者。 如果清單是空的，或您要使用的 Oracle 發行者不在清單中，請按一下 **[加入 Oracle 發行者]**。  
+ 從清單中選取 Oracle 發行者。 此清單包含先前已設定執行此精靈之伺服器為其散發者的 Oracle 發行者。 如果清單是空的，或您要使用的 Oracle 發行者不在清單中，請按一下 **[加入 Oracle 發行者]** 。  
   
  **[加入 Oracle 發行者]**  
- 按一下以啟動 **[散發者屬性]** 對話方塊。 在此對話方塊中，按一下 **[加入]**，然後按一下 **[加入 Oracle 發行者]**。 在 **[連接到伺服器]** 對話方塊中，指定 Oracle 伺服器名稱，以及複寫管理的使用者結構描述之登入和密碼。 如需詳細資訊，請參閱[連線到伺服器 &#40;Oracle&#41;，登入](connect-to-server-oracle-login.md)。  
+ 按一下以啟動 **[散發者屬性]** 對話方塊。 在此對話方塊中，按一下 **[加入]** ，然後按一下 **[加入 Oracle 發行者]** 。 在 **[連接到伺服器]** 對話方塊中，指定 Oracle 伺服器名稱，以及複寫管理的使用者結構描述之登入和密碼。 如需詳細資訊，請參閱[連線到伺服器 &#40;Oracle&#41;，登入](connect-to-server-oracle-login.md)。  
   
 > [!NOTE]  
 >  如果執行精靈的伺服器尚未設定為散發者，則會提示您立即設定。  

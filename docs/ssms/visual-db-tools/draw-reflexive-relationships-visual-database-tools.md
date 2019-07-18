@@ -12,15 +12,15 @@ helpviewer_keywords:
 - reflexive relationships
 - database diagrams [SQL Server], relationships
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74378b752fdf938a5b2b94b9712f47ffeb69e9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 79510a86159d771d6ff51a98ba9d1a988a312bc7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652566"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690301"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "47652566"
   
 2.  將線條拖曳回選取的資料表。  
   
-3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行] 對話方塊。  
+3.  放開滑鼠按鈕。 隨即出現 [資料表和資料行]  對話方塊。  
   
 4.  選取要用來形成關聯性的外部索引鍵資料行及主索引鍵資料表與資料行。  
   
-5.  選擇兩次 [確定] 以建立關聯性。  
+5.  選擇兩次 [確定]  以建立關聯性。  
   
 當您對資料表執行查詢時，可使用自反關聯性來建立自我聯結 (Self-Join)。 如需使用聯結查詢資料表的相關資訊，請參閱 [使用聯結查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)。  
   

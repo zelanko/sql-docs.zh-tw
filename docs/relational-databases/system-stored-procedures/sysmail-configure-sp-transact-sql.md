@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017717"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@parameter_name** =] **'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'** _parameter_name_ **'**  
  要變更的參數名稱。  
   
- [**@parameter_value** =] **'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'** _parameter_value_ **'**  
  參數的新值。  
   
- [**@description** =] **'**_描述_**'**  
+ [ **@description** =] **'** _描述_ **'**  
  參數的描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -62,7 +61,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|參數名稱|描述|預設值|  
+|參數名稱|描述|Default Value|  
 |*AccountRetryAttempts*|外部郵件處理序嘗試利用指定設定檔中的每個帳戶來傳送電子郵件訊息的次數。|**1**|  
 |*AccountRetryDelay*|在各次嘗試傳送訊息之間，外部郵件處理序所等待的時間 (以秒為單位)。|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|外部郵件處理序維持使用中的最短時間 (以秒為單位)。 當 Database Mail 傳送許多訊息時，請增加這個值，使 Database Mail 保持在使用中，以避免頻繁的啟動和停止所帶來的負擔。|**600**|  

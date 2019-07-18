@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250470"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>篩選合併式複寫之發行的資料
   除了可以使用其他複寫類型定義的靜態資料列篩選和資料行篩選之外，合併式複寫還提供了參數化資料列篩選器和聯結篩選。 如需靜態資料列篩選和資料行篩選的詳細資訊，請參閱[篩選發行的資料](../publish/filter-published-data.md)。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663392"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件類別
   **CursorUnprepare** 事件類別提供應用程式開發介面 (API) 資料指標中所發生之資料指標取消準備 (Cursor Unprepare) 事件的相關資訊。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄執行計畫時，便會發生資料指標取消準備事件。  

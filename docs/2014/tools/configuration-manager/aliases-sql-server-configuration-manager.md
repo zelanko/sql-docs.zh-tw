@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 41a8febf554d0531f5b58fe7e79d650dda74e7ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035280"
 ---
 # <a name="aliases-sql-server-configuration-manager"></a>別名 (SQL Server 組態管理員)
-  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 若要在此電腦上建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的別名，請以滑鼠右鍵按一下主控台窗格中的 [別名]，然後按一下 [新增別名]。 若要在此電腦上設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的現有別名，請以滑鼠右鍵按一下主控台窗格中的 [別名]，在詳細資料窗格內以滑鼠右鍵按一下想要設定的現有別名，然後按一下 [屬性]。  
+  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 若要在此電腦上建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的別名，請以滑鼠右鍵按一下主控台窗格中的 [別名]  ，然後按一下 [新增別名]  。 若要在此電腦上設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的現有別名，請以滑鼠右鍵按一下主控台窗格中的 [別名]  ，在詳細資料窗格內以滑鼠右鍵按一下想要設定的現有別名，然後按一下 [屬性]  。  
   
   

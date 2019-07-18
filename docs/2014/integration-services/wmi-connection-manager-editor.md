@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmiconnection.f1
@@ -15,19 +14,19 @@ ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054474"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 連接管理員編輯器
   使用 [WMI 連線管理員] 對話方塊，以指定 Microsoft Windows Management Instrumentation (WMI) 與伺服器的連線。  
   
  若要深入了解 WMI 連接管理員，請參閱＜ [WMI Connection Manager](connection-manager/wmi-connection-manager.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  提供唯一的名稱給連接管理員。  
   

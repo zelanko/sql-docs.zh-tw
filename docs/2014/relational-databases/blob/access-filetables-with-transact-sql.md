@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28447ca0e1e503e73826aba5e02b22bf71cff6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010433"
 ---
 # <a name="access-filetables-with-transact-sql"></a>利用 Transact-SQL 存取 FileTable
   描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料操作語言 (DML) 命令如何與 FileTable 搭配使用。  

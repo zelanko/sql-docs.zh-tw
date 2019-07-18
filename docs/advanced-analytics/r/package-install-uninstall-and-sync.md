@@ -3,17 +3,16 @@ title: 從檔案系統-SQL Server Machine Learning 服務的 R 套件同步處�
 description: 更新檔案系統上安裝較新版本的 SQL Server 上的 R 程式庫。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65903358acd1c14f63ca93ea8bd7438121ad9ad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962579"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>適用於 SQL Server 的 R 套件同步處理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +45,7 @@ RevoScaleR SQL Server 2017 中隨附的版本包括能夠同步處理的檔案�
 
 這項功能是適用於 SQL Server 2017 CTP 2 或更新版本。
 
-您也可以升級的執行個體，以使用最新版的 Microsoft R 的 SQL Server 2016 執行個體新增此功能如需詳細資訊，請參閱 <<c0> [ 使用 SqlBindR.exe 升級 SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+您也可以升級的執行個體，以使用最新版的 Microsoft R 的 SQL Server 2016 執行個體新增此功能如需詳細資訊，請參閱 <<c0> [ 使用 SqlBindR.exe 升級 SQL Server R Services](../install/upgrade-r-and-python.md)。
 
 ### <a name="enable-the-package-management-feature"></a>啟用封裝管理功能
 
@@ -69,7 +68,7 @@ RevoScaleR SQL Server 2017 中隨附的版本包括能夠同步處理的檔案�
 
 + 同步處理封裝標示**私人**，以系統管理員或封裝的擁有者必須執行函式，或封裝必須是私用。
 
-+ 若要同步處理使用者代表其他使用者的套件，擁有者必須 bhe 隸屬**db_owner**資料庫角色。
++ 若要同步處理使用者代表其他使用者的套件，擁有者必須是隸屬**db_owner**資料庫角色。
 
 ## <a name="how-package-synchronization-works"></a>封裝的同步處理運作方式
 

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6219f18bee08d5c20431cb87a2cb30795c515d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950477"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_xml_removedocument hdoc
  這是新建立之文件的控制代碼。 無效的控制代碼會傳回錯誤。 *hdoc*是一個整數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 (成功) 或 >0 (失敗)  
+ 0 （成功） 或 > 0 （失敗）  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
@@ -62,7 +61,7 @@ EXEC sp_xml_removedocument @hdoc;
 ## <a name="see-also"></a>另請參閱      
  <br>[系統預存程序 (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[XML 預存程序 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[sys.dm_exec_xml_handles & Amp;#40;transact-SQL&AMP;#41;](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
  <br>[OPENXML & Amp;#40;transact-SQL&AMP;#41](../../t-sql/functions/openxml-transact-sql.md)
   

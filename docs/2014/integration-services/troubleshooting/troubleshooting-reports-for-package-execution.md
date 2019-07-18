@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c1a59d9e77806666c487b0778edd574bcaa5e42
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62926303"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一些標準報表，可協助您監視和疑難排解已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 其中兩份封裝報表特別有助於您檢視封裝執行狀態以及識別執行失敗的原因。  
@@ -28,9 +28,9 @@ ms.locfileid: "58385009"
   
     -   如果封裝已完成，則持續時間 = 結束時間 - 開始時間  
   
-     對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。 例如，您可以按一下 [概觀] 顯示執行中工作狀態的高階概觀，或是按一下 [所有訊息] 顯示封裝執行過程中已擷取的詳細訊息。  
+     對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。 例如，您可以按一下 [概觀]  顯示執行中工作狀態的高階概觀，或是按一下 [所有訊息]  顯示封裝執行過程中已擷取的詳細訊息。  
   
-     您可以按一下 [篩選]，然後選取 [篩選設定] 對話方塊中的準則，篩選任何頁面上顯示的資料表。 可用的篩選準則取決於顯示的資料。 您可以在 [篩選設定] 對話方塊中按一下排序圖示，以變更報表的排序次序。  
+     您可以按一下 [篩選]  ，然後選取 [篩選設定]  對話方塊中的準則，篩選任何頁面上顯示的資料表。 可用的篩選準則取決於顯示的資料。 您可以在 [篩選設定]  對話方塊中按一下排序圖示，以變更報表的排序次序。  
   
 -   **活動 - 所有執行報表** - 這份報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行的摘要。 此摘要會顯示每個執行的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含執行詳細資訊的連結，包括執行期間產生的訊息以及效能資料。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   

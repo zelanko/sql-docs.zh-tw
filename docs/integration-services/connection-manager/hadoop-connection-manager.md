@@ -13,53 +13,57 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728216"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop 連線管理員可以使用您為屬性指定的值，讓 SQL Server Integration Services (SSIS) 套件連線至 Hadoop 叢集。  
   
 ## <a name="configure-the-hadoop-connection-manager"></a>設定 Hadoop 連接管理員  
   
-1.  在 [加入 SSIS 連線管理員] 對話方塊中，選取 [Hadoop] > [加入]。 [Hadoop 連線管理員編輯器] 對話方塊隨即開啟。  
+1.  在 [加入 SSIS 連線管理員]  對話方塊中，選取 [Hadoop]   > [加入]  。 [Hadoop 連線管理員編輯器]  對話方塊隨即開啟。  
   
-2.  若要設定相關的 Hadoop 叢集資訊，請選擇左窗格中的 [WebHCat] 或 [WebHDFS] 索引標籤。
+2.  若要設定相關的 Hadoop 叢集資訊，請選擇左窗格中的 [WebHCat]  或 [WebHDFS]  索引標籤。
   
-3.  如果您啟用 [WebHCat] 選項，以在 Hadoop 上叫用 Hive 或 Pig 工作，請執行下列動作： 
+3.  如果您啟用 [WebHCat]  選項，以在 Hadoop 上叫用 Hive 或 Pig 工作，請執行下列動作： 
   
-    1.  對於 [WebHCat 主機]，輸入裝載 WebHCat 服務的伺服器。  
+    1.  對於 [WebHCat 主機]  ，輸入裝載 WebHCat 服務的伺服器。  
   
-    2.  對於 [WebHCat 連接埠]，輸入 WebHCat 服務的連接埠 (預設為 50111)。  
+    2.  對於 [WebHCat 連接埠]  ，輸入 WebHCat 服務的連接埠 (預設為 50111)。  
   
-    3.  選取用於存取 WebHCat 服務的 [驗證] 方法。 可用的值為：[基本] 和 [Kerberos]。  
+    3.  選取用於存取 WebHCat 服務的 [驗證]  方法。 可用的值為：[基本]  和 [Kerberos]  。  
   
          ![使用基本驗證的 Hadoop 連線管理員編輯器螢幕擷取畫面](../../integration-services/connection-manager/media/hadoop-cm-basic.png "使用基本驗證的 Hadoop 連線管理員編輯器")  
   
          ![使用 Kerberos 驗證的 Hadoop 連線管理員編輯器螢幕擷取畫面](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "使用 Kerberos 驗證的 Hadoop 連線管理員編輯器")  
   
-    4.  對於 [WebHCat 使用者]，輸入已授權可存取 WebHCat 的 [使用者]。  
+    4.  對於 [WebHCat 使用者]  ，輸入已授權可存取 WebHCat 的 [使用者]  。  
   
-    5.  如果您選取 [Kerberos] 驗證，請輸入使用者的 [密碼] 和 [網域]。  
+    5.  如果您選取 [Kerberos]  驗證，請輸入使用者的 [密碼]  和 [網域]  。  
   
-4.  如果您啟用 [WebHDFS] 選項，以從 HDFS 中複製資料或將資料複製至 HDFS，請執行下列動作： 
+4.  如果您啟用 [WebHDFS]  選項，以從 HDFS 中複製資料或將資料複製至 HDFS，請執行下列動作： 
   
-    1.  對於 [WebHDFS 主機]，輸入裝載 WebHDFS 服務的伺服器。  
+    1.  對於 [WebHDFS 主機]  ，輸入裝載 WebHDFS 服務的伺服器。  
   
-    2.  對於 [WebHDFS 連接埠]，輸入 WebHDFS 服務的連接埠 (預設為 50070)。  
+    2.  對於 [WebHDFS 連接埠]  ，輸入 WebHDFS 服務的連接埠 (預設為 50070)。  
   
-    3.  選取用於存取 WebHDFS 服務的 [驗證] 方法。 可用的值為：[基本] 和 [Kerberos]。  
+    3.  選取用於存取 WebHDFS 服務的 [驗證]  方法。 可用的值為：[基本]  和 [Kerberos]  。  
   
-    4.  對於 [WebHDFS 使用者]，輸入已授權可存取 HDFS 的使用者。  
+    4.  對於 [WebHDFS 使用者]  ，輸入已授權可存取 HDFS 的使用者。  
   
-    5.  如果您選取 [Kerberos] 驗證，請輸入使用者的 [密碼] 和 [網域]。  
+    5.  如果您選取 [Kerberos]  驗證，請輸入使用者的 [密碼]  和 [網域]  。  
   
-5.  選取 [測試連線]。 (只會測試您已啟用的連接)。  
+5.  選取 [測試連線]  。 (只會測試您已啟用的連接)。  
   
-6.  按一下 [確定] 以關閉對話方塊。  
+6.  按一下 [確定]  以關閉對話方塊。  
 
 ## <a name="connect-with-kerberos-authentication"></a>使用 Kerberos 驗證進行連線
 有兩個選項可設定內部部署環境，以便讓您使用 Hadoop 連線管理員搭配 Kerberos 驗證。 您可以選擇較適合您情況的選項。
@@ -170,9 +174,9 @@ ms.locfileid: "58281432"
 
 3.  選取要搭配 Kerberos 使用的加密演算法。
 
-    1. 移至 [伺服器管理員] > [群組原則管理] > [網域]。 從該處移至 [群組原則物件] > [預設值或作用中網域原則] > [編輯]。
+    1. 移至 [伺服器管理員]   > [群組原則管理]   > [網域]  。 從該處移至 [群組原則物件]   > [預設值或作用中網域原則]   > [編輯]  。
 
-    2. 在 [群組原則管理編輯器] 快顯視窗中，移至 [電腦設定] > [原則] > [Windows 設定]。 從該處移至 [安全性設定] > [本機原則] > [安全性選項]。 設定[網路安全性:設定 Kerberos 允許的加密類型]。
+    2. 在 [群組原則管理編輯器]  快顯視窗中，移至 [電腦設定]   > [原則]   > [Windows 設定]  。 從該處移至 [安全性設定]   > [本機原則]   > [安全性選項]  。 設定[網路安全性:  設定 Kerberos 允許的加密類型]。
 
     3. 選取您要用來連線到 KDC 的加密演算法。 通常您可以選取任何選項。
 
@@ -184,11 +188,11 @@ ms.locfileid: "58281432"
 
 4.  若要在 Windows 網域中使用 Kerberos 主體，請建立網域帳戶和 Kerberos 主體之間的對應關係。
 
-    1. 移至 [系統管理工具] > [Active Directory 使用者和電腦]。
+    1. 移至 [系統管理工具]   > [Active Directory 使用者和電腦]  。
 
-    2. 選取 [檢視] > [進階功能]，以設定進階功能。
+    2. 選取 [檢視]   > [進階功能]  ，以設定進階功能。
 
-    3. 找出您想要建立對應的帳戶，以滑鼠右鍵按一下以檢視 [名稱對應]，然後選取 [Kerberos 名稱] 索引標籤。
+    3. 找出您想要建立對應的帳戶，以滑鼠右鍵按一下以檢視 [名稱對應]  ，然後選取 [Kerberos 名稱]  索引標籤。
 
     4. 加入來自領域的主體。
 

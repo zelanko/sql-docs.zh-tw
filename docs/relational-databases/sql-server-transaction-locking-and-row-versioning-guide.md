@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 069480b8a2afc1e88f5edbdd11775e4988e3f9f4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980554"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585784"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -291,7 +291,7 @@ GO
 |資料列版本設定隔離等級|定義|  
 |------------------------------------|----------------|  
 |讀取認可快照|當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 時，讀取認可隔離會使用資料列版本設定以提供陳述式層級的讀取一致性。 讀取作業只需要 SCH-S 資料表層級的鎖定，並不需要頁面或資料列的鎖定。 也就是說，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]會利用資料列版本設定，依照資料在陳述式開始時的存在狀態，為每個陳述式提供在交易上一致的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。 使用者定義的函數可傳回在包含 UDF 的陳述式開始之後所認可的資料。<br /><br /> 當 `READ_COMMITTED_SNAPSHOT` 資料庫選項設定為 OFF (預設設定) 時，讀取認可隔離會在目前交易執行讀取作業的期間，利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 這兩種實作都符合讀取認可隔離的 ISO 定義。|  
-|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 快照隔離之下的 BEGIN TRANSACTION 陳述式之後不允許有下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何 Common Language Runtime (CLR) DDL 陳述式。 當您在隱含交易內使用快照隔離時，便允許這些陳述式。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：`Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 在 BEGIN TRANSACTION 陳述式之後，不允許在快照隔離下執行下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何通用語言執行平台 (CLR) DDL 陳述式。 當您在隱含交易內使用快照隔離時，便允許這些陳述式。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：`Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  下表顯示不同隔離等級所啟用的並行副作用。  
   
@@ -453,7 +453,7 @@ GO
   
  索引鍵範圍鎖定可預防虛設項目讀取。 藉由保護資料列之間的索引鍵範圍，也可以預防虛設項目插入到交易存取的記錄集。  
   
- 索引鍵範圍鎖定是放置於索引之上，指定開始和結束的索引鍵值。 因為這些動作會先在索引上取得鎖定，因此這種鎖定可封鎖任何嘗試插入、更新或刪除含有索引鍵值落入範圍的任何資料列。 例如，可序列化的交易可能會發出 SELECT 陳述式，讀取其索引鍵值在 **'** AAA **'** 和 **'** CZZ **'** 之間的所有資料列。 從 **'** AAA **'** 到 **'** CZZ **'** 範圍中索引鍵值的索引鍵範圍鎖定，可預防其他交易將含有索引鍵值的資料列插入到該範圍內的任何地方，例如 **'** ADG **'**、 **'** BBD **'** 或 **'** CAL **'**。  
+ 索引鍵範圍鎖定是放置於索引之上，指定開始和結束的索引鍵值。 因為這些動作會先在索引上取得鎖定，因此這種鎖定可封鎖任何嘗試插入、更新或刪除含有索引鍵值落入範圍的任何資料列。 例如，可序列化的交易可能會發出 SELECT 陳述式，讀取其索引鍵值在 **'** AAA **'** 和 **'** CZZ **'** 之間的所有資料列。 從 **'** AAA **'** 到 **'** CZZ **'** 範圍中索引鍵值的索引鍵範圍鎖定，可預防其他交易將含有索引鍵值的資料列插入到該範圍內的任何地方，例如 **'** ADG **'** 、 **'** BBD **'** 或 **'** CAL **'** 。  
   
 #### <a name="key_range_modes"></a> 索引鍵範圍鎖定模式  
  索引鍵範圍鎖定包括範圍以及資料列元件，以範圍-資料列的格式來指定：  
@@ -509,7 +509,7 @@ GO
  在索引鍵範圍鎖定發生之前，必須滿足下列條件：  
   
 -   交易隔離等級必須設為 SERIALIZABLE。  
--   查詢處理器必須使用索引來實作範圍篩選述詞。 例如，SELECT 陳述式中的 WHERE 子句可利用以下述詞建立一個範圍的條件：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**。 如果 **ColumnX** 涵蓋在索引鍵中，才會取得索引鍵範圍鎖定。  
+-   查詢處理器必須使用索引來實作範圍篩選述詞。 例如，SELECT 陳述式中的 WHERE 子句可利用此述詞建立一個範圍條件：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** 。 如果 **ColumnX** 涵蓋在索引鍵中，才會取得索引鍵範圍鎖定。  
   
 #### <a name="examples"></a>範例  
  下列資料表和索引是用來作為索引鍵範圍鎖定範例要遵循的基礎。  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   交易 A 現在要求資料列 2 的獨佔鎖定，但會被封鎖直到交易 B 完成並釋出對資料列 2 的共用鎖定為止。  
 -   交易 B 現在要求資料列 1 的獨佔鎖定，但會被封鎖直到交易 A 完成並釋出對資料列 1 的共用鎖定為止。  
   
- 等到交易 B 完成後，交易 A 才能完成，但交易 B 被交易 A 封鎖了。這個狀況也稱為「循環相依性」：交易 A 相依於交易 B，且交易 B 因為相依於交易 A 而形成封閉式循環。  
+ 等到交易 B 完成後，交易 A 才能完成，但交易 B 卻被交易 A 封鎖了。這個狀況也稱為「循環相依性」：交易 A 相依於交易 B，且交易 B 因為相依於交易 A 而形成封閉式循環。  
   
  在死結中的這兩個交易會一直等下去，除非由外部處理序解除此死結。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 死結監視器會定期檢查死結中的工作。 如果監視器偵測到循環相依性，它會選擇其中一個工作作為犧牲者，以錯誤來結束其交易。 這樣另一個工作便可以完成其交易。 因為錯誤而結束交易的應用程式可以重試交易，通常在另一個死結交易完成之後便會完成。  
   
@@ -1074,6 +1074,9 @@ BEGIN TRANSACTION
   
 1.  將 `READ_COMMITTED_SNAPSHOT` 和 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項其中之一或兩者都設定為 ON。  
 2.  在應用程式中設定適當的交易隔離等級：  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   當 `READ_COMMITTED_SNAPSHOT` 資料庫選項為 ON 時，設定讀取認可隔離等級的交易就會使用資料列版本設定。  
     -   當 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項為 ON 時，交易便可設定快照隔離等級。  
   
@@ -1236,7 +1239,7 @@ BEGIN TRANSACTION
 ##### <a name="performance-counters"></a>效能計數器  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 效能計數器可提供受到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序影響的系統效能相關資訊。 下列效能計數器會監視 tempdb、版本存放區以及使用資料列版本設定的交易。 效能計數器包含在 SQLServer:Transactions 效能物件中。  
   
- **Free Space in tempdb (KB)**。 監視 tempdb 資料庫的可用空間量，以 KB 為單位。 tempdb 要有足夠的可用空間，才能處理支援快照集隔離的版本存放區。  
+ **Free Space in tempdb (KB)** 。 監視 tempdb 資料庫的可用空間量，以 KB 為單位。 tempdb 要有足夠的可用空間，才能處理支援快照集隔離的版本存放區。  
   
  下列公式提供版本存放區大小的概估。 若為長時間執行的交易，則監視產生速率和清除速率以評估版本存放區的大小上限，可能會有幫助。  
   
@@ -1244,11 +1247,11 @@ BEGIN TRANSACTION
   
  交易的最長執行時間不應包括線上索引組建。 由於這些作業在非常大的資料表上會花很長的時間，線上索引組建會使用不同的版本存放區。 線上索引組建版本存放區的近似大小，等於啟動線上索引組建時資料表中修改的資料量，包括所有索引。  
   
- **Version Store Size (KB)**。 監視所有版本存放區的大小，以 KB 為單位。 此資訊有助於決定版本存放區的 tempdb 資料庫所需要的空間量。 持續監視這個計數器一段時間，可對 tempdb 所需的其他空間提供有用的評估。  
+ **Version Store Size (KB)** 。 監視所有版本存放區的大小，以 KB 為單位。 此資訊有助於決定版本存放區的 tempdb 資料庫所需要的空間量。 持續監視這個計數器一段時間，可對 tempdb 所需的其他空間提供有用的評估。  
   
- `Version Generation rate (KB/s)`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。 監視所有版本存放區的版本產生速率 (以每秒 KB 數為單位)。  
+ 第 1 課：建立 Windows Azure 儲存體物件`Version Generation rate (KB/s)`。 監視所有版本存放區的版本產生速率 (以每秒 KB 數為單位)。  
   
- `Version Cleanup rate (KB/s)`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。 監視所有版本存放區的版本清除速率 (以每秒 KB 數為單位)。  
+ 第 1 課：建立 Windows Azure 儲存體物件`Version Cleanup rate (KB/s)`。 監視所有版本存放區的版本清除速率 (以每秒 KB 數為單位)。  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) 和 Version Cleanup rate (KB/s) 的資訊可用來預測 tempdb 的空間需求。  
@@ -1265,11 +1268,11 @@ BEGIN TRANSACTION
   
  **Transactions**。 監視使用中交易的總數。 這不包括系統交易。  
   
- `Snapshot Transactions`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。 監視使用中快照集交易的總數。  
+ 第 1 課：建立 Windows Azure 儲存體物件`Snapshot Transactions`。 監視使用中快照集交易的總數。  
   
- `Update Snapshot Transactions`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。 監視執行更新作業的使用中快照集交易的總數。  
+ 第 1 課：建立 Windows Azure 儲存體物件`Update Snapshot Transactions`。 監視執行更新作業的使用中快照集交易的總數。  
   
- `NonSnapshot Version Transactions`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。 監視產生版本記錄的使用中非快照集交易的總數。  
+ 第 1 課：建立 Windows Azure 儲存體物件`NonSnapshot Version Transactions`。 監視產生版本記錄的使用中非快照集交易的總數。  
   
 > [!NOTE]  
 > Update Snapshot Transactions 和 NonSnapshot Version Transactions 的總和代表參與版本產生的交易總數。 Snapshot Transactions 和 Update Snapshot Transactions 的差異可報告唯讀快照集交易的數目。  

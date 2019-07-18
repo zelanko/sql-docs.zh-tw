@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002560"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>引數  
  [ @objname=] '*物件*'  
- 目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*已**nvarchar(776)**，沒有預設值。 如果*物件*預存程序、 觸發程序或使用者定義函數、 預存程序，觸發程序名稱，或函式將會在下次執行時重新編譯。 如果*物件*是資料表或檢視的所有預存的程序、 觸發程序的名稱或參考資料表或檢視表的使用者定義函式將會在執行下一次重新編譯。  
+ 目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*已**nvarchar(776)** ，沒有預設值。 如果*物件*預存程序、 觸發程序或使用者定義函數、 預存程序，觸發程序名稱，或函式將會在下次執行時重新編譯。 如果*物件*是資料表或檢視的所有預存的程序、 觸發程序的名稱或參考資料表或檢視表的使用者定義函式將會在執行下一次重新編譯。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  

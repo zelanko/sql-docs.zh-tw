@@ -12,16 +12,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 57d0a1467495dc20c0508adbba6f44a6164193da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65939224"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53979604"
 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 **geography** 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。
 
 ##  <a name="objects"></a> 空間資料物件  
-**geometry** 和 **geography** 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從父資料類型衍生某些屬性，這些資料類型會將其區分為 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** ，或是 **geometry** 中的多個 **geography** 或 **GeometryCollection**執行個體。 **Geography** 類型具有一種額外的執行個體類型： **FullGlobe**。  
+**geometry** 和 **geography** 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」  ；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從父資料類型衍生某些屬性，這些資料類型會將其區分為 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** ，或是 **geometry** 中的多個 **geography** 或 **GeometryCollection**執行個體。 **Geography** 類型具有一種額外的執行個體類型： **FullGlobe**。  
 
 下圖說明 **geometry** 和 **geometry** 資料類型所根據的 **geography** 階層。 可具現化的 **geometry** 和 **geography** 類型是以藍色標示。  
 

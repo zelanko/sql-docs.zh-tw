@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62829408"
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -36,7 +36,7 @@ ms.locfileid: "59240807"
   
  HTTP 連接管理員可指向網站或「Web 服務描述語言」(WSDL) 檔案。 指向 WSDL 檔案之 HTTP 連接管理員的 URL 包含 `?WSDL` 參數：例如 `http://MyServer/MyWebService/MyPage.asmx?WSDL`。  
   
- WSDL 檔案必須可以在本機上使用，這樣才能使用 **設計師提供的 [Web 服務工作編輯器]**[!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊設定 Web 服務工作。  
+ WSDL 檔案必須可以在本機上使用，這樣才能使用 **設計師提供的 [Web 服務工作編輯器]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊設定 Web 服務工作。  
   
 -   如果 HTTP 連接管理員指向網站，則必須手動將 WSDL 檔案複製到本機電腦。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59240807"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Web 服務工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Web 服務工作編輯器 &#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Web 服務工作編輯器 &#40;輸入頁面&#41;](../web-service-task-editor-input-page.md)  
+-   [Web 服務工作編輯器 &#40;[輸入] 頁面&#41;](../web-service-task-editor-input-page.md)  
   
--   [Web 服務工作編輯器 &#40;輸出頁面&#41;](../web-service-task-editor-output-page.md)  
+-   [Web 服務工作編輯器 &#40;[輸出] 頁面&#41;](../web-service-task-editor-output-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

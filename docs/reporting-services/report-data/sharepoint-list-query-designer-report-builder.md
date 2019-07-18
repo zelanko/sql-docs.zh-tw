@@ -2,20 +2,20 @@
 title: SharePoint 清單查詢設計工具 (報表產生器) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
 - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 701cccc9acc67c21133d97b592f7aa6211adb8d4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500054"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 清單查詢設計工具 (報表產生器)
   報表產生器和報表設計師同時提供了圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，以便指定要從報表資料集之 SharePoint 網站中擷取的資料。 您可以使用圖形化查詢設計工具來瀏覽 SharePoint 清單中繼資料、以互動方式建立查詢以及檢視查詢的結果。 您可以使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢、修改查詢，或輸入查詢命令。 您也可以從檔案或報表匯入現有的查詢。  
@@ -93,6 +93,6 @@ ms.locfileid: "50031617"
 |**顯示隱藏的欄位**|切換顯示或隱藏 SharePoint 自動產生，但通常不會在報表中使用的欄位，例如 SharePoint 連結項目的 [ProgId] 和 [Level]。 隱藏這些欄位會縮短欄位清單，且更方便使用。|  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查詢設計工具 &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

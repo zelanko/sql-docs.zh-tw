@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbbb50000f88e35b03f5a006c4a50708f10b05b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781169"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 範例
   Hello World Ready 範例示範涉及建立、部署及測試以簡單全球化整備 Common Language Runtime (CLR) 整合為基礎之預存程序的基本作業。 全球化整備元件可以輕鬆地當地語系化成全世界不同市場的不同語言，而不變更元件的原始程式碼。 此範例還示範如何透過輸出參數，以及透過由預存程序動態建構及傳回至用戶端的記錄來傳回資料。此範例與 Hello World 範例幾乎相同，但它可更容易、更安全地當地語系化此應用程式。 若要變更當地語系化文字，需要依照以下進行：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
@@ -16,12 +15,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084214"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>建立採礦模型的複本
   當您想要快速建立數個以相同資料為基礎的採礦模型時，建立採礦模型的複本很有用。 複製模型之後，可以藉由變更參數或新增篩選來編輯新複本。  
@@ -40,7 +39,7 @@ ms.locfileid: "52529087"
   
      -或-  
   
-     選取此模型。 在 [採礦模型] 功能表上，選取 [新增採礦模型]。  
+     選取此模型。 在 [採礦模型]  功能表上，選取 [新增採礦模型]  。  
   
 4.  輸入新採礦模型的名稱，然後選取演算法。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

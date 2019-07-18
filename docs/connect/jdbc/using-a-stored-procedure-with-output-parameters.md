@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea98438694963986c31f0dbb7dddecfb5caa9da6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610826"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790340"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含有輸出參數的預存程序
 

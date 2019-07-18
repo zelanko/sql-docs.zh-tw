@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4eb1854e0e0062b7c9a59263b6f8847e26de94ee
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d1d1d341a12e417c118e6dfb64ecd9a5da5f2bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009162"
 ---
 # <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,9 @@ sp_delete_log_shipping_primary_database
 6.  中的項目中移除**log_shipping_primary_databases**此主要資料庫。  
   
 7.  呼叫**sp_delete_log_shipping_alert_job**監視伺服器上。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   

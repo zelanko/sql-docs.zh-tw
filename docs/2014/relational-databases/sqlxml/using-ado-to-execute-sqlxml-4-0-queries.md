@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5593d0c582d034be4e7add8f69449e99a6316f9e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012153"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
   在舊版的 SQLXML 中，可使用 SQLXML IIS 虛擬目錄和 SQLXML ISAPI 篩選來支援以 HTTP 為基礎的查詢執行。 在 SQLXML 4.0 中已經移除這些元件，因為自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始引進的原生 XML Web 服務提供了類似且重疊的功能。  

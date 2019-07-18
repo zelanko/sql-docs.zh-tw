@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
@@ -15,12 +14,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff63c6568f0a34a43caf6765e7e01ce8022e10f0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059063"
 ---
 # <a name="execute-package-task-editor"></a>執行封裝工作編輯器
   使用「執行封裝工作編輯器」設定「執行封裝」工作。 「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -39,7 +38,7 @@ ms.locfileid: "58382256"
   
 1.  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中開啟包含 [執行封裝] 工作的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案。  
   
-2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]。  
+2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]  。  
   
 ##  <a name="general"></a> 設定 [一般] 頁面上的 [選項]  
  **名稱**  
@@ -53,10 +52,10 @@ ms.locfileid: "58382256"
   
 ##  <a name="package"></a> 設定 [封裝] 頁面上的 [選項]  
  **ReferenceType**  
- 為專案中的子封裝選取 [專案參考]。 為封裝外部的子封裝選取 [外部參考]  
+ 為專案中的子封裝選取 [專案參考]  。 為封裝外部的子封裝選取 [外部參考]   
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 如需轉換的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
+>  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 如需轉換的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
   
  **密碼**  
  如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 ([...]) 按鈕，然後建立子封裝的新密碼。  
@@ -89,18 +88,18 @@ ms.locfileid: "58382256"
   
 #### <a name="location--sql-server"></a>位置 = SQL Server  
  **[連接]**  
- 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>] 建立新的連線管理員。  
+ 在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>]  建立新的連線管理員。  
   
- **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相關主題：** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
   
 #### <a name="location--file-system"></a>位置 = 檔案系統  
  **[連接]**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  顯示封裝名稱。  

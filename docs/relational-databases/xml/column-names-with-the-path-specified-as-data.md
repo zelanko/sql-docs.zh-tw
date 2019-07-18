@@ -1,7 +1,7 @@
 ---
 title: 以 data() 指定路徑的資料行名稱 | Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,18 +13,20 @@ ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f7044ff5ab003b31296a3293a0f146ac0a26c8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77913ea6358f9a5d1b88de7426144b730b5c74e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511435"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66175366"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>以 data() 指定路徑的資料行名稱
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  如果以資料行名稱指定的路徑是 "data()"，則在產生的 XML 中會將其值視為不可部分完成值。 如果序列化的下一個項目也是不可部分完成值，就會在 XML 中加入空白字元。 當您建立清單類型的元素與屬性值時，這會非常有用。 下列查詢會擷取產品型號識別碼、名稱以及該產品型號中的產品清單。  
+
+如果以資料行名稱指定的路徑是 "data()"，則在產生的 XML 中會將其值視為不可部分完成值。 如果序列化的下一個項目也是不可部分完成值，就會在 XML 中加入空白字元。 當您建立清單類型的元素與屬性值時，這會非常有用。 下列查詢會擷取產品型號識別碼、名稱以及該產品型號中的產品清單。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID       AS "@ProductModelID",  
@@ -39,14 +41,16 @@ WHERE ProductModelID= 7
 FOR XML PATH('ProductModelData');  
 ```  
   
- 巢狀 SELECT 會擷取產品識別碼的清單。 它會將 "data()" 指定為產品識別碼的資料行名稱。 因為 PATH 模式會為資料列元素名稱指定空白字串，所以不會產生任何資料列元素。 而是會以指派給父項 SELECT 中 <`ProductModelData`> 資料列元素的 ProductID 屬性來傳回值。 以下是結果：  
-  
- `<ProductModelData ProductModelID="7"`  
-  
- `ProductModelName="HL Touring Frame"`  
-  
- `ProductIDs="885 887 888 889 890 891 892 893" />`  
-  
+ 巢狀 SELECT 會擷取產品識別碼的清單。 它會將 "data()" 指定為產品識別碼的資料行名稱。 因為 PATH 模式會為資料列元素名稱指定空白字串，所以不會產生任何資料列元素。 而是會以指派給父項 SELECT 中 `<ProductModelData>` 資料列項目的 ProductID 屬性來傳回值。 以下是結果：  
+
+```sql
+<ProductModelData
+  ProductModelID="7"
+  ProductModelName="HL Touring Frame"
+  ProductIDs="885 887 888 889 890 891 892 893"
+/>
+```
+
 ## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   

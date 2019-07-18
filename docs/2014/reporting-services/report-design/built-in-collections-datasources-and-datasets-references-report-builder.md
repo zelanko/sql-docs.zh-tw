@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1680d11ef71bd0a4b6fa344951cfc5b7d92df927
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106430"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合參考 (報表產生器及 SSRS)
-  `DataSources` 集合代表報表中使用的所有資料來源。 同樣地，`DataSets` 集合則代表報表中所有資料來源的所有資料集。 請使用 [報表資料] 窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  
+  `DataSources` 集合代表報表中使用的所有資料來源。 同樣地，`DataSets` 集合則代表報表中所有資料來源的所有資料集。 請使用 [報表資料]  窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="datasources"></a>DataSources  
- `DataSources` 集合代表已發行報表定義中參考的資料來源。 您可以選擇在報表中加入這項資訊，以記錄報表資料的來源。 這個集合在 [預覽] 模式中無法使用。 下表描述 `DataSources` 集合內的變數。  
+ `DataSources` 集合代表已發行報表定義中參考的資料來源。 您可以選擇在報表中加入這項資訊，以記錄報表資料的來源。 這個集合在 [預覽]  模式中無法使用。 下表描述 `DataSources` 集合內的變數。  
   
 |**變數**|`Type`|**說明**|  
 |------------------|--------------|---------------------|  
@@ -33,7 +32,7 @@ ms.locfileid: "56296636"
 |`Type`|`String`|資料來源的資料提供者類型。 例如， `SQL`。|  
   
 ## <a name="datasets"></a>DataSets  
- `DataSets` 集合代表報表定義中參考的資料集。 您可以選擇將查詢加入報表的文字方塊中，這樣如果使用者想要知道報表中到底有什麼資料，就可以看到原始的命令文字。 這個集合在 [預覽] 模式中無法使用。 下表描述 `DataSets` 集合的成員。  
+ `DataSets` 集合代表報表定義中參考的資料集。 您可以選擇將查詢加入報表的文字方塊中，這樣如果使用者想要知道報表中到底有什麼資料，就可以看到原始的命令文字。 這個集合在 [預覽]  模式中無法使用。 下表描述 `DataSets` 集合的成員。  
   
 |**成員**|`Type`|**說明**|  
 |----------------|--------------|---------------------|  

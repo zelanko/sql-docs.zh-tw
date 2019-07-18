@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62695652"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>作業屬性：新增作業 (步驟頁面)
   使用此頁面來檢視和組織 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的作業步驟。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **作業步驟清單**  
  列出此作業的作業步驟。  
   

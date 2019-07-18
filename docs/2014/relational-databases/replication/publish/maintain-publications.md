@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63238803"
 ---
 # <a name="maintain-publications"></a>維護發行集
   建立發行集之後，可能需要加入或卸除發行項，或者變更發行集與發行項屬性。 建立發行集之後即允許多數變更。但在某些情況下，必須產生新的發行集快照集和 (或) 重新初始化訂閱到發行集。 如需詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  

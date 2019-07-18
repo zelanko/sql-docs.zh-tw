@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQRT function
 - square root values
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32b4247a138c3cf6d87dcb166c30083280dfccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4bd454ee74fb10ef9bbbe43c993397b39ae1101
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65947690"
 ---
 # <a name="sqrt-transact-sql"></a>SQRT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

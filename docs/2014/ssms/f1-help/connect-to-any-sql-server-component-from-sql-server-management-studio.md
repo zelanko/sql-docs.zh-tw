@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 342624645e9bd88d0a7afd08b3c18225fc2c14ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245366"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之各項元件所需的功能。 請利用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來連接到：  

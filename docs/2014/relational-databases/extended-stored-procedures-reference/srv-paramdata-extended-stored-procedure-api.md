@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127416"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
     
@@ -62,14 +62,14 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP、 NULL<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** N/A<br /><br /> **< 255:** N/A|  
-|BIGVARCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料|  
-|BIGCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 個空格<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料 + 填補 (最多 255)|  
-|BIGBINARY|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 0X00<br /><br /> **> = 255:** VP、255 個位元組<br /><br /> **< 255:** VP、實際資料 + 填補 (最多 255)|  
-|BIGVARBINARY|**NULL:** NULL、 N/A<br /><br /> **零：** VP、0X00<br /><br /> **> = 255:** VP、255 個位元組<br /><br /> **< 255:** VP、實際資料|  
-|NCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 個空格<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料 + 填補 (最多 255)|  
-|NVARCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料|  
-|NTEXT|**NULL:** N/A<br /><br /> **零：** N/A<br /><br /> **> = 255:** N/A<br /><br /> **\<255:** N/A|  
+|BITN|**NULL：** VP、NULL<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|BIGVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
+|BIGCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
+|BIGBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP，255 0x00<br /><br /> **>=255：** VP，255 個位元組<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
+|BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP，0x00<br /><br /> **>=255：** VP，255 個位元組<br /><br /> **<255：** VP、實際資料|  
+|NCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
+|NVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
+|NTEXT|**NULL：** N/A<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **\<255：** N/A|  
   
  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121452"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 函式
 **合規性**  
@@ -38,7 +37,7 @@ ms.locfileid: "53201767"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLConfigDriver(  
      HWND     hwndParent,  
@@ -54,7 +53,7 @@ BOOL SQLConfigDriver(
  *hwndParent*  
  [輸入]父視窗控制代碼。 如果控制代碼為 null，函式不會顯示任何對話方塊。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*必須包含下列值之一：  
   
  ODBC_CONFIG_DRIVER:變更連接共用的驅動程式所使用的逾時。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967150"
 ---
 # <a name="append-method-adox-views"></a>Append 方法 (ADOX Views)
 建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將其附加至[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
@@ -35,7 +34,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  A**字串**值，指定要建立之檢視的名稱。  
   
  *Command*  

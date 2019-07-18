@@ -10,15 +10,15 @@ helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9b60c47fd7cf05202a5203c1b908c9240cb5a22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483776"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
   在 **的** [使用者] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 清單中加入使用者，開始指派 Web 應用程式權限的程序。 在清單中的使用者存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，您必須提供使用者一個或多個功能區域和模型物件的權限。  

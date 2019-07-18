@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a44e3882121347235141aacf879beea8127e3133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910707"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>進階的物件選取項目 (AccessToSQL)
 **進階物件部分**對話方塊可讓您使用在 物件名稱的字串與子字串篩選資料庫物件，然後選取或取消選取這些物件。 SSMA 會執行轉換和移轉作業選取的物件。  

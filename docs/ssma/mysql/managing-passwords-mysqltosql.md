@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f04b786aaef8a994cff1051a289bbdad3b3fd5ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908999"
 ---
 # <a name="managing-passwords-mysqltosql"></a>管理密碼 (MySQLToSQL)
 本章節是關於保護資料庫的密碼和匯入，或將它們匯出到伺服器的程序：  
@@ -36,7 +35,7 @@ SSMA 可讓您保護您的資料庫的密碼。
   
 1.  **純文字格式：** 在 [密碼] 節點的值屬性中輸入資料庫密碼。 在指令碼檔案或伺服器連線檔案伺服器一節中的伺服器定義節點底下找到。  
   
-    以純文字密碼並不安全的。 因此，您將會遇到下列警告訊息中的主控台輸出：*「 伺服器&lt;伺服器識別碼&gt;密碼會提供不安全的純文字形式 SSMA 主控台應用程式會提供一個選項來保護透過加密的密碼，SSMA 說明檔中的-securepassword 選項，如需詳細資訊，請參閱資訊 」。*  
+    以純文字密碼並不安全的。 因此，您將會遇到下列警告訊息中的主控台輸出： *「 伺服器&lt;伺服器識別碼&gt;密碼會提供不安全的純文字形式 SSMA 主控台應用程式會提供一個選項來保護透過加密的密碼，SSMA 說明檔中的-securepassword 選項，如需詳細資訊，請參閱資訊 」。*  
   
     **加密的密碼：** 指定的密碼，在此情況下，是以加密形式儲存 ProtectedStorage.ssma 在本機電腦上。  
   

@@ -10,22 +10,22 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480992"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域的跨定義域規則。 跨定義域規則會在複合定義域所包含的單一定義域中測試值之間的關聯性。 跨定義域規則必須在複合定義域中成立，才能讓定義域值被視為正確且符合商務需求。 跨定義域規則是用來驗證、更正並標準化定義域值。  
   
  跨定義域規則的 If 子句和 Then 子句是分別針對複合定義域的其中一個單一定義域所定義。 您必須針對不同的單一定義域定義每個子句。 跨定義域規則必須與多個單一定義域相關。您無法針對複合定義域定義簡單定義域規則 (僅適用於單一定義域)。 您可以針對單一定義域定義定義域規則，藉以進行此作業。 If 子句和 Then 子句可以分別包含一個或多個條件。  
   
- 具有最終條件的跨定義域規則會將規則邏輯套用至條件中值的同義字，以及值本身。 If 和 Then 子句的最終條件包括 [值等於]、[值不等於]、[值在] 或 [值不在]。 例如，假設您有下列跨定義域規則的複合定義域：「 對於 'City' 而言如果值等於 ' Los Angeles'，然後對於 'State'，值等於 'CA'。 如果 'Los Angeles' 和 'LA' 是同義字，此規則會針對 'Los Angeles CA' 和 'LA CA' 傳回正確，而針對 'Los Angeles WA' 和 'LA WA' 傳回錯誤。  
+ 具有最終條件的跨定義域規則會將規則邏輯套用至條件中值的同義字，以及值本身。 If 和 Then 子句的最終條件包括 [值等於]、[值不等於]、[值在] 或 [值不在]。 例如，假設您擁有複合定義域的下列跨定義域規則：「對於 'City' 而言，如果值等於 'Los Angeles'，則對於 'State' 而言，值等於 'CA'」。 如果 'Los Angeles' 和 'LA' 是同義字，此規則會針對 'Los Angeles CA' 和 'LA CA' 傳回正確，而針對 'Los Angeles WA' 和 'LA WA' 傳回錯誤。  
   
  除了只讓您知道跨定義域規則是否有效之外，跨定義域規則中的最終 *Then* 子句 **[值等於]** 也會在資料清理活動期間更正資料。 如需詳細資訊，請參閱＜ [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) ＞中的 [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "56012020"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]** 。 如需相關資訊，請參閱 [建立知識庫](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  定義域管理會在 Data Quality Services 用戶端的頁面上執行，該頁面包含個別定義域管理作業所適用的五個索引標籤。 這不是精靈驅動的程序，任何管理作業都可以個別執行。  
@@ -54,7 +54,7 @@ ms.locfileid: "56012020"
   
 4.  按一下 **[CD 規則]** 索引標籤。  
   
-5.  按一下 **[加入新的定義域規則]**，然後輸入規則的名稱和描述。  
+5.  按一下 **[加入新的定義域規則]** ，然後輸入規則的名稱和描述。  
   
 6.  選取 **[使用中]** 指定將要執行此規則 (預設值)，或取消選取以防止執行此規則。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56012020"
   
     3.  如果條件需要值，請在與條件相關聯的文字方塊中輸入值。  
   
-    4.  如果 If 子句需要另一個條件，請按一下 **[將新條件加入選取的子句]**。 必要時，請選取運算子、選取條件，然後輸入條件的值。  
+    4.  如果 If 子句需要另一個條件，請按一下 **[將新條件加入選取的子句]** 。 必要時，請選取運算子、選取條件，然後輸入條件的值。  
   
     5.  若要變更條件的順序，請按一下條件的左側加以選取，然後按一下向上或向下箭號。  
   

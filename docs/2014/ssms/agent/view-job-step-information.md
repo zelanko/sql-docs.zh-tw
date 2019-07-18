@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245925"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
   本主題說明如何檢視 [作業步驟屬性] 對話方塊中的作業步驟詳細資料。 其中還包括檢視作業步驟輸出的相關資訊。  
@@ -51,11 +51,11 @@ ms.locfileid: "52786090"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]。  
+2.  依序展開 [SQL Server Agent]  和 [作業]  、以滑鼠右鍵按一下包含要檢視之作業步驟的作業，然後按一下 [屬性]  。  
   
 3.  在 **[作業屬性]** 對話方塊中，按一下 **[步驟]** 頁面。  
   
-4.  按一下所要檢視的作業步驟，再按一下 **[編輯]**。  
+4.  按一下所要檢視的作業步驟，再按一下 **[編輯]** 。  
   
 5.  在 **[作業步驟屬性]** 對話方塊的 **[一般]** 頁面上，您可以檢視作業步驟的類型及其功能。  
   

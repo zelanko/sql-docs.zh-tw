@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Server Agent, service accounts
 - multiserver environments [SQL Server], SQL Server Agent service account behavior
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19855f4745ee4f2dd64de924d268179d0617c774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a5a8c06c163cf71ae3509b84e8064aba0b34cd9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808576"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688681"
 ---
 # <a name="choose-the-right-sql-server-agent-service-account-for-multiserver-environments"></a>為多伺服器環境選擇適當的 SQL Server Agent 服務帳戶
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47808576"
   
 -   如果以本機系統帳戶執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，則只有在主要伺服器和目標伺服器都位在相同電腦上時，才支援「主要伺服器-目標伺服器」作業。 如果您使用這個組態，則將目標伺服器編列至主要伺服器時，會傳回下列訊息：  
   
-    「請確定 <目標伺服器電腦名稱> 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
+    「請確定 <目標伺服器電腦名稱>  的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
   
     您可以忽略此參考訊息。 編列作業應該順利完成。  
   

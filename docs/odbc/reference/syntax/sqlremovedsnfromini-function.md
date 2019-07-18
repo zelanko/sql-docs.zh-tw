@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbd405189d17051c4f1a6f07c943f77d6a6289c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024527"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53207797"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
      LPCSTR   lpszDSN);  

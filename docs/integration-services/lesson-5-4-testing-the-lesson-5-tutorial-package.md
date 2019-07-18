@@ -11,14 +11,18 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f97121a1916362d415eef3de717ad091fbac7958
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65721551"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 課：測試第 5 課套件
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 在執行階段，您的套件會從設定變數取得 **Directory** 屬性的值，而不是從建立套件時所指定的目錄名稱取得。 變數的值來自 **SSISTutorial.dtsConfig** XML 檔。  
   

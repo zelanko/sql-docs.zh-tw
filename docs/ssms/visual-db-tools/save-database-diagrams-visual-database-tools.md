@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96adc8b3f44c69a66aca46d6061d6ae2a673f33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: fc1335fce17eaf3f51f3a33a00e386782f801acd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740026"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679283"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>儲存資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47740026"
   
 ### <a name="to-save-the-database-diagram"></a>儲存資料庫圖表  
   
-1.  從 [檔案] 功能表中，選擇 **[儲存 \<**_tablename_**>]**。  
+1.  從 [檔案]  功能表中，選擇 **[儲存 \<** _tablename_ **>]** 。  
   
-2.  如果這是從未儲存過的新圖表，[另存新檔] 對話方塊便會出現。 輸入圖表的名稱。  
+2.  如果這是從未儲存過的新圖表，[另存新檔]  對話方塊便會出現。 輸入圖表的名稱。  
   
-    如果變更現有圖表中的資料表，[儲存] 對話方塊便會出現，並顯示儲存圖表時將會儲存到資料庫之變更的清單。  
+    如果變更現有圖表中的資料表，[儲存]  對話方塊便會出現，並顯示儲存圖表時將會儲存到資料庫之變更的清單。  
   
-3.  按一下 [是]\(如果為新圖表則為 [確定])，更新資料庫以符合您的圖表。  
+3.  按一下 [是]  \(如果為新圖表則為 [確定]  )，更新資料庫以符合您的圖表。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

@@ -2,20 +2,19 @@
 title: 查詢存放區集區中的 HDFS 資料
 titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 HDFS 資料。 您建立儲存體集區中資料的外部資料表，然後再執行查詢。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 03/27/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957700"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 HDFS 中的 SQL Server 的巨量資料叢集
 
@@ -76,12 +75,8 @@ ms.locfileid: "58860040"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    END
    ```
 

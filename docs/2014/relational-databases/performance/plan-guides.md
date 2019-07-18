@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150823"
 ---
 # <a name="plan-guides"></a>計畫指南
   當您無法或不想要在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中直接變更實際查詢的文字時，您可以使用計畫指南來最佳化查詢的效能。 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，藉以影響查詢的最佳化。 當協力廠商所提供的資料庫應用程式中有少量查詢子集的執行情況不如預期時，使用計畫指南會非常有用。 在計畫指南中，指定您要最佳化的 Transact-SQL 陳述式以及包含您想要使用之查詢提示的 OPTION 子句，或者是您想要用來將查詢進行最佳化的特定查詢計畫。 執行查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會比對 Transact-SQL 陳述式與計畫指南，然後在執行階段中，將 OPTION 子句附加至查詢或使用指定的查詢計畫。  

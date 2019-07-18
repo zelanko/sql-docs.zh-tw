@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44deb9eae8d5ddc253de0b8927e6579422a3f42e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 08d78fc30dbdafa8d65ac01943e729b6cf0d890d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109788"
 ---
 # <a name="complete-the-report-wizard"></a>完成報表精靈
   使用此頁面，即可命名報表和檢閱要套用至報表的選項。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **報表名稱**  
  輸入報表的名稱。 這個名稱也會顯示成報表的標題。 您可以在 [設計] 檢視中變更此標題。  
   

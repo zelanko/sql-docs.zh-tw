@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a89d17414328ea58a65a6df96af267335c8465d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 610100e8a9634fd25232b515533d993bb459b2bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830676"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788615"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: '欄位 （Visual c + + 語法索引與 #import） |Microsoft Docs'
+title: '欄位 (VisualC++含 #import 語法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2f442f665f6292c529b4d2360494869d9a0b2c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932691"
 ---
-# <a name="field-visual-c-syntax-index-with-import"></a>欄位 （Visual c + + 語法索引與 #import）
+# <a name="field-visual-c-syntax-index-with-import"></a>欄位 (VisualC++含 #import 語法索引)
 ## <a name="methods"></a>方法  
   
 ```  

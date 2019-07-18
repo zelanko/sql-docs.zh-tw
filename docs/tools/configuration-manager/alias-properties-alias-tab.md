@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], <Alias> properties
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ff3b9485f4e8915299c4ad06709336e7031bfd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f1c6201489a01626bc3905d2a30a937fa48e046c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677557"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728311"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 屬性 ([別名] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)] 對話方塊的 [別名] 頁面來指定別名的連接字串元素。  
+  別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 使用 [\<Alias name> Properties (<別名名稱> 內容)]   對話方塊的 [別名]  頁面來指定別名的連接字串元素。  
   
 ## <a name="options"></a>選項。  
  **別名名稱**  

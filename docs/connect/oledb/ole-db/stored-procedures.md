@@ -1,5 +1,5 @@
 ---
-title: 預存程序 |Microsoft Docs
+title: 預存程序 | Microsoft Docs
 description: 預存程序
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7d9a26049a09f45ff7588324d8c0421c4287db2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795885"
 ---
 # <a name="stored-procedures"></a>預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

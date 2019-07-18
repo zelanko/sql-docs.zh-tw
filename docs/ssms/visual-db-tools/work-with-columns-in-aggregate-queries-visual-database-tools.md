@@ -13,15 +13,15 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b3d6a176379c4cdfae4509e3ab3988202831c49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 1f6929ff23ab9c1f75d683f79b08d632611e7f66
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540650"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689229"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在彙總查詢中使用資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "52540650"
   
 當您將搜尋條件輸入 [準則] 窗格的 [篩選條件] 資料行時，查詢和檢視設計師將遵守下列規則：  
   
--   如果方格的 [群組依據] 資料行並未顯示 (因為您尚未指定彙總查詢)，則將搜尋條件放入 WHERE 子句。  
+-   如果方格的 [群組依據]  資料行並未顯示 (因為您尚未指定彙總查詢)，則將搜尋條件放入 WHERE 子句。  
   
--   如果您已在彙總查詢中並已選取 [群組依據] 資料行中的 [Where] 選項，則將搜尋條件放入 WHERE 子句。  
+-   如果您已在彙總查詢中並已選取 [群組依據]  資料行中的 [Where]  選項，則將搜尋條件放入 WHERE 子句。  
   
--   如果 [群組依據] 資料行中含有任何 [Where] 以外的值，則將搜尋條件放入 HAVING 子句。  
+-   如果 [群組依據]  資料行中含有任何 [Where]  以外的值，則將搜尋條件放入 HAVING 子句。  
   
 ## <a name="using-the-having-and-where-clauses"></a>使用 HAVING 和 WHERE 子句  
 以下原則說明如何在搜尋條件中參考彙總查詢中的資料行。 通常，您可以使用搜尋條件中的資料行來篩選應進行摘要的資料列 (WHERE 子句)，或決定最後輸出 (HAVING 子句) 中出現的群組結果。  

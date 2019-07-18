@@ -12,13 +12,13 @@ helpviewer_keywords:
 - user-defined functions [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: fdcd5378968a6bb38e0e1422e716293848c854bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 6ba52aeb855abd7e5d6325dd6de743f28f402993
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215847"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791289"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>執行使用者定義函數和處理傳回碼 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

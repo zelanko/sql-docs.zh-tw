@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62735874"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法 (ServerSettings 類別)
   設定目前的安全性憑證。  

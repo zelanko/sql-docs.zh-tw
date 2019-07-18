@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211330"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目標伺服器的位置 (SQL Server Management Studio)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中於多伺服器管理組態指定目標伺服器的位置。  
@@ -29,7 +29,7 @@ ms.locfileid: "52780510"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目指定目標伺服器的位置：**  
   
@@ -53,11 +53,11 @@ ms.locfileid: "52780510"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要指定目標伺服器位置的主要伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多伺服器管理]，然後選取 [管理目標伺服器]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多伺服器管理]  ，然後選取 [管理目標伺服器]  。  
   
-3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]。  
+3.  以滑鼠右鍵按一下目標伺服器，然後選取 [屬性]  。  
   
-4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]**。  
+4.  在 **[位置]** 方塊中輸入伺服器的位置，再按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52780510"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb ;  

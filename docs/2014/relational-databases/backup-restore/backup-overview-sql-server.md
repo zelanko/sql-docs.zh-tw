@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922119"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
@@ -67,7 +67,7 @@ ms.locfileid: "48049394"
  資料庫的備份。 完整資料庫備份代表備份完成時的整個資料庫。 差異資料庫備份僅包含自其最近的完整資料庫備份以來，對資料庫所做的變更。  
   
  [差異備份](full-database-backups-sql-server.md)  
- 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
+ 一種資料備份，是以整個或部分資料庫或一組資料檔案或檔案群組 (「差異基底」  ) 的最新完整備份為基礎，而且只包含自差異基底以來變更的資料範圍。  
   
  差異部分備份僅記錄自上一次部分備份後在檔案群組中變更過的資料範圍，稱為差異基底。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049394"
  [記錄備份](transaction-log-backups-sql-server.md)  
  交易記錄的備份，包含先前的記錄備份中未備份的所有記錄。 (完整復原模式)  
   
- [檔案備份](full-file-backups-sql-server.md)  
+ [file backup](full-file-backups-sql-server.md)  
  一個或多個資料庫檔案或檔案群組的備份。  
   
  [部分備份](partial-backups-sql-server.md)  
@@ -177,7 +177,7 @@ ms.locfileid: "48049394"
   
 -   [指定在發生錯誤後備份或還原作業應該繼續還是停止 &#40;SQL Server&#41;](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
--   [使用資源管理員來限制備份壓縮的 CPU 使用量 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   

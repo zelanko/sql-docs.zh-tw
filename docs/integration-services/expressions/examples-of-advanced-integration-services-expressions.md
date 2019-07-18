@@ -16,14 +16,18 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 919692adf35cbf78b11073905294925fef8e23b5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 17fd09520e21bdc70a77abf56337f4f6b3e1f2c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725475"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>進階 Integration Services 運算式範例
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   本節提供組合多個運算子和函數的進階運算式範例。 如果在優先順序條件約束或「條件式分割」轉換中使用運算式，則評估結果必須為布林。 不過，該條件約束不會套用至屬性運算式、變數、「衍生的資料行」轉換，或「For 迴圈」容器中使用的運算式。  
   
  下列範例使用 **AdventureWorks** 和 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 各範例代表其使用的資料表。  

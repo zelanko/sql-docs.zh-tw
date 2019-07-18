@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913692"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>升級 SQL Server 容錯移轉叢集
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在所有容錯移轉叢集節點上，個別從 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 與 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 容錯移轉叢集，升級 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 及 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c46f2a9adabe9a7a52400cb2f29338bfb0fabaab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfa385a2f3865199f68d24c3c8d03b8009fd08a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126755"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>連接到 SQL Server 的執行個體
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

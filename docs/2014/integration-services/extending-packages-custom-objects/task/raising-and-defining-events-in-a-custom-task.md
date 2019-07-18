@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896126"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎提供事件的集合，可以顯示驗證與執行工作時的工作進度狀態。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面會定義這些事件，而且是以 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的參數提供給工作。  

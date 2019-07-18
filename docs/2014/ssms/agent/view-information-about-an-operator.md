@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188751"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員的詳細資訊。  
@@ -31,7 +31,7 @@ ms.locfileid: "54100323"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目，檢視關於操作員的資訊：**  
   
@@ -60,13 +60,13 @@ ms.locfileid: "54100323"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含要檢視之操作員的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]  。  
   
-     如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
+     如需 [<操作員名稱> 屬性]   對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性和新的運算子&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54100323"
   
     -   [操作員屬性 &#40;記錄頁面&#41;](operator-properties-history-page.md)  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -82,9 +82,9 @@ ms.locfileid: "54100323"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- reports information about operator Fran??ois Ajenstat   

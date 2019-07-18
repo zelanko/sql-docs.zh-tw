@@ -1,8 +1,9 @@
 ---
 title: sys.workload_management_workload_classifier_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2019
-ms.prod: ''
+ms.date: 05/01/2019
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
 ms.topic: language-reference
@@ -10,16 +11,15 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: ed7694f087a8e1b10697ed2083dbae8bf879528c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061288"
 ---
-# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql-preview"></a>sys.workload_management_workload_classifier_details (TRANSACT-SQL) （預覽）
+# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details & Amp;#40;transact-SQL&AMP;#41;
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

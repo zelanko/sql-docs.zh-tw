@@ -2,19 +2,18 @@
 title: 設定存取 Azure Blob 儲存體中的外部資料的 PolyBase |Microsoft Docs
 description: 說明如何設定連接至外部 Hadoop 的平行處理資料倉儲的 PolyBase。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960282"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 以存取 Azure Blob 儲存體中的外部資料
 
@@ -32,7 +31,7 @@ ms.locfileid: "49460629"
 
 首先，設定 AP，以使用 Azure Blob 儲存體。
 
-1. 執行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' 設定為 Azure Blob 儲存體提供者使用。 若要尋找的值提供者，請參閱[PolyBase 連線組態](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+1. 執行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' 設定為 Azure Blob 儲存體提供者使用。 若要尋找提供者的值，請參閱 [PolyBase 連線設定](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -49,7 +48,7 @@ ms.locfileid: "49460629"
   
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
-若要查詢您的 Azure Blob 儲存體中的資料，您必須定義在 TRANSACT-SQL 查詢中使用外部資料表。 下列步驟說明如何設定外部資料表。
+若要查詢您的 Azure Blob 儲存體中的資料，您必須定義在 TRANSACT-SQL 查詢中使用外部資料表。 下列步驟描述如何設定外部資料表。
 
 1. 在資料庫上建立主要金鑰。 必須加密的認證密碼。
 
@@ -66,7 +65,7 @@ ms.locfileid: "49460629"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 建立與外部資料來源[CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +77,7 @@ ms.locfileid: "49460629"
    );  
    ```
 
-1. 建立外部檔案格式[CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)。
+1. 使用 [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) 建立外部檔案格式。
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +88,7 @@ ms.locfileid: "49460629"
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. 建立外部資料表指向 Azure 儲存體中儲存的資料[CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)。 在此範例中，外部資料包含車輛感應器資料。
+1. 使用 [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md) 建立外部資料表以指向 Azure 儲存體中所儲存的資料。 在此範例中，外部資料會包含車輛感應器資料。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +105,7 @@ ms.locfileid: "49460629"
    );  
    ```
 
-1. 建立外部資料表的統計資料。
+1. 在外部資料表上建立統計資料。
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -120,7 +119,7 @@ ms.locfileid: "49460629"
 - 匯入資料。  
 - 匯出資料。  
 
-下列查詢會提供範例使用虛構的車輛感應器資料。
+下列查詢會提供具有虛構車輛感應器資料的範例。
 
 ### <a name="ad-hoc-queries"></a>特定查詢  
 
@@ -173,11 +172,11 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中的檢視 PolyBase 物件  
 
-在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
+在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
   
 ![在 SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關 PolyBase 的詳細資訊，請參閱 <<c0> [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
+如需有關 PolyBase 的詳細資訊，請參閱 [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
 

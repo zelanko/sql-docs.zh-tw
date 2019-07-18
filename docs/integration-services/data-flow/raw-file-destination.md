@@ -21,14 +21,18 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726526"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
   
  除了將原始資料寫入檔案之外，您也可以使用原始檔案目的地產生僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案，而不必執行封裝。 您可以使用原始檔案來源擷取之前由目的地撰寫的原始資料。 您也可以將原始檔案來源指向僅中繼資料的檔案。  
@@ -114,11 +118,11 @@ ms.locfileid: "58282300"
   
  若要在迴圈的第一次反覆運算中建立檔案，然後在迴圈的後續反覆運算中附加資料列，您需要在設計階段執行下列動作：  
   
-1.  將 WriteOption 屬性設為 [CreateOnce] 或 [CreateAlways]，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
+1.  將 WriteOption 屬性設為 [CreateOnce]  或 [CreateAlways]  ，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
   
-2.  將 WriteOption 屬性重設為 [Append] ValidateExternalMetadata 屬性設定為 [False]。  
+2.  將 WriteOption 屬性重設為 [Append]  ValidateExternalMetadata 屬性設定為 [False]  。  
   
- 如果您使用 [TruncateAppend] 選項，而不是 [Append] 選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend] 選項也會要求資料符合檔案格式。  
+ 如果您使用 [TruncateAppend]  選項，而不是 [Append]  選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend]  選項也會要求資料符合檔案格式。  
   
 ## <a name="configuration-of-the-raw-file-destination"></a>原始檔案目的地的組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -150,7 +154,7 @@ ms.locfileid: "58282300"
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
 ###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  
@@ -192,7 +196,7 @@ ms.locfileid: "58282300"
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
 ###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  

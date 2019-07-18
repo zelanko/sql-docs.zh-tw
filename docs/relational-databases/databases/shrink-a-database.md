@@ -1,5 +1,5 @@
 ---
-title: 壓縮資料庫 | Microsoft 文件
+title: 壓縮資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7642b2514f7a73034e8f0c2a5c75db71149d33e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae356a0f5ad27a92eb7ba7ba70fcf1553c0aa65c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559585"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583463"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ ms.locfileid: "51559585"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法壓縮資料庫：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [You shrink a database](#FollowUp)  
+-   **後續操作：** [您要壓縮資料庫](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51559585"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -86,9 +86,9 @@ ms.locfileid: "51559585"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 [資料庫]，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
+2.  展開 [資料庫]  ，然後以滑鼠右鍵按一下您要壓縮的資料庫。  
   
-3.  指向 **[工作]** 的 **[壓縮]**，然後按一下 **[資料庫]**。  
+3.  指向 **[工作]** 的 **[壓縮]** ，然後按一下 **[資料庫]** 。  
   
      **[資料庫]**  
      顯示選取之資料庫的名稱。  
@@ -105,21 +105,23 @@ ms.locfileid: "51559585"
      **壓縮後檔案的最大可用空間**  
      輸入在資料庫壓縮後，資料庫檔案中剩餘可用空間的最大百分比。 允許值介於 0 和 99 之間。  
   
-4.  按一下 [確定] 。  
-  
+4.  按一下 [確定]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>若要壓縮資料庫  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行]  。 這個範例會使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 縮小 `UserDB` 資料庫中的資料和記錄檔大小，使資料庫中能有 `10` % 的可用空間。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> 待處理：壓縮資料庫之後  
+##  <a name="FollowUp"></a> 後續操作：壓縮資料庫之後  
  為壓縮檔案所移動的資料可散佈至檔案中的任何可用位置。 如此會造成索引片段，並可能導致大範圍之索引搜尋的查詢效能變慢。 若要消除資料片段，可考慮在壓縮之後重建該檔案的索引。  
   
 ## <a name="see-also"></a>另請參閱  

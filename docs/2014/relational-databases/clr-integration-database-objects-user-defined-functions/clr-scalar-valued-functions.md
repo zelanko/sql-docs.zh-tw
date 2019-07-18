@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919595"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
   純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../clr-integration/clr-integration-overview.md)。  
@@ -80,7 +80,7 @@ Public Class T
 End Class  
 ```  
   
- 第一行程式碼會參考 `Microsoft.SqlServer.Server` 來存取屬性，並參考 `System.Data.SqlClient` 來存取 ADO.NET 命名空間  (此命名空間包含 `SqlClient`，也就是 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
+ 第一行程式碼會參考 `Microsoft.SqlServer.Server` 來存取屬性，並參考 `System.Data.SqlClient` 來存取 ADO.NET 命名空間 (此命名空間包含 `SqlClient`，也就是 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
  接下來，此函數會接收 `SqlFunction` 自訂屬性，該屬性可在 `Microsoft.SqlServer.Server` 命名空間中找到。 此自訂屬性會指出使用者定義函數 (UDF) 是否會使用同處理序提供者來讀取伺服器上的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許 UDF 更新、插入或刪除資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以讓不使用同處理序提供者之 UDF 的執行最佳化。 將 `DataAccessKind` 設定為 `DataAccessKind.None` 可表示這一點。 在下一行中，目標方法為 public static (Visual Basic .NET 中則為 shared)。  
   
@@ -153,7 +153,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [CLR 整合自訂屬性的概觀](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
- [使用者定義函式](../user-defined-functions/user-defined-functions.md)   
+ [使用者定義的函式](../user-defined-functions/user-defined-functions.md)   
  [從 CLR 資料庫物件進行資料存取](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

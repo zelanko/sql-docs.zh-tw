@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011951"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中為主體授與權限。  
@@ -63,11 +63,11 @@ ms.locfileid: "54134918"
   
 3.  展開 **[預存程序]** 資料夾。  
   
-4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]  。  
   
-5.  在 **預存程序屬性-**_stored_procedure_name>_ 對話方塊中，在 選取頁面上，選取**權限**。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
+5.  在 **預存程序屬性-** _stored_procedure_name>_ 對話方塊中，在 選取頁面上，選取**權限**。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
   
-6.  完成後，請按一下 **[確定]**。  
+6.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -75,9 +75,9 @@ ms.locfileid: "54134918"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267483"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>在採礦模型中篩選巢狀資料表 (中繼資料採礦教學課程)
   建立並探索模型之後，您決定要將焦點放在客戶資料子集上。 例如，您可能只要分析包含特定項目的購物籃，或是分析在特定期間未購買任何產品的客戶人口統計。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了篩選採礦模型資料的功能。 此功能非常有用，因為您不需要設定新的資料來源檢視，以使用不同的資料。 在基本資料採礦教學課程中，您學會了如何對案例資料表套用條件，以篩選來自二維資料表的資料。 在這項工作中，您將建立套用至巢狀資料表的篩選。  
   
-## <a name="filters-on-nested-vs-case-tables"></a>巢狀和案例資料表的篩選  
+## <a name="filters-on-nested-vs-case-tables"></a>巢狀和。案例資料表  
  如果您的資料來源檢視如同用於關聯模型的資料來源檢視，同樣包含一個案例資料表和一個巢狀資料表，您可以篩選來自案例資料表的值、巢狀資料表中存在或不存在的值，或是兩者的一些組合。  
   
  在這項工作中，您要先建立一份關聯模型副本，然後將 IncomeGroup 和 Region 屬性加入新的相關模型中，以便在案例資料表中篩選這些屬性。  
@@ -31,7 +31,7 @@ ms.locfileid: "56027510"
   
 1.  在 **採礦模型**索引標籤[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下`Association`模型，然後選取**新的採礦模型**。  
   
-2.  針對**模型名稱**，輸入`Association Filtered`。 針對**演算法名稱**，選取**Microsoft 關聯規則**。 按一下 [確定] 。  
+2.  針對**模型名稱**，輸入`Association Filtered`。 針對**演算法名稱**，選取**Microsoft 關聯規則**。 按一下 [確定]  。  
   
 3.  中的資料行篩選的關聯模型中，按一下 IncomeGroup 資料列，並將值從變更**略過**要**輸入**。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "56027510"
   
 1.  在  **Mining Models**索引標籤，以滑鼠右鍵按一下 模型篩選的關聯，然後選取**設定模型篩選器**。  
   
-2.  在 [模型篩選器] 對話方塊的 [採礦結構資料行] 文字方塊中，按一下方格中的上方資料列。  
+2.  在 [模型篩選器]  對話方塊的 [採礦結構資料行]  文字方塊中，按一下方格中的上方資料列。  
   
 3.  在 **採礦結構資料行** 文字方塊中，選取 IncomeGroup。  
   
      文字方塊左側的圖示會變更，指出選取的項目是資料行。  
   
-4.  按一下 **運算子**文字方塊中，然後選取**=** 從清單中的運算子。  
+4.  按一下 **運算子**文字方塊中，然後選取 **=** 從清單中的運算子。  
   
 5.  按一下 **值**文字方塊中，然後輸入`High`在方塊中。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "56027510"
   
 11. 在 **篩選**對話方塊中，在底下的第一個資料列中**採礦結構資料行**，選取`Model`。  
   
-12. 針對**運算子**，選取**IS NOT NULL**。 離開**值**空白的文字方塊。 按一下 [確定] 。  
+12. 針對**運算子**，選取**IS NOT NULL**。 離開**值**空白的文字方塊。 按一下 [確定]  。  
   
      中的篩選條件**運算式**的文字方塊**模型篩選器**對話方塊會自動更新以包含巢狀資料表上新的條件。 完成的運算式如下：  
   

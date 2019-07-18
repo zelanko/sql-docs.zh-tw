@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d1b4fa09fbd6d66262d22e7061adad88dc4a6b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 6239949729ba443d1b6d60b99bd4e888d72b20eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092470"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>變更集與核准 (適用於 Excel 的 MDS 增益集)
 

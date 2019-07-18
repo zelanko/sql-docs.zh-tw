@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094354"
 ---
 # <a name="sequence-of-status-records"></a>狀態記錄的順序
 如果傳回兩個或多個狀態記錄，在驅動程式管理員和驅動程式進行排名，根據下列規則。 具有最高順位的記錄是第一筆記錄。 資料錄 （驅動程式管理員、 驅動程式、 閘道和等等） 的來源不是當排名的記錄。  

@@ -19,15 +19,14 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a09a67894f01aff4e964907f95cfcef55d2044e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078547"
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +68,11 @@ OBJECT_ID('table_name')
   
 |「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
-|關鍵字 (keyword)|**nvarchar(4000)**|儲存在全文檢索索引內部之關鍵字的十六進位表示法。<br /><br /> 注意： OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
-|display_term|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自儲存在全文檢索索引中的內部格式。<br /><br /> 注意： OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
+|關鍵字 (keyword)|**nvarchar(4000)**|儲存在全文檢索索引內部之關鍵字的十六進位表示法。<br /><br /> 注意:OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
+|display_term|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自儲存在全文檢索索引中的內部格式。<br /><br /> 注意:OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
 |column_id|**int**|從中針對目前關鍵字進行全文檢索索引之資料行的識別碼。|  
 |document_id|**int**|從中針對目前詞彙進行全文檢索索引之文件或資料列的識別碼。 這個識別碼會對應至該文件或資料列的全文檢索索引鍵值。|  
-|property_id|**int**|您在 OBJECT_ID 中指定之資料表的全文檢索索引內之搜尋屬性內部屬性識別碼 ('*table_name*') 參數。<br /><br /> 當給定的屬性新增到搜尋屬性清單時，全文檢索引擎會註冊屬性，並為它指派該屬性清單特有的內部屬性識別碼。 對於給定的搜尋屬性清單來說，內部屬性識別碼 (本身為整數) 是唯一的。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。<br /><br /> 注意： 內部屬性識別碼是不同於將屬性加入至搜尋屬性清單時指定的屬性整數識別碼。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。<br /><br /> 若要檢視屬性識別碼與屬性名稱之間的關聯：<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
+|property_id|**int**|您在 OBJECT_ID 中指定之資料表的全文檢索索引內之搜尋屬性內部屬性識別碼 ('*table_name*') 參數。<br /><br /> 當給定的屬性新增到搜尋屬性清單時，全文檢索引擎會註冊屬性，並為它指派該屬性清單特有的內部屬性識別碼。 對於給定的搜尋屬性清單來說，內部屬性識別碼 (本身為整數) 是唯一的。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。<br /><br /> 注意:內部屬性識別碼有所區別時將屬性加入至搜尋屬性清單所指定的屬性整數識別碼。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。<br /><br /> 若要檢視屬性識別碼與屬性名稱之間的關聯：<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
 ## <a name="remarks"></a>備註  
  這個動態管理檢視可以回答類似下列的問題：  
@@ -135,8 +134,8 @@ GO
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [改善全文檢索索引的效能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_document &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
- [sys.dm_fts_index_keywords &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  

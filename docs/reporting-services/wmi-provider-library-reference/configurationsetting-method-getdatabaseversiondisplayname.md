@@ -2,20 +2,20 @@
 title: GetDatabaseVersionDisplayName 方法 (WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5fdabaeb773d0311cf079c46b09fc30f90189bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570953"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
   取得給定報表伺服器資料庫版本字串的顯示名稱。  

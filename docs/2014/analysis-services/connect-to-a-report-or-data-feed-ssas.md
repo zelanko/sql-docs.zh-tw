@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
@@ -13,15 +12,15 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087166"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>連接到報表或資料摘要 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您連接到資料摘要。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  **[資料表匯入精靈]** 的這個頁面可讓您連接到資料摘要。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
 ## <a name="from-a-report"></a>從報表  
  **易記連接名稱**  
@@ -36,7 +35,7 @@ ms.locfileid: "48090208"
  導覽至有報表可用的位置。  
   
  **進階**  
- 使用 [設定進階屬性] 對話方塊設定其他連接屬性。  
+ 使用 [設定進階屬性]  對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  
@@ -46,7 +45,7 @@ ms.locfileid: "48090208"
  輸入資料摘要連接的易記名稱。  
   
  **資料摘要的 URL**  
- 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽] 選取 Atom 服務文件。  
+ 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽]  選取 Atom 服務文件。  
   
  **瀏覽**  
  導覽至有報表可用的位置。  
@@ -63,7 +62,7 @@ ms.locfileid: "48090208"
  將帳號金鑰 (已加密) 與資料連接一起儲存。  
   
  **進階**  
- 使用 [設定進階屬性] 對話方塊設定其他連接屬性。  
+ 使用 [設定進階屬性]  對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  
@@ -73,7 +72,7 @@ ms.locfileid: "48090208"
  輸入資料摘要連接的易記名稱。  
   
  **資料摘要的 URL**  
- 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽] 選取 Atom 服務文件。  
+ 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽]  選取 Atom 服務文件。  
   
  按一下 **[包含所有摘要資料行]** 可指定是否要匯入所有資料摘要資料行。  
   

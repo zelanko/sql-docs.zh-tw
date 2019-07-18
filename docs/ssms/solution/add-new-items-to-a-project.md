@@ -11,19 +11,19 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], item additions
 - adding project items
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 369e132b176237a7c1318d101026ccf2663505dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 1baf05baae45683c291d1ef26408d3efc8764f7b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804166"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683136"
 ---
 # <a name="add-new-items-to-a-project"></a>將新項目加入專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-請將新的項目加入專案中，來延伸應用程式功能。 新項目可以是查詢或連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的項目。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。  
+請將新的項目加入專案中，來延伸應用程式功能。 新項目可以是查詢或連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的項目。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。  
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允許您在專案內建立資料夾。 若要組織您的工作，請在方案內建立多個專案。  
   
@@ -31,13 +31,13 @@ ms.locfileid: "47804166"
   
 1.  在 [方案總管] 中，選取一個目標專案。  
   
-2.  在 [專案] 功能表上，按一下 [加入新項目]。  
+2.  在 [專案]  功能表上，按一下 [加入新項目]  。  
   
-3.  在 [新增項目] 對話方塊的左窗格中，選取一個類別目錄。  
+3.  在 [新增項目]  對話方塊的左窗格中，選取一個類別目錄。  
   
-4.  在右窗格中，選取一個查詢範本，再按一下 [新增]。 此時會在專案的 [查詢] 資料夾中，加入新的查詢。  
+4.  在右窗格中，選取一個查詢範本，再按一下 [新增]  。 此時會在專案的 [查詢]  資料夾中，加入新的查詢。  
   
-5.  在 [連接到 Database Engine] 對話方塊中，指定新查詢的連接，再按一下 [連接]。 如果您不要將連接關聯於這項新查詢，您可以在連接對話中，按一下 [取消]。  
+5.  在 [連接到 Database Engine]  對話方塊中，指定新查詢的連接，再按一下 [連接]  。 如果您不要將連接關聯於這項新查詢，您可以在連接對話中，按一下 [取消]  。  
   
 6.  如果想要的話，請在 [方案總管] 中重新命名查詢。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "47804166"
   
 1.  在 [方案總管] 中，選取一個目標專案。  
   
-2.  在 [專案] 功能表上，按一下 [加入新項目]。  
+2.  在 [專案]  功能表上，按一下 [加入新項目]  。  
   
-3.  在左窗格中，選取 [連接]。  
+3.  在左窗格中，選取 [連接]  。  
   
-4.  在右窗格中，選取 [新增連接]，再按一下 [新增]。  
+4.  在右窗格中，選取 [新增連接]  ，再按一下 [新增]  。  
   
-5.  在 [連接到 Database Engine] 對話方塊中，指定新查詢的連接，再按一下 [連接]。 此時會在專案的 [連接] 資料夾中，新增連接。  
+5.  在 [連接到 Database Engine]  對話方塊中，指定新查詢的連接，再按一下 [連接]  。 此時會在專案的 [連接]  資料夾中，新增連接。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

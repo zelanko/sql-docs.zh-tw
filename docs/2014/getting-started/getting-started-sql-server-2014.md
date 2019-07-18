@@ -4,26 +4,18 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ccb6285f43764de7c7b6958aebd96de0fd40bac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b571739fc268547e944dfe26672735a2520ff943
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62772374"
 ---
 # <a name="getting-started-sql-server-2014"></a>使用者入門 (SQL Server 2014)
   尋找 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資訊、系統需求、安裝指示等來源。  

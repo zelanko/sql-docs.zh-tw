@@ -2,27 +2,27 @@
 title: 將總計新增到群組或 Tablix 資料區 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 623fcc417e43802d016eda48a77bd9c9699512bb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f751557bf0124466960182ebf50029bd1e34282f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582138"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>將總計加入到群組或 Tablix 資料區 (報表產生器及 SSRS)
- 您可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的 Tablix 資料區中，加入群組的總計或整個資料區域的總計。 根據預設，總計是套用篩選之後，群組或資料區域中的數值、非 Null 資料的總和。 若要加入群組的總計，在 [群組] 窗格中，按一下群組之快速鍵功能表上的 **[加入總計]** 。 若要加入 Tablix 主體區域中個別資料格的總計，按一下資料格之快速鍵功能表上的 **[加入總計]** 。 [新增總計] 命令與內容相關，而且僅能針對數值欄位啟用。 根據所選取的 Tablix 資料格，您可以在 Tablix 主體區域中選取資料格來加入單一資料格的總計，或者在 Tablix 資料列群組區域或 Tablix 資料行群組區域中選取資料格來加入整個群組的總計。 如需 Tablix 資料區的詳細資訊，請參閱 [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)。  
+ 您可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的 Tablix 資料區中，加入群組的總計或整個資料區域的總計。 根據預設，總計是套用篩選之後，群組或資料區域中的數值、非 Null 資料的總和。 若要加入群組的總計，在 [群組] 窗格中，按一下群組之快速鍵功能表上的 **[加入總計]** 。 若要加入 Tablix 主體區域中個別資料格的總計，按一下資料格之快速鍵功能表上的 **[加入總計]** 。 [新增總計]  命令與內容相關，而且僅能針對數值欄位啟用。 根據所選取的 Tablix 資料格，您可以在 Tablix 主體區域中選取資料格來加入單一資料格的總計，或者在 Tablix 資料列群組區域或 Tablix 資料行群組區域中選取資料格來加入整個群組的總計。 如需 Tablix 資料區的詳細資訊，請參閱 [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)。  
   
  加入總計之後，您可以從內建報表函數的清單，將預設函數 Sum 變更為不同的彙總函數。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。 [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="to-add-a-total-for-an-individual-value-in-the-tablix-body-area"></a>在 Tablix 主體區域中加入個別值的總計  
   
--   在 Tablix 資料區域主體區域中，以滑鼠右鍵按一下您要加入總計的資料格。 資料格必須包含數值欄位。 指向 **[加入總計]**，然後按一下 **[資料列]** 或 **[資料行]**。  
+-   在 Tablix 資料區域主體區域中，以滑鼠右鍵按一下您要加入總計的資料格。 資料格必須包含數值欄位。 指向 **[加入總計]** ，然後按一下 **[資料列]** 或 **[資料行]** 。  
   
      目前群組外的新資料列或資料行會加入到資料區域中，其中包含您按下之資料格中欄位的預設總計。  
   
@@ -30,13 +30,13 @@ ms.locfileid: "56294126"
   
 ## <a name="to-add-totals-for-a-row-group"></a>加入資料列群組的總計  
   
--   在 Tablix 資料區域資料列群組區域中，以滑鼠右鍵按一下您要加總之資料列群組區域中的資料格，指向 [新增總計]，然後按一下 [之前] 或 [之後]。  
+-   在 Tablix 資料區域資料列群組區域中，以滑鼠右鍵按一下您要加總之資料列群組區域中的資料格，指向 [新增總計]  ，然後按一下 [之前]  或 [之後]  。  
   
      目前群組外的新資料列會加入到資料區域中，然後會在資料列中加入每個數值欄位的預設總計。  
   
 ## <a name="to-add-totals-for-a-column-group"></a>加入資料行群組的總計  
   
--   在 Tablix 資料區域資料列群組區域中，以滑鼠右鍵按一下您要加總之資料行群組區域中的資料格，指向 [新增總計]，然後按一下 [之前] 或 [之後]。  
+-   在 Tablix 資料區域資料列群組區域中，以滑鼠右鍵按一下您要加總之資料行群組區域中的資料格，指向 [新增總計]  ，然後按一下 [之前]  或 [之後]  。  
   
      目前群組外的新資料行會加入到資料區域中，然後會在資料行中加入每個數值欄位的預設總計。  
   

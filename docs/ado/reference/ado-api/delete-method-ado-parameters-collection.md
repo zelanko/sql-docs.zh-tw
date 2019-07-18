@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8864ac47f3fa212cc6c204cc79d587b8952512cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933170"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法 (ADO Parameters 集合)
 刪除的物件[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  

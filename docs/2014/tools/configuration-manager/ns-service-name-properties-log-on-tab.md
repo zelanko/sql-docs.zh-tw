@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049231"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([登入] 索引標籤)
   您可以使用 **[Notification Services 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務使用的帳戶，以及啟動和停止該服務。  

@@ -10,23 +10,23 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9ce4f0a9735c14aed6289527b47f76995e1c10d2
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041049"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285023"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
   在這個補充課程中，您將建立實作動態安全性的其他角色。 動態安全性提供以使用者目前登入的使用者名稱或登入識別碼為主的資料列層級安全性。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
  若要實作動態安全性，您必須將資料表加入至包含 Windows 使用者名稱的模型，這些使用者可以建立與模型的連接做為資料來源並且瀏覽模型物件與資料。 您使用本教學課程建立的模型位於 Adventure Works Corp. 內容中；不過為了完成本課程，您必須加入包含您自己的網域使用者的資料表。 您將不需要所加入使用者名稱的密碼。 若要 Employee Security 資料表，其中包含幾個您網域中的範例使用者，您將使用 [貼上] 功能從 Excel 試算表貼入員工資料。 在真實情況中，包含您加入模型中之使用者名稱的資料表通常會使用來自實際資料庫的資料表做為資料來源；例如，實際的 dimEmployee 資料表。  
   
- 若要實作動態安全性，您會使用兩個新的 DAX 函式：[USERNAME 函式&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)並[LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 該公式會使用 LOOKUPVALUE 函數從 Employee Security 資料表指定一個值，然後將該值傳遞給 USERNAME 函數，此函數會指定登錄使用者的使用者名稱屬於此角色。 使用者可以再瀏覽該角色的資料列篩選器所指定的資料。 在這個案例中，您將指定銷售員工只能瀏覽本身所屬銷售地區的網際網路銷售資料。  
+ 若要實作動態安全性，您會使用兩個新的 DAX 函式：[USERNAME 函式&#40;DAX&#41; ](/dax/username-function-dax)並[LOOKUPVALUE 函式&#40;DAX&#41;](/dax/lookupvalue-function-dax)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 該公式會使用 LOOKUPVALUE 函數從 Employee Security 資料表指定一個值，然後將該值傳遞給 USERNAME 函數，此函數會指定登錄使用者的使用者名稱屬於此角色。 使用者可以再瀏覽該角色的資料列篩選器所指定的資料。 在這個案例中，您將指定銷售員工只能瀏覽本身所屬銷售地區的網際網路銷售資料。  
   
  您將要完成一系列工作，才能完成這個補充課程。 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
- 完成本課程的估計時間：**30 分鐘**  
+ 估計的時間才能完成這一課：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  這個補充課程主題是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
@@ -100,7 +100,7 @@ ms.locfileid: "56041049"
   
      如果 [貼上] 呈現灰色，請按一下模型設計師視窗中任何資料表的任何資料行，然後按一下 [編輯] 功能表，再按一下 [貼上]。  
   
-7.  在 **貼上預覽**對話方塊中，於**資料表名稱**，型別`Employee Security`。  
+7.  在 [**貼上預覽**對話方塊中，於**資料表名稱**，型別`Employee Security`。  
   
 8.  在 [要貼上的資料] 中，確認資料包含 Sample Employee 工作表中的所有使用者資料和標頭。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "56041049"
   
 7.  按一下 [資料列篩選器] 索引標籤。  
   
-8.  針對`Employee Security`表格中，於**DAX 篩選** 欄中，輸入下列公式。  
+8.  針對`Employee Security`表格中，於**DAX 篩選**] 欄中，輸入下列公式。  
   
      `=FALSE()`  
   
@@ -198,8 +198,8 @@ ms.locfileid: "56041049"
      這個使用者無法瀏覽或查詢本身所屬地區以外之地區的任何網際網路銷售資料，因為 Sales Employees by Territory 使用者角色中針對 Sales Territory 資料表所定義的資料列篩選器有效地保護了與其他銷售地區相關之所有資料的安全。  
   
 ## <a name="see-also"></a>另請參閱  
- [USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函式&#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 函式&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 函式&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

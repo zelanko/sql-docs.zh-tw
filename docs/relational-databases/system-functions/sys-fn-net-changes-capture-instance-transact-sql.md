@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122574"
 ---
-# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包裝函式**changes<** 查詢函數。 sys.sp_cdc_generate_wrapper_function 系統預存程序會產生建立這些函數所需的指令碼。  
@@ -98,10 +97,10 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |\<中的資料行@column_list>|**而有所不同**|中所識別的資料行**column_list** sp_cdc_generate_wrapper_function 時呼叫它來產生建立包裝函式的指令碼的引數。 如果*column_list*為 NULL，所有的追蹤的來源資料行都會出現在結果集。|  
 |__CDC_OPERATION|**nvarchar(2)**|指示將資料列套用到目標環境時，需要哪一個作業的作業碼。 作業會有所不同的引數值*row_filter_option*下列呼叫中提供：<br /><br /> *row_filter_option* = 'all'、 'all with mask'<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - 刪除作業<br /><br /> 'M' - 插入作業或更新作業|  
-|\<中的資料行@update_flag_list>|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 旗標才會採用非 null 值時，才*row_filter_option* **= 'all with mask'** 並\__CDC_OPERATION **= 'UN'**。 如果在查詢視窗內修改了對應的資料行，它會設定為 1。 否則為 0。|  
+|\<中的資料行@update_flag_list>|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 旗標才會採用非 null 值時，才*row_filter_option* **= 'all with mask'** 並\__CDC_OPERATION **= 'UN'** 。 如果在查詢視窗內修改了對應的資料行，它會設定為 1。 否則為 0。|  
   
 ## <a name="remarks"></a>備註  
- fn_net_changes_<capture_instance> 函數會當做 cdc.fn_cdc_get_net_changes_<capture_instance> 查詢函數的包裝函數。 sys.sp_cdc_generate_wrapper 預存程序是用來建立此包裝函數的指令碼。  
+ Fn_net_changes_ < 擷取執行個體 > 函式做為 cdc.fn_cdc_get_net_changes_ < 擷取執行個體 > 查詢函數的包裝函式。 sys.sp_cdc_generate_wrapper 預存程序是用來建立此包裝函數的指令碼。  
   
  系統不會自動建立包裝函數。 您必須執行兩項作業，才能建立包裝函數：  
   
@@ -120,7 +119,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  異動資料擷取組態範本 '具現化的 CDC 包裝函式 tvf 」 結構描述' 示範如何使用 sp_cdc_generate_wrapper_function 預存程序，取得所有包裝函式的結構描述定義的查詢函數的 CREATE 指令碼。 然後，此範本會建立這些指令碼。 如需有關範本的詳細資訊，請參閱 <<c0> [ 範本總管](../../ssms/template/template-explorer.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_generate_wrapper_function &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys.sp_cdc_generate_wrapper_function &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

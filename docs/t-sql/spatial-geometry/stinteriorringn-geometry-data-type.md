@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c1e78bb2f5959045dd47f32bb91d057a09fa8f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6908f612018978e234dd50074ae8eaf1998ed5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938883"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47741136"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
- 開放地理空間協會 (OGC) 類型：**LineString**  
+ 開放式地理空間協會 (OGC) 類型：**LineString**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體不是多邊形，這個方法會傳回 **null**。 如果此運算式大於環形數，此方法也會擲回 **ArgumentOutOfRangeException**。 可以使用 `STNumInteriorRing``()` 傳回環形數。  

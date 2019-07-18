@@ -1,32 +1,32 @@
 ---
 title: 設定報表伺服器應用程式的可用記憶體 | Microsoft Docs
-ms.date: 03/20/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722706"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564029"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>設定報表伺服器應用程式的可用記憶體
-  雖然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以使用所有可用的記憶體，但是您可以透過針對配置給 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器應用程式的記憶體資源總數設定上限，覆寫預設行為。 此外，您也可以設定臨界值，讓報表伺服器根據系統處於低度、中度或嚴重記憶體不足壓力的情況，變更其設定優先權和處理要求的方式。 在低度記憶體不足壓力層級時，報表伺服器的回應方式為提供稍高優先權給互動式或視需要報表處理。 在高度記憶體不足壓力層級時，報表伺服器會運用有限的資源並使用多種技術來維持運作。  
+ 雖然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以使用所有可用的記憶體，但是您可以透過針對配置給 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器應用程式的記憶體資源總數設定上限，覆寫預設行為。 此外，您也可以設定臨界值，讓報表伺服器根據系統處於低度、中度或嚴重記憶體不足壓力的情況，變更其設定優先權和處理要求的方式。 在低度記憶體不足壓力層級時，報表伺服器的回應方式為提供稍高優先權給互動式或視需要報表處理。 在高度記憶體不足壓力層級時，報表伺服器會運用有限的資源並使用多種技術來維持運作。  
   
- 本主題將描述您可以指定的組態設定，以及當記憶體不足壓力成為處理要求的因素時，伺服器如何回應。  
+ 此文章說說明您可以指定的組態設定，以及當記憶體不足壓力成為處理要求的因素時，伺服器如何回應。  
   
 ## <a name="memory-management-policies"></a>記憶體管理原則  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過調整配置給特定應用程式和處理要求類型的記憶體數量，回應系統資源條件約束。 在報表伺服器服務中執行而且受限於記憶體管理的應用程式包括：  
   
--   報表管理員 (報表伺服器的 Web 前端應用程式)。  
+-   入口網站 (報表伺服器的 Web 前端應用程式)。  
   
 -   報表伺服器 Web 服務 (用於互動式報表處理和視需要要求)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47722706"
   
  下圖將顯示這些設定如何一起用來區別低度、中度和高度記憶體不足壓力層級：  
   
- ![記憶體狀態的組態設定](../../reporting-services/report-server/media/rs-memoryconfigurationzones.gif "記憶體狀態的組態設定")  
+ ![記憶體狀態的組態設定](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "記憶體狀態的組態設定")  
   
  下表描述 **WorkingSetMaximum**、 **WorkingSetMinimum**、 **MemorySafetyMargin**和 **MemoryThreshold** 設定。 組態設定指定於 [RSReportServer.config 檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中。  
   
@@ -72,12 +72,13 @@ ms.locfileid: "47722706"
 |**MemorySafetyMargin**|指定 **WorkingSetMaximum** 的百分比，以便定義中度與低度壓力狀況之間的界限。 這個值是保留給系統而且無法用於報表伺服器作業之可用記憶體的百分比。 預設值是 80。|  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，**MemoryLimit** 和 **MaximumMemoryLimit** 設定已過時。 如果您已升級現有的安裝，或正在使用包含這些設定的 RSReportServer.config 檔，則報表伺服器就不會再讀取這些值。  
+>  在**和更新版本中，** MemoryLimit **Maximum和更新版本中，** MaximumMemoryLimit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] MemoryLimit later versions. 如果您已升級現有的安裝，或正在使用包含這些設定的 RSReportServer.config 檔，則報表伺服器就不會再讀取這些值。  
   
 #### <a name="example-of-memory-configuration-settings"></a>記憶體組態設定的範例  
  下列範例將顯示使用自訂記憶體組態值之報表伺服器電腦的組態設定。 如果您想要加入 **WorkingSetMaximum** 或 **WorkingSetMinimum**，就必須在 RSReportServer.config 檔中輸入這些元素和值。 這兩個值都是整數，它們代表您配置給伺服器應用程式之 RAM 的 KB 數。 下列範例會指定報表伺服器應用程式的總記憶體不得超過 4 GB。 如果 **WorkingSetMinimum** 的預設值 ( **WorkingSetMaximum**的 60%) 可接受，您就可以省略它並單獨在 RSReportServer.config 檔中指定 **WorkingSetMaximum** 。 此範例包含 **WorkingSetMinimum** ，以便說明其顯示方式 (如果您想要加入它的話)：  
   
-```  
+```
+      Config files 
       <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
@@ -85,12 +86,10 @@ ms.locfileid: "47722706"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>關於 ASP.NET 記憶體組態設定  
- 雖然報表伺服器 Web 服務和報表管理員是 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，但是這兩個應用程式都不會回應您針對以 IIS 5.0 相容性模式執行的 **應用程式在 machine.config 之** processModel [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 區段中指定的記憶體組態設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只會從 RSReportServer.config 檔讀取記憶體組態設定。  
+ 雖然 2016年和更新版本報表伺服器 Web 服務和入口網站是 HTML5 應用程式，但舊版會[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]應用程式，兩個應用程式會回應您在中指定的記憶體組態設定**processModel** machine.config 區段[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在 IIS 5.0 和更新版本的相容性模式中執行的應用程式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只會從 RSReportServer.config 檔讀取記憶體組態設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [報表伺服器應用程式的應用程式網域](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
-  
   

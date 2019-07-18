@@ -3,19 +3,18 @@ title: 管理 SQL Server Always On 可用性群組 Kubernetes
 description: 這篇文章說明如何管理 SQL Server Always On 可用性群組在 Kubernetes 中。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 893e502c35ae33ce6ff87efd88049db97a40f875
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952547"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>管理 SQL Server Always On 可用性群組 Kubernetes
 

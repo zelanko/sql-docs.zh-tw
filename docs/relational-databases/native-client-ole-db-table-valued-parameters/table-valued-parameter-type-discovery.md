@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7e65f01ee1eb89f5dad03a9865c25cf934f6f6b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d219631203c505ad2e0cac594b629c22032214fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069617"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>資料表值參數類型探索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

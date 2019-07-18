@@ -2,7 +2,7 @@
 title: 篩選、分組和排序資料 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd86e9376e8520205702460e6f3e7834b5fe7424
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576523"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  
@@ -59,7 +59,7 @@ ms.locfileid: "56289286"
   
  從外部資料來源擷取資料之後，您可以將篩選加入至資料集、資料區和資料區群組，包括詳細資料群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。 如需詳細資訊，請參閱 [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
- 針對每個篩選，您會指定一個 *「篩選方程式」*(Filter Equation)。 篩選方程式包含一個指定所要篩選之資料的資料集欄位或運算式、一個運算子和一個要比較的值。 在處理項目時，只會包含符合篩選條件的資料值。  
+ 針對每個篩選，您會指定一個 *「篩選方程式」* (Filter Equation)。 篩選方程式包含一個指定所要篩選之資料的資料集欄位或運算式、一個運算子和一個要比較的值。 在處理項目時，只會包含符合篩選條件的資料值。  
   
  您可以在篩選運算式中包含參數，讓使用者協助控制報表中的資料。 如需詳細資訊，請參閱[參數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56289286"
   
  三種類型的排序全都可以在相同的報表中結合。 依預設，排序次序是由資料集查詢傳回資料的順序來決定。 排序運算式會套用在資料區和資料區群組中。 互動式排序則是在排序運算式之後套用。  
   
- 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：第一個、最後一個和上一個。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：First、Last 和 Previous。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  

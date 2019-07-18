@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Cluster Resource Group
@@ -13,12 +12,12 @@ ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3ff85f2d8f99f530ad784b3a68c3ef2bfcd6432
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096460"
 ---
 # <a name="cluster-resource-group"></a>叢集資源群組
   使用 [叢集資源群組] 頁面，即可指定即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬伺服器資源的磁碟。  
@@ -31,6 +30,6 @@ ms.locfileid: "53369610"
 -   輸入要建立之新群組的名稱。 請注意，名稱 "Available storage" 不是有效的群組名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [操作說明：建立新的 SQL Server 容錯移轉叢集](https://go.microsoft.com/fwlink/?LinkId=190960)  
+ [如何：建立新的 SQL Server 容錯移轉叢集](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

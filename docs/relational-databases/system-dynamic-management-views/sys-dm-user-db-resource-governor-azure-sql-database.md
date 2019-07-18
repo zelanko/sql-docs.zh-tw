@@ -2,10 +2,10 @@
 title: sys.dm_user_db_resource_governance (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: bb4c43fa4193d9254d7f06f24bd903f974739e87
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: eebc22fa4f17680b843f195777d7cc5f4b2835ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090453"
 ---
-# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance & Amp;#40;transact-SQL&AMP;#41;
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -68,7 +67,7 @@ ms.locfileid: "58567634"
 |**max_transaction_size**|BIGINT|使用的任何交易，以 kb 為單位的最大記錄空間。|
 |**checkpoint_rate_mbps**|ssNoversion|檢查點頻寬，以 mbps 為單位。|
 |**checkpoint_rate_io**|ssNoversion|檢查點 IO 在 IOs 中每秒速率。|
-|**last_updated_date_utc**|DATETIME|日期和時間的最後一個設定變更或重新設定。|
+|**last_updated_date_utc**|datetime|日期和時間的最後一個設定變更或重新設定。|
 |**primary_group_id**|ssNoversion|主要使用者的工作負載群組識別碼。|
 |**primary_group_max_workers**|ssNoversion|在主要使用者的工作負載群組層級的背景工作角色限制。|
 |**primary_min_log_rate**|BIGINT|在主要使用者的工作負載群組層級最低記錄速率 （每秒位元組為單位）。|

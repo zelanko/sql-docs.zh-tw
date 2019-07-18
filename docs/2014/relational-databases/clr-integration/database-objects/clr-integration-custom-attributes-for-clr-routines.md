@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873802"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 常式的自訂屬性
   列出的屬性可以套用 common language runtime (CLR) 常式、 使用者定義型別，以及在中註冊的使用者定義彙總[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性是在 `Microsoft.SqlServer.Server` 命令空間中定義的。  

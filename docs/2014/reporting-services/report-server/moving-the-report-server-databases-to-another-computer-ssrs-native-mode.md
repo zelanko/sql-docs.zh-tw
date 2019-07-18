@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e7cbe523d7edb8872814c3280c8e7c8a06cbf84a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103723"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
   您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
@@ -29,7 +28,7 @@ ms.locfileid: "56016620"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 雖然您不需要將這些作業移至新的電腦，但是可能會想要刪除電腦上不再使用的作業。  
   
--   移動的資料庫會保留訂閱、快取報表以及快照集。 如果快照集並未在移動資料庫之後收取重新整理過的資料，請在報表管理員中清除快照集選項，然後按一下 [套用] 儲存變更、重新建立排程，再按一下 [套用] 儲存變更。  
+-   移動的資料庫會保留訂閱、快取報表以及快照集。 如果快照集並未在移動資料庫之後收取重新整理過的資料，請在報表管理員中清除快照集選項，然後按一下 [套用]  儲存變更、重新建立排程，再按一下 [套用]  儲存變更。  
   
 -   當您移動 reportservertempdb 資料庫時，系統會保留儲存在該資料庫中的暫存報表和使用者工作階段。  
   
@@ -49,13 +48,13 @@ ms.locfileid: "56016620"
   
 3.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並開啟主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
-4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，並按一下 [卸離]。 針對報表伺服器暫存資料庫重複此步驟。  
+4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，並按一下 [卸離]  。 針對報表伺服器暫存資料庫重複此步驟。  
   
 5.  複製或移動 .mdf 和 .ldf 檔案到您要使用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Data 資料夾。 因為移動的資料庫共有兩個，因此請確定您總共移動或複製四個檔案。  
   
 6.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，開啟即將主控報表伺服器資料庫之新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
-7.  以滑鼠右鍵按一下 [資料庫] 節點，然後按一下 [附加]。  
+7.  以滑鼠右鍵按一下 [資料庫] 節點，然後按一下 [附加]  。  
   
 8.  按一下 **[加入]** ，選取您要附加之報表伺服器資料庫的 .mdf 和 .ldf 檔案。 針對報表伺服器暫存資料庫重複此步驟。  
   
@@ -63,9 +62,9 @@ ms.locfileid: "56016620"
   
 10. 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並開啟報表伺服器的連接。  
   
-11. 在 [資料庫] 頁面上，選取新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[連接]**。  
+11. 在 [資料庫] 頁面上，選取新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後按一下 **[連接]** 。  
   
-12. 選取您剛才移動的報表伺服器資料庫，然後按一下 **[套用]**。  
+12. 選取您剛才移動的報表伺服器資料庫，然後按一下 **[套用]** 。  
   
 13. 在 [加密金鑰] 頁面上，按一下 [還原]。 指定包含金鑰備份副本的檔案以及解除鎖定此檔案的密碼。  
   
@@ -202,17 +201,17 @@ GO
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並開啟報表伺服器的連接。  
   
-2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]**。 按一下 [下一步] 。  
+2.  在 [資料庫] 頁面上，按一下 **[變更資料庫]** 。 按一下 [下一步]  。  
   
-3.  按一下 **[選擇現有報表伺服器資料庫]**。 按一下 [下一步] 。  
+3.  按一下 **[選擇現有報表伺服器資料庫]** 。 按一下 [下一步]  。  
   
-4.  選取現在主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後按一下 **[測試連接]**。 按一下 [下一步] 。  
+4.  選取現在主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後按一下 **[測試連接]** 。 按一下 [下一步]  。  
   
-5.  在 [資料庫名稱] 中，選取您想要使用的報表伺服器資料庫。 按一下 [下一步] 。  
+5.  在 [資料庫名稱] 中，選取您想要使用的報表伺服器資料庫。 按一下 [下一步]  。  
   
-6.  在 [認證] 中，指定報表伺服器將用來連接至報表伺服器資料庫的認證。 按一下 [下一步] 。  
+6.  在 [認證] 中，指定報表伺服器將用來連接至報表伺服器資料庫的認證。 按一下 [下一步]  。  
   
-7.  按 **[下一步]** ，然後按一下 **[完成]**。  
+7.  按 **[下一步]** ，然後按一下 **[完成]** 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體必須包含 `RSExecRole` 角色。 當您透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定報表伺服器資料庫連接時，會產生角色建立、登入註冊以及角色指派等動作。 如果您使用其他方法 (尤其是使用 rsconfig.exe 命令提示字元公用程式) 來設定連接，報表伺服器將不會處於工作狀態。 您可能必須撰寫 WMI 程式碼，才能讓報表伺服器可供使用。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../tools/access-the-reporting-services-wmi-provider.md)。  

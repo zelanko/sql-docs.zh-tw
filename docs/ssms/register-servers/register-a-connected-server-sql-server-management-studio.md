@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f69435b486f9fc6fc984002fb95c81467714e8aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 66e01df7c294a684e646af2864f0284813684bf5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665016"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683938"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>註冊連接的伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 註冊 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中已連接的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]\\[已註冊的伺服器]，在 SSMS 中檢視已註冊的伺服器。
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 註冊 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中已連接的伺服器。 透過註冊伺服器，您可以儲存經常存取之伺服器的連接資訊。 您可以在連接之前或連接時從 [物件總管] 註冊伺服器。  您可以從功能表瀏覽至 [檢視]  \\[已註冊的伺服器]  ，在 SSMS 中檢視已註冊的伺服器。
   
  **本主題內容**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47665016"
   
 #### <a name="to-register-a-connected-server"></a>若要註冊連接的伺服器  
   
-在物件總管中，以滑鼠右鍵按一下已連接的伺服器，然後按一下 [註冊]。
+在物件總管中，以滑鼠右鍵按一下已連接的伺服器，然後按一下 [註冊]  。
   
 **伺服器名稱**  
 此欄位預設為連接的伺服器名稱。  或者您可以輸入伺服器名稱，或從下拉式清單中選擇一個。
@@ -55,7 +55,7 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 如需詳細資訊，請參閱 [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
 
      -    **User name**  
-顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]**，請以不同使用者登入電腦。 
+顯示您所連接的目前使用者名稱。 只有在您已選取使用 Windows 驗證進行連接時，才能使用此唯讀選項。 若要變更 **[使用者名稱]** ，請以不同使用者登入電腦。 
 
      -    **登入**  
 輸入要用來連接的登入。 只有在您已選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接時，才可以使用此選項。  
@@ -67,7 +67,7 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
 選取即可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密和儲存您輸入的密碼。 只有在您已選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接時，才會顯示此選項。  
 
           > [!NOTE]  
-          > 如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
+          > 如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]  。  
 
 **已註冊的伺服器名稱**  
 您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需要與 **[伺服器名稱]** 方塊中的名稱相符。  
@@ -76,7 +76,7 @@ Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msc
 輸入伺服器的選擇性描述。  
   
 **測試**  
-按一下以測試與 [伺服器名稱] 中選取之伺服器的連接。  
+按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。  
   
 **儲存**  
 按一下即可儲存已註冊的伺服器設定。 

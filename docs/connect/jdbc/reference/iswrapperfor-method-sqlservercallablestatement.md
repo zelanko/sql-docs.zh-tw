@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 587c1217d42aa02c269b986837997dfbe89be278
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 65f52e7bf154930d75f642ffc77ce5c94a3c1207
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796299"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>isWrapperFor 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) 方法是由 JDBC 4.0 中導入的 java.sql.Wrapper 介面所定義。  
   
  如果這個方法傳回 **true**，則配合相同引數呼叫 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) 將會成功。  

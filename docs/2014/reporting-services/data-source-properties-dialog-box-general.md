@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c8dc6e3ca883e5d27358733df7c6f83ee8c4eab
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9f918d6583f01473e061792406821b13a4856cea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109480"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>資料來源屬性對話方塊、一般
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可在報表中顯示和修改資料來源的連接資訊。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **名稱**  
  輸入資料來源的名稱。 資料來源名稱在報表內必須是唯一的。 根據預設，系統會將一般名稱 (例如，DataSource1 或 DataSource2) 指派給資料來源。  
   
@@ -35,10 +34,10 @@ ms.locfileid: "56295556"
  選取資料處理延伸模組。 此清單會顯示所有已註冊的延伸模組。  
   
  **連接字串**  
- 輸入資料來源的連接字串。 按一下 **[編輯]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。  
+ 輸入資料來源的連接字串。 按一下 **[編輯]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 請按一下 [運算式]  (*fx*) 按鈕來編輯運算式。  
   
  **使用共用的資料來源參考**  
- 選取此選項即可連結至共用資料來源。 從下拉式清單選取共用資料來源。 若要編輯選取的資料來源，請按一下 **[編輯]**。 如果選取 **[使用共用資料來源參考]** ，就會停用 **[類型]** 和 **[連接字串]** 。  
+ 選取此選項即可連結至共用資料來源。 從下拉式清單選取共用資料來源。 若要編輯選取的資料來源，請按一下 **[編輯]** 。 如果選取 **[使用共用資料來源參考]** ，就會停用 **[類型]** 和 **[連接字串]** 。  
   
  **處理查詢時，使用單一交易**  
  選取此選項，指出使用此資料來源的資料集會在單一交易中針對資料庫執行。 若要包含使用相同資料來源之子報表的交易，請在 **[屬性]** 窗格之子報表的 **[其他屬性]** 區段中，將 **MergeTransactions** 設定為 **True** 。  

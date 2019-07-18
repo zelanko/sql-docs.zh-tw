@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786743"
 ---
 # <a name="check-out-files"></a>簽出檔案
   除非您將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境設成允許編輯簽入的檔案，否則，您必須先將檔案簽出，才能修改它。 當您簽出檔案時，會將檔案版本的副本複製到您的本機磁碟中，且必須移除檔案的唯讀屬性。  
   
  您可以採獨佔或共用的模式來簽出檔案。 當您以獨佔方式來簽出檔案時，在您重新簽入這個檔案之前，任何使用者都無法將它簽出。 當您以共用模式來簽出檔案時，其他使用者也可以簽出和修改這個檔案，則當您將它簽入時，可能需要合併您簽出的版本及其他使用者所建立的版本。  
   
- 使用**簽出**命令來簽出原始檔控制專案和檔案。 如果您利用這個命令來簽出方案或專案，也會簽出方案或專案中的所有檔案。不過，簽出個別來源程式碼檔案，並不會簽出它所屬的專案或方案。  
+ 使用**簽出**命令來簽出原始檔控制專案和檔案。 如果您使用此命令來簽出方案或專案時，方案或專案中的所有檔案也將被都簽出。不過，簽出個別來源程式碼檔案不會導致簽出專案或其所屬的方案。  
   
 > [!NOTE]  
 >  如果[!INCLUDE[msCoName](../includes/msconame-md.md)]專案的 Visual SourceSafe 資料庫設定為允許多重簽出，而且您想要簽出檔案，您必須清除**允許多重簽出**選項**進階簽出選項**之前先簽出檔案 對話方塊。 您必須重新啟動 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，這項設定才會生效。  
@@ -55,7 +55,7 @@ ms.locfileid: "48051218"
      在原始檔控制連接之下，以一般清單顯示正在簽出的項目。  
   
      **編輯**  
-     修改項目但不要簽出。**編輯** 按鈕隨即出現，只有當您擁有[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]設定為支援編輯簽入的檔案。  
+     修改未簽出的項目。**編輯** 按鈕隨即出現，只有當您擁有[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]設定為支援編輯簽入的檔案。  
   
      **名稱**  
      會顯示可簽出之項目的名稱。 選取的項目旁邊會顯示核取方塊。 如果您不要簽出特定項目，請清除其核取方塊。  
@@ -63,7 +63,7 @@ ms.locfileid: "48051218"
      **選項。**  
      按一下按鈕右邊的箭頭之後，就會顯示原始檔控制外掛程式特定的簽出選項。  
   
-     **排序**  
+     **Sort**  
      排序顯示之資料行的順序。  
   
      **樹狀檢視**  

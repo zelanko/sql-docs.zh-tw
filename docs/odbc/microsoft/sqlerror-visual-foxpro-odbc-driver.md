@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3014c5c2af1a0ef8e5f485c790089e4807834446
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e8a60030e9c5c7666ce3b25488cfc6adf00783
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053861"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 一致性： 核心層級  
+ ODBC API 相容性：核心層級  
   
  傳回最後一個錯誤的錯誤或狀態資訊。 驅動程式會維護的堆疊或可針對傳回的錯誤清單*hstmt*， *hdbc*，並*henv*引數，視呼叫**SQLError**為止。 錯誤佇列中排清每個陳述式之後。  
   

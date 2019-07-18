@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510340"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 功能表說明 [SQL Server]
   本節包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，功能表列所提供之對話方塊及頁面的 F1 說明。  

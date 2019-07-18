@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43668ec1da730687ea422511021ebe64deec9d30
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 007740fbbf7a01139a7b3c1a679e1737d2f29a7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109578"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>選取 Cube 對話方塊 (報表產生器)
   使用 **[選取 Cube]** 對話方塊，即可選取不同的 Cube 做為報表的資料來源。 選取不同的 Cube 後，您的查詢可能會不再有效。  

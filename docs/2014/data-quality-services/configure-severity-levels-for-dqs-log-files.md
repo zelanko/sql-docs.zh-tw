@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480919"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
   此主題描述如何使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 來針對 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的各種不同活動和模組設定嚴重性層級。 嚴重性層級會定義 DQS 中發生之事件的強度。 DQS 事件具有以下的嚴重性層級 (依照嚴重性的遞減順序排列)：  
@@ -38,7 +38,7 @@ ms.locfileid: "56010581"
   
 -   **偵錯**：有關事件的詳細資訊。  
   
- 藉由設定各種 DQS 活動和模組的嚴重性層級，您會針對各自 DQS 活動或模組來篩選想要記錄的資訊以及寫入 DQS 記錄檔的資訊。 例如，如果您將 DQS 活動的嚴重性層級設定為 **[警告]**，只會記錄與 DQS 活動相關之警告和更高嚴重性層級的訊息 (錯誤和嚴重錯誤)。  
+ 藉由設定各種 DQS 活動和模組的嚴重性層級，您會針對各自 DQS 活動或模組來篩選想要記錄的資訊以及寫入 DQS 記錄檔的資訊。 例如，如果您將 DQS 活動的嚴重性層級設定為 **[警告]** ，只會記錄與 DQS 活動相關之警告和更高嚴重性層級的訊息 (錯誤和嚴重錯誤)。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -52,11 +52,11 @@ ms.locfileid: "56010581"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]**。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]** 。  
   
-3.  接下來，按一下 **[記錄檔設定]** 索引標籤。以下列出您可以選取嚴重性層級的 DQS 活動：[定義域管理]、[知識探索]、[清理專案 (例如**RDS)]、[比對原則和比對專案]** 和 [RDS]。  
+3.  接下來，按一下 **[記錄檔設定]** 索引標籤。以下列出您可以選取嚴重性層級的 DQS 活動：[定義域管理]  、[知識探索]  、[清理專案 (例如**RDS)]、[比對原則和比對專案]**  和 [RDS]  。  
   
-4.  如果是 DQS 活動，請選取您想要記錄的嚴重性層級。 您可以選取下列其中一項：[嚴重]、[錯誤]、[警告]、[資訊] 和 [偵錯]。 例如，如果您希望在知識探索活動中，只將嚴重訊息寫入 DQS 記錄檔，請針對 **[知識探索]** 活動於下拉式清單中選取 **[嚴重錯誤]** 。  
+4.  如果是 DQS 活動，請選取您想要記錄的嚴重性層級。 您可以選取下列其中一項：[嚴重]  、[錯誤]  、[警告]  、[資訊]  和 [偵錯]  。 例如，如果您希望在知識探索活動中，只將嚴重訊息寫入 DQS 記錄檔，請針對 **[知識探索]** 活動於下拉式清單中選取 **[嚴重錯誤]** 。  
   
     > [!NOTE]  
     >  預設會針對每一個活動選取 **[錯誤]** 。 這表示，預設會針對每一個活動將錯誤和嚴重訊息寫入 DQS 記錄檔中。  
@@ -71,7 +71,7 @@ ms.locfileid: "56010581"
  在活動層級指定的記錄嚴重性設定會決定組成活動之所有模組的記錄嚴重性設定。 但是，如果活動層級和模組層級的記錄嚴重性設定之間有任何衝突，則會考量模組層級的嚴重性設定。  
   
 > [!NOTE]
->  -   根據預設， **Microsoft.Ssdqs.Core.Startup** 模組會在 **[進階]** 區段中預先設定，且嚴重性層級設定為 **[資訊]**。 這樣做是為了記錄嚴重性為資訊或更高層級 (警告、錯誤和嚴重錯誤) 的事件，這些事件與啟動和停止 DQS 服務有關。  
+>  -   根據預設， **Microsoft.Ssdqs.Core.Startup** 模組會在 **[進階]** 區段中預先設定，且嚴重性層級設定為 **[資訊]** 。 這樣做是為了記錄嚴重性為資訊或更高層級 (警告、錯誤和嚴重錯誤) 的事件，這些事件與啟動和停止 DQS 服務有關。  
 > -   只有當您是熟悉 DQS 系統組件的資深 DQS 使用者時，才能在模組層級設定記錄嚴重性層級。  
   
  若要在模組層級設定記錄嚴重性層級：  
@@ -80,7 +80,7 @@ ms.locfileid: "56010581"
   
 2.  在出現的方格中，從 **[模組]** 資料行的下拉式清單中選取模組名稱。  
   
-3.  接下來，從 **[嚴重性]** 資料行的下拉式清單中選取模組的嚴重性層級。 您可以選取下列其中一項：[嚴重]、[錯誤]、[警告]、[資訊] 和 [偵錯]。  
+3.  接下來，從 **[嚴重性]** 資料行的下拉式清單中選取模組的嚴重性層級。 您可以選取下列其中一項：[嚴重]  、[錯誤]  、[警告]  、[資訊]  和 [偵錯]  。  
   
      例如在定義域管理活動中，您可以為定義域規則定義功能設定與定義域管理活動不同的資料粒度層級，方法是選取 **Microsoft.Ssdqs.DomainRules.Define** 模組，並選取不同的記錄嚴重性層級。 同樣地，您可以針對跨定義域規則功能設定不同的資料粒度層級，方法是選取 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 模組，並選取不同的記錄嚴重性層級。  
   

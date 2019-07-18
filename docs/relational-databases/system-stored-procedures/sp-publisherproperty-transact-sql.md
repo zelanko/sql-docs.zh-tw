@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c4ba291619ae756fa9803606eda4427a155ae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896487"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,28 +39,28 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publisher** =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  這是異質性發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [**@propertyname** =] **'***propertyname***'**  
+ [ **@propertyname** =] **'***propertyname***'**  
  這是要設定之屬性的名稱。 *propertyname*已**sysname**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**propertyname**|如果發行者端的交易分組成在交易上一致的各個組 (稱為 Xactsets)，以便進行後續處理。 值為**啟用**表示，可以建立 Xactsets，這是預設值。 值為**停用**所建立的任何新 xactsets 的方式處理現有的 Xactsets 的方式。|  
-|**propertyname**|如果啟用建立 Xactsets 的 Xactsets 作業， 值為**啟用**表示定期執行 Xactset 作業： 在 「 發行者 」 端建立 Xactsets。 值為**停用**表示，才建立 Xactsets 記錄讀取器代理程式時，它會輪詢 「 發行者 」 進行變更。|  
+|**xactsetjob**|如果啟用建立 Xactsets 的 Xactsets 作業， 值為**啟用**表示定期執行 Xactset 作業： 在 「 發行者 」 端建立 Xactsets。 值為**停用**表示，才建立 Xactsets 記錄讀取器代理程式時，它會輪詢 「 發行者 」 進行變更。|  
 |**xactsetjobinterval**|Xactset 作業的執行間隔 (以分鐘為單位)。|  
   
  當*propertyname*省略則會傳回所有可設定的屬性。  
   
- [**@propertyvalue** =] **'***propertyvalue***'**  
+ [ **@propertyvalue** =] **'***propertyvalue***'**  
  這是屬性設定的新值。 *propertyvalue*已**sysname**，預設值是 NULL。 當*propertyvalue*省略，則目前的設定會傳回屬性。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**propertyname**|**sysname**|傳回下列可設定的發行集屬性：<br /><br /> **propertyname**<br /><br /> **propertyname**<br /><br /> **xactsetjobinterval**|  
+|**propertyname**|**sysname**|傳回下列可設定的發行集屬性：<br /><br /> **propertyname**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**propertyvalue**|**sysname**|是中的屬性的目前設定**propertyname**資料行。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

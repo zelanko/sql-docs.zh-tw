@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 506d35b93cd873aed344ebb5dd5b019d6cbf3867
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937838"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 和 CancelUpdate 方法範例 (VB)
 此範例示範[更新](../../../ado/reference/ado-api/update-method.md)方法搭配[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  

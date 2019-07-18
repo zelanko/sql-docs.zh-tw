@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d0f42561d7b324a13068c14d0fc7971d3d46d83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928636"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 指定寫入的字串是否有附加行分隔符號[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

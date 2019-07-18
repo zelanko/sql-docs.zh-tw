@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
@@ -15,22 +14,22 @@ ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a698bf1a8078f969875ce9deba28c3673f1c292
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058605"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>一般檔案來源編輯器 (資料行頁面)
-  使用 [一般檔案來源編輯器] 對話方塊的 [資料行] 節點，將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [一般檔案來源編輯器]  對話方塊的 [資料行]  節點，將輸出資料行對應至每個外部 (來源) 資料行。  
   
 > [!NOTE]  
 >  `FileNameColumnName`一般檔案來源的屬性和`FastParse`其輸出資料行的屬性不適用於**一般檔案來源編輯器**，但可以透過設定**進階編輯器**. 如需這些屬性的詳細資訊，請參閱 [一般檔案自訂屬性](data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
   
  若要深入了解一般檔案來源，請參閱＜ [Flat File Source](data-flow/flat-file-source.md)＞。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **可用的外部資料行**  
  在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
   

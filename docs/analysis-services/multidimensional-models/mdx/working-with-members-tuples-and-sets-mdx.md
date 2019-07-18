@@ -1,5 +1,5 @@
 ---
-title: 使用成員、 Tuple 和集合 (MDX) |Microsoft 文件
+title: 使用成員、 Tuple 和集合 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 295a094505fdc2b532f337aaa87dc93ae0923dd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62988618"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成員、Tuple 和集合 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -109,8 +109,8 @@ FROM [Adventure Works]
  字串函數會作用在 MDX 運算式以傳回字串。 例如，[UniqueName &#40;MDX&#41;](../../../mdx/uniquename-mdx.md) 函數會傳回包含維度、階層、層級或成員唯一名稱的字串值。 如需字串函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 函數參考 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

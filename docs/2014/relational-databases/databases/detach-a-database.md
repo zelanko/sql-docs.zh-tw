@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871953"
 ---
 # <a name="detach-a-database"></a>卸離資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中卸離資料庫。 卸離的檔案會保留下來，您可以使用 CREATE DATABASE 搭配 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 選項來重新附加它。 您可以將這些檔案移到另一部伺服器，將它附加在那裡。  
@@ -55,9 +55,9 @@ ms.locfileid: "54134638"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體，然後展開執行個體。  
   
-2.  展開 **[資料庫]**，並選取您想要卸離的使用者資料庫名稱。  
+2.  展開 **[資料庫]** ，並選取您想要卸離的使用者資料庫名稱。  
   
-3.  以滑鼠右鍵按一下資料庫名稱，並指向**工作**，然後按一下 [卸離]。 **[卸離資料庫]** 對話方塊隨即出現。  
+3.  以滑鼠右鍵按一下資料庫名稱，並指向**工作**，然後按一下 [卸離]  。 **[卸離資料庫]** 對話方塊隨即出現。  
   
      **要卸離的資料庫**  
      列出要卸離的資料庫。  
@@ -78,18 +78,18 @@ ms.locfileid: "54134638"
      依預設，卸離作業會保留與該資料庫關聯的所有全文檢索目錄。 若要移除這些全文檢索目錄，請清除 **[保留全文檢索目錄]** 核取方塊。 只有當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級資料庫時，才會出現這個選項。  
   
      **狀態**  
-     會顯示下列狀態其中之一：**準備好**或是**未就緒**。  
+     顯示下列狀態其中之一：[就緒]  或 [未就緒]  。  
   
      **Message**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
   
-    -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
+    -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]** 。  
   
-    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 _< 使用中連接數目>_**使用**-例如：**1 個作用中的連接**。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 _< 使用中連接數目>_ **使用**-例如：[1 個使用中的連線]  。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
-4.  當您準備卸離資料庫時，請按一下 **[確定]**。  
+4.  當您準備卸離資料庫時，請按一下 **[確定]** 。  
   
 > [!NOTE]  
 >  重新整理檢視之前，仍可在 [物件總管] 的 **[資料庫]** 節點中看見最新卸離的資料庫。 您可以重新整理隨時檢視：按一下 [物件總管] 窗格中，並從功能表列選取**檢視**，然後**重新整理**。  
@@ -100,9 +100,9 @@ ms.locfileid: "54134638"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會以 skipchecks 設為 true 來卸離 AdventureWorks2012 資料庫。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會以 skipchecks 設為 true 來卸離 AdventureWorks2012 資料庫。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

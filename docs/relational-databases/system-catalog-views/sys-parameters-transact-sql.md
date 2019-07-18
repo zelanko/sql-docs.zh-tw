@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c87d4b784e46defac98823a5cf9d4dc9420aaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125348"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47752306"
 |**parameter_id**|**int**|參數的識別碼。 在物件中，這是唯一的。<br /><br /> 如果物件是純量函數**parameter_id** = 0 就代表傳回的值。|  
 |**system_type_id**|**tinyint**|參數系統類型的識別碼。|  
 |**user_type_id**|**int**|使用者所定義的參數類型識別碼。<br /><br /> 若要傳回之型別的名稱，加入[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目錄檢視這個資料行。|  
-|**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。<br /><br /> 值 =-1，當資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。|  
+|**max_length**|**smallint**|參數的最大長度 (以位元組為單位)。<br /><br /> 值 =-1，當資料行資料類型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或**xml**。|  
 |**有效位數**|**tinyint**|如果是以數值為基礎，便是參數的有效位數；否則，便是 0。|  
 |**scale**|**tinyint**|如果是以數值為基礎，便是參數的小數位數；否則，便是 0。|  
 |**is_output**|**bit**|1 = 參數是 OUTPUT 或 RETURN，否則就是 0。|  
@@ -51,7 +50,7 @@ ms.locfileid: "47752306"
 |**default_value**|**sql_variant**|如果**has_default_value**為 1，此資料行的值是參數的預設值的值; 否則為 NULL。|  
 |**xml_collection_id**|**int**|非零參數的資料型別是否**xml**且 XML 具備類型。 這個值是包含參數的驗證 XML 結構描述命名空間之集合的識別碼。<br /><br /> 0 = 沒有 XML 結構描述集合。|  
 |**is_readonly**|**bit**|1 = 參數為 READONLY，否則就是 0。|  
-|**is_nullable**|**bit**|1 = 參數不可為 Null  (預設值)。<br /><br /> 0 = 參數不可為 Null，適用於原生編譯預存程序更有效率的執行。|  
+|**is_nullable**|**bit**|1 = 參數不可為 Null (預設值)。<br /><br /> 0 = 參數不可為 Null，適用於原生編譯預存程序更有效率的執行。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

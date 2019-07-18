@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773474"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>將版本指定為最新版
   當您將檔案簽入原始檔控制中，簽入的版本會成為最新的版本；簽出或擷取最新版本的使用者會收到最近簽入之項目的本機副本。  

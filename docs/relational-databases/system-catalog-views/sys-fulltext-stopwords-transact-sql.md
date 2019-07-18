@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - sys.fulltext_stopwords catalog view
 - stopwords [full-text search]
 ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8395d9fe246d70843415079cdf188ac00817f51f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070456"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47832046"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|**stopword** 所屬之停用字詞表的識別碼。 此識別碼在資料庫中是唯一的。|  
 |**stopword**|**nvarchar(64)**|要針對停用字詞比對進行考量的詞彙。|  
-|**語言**|**sysname**|不是值中的別名[sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)地區設定識別碼值對應 (**LCID**)，或是數值 LCID 的字串表示法。|  
+|**language**|**sysname**|不是值中的別名[sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)地區設定識別碼值對應 (**LCID**)，或是數值 LCID 的字串表示法。|  
 |**language_id**|**int**|用於斷詞的 LCID。|  
   
 ## <a name="permissions"></a>Permissions  

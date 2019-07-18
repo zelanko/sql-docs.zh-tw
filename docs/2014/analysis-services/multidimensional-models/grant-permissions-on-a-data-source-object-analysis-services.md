@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
@@ -19,12 +18,12 @@ ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074994"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授與資料來源物件的權限 (Analysis Services)
   通常，大部分的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用者都不需要存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的基礎資料來源。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) 和 [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset) 子句的資料採礦延伸模組 (DMX) 查詢。  
@@ -37,9 +36,9 @@ ms.locfileid: "48126258"
 ## <a name="set-read-permissions-to-a-data-source"></a>設定資料來源的讀取權限  
  資料庫角色可以不被授與資料來源物件的任何存取權限，也可以被授與讀取權限。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]  ，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
-2.  在 [資料來源存取] 窗格的 [資料來源] 清單中尋找資料來源物件，然後在該資料來源的 [存取] 清單中選取 [讀取]。 如果這個選項無法使用，請檢查 [一般] 窗格，以查看是否已選取 [完整控制權]。 [完整控制權] 已經提供權限，您無法覆寫資料來源的權限。  
+2.  在 [資料來源存取]  窗格的 [資料來源]  清單中尋找資料來源物件，然後在該資料來源的 [存取]  清單中選取 [讀取]  。 如果這個選項無法使用，請檢查 [一般]  窗格，以查看是否已選取 [完整控制權]。 [完整控制權] 已經提供權限，您無法覆寫資料來源的權限。  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>使用資料來源物件使用的連接字串  
  資料來源物件會包含用於連接到基礎資料來源的連接字串。 此連接字串可指定下列其中之一：  
@@ -56,10 +55,10 @@ ms.locfileid: "48126258"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源](data-sources-in-multidimensional-models.md)   
- [連接字串屬性&#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
- [支援的 Analysis Services 的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授與對維度資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [連接字串屬性 &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [Analysis Services 支援的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

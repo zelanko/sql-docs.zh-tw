@@ -1,5 +1,5 @@
 ---
-title: Jet： 日期、 時間和時間戳記常值 |Microsoft Docs
+title: Jet：日期、 時間和時間戳記常值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085489"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet：日期、時間和時間戳記常值
 最大的互通性，應用程式應該傳遞日期常值使用 escape 子句語法的 ODBC 標準格式：  

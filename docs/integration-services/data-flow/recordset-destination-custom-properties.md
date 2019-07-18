@@ -11,14 +11,18 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cb31139e542344f3b7fd8354c250452783ba5bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726486"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料錄集目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料錄集目的地的自訂屬性。 所有屬性都是可讀寫的。  

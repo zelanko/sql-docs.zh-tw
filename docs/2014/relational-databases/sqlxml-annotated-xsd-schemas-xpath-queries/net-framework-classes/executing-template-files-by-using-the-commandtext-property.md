@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b52ed239cd8e27e6304c1335b57a6598f441cac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012506"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
   此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，使用 CommandTextproperty。 而不是做為 CommandText 值，指定 SQL 或 XPath 查詢，您可以指定檔案名稱的值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.TemplateFile。  
@@ -79,7 +79,7 @@ class Test
   
 2.  將這個範例所提供的 XML 範本 (TemplateFile.xml) 儲存在資料夾中。  
   
-3.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+3.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 4.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   

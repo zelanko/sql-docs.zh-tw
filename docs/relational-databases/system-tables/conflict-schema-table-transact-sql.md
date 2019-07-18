@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084774"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;結構描述&gt;_&lt;資料表&gt;& Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "52808900"
 |__$pre_version|**varbinary (32)**|引發衝突變更的資料庫版本。|  
 |__$reason_code|**int**|此衝突的解決程式碼。 可為下列其中一個值：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 如需詳細資訊，請參閱 < **__ reason_text**。|  
 |__$reason_text|**nvarchar (720)**|此衝突的解決方法。 可為下列其中一個值：<br /><br /> 已解決 (1)<br /><br /> 未解決 (2)<br /><br /> 未知 (0)|  
-|__$update_bitmap|**varbinary (** *n* **)**。 大小會視內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
+|__$update_bitmap|**varbinary(** *n* **)** . 大小會視內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
 |__$inserted_date|**datetime**|衝突資料列插入此資料表的日期和時間。|  
 |__$row_id|**timestamp**|與產生衝突之資料列有關聯的資料列版本。|  
 |__$change_id|**二進位檔 (8)**|如果是本機資料列，這個值會等於與此本機資料列衝突之傳入資料列的 __$row_id。 如果是傳入資料列，這個值會是 NULL。|  

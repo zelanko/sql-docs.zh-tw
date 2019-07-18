@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: c88caea8916cf7b3cd2b6655613135f7cbe10e19
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737129"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803167"
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

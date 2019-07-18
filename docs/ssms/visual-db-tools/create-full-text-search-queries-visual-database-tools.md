@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [full-text search], creating
 - full-text queries [SQL Server], creating
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 20ffbc7d09755d6cc849886723217a4142d47322
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 5bcb73a9c1129864991dee80a8e2951f2ca803de
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306016"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687771"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>建立全文檢索搜尋查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

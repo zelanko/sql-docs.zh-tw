@@ -32,14 +32,18 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719994"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
   
  封裝部署處理有四個步驟：  
@@ -116,7 +120,7 @@ ms.locfileid: "58276755"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
   
 #### <a name="xml-configuration-files"></a>XML 組態檔  
- 如果選取 [XML 組態檔] 組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
+ 如果選取 [XML 組態檔]  組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
   
  XML 組態檔包含兩個區段：  
   
@@ -146,10 +150,10 @@ ms.locfileid: "58276755"
 #### <a name="registry-entry"></a>登錄項目  
  如果您想使用登錄項目儲存組態，可以使用現有的機碼或在 HKEY_CURRENT_USER 中建立新的機碼。 您所使用的登錄機碼必須具有名為 **Value**的值。 該值可以是 DWORD 或字串。  
   
- 如果您選取 [登錄項目] 組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
+ 如果您選取 [登錄項目]  組態類型，就要在 [登錄項目] 方塊中輸入登錄機碼的名稱。 格式為 \<登錄機碼>。 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式識別該機碼。 例如，若要使用位於 SSISPackages 中的 MyPackage 機碼，請輸入 **SSISPackages\MyPackage**。  
   
 #### <a name="sql-server"></a>SQL Server  
- 如果選取 [SQL Server] 組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
+ 如果選取 [SQL Server]  組態類型，則需要指定要儲存組態之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的連接。 您可以將組態儲存至現有的資料表，或者在指定的資料庫中建立新的資料表。  
   
  下列 SQL 陳述式顯示 [封裝組態精靈] 提供的預設 CREATE TABLE 陳述式。  
   
@@ -172,21 +176,21 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  間接組態會使用環境變數。 與直接指定組態設定的方法不同，間接組態會指向包含組態值的環境變數。 如果組態的位置可以針對封裝的每個部署變更，則使用間接組態是較好的選擇。  
 
 ## <a name="create-package-configurations"></a>Create Package Configurations
-  使用 [套件組態組合管理] 對話方塊和 [套件組態精靈]，可以建立套件組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [SSIS] 功能表中，按一下 [封裝組態]。  
+  使用 [套件組態組合管理]  對話方塊和 [套件組態精靈]，可以建立套件組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [SSIS]  功能表中，按一下 [封裝組態]  。  
   
   
  **注意：**
-> 您按一下**組態**屬性旁邊的省略符號按鈕，也可以存取 [套件組態組合管理]。 [組態] 屬性會顯示在封裝的屬性視窗中。  
+> 您按一下**組態**屬性旁邊的省略符號按鈕，也可以存取 [套件組態組合管理]  。 [組態] 屬性會顯示在封裝的屬性視窗中。  
 > 
 > 組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。    
 > 
-> 在 [封裝組態組合管理] 對話方塊中，您可啟用封裝以使用組態、加入和刪除組態，以及設定載入組態的慣用順序。 
+> 在 [封裝組態組合管理]  對話方塊中，您可啟用封裝以使用組態、加入和刪除組態，以及設定載入組態的慣用順序。 
 > 
 > 以喜好的順序載入封裝組態時，組態會根據 **[封裝組態組合管理]** 對話方塊中清單顯示的順序 (由上而下) 依序載入。 不過，在執行階段，封裝組態可能不會以喜好的順序載入。 特別是，父封裝組態會在其他類型的組態後面載入。  
 > 
 > 如果多個組態設定同一物件屬性，則在執行階段會使用上次載入的值。  
   
- 從 [封裝組態組合管理] 對話方塊執行 [封裝組態精靈]，以逐步引導您建立組態。 若要執行 [封裝組態精靈]，請在 [封裝組態組合管理] 對話方塊中加入新的組態，或編輯現有的組態。 在精靈頁面上，選擇組態類型、選取是要直接存取組態還是使用環境變數，並選取要在組態中儲存的屬性。  
+ 從 [封裝組態組合管理]  對話方塊執行 [封裝組態精靈]，以逐步引導您建立組態。 若要執行 [封裝組態精靈]，請在 [封裝組態組合管理]  對話方塊中加入新的組態，或編輯現有的組態。 在精靈頁面上，選擇組態類型、選取是要直接存取組態還是使用環境變數，並選取要在組態中儲存的屬性。  
   
  下列範例會顯示 [封裝組態精靈] 的 [正在完成精靈] 頁面上所顯示之變數及封裝的目標屬性：  
   
@@ -210,11 +214,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  "\Package" 代表根目錄，而句號 (.) 則會分隔物件，這些物件會定義組態所更新之屬性的路徑。 變數及屬性的值是以方括號括住。 不論封裝名稱，組態中一律會使用 Package 這個詞彙；然而，路徑中的所有其他物件都會使用它們的使用者自訂名稱。  
   
- 在精靈完成後，新組態會加入 [封裝組態組合管理] 對話方塊中的組態清單。  
+ 在精靈完成後，新組態會加入 [封裝組態組合管理]  對話方塊中的組態清單。  
   
-> **注意：**「封裝組態精靈」的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec** 的設定選項使用。  
+> **注意：** 「封裝組態精靈」的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec** 的設定選項使用。  
   
- 下表描述 [封裝組態組合管理] 對話方塊中組態清單中的資料行。  
+ 下表描述 [封裝組態組合管理]  對話方塊中組態清單中的資料行。  
   
 |「資料行」|Description|  
 |------------|-----------------|  
@@ -230,23 +234,23 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [控制流程]、[資料流程]、[事件處理常式] 或 [封裝總管] 索引標籤。  
+3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [控制流程]  、[資料流程]  、[事件處理常式]  或 [封裝總管]  索引標籤。  
   
-4.  在 [SSIS] 功能表上，按一下 [封裝組態]。  
+4.  在 [SSIS]  功能表上，按一下 [封裝組態]  。  
   
-5.  在 [封裝組態組合管理] 對話方塊中，選取 [啟用封裝組態]，然後按一下 [加入]。  
+5.  在 [封裝組態組合管理]  對話方塊中，選取 [啟用封裝組態]  ，然後按一下 [加入]  。  
   
-6.  在 [封裝組態精靈] 頁面的歡迎頁面上，按 [下一步]。  
+6.  在 [封裝組態精靈] 頁面的歡迎頁面上，按 [下一步]  。  
   
 7.  在 [選取組態類型] 頁面上，指定組態類型，然後設定與組態類型相關聯的屬性。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
   
 8.  在 [選取要匯出的屬性] 頁面上，選取要併入組態之封裝物件的屬性。 如果組態類型僅支援一個屬性，此精靈頁面的標題將為 [選取目標屬性]。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../integration-services/packages/package-configuration-wizard-ui-reference.md)。  
   
-    > **注意：** 只有 [XML 組態檔] 和 [SQL Server] 組態類型支援在組態中併入多個屬性。  
+    > **注意：** 只有 [XML 組態檔]  和 [SQL Server]  組態類型支援在組態中併入多個屬性。  
   
-9. 在 [正在完成精靈] 頁面上，輸入組態的名稱，然後按一下 [完成]。  
+9. 在 [正在完成精靈] 頁面上，輸入組態的名稱，然後按一下 [完成]  。  
   
-10. 檢視 [封裝組態組合管理] 對話方塊中的組態。  
+10. 檢視 [封裝組態組合管理]  對話方塊中的組態。  
   
 11. 按一下 [ **關閉**]。  
 
@@ -287,7 +291,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  重新執行封裝組態精靈來編輯現有的組態。  
   
  **移除**  
- 選取組態，然後按一下 [移除]。  
+ 選取組態，然後按一下 [移除]  。  
   
  **箭頭**  
  選取組態，然後使用向上和向下箭頭，即可將其在清單中向上移動或向下移動。 組態會依其出現在清單中的順序載入。  
@@ -422,7 +426,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  檢視精靈用來建立組態的設定。  
   
  **[完成]**  
- 建立組態，並結束 [封裝組態精靈]。  
+ 建立組態，並結束 [封裝組態精靈]  。  
 
 ## <a name="child"></a> 在子套件中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  
@@ -442,7 +446,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，請按一下 [控制流程] 索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
     -   若要將範圍設定為「執行封裝」工作的父容器，請按一下該容器。  
   
@@ -461,7 +465,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，若要將範圍設定為封裝，請按一下 [控制流程] 索引標籤之設計介面上的任意位置。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，若要將範圍設定為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
 4.  加入及設定變數。  
   
@@ -475,7 +479,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案之封裝部署公用程式的方法是先設定建立部署公用程式的建立程序，然後再建立專案。 建立專案時，會自動併入專案中所有的封裝和封裝組態。 若要部署專案的其他檔案 (例如讀我檔案)，請將檔案放置在 **專案的** [Miscellaneous] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料夾中。 建立專案時，會自動併入這些檔案。  
   
- 您可以不同的方式設定每一個專案部署。 在建立專案和建立封裝部署公用程式之前，您可以設定部署公用程式上的屬性，以自訂在專案中部署封裝的方式。 例如，可以指定在部署專案時是否可以更新封裝組態。 若要存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的屬性，請以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
+ 您可以不同的方式設定每一個專案部署。 在建立專案和建立封裝部署公用程式之前，您可以設定部署公用程式上的屬性，以自訂在專案中部署封裝的方式。 例如，可以指定在部署專案時是否可以更新封裝組態。 若要存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的屬性，請以滑鼠右鍵按一下專案，然後按一下 [屬性]  。  
   
  下表列出部署公用程式屬性。  
   
@@ -493,9 +497,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含要為其建立封裝部署公用程式之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的方案。  
   
-2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下專案，然後按一下 [屬性]  。  
   
-3.  在 [\<專案名稱> 屬性頁] 對話方塊中，按一下 [部署公用程式]。  
+3.  在 [\<專案名稱> 屬性頁]  對話方塊中，按一下 [部署公用程式]  。  
   
 4.  若要在部署封裝時更新封裝組態，請將 **[AllowConfigurationChanges]** 設為 **True**。  
   
@@ -503,9 +507,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  選擇性地修改 **DeploymentOutputPath** 屬性，以更新部署公用程式的位置。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
-8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]。  
+8.  在方案總管中，以滑鼠右鍵按一下專案，然後按一下 [建立]  。  
   
 9. 檢視 **[輸出]** 視窗中的建立進度和建立錯誤。  
 
@@ -539,15 +543,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  按兩下資訊清單檔 \<專案名稱>.SSISDeploymentManifest，以啟動 [套件安裝精靈]。  
   
-3.  在 [部署 SSIS 封裝] 頁面上，選取 [SQL Server 部署] 選項。  
+3.  在 [部署 SSIS 封裝]  頁面上，選取 [SQL Server 部署]  選項。  
   
-4.  選擇性地選取 [安裝之後驗證封裝]，以在將封裝安裝到目標伺服器後對其進行驗證。  
+4.  選擇性地選取 [安裝之後驗證封裝]  ，以在將封裝安裝到目標伺服器後對其進行驗證。  
   
-5.  在 [指定目標 SQL Server] 頁面上，指定要安裝封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並選取驗證模式。 如果選取「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則您必須提供使用者名稱和密碼。  
+5.  在 [指定目標 SQL Server]  頁面上，指定要安裝封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並選取驗證模式。 如果選取「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則您必須提供使用者名稱和密碼。  
   
-6.  在 [選取安裝資料夾] 頁面上，為要安裝的封裝相依性指定檔案系統中的資料夾。  
+6.  在 [選取安裝資料夾]  頁面上，為要安裝的封裝相依性指定檔案系統中的資料夾。  
   
-7.  如果封裝包括組態，則可透過更新 [設定封裝] 頁面上 [值] 清單中的值來編輯組態。  
+7.  如果封裝包括組態，則可透過更新 [設定封裝] 頁面上 [值]  清單中的值來編輯組態。  
   
 8.  如果選擇在安裝後驗證封裝，請檢視已部署封裝的驗證結果。  
 
@@ -560,7 +564,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  如果您只更新專案中的幾個封裝，則可能不想重新部署整個專案。 若要只部署幾個封裝，您可以建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、將已更新的封裝加入新的專案，然後建立和部署該專案。 當您將封裝加入其他專案時，封裝組態會自動隨封裝一同複製。  
 
 ## <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
-  使用 [封裝安裝精靈] 來部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
+  使用 [封裝安裝精靈]  來部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
   
  在部署封裝之前，可以建立組態，然後將其隨封裝部署。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用組態，在執行階段以動態方式更新封裝及封裝物件的屬性。 例如，OLE DB 連接的連接字串可提供對應值與包含連接字串屬性的組態，藉此於執行階段進行動態設定。  
   
@@ -569,7 +573,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  下列章節描述精靈頁面。  
   
 ### <a name="welcome-to-the-package-installation-wizard-page"></a>歡迎使用封裝安裝精靈頁面  
- 使用 [封裝安裝精靈]，即可部署建立了封裝部署公用程式的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
+ 使用 [封裝安裝精靈]  ，即可部署建立了封裝部署公用程式的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
  **不要再顯示此開始頁面**  
  選取再次執行精靈時要略過開始頁面。  
@@ -581,13 +585,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="configure-packages-page"></a>設定封裝頁面  
- 使用 [設定封裝] 頁面即可編輯封裝組態。  
+ 使用 [設定封裝]  頁面即可編輯封裝組態。  
   
 #### <a name="options"></a>選項。  
  **組態檔**  
  從清單中選取檔案來編輯組態檔的內容。  
   
- **相關主題：**[建立套件設定](../../integration-services/packages/create-package-configurations.md)  
+ **相關主題：** [建立套件設定](../../integration-services/packages/create-package-configurations.md)  
   
  **路徑**  
  檢視要設定之屬性的路徑。  
@@ -605,7 +609,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="confirm-installation-page"></a>確認安裝頁面  
- 使用 [確認安裝] 頁面，即可開始安裝封裝、檢視狀態，以及檢視精靈用以從指定專案中安裝檔案的資訊。  
+ 使用 [確認安裝]  頁面，即可開始安裝封裝、檢視狀態，以及檢視精靈用以從指定專案中安裝檔案的資訊。  
   
  **下一個**  
  安裝封裝及其相依檔案，並在安裝完成時移到下一個精靈頁面。  
@@ -617,7 +621,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  移至 [完成封裝安裝精靈] 頁面。 如果您有回到先前的精靈頁面來修改選擇，並且指定了所有必要的選項，請使用此選項。  
   
 ### <a name="deploy-ssis-packages-page"></a>部署 SSIS 封裝頁面  
- 使用 [部署 SSIS 封裝] 頁面，來指定安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝及其相依性的位置。  
+ 使用 [部署 SSIS 封裝]  頁面，來指定安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝及其相依性的位置。  
   
 #### <a name="options"></a>選項。  
  **檔案系統部署**  
@@ -636,20 +640,20 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="packages-validation-page"></a>封裝驗證頁面  
- 使用 [封裝驗證] 頁面，即可檢視封裝驗證的進度與結果。  
+ 使用 [封裝驗證]  頁面，即可檢視封裝驗證的進度與結果。  
   
  **下一個**  
  移至精靈的下一頁。  
   
 ### <a name="select-installation-folder-page"></a>選取安裝資料夾頁面  
- 使用 [選取安裝資料夾] 頁面，即可指定安裝封裝及其相依性的檔案系統資料夾。  
+ 使用 [選取安裝資料夾]  頁面，即可指定安裝封裝及其相依性的檔案系統資料夾。  
   
 #### <a name="options"></a>選項。  
  **資料夾**  
  指定複製封裝及其相依性的路徑和資料夾。  
   
  **瀏覽**  
- 使用 [瀏覽資料夾] 對話方塊，即可瀏覽至目標資料夾。  
+ 使用 [瀏覽資料夾]  對話方塊，即可瀏覽至目標資料夾。  
   
  **下一個**  
  移至精靈的下一頁。  
@@ -658,7 +662,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  跳到 [完成封裝安裝精靈] 頁面。 如果您有依序返回精靈的其他頁面以修訂選擇，並且已指定了所有必要的選項，則請使用此選項。  
   
 ### <a name="specify-target-sql-server-page"></a>指定目標 SQL Server 頁面  
- 使用 [指定目標 SQL Server] 頁面，即可指定將封裝部署至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的選項。  
+ 使用 [指定目標 SQL Server]  頁面，即可指定將封裝部署至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的選項。  
   
 #### <a name="options"></a>選項。  
  **伺服器名稱**  
@@ -679,7 +683,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **封裝路徑**  
  指定邏輯資料夾名稱，或輸入 "/" 代表預設資料夾。  
   
- 若要在 [SSIS 封裝] 對話方塊中選取資料夾，請按一下 [瀏覽 (...)]。不過，此對話方塊並不能用來選取預設資料夾。 如果想要使用預設資料夾，必須在文字方塊中輸入 "/"。  
+ 若要在 [SSIS 封裝]  對話方塊中選取資料夾，請按一下 [瀏覽 (...)]。不過，此對話方塊並不能用來選取預設資料夾。 如果想要使用預設資料夾，必須在文字方塊中輸入 "/"。  
   
 > [!NOTE]  
 >  如果未輸入有效的套件路徑，則會出現下列錯誤訊息：「一或多個引數無效。」  
@@ -694,8 +698,8 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  跳到 [完成封裝安裝精靈] 頁面。 如果您依序返回精靈的頁面以修訂您的選擇，並且指定了所有必要的選項，則請使用這個選項。  
   
 ### <a name="finish-the-package-installation-page"></a>完成封裝安裝頁面  
- 使用 [完成封裝安裝精靈] 頁面，即可檢視封裝安裝結果的摘要。 此頁面提供詳細資料，例如已部署的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、已安裝的封裝、組態檔以及安裝位置。  
+ 使用 [完成封裝安裝精靈]  頁面，即可檢視封裝安裝結果的摘要。 此頁面提供詳細資料，例如已部署的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、已安裝的封裝、組態檔以及安裝位置。  
   
  **[完成]**  
- 按一下 [完成] 以結束精靈。  
+ 按一下 [完成]  以結束精靈。  
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b097b327121656cda3ff8c93ec24bfe1cb35921e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101115"
 ---
 # <a name="site-settings-page-report-manager"></a>站台設定頁面 (報表管理員)
   您可以使用 [站台設定] 頁面來變更應用程式標題、針對報表記錄限制和報表處理逾時值設定整個網站的預設值、管理系統層級角色指派，以及管理共用排程。 您必須擁有「內容管理員」和「系統管理員」權限才能檢視此頁面。  
@@ -31,7 +30,7 @@ ms.locfileid: "56035029"
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
      **注意：** 如果您看不見**站台設定**選項的功能表中，您沒有必要的權限，如需詳細資訊，請參閱 [站台設定] 區段的[設定原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "56035029"
   
  SharePoint 整合的模式：預設 URL 將採用 http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application。 」  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您對報表伺服器所做的變更。  
   
  **Security**  

@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127199"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
     
@@ -62,14 +62,14 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **零：** 1<br /><br /> **> = 255:** N/A<br /><br /> **< 255:** N/A|  
-|`BIGVARCHAR`|**NULL:** 0<br /><br /> **零：** 1<br /><br /> **> = 255:** 255<br /><br /> **<255：** 實際 *len*|  
-|`BIGCHAR`|**NULL:** 0<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`BIGBINARY`|**NULL:** 0<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`BIGVARBINARY`|**NULL:** 0<br /><br /> **零：** 1<br /><br /> **> = 255:** 255<br /><br /> **<255：** 實際 *len*|  
-|`NCHAR`|**NULL:** 0<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
-|`NVARCHAR`|**NULL:** 0<br /><br /> **零：** 1<br /><br /> **> = 255:** 255<br /><br /> **<255：** 實際 *len*|  
-|`NTEXT`|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255:** -1<br /><br /> **< 255:** -1|  
+|`BITN`|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|`BIGVARCHAR`|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
+|`BIGCHAR`|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|`BIGBINARY`|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|`BIGVARBINARY`|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
+|`NCHAR`|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|`NVARCHAR`|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
+|`NTEXT`|**NULL：** -1<br /><br /> **ZERO：** -1<br /><br /> **>=255:** -1<br /><br /> **<255:** -1|  
   
  \*   實際 *len* = 多位元組字元字串 (cch) 的長度  
   
@@ -79,7 +79,7 @@ n
  當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 雖然仍會呼叫 SRV_RPC 處理常式，但是看起來好像沒有參數，而且 **srv_rpcparams** 會傳回 0。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_paraminfo &#40;擴充預存程序 API&#41;](srv-paraminfo-extended-stored-procedure-api.md)   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f1e3ac7f0a76c607fa07d6eb92d069d99ef5e0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076216"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53205187"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverManager(  
      LPSTR    lpszPath,  

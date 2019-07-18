@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e0638477dd826f2023c3728bedb2a6f846ef305
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66009960"
 ---
 # <a name="move-a-filestream-enabled-database"></a>移動啟用 FILESTREAM 功能的資料庫
   本主題將示範如何移動已啟用 FILESTREAM 功能的資料庫。  

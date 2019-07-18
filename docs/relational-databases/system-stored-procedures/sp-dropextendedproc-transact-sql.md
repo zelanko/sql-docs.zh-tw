@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproc (Transact-SQL) | Microsoft Docs
+title: sp_dropextendedproc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3690d4c954ae3cde5159100280597af14a796d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054304"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @functname = ] 'procedure'` 是要卸除的擴充預存程序的名稱。 *程序*已**nvarchar(517)**，沒有預設值。  
+`[ @functname = ] 'procedure'` 是要卸除的擴充預存程序的名稱。 *程序*已**nvarchar(517)** ，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

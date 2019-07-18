@@ -7,28 +7,28 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5743f528e7b356611258da598edfa7b205971f3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a041133bf26865404da6a883992176b19e837c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479059"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
   Master Data Services Add-in for Excel 設定會決定如何從 MDS 將資料載入 Excel 增益集，以及如何從 Excel 增益集將資料發行到 MDS。  
   
- 若要針對 Excel 增益集進行設定，請開啟 [Excel]，並按一下 [主要資料] 功能表，然後按一下 [設定]。 可存取 Excel 的任何人都可以變更這些設定。 這些設定適用於開啟 Excel 的電腦。  
+ 若要針對 Excel 增益集進行設定，請開啟 [Excel]  ，並按一下 [主要資料]  功能表，然後按一下 [設定]  。 可存取 Excel 的任何人都可以變更這些設定。 這些設定適用於開啟 Excel 的電腦。  
   
 ## <a name="excel-add-in-settings"></a>Excel 增益集設定  
   
 ||||  
 |-|-|-|  
 |索引標籤和區段|設定|描述|  
-|設定：發行|在發行時顯示 [發行並註解] 對話方塊|在您按一下 [發行] 之後，選取此選項可顯示 [發行並註解] 對話方塊，好讓您輸入所有變更的單一註解，或輸入每一項變更的註解。<br /><br /> 取消選取此選項可指定發行程序已起始，而不必顯示 [發行並註解] 對話方塊。 您將沒有機會輸入註解。|  
-|設定：版本|版本選取項目|選取將載入 Excel 增益集中之主要資料的版本。 可為以下項目：<br /><br /> [無] 表示具有未預設為任何版本的版本<br /><br /> [最舊] 表示預設為最舊的版本；[最新] 表示預設為最新的版本。|  
+|設定：發行|在發行時顯示 [發行並註解]  對話方塊|在您按一下 [發行]  之後，選取此選項可顯示 [發行並註解]  對話方塊，好讓您輸入所有變更的單一註解，或輸入每一項變更的註解。<br /><br /> 取消選取此選項可指定發行程序已起始，而不必顯示 [發行並註解]  對話方塊。 您將沒有機會輸入註解。|  
+|設定：版本|版本選取項目|選取將載入 Excel 增益集中之主要資料的版本。 可為以下項目：<br /><br /> [無]  表示具有未預設為任何版本的版本<br /><br /> [最舊]  表示預設為最舊的版本；[最新]  表示預設為最新的版本。|  
 |設定：記錄|開啟詳細記錄|如此在服務中的每個命令的結果都會記錄下來，請啟用記錄的主要資料從 MDS 載入 Excel 增益集，程序。|  
 |設定：批次大小|要載入的資料格數目|選取一個數字，此數字指示在從 MDS 伺服器載入 Excel 的批次中，將會載入幾千個資料格。 預設值是 50,000 個資料格。|  
 |設定：批次大小|要發行的資料格數目|選取一個數字，此數字指示在從 Excel 傳回到伺服器的批次中，將會發行幾千個資料格。 預設值是 50,000 個資料格。|  

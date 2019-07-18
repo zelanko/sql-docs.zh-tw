@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: 45cb553dc1f83e42afee5d54951e598fc6df8d1a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645480"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768107"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 概觀
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 是一個 PHP 延伸模組，可提供對 SQL Server 2005 和更新版本 (包括 Azure SQL Database) 的資料存取。 延伸模組會提供使用 SQLSRV 驅動程式的程序性介面，PDO_SQLSRV 驅動程式的物件導向介面來存取資料的 SQL Server，包括從 SQL Server 2005 Express 所有版本。 3.1 和更新版本的驅動程式版本支援 SQL Server 2008 的開頭。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API 包含對 Windows 驗證、交易、參數繫結、資料流、中繼資料存取和錯誤處理的支援。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 是一個 PHP 延伸模組，可提供對 SQL Server 2005 和更新版本 (包括 Azure SQL Database) 的資料存取。 延伸模組會提供使用 SQLSRV 驅動程式的程序性介面，PDO_SQLSRV 驅動程式的物件導向介面來存取資料的 SQL Server，包括從 SQL Server 2005 Express 所有版本。 3\.1 和更新版本的驅動程式版本支援 SQL Server 2008 的開頭。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API 包含對 Windows 驗證、交易、參數繫結、資料流、中繼資料存取和錯誤處理的支援。  
   
 若要使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，您必須擁有正確版本的 SQL Server Native Client，或執行 PHP 在相同電腦上安裝的 Microsoft ODBC 驅動程式。  如需詳細資訊，請參閱 < [Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
   

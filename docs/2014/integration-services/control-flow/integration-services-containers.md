@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831256"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的物件，可提供結構給封裝，並提供服務給工作。 它們支援封裝中的重複控制流程，且會將工作和容器分組成有意義的工作單位。 除了工作外，容器還可包含其他容器。  

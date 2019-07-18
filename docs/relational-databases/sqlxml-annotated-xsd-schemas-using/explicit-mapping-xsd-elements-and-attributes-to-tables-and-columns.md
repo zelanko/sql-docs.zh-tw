@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -27,15 +26,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abeacc4ee89dd5f22cc0a48424530da9c5abc595
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4edb639a56e195bf57d4b34f8c1d399e1218b72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067123"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>XSD 項目和屬性對資料表和資料行的明確對應
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "56028369"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 結構描述所組成**\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
+ 在此範例中，XSD 結構描述所組成 **\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
   
  **Sql: relation**註解 maps **\<連絡人 >** 至 AdventureWorks 資料庫中的 Person.Contact 資料表的項目。 **Sql: field**註解 maps  **\<FName >** FirstName 資料行的項目與 **\<LName >** LastName 的項目資料行。  
   

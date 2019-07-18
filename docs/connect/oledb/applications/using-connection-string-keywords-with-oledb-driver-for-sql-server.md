@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: ed200e47d1ce7e579dde3059da1d17b85c6677f6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 91e498a1db30df380d7f2009f0fe34a9b4541467
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778032"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>利用 OLE DB Driver for SQL Server 使用連接字串關鍵字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,13 +100,13 @@ ms.locfileid: "56744528"
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值是 4096。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受的值為 "yes" 和 "no" 字串。 當為 "no" 時，不允許使用資料來源物件來保存敏感性驗證資訊。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入密碼。|  
-|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> 如果沒有指定，就會連接至本機電腦上的預設執行個體。<br /><br /> **地址**關鍵字會覆寫**Server**關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> **伺服器=;**<br /><br /> **伺服器 =。;**<br /><br /> **伺服器=(local);**<br /><br /> **伺服器=(local);**<br /><br /> **伺服器=(localhost);**<br /><br /> **伺服器=(localdb)\\** *執行個體名稱* **;**<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱 < [OLE DB Driver for SQL Server 支援 localdb](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\** _InstanceName_。<br /><br /> 如果未指定伺服器，就會連接到本機電腦上的預設執行個體。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> **Server** 關鍵字的完整語法如下：<br /><br /> **伺服器=**[_通訊協定_**:**]*伺服器*[**,**_連接埠_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此程式碼行指定具名管道通訊協定、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`) 以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果沒有*通訊協定*也**網路**關鍵字指定，則 OLE DB Driver for SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 傳遞給的值開頭的空格會被忽略**Server**時使用 OLE DB Driver for SQL Server 的連接字串中。|   
+|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> 如果沒有指定，就會連接至本機電腦上的預設執行個體。<br /><br /> **地址**關鍵字會覆寫**Server**關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> **伺服器=;**<br /><br /> **伺服器=.;**<br /><br /> **伺服器=(local);**<br /><br /> **伺服器=(local);**<br /><br /> **伺服器=(localhost);**<br /><br /> **伺服器=(localdb)\\** *執行個體名稱* **;**<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱 < [OLE DB Driver for SQL Server 支援 localdb](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\** _InstanceName_。<br /><br /> 如果未指定伺服器，就會連接到本機電腦上的預設執行個體。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> **Server** 關鍵字的完整語法如下：<br /><br /> **伺服器=**[_通訊協定_**:**]*伺服器*[**,**_連接埠_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此程式碼行指定具名管道通訊協定、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`) 以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果沒有*通訊協定*也**網路**關鍵字指定，則 OLE DB Driver for SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 傳遞給的值開頭的空格會被忽略**Server**時使用 OLE DB Driver for SQL Server 的連接字串中。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會導致 OLE DB Driver for SQL Server 使用預設值，提供者產生的 SPN。|  
 |**逾時**|DBPROP_INIT_TIMEOUT|等候資料來源初始化完成的時間量 (以秒為單位)。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|當"yes"，指示 OLE DB Driver for SQL Server 使用 Windows 驗證模式進行登入驗證。 否則會指示 OLE DB Driver for SQL Server 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼進行登入驗證，而且必須指定 UID 和 PWD 密碼。|  
 |**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受的值為 "yes" 和 "no" 字串。 預設值為 "no"，這表示將會驗證伺服器憑證。|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入名稱。|  
-|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|控制當連接到要擷取的中繼資料的方式[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]及更新版本。 可能的值為 "yes" 和 "no"。 預設值為 "no"。<br /><br />根據預設，使用 OLE DB Driver for SQL Server [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)並[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)預存程序來擷取中繼資料。 這些預存程序有一些限制 （例如將會失敗操作暫存資料表時）。 設定**UseFMTONLY**為 [是] 會指示驅動程式使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)擷取中繼資料改為。|  
+|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|控制連線到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 及更新版本時，如何擷取中繼資料。 可能的值為 "yes" 和 "no"。 預設值為 "no"。<br /><br />根據預設，使用 OLE DB Driver for SQL Server [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)並[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)預存程序來擷取中繼資料。 這些預存程序有一些限制 （例如將會失敗操作暫存資料表時）。 設定**UseFMTONLY**為 [是] 會指示驅動程式使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)擷取中繼資料改為。|  
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|這個關鍵字已被取代，並會忽略它的設定 OLE DB Driver for SQL Server。|  
 |**WSID**|SSPROP_INIT_WSID|工作站識別碼。|  
   
@@ -164,7 +164,7 @@ ms.locfileid: "56744528"
 |**Server SPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會導致 OLE DB Driver for SQL Server 使用預設值，提供者產生的 SPN。|  
 |**信任伺服器憑證**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受的值為 "true" 和 "false" 字串。 預設值為 "false"，這表示將會驗證伺服器憑證。|  
 |**為資料使用加密**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定當透過網路傳送資料以前，是否應該先加密資料。 可能的值為 "true" 和 "false"。 預設值為 "false"。|  
-|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制當連接到要擷取的中繼資料的方式[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]及更新版本。 可能的值為 "true" 和 "false"。 預設值為 "false"。<br /><br />根據預設，使用 OLE DB Driver for SQL Server [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)並[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)預存程序來擷取中繼資料。 這些預存程序有一些限制 （例如將會失敗操作暫存資料表時）。 設定**使用 FMTONLY**至"true"會指示驅動程式使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)擷取中繼資料改為。|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制連線到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 及更新版本時，如何擷取中繼資料。 可能的值為 "true" 和 "false"。 預設值為 "false"。<br /><br />根據預設，使用 OLE DB Driver for SQL Server [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)並[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)預存程序來擷取中繼資料。 這些預存程序有一些限制 （例如將會失敗操作暫存資料表時）。 設定**使用 FMTONLY**至"true"會指示驅動程式使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)擷取中繼資料改為。|  
 |**使用者識別碼**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入名稱。|  
 |**Workstation ID**|SSPROP_INIT_WSID|工作站識別碼。|  
   
@@ -221,7 +221,7 @@ ms.locfileid: "56744528"
 |**Server SPN**|SSPROP_INIT_SERVERSPN|伺服器的 SPN。 預設值為空字串。 空字串會導致 OLE DB Driver for SQL Server 使用預設值，提供者產生的 SPN。|  
 |**信任伺服器憑證**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受的值為 "true" 和 "false" 字串。 預設值為 "false"，這表示將會驗證伺服器憑證。|  
 |**為資料使用加密**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定當透過網路傳送資料以前，是否應該先加密資料。 可能的值為 "true" 和 "false"。 預設值為 "false"。|  
-|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制當連接到要擷取的中繼資料的方式[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]及更新版本。 可能的值為 "true" 和 "false"。 預設值為 "false"。<br /><br />根據預設，使用 OLE DB Driver for SQL Server [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)並[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)預存程序來擷取中繼資料。 這些預存程序有一些限制 （例如將會失敗操作暫存資料表時）。 設定**使用 FMTONLY**至"true"會指示驅動程式使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)擷取中繼資料改為。|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制連線到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 及更新版本時，如何擷取中繼資料。 可能的值為 "true" 和 "false"。 預設值為 "false"。<br /><br />根據預設，使用 OLE DB Driver for SQL Server [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)並[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)預存程序來擷取中繼資料。 這些預存程序有一些限制 （例如將會失敗操作暫存資料表時）。 設定**使用 FMTONLY**至"true"會指示驅動程式使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)擷取中繼資料改為。|  
 |**使用者識別碼**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入名稱。|  
 |**Workstation ID**|SSPROP_INIT_WSID|工作站識別碼。|  
   

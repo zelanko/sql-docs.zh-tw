@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 86c9baf93d4776bcd003e1978ee900df9dbc83ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f6eeba7adb9d1716120f046a3b937e0e9a0e21a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085579"
 ---
 # <a name="technical-reference-master-data-services"></a>技術參考 (Master Data Services)
 

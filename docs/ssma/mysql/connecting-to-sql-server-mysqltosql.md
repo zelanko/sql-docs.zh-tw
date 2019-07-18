@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103133"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>連線到 SQL Server (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Server 中，您必須連接到 SQL Server 目標執行個體。 連線時，SSMA 取得 SQL Server 執行個體中的所有資料庫的相關中繼資料，並在 SQL Server 中繼資料總管 會顯示資料庫中繼資料。 SSMA 會儲存您要連線，但不會儲存密碼的 SQL Server 執行個體的資訊。  
@@ -50,7 +49,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
   
 2.  在 [連線] 對話方塊中，輸入或選取的 SQL Server 執行個體的名稱。  
   
-    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+    -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   

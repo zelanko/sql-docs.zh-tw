@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150001"
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
   您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  

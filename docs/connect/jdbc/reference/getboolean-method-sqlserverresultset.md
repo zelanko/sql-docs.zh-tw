@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 970a41d0-b2f6-4890-aa6d-2346abb6d96a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2adbd7060442dd9501e4c10949252a6251e841d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c3880a5cd0517e51c5f1946b00d261c1f90fed2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783588"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771546"
 ---
 # <a name="getboolean-method-sqlserverresultset"></a>getBoolean 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

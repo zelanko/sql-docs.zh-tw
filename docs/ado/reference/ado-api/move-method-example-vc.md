@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9a158f5f31239a9e8c3dc791a86e4fdacceb8c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932092"
 ---
 # <a name="move-method-example-vc"></a>Move 方法範例 (VC++)
 這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，以記錄指標位置會根據使用者輸入。  

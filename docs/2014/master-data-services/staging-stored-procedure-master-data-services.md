@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e66748610d648ec8e427315d2a317d26e699d06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8647a1a4529f7c7d4a8258eac5b726da203c7df9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482719"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
   從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]起始暫存處理序時，可以使用下列三個預存程序其中之一：  
@@ -56,7 +56,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
- [載入或更新 Master Data Services 中的成員，使用暫存處理序](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [載入或更新 Master Data Services 中的成員，使用暫存處理序](add-update-and-delete-data-master-data-services.md)   
  [檢視暫存處理序期間發生的錯誤&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

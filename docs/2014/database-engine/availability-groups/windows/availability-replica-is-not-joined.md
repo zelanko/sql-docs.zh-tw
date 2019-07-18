@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815285"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性複本未聯結
     

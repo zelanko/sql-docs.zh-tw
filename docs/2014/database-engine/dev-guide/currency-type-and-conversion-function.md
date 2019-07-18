@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753238"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency 類型及轉換函數
   此範例會使用 C# 來定義 Currency 使用者定義資料類型。 這個使用者定義資料類型會封裝金額和文化特性，這樣做有助決定將金額轉譯成該文化特性中之貨幣值的正確方式。 此範例也會提供貨幣轉換函數，該函數會傳回 Currency 使用者定義資料類型的執行個體。 如果 AdventureWorks 資料庫具有從美元 (USD) 到與指定文化特性相關聯之貨幣的轉換比率，則轉換函數會傳回具有轉換比率和符合文化特性要求之文化特性的 Currency 使用者定義資料類型。 否則，會傳回具有使用 `en-us` 文化特性以 USD 計算之原始金額的 Currency 使用者定義資料類型。 此範例還會示範如何使用 Transact-SQL 取消註冊和註冊 Common Language Runtime (CLR) 方法與組件。  

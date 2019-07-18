@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029150"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -35,7 +34,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 ## <a name="project-commands"></a>專案命令  
 建立專案、 開啟、 儲存及結束專案的專案的命令控制代碼。  
   
-### <a name="create-new-project"></a>建立新專案間的  
+### <a name="create-new-project"></a>create-new-project  
 此命令會建立新的 SSMA 專案。  
   
 -   `project-folder` 表示取得建立之專案的資料夾。  
@@ -85,7 +84,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 > [!NOTE]  
 > SSMA for SAP ASE 主控台應用程式支援回溯相容性。 您可以使用它來開啟 建立的前一版的 SSMA 專案。  
   
-### <a name="save-project"></a>儲存專案  
+### <a name="save-project"></a>save-project  
 此命令會將儲存移轉專案。  
   
 **語法範例：**  
@@ -154,7 +153,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>連線目標資料庫  
+### <a name="connect-target-database"></a>connect-target-database  
 此命令會連線到目標 SQL Server 資料庫，並完全載入目標資料庫的高層級的中繼資料，但不是中繼資料。  
   
 如果無法連線到目標，則會產生錯誤和主控台應用程式會停止進一步執行。  
@@ -231,7 +230,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -296,7 +295,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -312,7 +311,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>移轉資料  
+### <a name="migrate-data"></a>migrate-data  
 此命令會將來源資料移轉至目標。  
   
 -   `object-name:` 指定來源物件視為移轉資料 （支援個別的物件名稱或群組物件名稱）。  
@@ -352,7 +351,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -406,9 +405,9 @@ sql-server-schema="<target-schema>"/>
   
 -   `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -431,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -440,7 +439,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -454,7 +453,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>從資料庫重新整理  
+### <a name="refresh-from-database"></a>refresh-from-database  
 此命令會重新整理資料庫的來源物件。  
   
 如果針對目標資料庫執行此命令時，會產生錯誤。  
@@ -467,9 +466,9 @@ fail-script>" (optional)
   
 -   `on-error:` 指定是否要呼叫重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
     -   失敗指令碼  
   
@@ -492,7 +491,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -501,7 +500,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -546,7 +545,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -620,7 +619,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -645,7 +644,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  

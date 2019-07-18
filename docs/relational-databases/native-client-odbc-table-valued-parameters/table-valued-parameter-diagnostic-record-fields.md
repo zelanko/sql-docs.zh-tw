@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3f272cde25fe7751dc7b0dffdfd4d5f818f9a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e58f94eb76762c77050bb3e80533201c5005a73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129077"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>資料表值參數診斷記錄欄位
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

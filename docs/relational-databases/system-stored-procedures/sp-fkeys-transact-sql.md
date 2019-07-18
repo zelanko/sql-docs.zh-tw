@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a30016240c6cfd34cd2e21d6987ea04a0bc27537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124395"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

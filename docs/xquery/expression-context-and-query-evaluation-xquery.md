@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038926"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>運算式內容和查詢評估 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54256873"
 ## <a name="static-context"></a>靜態內容  
  靜態內容初始化是指集中所有資訊，以進行運算式之靜態分析的過程。 在靜態內容初始化的過程中，會完成下列項目：  
   
--   **邊界空格**原則設定為刪除。 因此，界限泛空白字元不會保留**任何項目**並**屬性**建構函式在查詢中的。 例如：  
+-   **邊界空格**原則設定為刪除。 因此，界限泛空白字元不會保留**任何項目**並**屬性**建構函式在查詢中的。 例如:  
   
     ```  
     declare @x xml  
@@ -80,7 +79,7 @@ ms.locfileid: "54256873"
   
 -   如果查詢具型別**xml**資料行或變數，資料行或變數相關聯的 XML 結構描述集合的元件會匯入至靜態內容。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
--   對於所匯入之結構描述中的每一個不可部份完成類型，也可以在靜態內容中使用轉換函數。 下列範例會加以說明。 在此範例中，指定查詢針對具型別**xml**變數。 與此變數相關聯之 XML 結構描述集合會定義不可部份完成類型 myType。 對應於此類型的轉換函數**myType()**，靜態分析時可使用。 查詢運算式 (`ns:myType(0)`) 傳回 myType 的值。  
+-   對於所匯入之結構描述中的每一個不可部份完成類型，也可以在靜態內容中使用轉換函數。 下列範例會加以說明。 在此範例中，指定查詢針對具型別**xml**變數。 與此變數相關聯之 XML 結構描述集合會定義不可部份完成類型 myType。 對應於此類型的轉換函數**myType()** ，靜態分析時可使用。 查詢運算式 (`ns:myType(0)`) 傳回 myType 的值。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -120,7 +119,7 @@ ms.locfileid: "54256873"
   
 2.  解析運算式中所指定的函數和類型名稱。  
   
-3.  查詢的靜態類型 (Static Typing)。 這可確定查詢為安全類型。 例如，下列查詢會傳回靜態錯誤，因為**+** 運算子需要數值基本類型引數：  
+3.  查詢的靜態類型 (Static Typing)。 這可確定查詢為安全類型。 例如，下列查詢會傳回靜態錯誤，因為 **+** 運算子需要數值基本類型引數：  
   
     ```  
     declare @x xml  

@@ -18,14 +18,18 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8f12ca10a98e278d43023bebcb1c3b3d6b169d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9bcae930fc19aa252356f94fbdd387c2f721d048
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726512"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   資料錄集目的地可建立和擴展記憶體中的 ADO 資料錄集。 資料錄集的形狀，是由設計階段時對「資料錄集」目的地的輸入所定義。  
   
 ## <a name="configuration-of-the-recordset-destination"></a>資料錄集目的地的組態  

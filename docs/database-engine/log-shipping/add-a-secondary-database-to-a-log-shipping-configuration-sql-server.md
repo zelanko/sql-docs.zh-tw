@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d91061db6626f70d765a6c5fb98d3371cb5b085
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48f99b048474372ead6cdcef1f6988418b93c5b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794661"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>將次要資料庫加入至記錄傳送組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47672896"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要加入記錄傳送次要資料庫，請使用：**  
   

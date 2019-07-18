@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd30ff2c40271028a742e0dcab575e4ff3c99159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f46e00be95d751629325a6b7c54160bf00e44be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948966"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如 OBJECT_SCHEMA_NAME) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要物件的 ANY 權限。 若要指定資料庫識別碼，也需要資料庫的 CONNECT 權限，或必須啟用 Guest 帳戶。  
   
 ## <a name="remarks"></a>Remarks  

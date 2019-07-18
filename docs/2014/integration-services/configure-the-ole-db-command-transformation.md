@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d71ffe723df317733841450713ddccc3d03ddb36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060559"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>設定 OLE DB 命令轉換
   若要加入及設定「OLE DB 命令」轉換，封裝必須至少已包含一個「資料流程」工作和一個來源 (例如「一般檔案」來源或 OLE DB 來源)。 此轉換通常用於執行參數化查詢。  
@@ -34,19 +33,19 @@ ms.locfileid: "58377236"
   
 4.  將連接子 (綠色或紅色的箭頭) 從資料來源或前一個轉換拖曳至「OLE DB 命令」轉換，將「OLE DB 命令」轉換連線到資料流程。  
   
-5.  以滑鼠右鍵按一下元件，選取 [編輯] 或顯示 [進階編輯器]。  
+5.  以滑鼠右鍵按一下元件，選取 [編輯] 或顯示 [進階編輯器]  。  
   
 6.  在 **[連接管理員]** 索引標籤上，選取 **[連接管理員]** 清單中的 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)。  
   
-7.  按一下 [元件屬性] 索引標籤，然後按一下 [SqlCommand] 方塊中的省略符號按鈕 **(...)**。  
+7.  按一下 [元件屬性]  索引標籤，然後按一下 [SqlCommand]  方塊中的省略符號按鈕 **(...)** 。  
   
-8.  在 [字串值編輯器] 中，輸入參數化 SQL 陳述式，並使用問號 (?) 作為每個參數的參數標記。  
+8.  在 [字串值編輯器]  中，輸入參數化 SQL 陳述式，並使用問號 (?) 作為每個參數的參數標記。  
   
-9. 按一下 **[重新整理]**。 當您按一下 [重新整理] 時，轉換會在「外部資料行」集合中為每個參數建立資料行，並設定 DBParamInfoFlags 屬性。  
+9. 按一下 **[重新整理]** 。 當您按一下 [重新整理]  時，轉換會在「外部資料行」集合中為每個參數建立資料行，並設定 DBParamInfoFlags 屬性。  
   
 10. 按一下 **[輸入與輸出屬性]** 索引標籤。  
   
-11. 展開 **[OLE DB 命令輸入]**，然後展開 **[外部資料行]**。  
+11. 展開 **[OLE DB 命令輸入]** ，然後展開 **[外部資料行]** 。  
   
 12. 請確認 **[外部資料行]** 會列出 SQL 陳述式中每個參數的資料行。 資料行的名稱為 **Param_0**、 **Param_1**等。  
   
@@ -64,11 +63,11 @@ ms.locfileid: "58377236"
   
     -   指定資料行的資料類型，並依據該資料類型指定資料行的字碼頁、長度、有效位數和小數位數。  
   
-    -   若要刪除不使用的參數，請選取 **[外部資料行]** 中的參數，然後按一下 **[移除資料行]**。  
+    -   若要刪除不使用的參數，請選取 **[外部資料行]** 中的參數，然後按一下 **[移除資料行]** 。  
   
     -   按一下 **[資料行對應]** ，然後將 **[可用的輸入資料行]** 清單中的資料行對應至 **[可用的目的地資料行]** 清單中的參數。  
   
-14. 按一下 [確定] 。  
+14. 按一下 [確定]  。  
   
 15. 若要儲存更新的封裝，請按一下 **[檔案]** 功能表上的 **[儲存]** 。  
   

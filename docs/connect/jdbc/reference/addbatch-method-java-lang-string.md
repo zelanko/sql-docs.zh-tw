@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 159fec023940a41f5dc3e96cc0583317ecd8ff39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4cbd38eddb3fb5dcdb3f614b53c7d8d6399fa79f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830136"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803761"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

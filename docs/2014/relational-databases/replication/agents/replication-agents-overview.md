@@ -25,11 +25,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721910"
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
   複寫使用了許多名為代理程式的獨立程式，以執行與追蹤變更和散發資料有關的工作。 依預設，複寫代理程式作為在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 中排定的作業來執行，且必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 方可執行這些作業。 複寫代理程式也可以從命令列執行，或透過使用 Replication Management Objects (RMO) 的應用程式執行。 複寫代理程式可以透過「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]進行管理。  

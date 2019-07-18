@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c80123c2cc08d01c4fb41c945954288bb999f897
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cdd669db96a3019915e7380aa6a450b2333de36e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810646"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780816"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>cancelRowUpdates 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

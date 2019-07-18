@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
@@ -17,12 +16,12 @@ ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390875"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083883"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏機率分類演算法是根據貝氏的定理和所提供的分類演算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用於預測性模型。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
@@ -71,7 +70,7 @@ ms.locfileid: "52390875"
      可預期資料行的值可視為輸入。 當您瀏覽新的資料集來尋找資料行之間的關聯性時，這個作法很有用。  
   
 ## <a name="viewing-the-model"></a>檢視模型  
- 若要瀏覽此模型，您可以使用 **[Microsoft 貝氏機率分類檢視器]**。 檢視器會顯示輸入屬性與可預測屬性間的關聯。 檢視器也會針對每個群集提供詳細的設定檔、區分各個群集的屬性清單以及整個訓練資料集的特性。 如需詳細資訊，請參閱[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
+ 若要瀏覽此模型，您可以使用 **[Microsoft 貝氏機率分類檢視器]** 。 檢視器會顯示輸入屬性與可預測屬性間的關聯。 檢視器也會針對每個群集提供詳細的設定檔、區分各個群集的屬性清單以及整個訓練資料集的特性。 如需詳細資訊，請參閱[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
   
  如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 中瀏覽此模型。 如需此模型所儲存之資訊類型的詳細資訊，請參閱[貝式機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)。  
   

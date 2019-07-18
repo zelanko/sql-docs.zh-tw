@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123767"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引數  
  **'** *command_string* **'**  
- 這是包含要傳送至作業系統之命令的字串。 *command_string*已**varchar （8000)** 或是**nvarchar(4000)**，沒有預設值。 *command_string*不能包含雙引號括住的多個集合。 如果檔案路徑中有任何空格，或參考的程式名稱，則需要一對引號*command_string*。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
+ 這是包含要傳送至作業系統之命令的字串。 *command_string*已**varchar （8000)** 或是**nvarchar(4000)** ，沒有預設值。 *command_string*不能包含雙引號括住的多個集合。 如果檔案路徑中有任何空格，或參考的程式名稱，則需要一對引號*command_string*。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
   
  **no_output**  
  這是選擇性參數，用來指定不應將輸出傳回用戶端。  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  如果**xp_cmdshell**在批次內執行，並傳回錯誤，批次將會失敗。 這是行為的變更。 在舊版[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批次會繼續執行。  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell Proxy 帳戶  
- 當呼叫它不是成員的使用者所**sysadmin**固定伺服器角色**xp_cmdshell**使用的帳戶名稱和密碼儲存在名為認證連接到 Windows **# #xp_cmdshell_proxy_account # #**。 如果這個 proxy 認證不存在， **xp_cmdshell**將會失敗。  
+ 當呼叫它不是成員的使用者所**sysadmin**固定伺服器角色**xp_cmdshell**使用的帳戶名稱和密碼儲存在名為認證連接到 Windows **# #xp_cmdshell_proxy_account # #** 。 如果這個 proxy 認證不存在， **xp_cmdshell**將會失敗。  
   
  會建立 proxy 帳戶認證，請執行**sp_xp_cmdshell_proxy_account**。 作為引數，這個預存程序會取得 Windows 使用者名稱和密碼。 例如，下列命令會針對 Windows 網域使用者 `SHIPPING\KobeR` (這個使用者有 Windows 密碼 `sdfh%dkc93vcMt0`) 來建立 Proxy 認證。  
   

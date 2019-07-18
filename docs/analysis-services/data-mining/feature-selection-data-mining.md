@@ -1,5 +1,5 @@
 ---
-title: 特徵選取 （資料採礦） |Microsoft 文件
+title: 特徵選取 （資料採礦） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183277"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *特徵選取*是機器學習中很重要的一部分。 特徵選取指的是減少處理序和分析的輸入，或尋找最有意義之輸入的過程。 相關詞彙： *特徵工程設計* (或 *功能擷取*)，指的是從現有資料擷取實用資訊或功能的過程。  
   
 ## <a name="why-do-feature-selection"></a>為何執行特徵選取？  
- 特徵選取對於建立優良的模型十分重要，而原因有多個。 其中一個原因是特徵選取隱含某種程度的「基數減少」，在建置模型時，可以考量強制截止屬性的數目。 資料幾乎一律會包含比建立模型所需的更詳細資訊，或包含錯誤的資訊類型。 例如，您可能必須具有 500 個資料行的資料集來描述客戶特性；不過，如果某些部分資料行中的資料非常疏鬆，您幾乎無法從將它們加入模型中得到好處；而且如果部分資料行對彼此進行複製，使用這兩個資料行可能會影響模型。  
+ 特徵選取對於建立優良的模型十分重要，而原因有多個。 其中一個原因是特徵選取隱含某種程度的「基數減少」  ，在建置模型時，可以考量強制截止屬性的數目。 資料幾乎一律會包含比建立模型所需的更詳細資訊，或包含錯誤的資訊類型。 例如，您可能必須具有 500 個資料行的資料集來描述客戶特性；不過，如果某些部分資料行中的資料非常疏鬆，您幾乎無法從將它們加入模型中得到好處；而且如果部分資料行對彼此進行複製，使用這兩個資料行可能會影響模型。  
   
  功能選擇不只能改善模型的品質，它也會使建立模型的過程更有效率。 如果您在建置此模型時保留不需要的資料行，定型程序期間就會需要更多 CPU 和記憶體，而且完成模型將會需要更多儲存空間。 即使資源不成問題，您仍會想要執行功能選取項目，並找出最佳的資料行，因為不需要的資料行可能會在幾個不同的方面降低模型品質︰  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34019185"
   
  在特徵選取的過程中，分析師、模型工具或演算法會根據對分析的實用性，主動選取或捨棄屬性。  分析師可能會執行特性工程設計以加入功能，並移除或修改現有的資料，而機器學習演算法通常會為資料行評分，並驗證其在模型中的實用性。  
   
- ![功能選取項目 」 和 「 工程程序](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "功能選取項目 」 和 「 工程程序")  
+ ![特性選取和工程設計程序](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "特性選取和工程設計程序")  
   
  簡而言之，特徵選取有助於解決兩個問題：低價值資料過多，或高價值資料過少。 您在特徵選取中的目標應該是識別資料來源中，對建置模型很重要之資料行的最小數目。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "34019185"
 ### <a name="feature-selection-scores"></a>特徵選取分數  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦支援這些常見且妥善建立的方法，以為屬性評分。 在任何演算法或資料集中所使用的特定方法取決於資料類型及資料行的使用方式。  
   
--   「有趣性」(Interestingness) 分數是用來在包含非二進位連續數值資料的資料行中排名及排序屬性。  
+-   「有趣性」  (Interestingness) 分數是用來在包含非二進位連續數值資料的資料行中排名及排序屬性。  
   
--   包含離散和離散化資料的資料行使用「Shannon 熵」(Shannon's Entropy) 和兩個貝氏 (Bayesian) 分數。 但是，如果模型包含任何連續資料行，則會使用有趣性分數評估所有輸入資料行，以確保一致性。  
+-   包含離散和離散化資料的資料行使用「Shannon 熵」  (Shannon's Entropy) 和兩個貝氏  (Bayesian) 分數。 但是，如果模型包含任何連續資料行，則會使用有趣性分數評估所有輸入資料行，以確保一致性。  
   
 #### <a name="interestingness-score"></a>有趣性分數  
- 如果特徵能告訴您一些有用的資訊，就具備「有趣性」。 不過，「有趣性」可以從許多方面來測量。  對極端值偵測來說，「新奇」可能很重要，但是區分緊密關聯之項目的能力 (或稱為「辨識權重」)，對分類而言可能更有趣。  
+ 如果特徵能告訴您一些有用的資訊，就具備「有趣性」。 不過，「有趣性」  可以從許多方面來測量。  對極端值偵測來說，「新奇」  可能很重要，但是區分緊密關聯之項目的能力 (或稱為「辨識權重」  )，對分類而言可能更有趣。  
   
- 用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的「有趣性」量值是以「熵」 (Entropy) 為基礎，這表示具有隨機散發的屬性具有較高的熵和較低的資訊優勢，因此這類屬性較不有趣。 任何特定屬性的熵都會與所有其他屬性的熵進行比較，如下所示：  
+ 用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的「有趣性」量值是以「熵」  (Entropy) 為基礎，這表示具有隨機散發的屬性具有較高的熵和較低的資訊優勢，因此這類屬性較不有趣。 任何特定屬性的熵都會與所有其他屬性的熵進行比較，如下所示：  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34019185"
  這個計分方法可用於分隔和離散化的屬性。  
   
 #### <a name="bayesian-with-k2-prior"></a>使用 K2 優先的貝氏  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦提供兩種以貝氏網路為基礎的特徵選取分數。 貝氏網路是狀態及狀態間轉換的「導向」或「非循環」圖表，代表某些狀態一定會在目前的狀態之前、某些狀態會在之後，而圖表並不會重複或迴圈。 依照定義，貝氏網路可以使用先前的知識。 不過，在計算稍後狀態的機率時要使用什麼先前狀態的問題，對於演算法的設計、效能和精確度都很重要。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦提供兩種以貝氏網路為基礎的特徵選取分數。 貝氏網路是狀態及狀態間轉換的「導向」  或「非循環」  圖表，代表某些狀態一定會在目前的狀態之前、某些狀態會在之後，而圖表並不會重複或迴圈。 依照定義，貝氏網路可以使用先前的知識。 不過，在計算稍後狀態的機率時要使用什麼先前狀態的問題，對於演算法的設計、效能和精確度都很重要。  
   
  貝氏網路學習的 K2 演算法是由 Cooper 和 Herskovits 所開發，常用於資料採礦中。 這個演算法可以擴充，而且可以分析多個變數，但需要對當做輸入的變數進行排序。 如需詳細資訊，請參閱 Chickering、Geiger 和 Heckerman 所著的 [Learning Bayesian Networks](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf) (學習貝氏網路)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "34019185"
 #### <a name="maximumstates"></a>MAXIMUM_STATES  
  如果模型包含的案例比在 *MAXIMUM_STATES* 參數中所指定的數目多，則會將最不常用的狀態群組在一起，並視為遺漏。 如果其中有任何參數設定為 0，特徵選取就會關閉，且會影響處理時間和效能。  
   
- 除了這些特徵選取方法之外，您也可以透過在模型上設定「模型旗標」，或透過在結構上設定「散發旗標」，來改進演算法識別或提升有意義屬性的能力。 如需這些概念的詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) 和[資料行散發 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
+ 除了這些特徵選取方法之外，您也可以透過在模型上設定「模型旗標」  ，或透過在結構上設定「散發旗標」  ，來改進演算法識別或提升有意義屬性的能力。 如需這些概念的詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) 和[資料行散發 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  

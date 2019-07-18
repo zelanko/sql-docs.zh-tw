@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907151"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>對應來源和目標資料庫 (AccessToSQL)
 當您連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須指定目標資料庫，以便進行移轉。 如果您有多個 Access 資料庫中您就可以將它們對應至多個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫 （或結構描述） 或在連線的 SQL Azure 資料庫的多個結構描述。  

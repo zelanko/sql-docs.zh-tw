@@ -15,16 +15,16 @@ helpviewer_keywords:
 - spatial storage [SQL Server]
 - geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c3dcb4a6c1c23513a9dd8ea74f1eac5c6e3d65
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cf6eb74a98202d68e39f6ef89228d832aa075de6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65939245"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

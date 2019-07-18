@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63162249"
 ---
 # <a name="log-reader-agent-security"></a>記錄讀取器代理程式安全性
   **[記錄讀取器代理程式安全性]** 對話方塊可以讓您指定：  
@@ -35,7 +35,7 @@ ms.locfileid: "54128888"
   
  所有帳戶都必須有效，並且每個帳戶皆有指定正確的密碼。 等到代理程式執行時，才會驗證帳戶與密碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **處理帳戶**  
  輸入記錄讀取器代理程式在散發者端執行所用的 Windows 帳戶。 您指定的 Windows 帳戶，至少必須是散發資料庫中之 **db_owner** 固定資料庫角色的成員。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fcda429cced68aa0868fae88ee022b59b097a8e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298255"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105123"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 函數 (報表產生器及 SSRS)
   傳回運算式所指定之所有非 Null 數值的聯集 (在給定範圍中評估)。  

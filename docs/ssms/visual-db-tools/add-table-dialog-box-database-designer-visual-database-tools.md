@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65555
 - vdt.dlgbox.schema.addtable
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ca667e010b150137f9a50ca1ed61ff0f233fba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 52803db358a4a43ec7b5dc9064f940247f9515a2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793046"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686562"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47793046"
 加入選取的資料表或多個資料表。  
   
 > [!NOTE]  
-> 若要將好幾個資料表加入至圖表，可以在按一下 [新增] 之前選取所有資料表。 或是，按兩下每一個要加入的資料表，完成時按一下 [關閉]。  
+> 若要將好幾個資料表加入至圖表，可以在按一下 [新增]  之前選取所有資料表。 或是，按兩下每一個要加入的資料表，完成時按一下 [關閉]  。  
   
 **關閉**  
 關閉對話方塊，而不再加入其他資料表。  

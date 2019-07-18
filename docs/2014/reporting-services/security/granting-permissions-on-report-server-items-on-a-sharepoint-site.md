@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9afb10180087998afd0cc891af895a9db669feb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017259"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101930"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供內建的安全性功能，可用來授與從 SharePoint 網站和文件庫存取報表伺服器項目的權限。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  
@@ -59,7 +58,7 @@ ms.locfileid: "56017259"
  伺服器管理員和網站集合管理員可以設定選項，以決定其他網站擁有者能否設定權限。 依您擁有的不同權限等級，您或許無法建立或自訂 SharePoint 群組或權限等級。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用預先定義的 SharePoint 群組和權限等級  
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (它們是「 *Site name* **擁有者**, *Site name* **成員**」和「 *Site name* **訪客**」)，並於網站層級指定權限。 受您指定權限的大部分使用者應該是「 *Site name* **訪客** 」或「 *Site name* **成員** 」群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (它們是「 *Site name* **擁有者**, *Site name* **成員**」和「 *Site name* **訪客**」)，並於網站層級指定權限。 受您指定權限的大部分使用者應該是「 *Site name* **訪客** 」或「 *Site name* **成員** 」群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
   
  下列 SharePoint 群組具有下列預先定義的權限等級：  
   

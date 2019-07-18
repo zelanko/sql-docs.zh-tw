@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92cd44dcc30a0843409c908cb3cc3a76276519aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8e8f76699e35c71e7bbf85b972cd76eb0cb3c289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950548"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,14 +83,14 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|檢查與發行集相關聯之所有複寫代理程式的狀態，而且會以下列順序傳回所找到的最高狀態：<br /><br /> **6** = 失敗<br /><br /> **5** = 正在重試<br /><br /> **2** = 已停止<br /><br /> **4** = 閒置<br /><br /> **3** = 進行中<br /><br /> **1** = 啟動|  
-|**warning**|**int**|屬於發行集之訂閱所產生的臨界值警告最大值，可能是其中一個或多個這些值的邏輯 OR 結果。<br /><br /> **1** = 到期-交易式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **2** = latency-將交易式發行者資料複寫到訂閱者所花的時間超出臨界值，以秒為單位。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **8** = mergefastrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，快速網路連接。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，慢速或撥號網路連線。<br /><br /> **32** = mergefastrunspeed-傳遞速率無法維持臨界速率，以每秒的資料列快速網路連接合併訂閱同步處理期間，資料列。<br /><br /> **64** = mergeslowrunspeed-傳遞速率的合併訂閱同步處理期間，資料列無法維持臨界速率，以每秒的資料列，透過慢速或撥號網路連線。|  
+|**警告**|**int**|屬於發行集之訂閱所產生的臨界值警告最大值，可能是其中一個或多個這些值的邏輯 OR 結果。<br /><br /> **1** = 到期-交易式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **2** = latency-將交易式發行者資料複寫到訂閱者所花的時間超出臨界值，以秒為單位。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **8** = mergefastrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，快速網路連接。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，慢速或撥號網路連線。<br /><br /> **32** = mergefastrunspeed-傳遞速率無法維持臨界速率，以每秒的資料列快速網路連接合併訂閱同步處理期間，資料列。<br /><br /> **64** = mergeslowrunspeed-傳遞速率的合併訂閱同步處理期間，資料列無法維持臨界速率，以每秒的資料列，透過慢速或撥號網路連線。|  
 |**訂閱者**|**sysname**|這是訂閱者的名稱。|  
 |**subscriber_db**|**sysname**|這是訂閱所用資料庫的名稱。|  
 |**publisher_db**|**sysname**|這是發行集資料庫的名稱。|  
 |**publication**|**sysname**|這是發行集的名稱。|  
 |**publication_type**|**int**|這是發行集的類型，可以是下列其中一個值：<br /><br /> **0** = 交易式發行集<br /><br /> **1** = 快照式發行集<br /><br /> **2** = 合併式發行集|  
 |**subtype**|**int**|這是訂閱類型，它可以是下列其中一個值：<br /><br /> **0** = 發送<br /><br /> **1** = 提取<br /><br /> **2** = 匿名|  
-|**latency**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最高延遲 (以秒為單位)。|  
+|**延遲**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最高延遲 (以秒為單位)。|  
 |**latencythreshold**|**int**|這是交易式發行集引發警告的最大延遲。|  
 |**agentnotrunning**|**int**|這是代理程式未執行的時間長度 (以小時為單位)。|  
 |**agentnotrunningthreshold**|**int**|這是引發警告前代理程式未執行的時間長度 (以小時為單位)。|  

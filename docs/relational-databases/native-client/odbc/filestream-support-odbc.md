@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cfbe388f6320ba81dd2be38bf315f05326008235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59be322c19ba0e2dc2f3b74f215e7d2d98e0c167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913241"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支援 (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47637746"
  如果您在繫結的資料行上呼叫 SQLFetch，您會收到 「 資料截斷 」 警告，如果緩衝區不夠大，無法容納整個值。 忽略此警告，並使用 SQLParamData 和 SQLPutData 呼叫更新此繫結的資料行中的資料。 使用 SQLSetPos，如果它與 SQLBindCol 繫結，您可以更新 FILESTREAM 資料。  
   
 ## <a name="example"></a>範例  
- FILESTREAM 資料行的行為完全一樣**varbinary （max)** 資料行，但是沒有大小限制。 它們繫結為 SQL_VARBINARY  (SQL_LONGVARBINARY 會搭配 image 資料行使用，而且此類型有一些限制。 例如，SQL_LONGVARBINARY 無法當做輸出參數使用)。下列範例會示範 NTFS 對於 FILESTREAM 資料行的直接存取。 這些範例會假設下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼已在資料庫中執行：  
+ FILESTREAM 資料行的行為完全一樣**varbinary （max)** 資料行，但是沒有大小限制。 它們繫結為 SQL_VARBINARY (SQL_LONGVARBINARY 會搭配 image 資料行使用，而且此類型有一些限制。 例如，sql_longvarbinary 做為輸出參數。)下列範例會示範直接 NTFS 存取 FILESTREAM 資料行。 這些範例會假設下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼已在資料庫中執行：  
   
 ```  
 CREATE TABLE fileStreamDocs(  

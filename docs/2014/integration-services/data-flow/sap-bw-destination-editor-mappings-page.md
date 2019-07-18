@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770872"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
   使用 [SAP BW 目的地編輯器] 的 [對應] 頁面可以將輸入資料行對應至目的地資料行。  
@@ -33,7 +33,7 @@ ms.locfileid: "58381950"
   
 3.  在 [SAP BW 目的地編輯器] 中，按一下 [對應] 開啟編輯器的 [對應] 頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 > [!NOTE]  
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670574"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
   此主題描述如何針對資料庫和資料表啟用及停用異動資料擷取。  
@@ -35,7 +35,7 @@ ms.locfileid: "58533010"
  如需啟用資料庫的範例，請參閱「啟用異動資料擷取的資料庫」範本。  
   
 > [!IMPORTANT]  
->  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找出範本，請移至 **[檢視]**、按一下 **[範本總管]**，然後選取 **[SQL Server 範本]**。 **[異動資料擷取]** 是子資料夾。 在這個資料夾底下，您將會找到這個主題所參考的所有範本。 **工具列上也有一個** [範本總管] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖示。  
+>  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找出範本，請移至 **[檢視]** 、按一下 **[範本總管]** ，然後選取 **[SQL Server 範本]** 。 **[異動資料擷取]** 是子資料夾。 在這個資料夾底下，您將會找到這個主題所參考的所有範本。 **工具列上也有一個** [範本總管] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖示。  
   
 ```sql  
 -- ====  
@@ -55,7 +55,7 @@ GO
  如需停用資料庫的範例，請參閱「停用異動資料擷取的資料庫」範本。  
   
 > [!IMPORTANT]  
->  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找出範本，請移至 **[檢視]**、按一下 **[範本總管]**，然後按一下 **[SQL Server 範本]**。 **[異動資料擷取]** 是子資料夾，而且您將會在其中找到這個主題所參考的所有範本。 **工具列上也有一個** [範本總管] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖示。  
+>  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找出範本，請移至 **[檢視]** 、按一下 **[範本總管]** ，然後按一下 **[SQL Server 範本]** 。 **[異動資料擷取]** 是子資料夾，而且您將會在其中找到這個主題所參考的所有範本。 **工具列上也有一個** [範本總管] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖示。  
   
 ```sql  
 -- =======  
@@ -78,7 +78,7 @@ GO
   
  `A filegroup to contain the change table.`  
   
- 根據預設，變更資料表位於資料庫的預設檔案群組中。 想要控制個別變更資料表位置的資料庫擁有者可以使用 *@filegroup_name* 參數，指定與擷取執行個體相關聯之變更資料表的特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 請參閱`Enable a Table Specifying Filegroup Option`如需示範使用範例範本*@filegroup_name*參數。  
+ 根據預設，變更資料表位於資料庫的預設檔案群組中。 想要控制個別變更資料表位置的資料庫擁有者可以使用 *@filegroup_name* 參數，指定與擷取執行個體相關聯之變更資料表的特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 請參閱`Enable a Table Specifying Filegroup Option`如需示範使用範例範本 *@filegroup_name* 參數。  
   
 ```sql  
 -- =========  

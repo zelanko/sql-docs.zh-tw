@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963269"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 使用 ADO 2.5 及更新版本中使用的連接字串所指定的資料庫，同步處理指定的資料錄集。  
@@ -56,7 +55,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  同步處理資料錄集指標。  
   
  *pStatusArray*  
- 同步處理的 variant，用來傳回受影響的資料列的資料列狀態的安全陣列。 如果沒有任何下列的同步處理選項的設定不會設定： *RefreshWithUpdate*，*重新整理*並*RefreshConflicts*。  
+ 同步處理的 variant，用來傳回受影響的資料列的資料列狀態的安全陣列。 如果未下的同步處理選項的設定，未設定：*RefreshWithUpdate*，*重新整理*並*RefreshConflicts*。  
   
  *lcid*  
  用來建立會傳回任何錯誤的 LCID *pInformation*。  

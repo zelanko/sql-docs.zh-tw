@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e56037bbabff784ed59f8b579f3b3402d63ccfdb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101812"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>建立、刪除或修改角色 (Management Studio)
   Reporting Services 會提供定義報表伺服器之存取層級的預先定義角色。 需要存取報表伺服器的每個使用者或群組會透過描述可執行之工作的角色來達成此目的。 這些角色完全是針對報表伺服器所定義。 您無法針對報表伺服器的特定部分變更角色定義，或指定要根據情況以不同的方式使用某個角色。  
@@ -42,9 +41,9 @@ ms.locfileid: "56032859"
   
 2.  展開安全性資料夾。  
   
-3.  如果您要建立項目層級角色定義，請以滑鼠右鍵按一下 [角色]，然後指向 [新增角色]。  
+3.  如果您要建立項目層級角色定義，請以滑鼠右鍵按一下 [角色]  ，然後指向 [新增角色]  。  
   
-     如果您要建立系統層級角色定義，請以滑鼠右鍵按一下 [系統角色]，然後指向 [新增系統角色]。  
+     如果您要建立系統層級角色定義，請以滑鼠右鍵按一下 [系統角色]  ，然後指向 [新增系統角色]  。  
   
 4.  為角色輸入唯一的名稱。 名稱至少必須包含一個字元。 它也可以包括空格和特定符號，但不得包括下列字元：; ? : \@ & = +，$ / * \< > |"或 /。  
   
@@ -62,17 +61,17 @@ ms.locfileid: "56032859"
   
 3.  若要刪除或修改項目層級的角色定義，請展開 [角色] 資料夾。 執行下列其中之一：  
   
-    1.  若要刪除角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  若要刪除角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]  。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  若要修改角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]。 就會顯示 **[使用者角色屬性]** 對話方塊的 [一般] 頁面。  
+    2.  若要修改角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]  。 就會顯示 **[使用者角色屬性]** 對話方塊的 [一般] 頁面。  
   
-         選取這個角色的成員可以執行的工作，然後按一下 **[確定]**。  
+         選取這個角色的成員可以執行的工作，然後按一下 **[確定]** 。  
   
-4.  若要刪除或修改系統層級角色定義，請展開 [系統角色] 資料夾。 執行下列其中之一：  
+4.  若要刪除或修改系統層級角色定義，請展開 [系統角色]  資料夾。 執行下列其中之一：  
   
-    1.  若要刪除系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  若要刪除系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [刪除]  。 就會顯示 **[刪除物件]** 對話方塊。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  若要修改系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]。 就會顯示 **[系統角色屬性]** 對話方塊的 [一般] 頁面。  
+    2.  若要修改系統角色定義，請以滑鼠右鍵按一下項目，然後按一下 [屬性]  。 就會顯示 **[系統角色屬性]** 對話方塊的 [一般] 頁面。  
   
          選取這個角色的成員可以執行的工作，然後按一下 **[確定]** 來套用變更。  
   

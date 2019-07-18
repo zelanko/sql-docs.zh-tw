@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 447b854d41f035b7f519d2a437754e9812a64dd5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: f2db1c408693b02812db0cd431d139014c2244b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603218"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780776"
 ---
 # <a name="pdostatement-class"></a>PDOStatement 類別
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

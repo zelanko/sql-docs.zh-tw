@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -16,12 +15,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092435"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>執行 Upgrade Advisor (命令提示字元)
   使用**UpgradeAdvisorWizardCmd**公用程式來從命令提示字元執行 Upgrade Advisor。 您可以選擇以 XML 格式或含有逗號分隔值的檔案來接收結果。  
@@ -43,33 +42,33 @@ where <server_info> is any combination of the following:
  **-?**  
  顯示命令語法。  
   
- **-ConfigFile** _檔名_  
+ **-ConfigFile** _filename_  
  路徑名稱和檔案名稱的 XML 檔案，其中包含要在執行時使用的設定**UpgradeAdvisorWizardCmd**公用程式。  
   
- *< server_info >*  
+ *<server_info>*  
  指定要分析的電腦和執行個體。 如果您不要使用組態檔，請使用這些選項。  
   
  *< server_info >* 可以是下列四個引數的任何組合：  
   
- **-Server** __ n a_  
+ **-Server** _server_name_  
  指定要分析之電腦的名稱。 這可以是本機電腦 (預設值) 或遠端電腦。  
   
  **-執行個體** _執行個體名稱_  
  指定要分析之執行個體的名稱。 沒有預設值。 如果您沒有指定這個參數，就不會掃描 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的值為 MSSQLSERVER。 若為具名執行個體，請使用執行個體名稱。  
   
- **-ASInstance**  _AS_instance_name_   
+ **-ASInstance**  _AS_instance_name_  
  指定要分析之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的值為 MSSQLServerOLAPService。 若為具名執行個體，請使用執行個體名稱。  
   
- **-RSInstance**  _RS_instance_name_   
+ **-RSInstance**  _RS_instance_name_  
  指定要分析之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 代表 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設執行個體的值為 ReportServer。 若為具名執行個體，請使用執行個體名稱。  
   
  **-SqlUser** _login_id_  
  如果您要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，這個值就是 Upgrade Advisor 將用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您沒有指定登入，就會使用 Windows 驗證來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- **-SqlPassword** _密碼_  
+ **-SqlPassword** _password_  
  如果您使用 **-SqlUser**引數，使用這個引數指定的密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
   
- **CSV**  
+ **-CSV**  
  指定除了標準 XML 結果以外，還要將結果當做逗號分隔值提供至 .csv 檔案。 結果會寫入我的文件\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 資料夾。  
   
 ## <a name="return-values"></a>傳回值  

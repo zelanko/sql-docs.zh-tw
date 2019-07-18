@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
@@ -14,12 +12,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62726114"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 個人化延伸模組
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組是概念的實作外掛程式架構的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組提供的功能可讓您能夠達成以下目標：  
@@ -125,9 +123,9 @@ ms.locfileid: "53372220"
   
 -   [CREATE SET 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
--   [DROP SET 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
+-   [DROP SET Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
--   [CREATE KPI 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-kpi)  
+-   [CREATE KPI Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-kpi)  
   
 -   [DROP KPI 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-kpi)  
   
@@ -143,7 +141,7 @@ ms.locfileid: "53372220"
 ### <a name="schema-rowsets-extensions"></a>結構描述資料列集延伸模組  
  On MDSCHEMA_MEMBERS*範圍*加入資料行。 範圍值如下所示：MDMEMBER_SCOPE_GLOBAL = 1、 MDMEMBER_SCOPE_SESSION = 2。  
   
- On MDSCHEMA_SETS *set_evaluation_context*加入資料行。 設定評估內容值如下所示：MDSET_RESOLUTION_STATIC = 1、MDSET_RESOLUTION_DYNAMIC = 2。  
+ On MDSCHEMA_SETS *set_evaluation_context*加入資料行。 設定評估內容值如下所示：MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
  加入 On MDSCHEMA_KPIS 範圍資料行。 範圍值如下所示：MDKPI_SCOPE_GLOBAL = 1、 MDKPI_SCOPE_SESSION = 2。  
   

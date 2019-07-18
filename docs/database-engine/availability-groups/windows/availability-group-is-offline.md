@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: fb6134f8134d5f8a0ee10d0d5ac06d75d5dbe9e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203737"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797699"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On 可用性群組為離線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

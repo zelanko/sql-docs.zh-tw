@@ -1,5 +1,5 @@
 ---
-title: 結構描述產生精靈 (Analysis Services) |Microsoft 文件
+title: 結構描述產生精靈 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41e1c17aac763657a16327bb038c180f614fcf67
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165224"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>結構描述產生精靈 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34022975"
 ## <a name="in-this-section"></a>本節內容  
  下表列出說明如何使用 [結構描述產生精靈] 的其他主題。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[使用結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/use-the-schema-generation-wizard-analysis-services.md)|描述如何產生主題領域和暫存區域資料庫的結構描述。|  
 |[了解資料庫結構描述](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|描述針對主題領域和臨時區域資料庫產生的結構描述。|  

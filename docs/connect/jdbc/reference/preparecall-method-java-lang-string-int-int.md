@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6df80276995f7a58d51f4e1ea52539ab9eb6a66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 79340619e65fdcfd0bb076697ef6fa63cfb45c03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771086"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 #### <a name="parameters"></a>參數  
  *sql*  
   
- **String**，包含 SQL 陳述式。  
+ **String**，其中包含 SQL 陳述式。  
   
  *resultSetType*  
   
@@ -56,7 +56,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 prepareCall 方法是由 java.sql.Connection 介面中的 prepareCall 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

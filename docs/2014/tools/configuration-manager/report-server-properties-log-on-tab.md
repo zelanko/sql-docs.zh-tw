@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999523"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Report Server 屬性 (登入索引標籤)
   您可以使用 **[Report Server 屬性]** 對話方塊的 **[登入]** 索引標籤來指定 Report Server 服務所使用的帳戶，以及啟動和停止該服務。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **本機系統帳戶**  
  指定不需要密碼的本機系統帳戶。 但是，根據授與帳戶的權限，本機系統帳戶可能會限制服務與其他伺服器互動。  
   

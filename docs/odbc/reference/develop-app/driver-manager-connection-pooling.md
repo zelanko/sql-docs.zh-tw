@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 92aab28274d3709047e46c55192b437449e252ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047007"
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連線共用
 連接共用，可讓應用程式使用來自不需要重新建立每次使用的連接集區的連接。 一旦連線已建立並放在集區中，應用程式可以重複使用該連線，而不執行完整的連線程序。  
@@ -31,7 +30,7 @@ ms.locfileid: "53590932"
  除了效能的提升，連接共用架構可讓環境和其相關聯的連接，以供在單一處理序中的多個元件。 這表示相同的處理序中的獨立元件，可以不知道彼此的存在與彼此互動。 連接集區中的連線可以重複使用由多個元件。  
   
 > [!NOTE]
->  發生 ODBC 2 的 ODBC 應用程式可以使用連接共用。*x*行為，只要應用程式可以呼叫*SQLSetEnvAttr*。 使用連接共用時，應用程式必須執行 SQL 陳述式變更資料庫或資料庫，例如變更的內容\<*資料庫 * * 名稱*>，如此會變更使用的目錄資料來源。  
+>  發生 ODBC 2 的 ODBC 應用程式可以使用連接共用。*x*行為，只要應用程式可以呼叫*SQLSetEnvAttr*。 使用連接共用時，應用程式必須執行 SQL 陳述式變更資料庫或資料庫，例如變更的內容\<*資料庫名稱*>，如此會變更資料所使用的目錄來源。  
 
 
  ODBC 驅動程式必須是完整的安全執行緒，而且連接不能有執行緒親和性，以支援連接共用。 這表示驅動程式能夠處理任何執行緒上呼叫，在任何時間，而且能夠連線到另一個執行緒，使用連接和中斷連線的第三個執行緒上的一個執行緒上。  

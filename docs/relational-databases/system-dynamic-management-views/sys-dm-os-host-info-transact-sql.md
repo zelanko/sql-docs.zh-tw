@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900172"
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 傳回一個資料列會顯示作業系統版本資訊。  
@@ -66,7 +65,7 @@ FROM sys.dm_os_host_info;
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |視窗   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 以下是在 Linux 上設定的範例結果：
  

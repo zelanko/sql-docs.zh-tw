@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f5cee5122ca28c8eb16f3b7b0b4d1b330f5777b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5136be23e428e670e5f6928944203c446c120ba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913644"
 ---
 # <a name="changesets-master-data-services"></a>變更集 (Master Data Services)
 

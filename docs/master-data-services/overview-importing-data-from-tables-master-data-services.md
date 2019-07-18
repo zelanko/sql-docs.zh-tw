@@ -12,15 +12,14 @@ helpviewer_keywords:
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097386"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概觀：從資料表匯入資料 (Master Data Services)
 

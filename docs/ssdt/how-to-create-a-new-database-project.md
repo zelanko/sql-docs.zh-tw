@@ -15,20 +15,20 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65098122"
 ---
 # <a name="how-to-create-a-new-database-project"></a>如何：建立新的資料庫專案
 您可以建立新的資料庫專案，並從現有的資料庫、.sql 指令碼檔案或資料層應用程式 (.dacpac) 匯入資料庫結構描述。 接著，您可以叫用相同的視覺化設計工具 (Transact\-SQL 編輯器、資料表設計工具)，讓連接的資料庫開發工作變更離線資料庫專案，並將變更發行回生產資料庫。 變更也可以另存成指令碼，等以後再發行。 使用 [專案屬性] 窗格，您可以將目標平台變更為其他版本的 SQL Server (包括 SQL Azure)。  
   
-下列兩個程序建立新的資料庫專案並從現有的資料庫匯入結構描述，在本質上達到相同的目標。 每個資料庫物件在 [方案總管] 中都將呈現為 SQL 指令碼檔案 (.sql)。 如需有關從快照集匯入資料庫結構描述的詳細資訊，請參閱[如何：建立專案的快照集](../ssdt/how-to-create-a-snapshot-of-a-project.md)。  
+下列兩個程序建立新的資料庫專案並從現有的資料庫匯入結構描述，在本質上達到相同的目標。 每個資料庫物件在 [方案總管] 中都將呈現為 SQL 指令碼檔案 (.sql)。 如需從快照集匯入資料庫結構描述的詳細資訊，請參閱[如何：建立專案的快照集](../ssdt/how-to-create-a-snapshot-of-a-project.md)。  
   
 > [!WARNING]  
 > 下列程序將利用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)小節的程序中所建立的實體。  
@@ -55,7 +55,7 @@ ms.locfileid: "47673256"
   
 ### <a name="to-create-a-new-project-and-import-existing-database-schema"></a>若要建立新的專案並匯入現有的資料庫結構描述  
   
-1.  依序按一下 [檔案]、[新增] 和 [專案]。 在 [新增專案] 對話方塊中，選取左窗格中的 [SQL Server]。 請注意，只有一個資料庫專案類型：[SQL Server 資料庫專案]。 和舊版 Visual Studio 一樣，沒有平台特定的專案。 在專案建立後，您便可以在 [專案設定] 對話方塊中設定目標平台。 這類工作會涵蓋在[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題中。  
+1.  依序按一下 [檔案]、[新增] 和 [專案]。 在 [新增專案] 對話方塊中，選取左窗格中的 [SQL Server]。 請注意，只有一個資料庫專案類型：[SQL Server 資料庫專案]。 和舊版 Visual Studio 一樣，沒有平台特定的專案。 在專案建立後，您便可以在 [專案設定] 對話方塊中設定目標平台。 這類工作將會在以下內容中涵蓋：[如何：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題。  
   
 2.  將專案名稱變更為 **TradeDev**，然後按一下 [確定] 建立新專案。  
   
@@ -76,5 +76,5 @@ ms.locfileid: "47673256"
 9. 以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再選取 [建置] 建置該資料庫專案。  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[操作說明：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

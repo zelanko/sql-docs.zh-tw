@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f489a87573dabbd091f5d2dce8a084b53cc5771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911524"
 ---
 # <a name="children-property-ado-md"></a>Children 屬性 (ADO MD)
 傳回[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合目前[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層中的父系。  

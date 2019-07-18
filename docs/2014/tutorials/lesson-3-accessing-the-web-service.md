@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024829"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653781"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 課：存取 Web 服務
   將報表伺服器 Web 服務的參考加入專案後，下一步就是建立 Web 服務之 Proxy 類別的執行個體。 然後您可以藉由呼叫 Proxy 類別中的方法來存取 Web 服務的方法。 當您的應用程式呼叫這些方法時， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 產生的 Proxy 類別程式碼會處理應用程式與 Web 服務之間的通訊。  

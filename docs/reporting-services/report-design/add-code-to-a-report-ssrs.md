@@ -2,7 +2,7 @@
 title: 將程式碼新增至報表 (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - adding code
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd1fc16dd5201ae82cc505745566439649a2d16d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d66cb9fa3fdb3bdee5eb0f4fefbc282a9841f9a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582028"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>將程式碼加入至報表 (SSRS)
   在任何運算式中，您可以呼叫自己的自訂程式碼。 您可以透過下列兩個方法來提供程式碼：  
@@ -30,9 +30,9 @@ ms.locfileid: "56286207"
   
 ### <a name="to-add-embedded-code-to-a-report"></a>將內嵌程式碼加入報表中  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]。  
+1.  在 [設計]  檢視中，以滑鼠右鍵按一下報表框線外面的設計介面，然後按一下 [報表屬性]  。  
   
-2.  按一下 **[程式碼]**。  
+2.  按一下 **[程式碼]** 。  
   
 3.  在 **[自訂程式碼]** 中，輸入程式碼。 當報表執行時，程式碼中的錯誤會產生警告。 下列範例會建立名為 `ChangeWord` 的自訂函數，以 "`Bike`" 取代 "`Bicycle`" 一字。  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83fde7d8d43086114b2aae4350ce374b713ff4ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204658"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)
   如果您嘗試儲存可能具有損壞性副作用 (Side Effect) 的修改，或是資料庫認可操作可能失敗時，便會出現此對話方塊。 此會對話方塊指出有哪些可能的副作用，或是認可操作可能失敗的原因。 它可讓您選擇繼續執行修改或取消操作。  

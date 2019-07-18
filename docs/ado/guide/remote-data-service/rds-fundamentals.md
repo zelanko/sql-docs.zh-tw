@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed14ba8b72fba1713003d5fed7005dc01d4ce84b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 85851159f02c6d1fee02d1beac8bd71d04f36a6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922567"
 ---
 # <a name="rds-fundamentals"></a>RDS 基本概念
 > [!IMPORTANT]

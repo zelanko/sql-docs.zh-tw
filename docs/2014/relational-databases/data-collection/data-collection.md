@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919064"
 ---
 # <a name="data-collection"></a>資料收集
   資料收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的元件，它會收集不同的資料集。 資料收集會連續執行或依照使用者定義的排程執行。 然後，資料收集器會將收集而來的資料儲存在關聯式資料庫內 (稱為管理資料倉儲)。  
@@ -59,7 +59,7 @@ ms.locfileid: "52748890"
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)。  
   
 ## <a name="data-collector-terminology"></a>資料收集器術語  
- 目標  
+ target  
  支援資料收集之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需有關支援版本的詳細資訊，請參閱的 < 管理能力 > 一節[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  *「目標根」* (Target Root) 會定義目標階層中的子樹。 在這些由目標根定義之子樹上套用篩選後所產生之目標的群組，就是 *「目標集」* (Target Set)。 目標根可以是資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體或電腦執行個體。  

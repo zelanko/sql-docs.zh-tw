@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1a66e011ee5716f92d8b0257ed8424c86244139
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b10fda87b3149c56158c50722c65b09bf8ecb270
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895892"
 ---
 # <a name="native-error-numbers"></a>原生錯誤號碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

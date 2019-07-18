@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e41910316b7f28475fac6188d2186395a7e66bb4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 74823924864d15324b6e4f2183609fa6e761d6f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067179"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -148,7 +147,7 @@ ms.locfileid: "56034339"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 將 XML 元素對應至 XML 資料類型資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於**\<指示 >** 項目對應至使用的資料行**xml**所使用的資料型別**xsd:anyType**型別。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於 **\<指示 >** 項目對應至使用的資料行**xml**所使用的資料型別**xsd:anyType**型別。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

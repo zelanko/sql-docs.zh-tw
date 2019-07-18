@@ -2,17 +2,16 @@
 title: R 語言和 Python 整合-SQL Server Machine Learning 服務的已知的問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962816"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>在 Machine Learning 服務的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +135,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 + 用戶端電腦上安裝 R Server （獨立式） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
 + 使用安裝 Microsoft R Server[不同的 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援 Microsoft R 伺服器 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如您的 R Services 的版本，請參閱[執行個體的 R Services 使用 SqlBindR.exe 升級](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援 Microsoft R 伺服器 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如您的 R Services 的版本，請參閱[執行個體的 R Services 使用 SqlBindR.exe 升級](install/upgrade-r-and-python.md)。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R 伺服器 9.0.0 版或更早版本
 
@@ -204,7 +203,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 如果您遇到資源限制，請檢查目前的預設值。 如果 20%不夠時，請參閱文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如何變更此值。
 
-**適用於：** SQL Server 2016 R Services, Enterprise Edition
+**適用於：** SQL Server 2016 R 服務，Enterprise Edition
 
 ## <a name="r-script-execution-issues"></a>R 指令碼執行問題
 
@@ -214,9 +213,9 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.存取遭拒的非預設位置中的 SQL Server 上執行 R 指令碼時的警告
 
-如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如：
+如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如:
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1":存取遭拒*
+> *在  `normalizePath(path.expand(path), winslash, mustWork)` ： 路徑 [2] ="~ExternalLibraries/R/8/1 」:存取遭拒*
 
 原因是 R 函式嘗試讀取此路徑，且如果將會失敗的內建的使用者群組**SQLRUserGroup**，沒有讀取權限。 就會引發警告不會封鎖執行目前的 R 指令碼，但警告可能會重複發生，每當使用者執行任何其他的 R 指令碼。
 
@@ -252,7 +251,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 SQL Server 2016 Service Pack 1 已修正這個問題。 我們建議您升級至最新的服務版本。
 
-**適用於：** SQL Server 2016 R Services RTM version
+**適用於：** SQL Server 2016 R 服務 RTM 版本
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.讀取 SQL Server 計算內容中的資料，無法變更資料行類型。
 
@@ -358,7 +357,7 @@ data <- RxSqlServerData(
 
 若遇到此問題，您可以在 `f` 定義內嵌 `g`的定義以解決此問題， `g` 前的任何位置則會正常呼叫 `f`。
 
-例如：
+例如:
 
 ```R
 f <- function(x) { 2*x * 3 }
@@ -405,6 +404,29 @@ R --max-ppsize=500000
 `rxDTree` 函數目前不支援公式內的轉換。 尤其不支援使用 `F()` 語法即時建立因數。 不過，自動分類收納數字的資料。
 
 要求的因數會被視為與所有 RevoScaleR 分析函數中的因數相同，除了 `rxDTree`以外。
+
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20.在 R 中 OutputDataSet 做 Data.table
+
+使用`data.table`做為`OutputDataSet`在 R 中不支援在 SQL Server 2017 累積更新 13 (CU13) 及更早版本。 可能會出現下列訊息：
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` 為`OutputDataSet`在 R 中支援在 SQL Server 2017 累積更新 14 (CU14) 和更新版本。
 
 ## <a name="python-script-execution-issues"></a>Python 指令碼執行問題
 
@@ -461,12 +483,23 @@ go
 
 從 SQL Server 2017 CU2 開始，即使是已成功執行 Python 程式碼，否則可能會出現下列訊息：
 
-> *來自外部指令碼的 STDERR 訊息：*
+> *來自外部指令碼的 STDERR 訊息：* 
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state 是使用全域宣告之前*
 
-
 在 SQL Server 2017 累積更新 3 (CU3) 中已修正此問題。 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.不支援的數值、 decimal 和 money 資料類型
+
+從 SQL Server 2017 累積更新 12 (CU12)，在 WITH RESULT SETS numeric、 decimal 和 money 資料類型時，不支援使用 Python 與`sp_execute_external_script`。 可能會出現下列訊息：
+
+> *[程式碼：39004 SQL 狀態：就會傳回 S1000] 'Python' 指令碼錯誤，HRESULT 0x80004004 'sp_execute_external_script' 的執行期間發生。*
+
+> *[程式碼：39019 SQL 狀態：就會傳回 S1000] 發生外部指令碼錯誤：*
+> 
+> *SqlSatelliteCall 錯誤：輸出結構描述中不支援的類型。支援的型別： bit、 smallint、 int、 datetime、 smallmoney、 實際和 float。char、 varchar 部分支援。*
+
+這個問題已修正在 SQL Server 2017 累積更新 14 (CU14)。
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 

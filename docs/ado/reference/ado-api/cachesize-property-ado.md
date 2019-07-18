@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76cd9e4977ffda023c270a027602597ddf7b9a4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920337"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 屬性 (ADO)
 指出從資料錄數目[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)會在本機快取在記憶體中的物件。  

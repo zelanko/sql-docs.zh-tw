@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - delete jobs
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0382dd808bb78322d24840d3ded59057db03e2de
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 17caad6946157983d25aa3d16a05395a5aed5a80
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695856"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687868"
 ---
 # <a name="delete-jobs"></a>刪除作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

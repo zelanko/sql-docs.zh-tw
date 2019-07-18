@@ -13,16 +13,16 @@ helpviewer_keywords:
 - severity levels [SQL Server]
 - alerts [SQL Server], severity levels
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70d5030e0d406dd5078a94b9c7b2bee332546249
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 7f73b848ee5b0497623156981c583792d4566fa7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240812"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682727"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "56240812"
   
 1.  在 **[物件總管]** 中，按一下加號，以展開您要使用嚴重性層級建立警示的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 **[警示]** ，然後選取 **[新增警示]**。  
+3.  以滑鼠右鍵按一下 **[警示]** ，然後選取 **[新增警示]** 。  
   
 4.  在 **[新增警示]** 對話方塊中的 **[名稱]** 方塊，輸入此警示的名稱。  
   
-5.  在 **[類型]** 清單中，選取 **[SQL Server 事件警示]**。  
+5.  在 **[類型]** 清單中，選取 **[SQL Server 事件警示]** 。  
   
 6.  在 **[事件警示定義]** 下，從 **[資料庫名稱]** 清單中選取資料庫，將警示限制在特定資料庫。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "56240812"
   
 8.  核取對應到 **[訊息包含下列內容時引發警示]** 核取方塊，將警示限制在特定字元順序，然後在 **[訊息文字]** 中輸入關鍵字或字元字串。 最大字元數為 100。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -89,9 +89,9 @@ ms.locfileid: "56240812"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- Adds an alert (Test Alert) that notifies the

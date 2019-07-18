@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2f1ee73e2d6ad21ea57825bd31997db0a519a720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083547"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>進階物件選取項目 (SybaseToSQL)
 **進階物件部分**對話方塊可讓您使用在 物件名稱的字串與子字串篩選資料庫物件，然後選取或取消選取這些物件。 SSMA 會執行轉換和移轉作業選取的物件。  

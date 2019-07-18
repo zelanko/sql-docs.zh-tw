@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ce66534d59d68118fcd66eaedc82ac57850750c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ce7b42b1c97964108797c58948216aaed0ad5431
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105743"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>群組運算式範例 (報表產生器及 SSRS)
   在資料區域中，您可以依據單一欄位來分組資料，或是建立較為複雜的運算式來識別分組的資料。 複雜運算式包含了多個欄位或參數、條件陳述式或自訂程式碼的參考。 當您為資料區定義群組時，您會將這些運算式加入到 **[群組]** 屬性。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  

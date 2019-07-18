@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cddbf8cdfaf1c9793479f2d9cbb1877b696e377d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68b2dcc56e52ca35359e8af5f4c829a0be1ed6f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126726"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>從 SQL Server 的執行個體中斷連接
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  以手動方式關閉和中斷連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Management Objects (SMO) 物件就不需要。 連接會視需要開啟和關閉。  
+  您並不需要以手動方式關閉和中斷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件的連接。 連接會視需要開啟和關閉。  
   
 ## <a name="connection-pooling"></a>連接共用  
  當[Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)呼叫方法，不會自動釋放連接。 [中斷連線](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)必須明確地呼叫方法，若要將連接釋放到連接集區。 此外，您也可以要求非共用連接。 您可以設定[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)屬性<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>參照屬性[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)物件。  

@@ -1,28 +1,27 @@
 ---
-title: 總覽
+title: 什麼是 Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 是免費、 輕量級工具，來管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲在 Windows、 macOS 和 Linux 上執行。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: overview
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7369893be3cd42dab0e0c0cd870a52c639083b5
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
+ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958938"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
 Azure Data Studio 是跨平台資料庫工具，供資料專業人員使用 Microsoft 家族的內部部署和雲端資料平台，在 Windows、 MacOS 和 Linux 上的。
 
-先前的預覽名稱 SQL Operations Studio 發行，Azure Data Studio 提供 Intellisense、 程式碼片段、 原始檔控制整合和整合式終端機使用現代的編輯器體驗。 它在設計時將資料庫平台使用者納入考量，內建查詢結果集合圖表功能和可自訂自的儀表板。
+先前的預覽名稱 SQL Operations Studio 發行，Azure Data Studio 提供 IntelliSense、 程式碼片段、 原始檔控制整合和整合式終端機使用現代的編輯器體驗。 它在設計時將資料庫平台使用者納入考量，內建查詢結果集合圖表功能和可自訂自的儀表板。
 
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
@@ -95,7 +94,7 @@ SQL 程式碼片段會產生適當的 SQL 語法來建立資料庫、 資料表�
 |深色的模式|是||
 |Azure 資源總管|預覽||
 |產生指令碼精靈||是|
-|Import\Export DACPAC||是|
+|DACPAC 匯入/匯出||是|
 |物件屬性||是|
 |資料表設計工具||是|
 
@@ -123,7 +122,7 @@ SQL 程式碼片段會產生適當的 SQL 語法來建立資料庫、 資料表�
 |:---|:---|:---|
 |Linux|是||
 |macOS|是||
-|視窗|是|是|
+|Windows|是|是|
 
 ### <a name="data-engineering"></a>資料工程
 
@@ -160,9 +159,12 @@ SQL 程式碼片段會產生適當的 SQL 語法來建立資料庫、 資料表�
 |弱點評量||是|
 |XEvent 管理||是|
 
-
-
 ## <a name="next-steps"></a>後續步驟
+
 - [下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [連線及查詢 SQL Server](quickstart-sql-server.md)
 - [連線及查詢 Azure SQL Database](quickstart-sql-database.md)
+
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

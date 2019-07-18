@@ -11,14 +11,18 @@ ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f373cf121a0368508e9b4b3380ef5c674a9fc9f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f3714d58bea5ce8751f2b520a6c4f75353f48a64
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271671"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65728767"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 執行個體資料類型
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 執行個體支援大多數的 Oracle 資料類型。 以下章節描述支援的資料類型和不支援的資料類型。  
   
 ## <a name="supported-data-types"></a>支援的資料類型  

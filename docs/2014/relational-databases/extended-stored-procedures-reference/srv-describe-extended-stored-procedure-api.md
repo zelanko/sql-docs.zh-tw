@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127337"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
     
@@ -112,7 +112,7 @@ srcdata
  如果應用程式內的資料行名稱為 Unicode 格式，您需要將它轉換成伺服器的多位元組字碼頁，然後才能呼叫 **srv_describe**。 如需詳細資訊，請參閱 [Unicode 資料和伺服器字碼頁](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md)。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_sendrow &#40;擴充預存程序 API&#41;](srv-sendrow-extended-stored-procedure-api.md)   

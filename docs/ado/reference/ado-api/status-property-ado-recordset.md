@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5847300af48b39dc12ccb65f5e03f1fdc6f8e795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d91c3e92be7679ad6fbbb4a4ee7bd1bb6a48422
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916832"
 ---
 # <a name="status-property-ado-recordset"></a>Status 屬性 (ADO Recordset)
 指出相對於批次更新目前的記錄或其他的大量作業的狀態。  

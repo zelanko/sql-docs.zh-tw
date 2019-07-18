@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63265136"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
   自訂報表項目設計階段元件是可用於 Visual Studio 報表設計工具環境的控制項。 自訂報表項目設計階段元件提供啟動的設計介面，這個介面與 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器相整合，可接受拖放作業，並能夠提供自訂屬性編輯器。  
@@ -88,7 +86,7 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改元件屬性  
- 您可以用數種方式在設計環境中修改 `CustomData` 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器以 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性] 以顯示自訂屬性視窗。  
+ 您可以用數種方式在設計環境中修改 `CustomData` 屬性。 您可以修改任何由設計階段元件所公開的屬性 (Property)，這些屬性都會藉由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器以 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 標示。 此外，您也可以藉由下列方式修改屬性：將項目拖曳到自訂報表項目的設計介面，或者在設計環境中以滑鼠右鍵按一下控制項，然後選取捷徑功能表的 [屬性]  以顯示自訂屬性視窗。  
   
  下列程式碼範例顯示套用了 <xref:System.ComponentModel.BrowsableAttribute> 屬性 (Attribute) 的 `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData` 屬性 (Property)：  
   

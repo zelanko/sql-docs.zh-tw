@@ -11,19 +11,19 @@ helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 748ea2906106fcd8b8f4b6c47f8df04a7e8ed541
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 9de1dc3f9b50e7a39c5760c960fe525e6c2980a4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774026"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684861"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-引數是 Studio 環境提供的變數，適用於從 [工具] 功能表中啟動外部工具之時。 您可以使用 [外部工具] 對話方塊，將 [記事本] 之類的外部工具加入 [工具] 功能表中。  
+引數是 Studio 環境提供的變數，適用於從 [工具]  功能表中啟動外部工具之時。 您可以使用 [外部工具]  對話方塊，將 [記事本] 之類的外部工具加入 [工具]  功能表中。  
   
 下表列出外部工具的引數。  
   

@@ -14,14 +14,18 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb24d4b5e53d4892d2c9946ce3dc95dd74b0ca20
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 229e8b3d06d9524936be25758ee22d65234d25a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276907"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725094"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   以不同的字元字串或空白字串取代運算式中的字元字串後，傳回字元運算式。  
   
 > [!NOTE]  

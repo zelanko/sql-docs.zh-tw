@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62736198"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料表的檢查條件約束，以便指定一個或多個資料行可接受的資料值。  
@@ -49,9 +49,9 @@ ms.locfileid: "52814410"
   
 #### <a name="to-create-a-new-check-constraint"></a>若要建立新的檢查條件約束  
   
-1.  在 [物件總管] 中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]，然後按一下 [新增條件約束]。  
+1.  在 [物件總管]  中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]  ，然後按一下 [新增條件約束]  。  
   
-2.  在 [檢查條件約束] 對話方塊中，按一下 [運算式] 欄位，然後按一下省略符號 **(...)**。  
+2.  在 [檢查條件約束]  對話方塊中，按一下 [運算式]  欄位，然後按一下省略符號 **(...)** 。  
   
 3.  在 **[檢查條件約束運算式]** 對話方塊中，輸入檢查條件約束的 SQL 運算式。 例如，若要將 `SellEndDate` 資料表之 `Product` 資料行中的項目限制為大於或等於 `SellStartDate` 資料行中日期的值或是 NULL 值，請輸入：  
   
@@ -68,9 +68,9 @@ ms.locfileid: "52814410"
     > [!NOTE]  
     >  請務必將任何非數字條件約束值放在單引號 (') 中。  
   
-4.  按一下 [確定] 。  
+4.  按一下 [確定]  。  
   
-5.  在 [識別] 類別目錄中，您可以變更檢查條件約束的名稱，並且加入條件約束的描述 (擴充屬性)。  
+5.  在 [識別]  類別目錄中，您可以變更檢查條件約束的名稱，並且加入條件約束的描述 (擴充屬性)。  
   
 6.  在 **[資料表設計工具]** 類別目錄中，您可以設定強制執行條件約束的時間。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "52814410"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     ALTER TABLE dbo.DocExc   

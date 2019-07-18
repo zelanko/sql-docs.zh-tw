@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f6b0ebed67ba918cb45c1aaae9c14f15d6871c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869135"
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
     
@@ -30,7 +30,7 @@ ms.locfileid: "48152114"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_EXTENT_OUT_OF_RANGE|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID 中的範圍 P_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 超出這個資料庫的範圍。|  
+|訊息文字|資料表錯誤：範圍 P_ID，物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE） 超出此資料庫的範圍。|  
   
 ## <a name="explanation"></a>說明  
  *P_ID* 是採用 *(filenum:pageinfile)* 格式的頁面識別碼。 此範圍的 *pageinfile* 大於資料庫檔案 *filenum)* 的實際大小。 該範圍標示為已配置於指定配置單位識別碼的 IAM 頁面中。  

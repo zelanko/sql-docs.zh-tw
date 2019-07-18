@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], security
 - mail [Reporting Services]
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109703"
 ---
 # <a name="control-report-distribution"></a>控制報表散發
   您可以設定報表伺服器，以減少與電子郵件和檔案共用散發相關聯的安全性風險。  
@@ -40,7 +39,7 @@ ms.locfileid: "56018040"
 ## <a name="controlling-e-mail-delivery"></a>控制電子郵件傳遞  
  您可以設定報表伺服器，來限制只能散發電子郵件至特定主機網域。 例如，您可以防止報表伺服器將報表傳遞至 RSReportServer 組態檔中所列網域以外的所有網域。  
   
- 您也可以組態組態設定，以隱藏訂閱中的 [收件者] 欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
+ 您也可以組態組態設定，以隱藏訂閱中的 [收件者]  欄位。 在此情況下，報表只會傳遞給定義訂閱的使用者。 然而，在報表傳送給使用者之後，您無法明確地防止其被轉送。  
   
  控制報表散發最有效的方式，是將報表伺服器設定為只傳送報表伺服器 URL。 報表伺服器使用 Windows 驗證和以角色為基礎的驗證模型，來控制對報表的存取。 如果使用者意外地透過電子郵件接收到未被授權檢視的報表，報表伺服器將不會顯示報表。  
   

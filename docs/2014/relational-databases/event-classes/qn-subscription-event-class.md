@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62650513"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription 事件類別
   QN:Subscription 事件會報告通知訂閱的資訊。  
@@ -34,7 +34,7 @@ ms.locfileid: "53358180"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類別 = 199。|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 註冊的訂用帳戶：表示已經成功在資料庫中註冊查詢通知訂閱。<br /><br /> 倒轉的訂用帳戶：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 收到的訂閱要求與現有的訂閱完全相符。 在此情況下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將現有訂閱的逾時值設成新訂閱要求中所指定的逾時。<br /><br /> 引發的訂用帳戶：表示通知訂閱產生通知訊息。<br /><br /> 引發失敗，發生 broker 錯誤：表示通知訊息由於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 錯誤而失敗。<br /><br /> 引發失敗不會發生 broker 錯誤：表示通知訊息失敗，但不是因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 錯誤。<br /><br /> 攔截的 broker 時發生錯誤：表示 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 在查詢通知使用的交談中傳遞錯誤。<br /><br /> 訂用帳戶刪除嘗試：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 嘗試刪除過期的訂閱，以便釋出資源。<br /><br /> 訂用帳戶刪除失敗：表示嘗試刪除過期訂閱的動作已失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程訂閱的刪除作業，以便釋出資源。<br /><br /> 終結的訂用帳戶：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已成功刪除過期的訂閱。|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 註冊的訂用帳戶：表示在資料庫中已成功註冊查詢通知訂閱。<br /><br /> 倒轉的訂用帳戶：指出何時[!INCLUDE[ssDE](../../includes/ssde-md.md)]收到完全符合現有的訂用帳戶的訂用帳戶要求。 在此情況下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將現有訂閱的逾時值設成新訂閱要求中所指定的逾時。<br /><br /> 引發的訂用帳戶：指出當通知訂閱產生通知訊息。<br /><br /> 引發失敗，發生 broker 錯誤：這個值表示通知訊息時失敗原因為[!INCLUDE[ssSB](../../includes/sssb-md.md)]時發生錯誤。<br /><br /> 引發失敗不會發生 broker 錯誤：表示通知訊息失敗，但不是因為[!INCLUDE[ssSB](../../includes/sssb-md.md)]時發生錯誤。<br /><br /> 攔截的 broker 時發生錯誤：表示[!INCLUDE[ssSB](../../includes/sssb-md.md)]查詢通知使用的交談中傳遞錯誤。<br /><br /> 訂用帳戶刪除嘗試：表示[!INCLUDE[ssDE](../../includes/ssde-md.md)]嘗試刪除過期的訂閱，以便釋出資源。<br /><br /> 訂用帳戶刪除失敗：表示嘗試刪除過期的訂用帳戶已失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程訂閱的刪除作業，以便釋出資源。<br /><br /> 終結的訂用帳戶：表示[!INCLUDE[ssDE](../../includes/ssde-md.md)]已成功刪除過期的訂用帳戶|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  

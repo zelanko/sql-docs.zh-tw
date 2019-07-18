@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06695bf1770c9e362decac5702dcd924d47c23bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023369"
 ---
 # <a name="connect-options"></a>連線選項
 > [!IMPORTANT]  
@@ -34,8 +33,8 @@ ms.locfileid: "47750462"
 |SQL_ODBC_CURSORS|此連接屬性會實作驅動程式管理員。|  
 |SQL_OPT_TRACE|此連接屬性會實作驅動程式管理員。|  
 |SQL_OPT_TRACEFILE|此連接屬性會實作驅動程式管理員。|  
-|SQL_TRANSLATE_DLL|會傳回錯誤: 「 驅動程式不支援。 」|  
+|SQL_TRANSLATE_DLL|會傳回錯誤：「 驅動程式不支援。 」|  
 |SQL_TRANSLATE_OPTION|32 位元值傳遞至轉譯.dll。|  
-|SQL_TXN_ISOLATION|驅動程式可讓只 SQL_TXN_READ_COMMITTED。<br /><br /> 不支援下列 vParams:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE 的情況|  
+|SQL_TXN_ISOLATION|驅動程式可讓只 SQL_TXN_READ_COMMITTED。<br /><br /> 不支援下列 vParams:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
 |SQL_ATTR_ENLIST_IN_DTC|此 ODBC 3.0 連接屬性，可讓您在 Microsoft 元件服務 （或 MTS，如果您使用 Windows NT） 所協調的分散式交易中，使用適用於 Oracle 的 ODBC 驅動程式。 它提供的介面指標*pITransaction*做為交易*vParam*引數。|  
 |SQL_ATTR_CONNECTION_DEAD|此唯讀 ODBC 3.5 連接屬性可讓您判斷是否有失敗的連接到 Oracle 伺服器。 僅; get無法設定。|

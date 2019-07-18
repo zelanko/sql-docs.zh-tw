@@ -2,21 +2,21 @@
 title: Reporting Services 中的檔案共用傳遞 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889989"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575993"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 需要寫入者權限之帳戶可以是訂用帳戶中所設定認證或針對報表伺服器所設定的**檔案共用帳戶**。 如需檔案共用帳戶的詳細資訊，請參閱 [訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
@@ -25,7 +25,7 @@ ms.locfileid: "55889989"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
   
  **本主題內容：**  
   
@@ -68,11 +68,11 @@ ms.locfileid: "55889989"
 ##  <a name="bkmk_file_options"></a> 檔案選項  
  當您建立檔案共用訂閱時，可以設定檔案名稱的建立方式，以及檔案是否會覆寫報表的舊版本。 完整檔案名稱有三個部分：名稱、副檔名，以及附加至檔案以建立唯一檔案名稱的文字或數字  
   
- **檔案名稱：** 預設檔案名稱是以來源報表名稱為基礎，但是您可以在訂用帳戶中提供自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
+ **檔案名稱** ：預設檔案名稱是以來源報表名稱為基礎，但是您可以在訂閱中提供自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
   
- **覆寫：** 您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者也可以建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
+ **覆寫** ：您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
- 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 **@timestamp** 變數加入檔案名稱 (例如 *CompanySales@timestamp*)。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
+ 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 **@timestamp** 變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   
  下圖是針對檔案共用傳遞所設定之訂用帳戶的檔案設定範例。  
   

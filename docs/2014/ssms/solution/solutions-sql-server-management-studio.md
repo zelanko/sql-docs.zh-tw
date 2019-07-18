@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63064892"
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案是一個或多個相關專案的集合。 專案是開發人員用來組織相關檔案 (例如常用管理指令碼的集合) 的容器。  

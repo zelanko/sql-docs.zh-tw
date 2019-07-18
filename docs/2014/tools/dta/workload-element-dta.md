@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678716"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
   指定微調工作階段所用的工作負載。  

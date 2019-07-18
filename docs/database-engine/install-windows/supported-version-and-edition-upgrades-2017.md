@@ -15,13 +15,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 0a2942ac69ba5ed6d381c6377b08b551be94f589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 879d98b00c4728d9a93ea34e08e2fd98964f4e13
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794795"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>支援的版本與版本升級 - SQL Server 2017
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099830"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -103,9 +102,9 @@ ms.locfileid: "56023119"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全域變數會使用給定的名稱來建立並設定為所提供的值。 比方說， **-v =**"`1`" **-v b =**」`2`"會產生名為的變數`a`值為"`1`"和變數**b**值為"`2`」。  
+ 全域變數會使用給定的名稱來建立並設定為所提供的值。 比方說， **-v =** "`1`" **-v b =** 」`2`"會產生名為的變數`a`值為"`1`"和變數**b**值為"`2`」。  
   
- 指令碼中的任何函數均可使用全域變數。 反斜線和引號 (**\\"**) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)。  
+ 指令碼中的任何函數均可使用全域變數。 反斜線和引號 ( **\\"** ) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **-t**  
  (選擇性) 追蹤記錄的輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。  

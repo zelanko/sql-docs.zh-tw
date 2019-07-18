@@ -12,15 +12,15 @@ helpviewer_keywords:
 - opening database diagrams
 - diagrams [SQL Server], opening
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc949044510a1471f0715ccc30209242a1543ac9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 881f07eefc08f0ba30a8c1f04d684884aa85b1e5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732036"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681053"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>開啟資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47732036"
   
 ### <a name="to-open-a-database-diagram"></a>若要開啟資料庫圖表  
   
-1.  在物件總管中，展開 [資料庫圖表] 資料夾。  
+1.  在物件總管中，展開 [資料庫圖表]  資料夾。  
   
 2.  在要開啟的資料庫圖表名稱上按兩下。  
   
     -或-  
   
-    在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]。  
+    在要開啟的資料庫圖表名稱上按一下滑鼠右鍵，然後選擇 [設計資料庫圖表]  。  
   
 資料庫圖表將在 [資料庫圖表設計工具] 中開啟，您可在其中編輯圖表。  
   

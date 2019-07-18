@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919944"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
   若要使用的使用者定義的型別 (UDT) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](clr-user-defined-types.md)。  
@@ -177,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  數字，識別每個相關聯的第一個物件的物件，指定**assembly_id** 1 的值。 如果有多個物件具有相同相關聯**assembly_id**，則每個後續**file_id**值都會遞增 1。  
   
- **內容**  
+ **content**  
  組件或檔案的十六進位表示法。  
   
  您可以使用 CAST 或 CONVERT 函數，將轉換的內容**內容**可讀取的文字資料行。 下列查詢會將 Point.cs 檔案的內容轉換為可讀取的文字，並在 WHERE 子句中使用此名稱，以將結果集限制為單一資料列。  

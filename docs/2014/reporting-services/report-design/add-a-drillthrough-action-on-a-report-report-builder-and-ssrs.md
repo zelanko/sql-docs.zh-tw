@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6924f93adaa34af925704396d208c17723234a1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a345b0ed36fde93a3bc94ff4075233c6c24728af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106872"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
-  當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」*(Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
+  當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」* (Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
   
  鑽研報表必須與主報表發行至相同的報表伺服器，但是可位於不同的資料夾中。 您可以將鑽研連結加入到具有 **Action** 屬性的任何項目，例如文字方塊、影像或是圖表的資料點。  
   
@@ -30,11 +29,11 @@ ms.locfileid: "56288556"
   
 ### <a name="to-add-a-drillthrough-action"></a>若要加入鑽研動作  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下要新增連結的文字方塊、影像或圖表，然後按一下 [屬性]。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下要新增連結的文字方塊、影像或圖表，然後按一下 [屬性]  。  
   
-2.  在項目的 **[屬性]** 對話方塊中，按一下 **[動作]**。  
+2.  在項目的 **[屬性]** 對話方塊中，按一下 **[動作]** 。  
   
-3.  選取 **[移至報表]**。 對話方塊中會出現這個選項的其他區段。  
+3.  選取 **[移至報表]** 。 對話方塊中會出現這個選項的其他區段。  
   
 4.  在 **[指定報表]** 中，按一下 **[瀏覽]** ，找出您想要跳至的報表，或輸入報表的名稱。 或者，您也可以按一下運算式 (**fx**) 按鈕來建立報表名稱的運算式。  
   
@@ -42,9 +41,9 @@ ms.locfileid: "56288556"
   
      如果您必須指定鑽研報表的參數，請遵循下一個步驟。  
   
-5.  在 **[使用這些參數執行報表]** 中，按一下 **[加入]**。 新的資料列就會加入至參數方格。  
+5.  在 **[使用這些參數執行報表]** 中，按一下 **[加入]** 。 新的資料列就會加入至參數方格。  
   
-    -   在 [名稱] 文字方塊中，按一下下拉式清單或鍵入鑽研報表內的報表參數名稱。  
+    -   在 [名稱]  文字方塊中，按一下下拉式清單或鍵入鑽研報表內的報表參數名稱。  
   
         > [!NOTE]  
         >  參數清單中的名稱必須與目標報表中預期的參數完全相符。 例如，參數名稱的大小寫必須相符。 如果名稱不相符，或是未列出預期的參數，鑽研報表就會失敗。  
@@ -56,7 +55,7 @@ ms.locfileid: "56288556"
   
      如需如何隱藏報表中參數的資訊，請參閱[新增、變更或刪除報表參數 &#40;報表產生器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)。  
   
-6.  (選擇性) 如果是文字方塊，在 [功能區] 的 [主資料夾] 索引標籤上變更文字的色彩和效果，向使用者指示該文字為連結，將會很有協助。  
+6.  (選擇性) 如果是文字方塊，在 [功能區] 的 [主資料夾]  索引標籤上變更文字的色彩和效果，向使用者指示該文字為連結，將會很有協助。  
   
 7.  若要測試連結，請執行報表，然後按一下這個連結設定所在的報表項目。  
   

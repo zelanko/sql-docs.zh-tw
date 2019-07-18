@@ -13,15 +13,15 @@ helpviewer_keywords:
 - showing query properties
 - queries [SQL Server], properties
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4de1238fb42f9c875c35c6f426a05f19dd92f61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: c85f003384c714ff6da9ccba728e35adce71c1be
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825346"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688142"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>顯示查詢屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47825346"
   
 ### <a name="to-display-properties-for-a-query"></a>若要顯示查詢的屬性  
   
--   在查詢和檢視表設計工具中開啟查詢，然後按一下 [檢視] 功能表中的 [屬性視窗]。  
+-   在查詢和檢視表設計工具中開啟查詢，然後按一下 [檢視]  功能表中的 [屬性視窗]  。  
   
-此時查詢的屬性便會顯示在 [屬性] 視窗中。  
+此時查詢的屬性便會顯示在 [屬性]  視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

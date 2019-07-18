@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10530"
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b5befc97e163bd05baf118a2d6bf49d8c3c8285
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104301"
 ---
 # <a name="report-properties-dialog-box-references"></a>報表屬性對話方塊、參考
   選取 **[報表屬性]** 對話方塊上的 **[參考]** ，即可將參考加入報表定義中運算式所使用的自訂或其他外部組件以及自訂類別執行個體，或從中移除。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **新增或移除組件**  
  列出報表參考的組件。 組件必須可以在安裝設計報表所使用之工具的電腦和報表伺服器上使用。 參考的名稱必須符合的內容 **\<CodeModule >** 完全標記儲存在報表定義語言 (.rdl) 檔案。  
   

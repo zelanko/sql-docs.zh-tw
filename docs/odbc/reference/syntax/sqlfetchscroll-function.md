@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003040"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 函數
 **合規性**  
@@ -38,7 +37,7 @@ ms.locfileid: "52540808"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetchScroll(  
       SQLHSTMT      StatementHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLFetchScroll(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Sqlfetchscroll*  
+ *FetchOrientation*  
  [輸入]  
   
  擷取的型別：  
@@ -65,9 +64,9 @@ SQLRETURN SQLFetchScroll(
   
  SQL_FETCH_ABSOLUTE  
   
- SQL_FETCH_RELATIVE 但  
+ SQL_FETCH_RELATIVE  
   
- 要使用 SQL_FETCH_BOOKMARK  
+ SQL_FETCH_BOOKMARK  
   
  如需詳細資訊，請參閱 「 定位游標 」 「 註解 」 一節。  
   
@@ -133,11 +132,11 @@ SQLRETURN SQLFetchScroll(
 |----------------------|-------------|  
 |SQL_FETCH_NEXT|傳回下一個資料列集。 這就相當於呼叫**SQLFetch**。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
 |SQL_FETCH_PRIOR|傳回先前的資料列集。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
-|SQL_FETCH_RELATIVE 但|傳回資料列集*FetchOffset*從目前的資料列集的開頭。|  
+|SQL_FETCH_RELATIVE|傳回資料列集*FetchOffset*從目前的資料列集的開頭。|  
 |SQL_FETCH_ABSOLUTE|傳回資料列集資料列開始*FetchOffset*。|  
 |SQL_FETCH_FIRST|在結果集中傳回的第一個資料列集。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
 |SQL_FETCH_LAST|在結果集中傳回最後一個完整的資料列集。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
-|要使用 SQL_FETCH_BOOKMARK|傳回資料列集 FetchOffset 的資料列從 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性所指定的書籤。|  
+|SQL_FETCH_BOOKMARK|傳回資料列集 FetchOffset 的資料列從 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性所指定的書籤。|  
   
  驅動程式不需要支援所有 fetch 方向;應用程式呼叫**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標類型） 的資訊類型來判斷哪一個 fetch驅動程式支援的方向。 應用程式應該看看這些資訊類型在 SQL_CA1_NEXT、 SQL_CA1_RELATIVE、 SQL_CA1_ABSOLUTE 和 WQL_CA1_BOOKMARK 位元遮罩。 此外，如果資料指標是順向的而不 SQL_FETCH_NEXT，Sqlfetchscroll。 **SQLFetchScroll**傳回 SQLSTATE HY106 （擷取類型超出範圍）。  
   
@@ -165,7 +164,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*開始之前*|1|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*後端*|  
+|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*後端*|  
 |*後端*|*後端*|  
   
  [1] 如果自前一個呼叫來擷取資料列之後已變更的資料列集大小，這是先前呼叫所使用的資料列集大小。  
@@ -177,8 +176,8 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*開始之前*|*開始之前*|  
 |*CurrRowsetStart = 1*|*開始之前*|  
-|*1 < CurrRowsetStart < = RowsetSize* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart-RowsetSize* <sup>[2]</sup>|  
+|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*後端和 LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*後端和 LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]。</sup>|  
   
@@ -186,7 +185,7 @@ SQLRETURN SQLFetchScroll(
   
  [2] 如果自前一個呼叫來擷取資料列之後已變更的資料列集大小，這會是新的資料列集大小。  
   
-## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE 但  
+## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE  
  適用下列規則。  
   
 |條件|新的資料列集的第一個資料列|  
@@ -241,7 +240,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] 如果自前一個呼叫來擷取資料列之後已變更的資料列集大小，這會是新的資料列集大小。  
   
-## <a name="sqlfetchbookmark"></a>要使用 SQL_FETCH_BOOKMARK  
+## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
  適用下列規則。  
   
 |條件|新的資料列集的第一個資料列|  
@@ -257,9 +256,9 @@ SQLRETURN SQLFetchScroll(
   
  如果資料指標會偵測新增至結果集的資料列，或移除從結果集中刪除的資料列，它會顯示如同時偵測到這些變更只會在擷取資料。 這包括案例時**SQLFetchScroll**呼叫 Sqlfetchscroll 設 sql_fetch_relative 但 FetchOffset 設定為 0，重新擷取相同的資料列集，但不包含大小寫，fOption 設 SQL_ 的呼叫 SQLSetPos 時重新整理。 在後者的情況下，資料列集的緩衝區中的資料重新整理，但不是 refetched，和已刪除的資料列不會移除從結果集。 因此，當從刪除或插入至目前的資料列集資料列，資料指標不會修改資料列集的緩衝區。 相反地，它會偵測變更它擷取任何資料列集，先前包含刪除的資料列，或是現在插入的資料列。  
   
- 例如：  
+ 例如:  
   
-```  
+```cpp  
 // Fetch the next rowset.  
 SQLFetchScroll(hstmt, SQL_FETCH_NEXT, 0);  
 // Delete third row of the rowset. Does not modify the rowset buffers.  

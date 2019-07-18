@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 526e95490644b4fddae3e02e9ee73b57c00797c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211278"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>將作業狀態寫入到 Windows 應用程式記錄
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，將作業狀態寫入 Windows 應用程式事件記錄檔。  
@@ -38,7 +38,7 @@ ms.locfileid: "52786720"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目，將作業狀態寫入 Windows 應用程式記錄檔：**  
   
@@ -57,17 +57,17 @@ ms.locfileid: "52786720"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
+2.  展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
   
 3.  選取 **[通知]** 頁面。  
   
-4.  勾選 **[寫入 Windows 應用程式事件記錄檔]**，並選擇下列其中一項：  
+4.  勾選 **[寫入 Windows 應用程式事件記錄檔]** ，並選擇下列其中一項：  
   
-    -   按一下 [當作業成功時]，在作業成功完成時記錄作業狀態。  
+    -   按一下 [當作業成功時]  ，在作業成功完成時記錄作業狀態。  
   
-    -   按一下 [當作業失敗時]，在作業失敗時記錄作業狀態。  
+    -   按一下 [當作業失敗時]  ，在作業失敗時記錄作業狀態。  
   
-    -   按一下 [作業完成時]，不論完成狀態為何，一律記錄作業狀態。  
+    -   按一下 [作業完成時]  ，不論完成狀態為何，一律記錄作業狀態。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **若要將作業狀態寫入到 Windows 應用程式記錄**  

@@ -17,15 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_types catalog view
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ea20d8e326d006e1a405adffcf73fae6ca1e4473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060433"
 ---
 # <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

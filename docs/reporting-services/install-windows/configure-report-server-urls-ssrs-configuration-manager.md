@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514417"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 是用來存取報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在您可以使用其中一個應用程式以前，您至少必須為此 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]設定一個 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會針對在大多數部署方案下運作良好的這兩個應用程式 URL 提供預設值，其中包括與其他 Web 服務和應用程式並存的部署。  

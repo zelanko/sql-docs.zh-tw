@@ -19,14 +19,18 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4284edefaec85304fdf189de6ea53f4de87a7efd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dff785052650e18bbd6f8763771c7a7495f10dcd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726856"
 ---
 # <a name="excel-source"></a>Excel 來源
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
 
 > [!IMPORTANT]
@@ -66,10 +70,10 @@ ms.locfileid: "58290034"
   
 ### <a name="static-options"></a>靜態選項  
  **[無快取]**  
- 從清單中選取現有的 Excel 連線管理員，或按一下 [新增] 建立新的連線管理員。  
+ 從清單中選取現有的 Excel 連線管理員，或按一下 [新增]  建立新的連線管理員。  
   
  **新增**  
- 使用 [Excel 連線管理員] 對話方塊來建立新的連線管理員。  
+ 使用 [Excel 連線管理員]  對話方塊來建立新的連線管理員。  
   
  **資料存取模式**  
  從來源中指定選取資料的方法。  
@@ -77,12 +81,12 @@ ms.locfileid: "58290034"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：**[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：** [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL (命令)|使用 SQL 查詢從 Excel 檔案中擷取資料。 |  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   
  **預覽**  
- 使用 [資料檢視] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+ 使用 [資料檢視]  對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
 ### <a name="data-access-mode-dynamic-options"></a>資料存取模式動態選項  
   
@@ -96,16 +100,16 @@ ms.locfileid: "58290034"
   
 #### <a name="data-access-mode--sql-command"></a>資料存取模式 = SQL 命令  
  **SQL 命令文字**  
- 輸入 SQL 查詢的文字，按一下 [建立查詢] 建立查詢，或按一下 [瀏覽] 瀏覽至包含查詢文字的檔案。  
+ 輸入 SQL 查詢的文字，按一下 [建立查詢]  建立查詢，或按一下 [瀏覽]  瀏覽至包含查詢文字的檔案。  
   
  **參數**  
  如果您所輸入的參數化查詢使用 ? 做為查詢文字中的參數預留位置，請使用 **[設定查詢參數]** 對話方塊，將查詢輸入參數對應到封裝變數。  
   
  **建立查詢**  
- 使用 [查詢產生器] 對話方塊，以視覺化的方式來建構 SQL 查詢。  
+ 使用 [查詢產生器]  對話方塊，以視覺化的方式來建構 SQL 查詢。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊來找出包含 SQL 查詢文字的檔案。  
+ 使用 [開啟]  對話方塊來找出包含 SQL 查詢文字的檔案。  
   
  **剖析查詢**  
  請確認查詢文字的語法。  
@@ -115,7 +119,7 @@ ms.locfileid: "58290034"
  選取包含 SQL 查詢文字的變數。  
   
 ## <a name="excel-source-editor-columns-page"></a>Excel 來源編輯器 (資料行頁面)
-  使用 [Excel 來源編輯器] 對話方塊的 [資料行] 頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [Excel 來源編輯器]  對話方塊的 [資料行]  頁面，將輸出資料行對應至每個外部 (來源) 資料行。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -128,19 +132,19 @@ ms.locfileid: "58290034"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
 ## <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
-  使用 [Excel 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  使用 [Excel 來源編輯器]  對話方塊的 [錯誤輸出]  頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
 ### <a name="options"></a>選項。  
  **輸入或輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [Excel 來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [Excel 來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

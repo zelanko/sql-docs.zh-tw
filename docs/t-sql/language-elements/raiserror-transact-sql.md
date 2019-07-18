@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65980438"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  *寬度*  
   
- 這是定義引數值所在欄位最小寬度的整數。 如果引數值的長度等於或長於「寬度」，則列印出的值不帶填補。 如果值短於「寬度」，則會將值填補至「寬度」中指定的長度。  
+ 這是定義引數值所在欄位最小寬度的整數。 如果引數值的長度等於或長於「寬度」  ，則列印出的值不帶填補。 如果值短於「寬度」  ，則會將值填補至「寬度」  中指定的長度。  
   
  星號 (*) 表示寬度是由引數清單中相關聯的引數所指定，必須是整數值。  
   
@@ -101,7 +101,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  這是從字串值的引數值取得的最大字元數。 例如，如果字串有五個字元而有效位數為 3，則只會使用字串值的前三個字元。  
   
- 至於整數值，「有效位數」是列印出的最少小數位數。  
+ 至於整數值，「有效位數」  是列印出的最少小數位數。  
   
  星號 (*) 表示有效位數是由引數清單中相關聯的引數所指定，必須是整數值。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -17,12 +15,12 @@ ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af1b06ce11cc23781838d0faf3866fa11ba666d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727754"
 ---
 # <a name="calling-stored-procedures"></a>呼叫預存程序
   可以在伺服器上，或從用戶端應用程式呼叫預存程序。 在這兩種情況下，預存程序永遠會在伺服器上執行，不論是伺服器或資料庫的內容。 執行預存程序並不需要特殊的權限。 組件將預存程序加入到伺服器或資料庫內容後，任何使用者都可以執行預存程序，只要使用者的角色允許該預存程序執行的動作。  

@@ -8,16 +8,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 12c2d8393f77a26e8537a7f3c4a13baaddf2bb2f
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012659"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716695"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ CREATE TABLE AS SELECT (CTAS) 是最重要的 T-SQL 功能之一。 這是一種
 ## <a name="syntax"></a>語法   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required
@@ -114,7 +114,7 @@ CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE 
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 
 如需資料表的建立權限，請參閱 CREATE TABLE 中的[權限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 

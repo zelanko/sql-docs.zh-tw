@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: d0840057f6f4437b10416265eeb78b1ae4eec2d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991775"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
 
@@ -39,7 +38,7 @@ ms.locfileid: "56029995"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行拼字檢查。  
   
 ##  <a name="Enable"></a> 啟用拼字檢查  
@@ -66,7 +65,7 @@ ms.locfileid: "56029995"
   
 5.  如果顯示的值都不適合，而且有 **[其他建議]** 按鈕表示有其他值，請按一下此按鈕。 如果其中一個其他值比原來的值更適合，請按一下該值。  
   
-6.  如果您想要將此值加到字典，請按一下 **[新增至字典]**。 該值原有的紅色底線便會消失。  
+6.  如果您想要將此值加到字典，請按一下 **[新增至字典]** 。 該值原有的紅色底線便會消失。  
   
 ##  <a name="FollowUp"></a> 後續操作：使用拼字檢查之後  
  在您執行拼字檢查後，請完成定義域所屬的活動，以便使用拼字檢查所建議的更正。 如果在知識探索、定義域管理或比對原則活動中，請發行知識庫，以便將拼字檢查分析的結果提供給知識庫使用。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
@@ -74,6 +73,6 @@ ms.locfileid: "56029995"
 ##  <a name="How"></a> 拼字檢查的運作方式  
  DQS 拼字檢查會以紅色底線標示任何潛在的字串值錯誤 (整個值都會顯示該底線)。 例如，如果 "New York" 錯誤地拼寫為 "Neu York"，拼字檢查將會在 "Neu York" 底下顯示紅色底線 (而不只是在 "Neu" 底下顯示)。 如果您以滑鼠右鍵按一下此值，您會看到整個值的建議更正。 如果有五個以上的建議，您也可以按一下 **[其他建議]** 。 您可以選擇其中一項建議，或將值添加到原來的值所要顯示的字典中 (在使用者帳戶層級)。 加到字典中的值適用於所有定義域。 只有當您明確指定建議時，才會在定義域中進行更正。 當您從 [拼字檢查] 內容功能表選取建議時，值類型會變成 (或維持) 錯誤。 選取的建議將會加入至更正資料行。 請注意，值的 **[類型]** 可以是 **[正確]** ，但同時由拼字檢查標示為潛在錯誤。  
   
- DQS 將會在 **[值]** 資料表的 **[值]** 資料行和 **[更正為]** 資料行中提供值的建議。 當您在 **[值]** 資料行中選取建議時，值類型會設定為 **[錯誤]**，而且當您手動插入建議時，建議會複製到 **[更正為]** 資料行中。 如果有現有的更正，該更正會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，當您選取 **[更正為]** 資料行中的建議時，DQS 將會以選取項目取代目前選取的值，而且目前選取的值將會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，記錄層級 (下方方格) 不會產生任何建議。  
+ DQS 將會在 **[值]** 資料表的 **[值]** 資料行和 **[更正為]** 資料行中提供值的建議。 當您在 **[值]** 資料行中選取建議時，值類型會設定為 **[錯誤]** ，而且當您手動插入建議時，建議會複製到 **[更正為]** 資料行中。 如果有現有的更正，該更正會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，當您選取 **[更正為]** 資料行中的建議時，DQS 將會以選取項目取代目前選取的值，而且目前選取的值將會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，記錄層級 (下方方格) 不會產生任何建議。  
   
   

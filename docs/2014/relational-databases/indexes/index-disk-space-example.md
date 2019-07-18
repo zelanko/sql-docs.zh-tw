@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63161804"
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
   無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "52542710"
   
      非叢集索引 B:11 百萬 * 80 位元組 / 80%~ 100 MB  
   
-     現有結構的總計大小：363 MB  
+     現有結構的大小總計：363 MB  
   
 2.  決定目標索引結構的大小。 假設新的叢集索引鍵的長度是 24 個位元組，包含唯一識別值。 兩個非叢集索引的資料列指標 (長度為 8 個位元組) 會以此叢集索引鍵取代。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52542710"
   
      非叢集索引 B:11 百萬 * （80 8 + 24） 位元組 / 80%~ 120 MB  
   
-     新結構的總計大小：453 MB  
+     新結構的大小總計：453 MB  
   
      索引作業期間支援來源和目標結構所需的總磁碟空間是 816 MB (363 + 453)。 在索引作業認可之後，將會重新配置目前對來源結構配置的空間。  
   
@@ -109,10 +109,10 @@ ms.locfileid: "52542710"
   
 |索引作業|下列結構中，不同位置的磁碟空間需求|  
 |---------------------|---------------------------------------------------------------------------|  
-|離線索引作業，SORT_IN_TEMPDB = ON|在作業期間的總空間：1018 MB:<br /><br /> -現有的資料表和索引：363 MB\*<br /><br /> -<br />                    **tempdb**:202 MB *<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
-|離線索引作業，SORT_IN_TEMPDB = OFF|在作業期間的總空間：816 MB:<br /><br /> -現有的資料表和索引：363 MB *<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
-|線上索引作業，SORT_IN_TEMPDB = ON|在作業期間的總空間：1058 MB:<br /><br /> -現有的資料表和索引：363 MB\*<br /><br /> -**tempdb** （包含對應索引）：242 MB *<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
-|線上索引作業，SORT_IN_TEMPDB = OFF|在作業期間的總空間：856 MB:<br /><br /> -現有的資料表和索引：363 MB *<br /><br /> -暫存對應索引：40 MB\*<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
+|離線索引作業，SORT_IN_TEMPDB = ON|在作業期間的總空間：1018 MB:<br /><br /> -現有的資料表和索引：363 MB\*<br /><br /> -<br />                    **tempdb**:202 MB*<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
+|離線索引作業，SORT_IN_TEMPDB = OFF|在作業期間的總空間：816 MB:<br /><br /> -現有的資料表和索引：363 MB*<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
+|線上索引作業，SORT_IN_TEMPDB = ON|在作業期間的總空間：1058 MB:<br /><br /> -現有的資料表和索引：363 MB\*<br /><br /> -**tempdb** （包含對應索引）：242 MB*<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
+|線上索引作業，SORT_IN_TEMPDB = OFF|在作業期間的總空間：856 MB:<br /><br /> -現有的資料表和索引：363 MB*<br /><br /> -暫存對應索引：40 MB\*<br /><br /> -新的索引：453 MB<br /><br /> 在作業之後所需的總空間：453 MB|  
   
  * 此空間在索引作業認可之後會重新配置。  
   

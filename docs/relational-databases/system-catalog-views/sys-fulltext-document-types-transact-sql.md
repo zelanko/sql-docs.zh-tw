@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_document_types catalog view
 ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0995b501bd1032cdbc067fcef6c8f59693ef9abf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133845"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47812926"
 |**class_id**|**uniqueidentifier**|支援副檔名之 IFilter 類別的 GUID。|  
 |**path**|**nvarchar(260)**|通往 IFilter DLL 的路徑。 路徑，只會顯示的成員**serveradmin**固定的伺服器角色。|  
 |**version**|**sysname**|IFilter DLL 的版本。|  
-|**manufacturer**|**sysname**|IFilter 製造廠的名稱。<br /><br /> 注意： 只文件做為連絡製造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]上支援[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
+|**manufacturer**|**sysname**|IFilter 製造廠的名稱。<br /><br /> 注意:只記載為製造商[!INCLUDE[msCoName](../../includes/msconame-md.md)]上支援[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

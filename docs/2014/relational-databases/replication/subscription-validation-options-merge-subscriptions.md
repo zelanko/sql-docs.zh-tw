@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d7631df4a1e4c6ec37effbc06b6a141b0d41ebc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249287"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>訂閱驗證選項 (合併訂閱)
   使用 **[訂閱驗證選項]** 對話方塊來指定驗證應該只使用資料列計數，或使用資料列計數與二進位總和檢查碼。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **只確認資料列計數**  
  選取以驗證訂閱者端之資料表的資料列數目是否與發行者端之資料表的資料列數目相同。 此方法不會驗證資料列的內容是否相符。 資料列計數驗證提供一種輕量型驗證方法，可讓您發現資料中的問題。  
   

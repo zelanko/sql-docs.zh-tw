@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62630645"
 ---
 # <a name="subscriber-types"></a>訂閱者類型
   合併式複寫可讓您指定發行集必須支援的訂閱者類型。 選取訂閱者類型會設定 *發行集相容性層級*，以決定發行集可以使用哪些功能。  
   
  建立發行集快照集之後，可以在 **[發行集屬性]** 對話方塊的 **[一般]** 頁面上增加發行集相容性層級 (設定更多限制)；不可以減少相容性層級。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  選取此發行集必須支援的每個訂閱者類型。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

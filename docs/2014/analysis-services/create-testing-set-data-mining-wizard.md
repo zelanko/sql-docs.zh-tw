@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
@@ -13,15 +12,15 @@ ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086784"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>建立測試集 (資料採礦精靈)
-  使用 [建立測試集] 頁面來指定用於定型的資料量，以及保留用於測試集的資料量。 在建立採礦結構時將資料分割成定型集和測試集，可以更輕鬆地評估您稍後建立的採礦模型的正確性。  
+  使用 [建立測試集]  頁面來指定用於定型的資料量，以及保留用於測試集的資料量。 在建立採礦結構時將資料分割成定型集和測試集，可以更輕鬆地評估您稍後建立的採礦模型的正確性。  
   
  您可以將測試資料量指定為百分比，或者可以指定數字以限制用於測試的案例數。 如果同時指定了用於測試的案例百分比以及案例數上限，則這兩種設定都會使用，且測試資料集會包含較少的案例數。 根據預設，測試會使用 30% 的資料，定型則使用 70%，且測試案例數沒有上限。  
   
@@ -35,9 +34,9 @@ ms.locfileid: "48096348"
   
 -   如果想要預測儲存於巢狀資料表中的值，則無法分割資料。  
   
- **如需詳細資訊，請參閱**[測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)、[資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **如需詳細資訊：** [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)，[基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **測試資料的百分比**  
  請按一下向上或向下箭號來增加或減少用來當做定型集的資料百分比，或在文字方塊中輸入 0 和 100 之間的值。  
   

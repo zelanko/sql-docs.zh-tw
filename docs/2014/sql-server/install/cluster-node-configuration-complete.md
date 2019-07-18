@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb472e106438aee781bf54fd6216d2ed32f7f190
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096447"
 ---
 # <a name="cluster-node-configuration-complete"></a>叢集節點組態 (完成)
   您可以使用 [叢集節點組態 (完成)] 頁面來指定已經準備要建立叢集的現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。若要安裝或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  在下拉式方塊中：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱-選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]容錯移轉叢集。  

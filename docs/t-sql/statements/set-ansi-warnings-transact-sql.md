@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af30fd34d42b296e9b83bbd537dcff411cd42608
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639093"
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  

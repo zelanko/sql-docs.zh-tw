@@ -18,15 +18,14 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900942"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +55,8 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**關鍵字**|**nvarchar(4000)**|儲存在全文檢索索引內部之關鍵字的十六進位表示法。<br /><br /> 注意： OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
-|**display_term**|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自十六進位格式。<br /><br /> 注意︰ **display_term**值 OxFF 是"END OF FILE"。|  
+|**關鍵字**|**nvarchar(4000)**|儲存在全文檢索索引內部之關鍵字的十六進位表示法。<br /><br /> 注意:OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
+|**display_term**|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自十六進位格式。<br /><br /> 注意:**Display_term**值 OxFF 是"END OF FILE"。|  
 |**column_id**|**int**|從中針對目前關鍵字進行全文檢索索引之資料行的識別碼。|  
 |**document_count**|**int**|包含目前詞彙的文件或資料列數目。|  
   

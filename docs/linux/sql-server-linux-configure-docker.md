@@ -1,28 +1,27 @@
 ---
-title: 在 Docker 上的 SQL Server 組態選項 |Microsoft Docs
+title: 在 Docker 上的 SQL Server 組態選項
 description: 探索不同的方式使用，並與其互動 SQL Server 2017 和 2019年預覽容器映像，在 Docker 中。 這包括複製檔案，並進行疑難排解的保存資料。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: a376e566327c8c78a02dc61ffbbb5c37ce946f04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967509"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章說明如何設定和使用[mssql server linux 容器映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)使用 Docker。 此映像包含以 Ubuntu 16.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。
+這篇文章說明如何設定和使用[mssql server linux 容器映像](https://hub.docker.com/_/microsoft-mssql-server)使用 Docker。 此映像包含以 Ubuntu 16.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。
 
 > [!NOTE]
 > 本文特別著重於使用 mssql server linux 映像。 未涵蓋的 Windows 映像，但您可以深入了解上[mssql server windows Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
@@ -41,16 +40,16 @@ ms.locfileid: "58566627"
 
 ## <a id="rhel"></a> 執行 RHEL 為基礎的容器映像
 
-所有 SQL Server Linux 容器映像上的文件會指向以 Ubuntu 為基礎的容器。 從 SQL Server 2019 preview 開始，您可以使用基礎上 Red Hat Enterprise Linux (RHEL) 的容器。 變更的容器存放庫**mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu**要**mcr.microsoft.com/mssql/rhel/server:2019-CTP2.4**中所有的 docker 命令。
+所有 SQL Server Linux 容器映像上的文件會指向以 Ubuntu 為基礎的容器。 從 SQL Server 2019 preview 開始，您可以使用基礎上 Red Hat Enterprise Linux (RHEL) 的容器。 變更的容器存放庫**mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu**要**mcr.microsoft.com/mssql/rhel/server:2019-CTP3.1**中所有的 docker 命令。
 
 例如，下列命令會提取最新的 SQL Server 2019 預覽容器，使用 RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.4
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.1
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.4
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.1
 ```
 
 ::: moniker-end
@@ -83,11 +82,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> 傳遞的值，藉以**Y**環境變數**ACCEPT_EULA**和版本值以**MSSQL_PID**，您要表達您有有效的和現有的授權，版本和您想要使用的 SQL Server 版本。 您也同意在 Docker 容器映像中執行的 SQL Server 軟體的使用會受到您的 SQL Server 授權條款。
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> 如需完整的可能值清單**MSSQL_PID**，請參閱[環境變數，在 Linux 上設定 SQL Server 設定](sql-server-linux-configure-environment-variables.md)。
 
 ::: moniker-end
 
@@ -172,13 +171,13 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 下列範例會建立兩個 SQL Server 2019 預覽容器，並將它們對應至連接埠**1401年**並**1402年**主機電腦上。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ::: moniker-end
@@ -232,11 +231,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ::: moniker-end
@@ -266,11 +265,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 ::: moniker-end
 
@@ -310,7 +309,7 @@ docker ps
 若要啟動終端機執行容器中的 bash:
 
 ```bash
-docker exec -ti <Container ID> /bin/bash
+docker exec -it <Container ID> /bin/bash
 ```
 
 現在您可以執行命令，就好像您以在容器內的終端機中執行它們。 完成後，鍵入 `exit`。 這會結束互動式命令工作階段中，但您的容器會繼續執行。
@@ -396,14 +395,14 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sql1 \
    -e 'TZ=America/Los_Angeles'\
-   -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ```PowerShell
 sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 ::: moniker-end
 
@@ -411,7 +410,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 有的情況下您可能不想使用最新的 SQL Server 容器映像。 若要執行特定的 SQL Server 容器映像，請使用下列步驟：
 
-1. 識別 Docker**標記**您想要使用的版本。 若要檢視可用的標籤，請參閱[mssql server linux Docker hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+1. 識別 Docker**標記**您想要使用的版本。 若要檢視可用的標籤，請參閱[mssql server linux Docker hub 頁面](https://hub.docker.com/_/microsoft-mssql-server)。
 
 2. 提取 SQL Server 容器映像與標記。 例如，若要提取的 RC1 映像，取代`<image_tag>`在下列命令中使用`rc1`。
 
@@ -537,7 +536,7 @@ sudo systemctl start docker
 
 如果 SQL Server 容器無法執行，請嘗試下列測試：
 
-- 如果您收到錯誤，例如 **' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '**，則您嘗試對應到已在使用連接埠的容器連接埠 1433。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433。 例如： 
+- 如果您收到錯誤，例如 **' 無法建立端點 CONTAINER_NAME 上網路橋接器。啟動 proxy 時發生錯誤： 接聽 tcp 0.0.0.0:1433 繫結： 已經在使用中的位址。 '** ，則您嘗試對應到已在使用連接埠的容器連接埠 1433。 如果您在主機電腦，在本機執行 SQL Server，也可能會發生。 它也可會發生，如果您啟動兩個 SQL Server 容器，並嘗試將其同時對應到相同的主機連接埠。 如果發生這種情況，使用`-p`參數對應到不同的主機連接埠的容器連接埠 1433。 例如: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -555,11 +554,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu`.
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu`.
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu`.
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu`.
 ```
 
 ::: moniker-end
@@ -592,7 +591,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
 ::: moniker-end

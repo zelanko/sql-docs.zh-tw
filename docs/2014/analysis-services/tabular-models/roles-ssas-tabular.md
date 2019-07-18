@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419849"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284866"
 ---
 # <a name="roles-ssas-tabular"></a>角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 每個角色都包含成員 (依 Windows 使用者名稱或 Windows 群組列出) 和權限 (讀取、處理、系統管理員)。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。  
@@ -82,8 +81,8 @@ ms.locfileid: "52419849"
   
 |資料表|DAX 運算式|  
 |-----------|--------------------|  
-|Region|= 區域 [Country] ="USA"|  
-|ProductCategory|= ProductCategory [Name] ="自行車 」|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |交易|=Transactions[Year]=2008|  
   
  對 Transactions 資料表套用這些權限的結果如下：成員可以查詢美國客戶、自行車產品類別目錄及 2008 年的資料列。 使用者將無法查詢美國以外地區、非自行車及非 2008 年的任何交易，除非成為授與這些權限的其他角色成員。  
@@ -97,8 +96,8 @@ ms.locfileid: "52419849"
   
 |函數|描述|  
 |--------------|-----------------|  
-|[USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|傳回目前登入使用者的 domain\username。|  
-|[CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|傳回連接字串中的 CustomData 屬性。|  
+|[USERNAME 函式&#40;DAX&#41;](/dax/username-function-dax)|傳回目前登入使用者的 domain\username。|  
+|[CUSTOMDATA 函式&#40;DAX&#41;](/dax/customdata-function-dax)|傳回連接字串中的 CustomData 屬性。|  
   
  您可以使用 LOOKUPVALUE 函數傳回資料行值，其中 Windows 使用者名稱與 USERNAME 函數傳回的使用者名稱或 CustomData 函數傳回的字串相同。 然後，可以限制查詢，其中 LOOKUPVALUE 所傳回的值會符合相同或相關資料表中的值。  
   
@@ -141,8 +140,8 @@ ms.locfileid: "52419849"
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
  [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函式&#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 函式&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 函式&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

@@ -2,20 +2,20 @@
 title: ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 866307753cb23d2a7a95ae02a260cc625cf879a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1e39c771872b0afbb614257145f447d1a47386a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571332"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting 方法 - ListSSLCertificates
   傳回報表伺服器電腦上的憑證清單。  

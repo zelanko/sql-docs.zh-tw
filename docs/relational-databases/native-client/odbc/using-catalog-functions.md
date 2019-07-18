@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1fa87ff82d9fb47cc51f5add1380ae26270cd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c24e98f15793820df59bf372a73e42204814fb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913074"
 ---
 # <a name="using-catalog-functions"></a>使用目錄函數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54255383"
   
      傳回連結伺服器中所包含的目錄清單。  
   
- 您擁有連結的伺服器名稱和目錄名稱之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式支援從目錄取得資訊使用兩部分名稱_linked_server_name_**。**_catalog_ for *CatalogName*下列 odbc 目錄函數：  
+ 您擁有連結的伺服器名稱和目錄名稱之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式支援從目錄取得資訊使用兩部分名稱_linked_server_name_ **。** _catalog_ for *CatalogName*下列 odbc 目錄函數：  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "54255383"
   
 -   **SQLTables**  
   
- 兩段_linked_server_name_**。**_catalog_也支援*FKCatalogName*並*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
+ 兩段_linked_server_name_ **。** _catalog_也支援*FKCatalogName*並*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要下列檔案：  
   

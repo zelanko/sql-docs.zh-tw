@@ -23,14 +23,18 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2964300e2990721afe920c0e418a220fe0b1a22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2f8c4744c7e56e7b3014e8af3b462c87b639b6ae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271935"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725902"
 ---
 # <a name="row-sampling-transformation"></a>資料列取樣轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「資料列取樣」轉換是用來取得隨機選取的輸入資料集子集。 您可以指定輸出範例的確實大小，以及指定隨機號碼產生器的種子資料 (Seed)。  
   
  可用於隨機取樣的應用程式有許多種。 例如，某公司希望隨機選取 50 名員工接受抽獎獎項，即可在員工資料庫上使用「資料列取樣」轉換產生正確的獲獎者數目。  

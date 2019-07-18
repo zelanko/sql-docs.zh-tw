@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c27dfd012f87d730999e0e03a5a8b96d97b3d7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bd304bd86631ae143070f8bbf109fd9b9df8056
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932674"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>欄位集合屬性、 方法和事件
 ## <a name="properties"></a>屬性  
@@ -39,7 +38,7 @@ ms.locfileid: "47851136"
   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

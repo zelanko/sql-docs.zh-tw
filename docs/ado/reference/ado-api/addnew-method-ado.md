@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 911509c62c5ae93bc73ca94469ac776195d2a8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921320"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 建立可更新的新記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

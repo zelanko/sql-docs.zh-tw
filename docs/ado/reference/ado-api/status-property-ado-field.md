@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11a39cf6f30e7a4892d6f2df5c8c373ab6847632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930839"
 ---
 # <a name="status-property-ado-field"></a>Status 屬性 (ADO Field)
 表示的狀態[欄位](../../../ado/reference/ado-api/field-object.md)物件。  

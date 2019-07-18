@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - default members
@@ -16,12 +15,12 @@ ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49120d810eac622d75a8d3691654b65b78d0d570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077423"
 ---
 # <a name="define-a-default-member"></a>定義預設成員
   當查詢中並未包含屬性階層時，會使用屬性階層的預設成員來評估運算式。 只要查詢包含屬性階層，或是使用者階層包含做為屬性階層來源的屬性，就會忽略預設成員。 這是因為使用查詢中指定的成員。  

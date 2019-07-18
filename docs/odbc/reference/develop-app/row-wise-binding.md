@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061625"
 ---
 # <a name="row-wise-binding"></a>資料列取向的繫結
 當使用資料列取向繫結時，應用程式定義結構，包含一或兩個，或在某些情況下三個，每個資料行的資料，所要傳回的項目。 第一個項目會保存的資料值，而第二個元素會保留長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果這麼做，此結構會包含第三個項目。 接著，應用程式配置這些結構的陣列，其中包含資料列集內有資料列的項目數。  

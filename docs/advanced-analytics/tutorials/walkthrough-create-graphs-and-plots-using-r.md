@@ -3,24 +3,23 @@ title: 使用 SQL 和 R 函式-SQL Server Machine Learning 建立圖形和繪圖
 description: 本教學課程示範如何建立圖形和繪圖使用 SQL Server 上的 R 語言函式。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 542e36e01565ab454cce8beae9a4fa65279d8fa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961788"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R （逐步解說） 建立圖形和繪圖
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本逐步解說的這個部分，您會學習技術來產生繪圖和使用 R 與 SQL Server 資料的對應。 您會建立簡單的長條圖，並再開發更複雜的地圖繪圖。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 這個步驟會假設根據先前在本逐步解說的步驟進行中的 R 工作階段。 它會使用連接字串和資料來源中建立的物件執行這些步驟。 下列工具和套件來執行指令碼。
 
@@ -101,7 +100,7 @@ ms.locfileid: "58513165"
     + 當開頭的行會`plot`執行時，轉譯的資料會序列化回本機 R 環境，以便您可以在您的 R 用戶端中檢視。
 
     > [!NOTE]
-    > 如果您在 Azure 虛擬機器中使用 SQL Server，您可能在此時會發生錯誤。 當預設的防火牆規則，在 Azure 中的 R 程式碼會封鎖網路存取，就會發生錯誤。 如需有關如何修正此錯誤的詳細資訊，請參閱 < [Azure VM 上的安裝 Machine Learning （R) Services](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)。
+    > 如果您在 Azure 虛擬機器中使用 SQL Server，您可能在此時會發生錯誤。 當預設的防火牆規則，在 Azure 中的 R 程式碼會封鎖網路存取，就會發生錯誤。 如需有關如何修正此錯誤的詳細資訊，請參閱 < [Azure VM 上的安裝 Machine Learning （R) Services](../install/sql-machine-learning-azure-virtual-machine.md)。
 
 4. 下圖顯示輸出繪圖。 計程車上車位置會以紅點新增到地圖上。 您的映像可能會有所不同，視幾個位置您所使用的資料來源。
 

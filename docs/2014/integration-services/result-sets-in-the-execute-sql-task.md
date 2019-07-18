@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ee56d8f285eb3e054241ac912b552e55665a552
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056433"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>執行 SQL 工作中的結果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，結果集是否會傳回到執行 SQL 工作，端視工作所使用的 SQL 命令類型而定。 例如，SELECT 陳述式通常會傳回結果集，INSERT 陳述式則不會。  
@@ -75,7 +74,7 @@ ms.locfileid: "58376256"
   
  將變數對應到 **單一資料列** 結果集時，如果符合下列條件，SQL 陳述式傳回的非字串值就會轉換為字串：  
   
--   **TypeConversionMode** 屬性設為 True。 您可以在 [屬性] 視窗中設定屬性值，也可以使用 **[執行 SQL 工作編輯器]**。  
+-   **TypeConversionMode** 屬性設為 True。 您可以在 [屬性] 視窗中設定屬性值，也可以使用 **[執行 SQL 工作編輯器]** 。  
   
 -   轉換不會導致資料截斷。  
   

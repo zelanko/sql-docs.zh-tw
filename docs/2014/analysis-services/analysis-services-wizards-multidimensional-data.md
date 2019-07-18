@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
@@ -13,12 +12,12 @@ ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062393"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 精靈 (多維度資料)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 下表描述可用的精靈。  

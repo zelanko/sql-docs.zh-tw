@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091093"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>有關用戶端使用 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的警告
   組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型，具有已從 10.0 版升級為 11.0 版。 當某些條件成立時，參考這個組件的自訂應用程式可能會失敗。  
@@ -85,6 +84,7 @@ ms.locfileid: "52413765"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md
+)  
   
   

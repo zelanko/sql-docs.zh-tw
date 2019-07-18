@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6ca20c4a8719ee6a80bd6a3c349dd50c8b0df81d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205827"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258709"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "53205827"
 |stack_bytes_committed|**int**|堆疊中已認可的位元組數。|  
 |stack_bytes_used|**int**|執行緒目前使用的位元組數。|  
 |affinity|**bigint**|這個執行緒正在執行的 CPU 遮罩。 這取決於所設定的值**ALTER SERVER CONFIGURATION SET PROCESS AFFINITY**陳述式。 若是軟相似性，可能與排程器不同。|  
-|優先權|**int**|這個執行緒的優先權值。|  
+|Priority|**int**|這個執行緒的優先權值。|  
 |地區設定|**int**|執行緒的快取地區設定 LCID。|  
 |Token|**varbinary(8)**|執行緒的快取模擬 Token 控制代碼。|  
 |is_impersonating|**int**|指出這個執行緒是否使用 Win32 模擬。<br /><br /> 1 = 執行緒使用不同於處理序預設值的安全性認證。 這指出執行緒模擬的實體不是建立處理序的實體。|  
@@ -69,7 +68,11 @@ ms.locfileid: "53205827"
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+
+## <a name="notes-on-linux-version"></a>Linux 版本的注意事項
+
+由於 SQL 引擎如何在 Linux 中，有些資訊不符合 Linux 診斷資料。 例如，`os_thread_id`等工具的結果不符`ps`，`top` procfs 或 (/proc/`pid`)。  這是因為平台抽象層 (SQLPAL)，SQL Server 元件與作業系統之間的層。
 
 ## <a name="examples"></a>範例  
  在啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會啟動執行緒，然後使工作者與這些執行緒產生關聯。 不過，外部元件 (例如擴充預存程序) 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之下啟動執行緒。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並沒有這些執行緒的控制權。 sys.dm_os_threads 可以提供資訊中取用資源之惡意執行緒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序。  

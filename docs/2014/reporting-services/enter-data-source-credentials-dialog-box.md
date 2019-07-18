@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.runtimecredentials.f1
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 02fbe6cab9c47f1ea9e246aaf19ba641c098d529
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109240"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>輸入資料來源認證對話方塊
   使用**輸入資料來源認證**對話方塊來提供您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認證，讓您可以從資料來源擷取資料。  

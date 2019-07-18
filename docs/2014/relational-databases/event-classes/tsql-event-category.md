@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62746082"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件類別目錄
   **TSQL** 事件類別目錄包含一般 TSQL 事件。  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854981"
 ---
 # <a name="create-synonyms"></a>建立同義字
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立同義字。  
@@ -50,7 +50,7 @@ ms.locfileid: "52773299"
   
 1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
-2.  以滑鼠右鍵按一下 [同義字] 資料夾，然後按一下 [新增同義字]。  
+2.  以滑鼠右鍵按一下 [同義字]  資料夾，然後按一下 [新增同義字]  。  
   
 3.  在 **[加入新的同義字]** 對話方塊中，輸入下列資訊。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "52773299"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中的現有資料表建立同義字。 然後，此同義字將用於後續範例中。  

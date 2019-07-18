@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109414"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>資料來源屬性頁面 (報表管理員)
   使用 [資料來源] 屬性頁，即可定義目前的報表如何連接到外部資料來源。 您可以覆寫原先隨同報表發行的資料來源連線資訊。 如果報表使用多重資料來源，則每一個資料來源在屬性頁中各有它自己的區段。 資料來源依其報表中定義的排序來列示。  
@@ -32,11 +31,11 @@ ms.locfileid: "56031980"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表的 **[一般]** 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 **[一般]** 屬性頁面。  
   
 4.  選取 **[資料來源]** 索引標籤。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **共用的資料來源**  
  指定報表使用的共用資料來源。 如需建立新的資料來源的詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。</c0>  
   
@@ -56,7 +55,7 @@ ms.locfileid: "56031980"
   
  `data source=<a SQL Server instance>;initial catalog=MyData`  
   
- 連接字串可設定為運算式，以便於執行階段指定資料來源。 資料來源運算式是在報表設計師的報表中定義的。 「報表管理員」中無法定義、檢視及修改資料來源運算式。 不過，您可以按一下 **[覆寫預設值]** 以輸入靜態連接字串來取代資料來源運算式。 如果您想要切換回運算式，請按一下 **[還原為預設值]**。 報表伺服器會儲存原始的連接字串，您需要時即可還原。 若要使用資料來源運算式，您必須使用原本在報表中發行的資料來源連接資訊。 共用資料來源不支援在連接字串中使用運算式。  
+ 連接字串可設定為運算式，以便於執行階段指定資料來源。 資料來源運算式是在報表設計師的報表中定義的。 「報表管理員」中無法定義、檢視及修改資料來源運算式。 不過，您可以按一下 **[覆寫預設值]** 以輸入靜態連接字串來取代資料來源運算式。 如果您想要切換回運算式，請按一下 **[還原為預設值]** 。 報表伺服器會儲存原始的連接字串，您需要時即可還原。 若要使用資料來源運算式，您必須使用原本在報表中發行的資料來源連接資訊。 共用資料來源不支援在連接字串中使用運算式。  
   
  **使用連線**  
  指定決定如何取得認證的選項。  
@@ -91,7 +90,7 @@ ms.locfileid: "56031980"
   
  若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。  如需有關此帳戶的詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。</c0>  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  

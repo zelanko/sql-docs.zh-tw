@@ -17,87 +17,79 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9d0dcecd83c38dcd42bc7512bd416bd70d743ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06847b9eeb2c01ae7b3e5d512a01f87adafdeb42
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712186"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731945"
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
+
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除資料表資料行。  
-  
-> [!CAUTION]  
->  當您從資料表中刪除資料行時，會刪除其本身及其其所包含的所有資料。
-  
- **本主題內容**  
-  
--   **開始之前：**  
-  
-     [限制事項](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **若要使用下列項目從資料表中刪除資料行：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Restrictions"></a> 限制事項  
- 您無法刪除具有 CHECK 條件約束的資料行。 您必須先刪除條件約束。  
-  
- 除非使用資料表設計工具，否則您無法刪除具有 PRIMARY KEY 或 FOREIGN KEY 條件約束或其他相依性的資料行。 使用 [物件總管] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]時，您必須先移除資料行的所有相依性。  
-  
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> 權限  
- 需要資料表的 ALTER 權限。  
-  
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
-  
-#### <a name="to-delete-columns-by-using-object-explorer"></a>若要使用物件總管來刪除資料行  
-  
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
-  
-2.  在 [物件總管] 中，尋找您想要從中刪除資料行的資料表，然後展開以公開資料行名稱。 
+此主題說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除資料表資料行。
 
-3.  以滑鼠右鍵按一下您想要刪除的資料行，然後選擇 [刪除]。  
-  
-3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
-  
- 如果資料行包含條件約束或其他相依性， **[刪除物件]** 對話方塊將會顯示錯誤訊息。 請刪除參考的條件約束，藉以解決此錯誤。  
-  
-#### <a name="to-delete-columns-by-using-table-designer"></a>若要使用資料表設計工具來刪除資料行  
-  
-1.  在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]。  
-  
-2.  以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]。  
-  
-3.  如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [ **是**]。  
-  
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
-  
-#### <a name="to-delete-columns"></a>若要刪除資料行  
-  
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
-  
-2.  在標準列上，按一下 **[新增查詢]**。  
-  
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    ALTER TABLE dbo.doc_exb DROP COLUMN column_b ;  
-    ```  
-  
- 如果資料行包含條件約束或其他相依性，將會傳回錯誤訊息。 請刪除參考的條件約束，藉以解決此錯誤。  
-  
- 如需其他範例，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
-  
-##  <a name="FollowUp"></a>  
+> [!CAUTION]
+> 當您從資料表中刪除資料行時，會刪除其本身及其其所包含的所有資料。
+
+ **本主題內容**
+
+- **開始之前：**
+
+   [限制事項](#Restrictions)
+
+   [安全性](#Security)
+
+- **若要使用下列項目從資料表中刪除資料行：**
+
+   [Transact-SQL](#SSMSProcedure)
+
+   [Transact-SQL](#TsqlProcedure)
+
+## <a name="BeforeYouBegin"></a> 開始之前
+
+### <a name="Restrictions"></a> 限制事項
+
+您無法刪除具有 CHECK 條件約束的資料行。 您必須先刪除條件約束。
+
+除非使用資料表設計工具，否則您無法刪除具有 PRIMARY KEY 或 FOREIGN KEY 條件約束或其他相依性的資料行。 使用 [物件總管] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]時，您必須先移除資料行的所有相依性。
+
+### <a name="Security"></a> 安全性
+
+#### <a name="Permissions"></a> 權限
+
+需要資料表的 ALTER 權限。
+
+## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+
+### <a name="to-delete-columns-by-using-object-explorer"></a>若要使用物件總管來刪除資料行
+
+1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
+2. 在 [物件總管]  中，尋找您想要從中刪除資料行的資料表，然後展開以公開資料行名稱。
+3. 以滑鼠右鍵按一下您想要刪除的資料行，然後選擇 [刪除]  。
+4. 在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。
+
+如果資料行包含條件約束或其他相依性， **[刪除物件]** 對話方塊將會顯示錯誤訊息。 請刪除參考的條件約束，藉以解決此錯誤。
+
+### <a name="to-delete-columns-by-using-table-designer"></a>若要使用資料表設計工具來刪除資料行
+
+1. 在**物件總管**中，以滑鼠右鍵按一下您想要從中刪除資料行的資料表，然後選擇 [設計]  。
+2. 以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]  。
+3. 如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [ **是**]。
+
+## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+
+### <a name="to-delete-columns"></a>若要刪除資料行
+
+下列範例會示範如何刪除資料行。
+
+```sql
+ALTER TABLE dbo.doc_exb DROP COLUMN column_b;
+```
+
+如果資料行包含條件約束或其他相依性，將會傳回錯誤訊息。 請刪除參考的條件約束，藉以解決此錯誤。
+
+如需其他範例，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。
+
+## <a name="FollowUp"></a>

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117916"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
   
-`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)**，預設值是 PUSH。 如果**推播**新增發送訂閱，散發者端新增合併代理程式。 如果**提取**，而不會增加 「 合併代理程式在散發者端加入提取訂閱。  
+`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)** ，預設值是 PUSH。 如果**推播**新增發送訂閱，散發者端新增合併代理程式。 如果**提取**，而不會增加 「 合併代理程式在散發者端加入提取訂閱。  
   
 > [!NOTE]  
 >  匿名訂閱不需要使用這個預存程序。  
   
-`[ @subscriber_type = ] 'subscriber_type'` 為訂閱者的類型。 *subscriber_type*已**nvarchar(15)**，而且可以是下列值之一。  
+`[ @subscriber_type = ] 'subscriber_type'` 為訂閱者的類型。 *subscriber_type*已**nvarchar(15)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -84,7 +83,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` 數字，表示訂閱優先權。 *subscription_priority*已**實際**，預設值是 NULL。 如果是本機和匿名訂閱，優先權就是 0.0。 如果是全域訂閱，優先權必須小於 100.0。  
   
-`[ @sync_type = ] 'sync_type'` 這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)**，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
+`[ @sync_type = ] 'sync_type'` 這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)** ，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
   
 > [!NOTE]  
 >  我們建議您不要指定的值**無**。  
@@ -150,11 +149,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` 是 「 合併代理程式停止的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元執行。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。 這個參數用來新增擷取輸出以及將輸出儲存在檔案中的命令，或指定組態檔或屬性。  
+`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元執行。 *optional_command_line*已**nvarchar(4000)** ，預設值是 NULL。 這個參數用來新增擷取輸出以及將輸出儲存在檔案中的命令，或指定組態檔或屬性。  
   
-`[ @description = ] 'description'` 是這個合併訂閱的簡要描述。 *描述*已**nvarchar(255)**，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
+`[ @description = ] 'description'` 是這個合併訂閱的簡要描述。 *描述*已**nvarchar(255)** ，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定訂用帳戶是否可以透過同步處理[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定訂用帳戶是否可以透過同步處理[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)** ，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 `[ @offloadagent = ] remote_agent_activation` 指定可以從遠端啟動代理程式。 *remote_agent_activation&lt*已**位元**預設值是**0**。  
   
@@ -163,9 +162,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @offloadserver = ] 'remote_agent_server_name'` 指定要用來啟動遠端代理程式之伺服器的網路名稱。 *remote_agent_server_name*已**sysname**，預設值是 NULL。  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 可讓以互動方式解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 可讓以互動方式解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)** ，預設值是 FALSE。  
   
-`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name*參數已被取代，而且無法設定。 *merge_job_name*已**sysname**，預設值是 NULL。  
+`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name* 參數已被取代，而且無法設定。 *merge_job_name*已**sysname**，預設值是 NULL。  
   
 `[ @hostname = ] 'hostname'` 所傳回的值會覆寫[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化篩選的 WHERE 子句中使用此函式時。 *主機名稱*已**sysname**，預設值是 NULL。  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_addmergesubscription**用於合併式複寫中。  
   
- 當**sp_addmergesubscription**的成員來執行**sysadmin**固定伺服器角色來建立發送訂閱，合併代理程式作業會隱含地建立及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務帳戶。 我們建議您執行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，並指定不同、 特定代理程式的 Windows 帳戶的認證**@job_login**和 **@job_password**. 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 當**sp_addmergesubscription**的成員來執行**sysadmin**固定伺服器角色來建立發送訂閱，合併代理程式作業會隱含地建立及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務帳戶。 我們建議您執行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，並指定不同、 特定代理程式的 Windows 帳戶的認證 **@job_login** 和 **@job_password** . 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -191,8 +190,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)   
  [互動式衝突解決方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_changemergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

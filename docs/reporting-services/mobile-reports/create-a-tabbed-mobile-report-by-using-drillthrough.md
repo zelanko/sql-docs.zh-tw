@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45b598a405637d17c1e22cccfdb67858bd8e2a46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061778"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用鑽研建立索引標籤式的行動報表
 了解如何使用鑽研報表和參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，使其外觀和行為類似索引標籤式報表。
@@ -33,12 +33,12 @@ ms.locfileid: "56287906"
     * Sales
     * Transportation
     * Fuel
-    * Storage
+    * 儲存體
     * Misc Expenses
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. 將 Sales 量測計的 [輔色] 設為 [開啟]，以和報表其餘部分形成對比--本例中為黑色上的白色。
+2. 將 Sales 量測計的 [輔色]  設為 [開啟]  ，以和報表其餘部分形成對比--本例中為黑色上的白色。
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
@@ -50,7 +50,7 @@ ms.locfileid: "56287906"
 
     * Transportation
     * Fuel
-    * Storage
+    * 儲存體
     * Misc Expenses
 
 3. 將它們儲存到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表伺服器。
@@ -63,15 +63,15 @@ ms.locfileid: "56287906"
 
     ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. 選取 [版面配置] 索引標籤，然後在 [視覺屬性] 窗格中，選取 [鑽研目標]。
+2. 選取 [版面配置]  索引標籤，然後在 [視覺屬性]  窗格中，選取 [鑽研目標]  。
 
-3. 選取 [行動報表]。
+3. 選取 [行動報表]  。
 
 4. 巡覽並選取鑽研目的地的報表，本例中為 "Financials - Transportation"。
 
     ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. 在 [設定目標報表]，選取篩選報表的參數，然後選取 [套用]。
+5. 在 [設定目標報表]  ，選取篩選報表的參數，然後選取 [套用]  。
 
    ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
@@ -81,7 +81,7 @@ ms.locfileid: "56287906"
 
 1.  開啟 Transportation 報表，設定 Sales 量測計鑽研至銷售報表，並設定其他三個量測計鑽研至其個別報表。
 
-2. 仍然在 Transportation 報表中，將 Transportation 量測計的 [輔色] 設為 [開啟]，與報表的其餘部分對比。
+2. 仍然在 Transportation 報表中，將 Transportation 量測計的 [輔色]  設為 [開啟]  ，與報表的其餘部分對比。
 
 3. 針對 Fuel、Storage 和 Misc Expenses 報表，重複上述步驟。 
 

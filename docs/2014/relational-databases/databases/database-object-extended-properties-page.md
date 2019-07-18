@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917203"
 ---
 # <a name="database-object-extended-properties-page"></a>資料庫物件 (擴充屬性頁面)
   擴充屬性讓您能夠將自訂屬性加入資料庫物件中。 使用此頁面來檢視或修改選取物件的擴充屬性。 所有資料庫物件類型的 [擴充屬性] 頁面都是相同的。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014566"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>在 SQLXML 4.0 中使用 XPath 查詢
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於註解式 XSD 結構描述的支援可讓您建立資料庫中儲存之關聯式資料的 XML 檢視。 您可以使用 XPath 語言的子集來查詢註解式 XSD 結構描述所建立的 XML 檢視。  

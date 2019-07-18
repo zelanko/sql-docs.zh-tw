@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060222"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對每個由 Database Mail 系統傳回的 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息，各包含一個資料列。 (這個內容中的訊息指的是錯誤訊息之類的訊息，不是電子郵件訊息。) 設定**記錄層級**使用的參數**設定系統參數**對話方塊中的 Database Mail 組態精靈，或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)預存程序，以判斷傳回的訊息。  
+  針對每個由 Database Mail 系統傳回的 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息，各包含一個資料列。 （在此內容中的訊息是指例如提供錯誤訊息，而不是電子郵件訊息的訊息）。設定**記錄層級**使用的參數**設定系統參數**對話方塊中的 Database Mail 組態精靈，或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)預存程序，以判斷傳回的訊息。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

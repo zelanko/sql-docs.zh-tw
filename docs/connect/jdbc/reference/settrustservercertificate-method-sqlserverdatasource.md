@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 313e763fd82b1bf8515fcb5f7a850d84da260de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93feffdb0135e4530b43a6f092c581d145b5c0c6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793732"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783531"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

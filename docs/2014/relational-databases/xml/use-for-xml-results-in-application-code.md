@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193337"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  
@@ -153,25 +153,25 @@ ms.locfileid: "58532830"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文件 MyDataIsle 的用戶端處理  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales：** 1500000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue：** 150000  
   
--   **BankName:** 主要的國際電話  
+-   **BankName：** Primary International  
   
--   **BusinessType:** OS  
+-   **BusinessType：** OS  
   
--   **YearOpened:** 1974  
+-   **YearOpened：** 1974  
   
--   **特殊：** Road  
+-   **Specialty：** Road  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet：** 38000  
   
--   **品牌：** 3  
+-   **Brands：** 3  
   
--   **網際網路：** DSL  
+-   **Internet：** DSL  
   
--   **NumberEmployees:** 40  
+-   **NumberEmployees：** 40  
   
  VBScript 訊息方塊會顯示下列由 FOR XML 查詢結果所傳回之原始而未篩選過的 XML 資料島內容。  
   

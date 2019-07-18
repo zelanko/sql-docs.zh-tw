@@ -10,15 +10,15 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3fc2eec8064b9b5cad1f6a1875032f1d1158bc97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480968"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
   本主題描述如何設定 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄檔的進階設定，例如設定記錄檔的輪替檔案大小限制、設定事件的時間戳記模式等等。  
@@ -47,7 +47,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]** 。  
   
 3.  在 [查詢編輯器] 視窗中，複製下列 SQL 陳述式：  
   

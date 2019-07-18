@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355079"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079870"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>確認 PowerPivot for SharePoint 安裝
   您在 SharePoint 伺服器陣列中安裝的 PowerPivot for SharePoint 執行個體是透過 SharePoint 管理中心來進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以確認 PowerPivot 伺服器元件和功能是可用的。 但是，為了完整確認安裝作業，您必須擁有可以發行到 SharePoint 並從文件庫存取的 PowerPivot 活頁簿。 為了測試用途，您可以發行已經包含 PowerPivot 資料的範例活頁簿，並用它來確認 SharePoint 整合已正確設定。  
@@ -26,32 +25,32 @@ ms.locfileid: "53355079"
   
 1.  在 開始 功能表中，按一下 **所有程式**，開啟 Microsoft SharePoint 2010 產品，然後按一下**SharePoint 2010 管理中心**。  
   
-2.  輸入您的使用者名稱和密碼，然後按一下 [確定]。  
+2.  輸入您的使用者名稱和密碼，然後按一下 [確定]  。  
   
      您可以選擇修改瀏覽器設定，這樣一來，當您每次開啟管理中心時，就不必輸入使用者名稱和密碼。 若要將管理中心當做信任的網站加入，請執行下列動作。  
   
-    1.  在 Internet Explorer 的 [工具] 功能表中，按一下 [網際網路選項]。  
+    1.  在 Internet Explorer 的 [工具] 功能表中，按一下 [網際網路選項]  。  
   
-    2.  在 [安全性] 索引標籤的 [選取要檢視或變更安全性設定的區域] 區段中，按一下 [信任的網站]，然後按一下 [網站]。  
+    2.  在 [安全性] 索引標籤的 [選取要檢視或變更安全性設定的區域]  區段中，按一下 [信任的網站]，然後按一下 [網站]。  
   
-    3.  清除 [此區域內的所有網站需要伺服器驗證 (https:)] 核取方塊。  
+    3.  清除 [此區域內的所有網站需要伺服器驗證 (https:)]  核取方塊。  
   
-    4.  在 [將這個網站新增到區域] 中，輸入網站的 URL，然後按一下 [新增]。  
+    4.  在 [將這個網站新增到區域]  中，輸入網站的 URL，然後按一下 [新增]  。  
   
-    5.  按一下 [關閉]，然後按一下 [確定]。  
+    5.  按一下 [關閉]  ，然後按一下 [確定]  。  
   
         > [!NOTE]  
         >  SharePoint 安裝文件集包括用來解決 Proxy 伺服器錯誤以及停用 Internet Explorer 中 [增強式安全性設定] 的其他指示，好讓您可以下載及安裝更新。 如需詳細資訊，請參閱 Microsoft 網站上[以 SQL Server 部署單一伺服器](https://go.microsoft.com/fwlink/?LinkId=177754)中的 "**Perform additional tasks**" 一節。  
   
-3.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列功能]**。  
+3.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列功能]** 。  
   
-4.  確認 **[PowerPivot 整合功能]** 為 **[使用中]**。  
+4.  確認 **[PowerPivot 整合功能]** 為 **[使用中]** 。  
   
-5.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]**。  
+5.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器上的服務]** 。  
   
 6.  確認 **SQL Server Analysis Services** 和 **SQL Server PowerPivot 系統服務** 都已啟動。  
   
-7.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]**。  
+7.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
   
 8.  按一下 **預設的 PowerPivot 服務應用程式**此應用程式中開啟 PowerPivot 管理儀表板。 在第一次使用時，需要數分鐘才能載入儀表板。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "53355079"
   
 2.  確認應用程式中可以使用 PowerPivot 資料存取和處理功能。 若要這樣做，您可以確認 PowerPivot 提供的文件庫範本是否存在：  
   
-    1.  在 網站動作，按一下 **更多選項...**.  
+    1.  在 網站動作，按一下 **更多選項...** .  
   
     2.  在程式庫，您應該會看到**資料摘要庫**並**PowerPivot 圖庫**。 這些文件庫範本是由 PowerPivot 功能所提供，如果此功能已正確整合，就可以在文件庫清單中看到這些範本。  
   
@@ -79,17 +78,17 @@ ms.locfileid: "53355079"
   
 4.  按一下活頁簿頂端的交叉分析篩選器或篩選。 月份、色彩和類型是此活頁簿中的交叉分析篩選器。 按一下交叉分析篩選器會啟動 PowerPivot 查詢並證明您的伺服器可以運作。 伺服器將會在背景載入 PowerPivot 資料，然後傳回結果。  
   
-5.  回到文件庫。 選取活頁簿右邊的向下箭號，然後按一下 [啟動 Power View]。 此步驟會確認 Reporting Services 中的 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 功能可以運作。 如果您未安裝 Reporting Services，請略過此步驟。  
+5.  回到文件庫。 選取活頁簿右邊的向下箭號，然後按一下 [啟動 Power View]  。 此步驟會確認 Reporting Services 中的 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 功能可以運作。 如果您未安裝 Reporting Services，請略過此步驟。  
   
      在下一個步驟中，您將會連接到 Management Studio 中的伺服器，並確認已經載入及快取資料。  
   
 6.  在 [開始] 功能表中，從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 程式群組啟動 SQL Server Management Studio。 如果伺服器上未安裝此工具，您可以向前跳到最後一個步驟，確認快取檔案存在。  
   
-7.  在 [伺服器類型] 中，選取 [Analysis Services]。  
+7.  在 [伺服器類型] 中，選取 [Analysis Services]  。  
   
-8.  在 伺服器名稱輸入**\<伺服器名稱 > \powerpivot**，其中**\<伺服器名稱 >** 是已安裝 PowerPivot for SharePoint 的電腦名稱。  
+8.  在 伺服器名稱輸入 **\<伺服器名稱 > \powerpivot**，其中 **\<伺服器名稱 >** 是已安裝 PowerPivot for SharePoint 的電腦名稱。  
   
-9. 按一下 **[連接]**。 這樣會確認可以使用 Analysis Services 伺服器。  
+9. 按一下 **[連接]** 。 這樣會確認可以使用 Analysis Services 伺服器。  
   
 10. 在 [物件總管] 中，您可以按一下**資料庫**，檢視載入的 PowerPivot 資料檔案的清單。  
   

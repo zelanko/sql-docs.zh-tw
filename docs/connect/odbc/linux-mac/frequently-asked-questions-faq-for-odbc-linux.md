@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2f363fecebfe9a4ee4e586a5c5df703b47aa0e6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: aadbf8d0cc850d71626663883587195a8229ada8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602978"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785854"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 和 macOS 的常見問題集 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

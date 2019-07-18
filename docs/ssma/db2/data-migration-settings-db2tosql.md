@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989738"
 ---
 # <a name="data-migration-settings-db2tosql"></a>資料移轉設定 (DB2ToSQL)
   
@@ -40,7 +39,7 @@ ms.locfileid: "51681076"
     -   如果未選取此文字方塊中，已移轉的資料將會新增到目標資料庫的現有資料。  
   
 2.  **選取 使用自訂：**  
-     此選項可讓使用者修改 **選取** 存在的陳述式 (**選取** 陳述式可讓使用者選取要顯示在目標資料庫的資料)。  
+     此選項可讓使用者修改 **選取** 存在的陳述式 (**選取**陳述式可讓使用者選取要顯示在目標資料庫的資料)。  
   
     1.  根據預設，這個文字方塊未核取。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "51681076"
   
 有兩個按鈕出現的閱聽。:  
   
--   **套用：** 按一下 **套用**套用已變更的設定。  
+-   **適用於：** 按一下 **套用**套用已變更的設定。  
   
 -   **取消：** 按一下 **取消**還原出現設定進行變更之前。  
   

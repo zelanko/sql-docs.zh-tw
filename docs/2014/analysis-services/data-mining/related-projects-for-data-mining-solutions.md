@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082992"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
   資料採礦方案至少需要資料採礦專案，專案中會定義資料來源、資料來源檢視、採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  

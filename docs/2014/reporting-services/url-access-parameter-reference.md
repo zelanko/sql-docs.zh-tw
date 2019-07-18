@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031729"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098715"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](specify-device-information-settings-in-a-url.md)。  
@@ -64,7 +63,7 @@ ms.locfileid: "56031729"
 |*PersistStreams*|轉譯單一永續性資料流中的報表。 這個參數是由影像轉譯器用來傳輸轉譯的報表，一次一個區塊。 在 URL 存取字串中使用這個參數後，以 *GetNextStream* 參數使用相同的 URL 存取字串，而不用 *PersistStreams* 參數，以取得永續性資料流中的下一個區塊。 這個 URL 命令最後會傳回 0 個位元組資料流，表示永續性資料流結尾。 預設值是 `false`。|  
 |*GetNextStream*|取得使用 *PersistStreams* 參數存取的永續性資料流中的下一個資料區塊。 如需詳細資訊，請參閱 *PersistStreams*的描述。 預設值是 `false`。|  
 |*SessionID*|指定用戶端應用程式和報表伺服器之間已建立的使用中報表工作階段。 此參數的值是設定為工作階段識別碼。<br /><br /> 您可以將工作階段識別碼指定為 Cookie 或是 URL 的一部分。 當將報表伺服器設定成不使用工作階段 Cookie 時，第一個沒有指定工作階段識別碼的要求，會導致使用某個工作階段識別碼來進行重新導向。 如需有關報表伺服器工作階段的詳細資訊，請參閱＜ [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)＞。|  
-|*ClearSession*|`true` 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 (報表執行個體定義為：使用不同的報表參數值多次執行相同的報表)。預設值是 `false`。|  
+|*ClearSession*|`true` 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 (報表執行個體的定義：使用不同報表參數值執行多次的相同一份報表)。預設值是 `false`。|  
 |*ResetSession*|`true` 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值是 `false`。|  
 |*ShowHideToggle*|切換該報表區段的顯示和隱藏狀態。 指定正整數以表示要切換的區段。|  
   
@@ -80,7 +79,7 @@ ms.locfileid: "56031729"
 |*ParamMode*|控制報表檢視器 Web 組件的參數提示區域在整頁檢視中的顯示方式。  預設值是 `Full`。 有效值為：<br /><br /> `Full`：顯示參數提示區域。<br /><br /> `Collapsed`：摺疊參數提示區域。<br /><br /> `Hidden`：隱藏參數提示區域。<br /><br /> 例如，在 `SharePoint` 模式中，摺疊參數提示區域。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  
 |*DocMapMode*|控制報表檢視器 Web 組件的文件引導模式區域在整頁檢視中的顯示方式。 預設值是 `Full`。 有效值為：<br /><br /> `Full`：顯示文件引導模式區域。<br /><br /> `Collapsed`：摺疊文件引導模式區域。<br /><br /> `Hidden`：隱藏文件引導模式區域。|  
 |*DockToolBar*|控制報表檢視器 Web 組件的工具列是否停駐在頂部或底部。 有效值為 `Top` 和 `Bottom`。 預設值是 `Top`。<br /><br /> <br /><br /> 例如，在 `SharePoint` 模式中，將工具列停駐在底部。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
-|*ToolBarItemsDisplayMode*|控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如：針對沒有動作功能表，請使用 rv:ToolBarItemsDisplayMode=63 (或 0x3F)，這就是 1+2+4+8+16+ 32；僅針對動作功能表項目，請使用 rv:ToolBarItemsDisplayMode=960 (或 0x3C0)。  預設值是 `-1`，其中包含所有的工具列項目。 有效值為：<br /><br /> 1 (0x1)：[上一步] 按鈕<br /><br /> 2 (0x2)：文字搜尋控制項<br /><br /> 4 (0x4)：頁面導覽控制項<br /><br /> 8 (0x8)：[重新整理] 按鈕<br /><br /> 16 (0x10)：[顯示比例] 清單方塊<br /><br /> 32 (0x20)：[Atom 摘要] 按鈕<br /><br /> 64 (0x40)：[動作] 中的 [列印] 功能表選項<br /><br /> 128 (0x80)：[動作] 中的 [匯出] 子功能表<br /><br /> 256 (0x100：[動作] 中的 [用報表產生器開啟] 功能表選項<br /><br /> 512 (0x200：[動作] 中的 [訂閱] 功能表選項<br /><br /> 1024 (0x400：[動作] 中的 [新資料警示] 功能表選項<br /><br /> 例如，在`SharePoint`模式中只顯示**回**按鈕、 文字搜尋控制項、 頁面導覽控制項，而**重新整理** 按鈕。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
+|*ToolBarItemsDisplayMode*|控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如：針對沒有動作功能表，請使用 rv:ToolBarItemsDisplayMode=63 (或 0x3F)，這就是 1+2+4+8+16+ 32；僅針對動作功能表項目，請使用 rv:ToolBarItemsDisplayMode=960 (或 0x3C0)。  預設值是 `-1`，其中包含所有的工具列項目。 有效值為：<br /><br /> 1 (0x1)：[上一步]  按鈕<br /><br /> 2 (0x2)：文字搜尋控制項<br /><br /> 4 (0x4)：頁面導覽控制項<br /><br /> 8 (0x8)：[重新整理]  按鈕<br /><br /> 16 (0x10)：[顯示比例]  清單方塊<br /><br /> 32 (0x20)：[Atom 摘要]  按鈕<br /><br /> 64 (0x40)：[動作]  中的 [列印]  功能表選項<br /><br /> 128 (0x80)：[動作]  中的 [匯出]  子功能表<br /><br /> 256 (0x100：[動作]  中的 [用報表產生器開啟]  功能表選項<br /><br /> 512 (0x200：[動作]  中的 [訂閱]  功能表選項<br /><br /> 1024 (0x400：[動作]  中的 [新資料警示]  功能表選項<br /><br /> 例如，在`SharePoint`模式中只顯示**回**按鈕、 文字搜尋控制項、 頁面導覽控制項，而**重新整理** 按鈕。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
   
 ## <a name="see-also"></a>另請參閱  
  [URL 存取 &#40;SSRS&#41;](url-access-ssrs.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
@@ -15,12 +14,12 @@ ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083253"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>巢狀資料表 (Analysis Services - 資料採礦)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供獨特方法來處理這些情況下，就使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
@@ -67,7 +66,7 @@ ms.locfileid: "48121088"
  如需如何建立及使用模型篩選的詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構 &#40;Analysis Services-資料採礦 &#41;](mining-structures-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

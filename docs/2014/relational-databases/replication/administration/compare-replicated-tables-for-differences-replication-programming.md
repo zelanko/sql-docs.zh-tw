@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210780"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)
   發行項驗證可用來判斷「發行者」和「訂閱者」端資料表發行項的發行資料是否互異，若有則可能代表無法聚合。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。 不過，驗證只會傳回通過或失敗資訊，而不會針對來源及目的地資料表之間的差異提供任何相關資訊。 **tablediff** 命令提示字元公用程式會傳回兩個資料表之間差異的詳細資訊，甚至可能產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，將訂閱向發行者端的資料聚合。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], project additions
 - projects [SQL Server Management Studio], adding
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 786ac732e4e2dafed7275d477d5cc2552542400b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ff9f94b545e7170d7d68b7b5412bf99a4cc47696
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759616"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683236"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "47759616"
   
 1.  在 [方案總管] 中，選取方案。  
   
-2.  在 [檔案] 功能表上，指向 [新增]，再按一下 [現有的專案]。  
+2.  在 [檔案]  功能表上，指向 [新增]  ，再按一下 [現有的專案]  。  
   
-3.  在 [新增現有的專案] 對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]。  
+3.  在 [新增現有的專案]  對話方塊中，找出您要新增的專案，選取專案檔，再按一下 [開啟]  。  
   
     此時會將專案加入所選的方案中。  
   

@@ -1,20 +1,21 @@
 ---
 title: 報表資料
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 56da8c0b57955735d1e796ad3de7ecb9817a9b99
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: be36e61a44a416283e77638f01005f1b3e16883b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553020"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413052"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的報表資料
 
@@ -22,7 +23,7 @@ ms.locfileid: "53553020"
   
 ##  <a name="BkMk_ReportDataTerms"></a> 詞彙
 
- 如果您熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，檢閱中的下列條款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*資料連接*，*內嵌資料來源*，*共用資料來源*，*內嵌資料集*，*共用資料集*，*資料集查詢**報表組件*，並*的資料警示*。  
+ 如果您熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，檢閱中的下列條款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*資料連接*，*內嵌資料來源*，*共用資料來源*，*內嵌資料集*，*共用資料集*，*資料集查詢* *報表組件*，並*的資料警示*。  
   
 ##  <a name="BkMk_ReportDataTips"></a> 指定報表資料的秘訣
 

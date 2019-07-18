@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ae175665c2a62caa2d3b7b845c68fefebcfd4c32
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 4e3aa00334d98af02521005679174feb3b28c55f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001519"
 ---
 # <a name="comparison-operators"></a>比較運算子
 

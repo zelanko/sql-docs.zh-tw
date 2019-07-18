@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f9dc8938dc5809a38a68343e5fe356eebd98a67d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 78dda3464aab255834acffd16afd298021c40fd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945021"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>建立 Master Data Services 資料庫與 Web 應用程式的關聯
 
@@ -24,7 +23,7 @@ ms.locfileid: "47622136"
 
   將 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯，以指定要用於 Web 作業的資料庫。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 必須安裝在本機電腦上。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)。  
   
@@ -36,21 +35,21 @@ ms.locfileid: "47622136"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]**。  
+2.  按一下左窗格中的 **[Web 組態]** 。  
   
-3.  在 [Web 組態] 頁面的 [Web 應用程式] 底下，從 [網站] 清單中選取包含您的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式之網站。  
+3.  在 [Web 組態]  頁面的 [Web 應用程式]  底下，從 [網站]  清單中選取包含您的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式之網站。  
   
-4.  在 [Web 應用程式] 方塊中，選取主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的 Web 應用程式。  
+4.  在 [Web 應用程式]  方塊中，選取主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的 Web 應用程式。  
   
-5.  在 [將應用程式與資料庫產生關聯] 底下，按一下 [選取]。 [連接到資料庫] 對話方塊隨即開啟。  
+5.  在 [將應用程式與資料庫產生關聯]  底下，按一下 [選取]  。 [連接到資料庫]  對話方塊隨即開啟。  
   
-6.  為主控 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定連接資訊，然後按一下 [連接]。  
+6.  為主控 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體指定連接資訊，然後按一下 [連接]  。  
   
-7.  從 [Master Data Services 資料庫] 清單，選取要與 Web 應用程式產生關聯的資料庫，然後按一下 [確定]。  
+7.  從 [Master Data Services 資料庫]  清單，選取要與 Web 應用程式產生關聯的資料庫，然後按一下 [確定]  。  
   
-8.  確認 [將應用程式與資料庫產生關聯] 底下的執行個體和資料庫資訊都正確無誤，然後按一下 [套用]。  
+8.  確認 [將應用程式與資料庫產生關聯]  底下的執行個體和資料庫資訊都正確無誤，然後按一下 [套用]  。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   建立 Web 應用程式時，會自動啟用對 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務的程式設計存取。 為了讓開發人員可存取服務中繼資料，輕鬆地為程式設計存取產生 Proxy 類別，啟用中繼資料發佈。 如需詳細資訊，請參閱 [建立主資料管理員 Web 服務 Proxy 類別](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)。  
   

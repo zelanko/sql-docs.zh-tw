@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HAVING clause, query groups
 - group query conditions [SQL Server]
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0dd5f15a013da84217bb588bca8efbf62d257108
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: f3edb0c9985a0d7cf31abfb8c433bcdef5c99256
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509645"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681213"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>指定群組條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52509645"
   
 2.  如果[準則窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中沒有您要做為條件基礎的資料行，請新增它。 (條件通常牽涉已經是群組或摘要資料行的資料行)。您無法使用不屬於彙總函式 (Aggregate Function) 或 GROUP BY 子句一部分的資料行。  
   
-3.  在 [篩選條件] 欄位中，指定要套用至群組的條件。  
+3.  在 [篩選條件]  欄位中，指定要套用至群組的條件。  
   
     [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會自動在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的陳述式中建立 HAVING 子句，如下列範例所示：  
   

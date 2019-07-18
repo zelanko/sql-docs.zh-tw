@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20fdea1dd7a182ae3925880e1dded6537e297de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a2ca81717dcf7d5794683a33f2f3f5d080d3f1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044928"
 ---
 # <a name="creating-a-driver-application"></a>建立驅動程式應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "51661317"
   
 -   執行大量複製作業  
   
--   管理大型資料 (**varchar （max)**， **nvarchar （max)**，並**varbinary （max)** 資料行) 作業  
+-   管理大型資料 (**varchar （max)** ， **nvarchar （max)** ，並**varbinary （max)** 資料行) 作業  
   
 -   設定資料庫鏡像時，使用重新連接邏輯來簡化容錯移轉  
   
@@ -105,7 +104,7 @@ ms.locfileid: "51661317"
   
 -   針對連結之伺服器及其目錄的清單，呼叫分散式查詢中繼資料 API 函數。  
   
- 使用大量複製功能的任何 C 或 c + + ODBC 應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式必須與 sqlncli11.lib 檔連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli.h 和 sqlncli11.lib 檔案會隨著發佈[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發人員工具。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
+ 任何 C 或C++使用大量複製功能的 ODBC 應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式必須與 sqlncli11.lib 檔連結。 呼叫分散式查詢中繼資料 API 函數的應用程式也必須與 sqlncli11.lib 連結。 Sqlncli.h 和 sqlncli11.lib 檔案會隨著發佈[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發人員工具。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Include 和 Lib 目錄應該位於編譯器的 INCLUDE 和 LIB 路徑，如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

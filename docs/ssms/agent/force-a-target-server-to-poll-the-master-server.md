@@ -13,16 +13,16 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - target servers [SQL Server], polling the master server
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0f3c9d209055bc05ff53c64f354b282e32be8c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb1fbd7560e4c9507ad5bea8c7ec6348522642d1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740496"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687102"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47740496"
 > [!NOTE]  
 > 如果當目標伺服器嘗試上傳作業狀態時無法存取主要伺服器，作業狀態會被多工緩衝處理，直到可以存取主要伺服器為止。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
--   **若要強制目標伺服器輪詢主要伺服器，請使用：**[SQL Server Management Studio](#SSMS)  
+-   **若要強制目標伺服器輪詢主要伺服器，請使用：** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47740496"
   
 1.  在 **[物件總管]** 中展開主要伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]，指向 [多重伺服器管理]，然後按一下 [管理目標伺服器]。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]  ，指向 [多重伺服器管理]  ，然後按一下 [管理目標伺服器]  。  
   
-3.  按一下目標伺服器，然後按一下 **[強制輪詢]**。  
+3.  按一下目標伺服器，然後按一下 **[強制輪詢]** 。  
   

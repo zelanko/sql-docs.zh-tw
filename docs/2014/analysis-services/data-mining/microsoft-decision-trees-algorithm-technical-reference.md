@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -21,12 +20,12 @@ ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8b52319eaa9af7305c2d3044f3e19762437fff62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084021"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種混合式演算法，其中併入建立樹狀結構的不同方法，並支援多種分析工作，包括迴歸、分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
@@ -36,7 +35,7 @@ ms.locfileid: "53365400"
 ## <a name="implementation-of-the-decision-trees-algorithm"></a>實作決策樹演算法  
  Microsoft 決策樹演算法將貝氏方法套用至學習因果互動模型，取得模型的近似事後分佈。 如需這種方法的詳細說明，請參閱 Microsoft Research 網站上由 [結構和參數學習](https://go.microsoft.com/fwlink/?LinkId=237640&clcid=0x409)提供的文件。  
   
- 評估學習所需之 *「優先」* (Priors) 資訊值的方法，是根據 *「可能性相等」*(Likelihood Equivalence) 的假設。 此假設認為，資料無法協助您區分代表條件式獨立之相同判斷提示的網路結構。 每個案例都假設擁有一個單一的貝氏優先網路以及對於該網路之信心的單一量值。  
+ 評估學習所需之 *「優先」* (Priors) 資訊值的方法，是根據 *「可能性相等」* (Likelihood Equivalence) 的假設。 此假設認為，資料無法協助您區分代表條件式獨立之相同判斷提示的網路結構。 每個案例都假設擁有一個單一的貝氏優先網路以及對於該網路之信心的單一量值。  
   
  使用這些優先網路，演算法就可以根據目前的定型資料，計算網路結構的相對 *「事後機率」* (Posterior Probabilities)，並識別事後機率最高的網路結構。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "53365400"
  如需有關如何搭配使用的詳細說明[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法如何與分隔可預測資料行，請參閱[學習 Bayesian 網路：知識與統計資料的組合](https://go.microsoft.com/fwlink/?LinkId=45963)。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何與連續可預測資料行一起運作的詳細資訊，請參閱 [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(時間序列分析的自動迴歸樹狀模型) 的附錄。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>計分方法與特徵選取  
- Microsoft 決策樹演算法提供三個計算資訊的公式：Shannon 的 Entropy、Bayesian network with K2 prior 以及具有 prior 的統一狄氏分配 Bayesian 網路。 三種方法全都堅實的建立在資料採礦欄位中。 建議您試驗不同的參數與計分方法來判斷哪個公式會提供最佳的結果。 如需有關這些計分方法的詳細資訊，請參閱＜ [Feature Selection](../../sql-server/install/feature-selection.md)＞。  
+ Microsoft 決策樹演算法提供三個資訊改善的公式：Shannon 的 entropy、 Bayesian 網路 K2 prior 和統一狄氏分配 Bayesian 網路。 三種方法全都堅實的建立在資料採礦欄位中。 建議您試驗不同的參數與計分方法來判斷哪個公式會提供最佳的結果。 如需有關這些計分方法的詳細資訊，請參閱＜ [Feature Selection](../../sql-server/install/feature-selection.md)＞。  
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 特徵選取所使用的方法取決於建立模型所使用的演算法。 針對決策樹模型控制特徵選取的演算法參數為 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "53365400"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援會影響所產生之採礦模型效能和精確度的參數。 您也可以設定採礦模型資料行或採礦結構資料行上的模型旗標來控制處理資料的方式。  
   
 > [!NOTE]  
->  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  Microsoft 決策樹演算法可用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中，但是 Microsoft 決策樹演算法自訂行為的某些進階參數只能在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
  下表描述可以搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法使用的參數。  

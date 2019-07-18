@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdfceb91bf2f075254ef03319bf79d6d3d71d972
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2155087406860a70c70d8a2be6a8ed64425adb57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126497"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
 
@@ -36,7 +35,7 @@ ms.locfileid: "56017849"
   
 -   將最上層元素加入到 XML 文件中。 XML 需要單一的最上層元素 (根元素) 供文件使用。  
   
--   建立容器元素，例如**\<訂單 >** 包裝所有訂單的項目。  
+-   建立容器元素，例如 **\<訂單 >** 包裝所有訂單的項目。  
   
  **Sql: is-constant&lt**註解可以加入至 **\<complexType >** 項目。  
   
@@ -44,9 +43,9 @@ ms.locfileid: "56017849"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 來加入容器元素  
- 在此註解式 XSD 結構描述，  **\<CustomerOrders >** 藉由指定定義為常數元素**sql: is-constant&lt**屬性的值為 1。 因此，  **\<CustomerOrders >** 未對應到任何資料庫資料表或資料行。 此常數元素組成**\<順序 >** 子項目。  
+ 在此註解式 XSD 結構描述，  **\<CustomerOrders >** 藉由指定定義為常數元素**sql: is-constant&lt**屬性的值為 1。 因此，  **\<CustomerOrders >** 未對應到任何資料庫資料表或資料行。 此常數元素組成 **\<順序 >** 子項目。  
   
- 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，它仍然會出現在產生的 XML，做為容器項目包含**\<順序 >** 子項目。  
+ 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，它仍然會出現在產生的 XML，做為容器項目包含 **\<順序 >** 子項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -107,8 +106,10 @@ ms.locfileid: "56017849"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  這是部分結果集：  
   

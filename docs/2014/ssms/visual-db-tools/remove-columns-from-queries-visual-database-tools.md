@@ -16,21 +16,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62659633"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>移除查詢的資料行 (Visual Database Tools)
-  如果您不想再使用查詢中的資料行，可以將其移除。 一旦移除了，查詢和檢視設計師會移除選取清單、排序規格、搜尋準則、[SQL 窗格] 和所有群組規則中有關此資料行的參考。  
+  如果您不想再使用查詢中的資料行，可以將其移除。 一旦移除了，查詢和檢視設計師會移除選取清單、排序規格、搜尋準則、[SQL 窗格]  和所有群組規則中有關此資料行的參考。  
   
 > [!NOTE]  
 >  如果只是要從選取查詢的輸出中移除資料行，您不需將資料行一併從查詢中移除就可以完成此作業。 如需詳細資訊，請參閱[移除查詢結果的資料行 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
 ### <a name="to-remove-a-column-from-the-query"></a>若要從查詢中移除資料行  
   
--   在 [準則窗格] 中，選取包含要移除之資料行的方格資料列，然後按下 DELETE。  
+-   在 [準則窗格]  中，選取包含要移除之資料行的方格資料列，然後按下 DELETE。  
   
      -或-  
   

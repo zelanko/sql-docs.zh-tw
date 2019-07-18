@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e893b005e074f50828b04525c1c1f963a801489e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 29574c58eef6f18d685b48dd8d695a5fc42c3e6e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105804"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>設定量測計上範圍的格式 (報表產生器及 SSRS)
   量測計範圍是量測計標尺上的一個區域，表示值在量測計上的重要子區段。 您可以使用量測計範圍，以視覺化的方式表示指標值靠近特定值範圍的時間。 範圍是由開始值和結束值所定義。  
@@ -32,7 +31,7 @@ ms.locfileid: "56287336"
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [設定量測計的最小值或最大值 &#40;報表產生器及 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [教學課程：將 KPI 加入至報表&#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

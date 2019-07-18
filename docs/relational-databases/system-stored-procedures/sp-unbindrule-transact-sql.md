@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095863"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型，此規則的繫結來源的名稱。 *object_name*已**nvarchar(776)**，沒有預設值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會試圖先將兩部分識別碼解析成資料行名稱，再解析成別名資料類型。 當您將規則和別名資料類型解除繫結時，也會解除繫結這個資料類型有相同規則的任何資料行。 直接繫結規則之資料類型的資料行不受影響。  
+`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型，此規則的繫結來源的名稱。 *object_name*已**nvarchar(776)** ，沒有預設值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會試圖先將兩部分識別碼解析成資料行名稱，再解析成別名資料類型。 當您將規則和別名資料類型解除繫結時，也會解除繫結這個資料類型有相同規則的任何資料行。 直接繫結規則之資料類型的資料行不受影響。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括號 **[]** 作為分隔識別碼字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
-`[ @futureonly = ] 'futureonly_flag'` 只有在將規則和別名資料類型解除繫結時，才使用。 *futureonly_flag*已**varchar(15)**，預設值是 NULL。 當*futureonly_flag*是**futureonly**，該資料類型的現有資料行不會失去指定的規則。  
+`[ @futureonly = ] 'futureonly_flag'` 只有在將規則和別名資料類型解除繫結時，才使用。 *futureonly_flag*已**varchar(15)** ，預設值是 NULL。 當*futureonly_flag*是**futureonly**，該資料類型的現有資料行不會失去指定的規則。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

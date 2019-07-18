@@ -2,20 +2,20 @@
 title: 伺服器屬性 (一般頁面) | Microsoft Docs
 ms.date: 06/08/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c9079baf374b6ab60cf275aaa6551eba5385e79
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576162"
 ---
 # <a name="report-server-properties-general-page"></a>報表伺服器屬性 (一般頁面)
   您可以使用這個頁面來檢視或修改在報表管理員中使用的標題、啟用或停用 [我的報表]、針對 [我的報表] 安全性選取角色定義，以及啟用或停用用戶端列印控制項。  
@@ -23,7 +23,7 @@ ms.locfileid: "52712029"
  **若要開啟此頁面：**
  1) 啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 連接到報表伺服器執行個體。
- 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]。  
+ 3) 以滑鼠右鍵按一下報表伺服器名稱，然後選取 [屬性]  。  
   
  伺服器模式會決定您可以設定的伺服器屬性。 如果您要管理針對 SharePoint 整合模式所設定的報表伺服器，便無法啟用 [我的報表] 或設定入口網站的標題。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52712029"
  此屬性是唯讀的。 指定報表伺服器 Web 服務的 URL。 這個值是在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中指定的。 如需詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
  **為每個使用者啟用 [我的報表] 資料夾**  
- 讓使用者可以使用 [我的報表]。 這個選項僅適用於原生模式報表伺服器。  
+ 讓使用者可以使用 [我的報表]  。 這個選項僅適用於原生模式報表伺服器。  
   
  **選取要套用至每個 [我的報表] 資料夾的角色**  
  指定要用於 [我的報表] 安全性的角色定義。 角色定義會識別每個 [我的報表] 資料夾中所支援的這組工作。  

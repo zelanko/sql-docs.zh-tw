@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055004"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>傳送作業工作編輯器 (一般頁面)
   使用 **[傳送作業工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送作業工作。 如需有關傳送作業工作的詳細資訊，請參閱＜ [Transfer Jobs Task](control-flow/transfer-jobs-task.md)＞。  

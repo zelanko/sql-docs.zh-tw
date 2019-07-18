@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d3931ff867ef1475165eb6cbac97f4ba4564bf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006962"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |||  
 |-|-|  
 |**tran**|移除異動複寫發行物件。|  
-|**merge**|移除合併式複寫發行物件。|  
+|**合併式**|移除合併式複寫發行物件。|  
 |**兩者**（預設值）|移除所有的複寫發行物件。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

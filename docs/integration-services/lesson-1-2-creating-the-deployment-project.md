@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：建立部署專案 | Microsoft Docs
+title: 步驟 2:建立部署專案 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,33 +11,37 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9d2fe8b249b56ec61196a2df36468f978857bc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48f34b1637ce5e388ff5961b984485de8a2e08ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723417"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>課程 1-2 - 建立部署專案
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，可部署的單位是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 部署封裝之前，必須先建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並且將所有封裝以及要隨同封裝一起部署的所有輔助檔案全部加入至該專案中。  
   
 ### <a name="to-create-the-integration-services-project"></a>若要建立 Integration Services 專案  
   
-1.  按一下 [開始]，依序指向 [所有程式] 和 [Microsoft SQL Server]，然後按一下 [SQL Server]、[SQL Server Data Tools]。  
+1.  按一下 [開始]  ，依序指向 [所有程式]  和 [Microsoft SQL Server]  ，然後按一下 [SQL Server]、[SQL Server Data Tools]  。  
   
-2.  在 [檔案] 功能表上，指向 [開新檔案]，然後按一下 [專案] 建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+2.  在 [檔案]  功能表上，指向 [開新檔案]  ，然後按一下 [專案]  建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-3.  在 [新增專案] 對話方塊中，選取 [範本] 窗格中的 [Integration Services 專案]。  
+3.  在 [新增專案]  對話方塊中，選取 [範本]  窗格中的 [Integration Services 專案]  。  
   
-4.  在 [名稱] 方塊中，將預設名稱變更為**部署教學課程**。 您可以選擇性地清除 **[建立方案的目錄]** 核取方塊。  
+4.  在 [名稱]  方塊中，將預設名稱變更為**部署教學課程**。 您可以選擇性地清除 **[建立方案的目錄]** 核取方塊。  
   
-5.  接受預設位置，或按一下 [瀏覽] 尋找您要使用的資料夾。  
+5.  接受預設位置，或按一下 [瀏覽]  尋找您要使用的資料夾。  
   
-6.  在 [專案位置] 對話方塊中，按一下該資料夾，然後按一下 [開啟]。  
+6.  在 [專案位置]  對話方塊中，按一下該資料夾，然後按一下 [開啟]  。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
-8.  依預設，會建立名稱為 Package.dtsx 的空白封裝，並將其加入至專案中。 但是，您並不會使用此封裝，而是將現有的封裝加入至專案中。 由於專案中的所有封裝都會包含在部署中，因此應該刪除 Package.dtsx。 若要刪除，請以滑鼠右鍵按一下這個檔案，然後按一下 [刪除]。  
+8.  依預設，會建立名稱為 Package.dtsx 的空白封裝，並將其加入至專案中。 但是，您並不會使用此封裝，而是將現有的封裝加入至專案中。 由於專案中的所有封裝都會包含在部署中，因此應該刪除 Package.dtsx。 若要刪除，請以滑鼠右鍵按一下這個檔案，然後按一下 [刪除]  。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [步驟 3：新增套件和其他檔案](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
@@ -14,12 +13,12 @@ ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083571"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>時序群集模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -194,9 +193,9 @@ ORDER BY Count(*) DESC
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下 [時序群集] 模型，然後選取 [瀏覽]。  
   
-2.  在時序叢集檢視器中，按一下 [狀態轉換] 索引標籤。  
+2.  在時序叢集檢視器中，按一下 [狀態轉換]  索引標籤。  
   
-3.  在 [叢集] 下拉式清單中，確認有選取 [母體擴展 (全部)]。  
+3.  在 [叢集]  下拉式清單中，確認有選取 [母體擴展 (全部)]  。  
   
 4.  將窗格左側的滑動軸一直向上移動，即可顯示所有連結。  
   
@@ -208,9 +207,9 @@ ORDER BY Count(*) DESC
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下 [時序群集] 模型，然後選取 [瀏覽]。  
   
-2.  從檢視器下拉式清單中，選取 [Microsoft 一般內容樹狀檢視器]。  
+2.  從檢視器下拉式清單中，選取 [Microsoft 一般內容樹狀檢視器]  。  
   
-3.  在 [節點標題] 窗格中，按一下名稱為 [叢集 16 的時序層級] 的節點。  
+3.  在 [節點標題]  窗格中，按一下名稱為 [叢集 16 的時序層級]  的節點。  
   
 4.  在 [節點詳細資料] 窗格中，尋找 NODE_DISTRIBUTION 資料列，然後在巢狀資料表中按一下任意位置。  
   
@@ -223,11 +222,11 @@ ORDER BY Count(*) DESC
     > [!NOTE]  
     >  您可以使用程式設計的方式，取得特定時序狀態的資料列號碼，但是如果您只是在瀏覽，只將巢狀資料表複製到 Excel 活頁簿可能比較容易。  
   
-6.  返回 [節點標題] 窗格，然後展開 [叢集 16 的時序層級] 節點 (如果尚未展開)。  
+6.  返回 [節點標題] 窗格，然後展開 [叢集 16 的時序層級]  節點 (如果尚未展開)。  
   
-7.  在其子節點中尋找 [時序狀態 20 的轉換資料列]。 按一下轉換節點。  
+7.  在其子節點中尋找 [時序狀態 20 的轉換資料列]  。 按一下轉換節點。  
   
-8.  NODE_DISTRIBUTION 巢狀資料表包含下列產品和機率。 在時序叢集檢視器的 [狀態轉換] 索引標籤中比較這些狀態與結果。  
+8.  NODE_DISTRIBUTION 巢狀資料表包含下列產品和機率。 在時序叢集檢視器的 [狀態轉換]  索引標籤中比較這些狀態與結果。  
   
  下表顯示 NODE_DISTRIBUTION 資料表的結果，以及顯示在圖形檢視器中的捨入機率值。  
   
@@ -262,8 +261,8 @@ ORDER BY Count(*) DESC
  若要找出如何藉由查詢模型內容取得觀察之路徑的清單，以及如何在時序叢集模型上查看查詢的其他範例，請參閱 [時序叢集模型查詢範例](clustering-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)   
- [時序群集模型查詢範例](clustering-model-query-examples.md)  
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft 時序叢集演算法](microsoft-sequence-clustering-algorithm.md)   
+ [時序叢集模型查詢範例](clustering-model-query-examples.md)  
   
   

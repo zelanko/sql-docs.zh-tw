@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c116e8dcfe3484641563da41577cee05058daab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 052506f34c30a3d38eebbd07b6023f280325c9f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803282"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>自主資料庫驗證伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

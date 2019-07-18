@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f8c17463cd8882da5d51d54ae63b186510495ec0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 52ffe540d1afe9334533c2a5a8a631f342aed983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086457"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>編輯和刪除實體同步關係 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52769610"
 
   實體同步是實體版本間單向且可重複的同步處理。 它提供不同模型間共用實體資料的方法。 您可以編輯和刪除您已建立的同步關係。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  編輯實體同步關係的必要條件。  
   
 -   您必須擁有存取系統管理功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -61,29 +60,29 @@ ms.locfileid: "52769610"
   
  **編輯實體同步關係**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理] 。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理]  。  
   
 3.  在 [實體同步維護]  業面上，選取方格中的同步關係。  
   
-4.  按一下 **[編輯]**。 隨即會在右側顯示面板。  
+4.  按一下 **[編輯]** 。 隨即會在右側顯示面板。  
   
-5.  變更 [頻率]。 選取 [隨需同步處理] ，或選取 [自動同步處理]  並設定頻率。  
+5.  變更 [頻率]  。 選取 [隨需同步處理]  ，或選取 [自動同步處理]  並設定頻率。  
   
-6.  按一下 **[儲存]**。  
+6.  按一下 [儲存]  。  
   
  **刪除實體同步關係**  
   
-1.  在主資料管理員中，按一下 [系統管理] 。  
+1.  在主資料管理員中，按一下 [系統管理]  。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理] 。  
+2.  在 [模型檢視]  頁面上，從功能表列指向 [管理]  ，然後按一下 [實體同步處理]  。  
   
 3.  在 [實體同步維護]  業面上，選取方格中的同步關係。  
   
-4.  按一下 **[刪除]**。  
+4.  按一下 **[刪除]** 。  
   
-5.  在確認對話方塊中，按一下 [確定]。  
+5.  在確認對話方塊中，按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及執行實體同步關係 &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   

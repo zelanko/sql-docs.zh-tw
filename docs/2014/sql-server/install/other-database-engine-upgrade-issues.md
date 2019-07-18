@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
@@ -13,12 +12,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093703"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
   目前的 Upgrade Advisor 版本無法偵測到下列升級問題。 請檢閱下列問題，以便評估它們可能對您系統造成的影響。  
@@ -28,7 +27,7 @@ ms.locfileid: "52321634"
   
 -   BACKUP LOG 的 NO_LOG 和 TRUNCATE_ONLY 選項  
   
--   BACKUP TRANSACTION   
+-   BACKUP TRANSACTION  
   
 -   RESTORE TRANSACTION  
   

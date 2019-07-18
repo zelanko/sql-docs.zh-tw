@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 040d2e81b8b45f8f7c6f3003a7522c63dbcef568
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9f3c0a25f3c65a55a647f265b8e0837780a4d44d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696196"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690088"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>在 Management Studio 中使用屬性視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51696196"
   
 ### <a name="to-view-properties-using-the-properties-window"></a>利用 [屬性] 視窗檢視屬性  
   
-1.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
+1.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
   
 2.  將焦點設在您要檢視的物件上。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "51696196"
   
 ### <a name="to-view-connection-properties-of-a-query-window"></a>檢視查詢視窗的連接屬性  
   
-1.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
+1.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
   
 2.  在 [屬性] 視窗中，您可以見到所有連接屬性。  
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>檢視執行程序表運算子的屬性  
   
-1.  在 [查詢] 功能表上，按一下 [包括實際執行計畫]。  
+1.  在 [查詢]  功能表上，按一下 [包括實際執行計畫]  。  
   
 2.  在 [SQL 查詢編輯器] 中，輸入和執行查詢。  
   
-3.  如果看不到 [屬性] 視窗，請按一下 [檢視] 功能表中的 [屬性視窗]，或按 F4。  
+3.  如果看不到 [屬性] 視窗，請按一下 [檢視]  功能表中的 [屬性視窗]  ，或按 F4。  
   
-4.  在 [SQL 查詢編輯器] 的 [執行計畫] 索引標籤中，按一下運算子的圖示來檢視 [屬性] 視窗中之運算子的相關資訊。  
+4.  在 [SQL 查詢編輯器] 的 [執行計畫]  索引標籤中，按一下運算子的圖示來檢視 [屬性] 視窗中之運算子的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性視窗 &#40;Management Studio&#41;](https://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  

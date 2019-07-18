@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 14d5a145bcf98c606bfebbc872c84a3b76a8d74b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d9f6905ea87c08460fe9faba22095a9ecaf0b308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052103"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>變更屬性群組名稱 (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "52785380"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性群組的名稱。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -35,21 +34,21 @@ ms.locfileid: "52785380"
   
 ### <a name="to-change-an-attribute-group-name"></a>若要變更屬性群組名稱  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體] 。  
+2.  在 [管理模型]  頁面上，從方格中選取模型，然後按一下 [實體]  。  
   
-3.  在 [管理實體] 頁面上，從方格中選取含有您想要編輯屬性群組之實體的資料列。  
+3.  在 [管理實體]  頁面上，從方格中選取含有您想要編輯屬性群組之實體的資料列。  
   
-4.  按一下 [屬性群組]。  
+4.  按一下 [屬性群組]  。  
   
-5.  在 [管理屬性群組] 頁面上，依據您想要更新的群組類型，從 [成員類型] 下拉式清單中選取成員類型，再展開 [分葉]、[合併] 或 [集合]。  
+5.  在 [管理屬性群組]  頁面上，依據您想要更新的群組類型，從 [成員類型]  下拉式清單中選取成員類型，再展開 [分葉]  、[合併]  或 [集合]  。  
   
-6.  按一下要更新的屬性群組名稱，然後按一下 [編輯]。  
+6.  按一下要更新的屬性群組名稱，然後按一下 [編輯]  。  
   
-7.  在 [名稱] 方塊中輸入新名稱。  
+7.  在 [名稱]  方塊中輸入新名稱。  
   
-8.  按一下 [儲存群組]。  
+8.  按一下 [儲存群組]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   

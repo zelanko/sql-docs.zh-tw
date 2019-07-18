@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2972e951446a28b399deec5f5a3cb86b3f28a89
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902225"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>註解解譯 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56029459"
   
  因為它將資料儲存在溢位資料行，XML 大量載入也會儲存的開頭和結尾標記的父項目， **sql: overflow-field-欄位**定義。  
   
- 例如，下列結構描述會描述**\<客戶 >** 並 **\<CustOrder >** 項目。 每一個元素都可識別溢位資料行：  
+ 例如，下列結構描述會描述 **\<客戶 >** 並 **\<CustOrder >** 項目。 每一個元素都可識別溢位資料行：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +75,9 @@ ms.locfileid: "56029459"
 </xsd:schema>  
 ```  
   
- 在結構描述中， **\<客戶 >** 元素會對應到 Cust 資料表和**\<順序 >** 元素會對應到 CustOrder 資料表。  
+ 在結構描述中， **\<客戶 >** 元素會對應到 Cust 資料表和 **\<順序 >** 元素會對應到 CustOrder 資料表。  
   
- 這兩個**\<客戶 >** 並**\<順序 >** 項目會識別為溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性**\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的**\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
+ 這兩個 **\<客戶 >** 並 **\<順序 >** 項目會識別為溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性 **\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的 **\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

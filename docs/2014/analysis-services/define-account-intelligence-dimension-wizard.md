@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.accountintelligencetypemapping.f1
@@ -13,22 +12,22 @@ ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 927442d1fe46fc42998643d4f7de47b438cbaa49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082154"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>定義帳戶智慧 (維度精靈)
   使用 **[定義帳戶智慧]** 頁面，即可將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上定義的帳戶類型，對應至維度屬性上所定義的帳戶類型，這些帳戶類型與維度中的 **[帳戶類型]** 屬性類型相關聯。  
   
 > [!NOTE]  
->  只有在您已選取 [選取維度類型] 頁面上的 [標準維度]，而且已將維度屬性對應至 [指定維度類型] 頁面上的 [帳戶類型] 屬性類型時，才會顯示此頁面。  
+>  只有在您已選取 [選取維度類型]  頁面上的 [標準維度]  ，而且已將維度屬性對應至 [指定維度類型]  頁面上的 [帳戶類型]  屬性類型時，才會顯示此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **來源資料表帳戶類型**  
- 顯示已指派給 [指定維度索引鍵和類型] 頁面中的 [帳戶類型] 屬性類型之維度屬性中所含的值。  
+ 顯示已指派給 [指定維度索引鍵和類型]  頁面中的 [帳戶類型]  屬性類型之維度屬性中所含的值。  
   
  **內建帳戶類型**  
  選取在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上定義，且對應至來源資料表帳戶類型的帳戶類型。  

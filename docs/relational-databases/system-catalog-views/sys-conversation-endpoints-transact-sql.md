@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 493fd7d0ce579073228c467226cef7ea86b2dc26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109545"
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

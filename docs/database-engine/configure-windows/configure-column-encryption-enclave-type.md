@@ -9,14 +9,14 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
+manager: jroth
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 961cf4a634f134f3bd41858a8157db0e8f6cb45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1031bdfa3aa6c728d3e33b500fe942d5e52c5fdc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799464"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>資料行加密記憶體保護區類型伺服器設定選項
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47782386"
 |ReplTest1|Description|  
 |-------------------|-----------------|  
 |0|**無安全記憶體保護區**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將不會初始化 Always Encrypted 的安全記憶體保護區。 因此，將無法使用具有安全記憶體保護區之 Always Encrypted 的功能。|  
-|1|**虛擬化型安全性 (VBS)**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會初始化 Always Encrypted 的安全記憶體保護區 (VBS 安全記憶體保護區)。|    
+|1|**虛擬化型安全性 (VBS)** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會初始化 Always Encrypted 的安全記憶體保護區 (VBS 安全記憶體保護區)。|    
 
 > [!IMPORTANT]
 > 除非您重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，否則**資料行加密記憶體保護區類型**不會生效。

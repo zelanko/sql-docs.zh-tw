@@ -2,19 +2,18 @@
 title: 組態檢查清單-Analytics Platform System |Microsoft Docs
 description: 檢查清單提供為您自己的環境設定 Analytics Platform System 所需的工作。 這些組態工作是必要的才能使用設備。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9977ac8ea73e37afef85a46d6794ea5136357b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961590"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System appliance 組態檢查清單
 檢查清單提供為您自己的環境設定 Analytics Platform System 所需的工作。 這些組態工作是必要的才能使用設備。  
@@ -24,7 +23,7 @@ ms.locfileid: "52398601"
   
 ## <a name="BeforeTasks"></a>開始之前  
   
-### <a name="prerequisites"></a>先決條件  
+### <a name="prerequisites"></a>必要條件  
   
 1.  設備必須安裝在資料中心，並開啟電源。  
   

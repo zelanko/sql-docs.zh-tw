@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629633"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
-  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導，請考慮閱讀常見問答集，以更加熟悉一般問題和問題：[複寫管理員的常見問題集](frequently-asked-questions-for-replication-administrators.md)。  
+  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照本主題中提出的最佳做法指導以外，請考慮閱讀常見問答集主題來熟悉常見的問題：[複寫管理員的常見問題集](frequently-asked-questions-for-replication-administrators.md)。  
   
  將最佳做法指南分成兩個方面非常有用：  
   

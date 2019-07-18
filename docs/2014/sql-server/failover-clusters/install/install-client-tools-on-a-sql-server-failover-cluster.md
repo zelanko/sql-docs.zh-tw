@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800480"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62657477"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 容錯移轉叢集上安裝用戶端工具
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 之類的用戶端工具是在相同機器上所有執行個體通用的共用功能。 這些功能與可以並排安裝的支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本回溯相容。 在一個節點上一次只能存在一個版本的用戶端工具。  
@@ -33,24 +33,24 @@ ms.locfileid: "52800480"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體。 在根安裝資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
-2.  在 [安裝] 頁面上，按一下 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝]。 請不要按 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝]。  
+2.  在 [安裝]  頁面上，按一下 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝]  。 請不要按 [新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝]  。  
   
 3.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。  
   
-4.  在 [安裝類型] 頁面上，按一下 [執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的新安裝]。  
+4.  在 [安裝類型]  頁面上，按一下 [執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的新安裝]  。  
   
 5.  在 **[特徵選取]** 頁面上，選取您要安裝的工具，然後遵循安裝程序的其餘步驟進行。  
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>在命令提示字元安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
   
-1.  若要安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端工具和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》，執行下列命令：Setup.exe/q/Action=Install /Features = Tools  
+1.  若要安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端工具和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》，執行下列命令：Setup.exe/q/Action=Install /Features=Tools  
   
 2.  若要安裝僅基本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理工具執行下列命令：Setup.exe/q/Action=Install 功能 = SSMS。 這會針對 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、sqlcmd 公用程式，以及 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 提供者，安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援。  
   
 3.  若要安裝完整[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理工具 中，執行下列命令：Setup.exe/q/Action=Install /Features = ADV_SSMS。 如需功能的參數值的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
- 這些用戶端工具在 [控制台] 的 [新增或移除程式] 中顯示為 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**，而且可以從該處移除。 當您使用 [移除節點] 從容錯移轉叢集解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，不會同時解除安裝用戶端元件。  
+ 這些用戶端工具在 [控制台] 的 [新增或移除程式] 中顯示為 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** ，而且可以從該處移除。 當您使用 [移除節點] 從容錯移轉叢集解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，不會同時解除安裝用戶端元件。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

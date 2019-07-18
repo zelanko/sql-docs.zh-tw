@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4f706344fb2e3f194cb059e5d0d0338aaf7adc06
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 32e22f93dff6edb90c89896fca3495d27ac34dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092405"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
 
@@ -57,8 +56,8 @@ ms.locfileid: "52402694"
   
 ## <a name="related-content"></a>相關內容  
   
--   [概觀：從 Excel 匯入資料 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概觀：從 Excel 匯入資料&#40;MDS 增益集的 Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [Data Matching](../../data-quality-services/data-matching.md)  
+-   [資料比對](../../data-quality-services/data-matching.md)  
   
   

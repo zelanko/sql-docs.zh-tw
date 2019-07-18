@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1f097d66259e51e2883dd350a33f7d7ff6a6bbba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963989"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 屬性範例 (VB)
 > [!IMPORTANT]

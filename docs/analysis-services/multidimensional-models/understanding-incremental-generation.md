@@ -1,5 +1,5 @@
 ---
-title: 了解累加式產生 |Microsoft 文件
+title: 了解累加式產生 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62802698"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "34024345"
  相反地，如果您將資料來源連接字串，變更為與前一次產生不同的資料庫，則不會產生錯誤。 這時會使用新資料庫，且先前的資料庫不會產生任何變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理資料來源檢視和資料來源的變更](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [結構描述產生精靈 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [管理對資料來源檢視及資料來源所做的變更](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

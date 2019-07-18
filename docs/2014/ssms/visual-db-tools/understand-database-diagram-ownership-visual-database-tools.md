@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204705"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>了解資料庫圖表擁有權 (Visual Database Tools)
   若要使用資料庫圖表設計工具，必須先由 db_owner 角色 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的角色) 的成員進行設定，才能控制圖表的存取權。 每個圖表必定有一個，也只能有一個擁有者，也就是建立該圖表的使用者。 如需設定圖表化的詳細資訊，請參閱[設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](visual-database-tools.md)。  

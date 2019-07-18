@@ -18,15 +18,15 @@ helpviewer_keywords:
 - limiting rows returned
 - search criteria [SQL Server], TOP clause
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5b9f347bc3d3e85bc67ed117caf787cb4f17fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 716c121bfa759dd67b709b1590b6637c97237ac8
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815556"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682839"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查詢中指定 TOP 子句 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,22 +36,22 @@ TOP 子句只傳回查詢中的前 *n* 或百分之 *n* 個資料列。 當您�
   
 1.  在 [方案總管] 中開啟查詢或建立新查詢。  
   
-2.  從 [檢視] 功能表中，按一下 [屬性視窗]。  
+2.  從 [檢視]  功能表中，按一下 [屬性視窗]  。  
   
-3.  在 [屬性視窗] 中，找出並展開 [Top 規格] 屬性。  
+3.  在 [屬性視窗]  中，找出並展開 [Top 規格]  屬性。  
   
-4.  按一下 [(Top)] 子屬性，並將其設定為 [Yes]。  
+4.  按一下 [(Top)]  子屬性，並將其設定為 [Yes]  。  
   
-5.  在 [Expression] 子屬性中，輸入有數字結果 (例如 10 或 2*5) 的運算式。  
+5.  在 [Expression]  子屬性中，輸入有數字結果 (例如 10 或 2*5) 的運算式。  
   
-6.  按一下 [Percent] 子屬性，並指示是否將 [Expression] 屬性視為所有傳回資料列的百分比 (Yes)，或視為傳回資料列的絕對值 (No)。  
+6.  按一下 [Percent]  子屬性，並指示是否將 [Expression]  屬性視為所有傳回資料列的百分比 (Yes)，或視為傳回資料列的絕對值 (No)。  
   
-7.  如果查詢使用 ORDER BY 子句，請按一下 [With Ties] 子屬性，並選擇 [Yes] 以顯示群組中的所有資料列 (如果此群組有一部份包含在內)，或選擇 [No] 將它們截斷。  
+7.  如果查詢使用 ORDER BY 子句，請按一下 [With Ties]  子屬性，並選擇 [Yes]  以顯示群組中的所有資料列 (如果此群組有一部份包含在內)，或選擇 [No]  將它們截斷。  
   
 在進行先前的程序之後，注意 SQL 窗格中顯示的 TOP 子句會變更，以反映目前的屬性設定。  
   
 > [!NOTE]  
-> 您也可以編輯 SQL 窗格中的 TOP 子句，以變更 [Top 規格] 中的子屬性值。  
+> 您也可以編輯 SQL 窗格中的 TOP 子句，以變更 [Top 規格]  中的子屬性值。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

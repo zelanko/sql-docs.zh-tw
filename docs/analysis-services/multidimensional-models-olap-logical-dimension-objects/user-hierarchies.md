@@ -1,5 +1,5 @@
 ---
-title: 使用者階層 |Microsoft 文件
+title: 使用者階層 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40b3ebfd8a92bb1c577c9fbd8ee4c9ed0068a700
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209218"
 ---
 # <a name="user-hierarchies"></a>使用者階層
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  使用者定義階層是使用者定義的屬性中所使用的階層[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度的成員組織成階層式結構，並提供 cube 中的導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
+  使用者定義階層是使用者定義中所使用的屬性階層[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]維度的成員組織成階層式結構，並提供 cube 中的導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -37,10 +37,10 @@ ms.locfileid: "34027145"
   
  使用年份、季度和月份屬性，即可在時間維度中建構名為「日曆」的使用者自訂階層。 日曆維度 (一個一般維度) 的層級和成員之間的關聯性如下圖所示：  
   
- ![針對時間維度的層級和成員階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/as-levelconcepts.gif "時間維度的階層層級和成員")  
+ ![時間維度的層級和成員階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/as-levelconcepts.gif "時間維度的階層層級和成員")  
   
 > [!NOTE]  
->  預設兩層級屬性階層之外的任何階層都稱為使用者自訂階層。 如需有關屬性階層的詳細資訊，請參閱[屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+>  預設兩層級屬性階層之外的任何階層都稱為使用者自訂階層。 如需有關屬性階層的詳細資訊，請參閱 <<c0> [ 屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
 ## <a name="member-structures"></a>成員結構  
  除了父子式階層以外，成員在階層內的位置是由階層定義裡之屬性的順序控制。 此階層定義中的每一個屬性都會在階層中組成一個層級； 層級內之成員的位置，是由用來建立層級之屬性的順序決定。 使用者自訂階層的成員結構依成員間互相關聯的方式，可以具有四種基本形式之一。  
@@ -51,7 +51,7 @@ ms.locfileid: "34027145"
 ### <a name="unbalanced-hierarchies"></a>不對稱的階層  
  在不對稱的階層中，階層的分支下降至不同的層級。 父子式階層即為不對稱的階層。 例如，[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的組織維度會包含每位員工的成員。 CEO 是階層中的頂部成員，而部門經理和執行秘書則是直接在 CEO 底下。 部門經理有從屬成員，但是執行秘書沒有。  
   
- 一般使用者可能根本無法區分不對稱的和不完全的階層。 然而，您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用不同的技術和屬性，以支援這兩種類型的階層。 如需詳細資訊，請參閱[不完全階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)，和[父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
+ 一般使用者可能根本無法區分不對稱的和不完全的階層。 然而，您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用不同的技術和屬性，以支援這兩種類型的階層。 如需詳細資訊，請參閱 <<c0> [ 不完全階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)，並[父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
 ### <a name="ragged-hierarchies"></a>不完全階層  
  在不完全的階層中，至少一個成員的邏輯父成員不在成員的上一層級內。 這樣將會使階層的分支下降至不同的層級。 例如，在定義了大陸、國家 (地區) 和縣 (市) 層級的地理位置維度中，依照該順序，Europe 成員會在階層的最上層顯示、France 成員在中間層顯示，而 Paris 成員則在最下層顯示。 France 比 Europe 更為具體，而 Paris 又比 France 更為具體。 對於這個一般階層，會進行下列變更：  
@@ -65,7 +65,7 @@ ms.locfileid: "34027145"
  省份層級會使用與國家 (地區) 層級中之其他成員相關聯的成員進行擴展，而縣 (市) 層級中的成員會與省份層級中之對應的成員相關聯。 但是，由於國家 (地區) 層級中的 Vatican City 成員在省份層級裡沒有關聯的成員，因此必須直接從縣 (市) 層級，將成員與國家 (地區) 層級裡的 Vatican City 成員相關聯。 因為這些變更，所以維度的階層會變成不完全。 Vatican City 縣 (市) 的父系是 Vatican City 國家 (地區)，這並不會在國家 (地區) 層級中 Vatican City 成員的直接上層層級裡。 如需詳細資訊，請參閱 [不完全階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)。  
   
 ### <a name="parent-child-hierarchies"></a>父子式階層  
- 維度的父子式階層是使用一個特殊屬性 (稱為父屬性) 定義，以決定各成員如何互相關聯。 父屬性描述維度主資料表內的「自我參考關聯性」或「自我聯結」。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層的維度結構描述，相依於維度主資料表上所顯示的自我參考關聯性。 例如下, 圖說明**DimOrganization**中的維度主資料表[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]範例資料庫。  
+ 維度的父子式階層是使用一個特殊屬性 (稱為父屬性) 定義，以決定各成員如何互相關聯。 父屬性描述維度主資料表內的「自我參考關聯性」  或「自我聯結」  。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層的維度結構描述，相依於維度主資料表上所顯示的自我參考關聯性。 例如下, 圖說明**DimOrganization**中的維度主資料表[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]範例資料庫。  
   
  ![DimOrganization 資料表中的自我參考聯結](../../analysis-services/multidimensional-models/media/dimorganization.gif "DimOrganization 資料表中的自我參考聯結")  
   
@@ -75,11 +75,11 @@ ms.locfileid: "34027145"
   
  各階層分支中的父子式階層深度會不同。 換句話說，會將父子式階層視為不對稱的階層。  
   
- 使用者自訂階層中的層級數目會決定使用者可看到的層級數目，而父子式階層則與使用者自訂階層不同，是由屬性階層的單一層級所定義，而這個單一層級中的值會產生使用者可看到的多個層級。 顯示之層級的數目，會視儲存成員索引鍵和父索引鍵之維度資料表資料行的內容而定。 維度資料表中的資料變更時，層級的數目可能會變更。 如需詳細資訊，請參閱[父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)，和[父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
+ 使用者自訂階層中的層級數目會決定使用者可看到的層級數目，而父子式階層則與使用者自訂階層不同，是由屬性階層的單一層級所定義，而這個單一層級中的值會產生使用者可看到的多個層級。 顯示之層級的數目，會視儲存成員索引鍵和父索引鍵之維度資料表資料行的內容而定。 維度資料表中的資料變更時，層級的數目可能會變更。 如需詳細資訊，請參閱 <<c0> [ 父子式維度](../../analysis-services/multidimensional-models/parent-child-dimension.md)，並[父子式階層中的屬性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [使用者階層屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

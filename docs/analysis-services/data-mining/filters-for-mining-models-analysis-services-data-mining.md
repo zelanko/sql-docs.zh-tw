@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210000"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410665"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用資料採礦設計師來建立模型篩選  
  您可以變更採礦模型的 **Filter** 屬性，藉以在資料採礦設計師中篩選模型。 您可以直接在 **[屬性]** 窗格中輸入篩選運算式，也可以開啟篩選對話方塊來建立條件。  
   
- 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用 **AND**/**OR** 運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 **greater than** 和 **less than** 運算子。 不過，若是離散值，您只能使用 **= (等於)**、 **!= (不等於)** 和 **is null** 運算子。  
+ 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用 **AND**/**OR** 運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 **greater than** 和 **less than** 運算子。 不過，若是離散值，您只能使用 **= (等於)** 、 **!= (不等於)** 和 **is null** 運算子。  
   
 > [!NOTE]  
 >  不支援 **LIKE** 關鍵字。 如果您想要加入多個離散屬性，就必須建立不同的條件，然後使用 **OR** 運算子來連結它們。  
@@ -76,7 +76,7 @@ ms.locfileid: "52410665"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>我要如何判斷是否使用篩選？  
  有多種方法可判斷篩選是否套用到模型：  
   
--   在設計師中按一下 **[採礦模型]** 索引標籤，並開啟 **[屬性]**，然後檢視採礦模型的 **Filter** 屬性。  
+-   在設計師中按一下 **[採礦模型]** 索引標籤，並開啟 **[屬性]** ，然後檢視採礦模型的 **Filter** 屬性。  
   
 -   DMV、DMSCHEMA_MINING_MODELS 會輸出包含篩選文字的資料行。 您可以針對 DMV 使用以下查詢來傳回模型的名稱以及其篩選：  
   

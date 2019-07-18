@@ -11,15 +11,15 @@ helpviewer_keywords:
 - copying tables
 - duplicating tables
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14fe222ac05e7dcab11412dfc8a82a0f5d27b588
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 794a484546d1ab40ae5da167a5d0eff64436f211
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805536"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686121"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>將資料表從一個資料庫圖表複製至另一個資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "47805536"
   
 2.  開啟來源和目標資料庫圖表，然後在來源圖表中選取要複製至目標圖表的資料表。  
   
-3.  按一下工具列上的 [複製] 按鈕。 這一動作會將選取的資料表定義放在剪貼簿中。  
+3.  按一下工具列上的 [複製]  按鈕。 這一動作會將選取的資料表定義放在剪貼簿中。  
   
 4.  切換至目標圖表。 這一圖表必須與來源圖表在同一資料庫中。  
   
-5.  按一下工具列上的 [貼上] 按鈕。 剪貼簿的內容會出現在新位置，而且仍保持反白顯示，直到您按一下別處。 如果選取的資料表與目標圖表中的其他資料表之間有關聯性，則會自動繪出關聯線。  
+5.  按一下工具列上的 [貼上]  按鈕。 剪貼簿的內容會出現在新位置，而且仍保持反白顯示，直到您按一下別處。 如果選取的資料表與目標圖表中的其他資料表之間有關聯性，則會自動繪出關聯線。  
   
 在任一圖表中編輯資料表時，您所做的變更會同時反應在兩個圖表中。 同理，在任一圖表中儲存資料表，則任一圖表中的資料表都不會再被視為「已修改」。  
   

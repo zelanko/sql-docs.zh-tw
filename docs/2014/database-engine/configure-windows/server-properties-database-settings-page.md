@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809530"
 ---
 # <a name="server-properties-database-settings-page"></a>伺服器屬性 (資料庫設定頁面)
   使用此頁面來檢視或修改您的資料庫設定。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **預設索引填滿因數**  
  指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用現有的資料建立新索引時，它應該填入每個頁面的程度。 填滿因數會影響效能，因為當頁面填滿之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就必須花費時間進行頁面的分割。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52639426"
  提供每個備份媒體的全系統保存預設時間長度，設定當備份用於資料庫或交易記錄備份之後，預設要保存多久。 此選項協助保護備份，在指定的天數經過之前不被覆寫。  
   
  **壓縮備份**  
- 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，表示 [備份壓縮預設] 選項的目前設定。 這一個選項會決定壓縮備份的伺服器層級預設值，如下所示：  
+ 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新的版本) 中，表示 [備份壓縮預設]  選項的目前設定。 這一個選項會決定壓縮備份的伺服器層級預設值，如下所示：  
   
 -   如果 **[壓縮備份]** 方塊是空的，新備份預設不會進行壓縮。  
   

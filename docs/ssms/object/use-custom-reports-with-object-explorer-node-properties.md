@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea06c538f83e6bed00a84a4724b827d380c51389
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 4441e281c207d94a062da45967a1724221977a56
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702786"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683306"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>使用自訂報表搭配物件總管節點屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "51702786"
   
 2.  將報表檔案複製到您在資料庫伺服器上針對自訂報表所建立資料夾。  
   
-3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，於物件總管中的節點上按一下滑鼠右鍵，再指向 [報表]，然後按一下 [自訂報表]。 在 [開啟檔案] 對話方塊中，找出自訂報表資料夾並選取報表檔案，然後按一下 [開啟]。  
+3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，於物件總管中的節點上按一下滑鼠右鍵，再指向 [報表]  ，然後按一下 [自訂報表]。 在 [開啟檔案]  對話方塊中，找出自訂報表資料夾並選取報表檔案，然後按一下 [開啟]  。  
   
-    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表] 下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表] 下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
+    第一次從物件總管節點開啟新的自訂報表時，該報表會新增到該節點的快速鍵功能表中，[自訂報表]  下之最近使用的清單中。 第一次開啟標準報表時，該報表也會顯示在 [自訂報表]  下之最近使用的清單中。 如果您刪除了某個自訂報表檔，下次選取該項目時，系統就會提示您是否要從最近使用清單中刪除該項目。  
   
-    1.  若要變更最近使用之清單上所顯示的檔案數，請在 [工具] 功能表中按一下 [選項]，再展開 [環境] 資料夾，然後按一下 [一般]。  
+    1.  若要變更最近使用之清單上所顯示的檔案數，請在 [工具]  功能表中按一下 [選項]  ，再展開 [環境]  資料夾，然後按一下 [一般]  。  
   
-    2.  調整 [顯示在最近使用的清單中的檔案數] 中的數目。  
+    2.  調整 [顯示在最近使用的清單中的檔案數]  中的數目。  
   
 ## <a name="custom-report-code-sample"></a>自訂報表程式碼範例  
 使用下列程式碼所建立的報表將會使用與 [物件總管] 節點相關聯的參數。  

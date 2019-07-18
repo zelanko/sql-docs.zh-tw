@@ -23,20 +23,20 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b3a44f0e79f0f8961a404072d02d308b20d5dedb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590542"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733570"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
-  
+  **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。
+
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -162,7 +162,7 @@ WHERE database_id = DB_ID();
   
  **OFF**：未設定任何對話安全性。 沒有部署任何憑證、沒有建立任何遠端服務繫結，而且起始端服務的 GRANT SEND 已指定了 **Public** 角色。  
   
- **ANONYMOUS**：已設定匿名對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
+ **ANONYMOUS**：已設定匿名的對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
   
  **RUNTIME**  
  要求導致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談發生執行階段錯誤之問題的報表。 如未指定 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會監視連線選項中指定之所有資料庫中的所有交談。 如果指定了 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會建立參數中指定的識別碼清單。  
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  可識別應用程式中某個交談端點的唯一識別碼。 交談控制代碼對於交談的某個端點而言是唯一的，而起始端和目標端點具有不同的交談控制代碼。  
   
- **BEGIN DIALOG** 陳述式的 *@dialog_handle* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_handle** 資料行，會將交談控制代碼傳回應用程式。  
+ **BEGIN DIALOG** 陳述式的 *\@dialog_handle* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_handle** 資料行，會將交談控制代碼傳回應用程式。  
   
  **sys.transmission_queue** 和 **sys.conversation_endpoints** 目錄檢視的 **conversation_handle** 資料行中會報告交談控制代碼。  
   
  *conversation_group_id*  
  識別交談群組且不重複的識別碼。  
   
- **GET CONVERSATION GROUP** 陳述式的 *@conversation_group_id* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_group_id** 資料行會將交談群組識別碼傳回應用程式。  
+ **GET CONVERSATION GROUP** 陳述式的 *\@conversation_group_id* 參數和 **RECEIVE** 陳述式結果集中的 **conversation_group_id** 資料行會將交談群組識別碼傳回應用程式。  
   
  **sys.conversation_groups** 和 **sys.conversation_endpoints** 目錄檢視的 **conversation_group_id** 資料行中會報告交談群組識別碼。  
   
@@ -202,7 +202,7 @@ WHERE database_id = DB_ID();
  **sys.conversation_endpoints** 目錄檢視的 **conversation_id** 資料行中會報告交談識別碼。  
   
  **-TIMEOUT** _timeout_interval_  
- 指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束**-**。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
+ 指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束 **-** 。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
   
  **\<runtimeconnectionoptions>**  
  指定資料庫的連接資訊，而這些資料庫包含與受監視之交談元素相關聯的服務。 如果所有服務都位於相同的資料庫中，您就只需要指定一個 **CONNECT TO** 子句。 如果各項服務位於不同的資料庫中，您就必須針對每個資料庫提供一個 **CONNECT TO** 子句。 如未指定 **runtimeconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions**中的連接資訊。  
@@ -245,7 +245,7 @@ WHERE database_id = DB_ID();
  **-S** _server_name_[\\*instance_name*]  
  指定保存要分析之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體。  
   
- 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連接到該伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的具名執行個體。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
+ 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定 _server\_name_ **\\** _instance\_name_，即可連接到該伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的具名執行個體。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
   
  **-d** _database_name_  
  指定保存要分析之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務的資料庫。 如果此資料庫不存在，就會產生錯誤訊息。 如未指定 **-d** ，預設值就是登入之預設資料庫屬性中所指定的資料庫。  
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 環境變數  
  **ssbdiagnose** 公用程式支援 **sqlcmd** 公用程式也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 環境變數。 您可以使用命令提示字元 SET 命令，或在用 **sqlcmd** 執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中使用 **setvar**命令，來設定這些環境變數。 如需如何在 **sqlcmd** 中使用 **setvar**的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  在每個 **connectionoptions** 子句中，使用 **-E** 或 **-U** 指定的登入，必須是以 **-S** 所指定之執行個體內 **系統管理員**固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

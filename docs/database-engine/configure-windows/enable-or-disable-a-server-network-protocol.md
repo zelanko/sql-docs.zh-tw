@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d41ee42e17dc8f501749599e56ab31e01ba6f85d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 55b104222d746e3d10641ecf61b7059e519f0717
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803253"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>啟用或停用伺服器網路通訊協定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 780368a3b3c4b61c404f18289a7085a5f70c3d89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010687"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
   下列範例示範如何在 XPath 查詢中傳遞 XPath 變數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "52807128"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. 使用 XPath 變數  
- 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 使用預設值的兩個參數中指定 **\<sql:header >**。  
+ 範例範本由兩個 XPath 查詢所組成。 每個 XPath 查詢都會採用一個參數。 此範本也會指定這些參數的預設值。 如果未指定參數值，則會使用預設值。 使用預設值的兩個參數中指定 **\<sql:header >** 。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

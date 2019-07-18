@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812972"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 AlwaysOn 原則或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，判斷 AlwaysOn 可用性群組的作業健全狀況。 如需 AlwaysOn 原則式管理資訊，請參閱[AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "54420123"
   
 3.  展開 **[AlwaysOn 高可用性]** 節點。  
   
-     以滑鼠右鍵按一下 [可用性群組] 節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
+     以滑鼠右鍵按一下 [可用性群組]  節點，或展開此節點，然後以滑鼠右鍵按一下特定的可用性群組。  
   
 4.  選取 **[顯示儀表板]** 命令。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "54420123"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   

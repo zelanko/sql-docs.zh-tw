@@ -13,13 +13,13 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9aa75a4d0ca9b66c37cb57ee603d513c6912b751
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794968"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 
@@ -100,17 +100,17 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>在遠端使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員  
 這些步驟要在執行用戶端版的 Windows 電腦或已安裝伺服器圖形化介面的 Windows Server 上執行。  
   
-1. 開啟 [電腦管理]。 若要開啟 [電腦管理]，請按一下 [開始]，鍵入 `compmgmt.msc`，然後按一下 [確定]。    
+1. 開啟 [電腦管理]  。 若要開啟 [電腦管理]  ，請按一下 [開始]  ，鍵入 `compmgmt.msc`，然後按一下 [確定]  。    
   
-2. 在主控台樹狀目錄中，以滑鼠右鍵按一下 [電腦管理]，然後按一下 [連線到另一部電腦]。  
+2. 在主控台樹狀目錄中，以滑鼠右鍵按一下 [電腦管理]  ，然後按一下 [連線到另一部電腦]  。  
   
-3. 在 [選取電腦] 對話方塊中，鍵入要管理的 Server Core 電腦名稱，或按一下 [瀏覽] 尋找此電腦，然後按一下 [確定]。  
+3. 在 [選取電腦]  對話方塊中，鍵入要管理的 Server Core 電腦名稱，或按一下 [瀏覽]  尋找此電腦，然後按一下 [確定]  。  
   
-4. 在主控台樹狀目錄中，於 Server Core 電腦的 [電腦管理] 底下按一下 [服務與應用程式]。  
+4. 在主控台樹狀目錄中，於 Server Core 電腦的 [電腦管理]  底下按一下 [服務與應用程式]  。  
   
-5. 按兩下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
+5. 按兩下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]  。  
   
-6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務]，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
+6. 在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員**中，按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務]  ，以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<執行個體名稱>)，這裡的 \<執行個體名稱> 是您想要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 7. 選取 **[AlwaysOn 高可用性]** 索引標籤。  
   
@@ -178,11 +178,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在執行個體上啟用 TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
   
-1.  在執行 Windows Server Core 的電腦上，啟動 [工作管理員]。  
+1.  在執行 Windows Server Core 的電腦上，啟動 [工作管理員]  。  
   
-2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
+2.  在 [應用程式]  索引標籤上，按一下 [新工作]  。  
   
-3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中輸入 **sqlps.exe**，然後按一下 [確定]。 隨即開啟 [**Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗。  
+3.  在 [建立新工作]  對話方塊的 [開啟]  欄位中輸入 **sqlps.exe**，然後按一下 [確定]  。 隨即開啟 [**Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗。  
   
 4.  在 [**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**] 視窗中，執行下列指令碼以啟用 TCP/IP 通訊協定：  
   
@@ -216,7 +216,7 @@ $Tcp
 |[dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)|用以設定及執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 公用程式](../../integration-services/dtutil-utility.md)|用來管理 SSIS 封裝。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql 公用程式](../../tools/osql-utility.md)|可讓您在命令提示字元之下，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlagent90 應用程式](../../tools/sqlagent90-application.md)|用來從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。|\<磁碟機>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<執行個體名稱>\MSSQL\Binn|  
+|[sqlagent90 應用程式](../../tools/sqlagent90-application.md)|用來從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。|\<磁碟機>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<執行個體名稱  >\MSSQL\Binn|  
 |[sqlcmd 工用程式](../../tools/sqlcmd-utility.md)|可讓您在命令提示字元之下，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 公用程式](../../tools/sqldiag-utility.md)|用以收集可供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶服務與支援部門使用的診斷資訊。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlmaint 公用程式](../../tools/sqlmaint-utility.md)|用來執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。|\<磁碟機>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  

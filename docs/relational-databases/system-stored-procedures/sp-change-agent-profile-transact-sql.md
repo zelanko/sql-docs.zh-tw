@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 46aeaafce338d3ffdb9b6d4cb3d827fbbefde82d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045838"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` 是屬性的名稱。 *屬性*已**sysname**，沒有預設值。  
   
-`[ @value = ] 'value'` 是新屬性的值。 *值*已**nvarchar(3000)**，沒有預設值。  
+`[ @value = ] 'value'` 是新屬性的值。 *值*已**nvarchar(3000)** ，沒有預設值。  
   
  這份資料表描述可變更的設定檔屬性。  
   

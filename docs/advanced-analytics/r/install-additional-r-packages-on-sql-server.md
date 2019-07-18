@@ -3,17 +3,16 @@ title: 安裝新的 R 語言套件-SQL Server Machine Learning 服務
 description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962620"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "58513334"
 
 R 套件程式庫實際上位於 SQL Server 執行個體，在具有限制存取的安全資料夾中的 [Program Files] 資料夾。 寫入此位置需要系統管理員權限。
 
-非系統管理員可以安裝套件，但這樣做需要 addititional 組態和功能在初始安裝中無法使用。 有兩種方法來進行非系統管理員套件安裝：RevoScaleR 使用版本 9.0.1 （英文） 和更新版本，或使用 CREATE EXTERNAL LIBRARY (只有 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或另一個具有 CREATE EXTERNAL LIBRARY 權限的使用者可以將 R 套件安裝到目前的資料庫。
+非系統管理員可以安裝套件，但這麼做還需要額外的設定和功能在初始安裝中無法使用。 有兩種方法來進行非系統管理員套件安裝：RevoScaleR 使用版本 9.0.1 （英文） 和更新版本，或使用 CREATE EXTERNAL LIBRARY (只有 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或另一個具有 CREATE EXTERNAL LIBRARY 權限的使用者可以將 R 套件安裝到目前的資料庫。
 
 R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者程式庫。 這種做法是在 SQL Server 資料庫引擎執行個體中執行的 R 程式碼有問題。 SQL Server 無法從外部的程式庫載入封裝，即使該程式庫位於相同的電腦上。 只有從執行個體文件庫的封裝可以用於 SQL Server 中執行的 R 程式碼。
 
@@ -41,7 +40,6 @@ R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者
 然後再安裝新的套件，請考慮是否適合在 SQL Server 環境中所指定的封裝啟用的功能。 在強化後的 SQL Server 環境中，您可能想要避免下列：
 
 + 需要網路存取的套件
-+ 需要 Java 或其他架構，通常不會使用 SQL Server 環境中的封裝
 + 需要提高權限的檔案系統存取權的套件
 + 封裝用於 web 開發 」 或 「 無益在 SQL Server 內執行其他工作
 
@@ -51,7 +49,7 @@ R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者
 
 識別所有相依性變得複雜。 針對 R，我們建議您使用[miniCRAN 建立本機儲存機制](create-a-local-package-repository-using-minicran.md)然後將傳送到隔離的 SQL Server 執行個體的完整定義的存放庫。
 
-Alternativley，您可以執行此步驟以手動方式：
+或者，您也可以手動執行下列步驟：
 
 1. 找出所有套件相依性。 
 2. 請檢查是否在伺服器上已安裝任何必要的套件。 如果安裝套件時，請確認版本正確無誤。
@@ -89,8 +87,7 @@ R 和 Python 功能包含多項 Microsoft 產品，全部都可能共存於同�
 
 如果您安裝 SQL Server 2017 Microsoft Machine Learning Server （獨立式） 或 SQL Server 2016 R Server （獨立式），除了 （SQL Server 2017 Machine Learning 服務和 SQL Server 2016 R Services） 的資料庫內分析，您的電腦有不同所有的 R 工具和程式庫的重複項的每個 R 安裝。
 
-會安裝到 R_SERVER 程式庫的套件僅供在獨立伺服器，且無法存取 SQL Server （資料庫內） 執行個體。 一律使用`R_SERVICES`安裝您想要使用 SQL Server 上的資料庫中的封裝時的程式庫。 如需路徑的詳細資訊，請參閱 <<c0> [ 封裝程式庫位置](installing-and-managing-r-packages.md#package-library-location)。
-
+會安裝到 R_SERVER 程式庫的套件僅供在獨立伺服器，且無法存取 SQL Server （資料庫內） 執行個體。 一律使用`R_SERVICES`安裝您想要使用 SQL Server 上的資料庫中的封裝時的程式庫。 如需路徑的詳細資訊，請參閱 <<c0> [ 封裝程式庫位置](../package-management/default-packages.md)。
 
 ## <a name="see-also"></a>另請參閱
 

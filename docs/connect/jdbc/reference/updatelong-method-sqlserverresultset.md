@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6df9a038808df7871c09bcb04bb324c6eae024d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1a66c0aff804a869d58ecca46cc5144425ce4aa9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741926"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798459"
 ---
 # <a name="updatelong-method-sqlserverresultset"></a>updateLong 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

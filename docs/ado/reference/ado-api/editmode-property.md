@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 147528e9400d6befe9d5cb3c5d3cc3f882e48ad0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918987"
 ---
 # <a name="editmode-property"></a>EditMode 屬性
 指出目前記錄的編輯狀態。  

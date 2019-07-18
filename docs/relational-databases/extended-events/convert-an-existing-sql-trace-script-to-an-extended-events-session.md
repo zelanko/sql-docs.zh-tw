@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478193"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583853"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
 
@@ -37,7 +37,9 @@ ms.locfileid: "58478193"
 3.  使用 fn_trace_getfilterinfo 函數可列出要使用的篩選以及同等的「擴充事件」動作。  
   
 4.  使用同等的「擴充事件」事件、動作和述詞 (篩選器) 手動建立「擴充事件」工作階段。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>若要取得追蹤識別碼  
   
 1.  在查詢編輯器中開啟 SQL 追蹤指令碼，並執行此指令碼來建立追蹤工作階段。 請注意，不需要執行追蹤工作階段也可完成此程序。  
@@ -84,7 +86,7 @@ ms.locfileid: "58478193"
   
     2.  針對您在上一個步驟所識別的每個 SQL 追蹤事件類別，尋找同等的「擴充事件」事件名稱 (如果您不確定同等的事件名稱，請使用 [檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主題中的查詢)。  
   
-    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>。  
+    3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>  。  
   
         ```sql
         SELECT xp.name package_name, xe.name event_name  

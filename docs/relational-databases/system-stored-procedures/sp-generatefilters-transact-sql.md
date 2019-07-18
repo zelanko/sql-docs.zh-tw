@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 077adede972aa0873efc92b250a3f79f96774c70
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 410bdf157cc4194191649e6a6e6ab6d92ea033b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124154"
 ---
 # <a name="spgeneratefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

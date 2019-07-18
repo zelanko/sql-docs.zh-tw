@@ -1,5 +1,5 @@
 ---
-title: sp_add_operator (Transact-SQL) | Microsoft Docs
+title: sp_add_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121024"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'` 操作員 （通知收件者） 的名稱。 此名稱必須是唯一的而且不能包含百分比 (**%**) 字元。 *名稱*已**sysname**，沒有預設值。  
+`[ @name = ] 'name'` 操作員 （通知收件者） 的名稱。 此名稱必須是唯一的而且不能包含百分比 ( **%** ) 字元。 *名稱*已**sysname**，沒有預設值。  
   
 `[ @enabled = ] enabled` 指出操作員目前狀態。 *已啟用*已**tinyint**，預設值是**1** （啟用）。 如果**0**，操作員未啟用，而且不會收到通知。  
   
-`[ @email_address = ] 'email_address'` 操作員的電子郵件地址。 這個字串會直接傳遞至電子郵件系統。 *email_address*已**nvarchar(100)**，預設值是 NULL。  
+`[ @email_address = ] 'email_address'` 操作員的電子郵件地址。 這個字串會直接傳遞至電子郵件系統。 *email_address*已**nvarchar(100)** ，預設值是 NULL。  
   
- 您可以指定實體電子郵件地址或別名*email_address*。 例如：  
+ 您可以指定實體電子郵件地址或別名*email_address*。 例如:  
   
- '**jdoe**'**jdoe@xyz.com**'  
+ '**jdoe**' **jdoe@xyz.com** '  
   
 > [!NOTE]  
 >  您必須針對 Database Mail 使用電子郵件地址。  
   
-`[ @pager_address = ] 'pager_address'` 操作員呼叫器號碼。 這個字串會直接傳遞至電子郵件系統。 *pager_address&lt*已**narchar(100)**，預設值是 NULL。  
+`[ @pager_address = ] 'pager_address'` 操作員呼叫器號碼。 這個字串會直接傳遞至電子郵件系統。 *pager_address&lt*已**narchar(100)** ，預設值是 NULL。  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` 這段時間之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式將呼叫器通知傳給指定的操作員在工作日，從星期一到星期五。 *weekday_pager_start_time*已**int**，預設值是**090000**，這表示上午 9:00 必須用 HHMMSS 格式來輸入。  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|星期五|  
 |**64**|星期六|  
   
-`[ @netsend_address = ] 'netsend_address'` 網路訊息所要送往的操作員網路位址。 *netsend_address&lt*已**nvarchar(100)**，預設值是 NULL。  
+`[ @netsend_address = ] 'netsend_address'` 網路訊息所要送往的操作員網路位址。 *netsend_address&lt*已**nvarchar(100)** ，預設值是 NULL。  
   
 `[ @category_name = ] 'category'` 這位操作員的類別目錄的名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
   
@@ -131,9 +130,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_delete_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_update_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

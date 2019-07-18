@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923466"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函式
 下列 Visual Basic for Applications 函式可以用於資料成形 CALC 運算式：  
@@ -31,9 +30,9 @@ ms.locfileid: "47611596"
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|錯誤|Error$|Exp|Fix|[格式]|Format$|  
+|錯誤|Error$|Exp|Fix|格式|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  

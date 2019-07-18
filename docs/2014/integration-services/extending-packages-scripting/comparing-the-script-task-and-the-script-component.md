@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62895017"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比較指令碼工作和指令碼元件
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師之 [控制流程] 視窗所提供的指令碼工作與 [資料流程] 視窗所提供的指令碼元件，其用途大不相同。 該工作是一般目的之控制流程工具，而該元件則是做為資料流程中的來源、轉換或是目的地。 不過，儘管其目的不同，指令碼工作與指令碼元件在所使用的程式碼編寫工具以及提供給開發人員的封裝中之物件方面，有一些相似之處。 了解其相似性與差異性可協助您更有效率地使用工作與元件。  
@@ -52,8 +52,8 @@ ms.locfileid: "59241336"
 |傳回結果|指令碼工作會使用這兩者<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>屬性和選用<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>屬性`Dts`以通知執行階段其結果的物件。|指令碼元件以資料流程工作的一部分執行，而且不會使用這些屬性的任何一個來報告結果。|  
   
 ## <a name="see-also"></a>另請參閱  
- [以指令碼工作擴充封裝](task/extending-the-package-with-the-script-task.md)   
- [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [以指令碼工作擴充套件](task/extending-the-package-with-the-script-task.md)   
+ [使用指令碼元件擴充資料流程](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [使用 SQL Server Integration Services SSIS 中的指令碼工作連接到 Web 服務](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   
   

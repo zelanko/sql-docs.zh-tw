@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6802a5950a8b366fe8989137da4ec4de70e9e605
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054152"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>啟用明確階層和集合的實體 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，啟用明確階層和集合的實體，才能建立實體的明確階層和集合。  
@@ -35,21 +34,21 @@ ms.locfileid: "56039099"
   
 ### <a name="to-enable-an-entity-for-explicit-hierarchies-and-collections"></a>若要啟用明確階層和集合的實體  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  選取要更新之實體的資料列。  
   
-5.  按一下 **[編輯選取的實體]**。  
+5.  按一下 **[編輯選取的實體]** 。  
   
 6.  從**啟用明確階層和集合**清單中，選取**是**。  
   
 7.  在 **明確階層名稱**方塊中，輸入明確階層的名稱。  
   
-8.  (選擇性) 清除 [強制階層] 核取方塊，將階層建立為非強制階層。  
+8.  (選擇性) 清除 [強制階層]  核取方塊，將階層建立為非強制階層。  
   
 9. 按一下 **儲存實體**。  
   

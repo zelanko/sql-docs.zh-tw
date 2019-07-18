@@ -1,21 +1,20 @@
 ---
-title: 操作可用性群組在 Linux 上的 SQL Server |Microsoft Docs
+title: 操作可用性群組在 Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916044"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>一律對 Linux 上的可用性群組
 
@@ -77,13 +76,13 @@ ms.locfileid: "47795996"
 
    如果可用性群組叢集類型`NONE`、 手動容錯移轉。 依序完成下列步驟：
 
-      A. 下列命令會將主要複本設定為次要。 取代`AG1`您的可用性群組的名稱。 在裝載主要複本的 SQL Server 執行個體上執行 TRANSACT-SQL 命令。
+      a. 下列命令會將主要複本設定為次要。 取代`AG1`您的可用性群組的名稱。 在裝載主要複本的 SQL Server 執行個體上執行 TRANSACT-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 下列命令會將同步的次要複本設定為主要。 在 SQL Server-主控同步的次要複本的執行個體的目標執行個體上執行下列 TRANSACT-SQL 命令。
+      b. 下列命令會將同步的次要複本設定為主要。 在 SQL Server-主控同步的次要複本的執行個體的目標執行個體上執行下列 TRANSACT-SQL 命令。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

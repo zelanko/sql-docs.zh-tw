@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042447"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -270,7 +270,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>引數
 *OR ALTER*  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  只有在函數已經存在時，才能有條件地更改它。 
  
@@ -347,15 +347,15 @@ RETURNS return_data_type
  指定建立函式名稱時應該要參考的組件和方法。  
   
 -   *assembly_name* - 必須符合 `name` 資料行中的值，此資料行屬於   
-    `SELECT * FROM sys.assemblies;`。  
+    第 1 課：建立 Windows Azure 儲存體物件`SELECT * FROM sys.assemblies;`。  
     這是 `CREATE ASSEMBLY` 陳述式中所使用的名稱。  
   
 -   *class_name* - 必須符合 `assembly_name` 資料行中的值，此資料行屬於  
-    `SELECT * FROM sys.assembly_modules;`。  
+    第 1 課：建立 Windows Azure 儲存體物件`SELECT * FROM sys.assembly_modules;`。  
     值常包含內嵌的句號或點。 在這類情況下，TRANSACT-SQL 語法會要求以一組方括弧 [] 括住值，或以一組雙引號 "" 括住值。  
   
 -   *method_name* - 必須符合 `method_name` 資料行中的值，此資料行屬於   
-    `SELECT * FROM sys.assembly_modules;`。  
+    第 1 課：建立 Windows Azure 儲存體物件`SELECT * FROM sys.assembly_modules;`。  
     方法必須為靜態。  
   
 在典型的範例中，針對所有類型皆位於 MyFood 命名空間的 MyFood.DLL，`EXTERNAL NAME` 的值可能是：   
@@ -389,7 +389,7 @@ RETURNS return_data_type
  EXECUTE AS  
  EXECUTE AS 是原生編譯之純量使用者定義函式的必要項目。  
   
- **\<function_option>::= 和 \<clr_function_option>::=** 
+ **\<function_option>::= and \<clr_function_option>::=** 
   
  指定此函數將會有下列其中一個或多個選項。  
   
@@ -430,7 +430,7 @@ EXECUTE AS 子句
 指定執行使用者定義函數時所在的安全性內容。 因此，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要利用哪個使用者帳戶來驗證在函數參考的任何資料庫物件上的權限。  
   
 > [!NOTE]  
-> `EXECUTE AS` 無法為內嵌資料表值函式指定。
+> 無法為內嵌資料表值函式指定 `EXECUTE AS`。
   
 如需詳細資訊，請參閱 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
 
@@ -456,7 +456,7 @@ INLINE = { ON | OFF }
  COLLATE 子句只能用來變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。  
   
  > [!NOTE]
- > `COLLATE` 無法為 CLR 資料表值函式指定。  
+ > 無法為 CLR 資料表值函式指定 `COLLATE`。  
   
  ROWGUIDCOL  
  指出新資料行是一個資料列全域唯一識別碼資料行。 每個資料表只能有一個 **uniqueidentifier** 資料行指定為 ROWGUIDCOL 資料行。 ROWGUIDCOL 屬性只能指派給 **uniqueidentifier** 資料行。  
@@ -567,15 +567,15 @@ INLINE = { ON | OFF }
 
 -   除 `TRY...CATCH` 陳述式之外的流程控制陳述式。  
 
--   `DECLARE` 定義區域資料變數和區域資料指標的陳述式。  
+-   定義區域資料變數和區域資料指標的 `DECLARE` 陳述式。  
 
--   `SELECT` 包含選取清單的陳述式，其中含有將值指派給區域變數的運算式。  
+-   包含選取清單的 `SELECT` 陳述式，其中含有將值指派給區域變數的運算式。  
 
 -   資料指標作業 - 參考函數中之已宣告、已開啟、已關閉及已取消配置的本機資料指標。 只允許使用 `INTO` 子句將值指派給區域變數的 `FETCH` 陳述式；不允許將資料傳回用戶端的 `FETCH` 陳述式。  
 
--   `INSERT`修改區域資料表變數的 `UPDATE` 和 `DELETE` 陳述式。  
+-   修改區域資料表變數的 `INSERT`、`UPDATE` 和 `DELETE` 陳述式。  
 
--   `EXECUTE` 呼叫擴充預存程序的陳述式。  
+-   呼叫擴充預存程序的 `EXECUTE` 陳述式。  
 
 如需詳細資訊，請參閱[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   
@@ -645,11 +645,11 @@ INLINE = { ON | OFF }
   
     -   `ORDER` 子句與索引相容的插入查詢。  
   
-    -   `ORDER BY` 與 `ORDER` 子句相容的子句。  
+    -   與 `ORDER` 子句相容的 `ORDER BY` 子句。  
   
     -   `GROUP BY` 與 `ORDER` 子句相容的彙總。  
   
-    -   `DISTINCT` 相異資料行會與 `ORDER` 子句相容的彙總。  
+    -   相異資料行與 `ORDER` 子句相容的 `DISTINCT` 彙總。  
   
 除非同時在查詢中指定 `ORDER BY` 子句，否則 `ORDER` 子句並不保證在執行 SELECT 查詢時會傳回排序的結果。 如需有關如何查詢資料表值函式之排序次序中所含資料行的資訊，請參閱 [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)。  
   
@@ -824,14 +824,14 @@ GO
  使用 `ENCRYPTION` 選項建立的函式定義無法使用 sys.sql_modules 來檢視，但是會顯示與加密函式相關的其他資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立使用者定義函式 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [建立使用者定義函數 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [CLR 使用者定義函數](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [CLR 使用者定義函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   

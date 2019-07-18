@@ -26,14 +26,18 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717871"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
   
  **[屬性]** 視窗提供分類且按字母排列的屬性清單。 若要依類別來排列 **[屬性]** 視窗，請按一下 [分類] 圖示。  
@@ -56,7 +60,7 @@ ms.locfileid: "58277377"
   
 -   [版本(Version)](#Version)  
   
- 如需無法在 [屬性] 視窗中設定的其他套件屬性的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
+ 如需無法在 [屬性]  視窗中設定的其他套件屬性的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在屬性視窗中設定封裝屬性  
   
@@ -109,7 +113,7 @@ ms.locfileid: "58277377"
 |**CreatorComputerName**|用來建立封裝的電腦名稱。|  
 |**CreatorName**|封裝建立者名稱。|  
 |**說明**|封裝功能描述。|  
-|**ID**|在建立封裝時所指派的封裝 GUID。 此屬性是唯讀的。 若要為 **ID** 屬性產生新的隨機值，請選取下拉式清單中的 **\<產生新的識別碼\>**。|  
+|**ID**|在建立封裝時所指派的封裝 GUID。 此屬性是唯讀的。 若要為 **ID** 屬性產生新的隨機值，請選取下拉式清單中的 **\<產生新的識別碼\>** 。|  
 |**名稱**|封裝名稱。|  
 |**PackageType**|封裝類型。 可能的值為 **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此屬性的預設值為 **Default**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
@@ -118,8 +122,8 @@ ms.locfileid: "58277377"
   
 |屬性|Description|  
 |--------------|-----------------|  
-|**組態**|封裝使用的組態集合。 請按一下瀏覽按鈕 ([...]) 以檢視和設定封裝組態。|  
-|**運算式**|請按一下瀏覽按鈕 ([...]) 以建立封裝屬性的運算式。<br /><br /> 請注意，您可以為物件模型中包含的所有封裝屬性建立屬性運算式，而不是只有 [屬性] 視窗中所列的屬性而已。<br /><br /> 如需詳細資訊，請參閱[在封裝中使用屬性運算式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要檢視現有的屬性運算式，請展開 **Expressions**。 按一下運算式文字方塊中的瀏覽按鈕 ([...])，以修改及評估運算式。|  
+|**組態**|封裝使用的組態集合。 請按一下瀏覽按鈕 ([...])  以檢視和設定封裝組態。|  
+|**運算式**|請按一下瀏覽按鈕 ([...])  以建立封裝屬性的運算式。<br /><br /> 請注意，您可以為物件模型中包含的所有封裝屬性建立屬性運算式，而不是只有 [屬性] 視窗中所列的屬性而已。<br /><br /> 如需詳細資訊，請參閱[在封裝中使用屬性運算式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要檢視現有的屬性運算式，請展開 **Expressions**。 按一下運算式文字方塊中的瀏覽按鈕 ([...])  ，以修改及評估運算式。|  
 |**ForceExecutionResult**|封裝的執行結果。 可能的值為 **None**、 **Success**、 **Failure**和 **Completion**。 此屬性的預設值為 **None**。 如需詳細資訊，請參閱 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |**LocaleId**|Microsoft Win32 地區設定。 此屬性的預設值為本機電腦作業系統的地區設定。|  
 |**LoggingMode**|指定封裝記錄行為的值。 這些值為 **Disabled**、 **Enabled**和 **UseParentSetting**。 此屬性的預設值為 **UseParentSetting**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  
@@ -140,7 +144,7 @@ ms.locfileid: "58277377"
   
 |屬性|Description|  
 |--------------|-----------------|  
-|**IsolationLevel**|封裝交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。<br /><br /> 注意：**IsolationLevel** 屬性的 **Snapshot** 值與套件交易不相容。 因此，您不能使用 **IsolationLevel** 屬性將封裝交易的隔離等級設定為 **Shapshot**。 而是要改用 SQL 查詢將封裝交易設定為 **Snapshot**。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 只有當 **IsolationLevel** 屬性的值設定為 **TransactionOption** 時，系統才會將 **Required**屬性套用到封裝交易。<br /><br /> 當下列條件成立時，子容器所要求的 **IsolationLevel** 屬性值會被忽略：<br />子容器的 **TransactionOption** 屬性值為 **Supported**。<br />子容器會聯結父容器的交易。<br /><br /> 只有當容器起始新的交易時，才會接受容器所要求的 **IsolationLevel** 屬性值。 當下列條件都成立時，容器會起始新的交易：<br />容器的 **TransactionOption** 屬性值為 **Required**。<br />父容器尚未啟動交易。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|**IsolationLevel**|封裝交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。<br /><br /> 注意:**IsolationLevel** 屬性的 **Snapshot** 值與套件交易不相容。 因此，您不能使用 **IsolationLevel** 屬性將封裝交易的隔離等級設定為 **Shapshot**。 而是要改用 SQL 查詢將封裝交易設定為 **Snapshot**。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 只有當 **IsolationLevel** 屬性的值設定為 **TransactionOption** 時，系統才會將 **Required**屬性套用到封裝交易。<br /><br /> 當下列條件成立時，子容器所要求的 **IsolationLevel** 屬性值會被忽略：<br />子容器的 **TransactionOption** 屬性值為 **Supported**。<br />子容器會聯結父容器的交易。<br /><br /> 只有當容器起始新的交易時，才會接受容器所要求的 **IsolationLevel** 屬性值。 當下列條件都成立時，容器會起始新的交易：<br />容器的 **TransactionOption** 屬性值為 **Required**。<br />父容器尚未啟動交易。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**TransactionOption**|封裝的交易式參與。 可能的值為 **NotSupported**、 **Supported**、 **Required**。 此屬性的預設值為 **Supported**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
   
 ###  <a name="Version"></a> 版本  
@@ -157,13 +161,13 @@ ms.locfileid: "58277377"
 ## <a name="set-package-properties-in-the-properties-window"></a>在屬性視窗中設定套件屬性 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含要設定之封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，按兩下封裝以使其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中開啟，或是以滑鼠右鍵按一下並選取 [檢視設計師]。  
+2.  在方案總管  中，按兩下封裝以使其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中開啟，或是以滑鼠右鍵按一下並選取 [檢視設計師]  。  
   
 3.  按一下 **[控制流程]** 索引標籤，然後執行下列其中之一：  
   
-    -   以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
+    -   以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]  。  
   
-    -   在 [檢視]  功能表上，按一下 [屬性視窗] 。  
+    -   在 [檢視]  功能表上，按一下 [屬性視窗]  。  
   
 4.  在 **[屬性]** 視窗中編輯封裝屬性。  
   

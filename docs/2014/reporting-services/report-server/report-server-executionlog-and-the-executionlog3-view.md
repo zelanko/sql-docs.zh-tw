@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103465"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -54,23 +53,23 @@ ms.locfileid: "56011250"
   
  **若要啟用執行記錄：**  
   
-1.  從 SharePoint 管理中心，按一下 [應用程式管理] 群組中的 [管理服務應用程式]。  
+1.  從 SharePoint 管理中心，按一下 [應用程式管理]  群組中的 [管理服務應用程式]  。  
   
 2.  按一下您想要設定之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。  
   
-3.  按一下 **[系統設定]**。  
+3.  按一下 **[系統設定]** 。  
   
-4.  選取 [記錄] 區段中的 [啟用執行記錄]。  
+4.  選取 [記錄]  區段中的 [啟用執行記錄]  。  
   
-5.  按一下 [確定] 。  
+5.  按一下 [確定]  。  
   
  **若要啟用詳細資訊記錄：**  
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定] 頁面中，尋找 [使用者定義] 區段。  
+1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定]  頁面中，尋找 [使用者定義]  區段。  
   
-2.  將 [ExecutionLogLevel] 變更為 [verbose]。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose] 和 [normal]。  
+2.  將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
 ##  <a name="bkmk_native"></a> 原生模式報表伺服器的組態設定  
  您可以從 SQL Server Management Studio 的 [伺服器屬性] 頁面開啟或關閉報表執行記錄。 **EnableExecutionLogging** 是進階屬性。  
@@ -85,19 +84,19 @@ ms.locfileid: "56011250"
   
 2.  連接到所需的報表伺服器。  
   
-3.  以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]。 如果 [屬性] 選項已停用，請確認您已使用系統管理權限來啟動 SQL Server Management Studio。  
+3.  以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 如果 [屬性] 選項已停用，請確認您已使用系統管理權限來啟動 SQL Server Management Studio。  
   
-4.  按一下 [記錄] 頁面。  
+4.  按一下 [記錄]  頁面。  
   
-5.  選取 [啟用報表執行記錄]。  
+5.  選取 [啟用報表執行記錄]  。  
   
  **若要啟用詳細資訊記錄：**  
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [伺服器屬性] 對話方塊中，按一下 [進階] 頁面。  
+1.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面。  
   
-2.  在 [使用者定義] 區段中，將 [ExecutionLogLevel] 變更為 [verbose]。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose] 和 [normal]。  
+2.  在 [使用者定義]  區段中，將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
 ##  <a name="bkmk_executionlog3"></a> 記錄欄位 (ExecutionLog3)  
  這個檢視已在 XML 架構的 **AdditionalInfo** 資料行內加入其他效能診斷節點。 AdditionalInfo 資料行包含的 XML 結構是由 1 至多個其他資訊欄位所組成。 下面是可從 ExecutionLog3 檢視中擷取資料列的範例 Transact SQL 陳述式。 此範例會假設報表伺服器資料庫名為 **ReportServer**：  
@@ -118,13 +117,13 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|可能的值如下：<br />**Interactive**<br />**訂閱**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
 |格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
-|ItemAction|可能的值如下：<br /><br /> **轉譯**<br /><br /> **排序**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
+|ItemAction|可能的值如下：<br /><br /> **轉譯**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料所花費的毫秒數。|  
 |TimeProcessing|處理報表所花費的毫秒數。|  
 |TimeRendering|轉譯報表所花費的毫秒數。|  
-|原始程式檔|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示根據鑽研報表且動態產生的報表模型，或者在使用報表伺服器處理與轉譯的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立之工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
+|`Source`|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -317,13 +316,13 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|要求類型 (使用者或系統)。|  
 |格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
-|ReportAction|可能的值如下：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
+|ReportAction|可能的值如下：轉譯，排序、 BookMarkNavigation、 DocumentNavigation、 GetDocumentMap、 Findstring|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|原始程式檔|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
+|`Source`|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -353,7 +352,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|原始程式檔|報表執行的來源。 可能的值如下：(1= 即時、2= 快取、3= 快照集、4= 記錄、5= 特定、6= 工作階段、7= RDCE)。|  
+|`Source`|報表執行的來源。 可能的值如下：(1 = 即時、 2 = 快取、 3 = 快照集、 4 = 記錄、 5 = 特定、 6 = 工作階段、 7 = RDCE)。|  
 |[狀態]|可能的值如下：rsSuccess、rsProcessingAborted 或錯誤碼。 如果發生多個錯誤，只會記錄第一個錯誤。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  

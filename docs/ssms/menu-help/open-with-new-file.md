@@ -10,38 +10,38 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1ae2df6aab71a5dc914260f19b13327e1e84a2a
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 68e76bc218016f5c759e77a5cf91f403b066d8d3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328158"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690260"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  
+按一下 [檔案]  功能表上的 [開啟]  ，然後按一下 [檔案]  ，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案]  對話方塊中選取檔案，按一下 [開啟]  箭頭，然後按一下 [開啟方式]  。 在 [開啟方式]  對話方塊的 [選取要開啟的程式]  清單中，按一下慣用的程式，然後按一下 [開啟]  。  
   
 ## <a name="options"></a>選項。  
 **選取要開啟的程式**  
-列出 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 中可以用來編輯所選之檔案類型的編輯器。 從顯示的清單中選擇用來開啟文件的編輯器，或按一下 [新增] 在清單中包含新的編輯器。  
+列出 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 中可以用來編輯所選之檔案類型的編輯器。 從顯示的清單中選擇用來開啟文件的編輯器，或按一下 [新增]  在清單中包含新的編輯器。  
   
 **開啟**  
-按一下 [開啟] 即可在選取的編輯器中開啟文件。  
+按一下 [開啟]  即可在選取的編輯器中開啟文件。  
   
 **[加入]**  
-按一下此按鈕即可將程式新增至 [選取要開啟的程式] 清單中。 您可以在 [程式名稱] 欄位中鍵入檔案路徑，或按一下 [瀏覽] 瀏覽至程式的位置。 在 [易記名稱] 中輸入要顯示在 [選取要開啟的程式] 清單中的程式名稱。  
+按一下此按鈕即可將程式新增至 [選取要開啟的程式]  清單中。 您可以在 [程式名稱]  欄位中鍵入檔案路徑，或按一下 [瀏覽]  瀏覽至程式的位置。 在 [易記名稱]  中輸入要顯示在 [選取要開啟的程式]  清單中的程式名稱。  
   
 **移除**  
-若要移除程式，請選取程式然後按一下 [移除]。  
+若要移除程式，請選取程式然後按一下 [移除]  。  
   
 **設定為預設值**  
-若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式] 清單中選擇程式，然後按一下 [設定為預設值]。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
+若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式]  清單中選擇程式，然後按一下 [設定為預設值]  。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
   
 > [!NOTE]  
-> 在 [選取要開啟的程式] 的程式清單中，所選之檔案類型的預設編輯器名稱後面會接著 [(預設)]。  
+> 在 [選取要開啟的程式]  的程式清單中，所選之檔案類型的預設編輯器名稱後面會接著 [(預設)]  。  
   
 ## <a name="see-also"></a>另請參閱  
 [使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

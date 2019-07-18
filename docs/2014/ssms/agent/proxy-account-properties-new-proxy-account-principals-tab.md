@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62650219"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Proxy 帳戶屬性及新增 Proxy 帳戶 (主體索引標籤)
   使用此頁面來檢視或變更可以在作業步驟中使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的主體。  

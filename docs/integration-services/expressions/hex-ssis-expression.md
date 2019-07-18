@@ -14,14 +14,18 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbaa082b67c3093911f000a42e639c5eac9a81a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5f219cf46c3b8833086f5b7b4b3f058200ca92b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725335"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回代表整數的十六進位值的字串。  
   
 ## <a name="syntax"></a>語法  

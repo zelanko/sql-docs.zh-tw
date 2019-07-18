@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63141236"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>將自訂地圖加入 Reporting Services 行動報表
 自訂地圖需要兩個檔案︰  
@@ -26,15 +26,15 @@ ms.locfileid: "56291256"
   
 ## <a name="load-a-custom-map"></a>載入自訂地圖  
   
-1. 在 [版面配置] 索引標籤上，選取地圖類型：[漸層熱度圖]、[範圍停止熱度圖] 或 [泡泡地圖]，將其拖曳至設計介面，並調整為您想要的大小。  
+1. 在 [配置]  索引標籤上選取地圖類型：[漸層熱度圖]  、[範圍停止熱度圖]  或 [泡泡圖]  ，將其拖曳至設計介面，並調整為您想要的大小。  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
-2. 在 [配置] 檢視 > [視覺屬性] 面板 > [地圖] 中，選取 [Custom Map From File]\(檔案的自訂地圖)。   
+2. 在 [配置]  檢視 > [視覺屬性]  面板 > [地圖]  中，選取 [Custom Map From File]\(檔案的自訂地圖)  。   
   
    ![SSMRP_SelectCustomMap](../../reporting-services/mobile-reports/media/ssmrp-selectcustommap.png)  
   
-3. 在 [開啟] 對話方塊中，瀏覽至 SHP 和 DBF 檔案的位置，然後選取兩者。   
+3. 在 [開啟]  對話方塊中，瀏覽至 SHP 和 DBF 檔案的位置，然後選取兩者。   
   
    ![SSMRP_SelectDBFandSHP](../../reporting-services/mobile-reports/media/ssmrp-selectdbfandshp.png)  
   

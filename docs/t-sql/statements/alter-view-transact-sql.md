@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664683"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ AS select_statement
  加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 ALTER VIEW 陳述式文字的項目。 WITH ENCRYPTION 可防止在 SQL Server 複寫中發行檢視。  
   
  SCHEMABINDING  
- 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，_select\_statement_ 必須包括參考的資料表、檢視表或使用者定義函式的兩部分名稱 (_schema_**.**_object_)。 所有參考的物件都必須在相同的資料庫中。  
+ 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，_select\_statement_ 必須包括參考的資料表、檢視表或使用者定義函式的兩部分名稱 (_schema_ **.** _object_)。 所有參考的物件都必須在相同的資料庫中。  
   
  您無法卸除參與 SCHEMABINDING 子句所建立之檢視的檢視或資料表，除非這份檢視已經卸除或有了改變，不再擁有結構描述繫結。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤。 另外，如果 ALTER TABLE 陳述式會影響到檢視定義，在參與擁有結構描述繫結的檢視之資料表上執行這些陳述式也會失敗。  
   
@@ -103,7 +103,7 @@ AS select_statement
   
  您可以將 ALTER VIEW 套用在索引檢視上；不過，ALTER VIEW 會無條件地卸除檢視的所有索引。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行 ALTER VIEW，至少需要 OBJECT 的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

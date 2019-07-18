@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.inclusionexclusion.f1
@@ -15,12 +14,12 @@ ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6292fa7798c9f9d76868b4230317eb99a1f8b3d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055232"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  
@@ -32,10 +31,10 @@ ms.locfileid: "58392736"
  藉由指定包含排除詞彙的資料行，指出是否要在詞彙擷取期間排除特定詞彙。 如果您選擇要排除詞彙，就必須指定下列來源屬性。  
   
  **[無快取]**  
- 選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新的連接。  
+ 選取現有的 OLE DB 連線管理員，或按一下 [新增]  來建立新的連接。  
   
  **新增**  
- 使用 [設定 OLE DB 連線管理員] 對話方塊，來建立新的資料庫連接。  
+ 使用 [設定 OLE DB 連線管理員]  對話方塊，來建立新的資料庫連接。  
   
  **資料表或檢視**  
  選取包含排除詞彙的資料表或檢視。  

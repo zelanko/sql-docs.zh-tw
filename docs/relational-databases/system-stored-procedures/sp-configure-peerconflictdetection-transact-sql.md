@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215947"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication=] '*發行集*'  
+ [ @publication=] '*publication*'  
  這是要設定衝突偵測的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ @action=] '*動作*'  
- 指定發行集啟用或停用衝突偵測。 *動作*已**nvarchar(5)**，而且可以是下列值之一。  
+ [ @action= ] '*action*'  
+ 指定發行集啟用或停用衝突偵測。 *動作*已**nvarchar(5)** ，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

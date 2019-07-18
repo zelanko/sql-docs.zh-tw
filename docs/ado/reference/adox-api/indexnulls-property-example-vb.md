@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5976cf913a98e5fa7db313144463ca12373d6bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965990"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 屬性範例 (VB)
 此範例示範[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)屬性[Index](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的索引，並設定的值**IndexNulls**根據使用者輸入 （從清單方塊，名為 List1）。 然後， **Index**附加至**員工**[資料表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**套用至[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據**員工**資料表，而**資料錄集**開啟。 新的記錄新增至**員工**資料表中，使用**Null**中索引欄位的值。 這個新的記錄顯示與否取決於設定**IndexNulls**屬性。  

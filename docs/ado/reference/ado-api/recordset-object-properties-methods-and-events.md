@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917337"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>資料錄集物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -121,7 +120,7 @@ ms.locfileid: "47691316"
   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  [EndOfRecordset 事件](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [FetchComplete 事件](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  

@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.browseforservers.f1
 - sql12.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b40e0243b8ab330a4c865514d6bc047f7b0b2d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbb790fc5067d1544cd4b3d9d6e90b34be8e2b77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484144"
 ---
 # <a name="run-the-data-quality-client-application"></a>執行 Data Quality Client 應用程式
   您可以執行 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]，然後登入 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]，藉以使用 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (DQS)。  

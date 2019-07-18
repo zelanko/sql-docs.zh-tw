@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 541f24693598d20925dd37d4970c6d9916945793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032008"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>資料庫引擎擴充預存程序 - 程式設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

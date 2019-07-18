@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779133"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體。 這些步驟包含以下內容：  
@@ -77,7 +77,7 @@ ms.locfileid: "53354947"
 ##  <a name="BKMK_PrepareImage"></a> 準備映像  
  準備映像步驟會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品和功能，但不會設定安裝。  
   
- 您可以在這個步驟中，指定要安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品安裝檔的安裝位置。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，可以在 [安裝中心] 的 [進階] 頁面上透過 [Image Preparation of a stand-alone instance for SysPrep deployment (準備 SysPrep 部署獨立執行個體的映像)] 或是從命令提示字元執行。  
+ 您可以在這個步驟中，指定要安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品安裝檔的安裝位置。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，可以在 [安裝中心]  的 [進階]  頁面上透過 [Image Preparation of a stand-alone instance for SysPrep deployment (準備 SysPrep 部署獨立執行個體的映像)]  或是從命令提示字元執行。  
   
 -   您可以在同一部電腦上準備多個可於稍後完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "53354947"
   
 -   使用 [開始] 功能表上的捷徑。  
   
--   在 [安裝中心] 的 [進階] 頁面上存取 [Image completion of a prepared stand-alone instance (完成備妥之獨立執行個體的映像)] 步驟。  
+-   在 [安裝中心]  的 [進階]  頁面上存取 [Image completion of a prepared stand-alone instance (完成備妥之獨立執行個體的映像)]  步驟。  
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)  

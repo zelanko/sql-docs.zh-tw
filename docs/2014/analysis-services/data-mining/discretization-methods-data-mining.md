@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -21,12 +20,12 @@ ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e984fe2ea57ab175e3224d099f5392f96287c74
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084640"
 ---
 # <a name="discretization-methods-data-mining"></a>分隔方法 (資料採礦)
   有些用於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立資料採礦模型的演算法需要特定內容類型，才能正確運作。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法無法使用連續資料行做為輸入，也無法預測連續值。 另外，有些資料行可能包含太多值，使得演算法不容易識別資料中的模式來建立模型。  
@@ -51,19 +50,19 @@ ms.locfileid: "48187049"
   
 ## <a name="remarks"></a>備註  
   
--   您可以使用`EQUAL_AREAS`方法來分隔字串。  
+-   您可以使用 `EQUAL_AREAS` 方法來分隔字串。  
   
--   `CLUSTERS`方法使用 1000年筆隨機取樣來離散化資料。 如果您不想要演算法取樣資料，請使用 `EQUAL_AREAS` 方法。  
+-   `CLUSTERS` 方法使用 1000 筆隨機取樣記錄來離散化資料。 如果您不想要演算法取樣資料，請使用 `EQUAL_AREAS` 方法。  
   
--   類神經網路採礦模型提供了一個範例，為您示範如何自訂分隔。 如需詳細資訊，請參閱 <<c0> [ 第 5 課： 建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。</c0>  
+-   類神經網路採礦模型提供了一個範例，為您示範如何自訂分隔。 如需詳細資訊，請參閱[第 5 課：建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型&#40;資料採礦&#41;](content-types-data-mining.md)   
- [內容類型&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
- [資料型別&#40;資料採礦&#41;](data-types-data-mining.md)   
+ [內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)   
+ [內容類型 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [資料類型 &#40;資料採礦&#41;](data-types-data-mining.md)   
  [採礦結構資料行](mining-structure-columns.md)   
- [資料行散發&#40;資料採礦&#41;](column-distributions-data-mining.md)  
+ [資料行散發 &#40;資料採礦&#41;](column-distributions-data-mining.md)  
   
   

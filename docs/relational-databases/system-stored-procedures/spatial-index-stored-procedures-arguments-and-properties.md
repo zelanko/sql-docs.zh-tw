@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950403"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間索引預存程序-引數和屬性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "58528810"
 `[ @xml_output = ] 'xml_output'` 集是以 XML 片段傳回結果的輸出參數。 *xml_output*已**xml**沒有預設值。  
   
 ## <a name="properties"></a>屬性  
- 設定**@verboseoutput** = 0 以傳回核心屬性，如表; 中所示**@verboseoutput** > 0，以傳回空間索引的所有屬性。  
+ 設定 **@verboseoutput** = 0 以傳回核心屬性，如表; 中所示 **@verboseoutput** > 0，以傳回空間索引的所有屬性。  
   
  **Base_Table_Rows**  
  基底資料表中的資料列數。 值是**bigint**。  
@@ -165,7 +164,7 @@ ms.locfileid: "58528810"
  在鑲嵌層級 3 的物件完全涵蓋，因此是 內部物件的資料格數目。 （Cell_attribute 值是 2）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- 在鑲嵌層級 4 由物件完全涵蓋 (因此屬於該物件內部) 的資料格數目  （Cell_attribute 值是 2）。這是核心屬性。 值是**bigint**。  
+ 在鑲嵌層級 4 由物件完全涵蓋 (因此屬於該物件內部) 的資料格數目 （Cell_attribute 值是 2）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
  會透過在鑲嵌層級 1 物件交集的資料格數目。 （Cell_attribute 值是 1）。這是核心屬性。 值是**bigint**。  
@@ -177,7 +176,7 @@ ms.locfileid: "58528810"
  會透過在鑲嵌層級 3 物件交集的資料格數目。 （Cell_attribute 值是 1）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- 與鑲嵌層級 4 的物件交叉的資料格數目  （Cell_attribute 值是 1）。這是核心屬性。 值是**bigint**。  
+ 與鑲嵌層級 4 的物件交叉的資料格數目 （Cell_attribute 值是 1）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  指出查詢範例是否落在週框方塊外的根資料格 0 中，但觸及該方塊。 這是核心屬性。 值是**bigint**。  
@@ -186,19 +185,19 @@ ms.locfileid: "58528810"
 >  這項資訊僅適用於判斷是否有週框方塊剛好略過的物件。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- 觸及週框方塊的層級 0 物件數目  (Cell_attribute 值是 0)。值是**bigint**。  
+ 觸及週框方塊的層級 0 物件數目 （Cell_attribute 值是 0）。值是**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- 觸及鑲嵌層級 1 方格資料格界限的物件資料格數目。 (Cell_attribute 值是 0)。這是核心屬性。 值是**bigint**。  
+ 觸及鑲嵌層級 1 方格資料格界限的物件資料格數目。 （Cell_attribute 值是 0）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- 觸及鑲嵌層級 2 方格資料格界限的物件資料格數目。 (Cell_attribute 值是 0)。這是核心屬性。 值是**bigint**。  
+ 觸及鑲嵌層級 2 方格資料格界限的物件資料格數目。 （Cell_attribute 值是 0）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- 觸及鑲嵌層級 3 方格資料格界限的物件資料格數目。 (Cell_attribute 值是 0)。這是核心屬性。 值是**bigint**。  
+ 觸及鑲嵌層級 3 方格資料格界限的物件資料格數目。 （Cell_attribute 值是 0）。這是核心屬性。 值是**bigint**。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- 觸及鑲嵌層級 4 的方格資料格界限的物件資料格數目  (Cell_attribute 值是 0)。這是核心屬性。 值是**bigint**。  
+ 觸及鑲嵌層級 4 的方格資料格界限的物件資料格數目 （Cell_attribute 值是 0）。這是核心屬性。 值是**bigint**。  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  方格總區域 (分葉資料格總計) 的百分比，此方格包含物件所涵蓋的分葉資料格。  

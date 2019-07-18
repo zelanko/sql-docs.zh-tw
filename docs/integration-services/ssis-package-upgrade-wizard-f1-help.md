@@ -19,14 +19,18 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b19b574a61ad5667d6617b68b8472589a2328bb1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65717841"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [SSIS 套件升級精靈] 將舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所建立的套件升級為目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本的套件格式。  
   
  **執行 SSIS 封裝升級精靈**  

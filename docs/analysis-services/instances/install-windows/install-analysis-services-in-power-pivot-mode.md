@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63054783"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,36 +56,36 @@ ms.locfileid: "52527755"
 ###  <a name="bkmk_sqleditions"></a> SQL Server Edition 需求  
  並非在所有版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中都提供商業智慧功能。 如需詳細資訊，請參閱 < [Analysis Services 的 SQL Server 2016 版本所支援的功能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)並[SQL Server 2016 的元件和版本](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-##  <a name="InstallSQL"></a> 步驟 1:安裝 Power Pivot for SharePoint  
+##  <a name="InstallSQL"></a> 步驟 1：安裝 Power Pivot for SharePoint  
  在此步驟中，您會執行 SQL Server 安裝程式，以在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式中安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器。 在後續步驟中，您針對活頁簿資料模型設定 Excel Services 使用此伺服器。  
   
 1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
   
 2.  選取位於左邊功能窗格的 [安裝]  。  
   
-3.  選取 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]。  
+3.  選取 [新增 SQL Server 獨立安裝或將功能加入至現有安裝]  。  
   
-4.  如果看到 **[產品金鑰]** 頁面，請指定 Evaluation Edition 或是輸入 Enterprise Edition 授權複本的產品金鑰。 select **[下一步]**。 如需版本的詳細資訊，請參閱＜ [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)＞。  
+4.  如果看到 **[產品金鑰]** 頁面，請指定 Evaluation Edition 或是輸入 Enterprise Edition 授權複本的產品金鑰。 select **[下一步]** 。 如需版本的詳細資訊，請參閱＜ [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)＞。  
   
-5.  檢閱並接受 Microsoft 軟體授權條款的條款，然後選取 [下一步] 。  
+5.  檢閱並接受 Microsoft 軟體授權條款的條款，然後選取 [下一步]  。  
   
 6.  如果您看到 **[全域規則]** 頁面，請檢閱安裝精靈顯示的所有規則資訊。  
   
-7.  在 [Microsoft Update]  頁面上，建議您使用 Microsoft Update 來檢查更新，然後選取 [下一步] 。  
+7.  在 [Microsoft Update]  頁面上，建議您使用 Microsoft Update 來檢查更新，然後選取 [下一步]  。  
   
-8.  **[安裝安裝檔案]** 頁面會執行數分鐘。 檢閱所有規則警告或失敗規則，然後選取 [下一步] 。  
+8.  **[安裝安裝檔案]** 頁面會執行數分鐘。 檢閱所有規則警告或失敗規則，然後選取 [下一步]  。  
   
-9. 若您看到另一個 [安裝程式支援規則] ，請檢閱任何警告，然後選取 [下一步] 。  
+9. 若您看到另一個 [安裝程式支援規則]  ，請檢閱任何警告，然後選取 [下一步]  。  
   
-     **注意：** 由於已啟用 Windows 防火牆，因此您會看到開放通訊埠才可啟用遠端存取的警告。  
+     **注意：** 因為已啟用 Windows 防火牆，您會看到開放通訊埠來啟用遠端存取的警告。  
   
-10. 在 [安裝程式角色]  頁面上，選取 [SQL Server 功能安裝] 。  
+10. 在 [安裝程式角色]  頁面上，選取 [SQL Server 功能安裝]  。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
-11. 在 [特徵選取] 頁面上，選取 [Analysis Services] 。 此選項可讓您安裝三種 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之一。 您將在稍後步驟中選取模式。 選取 **[下一步]**。  
+11. 在 [特徵選取] 頁面上，選取 [Analysis Services]  。 此選項可讓您安裝三種 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之一。 您將在稍後步驟中選取模式。 選取 **[下一步]** 。  
   
-12. 在 [執行個體設定]  頁面上，選取 [具名執行個體]  ，然後針對執行個體名稱輸入 **POWERPIVOT** ，接著再按一下 [下一步] 。  
+12. 在 [執行個體設定]  頁面上，選取 [具名執行個體]  ，然後針對執行個體名稱輸入 **POWERPIVOT** ，接著再按一下 [下一步]  。  
   
      ![SQL 安裝程式-登陸頁面的執行個體組態](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL 安裝程式-登陸頁面的執行個體組態")  
   
@@ -97,13 +97,13 @@ ms.locfileid: "52527755"
   
     -   絕不要使用您自己的網域使用者帳戶來提供服務帳戶。 這麼做會授與伺服器您對網路中的資源所擁有的相同權限。 如果惡意使用者入侵伺服器，該使用者就會使用您的網域認證登入。 該使用者將有權下載或使用您有權下載或使用的相同資料和應用程式。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
      ![SQL 安裝程式-伺服器組態 登陸頁面](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL 安裝程式-伺服器組態 登陸頁面")  
   
 14. 若您正安裝 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，則隨即會出現 **[資料庫引擎組態]** 頁面。 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 設定中，選取 [加入目前使用者]  ，以針對資料庫引擎執行個體授與使用者帳戶管理員權限。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
 15. 在 [Analysis Services 設定]  頁面的 [伺服器模式]  下方，選取 [PowerPivot 模式]   
   
@@ -116,15 +116,15 @@ ms.locfileid: "52527755"
     -   > [!NOTE]  
         >  需要存取 Analysis Services 伺服器執行個體的所有服務應用程式都必須具有 Analysis Services 管理權限。 例如，加入 Excel Services、Power View 及 Performance Point 服務的服務帳戶。 此外，請加入 SharePoint 伺服器陣列帳戶，做為裝載管理中心的 Web 應用程式的識別。  
   
-     選取 **[下一步]**。  
+     選取 **[下一步]** 。  
   
-17. 在 [錯誤報告]  頁面上，選取 [下一步] 。  
+17. 在 [錯誤報告]  頁面上，選取 [下一步]  。  
   
-18. 在 [已可安裝]  頁面上，選取 [安裝] 。  
+18. 在 [已可安裝]  頁面上，選取 [安裝]  。  
   
-19. 若您看見 [需要重新啟動電腦] 對話方塊，請選取 [確定] 。  
+19. 若您看見 [需要重新啟動電腦]  對話方塊，請選取 [確定]  。  
   
-20. 安裝完成時，選取 [關閉] 。  
+20. 安裝完成時，選取 [關閉]  。  
   
 21. 重新啟動電腦。  
   
@@ -133,13 +133,13 @@ ms.locfileid: "52527755"
 ### <a name="verify-the-sql-server-installation"></a>確認 SQL Server 安裝  
  確認 Analysis Services 服務正在執行。  
   
-1.  在 Microsoft Windows 中，按一下 [開始] ，選取[所有程式] ，然後選取 [Microsoft SQL Server 2016]  群組。  
+1.  在 Microsoft Windows 中，按一下 [開始]  ，選取[所有程式]  ，然後選取 [Microsoft SQL Server 2016]  群組。  
   
-2.  選取 [SQL Server Management Studio] 。  
+2.  選取 [SQL Server Management Studio]  。  
   
 3.  連接至 Analysis Services 執行個體，例如 **[您的伺服器名稱]\POWERPIVOT**。 如果您可以連接到執行個體，表示已確認服務正在執行。  
   
-##  <a name="bkmk_config"></a> 步驟 2:設定基本 Analysis Services SharePoint 整合  
+##  <a name="bkmk_config"></a> 步驟 2：設定基本 Analysis Services SharePoint 整合  
  下列步驟描述必要的組態變更，讓您可以與 SharePoint 文件庫中的 Excel 進階資料模型互動。 在您安裝 SharePoint 和 SQL Server Analysis Services 之後，完成這些步驟。  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -150,11 +150,11 @@ ms.locfileid: "52527755"
   
 1.  在 Analysis Services 伺服器上，啟動 SQL Server Management Studio 並連接至 Analysis Services 執行個體，例如 `[MyServer]\POWERPIVOT`.  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下執行個體名稱，然後選取 [屬性]。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下執行個體名稱，然後選取 [屬性]  。  
   
      ![檢視 SSAS 伺服器的內容](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS 伺服器的檢視內容")  
   
-3.  在左窗格中選取 [安全性] 。 新增已安裝 Office Online Server 的機器帳戶。  
+3.  在左窗格中選取 [安全性]  。 新增已安裝 Office Online Server 的機器帳戶。  
   
      ![SSAS 伺服器的安全性設定](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 伺服器的安全性設定")  
   
@@ -178,29 +178,29 @@ ms.locfileid: "52527755"
   
 1.  在 Analysis Services 伺服器上，啟動 SQL Server Management Studio 並連接至 Analysis Services 執行個體，例如 `[MyServer]\POWERPIVOT`.  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下執行個體名稱，然後選取 [屬性]。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下執行個體名稱，然後選取 [屬性]  。  
   
      ![檢視 SSAS 伺服器的內容](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS 伺服器的檢視內容")  
   
-3.  在左窗格中選取 [安全性] 。 加入您在步驟 1 中為 Excel Services 應用程式設定的網域登入。  
+3.  在左窗格中選取 [安全性]  。 加入您在步驟 1 中為 Excel Services 應用程式設定的網域登入。  
   
      ![SSAS 伺服器的安全性設定](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 伺服器的安全性設定")  
   
 #### <a name="configure-excel-services-for-analysis-services-integration"></a>針對 Analysis Services 整合設定 Excel Services  
   
-1.  在 [SharePoint 管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]**。  
+1.  在 [SharePoint 管理中心] 的 [應用程式管理] 群組中，按一下 **[管理服務應用程式]** 。  
   
-2.  按一下您的服務應用程式名稱，預設為 **[Excel Services 應用程式]**。  
+2.  按一下您的服務應用程式名稱，預設為 **[Excel Services 應用程式]** 。  
   
-3.  在 **[管理 Excel Services 應用程式]** 頁面上，按一下 **[資料模型設定]**。  
+3.  在 **[管理 Excel Services 應用程式]** 頁面上，按一下 **[資料模型設定]** 。  
   
-4.  按一下 **[加入伺服器]**。  
+4.  按一下 **[加入伺服器]** 。  
   
-5.  在 [伺服器名稱] 中，輸入 Analysis Services 伺服器名稱和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 執行個體名稱。 例如 `MyServer\POWERPIVOT`。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 執行個體名稱為必填。  
+5.  在 [伺服器名稱]  中，輸入 Analysis Services 伺服器名稱和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 執行個體名稱。 例如 `MyServer\POWERPIVOT`。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 執行個體名稱為必填。  
   
      輸入描述。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 **[確定]** 。  
   
 7.  變更在數分鐘內就會生效，您也可以 **[停止]** 和 **[啟動]** **[Excel Calculation Services]** 服務。 若要  
   
@@ -215,20 +215,20 @@ ms.locfileid: "52527755"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 步驟 3:確認整合  
+##  <a name="bkmk_verify"></a> 步驟 3：確認整合  
  下列步驟會逐步引導您建立和上傳新的活頁簿，以確認 Analysis Services 整合。 您將需要使用 SQL Server 資料庫才能完成這些步驟。  
   
-1.  **注意：** 如果您已有含交叉分析篩選器或篩選的進階活頁簿，可以將它上傳至 SharePoint 文件庫，然後確認您可以從文件庫檢視中與交叉分析篩選器和篩選互動。  
+1.  **注意：** 如果您已經使用交叉分析篩選器或篩選的進階活頁簿，您可以將它上傳至 SharePoint 文件庫，並確認您能夠與交叉分析篩選器和篩選互動從文件庫檢視。  
   
 2.  在 Excel 中啟動新的活頁簿。  
   
-3.  在 [資料] 索引標籤上，選取位於 [取得外部資料]  功能區的 [從其他來源] 。  
+3.  在 [資料] 索引標籤上，選取位於 [取得外部資料]  功能區的 [從其他來源]  。  
   
-4.  選取 **[從 SQL Server]**。  
+4.  選取 **[從 SQL Server]** 。  
   
-5.  在 **[資料連線精靈]**，輸入具有您要使用的資料庫的 SQL Server 執行個體名稱。  
+5.  在 **[資料連線精靈]** ，輸入具有您要使用的資料庫的 SQL Server 執行個體名稱。  
   
-6.  在登入認證下方，確認已選取 [使用 Windows 驗證]  ，然後選取 [下一步] 。  
+6.  在登入認證下方，確認已選取 [使用 Windows 驗證]  ，然後選取 [下一步]  。  
   
 7.  選取您要使用的資料庫。  
   
@@ -238,11 +238,11 @@ ms.locfileid: "52527755"
   
 10. 選取要匯入的資料表。  
   
-11. 選取 [匯入選定資料表之間的關聯性] 核取方塊，然後選取 [下一步] 。 從關聯式資料庫匯入多個資料表，可讓您使用已經相關的資料表。 這個方式可以免除一些步驟，因為您不需要手動建立關聯性。  
+11. 選取 [匯入選定資料表之間的關聯性]  核取方塊，然後選取 [下一步]  。 從關聯式資料庫匯入多個資料表，可讓您使用已經相關的資料表。 這個方式可以免除一些步驟，因為您不需要手動建立關聯性。  
   
-12. 在精靈的 [儲存資料連線檔案和完成]  頁面上，輸入您的連接名稱，然後選取 [完成] 。  
+12. 在精靈的 [儲存資料連線檔案和完成]  頁面上，輸入您的連接名稱，然後選取 [完成]  。  
   
-13. **[匯入資料]** 對話方塊將會出現。 選擇 [樞紐分析表] ，然後選取 [確定] 。  
+13. **[匯入資料]** 對話方塊將會出現。 選擇 [樞紐分析表]  ，然後選取 [確定]  。  
   
 14. [樞紐分析表欄位清單] 會出現在活頁簿中。   
     在欄位清單中，選取 [全部]  索引標籤  
@@ -262,7 +262,7 @@ ms.locfileid: "52527755"
  升級在舊版 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中建立之活頁簿所需的步驟，主要取決於建立活頁簿的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 版本。 如需詳細資訊，請參閱 [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_multiple_servers"></a> 超越單一伺服器安裝-Powerpivot for Microsoft SharePoint  
- **Web 前端 (WFE)** 或是**中介層：**:若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式中較大的 SharePoint 伺服器陣列，並安裝其他伺服器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]功能組織成伺服器陣列中，執行安裝程式套件**spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint2013)** 每部 SharePoint 伺服器上。 spPowerPivot16.msi 或 spPowerPivot.msi 會安裝必要的資料提供者以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 或 2013 設定工具。  
+ **Web 前端 (WFE)** 或是**中介層：** :若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式中較大的 SharePoint 伺服器陣列，並安裝其他伺服器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]功能組織成伺服器陣列中，執行安裝程式套件**spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint2013)** 每部 SharePoint 伺服器上。 spPowerPivot16.msi 或 spPowerPivot.msi 會安裝必要的資料提供者以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 或 2013 設定工具。  
   
  如需有關安裝及設定中介層的詳細資訊，請參閱以下主題：  
   

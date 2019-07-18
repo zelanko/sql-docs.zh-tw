@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eadcd1de5bfc3eea254bb134b963c2b4be094eaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4178e4b44bc226e31b6f6287b366d154cc306a9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069553"
 ---
 # <a name="dropping-a-sql-server-index"></a>卸除 SQL Server 索引
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

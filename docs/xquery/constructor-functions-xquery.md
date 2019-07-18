@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038988"
 ---
 # <a name="constructor-functions-xquery"></a>建構函式函數 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函數擷取較舊的產品描述  
- 在此範例中，範例 XML 文件會先指派給**xml**類型變數。 此文件包含三個範例 <`ProductDescription`> 元素，而每個元素都包含一個 <`DateCreated`> 子元素。  
+ 在此範例中，範例 XML 文件會先指派給**xml**類型變數。 本文件包含三個範例 <`ProductDescription`> 項目，而每個包含 <`DateCreated`> 子元素。  
   
  然後查詢該變數，只擷取在特定日期之前建立的那些產品描述。 基於比較的詳細資訊，此查詢會使用**xs:dateTime()** 建構函式，以輸入日期。  
   
@@ -174,7 +173,7 @@ select @x.query('
   
  請注意下列項目是從上一個查詢而來：  
   
--   FOR ...WHERE 迴圈結構用以擷取\<ProductDescription > 滿足 WHERE 子句中指定之條件的項目。  
+-   FOR...WHERE 迴圈結構用以擷取\<ProductDescription > 滿足 WHERE 子句中指定之條件的項目。  
   
 -   **Datetime （)** 建構函式用來建構**dateTime**型別值，因此它們可以進行適當地進行比較。  
   

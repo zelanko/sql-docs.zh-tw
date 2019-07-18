@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9b7229882b3b7f94e6b059e04c6496bde09641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938046"
 ---
 # <a name="about-drivers-and-data-sources"></a>關於驅動程式和資料來源
 *驅動程式*是可處理 ODBC 要求，並將資料傳回給應用程式的元件。 如有必要，驅動程式會修改成格式以了解資料來源的應用程式的要求。 您必須使用驅動程式的安裝程式來新增或刪除驅動程式從您的電腦。  

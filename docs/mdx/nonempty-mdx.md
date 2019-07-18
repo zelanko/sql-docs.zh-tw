@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) |Microsoft 文件
+title: NonEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088338"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -45,7 +44,7 @@ NONEMPTY(set_expression1 [,set_expression2])
 >  非空的是 Tuple 所參考之資料格參考的特性，而不是 Tuple 本身的特性。  
   
 ## <a name="examples"></a>範例  
- 下列查詢示範簡單的範例**NonEmpty**，傳回所有客戶的非 null 值的 Internet Sales Amount 年 7 月 1 日 2001:  
+ 下列查詢會示範一個簡單的範例**NonEmpty**，傳回所有具有非 null 值的 Internet Sales Amount，年 7 月 1 日 2001 的客戶：  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +60,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- 下列範例會傳回包含客戶和購買日期，使用的 tuple 集合**篩選**函式和**NonEmpty**尋找的最後一個日期，每一位客戶購買的函式：  
+ 下列範例會傳回包含客戶和購買日期，使用的 tuple 集合**篩選條件**函式並**NonEmpty**函式以尋找最後一個日期，每位客戶購買：  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -89,9 +88,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>另請參閱  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [篩選&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

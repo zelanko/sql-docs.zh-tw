@@ -10,16 +10,16 @@ helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 23b0b3156d97670832ba040693a2ea0dc20540f2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979528"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584073"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 1.  組成 **MultiLineString** 執行個體的所有執行個體必須都是有效的 **LineString** 執行個體。  
   
 2.  組成 **MultiLineString** 執行個體的任兩個 **LineString** 執行個體都不可在間隔上重疊。 **LineString** 執行個體只能在有限的點數內彼此交集或接觸，或是接觸其他 **LineString** 執行個體。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 下列範例示範三個有效的 **MultiLineString** 執行個體和一個無效的 **MultiLineString** 執行個體。  
   
 ```sql  

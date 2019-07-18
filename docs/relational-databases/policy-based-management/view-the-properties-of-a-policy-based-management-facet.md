@@ -13,12 +13,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3616f421a3817f1a3cf56d2e70f5b4fe91927c84
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: bb04eb063885e7682537f88386772cf8101d7f53
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256513"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581652"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>檢視原則式管理 Facet 的屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54256513"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,12 +49,13 @@ ms.locfileid: "54256513"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]。 如需有關 [Facet 屬性 - _Facet 名稱_] 對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[Facet 屬性對話方塊，相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]  。 如需有關 [Facet 屬性 - _Facet 名稱_]  對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[Facet 屬性對話方塊，相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
   
-6.  完成後，請按一下 **[關閉]**。  
-  
-  
+6.  完成後，請按一下 **[關閉]** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

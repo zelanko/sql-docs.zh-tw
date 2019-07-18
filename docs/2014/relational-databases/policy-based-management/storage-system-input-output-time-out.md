@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241976"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253165"
 ---
 # <a name="storage-system-input-output-time-out"></a>儲存體系統輸入輸出逾時
   這個規則會檢查系統事件記錄檔中是否有 EventId 9。 此訊息表示儲存體系統中發生了 I/O 逾時。  

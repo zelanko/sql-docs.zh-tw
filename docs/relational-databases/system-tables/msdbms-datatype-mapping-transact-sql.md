@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d513da9588b8ae8fb4f20ece11390c29d71bcf9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907540"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52750093"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|識別每個唯一的資料類型對應。|  
-|**msdbms_datatype_mapping**|**int**|識別來源資料類型。|  
+|**map_id**|**int**|識別來源資料類型。|  
 |**dest_datatype_id**|**int**|識別目的地資料類型。|  
 |**dest_precision**|**bigint**|定義目的地資料類型，其中 NULL 值表示不使用有效位數，精確度值，並針對 **-1**表示使用來源資料類型的有效位數。|  
 |**dest_scale**|**int**|定義標尺的目的地資料類型，其中 NULL 值表示不使用 小數位數，而值為 **-1**表示使用來源資料類型的小數位數。|  

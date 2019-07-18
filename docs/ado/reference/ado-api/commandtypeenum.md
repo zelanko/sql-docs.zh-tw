@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919680"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定應該如何解譯為命令引數。  
@@ -35,7 +34,7 @@ ms.locfileid: "47742876"
 |**adCmdTable**|2|會評估**CommandText**資料表的名稱，其資料行都會傳回內部產生的 SQL 查詢。|  
 |**adCmdStoredProc**|4|會評估**CommandText**做為預存程序名稱。|  
 |**adCmdUnknown**|8|預設值。 表示命令中的類型**CommandText**並不知道屬性。<br /><br /> 當命令的類型未知時，ADO 會多次嘗試才能解譯**CommandText**。<br /><br /> -   **CommandText**會解譯為文字定義命令或預存程序呼叫。 這是相同的行為**adCmdText**。<br />-   **CommandText**是預存程序的名稱。 這是相同的行為**adCmdStoredProc**。<br />-   **CommandText**會解譯為資料表的名稱。 內部產生的 SQL 查詢會傳回所有資料行。 這是相同的行為**adCmdTable**。|  
-|**adCmdFile**|256|會評估**CommandText**持續預存的檔案名稱作為[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 搭配**資料錄集。**[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)或是[Requery](../../../ado/reference/ado-api/requery-method.md)只。|  
+|**adCmdFile**|256|會評估**CommandText**持續預存的檔案名稱作為[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 搭配**資料錄集。** [開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)或是[Requery](../../../ado/reference/ado-api/requery-method.md)只。|  
 |**adCmdTableDirect**|512|會評估**CommandText**都會傳回的資料行資料表的名稱。 搭配**Recordset.Open**或是**Requery**只。 若要使用[Seek](../../../ado/reference/ado-api/seek-method.md)方法， **Recordset**必須以開啟**adCmdTableDirect**。<br /><br /> 此值不得搭配[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值**adAsyncExecute**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

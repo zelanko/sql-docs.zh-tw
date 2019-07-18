@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924696"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>傳遞參數給具名命令
 就如同命令的結果會當做傳遞*出*具名命令，也就是參數的變數參數化的命令可以針對已傳入作為*中*具名命令的變數。  

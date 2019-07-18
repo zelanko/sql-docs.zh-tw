@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063425"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL 偵錯工具資訊
   每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。  
@@ -41,7 +40,7 @@ ms.locfileid: "48147438"
 -   在 [偵錯] 工具列上，按一下 [中斷點]，然後選取您想要的視窗。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 運算式  
- 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側的偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4]。  
+ 運算式是評估成單一純量值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，例如變數或參數。 左側偵錯工具視窗最多可以在五個索引標籤或視窗中顯示目前指派給運算式的資料值：[區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4]。  
   
  [區域變數] 視窗會顯示有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具目前範圍中之區域變數的資訊。 [區域變數] 視窗中所列的這組運算式會隨著偵錯工具逐步執行不同的程式碼部分而變更。  
   

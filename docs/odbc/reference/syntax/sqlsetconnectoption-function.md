@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b429e499cccaad553236b4ebee78374c69c7c4dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093016"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 函式
 **合規性**  

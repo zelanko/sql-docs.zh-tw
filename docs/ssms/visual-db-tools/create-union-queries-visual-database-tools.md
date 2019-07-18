@@ -14,15 +14,15 @@ helpviewer_keywords:
 - combining query results
 - merged SELECT query [SQL Server]
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f4fb949c7706aa5b476edde388d747411f3a1a3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 510b22c7b4f384e59d8839ff0009855970378ae6
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699519"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690462"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>建立 UNION 查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ UNION 關鍵字讓您可以在所產生的單一資料表中，包含 2 個 SELE
     FROM dbo.Gloves;  
     ```  
   
-3.  在 [查詢設計工具] 功能表中，按一下 [執行 SQL] 來執行查詢。  
+3.  在 [查詢設計工具]  功能表中，按一下 [執行 SQL]  來執行查詢。  
   
     查詢設計工具目前已格式化您的 UNION 查詢。  
   

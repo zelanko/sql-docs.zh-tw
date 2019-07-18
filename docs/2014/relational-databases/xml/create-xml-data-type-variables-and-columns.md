@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637991"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
   `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建的類型，您可以使用`xml`資料類型作為資料行類型，當您建立資料表作為變數類型、 參數類型、 函式傳回類型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  

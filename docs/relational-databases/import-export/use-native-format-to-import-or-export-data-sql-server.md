@@ -11,16 +11,16 @@ helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e8598624186ebd2c1af9901facaae9429504fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c617d46174b44bb43add44314c5d3192bc6cd94
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717566"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579603"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "47717566"
 1.  將來源資料表中的資料大量匯出到資料檔  
   
 2.  將資料檔中的資料大量匯入目標資料表  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 在相同資料表之間使用原生格式，可避免資料類型與字元格式間進行不需要的來回轉換，因而可節省時間及空間。 不過，若要取得最佳的傳輸率，必須針對資料格式化做一些檢查。 若要防止所載入的資料發生問題，請參閱下列限制清單。  
 
 |本主題內容：|
@@ -94,7 +96,7 @@ ms.locfileid: "47717566"
 |OPENROWSET|不適用|必須使用格式檔案|
 
   
- \*若要將原生 (**-n**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要將原生 ( **-n**) 資料載入與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端相容的格式，請使用 **-V** 參數。 如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。

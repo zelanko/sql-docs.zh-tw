@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connterradb.f1
@@ -13,15 +12,15 @@ ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6254610e6d42c33e1a46c48080db27f208f5bbf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087193"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>連接至 Teradata 資料庫 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Teradata 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  **[資料表匯入精靈]** 的這個頁面可讓您指定連接到 Teradata 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48173748"
  為資料庫連接指定密碼。  
   
  **儲存我的密碼**  
- 指定是否應該儲存您在 [密碼] 方塊中輸入的密碼。  
+ 指定是否應該儲存您在 [密碼]  方塊中輸入的密碼。  
   
  **進階**  
  使用 **[設定進階屬性]** 對話方塊設定其他連接屬性。 如需詳細資訊，請參閱[設定進階屬性 &#40;SSAS&#41;](set-advanced-properties-ssas.md)。  

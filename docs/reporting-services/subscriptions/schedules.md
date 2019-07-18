@@ -2,7 +2,7 @@
 title: 排程 | Microsoft Docs
 ms.date: 07/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578100"
 ---
 # <a name="schedules"></a>[排程]
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供 **共用排程** 和 **報表特定排程** 來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。
@@ -116,7 +116,7 @@ ms.locfileid: "52711469"
  Reporting Services 會針對所有排程的作業維護事件佇列， 也會定期輪詢此佇列，以檢查是否有新的事件。 依預設，每隔 10 秒鐘會掃描一次佇列。 您可以變更此間隔，其方式是在 RSReportServer.config 檔中修改 **PollingInterval**、 **IsNotificationService**和 **IsEventService** 組態設定。 SharePoint 模式也會將 RSreporserver.config 用於這些設定，而且這些值會套用到所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 伺服器相依性  
- 排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程與傳遞處理功能必須透過原則型管理中 [Reporting Services 的介面區設定] Facet 的 **ScheduleEventsAndReportDeliveryEnabled** 屬性來啟用。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
+ 排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程與傳遞處理功能必須透過原則型管理中 [Reporting Services 的介面區設定]  Facet 的 **ScheduleEventsAndReportDeliveryEnabled** 屬性來啟用。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
   
 > [!NOTE]  
 >  您可以使用 **[Reporting Services 的介面區組態]** Facet，暫時或永久地停止排程的作業。 您可以建立與部署自訂傳遞擴充模組，但排程與傳遞處理器無法藉由本身擴充。 您無法變更它管理事件與通知的方式。 如需有關關閉功能的詳細資訊，請參閱＜ **Turn Reporting Services Features On or Off** ＞的＜ [排程的事件和傳遞](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)＞一節。  

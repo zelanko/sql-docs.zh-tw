@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46a1f3e53c4953f08400d5d5599bec348fb6b15c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 82a5b96d25ed608ad9e44dec6a937527055c65e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749434"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795831"
 ---
 # <a name="comparing-execution-functions"></a>比較執行函數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

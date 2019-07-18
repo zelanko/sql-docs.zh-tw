@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc7c57172b4f824794f20710105b9d2f49d91c8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ceffc0d0609e310d7a9285118f1d99020bf50b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775529"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>設定工作集大小伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

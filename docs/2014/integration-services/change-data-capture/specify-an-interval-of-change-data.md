@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771201"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是 `datetime` 值，而且將會以封裝變數儲存，以便稍後在封裝中使用。  
@@ -83,13 +83,13 @@ ms.locfileid: "58381146"
   
 2.  開啟 **[執行 SQL 工作編輯器]** 然後在編輯器的 **[一般]** 頁面上，選取下列選項：  
   
-    1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
+    1.  針對 **[ResultSet]** ，選取 **[單一資料列]** 。  
   
     2.  將有效的連接設定到來源資料庫。  
   
-    3.  針對 **[SQLSourceType]**，選取 **[直接輸入]**。  
+    3.  針對 **[SQLSourceType]** ，選取 **[直接輸入]** 。  
   
-    4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
+    4.  針對 **[SQLStatement]** ，輸入下列 SQL 陳述式：  
   
         ```  
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
@@ -105,7 +105,7 @@ ms.locfileid: "58381146"
 ## <a name="next-step"></a>下一個步驟  
  計算變更範圍的起點和結束點後，下一個步驟是判斷變更資料是否就緒。  
   
- **下一個主題：**[判斷變更資料是否就緒](determine-whether-the-change-data-is-ready.md)  
+ **下一個主題：** [判斷變更資料是否就緒](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [在封裝中使用變數](../use-variables-in-packages.md)   

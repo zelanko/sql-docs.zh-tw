@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
@@ -14,12 +13,12 @@ ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064824"
 ---
 # <a name="feature-reference-database-engine"></a>功能參考 (Database Engine)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含可用來建立、管理以及檢視資料庫物件與資料的數個工具和應用程式。 此外，還有您可以用來監視並疑難排解伺服器和資料庫效能，以及啟用和停用功能、服務與網路通訊協定的工具。 本節提供描述這些工具和應用程式之對話方塊的特定主題。  

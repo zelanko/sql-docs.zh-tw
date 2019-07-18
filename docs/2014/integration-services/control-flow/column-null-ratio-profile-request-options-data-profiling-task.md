@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832589"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>資料行 Null 比例設定檔要求選項 (資料分析工作)
   您可以使用 **[設定檔要求]** 頁面的 **[要求屬性]** 窗格，針對要求窗格中選取的 **[資料行 Null 比例要求]** 設定選項。 資料行 Null 比例設定檔會報告選取之資料行中 Null 值的百分比。 這個設定檔可協助您識別資料中的問題，例如某個資料行中 Null 值的比例過高。 舉例來說，資料行 Null 比例設定檔可能會分析「郵遞區號」資料行並發現遺漏郵遞區號的百分比過高。  

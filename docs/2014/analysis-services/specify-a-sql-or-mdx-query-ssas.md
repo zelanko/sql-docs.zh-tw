@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.specsqlmdxquery.f1
@@ -13,15 +12,15 @@ ms.assetid: e4128221-3b46-48be-b0f1-d82477ce6782
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a49884701445668aeb4f3785ed3f4a8ff13a1ee1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: baf3349bc72a6d6baff4defd9a9cd4799397b716
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068504"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>指定 SQL 或 MDX 查詢 (SSAS)
-  **[資料表匯入精靈]** 的這個頁面可讓您使用 SQL 或 MDX 查詢匯入資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  **[資料表匯入精靈]** 的這個頁面可讓您使用 SQL 或 MDX 查詢匯入資料。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
   
  此查詢可以操作已匯入的資料。 例如，您可以加入不同資料表的資料，或只選取符合特定準則的資料列。  
   

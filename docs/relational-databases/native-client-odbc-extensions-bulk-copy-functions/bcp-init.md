@@ -1,5 +1,5 @@
 ---
-title: bcp_init |Microsoft Docs
+title: bcp_init | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895534"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，資料行在資料檔案中的序數位置必須與資料行在資料庫資料表中的序數位置相同。 從複製時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**會根據資料庫資料表中的資料行的序數位置的資料。  
   
--   如果資料庫資料類型的長度是變數 (例如**varbinary(22)**) 或者如果資料庫資料行可以包含 null 值，資料檔案中的資料的前置詞為長度 /null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。  
+-   如果資料庫資料類型的長度是變數 (例如**varbinary(22)** ) 或者如果資料庫資料行可以包含 null 值，資料檔案中的資料的前置詞為長度 /null 指標。 指標的寬度會根據資料類型和大量複製的版本而改變。  
   
  若要變更針對資料檔指定的資料格式值，請呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)並[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
   

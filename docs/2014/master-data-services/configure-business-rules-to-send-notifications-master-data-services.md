@@ -11,15 +11,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05ca904445d4a13cdf957ed82e70c70d57b3ad17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483949"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
@@ -27,29 +27,29 @@ ms.locfileid: "52792980"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須擁有存取 [系統管理] 和 [使用者及群組的權限] 功能區域的權限。 如果您沒有 [使用者及群組的權限] 功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
+-   您必須擁有存取 [系統管理]  和 [使用者及群組的權限]  功能區域的權限。 如果您沒有 [使用者及群組的權限]  功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   使用驗證動作的商務規則必須已經存在。 如需詳細資訊，請參閱[建立及發行商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
--   接收通知的使用者或群組至少必須針對驗證失敗的屬性擁有 [唯讀] 權限。 遭明確或隱含拒絕此屬性之權限的使用者或群組將會收到電子郵件，但是無法在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中存取此屬性。  
+-   接收通知的使用者或群組至少必須針對驗證失敗的屬性擁有 [唯讀]  權限。 遭明確或隱含拒絕此屬性之權限的使用者或群組將會收到電子郵件，但是無法在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中存取此屬性。  
   
 -   如果將郵件傳送給群組，只有可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的群組成員會收到電子郵件。  
   
 ### <a name="to-configure-business-rules-to-send-notifications"></a>若要設定商務規則來傳送通知  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
   
-3.  在 [商務規則維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [商務規則維護]  頁面上，選取 [模型]  清單中的模型。  
   
-4.  從 [實體] 清單中選取實體。  
+4.  從 [實體]  清單中選取實體。  
   
 5.  從**的成員型別**清單中，選取 成員類型。  
   
-6.  從 [屬性] 清單中，選取屬性或保留預設值 [全部]。  
+6.  從 [屬性]  清單中，選取屬性或保留預設值 [全部]  。  
   
 7.  在方格中，在 商務規則資料列，按兩下**通知**欄位。  
   

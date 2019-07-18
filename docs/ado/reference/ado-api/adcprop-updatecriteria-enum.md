@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_UPDATECRITERIA_ENUM |Microsoft Docs
+title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921410"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 指定哪些欄位可用來偵測衝突，開放式資料來源之資料列更新期間[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

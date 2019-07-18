@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d22ec44b7be6562c7186272b403a76cd562be62
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192085"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>連接到 SQL Server 的執行個體
   中的第一個程式設計步驟[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Management Objects (SMO) 應用程式是要建立的執行個體<xref:Microsoft.SqlServer.Management.Smo.Server>物件，並建立它的執行個體的連線[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

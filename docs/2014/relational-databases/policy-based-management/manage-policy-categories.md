@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210791"
 ---
 # <a name="manage-policy-categories"></a>管理原則類別目錄
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將某個類別目錄中的任何或所有可用原則套用至 [!INCLUDE[tsql](../../includes/tsql-md.md)]的整個執行個體。  
@@ -28,7 +28,7 @@ ms.locfileid: "52817968"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列方法將類別目錄原則套用至 SQL Server 執行個體：**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52817968"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理] 並選取 [管理類別目錄]。  
+3.  以滑鼠右鍵按一下 [原則管理]  並選取 [管理類別目錄]  。  
   
      **[管理原則類別目錄]** 對話方塊中提供下列資訊：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52817968"
   
 4.  選取或清除 **[託管資料庫訂閱]** 下的任何或所有核取方塊，將該原則類別目錄套用至 SQL Server 執行個體。  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "52817968"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb;  

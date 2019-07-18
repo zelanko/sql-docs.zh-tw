@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 651a397a199f2d42aa2b0dab33d2864a0711a492
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29695a5daa338a692e82abdafc03a13c55ec4d3e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756636"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583856"
 ---
 # <a name="create-unique-constraints"></a>建立唯一的條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47756636"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來建立唯一條件約束：**  
   
@@ -53,25 +53,27 @@ ms.locfileid: "47756636"
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   
-1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]。  
+1.  在**物件總管**中，以滑鼠右鍵按一下要加入唯一條件約束的資料表，然後按一下 [設計]  。  
   
-2.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+2.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
-3.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
+3.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
   
-4.  在 [一般] 底下的方格中，按一下 [類型]，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]。  
+4.  在 [一般]  底下的方格中，按一下 [類型]  ，然後從屬性右邊的下拉式清單方塊中選擇 [唯一索引鍵]  。  
   
-5.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
-  
+5.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>若要建立唯一條件約束  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立 `TransactionHistoryArchive4` 資料表並且在 `TransactionID`資料行上建立唯一條件約束。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立 `TransactionHistoryArchive4` 資料表並且在 `TransactionID`資料行上建立唯一條件約束。  
   
     ```  
     USE AdventureWorks2012;  
@@ -89,9 +91,9 @@ ms.locfileid: "47756636"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `PasswordHash` 資料表中的 `PasswordSalt` 和 `Person.Password`資料行上建立唯一條件約束。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會在 `PasswordHash` 資料表中的 `PasswordSalt` 和 `Person.Password`資料行上建立唯一條件約束。  
   
     ```  
     USE AdventureWorks2012;   
@@ -106,9 +108,9 @@ ms.locfileid: "47756636"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表並且在 `TransactionID` 資料行上定義唯一條件約束。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立資料表並且在 `TransactionID` 資料行上定義唯一條件約束。  
   
     ```  
     USE AdventureWorks2012;  

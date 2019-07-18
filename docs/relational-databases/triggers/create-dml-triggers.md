@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 245ff3f542bead93290c09bf4dd3de25337795cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 927967c01e03327512bbb9876e2893f89c4f0082
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624266"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584693"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "47624266"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [資料庫]、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫、[資料表] 和 **Purchasing.PurchaseOrderHeader** 資料表。  
+2.  依序展開 [資料庫]  、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫、[資料表]  和 **Purchasing.PurchaseOrderHeader** 資料表。  
   
-3.  以滑鼠右鍵按一下 [觸發程序]，然後選取 [新增觸發程序]。  
+3.  以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [新增觸發程序]  。  
   
-4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。 您也可以按 (Ctrl-Shift-M) 開啟 [指定範本參數的值] 對話方塊。  
+4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。 您也可以按 (Ctrl-Shift-M) 開啟 [指定範本參數的值]  對話方塊。  
   
 5.  在 **[指定範本參數的值]** 對話方塊中，為顯示的參數輸入下列值。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "47624266"
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|從清單中移除 UPDATE 和 DELETE。|  
   
-6.  按一下 [確定] 。  
+6.  按一下 [確定]  。  
   
-7.  在 [查詢編輯器] 中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
+7.  在 [查詢編輯器]  中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
   
     ```sql  
     IF @@ROWCOUNT = 1  
@@ -94,21 +94,23 @@ ms.locfileid: "47624266"
     END;  
     ```  
   
-8.  若要驗證語法是否有效，請在 [查詢] 功能表上按一下 [剖析]。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正，然後重複此步驟。  
+8.  若要驗證語法是否有效，請在 [查詢]  功能表上按一下 [剖析]  。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正，然後重複此步驟。  
   
-9. 若要建立 DML 觸發程序，請在 [查詢] 功能表中按一下 [執行]。 DML 觸發程序會建立為資料庫中的物件。  
+9. 若要建立 DML 觸發程序，請在 [查詢]  功能表中按一下 [執行]  。 DML 觸發程序會建立為資料庫中的物件。  
   
-10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]，然後選取 [重新整理]。  
-  
+10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [重新整理]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [開始之前](#Top)  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  在 **[檔案]** 功能表中，按一下 **[新增查詢]**。  
+2.  在 **[檔案]** 功能表中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立與上面相同的預存 DML 觸發程序。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立與上面相同的預存 DML 觸發程序。  
   
     ```sql  
     -- Trigger valid for multirow and single row inserts  

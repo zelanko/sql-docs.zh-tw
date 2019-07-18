@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b924596a4071f59175faa629006e9e5b220f66ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200240"
 ---
 # <a name="executing-queries-odbc"></a>執行查詢 (ODBC)
   當 ODBC 應用程式將連接控制代碼初始化並連接資料來源後，會在連接控制代碼上配置一個或多個陳述式控制代碼。 接著可執行應用程式[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式控制代碼上的陳述式。 執行 SQL 陳述式的一般事件序列是：  

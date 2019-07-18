@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 329446a2ca5b7719e68123b2257d32ceddcd0e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905040"
 ---
 # <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
  是您要協調索引已啟用 Stretch 之資料表的限定或非限定名稱。 只有當您指定限定的物件時，才需要引號。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 (成功) 或 >0 (失敗)  
+ 0 （成功） 或 > 0 （失敗）  
   
 ## <a name="see-also"></a>另請參閱  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

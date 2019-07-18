@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9bd9b370dbe030a745eb36c475f806316a5ef270
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056582"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>原始檔案目的地編輯器 (資料行頁面)
   使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  
@@ -35,7 +34,7 @@ ms.locfileid: "58377548"
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝。  
   
-2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]**。  
+2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
 ##  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  

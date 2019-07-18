@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079755"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
   Analysis Services 執行個體將會記錄伺服器通知、 錯誤和警告至 msmdsrv.log 檔案-一個用於您所安裝的每個執行個體。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](https://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
@@ -38,7 +37,7 @@ ms.locfileid: "53363750"
 -   [秘訣和最佳作法](#bkmk_tips)  
   
 > [!NOTE]  
->  如果您正在尋找記錄的相關資訊，您也可能想要追蹤顯示處理和查詢執行路徑的作業。 臨機操作和持續性追蹤 (例如稽核 Cube 存取) 的追蹤物件，以及如何充分運用可以在此頁面上找到連結的 Flight Recorder、SQL Server Profiler 和 xEvents 的建議：[監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)。  
+>  如果您正在尋找記錄的相關資訊，您也可能想要追蹤顯示處理和查詢執行路徑的作業。 臨機操作和持續性追蹤 （例如稽核 cube 存取），以及建議如何充分運用 Flight Recorder、 SQL Server Profiler，和 xEvents 可透過連結此頁面上的追蹤物件：[監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)。  
   
 ##  <a name="bkmk_location"></a> 記錄檔的位置和類型  
  Analysis Services 提供如下所述的記錄檔。  
@@ -49,7 +48,7 @@ ms.locfileid: "53363750"
 |關聯式資料庫中的 OlapQueryLog 資料表|查詢記錄|收集使用方式的最佳化精靈的輸入|否|  
 |Sqldmp<guid\<guid >.mdmp 檔|當機和例外狀況|深入疑難排解|否|  
   
- 我們強烈建議使用下列連結，以取得本主題中未涵蓋的其他資訊資源：[初始資料收集提示，Microsoft 支援服務](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
+ 我們強烈建議下列連結以取得此主題中未涵蓋的其他資訊資源：[初始資料收集提示，Microsoft 支援服務](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
 ##  <a name="bkmk_general"></a> 記錄檔組態設定的一般資訊  
  您可以在 msmdsrv.ini 伺服器組態檔案中找到每個記錄檔的區段，其位於 \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config 資料夾。 如需編輯此檔案的指示，請參閱 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) 。  
@@ -110,7 +109,7 @@ ms.locfileid: "53363750"
   
 2.  授與 Analysis Services 服務帳戶資料庫的足夠權限。 帳戶需要建立資料表、寫入資料表，並從資料表讀取的權限。  
   
-3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 **[Analysis Services]** | **[屬性]** | **[一般]**，並將 **CreateQueryLogTable** 設為 true。  
+3.  在 SQL Server Management Studio 中，以滑鼠右鍵按一下 **[Analysis Services]**  |  **[屬性]**  |  **[一般]** ，並將 **CreateQueryLogTable** 設為 true。  
   
 4.  如果您想要以不同的速率對查詢取樣，或使用不同的資料表名稱，請選擇性地變更 **QueryLogSampling** 或 **QueryLogTableName** 。  
   
@@ -176,7 +175,7 @@ ms.locfileid: "53363750"
   
 -   設定 msmdsrv.log 檔案來控制 msmdsrv 記錄檔的大小和數目。 預設不會啟用此設定，因此務必將它們加入做為後續安裝步驟。 請參閱本主題的 [MSMDSRV 服務記錄檔](#bkmk_msmdsrv) 。  
   
--   檢閱來自 Microsoft 客戶支援的這些部落格文章，以了解他們用何資源來取得有關伺服器作業的資訊：[初始資料收集](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   檢閱來自 Microsoft 客戶支援，以了解他們用來取得有關伺服器作業的資訊何資源此部落格文章：[初始資料收集](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   若要找出查詢 Cube 的對象，請使用 ASTrace2012，而不是查詢記錄。 查詢記錄通常用來對使用方式的最佳化精靈提供輸入，其擷取的資料並不易閱讀或解譯。 ASTrace2012 是廣泛使用的社群工具，可擷取查詢作業。 請參閱[Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   

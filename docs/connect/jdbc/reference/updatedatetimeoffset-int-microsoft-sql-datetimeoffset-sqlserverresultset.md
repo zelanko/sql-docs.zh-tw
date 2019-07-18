@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset(int) (SQLServerResultSet) |Microsoft Docs
+title: updateDateTimeOffset(int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a216a94ffa49015684bc349e460bf758ac1666
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8deb226ee69f91a3b9e12e50c1f6a8b8ec3e6d43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804225"
 ---
 # <a name="updatedatetimeoffsetint-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以擷取[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值替換[SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)。  
   
 ## <a name="see-also"></a>另請參閱  

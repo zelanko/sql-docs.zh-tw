@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856505"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
     
 ##  <a name="Top"></a> 本主題描述如何檢視預存程序中的相依性[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：**[安全性](#Security)  
   
--   使用 [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure) **檢視程序的相依性**  
+-   **若要檢視的相依性的程序中，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

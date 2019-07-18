@@ -2,19 +2,18 @@
 title: 分析平台系統的文件 | Microsoft Docs
 description: Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc8765d0bc8fe4b5b9ab3b4bcc98ce940f99400c
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e0f4fc55632b4effbe04776542b35aa54dcd9462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960845"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 

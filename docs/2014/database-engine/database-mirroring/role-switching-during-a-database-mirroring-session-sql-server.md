@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754470"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
   在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
@@ -170,7 +170,7 @@ ms.locfileid: "48181210"
   
  一開始，三部伺服器都已連接 (也就是工作階段具有完整的仲裁)。 **Partner_A** 是主體伺服器， **Partner_B** 是鏡像伺服器。 **Partner_A** (或 **Partner_A**上的主體資料庫) 變得無法使用。 見證與 **Partner_B** 兩者皆認定主體已無法使用，且工作階段會重新取得仲裁。 **Partner_B** 會成為主體伺服器，並使其資料庫副本成為新的主體資料庫。 最後， **Partner_A** 重新連接到工作階段，並發現 **Partner_B** 此時已擁有主體角色。 **Partner_A** 會接替鏡像角色。  
   
- 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ 容錯移轉之後，用戶端必須重新連接到目前的主體資料庫。 如需詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)的程序交換。  
   
 > [!NOTE]  
 >  在容錯移轉發生時，凡是已利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器準備好但尚未認可的交易，都會在資料庫完成容錯移轉後被視為已中止。  

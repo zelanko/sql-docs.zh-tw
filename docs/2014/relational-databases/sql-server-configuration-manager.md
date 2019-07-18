@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212007"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044453"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個工具，用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關服務、設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所用的網路通訊協定，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端電腦的網路連接組態。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 嵌入式管理單元，您可以從 [開始] 功能表存取它，也可以將它加入任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 顯示畫面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) 會在 Windows System32 資料夾中的 SQLServerManager10.msc 檔來開啟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Configuration Manager。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee2218124f3bbae716c42d013ba9d7339c0b011b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 03a2965c837cc8842843c53b127323a1551ee08c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109635"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供各種已準備好要使用的工具和服務，協助您建立、 部署及管理您組織的報表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可讓您擴充和自訂報表功能的程式設計功能。  

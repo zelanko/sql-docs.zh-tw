@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -18,12 +17,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064664"
 ---
 # <a name="browsing-a-decision-trees-model"></a>瀏覽決策樹模型
   當您開啟分類模型，使用**瀏覽**，此模型會顯示互動式決策樹檢視器，類似於[!INCLUDE[msCoName](../includes/msconame-md.md)]決策樹檢視器中的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 此檢視器會將分類的結果顯示成圖形，而這個圖形是設計來反白顯示區分不同資料群組的準則。 您也可以向下鑽研個別的樹狀結構子集，並且擷取基礎資料。  

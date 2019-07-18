@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d2d611ab4292f96db13305571e8b3fa16d4702
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896248"
 ---
 # <a name="validating-a-data-flow-component"></a>驗證資料流程元件
   提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 基底類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法，可以避免執行設定不正確的元件。 使用這個方法可確認元件具有預期的輸入和輸出物件數、此元件的自訂屬性具有可接受的值，以及指定了任何需要的連接。 使用這個方法也可確認輸入和輸出集合內的資料行具有正確的資料類型，以及每一個資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> 都針對此元件適當地設定。 基底類別實作會協助驗證程序，其方式是檢查此元件的輸入資料行集合，並確保此集合中的每一個資料行都會參考上游元件之 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> 中的資料行。  
@@ -38,9 +38,9 @@ ms.locfileid: "58380616"
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> 值指出，此元件的錯誤可以在設計師中編輯此元件來加以修正。 此錯誤通常是因為自訂屬性或是未指定或設定錯誤的必要連接所造成。  
   
- 最後的錯誤值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，該值指出此元件發現的錯誤只有在直接修改了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性時才應該發生 (不論是編輯封裝 XML 或使用物件模型)。 例如，當元件只加入了單一輸入，但是驗證作業發現 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有一個以上的輸入存在時，就會發生這種錯誤。 若要修復產生這個傳回值的錯誤，只能重設此元件或是使用 [進階編輯器] 對話方塊中的 [重設] 按鈕。  
+ 最後的錯誤值是 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>，該值指出此元件發現的錯誤只有在直接修改了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性時才應該發生 (不論是編輯封裝 XML 或使用物件模型)。 例如，當元件只加入了單一輸入，但是驗證作業發現 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 中有一個以上的輸入存在時，就會發生這種錯誤。 若要修復產生這個傳回值的錯誤，只能重設此元件或是使用 [進階編輯器]  對話方塊中的 [重設]  按鈕。  
   
- 除了傳回錯誤值以外，元件還會藉由公佈驗證期間的警告或錯誤來提供意見。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法會提供這項機制。 當呼叫這些方法時，這些事件會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [錯誤清單] 視窗內公佈。 然後元件開發人員可以提供有關所發生之錯誤的直接意見給使用者，並在適當的情況下提供修正錯誤的方式。  
+ 除了傳回錯誤值以外，元件還會藉由公佈驗證期間的警告或錯誤來提供意見。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 方法會提供這項機制。 當呼叫這些方法時，這些事件會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的 [錯誤清單]  視窗內公佈。 然後元件開發人員可以提供有關所發生之錯誤的直接意見給使用者，並在適當的情況下提供修正錯誤的方式。  
   
  下列程式碼範例會示範已覆寫的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 實作。  
   

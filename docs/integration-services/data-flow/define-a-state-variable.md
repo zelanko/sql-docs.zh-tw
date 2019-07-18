@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65726966"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
   
  CDC 狀態變數是由 CDC 控制工作所載入、初始化及更新，並且由 CDC 來源資料流程元件用來判斷變更記錄目前的處理範圍。 CDC 狀態變數可定義於 CDC 控制工作和 CDC 來源通用的任何容器上。 這可以是在封裝層級，但也可以是在其他容器，如迴圈容器。  

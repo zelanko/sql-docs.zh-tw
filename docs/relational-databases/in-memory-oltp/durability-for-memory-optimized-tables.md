@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419909"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047737"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "52419909"
  當資料列遭到刪除時，並不會從資料檔案移除該資料列，而是該資料列的參考將附加到與該資料列插入當時的交易範圍相關聯的差異檔案。 由於要刪除的資料列已存在於資料檔案中，差異檔案只會儲存參考資訊 `{inserting_tx_id, row_id, deleting_tx_id }` ，且將遵照原始刪除或更新作業的交易記錄順序。  
   
 
- 大小：若為記憶體大於 16GB 的電腦，每個差異檔案的大小約為 16MB；若為記憶體小於或等於 16GB 的電腦，每個差異檔案的大小約為 1MB。 如果儲存子系統速度認定夠快，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server 開始就可以使用大型的檢查點模式。 在大型的檢查點模式中，差異檔案的大小為 128MB。  
+ 大小：若為記憶體大於 16 GB 的電腦，每個差異檔案的大小約為 16 MB；若為記憶體小於或等於 16 GB 的電腦，每個差異檔案的大小約為 1 MB。 如果儲存子系統速度認定夠快，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server 開始就可以使用大型的檢查點模式。 在大型的檢查點模式中，差異檔案的大小為 128MB。  
  
 ## <a name="populating-data-and-delta-files"></a>擴展資料檔案和差異檔案  
  資料檔案和差異檔案會根據記憶體最佳化資料表認可交易所產生的交易記錄填寫，再將已插入及刪除的資料列相關資訊附加到適當的資料檔案和差異檔案。 不同於在檢查點完成時以隨機 I/O 方式排清資料/索引頁的磁碟資料表，記憶體最佳化資料表的保存是連續的背景作業。 如此將會存取多個差異檔案，因為交易可以刪除或更新任何先前交易所插入的任何資料列。 刪除資訊一律會附加到差異檔案的結尾。 例如，認可時間戳記為 600 的交易會插入一個新的資料列，並且刪除認可時間戳記為 150、250 和 450 的交易所插入的資料列，如下圖所示。 所有 4 個檔案 I/O 作業 (三個用於已刪除的資料列，一個用於新插入的資料列) 都是對應的差異檔案和資料檔案的附加專用作業。  

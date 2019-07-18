@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c28f61a39e45ea101f2e999d5787dfa23cb29c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b3726686a2c0e5229a0fccf4d9f51c0e1404f1a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038947"
 ---
 # <a name="data-accessor-functions"></a>Data Accessor 函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

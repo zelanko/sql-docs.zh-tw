@@ -2,18 +2,18 @@
 title: 建立遞迴階層群組 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 577043b3994b5acdee3cd71c76040ec9de7c3481
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581553"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，遞迴階層群組會組織包含多個階層層級之單一報表資料集內的資料，例如組織階層內經理-員工關聯性的報告結構。  
@@ -27,15 +27,15 @@ ms.locfileid: "56296666"
   
 1.  在 [設計] 檢視中加入資料表，並將資料集欄位拖曳至顯示。 一般來說，您想要顯示為階層的欄位會位於第一個資料行中。  
   
-2.  以滑鼠右鍵按一下資料表中的任何地方，即可選取它。 [群組] 窗格會顯示選定資料表的詳細資料群組。 在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料]，然後按一下 [編輯群組]。 **[群組屬性]** 對話方塊隨即開啟。  
+2.  以滑鼠右鍵按一下資料表中的任何地方，即可選取它。 [群組] 窗格會顯示選定資料表的詳細資料群組。 在 [資料列群組] 窗格中，以滑鼠右鍵按一下 [詳細資料]  ，然後按一下 [編輯群組]  。 **[群組屬性]** 對話方塊隨即開啟。  
   
-3.  在 **[群組運算式]** 中，按一下 **[加入]**。 新的資料列會出現在方格中。  
+3.  在 **[群組運算式]** 中，按一下 **[加入]** 。 新的資料列會出現在方格中。  
   
-4.  在 [群組對象] 清單中，鍵入或選取要分組的欄位。  
+4.  在 [群組對象]  清單中，鍵入或選取要分組的欄位。  
   
-5.  按一下 **[進階]**。  
+5.  按一下 **[進階]** 。  
   
-6.  在 [遞迴父系] 清單中，輸入或選取要作為分組對象的欄位。  
+6.  在 [遞迴父系]  清單中，輸入或選取要作為分組對象的欄位。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,9 +46,9 @@ ms.locfileid: "56296666"
 1.  按一下文字方塊，其中包含您想要將縮排層次加入其中以顯示階層格式的欄位。 文字方塊的屬性會顯示在 [屬性] 窗格中。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，請按一下 [檢視] 索引標籤上的 [屬性]。  
+    >  如果看不到 [屬性] 窗格，請按一下 [檢視]  索引標籤上的 [屬性]  。  
   
-2.  在 [屬性] 窗格中，展開 [Padding] 節點，然後按一下 [左]，再從下拉式清單中選取 [\<運算式>]。  
+2.  在 [屬性] 窗格中，展開 [Padding]  節點，然後按一下 [左]  ，再從下拉式清單中選取 [\<運算式>]  。  
   
 3.  在 [運算式] 窗格中，輸入下列運算式：  
   

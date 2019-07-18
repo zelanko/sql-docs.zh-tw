@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522026"
 ---
 # <a name="idle-connection-resiliency"></a>閒置連線恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,14 +23,14 @@ ms.locfileid: "58305916"
 
 連接恢復功能透過兩個連接關鍵字可加入至連接字串中實作： **ConnectRetryCount**並**ConnectRetryInterval**。
 
-|關鍵字|值|預設|Description|
+|關鍵字|值|預設|描述|
 |-|-|-|-|
-|**ConnectRetryCount**| 介於 0 和 255 之間 （含） 之間的整數|1|若要重新建立放棄之前中斷的連線的嘗試次數上限。 根據預設，單一嘗試重新建立連線時中斷。 值 0 表示沒有重新連線將會嘗試。|
-|**ConnectRetryInterval**| 介於 1 到 60 （含） 之間的整數|1| 時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，並接著將會等候**ConnectRetryInterval**秒後再試一次。 如果，則會忽略這個關鍵字**ConnectRetryCount**等於 0。
+|**ConnectRetryCount**| 介於 0 和 255 (含) 之間的整數|1|若要重新建立放棄之前中斷的連線的嘗試次數上限。 根據預設，單一嘗試重新建立連線時中斷。 值 0 表示沒有重新連線將會嘗試。|
+|**ConnectRetryInterval**| 介於 1 和 60 (含) 之間的整數|1| 時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，並接著將會等候**ConnectRetryInterval**秒後再試一次。 如果，則會忽略這個關鍵字**ConnectRetryCount**等於 0。
 
 如果的乘積**ConnectRetryCount**乘以**ConnectRetryInterval**大於**LoginTimeout**，則用戶端將會停止嘗試一次連線**LoginTimeout**為止; 否則它會繼續嘗試重新連線到**ConnectRetryCount**為止。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>備註
 
 當連線處於閒置狀態時，適用於連接恢復功能。 失敗發生時執行的交易，例如，將不會觸發重新連線嘗試次數-它們會失敗，因為預期。 下列情況下，稱為無法復原的工作階段狀態，將不會觸發重新連線嘗試：
 

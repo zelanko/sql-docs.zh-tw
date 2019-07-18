@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b88616b096557f0c27255669d4f5fab1f646f5f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059882"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>資料採礦模型培訓編輯器 (連接索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[連接]** 頁面，選取要培訓的採礦模型。  
@@ -29,16 +28,16 @@ ms.locfileid: "58390196"
   
 ## <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增] 按鈕建立新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連接，如下所述。  
+ 從現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增]  按鈕建立新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連接，如下所述。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
   
  **採礦結構**  
- 從可用的採礦結構清單中選取，或按一下 [新增] 建立新結構。  
+ 從可用的採礦結構清單中選取，或按一下 [新增]  建立新結構。  
   
  **新增**  
- 使用 [資料採礦精靈] 來建立新的採礦結構和採礦模型。  
+ 使用 [資料採礦精靈]  來建立新的採礦結構和採礦模型。  
   
  **採礦模型**  
  檢視與選取的採礦結構相關聯的採礦模型清單。  

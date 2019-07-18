@@ -1,7 +1,7 @@
 ---
 title: 只複製備份 (SQL Server) | Microsoft 文件
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/08/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 860d6d2d5f84f41d006cb10972b63ec6b93210f3
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 6649909f4d3a4bf6b95b657ef45f55c34f042f3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478510"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+  「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
   
  只複製備份的類型如下所示：  
   
@@ -50,13 +50,15 @@ ms.locfileid: "58658192"
 ###  <a name="SSMSProcedure"></a> A.  使用 SQL Server Management Studio  
 在此範例中，`Sales` 資料庫的只複製備份將會備份至預設備份位置的磁碟。
 
-1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-2.  展開 [資料庫]，以滑鼠右鍵按一下 `Sales`，指向 [工作]，然後按一下 [備份...]。
+1.  在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
-3.  在 [一般] 頁面的 [來源] 區段中，核取 [只複製備份] 核取方塊。
+2.  展開 [資料庫]  ，以滑鼠右鍵按一下 `Sales`，指向 [工作]  ，然後按一下 [備份...]  。
 
-4.  按一下 [確定] 。
+3.  在 [一般]  頁面的 [來源]  區段中，核取 [只複製備份]  核取方塊。
+
+4.  按一下 [確定]  。
 
   
 ###  <a name="TsqlProcedure"></a>B.  使用 Transact-SQL  

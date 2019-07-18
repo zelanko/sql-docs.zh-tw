@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198935"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用範本來設定資源管理員
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所提供的範本來設定資源管理員。  
   
--   **開始之前：**[Permissions](#Permissions)  
+-   **開始之前：** [權限](#Permissions)  
   
 -   **若要建立工作負載群組，請使用：**  [範本](#ConfRGTemplate)  
   
@@ -35,17 +35,17 @@ ms.locfileid: "52754010"
 ##  <a name="ConfRGTemplate"></a> 使用範本來設定資源管理員  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視]  功能表上，按一下 [範本總管] 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視]  功能表上，按一下 [範本總管]  。  
   
-2.  在 [範本總管] 中，展開 [Resource Governor]，然後按兩下 [設定 Resource Governor]。  
+2.  在 [範本總管]  中，展開 [Resource Governor]  ，然後按兩下 [設定 Resource Governor]  。  
   
-3.  在 **[連接到 Database Engine]** 中，輸入必要資訊，然後按一下 **[確定]**。 此時，[查詢編輯器] 就會提供 Configure Resource Governor.sql 範本。 您可以使用此範本來建立並設定資源集區、工作負載群組和分類函數。  
+3.  在 **[連接到 Database Engine]** 中，輸入必要資訊，然後按一下 **[確定]** 。 此時，[查詢編輯器] 就會提供 Configure Resource Governor.sql 範本。 您可以使用此範本來建立並設定資源集區、工作負載群組和分類函數。  
   
 4.  若要變更範本中的值，請按下 CTRL+SHIFT+M。 在 **[指定範本參數的值]** 視窗中，輸入您想要使用的值。  
   
-5.  若要儲存您對範本所做的變更，請按一下 **[確定]**。  
+5.  若要儲存您對範本所做的變更，請按一下 **[確定]** 。  
   
-6.  若要執行查詢，請按一下 **[執行]**。  
+6.  若要執行查詢，請按一下 **[執行]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資源管理員](resource-governor.md)   

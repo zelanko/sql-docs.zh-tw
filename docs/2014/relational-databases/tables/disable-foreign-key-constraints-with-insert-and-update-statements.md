@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760995"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用 INSERT 和 UPDATE 交易期間的外部索引鍵條件約束。 如果您確知新資料將違反現有條件約束，或是條件約束只適用於已經在資料庫中的資料，請使用此選項。  
@@ -56,7 +56,7 @@ ms.locfileid: "52782070"
   
 1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[索引鍵]** 資料夾。  
   
-2.  以滑鼠右鍵按一下條件約束，然後選取 **[修改]**。  
+2.  以滑鼠右鍵按一下條件約束，然後選取 **[修改]** 。  
   
 3.  在 **[資料表設計工具]** 底下的方格中，按一下 **[強制使用外部索引鍵條件約束]** ，然後從下拉式功能表中選取 **[否]** 。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "52782070"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

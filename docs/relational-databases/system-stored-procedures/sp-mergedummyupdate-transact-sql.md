@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 209a41ff29f8063ec6c46fe1fb5e821be1419cd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019985"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @source_object = ] 'source_object'` 是來源物件的名稱。 *source_object*已**nvarchar(386)**，沒有預設值。  
+`[ @source_object = ] 'source_object'` 是來源物件的名稱。 *source_object*已**nvarchar(386)** ，沒有預設值。  
   
 `[ @rowguid = ] 'rowguid'` 是資料列識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
   

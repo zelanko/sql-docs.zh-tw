@@ -49,16 +49,16 @@ helpviewer_keywords:
 - functions, ODBC WEEK
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f27a13116e1b0e393917c99c30039dce374019b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760081"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65944905"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "55760081"
 |CURDATE( ) (ODBC 3.0)|傳回目前的日期。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|傳回目前的當地時間。 其中 time-precision 引數會決定傳回值的秒數有效位數。|  
 |CURTIME() (ODBC 3.0)|傳回目前的當地時間。|  
-|DAYNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的日期部分包含資料來源專用的日期名稱。 例如，若為使用英文的資料來源，則名稱為 Sunday 到 Saturday 或 Sun. 到 Sat. 。 若為使用德文的資料來源，則名稱為 Sonntag 到 Samstag。|
+|DAYNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的日期部分包含資料來源專用的日期名稱。 例如，若為使用英文的資料來源，則名稱為 Sunday 到 Saturday 或 Sun. 到 Sat.； 。 若為使用德文的資料來源，則名稱為 Sonntag 到 Samstag。|
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|根據 date_exp 中的月份欄位，以整數值傳回月份的日期。 傳回值的範圍介於 1-31 之間。|  
 |DAYOFWEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，以整數值傳回當週的日期。 傳回值的範圍介於 1-7 之間，其中 1 代表星期日。|  
 |HOUR( time_exp ) (ODBC 1.0)|根據 time_exp 中的小時欄位，以整數值 (範圍介於 0-23 之間) 傳回小時。|  

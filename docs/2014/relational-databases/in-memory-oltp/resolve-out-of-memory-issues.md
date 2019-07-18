@@ -10,12 +10,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527890"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624402"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -24,12 +24,12 @@ ms.locfileid: "58527890"
   
 |主題|總覽|  
 |-----------|--------------|  
-| [解決由於 OOM 所造成的資料庫還原失敗](#resolve-database-restore-failures-due-to-oom) |若您收到錯誤訊息：「資料庫 '\<資料庫名稱>' 的還原作業因為資源集區 '\<資源集區名稱>' 中的記憶體不足而失敗」，該怎麼辦。|  
+| [解決由於 OOM 所造成的資料庫還原失敗](#resolve-database-restore-failures-due-to-oom) |若您收到錯誤訊息：「資料庫 '\<資料庫名稱>  ' 的還原作業因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足而失敗」，該怎麼辦。|  
 | [解決低記憶體或 OOM 狀況對於工作負載的影響](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
-| [解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>' 的頁面配置，因為資源集區 '\<資源集區名稱>' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|  
+| [解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>  ' 的頁面配置，因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時可能會收到錯誤訊息：「 還原資料庫失敗的作業 '*\<databaseName >*'因為資源集區中的記憶體不足'*\<辦 >*'。 」在可以成功還原資料庫之前，您必須提供更多可用的記憶體，以解決記憶體不足的問題。  
+ 當您嘗試還原資料庫時可能會收到錯誤訊息：「 還原資料庫失敗的作業 ' *\<databaseName >* '因為資源集區中的記憶體不足' *\<辦 >* '。 」在可以成功還原資料庫之前，您必須提供更多可用的記憶體，以解決記憶體不足的問題。  
   
  若要解決由於 OOM 所造成的復原失敗，請使用下列任何或所有方法來暫時增加復原作業可用的記憶體。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58527890"
   
     > [!IMPORTANT]  
     >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 設成與 MAX_MEMORY_PERCENT 相同的值。   
-    > 請參閱主題[最佳作法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+    > 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
   
     ```sql  
   
@@ -63,13 +63,13 @@ ms.locfileid: "58527890"
   
      如需有關 MAX_MEMORY_PERCENT 的最大值，請參閱主題章節[的可用記憶體最佳化資料表和索引的記憶體百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)
   
--   重新設定 [最大伺服器記憶體]。  
-    如需設定 [最大伺服器記憶體] 的資訊，請參閱[使用記憶體組態選項最佳化伺服器效能](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)主題。  
+-   重新設定 [最大伺服器記憶體]  。  
+    如需設定 [最大伺服器記憶體]  的資訊，請參閱[使用記憶體組態選項最佳化伺服器效能](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)主題。  
   
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>解決低記憶體或 OOM 狀況對於工作負載的影響  
  避免發生低記憶體或 OOM (記憶體不足) 的情況才是最上策。 良好的規劃和監視有助於避免 OOM 情況。 不過，最佳的規劃永遠無法預測實際發生的狀況，而最後可能會導致低記憶體或 OOM。 有兩個步驟可以從 OOM 中復原：  
   
-1.  [開啟 DAC （專用的管理員連接） ](#open-a-dac-dedicated-administrator-connection) 
+1.  [開啟 DAC (專用管理員連接)](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [採取更正動作](#take-corrective-action) 
   
@@ -105,7 +105,7 @@ ms.locfileid: "58527890"
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
-> 請參閱主題[最佳作法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+> 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
   
 ```sql  
   
@@ -132,10 +132,10 @@ GO
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
-> 請參閱主題[最佳作法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+> 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗  
- 如果您收到錯誤訊息: 「 不允許頁面配置，資料庫 '*\<databaseName >*'因為資源集區中的記憶體不足'*\<名稱 >*'. 請參閱 '<https://go.microsoft.com/fwlink/?LinkId=330673>' 如需詳細資訊。 」 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
+ 如果您收到錯誤訊息: 「 不允許頁面配置，資料庫 ' *\<databaseName >* '因為資源集區中的記憶體不足' *\<名稱 >* '. 請參閱 '<https://go.microsoft.com/fwlink/?LinkId=330673>' 如需詳細資訊。 」 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
   
  為了解決此問題，您必須啟用資源管理員。  
   

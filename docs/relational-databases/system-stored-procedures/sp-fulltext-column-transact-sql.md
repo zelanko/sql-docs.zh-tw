@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 782f480ad0ae9f2342180ae1f2a44e32c44b9022
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124343"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,14 +47,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
+`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name&lt*已**nvarchar(517)** ，沒有預設值。  
   
 `[ @colname = ] 'column_name'` 中的資料行名稱*qualified_table_name&lt*。 這個資料行必須是 character **varbinary （max)** 或是**映像**資料行，不能是計算資料行。 *column_name*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)** 或是**映像**資料型別。 影像和圖片沒有索引。  
   
-`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)** ，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

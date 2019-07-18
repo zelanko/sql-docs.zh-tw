@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aefc83920cfe20f150c34ff7f35ad639f78739ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 7d0443190e3febdb2730c7c8b8bc06786daf6fe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124253"
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,9 @@ GO
 1.  檢查目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體沒有語意母體擴展正在進行中。  
   
 2.  移除與指定之語義語言統計資料庫相關聯的所有中繼資料。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  

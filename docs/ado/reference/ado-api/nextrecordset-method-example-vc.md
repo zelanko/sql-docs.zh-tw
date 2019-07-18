@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932020"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 方法範例 (VC++)
 這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以檢視中使用複合命令陳述式組成的三個不同的資料錄集的資料**選取**陳述式。  

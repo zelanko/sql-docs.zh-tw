@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987832"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 靜態資料指標
 靜態資料指標是其中一個結果集似乎是靜態。 它通常無法偵測到的成員資格、 順序或結果集資料指標開啟後的值所做的變更。 例如，假設在靜態資料指標提取資料列和另一個應用程式，然後更新該資料列。 如果靜態資料指標 refetches 資料列，則它所看到的值會是不變，即使由其他應用程式所做的變更。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a711ab2e1f8f8f454e69b3b81b878d024d81eeba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c87089b59855ef2c68a9e3b1051ed39850d7b17e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742006"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770066"
 ---
 # <a name="connecting-and-retrieving-data"></a>連接及擷取資料
 

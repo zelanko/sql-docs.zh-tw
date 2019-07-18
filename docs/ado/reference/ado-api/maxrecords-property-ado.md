@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac5097a8692ed7a9e6566707354112547c5a619c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932239"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords 屬性 (ADO)
 表示要傳回的記錄數目上限[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從查詢。  

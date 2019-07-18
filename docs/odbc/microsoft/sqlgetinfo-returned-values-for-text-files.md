@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898804"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文字檔的 SQLGetInfo 傳回值
 下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱[ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "47676696"
 > [!NOTE]  
 >  何處**SQLGetInfo**會傳回 32 位元遮罩，垂直列 (&#124;) 代表位元 OR 運算。  
   
-|資訊類型|傳回值|  
+|InfoType|傳回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -87,7 +86,7 @@ ms.locfileid: "47676696"
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"TEXT"|  
-|SQL_DBMS_VER|ISAM： 文字<br /><br /> 版本： 1.0<br /><br /> 版本號碼的格式： 01.00.0000|  
+|SQL_DBMS_VER|ISAM:Text<br /><br /> 版本：1.0<br /><br /> 版本號碼的格式：01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -112,7 +111,7 @@ ms.locfileid: "47676696"
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'"（反引號）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|「\`"（反引號）|  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -142,7 +141,7 @@ ms.locfileid: "47676696"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多個值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|從 驅動程式管理員|  
 |SQL_OJ_CAPABILITIES|多個值|  
@@ -157,7 +156,7 @@ ms.locfileid: "47676696"
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"TEXT"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  

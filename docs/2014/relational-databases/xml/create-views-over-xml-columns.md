@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63301321"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
   您可以使用 `xml` 類型的資料行建立檢視。 下列範例會建立一個檢視，而在此檢視中會使用 `xml` 資料類型的 `value()` 方法，擷取 `xml` 類型資料行中的值。  

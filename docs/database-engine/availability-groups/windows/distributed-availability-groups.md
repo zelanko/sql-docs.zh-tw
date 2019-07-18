@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+manager: jroth
+ms.openlocfilehash: 076d1522ccb34aed7cccabd8ec1ec8369eb4e595
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765832"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,9 @@ SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同�
 
 以下是分散式可用性群組的三個主要使用案例： 
 
-* [災害復原和更輕鬆的多站台設定](#disaster-recovery-and-multi-site-scenarios)
-* [移轉至新硬體或設定，可能包括使用新硬體或變更基礎作業系統](#migrate-by-using-a-distributed-availability-group)
-* [藉由跨越多個可用性群組，在單一可用性群組中增加八個以上可讀取的複本數目](#scale-out-readable-replicas-with-distributed-availability-groups)
+* [災害復原和更輕鬆的多網站組態](#disaster-recovery-and-multi-site-scenarios)
+* [移轉至新硬體或組態，可能包括使用新硬體或變更基礎作業系統](#migrate-by-using-a-distributed-availability-group)
+* [跨多個可用性群組以在單一可用性群組中增加八個以上的可讀取複本數目](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>災害復原和多網站案例
 
@@ -178,7 +178,7 @@ SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同�
 
 分散式可用性群組是僅限 SQL Server 建構，而且在基礎 WSFC 叢集中看不到它。 下圖顯示兩個不同的 WSFC 叢集 (CLUSTER_A 和 CLUSTER_B)，且各有其專屬可用性群組。 這裡只討論 CLUSTER_A 中的 AG1 以及 CLUSTER_B 中的 AG2。 
 
-[透過 PowerShell Get-ClusterGroup 命令，取得兩個包含多個可用性群組的 WSFC 叢集](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+[透過 PowerShell Get-ClusterGroup 命令取得兩個 WSFC 叢集，其中包含多個可用性群組](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
 
 
 ```

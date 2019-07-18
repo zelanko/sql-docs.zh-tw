@@ -1,5 +1,5 @@
 ---
-title: 建立貨幣類型維度 |Microsoft 文件
+title: 建立貨幣類型維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73c44e299e448606ce37848ee8f58dd0e15aea76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178878"
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>資料庫維度-建立貨幣類型維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，貨幣類型維度是指其屬性代表財務報表所使用之貨幣清單的維度。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，貨幣類型維度是指其屬性代表財務報表所使用之貨幣清單的維度。  
   
  貨幣維度可讓您將貨幣轉換功能加入至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 Cube 中。 若要將貨幣轉換加入至 Cube，您可以使用商業智慧精靈定義多維度運算式 (MDX) 指令碼命令，將貨幣量值轉換成適合用戶端應用程式地區設定的值。 若要建立這個 MDX 指令碼，商業智慧精靈需要下列資訊：  
   

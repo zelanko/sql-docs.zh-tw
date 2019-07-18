@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704860"
 ---
 # <a name="resource-governor"></a>[資源管理員]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  

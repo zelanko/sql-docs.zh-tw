@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020476"
 ---
 # <a name="retrieving-results-basic"></a>擷取結果 (基本)
 A*結果集*是一組符合特定準則的資料來源上的資料列。 它是概念性的資料表所產生的查詢及表格式格式，是可為應用程式。 **選取**陳述式、 目錄函數和一些程序建立結果集。 在下列範例中，第一個 SQL 陳述式會建立包含所有資料列和 「 訂單 」 資料表中的所有資料行的結果集，和第二個 SQL 陳述式會建立包含 「 訂單 」 資料表中的資料列的 OrderID、 銷售人員，以及狀態資料行的結果集以狀態為開啟：  

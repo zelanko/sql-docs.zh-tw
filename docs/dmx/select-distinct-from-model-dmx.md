@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928441"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>備註  
  **SELECT DISTINCT FROM**陳述式僅適用於具有單一資料行或一組相關的資料行。 這個子句不能配合一組未關聯的資料行使用。  
   
- **SELECT DISTINCT FROM**陳述式可讓您直接參考巢狀資料表內部的資料行。 例如：  
+ **SELECT DISTINCT FROM**陳述式可讓您直接參考巢狀資料表內部的資料行。 例如:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -56,7 +55,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  結果**SELECT DISTINCT FROM\<模型 >** 陳述式而有所不同，視資料行類型而定。 下表說明支援的資料行類型與陳述式的輸出。  
   
-|資料行類型|輸出|  
+|資料行類型|Output|  
 |-----------------|------------|  
 |Discrete|資料行中的唯一值。|  
 |Discretized|資料行中每個分隔式值區的中點。|  
@@ -129,13 +128,13 @@ FROM [TM Decision Tree]
   
  例如，如果您使用決策樹檢視器瀏覽模型，然後按一下包含以收入分組之客戶的節點，下列節點屬性就會顯示在工具提示中：  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Age > = 69 和每年的收益 < 39221.41  
   
 > [!NOTE]  
 >  最小值區的最小值與最大值區的最大值剛好分別是最高與最低的觀察值。 系統會假設超出此觀察範圍的任何值都屬於最小和最大值區。  
   
 ## <a name="see-also"></a>另請參閱  
- [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   

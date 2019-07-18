@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd3adc2fa522a4161aed44668668fd77e26a7fa
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922841"
 ---
 # <a name="configuring-rds"></a>設定 RDS
 > [!IMPORTANT]

@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 06e538ebbdab9d6438182eaa0b61d44818286547
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741676"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262962"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>對應 Oracle 和 SQL Server 資料類型 (OracleToSQL)
 Oracle 資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型。 當您轉換到 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您必須指定如何將對應從 Oracle 資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
@@ -51,7 +51,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
 2.  若要加入新的對應，請執行下列作業：  
   
-    1.  按一下 **[加入]**。  
+    1.  按一下 **[加入]** 。  
   
     2.  底下**來源類型**，選取要對應的 Oracle 資料型別。  
   
@@ -67,7 +67,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
 3.  若要修改的資料類型對應，請執行下列作業：  
   
-    1.  按一下 **[編輯]**。  
+    1.  按一下 **[編輯]** 。  
   
     2.  底下**來源類型**，選取要對應的 Oracle 資料型別。  
   
@@ -83,7 +83,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
     1.  在包含您想要移除的資料類型對應的類型對應清單中選取的資料列。  
   
-    2.  按一下 **[移除]**。  
+    2.  按一下 **[移除]** 。  
   
         您無法移除繼承的對應。 不過，在特定物件或物件類別目錄的自訂對應會覆寫繼承的對應。  
   

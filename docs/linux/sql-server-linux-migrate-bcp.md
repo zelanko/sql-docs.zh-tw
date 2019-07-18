@@ -1,21 +1,19 @@
 ---
-title: 將資料大量複製到 Linux 上的 SQL Server |Microsoft 文件
+title: 在 Linux 上 SQL server 的大量複製資料
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127315"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 Linux 上的 SQL Server 的 bcp 大量複製資料
 
@@ -81,7 +79,7 @@ cat ~/test_data.txt
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>從來源資料檔匯入資料
-複製並貼到終端機視窗中的下列命令。 此命令會使用`bcp`連接到本機的 SQL Server 執行個體 (**localhost**) 和從資料檔匯入資料 (**~/test_data.txt**) 插入資料表 (**TestEmployees**) 在資料庫中 (**BcpSampleDB**)。 請記得取代使用者名稱和`<your_password>`視之前執行命令。
+複製並貼到終端機視窗中的下列命令。 此命令會使用`bcp`連接到本機的 SQL Server 執行個體 (**localhost**) 和從資料檔匯入資料 ( **~/test_data.txt**) 插入資料表 (**TestEmployees**) 在資料庫中 (**BcpSampleDB**)。 請記得取代使用者名稱和`<your_password>`視之前執行命令。
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -140,4 +138,4 @@ cat ~/test_export.txt
 - [bcp 公用程式](../tools/bcp-utility.md)
 - [使用 bcp 時的相容性的資料格式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [使用 BULK INSERT 匯入大量資料](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [BULK INSERT & Amp;#40;transact-SQL&AMP;#41](../t-sql/statements/bulk-insert-transact-sql.md)
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

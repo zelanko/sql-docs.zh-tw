@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2b2aa3eb59b32894b7ca6bfcf0a8a519bf3903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916788"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 屬性範例 (Recordset) (VB)
 這個範例會使用[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性來顯示哪些記錄內修改過的批次作業之前發生的批次更新。  

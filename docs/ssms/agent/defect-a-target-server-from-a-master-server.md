@@ -14,16 +14,16 @@ helpviewer_keywords:
 - master servers [SQL Server], defecting target servers
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d539e6a6446fc17ae935a372e9c8562d84b71c35
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f7d83a7904f3b3d8f77f8ded6d4a30a88314a38e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703526"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688061"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51703526"
   
 -   **開始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **使用下列方法脫離目標伺服器：**  
   
-    [SQL Server Management Studio](#SSMSProcedure)  
+    [Transact-SQL](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "51703526"
   
 1.  在 **[物件總管]** 中，展開設定為目標伺服器的伺服器。  
   
-2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[脫離]**。  
+2.  以滑鼠右鍵按一下 **[SQL Server Agent]** ，指向 **[多伺服器管理]** ，然後按一下 **[脫離]** 。  
   
 3.  按一下 **[是]** 以確定您要從主要伺服器脫離這台目標伺服器。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "51703526"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
 ```  
 sp_msx_defect ;  

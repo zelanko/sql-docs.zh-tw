@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4c4ffead9ca22f1ef72784deb1970ff92e79761
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 52e2f0336c2c4bfbe6b14ce116c0888844afc000
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784715"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>getNCharacterStream 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  GetNCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 getNCharacterStream 方法。  
   
  這個方法可用來擷取值**nvarchar**， **nchar**， **nvarchar （max)**， **ntext**，或**xml**中目前的資料列，這個資料行[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  

@@ -1,5 +1,5 @@
 ---
-title: CurrentMember (MDX) |Microsoft 文件
+title: CurrentMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047116"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -75,7 +74,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 目前的成員會在查詢內之軸上使用的階層上變更。 因此，相同維度上不會在軸的其他階層上的目前成員也可以變更;這個行為稱為 「 自動存在 ' 和更多詳細資料位於[MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 例如，底下的查詢會顯示 Date 維度之 Calendar Year 階層上的目前成員會隨著 Calendar 階層上的目前成員而變更，後者會顯示在資料列軸上：  
+ 目前的成員會在查詢內之軸上使用的階層上變更。 因此，相同維度上不會在座標軸的其他階層上的目前成員也可以變更;這個行為稱為 「 自動存在 '，且可以找到更多詳細資料[MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 例如，底下的查詢會顯示 Date 維度之 Calendar Year 階層上的目前成員會隨著 Calendar 階層上的目前成員而變更，後者會顯示在資料列軸上：  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -93,7 +92,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember**對於讓計算得知目前使用中的查詢內容的非常重要。 下列範例會傳回每個產品的訂單數量和訂單數量百分比依類別和型號，從**Adventure Works** cube。 **CurrentMember**函式識別會用於計算訂單數量的產品。  
+ **CurrentMember**對於讓計算得知的查詢在使用中的內容是很重要。 下列範例會傳回每個產品的訂單數量和訂單數量百分比依類別和型號，從**Adventure Works** cube。 **CurrentMember**函式會識別訂單數量來計算期間的產品。  
   
 ```  
 WITH   
@@ -118,6 +117,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

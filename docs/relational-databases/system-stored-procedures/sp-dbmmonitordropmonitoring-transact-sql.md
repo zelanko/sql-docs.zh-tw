@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d373b4e62a0141c64a335cc860407251e0ed9be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9c138cd574e22d1ce658c4749f2a61c34d8e73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108070"
 ---
 # <a name="spdbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

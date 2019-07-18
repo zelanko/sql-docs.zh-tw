@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4ed8568dd53d02df3e0788b79d0b9240f47dbe5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794636"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47703806"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要設定記錄傳送，請使用：**  
   
@@ -60,17 +60,17 @@ ms.locfileid: "47703806"
   
 #### <a name="to-configure-log-shipping"></a>設定記錄傳送  
   
-1.  以滑鼠右鍵按一下記錄傳送組態中要做為主要資料庫的資料庫，然後按一下 **[屬性]**。  
+1.  以滑鼠右鍵按一下記錄傳送組態中要做為主要資料庫的資料庫，然後按一下 **[屬性]** 。  
   
-2.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
+2.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]** 。  
   
 3.  選取 **[將此啟用為記錄傳送組態的主要資料庫 ]** 核取方塊。  
   
-4.  在 **[交易記錄檔備份]** 下，按一下 **[備份設定]**。  
+4.  在 **[交易記錄檔備份]** 下，按一下 **[備份設定]** 。  
   
 5.  在 **[到備份資料夾的網路路徑]** 方塊中，輸入您針對交易記錄檔備份資料夾所建立之共用的網路路徑。  
   
-6.  如果備份資料夾位於主要伺服器，請在 **[如果備份資料夾位於主要伺服器上，請輸入至該資料夾的本機路徑]** 方塊中，輸入備份資料夾的本機路徑 (如果備份資料夾不在主要伺服器，您可以將這個方塊留空)。  
+6.  **若備份資料夾位於主要伺服器上，請在 [備份資料夾] 方塊中鍵入本機路徑。** (如果備份資料夾不在主要伺服器，您可以將這個方塊留空)。  
   
     > [!IMPORTANT]  
     >  如果主要伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶是在本機系統帳戶下執行，您必須在主要伺服器上建立備份資料夾，並指定該資料夾的本機路徑。  
@@ -79,11 +79,11 @@ ms.locfileid: "47703806"
   
 8.  請注意 **[備份作業]** 之下 **[排程]** 方塊所列的備份排程。 如果您想要自訂安裝的排程，請按一下 **[排程]** ，並視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以選擇以下其中一個選項來控制記錄備份的備份壓縮行為： **[使用預設伺服器設定]**、 **[壓縮備份]** 或 **[不要壓縮備份]**。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 在建立記錄傳送設定時，您可以透過選擇下列其中一個選項，來控制記錄備份的備份壓縮行為：[使用預設伺服器設定]  、[壓縮備份]  ，或 [不要壓縮備份]  。 如需詳細資訊，請參閱 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
-11. 在 **[次要伺服器執行個體與資料庫]** 下，按一下 **[新增]**。  
+11. 在 **[次要伺服器執行個體與資料庫]** 下，按一下 **[新增]** 。  
   
 12. 按一下 **[連接]** ，連接到您要做為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47703806"
   
 17. 在 **[還原]** 索引標籤上的 **[還原備份時的資料庫狀態]** 下，選擇 **[不復原模式]** 或 **[待命模式]** 選項。  
     > [!IMPORTANT]  
-    > **待命模式**只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\)
+    > **待命模式**只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\) 
   
 18. 如果您選擇 **[待命模式]** 選項，請選擇是否要在還原作業進行時，中斷使用者與次要資料庫的連接。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "47703806"
   
 21. 請注意 **[還原作業]** 下之 **[排程]** 方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
-22. 按一下 [確定] 。  
+22. 按一下 [確定]  。  
   
-23. 在 **[監視伺服器執行個體]** 下，選取 **[使用監視伺服器執行個體]** 核取方塊，再按一下 **[設定]**。  
+23. 在 **[監視伺服器執行個體]** 下，選取 **[使用監視伺服器執行個體]** 核取方塊，再按一下 **[設定]** 。  
   
     > [!IMPORTANT]  
     >  若要監視這個記錄傳送組態，您必須立即加入監視伺服器。 若要在日後加入監視伺服器，您就必須移除這個記錄傳送組態，然後將它取代成包含監視伺服器的新組態。  
@@ -123,7 +123,7 @@ ms.locfileid: "47703806"
   
 26. 在 **[記錄保留]** 下，選擇您要保留記錄傳送記錄的時間長度。  
   
-27. 按一下 [確定] 。  
+27. 按一下 [確定]  。  
   
 28. 在 **[資料庫屬性]** 對話方塊上，按一下 **[確定]** 以開始設定處理序。  
   

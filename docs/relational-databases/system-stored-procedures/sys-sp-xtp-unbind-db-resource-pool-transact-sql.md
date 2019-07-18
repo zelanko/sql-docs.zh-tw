@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673b1e914c63f0edd191b29dbd7c05af5e63f6fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041006"
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
 -   需要 CONTROL SERVER 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

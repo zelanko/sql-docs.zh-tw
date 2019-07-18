@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60fb1fd10b448e7dc71d06aecaa36385f882f62f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048425"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47755176"
 |**object_id**|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
 |**parent_class**|**tinyint**|父系的類別。<br /><br /> 0 = 資料庫<br /><br /> 1 = 物件或資料行|  
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**sys.internal_tables**|**int**|父物件的非零識別碼。<br /><br /> 0 = 父類別是資料庫。|  
+|**parent_id**|**int**|父物件的非零識別碼。<br /><br /> 0 = 父類別是資料庫。|  
 |**create_date**|**datetime**|建立日期。|  
 |**modify_date**|**datetime**|一律等於**create_date**。|  
 |**service_name**|**nvarchar(256)**|通知所送往之目標服務的名稱。|  

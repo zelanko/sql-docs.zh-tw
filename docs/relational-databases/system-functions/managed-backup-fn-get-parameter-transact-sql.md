@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a3fca21870bda4a5a47ba4a8d898939a5f09f6a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140646"
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> 引數  
  parameter_name  
- 參數的名稱。 是 parameter_name **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
+ 參數的名稱。 是 parameter_name **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   

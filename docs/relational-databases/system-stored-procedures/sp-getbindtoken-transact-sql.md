@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3636ce2bb082d4686d0895716fb10567b5dc750
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123997"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  None  
   
 ## <a name="remarks"></a>備註  
- 只有在使用中交易內執行預存程序時，sp_getbindtoken 才會傳回有效的語彙基元。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息。 例如：  
+ 只有在使用中交易內執行預存程序時，sp_getbindtoken 才會傳回有效的語彙基元。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息。 例如:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -66,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- 使用分散式的交易內加入連接開啟的交易，sp_getbindtoken 時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回相同的語彙基元。 例如：  
+ 使用分散式的交易內加入連接開啟的交易，sp_getbindtoken 時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回相同的語彙基元。 例如:  
   
 ```  
 USE AdventureWorks2012;  

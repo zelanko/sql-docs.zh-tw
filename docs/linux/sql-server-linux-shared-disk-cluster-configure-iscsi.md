@@ -1,20 +1,19 @@
 ---
-title: 設定容錯移轉叢集執行個體儲存體 iSCSI Linux 上的 SQL Server |Microsoft Docs
+title: 設定容錯移轉叢集執行個體儲存體 iSCSI Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032400"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server
 
@@ -95,7 +94,7 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  建立實體的磁碟區上的 iSCSI 磁碟。
 
@@ -320,7 +319,7 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
 
    *    若要測試，請在該資料夾中建立資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫、 切換到它的內容，請確認檔案存在於 OS 層級，然後刪除 暫存位置。 您可以使用 SSMS。
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    取消掛接共用 
 

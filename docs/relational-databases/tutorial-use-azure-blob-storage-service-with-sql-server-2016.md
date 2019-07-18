@@ -1,7 +1,7 @@
 ---
 title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 38e4aa10089bcd96f0285d2e18cf763f31f45d7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356481"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478776"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 
@@ -42,7 +42,9 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 下載 [AdventureWorks2016 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) \(英文\)。
 - 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 建立預存存取原則和共用存取儲存體
 
 在本節中，您將使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  
@@ -102,20 +104,20 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
     $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

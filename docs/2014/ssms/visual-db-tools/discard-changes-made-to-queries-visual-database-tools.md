@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63130266"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
   在儲存對查詢定義所做的變更之前，您可以捨棄這些變更。 一旦儲存之後，就無法回復為先前的狀態。  
@@ -29,9 +29,9 @@ ms.locfileid: "52775330"
   
 ### <a name="to-discard-changes-made-to-a-query-definition"></a>若要捨棄對查詢定義所做的變更  
   
-1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案] 功能表中按一下 [關閉]。  
+1.  在查詢和檢視表設計工具中開啟查詢時，從 [檔案]  功能表中按一下 [關閉]  。  
   
-2.  在 [Microsoft SQL Server Management Studio] 對話方塊中，按一下 [否]。  
+2.  在 [Microsoft SQL Server Management Studio]  對話方塊中，按一下 [否]  。  
   
      查詢定義會回復為上次儲存時的狀態。  
   

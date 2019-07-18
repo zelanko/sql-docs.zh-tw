@@ -12,15 +12,15 @@ helpviewer_keywords:
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a8ed7c0555c566d5d93feafaea6f4ca851920ca1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 10a15337989da83395ff1bfea5c0ffd13bec8cbe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813036"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689843"
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,26 +31,26 @@ ms.locfileid: "47813036"
   
 #### <a name="to-open-a-file-with-a-specific-editor"></a>利用特定編輯器開啟檔案  
   
-1.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [檔案]。  
+1.  在 [檔案]  功能表上，指向 [開啟舊檔]  ，再按一下 [檔案]  。  
   
-2.  在 [開啟檔案] 對話方塊中，選取檔案名稱。  
+2.  在 [開啟檔案]  對話方塊中，選取檔案名稱。  
   
-3.  按一下 [開啟舊檔] 按鈕旁的箭頭，在出現的功能表上，按一下 [開啟檔案]。  
+3.  按一下 [開啟舊檔]  按鈕旁的箭頭，在出現的功能表上，按一下 [開啟檔案]  。  
   
-4.  在 [選取要開啟的程式] 清單中，選取一個編輯器，再按一下 [開啟]。 若要開啟含有特定編碼的檔案，請選取含編碼支援的編輯器，如含編碼的 SQL 查詢編輯器，或含編碼的 XML 編輯器。  
+4.  在 [選取要開啟的程式]  清單中，選取一個編輯器，再按一下 [開啟]  。 若要開啟含有特定編碼的檔案，請選取含編碼支援的編輯器，如含編碼的 SQL 查詢編輯器，或含編碼的 XML 編輯器。  
   
 ## <a name="saving-files"></a>儲存檔案  
 您也可以利用 Unicode 編碼或不同的字碼頁來儲存您的程式碼，以便支援不同的語言，如西歐或東歐。 您可以建立特定字元編碼與檔案的關聯，以便用這個語言來顯示您的程式碼，也可以建立行尾結束符號類型的關聯，以便支援特定作業系統。 另外，當您在檔案名稱中使用某些字元時，除非用 Unicode 編碼來儲存，否則無法儲存它們。  
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>利用不同編碼或行尾結束符號類型來儲存檔案  
   
-1.  在 [檔案] 功能表上按一下 [另存新檔]**<filename>**。  
+1.  在 [檔案]  功能表上按一下 [另存新檔] **<filename>** 。  
   
-2.  在 [另存新檔] 對話方塊中，展開 [儲存] 按鈕，再按一下 [使用編碼方式儲存]。  
+2.  在 [另存新檔]  對話方塊中，展開 [儲存]  按鈕，再按一下 [使用編碼方式儲存]  。  
   
-3.  在 [進階儲存選項] 對話方塊中，從 [編碼] 清單中選取您需要的編碼。  
+3.  在 [進階儲存選項]  對話方塊中，從 [編碼]  清單中選取您需要的編碼。  
   
-4.  從 [行尾結束符號] 清單中，選取您需要的行尾結束符號類型。  
+4.  從 [行尾結束符號]  清單中，選取您需要的行尾結束符號類型。  
   
     > [!NOTE]  
     > 如果您利用 Unicode 編碼來儲存您的檔案，檔案應該做為二進位檔簽入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe 中，因為 Visual SourceSafe 不支援合併、比較和顯示儲存成 Unicode 的檔案之間的差異。  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62654062"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>修改與 SQL Server Agent 主要作業相關聯的目標伺服器
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改與 SQL Server Agent 主要作業相關聯的目標伺服器。  
@@ -50,15 +50,15 @@ ms.locfileid: "54129058"
   
 1.  在 **[物件總管]** 中，按一下加號，展開包含您想要修改目標伺服器之作業的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要修改目標伺服器的作業，然後選取 [屬性]。  
+4.  以滑鼠右鍵按一下您想要修改目標伺服器的作業，然後選取 [屬性]  。  
   
-5.  在 **作業屬性-**_job_name_對話方塊的 **選取頁面**，選取**目標**。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;為目標頁面&#41;](job-properties-new-job-targets-page.md)。  
+5.  在 [作業屬性 -_job_name_]  對話方塊的 [選取頁面]  下，選取 [目標]  。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;為目標頁面&#41;](job-properties-new-job-targets-page.md)。  
   
-6.  完成後，請按一下 **[確定]**。  
+6.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -66,9 +66,9 @@ ms.locfileid: "54129058"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- removes the server SEATTLE2 from processing the Weekly Sales Backupsjob   
@@ -88,9 +88,9 @@ ms.locfileid: "54129058"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- assigns the multiserver job Weekly Sales Backups to the server SEATTLE2   

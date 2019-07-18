@@ -14,14 +14,18 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a0fc2dcf29877c1c1fe0e3c0a4a75ca9b23096bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca8a649e1e60ffd44047377ed1b8eaaaba0569aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725204"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行布林運算元的否定運算。  
   
 > [!NOTE]  

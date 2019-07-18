@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -13,15 +12,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc452717be52dc857465e202771678f782d61f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104652"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)
   若要控制 Tablix 資料區域的資料列和資料行如何在報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱 <<c0> [ 資料表&#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩陣&#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或[列出&#40;報表產生器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。</c0>  
@@ -75,7 +74,7 @@ ms.locfileid: "56296436"
 ## <a name="displaying-data-on-rows-and-columns"></a>顯示資料列和資料行上的資料  
  資料列和資料列群組以及資料行和資料行群組擁有相同的關聯性。 以下討論描述如何加入資料列來顯示 Tablix 資料區域中資料列上的詳細資料與群組資料，但是加入資料行來顯示詳細資料和群組資料時，則適用相同的原則。  
   
- 對於 Tablix 資料區域中的每個資料列而言，資料列位於每個資料列群組的內部或外部。 如果資料列位於資料列群組內部，該資料列會針對群組 (也就是所謂的 *「群組執行個體」*(Group Instance)) 的每個唯一值重複一次。 如果資料列位於資料列群組外部，則會針對該群組重複一次。 所有資料列群組外部的資料列都是靜態的，而且僅針對資料區域重複一次。 例如，資料表的頁首或頁尾資料列為靜態資料列。 根據至少一個群組重複的資料列是動態的。  
+ 對於 Tablix 資料區域中的每個資料列而言，資料列位於每個資料列群組的內部或外部。 如果資料列位於資料列群組內部，該資料列會針對群組 (也就是所謂的 *「群組執行個體」* (Group Instance)) 的每個唯一值重複一次。 如果資料列位於資料列群組外部，則會針對該群組重複一次。 所有資料列群組外部的資料列都是靜態的，而且僅針對資料區域重複一次。 例如，資料表的頁首或頁尾資料列為靜態資料列。 根據至少一個群組重複的資料列是動態的。  
   
  當您擁有巢狀群組時，資料列可能會位於父群組內部，但位於子群組外部。 資料列會根據父群組中的每個群組值重複，但是僅針對子群組顯示一次。 若要顯示群組的標籤或總計，請加入群組外部的資料列。 若要顯示針對每個群組執行個體變更的資料，加入群組內部的資料列。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "56296436"
  當資料格位於詳細資料列或資料行時，Tablix 主體區域中的資料格可以顯示詳細資料，而當資料格位於群組資料列或資料行時，則會顯示彙總群組資料。 資料格中的資料範圍是資料格所屬之最內部資料列群組及最內部資料行群組的交集。  
   
 > [!NOTE]  
->  針對每個資料格顯示的實際資料是針對資料格所包含之報表項目 (這通常是文字方塊) 評估過的運算式。 在屬於詳細資料列或資料行的資料格中，此運算式預設為詳細資料 (例如， **[LineTotal]**)。 在不屬於詳細資料列或資料行的資料格中，此運算式預設為彙總函式 (例如， **Sum[LineTotal]**)。 如果即使在資料格屬於群組資料列或資料行時，運算式也沒有指定彙總函式，則會顯示群組中的第一個值。 如需彙總的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+>  針對每個資料格顯示的實際資料是針對資料格所包含之報表項目 (這通常是文字方塊) 評估過的運算式。 在屬於詳細資料列或資料行的資料格中，此運算式預設為詳細資料 (例如， **[LineTotal]** )。 在不屬於詳細資料列或資料行的資料格中，此運算式預設為彙總函式 (例如， **Sum[LineTotal]** )。 如果即使在資料格屬於群組資料列或資料行時，運算式也沒有指定彙總函式，則會顯示群組中的第一個值。 如需彙總的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ### <a name="merging-and-splitting-cells"></a>合併與分割資料格  
  在 Tablix 區域內部，您可以將多個相鄰的資料格合併在一起。 例如，您可以針對跨越多個資料行或資料列的標籤建立資料格。  

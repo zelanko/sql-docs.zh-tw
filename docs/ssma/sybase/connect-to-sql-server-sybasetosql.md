@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1d610ea44ff29056228d6bf788cba1f74a50db58
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ed3ab8f05b9f809df99508163d07cb3e1bededa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083405"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>連線到 SQL Server (SybaseToSQL)
 使用**連接到 SQL Server**對話方塊中，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊的 **檔案**功能表上，按一下 **連接到 SQL Server**。  
@@ -24,7 +23,7 @@ ms.locfileid: "52406085"
 **伺服器名稱**  
 輸入或選取 連接到 SQL Server 執行個體。 根據預設，會顯示您連線到最近的執行個體。  
   
--   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
+-   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 ( **。** )。  
   
 -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   

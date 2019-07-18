@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9bac4dba698af6e7f3dc57904da66a7fb15a08b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62989042"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>解除安裝及移除 Master Data Services
-  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請依照[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能] 頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
+  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體解除安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能時，請依照[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) 的步驟，並於 [選取功能]  頁面指定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 為應移除的功能。 解除安裝程序會從本機電腦移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料夾和檔案，以及解除安裝 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
  為避免資料遺失且避免影響系統中的其他電腦，解除安裝程序不會移除或變更某些項目。 請檢閱下表，判斷要保留或移除項目。  
   

@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 14d2c5ca414281e8a3faf5b0fb627452503dd4d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025074"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>建立實體管理員 (Master Data Services)
 
@@ -27,26 +26,26 @@ ms.locfileid: "52822222"
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，然後將此群組設定為實體管理員。 然後不需存取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您就可以在群組中加入及移除使用者。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   您必須擁有存取 [使用者及群組的權限] 功能區域的權限。  
+-   您必須擁有存取 [使用者及群組的權限]  功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ## <a name="to-create-an-entity-administrator"></a>建立實體管理員  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
-2.  選取您要編輯之使用者或群組的資料列，然後按一下 [編輯選取的使用者]。  
+2.  選取您要編輯之使用者或群組的資料列，然後按一下 [編輯選取的使用者]  。  
   
-3.  按一下 [模型] 索引標籤，選擇性地從 [模型] 清單中選取模型，然後按一下 [編輯]。  
+3.  按一下 [模型]  索引標籤，選擇性地從 [模型]  清單中選取模型，然後按一下 [編輯]  。  
   
-4.  按一下您要授與權限的實體，然後按一下功能表上的 [管理]。  
+4.  按一下您要授與權限的實體，然後按一下功能表上的 [管理]  。  
   
 5.  針對您希望群組或使用者成為其管理員的每個實體，完成步驟 4。  
   
-6.  按一下 **[儲存]**。  
+6.  按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

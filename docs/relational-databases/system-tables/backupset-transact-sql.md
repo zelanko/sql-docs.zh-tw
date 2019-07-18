@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119325"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  每個備份組各含一個資料列。 「備份組」包含單次成功備份作業的備份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 陳述式會在位於指定之單一或多重備份裝置上媒體集內單一備份組上操作。  
+  每個備份組各含一個資料列。 「備份組」  包含單次成功備份作業的備份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 陳述式會在位於指定之單一或多重備份裝置上媒體集內單一備份組上操作。  
   
  這份資料表儲存在**msdb**資料庫。  
 
@@ -40,7 +39,7 @@ ms.locfileid: "52402846"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|用來識別備份組的唯一備份組識別碼。 識別，主索引鍵。|  
 |**backup_set_uuid**|**uniqueidentifier**|用來識別備份組的唯一備份組識別碼。|  
-|**media_set_id**|**int**|用來識別備份組所在媒體集的唯一媒體集識別碼。 參考**backupmediaset （media_set_id)**。|  
+|**media_set_id**|**int**|用來識別備份組所在媒體集的唯一媒體集識別碼。 參考**backupmediaset （media_set_id)** 。|  
 |**first_family_number**|**tinyint**|備份組啟動時所在之媒體的家族號碼。 可以是 NULL。|  
 |**first_media_number**|**smallint**|備份組啟動時所在之媒體的媒體號碼。 可以是 NULL。|  
 |**last_family_number**|**tinyint**|備份組結束時所在之媒體的家族號碼。 可以是 NULL。|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b6e811f9114a484f7b0b68ca9782b9b60e366383
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62866881"
 ---
 # <a name="create-a-report-data-source"></a>建立報表資料來源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "52393321"
   
 #### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>若要建立共用報表資料來源 (.rsds) 檔案 (SharePoint 2010)  
   
-1.  按一下文件庫功能區上的 [文件] 索引標籤。  
+1.  按一下文件庫功能區上的 [文件]  索引標籤。  
   
-2.  按一下 [新增文件] > [報表資料來源]。  
+2.  按一下 [新增文件]   > [報表資料來源]  。  
   
     > [!NOTE]  
-    >  如果您沒有在功能表上看見 [報表資料來源] 項目，表示此文件庫的報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+    >  如果您沒有在功能表上看見 [報表資料來源]  項目，表示此文件庫的報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱 [將 Reporting Services 內容類型加入至 SharePoint 文件庫](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
-3.  在 [資料來源屬性] 頁面的 [名稱] 中，輸入連接 .rsds 檔案的名稱。  
+3.  在 [資料來源屬性]  頁面的 [名稱]  中，輸入連接 .rsds 檔案的名稱。  
   
-4.  在 [資料來源類型] 中，選取 [Power View 的 Microsoft 商業智慧語意模型]。  
+4.  在 [資料來源類型]  中，選取 [Power View 的 Microsoft 商業智慧語意模型]  。  
   
-5.  在 [連接字串] 中，指定 Analysis Services 伺服器名稱、資料庫名稱、Cube 名稱及任何選擇性設定。  
+5.  在 [連接字串]  中，指定 Analysis Services 伺服器名稱、資料庫名稱、Cube 名稱及任何選擇性設定。  
   
      連接字串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
@@ -59,18 +59,18 @@ ms.locfileid: "52393321"
   
      (選擇性) 在模型中，可以指定各種語言的 Cube 中繼資料和資料翻譯。 若要顯示翻譯 （資料和中繼資料），您需要將"Locale Identifier"屬性新增至連接字串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
-6.  在 [認證] 中，指定報表伺服器取得認證來存取外部資料來源的方式。  
+6.  在 [認證]  中，指定報表伺服器取得認證來存取外部資料來源的方式。  
   
-    -   如果您想要使用開啟報表之使用者的認證來存取資料，請選取 [Windows 驗證 (整合式)]。 如果 SharePoint 網站或伺服陣列使用表單驗證或透過受信任帳戶連接到報表伺服器，請勿選取這個選項。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 如果未啟用 Kerberos 驗證，Windows 認證只能傳遞至一部其他電腦。 這表示，如果外部資料來源位於另一部需要其他連接的電腦上，您就會收到錯誤而非所預期的資料。  
+    -   如果您想要使用開啟報表之使用者的認證來存取資料，請選取 [Windows 驗證 (整合式)]  。 如果 SharePoint 網站或伺服陣列使用表單驗證或透過受信任帳戶連接到報表伺服器，請勿選取這個選項。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 如果未啟用 Kerberos 驗證，Windows 認證只能傳遞至一部其他電腦。 這表示，如果外部資料來源位於另一部需要其他連接的電腦上，您就會收到錯誤而非所預期的資料。  
   
-    -   如果您希望使用者在每次執行報表時輸入自己的認證，請選取 [提示認證]。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
+    -   如果您希望使用者在每次執行報表時輸入自己的認證，請選取 [提示認證]  。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
   
-    -   如果您想要使用單一認證集來存取這個資料，請選取 [預存認證]。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。  
+    -   如果您想要使用單一認證集來存取這個資料，請選取 [預存認證]  。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]  。  
   
-    -   如果您在連接字串中指定認證，或是想要使用最低權限帳戶來執行報表，請選取 [不需要認證]。  
+    -   如果您在連接字串中指定認證，或是想要使用最低權限帳戶來執行報表，請選取 [不需要認證]  。  
   
-7.  按一下 [測試連接] 進行驗證。  
+7.  按一下 [測試連接]  進行驗證。  
   
-8.  如果您想要讓資料來源成為使用中，請選取 [啟用此資料來源]。 如果資料來源已設定，但是非使用中，當使用者嘗試建立報表時，就會收到錯誤訊息。  
+8.  如果您想要讓資料來源成為使用中，請選取 [啟用此資料來源]  。 如果資料來源已設定，但是非使用中，當使用者嘗試建立報表時，就會收到錯誤訊息。  
   
   

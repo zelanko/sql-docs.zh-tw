@@ -15,14 +15,18 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7f51d8027bcb65b1f9e3596748778baed36759e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8be3332bb15cd43a5c5a8ba3289f3edc6217145e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725636"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   加入兩個數值運算式。  
   
 ## <a name="syntax"></a>語法  

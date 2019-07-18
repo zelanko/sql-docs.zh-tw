@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9fcf6142a0df913c33782b4c65e8e95d4fcf91ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029384"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>資料移轉設定 (SybaseToSQL)
   
@@ -48,7 +47,7 @@ ms.locfileid: "51658132"
   
 有兩個按鈕出現的閱聽。:  
   
--   **套用：** 按一下 **套用**套用已變更的設定。  
+-   **適用於：** 按一下 **套用**套用已變更的設定。  
   
 -   **取消：** 按一下 **取消**還原出現設定進行變更之前。  
   

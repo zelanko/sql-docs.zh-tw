@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043943"
 ---
 # <a name="delete-a-solution"></a>刪除方案
   永久刪除方案，會從實體儲存體中清除檔案，也會從方案中清除檔案項目。  
@@ -35,7 +35,7 @@ ms.locfileid: "52781660"
   
 3.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的 [檔案總管] 中，尋找和選取您要刪除之方案的相關檔案。  
   
-4.  在 [檔案] 功能表上，按一下 [刪除]。  
+4.  在 [檔案]  功能表上，按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   

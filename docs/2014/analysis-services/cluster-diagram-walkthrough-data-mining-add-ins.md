@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
@@ -17,12 +16,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087906"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>叢集圖表逐步解說 (資料採礦增益集)
   您已建立叢集模型之後，您可以匯入它使用 Visio**叢集**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含下列用於處理資料採礦圖表的自訂控制項：  
@@ -77,7 +76,7 @@ ms.locfileid: "52420000"
   
      不過，此選項會做做為篩選條件，在圖表的資料，因此您無法增加的更新版本的項目數。  
   
-8.  按一下 **[進階]**。  
+8.  按一下 **[進階]** 。  
   
      **叢集選項**對話方塊可讓您可讓您自訂圖表中使用之圖形的視覺外觀。 您可以變更用於圖形的色彩，以及用於叢集的圖形。  
   

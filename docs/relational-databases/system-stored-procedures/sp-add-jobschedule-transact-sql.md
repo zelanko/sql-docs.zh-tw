@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
+title: sp_add_jobschedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078194"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>引數  
 `[ @job_id = ] job_id` 要加入排程作業的作業識別碼。 *job_id*已**uniqueidentifier**，沒有預設值。  
   
-`[ @job_name = ] 'job_name'` 要加入排程之作業的名稱。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
+`[ @job_name = ] 'job_name'` 要加入排程之作業的名稱。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，沒有預設值。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
-`[ @name = ] 'name'` 排程的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
+`[ @name = ] 'name'` 排程的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，沒有預設值。  
   
 `[ @enabled = ] enabled_flag` 指出排程的目前狀態。 *enabled_flag*已**tinyint**，預設值是**1** （啟用）。 如果**0**，未啟用排程。 停用排程時，就不會執行作業。  
   

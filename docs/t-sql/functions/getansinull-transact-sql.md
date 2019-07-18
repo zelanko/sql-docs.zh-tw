@@ -18,15 +18,15 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb776fcd58d77bcba803e4c461ce3433ee5e66f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65946748"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

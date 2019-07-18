@@ -14,14 +14,18 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34bc5338938376bb3327fe4f95dd1f14eac9c144
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 51785a66b005ec3c7f9b6af498803064c93635a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725188"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回移除開頭空白之後的字元運算式。  
   
 > [!NOTE]  

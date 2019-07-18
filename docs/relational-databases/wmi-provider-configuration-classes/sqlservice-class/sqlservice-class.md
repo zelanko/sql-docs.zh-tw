@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 92a36de1c91add065db9ba418b7370e7ed36da93
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4edf230bd551987642da43e36ef1dbd86d0d655a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054775"
 ---
 # <a name="sqlservice-class"></a>SqlService 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

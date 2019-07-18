@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149884"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
   在您已經備妥輸入追蹤資料之後，就可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 如需詳細資訊，請參閱[準備輸入追蹤資料](prepare-the-input-trace-data.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "52819350"
   
     5.  (選擇性) 使用 *target_server* 參數 **-s**，指定 Distributed Replay Client 應該重新執行追蹤工作負載所在的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果您使用了 `<Server>` 元素，在重新執行組態檔的 `<ReplayOptions>` 元素中指定目標伺服器，就不需要這個參數。  
   
-    6.  使用 *clients* 參數 **-w**，指定應該參與重新執行的 Distributed Replay Client。 然後，列出用戶端電腦名稱 (以逗號隔開)。 注意：不允許 IP 位址。  
+    6.  使用 *clients* 參數 **-w**，指定應該參與重新執行的 Distributed Replay Client。 然後，列出用戶端電腦名稱 (以逗號隔開)。 注意:不允許 IP 位址。  
   
     7.  (選擇性) 使用 *config_file* 參數 **-c**，指定重新執行組態檔的位置。 如果已修改預設重新執行組態檔的複本，請使用此參數指向新的組態檔。  
   

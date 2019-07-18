@@ -8,18 +8,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308395"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
 
-入口網站是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration]\(以預設原生模式設定安裝) 選項，入口網站就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將入口網站設定為後續安裝工作。 本主題會提供有關下列入口網站設定狀況的資訊：
+入口網站是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration]\(以預設原生模式設定安裝)  選項，入口網站就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將入口網站設定為後續安裝工作。 本主題會提供有關下列入口網站設定狀況的資訊：
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -35,7 +35,7 @@ ms.locfileid: "52415405"
 
 入口網站是使用者在網頁瀏覽器中存取的 Web 應用程式。 您至少必須定義用來在瀏覽器視窗中開啟應用程式的 URL。 此 URL 包含主機名稱、通訊埠和虛擬目錄。 此 URL 的預設值包括您針對報表伺服器 Web 服務 URL 所定義的主機名稱和通訊埠值，再加上 **reports** 虛擬目錄名稱。 如果您擁有具名執行個體，此虛擬目錄就是 **reports_instance**，其中 **instance** 是您 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。
 
-根據預設，入口網站 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將入口網站設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中的 [入口網站 URL] 頁面。
+根據預設，入口網站 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將入口網站設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中的 [入口網站 URL]  頁面。
 
 > [!TIP]
 > 如果您嘗試存取遠端電腦上的入口網站，但是在瀏覽器中收到連線錯誤訊息，常見的原因會是防火牆設定。 如需詳細資訊，請參閱 [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。
@@ -44,11 +44,11 @@ ms.locfileid: "52415405"
 
 1. 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。
 
-2. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中，按一下 [入口網站 URL] 開啟設定 URL 的頁面。
+2. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中，按一下 [入口網站 URL]  開啟設定 URL 的頁面。
 
 3. 針對入口網站輸入唯一的虛擬目錄名稱。
 
-4. 按一下 **[套用]**。
+4. 按一下 **[套用]** 。
 
 5. 如果您正在使用 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 或 Windows Server 2008，可能需要進行其他步驟，才能使用入口網站。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。
 
@@ -76,17 +76,17 @@ ms.locfileid: "52415405"
 
 #### <a name="to-modify-application-title"></a>修改應用程式標題
 
-1. 使用被指派報表伺服器之 [系統管理員] 權限的帳戶來登入。
+1. 使用被指派報表伺服器之 [系統管理員]  權限的帳戶來登入。
 
 2. 開啟 Internet Explorer。
 
-3. 輸入入口網站 URL。 根據預設，它是 https://\<**您的伺服器名稱**>/reports，但如果您將 Reporting Services 安裝成具名執行個體，預設 URL 將為 https://\<**您的伺服器名稱**>/reports\<**_執行個體名稱**>。
+3. 輸入入口網站 URL。 根據預設，它是 https://\<**您的伺服器名稱**>/reports，但如果您將 Reporting Services 安裝成具名執行個體，預設 URL 將為 https://\<**您的伺服器名稱**>/reports\< **_執行個體名稱**>。
 
-4. 選取 [站台設定] 。
+4. 選取 [站台設定]  。
 
-5. 在 [一般] 索引標籤的 [名稱] 中，將 **SQL Server Reporting Services** 取代成不同的名稱。
+5. 在 [一般]  索引標籤的 [名稱]  中，將 **SQL Server Reporting Services** 取代成不同的名稱。
 
-6. 選取 [套用]。
+6. 選取 [套用]  。
 
 ## <a name="next-steps"></a>後續步驟
 

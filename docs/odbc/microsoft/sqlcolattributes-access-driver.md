@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fa4de89a1ca617f7955d89e18650b7cf1e0c0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c78229da8a577670ba31ae82c679bfefbef4f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903984"
 ---
 # <a name="sqlcolattributes-access-driver"></a>SQLColAttributes (Access 驅動程式)
 > [!NOTE]  
 >  本主題提供存取驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|attribute|註解|  
+|屬性|註解|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|SQL_COLUMN_DISPLAY_SIZE LONGVARBINARY 資料是資料行，而不 2 次的資料行的最大長度的最大長度。|  
 |SQL_OWNER_NAME|空字串 ("") 會傳回此資料行中，因為不支援擁有者名稱。|  

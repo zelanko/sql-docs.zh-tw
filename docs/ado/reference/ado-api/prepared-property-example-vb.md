@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41dadd067fc62de6316c5258d660c757febc0fbc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931590"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 屬性範例 (VB)
 此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件-一個已備妥，另一個尚未備妥。  

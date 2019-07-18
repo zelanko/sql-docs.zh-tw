@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49bffb24c5ddc45c1c6b88fb424ab419445819fb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a3972d2d92274c3454f8add9fb7b92a001dda359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124051"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'` 發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'` 當初發行資料庫的 SQL Server 執行個體名稱。 *original_publisher*已**sysname**，沒有預設值。
   
 `[ @publisher_db = ] 'publisher_db'` 發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
@@ -71,7 +70,7 @@ sp_get_redirected_publisher
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c60005e798e2a942970d9fb7a8746256308c795
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102400"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上傳檔案或報表 (報表管理員)
   報表管理員會提供一項上傳功能，讓您可以將報表、模型和其他檔案加入至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  
@@ -39,13 +38,13 @@ ms.locfileid: "56023669"
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要加入項目的資料夾。  
   
-3.  按一下 [上傳檔案]。  
+3.  按一下 [上傳檔案]  。  
   
-4.  按一下 [瀏覽] 選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
+4.  按一下 [瀏覽]  選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
 5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : \@ & = + , $ / * \< > |.  
   
-6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]。  
+6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

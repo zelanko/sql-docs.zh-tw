@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f86d2fe9f361470f96123f1035fe9ad51fc7cbe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915613"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
     
@@ -30,7 +30,7 @@ ms.locfileid: "48063868"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|OS_ERROR|  
-|訊息文字|%ls: 發現作業系統錯誤 %ls。|  
+|訊息文字|%ls:發現作業系統錯誤 %ls。|  
   
 ## <a name="explanation"></a>說明  
  發生一般作業系統錯誤。  不確定產生的狀態為何。  

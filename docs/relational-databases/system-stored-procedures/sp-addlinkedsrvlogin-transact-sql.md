@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072673"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +34,29 @@ ms.locfileid: "47838106"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  這是登入對應所套用的連結伺服器名稱。 *rmtsrvname&lt*已**sysname**，沒有預設值。  
   
- [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
- 決定是否連接到*rmtsrvname&lt*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (** 8 **)**，預設值是 TRUE。  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
+ 決定是否連接到*rmtsrvname&lt*模擬本機登入或明確提交登入和密碼。 資料類型是**varchar (** 8 **)** ，預設值是 TRUE。  
   
  值為 TRUE 可讓您指定登入使用他們自己的認證來連接到*rmtsrvname&lt*，使用*rmtuser&lt*並*rmtpassword&lt*引數被忽略。 FALSE 指定*rmtuser&lt*並*rmtpassword&lt*引數用來連接到*rmtsrvname&lt*指定*locallogin*. 如果*rmtuser&lt*並*rmtpassword&lt*也會設為 NULL、 沒有登入或密碼用來連接到連結的伺服器。  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  這是本機伺服器上的登入。 *locallogin*已**sysname**，預設值是 NULL。 NULL 可讓您指定這個項目會套用到所有的本機登入，連接到*rmtsrvname&lt*。 如果不是 NULL， *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 登入存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
   
- [ @rmtuser **=** ] **'***rmtuser&lt***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  用來連接到遠端登入*rmtsrvname&lt*當@useself為 FALSE。 遠端伺服器時的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不使用 Windows 驗證*rmtuser&lt*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。 *rmtuser&lt*已**sysname**，預設值是 NULL。  
   
- [ @rmtpassword **=** ] **'***rmtpassword&lt***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  密碼相關聯*rmtuser&lt*。 *rmtpassword&lt*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

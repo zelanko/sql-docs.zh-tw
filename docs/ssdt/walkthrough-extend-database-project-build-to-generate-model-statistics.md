@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：擴充資料庫專案組建，以產生模型統計資料 | Microsoft Docs
+title: 逐步解說：延伸資料庫專案組建，以產生模型統計資料 | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65102043"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
 您可以建立組建參與者，以便在建置資料庫時執行自訂動作。 在這個逐步解說，會建立名為 ModelStatistics 的組建參與者，以便在建置資料庫專案時從 SQL 資料庫模型輸出統計資料。 因為在建置時這個組建參與者採用參數，所以需要某些其他步驟。  
@@ -89,11 +89,11 @@ ms.locfileid: "52523416"
   
 2.  將 "Class1.cs" 檔案重新命名為 "ModelStatistics.cs"。  
   
-3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]  。  
   
 4.  選取 **System.ComponentModel.Composition** 項目，然後按一下 [ **確定**]。  
   
-5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [ **瀏覽** ] 按鈕。 巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、 **Microsoft.SqlServer.Dac.Extensions.dll**和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，然後按一下 [ **確定**]。  
+5.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]  。 按一下 [ **瀏覽** ] 按鈕。 巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、 **Microsoft.SqlServer.Dac.Extensions.dll**和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，然後按一下 [ **確定**]。  
   
     下一步，開始將程式碼加入至類別。  
   
@@ -438,13 +438,13 @@ ms.locfileid: "52523416"
   
 3.  按一下 [ **簽署組件**]。  
   
-4.  在 [選擇強式名稱金鑰檔案] 中，按一下 **<New>**。  
+4.  在 [選擇強式名稱金鑰檔案]  中，按一下 **<New>** 。  
   
 5.  在 [ **建立強式名稱金鑰** ] 對話方塊中的 [ **金鑰檔名稱**]，輸入 **MyRefKey**。  
   
 6.  (選擇性) 您可以為強式名稱金鑰檔指定密碼。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -525,7 +525,7 @@ ms.locfileid: "52523416"
   
 1.  在 Visual Studio 中，以滑鼠右鍵按一下專案並選取 [重建]。 這會重建專案，而且您應該會看見產生的模型統計資料，其輸出包含在建置輸出中並儲存至 ModelStatistics.xml。 請注意，您可能需要在方案總管中選取 [顯示所有檔案] 才能看得到 xml 檔案。  
   
-2.  開啟 Visual Studio 命令提示字元：在 [開始] 功能表上，依序按一下 [所有程式]、[Microsoft Visual Studio <Visual Studio Version>]、[Visual Studio Tools]，然後按一下 [Visual Studio 命令提示字元 (<Visual Studio Version>)]。  
+2.  開啟 Visual Studio 命令提示字元：在 [開始] 功能表  上，依序按一下 [所有程式]  、[Microsoft Visual Studio <Visual Studio Version>]  和 [Visual Studio 工具]  ，然後按一下 [Visual Studio 命令提示字元 (<Visual Studio Version>)]  。  
   
 3.  在命令提示字元中，巡覽至包含 SQL 專案的資料夾。  
   
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>另請參閱  
 [使用組建和部署參與者自訂資料庫建置和部署](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[逐步解說：擴充資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[逐步解說：延伸資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

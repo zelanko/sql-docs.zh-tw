@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823298"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>加入用於撥接中心資料的資料來源檢視 (中繼資料採礦教學課程)
   在這項工作中，您將加入資料來源檢視，用來存取撥接中心資料。 相同的資料將用於建立用來進行探索的初步類神經網路模型，以及用於提出建議的羅吉斯迴歸模型。  
@@ -30,9 +30,9 @@ ms.locfileid: "56035039"
   
      此時會開啟資料來源檢視精靈。  
   
-2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
+2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按一下 [下一步]  。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料來源。 如果您沒有此資料來源，請參閱[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。 按一下 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料來源。 如果您沒有此資料來源，請參閱[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。 按一下 [下一步]  。  
   
 4.  在 **選取資料表和檢視**頁面上，選取下列資料表，然後按一下向右箭號，將它新增至資料來源檢視：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "56035039"
   
     -   **DimDate**  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
 6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為**CallCenter**，然後按一下**完成**。  
   

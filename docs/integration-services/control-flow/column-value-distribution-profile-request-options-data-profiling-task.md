@@ -13,15 +13,19 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d10496080bd9103bb3814ec0abe97f3e690982e9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9251b25d0f4f353312a56a2117d1388f813d839f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727842"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>資料行值散發設定檔要求選項 (資料分析工作)
-  您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行值散發設定檔要求] 設定選項。 資料行值散發設定檔會報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 此設定檔也可以報告代表超過資料表中指定之資料列百分比的值。 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 舉例來說，您分析了「美國州名」資料行並發現超過 50 個相異值。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  您可以使用 [設定檔要求]  頁面的 [要求屬性]  窗格，針對要求窗格中選取的 [資料行值散發設定檔要求]  設定選項。 資料行值散發設定檔會報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 此設定檔也可以報告代表超過資料表中指定之資料列百分比的值。 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 舉例來說，您分析了「美國州名」資料行並發現超過 50 個相異值。  
   
 > [!NOTE]  
 >  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
@@ -29,9 +33,9 @@ ms.locfileid: "58281902"
  如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>要求屬性選項  
- [要求屬性] 窗格會針對 [資料行值散發設定檔要求] 顯示下列選項群組：  
+ [要求屬性]  窗格會針對 [資料行值散發設定檔要求]  顯示下列選項群組：  
   
--   **[資料]**，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
+-   **[資料]** ，其中包括 **[TableOrView]** 和 **[資料行]** 選項。  
   
 -   **一般**  
   
@@ -60,16 +64,16 @@ ms.locfileid: "58281902"
   
 #### <a name="column-options"></a>資料行選項  
  **IsWildCard**  
- 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
+ 指定是否已經選取 **(\*)** 萬用字元。 如果您已選取 **(\*)** 來分析所有資料行，這個選項會設定為 [True]  。 如果您已選取要分析的個別資料行，它就會設定為 **[False]** 。 此選項是唯讀的。  
   
  **ColumnName**  
  顯示所選取資料行的名稱。 如果您已選取 **(\*)** 來分析所有資料行，這個選項就是空白的。 此選項是唯讀的。  
   
  **StringCompareOptions**  
- 選取比較字串值的選項。 這個屬性具有下表中所列的選項。 此選項的預設值為 [預設值]。  
+ 選取比較字串值的選項。 這個屬性具有下表中所列的選項。 此選項的預設值為 [預設值]  。  
   
 > [!NOTE]  
->  如果您針對 **ColumnName** 使用 **(\*)** 萬用字元，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值] 設定。  
+>  如果您針對 **ColumnName** 使用 **(\*)** 萬用字元，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值]  設定。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -77,12 +81,12 @@ ms.locfileid: "58281902"
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
 |**DictionarySort**|根據相關聯之語言或字母字典中所定義的排序和比較規則來排序和比較資料。|  
   
- 如果您選取 [DictionarySort]，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
+ 如果您選取 [DictionarySort]  ，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
-|**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
+|**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"Ã¥" 等於 "a"。|  
 |**IgnoreKanaType**|指定比較是否區分兩類日文的假名字元：平假名與片假名。 如果設定此選項，則字串比較會忽略假名類型。|  
 |**IgnoreWidth**|指定比較是否區分單一位元組字元和表示為雙位元組字元的相同字元。 如果設定此選項，則字串比較會將同一字元的單一位元組表示法和雙位元組表示法視為一樣。|  
   

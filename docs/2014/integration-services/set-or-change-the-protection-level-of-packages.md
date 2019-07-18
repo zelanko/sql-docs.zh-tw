@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055846"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>設定或變更封裝的保護等級
   若要控制封裝內容以及其中包含之機密值 (例如密碼) 的存取權，請設定 `ProtectionLevel` 屬性的值 包含在專案中的封裝需要有和專案相同的保護層級，才能建立專案。 如果您變更專案上的 `ProtectionLevel` 屬性設定，就需要手動更新封裝的屬性設定。  
@@ -47,7 +46,7 @@ ms.locfileid: "58388106"
   
      如果您選取了需要密碼的保護等級，請輸入密碼作為 **PackagePassword** 屬性的值。  
   
-6.  在 [檔案] 功能表上，選取 [儲存選取項目] 以儲存修改過的封裝。  
+6.  在 [檔案]  功能表上，選取 [儲存選取項目]  以儲存修改過的封裝。  
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示字元設定或變更封裝的保護等級  
   

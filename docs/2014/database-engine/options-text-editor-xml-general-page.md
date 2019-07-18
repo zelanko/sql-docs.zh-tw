@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029097"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089203"
 ---
 # <a name="options-text-editor---xml---general-page"></a>選項 (文字編輯器 - XML - 一般頁面)
-  使用這個對話方塊可以變更 XML 編輯器的一般編輯行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請在 **[工具]** 功能表上按一下 **[選項]** ，展開 **[XML]** 子資料夾，然後按一下 **[一般]**。  
+  使用這個對話方塊可以變更 XML 編輯器的一般編輯行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請在 **[工具]** 功能表上按一下 **[選項]** ，展開 **[XML]** 子資料夾，然後按一下 **[一般]** 。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多個位置設定選項  
  XML 編輯器的選項也可以在 **[所有語言 - 一般]** 對話方塊中設定。 如果您使用 **[所有語言]** 對話方塊為其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器 (例如 DMX 或 MDX 編輯器) 設定不同的選項，則必須使用這個對話方塊重設 XML 編輯器選項。  
@@ -50,11 +49,11 @@ ms.locfileid: "51029097"
  **沒有選取項目時，套用剪下/複製命令至空白行**  
  當您在空白行上放置插入點、不選取任何內容，然後按一下 **[複製]** 或 **[剪下]** 時，此核取方塊就會設定編輯器的行為。  
   
- 如果選取此核取方塊，就會複製或剪下空白行。 接著，如果您按一下 **[貼上]**，就會插入一個新的空白行。  
+ 如果選取此核取方塊，就會複製或剪下空白行。 接著，如果您按一下 **[貼上]** ，就會插入一個新的空白行。  
   
- 如果清除此核取方塊，就不會複製或剪下任何內容。 接著，您按一下 **[貼上]**，就會貼上最近複製的內容。 如果先前沒有進行複製，就不會有貼上動作。  
+ 如果清除此核取方塊，就不會複製或剪下任何內容。 接著，您按一下 **[貼上]** ，就會貼上最近複製的內容。 如果先前沒有進行複製，就不會有貼上動作。  
   
- 當行不是空白時，此設定對 **[複製]** 或 **[剪下]** 沒有影響。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]**，就會貼上整行的文字與其結束字元。  
+ 當行不是空白時，此設定對 **[複製]** 或 **[剪下]** 沒有影響。 如果沒有選取內容，就會複製或剪下整個行。 接著，如果您按一下 **[貼上]** ，就會貼上整行的文字與其結束字元。  
   
 ## <a name="display"></a>顯示器  
  **行號**  

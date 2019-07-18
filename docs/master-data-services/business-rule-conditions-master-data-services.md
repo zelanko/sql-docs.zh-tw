@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1ed0aa7fad822748bfab2426ef22071a72ba1774
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4f7c48db940a192f1506fb1c6c8e371e9d5a7958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047476"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "52823247"
   
 ## <a name="business-rule-conditions"></a>商務規則條件  
   
-|條件名稱|Description|  
+|條件名稱|描述|  
 |--------------------|-----------------|  
 |**等於**|選取的屬性 **等於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  
 |**不等於**|選取的屬性 **不等於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  

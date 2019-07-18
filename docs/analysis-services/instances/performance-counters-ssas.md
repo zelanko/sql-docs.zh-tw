@@ -1,5 +1,5 @@
 ---
-title: 效能計數器 (SSAS) |Microsoft 文件
+title: 效能計數器 (SSAS) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,27 +10,27 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62709733"
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   使用效能監視器可以透過效能計數器來監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  
   
- 效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon** ，或是從 [控制台] 按一下 **[系統管理工具]** 然後按一下 **[效能監視器]**。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
+ 效能監視器是追蹤資源使用方式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) 嵌入式管理單元。 您可以啟動這個 MMC 嵌入式管理單元，方法是在命令提示字元中輸入 **PerfMon** ，或是從 [控制台] 按一下 **[系統管理工具]** 然後按一下 **[效能監視器]** 。 效能監視器可讓您使用預先定義的物件和計數器來追蹤伺服器和處理序效能與活動，並利用使用者定義的計數器來監視事件。 效能監視器會收集計數而非關於事件的資料，例如，記憶體使用量、使用中交易數目或 CPU 活動。 您也可在特定計數器上設定臨界值，以產生通知操作員的警示。  
   
  效能監視器可以監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的遠端與本機執行個體。 如需詳細資訊，請參閱 [使用效能監視器](http://technet.microsoft.com/library/cc749115.aspx)。  
   
- 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以使用之任何計數器的描述，請在效能監視器中開啟 **[新增計數器]** 對話方塊，並選取效能物件，然後按一下 **[顯示描述]**。 最重要的計數器有 CPU 使用量、記憶體使用量、磁碟 IO 速率。 建議您從這些重要的計數器開始，當您較為了解可透過監視提升哪些效能時，再移至更詳細的計數器。 如需有關要包含哪些計數器的詳細資訊，請參閱 [SQL Server 2008 R2 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以使用之任何計數器的描述，請在效能監視器中開啟 **[新增計數器]** 對話方塊，並選取效能物件，然後按一下 **[顯示描述]** 。 最重要的計數器有 CPU 使用量、記憶體使用量、磁碟 IO 速率。 建議您從這些重要的計數器開始，當您較為了解可透過監視提升哪些效能時，再移至更詳細的計數器。 如需有關要包含哪些計數器的詳細資訊，請參閱 [SQL Server 2008 R2 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  計數器已分組，因此您可以更輕鬆地找到相關計數器。  
   
 ## <a name="counters-by-groups"></a>依群組分組的計數器  
   
-|群組|說明|  
+|群組|描述|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|與 Analysis Services 彙總快取相關的統計資料。|  
 |[連接](#bkmk_Connection)|與 Microsoft Analysis Services 連接相關的統計資料。|  
@@ -49,7 +49,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_Cache"></a> Cache  
  與 Microsoft Analysis Services 彙總快取相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current KB|目前由彙總快取所使用的記憶體，以 KB 為單位。|  
 |KB added/sec|記憶體加入快取的速率，KB/秒。|  
@@ -71,7 +71,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_Connection"></a> 連接  
  與 Microsoft Analysis Services 連接相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current connections|目前已建立的用戶端連接數目。|  
 |Requests/sec|連接要求的速率。  這些是到達的要求。|  
@@ -85,7 +85,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_DataMiningModelProcessing"></a> Data Mining Model Processing  
  與 Microsoft Analysis Services 資料採礦模型處理相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Cases/sec|處理案例的速率。|  
 |Current models processing|目前正在處理的模型數目。|  
@@ -93,7 +93,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_DataMiningPrediction"></a> Data Mining Prediction  
  與 Microsoft Analysis Services 資料採礦預測相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Concurrent DM queries|目前正在處理的資料採礦查詢數目。|  
 |Predictions/sec|在資料採礦查詢中產生的預測數目。|  
@@ -106,7 +106,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_Locks"></a> 鎖定  
  與 Microsoft Analysis Services 內部伺服器鎖定相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current latch waits|目前等候閂鎖的執行緒數目。  這些是無法立即被授與，而處於等候狀態的閂鎖要求。|  
 |Latch waits/sec|無法立即被授與及必須等候授與的閂鎖要求速率。|  
@@ -122,7 +122,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_MDX"></a> MDX  
  與 Microsoft Analysis Services MDX 計算相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Number of calculation covers|由 MDX 執行計畫所建立的評估節點總數，包括使用中和快取的。|  
 |Current number of evaluation nodes|由使用中和快取的 MDX 執行計畫所建立的目前 (大約) 評估節點數目。|  
@@ -155,7 +155,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_Memory"></a> 記憶體  
  與 Microsoft Analysis Services 內部伺服器記憶體相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Page Pool 64 Alloc KB|從系統借用的記憶體大小，以 KB 為單位。  此記憶體會提供給伺服器的其他部分使用。|  
 |Page Pool 64 Lookaside KB|目前在 64KB 對應清單中的記憶體，以 KB 為單位  (備妥供使用的記憶體頁面)。|  
@@ -232,7 +232,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_ProactiveCaching"></a> 主動式快取  
  與 Microsoft Analysis Services 主動式快取相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Notifications/sec|來自關聯式資料庫的通知速率。|  
 |Processing Cancellations/sec|通知所引起的處理取消速率。|  
@@ -242,7 +242,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_ProcAggregations"></a> Processing Aggregations  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之彙總相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current partitions|目前正在處理的資料分割數目。|  
 |Total partitions|已處理的資料分割總計 (成功或失敗)。|  
@@ -256,7 +256,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_ProcIndexes"></a> Processing Indexes  
  與 Microsoft Analysis Services 處理 MOLAP 資料檔之索引相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current partitions|目前正在處理的資料分割數目。|  
 |Total partitions|已處理的資料分割總計 (成功或失敗)。|  
@@ -266,7 +266,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_Processing"></a> Processing  
  與 Microsoft Analysis Services 處理資料相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Rows read/sec|從所有關聯式資料庫讀取資料列的速率。|  
 |Total rows read|從所有關聯式資料庫讀取的資料列計數。|  
@@ -278,7 +278,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_StorageEngineQuery"></a> Storage Engine Query  
  與 Microsoft Analysis Services 儲存引擎查詢相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Current measure group queries|目前正在進行的量值群組查詢數目。|  
 |Measure group queries/sec|量值群組查詢的速率|  
@@ -321,7 +321,7 @@ ms.locfileid: "34019235"
 ###  <a name="bkmk_Threads"></a> Threads  
  與 Microsoft Analysis Services 執行緒相關的統計資料。  
   
-|計數器|說明|  
+|計數器|描述|  
 |-------------|-----------------|  
 |Short parsing idle threads|簡短剖析執行緒集區中的閒置執行緒數目。|  
 |Short parsing busy threads|簡短剖析執行緒集區中的忙碌執行緒數目。|  

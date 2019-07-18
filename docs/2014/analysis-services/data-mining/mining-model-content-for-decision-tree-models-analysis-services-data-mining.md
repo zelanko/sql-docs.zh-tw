@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
@@ -15,12 +14,12 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083665"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
@@ -76,10 +75,10 @@ ms.locfileid: "53351949"
 |節點類型|描述|  
 |---------------|-----------------|  
 |1 (模型)|模型的根節點。|  
-|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」**。|  
+|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」** 。|  
 |3 (內部)|內部分支的標頭，可在分類樹狀結構或迴歸樹狀結構中找到。|  
 |4 (分佈)|分葉節點，可在分類樹狀結構或迴歸樹狀結構中找到。|  
-|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」**。|  
+|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」** 。|  
   
  NODE_CAPTION  
  提供顯示用途的好記名稱。  
@@ -272,7 +271,7 @@ ms.locfileid: "53351949"
   
  一般而言，迴歸會將連續相依 (可預測的變數) 中的變更對應為輸入中變更的功能。 如果相依變數有任何連續輸入，而且輸入和已預測值之間的關聯性夠穩定，可以當做線條圖計算，迴歸的節點就會包含公式。  
   
- 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」*(Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
+ 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」* (Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
   
 |分岔條件|節點的結果|  
 |---------------------|--------------------|  

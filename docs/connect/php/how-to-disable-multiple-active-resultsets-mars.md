@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d0095953a9fc6b70f0776b438af567260a9f749c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a438c1d077de0559a950458755a68ac08a1de089
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686097"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796122"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>如何：停用 Multiple Active Resultsets (MARS)。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

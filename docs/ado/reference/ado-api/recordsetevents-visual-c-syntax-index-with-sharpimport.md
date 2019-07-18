@@ -1,5 +1,5 @@
 ---
-title: 'RecordsetEvents （含的 Visual c + + 語法索引 #import） |Microsoft Docs'
+title: 'RecordsetEvents (VisualC++含 #import 語法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c13d577dbe818038af51a9b736595eb83328b6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd512cbb01ace33bad275981be4c895591cd229d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917318"
 ---
-# <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents （含的 Visual c + + 語法索引 #import）
-## <a name="events"></a>事件  
+# <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (VisualC++含 #import 語法索引)
+## <a name="events"></a>Events  
   
 ```  
 HRESULT WillChangeField( long cFields, const  

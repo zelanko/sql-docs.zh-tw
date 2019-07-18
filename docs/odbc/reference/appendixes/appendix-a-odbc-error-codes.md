@@ -1,5 +1,5 @@
 ---
-title: 附錄 A:ODBC 錯誤碼 |Microsoft Docs
+title: 附錄 A：ODBC 錯誤碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c16ec959f847f1b2dba5bdfbea8f886bb00545a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996242"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附錄 A：ODBC 錯誤碼
 本主題會討論 ODBC 3 SQLSTATE 值。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[SQLSTATE 對應](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
   
- **SQLGetDiagRec**或是**SQLGetDiagField** Open Group 所定義，會傳回 SQLSTATE 值*資料管理： 結構化查詢語言 (SQL)、 第 2 版*(1995 年 3 月)。 SQLSTATE 值是包含五個字元的字串。 下表列出的驅動程式可傳回的 SQLSTATE 值**SQLGetDiagRec**。  
+ **SQLGetDiagRec**或是**SQLGetDiagField** Open Group 所定義，會傳回 SQLSTATE 值*資料管理：結構化查詢語言 (SQL)、 第 2 版*(1995 年 3 月)。 SQLSTATE 值是包含五個字元的字串。 下表列出的驅動程式可傳回的 SQLSTATE 值**SQLGetDiagRec**。  
   
  傳回為 SQLSTATE 的字元字串值是由兩個字元類別值，後面接著三個字元的子類別值所組成。 類別值為"01"表示警告，並伴隨著 SQL_SUCCESS_WITH_INFO 傳回碼。 類別"01，「 類別 」 IM，「 除了以外的值表示錯誤，並附帶 SQL_ERROR 傳回值。 類別"IM 」 是特定警告和錯誤衍生自 ODBC 本身的實作。 在任何類別中的子類別值"000 」 不表示該 SQLSTATE 任何子類別。 SQL-92 定義的類別和子類別值的指派。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "47767736"
 |HY019|整塊傳送非字元及非二進位的資料|**SQLPutData**|  
 |HY020|嘗試串連 null 值|**SQLPutData**|  
 |HY021|不一致的描述元資訊|**SQLBindParameter**<br /><br /> **SQLCopyDesc**<br /><br /> **SQLGetDescField**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
-|其中包含 SQLSTATE=HY024|屬性值無效|**SQLSetConnectAttr**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
+|HY024|屬性值無效|**SQLSetConnectAttr**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |HY090|字串或緩衝區長度無效|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLConnect**<br /><br /> **SQLDataSources**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLDrivers**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetInfo**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLNativeSql**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSetPos**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
 |HY091|無效的描述項欄位識別碼|**SQLColAttribute**<br /><br /> **SQLGetDescField**<br /><br /> **SQLSetDescField**|  
 |HY092|屬性/選項識別碼無效|**SQLAllocHandle**<br /><br /> **QLBulkOperations**<br /><br /> **SQLCopyDesc**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLEndTran**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetEnvAttr**<br /><br /> **QLParamData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetPos**<br /><br /> **SQLSetStmtAttr**|  
@@ -127,7 +126,7 @@ ms.locfileid: "47767736"
 |HY101|精確度選項類型超出範圍|**SQLStatistics**|  
 |HY103|無效的擷取程式碼|**SQLDataSources**<br /><br /> **SQLDrivers**|  
 |HY104|無效的有效位數或小數位數的值|**SQLBindParameter**|  
-|包含 SQLSTATE=HY105|無效的參數類型|**SQLBindParameter**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetDescField**|  
+|HY105|無效的參數類型|**SQLBindParameter**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetDescField**|  
 |HY106|擷取類型超出範圍|**SQLExtendedFetch**<br /><br /> **SQLFetchScroll**|  
 |HY107|資料列值超出範圍|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLSetPos**|  
 |HY109|無效的資料指標位置|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLGetData**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLNativeSql**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  

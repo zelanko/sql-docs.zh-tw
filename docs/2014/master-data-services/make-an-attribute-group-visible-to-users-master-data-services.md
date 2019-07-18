@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14f9ad5eb733db24f47acad192dbe89543831766
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479148"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>讓使用者看到屬性群組 (Master Data Services)
-  當您希望使用者在總管 功能區域的方格上方有索引標籤時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中對使用者或群組顯示屬性群組。  
+  當您希望使用者在總管  功能區域的方格上方有索引標籤時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中對使用者或群組顯示屬性群組。  
   
  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。  
   
@@ -33,13 +33,13 @@ ms.locfileid: "52750916"
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>若要讓使用者看到屬性群組  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
 2.  在 **模型檢視**頁面上，從功能表列指向**管理**，按一下 **屬性群組**。  
   
 3.  從 **[模型]** 清單中選取模型。  
   
-4.  從 [實體] 清單中選取實體。  
+4.  從 [實體]  清單中選取實體。  
   
 5.  按一下加號，展開**分葉群組**，**合併群組**，或**集合群組**，取決於您想要顯示的群組類型。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "52750916"
   
 8.  按一下 **編輯選取的項目**。  
   
-9. 按一下 使用者或群組中的**可用**方塊，然後按一下**新增**箭號。 若要全部加入，請按一下 [全部加入] 箭號。  
+9. 按一下 使用者或群組中的**可用**方塊，然後按一下**新增**箭號。 若要全部加入，請按一下 [全部加入]  箭號。  
   
-10. 按一下 [儲存] 。  
+10. 按一下 [儲存]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   

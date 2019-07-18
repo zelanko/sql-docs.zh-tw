@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - member groups [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 389439143ddd5f56d565cdebff42a91e241e16fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077295"
 ---
 # <a name="define-member-groups"></a>定義成員群組
   如果屬性有大量成員，您可以選擇將這些成員分組成值區，減少使用者在階層中瀏覽資料時所看到的成員數目。 您也可以決定成員分組的值區數目和設定值區的命名配置。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
@@ -33,8 +32,8 @@ ms.locfileid: "48219338"
   
 1.  開啟您要使用的維度。 依預設，會開啟 **[維度結構]** 索引標籤。  
   
-2.  在 [屬性] 中，以滑鼠右鍵按一下您要將其成員分組的屬性，然後按一下 [屬性]。  
+2.  在 [屬性]  中，以滑鼠右鍵按一下您要將其成員分組的屬性，然後按一下 [屬性]  。  
   
-3.  從 [DiscretizationMethod] 旁邊的下拉式清單中，選取將成員分組的方法。 如需 **DiscretizationMethod** 設定的詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
+3.  從 [DiscretizationMethod]  旁邊的下拉式清單中，選取將成員分組的方法。 如需 **DiscretizationMethod** 設定的詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
   
   

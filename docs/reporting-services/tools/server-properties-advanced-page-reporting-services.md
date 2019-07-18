@@ -1,18 +1,18 @@
 ---
 title: 伺服器屬性 (進階頁面) - Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
-ms.translationtype: HT
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805744"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463586"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -20,7 +20,7 @@ ms.locfileid: "54805744"
 
 您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。
 
-若要開啟此頁面，請啟動 SQL Server Management Studio，並連線至報表伺服器執行個體，然後以滑鼠右鍵按一下報表伺服器名稱，再選取 [屬性]。 選取 [進階]，即可開啟此頁面。
+若要開啟此頁面，請啟動 SQL Server Management Studio，並連線至報表伺服器執行個體，然後以滑鼠右鍵按一下報表伺服器名稱，再選取 [屬性]  。 選取 [進階]  ，即可開啟此頁面。
 
 ## <a name="options"></a>選項。
 
@@ -40,7 +40,7 @@ ms.locfileid: "54805744"
 要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括 **-1** 至 **2**、**147**、**483**和**647**。 如果此值為 **-1**，系統不會從執行記錄資料表中刪除項目。 預設值是 **60**秒。  
 
 > [!NOTE]
-> 將值設定為 **0** 會「刪除」執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，且不會將其刪除。
+> 將值設定為 **0** 會「刪除」  執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，且不會將其刪除。
 
 **RDLXReportTimetout** RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名空間中所有受控報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800**秒。
 
@@ -93,8 +93,9 @@ ms.locfileid: "54805744"
 
 **AccessControlMaxAge** 指定可快取推斷要求結果的秒數。 預設值為 600 (10 分鐘)。
 
-**AllowedResourceExtensionsForUpload** ***(僅限 Power BI 報表伺服器)***：設定可上傳到報表伺服器的資源副檔名。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。 
+**AllowedResourceExtensionsForUpload**一組擴充功能的資源可供上傳至報表伺服器。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。
 
+**RestrictedResourceMimeTypeForUpload**的 mime 類型使用者的設定不允許上傳的內容。 只為應用程式/八位元資料流而不是開啟/執行瀏覽器下載任何已儲存與受限制的 mime 類型的資源。  根據預設，在此清單中，沒有任何限制的項目，但我們建議組織填入此選項可提供最安全的經驗。
 
 **EditSessionCacheLimit**  
 指定可以在報表編輯工作階段中使用的資料快取項目數目。 預設數目是 5。  

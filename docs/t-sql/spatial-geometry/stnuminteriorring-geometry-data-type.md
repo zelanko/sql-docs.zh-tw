@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumInteriorRing (geometry Data Type)
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0d2a1d1b8cea6a02b16b98edf57e3c92278599f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd2a5e5e4f973cb476a36cb7fee6ca7d0924965b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65938448"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47753842"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**int**  
   
- CLR 傳回類型：**SqlInt32**  
+ CLR 傳回型別：**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  如果 **geometry** 執行個體不是多邊形，此方法會傳回 Null。  

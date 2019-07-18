@@ -16,16 +16,16 @@ helpviewer_keywords:
 - PERCENT_RANK function
 - analytic functions, PERCENT_RANK
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c0143fe79636fd8d9fc75b69fc25f1ebb84148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a71b6b5cd3f62fd3c51121bd6ef705911ffc76d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943460"
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

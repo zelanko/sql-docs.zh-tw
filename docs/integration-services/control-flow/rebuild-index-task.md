@@ -17,14 +17,18 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78fabbab0e38e65fdb77dc1b1a5e300154d1569a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ad0dca79322d67e357f4629357367f0ecfb50b03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65805230"
 ---
 # <a name="rebuild-index-task"></a>重建索引工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「重建索引」工作會重建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表與檢視中的索引。 如需管理索引的詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
  藉由使用「重建索引」工作，封裝可重建單一資料庫或多重資料庫中的索引。 如果此工作只重建單一資料庫中的索引，您可以選擇要由此工作重建索引的檢視與資料表。  

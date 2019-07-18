@@ -2,18 +2,18 @@
 title: Multilookup 函式 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0425be1f799a078a22965150e10525780e5b687
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577153"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>報表產生器函式 - Multilookup 函式
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  

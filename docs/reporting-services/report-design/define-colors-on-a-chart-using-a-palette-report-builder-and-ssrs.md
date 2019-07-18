@@ -2,21 +2,21 @@
 title: 使用調色盤定義圖表的色彩 (報表產生器及 SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dd8024f796beebd449c897b8fce8a7be448e0174
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4cae758708ce0ac703aa2b6e82b574b45c54195a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292946"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65572267"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
-  您可以選取預先定義的調色盤，或定義自訂調色盤來變更圖表的色彩調色盤。 自訂調色盤是報表專屬的。  
+  您可以選取預先定義的調色盤，或定義自訂調色盤來變更圖表的色彩調色盤。 自訂調色盤專供圖表使用。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -29,7 +29,7 @@ ms.locfileid: "56292946"
   
      物件名稱 (預設為**Chart1** ) 就會出現在 [屬性] 窗格頂端的下拉式清單中。  
   
-3.  在 [圖表] 區段中，從下拉式清單為 Palette 屬性選取新的調色盤。  
+3.  在 [圖表]  區段中，從下拉式清單為 Palette 屬性選取新的調色盤。  
   
     > [!NOTE]  
     >  您無法在預先定義的調色盤中變更色彩或順序。  
@@ -40,9 +40,9 @@ ms.locfileid: "56292946"
   
 2.  在設計介面上，按一下圖表。 圖表物件的屬性會顯示在 [屬性] 窗格中。  
   
-3.  在 **[圖表]** 區段中，為 **[調色盤]** 屬性選取 **[自訂]**。  
+3.  在 **[圖表]** 區段中，為 **[調色盤]** 屬性選取 **[自訂]** 。  
   
-4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合] \(**...**) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
+4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合] \( **...** ) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
   
 5.  按一下 **[加入]** 來加入色彩。 從下拉式清單中選取一個色彩，或選取 [運算式]，然後為特定色彩指定一個十六進位值，例如，ff6600 代表「橙色」。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "56292946"
   
 6.  按一下 **[加入]** ，將其他色彩加入到調色盤中。  
   
-7.  在您完成後，按一下 **[確定]**。  
+7.  在您完成後，按一下 **[確定]** 。  
   
  如果您要使用自訂調色盤，可以藉由變更色彩的順序來變更圖表中不同序列的色彩。  
   

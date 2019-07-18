@@ -4,43 +4,42 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5cd312338aba04b3e70a18ca6fd71503b544e851
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108489"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：設計父報表使用報表精靈
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
   在您建立父報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計父報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>若要使用報表精靈設計父報表  
   
 1.  請確認已在 **方案總管**中選取頂層網站。  
   
-2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]。  
+2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]  。  
   
 3.  在 **加入新項目**對話方塊中，選取**報表精靈**，輸入報表檔的名稱，然後按一下**新增**。  
   
      這樣會啟動 [報表精靈]。  
   
 4.  在 **資料集屬性**頁面上，於**資料來源**方塊中，選取**DataSet1**您在建立[第 2 課：定義父報表的資料連接和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
-    [可用資料集] 方塊會自動更新為您如上所建立的 **DataTable**。  
+    [可用資料集]  方塊會自動更新為您如上所建立的 **DataTable**。  
   
-5.  按一下 [下一步] 。  
+5.  按一下 [下一步]  。  
   
-6.  在 [排列欄位] 頁面中執行下列操作：  
+6.  在 [排列欄位]  頁面中執行下列操作：  
   
-    1.  從 [可用欄位] 將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值] 方塊。  
+    1.  從 [可用欄位]  將 **ProductID**、**Name**、**ProductNumber**、**SafetyStockLevel** 和 **ReorderLevel** 拖曳至 [值]  方塊。  
   
-    2.  按一下箭號旁**sum （productid)**， **sum （safetystocklevel)**， **sum （reorderlevel)** 清除**總和**選取項目。  
+    2.  按一下箭號旁**sum （productid)** ， **sum （safetystocklevel)** ， **sum （reorderlevel)** 清除**總和**選取項目。  
   
 7.  按一下 [**下一步]** 兩次，然後按一下**完成**以關閉**報表精靈**。  
   

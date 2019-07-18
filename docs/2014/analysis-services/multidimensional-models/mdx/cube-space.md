@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074704"
 ---
 # <a name="cube-space"></a>Cube 空間
   「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
@@ -130,12 +129,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>計算內容  
   
 ## <a name="see-also"></a>另請參閱  
- [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Tuple](tuples.md)   
- [「 自動存在 」](autoexists.md)   
- [使用成員、 Tuple 和集合&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Tuples](tuples.md)   
+ [自動存在](autoexists.md)   
+ [使用成員、Tuple 和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [視覺化總計和非視覺化總計](visual-totals-and-non-visual-totals.md)   
- [MDX 語言參考&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多維度運算式&#40;MDX&#41;參考](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

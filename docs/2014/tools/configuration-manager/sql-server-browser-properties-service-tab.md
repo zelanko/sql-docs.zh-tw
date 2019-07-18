@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211156"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server Browser 屬性 (服務索引標籤)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 程式會以伺服器服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。  
   
- 您可以使用 **[SQL Server Browser 內容]** 對話方塊上的 **[服務]** 索引標籤來檢視下列選項。 除了 [啟動模式] 之外的所有屬性都是唯讀的。  
+ 您可以使用 **[SQL Server Browser 內容]** 對話方塊上的 **[服務]** 索引標籤來檢視下列選項。 除了 [啟動模式]  之外的所有屬性都是唯讀的。  
   
 ## <a name="options"></a>選項。  
  **二進位路徑**  
@@ -47,14 +47,14 @@ ms.locfileid: "52757550"
  **啟動模式**  
  將這個服務設定為下列選擇：  
   
--   手動：電腦啟動時，這項服務不會自動啟動。 您必須使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」或其他工具來啟動服務。  
+-   Manual:這項服務沒有自動啟動的電腦啟動時。 您必須使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」或其他工具來啟動服務。  
   
--   自動：這部電腦啟動時，這項服務會嘗試啟動。  
+-   自動：此服務會嘗試這台電腦啟動時啟動。  
   
--   已停用：這項服務無法啟動。  
+-   已停用：無法啟動此服務。  
   
  **狀態**  
- 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 " **...** " 表示狀態變更已暫止。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Browser 服務](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

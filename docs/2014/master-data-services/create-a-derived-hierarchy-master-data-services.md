@@ -10,15 +10,15 @@ helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0b56342c407bf2324da503810ca00d797b1c5cc6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479959"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>建立衍生階層 (Master Data Services)
   當您需要以層級為基礎的階層，確保成員存在於正確層級時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立衍生階層。 衍生階層是以模型中存在的網域屬性關聯性為基礎。  
@@ -35,26 +35,26 @@ ms.locfileid: "52782370"
   
 ### <a name="to-create-a-derived-hierarchy"></a>若要建立衍生階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
 2.  在 **模型檢視**頁面上，從功能表列指向**管理**，按一下 **衍生階層**。  
   
-3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
+3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
   
 4.  按一下 **加入衍生階層**。  
   
-5.  在 [加入衍生階層] 頁面上的 [衍生階層名稱] 方塊中，輸入階層的名稱。  
+5.  在 [加入衍生階層]  頁面上的 [衍生階層名稱]  方塊中，輸入階層的名稱。  
   
     > [!TIP]  
     >  請使用名稱來描述階層中的層級，例如**產品到子類別目錄到類別目錄**。  
   
-6.  按一下 [儲存衍生階層]。  
+6.  按一下 [儲存衍生階層]  。  
   
 7.  在 **編輯衍生階層**頁面上，於**可用的實體和階層**窗格中，按一下實體或階層，並將它拖曳至**目前層級**窗格。  
   
 8.  繼續拖曳實體或階層，直到完成階層為止。  
   
-9. 按一下 [上一步]。  
+9. 按一下 [上一步]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   

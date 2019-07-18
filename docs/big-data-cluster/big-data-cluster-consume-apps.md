@@ -4,19 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 使用 SQL Server 2019 巨量資料叢集使用 RESTful web 服務 （預覽） 上部署應用程式。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
-manager: craigg
+ms.reviewer: mikeray
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958886"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服務的巨量資料叢集上部署的應用程式
 
@@ -105,7 +103,7 @@ mssqlctl app describe --name addpy --version v1
 > [!NOTE]
 > 如果您想，您可以開啟的 URL`swagger`當您執行時所傳回`mssqlctl app describe --name [appname] --version [version]`在瀏覽器中，其應該類似於`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`。 您必須登入您所使用的相同認證`mssqlctl login`。 內容`swagger.json`您可以將它貼入[Swagger 編輯器](https://editor.swagger.io)。 您會看到 web 服務會公開`run`方法。 也請注意顯示在頂端的基底 URL。
 
-您可以使用您最愛的工具來呼叫`run`方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，並傳入您為 json 的 POST 要求主體中的參數。 在此範例中我們將使用[Postman](https://www.getpostman.com/)。 再進行呼叫，您必須設定`Authorization`至`Bearer Token`並貼上您先前擷取的權杖。 這會將設定您的要求標頭。 請參閱下面的螢幕擷取畫面。
+您可以使用您最愛的工具來呼叫`run`方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，並傳入您為 json 的 POST 要求主體中的參數。 在此範例中我們將使用[Postman](https://www.getpostman.com/)。 再進行呼叫，您必須設定`Authorization`至`Bearer Token`並貼上您先前擷取的權杖。 這會將設定您的要求標頭。 請參閱以下螢幕擷取畫面。
 
 ![Postman 執行標頭](media/big-data-cluster-consume-apps/postman_run_1.png)
 

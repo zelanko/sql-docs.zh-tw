@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060549"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,6 +49,7 @@ ms.locfileid: "52398121"
 |**scale**|**tinyint NOT NULL**|資料類型的最大小數位數。 小數位數會與有效位數一起傳回，提供使用者完整的中繼資料。 順序物件的小數位數永遠是 0，因為只允許整數類型。|  
 |**current_value**|**sql_variant NOT NULL**|最後一個強制值。 也就是從最新的執行 NEXT VALUE FOR 函式或執行的最後一個值傳回的值**sp_sequence_get_range**程序。 如果從未使用順序，則會傳回 START WITH 值。|  
 |**is_exhausted**|**位元 NOT NULL**|0 表示可從順序產生多個值。 1 表示順序物件已經達到 MAXVALUE 參數，而且順序未設定為 CYCLE。 NEXT VALUE FOR 函數會傳回錯誤，直到使用 ALTER SEQUENCE 重新啟動順序為止。|  
+|**last_used_value**|**sql_variant 的 NULL**|傳回所產生的最後一個值[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)函式。 適用於 SQL Server 2017 和更新版本。|  
   
 ## <a name="permissions"></a>Permissions  
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本中，目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

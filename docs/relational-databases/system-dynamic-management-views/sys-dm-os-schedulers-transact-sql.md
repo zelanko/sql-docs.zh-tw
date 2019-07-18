@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4beae403312770c5f8b93bce5b8be11518708508
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625846"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265676"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,12 +40,12 @@ ms.locfileid: "47625846"
 |scheduler_address|**varbinary(8)**|排程器的記憶體位址。 不可為 Null。|  
 |parent_node_id|**int**|排程器所屬節點 (也稱為父節點) 的識別碼。 這代表非統一記憶體存取 (NUMA) 節點。 不可為 Null。|  
 |scheduler_id|**int**|排程器的識別碼。 所有用來執行一般查詢的排程器，其識別碼都小於 1048576。 識別碼大於或等於 1048576 的排程器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部使用的排程器，例如專用管理員連接排程器。 不可為 Null。|  
-|cpu_id|**smallint**|指派給排程器的 CPU 識別碼。<br /><br /> 不可為 Null。<br /><br /> **注意︰** 255 不表示沒有任何關聯性所顯示的一樣[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 請參閱[sys.dm_os_threads &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)其他相似性資訊。|  
+|cpu_id|**smallint**|指派給排程器的 CPU 識別碼。<br /><br /> 不可為 Null。<br /><br /> **注意：** 255 不表示沒有任何關聯性所顯示的一樣[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 請參閱[sys.dm_os_threads &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)其他相似性資訊。|  
 |status|**nvarchar(60)**|指出排程器的狀態。 可為下列其中一個值：<br /><br /> 隱藏線上<br />隱藏離線<br />可見線上<br />可見離線<br />可見的線上 (DAC)<br />-HOT_ADDED<br /><br /> 不可為 Null。<br /><br /> HIDDEN 排程器用來處理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 內部的要求。 VISIBLE 排程器用來處理使用者要求。<br /><br /> OFFLINE 排程器對應到相似性遮罩中離線的處理器，因此不會用來處理任何要求。 ONLINE 排程器對應到相似性遮罩中上線的處理器，可以用來處理執行緒。<br /><br /> DAC 指出排程器正在專用管理員連接下執行。<br /><br /> HOT ADDED 表示已加入排程器來回應 Hot Add CPU 事件。|  
 |is_online|**bit**|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定成只使用伺服器上部分可用的處理器，這個組態可能表示部分排程器對應到不在相似性遮罩中的處理器。 如果是這種情況，這個資料行會傳回 0。 這個值表示排程器目前未用於處理查詢或批次。<br /><br /> 不可為 Null。|  
 |is_idle|**bit**|1 = 排程器閒置。 目前沒有任何工作者正在執行。 不可為 Null。|  
 |preemptive_switches_count|**int**|排程器的工作者切換到先佔式模式的次數。<br /><br /> 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。|  
-|context_switches_count|**int**|這個排程器上發生的內容切換次數。 不可為 Null。<br /><br /> 若要讓其他的工作者能夠執行，目前正在執行的工作者必須讓出排程器的控制權或切換內容。<br /><br /> **注意：** 如果工作者產生排程器和將本身置於可執行的佇列，以及接著會尋找不到其他工作者，背景工作角色將會選取本身。 在這個情況下，不會更新 context_switches_count，但會更新 yield_count。|  
+|context_switches_count|**int**|這個排程器上發生的內容切換次數。 不可為 Null。<br /><br /> 若要讓其他的工作者能夠執行，目前正在執行的工作者必須讓出排程器的控制權或切換內容。<br /><br /> **注意：** 如果工作者產生排程器和將本身置於可執行的佇列，然後找出任何其他背景工作角色會選取背景工作角色本身。 在這個情況下，不會更新 context_switches_count，但會更新 yield_count。|  
 |idle_switches_count|**int**|排程器於閒置時等候事件的次數。 這個資料行與 context_switches_count 相似。 不可為 Null。|  
 |current_tasks_count|**int**|與這個排程器關聯的目前工作數目。 這個計數包含下列項目：<br /><br /> -正在等候工作者執行的工作。<br />-工作目前正在等候或執行 （處於 SUSPENDED 或 RUNNABLE 狀態）。<br /><br /> 工作完成時，這個計數會遞減。 不可為 Null。|  
 |runnable_tasks_count|**int**|已擁有指派工作且正在等候排程到可執行佇列上的工作者數目。 不可為 Null。|  
@@ -62,12 +61,16 @@ ms.locfileid: "47625846"
 |memory_object_address|**varbinary(8)**|排程器記憶體物件的記憶體位址。 不是 NULLABLE。|  
 |task_memory_object_address|**varbinary(8)**|工作記憶體物件的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱 < [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 公開 SQLOS 所使用的排程器配量。|  
+| total_cpu_usage_ms |**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本 <br><br> 非先佔式工作者所報告，這個排程器所耗用的 CPU 總計。 不可為 Null。|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 表示正在進行節流根據[服務等級目標](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)，一律為 0 表示非 Azure 版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可為 Null。|
+|total_scheduler_delay_ms|**bigint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本 <br><br> 切換移出一個背景工作和切換移入另一個之間的時間。 可能被因延遲排程的下一個非先佔式背景工作角色，或因為排程來自其他處理序執行緒的作業系統的先佔式背景工作角色。 不可為 Null。|
+|ideal_workers_limit|**int**|**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本 <br><br> 排程器在理想情況下應該是多少背景工作角色。 如果目前的背景工作角色之後在變成閒置，超過限制，因為不平衡的工作負載，會刪除它們。 不可為 Null。|
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions
 
 在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
 
 ## <a name="examples"></a>範例  
   
@@ -125,7 +128,7 @@ active_workers_count work_queue_count
   
  輸出中提供下列資訊：  
   
--   共有五個排程。 其中兩個排程器的識別碼值 < 1048576。 識別碼 >= 1048576 的排程器稱為隱藏排程器。 排程器 `255` 代表專用管理員連接 (DAC)。 每個執行個體只有一個 DAC 排程器。 協調記憶體壓力的資源監視器會使用排程器 `257` 和排程器 `258`，每個 NUMA 節點各一個。  
+-   共有五個排程。 兩個排程器有的識別碼值 < 1048576。 排程器識別碼 > = 1048576 稱為隱藏排程器。 排程器 `255` 代表專用管理員連接 (DAC)。 每個執行個體只有一個 DAC 排程器。 協調記憶體壓力的資源監視器會使用排程器 `257` 和排程器 `258`，每個 NUMA 節點各一個。  
   
 -   輸出中有 23 項使用中的工作。 除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經啟動的資源管理工作以外，這些工作還包括使用者要求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作的範例為 RESOURCE MONITOR (每個 NUMA 節點一個)、LAZY WRITER (每個 NUMA 節點一個)、LOCK MONITOR、CHECKPOINT 和 LOG WRITER。  
   

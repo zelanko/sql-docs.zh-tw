@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835345"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
   此對話方塊會顯示 Oracle 補充記錄指令碼。  
@@ -24,7 +24,7 @@ ms.locfileid: "58379169"
   
  根據組織內的 Oracle DBA 政策而定，執行補充記錄指令碼可能需要 Oracle DBA 審查及核准。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  以下是如何執行指令碼的可用選項。  
   
  **執行指令碼**  

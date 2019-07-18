@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
@@ -13,12 +12,12 @@ ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059275"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中啟用封裝記錄功能
   本程序描述如何將記錄檔加入封裝、設定封裝層級的記錄，以及將記錄組態儲存至 XML 檔案。 您可以僅在封裝層級加入記錄檔，但封裝無需執行記錄即可啟用封裝所包含之容器中的記錄。  
@@ -32,11 +31,11 @@ ms.locfileid: "58387016"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
   
-3.  在 [提供者類型] 清單中選取記錄提供者，然後按一下 [加入]。  
+3.  在 [提供者類型]  清單中選取記錄提供者，然後按一下 [加入]  。  
   
-4.  在 [設定] 資料行中，選取連線管理員，或按一下 [\<新增連線>]，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [設定]  資料行中，選取連線管理員，或按一下 [\<新增連線>]  ，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
     -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱 [檔案連線管理員](connection-manager/file-connection-manager.md)  
   
@@ -53,18 +52,18 @@ ms.locfileid: "58387016"
     > [!NOTE]  
     >  封裝可以使用每種類型一個以上的記錄檔。  
   
-6.  選擇性地選取封裝層級核取方塊，並選取要用於封裝層級記錄的記錄檔，然後按一下 [詳細資料] 索引標籤。  
+6.  選擇性地選取封裝層級核取方塊，並選取要用於封裝層級記錄的記錄檔，然後按一下 [詳細資料]  索引標籤。  
   
-7.  在 [詳細資料] 索引標籤上，選取 [事件]，以記錄所有記錄項目，或清除 [事件]，以選取個別事件。  
+7.  在 [詳細資料]  索引標籤上，選取 [事件]  ，以記錄所有記錄項目，或清除 [事件]  ，以選取個別事件。  
   
-8.  選擇性地按一下 [進階]，以指定要記錄哪些資訊。  
+8.  選擇性地按一下 [進階]  ，以指定要記錄哪些資訊。  
   
     > [!NOTE]  
     >  依預設，會記錄所有資訊。  
   
-9. 在 [詳細資料] 索引標籤上，按一下 [儲存]。 [另存新檔] 對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]。  
+9. 在 [詳細資料]  索引標籤上，按一下 [儲存]  。 [另存新檔]  對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]  。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

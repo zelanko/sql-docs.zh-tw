@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.openlocfilehash: c807825bfd4ef90491fb38e09e81eb79134fdbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467795"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 
@@ -25,7 +25,7 @@ ms.locfileid: "59476714"
   
 若要完成這一課，Excel 必須安裝在 Visual Studio 的同一部電腦上。
   
-完成本課程的估計時間：**5 分鐘**  
+估計的時間才能完成這一課：**5 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -39,7 +39,7 @@ ms.locfileid: "59476714"
   
 1.  按一下 **模型**功能表 >**在 Excel 中的進行分析**。  
   
-2.  於 [在 Excel 中進行分析] 對話方塊中，按一下 [確定]。  
+2.  於 [在 Excel 中進行分析]  對話方塊中，按一下 [確定]  。  
   
     Excel 會開啟新的活頁簿。 系統會使用目前的使用者帳戶建立資料來源連接，並將預設檢視方塊用於定義可檢視的欄位。 樞紐分析表會自動加入至工作表。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59476714"
   
 1.  按一下 **模型**功能表，然後再按一下**在 Excel 中的進行分析**。  
   
-2.  於 [在 Excel 中進行分析] 對話方塊中，將 [目前的 Windows 使用者] 維持在選取狀態，並在 [檢視方塊] 下拉式清單方塊中，選取 [網際網路銷售]，然後按一下 [確定]。 
+2.  於 [在 Excel 中進行分析]  對話方塊中，將 [目前的 Windows 使用者]  維持在選取狀態，並在 [檢視方塊]  下拉式清單方塊中，選取 [網際網路銷售]  ，然後按一下 [確定]  。 
     
     ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     

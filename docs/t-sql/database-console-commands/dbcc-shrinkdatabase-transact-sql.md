@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342902"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866228"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ NOTRUNCATE
   
 檔案結尾的可用空間並不會還給作業系統，檔案的實際大小也不會改變。 因此，當您指定 NOTRUNCATE 時資料庫似乎不會壓縮。  
   
-NOTRUNCATE 只適用於資料檔案。 NONTRUNCATE 不會影響記錄檔。  
+NOTRUNCATE 只適用於資料檔案。 NOTRUNCATE 不會影響記錄檔。  
   
 TRUNCATEONLY  
 將檔案結尾的所有可用空間釋放給作業系統。 不會在檔案內移動任何頁面。 資料檔案只會壓縮到最後一個指派的範圍。 如果在使用 TRUNCATEONLY 時指定 _target\_percent_，則會予以忽略。 Azure SQL 資料倉儲不支援此選項。
@@ -79,7 +79,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的識別碼。|  
@@ -91,7 +91,7 @@ WITH NO_INFOMSGS
 >[!NOTE]
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會顯示未壓縮之檔案的資料列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 >[!NOTE]
 > Azure SQL 資料倉儲目前不支援 DBCC SHRINKDATABASE。 不建議執行此命令，因為這是 I/O 密集作業，而且可以讓您的資料倉儲離線。 此外，執行此命令之後將會對您的資料倉儲快照集成本有所影響。 

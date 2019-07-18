@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 3439419bd3877b8ab7a951df58585703f169ee4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079456"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,15 +37,14 @@ ms.locfileid: "51947652"
 |**value**|**sqlvariant**|設定主要複本的這個組態選項的值。|  
 |**value_for_secondary**|**sqlvariant**|設定次要複本的這個組態選項的值。|  
 |**is_value_default**|**bit** |指定設定的值是否為預設值。|
-|**elevate_resumable**|nvarchar(60)|可繼續索引作業選項的預設集的資料庫範圍| 
   
 ##  <a name="Permissions"></a> 權限  
- 需要 **public** 角色的成員資格。  
+需要 **public** 角色的成員資格。  
   
 ## <a name="remarks"></a>備註  
- 當傳回 NULL 時做為值**value_for_secondary**，這表示，次要資料庫會設定為主要。  
+當傳回 NULL 時做為值**value_for_secondary**，這表示，次要資料庫會設定為主要。  
  
- 資料庫範圍組態設定會伴隨著資料庫。 這意謂著還原或附加指定的資料庫時，現有的組態設定會持續存留。
+資料庫範圍組態設定會伴隨著資料庫。 這意謂著還原或附加指定的資料庫時，現有的組態設定會持續存留。
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

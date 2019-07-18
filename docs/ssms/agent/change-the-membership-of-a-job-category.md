@@ -13,16 +13,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - members [SQL Server], job categories
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15fc94e47166c2b822afcbd575d279e08ed6b8b4
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131128"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688786"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,17 +59,17 @@ ms.locfileid: "54131128"
   
 1.  在 **[物件總管]** 中，按一下加號展開要編輯作業類別目錄所在的伺服器。  
   
-2.  按一下加號展開 **[SQL Server Agent]**。  
+2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
+3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [管理作業類別目錄]  。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，選取要編輯的作業類別目錄，然後按一下 [檢視作業]。  
+4.  在 [管理作業類別目錄 <伺服器名稱>]   對話方塊中，選取要編輯的作業類別目錄，然後按一下 [檢視作業]  。  
   
 5.  選取 **[顯示所有作業]** 核取方塊。  
   
-6.  若要將作業加入至類別目錄，在主要方格中選取該作業所對應之 **[選取]** 資料行中的核取方塊。 若要移除類別目錄中的作業，請清除該方塊。 完成後，請按一下 **[確定]**。  
+6.  若要將作業加入至類別目錄，在主要方格中選取該作業所對應之 **[選取]** 資料行中的核取方塊。 若要移除類別目錄中的作業，請清除該方塊。 完成後，請按一下 **[確定]** 。  
   
-7.  關閉 [管理作業類別目錄 <伺服器名稱>] 對話方塊。  
+7.  關閉 [管理作業類別目錄 <伺服器名稱>]   對話方塊。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "54131128"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     -- adding a new job category to the "NightlyBackups" job  

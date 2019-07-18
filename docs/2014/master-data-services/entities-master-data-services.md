@@ -10,15 +10,15 @@ helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483898"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
   實體是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的物件。 每個實體都含有會員，也就是您所管理之主要資料的資料列。  
@@ -49,7 +49,7 @@ ms.locfileid: "52800910"
  您可以授予使用者實體的權限，包括相關的模型物件。 如需詳細資訊，請參閱[實體權限 &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md)。  
   
 ## <a name="entity-examples"></a>實體範例  
- 下列範例會顯示實體具有下列屬性：名稱、 程式碼、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
+ 下列範例顯示具有下列屬性的實體：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
  ![自行車產品實體資料表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   

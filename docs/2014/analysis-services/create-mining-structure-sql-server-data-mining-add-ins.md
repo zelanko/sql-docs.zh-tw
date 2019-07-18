@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
@@ -13,12 +12,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086823"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>建立採礦結構 (SQL Server 資料採礦增益集)
   ![建立採礦結構 按鈕，資料採礦功能區](media/dmc-createstruct.gif "Create Mining Structure] 按鈕，[資料採礦功能區")  
@@ -38,7 +37,7 @@ ms.locfileid: "52542972"
   
 2.  在 **選取來源資料**對話方塊方塊中，指定 Excel 範圍、 Excel 資料表或包含您想要用於分析的資料的外部資料來源。  
   
-     按 [下一步] 。  
+     按一下 [下一步]  。  
   
 3.  在 **選取資料行**對話方塊方塊中，檢閱所選的資料來源中資料行的清單。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "52542972"
   
      按一下 **[確定]** ，關閉對話方塊。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步]  。  
   
      根據您使用的資料類型，您可以在這個步驟之後就完成精靈。 在此情況下，往前跳至**完成**頁面，即可命名採礦結構。  
   
@@ -75,11 +74,11 @@ ms.locfileid: "52542972"
   
      或者，輸入要用於測試之資料列的數目上限。  
   
-     按 [下一步] 。  
+     按一下 [下一步]  。  
   
 8.  在 [**完成**] 對話方塊中，輸入名稱和新的採礦結構描述。  
   
-9. 按一下 **[完成]**。  
+9. 按一下 **[完成]** 。  
   
 ### <a name="related-options"></a>相關的選項  
   
@@ -95,7 +94,7 @@ ms.locfileid: "52542972"
   
 |值|描述|  
 |------------|-----------------|  
-|**包含**|指定資料行包含可用於分析或預測的資料。|  
+|**Include**|指定資料行包含可用於分析或預測的資料。|  
 |**索引鍵**|指定資料行包含交易識別碼、序列識別碼，或處理所需的另一個索引鍵。<br /><br /> 所有的演算法都需要索引鍵資料行。 不過，有些演算法只允許單一索引鍵，有些則允許多個索引鍵。<br /><br /> 如果資料行包含索引鍵，但不需要進行處理，請選取**不使用**。|  
 |**Key Time**|指定資料行包含日期或其他的數值，可用來唯一識別時間序列的項目。|  
 |**請勿使用**|指定應忽略資料行。 不會處理資料行中的資料。|  

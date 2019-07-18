@@ -14,13 +14,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 164b87135257f812898c254fd7fd4f5c762c72ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 23b190bdeb478d5909ca235cf2801a98fb954e9c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800892"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47735246"
 
   OLE DB Driver for SQL Server 包含下列元件：  
 
-|元件|Description|  
+|元件|描述|  
 |---------------|-----------------|  
 |msoledbsql.dll|動態連結程式庫 (DLL) 檔案，其中包含所有的 OLE DB driver for SQL Server 功能。|  
 |msoledbsqlr.rll|OLE DB driver for SQL Server 文件庫隨附的資源檔。|   

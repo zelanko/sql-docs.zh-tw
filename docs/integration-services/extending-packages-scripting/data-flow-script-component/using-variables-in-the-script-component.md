@@ -13,14 +13,18 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c267518f15bb87dddfd1139e80c3c7922bdf37c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0860c983b6d00f1ec1199f716cae73140e5b84d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724167"
 ---
 # <a name="using-variables-in-the-script-component"></a>在指令碼元件中使用變數
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   變數會儲存封裝及其容器、工作與事件處理常式在執行階段所能使用的值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../../integration-services/integration-services-ssis-variables.md)。  
   
  您可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上的 [ReadOnlyVariables] 與 [ReadWriteVariables] 欄位中輸入以逗號分隔的變數清單，來將現有的變數以唯讀或讀取/寫入存取的方式提供自訂指令碼使用。 請記住變數名稱有區分大小寫。 使用 **Value** 屬性讀取和寫入個別變數。 當指令碼在執行階段操作變數時，指令碼元件會在幕後處理任何所需的鎖定。  

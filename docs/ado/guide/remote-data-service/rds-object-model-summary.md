@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b19a138e9e4d479e7fb9cb3f8b4e140838b43e8a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922536"
 ---
 # <a name="rds-object-model-summary"></a>RDS 物件模型摘要
 > [!IMPORTANT]

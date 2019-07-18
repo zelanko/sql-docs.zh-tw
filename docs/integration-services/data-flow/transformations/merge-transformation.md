@@ -20,14 +20,18 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224c5e74a1f6019404faa45eed3c5a02f18943bb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d7267c2d4f86025f213208baae90057a84ced3e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725984"
 ---
 # <a name="merge-transformation"></a>合併轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「合併」轉換會將兩個已排序的資料集結合成單一資料集。 各資料集的資料列會根據其索引鍵資料行的值插入輸出中。  
   
  藉由在資料流程中加入「合併」轉換，即可執行下列工作：  
@@ -72,7 +76,7 @@ ms.locfileid: "58276752"
 -   [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-transformation-editor"></a>合併轉換編輯器
-  使用 [合併轉換編輯器]，即可指定來自兩個已排序資料集的資料行，以進行合併。  
+  使用 [合併轉換編輯器]  ，即可指定來自兩個已排序資料集的資料行，以進行合併。  
   
 > [!IMPORTANT]  
 >  合併轉換針對其輸入需要已排序的資料。 如需這項重要需求的詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  

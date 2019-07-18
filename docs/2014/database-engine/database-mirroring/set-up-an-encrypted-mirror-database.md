@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754387"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>設定加密鏡像資料庫
 
@@ -35,11 +35,11 @@ ms.locfileid: "48164198"
 
 ## <a name="see-also"></a>另請參閱
 
-[sp_control_dbmasterkey_password &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
+[sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 
 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)
 
-[ALTER MASTER KEY &#40;Transact SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
+[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
 
 [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)
 

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 210ccac6528abd6427e9973d45c83836c67e619d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9f90e22e024f541cd5ca73ec26ca39895b23576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126754"
 ---
 # <a name="calling-methods"></a>呼叫方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47633286"
   
  方法會在物件上執行作業。 方法可以採用參數，而且通常有一個傳回值。 傳回值可以是簡單資料類型、複雜物件，或包含許多成員的結構。  
   
- 使用例外狀況處理來偵測方法是否成功。 如需詳細資訊，請參閱 < [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)。  
+ 使用例外狀況處理來偵測方法是否成功。 如需詳細資訊，請參閱 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)。  
   
 ## <a name="examples"></a>範例  
 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
@@ -69,7 +68,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中搭配參數使用 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table>物件有一個方法，叫做<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 **FillFactor**的數值參數。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 **FillFactor**的數值參數。  
   
 ```VBNET
 Dim srv As Server  
@@ -80,7 +79,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中搭配參數使用 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table>物件有一個方法，叫做<xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>。 此方法需要指定 `FillFactor`的數值參數。  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
   
 ```csharp  
 {   
@@ -93,7 +92,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用傳回 DataTable 物件的列舉方法  
- 本章節描述如何呼叫列舉方法，以及如何處理在傳回資料<xref:System.Data.DataTable>物件。  
+ 本節描述如何呼叫列舉方法，以及如何處理傳回之 <xref:System.Data.DataTable> 物件中的資料。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回 <xref:System.Data.DataTable> 物件，此物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
   
@@ -117,9 +116,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用傳回 DataTable 物件的列舉方法  
- 本章節描述如何呼叫列舉方法，以及如何處理在傳回資料<xref:System.Data.DataTable>物件。  
+ 本節描述如何呼叫列舉方法，以及如何處理傳回之 <xref:System.Data.DataTable> 物件中的資料。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A>方法會傳回系統<xref:System.Data.DataTable>物件。 <xref:System.Data.DataTable>物件需要進一步導覽，才能存取的執行個體的所有可用定序資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回系統 <xref:System.Data.DataTable> 物件。 <xref:System.Data.DataTable> 物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -180,7 +179,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>在 Visual Basic 中複製 SMO 物件  
- 此程式碼範例會使用<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>方法用來建立一份<xref:Microsoft.SqlServer.Management.Smo.Server>物件。 <xref:Microsoft.SqlServer.Management.Smo.Server>物件代表的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -196,7 +195,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>在 Visual C# 中複製 SMO 物件  
- 此程式碼範例會使用<xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>方法用來建立一份<xref:Microsoft.SqlServer.Management.Smo.Server>物件。 <xref:Microsoft.SqlServer.Management.Smo.Server>物件代表的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
 ```csharp  
 {   
@@ -214,7 +213,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>在 Visual Basic 中監視伺服器處理序  
- 您可以取得目前的狀態類型資訊的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過列舉方法。 程式碼範例會使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法來探索目前處理序的相關資訊。 該範例也會示範如何使用傳回之 <xref:System.Data.DataTable> 物件中的資料行和資料列。  
+ 您可以透過列舉方法取得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體目前的狀態類型資訊。 程式碼範例會使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法來探索目前處理序的相關資訊。 該範例也會示範如何使用傳回之 <xref:System.Data.DataTable> 物件中的資料行和資料列。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -236,7 +235,7 @@ Next
 ```
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>在 Visual C# 中監視伺服器處理序  
- 您可以取得目前的狀態類型資訊的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過列舉方法。 程式碼範例會使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法來探索目前處理序的相關資訊。 該範例也會示範如何使用傳回之 <xref:System.Data.DataTable> 物件中的資料行和資料列。  
+ 您可以透過列舉方法取得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體目前的狀態類型資訊。 程式碼範例會使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 方法來探索目前處理序的相關資訊。 該範例也會示範如何使用傳回之 <xref:System.Data.DataTable> 物件中的資料行和資料列。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - M method
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9be06ef22018256fd0df0840af055cdfacd04ee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87ca41dc0b2b00db06acedb78c7196f92274180a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937646"
 ---
 # <a name="m-geography-data-type"></a>M (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

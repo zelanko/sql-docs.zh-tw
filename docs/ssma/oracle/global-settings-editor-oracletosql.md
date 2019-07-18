@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: bb07c2ca671fccbfdb737004ea0786359873a179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 6fcb9915f6945e2dc8413a4c28003428a4ad3e07
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616016"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264425"
 ---
 # <a name="global-settings-editor-oracletosql"></a>全域設定 (編輯器) (OracleToSQL)
 使用編輯器頁面**全域設定**對話方塊來指定程式碼編輯器視窗的設定。  

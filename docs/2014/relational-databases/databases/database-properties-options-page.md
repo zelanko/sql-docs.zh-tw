@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917080"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
   使用此頁面來檢視或修改選取之資料庫的選項。 在此頁面上的可用選項的相關資訊，請參閱[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
@@ -27,13 +27,13 @@ ms.locfileid: "52774420"
  從清單中選取以指定資料庫的定序。 如需詳細資訊，請參閱 [設定或變更資料庫定序](../collations/set-or-change-the-database-collation.md)。  
   
  **復原模式**  
- 指定下列模型來進行資料庫復原到其中一項：**完整**， **Bulk-logged**，或**簡單**。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
+ 指定下列其中一個復原資料庫模式：[完整]  、[大量記錄]  或 [簡單]  。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
   
  **相容性層級**  
- 指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值為  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)**。 當 SQL Server 2005 資料庫升級到 SQL Server 2014 時，該資料庫的相容性層級會從 90 變更為 100。  SQL Server 2014 不支援 90 相容性層級。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
+ 指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值為  **SQL Server 2014 (120)** 、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)** 。 當 SQL Server 2005 資料庫升級到 SQL Server 2014 時，該資料庫的相容性層級會從 90 變更為 100。  SQL Server 2014 不支援 90 相容性層級。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   
  **內含項目類型**  
- 指定無或部分以指定其是否為自主資料庫。 如需自主資料庫的詳細資訊，請參閱[自主資料庫](contained-databases.md)。 必須先將伺服器屬性 [啟用自主資料庫] 設為 [TRUE]，才能將資料庫設為自主。  
+ 指定無或部分以指定其是否為自主資料庫。 如需自主資料庫的詳細資訊，請參閱[自主資料庫](contained-databases.md)。 必須先將伺服器屬性 [啟用自主資料庫]  設為 [TRUE]  ，才能將資料庫設為自主。  
   
 > [!IMPORTANT]  
 >  若啟用部分自主資料庫，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取控制權委派給資料庫擁有者。 如需詳細資訊，請參閱 [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "52774420"
  針對與選定資料庫相關的 FILESTREAM 資料指定目錄名稱。  
   
  **FILESTREAM 非交易存取**  
- 指定下列選項，可從檔案系統到 Filetable 中儲存之 FILESTREAM 資料的非交易式存取的其中一個：**關閉**， **READ_ONLY**，或**完整**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)。  
+ 指定下列其中一個選項，可進行透過檔案系統到 FileTable 中所儲存 FILESTREAM 資料的非交易存取：**OFF**、**READ_ONLY** 或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
  **ANSI NULL 預設值**  
@@ -126,7 +126,7 @@ ms.locfileid: "52774420"
  指定資料庫如何處理捨入錯誤。 可能的值是 `True` 和 `False`。 當它是 `True` 時，在運算式中遺失有效位數時，會產生錯誤。 當`False`、 遺失有效位數並不會產生錯誤訊息，並將結果四捨五入成的資料行或變數儲存結果的精確度。 如需詳細資訊，請參閱 [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)。  
   
  **參數化**  
- 若為 [SIMPLE]，將會根據資料庫的預設行為將查詢參數化。 若為 [FORCED]，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將資料庫中的所有查詢都參數化。  
+ 若為 [SIMPLE]  ，將會根據資料庫的預設行為將查詢參數化。 若為 [FORCED]  ，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將資料庫中的所有查詢都參數化。  
   
  **引號識別碼已啟用**  
  指定如果以引號括住，是否可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關鍵字做為識別碼 (物件或變數名稱)。 可能的值是 `True` 和 `False`。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。  
@@ -154,17 +154,17 @@ ms.locfileid: "52774420"
   
 ## <a name="recovery"></a>復原  
  **頁面確認**  
- 指定用來探索和報告磁碟 I/O 錯誤所引起之不完整 I/O 交易的選項。 可能的值為 [無]、[TornPageDetection] 及 [總和檢查碼]。 如需詳細資訊，請參閱 [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)，在  中還原頁面。  
+ 指定用來探索和報告磁碟 I/O 錯誤所引起之不完整 I/O 交易的選項。 可能的值為 [無]  、[TornPageDetection]  及 [總和檢查碼]  。 如需詳細資訊，請參閱 [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)，在  中還原頁面。  
   
  **目標復原時間 (秒)**  
  指定發生損毀時，復原指定之資料庫的時間上限 (以秒鐘表示)。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../logs/database-checkpoints-sql-server.md)。  
   
 ## <a name="state"></a>State  
  **資料庫唯讀**  
- 指定資料庫是否為唯讀。 可能的值是 `True` 和 `False`。 當它是 `True` 時，使用者只能讀取資料庫中的資料。 使用者無法修改資料或資料庫物件，但可以使用 DROP DATABASE 陳述式刪除該資料庫。 在指定 [資料庫唯讀] 選項的新值時，資料庫不可在使用中。 master 資料庫為例外，只有系統管理員可以在設定此選項時使用 master。  
+ 指定資料庫是否為唯讀。 可能的值是 `True` 和 `False`。 當它是 `True` 時，使用者只能讀取資料庫中的資料。 使用者無法修改資料或資料庫物件，但可以使用 DROP DATABASE 陳述式刪除該資料庫。 在指定 [資料庫唯讀]  選項的新值時，資料庫不可在使用中。 master 資料庫為例外，只有系統管理員可以在設定此選項時使用 master。  
   
  **資料庫狀態**  
- 檢視資料庫的目前狀態。 它是不可編輯的。 如需 [資料庫狀態] 的詳細資訊，請參閱[資料庫狀態](database-states.md)。  
+ 檢視資料庫的目前狀態。 它是不可編輯的。 如需 [資料庫狀態]  的詳細資訊，請參閱[資料庫狀態](database-states.md)。  
   
  **限制存取**  
  指定哪些使用者可以存取資料庫。 可能的值為：  

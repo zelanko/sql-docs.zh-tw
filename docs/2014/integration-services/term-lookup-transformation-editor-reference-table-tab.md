@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
@@ -15,24 +14,24 @@ ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b74ef55a8b957a7cc8503a56601162060d0749c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055145"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>詞彙查閱轉換編輯器 (參考資料表索引標籤)
-  使用 [詞彙查閱轉換編輯器] 對話方塊的 [參考資料表] 索引標籤，即可指定參考 (查閱) 資料表的連接。  
+  使用 [詞彙查閱轉換編輯器]  對話方塊的 [參考資料表]  索引標籤，即可指定參考 (查閱) 資料表的連接。  
   
  若要深入了解模糊查閱轉換，請參閱＜ [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
 ## <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
  **參考資料表名稱**  
  從清單中選取項目，以選取資料庫中的查閱資料表或檢視。 資料表或檢視應包含具有現有詞彙清單的資料行，可以用來與來源資料行中的文字進行比較。  

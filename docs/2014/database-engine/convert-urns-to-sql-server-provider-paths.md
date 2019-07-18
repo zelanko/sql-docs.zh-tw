@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e75581756f0464197e05b78083b7e90d7d3dfb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06e59cd00382610e330e2c288f44fda50244256f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065123"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>將 URN 轉換成 SQL Server 提供者路徑
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型 (SMO) 會針對它的物件建立統一資源名稱 (URN)。 每個 URN 可唯一識別 SMO 物件，而且可以使用轉換成 SQL Server PowerShell 提供者路徑`Convert-UrnToPath`cmdlet。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型 (SMO) 會針對它的物件建立統一資源名稱 (URN)。 每個 URN 都可以唯一識別 SMO 物件，而且可以使用 `Convert-UrnToPath` Cmdlet 來轉換為 SQL Server PowerShell 提供者路徑。  
   
 ## <a name="converting-urns-to-paths"></a>將 URN 轉換成路徑  
  每一個 URN 都有與物件之路徑相同的資訊，但是格式會不同。 例如，以下為資料表的路徑：  

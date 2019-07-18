@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4628ed370354ff1551892bf979b3627e00f119b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 73d733cd120e7ce991e092328d1a84a219472c6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992060"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
 
@@ -35,7 +34,7 @@ ms.locfileid: "56020769"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入定義域。  
   
 ##  <a name="Import"></a> Import a domain from a .dqs file  
@@ -46,9 +45,9 @@ ms.locfileid: "56020769"
   
 3.  按一下 **[從資料檔匯入定義域]** 圖示。  
   
-4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]**。  
+4.  在 **[從資料檔匯入]** 對話方塊中，移至包含您要匯入之檔案的資料夾，然後選取檔案 (檔案類型為 DQS 檔案)，再按一下 **[開啟]** 。  
   
-5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[匯入定義域]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!NOTE]  
     >  只有當匯入的來源 .dqs 檔案只包含一個單一定義域或是一個複合定義域 (包含多個單一定義域) 時，匯入作業才會成功。  

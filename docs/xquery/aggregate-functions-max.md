@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f40e89eef1a4480110a4b0b066d3e080732ac202
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985959"
 ---
 # <a name="aggregate-functions---max"></a>彙總函式 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Max (**) 函式會將所有整數都對應到 xs: decimal。  
+-   **Max (** ) 函式會將所有整數都對應到 xs: decimal。  
   
 -   **Max （)** 不支援的 xs: duration 類型值的函式。  
   

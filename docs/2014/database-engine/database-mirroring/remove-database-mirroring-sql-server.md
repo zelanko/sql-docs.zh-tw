@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754683"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中移除資料庫內的資料庫鏡像。  資料庫擁有者可以隨時手動移除資料庫的鏡像，藉以停止資料庫鏡像工作階段。  
@@ -40,20 +40,20 @@ ms.locfileid: "52506129"
   
 2.  展開 **[資料庫]** 並選取資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]，然後按一下 [鏡像]。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  在 **[選取頁面]** 窗格中按一下 **[鏡像]**。  
+4.  在 **[選取頁面]** 窗格中按一下 **[鏡像]** 。  
   
-5.  若要移除鏡像，請按一下 **[移除鏡像]**。 會出現提示要求確認。 如果按一下 **[是]**，會停止工作階段，並從資料庫移除鏡像。  
+5.  若要移除鏡像，請按一下 **[移除鏡像]** 。 會出現提示要求確認。 如果按一下 **[是]** ，會停止工作階段，並從資料庫移除鏡像。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 若要移除資料庫鏡像，請使用 **[資料庫屬性]**。 使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。  
+ 若要移除資料庫鏡像，請使用 **[資料庫屬性]** 。 使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。  
   
 #### <a name="to-remove-database-mirroring"></a>若要移除資料庫鏡像  
   
 1.  連接到任一個鏡像夥伴的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  發出下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52506129"
   
 -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [範例：設定資料庫鏡像使用憑證&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

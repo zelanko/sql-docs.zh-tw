@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], about FILESTREAM
@@ -13,12 +12,12 @@ ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 190a6ce588ed40ab7cc9181476ca3730eeef34b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095785"
 ---
 # <a name="database-engine-configuration---filestream"></a>Database Engine 組態 - Filestream
   您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。 FILESTREAM 整合[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]與 NTFS 檔案系統儲存`varbinary(max)`二進位大型物件 (BLOB) 資料當做檔案系統上的檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以插入、更新、查詢、搜尋和備份 FILESTREAM 資料。 Win32 檔案系統介面提供了資料的資料流方式存取。  

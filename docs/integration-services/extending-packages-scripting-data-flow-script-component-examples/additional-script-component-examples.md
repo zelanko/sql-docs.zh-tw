@@ -15,14 +15,18 @@ ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c68ab205087358682959685953266ad962a7e9a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9f962738621bf4be19975077d39fb253f62ad3ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65724377"
 ---
 # <a name="additional-script-component-examples"></a>額外的指令碼元件範例
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指令碼元件是您可以在封裝的資料流程中使用的可設定工具，幾乎可滿足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的來源、轉換和目的地未能達成的任何需求。 本節包含指令碼元件程式碼範例，以示範各種類型的可用功能。  
   
  如需示範如何將指令碼元件設定為來源、轉換或目的地的範例，請參閱[開發特定類型的指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)。  

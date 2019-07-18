@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7895158afd1f0302182ca7601cb138af4afc36f1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639277"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE 系統物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>引數  
- [**sys.**] .  
+ [**sys.** ] .  
  只有在參考目錄檢視和動態管理檢視時，才需要 **sys** 限定詞。  
   
  *system_object*  
@@ -61,7 +61,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
   
  您可以在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目錄檢視中看到系統物件。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

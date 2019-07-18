@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 78be24ea75fad04c7b7c1bdae103dfd3f92c78ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016723"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **合規性**  
@@ -36,7 +35,7 @@ ms.locfileid: "53210088"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL ConfigDSN(  
      HWND     hwndParent,  
@@ -49,7 +48,7 @@ BOOL ConfigDSN(
  *hwndParent*  
  [輸入]父視窗控制代碼。 如果控制代碼為 null，函式不會顯示任何對話方塊。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
  ODBC_ADD_DSN:加入新的資料來源。  

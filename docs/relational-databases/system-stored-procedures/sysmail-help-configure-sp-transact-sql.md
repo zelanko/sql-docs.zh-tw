@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909068"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +39,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@parameter_name** = ] **'***parameter_name***'**  
- 要擷取之組態設定的名稱。 指定時，組態設定的值都會傳入**@parameter_value**輸出參數。 若未**@parameter_name**指定，此預存程序傳回的結果集包含所有執行個體中的 Database Mail 組態設定。  
+ [ **@parameter_name** = ] **'***parameter_name***'**  
+ 要擷取之組態設定的名稱。 指定時，組態設定的值都會傳入 **@parameter_value** 輸出參數。 若未 **@parameter_name** 指定，此預存程序傳回的結果集包含所有執行個體中的 Database Mail 組態設定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 若未**@parameter_name**指定，則會傳回含下列資料行的結果集。  
+ 若未 **@parameter_name** 指定，則會傳回含下列資料行的結果集。  
   
 ||||  
 |-|-|-|  
@@ -59,7 +58,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>備註  
  預存程序**sysmail_help_configure_sp**列出執行個體目前的 Database Mail 組態設定。  
   
- 當**@parameter_name**指定，但沒有輸出參數供**@parameter_value**，此預存程序會產生任何輸出。  
+ 當 **@parameter_name** 指定，但沒有輸出參數供 **@parameter_value** ，此預存程序會產生任何輸出。  
   
  預存程序**sysmail_help_configure_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須以叫用三部分名稱如果不是目前的資料庫**msdb**。  
   

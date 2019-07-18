@@ -11,16 +11,16 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52b121f7b56032856d2c844c230b915069bf69ef
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c03708b7cb59bf4fce03a1c2c2d8e73b10466451
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65935509"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "53980374"
 ###  <a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
  **geography** 資料類型提供一種方法，從 GML 產生 **geography** 執行個體，而 GML 是 **geography** 執行個體的 XML 表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
- 如需有關地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629) (OGC 規格，地理標記語言)。  
+ 如需地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629) (OGC 規格，地理標記語言)。  
   
  **從 GML 輸入建構任何類型的地理位置執行個體**  
  [GeomFromGML &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
@@ -148,7 +148,7 @@ ms.locfileid: "53980374"
  [STGeometryN &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (geography 資料類型)  
   
 ###  <a name="number"></a> 點數  
- 所有非空白的 **geography** 執行個體都是由 *「點」*(Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
+ 所有非空白的 **geography** 執行個體都是由 *「點」* (Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
  [STNumPoints &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
@@ -175,13 +175,13 @@ ms.locfileid: "53980374"
  [STArea &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Empty  
- 「空的」**geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、**CompoundCurve** 和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
+ 「空的」  **geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、**CompoundCurve** 和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> 封閉性  
- 「封閉式」**geography** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
+ 「封閉式」  **geography** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "53980374"
 下列範例示範如何加入及查詢地理位置資料。  
   
 ### <a name="example-a"></a>範例 A。 
-此範例會建立具有識別資料行及 `geography` 資料行 `GeogCol1`的資料表。 第三個資料行會將 `geography` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geography`執行個體，另一個資料列包含 `Polygon` 執行個體。  
+此範例會建立具有識別資料行及 `geography` 資料行 `GeogCol1` 的資料表。 第三個資料行會將 `geography` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geography`執行個體，另一個資料列包含 `Polygon` 執行個體。  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

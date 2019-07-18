@@ -13,14 +13,18 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31e092d5913cb1cc9f4572e6ee7d5b8174b59beb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a0b1b7e7a0cecb2f71d8e326615bb25259ca0fcf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65727636"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，才能決定報告的違規項目是否有意義，或是否為過度報告。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
   
  不過，當資料品質的準則確立之後，您可能會想要自動化資料來源的定期分析與清除作業。 請考慮這些狀況：  
@@ -103,9 +107,9 @@ ms.locfileid: "58275724"
   
 -   在 **[變數]** 視窗中，加入並設定下列兩個封裝變數：  
   
-    -   為其中一個變數輸入 **ProfileConnectionName**名稱，然後將這個變數的類型設定為 [String] 。  
+    -   為其中一個變數輸入 **ProfileConnectionName**名稱，然後將這個變數的類型設定為 [String]  。  
   
-    -   為另一個變數輸入 **AddressLine2NullRatio**名稱，然後將這個變數的類型設定為 [Double] 。  
+    -   為另一個變數輸入 **AddressLine2NullRatio**名稱，然後將這個變數的類型設定為 [Double]  。  
   
 ### <a name="configure-the-data-profiling-task"></a>設定資料分析工作  
  您必須以下列方式來設定資料分析工作：  
@@ -294,7 +298,7 @@ ms.locfileid: "58275724"
   
 -   在將指令碼工作連接至工作流程中下游分支的優先順序條件約束中，撰寫使用變數值來導向工作流程的運算式。  
   
-     例如，您可能會將優先順序條件約束的 **[評估作業]** 設定為 **[運算式與條件約束]**。 然後，您可能會使用 `@AddressLine2NullRatio < .90` 當做運算式的值。 當先前的工作成功，而且選取資料行中 Null 值的百分比小於 90% 時，這樣做會導致工作流程遵循選取的路徑。  
+     例如，您可能會將優先順序條件約束的 **[評估作業]** 設定為 **[運算式與條件約束]** 。 然後，您可能會使用 `@AddressLine2NullRatio < .90` 當做運算式的值。 當先前的工作成功，而且選取資料行中 Null 值的百分比小於 90% 時，這樣做會導致工作流程遵循選取的路徑。  
   
 ## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>將資料分析工作連接至資料流程的已轉換資料  
  除了分析直接來自資料來源的資料以外，您也可以分析已經在資料流程中載入並轉換的資料。 不過，資料分析工作只能針對保存的資料運作，無法針對記憶體中的資料運作。 因此，您必須先使用目的地元件，將已轉換的資料儲存至臨時資料表。  

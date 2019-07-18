@@ -1,7 +1,7 @@
 ---
 title: 記憶體最佳化資料表的索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462465"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 有數種方式可用來區分記憶體最佳化索引上的索引和以磁碟為基礎之資料表上的傳統索引：  
@@ -35,9 +36,9 @@ ms.locfileid: "51673017"
 - 雜湊索引  
 - 記憶體最佳化非叢集索引 (表示 B 型樹狀結構的預設內部結構) 
   
-「雜湊」索引會在[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)中詳細討論。
-「非叢集」索引會在[記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)中詳細討論。  
-「資料行存放區」索引會在[另一篇文章](../../relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
+「雜湊」  索引會在[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)中詳細討論。  
+「非叢集」  索引會在[記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)中詳細討論。  
+「資料行存放區」  索引會在[另一篇文章](../../relational-databases/indexes/columnstore-indexes-overview.md)中討論。  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>記憶體最佳化索引的語法  
   
@@ -57,7 +58,7 @@ ms.locfileid: "51673017"
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 針對每個經記憶體最佳化的資料表或資料表類型最多可以有 8 個索引。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不再有特定於經記憶體最佳化的資料表和資料表類型的索引數目限制。
@@ -116,11 +117,30 @@ ms.locfileid: "51673017"
   
 ## <a name="duplicate-index-key-values"></a>重複的索引鍵值
 
-重複的索引鍵值可能會影響記憶體最佳化資料表上的作業效能。 大量的重複項目 (例如，100+) 讓維護索引的工作效率不佳，因為大部分的索引作業都必須周遊重複鏈結。 經記憶體最佳化的資料表上的 `INSERT`、`UPDATE` 和 `DELETE` 作業中可以看到此影響。 
+重複的索引鍵值可能會降低記憶體最佳化資料表效能。 系統周遊大部分索引讀取和寫入作業項目鏈結的重複項目。 當重複項目的鏈結超過 100 個項目時，效能降低可能會變得很明顯。
 
-這個問題在雜湊索引的情況下更明顯可見，起因包括雜湊索引的每個作業成本較低，以及大型重複鏈結對雜湊衝突鏈結的干擾。 若要減少重複的索引，請使用非叢集索引，並在索引鍵的結尾加上額外的資料行 (例如，從主索引鍵)，以減少重複數量。 如需雜湊衝突的詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。
+### <a name="duplicate-hash-values"></a>重複的雜湊值
 
-例如，請考慮 `CustomerId` 上具有主索引鍵的 `Customers` 資料表，以及 `CustomerCategoryID` 資料行上的索引。 通常指定的類別中會有許多客戶，因此 CustomerCategoryID 索引中的指定索引鍵會有許多重複的值。 在此案例中，最佳做法是在 `(CustomerCategoryID, CustomerId)` 上使用非叢集索引。 此索引可用於使用牽涉到 `CustomerCategoryID` 之述詞的查詢，其並不包含重複，因此不會造成索引維護的效率低落。
+在雜湊索引的情況下，這個問題更明顯可見。 基於下列情況，雜湊索引會受到較大的影響：
+
+- 雜湊索引的每個作業成本較低。
+- 雜湊衝突鏈結會造成大型重複鏈結干擾。
+
+若要減少索引中的重複項目，請嘗試下列調整：
+
+- 使用非叢集索引。
+- 新增其他資料行至索引鍵結尾，以減少重複項目數。
+  - 例如，您可以新增同時位於主索引鍵中的資料行。
+
+如需雜湊衝突的詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。
+
+### <a name="example-improvement"></a>改善範例
+
+以下是如何避免索引中任何效率不彰的範例。
+
+請考慮 `Customers` 資料表，其在 `CustomerId` 上具有主索引鍵，並在 `CustomerCategoryID` 資料行上具有索引。 一般來說，指定的類別中會有許多客戶。 因此，所指定索引鍵內會有許多重複的 CustomerCategoryID 值。
+
+在此情況下，最佳做法是在 `(CustomerCategoryID, CustomerId)` 上使用非叢集索引。 此索引可用於使用 `CustomerCategoryID` 相關述詞的查詢，但索引鍵不包含重複項目。 因此，重複的 CustomerCategoryID 值或索引中額外資料行，就不會造成索引維護效率不彰。
 
 下列查詢會顯示範例資料庫 `CustomerCategoryID` WideWorldImporters `Sales.Customers`的資料表 [中，](../../sample/world-wide-importers/wide-world-importers-documentation.md)上索引之重複索引鍵值的平均數目。
 
@@ -155,15 +175,11 @@ SELECT AVG(row_count) FROM
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,9 +211,9 @@ WHERE col1 = 'dn';
   
 如果 `WHERE` 子句只指定索引鍵中的第二個資料行，則兩種索引類型皆無用。  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>比較索引使用狀況案例的摘要資料表  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>比較索引使用狀況案例的摘要資料表  
   
-下表列出各種索引類型支援的所有運算。 「是」表示索引可以有效率地為要求提供服務，「否」則表示索引無法有效率地滿足要求。 
+下表列出各種索引類型支援的所有運算。 「是」  表示索引可以有效率地為要求提供服務，「否」  則表示索引無法有效率地滿足要求。 
   
 | 作業 | 記憶體最佳化、 <br/> hash (雜湊) | 記憶體最佳化、 <br/> 非叢集 | 以磁碟為基礎、 <br/> (非)叢集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
@@ -206,6 +222,7 @@ WHERE col1 = 'dn';
 | 不等比較和範圍述詞的索引搜尋 <br/> (>, <, <=, >=, `BETWEEN`)。 | 否 <br/> (產生索引掃描。) | 是 <sup>1</sup> | 是 |  
 | 依照排序次序擷取符合索引定義的資料列。 | 否 | 是 | 是 |  
 | 依照排序次序擷取符合相反索引定義的資料列。 | 否 | 否 | 是 |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> 針對經記憶體最佳化的非叢集索引，不需要完整的索引鍵來執行索引搜尋。  
 

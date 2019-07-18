@@ -18,15 +18,15 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014463"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
   您可以使用 XML 結構描述定義 (XSD) 語言來建立關聯式資料的 XML 檢視。 接著，您就可以使用 XML 路徑語言 (XPath) 查詢來查詢這些檢視。 這類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對檢視指定 SQL 查詢。  
@@ -108,7 +108,7 @@ ms.locfileid: "52807070"
 </xsd:schema>  
 ```  
   
- 在對應結構描述**\<連絡人 >** 元素會對應至 Person.Contact 資料表，在範例 AdventureWorks 資料庫中使用`sql:relation`註釋。 ConID、FName 和 LName 屬性會使用 `sql:field` 註解來對應至 Person.Contact 資料表中的 ContactID、FirstName 和 LastName 資料行。  
+ 在對應結構描述 **\<連絡人 >** 元素會對應至 Person.Contact 資料表，在範例 AdventureWorks 資料庫中使用`sql:relation`註釋。 ConID、FName 和 LName 屬性會使用 `sql:field` 註解來對應至 Person.Contact 資料表中的 ContactID、FirstName 和 LastName 資料行。  
   
  此註解式 XSD 結構描述會提供關聯式資料的 XML 檢視。 您可以使用 XPath 語言來查詢這個 XML 檢視。 XPath 查詢會傳回 XML 文件當做結果，而不是 SQL 查詢所傳回的資料列集。  
   

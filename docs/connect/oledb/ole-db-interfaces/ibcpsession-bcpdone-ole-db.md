@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: ea7b944d51628e17c778cafe54a1eb384ce05f41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790922"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51031525"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  呼叫 **BCPDone** 方法之後，您就無法針對 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  

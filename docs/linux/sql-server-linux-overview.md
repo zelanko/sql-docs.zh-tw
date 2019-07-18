@@ -1,21 +1,19 @@
 ---
-title: 在 Linux 上的 SQL Server 概觀 |Microsoft Docs
+title: 在 Linux 上的 SQL Server 概觀
 description: 本文說明如何在 Linux 上執行 SQL Server，並提供深入的資訊。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 09/25/2018
+author: VanMSFT
+ms.author: vanto
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3bd50cba4bcab81e7dcf00db9394704c5486160
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105463"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -26,22 +24,22 @@ SQL Server 從 SQL Server 2017 開始，在 Linux 上執行。 它是相同的 S
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-在 Linux 上執行 SQL Server 2019 預覽。 它是相同的 SQL Server 資料庫引擎，與許多類似的功能和服務，不論您的作業系統。 若要深入了解此版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)。
+在 Linux 上執行 SQL Server 2019 預覽。 它是相同的 SQL Server 資料庫引擎，與許多類似的功能和服務，不論您的作業系統。 若要深入了解此版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)。
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 預覽](sql-server-linux-overview.md?view=sql-server-ver15)已發行 ！ 若要了解新功能適用於 Linux 的最新版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
+> [SQL Server 2019 預覽](sql-server-linux-overview.md?view=sql-server-ver15)已發行 ！ 若要了解新功能適用於 Linux 的最新版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)。
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 預覽](sql-server-linux-overview.md?view=sql-server-linux-ver15)已發行 ！ 若要了解新功能適用於 Linux 的最新版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)。
+> [SQL Server 2019 預覽](sql-server-linux-overview.md?view=sql-server-linux-ver15)已發行 ！ 若要了解新功能適用於 Linux 的最新版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux)。
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 預覽已發行了 ！ 若要了解新功能適用於 Linux 的最新版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)。
+> SQL Server 2019 預覽已發行了 ！ 若要了解新功能適用於 Linux 的最新版本，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)。
 ::: moniker-end
 
 ## <a name="install"></a>安裝
@@ -52,12 +50,12 @@ SQL Server 從 SQL Server 2017 開始，在 Linux 上執行。 它是相同的 S
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上執行](quickstart-install-connect-docker.md)
-- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 > [!NOTE]
 > Docker 本身會在執行多個平台，這表示您可以在 Linux、 Mac 和 Windows 上執行的 Docker 映像。
 
-## <a name="connect"></a>[連接]
+## <a name="connect"></a>連線
 
 安裝完成後，連線到 Linux 機器上的 SQL Server 執行個體。 您可以連接本機或遠端和使用各種工具和驅動程式。 快速入門示範如何使用[sqlcmd](sql-server-linux-setup-tools.md)命令列工具。 其他工具包括下列各項：
 
@@ -99,7 +97,7 @@ SQL Server 2017 和[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]所有
 然後，查看最新消息：
 
 - [什麼是 SQL Server 2017 的新功能](sql-server-linux-whats-new.md)
-- [新功能在 Linux 上的 SQL Server 2019 preview](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [新功能在 Linux 上的 SQL Server 2019 preview](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

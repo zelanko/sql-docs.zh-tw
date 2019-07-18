@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016804"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 

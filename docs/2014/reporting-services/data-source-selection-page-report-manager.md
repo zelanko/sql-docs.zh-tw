@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109440"
 ---
 # <a name="data-source-selection-page-report-manager"></a>資料來源選擇頁面 (報表管理員)
   您可以使用 [資料來源選擇] 頁面來選取要搭配報表或報表模型使用的現有共用資料來源項目。 您也可以使用此頁面來選取不同的資料來源。 若要檢視資料來源類型或連接字串，您必須導覽到共用資料來源並開啟屬性頁面。  
@@ -30,14 +29,14 @@ ms.locfileid: "56032319"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[管理]**。 這樣就會開啟該報表或模型的 [一般] 屬性頁面。  
+3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表或模型的 [一般] 屬性頁面。  
   
 4.  選取 **[資料來源]** 索引標籤。  
   
-5.  在屬性窗格中，選取 **[共用資料來源]** ，然後按一下 **[瀏覽]**。  
+5.  在屬性窗格中，選取 **[共用資料來源]** ，然後按一下 **[瀏覽]** 。  
   
 ## <a name="options"></a>選項。  
- **位置**  
+ **Location**  
  指定共用資料來源項目的完整路徑，由根資料夾名稱開始。 您可以輸入路徑名稱，或使用樹狀檢視來瀏覽想要的共用資料來源。  
   
  **樹狀檢視**  

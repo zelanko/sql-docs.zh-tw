@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
@@ -18,15 +17,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41187abb5ca3cfaf030497c787da470ebfe4dea6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104622"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>使用規則與分析資料更改多邊形、線條與點顯示 (報表產生器及 SSRS)
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -101,15 +100,15 @@ ms.locfileid: "56294536"
 ##  <a name="Distribution"></a> 了解分佈選項  
  若要建立值的分佈，您可以將資料分割成幾個範圍。 您可以指定分佈類型、子範圍的數目，以及最小與最大範圍值。  
   
- 在下列清單中，假設您有三個地圖元素和六個相關的分析值，其範圍為 1 到 9999，而其值分別為：1, 10, 200, 2000, 4777, 8999.  
+ 在下列清單中，假設您有三個地圖元素和六個相關的分析值，範圍從 1 到 9999 之間的下列值：1, 10, 200, 2000, 4777, 8999.  
   
--   **EqualInterval：** 建立的範圍會將資料分割成相等的範圍間隔。 針對此範例，三個範圍為 0-2999、3000-5999、6000-8999。 子範圍 1：1, 10, 200, 500. 子範圍 2：4777. 子範圍 3：8999. 此方法不會將資料分佈的方法納入考慮。 非常大的值或非常小的值都可能會扭曲分佈結果。  
+-   **EqualInterval：** 建立的範圍會將資料分割成相等的範圍間隔。 針對此範例，三個範圍為 0-2999、3000-5999、6000-8999。 子範圍 1:1, 10, 200, 500. 子範圍 2:4777. 子範圍 3:8999. 此方法不會將資料分佈的方法納入考慮。 非常大的值或非常小的值都可能會扭曲分佈結果。  
   
--   **EqualDistribution：** 建立的範圍會分割該資料，讓每個範圍都有相等的項目數目。 針對此範例資料，三個範圍為 0-10、11-500、501-8999。 子範圍 1：1、 10。 子範圍 2：200, 500. 子範圍 3：4777, 8999. 此方法可以建立跨越非常大範圍或非常小範圍的分佈來扭曲分佈。  
+-   **EqualDistribution：** 建立的範圍會分割該資料，讓每個範圍都有相等的項目數目。 針對此範例資料，三個範圍為 0-10、11-500、501-8999。 子範圍 1:1, 10. 子範圍 2:200, 500. 子範圍 3:4777, 8999. 此方法可以建立跨越非常大範圍或非常小範圍的分佈來扭曲分佈。  
   
 -   **最佳：** 建立會自動調整分佈的範圍來建立對稱的子範圍。 子範圍的數目取決於演算法。  
   
--   **自訂：** 指定您自己的範圍數目來控制值的分佈。 針對此範例資料，您可以指定範圍 3 的範圍：1-2, 3-8, 9.  
+-   **自訂：** 指定您自己的範圍數目來控制值的分佈。 針對範例資料中，您可以指定範圍 3 的範圍：1-2, 3-8, 9.  
   
  規則會使用分佈值來更改地圖元素顯示值。  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205063"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各個 SQL Server 資料類型的 FOR XML 支援
   本章節的主題將描述對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中資料類型的 FOR XML 支援。  

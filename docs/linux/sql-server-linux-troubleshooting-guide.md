@@ -1,21 +1,19 @@
 ---
-title: 疑難排解 SQL Server on Linux |Microsoft Docs
+title: 疑難排解 SQL Server on Linux
 description: 在 Linux 上使用 SQL Server 提供疑難排解提示。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032214"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
@@ -27,7 +25,9 @@ ms.locfileid: "53215454"
 > 如需常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。
 
 ## <a id="connection"></a> 針對連線失敗進行疑難排解
-如果您無法連線到您的 Linux SQL Server，有幾件事，若要檢查。 
+如果您無法連線到您的 Linux SQL Server，有幾件事，若要檢查。
+
+- 如果您無法使用本機連接**localhost**，請嘗試改為使用 IP 位址 127.0.0.1。 可以**localhost**未正確對應到這個地址。
 
 - 請確認伺服器名稱或 IP 位址是從用戶端電腦可連線。
 
@@ -193,7 +193,7 @@ SQL 傾印
 
 ## <a name="improve-performance"></a>改善效能
 
-有許多因素會影響效能，包括資料庫設計、 硬體和工作負載需求。 如果您想要改善效能，一開始會檢閱本文件的最佳作法[效能最佳做法和 Linux 上的 SQL Server 組態指導方針](sql-server-linux-performance-best-practices.md)。 然後探索一些效能問題疑難排解的可用工具。
+有許多因素會影響效能，包括資料庫設計、 硬體和工作負載需求。 如果您想要改善效能，一開始會檢閱本文件的最佳作法[效能最佳做法和 Linux 上的 SQL Server 組態指導方針](sql-server-linux-performance-best-practices.md)。 然後探索一些可用於疑難排解效能問題的工具。
 
 - [查詢存放區](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [系統動態管理檢視 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

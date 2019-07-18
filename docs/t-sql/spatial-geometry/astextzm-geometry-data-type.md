@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM (geometry Data Type)
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 838bead95017140a2277169187935f534a3953a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 642c3cb7a6158856ad77761cab731be10d459270
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65939166"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47821646"
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**nvarchar(max)**  
   
- CLR 傳回類型：**SqlChars**  
+ CLR 傳回型別：**SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   

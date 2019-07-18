@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b56f8df139116691c2f4751bd5566b398b3a6e08
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296946"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107624"
 ---
 # <a name="saving-reports-report-builder"></a>儲存報表 (報表產生器)
   在報表產生器中，您可以將報表儲存到報表伺服器、SharePoint 文件庫、您具有寫入權限的檔案共用位置或是您的電腦上。 您可以將報表儲存到開啟它的相同位置，也可以儲存到另一個位置，或是以新的名稱儲存到相同或不同的位置。 根據預設，報表會重新儲存到開啟它的相同位置。 當您儲存報表時，您實際上儲存的是報表定義，報表定義會描述報表配置。 您不會儲存資料。 每當您執行報表時，便會重新整理報表資料，而且報表資料可能會與您上次執行報表時的資料不同。  

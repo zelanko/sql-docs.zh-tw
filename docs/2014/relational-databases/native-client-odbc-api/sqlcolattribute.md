@@ -1,5 +1,5 @@
 ---
-title: SQLColAttribute |Microsoft Docs
+title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067662"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   您可以使用`SQLColAttribute`來擷取已備妥或已執行的 ODBC 陳述式的結果集資料行的屬性。 呼叫`SQLColAttribute`上備妥陳述式造成的往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會接收結果集資料行資料做為陳述式執行，因此，呼叫的一部分`SQLColAttribute`完成後**SQLExecute**或是**SQLExecDirect**沒有不會造成伺服器往返。  

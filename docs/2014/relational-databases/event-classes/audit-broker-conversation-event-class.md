@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912192"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker 交談事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Conversation** 事件，以報告與 Service Broker 對話安全性相關的稽核訊息。  

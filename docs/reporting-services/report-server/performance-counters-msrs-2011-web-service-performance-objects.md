@@ -1,8 +1,8 @@
 ---
 title: 效能計數器 MSRS 2011 Web Service、效能物件 | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,15 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52e4ef6b3361ca1e577f4c19a325bcb982c4e103
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: d5d9c379aaa2b8b0b92e064ed6dc21a4eb968b95
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403144"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412598"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>效能計數器 MSRS 2011 Web Service、效能物件
   本主題描述 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 效能物件的效能計數器。 這些物件是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式部署的一部分。  
@@ -28,7 +29,7 @@ ms.locfileid: "52403144"
 > [!NOTE]  
 >  這些效能物件會監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  如需 SharePoint 模式效能計數器的資訊，請參閱 [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   

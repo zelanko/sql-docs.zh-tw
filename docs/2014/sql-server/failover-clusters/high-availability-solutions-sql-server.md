@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193048"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解決方案 (SQL Server)
   本主題會介紹幾個可增進伺服器或資料庫可用性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高可用性解決方案。 高可用性解決方案可遮蔽硬體或軟體失敗所造成的影響，並維護應用程式的可用性，進而讓使用者的停機時間減至最少。  
@@ -48,10 +48,10 @@ ms.locfileid: "57579038"
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
   
- 資料庫鏡像是支援近乎瞬間的容錯移轉，進而提高資料庫可用性的方案。 資料庫鏡像可用以維護實際執行的資料庫 (稱為 *「主體資料庫」*) 所對應的單一待命資料庫 (或稱 *「鏡像資料庫」*)。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 資料庫鏡像是支援近乎瞬間的容錯移轉，進而提高資料庫可用性的方案。 資料庫鏡像可用以維護實際執行的資料庫 (稱為 *「主體資料庫」* ) 所對應的單一待命資料庫 (或稱 *「鏡像資料庫」* )。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
  記錄傳送  
- 記錄傳送就像 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 與資料庫鏡像一樣，都是在資料庫層級運作。 您可以使用記錄傳送來針對單一實際執行資料庫 (稱為「主要資料庫」) 維護一個或多個暖待命資料庫 (稱為「次要資料庫」)。 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+ 記錄傳送就像 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 與資料庫鏡像一樣，都是在資料庫層級運作。 您可以使用記錄傳送來針對單一實際執行資料庫 (稱為「主要資料庫」  ) 維護一個或多個暖待命資料庫 (稱為「次要資料庫」  )。 如需記錄傳送作業的相關資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
 ##  <a name="RecommendedSolutions"></a> 使用 SQL Server 保護資料的建議方案  
  為您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境提供資料保護的建議如下：  

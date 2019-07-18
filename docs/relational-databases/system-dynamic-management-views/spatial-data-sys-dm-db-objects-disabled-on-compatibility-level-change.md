@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937108"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間資料-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|條件約束的 OBJECT 或 COLUMN<br /><br /> 索引和堆積的 INDEX|  
 |**major_id**|**int**|條件約束的 OBJECT ID<br /><br /> 包含索引和堆積的資料表 OBJECT ID|  
 |**minor_id**|**int**|條件約束的 NULL<br /><br /> 索引和堆積的 Index_id|  
-|**相依性**|**nvarchar(60)**|導致條件約束或索引停用的相依性說明。 升級期間所引發的警示也會使用相同的值。 範例包括：<br /><br /> 內建的 "space"<br /><br /> 系統 UDT 的 "geometry"<br /><br /> 系統 UDT 之方法的 "geography::Parse"|  
+|**dependency**|**nvarchar(60)**|導致條件約束或索引停用的相依性說明。 升級期間所引發的警示也會使用相同的值。 範例包括：<br /><br /> 內建的 "space"<br /><br /> 系統 UDT 的 "geometry"<br /><br /> 系統 UDT 之方法的 "geography::Parse"|  
   
 ## <a name="general-remarks"></a>一般備註  
  當相容性層級變更時，將會停用使用內建函數的保存計算資料行。 除此之外，當資料庫升級時，也會停用使用幾何或地理方法的保存計算資料行。  
@@ -114,7 +113,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>停用物件的行為  
  **[索引]**  
   
- 如果停用叢集索引或強制執行非叢集索引，將會引發下列錯誤：「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，重建索引在升級之後藉由呼叫**ALTER INDEX ON...REBUILD**。  
+ 如果叢集的索引已停用，或強制執行非叢集索引，會引發下列錯誤：「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，重建索引在升級之後藉由呼叫**ALTER INDEX ON...REBUILD**。  
   
  **堆積**  
   

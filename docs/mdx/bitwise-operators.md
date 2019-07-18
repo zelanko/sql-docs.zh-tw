@@ -1,5 +1,5 @@
 ---
-title: 位元運算子 |Microsoft 文件
+title: 位元運算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016972"
 ---
 # <a name="bitwise-operators"></a>位元運算子
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49968392dd813b48f43e5e63586fd0c6bec71d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118521"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +29,18 @@ ms.locfileid: "47802276"
   
  下列三個不同的位置會定義可決定授與給組件之權限的安全性原則：  
   
--   電腦原則：此原則適用於在已安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之電腦中執行的所有 Managed 程式碼。  
+-   電腦原則：這是原則生效的機器中執行的所有 managed 程式碼[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝。  
   
--   使用者原則：此原則適用於由處理序主控的 Managed 程式碼。 若為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，則使用者原則為執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務之 Windows 帳戶所特有。  
+-   使用者原則：這是作用中的處理程序所裝載的 managed 程式碼原則。 若為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，則使用者原則為執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務之 Windows 帳戶所特有。  
   
--   主機原則：此原則由 CLR 的主機 (在此案例中為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 所設定，適用於在該主機中執行的 Managed 程式碼。  
+-   主機原則：這是由 CLR 的主機設定的原則 (在此情況下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])，實際上是在該主機中執行的 managed 程式碼。  
   
  CLR 所支援的程式碼存取安全性機制是根據執行階段可以主控完全信任和部分信任程式碼的假設。 受 CLR 程式碼存取安全性的資源通常會需要對應的權限，才能允許存取資源的受管理的應用程式開發介面所包裝。 唯有在呼叫堆疊中所有的呼叫者 (在組件層級) 都具有對應的資源權限時，權限的要求才會被滿足。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內執行時授與給 Managed 程式碼的程式碼存取安全性權限集合是上述三個原則層級所授與之權限集合的交集。 即使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將權限集合授與給在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中載入的組件，使用者及電腦層級原則也會進一步限制指定給使用者程式碼的最終權限集合。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主機原則層級權限集合  
- 由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個權限集合：**安全**， **EXTERNAL_ACCESS**並**UNSAFE** (使用指定**PERMISSION_SET** 選項[建立組件&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
+ 由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個權限集合：**安全**， **EXTERNAL_ACCESS**並**UNSAFE** (使用指定**PERMISSION_SET**選項[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在主控 CLR 時，會將主機層級的安全性原則層級提供給該 CLR；這項原則是在永遠會實行之兩個原則層級之下的另一個原則層級。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立的每一個應用程式網域都會設定此原則。 此原則不適用於當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立 CLR 執行個體時所生效的預設應用程式網域。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47802276"
 |權限|值/描述|  
 |----------------|-----------------------------|  
 |**SecurityPermission**|**執行：** 執行 managed 程式碼的權限。|  
-|**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**： 只可以使用內容連線，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
+|**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**:只可以使用內容連線，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 組件具有相同的權限**安全**組件，並附帶存取外部系統資源，例如檔案、 網路、 環境變數和登錄的能力。  
@@ -68,20 +67,20 @@ ms.locfileid: "47802276"
   
 |權限|值/描述|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**不受限制：** 允許分散式交易。|  
+|**DistributedTransactionPermission**|**不受限制：** 允許分散式的交易。|  
 |**DNSPermission**|**不受限制：** 向網域名稱伺服器要求資訊的權限。|  
-|**EnvironmentPermission**|**不受限制：** 完整允許存取系統和使用者的環境變數。|  
+|**EnvironmentPermission**|**不受限制：** 允許對系統和使用者的環境變數的完整存取。|  
 |**EventLogPermission**|**系統管理員：** 允許下列動作： 建立事件來源、 讀取現有的記錄檔、 刪除事件來源或記錄檔、 回應項目、 清除事件記錄檔、 接聽事件，並存取所有事件記錄檔的集合。|  
-|**FileIOPermission**|**不受限制：** 完整存取權的檔案和資料夾允許。|  
-|**KeyContainerPermission**|**不受限制：** 完整允許對金鑰容器的存取。|  
-|**NetworkInformationPermission**|**存取：** Pinging 允許。|  
+|**FileIOPermission**|**不受限制：** 允許檔案和資料夾的完整存取。|  
+|**KeyContainerPermission**|**不受限制：** 允許對金鑰容器的完整存取。|  
+|**NetworkInformationPermission**|**存取：** 允許 ping。|  
 |**RegistryPermission**|允許的讀取權限**HKEY_CLASSES_ROOT**， **HKEY_LOCAL_MACHINE**， **HKEY_CURRENT_USER**，**機碼 HKEY_CURRENT_CONFIG**，以及**HKEY_USERS。**|  
-|**SecurityPermission**|**判斷提示：** 能夠判斷提示的這段程式碼的所有呼叫端具有必要的權限的作業。<br /><br /> **ControlPrincipal:** 操作之主體物件的能力。<br /><br /> **執行：** 執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:** 能夠提供序列化服務。|  
-|**SmtpPermission**|**存取：** 允許的 SMTP 主機連接埠 25 的傳出連接。|  
+|**SecurityPermission**|**判斷提示：** 此程式碼的所有呼叫端都作業的必要權限的能力。<br /><br /> **ControlPrincipal:** 操作主體物件的能力。<br /><br /> **執行：** 執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:** 提供序列化服務的能力。|  
+|**SmtpPermission**|**存取：** 允許輸出連接到 SMTP 主機連接埠 25。|  
 |**SocketPermission**|**連接：** 允許的傳輸位址上的傳出連接 （所有連接埠，所有的通訊協定）。|  
-|**SqlClientPermission**|**不受限制：** 完整允許存取資料來源。|  
-|**StorePermission**|**不受限制：** 完整權限允許的 X.509 憑證存放區。|  
-|**WebPermission**|**連接：** 允許的網路資源的傳出連接。|  
+|**SqlClientPermission**|**不受限制：** 允許的資料來源的完整存取。|  
+|**StorePermission**|**不受限制：** 允許對 X.509 憑證存放區的完整存取。|  
+|**WebPermission**|**連接：** 允許的網路資源的輸出連線。|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE 可讓組件無限制存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內外部的資源。 從執行的程式碼**UNSAFE**組件也可以呼叫 unmanaged 程式碼。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066663"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （類型對應） (AccessToSQL)
 型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱 <<c0> [ 對應來源和目標資料型別](mapping-source-and-target-data-types-accesstosql.md)。  
@@ -46,7 +45,7 @@ ms.locfileid: "51681246"
 |--------------------|------------------------|  
 |**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**位元組**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  

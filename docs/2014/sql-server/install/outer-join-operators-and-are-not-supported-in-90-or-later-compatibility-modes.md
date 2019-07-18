@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
@@ -16,12 +15,12 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 62a6f9e016abf24f28660b04e7a6242fdd6606ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093690"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>在 90 (含) 之後的相容性模式中不支援外部聯結運算 \*= 和 =\*
   Upgrade Advisor 偵測到使用外部聯結運算子\*= 和 =\*。 在 90 或之後的相容性模式中並不支援這些運算子。 當您升級時，使用者資料庫會維持其相容性模式。 使用這些運算子的陳述式將會失敗。  
@@ -54,6 +53,6 @@ ORDER BY employee.job_id
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

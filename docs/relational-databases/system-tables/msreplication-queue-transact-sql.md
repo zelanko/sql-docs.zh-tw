@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2370bfc06f9fd939f5778ad52e6cb09aeae2806
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080010"
 ---
 # <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52819051"
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
 |**data**|**varbinary(8000)**|儲存佇列命令相關資訊的壓縮位元組資料流。|  
 |**datalen**|**int**|資料長度 (以位元組為單位)。|  

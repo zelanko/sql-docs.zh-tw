@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180373"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50146363"
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
 |報表|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  
-|引數|執行 OLE DB 命令。|  
+|陳述式|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
 ## <a name="resolving-and-executing-actions"></a>解析及執行動作  

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773666"
 ---
 # <a name="search-property-list-editor"></a>搜尋屬性清單編輯器
   使用此對話方塊來新增或刪除搜尋屬性清單中的搜尋屬性。  
@@ -25,11 +25,11 @@ ms.locfileid: "48148938"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>若要使用 SQL Server Management Studio 管理搜尋屬性清單  
  如需有關如何建立、 檢視或刪除搜尋屬性清單，以及如何設定屬性搜尋的全文檢索索引資訊，請參閱 < [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **屬性名稱**  
  指定要用來識別全文檢索查詢中之屬性的名稱。 屬性名稱可以包含內部空格。 **[屬性名稱]** 的最大長度為 256 個字元。 這個名稱可以是使用者易記名稱，例如「作者」或「住家地址」，或者它可以是屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。 **[屬性名稱]** 必須唯一識別屬性集內的屬性。  
   
- 開發人員使用的屬性名稱來識別中的屬性[CONTAINS](/sql/t-sql/queries/contains-transact-sql)述詞。 因此，在加入屬性時，務必指定可有意義地表示屬性的值。  
+ 開發人員使用屬性名稱來識別 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞中的屬性。 因此，在加入屬性時，務必指定可有意義地表示屬性的值。  
   
  **屬性集 GUID**  
  指定屬性所屬之屬性集的識別碼。 這是全域唯一識別碼 (GUID)。 屬性集是一組邏輯相關的屬性。 如需有關取得此值的詳細資訊，請參閱本主題稍後的＜備註＞。  

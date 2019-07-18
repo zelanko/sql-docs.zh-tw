@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b80955ba910b185e7de273c7849fe6b93bdce60a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae15f57418712ab4977d993e71a9528ee489fdfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059517"
 ---
 # <a name="using-database-mirroring"></a>使用資料庫鏡像
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "47648446"
   
  資料庫鏡像是根據每一個資料庫來實作，它會在待命伺服器上保留 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 生產資料庫的複本。 此伺服器為熱或暖待命伺服器，端視資料庫鏡像工作階段的組態和狀態而定。 熱待命伺服器支援不會遺失任何已認可交易的快速容錯移轉，而暖待命伺服器支援強制服務 (資料可能會遺失)。  
   
- 生產資料庫稱為「主體資料庫」，而待命副本則稱為「鏡像資料庫」。 主體資料庫和鏡像資料庫必須位於個別的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體) 上，如有可能，也應該位於個別的電腦上。  
+ 生產資料庫稱為「主體資料庫」  ，而待命副本則稱為「鏡像資料庫」  。 主體資料庫和鏡像資料庫必須位於個別的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體) 上，如有可能，也應該位於個別的電腦上。  
   
- 稱為「主體伺服器」的實際執行伺服器執行個體會與稱為「鏡像伺服器」的待命伺服器執行個體進行通訊。 主體伺服器和鏡像伺服器會在資料庫鏡像「工作階段」內當做夥伴運作。 如果主體伺服器失敗，則鏡像伺服器可以透過稱為「容錯移轉」的處理序，使鏡像伺服器的資料庫成為主體資料庫。 例如，Partner_A 與 Partner_B 是兩個夥伴伺服器，其中主體資料庫一開始位於 Partner_A 上做為主體伺服器，而鏡像資料庫位於 Partner_B 上做為鏡像伺服器。 如果 Partner_A 離線，Partner_B 上的資料庫可以容錯移轉，變成目前的主體資料庫。 當 Partner_A 重新加入鏡像工作階段時，它會變成鏡像伺服器而其資料庫會變成鏡像資料庫。  
+ 稱為「主體伺服器」  的實際執行伺服器執行個體會與稱為「鏡像伺服器」  的待命伺服器執行個體進行通訊。 主體伺服器和鏡像伺服器會在資料庫鏡像「工作階段」  內當做夥伴運作。 如果主體伺服器失敗，則鏡像伺服器可以透過稱為「容錯移轉」  的處理序，使鏡像伺服器的資料庫成為主體資料庫。 例如，Partner_A 與 Partner_B 是兩個夥伴伺服器，其中主體資料庫一開始位於 Partner_A 上做為主體伺服器，而鏡像資料庫位於 Partner_B 上做為鏡像伺服器。 如果 Partner_A 離線，Partner_B 上的資料庫可以容錯移轉，變成目前的主體資料庫。 當 Partner_A 重新加入鏡像工作階段時，它會變成鏡像伺服器而其資料庫會變成鏡像資料庫。  
   
  替代的資料庫鏡像組態提供不同層次的效能及資料安全，並支援不同形式的容錯移轉。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   

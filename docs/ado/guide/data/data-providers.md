@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925650"
 ---
 # <a name="data-providers"></a>資料提供者
 資料提供者會代表不同來源的資料，例如 SQL 資料庫、 編製索引-循序檔案、 試算表、 文件存放區和郵件檔。 提供者會公開一致地使用常見的抽象概念，稱為資料列集的資料。  

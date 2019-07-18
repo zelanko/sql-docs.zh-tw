@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781742"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 通訊埠對應到非統一記憶體存取 (NUMA) 節點。 在啟動時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將節點資訊寫入錯誤記錄檔。  
@@ -48,9 +48,9 @@ ms.locfileid: "52640169"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>若要將 TCP/IP 通訊埠對應到 NUMA 節點  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server 網路組態]，然後按一下 [\<執行個體名稱> 的通訊協定]。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server 網路組態]  ，然後按一下 [\<執行個體名稱> 的通訊協定]   。  
   
-2.  在詳細資料窗格中，按兩下 [TCP/IP]。  
+2.  在詳細資料窗格中，按兩下 [TCP/IP]  。  
   
 3.  在 **[IP 位址]** 索引標籤上，在對應到要設定之 IP 位址的區段中，在 **[TCP 通訊埠]** 方塊中，在通訊埠編號後面以方括號加入 NUMA 節點識別碼中。 例如，對於 TCP 通訊埠 1500 和節點 0、2 和 5，請使用 `1500[37]` 或 `1500[0x25]`。  
   

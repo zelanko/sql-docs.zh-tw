@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144005"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028385"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 資料來源
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源名稱 (DSN) 會識別 ODBC 資料來源，其中包含 ODBC 應用程式需要連接到特定伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有資訊。 有兩個方式可以定義 ODBC 資料來源名稱：  
   
--   用戶端電腦上，開啟 控制台 中 系統管理工具，然後按兩下**資料來源 (ODBC)**。 這樣會開啟「ODBC 資料來源管理員」來建立 DSN。  
+-   用戶端電腦上，開啟 控制台 中 系統管理工具，然後按兩下**資料來源 (ODBC)** 。 這樣會開啟「ODBC 資料來源管理員」來建立 DSN。  
   
 -   在 ODBC 應用程式中，呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
   

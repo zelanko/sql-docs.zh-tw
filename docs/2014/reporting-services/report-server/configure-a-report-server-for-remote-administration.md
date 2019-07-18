@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 878285a06dbd9262d675e9fad18142974a0d2d0c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104097"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以在本機或遠端設定報表伺服器執行個體。 若要設定遠端報表伺服器執行個體，您可以使用 Reporting Services 組態工具，或是撰寫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者的自訂程式碼。 Reporting Services 組態工具提供了 WMI 提供者的圖形介面，好讓您不需要撰寫程式碼就可以設定報表伺服器。 當您啟動這個工具時，可以指定要連接的遠端伺服器。  
@@ -67,9 +66,9 @@ ms.locfileid: "56020159"
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>設定與報表伺服器資料庫的遠端連接  
   
-1.  按一下 **[開始]**，並依序指向 **[程式集]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。  
+1.  按一下 **[開始]** ，並依序指向 **[程式集]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，然後按一下 **[SQL Server 組態管理員]** 。  
   
-2.  在左窗格中，展開 [SQL Server 網路設定]，然後針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體按一下 [通訊協定]。  
+2.  在左窗格中，展開 [SQL Server 網路設定]  ，然後針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體按一下 [通訊協定]  。  
   
 3.  在詳細資料窗格中，啟用 TCP/IP 和具名管道通訊協定，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "56020159"
   
 ### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>設定 DCOM 權限來對非管理員啟用遠端 WMI 存取  
   
-1.  在 [開始] 功能表上，指向 **[系統管理工具]**，然後按一下 **[元件服務]**。  
+1.  在 [開始] 功能表上，指向 **[系統管理工具]** ，然後按一下 **[元件服務]** 。  
   
      適用於 Windows Vista [開始] 功能表中，按一下**所有程式**，按一下**執行**，然後輸入`mmc comexp.msc`。  
   
@@ -107,27 +106,27 @@ ms.locfileid: "56020159"
   
 4.  選取 [我的電腦]。  
   
-5.  選取 **[執行]** 功能表上的 **[內容]**。  
+5.  選取 **[執行]** 功能表上的 **[內容]** 。  
   
-6.  按一下 **[COM 安全設定]**。  
+6.  按一下 **[COM 安全設定]** 。  
   
-7.  在 **[啟動和啟用權限]** 中，按一下 **[編輯限制]**。  
+7.  在 **[啟動和啟用權限]** 中，按一下 **[編輯限制]** 。  
   
-8.  如果您沒有在 **[啟動權限]** 中看到您的名稱，請按一下 **[新增]**。  
+8.  如果您沒有在 **[啟動權限]** 中看到您的名稱，請按一下 **[新增]** 。  
   
-9. 輸入您的使用者帳戶名稱，然後按一下 **[確定]**。  
+9. 輸入您的使用者帳戶名稱，然後按一下 **[確定]** 。  
   
-10. 在 [\<使用者或群組> 的權限] 的 [允許] 欄中，選取 [遠端啟動] 和 [遠端啟用]，然後按一下 [確定]。  
+10. 在 [\<使用者或群組> 的權限]  的 [允許]  欄中，選取 [遠端啟動]  和 [遠端啟用]  ，然後按一下 [確定]  。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>針對非管理員設定報表伺服器 WMI 命名空間的權限  
   
-1.  在 [開始] 功能表上，指向 **[系統管理工具]**，然後按一下 **[電腦管理]**。  
+1.  在 [開始] 功能表上，指向 **[系統管理工具]** ，然後按一下 **[電腦管理]** 。  
   
 2.  開啟 [服務及應用程式] 資料夾。  
   
-3.  以滑鼠右鍵按一下 [WMI 控制]，然後選取 [內容]。  
+3.  以滑鼠右鍵按一下 [WMI 控制]  ，然後選取 [內容]  。  
   
-4.  按一下 **[安全性]**。  
+4.  按一下 **[安全性]** 。  
   
 5.  開啟 [Root] 資料夾。  
   
@@ -141,11 +140,11 @@ ms.locfileid: "56020159"
   
 10. 開啟 [v10] 資料夾。  
   
-11. 選取 [Admin] 資料夾，然後按一下 **[安全性]**。  
+11. 選取 [Admin] 資料夾，然後按一下 **[安全性]** 。  
   
-12. 按一下 **[新增]**，然後輸入將用來管理伺服器的使用者帳戶。  
+12. 按一下 **[新增]** ，然後輸入將用來管理伺服器的使用者帳戶。  
   
-13. 在 **[允許]** 一欄中，選取 **[啟用帳戶]**、 **[遠端啟用]** 及 **[讀取安全性]**，然後按一下 **[確定]**。  
+13. 在 **[允許]** 一欄中，選取 **[啟用帳戶]** 、 **[遠端啟用]** 及 **[讀取安全性]** ，然後按一下 **[確定]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130007"
 ---
 # <a name="default-c-data-types"></a>預設 C 資料類型
 如果應用程式指定在 SQL_C_DEFAULT **SQLBindCol**， **SQLGetData**，或**SQLBindParameter**，驅動程式會假設 C 資料類型的輸出或輸入的緩衝區對應至 SQL 資料類型的資料行或參數繫結至緩衝區。  

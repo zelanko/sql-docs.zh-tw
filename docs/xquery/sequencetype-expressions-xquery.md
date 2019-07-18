@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946287"
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,18 +32,18 @@ ms.locfileid: "54255123"
  不可部分完成的型別名稱也可用在**轉換為**XQuery 運算式。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，則**的執行個體**並**轉換為**部分支援在 SequenceTypes 上的 XQuery 運算式。  
   
 ## <a name="instance-of-operator"></a>運算子的執行個體  
- **的執行個體**運算子可以用來判斷指定之運算式的值的動態或執行階段型別。 例如：  
+ **的執行個體**運算子可以用來判斷指定之運算式的值的動態或執行階段型別。 例如:  
   
 ```  
   
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 請注意，`instance of`運算子， `Occurrence indicator`，指定基數，也就是產生的序列中的項目數。 若未指定，會將基數假設為 1。 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，只在問號 (**？)** 支援發生指標。 **嗎？** 發生指標指出`Expression`可以傳回零個或一個項目。 如果**嗎？** 指定發生指標，則`instance of`，則傳回 True 時`Expression`符合指定的型別`SequenceType`，而不論是否`Expression`傳回單一值或空的序列。  
+ 請注意，`instance of`運算子， `Occurrence indicator`，指定基數，也就是產生的序列中的項目數。 若未指定，會將基數假設為 1。 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，只在問號 ( **？)** 支援發生指標。 **嗎？** 發生指標指出`Expression`可以傳回零個或一個項目。 如果**嗎？** 指定發生指標，則`instance of`，則傳回 True 時`Expression`符合指定的型別`SequenceType`，而不論是否`Expression`傳回單一值或空的序列。  
   
  如果**嗎？** 未指定發生指標，則`sequence of`，則傳回 True 時，才`Expression`輸入相符項目`Type`指定和`Expression`傳回單一值。  
   
- **附註**加號 (**+**) 和星號 (**&#42;**) 中的相符項目指標不支援[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **附註**加號 ( **+** ) 和星號 ( **&#42;** ) 中的相符項目指標不支援[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  下列範例說明使用**的執行個體**XQuery 運算子。  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- 下列查詢會傳回 False，因為在 `instance of` 運算式中指定的 SequenceType 不是指定運算式中實際類型的最高父系。 也就是，<`TestElement`> 的值是整數類型。 最高父系是 xs:decimal。 不過，並未將它指定為 `instance of` 運算子的第二個運算元。  
+ 下列查詢會傳回 False，因為在 `instance of` 運算式中指定的 SequenceType 不是指定運算式中實際類型的最高父系。 也就是值 <`TestElement`> 是整數類型。 最高父系是 xs:decimal。 不過，並未將它指定為 `instance of` 運算子的第二個運算元。  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>範例 D  
  在此範例中，您先建立 XML 結構描述集合並用它來鍵入**xml**變數。 具型別的**xml**變數接著會查詢來說明`instance of`功能。  
   
- 下列 XML 結構描述集合會定義簡單的類型、myType 以及 myType 類型的 <`root`> 元素：  
+ 下列的 XML 結構描述集合定義的簡單型別、 myType 以及 mytype 元素，<`root`>，類型 myType 的：  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   建立具型別**xml**變數並指派 XML 範例執行個體給它。  
   
--   針對變數指定查詢。 查詢運算式會先從第一個  <`Customer`> 的 OrderList IDRERS 類型屬性擷取第一個訂單識別碼值。 所擷取的值是 IDREF 類型。 因此，`instance of` 會傳回 True。  
+-   針對變數指定查詢。 查詢運算式會擷取第一個的 OrderList IDRERS 類型屬性中的第一個訂單識別碼值 <`Customer`>。 所擷取的值是 IDREF 類型。 因此，`instance of` 會傳回 True。  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   當您使用一種**element()** 時序類型的指定類型名稱，例如`element(ElementName, TypeName)`，必須以問號 （？） 限定型別。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的執行階段偵測**xsi: nil**屬性使用`instance of`。  
   
--   如果在 `Expression` 中的值是源自於聯集類型的元素或屬性，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能識別基本類型，而無法識別衍生值類型的衍生類型。 例如，如果 <`e1`> 是定義為具有靜態類型的 (xs:integer | xs:string)，下列程式碼將會傳回 False。  
+-   如果在 `Expression` 中的值是源自於聯集類型的元素或屬性，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能識別基本類型，而無法識別衍生值類型的衍生類型。 例如，如果 <`e1`> 定義為具有靜態類型的 (xs: integer | xs: string)，下列會傳回 False。  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
@@ -326,7 +325,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   針對**processing-instruction**並**document-node**時序類型，允許不含引數的表單。 例如，允許 `processing-instruction()` 但不允許 `processing-instruction('abc')`。  
   
 ## <a name="cast-as-operator"></a>cast as 運算子  
- **轉換為**運算式可用來將值轉換成特定的資料類型。 例如：  
+ **轉換為**運算式可用來將值轉換成特定的資料類型。 例如:  
   
 ```  
   

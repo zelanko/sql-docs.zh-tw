@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9100405c91387faa66b714a94b8259167ae31899
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076858"
 ---
 # <a name="ddl-statements"></a>DDL 陳述式
 資料定義語言 (DDL) 陳述式而異 Dbms 極大的差異。 ODBC SQL 定義陳述式中的最常見的資料定義作業： 建立和卸除資料表、 索引和檢視;改變資料表;授與和撤銷的權限。 所有其他 DDL 陳述式是資料來源特有。 因此，互通的應用程式無法執行某些資料定義作業。 一般情況下，這並不是問題，因為這類作業傾向於較高的 DBMS 特定和最左邊的專屬資料庫管理軟體隨附於大部分的 Dbms，或安裝程式隨附的驅動程式。  

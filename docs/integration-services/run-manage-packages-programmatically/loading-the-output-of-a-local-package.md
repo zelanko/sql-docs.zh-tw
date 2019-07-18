@@ -17,14 +17,18 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf9107bb5a6e514e84fb17ae143491c9c3637991
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 385fd9fe4224c754af7546ffe2737316aaaf62fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719285"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 **System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 **Microsoft.SqlServer.Dts.DtsClient** 命名空間，其中包含 **System.Data** 命名空間中的 **IDbConnection**、**IDbCommand** 和 **IDbDataParameter** 介面的特殊實作。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  
 
 > [!IMPORTANT]
@@ -49,7 +53,7 @@ ms.locfileid: "58272934"
   
 4.  建立類型為 **DtsClient.DtsCommand** 的物件，以使用先前建立的 **DtsConnection** 並將其 **CommandText** 屬性設定為套件中的 DataReader 目的地名稱。 然後呼叫命令物件的 **ExecuteReader** 方法，將套件結果載入新的 DataReader。  
   
-5.  您可以選擇性地使用 **DtsCommand** 物件上的 **DtsDataParameter** 物件集合，間接地參數化套件輸出，以便將值傳遞給定義在套件中的變數。 您可以在封裝中使用這些變數做為查詢參數，或在運算式中加以運用，藉此影響傳回 DataReader 目的地的結果。 您必須先在 **DtsClient** 命名空間的套件中定義這些變數，才可將其用於用戶端應用程式的 **DtsDataParameter** 物件  (您可能需要按一下 [變數] 視窗中的 [選擇變數資料行] 工具列按鈕，才會顯示 [命名空間] 資料行)。在您的用戶端程式碼中，將 **DtsDataParameter** 新增至 **DtsCommand** 的 **Parameters** 集合時，請省略變數名稱中的 DtsClient 命名空間參考。 例如：  
+5.  您可以選擇性地使用 **DtsCommand** 物件上的 **DtsDataParameter** 物件集合，間接地參數化套件輸出，以便將值傳遞給定義在套件中的變數。 您可以在封裝中使用這些變數做為查詢參數，或在運算式中加以運用，藉此影響傳回 DataReader 目的地的結果。 您必須先在 **DtsClient** 命名空間的套件中定義這些變數，才可將其用於用戶端應用程式的 **DtsDataParameter** 物件 (您可能需要按一下 [變數]  視窗中的 [選擇變數資料行]  工具列按鈕，才會顯示 [命名空間]  資料行)。在您的用戶端程式碼中，將 **DtsDataParameter** 新增至 **DtsCommand** 的 **Parameters** 集合時，請省略變數名稱中的 DtsClient 命名空間參考。 例如：  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -73,7 +77,7 @@ ms.locfileid: "58272934"
   
 1.  建立新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 範例程式碼使用 "DtsClientWParamPkg.dtsx" 做為封裝的名稱。  
   
-2.  在 DtsClient 命名空間中加入 String 類型的變數。 範例程式碼使用 Country 做為變數的名稱  (您可能需要按一下 [變數] 視窗中的 [選擇變數資料行] 工具列按鈕，才會顯示 [命名空間] 資料行)。  
+2.  在 DtsClient 命名空間中加入 String 類型的變數。 範例程式碼使用 Country 做為變數的名稱 (您可能需要按一下 [變數]  視窗中的 [選擇變數資料行]  工具列按鈕，才會顯示 [命名空間]  資料行)。  
   
 3.  加入連接至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 OLE DB 連接管理員。  
   
@@ -85,7 +89,7 @@ ms.locfileid: "58272934"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  按一下 [參數]，然後在 [設定查詢參數] 對話方塊中，將查詢中的單一輸入參數 Parameter0 對應至 DtsClient::Country 變數。  
+6.  按一下 [參數]  ，然後在 [設定查詢參數]  對話方塊中，將查詢中的單一輸入參數 Parameter0 對應至 DtsClient::Country 變數。  
   
 7.  將彙總轉換加入資料流程，然後將 OLE DB 來源的輸出連接到轉換。 開啟「彙總轉換編輯器」並將它設定成在所有的輸入資料行 (*) 上執行 "Count all" 作業，並輸出別名為 CustomerCount 的彙總值。  
   

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b24a03ff71e6ddec125dfa40ae4c01b3062ada8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5defabecf637a230571a954c306d207b0f1bbcfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483299"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>建立明確階層 (Master Data Services)
   當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立明確階層。 明確階層包含來自單一實體的成員。  
   
- 建立明確階層之後，您可以在總管 功能區域的這個階層中加入成員。  
+ 建立明確階層之後，您可以在總管  功能區域的這個階層中加入成員。  
   
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
@@ -36,21 +36,21 @@ ms.locfileid: "52761600"
   
 ### <a name="to-create-an-explicit-hierarchy"></a>若要建立明確階層  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]**。  
+2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[實體]** 。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
 4.  針對要建立明確階層的實體選取資料列。  
   
-5.  按一下 **[編輯選取的實體]**。  
+5.  按一下 **[編輯選取的實體]** 。  
   
 6.  在 **編輯實體**頁面上，於**明確階層**窗格中，按一下 **加入明確階層**。  
   
 7.  在 **加入明確階層**頁面上，於**明確階層名稱**方塊中，輸入階層的名稱。  
   
-8.  (選擇性) 清除 [強制階層] 核取方塊，將階層建立為非強制階層。 如需階層類型的詳細資訊，請參閱 [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)(管理員 (Master Data Services))。  
+8.  (選擇性) 清除 [強制階層]  核取方塊，將階層建立為非強制階層。 如需階層類型的詳細資訊，請參閱 [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)(管理員 (Master Data Services))。  
   
 9. 按一下 **儲存階層**。  
   

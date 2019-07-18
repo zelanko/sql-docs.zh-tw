@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 206a0fe9ae945267483cf7ee2ccec08eda2696c2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058868"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration assistant
 

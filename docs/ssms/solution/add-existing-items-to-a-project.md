@@ -11,15 +11,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], item additions
 - adding project items
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db4a09177a9af1afa73fadfbf585f5b9e0f0b8ab
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: c2335e08703b54752648c36486bbe17a78a71e83
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397517"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683150"
 ---
 # <a name="add-existing-items-to-a-project"></a>將現有的項目加入至專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "54397517"
   
 1.  在 [方案總管] 中，選取一個目標專案。  
   
-2.  在 [專案] 功能表上，按一下 [新增現有項目]。  
+2.  在 [專案]  功能表上，按一下 [新增現有項目]  。  
   
     **Look in**  
     從此清單中找出要加入專案的檔案或資料夾。 針對 XML Web 服務和 ASP.NET Web 應用程式，這些檔案是位於 Web 伺服器上。  
@@ -38,16 +38,16 @@ ms.locfileid: "54397517"
     顯示位於桌面上的檔案和資料夾。  
   
     **我的專案**  
-    顯示位於預設 [我的專案] 位置處的檔案和資料夾。  
+    顯示位於預設 [我的專案]  位置處的檔案和資料夾。  
   
     **我的電腦**  
-    顯示 [我的電腦] 資料夾的內容。  
+    顯示 [我的電腦]  資料夾的內容。  
   
     **檔案名稱**  
     使用此選項來篩選所顯示的檔案和資料夾。 輸入要篩選的完整或部份檔案名稱；使用星號 (`*`) 作為萬用字元。  
   
     > [!NOTE]  
-    > 在 [檔案名稱] 方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如，**`https://mywebsite`** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
+    > 在 [檔案名稱]  方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如， **`https://mywebsite`** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
   
     **檔案類型**  
     使用此選項根據副檔名篩選檔案。 每個產品都會列出最常用之檔案類型的預設篩選。  
@@ -63,9 +63,9 @@ ms.locfileid: "54397517"
   
         將選取的檔案加入專案中並以該檔案類型的預設編輯器開啟它。 此選項會開啟原始選取的檔案，但不會將檔案複製到專案資料夾。  
   
-3.  如果您要加入查詢檔，連接對話方塊會提示您指定查詢的連接。 如果不要將連接關聯於這項查詢，您可以在連接對話中，按一下 [取消]。  
+3.  如果您要加入查詢檔，連接對話方塊會提示您指定查詢的連接。 如果不要將連接關聯於這項查詢，您可以在連接對話中，按一下 [取消]  。  
   
-4.  此時檔案會加入專案的 [查詢] 或 [其他檔案] 資料夾中。  
+4.  此時檔案會加入專案的 [查詢]  或 [其他檔案]  資料夾中。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

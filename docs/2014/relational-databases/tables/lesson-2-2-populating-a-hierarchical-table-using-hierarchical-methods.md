@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - HierarchyID
@@ -15,12 +14,12 @@ ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058041"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110055"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用階層式方法擴展階層式資料表
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 行銷部門有 8 名員工。 員工層級如下：  

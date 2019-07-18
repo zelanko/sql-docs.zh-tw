@@ -13,14 +13,18 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 665e813c6315b292bfc7c2471fd16bf8cef16e36
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a8a17490da94d7ef608ebc553770021d064b2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65729226"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 **[專案版本]** 對話方塊檢視專案版本，以及還原舊版。  
   
  您也可以在 [catalog.object_versions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md) 檢視中檢視舊版，並使用 [catalog.restore_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) 預存程序還原舊版。  
@@ -43,11 +47,11 @@ ms.locfileid: "58281512"
   
 4.  **[SSISDB]** 節點包含一個或多個資料夾，且每個資料夾包含一個或多個專案。 展開包含您感興趣之專案的資料夾。  
   
-5.  以滑鼠右鍵按一下專案，然後按一下 [版本]。  
+5.  以滑鼠右鍵按一下專案，然後按一下 [版本]  。  
   
- 在 [專案版本] 對話方塊中，[版本] 資料表會顯示已經在伺服器上部署之專案版本的清單、版本部署的日期和時間、版本還原的日期和時間 (如果已還原)、版本描述，以及版本識別碼。 目前使用中的版本會以資料表之 **[目前]** 資料行中的核取記號表示。  
+ 在 [專案版本]  對話方塊中，[版本]  資料表會顯示已經在伺服器上部署之專案版本的清單、版本部署的日期和時間、版本還原的日期和時間 (如果已還原)、版本描述，以及版本識別碼。 目前使用中的版本會以資料表之 **[目前]** 資料行中的核取記號表示。  
   
 ##  <a name="restore"></a> 還原專案版本  
- 若要還原舊版專案，請在 **[版本]** 資料表中選取版本，然後按一下 **[還原至選取的版本]**。 專案便會還原到選取的版本，而且該版本會以 **[版本]** 資料表之 **[目前]** 資料行中的核取記號表示。  
+ 若要還原舊版專案，請在 **[版本]** 資料表中選取版本，然後按一下 **[還原至選取的版本]** 。 專案便會還原到選取的版本，而且該版本會以 **[版本]** 資料表之 **[目前]** 資料行中的核取記號表示。  
   
   

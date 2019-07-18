@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118611"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 函數 (英文)
 **合規性**  
@@ -38,7 +37,7 @@ ms.locfileid: "53215597"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   
 BOOL SQLConfigDataSource(  
      HWND     hwndParent,  
@@ -51,7 +50,7 @@ BOOL SQLConfigDataSource(
  *hwndParent*  
  [輸入]父視窗控制代碼。 如果控制代碼為 null，函式不會顯示任何對話方塊。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
  ODBC_ADD_DSN:加入新的使用者資料來源。  
@@ -98,7 +97,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource**對應系統 DSN*常見*至 使用者 DSN*常見*s (ODBC_ADD_SYS_DSN 至 ODBC_ADD_DSN、 ODBC_CONFIG_DSN，和 ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSNDSN 來 ODBC_REMOVE_DSN)。 為了區分使用者與系統 Dsn **SQLConfigDataSource**設定安裝程式，根據下表的組態模式。 傳回前, **SQLConfigDataSource**將組態模式重設 BOTHDSN。 **ConfigDSN** （實作驅動程式） 應該呼叫**SQLWriteDSNToIni**並**SQLWritePrivateProfileString**支援系統 DSN。 如需詳細資訊，請參閱 < [ConfigDSN 函式](../../../odbc/reference/syntax/configdsn-function.md)。  
   
-|*常見*|設定模式|  
+|*fRequest*|設定模式|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  

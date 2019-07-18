@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-validation
@@ -15,12 +14,12 @@ ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086644"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉驗證 (SQL Server 資料採礦增益集)
   ![交叉驗證 按鈕，資料採礦功能區](media/dmc-xvalid.gif "交叉驗證 按鈕，資料採礦功能區")  
@@ -63,7 +62,7 @@ ms.locfileid: "48171748"
   
      如果可預測的資料行包含連續數值資料，就無法使用此選項。  
   
-8.  按一下 **[完成]**。 建立新的工作表時，名為**k-fold Cross-validation**。  
+8.  按一下 **[完成]** 。 建立新的工作表時，名為**k-fold Cross-validation**。  
   
     > [!NOTE]  
     >  當系統正在將模型分割為折疊，而且每個折疊都在進行測試時，Microsoft Excel 可能會暫時變成沒有回應。  
@@ -76,7 +75,7 @@ ms.locfileid: "48171748"
  如果您選擇同時支援群集模型和其他種類模型的結構，將不會測試群集模型。  
   
 ## <a name="understanding-cross-validation-results"></a>了解交叉驗證結果  
- 交叉驗證的結果會顯示在標題為新工作表**交叉驗證報表，以便\<屬性名稱 >**。 新的工作表包含數個區段：第一個區段是摘要，提供關於經過測試之模型的重要中繼資料，讓您知道這是哪個模型或結構的結果。  
+ 交叉驗證的結果會顯示在標題為新工作表**交叉驗證報表，以便\<屬性名稱 >** 。 新的工作表包含數個區段：第一個區段是摘要，提供關於經過測試之模型的重要中繼資料，讓您知道這是哪個模型或結構的結果。  
   
  報表中的第二個區段提供統計摘要，表示原始模型的良好程度。 在此摘要中，針對每個折疊所建立的模型之間的差異分析以找出三個重要的量值：*均方根誤差*，*平均絕對誤差*，和*對數分數*. 這些是標準的統計量值，不但可用於資料採礦，而且也可以用於大部分類型的統計分析。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "48171748"
   
  通過/失敗的計算方式是符合下列條件的案例計數：**傳遞**如果具有最高機率的預測的狀態與輸入狀態相同且機率大於您為指定的值**狀態臨界值**，否則**失敗**。  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>分類：真肯定和真否定或誤判和誤否定  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>分類：True 或 False 的肯定和否定  
  此測試用於具有指定之目標的所有分類模型。 量值表示每個案例對於下列問題的回應如何進行分類：模型在預測什麼，以及實際的結果是什麼。  
   
 |[量值]|描述|  

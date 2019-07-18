@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196680"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
   UNIQUE 和 CHECK 是兩種類型的條件約束，可用來強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  

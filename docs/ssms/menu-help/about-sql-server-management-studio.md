@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae5dd450183648335f4702bad49849071d4426bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 05bfbddc135868644af2f624492d7c646fc3819d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723776"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684839"
 ---
 # <a name="about-sql-server-management-studio"></a>關於 SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

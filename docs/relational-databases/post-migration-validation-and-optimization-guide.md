@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206364"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860494"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 
@@ -53,7 +53,7 @@ ms.locfileid: "54206364"
 **適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
-> 針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，則依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
+> 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 透過在第一次編譯時使用探查輸入參數來編譯預存程序的查詢計劃，產生已針對該輸入資料分佈進行最佳化的參數化和可重複使用的計畫。 即使不是預存程序，也會將產生簡單計劃的大部分陳述式進行參數化。 第一次快取計劃之後，日後的每次執行都會對應至先前快取的計劃。
 第一次編譯時若未對一般工作負載使用最常見的參數集，就會引發潛在問題。 對於不同的參數，使用相同的執行計畫會變成效率不佳。 如需本主題的詳細資訊，請參閱[參數探測](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
@@ -108,6 +108,9 @@ ms.locfileid: "54206364"
   -   這可能涉及將資料庫所儲存的任何使用者定義程式碼建構 (例如預存程序、使用者定義函數或檢視表)，與保存基礎表格所用資料類型相關資訊的系統資料表 (例如 [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)) 進行比較。
 2. 如果無法周遊所有程式碼到上一個點，則基於相同目的，請變更資料表的資料類型以符合任何變數/參數宣告。
 3. 推斷出下列結構的效益：
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   作為述詞使用的函數；
   -   萬用字元搜尋；
   -   根據單欄式資料的複雜運算式 - 評估是否需要改為建立可建立索引的保存計算資料行；

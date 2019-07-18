@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6abe725d180b36de3eeea53c59666da1322214bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033540"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  這是要卸除的遠端服務繫結名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  卸除遠端服務繫結的權限預設為遠端服務繫結的擁有者、db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL： 二進位 |Microsoft Docs
+title: C 轉換為 SQL：二進位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7220497bfac2b74e933595cb7debfd35b98fc07b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037736"
 ---
-# <a name="c-to-sql-binary"></a>C 到 SQL：二進位
+# <a name="c-to-sql-binary"></a>C 轉換為 SQL：二進位
 二進位的 ODBC C 資料類型的識別項是：  
   
  SQL_C_BINARY  

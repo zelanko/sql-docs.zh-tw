@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022148"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 應用程式會呼叫**SQLGetDiagRec**或是**SQLGetDiagField**擷取診斷資訊。 這些函式接受環境、 連接、 陳述式或描述元控制代碼，並從上一次使用該控制代碼的函式會傳回診斷。 新的函式呼叫使用該控制代碼時，診斷登入特定的控制代碼都會被捨棄。 如果函式傳回多個診斷記錄，應用程式會呼叫這些函式多次;狀態記錄的總數會擷取藉由呼叫**SQLGetDiagField** SQL_DIAG_NUMBER 選項標頭記錄 （記錄 0）。  

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768888"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>執行計劃和緩衝區配置
   在執行之前，資料流程工作會檢查其元件並為元件的每個順序產生執行計劃。 本節提供有關執行計劃的詳細資料、如何檢視計劃以及輸入與輸出緩衝區如何根據執行計劃配置。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, running
@@ -13,12 +12,12 @@ ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cc8ae36dbcc728062e2074d715673a39f95e1d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073043"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
   當您使用「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈」來部署 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，可依下列方式執行此精靈：  
@@ -37,14 +36,14 @@ ms.locfileid: "52535042"
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>以互動方式執行 Analysis Services 部署精靈  
   
--   按一下 **[開始]** 功能表，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[Analysis Services]**，然後按一下 **[部署精靈]**。  
+-   按一下 **[開始]** 功能表，依序指向 **[所有程式]** 、 **[Microsoft SQL Server]** 和 **[Analysis Services]** ，然後按一下 **[部署精靈]** 。  
   
      -或-  
   
--   在 **專案**的資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下*\<專案名稱 >*.asdatabase 檔案。  
+-   在 **專案**的資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下 *\<專案名稱 >* .asdatabase 檔案。  
   
     > [!NOTE]  
-    >  如果找不到*\<專案名稱 >*.asdatabase 檔案，請嘗試使用搜尋，並指定 *.asdatabase。  
+    >  如果找不到 *\<專案名稱 >* .asdatabase 檔案，請嘗試使用搜尋，並指定 *.asdatabase。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示字元下執行 Analysis Services 部署精靈  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈也可以在命令提示字元下執行。 當您在命令提示字元中執行精靈時，請提供 .asdatabase 檔案的完整路徑，並在下列其中一個模式下執行精靈：  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178970"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "52529113"
 |---------------------------------|-----------------|  
 |BigInt|64 位元帶正負號的整數。 這個資料類型會對應至 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int64 資料類型和 OLE DB 內部的 DBTYPE_I8 資料類型。|  
 |Bool|布林值 (Boolean)。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Boolean 資料類型和 OLE DB 內部的 DBTYPE_BOOL 資料類型。|  
-|CURRENCY|貨幣值，範圍從 -263 (或 -922,337,203,685,477.5808) 到 263-1 (或 +922,337,203,685,477.5807)，正確率為貨幣單位的千分之十。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Decimal 資料類型和 OLE DB 內部的 DBTYPE_CY 資料類型。|  
-|date|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
+|Currency|貨幣值，範圍從 -263 (或 -922,337,203,685,477.5808) 到 263-1 (或 +922,337,203,685,477.5807)，正確率為貨幣單位的千分之十。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Decimal 資料類型和 OLE DB 內部的 DBTYPE_CY 資料類型。|  
+|Date|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
 |Double|在 -1.79E +308 到 1.79E +308 範圍中的雙精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Double 資料類型和 OLE DB 內部的 DBTYPE_R8 資料類型。|  
 |Integer|32 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int32 資料類型和 OLE DB 內部的 DBTYPE_I4 資料類型。|  
 |Single|在 -3.40E +38 到 3.40E +38 範圍中的單精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Single 資料類型和 OLE DB 內部的 DBTYPE_R4 資料類型。|  
 |SmallInt|16 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int16 資料類型和 OLE DB 內部的 DBTYPE_I2 資料類型。|  
-|TinyInt|8 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 SByte 資料類型和 OLE DB 內部的 DBTYPE_I1 資料類型。<br /><br /> 注意：如果資料來源包含屬於 Tinyint 資料類型的欄位，且 AutoIncrement 屬性設為 True，則它們會在資料來源檢視中轉換為整數。|  
+|TinyInt|8 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 SByte 資料類型和 OLE DB 內部的 DBTYPE_I1 資料類型。<br /><br /> 注意:如果資料來源包含屬於 tinyint 資料類型欄位，且 AutoIncrement 屬性設為 True，則它們會轉換為資料來源檢視中的整數。|  
 |UnsignedBigInt|64 位元不帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 UInt64 資料類型和 OLE DB 內部的 DBTYPE_UI8 資料類型。|  
 |UnsignedInt|32 位元不帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 UInt32 資料類型和 OLE DB 內部的 DBTYPE_UI4 資料類型。|  
 |UnsignedSmallInt|16 位元不帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 UInt16 資料類型和 OLE DB 內部的 DBTYPE_UI2 資料類型。|  
@@ -61,7 +61,7 @@ ms.locfileid: "52529113"
   
 -   每一個量值都會繫結至該資料表中的資料行 (例如 **Measure.ValueColumn.Source**)。  
   
--   每一個量值群組維度都有一組「資料粒度屬性」可定義此量值群組的資料粒度。 每一個屬性都必須繫結至包含此屬性索引鍵之事實資料表中的一或多個資料行  (如需有關資料粒度屬性的詳細資訊，請參閱本主題稍後的「量值群組資料粒度屬性」)。  
+-   每一個量值群組維度都有一組「資料粒度屬性」  可定義此量值群組的資料粒度。 每一個屬性都必須繫結至包含此屬性索引鍵之事實資料表中的一或多個資料行 (如需有關資料粒度屬性的詳細資訊，請參閱本主題稍後的「量值群組資料粒度屬性」)。  
   
  可以根據資料分割選擇性地覆寫這些預設繫結。 每一個資料分割都可以指定不同的資料來源、資料表或查詢名稱，或是篩選運算式。 最常見的資料分割策略是使用相同的資料來源，根據資料分割覆寫資料表。 替代方式包括根據資料分割套用不同的篩選，或是變更資料來源。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "52529113"
   
 -   每一個非巢狀資料表資料行都會繫結至案例資料表上或與案例資料表相關之資料表上的資料行 (遵循多對一或一對一關聯性)。 DSV 會定義資料表之間的關聯性。  
   
--   每個巢狀資料表資料行都會繫結至來源資料表。 這些資料行會由巢狀資料表資料行所擁有，然後繫結至該來源資料表上或與來源資料表相關之資料表上的資料行  (此繫結同樣會遵循多對一或一對一關聯性)。採礦模型繫結不會提供巢狀資料表的聯結路徑。 但是，DSV 中定義的關聯性會提供這項資訊。  
+-   每個巢狀資料表資料行都會繫結至來源資料表。 這些資料行會由巢狀資料表資料行所擁有，然後繫結至該來源資料表上或與來源資料表相關之資料表上的資料行 (此繫結同樣會遵循多對一或一對一關聯性)。採礦模型繫結不會提供巢狀資料表的聯結路徑。 但是，DSV 中定義的關聯性會提供這項資訊。  
   
 ### <a name="bindings-for-an-olap-mining-model"></a>OLAP 採礦模型的繫結  
  OLAP 採礦模型沒有與 DSV 同等的項目。 因此，資料繫結必須提供資料行與資料來源之間的任何去除混淆內容。 例如，採礦模型可以根據 Sales Cube，而資料行可以根據 Qty、Amount 和 Product Name。 另外，採礦模型也可以根據 Product，而資料行可以根據 Product Name、Product Color 和具有 Sales Qty 的巢狀資料表。  
@@ -145,7 +145,7 @@ ms.locfileid: "52529113"
   
  非正規繫結的指定方式，是使用處理命令來包含選擇性 **Bindings** 集合物件。 選擇性 **Bindings** 集合包含下列元素。  
   
-|屬性|基數|類型|描述|  
+|屬性|基數|type|描述|  
 |--------------|-----------------|----------|-----------------|  
 |**繫結**|0-n|**繫結**|提供新繫結的集合。|  
 |**DataSource**|0-1|**DataSource**|取代原本會使用之伺服器中的 **DataSource** 。|  

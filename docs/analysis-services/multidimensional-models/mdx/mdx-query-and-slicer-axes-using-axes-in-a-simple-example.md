@@ -1,5 +1,5 @@
 ---
-title: 在簡單的範例 (MDX) 中使用查詢及 Slicer 軸 |Microsoft 文件
+title: 使用簡單的範例 (MDX) 中的查詢與交叉分析篩選器軸 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fce95d7e51c17f6e8a0fedbec01eccf7bd8ec8c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165829"
 ---
-# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 查詢及 Slicer 軸的簡單範例中使用軸
+# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 查詢與交叉分析篩選器軸 - 在簡單的範例中使用軸
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   本主題中的簡單範例說明指定和使用查詢及 Slicer 軸的基本知識。  
   
@@ -45,7 +45,7 @@ WHERE ( [Measures].[Packages] )
 |2nd quarter|45|45|  
   
 ## <a name="see-also"></a>另請參閱  
- [指定查詢座標軸 & #40; 的內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [指定 Slicer 軸 & #40; 的內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定查詢座標軸的內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [指定 Slicer 軸的內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

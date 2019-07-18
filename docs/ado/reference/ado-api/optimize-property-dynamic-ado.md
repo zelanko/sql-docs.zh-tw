@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931856"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 動態屬性 (ADO)
 指定是否應該在建立索引[欄位](../../../ado/reference/ado-api/field-object.md)。  
@@ -34,7 +33,7 @@ ms.locfileid: "47662276"
   
  **最佳化**動態屬性附加至[欄位](../../../ado/reference/ado-api/field-object.md)物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合時[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
   
 ```  
 Dim rs As New Recordset  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62699004"
 ---
 # <a name="audit-database-object-access-event-class"></a>稽核資料庫物件存取事件類別
   存取資料庫物件 (例如：結構描述) 時，會發生 **Audit Database Object Access** 事件類別。  

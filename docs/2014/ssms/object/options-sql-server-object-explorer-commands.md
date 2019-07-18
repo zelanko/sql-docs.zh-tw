@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999300"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>選項 （SQL Server 物件總管-命令）
   當您以滑鼠右鍵按一下 [物件總管] 中的資料表或檢視時，即會出現可用來顯示資料表資料列的以下兩個選項：  
@@ -30,7 +30,7 @@ ms.locfileid: "52772730"
   
      在 Visual Database Tools 中開啟已填入 200 個資料列的資料表。  
   
- 使用 [一般指令碼選項] 對話方塊，以變更將會開啟的資料列數目。  
+ 使用 [一般指令碼選項]  對話方塊，以變更將會開啟的資料列數目。  
   
 ## <a name="general-scripting-options"></a>一般指令碼選項  
  **選取 [Top 值\<n > 筆稽核記錄] 命令**  

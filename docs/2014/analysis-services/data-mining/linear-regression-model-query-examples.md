@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084303"
 ---
 # <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，內容查詢可能會提供有關迴歸公式的其他詳細資料，而預測查詢則會告訴您新資料點是否符合模型。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -45,11 +44,11 @@ ms.locfileid: "48201008"
  [搭配迴歸模型使用預測函數](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> 尋找有關線性迴歸模型的資訊  
- 線性迴歸模型的結構相當簡單：採礦模型將資料表示為定義迴歸公式的單一節點。 如需詳細資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)。  
+ 線性迴歸模型的結構相當簡單：採礦模型將資料表示為定義迴歸公式的單一節點。 如需詳細資訊，請參閱 [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)。  
   
  [回頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> 範例查詢 1：使用資料採礦結構描述資料列集來判斷用於模型的參數  
+###  <a name="bkmk_Query1"></a> 範例查詢 1:使用資料採礦結構描述資料列集來判斷用於模型的參數  
  您可以查詢資料採礦結構描述資料列集來尋找有關模型的中繼資料。 這可能包括建立模型的時間、上次處理模型的時間、模型所依據之採礦結構的名稱，以及指定為可預測屬性之資料行的名稱。 您也可以傳回初次建立此模型時所使用的參數。  
   
 ```  
@@ -69,10 +68,10 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [回頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> 範例查詢 2：擷取模型的迴歸公式  
+###  <a name="bkmk_Query2"></a> 範例查詢 2:擷取模型的迴歸公式  
  下列查詢會針對利用＜ [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)＞中所使用之相同目標郵寄資料來源所建立的線性迴歸模型，傳回採礦模型內容。 此模型會根據年齡預測客戶收入。  
   
- 查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 **(All)** 節點，然後開啟 **[採礦圖例]**。  
+ 查詢會傳回包含迴歸公式之節點的內容。 每個變數和係數都儲存在 NODE_DISTRIBUTION 資料表的個別資料列中。 如果您要檢視完整的迴歸公式，使用 [Microsoft 樹狀檢視器](browse-a-model-using-the-microsoft-tree-viewer.md)，按一下 **(All)** 節點，然後開啟 **[採礦圖例]** 。  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -113,11 +112,11 @@ FROM LR_PredictIncome.CONTENT
 |9 (統計資料)|  
 |11 (截距)|  
   
- 迴歸模型每個值類型的意義的相關資訊，請參閱[Mining Model Content for Linear Regression Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 如需迴歸模型每個值類型之意義的詳細資訊，請參閱 [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
  [回頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> 範例查詢 3：僅傳回模型的係數  
+###  <a name="bkmk_Query3"></a> 範例查詢 3:僅傳回係數模型  
  您可以使用 VALUETYPE 列舉，僅傳回迴歸方程式的係數，如以下查詢所示：  
   
 ```  
@@ -146,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
   
  [回頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> 範例查詢 4：使用單一查詢預測收入  
+###  <a name="bkmk_Query4"></a> 範例查詢 4:使用單一查詢預測成果  
  在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 例如，您可以建置下列 DMX 查詢，藉由選取適當的迴歸模型中，選擇**單一查詢**，然後輸入`20`做為值**年齡**。  
   
 ```  
@@ -164,7 +163,7 @@ NATURAL PREDICTION JOIN
   
  [回頁首](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> 範例查詢 5：搭配迴歸模型使用預測函數  
+###  <a name="bkmk_Query5"></a> 範例查詢 5:搭配迴歸模型使用預測函數  
  您可以搭配線性迴歸模型使用多個標準的預測函數。 下列範例說明如何將一些敘述性的統計資料加入到預測查詢結果中。 從這些結果中您可以發現，這與此模型的平均值有相當大的偏差。  
   
 ```  
@@ -190,7 +189,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|預測函數|使用方式|  
+|預測函數|使用量|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回指定之資料行的一個或一組預測值。|  
@@ -205,6 +204,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 線性迴歸演算法](microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [線性迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

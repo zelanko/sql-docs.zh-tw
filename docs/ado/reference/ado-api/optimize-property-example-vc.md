@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931832"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 屬性範例 (VC++)
 此範例示範[欄位](../../../ado/reference/ado-api/field-object.md)物件的動態**最佳化**屬性。 **Zip**欄位**作者**資料表中**Pubs**資料庫未編製索引。 設定[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性設 **，則為 True**上**zip**欄位會授與建立索引可提升效能的 ADO[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

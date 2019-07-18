@@ -2,19 +2,18 @@
 title: 以系統管理員主控台-分析平台系統監視 |Microsoft Docs
 description: Analytics Platform System，系統管理員主控台是呈現應用裝置狀態、 健全狀況和效能資訊的 web 應用程式。 使用者連線到系統管理員主控台，透過網際網路瀏覽器。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960482"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>監視與系統管理員主控台-Analytics Platform System appliance
 系統管理員主控台是呈現應用裝置狀態、 健全狀況和效能資訊的 SQL Server PDW web 應用程式。 使用者連線到透過 Internet Explorer 的系統管理員主控台。  
@@ -58,7 +57,7 @@ Backups/Restores
 資源  
 會顯示一份 PDW 資源鎖定和其目前的狀態。  
   
-Storage  
+儲存體  
 摘要說明的 PDW 儲存體使用率。  
   
 效能監視  

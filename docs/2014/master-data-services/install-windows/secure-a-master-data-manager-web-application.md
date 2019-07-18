@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a851e7fe24def1b3853590360047ed753a8cdd20
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479349"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
   您可以使用 HTTPS 保護 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。  
@@ -34,24 +34,24 @@ ms.locfileid: "53354088"
   
 1.  在確認 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式已經使用 HTTP 正確設定之後，在 IIS 中建立憑證。 如需詳細資訊，請參閱[在 IIS 7 中設定伺服器憑證](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx)。  
   
-2.  在 [連接] 窗格中，按一下 [網站] 底下主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的網站。  
+2.  在 [連接]  窗格中，按一下 [網站]  底下主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的網站。  
   
-3.  在 [動作] 窗格中，按一下 [繫結]。  
+3.  在 [動作]  窗格中，按一下 [繫結]  。  
   
-4.  按一下 **[加入]**。  
+4.  按一下 **[加入]** 。  
   
-5.  從清單中選取 [https]。  
+5.  從清單中選取 [https]  。  
   
 6.  選取 SSL 憑證。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
-8.  選擇性。 若要移除 HTTP，讓使用者只能使用 HTTPS 存取網站，請從清單中按一下含有 **http** 的資料列。 按一下 [移除]，然後在確認對話方塊中按一下 [是]。  
+8.  選擇性。 若要移除 HTTP，讓使用者只能使用 HTTPS 存取網站，請從清單中按一下含有 **http** 的資料列。 按一下 [移除]  ，然後在確認對話方塊中按一下 [是]  。  
   
     > [!IMPORTANT]  
     >  在移除 HTTP 之後，您必須變更 basicHttp 和 wsHttpBinding 組態。  
   
-9. 若要關閉 [網站繫結] 對話方塊，請按一下 [關閉]。  
+9. 若要關閉 [網站繫結]  對話方塊，請按一下 [關閉]  。  
   
 10. 現在開啟 web.config 檔案，從*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication。  
   

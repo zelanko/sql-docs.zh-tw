@@ -1,32 +1,20 @@
 ---
 title: 報表管理員 （SSRS 原生模式） |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568380"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>報表管理員 (SSRS 原生模式)
   「報表管理員」是 Web 架構的報表存取與管理工具，用來從遠端位置透過 HTTP 連線管理單一報表伺服器執行個體。 您也可以使用報表管理員的報表檢視器和導覽功能。 本主題內容：  
@@ -109,17 +97,15 @@ ms.locfileid: "56289009"
 |![資料夾圖示](media/hlp-16folder.gif "資料夾圖示")|資料夾|按一下資料夾圖示或名稱來開啟資料夾。|  
 |![訂閱圖示](media/hlp-16subscription.gif "訂用帳戶圖示")|訂閱|按一下訂閱圖示或描述來編輯訂閱。|  
 |![資料驅動訂閱圖示](media/hlp-16subscriptiondd.gif "資料驅動訂閱圖示")|資料驅動訂閱|按一下資料驅動訂閱圖示或描述來編輯訂閱。|  
-|![一般資源圖示](media/hlp-16file.gif "一般資源圖示")|資源|按一下資源圖示或名稱來開啟資源。 資源會在個別視窗中開啟。|  
+|![一般資源圖示](media/hlp-16file.gif "一般資源圖示")|Resource|按一下資源圖示或名稱來開啟資源。 資源會在個別視窗中開啟。|  
 |![共用資料來源圖示](media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源項目|按一下共用資料來源圖，來開啟資料來源的屬性頁面、報表清單和訂閱清單。|  
 |![屬性頁面圖示](media/hlp-16prop.gif "屬性頁面圖示")|屬性頁面|按一下屬性圖示來存取其他頁面，以設定屬性和安全性。|  
   
-## <a name="see-also"></a>另請參閱  
- [設定 URL &#40;SSRS 組態管理員&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [報表產生器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Reporting Services 工具](tools/reporting-services-tools.md)   
- [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [檢視及瀏覽原生模式報表使用 SharePoint Web 組件&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+- [設定 URL &#40;SSRS 組態管理員&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [報表產生器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Reporting Services 工具](tools/reporting-services-tools.md)
+- [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)  
+[報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)

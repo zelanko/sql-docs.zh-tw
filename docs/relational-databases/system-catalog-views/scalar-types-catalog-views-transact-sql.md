@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c35cb96241e9883558daaa87c82946f64e5a8ea8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b73a3de04b90a91cb66d060c6559088a7d0e8855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018350"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>純量類型目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,16 +17,15 @@ helpviewer_keywords:
 - database_usage
 - sys.database_usage
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d64f3e03db3eaf12755eb36d41814d4548a2ae52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079404"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

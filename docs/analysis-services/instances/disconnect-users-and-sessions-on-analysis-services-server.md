@@ -1,6 +1,6 @@
 ---
 title: 中斷連接的使用者和工作階段上 Analysis Services 伺服器 |Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 07/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 696c6548dadda2412566acf7fae1e2cff2b28095
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144767"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624385"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>中斷 Analysis Services 伺服器上的使用者和工作階段連接
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的管理員在執行工作負載管理時，可以選擇結束使用者活動。 方法是您可以取消工作階段和連接來達成此目的。 工作階段可在查詢執行時自動形成 (隱含)，或在管理員建立時加以命名 (明確)。 連接就像開啟的導管，可在上面執行查詢。 使用中的工作階段和連接都可以結束。 例如，處理時間如果太長，或對於執行的命令是否撰寫正確有疑問時，管理員可以結束工作階段的處理。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+  身為管理員，您可能想要工作負載管理時結束使用者活動。 方法是您可以取消工作階段和連接來達成此目的。 工作階段可在查詢執行時自動形成 (隱含)，或在管理員建立時加以命名 (明確)。 連接就像開啟的導管，可在上面執行查詢。 使用中的工作階段和連接都可以結束。 例如，您可能要結束處理程序的時間太長，則有疑問並正在執行的命令是否撰寫正確處理工作階段。  
   
 ## <a name="ending-sessions-and-connections"></a>結束工作階段和連接  
- 若要管理工作階段和連接，您可以使用動態管理檢視 (DMV) 和 XMLA：  
+ 若要管理工作階段和連接，請使用動態管理檢視 (Dmv) 和 XMLA:  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 Analysis Services 執行個體。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50144767"
   
      `Select * from $System.Discover_Sessions`  
   
-     `Select * from $System.Discover_Connections`  
+     `Select * from $System.Discover_Connections`  （此查詢不適用於 Azure Analysis Services）
   
      `Select * from $System.Discover_Commands`  
   
@@ -56,16 +56,10 @@ ms.locfileid: "50144767"
     ```  
   
 2.  按 F5 執行取消命令。  
+
+取消 SPID/SessionID，將會取消任何作用中命令對應到 SPID/工作階段識別碼的工作階段上執行。 正在取消連接後，會識別與連線相關聯的工作階段，並取消任何作用中的命令，在該工作階段上執行。 在罕見的情況下，不會關閉連線如果引擎無法追蹤所有工作階段與連接相關聯的 Spid比方說，當多個工作階段會開啟一個 HTTP 狀況中。   
   
- 結束連接會取消所有工作階段與 SPID，並關閉主機工作階段。  
-  
- 結束工作階段會停止當做該工作階段一部分執行的所有命令 (SPID)。  
-  
- 結束 SPID 會取消一個特定命令。  
-  
- 在罕見的情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 若無法追蹤與連接相關聯的所有工作階段和 SPID，則不會關閉連接 (例如，當某個 HTTP 案例中開啟了多個工作階段時)。  
-  
- 如需本主題中所參考之 XMLA 的詳細資訊，請參閱 [Execute 方法 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 和 [Cancel 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)。  
+若要深入了解本主題中所參考之 XMLA，請參閱[Execute Method &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)並[Cancel 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理連接與工作階段 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

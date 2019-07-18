@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207088"
 ---
 # <a name="handling-errors-and-messages"></a>處理錯誤與訊息
   當應用程式呼叫 ODBC 函數時，驅動程式就會執行函式，並傳回診斷資訊有兩種：傳回碼指出整體成功或失敗的 ODBC 函式，以及診斷記錄會提供有關函數的詳細的資訊。 診斷記錄包含標頭記錄和狀態記錄。 即使函數成功，也會傳回至少一個診斷記錄，也就是標頭記錄。  

@@ -3,19 +3,18 @@ title: 適用於 SQL Server 容器的高可用性
 description: 本文將介紹適用於 SQL Server 容器的高可用性
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: aa54849c16ea9dfb821404b553b1e9183b61d66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077483"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>適用於 SQL Server 容器的高可用性
 

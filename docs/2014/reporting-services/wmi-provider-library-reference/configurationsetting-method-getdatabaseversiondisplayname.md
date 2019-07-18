@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8777faa32fd31bb31a161f8e4bcb6c297ff2c4b9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098412"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName 方法 (WMI)
   取得給定報表伺服器資料庫版本字串的顯示名稱。  

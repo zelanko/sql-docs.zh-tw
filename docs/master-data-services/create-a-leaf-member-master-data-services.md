@@ -12,15 +12,14 @@ helpviewer_keywords:
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ffc3b726b0143b67a4991b8c22486259865ed804
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906738"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "52822052"
   
  您也可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 匯入資料。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -43,15 +42,15 @@ ms.locfileid: "52822052"
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
   
-2.  如果您是使用者，請從 [版本] 清單中選取開啟的版本。 如果您是系統管理員，請從 [版本] 清單中選取狀態為開啟或鎖定的版本。  
+2.  如果您是使用者，請從 [版本]  清單中選取開啟的版本。 如果您是系統管理員，請從 [版本]  清單中選取狀態為開啟或鎖定的版本。  
   
-3.  按一下 **[總管]**。  
+3.  按一下 **[總管]** 。  
   
-4.  從功能表列指向 [實體]，然後按一下要新增成員的實體名稱。  
+4.  從功能表列指向 [實體]  ，然後按一下要新增成員的實體名稱。  
   
-5.  按一下 [加入成員]。  
+5.  按一下 [加入成員]  。  
   
-6.  填妥 [詳細資料] 窗格中的欄位。  
+6.  填妥 [詳細資料]  窗格中的欄位。  
   
      如為網域型屬性，且屬性已套用篩選，則篩選父屬性就會限制屬性值清單。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "52822052"
   
 7.  選擇性。 在 **[註解]** 方塊中，輸入有關加入此成員之原因的註解。 可存取成員的所有使用者都可以檢視註解。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立合併成員 &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   

@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f80d1dc8540c2305811d249a7e537972b6ad4e38
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b1382b8922e863607f519d8b71b6bedecaa6a775
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731914"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 屬性 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  您可以使用 [MSSQLSERVER 屬性] 對話方塊的 [服務] 索引標籤來檢視或指定下列選項。  
+  您可以使用 [MSSQLSERVER 屬性]  對話方塊的 [服務]  索引標籤來檢視或指定下列選項。  
   
 ## <a name="options"></a>選項。  
  **二進位路徑**  
@@ -55,6 +55,6 @@ ms.locfileid: "52543718"
 -   停用：這項服務無法啟動。  
   
  **State**  
- 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 " **...** " 表示狀態變更已暫止。  
   
   

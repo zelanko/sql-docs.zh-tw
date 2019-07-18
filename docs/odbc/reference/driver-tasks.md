@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee695c62fc60b2ebb0ae9bb33ef9008ba617b49a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915464"
 ---
 # <a name="driver-tasks"></a>驅動程式工作
 特定驅動程式所執行的工作包括：  

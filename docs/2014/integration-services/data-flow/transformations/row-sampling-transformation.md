@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770389"
 ---
 # <a name="row-sampling-transformation"></a>資料列取樣轉換
   「資料列取樣」轉換是用來取得隨機選取的輸入資料集子集。 您可以指定輸出範例的確實大小，以及指定隨機號碼產生器的種子資料 (Seed)。  
@@ -47,7 +47,7 @@ ms.locfileid: "58391236"
   
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [資料列取樣轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請參閱[資料列取樣轉換編輯器 &#40;取樣頁面&#41;](../../row-sampling-transformation-editor-sampling-page.md)。  
+ 如需可在 [資料列取樣轉換編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱[資料列取樣轉換編輯器 &#40;取樣頁面&#41;](../../row-sampling-transformation-editor-sampling-page.md)。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

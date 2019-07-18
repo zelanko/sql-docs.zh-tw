@@ -18,16 +18,16 @@ helpviewer_keywords:
 - ignored statements
 - BREAK keyword
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162866b5200a3c9a24f313e61a9e2dcc4efa689c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 1a12e02202211060bba006d5ec39f4a27136bc07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65982709"
 ---
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

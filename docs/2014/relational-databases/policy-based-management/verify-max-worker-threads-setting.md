@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 861e24cf64a29d55a01fc9a10300e4174cd76d5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676963"
 ---
 # <a name="verify-max-worker-threads-setting"></a>確認最大工作者執行緒設定
   此規則會檢查 max worker threads server 選項中是否可能有不正確的設定。 將 max worker threads 選項設定為很小的值可能會阻礙足夠的執行緒及時服務內送用戶端要求，而且可能會導致執行緒資源用盡。 但是，將此選項設定為較大的值可能會浪費位址空間，因為每一個使用中執行緒都會在 32 位元伺服器上耗用 512 KB 空間，並在 64 位元伺服器上最多耗用 4 MB 空間。  

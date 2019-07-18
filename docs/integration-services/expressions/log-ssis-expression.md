@@ -14,14 +14,18 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d59d1ecc0f250d19196a356f77ecae00b097fdd9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77e50116aee1dfc144e5175de7cc56077d205e86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725244"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   傳回數值運算式以 10 為底的對數。  
   
 ## <a name="syntax"></a>語法  

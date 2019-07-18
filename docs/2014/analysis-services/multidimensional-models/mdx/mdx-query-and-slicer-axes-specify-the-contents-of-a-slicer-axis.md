@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - slicer axis
@@ -14,12 +13,12 @@ ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 745d7dc7682c06b776dca3df6a69fb8e235c1d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074055"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>指定 Slicer 軸的內容 (MDX)
   Slicer 軸會篩選多維度運算式 (MDX) SELECT 陳述式傳回的資料，限制傳回的資料，以便只傳回與指定成員交集的資料。 它可以視為查詢中隱藏的額外軸。 Slicer 軸定義在 MDX SELECT 陳述式的 WHERE 子句中。  

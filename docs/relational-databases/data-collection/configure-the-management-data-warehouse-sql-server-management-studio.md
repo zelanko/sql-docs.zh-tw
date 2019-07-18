@@ -23,12 +23,12 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 978588df2388f0731bccff024b46cc134e549688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 735df8e0e0aca995fd96e38da407f1acafc1f52d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708266"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586025"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "47708266"
   
 2.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
-3.  以滑鼠右鍵按一下 [資料收集]，展開 [工作]，然後按一下 [設定管理資料倉儲]。  
+3.  以滑鼠右鍵按一下 [資料收集]  ，展開 [工作]  ，然後按一下 [設定管理資料倉儲]  。  
   
-4.  使用 [設定管理資料倉儲精靈](#Wizard) 來建立管理資料倉儲、設定登入、啟用資料收集，並啟動 **[系統資料收集組]**。  
+4.  使用 [設定管理資料倉儲精靈](#Wizard) 來建立管理資料倉儲、設定登入、啟用資料收集，並啟動 **[系統資料收集組]** 。  
   
      若要設定多個執行個體，請繼續執行步驟 5。  
   
@@ -56,10 +56,12 @@ ms.locfileid: "47708266"
   
     -   使用「設定管理資料倉儲精靈」來針對現有的管理資料倉儲設定資料收集。  
   
-    -   以滑鼠右鍵按一下 [資料收集]，然後按一下 [屬性]。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
+    -   以滑鼠右鍵按一下 [資料收集]  ，然後按一下 [屬性]  。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
   
 6.  重複步驟 5，直到使用資料收集器的所有資料庫執行個體都設定為可將資料上傳到共用管理資料倉儲為止。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ####  <a name="Wizard"></a> 設定管理資料倉儲精靈  
  **歡迎頁面**  
   
@@ -104,7 +106,7 @@ ms.locfileid: "47708266"
 -   **mdw_writer**  
   
  **新增登入**  
- 開啟 [登入 - 新增] 對話方塊，並為此管理資料倉儲建立新的登入。  
+ 開啟 [登入 - 新增]  對話方塊，並為此管理資料倉儲建立新的登入。  
   
  **完成精靈頁面**  
   
@@ -115,7 +117,7 @@ ms.locfileid: "47708266"
  使用此頁面可檢視每一個組態步驟的結果。  
   
  **詳細資料**  
- 將每一個組態步驟顯示為 [詳細資料] 方格中的資料列。 每一個資料列都包含一個可描述此步驟的 **[動作]** 資料行，以及一個指示此步驟為成功或失敗的 **[狀態]** 資料行。 如果發生錯誤， **[訊息]** 資料行中會出現訊息。  
+ 將每一個組態步驟顯示為 [詳細資料]  方格中的資料列。 每一個資料列都包含一個可描述此步驟的 **[動作]** 資料行，以及一個指示此步驟為成功或失敗的 **[狀態]** 資料行。 如果發生錯誤， **[訊息]** 資料行中會出現訊息。  
   
  **停止**  
  停止精靈的處理。  
@@ -127,7 +129,7 @@ ms.locfileid: "47708266"
   
 -   將報表儲存到檔案  
   
--   複製報表到剪貼簿  
+-   [複製報表到剪貼簿]  
   
 -   以電子郵件傳送報表  
   

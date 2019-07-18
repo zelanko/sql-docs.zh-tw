@@ -2,19 +2,18 @@
 title: 設備監視-Analytics Platform System |Microsoft Docs
 description: 此應用裝置的監視指南描述的工具和監視 Analytics Platform System appliance 的工作。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961502"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>設備監視 Analytics Platform System
 此應用裝置的監視指南描述的工具和監視 Analytics Platform System appliance 的工作。  

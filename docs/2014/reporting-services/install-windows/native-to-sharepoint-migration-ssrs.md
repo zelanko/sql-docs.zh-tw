@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5aa1492942e76011eac784bbea90e41b7a3a2484
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f5e93d3e46dcad5331b765fbfa440297c34bbb98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108754"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
   您無法從一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式升級或轉換至另一個模式。 例如，您無法將原生模式報表伺服器升級或轉換為 SharePoint 模式。 您無法在兩種模式之間複製報表伺服器資料庫，因為它們使用不同的資料庫結構描述。 您可以將內容從一部報表伺服器移轉至另一部報表伺服器。 您使用的工具取決於為來源和目的地伺服器設定的報表伺服器模式類型。  
@@ -33,7 +32,7 @@ ms.locfileid: "56011169"
   
 1.  備份與還原加密金鑰。 這是用於加密資料的金鑰。 加密金鑰也用於加密密碼，例如，針對資料來源連接儲存的密碼。 不過，密碼無法移轉，因此您必須在目的地環境中再次輸入密碼。  
   
-2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 撰寫呼叫報表伺服器 Web 服務 SOAP 方法的 Visual Basic 指令碼，以便在資料庫之間複製資料。 使用 **RS.exe** 公用程式來執行指令碼。 Rs.exe 會與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安裝。  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 撰寫呼叫資料庫之間複製資料的報表伺服器 Web 服務 SOAP 方法的 Visual Basic 指令碼。 使用 **RS.exe** 公用程式來執行指令碼。 Rs.exe 會與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安裝。  
   
     -   [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 本主題說明如何使用您可以從 CodePlex 下載的範例指令碼。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "56011169"
 |資料集|是||  
 |報表組件||在移轉之後，驗證或更新報表組件的路徑。|  
 |[排程]|是| [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)請參閱 ListSchedules 方法|  
-|訂閱|是|請參閱 List Subscriptions 方法[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)和 ChangeSubscriptionOwner 方法 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|Subscriptions|是|請參閱 List Subscriptions 方法[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)和 ChangeSubscriptionOwner 方法 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |快照集|||  
 ||||  
   

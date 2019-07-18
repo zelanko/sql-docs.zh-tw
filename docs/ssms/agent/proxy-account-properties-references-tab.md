@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.references.f1
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9cde086cf2b9d96d0224cf294ba2d5428bc589f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fb60571c6462c76e4368d73af70a07df92a2547
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774656"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685351"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxy 帳戶屬性 (參考索引標籤)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

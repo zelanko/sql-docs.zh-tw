@@ -2,7 +2,7 @@
 title: GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570962"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   產生可用來將報表伺服器資料庫和其他資料庫 (執行報表伺服器所需) 之權限授與使用者的 SQL 指令碼。 呼叫者預期要連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器並執行此指令碼。  
@@ -66,9 +66,9 @@ out Int32 HRESULT);
   
  如果 *IsWindowsUser* 設為 **true**，則 *UserName* 的格式應該為 \<網域>\\<使用者名稱\>。  
   
- 當 *IsWindowsUser* 設為 [true] 時，產生的指令碼就會將登入權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者、將報表伺服器資料庫設定為預設資料庫，並且針對報表伺服器資料庫、報表伺服器暫存資料庫、master 資料庫和 MSDB 系統資料庫授與 **RSExec** 角色。  
+ 當 *IsWindowsUser* 設為 [true]  時，產生的指令碼就會將登入權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者、將報表伺服器資料庫設定為預設資料庫，並且針對報表伺服器資料庫、報表伺服器暫存資料庫、master 資料庫和 MSDB 系統資料庫授與 **RSExec** 角色。  
   
- 當 *IsWindowsUser* 設為 [true] 時，此方法就會接受標準 Windows SID 當作輸入。 提供了標準 Windows SID 或服務帳戶名稱時，它就會轉譯成使用者名稱字串。 如果資料庫位於本機，此帳戶就會轉譯成帳戶的正確當地語系化表示。 如果資料庫位於遠端，此帳戶就會表示成電腦的帳戶。  
+ 當 *IsWindowsUser* 設為 [true]  時，此方法就會接受標準 Windows SID 當作輸入。 提供了標準 Windows SID 或服務帳戶名稱時，它就會轉譯成使用者名稱字串。 如果資料庫位於本機，此帳戶就會轉譯成帳戶的正確當地語系化表示。 如果資料庫位於遠端，此帳戶就會表示成電腦的帳戶。  
   
  下表將顯示已轉譯的帳戶及其遠端表示。  
   

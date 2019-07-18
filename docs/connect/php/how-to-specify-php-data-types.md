@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 596c7b648d0d6812859fc688657dfba4f7567b1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602168"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799664"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

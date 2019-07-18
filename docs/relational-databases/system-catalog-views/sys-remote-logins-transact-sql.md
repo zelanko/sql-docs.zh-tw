@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb56b0fd04842ba006de99db9b5dcabdca3ee8a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904571"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

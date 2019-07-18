@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923931"
 ---
 # <a name="the-fields-collection"></a>Fields 集合
 **欄位**集合是其中一個 ADO 的內建集合。 集合是可當做一個單位參考的項目已排序的集合。 如需有關 ADO 集合的詳細資訊，請參閱[ADO 物件模型](../../../ado/guide/data/ado-objects-and-collections.md)。  

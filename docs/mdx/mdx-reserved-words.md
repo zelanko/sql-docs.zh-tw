@@ -1,5 +1,5 @@
 ---
-title: MDX 保留字 |Microsoft 文件
+title: MDX 保留字 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003455"
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
 
@@ -80,6 +79,6 @@ ms.locfileid: "34742287"
   
 ## <a name="see-also"></a>另請參閱  
  [保留的關鍵字&#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

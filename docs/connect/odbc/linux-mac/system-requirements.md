@@ -1,7 +1,7 @@
 ---
 title: 系統需求 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 287e6d44e3d816952f5802edd739a0af1160e82b
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+manager: jroth
+ms.openlocfilehash: 2c893ee3372a52a87095431560f8e4806d9b9296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66766067"
 ---
 # <a name="system-requirements"></a>系統需求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-此主題列出使用 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的需求。
+本主題列出使用 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的需求。
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13、13.1 和 17 for SQL Server
 
-僅適用於下列作業系統的 64 位元版本的 Linux 和 macOS 的驅動程式︰
+Linux 和 macOS 驅動程式僅適用於下列作業系統的 64 位元版本︰
 
 |作業系統|支援的驅動程式版本|
 |------------------------------------|--------------------------------|
@@ -54,7 +54,7 @@ ms.locfileid: "56955791"
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
 
-安裝套件[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13，13.1，17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux 和 macOS 上解決中所述使用您的散發套件的套件管理系統的安裝時，自動的驅動程式的相依性[安裝驅動程式](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 13、13.1 及 17 的安裝套件，可在使用散發套件的套件管理系統安裝時，能夠自動解析驅動程式的相依性，如[安裝驅動程式](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中所述。
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   
@@ -89,4 +89,4 @@ ms.locfileid: "56955791"
 
 [此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
-[版本資訊](../../../connect/odbc/linux-mac/release-notes.md)  
+[版本資訊](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

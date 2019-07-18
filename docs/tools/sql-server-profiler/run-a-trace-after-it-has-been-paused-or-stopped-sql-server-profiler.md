@@ -13,15 +13,15 @@ helpviewer_keywords:
 - restarting traces
 - stopping traces
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: badfad93ca750717b61a7f6cde38dc18d9397ded
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ca8c6de30ff6a1bb949648088a6b29441ea0222
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709646"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733365"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在追蹤暫停或停止之後執行追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47709646"
   
 1.  選取包含停止或暫停之追蹤的視窗。  
   
-2.  在 **[檔案]** 功能表上，按一下 **[執行追蹤]**。  
+2.  在 **[檔案]** 功能表上，按一下 **[執行追蹤]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   

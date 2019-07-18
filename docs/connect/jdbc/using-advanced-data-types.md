@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736819"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790372"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 
@@ -48,11 +48,11 @@ ms.locfileid: "55736819"
 JDBC 驅動程式會實作 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 介面的所有方法。  
   
 > [!NOTE]  
-> CLOB 值可以與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (或更新版本) 大數值資料類型搭配使用。 明確地說，CLOB 型別可以搭配**varchar （max)** 並**nvarchar （max)** 資料類型、 BLOB 型別可以搭配**varbinary （max)** 並**映像**資料類型，而 NCLOB 型別可以搭配**ntext**並**nvarchar （max)**。  
+> CLOB 值可以與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (或更新版本) 大數值資料類型搭配使用。 明確地說，CLOB 型別可以搭配**varchar （max)** 並**nvarchar （max)** 資料類型、 BLOB 型別可以搭配**varbinary （max)** 並**映像**資料類型，而 NCLOB 型別可以搭配**ntext**並**nvarchar （max)** 。  
 
 ## <a name="large-value-data-types"></a>大數值資料類型
 
-在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用大數值資料類型需要特別的處理。 大數值資料類型是指最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 推出 max 規範，此規範可用於 **varchar**、**nvarchar** 和 **varbinary** 資料類型，以允許儲存最大可達 2^31 個位元組的值。 資料表資料行和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數可以指定 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 資料類型。  
+在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用大數值資料類型需要特別的處理。 大數值資料類型是指最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 推出 max 規範，此規範可用於 **varchar**、**nvarchar** 和 **varbinary** 資料類型，以允許儲存最大可達 2^31 個位元組的值。 資料表資料行和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數可以指定 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 資料類型。  
 
 使用大數值類型的主要狀況包括從資料庫擷取它們，或將它們加入資料庫中。 下列章節說明完成這些工作的不同方法。  
 

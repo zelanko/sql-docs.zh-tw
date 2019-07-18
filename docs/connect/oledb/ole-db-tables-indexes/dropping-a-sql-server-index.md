@@ -17,13 +17,13 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 990318037a3f1b35e311a983859507a364c52127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a426352059f0ca400091aec14589742ec592ea97
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669166"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801275"
 ---
 # <a name="dropping-a-sql-server-index"></a>卸除 SQL Server 索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,21 +12,21 @@ helpviewer_keywords:
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5edc9e484002c27e906ee71e53289b93dfb3f033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 84c55898c5aefd30fda0caef49436a02953bab03
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724776"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689769"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 您可以使用 [SQL] 窗格建立您自己的 SQL 陳述式，也可以使用 [準則] 窗格和 [圖表] 窗格建立陳述式。在這個情況中，SQL 陳述式會在 [SQL] 窗格中建立。 當您建置查詢時，[SQL 窗格] 會自動進行簡單的可讀性更新及重新格式化。  
   
-若要開啟 [SQL 窗格]，請先開啟查詢和檢視設計工具 (按一下 [資料庫] 功能表中的 [新增查詢]，以在伺服器總管中選取資料庫物件)。 接著在 [查詢設計工具] 功能表中指向 [窗格]按一下 [SQL]。  
+若要開啟 [SQL 窗格]，請先開啟查詢和檢視設計工具 (按一下 [資料庫]  功能表中的 [新增查詢]  ，以在伺服器總管中選取資料庫物件)。 接著在 [查詢設計工具]  功能表中指向 [窗格]  按一下 [SQL]  。  
   
 您可以在 [SQL 窗格] 中：  
   

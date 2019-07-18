@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba87da9a621655befe608c4ef82d8fa4cde1754b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 211e180d2c50b764d82aeb3c41189e4037d5408a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734546"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799783"
 ---
 # <a name="getbinarystream-method-sqlserverblob"></a>getBinaryStream 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

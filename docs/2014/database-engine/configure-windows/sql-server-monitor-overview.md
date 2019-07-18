@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755186"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 監視器概觀
   「SQL Server 監視器」不會執行監視功能，但是它所主控的模組會執行該項功能。 「SQL Server 監視器」的模組包括「複寫監視器」和「資料庫鏡像監視器」。  
@@ -45,7 +45,7 @@ ms.locfileid: "52640239"
  下列是與「SQL Server 監視器」相關的功能表選項：  
   
  **檔案**  
- 這個功能表包含 [結束] 命令。  
+ 這個功能表包含 [結束]  命令。  
   
  **動作**  
  包含導覽樹狀目錄中選取之節點的內容功能表。  

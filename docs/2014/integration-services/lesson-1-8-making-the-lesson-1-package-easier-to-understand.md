@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767590"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步驟 8：使第 1 課的封裝更容易了解
   現在您已完成第 1 課封裝的組態，不妨整理一下封裝配置。 如果控制流程配置和資料流程配置中的形狀是隨機大小，或形狀沒有對齊或分組，則封裝功能可能更難以了解。  
@@ -34,13 +34,13 @@ ms.locfileid: "58393116"
   
 3.  將資料指標放到 [擷取範例貨幣] 轉換的上面和右邊、按一下滑鼠按鍵，然後在所有資料流程元件上拖曳資料指標。  
   
-4.  在 **[格式]** 功能表上，指向 **[設定成相同大小]**，再按一下 **[兩者]**。  
+4.  在 **[格式]** 功能表上，指向 **[設定成相同大小]** ，再按一下 **[兩者]** 。  
   
-5.  選取資料流程物件之後，在 **[格式]** 功能表上，指向 **[對齊]**，然後按一下 **[靠左]**。  
+5.  選取資料流程物件之後，在 **[格式]** 功能表上，指向 **[對齊]** ，然後按一下 **[靠左]** 。  
   
 ### <a name="to-add-an-annotation-to-the-data-flow"></a>若要將註解加入資料流程中  
   
-1.  以滑鼠右鍵按一下資料流程設計介面背景中的任何位置，然後按一下 **[加入註解]**。  
+1.  以滑鼠右鍵按一下資料流程設計介面背景中的任何位置，然後按一下 **[加入註解]** 。  
   
 2.  在註解方塊中輸入或貼上下列文字。  
   

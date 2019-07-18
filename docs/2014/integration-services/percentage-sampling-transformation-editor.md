@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e419dd8943aa85df1d7828ca3a5980648799013
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056714"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>百分比取樣轉換編輯器
   使用 **[百分比取樣轉換編輯器]** 對話方塊，即可依指定的資料列百分比，將輸入的一部分分割為取樣。 這個轉換會將輸入分成兩個不同的輸出。  

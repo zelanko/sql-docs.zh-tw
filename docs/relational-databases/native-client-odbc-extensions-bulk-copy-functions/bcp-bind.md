@@ -1,5 +1,5 @@
 ---
-title: bcp_bind |Microsoft Docs
+title: bcp_bind | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895730"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +121,7 @@ bcp_bind(hdbc, szName, 0,
   
  *EDataType*參數會列舉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的資料類型 token，不 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLINT2 來指定兩個位元組的整數 ODBC 類型 SQL_C_SHORT。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型語彙基元中的支援**_eDataType_** 參數。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型語彙基元中的支援 **_eDataType_** 參數。  
  
  下表列出有效的列舉資料類型和對應的 ODBC C 資料類型。
   
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  如果*pData*的資料行設為 NULL，因為其值會提供呼叫[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)，與任何後續的資料行*eDataType*設定為 SQLTEXT、 SQLNTEXT，SQLXML、 SQLUDT、 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY、 SQLNCHAR 或 SQLIMAGE 必須也繫結與*pData*設定為 NULL，和其值也必須提供藉由呼叫**bcp_moretext**.  
   
- 對於新的大數值類型，例如**varchar （max)**， **varbinary （max)**，或**nvarchar （max)**，您可以使用 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY 和中的類型指標為 SQLNCHAR *eDataType*參數。  
+ 對於新的大數值類型，例如**varchar （max)** ， **varbinary （max)** ，或**nvarchar （max)** ，您可以使用 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY 和中的類型指標為 SQLNCHAR *eDataType*參數。  
   
  如果*cbTerm*是不是 0，任何值 （1、 2、 4 或 8） 都是有效的前置詞 (*cbIndicator*)。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端會搜尋結束字元、 計算結束字元的資料長度 (*我*)，並將*cbData*以較小的 i 值與值前置詞。  
   

@@ -16,14 +16,18 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bac11c827ef91a84056babd81750c1f134d765b9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 93407a41ef455dfd1b5aae2899b1f1100c514734
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725361"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   使用 DT_DBTIMESTAMP 格式，傳回 UTC 時間格式 (世界標準時間或格林威治標準時間) 的系統目前日期。 GETUTCDATE 函數不接受引數。  
   
 ## <a name="syntax"></a>語法  

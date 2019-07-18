@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770772"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266576"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>專案設定 (類型對應) (OracleToSQL)
 類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 Oracle 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
@@ -69,10 +69,10 @@ ms.locfileid: "47770772"
 |char varying|varchar(max)|  
 |character|varchar(max)|  
 |character varying|varchar(max)|  
-|Clob|varchar(max)|  
-|日期|datetime2[0]|  
+|clob|varchar(max)|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
-|Decimal|float [53]|  
+|decimal|float [53]|  
 |雙精度|float [53]|  
 |FLOAT|float [53]|  
 |ssNoversion|ssNoversion|  
@@ -98,13 +98,13 @@ ms.locfileid: "47770772"
 |signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |Varchar2|varchar(max)|  
-|xmltype|xml|  
+|xmltype|Xml|  
   
 <sup>*</sup> 傳回值型別對應只會套用。  
   
@@ -125,12 +125,12 @@ ms.locfileid: "47770772"
 |character|char|  
 |可變長度字元 [*..\*]|varchar[*]|  
 |字元 [*..\*]|char[*]|  
-|Clob|varchar(max)|  
-|日期|datetime2[0]|  
+|clob|varchar(max)|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*..\*]|dec[*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
 |雙精度|float [53]|  
@@ -166,7 +166,7 @@ ms.locfileid: "47770772"
 |REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset[*]|  
 |時區的時間戳記|datetimeoffset|  
@@ -176,19 +176,19 @@ ms.locfileid: "47770772"
 |urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..\*]|varchar[*]|  
 |varchar2 [*..\*]|varchar[*]|  
-|Xmltype|xml|  
+|Xmltype|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>預設本機變數的類型對應  
 下表包含本機變數的預設型別對應。  
   
 |Oracle 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
-|布林|bit|  
+|Boolean|bit|  
 |Char|char|  
 |char varying [*..8000]|varchar[*]|  
 |char varying [8001..*]|varchar(max)|  
@@ -199,12 +199,12 @@ ms.locfileid: "47770772"
 |可變長度字元 [8001..*]|varchar(max)|  
 |字元 [*..8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
-|Clob|varchar(max)|  
-|日期|datetime2[0]|  
+|clob|varchar(max)|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*..\*]|dec[*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
 |雙精度|float [53]|  
@@ -237,7 +237,7 @@ ms.locfileid: "47770772"
 |Number|float [53]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
-|數值|numeric[38][0]|  
+|Numeric|numeric[38][0]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..4000]|nvarchar[*]|  
@@ -246,12 +246,12 @@ ms.locfileid: "47770772"
 |原始 [*..8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
 |Real|float [53]|  
-|rowid|UNIQUEIDENTIFIER|  
+|Rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |Smallint|SMALLINT|  
 |字串 [*..8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset[*]|  
@@ -263,7 +263,7 @@ ms.locfileid: "47770772"
 |varchar[8001..*]|varchar(max)|  
 |varchar2 [*..8000]|varchar[*]|  
 |varchar2[8001..*]|varcha(max)|  
-|Xmltype|xml|  
+|Xmltype|Xml|  
   
 ## <a name="see-also"></a>另請參閱  
 [使用者介面參考&#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  

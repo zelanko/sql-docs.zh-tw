@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6857a18ca740c399feb5e8fd65dae4ec9a7d7dd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028956"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法律注意事項 (SSMA for Sybase)
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  

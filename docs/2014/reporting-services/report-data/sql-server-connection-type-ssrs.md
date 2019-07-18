@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 039534e71623cf91cdd936be5e73433f216cd2d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 27e4057ed11d2f7f0bab32faa3e4a19e9adb890b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106992"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，您必須具有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至目前版本和舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並從中擷取資料。  
@@ -89,7 +88,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 按一下工具列上的 **[執行]** 按鈕 (**!**) 來執行查詢並顯示結果集。  
+ 按一下工具列上的 **[執行]** 按鈕 ( **!** ) 來執行查詢並顯示結果集。  
   
  若要將這個查詢參數化，請加入查詢參數。 例如，將 WHERE 子句變更為下列：  
   
@@ -129,7 +128,7 @@ WHERE EmployeeID = (@EmpID)
   
  報表參數是透過預設屬性值建立，您可能會需要修改這些值。 例如：  
   
--   根據預設，每一個報表參數的資料類型都是 **[文字]**。 如果基礎資料是不同的資料類型，則必須變更參數資料類型。  
+-   根據預設，每一個報表參數的資料類型都是 **[文字]** 。 如果基礎資料是不同的資料類型，則必須變更參數資料類型。  
   
 -   如果您為多值參數選取此選項，則必須使用 `IN` 運算子手動變更查詢，測試值是否為集合的一部分，例如 `WHERE EmployeeID IN (@EmpID)`。  
   

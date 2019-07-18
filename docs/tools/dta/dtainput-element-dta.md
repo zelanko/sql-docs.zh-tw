@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d77f9a70ade63a2e8fdf1d063932b315d9f4656e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 5731b02656cea4b5456a7bc8051548e4b05d3a1a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729475"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

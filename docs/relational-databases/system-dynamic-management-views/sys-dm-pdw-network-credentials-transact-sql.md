@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_network_credentials & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d9e18284ac4d97efaa217802682fe79ebb2dfc5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899353"
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "56041519"
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。|  
 |target_server_name|**nvarchar(32)**|目標伺服器的 IP 位址，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會使用使用者名稱和密碼的認證來存取。|  
-|username|**nvarchar(32)**|密碼會儲存使用者名稱。|  
+|userName|**nvarchar(32)**|密碼會儲存使用者名稱。|  
 |last_modified|**datetime**|修改認證的上次作業的日期時間。|  
   
 ## <a name="permissions"></a>Permissions  

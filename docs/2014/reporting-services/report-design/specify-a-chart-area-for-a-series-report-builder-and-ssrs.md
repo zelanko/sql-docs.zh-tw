@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6014bed70e71f376e6321664265c4359f5bf7021
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104964"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>為數列指定圖表區域 (報表產生器及 SSRS)
   此圖表是最上層的容器，其中包含外框、圖表標題和圖例。 依預設，圖表包含一個預設的圖表區域。 在圖表介面上看不到圖表區域，但是您可以將圖表區域視為僅包含軸標籤、軸標題，以及一或多個數列之繪圖區的容器。 下圖顯示單一圖表內圖表區域的概念。  
@@ -35,13 +34,13 @@ ms.locfileid: "56288926"
   
 ### <a name="to-associate-a-series-with-a-new-chart-area"></a>讓數列與新圖表區域產生關聯  
   
-1.  以滑鼠右鍵按一下圖表的任何位置，然後選取 [新增新的圖表區域]。 新的空白圖表區域就會出現在圖表上。  
+1.  以滑鼠右鍵按一下圖表的任何位置，然後選取 [新增新的圖表區域]  。 新的空白圖表區域就會出現在圖表上。  
   
-2.  以滑鼠右鍵按一下圖表上的數列，或者在 [圖表資料] 窗格以滑鼠右鍵按一下適當區域中的資料欄位，然後按一下 [數列屬性]。  
+2.  以滑鼠右鍵按一下圖表上的數列，或者在 [圖表資料] 窗格以滑鼠右鍵按一下適當區域中的資料欄位，然後按一下 [數列屬性]  。  
   
 3.  在 **[軸和圖表區域]** 中，選取您要數列顯示在其中的圖表區域。  
   
-4.  (選擇性) 垂直對齊圖表區域。 若要這樣做，以滑鼠右鍵按一下圖表，然後選取 [圖表區域屬性]。 在 **[對齊]** 中，選取您要與所選圖表區域對齊的另一個圖表區域。  
+4.  (選擇性) 垂直對齊圖表區域。 若要這樣做，以滑鼠右鍵按一下圖表，然後選取 [圖表區域屬性]  。 在 **[對齊]** 中，選取您要與所選圖表區域對齊的另一個圖表區域。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   

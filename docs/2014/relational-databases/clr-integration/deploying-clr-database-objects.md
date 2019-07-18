@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62920830"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
   部署是指您用來散發即將在其他電腦上安裝和執行之已完成應用程式或模組的程序。 您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 來開發 Common Language Runtime (CLR) 資料庫物件並將它們部署至測試伺服器。 或者，您也可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 轉散發檔案 (而非 Visual Studio) 來編譯 Managed 資料庫物件。 一旦編譯完成之後，您就可以使用 Visual Studio 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，將包含 CLR 資料庫物件的組件部署至測試伺服器。 請注意，Visual Studio .NET 2003 無法用於 CLR 整合程式設計或部署。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含預先安裝的 .NET Framework，而且 Visual Studio .NET 2003 無法使用 .NET Framework 2.0 組件。  
@@ -86,17 +86,17 @@ ms.locfileid: "48122778"
   
 1.  開啟 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 並連接至已註冊要部署之 Managed 組件或資料庫物件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在**物件總管**，展開**\<伺服器名稱 >** 並**資料庫**樹狀結構。 以滑鼠右鍵按一下 受管理的資料庫物件的位置已註冊，請選取的資料庫**任務**，然後選取**產生的指令碼**。 指令碼精靈隨即開啟。  
+2.  在**物件總管**，展開 **\<伺服器名稱 >** 並**資料庫**樹狀結構。 以滑鼠右鍵按一下 受管理的資料庫物件的位置已註冊，請選取的資料庫**任務**，然後選取**產生的指令碼**。 指令碼精靈隨即開啟。  
   
 3.  從清單方塊中選取資料庫，然後按一下**下一步**。  
   
 4.  在 **選擇指令碼選項**窗格中，按一下**下一步**，或變更的選項，然後按一下**下一步**。  
   
-5.  在  **選擇物件類型** 窗格中，選擇要部署的資料庫物件的類型。 按 [下一步] 。  
+5.  在  **選擇物件類型** 窗格中，選擇要部署的資料庫物件的類型。 按一下 [下一步]  。  
   
 6.  選取在每個物件類型**選擇物件類型**窗格中，**選擇\<類型 >** 窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一或多個物件，然後按一下**下一步**。  
   
-7.  **輸出選項**所有所需的資料庫物件已選取型別時，窗格會出現。 選取 **指令碼至檔案**並指定指令碼的檔案路徑。 選取 **[下一步]**。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
+7.  **輸出選項**所有所需的資料庫物件已選取型別時，窗格會出現。 選取 **指令碼至檔案**並指定指令碼的檔案路徑。 選取 **[下一步]** 。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
   
 ## <a name="post-deployment-scripts"></a>部署後指令碼  
  您可以執行部署後指令碼。  

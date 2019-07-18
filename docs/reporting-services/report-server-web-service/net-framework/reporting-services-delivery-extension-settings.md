@@ -18,14 +18,14 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1935b8ff2ac78ebd7d926950e6c2d97dbad75a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128842"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞提供一個透過電子郵件傳送報表給個別使用者或群組的方法。 檔案共用傳遞可讓您將轉譯的報表自動傳送給網路上的共用。 您可以使用其中一個支援的傳遞延伸模組搭配標準訂閱或資料驅動訂閱來傳送。 每當您呼叫 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法時，會傳遞特屬傳遞延伸模組類型的傳遞設定。 若要以程式設計的方式擷取傳遞設定清單，請使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  
@@ -38,9 +38,9 @@ ms.locfileid: "47628486"
   
 |設定|ReplTest1|  
 |-------------|-----------|  
-|**收件人**|出現在電子郵件訊息 [收件人] 的電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
-|**副本**|出現在電子郵件訊息 [副本] 的電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
-|**密件副本**|出現在電子郵件訊息 [密件副本] 的電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
+|**收件人**|出現在電子郵件訊息 [收件人]  的電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
+|**副本**|出現在電子郵件訊息 [副本]  的電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
+|**密件副本**|出現在電子郵件訊息 [密件副本]  的電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**ReplyTo**|出現在電子郵件訊息**回覆**標頭的電子郵件地址。 值必須是單一電子郵件地址。 選擇性。|  
 |**IncludeReport**|指出在電子郵件傳遞中是否包括報表的值。 **true** 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
 |**RenderFormat**|要用以產生轉譯報表的轉譯延伸模組名稱。 名稱必須對應至報表伺服器上安裝的其中一個可見的轉譯延伸模組。 如果將 **IncludeReport** 設定為 **true** 的值，則這個值是必要的。|  

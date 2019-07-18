@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b46d985a4b43fc55fdbae3fa1012e77e4c2c0316
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102876"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 查詢設計工具
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供圖形化和以文字為基礎的查詢設計工具，可協助您在報表中每個資料來源類型為建立查詢。  
@@ -31,7 +30,7 @@ ms.locfileid: "56285626"
   
 -   **依查詢設計工具類型。** 例如， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料來源同時支援圖形化查詢設計工具以及以文字為基礎的查詢設計工具。  
   
--   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
+-   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
   
 -   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如， `SELECT FirstName, LastName FROM [Person].[Person]` 。  
   

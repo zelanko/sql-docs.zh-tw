@@ -2,17 +2,17 @@
 title: 自訂報表檢視器 Web 組件 | Microsoft Docs
 ms.date: 11/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0974e9bd7e2e4c2306a5ada0a3a41f657073a267
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580003"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
 
@@ -41,13 +41,13 @@ ms.locfileid: "52411635"
   
 ### <a name="change-default-properties"></a>變更預設屬性
 
- 報表檢視器 Web 組件有一些預設屬性，非常適合用於視需要從文件庫或資料夾開啟報表。 根據預設，工具列會顯示所有可用的控制項。 高度和寬度設定為使用網頁上所有的可用空間。 如果您要修改預設屬性，可透過 [網站設定] 自訂 Web 組件。  
+ 報表檢視器 Web 組件有一些預設屬性，非常適合用於視需要從文件庫或資料夾開啟報表。 根據預設，工具列會顯示所有可用的控制項。 高度和寬度設定為使用網頁上所有的可用空間。 如果您要修改預設屬性，可透過 [網站設定]  自訂 Web 組件。  
   
-1.  在 **[網站動作]** 功能表上，按一下 **[網站設定]**。  
+1.  在 **[網站動作]** 功能表上，按一下 **[網站設定]** 。  
   
-2.  在組件庫下，按一下 [Web 組件]。  
+2.  在組件庫下，按一下 [Web 組件]  。  
   
-3.  按一下 **[ReportViewer.dwp]**。  
+3.  按一下 **[ReportViewer.dwp]** 。  
   
 4.  開啟工具窗格，並設定要使用的屬性。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52411635"
 
  您可以設定屬性，使報表檢視器適合網頁的大小。 報表檢視器可以與包含它的頁面使用相同的樣式和色彩。 您可以隱藏工具列、文件引導模式和參數區域的全部或一部分，使配置空間內的報表檢視區域放到最大。 報表一律使用您建立報表時所定義的樣式。 當您將報表發行至 SharePoint 文件庫之後，即無法自訂報表外觀。  
   
- 如果要將報表檢視器 Web 組件內嵌在網頁中，就應該將 [報表 URL] 屬性設定為特定報表。 否則，報表檢視器將會顯示連結至報表的指示。 您無法自訂或移除這些指示。  
+ 如果要將報表檢視器 Web 組件內嵌在網頁中，就應該將 [報表 URL]  屬性設定為特定報表。 否則，報表檢視器將會顯示連結至報表的指示。 您無法自訂或移除這些指示。  
   
 ### <a name="custom-properties-of-the-report-viewer-web-part"></a>報表檢視器 Web 組件的自訂屬性
 
@@ -90,7 +90,7 @@ ms.locfileid: "52411635"
 
  工具列會出現在標題下方，並且橫跨報表頂端。 工具列提供 **[動作]** 功能表、已編頁報表的頁面導覽、重新整理和顯示比例。 其中包含文件引導模式控制項，用於擁有文件引導模式的報表。 **[動作]** 功能表所包含的命令可用於匯出報表、搜尋報表中的文字或數字、列印報表，以及在報表產生器中開啟報表。  
   
- 您無法將新的命令加入至  **[動作]** 功能表，但是您可以變更使用者看得到的選項來加以自訂。 若要變更工具列按鈕與控制項的可見性，您可以變更 Web 組件之 [工具列項目可見性] 區段中的選項。 您也可以在報表伺服器上停用 **[列印]** 命令或特定匯出格式，藉此移除這些功能。 頁面導覽控制項適用於擁有分頁符號的報表；否則，報表為可改變長度的單一頁面。 [重新整理] 會使用報表的最新參數重新處理報表。 若要在同一行顯示所有控制項，請將 Web 組件的整體寬度設定為至少 400 像素。  
+ 您無法將新的命令加入至  **[動作]** 功能表，但是您可以變更使用者看得到的選項來加以自訂。 若要變更工具列按鈕與控制項的可見性，您可以變更 Web 組件之 [工具列項目可見性]  區段中的選項。 您也可以在報表伺服器上停用 **[列印]** 命令或特定匯出格式，藉此移除這些功能。 頁面導覽控制項適用於擁有分頁符號的報表；否則，報表為可改變長度的單一頁面。 [重新整理]  會使用報表的最新參數重新處理報表。 若要在同一行顯示所有控制項，請將 Web 組件的整體寬度設定為至少 400 像素。  
 
 ## <a name="customizing-the-viewing-area"></a>自訂檢視區域
 

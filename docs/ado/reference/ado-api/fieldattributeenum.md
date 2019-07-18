@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918707"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定一或多個屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件。  

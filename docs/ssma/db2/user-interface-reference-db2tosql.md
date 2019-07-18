@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059964"
 ---
 # <a name="user-interface-reference-db2tosql"></a>使用者介面參考 (DB2ToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2。  

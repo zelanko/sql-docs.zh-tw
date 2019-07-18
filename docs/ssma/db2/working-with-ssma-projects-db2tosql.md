@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086184"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 專案 (DB2ToSQL)
 若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
@@ -62,7 +61,7 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
 1.  在 **檔案**功能表上，按一下**新的專案**。  
   
-    [新增專案]  對話方塊隨即出現。  
+    [ **新增專案** ] 對話方塊隨即出現。  
   
 2.  在 **名稱**方塊中，輸入您專案的名稱。  
   
@@ -76,7 +75,7 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure 的 SQL 資料庫  
+    -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>自訂專案設定  
 除了定義套用到所有新的 SSMA 專案的預設專案設定，您可以自訂每個專案的設定。 如需詳細資訊，請參閱 <<c0> [ 設定專案選項&#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md)和相關的區段。</c0>  
@@ -96,7 +95,7 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但不選取任何核取方塊。  
   
-    2.  按一下 [**儲存**] 按鈕。  
+    2.  按一下 [儲存]  按鈕。  
   
         SSMA 會剖析 DB2 結構描述，並將中繼資料儲存到專案檔。  
   

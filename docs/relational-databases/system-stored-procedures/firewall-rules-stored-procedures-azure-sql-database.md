@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1794f45c95095dbbfaac065eed40b4ef23cac725
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec667b6fc6c12f94d9e0a5e87f61b4acb7f98f40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942239"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>防火牆規則預存程序 (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

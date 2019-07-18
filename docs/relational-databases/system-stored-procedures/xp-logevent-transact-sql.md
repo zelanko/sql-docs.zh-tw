@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c8604413718e8b318b67cf63562531e869a79ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116635"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  這是字元字串，最多 2048 個字元。  
   
  **'** *嚴重性* **'**  
- 這是三個字元字串的其中一個：INFORMATIONAL、WARNING 或 ERROR。 *嚴重性*是選擇性的預設值為 INFORMATIONAL。  
+ 是三個字元字串的其中一個：INFORMATIONAL、 WARNING 或 ERROR。 *嚴重性*是選擇性的預設值為 INFORMATIONAL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

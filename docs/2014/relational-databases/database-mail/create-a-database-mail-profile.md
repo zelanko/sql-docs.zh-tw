@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872204"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
   您可以使用 [Database Mail 組態精靈] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。  
@@ -52,7 +52,7 @@ ms.locfileid: "53979134"
   
 -   在 [管理設定檔和帳戶] 頁面上，選取 [建立新設定檔] 選項，然後按一下 [下一步]。  
   
--   在 [**新的設定檔**頁面上，指定的設定檔的名稱、 描述，然後將帳戶新增至包含在設定檔，然後按一下**下一步]**。  
+-   在 [新增設定檔] 頁面上，指定設定檔名稱、描述並新增要併入設定檔中的帳戶，然後按一下 [下一步]。  
   
 -   在 [完成精靈] 頁面上，檢閱要執行的動作，然後按一下 [完成] 完成新設定檔的建立。  
   

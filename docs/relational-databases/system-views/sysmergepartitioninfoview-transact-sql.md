@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094819"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,15 +76,15 @@ ms.locfileid: "54124680"
 |**fast_multicol_updateproc**|**bit**|指定是否已啟用合併代理程式，以在 UPDATE 陳述式中，將變更套用相同資料列的多個資料行中。<br /><br /> **0** = 變更為個別更新每個資料行的問題。<br /><br /> **1** = 發出 UPDATE 陳述式，這會導致更新發生在單一陳述式的多個資料行上。|  
 |**check_permissions**|**int**|合併代理程式將變更套用在發行者時，將驗證之資料表層級權限的點陣圖。 *check_permissions*可以有下列值之一：<br /><br /> **0x00** = 不檢查權限。<br /><br /> **0x10** = 上傳在訂閱者端進行插入之前，「 發行者 」 的權限檢查。<br /><br /> **0x20** = 在發行者端檢查權限，在上傳在訂閱者端進行的更新之前。<br /><br /> **0x40** = 在上傳在訂閱者端所作的刪除之前的發行者端檢查權限。|  
 |**maxversion_at_cleanup**|**int**|下次執行合併代理程式時，所清除的最大層代 (Generation)。|  
-|**processing_order**|**int**|指出合併式發行集中; 的發行項的處理順序值**0**表示發行項並未排序，而且發行項的處理順序從最低到最高的值。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。|  
+|**processing_order**|**int**|指出合併式發行集中; 的發行項的處理順序值**0**表示發行項並未排序，而且發行項的處理順序從最低到最高的值。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱[指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。|  
 |**upload_options**|**tinyint**|定義是否能在訂閱者端進行變更或從訂閱者上傳變更，它可以是下列值之一。<br /><br /> **0** = 在訂閱者端進行的更新沒有限制; 所有的變更會上傳到 「 發行者 」。<br /><br /> **1** = 允許在訂閱者，但變更不會上傳到 「 發行者 」。<br /><br /> **2** = 不允許在訂閱者端進行變更。|  
 |**published_in_tran_pub**|**bit**|指出合併式發行集中的發行項也在交易式發行集中發行。<br /><br /> **0** = 發行項不發行在交易式發行項中。<br /><br /> **1** = 發行項也發行在交易式發行項中。|  
 |**輕量型**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|在更新之前，資料表的檢視之識別碼。|  
-|**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當 windows 7 *delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 注意：值為**0**導致無法聚合。|  
-|**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作會停用。<br /><br /> **1** = 無法在 「 訂閱者 」 或 「 發行者 」 一定會導致套用至補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 注意：值為**0**導致無法聚合。|  
+|**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當 windows 7 *delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 注意:值為**0**導致無法聚合。|  
+|**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作會停用。<br /><br /> **1** = 無法在 「 訂閱者 」 或 「 發行者 」 一定會導致套用至補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 注意:值為**0**導致無法聚合。|  
 |**pub_range**|**bigint**|發行者識別範圍大小。|  
 |**範圍**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
 |**threshold**|**int**|識別範圍臨界值百分比。|  
@@ -111,7 +110,7 @@ ms.locfileid: "54124680"
  [合併式發行集使用參數化篩選管理資料分割](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepartition &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_helpmergepartition &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   

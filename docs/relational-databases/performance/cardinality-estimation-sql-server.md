@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828018"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59516454"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具是以成本為基礎的查詢最佳化工具。 這表示它會選取估計處理成本最低的查詢計畫來執行。 查詢最佳化工具根據兩個主要因素來判斷執行查詢計劃的成本：
@@ -53,9 +54,10 @@ ms.locfileid: "56828018"
 - 執行頻繁很高而經常同時執行多個執行個體的 OLTP (線上交易處理) 查詢。  
 - 在您的 OLTP 營業期間執行大量彙總的 SELECT。  
   
-您有幾個方法來指出使用新的 CE 執行較慢的查詢。 您也可以選擇要如何解決此效能問題。     
+您有幾個方法來指出使用新的 CE 執行較慢的查詢。 您也可以選擇要如何解決此效能問題。
   
-## <a name="versions-of-the-ce"></a>CE 的版本  
+## <a name="versions-of-the-ce"></a>CE 的版本
+
 在組建 1998 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 隨附提供 CE 的一項重大更新，其相容性層級為 70。 這個版本的 CE 模型會根據四個基本假設設定：
 
 -  **獨立性：** 在不同資料行散發的資料會假設為各自獨立，除非提供可用的相互關聯資訊。
@@ -106,7 +108,7 @@ GO
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)  
  [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)   

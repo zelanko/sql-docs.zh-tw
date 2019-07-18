@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a6e55acf0394d5c85630b8c6772dba88696cc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 471d8bec6d1491ed8e2ddabbf819abdfa68db16d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600016"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797255"
 ---
 # <a name="supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -12,15 +12,19 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 874b949e3ea793d0e891980926239b6e01e73af2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bb77f2da026e085aa14260c06648dd93f8b161c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65723777"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供來源查詢 (SQL Server 匯入和匯出精靈)
-如果您指定您想要提供查詢以選取要複製的資料，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [提供來源查詢] 。 在此頁面上，您可以撰寫和測試 SQL 查詢，以選取要從資料來源複製到目的地的資料。 您也可以貼上已儲存查詢的文字，或從檔案載入查詢文字。
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+如果您指定您想要提供查詢以選取要複製的資料，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [提供來源查詢]  。 在此頁面上，您可以撰寫和測試 SQL 查詢，以選取要從資料來源複製到目的地的資料。 您也可以貼上已儲存查詢的文字，或從檔案載入查詢文字。
 
 ## <a name="screen-shot-of-the-source-query-page"></a>[來源查詢] 頁面的螢幕擷取畫面  
 下列螢幕擷取畫面顯示精靈的 [提供來源查詢]  頁面。
@@ -33,7 +37,7 @@ ms.locfileid: "58279852"
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>提供查詢並檢查其語法
 **SQL 陳述式**  
- 輸入 SELECT 查詢，即可從來源資料庫擷取特定的資料列和資料行。 您也可以貼上已儲存查詢的文字，或按一下 [瀏覽] 從檔案載入查詢。 
+ 輸入 SELECT 查詢，即可從來源資料庫擷取特定的資料列和資料行。 您也可以貼上已儲存查詢的文字，或按一下 [瀏覽]  從檔案載入查詢。 
   
  例如，下列查詢會從 AdventureWorks 範例資料庫中，擷取佣金百分比超過 1.5% 之業務員的 **SalesPersonID**、**SalesQuota** 以及 **SalesYTD**。  
   
@@ -54,7 +58,7 @@ WHERE CommissionPct > 0.015
 > 如果檢查陳述式語法所需的時間超過逾時值 30 秒，剖析就會停止並引發錯誤。 在剖析成功之前，您將無法移過精靈的這個頁面。 避免逾時的方案為建立以您想使用之查詢為基礎的資料庫檢視，然後從精靈查詢此檢視，而非直接輸入查詢文字。  
   
  **瀏覽**  
- 使用 [開啟] 對話方塊，選取包含 SQL 查詢文字的已儲存檔案。 選取檔案就會將該檔案的文字複製到 [SQL 陳述式]  文字方塊中。  
+ 使用 [開啟]  對話方塊，選取包含 SQL 查詢文字的已儲存檔案。 選取檔案就會將該檔案的文字複製到 [SQL 陳述式]  文字方塊中。  
  
 ## <a name="excelQueries"></a> 提供 Excel 的來源查詢
 
@@ -62,7 +66,7 @@ WHERE CommissionPct > 0.015
 > 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
 
 有三種您可以查詢的 Excel 物件。
--   **工作表。** 若要查詢工作表，請在工作表名稱結尾加上 $ 字元，並以分隔符號括住字串，例如 **[Sheet1$]**。
+-   **工作表。** 若要查詢工作表，請在工作表名稱結尾加上 $ 字元，並以分隔符號括住字串，例如 **[Sheet1$]** 。
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -74,7 +78,7 @@ WHERE CommissionPct > 0.015
     SELECT * FROM MyDataRange
     ```
 
--   **未命名範圍。** 若要指定尚未命名的儲存格範圍，請在工作表名稱結尾加上 $ 字元、指定範圍，再以分隔符號括住字串，例如 **[Sheet1$A1:B4]**。
+-   **未命名範圍。** 若要指定尚未命名的儲存格範圍，請在工作表名稱結尾加上 $ 字元、指定範圍，再以分隔符號括住字串，例如 **[Sheet1$A1:B4]** 。
 
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
@@ -83,8 +87,8 @@ WHERE CommissionPct > 0.015
 ## <a name="whats-next"></a>下一步  
  在撰寫並測試選取要複製資料的 SQL 查詢之後，下一個頁面會取決於您資料的目的地。  
   
--   下一個頁面上的大部分目的地為 [選取來源資料表和檢視] 。 在此頁面上，您檢閱所提供的查詢，並選擇性地選擇資料行以複製和預覽範例資料。 如需詳細資訊，請參閱 [選取來源資料表和檢視表](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。  
+-   下一個頁面上的大部分目的地為 [選取來源資料表和檢視]  。 在此頁面上，您檢閱所提供的查詢，並選擇性地選擇資料行以複製和預覽範例資料。 如需詳細資訊，請參閱 [選取來源資料表和檢視表](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。  
   
--   如果您的目的地為一般檔案，則下一個頁面為 [設定一般檔案目的地] 。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (在您設定一般檔案之後，下一個頁面是 [選取來源資料表和檢視表])。如需詳細資訊，請參閱[設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+-   如果您的目的地為一般檔案，則下一個頁面為 [設定一般檔案目的地]  。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (在您設定一般檔案之後，下一個頁面是 [選取來源資料表和檢視表]  )。如需詳細資訊，請參閱[設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
 
 

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211651"
 ---
 # <a name="rename-views"></a>重新命名檢視
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名檢視。  
@@ -32,7 +32,7 @@ ms.locfileid: "52393702"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法重新命名檢視：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52393702"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[在重新命名檢視之後](#FollowUp)  
+-   **後續操作：** [重新命名檢視後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52393702"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要重新命名的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要重新命名的檢視，然後選取 **[重新命名]**。  
+2.  以滑鼠右鍵按一下您要重新命名的檢視，然後選取 **[重新命名]** 。  
   
 3.  輸入檢視的新名稱。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52393702"
   
  如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) 和 [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)。  
   
-##  <a name="FollowUp"></a> 後續操作：在重新命名檢視之後  
+##  <a name="FollowUp"></a> 後續操作：重新命名檢視後  
  確定參考檢視舊名稱的任何物件、指令碼和應用程式現在都使用新名稱。  
   
   

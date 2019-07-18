@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e669f02eeb76ba529c75851ce8bf6ff9a7831a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107267"
 ---
 # <a name="statement-attributes"></a>陳述式屬性
 陳述式屬性是陳述式的特性。 例如，使用書籤和什麼種類的資料指標來使用陳述式的結果集中是否是陳述式屬性。  
@@ -29,7 +28,7 @@ ms.locfileid: "47739506"
  當陳述式屬性可以設定取決於本身的屬性。 在執行陳述式之前，必須設定 SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR 和 SQL_ATTR_USE_BOOKMARKS 的陳述式屬性。 SQL_ATTR_ASYNC_ENABLE 和 SQL_ATTR_NOSCAN 的陳述式屬性可以設定在任何時間，但會再次使用陳述式之前，不會套用。 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS 和 SQL_ATTR_QUERY_TIMEOUT 陳述式屬性可以設定在任何時間，但很是否會套用之前的陳述式就會再次使用特定驅動程式。 剩餘的陳述式屬性可以設定在任何時間。  
   
 > [!NOTE]  
->  能夠在連接層級設定陳述式屬性，藉由呼叫**SQLSetConnectAttr** ODBC 3 中已被取代。*x*。 ODBC 3。*x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3。*x*驅動程式只需要支援這項功能，如果應該使用 ODBC 2。*x*應用程式。 如需詳細資訊，請參閱 < [SQLSetConnectOption 對應](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)附錄 g： 驅動程式指導方針，為了與舊版相容。  
+>  能夠在連接層級設定陳述式屬性，藉由呼叫**SQLSetConnectAttr** ODBC 3 中已被取代。*x*。 ODBC 3。*x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3。*x*驅動程式只需要支援這項功能，如果應該使用 ODBC 2。*x*應用程式。 如需詳細資訊，請參閱 < [SQLSetConnectOption 對應](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
 >   
 >  這個例外狀況是 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 屬性，這是連接屬性和陳述式屬性，而且在連接層級或陳述式層級設定。  
 >   

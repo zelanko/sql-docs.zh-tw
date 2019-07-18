@@ -16,16 +16,16 @@ helpviewer_keywords:
 - FIRST_VALUE function
 - analytic functions, FIRST_VALUE
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a1cd0345c767ea0e97e9a5571a6e7a9bad43ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb15792c255a00b77565bc84eabbd474a63cc63c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65945920"
 ---
 # <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

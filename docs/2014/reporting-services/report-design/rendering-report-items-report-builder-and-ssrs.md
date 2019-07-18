@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5848c5161395a070b16175238fa34dc6356245c4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105346"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering Report Items (Report Builder and SSRS)
   報表項目的數目、大小和位置會影響轉譯器為報表主體分頁的方式。 下列是如何轉譯各種報表項目的描述。  

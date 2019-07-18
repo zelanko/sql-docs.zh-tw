@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
@@ -13,12 +12,12 @@ ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087094"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>連接到來源資料 (適用於 Excel 的資料採礦用戶端)
   本主題將說明如何建立和使用用於儲存資料採礦模型的連接，以及用於存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中儲存之外部資料的連接。  
@@ -29,7 +28,7 @@ ms.locfileid: "48159738"
   
  **外部資料來源的連接。** 您也可以在建立模型或儲存結果時建立外部資料的連接。 例如，您可以在某個伺服器上建立資料採礦模型，然後使用另一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體、Excel 資料表或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 之類的外部資料來源中儲存之資料，對資料採礦模型執行預測查詢。 每次您存取新的資料來源時，系統都會提示您使用對話方塊來建立連接。  
   
-##  <a name="bkmk_prereq2"></a> Prerequisites  
+##  <a name="bkmk_prereq2"></a> 必要條件  
  此版本的增益集需要 SQL Server 2012 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 如果您要連接到舊版的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，則可以使用增益集的另一個版本。 目前有其他支援 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2 的增益集版本。  
   
  若要連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，您必須擁有存取資料庫伺服器的權限。 而且，資料採礦工作階段必須已啟用，您也必須有伺服器上儲存之資料庫物件的讀取或讀取/寫入權限。  
@@ -61,13 +60,13 @@ ms.locfileid: "48159738"
   
 4.  指定驗證方法。  
   
-5.  選取 將資料庫從**目錄名稱**下拉式清單。 如果資料庫不存在的執行個體上，選取 **（預設值）**。  
+5.  選取 將資料庫從**目錄名稱**下拉式清單。 如果資料庫不存在的執行個體上，選取 **（預設值）** 。  
   
 6.  輸入連接的易記名稱。  
   
 7.  按一下 **測試連接**來確認伺服器和資料庫可供使用。  
   
-8.  按一下 **[確定]**，然後按一下 **[關閉]**。  
+8.  按一下 **[確定]** ，然後按一下 **[關閉]** 。  
   
 ### <a name="connections-using-a-web-service"></a>使用 Web 服務的連接  
  如果您要使用精簡型用戶端架構來啟用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 和資料的瀏覽，也可以透過 Web 服務設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器的連接。 如需有關如何定義網路架構用戶端的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  

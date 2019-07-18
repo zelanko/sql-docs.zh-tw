@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926631"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然有更多資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，大部分的 DBMS 系統目前使用中可以透過 ODBC 存取。
@@ -65,7 +64,7 @@ MSDASQL
 
  提供者不支援任何特定的連接參數，除了 ADO 所定義。 不過，提供者會將任何非 ADO 連接參數傳遞至 ODBC 驅動程式管理員。
 
- 因為您可以省略**提供者**參數，您可以因此撰寫等同於相同的資料來源的 ODBC 連接字串的 ADO 連接字串。 使用相同的參數名稱 (**驅動程式 =**， **DATABASE =**， **DSN =** 等等)，值，以及與您的語法會撰寫的 ODBC 連接字串時。 您可以在包含或不含預先定義的資料來源名稱 (DSN) 或 FileDSN 連接。
+ 因為您可以省略**提供者**參數，您可以因此撰寫等同於相同的資料來源的 ODBC 連接字串的 ADO 連接字串。 使用相同的參數名稱 (**驅動程式 =** ， **DATABASE =** ， **DSN =** 等等)，值，以及與您的語法會撰寫的 ODBC 連接字串時。 您可以在包含或不含預先定義的資料來源名稱 (DSN) 或 FileDSN 連接。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>使用資料來源名稱或 FileDSN 語法：
 
@@ -84,11 +83,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>備註
  如果您使用**DSN**或是**FileDSN**，它必須定義透過 ODBC 資料來源管理員在 Windows 控制台中。 在 Microsoft Windows 2000 中，ODBC 管理員位於 系統管理工具。 在舊版的 Windows 中，名為 ODBC 管理員圖示**32 位元 ODBC**或簡稱**ODBC**。
 
- 設定替代**DSN**，您可以指定 ODBC 驅動程式 (**驅動程式 =**)，例如"SQL Server"; 伺服器名稱 (**SERVER =**); 和資料庫名稱 (**DATABASE =**)。
+ 設定替代**DSN**，您可以指定 ODBC 驅動程式 (**驅動程式 =** )，例如"SQL Server"; 伺服器名稱 (**SERVER =** ); 和資料庫名稱 (**DATABASE =** )。
 
- 您也可以指定使用者帳戶名稱 (**UID =**)，以及使用者帳戶的密碼 (**PWD =**) 或標準 ODBC 特有的參數中 ADO 定義*使用者*和*密碼*參數。
+ 您也可以指定使用者帳戶名稱 (**UID =** )，以及使用者帳戶的密碼 (**PWD =** ) 或標準 ODBC 特有的參數中 ADO 定義*使用者*和*密碼*參數。
 
- 雖然**DSN**已定義指定的資料庫，您可以指定 *資料庫*參數，除了**DSN**連線不同的資料庫。 最好一律包括 *資料庫*當您使用的參數**DSN**。 這可確保您連線到正確的資料庫，如果另一位使用者變更預設資料庫參數，因為您上次檢查**DSN**定義。
+ 雖然**DSN**已定義指定的資料庫，您可以指定  *資料庫*參數，除了**DSN**連線不同的資料庫。 最好一律包括  *資料庫*當您使用的參數**DSN**。 這可確保您連線到正確的資料庫，如果另一位使用者變更預設資料庫參數，因為您上次檢查**DSN**定義。
 
 ## <a name="provider-specific-connection-properties"></a>提供者特定連接屬性
  OLE DB provider for ODBC 數個將屬性加入至[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**連線**物件。 下表列出這些屬性與對應的 OLE DB 屬性名稱括號括住。
@@ -101,7 +100,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |驅動程式名稱 (KAGPROP_DRIVERNAME)|指出 ODBC 驅動程式的檔案名稱。|
 |驅動程式的 ODBC 版本 (KAGPROP_DRIVERODBCVER)|指出此驅動程式支援的 ODBC 版本。|
 |檔案使用情況 (KAGPROP_FILEUSAGE)|指出如何驅動程式會將資料來源; 中的檔案為資料表，或為類別目錄。|
-|Like 逸出子句 (KAGPROP_LIKEESCAPECLAUSE)|表示 LIKE 述詞的 WHERE 子句中的驅動程式是否支援定義和逸出字元使用百分比字元 （%） 和底線字元 (_)。|
+|Like 逸出子句 (KAGPROP_LIKEESCAPECLAUSE)|指出是否此驅動程式支援的定義和逸出字元使用百分比字元 （%）與 LIKE 述詞的 WHERE 子句加上底線字元 (_)。|
 |在 群組依據 (KAGPROP_MAXCOLUMNSINGROUPBY) 的最大資料行|表示可以在 SELECT 陳述式的 GROUP BY 子句中列出的資料行的數目上限。|
 |索引 (KAGPROP_MAXCOLUMNSININDEX) 中的最大資料行|指出索引中所包含的資料行的數目上限。|
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY) 中的最大資料行|表示可以在 SELECT 陳述式的 ORDER BY 子句中列出的資料行的數目上限。|
@@ -222,7 +221,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
 
- * 不支援針對 Microsoft Access 資料庫。
+ \* 不支援針對 Microsoft Access 資料庫。
 
 ## <a name="dynamic-properties"></a>動態屬性
  Microsoft OLE DB Provider for ODBC 插入到數個動態屬性**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，以及[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。
@@ -256,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |隔離等級|DBPROP_SUPPORTEDTXNISOLEVELS|
 |隔離保留功能|DBPROP_SUPPORTEDTXNISORETAIN|
 |地區設定識別碼|DBPROP_INIT_LCID|
-|位置|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |索引大小上限|DBPROP_MAXINDEXSIZE|
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|

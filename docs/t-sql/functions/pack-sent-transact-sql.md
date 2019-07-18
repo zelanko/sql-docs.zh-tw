@@ -20,15 +20,15 @@ helpviewer_keywords:
 - connections [SQL Server], packets
 - output packets written to network [SQL Server]
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9acc45cf23878582f39fffc72a9c19ba01f9729
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 77d784ebe3806822eac387b0147db60545c7d6b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65943592"
 ---
 # <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

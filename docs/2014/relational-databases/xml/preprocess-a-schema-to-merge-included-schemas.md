@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63241223"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
   W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  

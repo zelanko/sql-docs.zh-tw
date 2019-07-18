@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65719620"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會將各種事件訊息記錄至 Windows 應用程式事件記錄檔。 當封裝啟動、停止以及發生特定問題時，此封裝就會記錄這些訊息。  
   
  本主題會提供封裝記錄至應用程式事件記錄檔之常見事件訊息的相關資訊。 根據預設，封裝會記錄其中某些訊息，即使您尚未針對此封裝啟用記錄也一樣。 不過，只有當您針對此封裝啟用記錄時，封裝才會記錄其他訊息。 不論此封裝預設記錄這些訊息或因為已經啟用記錄，訊息的事件來源都是 SQLISPackage。  
@@ -77,30 +81,30 @@ ms.locfileid: "58281532"
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名稱: %1%r 訊息: %9%r 操作員: %2%r 來源名稱: %3%r 來源識別碼: %4%r 執行識別碼: %5%r 開始時間: %6%r 結束時間: %7%r 資料碼: %8|這則訊息會報告與錯誤或警告沒有關聯的參考用訊息。|  
 
 ## <a name="view-log-entries-in-the-log-events-window"></a>檢視記錄事件視窗中的記錄項目
-  此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件] 視窗中的記錄項目，以執行進一步的分析。  
+  此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件]  視窗中的記錄項目，以執行進一步的分析。  
   
- 您不需要將記錄項目寫入記錄檔，以便將項目寫入 [記錄事件] 視窗中。  
+ 您不需要將記錄項目寫入記錄檔，以便將項目寫入 [記錄事件]  視窗中。  
   
 ### <a name="to-view-log-entries"></a>檢視記錄項目  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 [SSIS] 功能表上，按一下 [記錄事件]。 您可以將 View.LogEvents 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件] 視窗。  
+2.  在 [SSIS]  功能表上，按一下 [記錄事件]  。 您可以將 View.LogEvents 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [記錄事件]  視窗。  
   
-3.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+3.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]** 。  
   
-     當執行階段遇到為了記錄而啟用的事件與自訂訊息時，每個事件或訊息的記錄項目都會寫入 [記錄事件] 視窗。  
+     當執行階段遇到為了記錄而啟用的事件與自訂訊息時，每個事件或訊息的記錄項目都會寫入 [記錄事件]  視窗。  
   
-4.  在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+4.  在 **[偵錯]** 功能表上，按一下 **[停止偵錯]** 。  
   
-     記錄項目將繼續保留在 [記錄事件] 視窗中，直到您重新執行封裝、執行不同的封裝或關閉 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 為止。  
+     記錄項目將繼續保留在 [記錄事件]  視窗中，直到您重新執行封裝、執行不同的封裝或關閉 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 為止。  
   
-5.  檢視 [記錄事件] 視窗中的記錄項目。  
+5.  檢視 [記錄事件]  視窗中的記錄項目。  
   
-6.  (選擇性) 按一下要複製的記錄項目，按一下滑鼠右鍵，然後按一下 [複製]。  
+6.  (選擇性) 按一下要複製的記錄項目，按一下滑鼠右鍵，然後按一下 [複製]  。  
   
-7.  (選擇性) 按兩下記錄項目，然後在 [記錄項目] 對話方塊中檢視單一記錄項目的詳細資料。  
+7.  (選擇性) 按兩下記錄項目，然後在 [記錄項目]  對話方塊中檢視單一記錄項目的詳細資料。  
   
-8.  在 [記錄項目] 對話方塊中，按一下上下箭頭以顯示上一個或下一個記錄項目，然後按一下複製圖示來複製記錄項目。  
+8.  在 [記錄項目]  對話方塊中，按一下上下箭頭以顯示上一個或下一個記錄項目，然後按一下複製圖示來複製記錄項目。  
   
 9. 開啟文字編輯器、貼上，然後將記錄項目儲存為文字檔。

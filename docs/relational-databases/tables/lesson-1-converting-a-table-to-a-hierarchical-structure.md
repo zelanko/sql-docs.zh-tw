@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b490c48cf60c01efa1a0c3fed38b4aabb10495
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661156"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716283"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,22 +42,25 @@ ms.locfileid: "47661156"
 ### <a name="copy-the-employee-table"></a>複製 Employee 資料表  
   
 1.  在 [查詢編輯器] 視窗中執行下列程式碼，以便將資料表結構和資料從 **Employee** 資料表複製到名稱為 **EmployeeDemo**的新資料表。 由於原始的資料表已經使用 hierarchyid，此查詢基本上會使階層扁平化，以擷取員工的經理。 在本課程的後續部分中，我們將會重建此階層。
-  
-    ```sql  
-    USE AdventureWorks2017;  
-    GO  
-      if OBJECT_ID('HumanResources.EmployeeDemo') is not null
-     drop table HumanResources.EmployeeDemo 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+
+   ```sql  
+   USE AdventureWorks2017;  
+   GO  
+     if OBJECT_ID('HumanResources.EmployeeDemo') is not null
+    drop table HumanResources.EmployeeDemo 
 
     SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
-      (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
-            WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
-                (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
-           emp.JobTitle, emp.HireDate
-    INTO HumanResources.EmployeeDemo   
-    FROM HumanResources.Employee emp ;
-    GO
-    ```  
+     (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
+        WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
+            (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
+          emp.JobTitle, emp.HireDate
+   INTO HumanResources.EmployeeDemo   
+   FROM HumanResources.Employee emp ;
+   GO
+   ```  
   
 ### <a name="examine-the-structure-and-data-of-the-employeedemo-table"></a>檢查 EmployeeDemo 資料表的結構和資料  
   
@@ -290,7 +293,7 @@ ms.locfileid: "47661156"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID** 優先索引：資料列會以 **EmployeeID** 順序儲存。  
+    **EmployeeID**-優先索引：資料列會以 **EmployeeID** 順序儲存。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

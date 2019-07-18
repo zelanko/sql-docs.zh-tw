@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8cde8f5d9d50b37f3d89154d09d6d60ac3bc987
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917970"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 屬性範例 (VC++)
 這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)並[有效位數](../../../ado/reference/ado-api/precision-property-ado.md)要顯示的數值小數位數與有效位數中的欄位屬性***折扣***資料表***Pubs***資料庫。  

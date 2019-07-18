@@ -14,14 +14,18 @@ ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8aa8033e8af22fa518ce8b5e27dde817395f7eaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5aa564e8db4c3ba9d16fca1ad22c7f0b8ddfc74c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725617"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (位元排除 OR) (SSIS 運算式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   執行兩個整數值的位元排除 OR 運算。 它會比較其第一個運算元的每個位元和其第二個運算元的對應位元。 如果一個位元為 0 而另一個位元為 1，則對應的結果位元會設為 1。 如果這兩個位元都是 0 或都是 1，則對應的結果位元會設為 0。  
   
  兩個條件都必須是簽署的整數資料類型，或者都必須是未簽署的整數資料類型。  

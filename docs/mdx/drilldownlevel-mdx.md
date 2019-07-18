@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049294"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 

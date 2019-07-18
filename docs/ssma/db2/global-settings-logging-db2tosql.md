@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989565"
 ---
 # <a name="global-settings-logging-db2tosql"></a>全域設定 （記錄） (DB2ToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您會在與產品支援人員合作時，才變更這些設定。  
@@ -48,11 +47,11 @@ ms.locfileid: "47857316"
 |**嚴重錯誤**|僅嚴重的錯誤訊息寫入記錄檔。|  
 |**錯誤**|錯誤和嚴重錯誤訊息寫入記錄檔。|  
 |**警告**|寫入記錄檔的警告、 錯誤和嚴重的錯誤訊息。|  
-|**資訊**|寫入記錄檔的資訊、 警告、 錯誤和嚴重的錯誤訊息。|  
+|**Info**|寫入記錄檔的資訊、 警告、 錯誤和嚴重的錯誤訊息。|  
 |**偵錯**|寫入所有的訊息，包括偵錯訊息，記錄檔。|  
   
 **記錄檔路徑**  
-檔案路徑和名稱的 SSMA 記錄檔。 若要指定不同的名稱，按一下目前路徑，然後按一下 瀏覽 (**...**) 按鈕。  
+檔案路徑和名稱的 SSMA 記錄檔。 若要指定不同的名稱，按一下目前路徑，然後按一下 瀏覽 ( **...** ) 按鈕。  
   
 **記錄檔大小**  
 記錄檔，以 kb 為單位的大小上限。 最小的大小為 10 KB。 預設大小為 10240 KB。  

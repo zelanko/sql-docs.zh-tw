@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f4b5e0f04f893bd5f351857a5a1b655d52350c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898344"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login'` 是 Windows 使用者或要從中撤銷存取權的群組名稱。 *登入*必須包含網域名稱，例如 **[ADVWKS\sylvester1]**。 *登入*已**sysname**，沒有預設值。  
+`[ @loginame = ] 'login'` 是 Windows 使用者或要從中撤銷存取權的群組名稱。 *登入*必須包含網域名稱，例如 **[ADVWKS\sylvester1]** 。 *登入*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -60,7 +59,7 @@ xp_revokelogin {[@loginame=] 'login'}
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
+ [xp_loginconfig &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

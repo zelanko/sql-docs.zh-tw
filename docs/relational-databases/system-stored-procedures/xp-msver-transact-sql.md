@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8aaa598f5f6477b13a932e8ec2849e36c97b21cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b936f00f449bd57a7a00fa825910a809a1baf225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898369"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ xp_msver [ optname ]
 |**FileDescription**|作業系統。|  
 |**FileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可執行檔的版本。|  
 |**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部名稱；例如 SQLSERVR。|  
-|**LegalCopyright**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要的合法著作權資訊；例如 Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp.1988-2005.|  
+|**LegalCopyright**|必要的合法著作權資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 例如 Copyright © [!INCLUDE[msCoName](../../includes/msconame-md.md)] corp.1988-2005.|  
 |**LegalTrademarks**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要的合法商標資訊。 例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation 的註冊商標。|  
 |**OriginalFilename**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行的檔案名稱；例如 Sqlservr.exe。|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

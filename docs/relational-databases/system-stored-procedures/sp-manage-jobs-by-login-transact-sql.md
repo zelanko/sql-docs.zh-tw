@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894987"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @action = ] 'action'` 要針對指定的登入所採取的動作。 *動作*已**varchar(10)**，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**所擁有的所有作業會都刪除*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
+`[ @action = ] 'action'` 要針對指定的登入所採取的動作。 *動作*已**varchar(10)** ，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**所擁有的所有作業會都刪除*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` 目前作業擁有者的登入名稱。 *current_owner_login_name*已**sysname**，沒有預設值。  
   

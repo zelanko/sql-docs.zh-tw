@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53d48d2522dc32db775782cf147a3e503b543c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199f89e1ee33793a1186a6b40fed6dcf9658d8b5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601596"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581600"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47601596"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來重新命名資料表：**  
   
@@ -61,25 +61,27 @@ ms.locfileid: "47601596"
   
 #### <a name="to-rename-a-table"></a>重新命名資料表  
   
-1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]。  
+1.  在物件總管中，以滑鼠右鍵按一下想要重新命名的資料表，然後從快速鍵功能表選擇 [設計]  。  
   
-2.  從 **[檢視]** 功能表中選擇 **[屬性]**。  
+2.  從 **[檢視]** 功能表中選擇 **[屬性]** 。  
   
 3.  在 **[屬性]** 視窗中的 **[名稱]** 值欄位中，輸入資料表的新名稱。  
   
 4.  若要取消這個動作，請在離開這個欄位之前按 ESC 鍵。  
   
-5.  從 [檔案] 功能表中，選擇 [儲存 _資料表名稱_]。  
-  
+5.  從 [檔案]  功能表中，選擇 [儲存 _資料表名稱_]  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>重新命名資料表  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  下列範例會將 `SalesTerritory` 資料表重新命名為 `SalesTerr` 結構描述中的 `Sales` 。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  下列範例會將 `SalesTerritory` 資料表重新命名為 `SalesTerr` 結構描述中的 `Sales` 。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;   

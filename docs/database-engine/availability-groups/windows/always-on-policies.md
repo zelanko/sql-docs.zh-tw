@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d049d012c9447eeb79cd2d64435d37223540adb5
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+manager: jroth
+ms.openlocfilehash: 2f8fb49b90a0da28a4961806c7ace46bcb10f5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789450"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>使用群組原則評估 Always On 可用性群組的健全狀況
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

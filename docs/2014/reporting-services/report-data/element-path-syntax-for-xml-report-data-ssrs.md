@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cd7ef91cd1e682c7a238c029f6a072613b2efb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107303"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
   在「報表設計師」中，可藉由定義區分大小寫的元素路徑來指定要用於 XML 資料來源中之報表的資料。 元素路徑會指出在 XML 資料來源中周遊 XML 階層式節點及其屬性的方法。 若要使用預設的元素路徑，請將資料集查詢或 XML `ElementPath` (屬於 XML `Query`) 保留空白。 由 XML 資料來源擷取資料時，具有文字值的元素節點以及元素節點屬性會變成結果集內的資料行。 執行查詢時，節點及屬性的值會變成資料列資料。 這些資料行會以資料集欄位集合的方式顯示在 [報表資料] 窗格中。 此主題描述元素路徑語法。  
@@ -35,7 +34,7 @@ ms.locfileid: "56025669"
 |&#124; (分隔號)|會分隔語法項目， 您只能選擇其中一個項目。|  
 |`[ ] (brackets)`|選擇性的語法項目。 不要輸入方括號。|  
 |**{ }** (大括弧)|會分隔語法項目的參數。|  
-|[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
+|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -79,7 +78,7 @@ XMLLocalName :: =
 |`ElementNode`|XML 文件中的 XML 節點。 節點是由標記指定，並存在於與其他節點構成的階層式關聯性中。 例如，\<Customers> 是根元素節點。 \<Customer> 是 \<Customers>的子元素。|  
 |`XMLName`|節點的名稱。 例如，Customers 節點的名稱為 Customers。 `XMLName` 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
 |`Encoding`|指出本元素的 `Value` 是已編碼的 XML，需要加以解碼並加入做為此元素的子元素。|  
-|`FieldList`|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 (**{}**)，就不會使用這個節點中的任何欄位。<br /><br /> `FieldList` 可能不會同時包含 `Value` 及 `Element` 或 `ElementNode`。|  
+|`FieldList`|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 ( **{}** )，就不會使用這個節點中的任何欄位。<br /><br /> `FieldList` 可能不會同時包含 `Value` 及 `Element` 或 `ElementNode`。|  
 |`Field`|指定擷取做為資料集欄位的資料。|  
 |`Attribute`|`ElementNode` 中名稱與值的配對。 例如，在項目節點\<客戶 ID ="1">，`ID`是屬性和`@ID(Integer)`相對應的 [資料] 欄位中傳回"1"為整數類型`ID`。|  
 |`Value`|元素的值。 `Value` 只能用於元素路徑中的最後一個 `ElementNode` 上。 例如，因為\<傳回 > 是一個分葉節點，如果您包含結尾的元素路徑的值`Return {@}`是`Chair`。|  
@@ -179,7 +178,7 @@ XMLLocalName :: =
   
 2.  建立 XML 資料來源的新資料集。  
   
-3.  在 **[資料集屬性]** 對話方塊中，按一下 **[查詢設計工具]**。 以文字為基礎的查詢設計工具對話方塊隨即開啟。  
+3.  在 **[資料集屬性]** 對話方塊中，按一下 **[查詢設計工具]** 。 以文字為基礎的查詢設計工具對話方塊隨即開啟。  
   
 4.  在查詢窗格中，輸入下列兩行程式碼：  
   
@@ -197,7 +196,7 @@ XMLLocalName :: =
   
      `<Query>`  
   
-8.  按一下 [執行查詢]\(!)。  
+8.  按一下 [執行查詢]  \(!)。  
   
      結果集會顯示具有下列資料行的 4 行資料： `xmlns`、 `Customer.ID`、 `FirstName`、 `LastName`、 `ID`、 `Qty`、 `Order`。  
   

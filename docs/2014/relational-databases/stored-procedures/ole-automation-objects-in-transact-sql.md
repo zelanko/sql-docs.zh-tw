@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06913c27af89657aef5a0a5397cd77a1ee025299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211859"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL 中的 OLE Automation 物件
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 包含多個系統預存程序，可讓您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序與觸發程序中參考 OLE Automation 物件。 這些系統預存程序以擴充預存程序來執行，而透過預存程序執行的 OLE Automation 物件在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的位址空間內的執行方式與擴充預存程序的執行方式相同。  

@@ -1,6 +1,6 @@
 ---
 title: Polygon | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,19 +10,21 @@ helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f1ff1b99dbc5880909fb8387fc1b82d9b32df8
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979014"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581697"
 ---
 # <a name="polygon"></a>多邊形
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **Polygon** 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
   
 ## <a name="polygon-instances"></a>Polygon 執行個體  
@@ -41,7 +43,9 @@ ms.locfileid: "53979014"
 2.  圖 2 是 **Polygon** 執行個體，其界限是由一個外部環形和兩個內部環形所定義。 內部環形內的區域是 **Polygon** 執行個體外部的一部分。  
   
 3.  圖 3 是有效的 **Polygon** 執行個體，因為它的內部環形會在單一正切點上相交。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>已接受的執行個體  
  已接受的 **Polygon** 執行個體是指可儲存在 **geometry** 或 **geography** 變數中而不會擲回例外狀況的執行個體。 已接受的 **Polygon** 執行個體如下：  
   
@@ -107,11 +111,13 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
 ## <a name="examples"></a>範例  
 ### <a name="example-a"></a>範例 A。  
-下列範例會建立包含一個洞及 SRID 10 的簡單 `geometry``Polygon` 執行個體。  
+下列範例會建立包含間距及 SRID 10 的簡單 `geometry` `Polygon` 執行個體。
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
+SET @g = geometry::STPolyFromText(
+    'POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))',
+    10);
 ```  
   
 
@@ -120,7 +126,9 @@ SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2,
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
+SET @g = geometry::Parse(
+    'POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))'
+    );  
 ```  
   
 ### <a name="example-c"></a>範例 C。  
@@ -134,7 +142,8 @@ SELECT @g.ToString();
 上述範例傳回的 `geometry` 執行個體是 `MultiPolygon`。  
   
 ```sql  
-MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
+MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)),
+              ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))
 ```  
   
 ### <a name="example-d"></a>範例 D.  

@@ -8,23 +8,23 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a4d94524bfe9b991f59dfbe21a5160c5b726ef1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 347fa69d65589f7eabf5d9f0764fe31e071e948e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501991"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683759"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>設定編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   您可以設定各個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器的選項，以自訂其作業。  
   
 ## <a name="settng-editor-options"></a>設定編輯器選項  
- 使用 [工具] 功能表並選取 [選項...] 來顯示 [選項] 對話方塊，即可設定大部分的編輯器選項。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  
+ 使用 [工具]  功能表並選取 [選項...]  來顯示 [選項]  對話方塊，即可設定大部分的編輯器選項。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  
   
 1.  **所有語言** - 使用此節點設定的選項會套用至所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 編輯器。 使用其他節點為特定的編輯器設定不同之選項，可以覆寫這些設定。  
   

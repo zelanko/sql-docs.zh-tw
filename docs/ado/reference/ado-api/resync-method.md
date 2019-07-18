@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68ca8ac6d223100f437a7ba0ca8bf7776953d40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917165"
 ---
 # <a name="resync-method"></a>Resync 方法
 重新整理中目前的資料[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，或[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件，從基礎資料庫。  

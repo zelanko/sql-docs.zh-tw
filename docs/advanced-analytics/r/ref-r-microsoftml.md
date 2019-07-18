@@ -3,17 +3,16 @@ title: MicrosoftML R 函式程式庫-SQL Server Machine Learning 服務
 description: 在 SQL Server 2016 R Services 和 SQL Server 2017 Machine Learning 服務與 r 的 MicrosoftML 函式程式庫簡介
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e3dc94026f90ef769abb3889a716b5dadb317c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962507"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML （SQL Server 中的 R 程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "58512255"
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
-+ [Microsoft R client](set-up-a-data-science-client.md)
++ [Microsoft R 用戶端](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 完整的產品版本是 Windows 專屬，從 SQL Server 2017 開始。 Linux 支援**MicrosoftML**的新功能[SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md)。
@@ -140,7 +139,7 @@ ms.locfileid: "58512255"
 
 中的函式**MicrosoftML**封裝在預存程序中的 R 程式碼中呼叫。 大部分的開發人員建置**MicrosoftML**解決方案在本機，然後將完成的 R 程式碼移轉到預存程序中，部署練習變更。
 
-**MicrosoftML** R 是已安裝 「--現成的 「 SQL Server 2017 中的封裝。 如果您升級執行個體的 R 元件，它是也適用於 SQL Server 2016:[使用繫結的 SQL Server 執行個體進行升級](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+**MicrosoftML** R 是已安裝 「--現成的 「 SQL Server 2017 中的封裝。 如果您升級執行個體的 R 元件，它是也適用於 SQL Server 2016:[使用繫結的 SQL Server 執行個體進行升級](../install/upgrade-r-and-python.md)
 
 預設不會載入封裝。 第一個步驟中，載入**MicrosoftML**套件，並接著載入**RevoScaleR**如果您要使用遠端計算內容或相關的連線或資料來源物件。 然後，參考您需要個別的函式。
 

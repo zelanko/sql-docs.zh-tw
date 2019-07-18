@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12b2d4d449e46b167f99b0c8e10edb3975fcd129
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833578"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理連接管理員
   DQS 清理連線管理員可讓封裝連接到 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 伺服器。 DQS 清理轉換會使用 DQS 清理連接管理員。  

@@ -2,7 +2,7 @@
 title: MSReportServer_Instance 成員 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4190c7654cc449162c57a93fc1d8acf2fcda2b48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65572213"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

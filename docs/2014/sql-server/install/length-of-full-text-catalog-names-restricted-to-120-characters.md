@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs names
@@ -13,12 +12,12 @@ ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ca564fd81a1363f9866a0a8eaf067fc67a1f1f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cce05426fdff2aacf40612738ad80b07d9ec0e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094056"
 ---
 # <a name="length-of-full-text-catalog-names-restricted-to-120-characters"></a>全文檢索目錄名稱長度的限制是 120 個字元
   全文檢索目錄名稱的長度限制已經從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 128 個字元，調降為 120 個字元。  

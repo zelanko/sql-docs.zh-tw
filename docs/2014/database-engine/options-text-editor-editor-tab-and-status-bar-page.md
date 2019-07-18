@@ -1,11 +1,10 @@
 ---
-title: 選項 (文字編輯器： 編輯器索引標籤和狀態列頁面) |Microsoft Docs
+title: 選項 (文字編輯器：編輯器索引標籤和狀態列頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
@@ -14,15 +13,15 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089236"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
-  [編輯器索引標籤和狀態列] 頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
+  [編輯器索引標籤和狀態列]  頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
   
 ## <a name="option-settings-by-editor"></a>依編輯器的選項設定  
  所有 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器中都可以使用編輯器索引標籤和狀態列，但有不同的功能等級。  
@@ -38,7 +37,7 @@ ms.locfileid: "48055448"
  **無**  
  狀態列不會顯示任何時間資訊。  
   
- **結束**  
+ **End**  
  狀態列會在指令碼執行時顯示目前當日時間。 當指令碼完成時，則會顯示指令碼完成的當日時間。  
   
  **經過**  
@@ -93,7 +92,7 @@ ms.locfileid: "48055448"
  包含伺服器名稱。 如果是本機連接，這是執行個體名稱。 如果是遠端連接，這是遠端電腦名稱與執行個體名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [選項&#40;環境： 字型和色彩頁面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [選項&#40;環境：字型和色彩頁面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [查詢編輯器中的色彩編碼](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

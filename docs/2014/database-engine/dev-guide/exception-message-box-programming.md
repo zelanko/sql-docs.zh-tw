@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - ExceptionMessageBox class, about ExceptionMessageBox class
@@ -19,12 +17,12 @@ ms.assetid: 0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e2417978fa053d2d6cb030149993a54013faa75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753371"
 ---
 # <a name="exception-message-box-programming"></a>例外狀況訊息方塊程式設計
   例外狀況訊息方塊是程式設計介面與一起安裝而且由[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]圖形化元件。 例外狀況訊息方塊是支援的 Managed 組件，可讓您用於應用程式中，以便更有效地控制訊息經驗，以及讓使用者選擇要儲存錯誤訊息內容以供日後參考，或是取得訊息的相關說明。 由於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都會安裝例外狀況訊息方塊 ([!INCLUDE[ssEW](../../includes/ssew-md.md)] 除外)，因此您可以在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端元件的任何電腦上使用此功能，不需要進行其他組態設定。  

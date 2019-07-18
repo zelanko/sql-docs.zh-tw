@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f588b8a4305f44eceb8a8f6ab351bc940fbfef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754935"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>包含見證伺服器 (設定資料庫鏡像安全性精靈)
   使用此頁面，來指定您是否想要將見證伺服器包含在資料庫鏡像的這個安全性組態中。  
@@ -28,7 +28,7 @@ ms.locfileid: "48105218"
   
 -   [啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **是**  
  按一下即可將見證伺服器執行個體包含在安全性組態中。 具有自動容錯移轉的高安全性模式必須要有見證伺服器，如果主體伺服器執行個體失敗，這個見證伺服器就可以支援自動容錯移轉至鏡像伺服器執行個體。  
   

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915426"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -53,24 +53,24 @@ ms.locfileid: "54133378"
   
  **若要在伺服器電腦上變更 MaxTokenSize**  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  型別`regedit`，然後按一下 **[確定]**。 (如果出現 [使用者帳戶控制] 對話方塊，請按一下 [繼續])。  
+2.  型別`regedit`，然後按一下 **[確定]** 。 (如果出現 [使用者帳戶控制]  對話方塊，請按一下 [繼續]  )。  
   
 3.  巡覽至 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
-4.  如果 **MaxTokenSize** 參數不存在，請以滑鼠右鍵按一下 [參數]，並指向 [新增]，然後按一下 [DWORD (32-位元) 值]。 將此登錄項目命名為 **MaxTokenSize**。  
+4.  如果 **MaxTokenSize** 參數不存在，請以滑鼠右鍵按一下 [參數]  ，並指向 [新增]  ，然後按一下 [DWORD (32-位元) 值]  。 將此登錄項目命名為 **MaxTokenSize**。  
   
-5.  以滑鼠右鍵按一下 **MaxTokenSize**，然後按一下 [修改]。  
+5.  以滑鼠右鍵按一下 **MaxTokenSize**，然後按一下 [修改]  。  
   
-6.  在 [數值資料] 方塊中，輸入所需的 **MaxTokenSize** 值。  
+6.  在 [數值資料]  方塊中，輸入所需的 **MaxTokenSize** 值。  
   
     > [!NOTE]  
     >  十六進位值 ffff (十進位值 65535) 是最大的建議 Token 大小。 雖然提供這個值可能會解決此問題，但是卻可能會對效能造成整部電腦的不良影響。 我們建議您建立允許組織內任何使用者之最大 Token 的最小 **MaxTokenSize** 值並且輸入該值。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-8.  關閉 [登錄編輯程式]。  
+8.  關閉 [登錄編輯程式]  。  
   
 9. 重新啟動電腦。  
   

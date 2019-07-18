@@ -11,15 +11,14 @@ helpviewer_keywords:
 - reserved words [Master Data Services]
 - Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085695"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "52752108"
 -   [成員](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a> 模型  
- 如果您建立一個名稱設定為 **Name** 或 **Code** 的模型，請勿選取 [建立與模型同名的實體]，原因是 **Name** 或 **Code** 無法用於實體的名稱。  
+ 如果您建立一個名稱設定為 **Name** 或 **Code** 的模型，請勿選取 [建立與模型同名的實體]  ，原因是 **Name** 或 **Code** 無法用於實體的名稱。  
   
 ##  <a name="entities"></a> 實體  
  您無法針對實體名稱使用 **Name** 或 **Code**。  

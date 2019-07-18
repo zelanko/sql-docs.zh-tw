@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042631"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>使用增益圖測試精確度 (基本資料採礦教學課程)
   在  **採礦精確度圖表** 索引標籤的 資料採礦設計師中，您可以計算程度的模型執行預測，並比較直接對照其他模型的結果的每個模型的結果。 這種比較方法稱為*增益圖*。 一般來說，採礦模型的預測精確度是由「增益」(Lift) 或分類精確度所衡量。 在此教學課程中，我們只會使用增益圖。  

@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - OGC Methods on Geometry Instances [SQL Server]
 ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a51eea71eca3a32f63320196c5a765028c77fc9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 109f44f58de4693d963aea4a23bca68e22a1808a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65937478"
 ---
 # <a name="ogc-methods-on-geometry-instances"></a>幾何例項上的 OGC 方法
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52543626"
   
 -   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
+-   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999843"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>使用邏輯記錄分組相關資料列的變更
     

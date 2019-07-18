@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db169f7adfb02c0bed09fb33d6e306856b3e7122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215930"
 ---
 # <a name="spremoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

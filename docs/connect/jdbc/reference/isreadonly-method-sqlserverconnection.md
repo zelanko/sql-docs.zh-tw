@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cdb2e326a1e3936aec623b9e566428eefe594c6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2faac8d83f79c60551c0d62f18e64ccd427f91bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652126"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796374"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>isReadOnly 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指出這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件是否處在唯讀模式。  
+  指出這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件是否處於唯讀模式。  
   
 > [!NOTE]  
 >  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。  

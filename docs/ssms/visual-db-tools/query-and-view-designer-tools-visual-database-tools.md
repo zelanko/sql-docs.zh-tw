@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], components
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6fd60f349d9db6e6abd84d59812609fd61096bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 52c8f9e450998b887b2c5e05cedc8f97c753e932
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682266"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687549"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>查詢和檢視設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47682266"
 您可以在其中任何一個窗格中建立查詢或檢視：您可以在 [圖表] 窗格中選擇要指定顯示的資料行、將資料行輸入 [準則] 窗格，或使之成為 [SQL] 窗格中 SQL 陳述式的一部份。  
   
 ## <a name="displaying-and-hiding-panes"></a>顯示及隱藏窗格  
-若要隱藏窗格或顯示看不見的窗格，請以滑鼠右鍵按一下設計介面，指向 [窗格]，然後按一下窗格名稱。 如果在查詢設計工具模式中開啟 查詢和檢視表設計工具，則無法使用 結果 窗格。  
+若要隱藏窗格或顯示看不見的窗格，請以滑鼠右鍵按一下設計介面，指向 [窗格]  ，然後按一下窗格名稱。 如果在查詢設計工具模式中開啟 查詢和檢視表設計工具，則無法使用 結果  窗格。  
   
 ## <a name="see-also"></a>另請參閱  
 [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

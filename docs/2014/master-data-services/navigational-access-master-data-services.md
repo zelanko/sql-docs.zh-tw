@@ -10,15 +10,15 @@ helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 74e29a2e266dd525893e5b2fe54ba82414e046c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482630"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
   導覽存取權會套用至模型物件安全性 (在 **[模型]** 索引標籤上指派)。  

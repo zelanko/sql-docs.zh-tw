@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74f9508431e4c8d8d5b460c055b69837c09a4fe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1cbc45a185fd2fb36e838657dfcb28905023e96d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702026"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786525"
 ---
 # <a name="supportsfullouterjoins-method-sqlserverdatabasemetadata"></a>supportsFullOuterJoins 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

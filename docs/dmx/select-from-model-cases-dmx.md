@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2fc4a61868114f86a198878f5f54a59f3e96a5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928435"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。案例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +87,7 @@ AND IsInNode('002')
 >  並非所有的採擷模型類型都支援鑽研。 如需支援鑽研之模型的資訊，請參閱[鑽研查詢&#40;資料採礦&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  

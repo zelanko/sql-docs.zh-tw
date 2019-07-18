@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37dfbbec68d525667d415cca852aded4aba8b747
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105470"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
   良好的報表會呈現具備行動力或洞察能力的資訊。 若要針對地理背景呈現分析資料 (例如銷售總計或人口統計)，您可以將地圖加入至報表中。 一個地圖可以包含多個圖層，而每個圖層都會顯示由特定類型之空間資料所定義的地圖元素：表示位置的點、表示路線的線條，或表示區域的多邊形。 您可以讓您的分析資料與每個圖層上的地圖元素產生關聯。  
@@ -114,12 +113,12 @@ ms.locfileid: "56288186"
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本地圖|多邊形|僅顯示區域的地圖，例如銷售領域。<br /><br /> 選項:依調色盤更改色彩或使用單一色彩。 調色盤是預先定義的一組色彩。 當調色盤中的所有色彩都經過指派之後，就會指派色彩的陰影。|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|色彩分析地圖|多邊形|透過更改色彩顯示分析資料的地圖，例如，依地區顯示的銷售資料。|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|泡泡地圖|多邊形|透過更改在區域上置中的泡泡大小來顯示分析資料的地圖，例如，依地區顯示的銷售資料。<br /><br /> 選項:根據另一個分析欄位更改區域色彩，然後指定色彩規則。|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|泡泡地圖|多邊形|透過更改在區域上置中的泡泡大小來顯示分析資料的地圖，例如，依地區顯示的銷售資料。<br /><br /> 選項:更改區域色彩，根據另一個分析欄位，然後指定色彩規則。|  
 |![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線條地圖|線條|僅顯示線條的地圖，例如傳遞路線。<br /><br /> 選項:依調色盤更改色彩或使用單一色彩。|  
-|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線條地圖|線條|更改線條色彩與寬度的地圖，例如，已傳遞的封裝數目以及依路線顯示的準時度量資訊。<br /><br /> 選項:依某個分析欄位更改線條寬度、依另一個分析欄位更改線條色彩，然後指定色彩規則。|  
-|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本標記地圖|點|顯示每個位置之標記的地圖，例如城市。<br /><br /> 選項:依調色盤更改色彩或使用單一色彩，然後變更標記樣式。|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線條地圖|線條|更改線條色彩與寬度的地圖，例如，已傳遞的封裝數目以及依路線顯示的準時度量資訊。<br /><br /> 選項:更改線條寬度，由另一個分析欄位更改線條色彩，由另一個分析欄位，指定色彩規則。|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本標記地圖|點|顯示每個位置之標記的地圖，例如城市。<br /><br /> 選項:依調色盤更改色彩或使用單一色彩，並變更標記樣式。|  
 |![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|泡泡標記地圖|點|針對每個位置顯示泡泡，並依某個分析資料欄位更改泡泡大小的地圖，例如，依城市顯示的銷售資料。<br /><br /> 選項:根據另一個分析欄位更改泡泡色彩，然後指定色彩規則。|  
-|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析標記地圖|點|在每個位置顯示標記，並根據分析資料更改標記色彩、大小與類型的地圖，例如，最暢銷的產品、收益範圍與折扣策略。<br /><br /> 選項:依某個分析欄位更改標記類型、依另一個分析欄位更改標記大小，依第三個分析欄位更改標記色彩，然後指定色彩規則。|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析標記地圖|點|在每個位置顯示標記，並根據分析資料更改標記色彩、大小與類型的地圖，例如，最暢銷的產品、收益範圍與折扣策略。<br /><br /> 選項:更改標記類型的另一個分析欄位更改標記大小，根據第二個分析欄位，更改標記色彩，根據第三個分析欄位，，指定色彩規則。|  
   
  使用「地圖精靈」加入地圖之後，您可以使用「圖層精靈」建立其他圖層或變更圖層的選項。 如需精靈的詳細資訊，請參閱[地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
@@ -163,8 +162,8 @@ ms.locfileid: "56288186"
   
 ## <a name="see-also"></a>另請參閱  
  [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [教學課程：地圖報表&#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)   
+ [教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

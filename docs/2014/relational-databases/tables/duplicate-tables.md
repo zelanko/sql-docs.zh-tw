@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760760"
 ---
 # <a name="duplicate-tables"></a>複製資料表
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立新的資料表，然後從現有的資料表複製資料行資訊，藉以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中複製現有的資料表。  
@@ -53,19 +53,19 @@ ms.locfileid: "54132438"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]，再按一下 [新增資料表]。  
+2.  在 [物件總管] 中，以滑鼠右鍵按一下 [資料表]  ，再按一下 [新增資料表]  。  
   
-3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]。  
+3.  在 [物件總管] 中，以滑鼠右鍵按一下您要複製的資料表，然後按一下 [設計]  。  
   
-4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]**。  
+4.  選取現有資料表中的資料行，再從 **[編輯]** 功能表中按一下 **[複製]** 。  
   
 5.  切換回新的資料表，並選取第一列。  
   
-6.  從 **[編輯]** 功能表中，按一下 **[貼上]**。  
+6.  從 **[編輯]** 功能表中，按一下 **[貼上]** 。  
   
-7.  從 [檔案]  功能表中，按一下 [儲存] _table name_。  
+7.  從 [檔案]  功能表中，按一下 [儲存]  _table name_。  
   
-8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]**。  
+8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,12 +73,12 @@ ms.locfileid: "54132438"
   
 1.  請確定已連接至要建立資料表的資料庫，以及已在 [物件總管] 中選取資料庫。  
   
-2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為] 和 [CREATE 至]，然後選取 [新增查詢編輯器視窗]。  
+2.  以滑鼠右鍵按一下您想要複製的資料表，並依序指向 [編寫資料表的指令碼為]  和 [CREATE 至]  ，然後選取 [新增查詢編輯器視窗]  。  
   
 3.  變更資料表的名稱。  
   
 4.  移除新資料表不需要的任何資料行。  
   
-5.  按一下 [執行] 。  
+5.  按一下 [執行]  。  
   
   

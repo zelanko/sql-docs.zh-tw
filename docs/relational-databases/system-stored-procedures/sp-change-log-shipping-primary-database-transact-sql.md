@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045817"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +52,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>引數  
 `[ @database = ] 'database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
-`[ @backup_directory = ] 'backup_directory'` 是主要伺服器上備份資料夾的路徑。 *backup_directory*已**nvarchar(500)**，沒有預設值，不能是 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 是主要伺服器上備份資料夾的路徑。 *backup_directory*已**nvarchar(500)** ，沒有預設值，不能是 NULL。  
   
-`[ @backup_share = ] 'backup_share'` 是主要伺服器上備份目錄的網路路徑。 *backup_share*已**nvarchar(500)**，沒有預設值，不能是 NULL。  
+`[ @backup_share = ] 'backup_share'` 是主要伺服器上備份目錄的網路路徑。 *backup_share*已**nvarchar(500)** ，沒有預設值，不能是 NULL。  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` 這是時間的以分鐘為單位，將記錄備份檔儲存在備份目錄中主要伺服器上長度。 *backup_retention_period*已**int**，沒有預設值，不能是 NULL。  
   
@@ -131,6 +130,6 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

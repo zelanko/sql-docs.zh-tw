@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSDEST.F1
@@ -14,12 +13,12 @@ ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 author: yualan
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f10f78f59a6ec1dd5d5119a89624295935d6ff9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061456"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目的地
   **Azure Data Lake Store 目的地** 元件可讓 SSIS 套件將資料寫入 Azure Data Lake Store。 支援的檔案格式：文字、Avro 和 ORC。 

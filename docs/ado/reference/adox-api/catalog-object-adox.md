@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5547090443e2f22a135234853b76480fb8295e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967050"
 ---
 # <a name="catalog-object-adox"></a>Catalog 物件 (ADOX)
 包含集合 ([資料表](../../../ado/reference/adox-api/tables-collection-adox.md)，[檢視](../../../ado/reference/adox-api/views-collection-adox.md)，[使用者](../../../ado/reference/adox-api/users-collection-adox.md)，[群組](../../../ado/reference/adox-api/groups-collection-adox.md)，以及[程序](../../../ado/reference/adox-api/procedures-collection-adox.md))，說明資料來源的結構描述目錄。  

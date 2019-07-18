@@ -424,7 +424,7 @@
   items:
     - name: 從命令提示字元安裝更新
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 如何：驗證 SQL Server 更新的安裝是否成功
+    - name: 如何：驗證 SQL Server 更新是否成功安裝
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: SQL Server 服務安裝概觀
       href: overview-of-sql-server-servicing-installation.md

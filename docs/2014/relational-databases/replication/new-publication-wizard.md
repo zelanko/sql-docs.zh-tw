@@ -44,11 +44,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022573"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   此章節提供有關新增發行集精靈之下列頁面的資訊。  

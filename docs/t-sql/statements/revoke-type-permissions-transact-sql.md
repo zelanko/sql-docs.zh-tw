@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a5a98994ab735e685e1d866ff9a28899cdef8c52
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638657"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 類型權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以撤銷的類型權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
- 指定要撤銷其權限的類型。 範圍限定詞 (**::**) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 (**.**) 為必要項目。  
+ 指定要撤銷其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
  { FROM | TO } \<database_principal> 指定要對其撤銷權限的主體。  
   
@@ -125,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要類型的 CONTROL 權限。 如果使用 AS 子句，指定的主體必須擁有類型。  
   
 ## <a name="examples"></a>範例  

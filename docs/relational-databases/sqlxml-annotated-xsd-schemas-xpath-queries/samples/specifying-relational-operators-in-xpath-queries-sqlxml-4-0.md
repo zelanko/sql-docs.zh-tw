@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3cc16364c9a1d587de00311ee7f8931b82cd6283
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027049"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "56030640"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定關係運算子  
- 此 XPath 查詢傳回的子系的項目**\<客戶 >** 項目其中**CustomerID**屬性值是"1"，其中任何子**\<順序>** 項目包含 **\<OrderDetail >** 子項**OrderQty**屬性大於 3 的值：  
+ 此 XPath 查詢傳回的子系的項目 **\<客戶 >** 項目其中**CustomerID**屬性值是"1"，其中任何子 **\<順序>** 項目包含 **\<OrderDetail >** 子項**OrderQty**屬性大於 3 的值：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 指定在方括號篩選器述詞**\<客戶 >** 項目。 只有**\<客戶 >** 至少有一個項目 **\<OrderDetail >** 包含 OrderQty 屬性值大於 3 會傳回的孫系。  
+ 指定在方括號篩選器述詞 **\<客戶 >** 項目。 只有 **\<客戶 >** 至少有一個項目 **\<OrderDetail >** 包含 OrderQty 屬性值大於 3 會傳回的孫系。  
   
  **子系**軸是預設值。 因此，此查詢可以指定為：  
   
@@ -66,8 +65,10 @@ ms.locfileid: "56030640"
     ```  
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
-  
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  以下為範本執行的結果集：  
   
@@ -82,7 +83,7 @@ ms.locfileid: "56030640"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查詢中指定關係運算子並使用布林函數來比較結果  
- 此查詢會傳回所有**\<順序 >** 具有的內容節點的項目子系**SalesPersonID**屬性是小於 270 的值：  
+ 此查詢會傳回所有 **\<順序 >** 具有的內容節點的項目子系**SalesPersonID**屬性是小於 270 的值：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -95,7 +96,7 @@ ms.locfileid: "56030640"
 ```  
   
 > [!NOTE]  
->  在範本中指定這個查詢時，< 字元必須進行實體編碼，因為 < 字元在 XML 文件中具有特殊意義。 在範本中，請使用 `<` 來指定 < 字元。  
+>  在範本中，指定這個查詢時 < 字元必須是實體編碼，因為 < 字元在 XML 文件中具有特殊意義。 在範本中，使用`<`來指定 < 字元。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

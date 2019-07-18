@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45e9264284a690dee4a2938f56afb1fa9d9afed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a6a198d252f2363fc55e38677518ec02724e3e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65102024"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>疑難排解 SQL Server 資料庫單元測試的問題
 搭配資料庫使用 SQL Server 單元測試時，您可能會遇到本主題所述的問題：  
@@ -28,7 +28,7 @@ ms.locfileid: "47626326"
 -   [執行資料庫單元測試發生逾時](#TimeoutsDuringUnitTests)  
   
 ## <a name="UnitTestingAndAppConfigChanges"></a>執行單元測試後，單元測試以及 App.Config 的變更遭到忽略  
-如果您已修改測試專案中的 App.Config 檔案，就必須重建測試專案，這些變更才會生效， 其中包括了使用 [SQL Server 測試組態] 對話方塊對 App.Config 所做的變更。 若您並未重建測試專案，執行單元測試時便不會套用任何變更。  
+如果您已修改測試專案中的 App.Config 檔案，就必須重建測試專案，這些變更才會生效， 其中包括了使用 [SQL Server 測試組態]  對話方塊對 App.Config 所做的變更。 若您並未重建測試專案，執行單元測試時便不會套用任何變更。  
   
 ## <a name="DatabaseDeploymentInUnitTests"></a>執行單元測試後，資料庫部署至非預期的目標  
 如果您是從執行單元測試的資料庫專案來部署資料庫，該資料庫將會使用單元測試組態中所指定的連接字串資訊進行部署。 這項作業並未採用資料庫專案的 [偵錯] 屬性所指定的連接資訊，以便讓您能夠對同一個資料庫的不同執行個體執行 SQL Server 單元測試。  
@@ -49,6 +49,6 @@ ms.locfileid: "47626326"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：建立函式、觸發程序和預存程序的 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[操作說明：建立針對函式、觸發程序和預存程序建立 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[操作說明：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

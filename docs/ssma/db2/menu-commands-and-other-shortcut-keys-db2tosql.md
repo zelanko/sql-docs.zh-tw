@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074154"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>功能表命令和其他快速鍵 (DB2ToSQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於 DB2 的應用程式。  

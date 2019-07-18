@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098519"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 資料定義 - ALTER CUBE
 
 
-  改變指定 Cube 的結構，通常用來支援維度回寫。 如需應用程式中使用回寫的詳細資訊，請參閱此部落格文章：[建置回寫應用程式與 Analysis Services （部落格）](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  改變指定 Cube 的結構，通常用來支援維度回寫。 如需應用程式中使用回寫的詳細資訊，請參閱此部落格文章：[建立回寫應用程式與 Analysis Services （部落格）](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  請注意，並行維度回寫可能會導致死結，其中第一個回寫由於第二個回寫保留共用鎖定而無法認可。 在此情況下，雖然不會產生錯誤，但是也無法進行作業。 最後，這兩個回寫會逾時，而系統會回復變更。  
   
@@ -92,7 +91,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  提供新維度成員之父系名稱的有效字串運算式，若維度成員是建立於根節點，便無法提供。  
   
- *成員名稱*  
+ *MemberName*  
  提供成員名稱的有效字串運算式。  
   
  *Key_Value*  
@@ -140,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  為所移動的維度成員，提供新父系名稱的有效字串運算式。  
   
- *成員名稱*  
+ *MemberName*  
  提供成員名稱的有效字串運算式。  
   
  Unsigned_*整數*  
@@ -152,7 +151,7 @@ CELL CALCULATION Calculation_Name
  UPDATE DIMENSION MEMBER 子句讓您能修改成員屬性，以及與成員相關聯的自訂成員公式。  
   
 ### <a name="arguments"></a>引數  
- *成員名稱*  
+ *MemberName*  
  提供成員名稱的有效字串運算式。  
   
  *MDX_Expression*  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f65c682bfa09e5099455e06ae26fe5926ec8ceab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2498a083e94b81abbb23c1bd52080676c029bc3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041067"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>用戶端和伺服器端格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

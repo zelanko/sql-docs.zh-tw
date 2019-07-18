@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070899"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
   您可以藉由使用 **準則窗格** 中的 [排序次序](visual-database-tools.md)，指定排序資料時要使用之資料行的次序。  

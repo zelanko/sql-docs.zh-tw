@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
@@ -13,20 +12,20 @@ ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082013"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>定義時間週期 (資料來源) (維度精靈)
   使用 **[定義時間週期]** 頁面，即可定義代表時間維度中之時間週期的屬性，該時間維度具有 **[選取維度類型]** 頁面指定之資料表中的資料行。  
   
 > [!NOTE]  
->  只有您已經選取 [維度定義] 頁面上的 [使用資料來源建立維度] 和 [選取資料類型] 頁面上的 [時間維度] 時，才會出現此頁面。  
+>  只有您已經選取 [維度定義]  頁面上的 [使用資料來源建立維度]  和 [選取資料類型]  頁面上的 [時間維度]  時，才會出現此頁面。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **時間屬性名稱**  
  顯示用來指出時間維度內之時間週期的屬性類型。 如需屬性類型的詳細資訊，請參閱 [Type 元素 &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029786"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52748421"
 |**publisher_db**|**sysname**|預設發行者資料庫的名稱。|  
 |**name**|**sysname**|發行集的名稱。|  
 |**description**|**nvarchar(255)**|發行集的簡要描述。|  
-|**保留期**|**int**|整個發行集，其中單元會以值的保留期限**retention_period_unit**資料行。|  
+|**retention**|**int**|整個發行集，其中單元會以值的保留期限**retention_period_unit**資料行。|  
 |**publication_type**|**tinyint**|指出發行集的篩選：<br /><br /> **0** = 未篩選。<br /><br /> **1** = 篩選。|  
 |**pubid**|**uniqueidentifier**|這個發行集的唯一識別碼。 這是加入發行集時產生的識別碼。|  
 |**designmasterid**|**uniqueidentifier**|保留供日後使用。|  
@@ -67,7 +66,7 @@ ms.locfileid: "52748421"
 |**validate_subscriber_info**|**nvarchar(500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的 GUID 指定發行集發行在 Active Directory 中，GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 Active Directory 中。|  
 |**backward_comp_level**|**int**|資料庫相容性層級。 可為下列其中一個值：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
-|**到達**|**int**|允許使用的最大並行合併處理序數目。 值為**0**的這個屬性表示會在任何給定時間執行的並行合併處理序數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行合併處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
+|**max_concurrent_merge**|**int**|允許使用的最大並行合併處理序數目。 值為**0**的這個屬性表示會在任何給定時間執行的並行合併處理序數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行合併處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允許針對合併式發行集來執行的最大並行已篩選資料快照集工作階段數目。 如果**0**，能夠同時針對的發行集之任何指定時間執行的並行已篩選的資料快照集工作階段最大數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行快照集處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**use_partition_groups**|**smallint**|指定發行集是否使用預先計算的資料分割。|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|發行集的參數化資料列篩選器所用的函數清單 (用分號分隔)。|  
@@ -81,7 +80,7 @@ ms.locfileid: "52748421"
 |**snapshot_jobid**|**binary(16)**|識別在訂閱者能夠起始快照集產生程序時，產生快照集的代理程式作業。|  
 |**allow_web_synchronization**|**bit**|指定是否要將發行集啟用 Web 同步處理，其中**1**表示發行集啟用 Web 同步處理。|  
 |**web_synchronization_url**|**nvarchar(500)**|指定 Web 同步處理所用的網際網路 URL 預設值。|  
-|**allow_partition_realignment**|**bit**|指出當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。<br /><br /> **0** = 資料從舊分割區會保留在 「 訂閱者 」，其中這項資料在 「 發行者 」 上所做的變更將不會複寫到這個訂閱者，但在 「 訂閱者 」 上所做的變更會複寫到 「 發行者 」 上。<br /><br /> **1** = 刪除導引到 「 訂閱者 」，以反映資料分割變更的結果來移除已不在訂閱者資料分割的資料。<br /><br /> 如需詳細資訊，請參閱 < [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意：此值時，會保持在 「 訂閱者 」 的資料**0**應該視為如同它是唯讀狀態; 不過，這不會嚴格強制執行複寫系統。|  
+|**allow_partition_realignment**|**bit**|指出當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。<br /><br /> **0** = 資料從舊分割區會保留在 「 訂閱者 」，其中這項資料在 「 發行者 」 上所做的變更將不會複寫到這個訂閱者，但在 「 訂閱者 」 上所做的變更會複寫到 「 發行者 」 上。<br /><br /> **1** = 刪除導引到 「 訂閱者 」，以反映資料分割變更的結果來移除已不在訂閱者資料分割的資料。<br /><br /> 如需詳細資訊，請參閱 < [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意:此值時，會保持在 「 訂閱者 」 的資料**0**應該視為如同它是唯讀狀態; 不過，這不會嚴格強制執行複寫系統。|  
 |**retention_period_unit**|**tinyint**|定義用來定義時的單位*保留*，它可以是下列值之一：<br /><br /> **0** = 日。<br /><br /> **1** = 週。<br /><br /> **2** = 月。<br /><br /> **3** = 年。|  
 |**decentralized_conflicts**|**int**|指出是否將衝突記錄儲存在造成衝突的訂閱者端：<br /><br /> **0** = 將衝突記錄不會儲存在 「 訂閱者 」。<br /><br /> **1** = 將衝突記錄儲存在 「 訂閱者 」。|  
 |**generation_leveling_threshold**|**int**|指定某個層代中包含的變更數目。 層代是指傳遞給發行者或訂閱者的變更集合。|  
@@ -90,8 +89,8 @@ ms.locfileid: "52748421"
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

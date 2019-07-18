@@ -2,21 +2,20 @@
 title: 建立擴充功能
 titleSuffix: Azure Data Studio
 description: 了解建立與 Azure Data Studio 中加入擴充功能
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959601"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組擴充功能
 

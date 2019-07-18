@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767683"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
@@ -66,7 +66,7 @@ ms.locfileid: "59241656"
  在不同電腦上安裝封裝時，組態會先儲存並隨著封裝部署。 安裝封裝時，可更新組態中的值，以便於不同環境中支援封裝。 如需詳細資訊，請參閱 [建立封裝組態](../../2014/integration-services/create-package-configurations.md)。  
   
 ### <a name="logging-and-log-providers"></a>記錄和記錄提供者  
- 記錄是封裝執行時所收集的封裝資訊集合。 例如，記錄可提供封裝執行的開始和結束時間。 記錄提供者會定義封裝及其容器和工作可用來記錄執行階段資訊的目的地類型與格式。 記錄與封裝相關，但封裝中的工作和容器可將資訊記錄至任何封裝記錄中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種用來記錄的內建記錄提供者。 例如，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文字檔的記錄提供者。 您也可以建立自訂的記錄提供者，並用它們進行記錄。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](performance/integration-services-ssis-logging.md)。  
+ 記錄是封裝執行時所收集的封裝資訊集合。 例如，記錄可提供封裝執行的開始和結束時間。 記錄提供者會定義封裝及其容器和工作可用來記錄執行階段資訊的目的地類型與格式。 記錄與封裝相關，但封裝中的工作和容器可將資訊記錄至任何封裝記錄中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種用來記錄的內建記錄提供者。 例如， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文字檔的記錄提供者。 您也可以建立自訂的記錄提供者，並用它們進行記錄。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](performance/integration-services-ssis-logging.md)。  
   
 ### <a name="variables"></a>變數  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援系統變數和使用者定義的變數。 系統變數提供執行階段時，有關封裝物件的實用資訊，而使用者定義的變數則支援封裝中的自訂狀況。 這兩種類型的變數都可在運算式、指令碼和組態中使用。  
@@ -74,7 +74,7 @@ ms.locfileid: "59241656"
  封裝層級的變數包括可供封裝使用的預先定義系統變數，以及使用者定義的封裝範圍變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。  
   
 ### <a name="parameters"></a>參數  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」*(Project Parameter)，並在封裝層級建立 *「封裝參數」*(Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 參數](integration-services-ssis-package-and-project-parameters.md)。  
   
 ## <a name="package-properties-that-support-extended-features"></a>支援擴充功能的封裝屬性  
  封裝物件可設定成支援各種功能，包括於檢查點重新啟動封裝、以數位憑證簽署封裝、設定封裝保護等級，以及使用交易確保資料完整性。  
@@ -98,18 +98,18 @@ ms.locfileid: "59241656"
 |`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。|  
   
 ## <a name="configuration-of-packages"></a>封裝的組態  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或以程式設計方式設定屬性。  
   
  如需如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來設定這些屬性的詳細資訊，請參閱 [設定封裝屬性](set-package-properties.md)。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ## <a name="related-tasks"></a>相關工作  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 用來建立封裝的工具除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 物件模型之外，還包含兩項圖形工具：[[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 和 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱下列主題。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 用來建立封裝的工具除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 物件模型之外，還包含兩項圖形工具：[ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設計師] 和 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 匯入和匯出精靈]。 如需詳細資訊，請參閱下列主題。  
   
 -   [執行 SQL Server 匯入和匯出精靈](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   
--   [在 SQL Server 資料工具中建立封裝](create-packages-in-sql-server-data-tools.md)  
+-   [在 SQL Server Data Tools 中建立套件](create-packages-in-sql-server-data-tools.md)  
   
 -   請參閱《開發人員指南》中的**以程式設計方式建立封裝**一節。  
 

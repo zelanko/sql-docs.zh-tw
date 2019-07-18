@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL： 字元 |Microsoft Docs
+title: C 轉換為 SQL：字元 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037726"
 ---
-# <a name="c-to-sql-character"></a>C 到 SQL：字元
+# <a name="c-to-sql-character"></a>C 轉換為 SQL：字元
 ODBC C 資料類型的字元的識別項是：  
   
  SQL_C_CHAR  

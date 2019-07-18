@@ -24,14 +24,18 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc197ee015ac6ca35613bbb54dd48bbca67b2faa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f9dc06cb17b0135f6368824235e264bfcddddb2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65725795"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「詞彙查閱」轉換會比對從轉換輸入資料行的文字中擷取的詞彙，以及參考資料表中的詞彙。 然後，它會計算查閱資料表中的詞彙在輸入資料集中出現的次數，並將計數與參考資料表的詞彙一起寫入轉換輸出中的資料行。 此轉換包括單字頻率統計資料，對基於輸入文字建立自訂單字清單很有用處。  
   
  在「詞彙查閱」轉換執行查閱之前，它會使用與「詞彙擷取」轉換相同的方法從輸入資料行的文字中擷取單字：  
@@ -66,7 +70,7 @@ ms.locfileid: "58290304"
 |參考詞彙|Windows、Windows 7 Professional|  
 |輸出|Windows|  
   
- 「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元如下：%、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
+ 「詞彙查閱」轉換可以比對包含特殊字元的名詞及名詞片語，且參考資料表中的資料可能包含這些字元。 特殊字元如下：%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 '。  
   
 ## <a name="data-types"></a>資料型別  
  「詞彙查閱」轉換只可以使用具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行。 如果資料行包含文字，但不具有這些資料類型的其中之一，則「資料轉換」可以將具有 DT_WSTR 或 DT_NTEXT 資料類型的資料行加入資料流程，並將資料行值複製至新資料行。 然後，「資料轉換」的輸出可以用作「詞彙查閱」轉換的輸入。 如需詳細資訊，請參閱 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
@@ -124,14 +128,14 @@ ms.locfileid: "58290304"
  使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊，即可指定造成錯誤之資料列的錯誤處理選項。  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>詞彙查閱轉換編輯器 (參考資料表索引標籤)
-  使用 [詞彙查閱轉換編輯器] 對話方塊的 [參考資料表] 索引標籤，即可指定參考 (查閱) 資料表的連接。  
+  使用 [詞彙查閱轉換編輯器]  對話方塊的 [參考資料表]  索引標籤，即可指定參考 (查閱) 資料表的連接。  
   
 ### <a name="options"></a>選項。  
  **[無快取]**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
   
  **參考資料表名稱**  
  從清單中選取項目，以選取資料庫中的查閱資料表或檢視。 資料表或檢視應包含具有現有詞彙清單的資料行，可以用來與來源資料行中的文字進行比較。  
@@ -140,7 +144,7 @@ ms.locfileid: "58290304"
  使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊，即可指定造成錯誤之資料列的錯誤處理選項。  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>詞彙查閱轉換編輯器 (進階索引標籤)
-  使用 [詞彙查閱轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定查閱是否應區分大小寫。  
+  使用 [詞彙查閱轉換編輯器]  對話方塊的 [進階]  索引標籤，即可指定查閱是否應區分大小寫。  
   
 ### <a name="options"></a>選項。  
  **使用區分大小寫的詞彙查閱**  

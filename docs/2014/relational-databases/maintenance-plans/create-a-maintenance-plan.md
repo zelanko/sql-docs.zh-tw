@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206049"
 ---
 # <a name="create-a-maintenance-plan"></a>建立維護計畫
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立單一伺服器或多伺服器維護計畫。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]透過兩種方式的其中一種建立這些維護計畫：使用「維護計畫精靈」或設計介面。 本精靈最適用於建立基本的維護計畫，使用設計介面建立計畫時可讓您利用加強的工作流程。  
@@ -28,7 +28,7 @@ ms.locfileid: "52801540"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立維護計畫：**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52801540"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [維護計畫精靈]。  
+3.  以滑鼠右鍵按一下 [維護計畫]  資料夾，然後選取 [維護計畫精靈]  。  
   
 4.  請遵循精靈的步驟來建立維護計畫。 如需詳細資訊，請參閱 [Use the Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52801540"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [新增維護計畫]。  
+3.  以滑鼠右鍵按一下 [維護計畫]  資料夾，然後選取 [新增維護計畫]  。  
   
 4.  遵循[建立維護計畫 &#40;維護計畫設計介面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md) 中的步驟建立維護計畫。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "52801540"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb;  

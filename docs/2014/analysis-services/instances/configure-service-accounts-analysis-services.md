@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
@@ -16,12 +15,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080192"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
@@ -67,7 +66,7 @@ ms.locfileid: "54125498"
   
 |||  
 |-|-|  
-|**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有必要的權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
+|**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限鎖定伺服器，Analysis Services 可能無法啟動，記錄以下錯誤：「 所需的權限不會保留用戶端 」。 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
 |**調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
 |**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 `VertiPaqPagingPolicy` 設為 0，來防止它使用 Windows 分頁。<br /><br /> `VertiPaqPagingPolicy` 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定 (其中`VertiPaqPagingPolicy`= 1)，您不需要授與**在記憶體中鎖定分頁**表格式執行個體的權限。<br /><br /> `VertiPaqPagingPolicy` 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 會仰賴**在記憶體中鎖定分頁**權限，才能在`VertiPaqPagingPolicy`= 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 請參閱[Memory Properties](../server-properties/memory-properties.md)如需詳細資訊`VertiPaqPagingPolicy`。|  
   

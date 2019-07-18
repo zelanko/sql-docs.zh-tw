@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138063"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相對與絕對的捲動
 捲動選項中的大部分**SQLFetchScroll**游標的位置，相對於目前的位置或絕對位置。 **SQLFetchScroll**支援提取下一步 之前，第一個和最後一個資料列集，做為也為相對提取 (提取資料列集*n*從目前的資料列集開始的資料列) 和絕對提取 （提取的資料列集開始在資料列*n*)。 如果*n*是負的絕對提取中，會計算資料列從結果集的結尾。 因此，絕對提取的資料列-1 表示提取結果集內的最後一個資料列的開頭資料列集。  

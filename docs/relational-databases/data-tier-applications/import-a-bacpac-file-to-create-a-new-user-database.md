@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5343d744d5b8be25a51ad48ec5ad797208a2643c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590682"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580190"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53590682"
 1.  匯入會使用儲存在匯出檔案中的 DAC 定義，建立新的 DAC 及相關聯的資料庫，其方式相當於 DAC 部署從 DAC 封裝檔案中的定義建立新的 DAC。  
   
 2.  匯入會從匯出檔案大量複製資料。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-utility"></a>SQL Server 公用程式  
  如果您將 DAC 匯入至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
@@ -61,7 +63,7 @@ ms.locfileid: "53590682"
 ## <a name="security"></a>Security  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 匯出檔案中，而且沒有密碼。 當您匯入檔案之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>使用匯入資料層應用程式精靈  
@@ -92,20 +94,20 @@ ms.locfileid: "53590682"
   
 -   **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
--   **下一步** - 繼續進行 [匯入設定] 頁面。  
+-   **下一步** - 繼續進行 [匯入設定]  頁面。  
   
 -   **取消** - 取消作業並關閉精靈。  
   
 ###  <a name="Import_settings"></a> 匯入設定頁面  
  您可以使用此頁面來指定要匯入之 .bacpac 檔案的位置。  
   
--   **從本機磁碟匯入** - 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
+-   **從本機磁碟匯入** - 按一下 [瀏覽...]  巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
 -   **從 Azure 匯入** - 從 Microsoft Azure 容器匯入 BACPAC 檔案。 您必須連線到 Microsoft Azure 容器，才能驗證此選項。 請注意，[從 Azure 匯入] 選項也會要求您指定暫存檔案的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
-     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 您可以依照 [名稱]、[大小] 或 [修改日期] 排序資料行。  
+     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 您可以依照 [名稱]  、[大小]  或 [修改日期]  排序資料行。  
   
-     若要繼續進行，請指定要匯入的 .bacpac 檔案，然後按一下 **[開啟]**。  
+     若要繼續進行，請指定要匯入的 .bacpac 檔案，然後按一下 **[開啟]** 。  
   
 ###  <a name="Database_settings"></a> 資料庫設定頁面  
  您可以使用此頁面指定要建立之資料庫的詳細資料。  
@@ -114,29 +116,29 @@ ms.locfileid: "53590682"
   
 -   **新資料庫名稱** - 針對匯入的資料庫提供名稱。  
   
--   **資料檔案路徑** - 提供資料檔案的本機目錄。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。  
+-   **資料檔案路徑** - 提供資料檔案的本機目錄。 按一下 [瀏覽...]  巡覽本機電腦，或在提供的空間中指定路徑。  
   
--   **記錄檔路徑** - 提供記錄檔的本機目錄。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。  
+-   **記錄檔路徑** - 提供記錄檔的本機目錄。 按一下 [瀏覽...]  巡覽本機電腦，或在提供的空間中指定路徑。  
   
- 若要繼續進行，請按 **[下一步]**。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
  **針對 Azure SQL Database：**  
   
  - **[匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 提供使用 Azure 入口網站、PowerShell、SSMS 或 SqlPackage 的逐步指示。  
- - 請參閱 **[SQL Database 選項和效能：了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)**，以取得不同服務層的詳細外觀。  
+ - 請參閱 **[SQL Database 選項和效能：了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** ，以取得不同服務層的詳細外觀。  
 
 ### <a name="validation-page"></a>驗證頁面  
  您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
   
- 若要繼續進行，請按 **[下一步]**。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ###  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯入作業，請按一下 **[完成]**。 若要取消匯入作業並結束精靈，請按一下 **[取消]**。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯入作業，請按一下 **[完成]** 。 若要取消匯入作業並結束精靈，請按一下 **[取消]** 。  
   
 ###  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
   
- 若要繼續進行，請按 **[下一步]**。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ###  <a name="Results"></a> 結果頁面  
  此頁面會報告匯入和建立資料庫作業成功或失敗，並顯示每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  

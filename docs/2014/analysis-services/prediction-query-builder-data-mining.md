@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070776"
 ---
 # <a name="prediction-query-builder-data-mining"></a>預測查詢產生器 (資料採礦)
   使用 **[採礦模型預測]** 檢視，即可根據採礦結構包含的採礦模型建立預測。  
@@ -25,7 +24,7 @@ ms.locfileid: "48095048"
   
 -   [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [建立及查詢使用 DMX 資料採礦模型： 教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [建立及查詢使用 DMX 資料採礦模型：教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [資料採礦查詢](data-mining/data-mining-queries.md)  
   

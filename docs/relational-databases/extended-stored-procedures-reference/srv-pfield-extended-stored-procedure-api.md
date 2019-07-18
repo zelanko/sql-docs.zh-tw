@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 822e8608939d7fb3dbef6872ec92da37e7621865
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131584"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

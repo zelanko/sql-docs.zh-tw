@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9af0e0c5a843ecf475b28dd873ecfedc5d2f6472
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c9229f612c45c2163148b809d8a79de592f06b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041084"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
   
-  **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >** 項目。  
+ **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >** 項目。  
   
  範本是包含一或多個查詢的有效 XML 文件。 FOR XML 和 XPath 查詢會傳回文件片段。 範本對於文件片段就像是容器一樣；因此，範本會提供一種方式來指定單一的上層元素。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "56036409"
   
  除了指定**對應結構描述**屬性上 **\<sql:xpath-查詢 >** 項目在範本中 （當 XPath 查詢），或在 **\<updg:sync >** 項目在 updategram 中，您可以執行下列動作：  
   
--   指定**對應結構描述**屬性上**\<根 >** 範本中的項目 （全域宣告）。 此對應結構描述就會變成沒有明確的所有 XPath 和 updategram 節點將都使用的預設結構描述**對應結構描述**註釋。  
+-   指定**對應結構描述**屬性上 **\<根 >** 範本中的項目 （全域宣告）。 此對應結構描述就會變成沒有明確的所有 XPath 和 updategram 節點將都使用的預設結構描述**對應結構描述**註釋。  
   
 -   指定**對應結構描述**屬性使用 ADO**命令**物件。  
   

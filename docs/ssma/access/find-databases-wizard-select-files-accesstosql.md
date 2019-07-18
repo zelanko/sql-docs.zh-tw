@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006552"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫精靈 （選取檔案） (AccessToSQL)
 [尋找資料庫精靈] 的 [選取檔案] 頁面上列出搜尋期間找到的檔案。 若要選取要加入至 SSMA 檔案，選取 包含的檔案名稱的資料列。 當您完成選取的檔案，請按一下**下一步**若要檢視 確認選取項目 頁面。  

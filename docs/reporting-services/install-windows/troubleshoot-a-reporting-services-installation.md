@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502674"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -47,6 +47,8 @@ ms.locfileid: "52391661"
 -   Authz.dll 必須存在於 System32 資料夾中。  
   
  安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安裝，則安裝程式會加以安裝。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> 針對 SharePoint 模式安裝的問題進行移難排解  
   
@@ -85,7 +87,7 @@ ms.locfileid: "52391661"
   
 1.  在執行 SharePoint 2013/2016 管理中心的電腦上  
   
-    1.  使用系統管理員權限來開啟 SharePoint 2013/2016 管理命令介面。 以滑鼠右鍵按一下圖示，然後按一下 [以系統管理員身分執行]。 在命令介面中執行下列三個指令程式：  
+    1.  使用系統管理員權限來開啟 SharePoint 2013/2016 管理命令介面。 以滑鼠右鍵按一下圖示，然後按一下 [以系統管理員身分執行]  。 在命令介面中執行下列三個指令程式：  
   
     2.  ```  
         Install-SPRSService  
@@ -99,7 +101,7 @@ ms.locfileid: "52391661"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  在以下頁面上，確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的狀態已顯示為 [已啟動]：SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務]  
+2.  在以下頁面上，確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的狀態已顯示為 [已啟動]  ：SharePoint 2013/2016 管理中心 -> [應用程式管理]  -> [管理伺服器上的服務]   
   
  ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
   
@@ -114,7 +116,7 @@ ms.locfileid: "52391661"
   
 -   從 SQL Server 安裝媒體安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。  
   
- 如果當您完成其中一種因應措施時，[SharePoint 2013/2016 管理命令介面] 已開啟，請關閉並重新開啟管理命令介面。  
+ 如果當您完成其中一種因應措施時，[SharePoint 2013/2016 管理命令介面]  已開啟，請關閉並重新開啟管理命令介面。  
   
  如需詳細資訊，請參閱下列文件：  
   
@@ -135,7 +137,7 @@ ms.locfileid: "52391661"
  
  - SSRS 服務應用程式未對應至此 Web 應用程式。 請使用 SSRS 服務應用程式頁面，將 SSRS 服務應用程式 Proxy 關聯至此 Web 應用程式的應用程式 Proxy 群組。 
   
- **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 「報表伺服器 URL 未設定」訊息中的第一項建議。 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定] 頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)] 來完成。  
+ **因應措施：** 此錯誤訊息包含更正這個問題的三個建議步驟。 「報表伺服器 URL 未設定」訊息中的第一項建議。 是與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的報表伺服器版本整合時相關。 先前報表伺服器版本的 SharePoint 設定是在 [一般應用程式設定]  頁面上，使用 [SQL Server Reporting Services (2008 和 2008 R2)]  來完成。  
   
  **詳細資訊：** 當您嘗試使用任何需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之連接的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，就會看見這則錯誤訊息。 這包括：  
   
@@ -188,6 +190,8 @@ ms.locfileid: "52391661"
  **因應措施：** 沒有因應措施。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式支援 SYSPREP。  
   
  ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
+
+::: moniker-end
   
 ##  <a name="bkmk_tshoot_native"></a> 針對原生模式安裝的問題進行疑難排解  
   
@@ -204,10 +208,10 @@ ms.locfileid: "52391661"
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
-    -   **run \<**.NET 4.0 Framework 目錄 **>\InstallUtil.exe \<** Report Server Bin 目錄 **>\ReportingServicesLibrary.dll**  
+    -   **run \<** .NET 4.0 Framework 目錄  **>\InstallUtil.exe \<** Report Server Bin 目錄  **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  以 .NET Framework 4.0 檔案的實體路徑來取代 \<.NET 4.0 Framework 目錄>，並以報表伺服器 Bin 檔案的實體路徑來取代 \<報表伺服器 Bin 目錄>。  
+        >  以 .NET Framework 4.0 檔案的實體路徑來取代 \<.NET 4.0 Framework 目錄  >，並以報表伺服器 Bin 檔案的實體路徑來取代 \<報表伺服器 Bin 目錄  >。  
   
 3.  重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務。  
   
@@ -217,13 +221,13 @@ ms.locfileid: "52391661"
   
 1.  開啟登錄編輯程式：  
   
-    1.  按一下 **[開始]**，並按一下 **[執行]**。  
+    1.  按一下 **[開始]** ，並按一下 **[執行]** 。  
   
     2.  在 [執行]  對話方塊的 [開啟]  方塊中，輸入 **regedit**。  
   
 2.  在 [登錄編輯程式] 中，選取下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
+3.  以滑鼠右鍵按一下 [Performance]  節點，並指向 [新增]  ，然後按一下 [多字串值]  。  
   
 4.  輸入 **Counter Names** ，然後按 ENTER。  
   
@@ -231,7 +235,7 @@ ms.locfileid: "52391661"
   
 6.  瀏覽到以下的登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
+7.  以滑鼠右鍵按一下 [Performance]  節點，並指向 [新增]  ，然後按一下 [多字串值]  。  
   
 8.  輸入 **Counter Names** ，然後按 ENTER。  
   
