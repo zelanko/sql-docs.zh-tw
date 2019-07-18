@@ -1,6 +1,6 @@
 ---
-title: 執行 SQL Server Machine Learning 在容器中的服務 |Microsoft Docs
-description: 本教學課程會示範如何使用 SQL Server Machine Learning 服務在 Docker 上執行的 Linux 容器。
+title: 在容器中執行 SQL Server Machine Learning 服務 |Microsoft Docs
+description: 本教學課程說明如何在 Docker 上執行的 Linux 容器中, 使用 SQL Server Machine Learning 服務。
 author: uc-msft
 ms.author: umajay
 ms.date: 06/26/2019
@@ -9,24 +9,24 @@ ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
 moniker: '>= sql-server-linux-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 484f4fc9e51bc8d6ec4ad6e2e75df88593672c28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3d3774adf4bee07269b25c3359b031ca24eb99e
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941086"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300430"
 ---
-# <a name="run-sql-server-machine-learning-services-in-a-container"></a>執行 SQL Server Machine Learning 在容器中的服務
+# <a name="run-sql-server-machine-learning-services-in-a-container"></a>在容器中執行 SQL Server Machine Learning 服務
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本教學課程會示範如何建置 SQL Server Machine Learning 服務的 Docker 容器，並從 TRANSACT-SQL 中執行機器學習服務指令碼。
+本教學課程示範如何使用 SQL Server Machine Learning 服務建立 Docker 容器, 並從 Transact-sql 執行 Machine Learning 腳本。
 
 > [!div class="checklist"]
-> * Mssql docker 存放庫複製。
-> * 建置使用機器學習服務的 SQL Server Linux 容器映像。
-> * 使用機器學習服務中執行 SQL Server Linux 容器映像。
-> * 執行 R 或 Python 指令碼使用 TRANSACT-SQL 陳述式。
+> * 複製 mssql-docker 存放庫。
+> * 使用 Machine Learning 服務組建 SQL Server Linux 容器映射。
+> * 使用 Machine Learning 服務執行 SQL Server Linux 容器映射。
+> * 使用 Transact-sql 語句執行 R 或 Python 腳本。
 > * 停止並移除 SQL Server Linux 容器。 
 
 ## <a name="prerequisites"></a>先決條件
@@ -34,40 +34,40 @@ ms.locfileid: "67941086"
 * Git 命令列介面。
 * 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 * 至少 2 GB 的磁碟空間。
-* 至少 2 GB 的 RAM。
+* 最少 2 GB 的 RAM。
 * [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
 
-## <a name="clone-the-mssql-docker-repository"></a>Mssql docker 存放庫複製
+## <a name="clone-the-mssql-docker-repository"></a>複製 mssql-docker 存放庫
 
-1. 開啟 bash 終端機，在 Windows 上的 Linux/Mac 或 WSL 終端機上。
+1. 開啟 Linux/Mac 上的 bash 終端機或 Windows 上的 WSL 終端機。
 
-1. 建立要在本機保留一份 mssql docker 存放庫的本機目錄。
-1. 執行 git clone 命令來複製 mssql docker 存放庫。
+1. 建立本機目錄, 以在本機保存 mssql-docker 存放庫的複本。
+1. 執行 git clone 命令以複製 mssql docker 存放庫。
 
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
 
-## <a name="build-sql-server-linux-container-image-with-machine-learning-services"></a>建置使用機器學習服務的 SQL Server Linux 容器映像
+## <a name="build-sql-server-linux-container-image-with-machine-learning-services"></a>使用 Machine Learning 服務組建 SQL Server Linux 容器映射
 
-1. 將目錄變更為 mssql mlservices 目錄。
+1. 將目錄變更為 mssql-mlservices 目錄。
 
     ```bash
     cd mssql-docker/linux/preview/examples/mssql-mlservices
     ```
 
-1. 執行 build.sh 指令碼。
+1. 執行 build.sh 腳本。
 
    ```bash
    ./build.sh
    ```
 
    > [!NOTE]
-   > 建置 docker 映像時，需要安裝幾個 Gb 大小的封裝。 指令碼可能需要 20 分鐘的時間才能完成，視網路頻寬而定。
+   > 建立 docker 映射需要安裝大小為數 Gb 的套件。 視網路頻寬而定, 腳本可能需要最多20分鐘的時間才能完成。
 
-## <a name="run-sql-server-linux-container-image-with-machine-learning-services"></a>使用機器學習服務中執行 SQL Server Linux 容器映像
+## <a name="run-sql-server-linux-container-image-with-machine-learning-services"></a>使用 Machine Learning 服務執行 SQL Server Linux 容器映射
 
-1. 執行容器之前先設定環境變數。 將 PATH_TO_MSSQL 環境變數設定主應用程式目錄。
+1. 在執行容器之前, 請先設定環境變數。 將 PATH_TO_MSSQL 環境變數設定為主機目錄。
 
    ```bash
     export MSSQL_PID='Developer'
@@ -76,16 +76,16 @@ ms.locfileid: "67941086"
     export PATH_TO_MSSQL='/home/mssql/'
    ```
 
-1. 執行 run.sh 指令碼。
+1. 執行 run.sh 腳本。
 
    ```bash
    ./run.sh
    ```
 
-   此命令會建立使用機器學習服務的 SQL Server 容器與開發人員版本 （預設值）。 SQL Server 連接埠**1433年**在連接埠與主機上公開**1401年**。
+   此命令會建立具有 Developer edition (預設值) Machine Learning 服務的 SQL Server 容器。 SQL Server 埠**1433**會在主機上公開為埠**1401**。
 
    > [!NOTE]
-   > 在容器中執行生產 SQL Server 版本的程序會稍有不同。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。 如果您使用相同的容器名稱和連接埠，本逐步解說的其餘部分仍適用於實際執行的容器。
+   > 在容器中執行生產 SQL Server 版本的程式稍有不同。 如需詳細資訊, 請參閱[在 Docker 上設定 SQL Server 容器映射](sql-server-linux-configure-docker.md)。 如果您使用相同的容器名稱和埠, 本逐步解說的其餘部分仍然可與生產環境容器搭配運作。
 
 1. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
@@ -110,9 +110,9 @@ ms.locfileid: "67941086"
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
-## <a name="execute-r--python-scripts-from-transact-sql"></a>執行 R / Python 指令碼從 TRANSACT-SQL
+## <a name="execute-r--python-scripts-from-transact-sql"></a>從 Transact-sql 執行 R/Python 腳本
 
-1. 連接到容器中的 SQL Server，並執行下列 T-SQL 陳述式啟用外部指令碼組態選項。
+1. 連接到容器中的 SQL Server, 然後執行下列 T-sql 語句來啟用 [外部腳本設定] 選項。
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1
@@ -120,7 +120,7 @@ ms.locfileid: "67941086"
     go
     ```
 
-1. 請確認機器學習服務正在執行下列的簡單 R/Python sp_execute_external_script。
+1. 執行下列簡單的 R/Python sp_execute_external_script, 確認 Machine Learning 服務正在運作。
 
     ```sql
     execute sp_execute_external_script 
@@ -150,16 +150,16 @@ ms.locfileid: "67941086"
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您了解如何執行下列作業：
+在本教學課程中, 您已瞭解如何執行下列動作:
 
 > [!div class="checklist"]
-> * Mssql docker 存放庫複製。
-> * 建置使用機器學習服務的 SQL Server Linux 容器映像。
-> * 使用機器學習服務中執行 SQL Server Linux 容器映像。
-> * 執行 R 或 Python 指令碼使用 TRANSACT-SQL 陳述式。
+> * 複製 mssql-docker 存放庫。
+> * 使用 Machine Learning 服務組建 SQL Server Linux 容器映射。
+> * 使用 Machine Learning 服務執行 SQL Server Linux 容器映射。
+> * 使用 Transact-sql 語句執行 R 或 Python 腳本。
 > * 停止並移除 SQL Server Linux 容器。
 
-接下來，請檢閱其他的 Docker 設定及疑難排解案例：
+接下來, 請參閱其他 Docker 設定和疑難排解案例:
 
 > [!div class="nextstepaction"]
->[在 Docker 上的 SQL Server 的設定指南](sql-server-linux-configure-docker.md)
+>[Docker 上的 SQL Server 設定指南](sql-server-linux-configure-docker.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6f608fc4fa1aea15a35e24273fdab3154672f71d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: f5c29caffadeb96b2bcf4ea380c491f2a0c12f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220508"
 ---
-<Token>**適用於：** ![yes](media/yes.png)（從 2016年開始） 的 SQL Server![沒有](media/no.png)Azure SQL Database![是](media/yes.png)Azure SQL 資料倉儲![沒有](media/no.png)平行處理資料倉儲 </Token>
+<Token>**適用於：** ![是](media/yes.png)SQL Server ![否](media/no.png)Azure SQL Database ![是](media/yes.png)Azure SQL 資料倉儲 ![否](media/no.png)平行處理資料倉儲 </Token>
 

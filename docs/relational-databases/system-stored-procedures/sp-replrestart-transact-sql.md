@@ -1,5 +1,5 @@
 ---
-title: sp_replrestart & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_replrestart (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 482658872c069ff530484b6f5eaafd73cb0b3d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc15ed0b36738968a2b455157213a10dbceb2965
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113157"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300441"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68113157"
   在備份與還原期間，供異動複寫使用，以便同步處理散發者端的複寫資料和發行者端的資料。 這個預存程序執行於發行集資料庫的發行者端。  
   
 > [!IMPORTANT]  
->  **sp_replrestart**是一個內部複寫預存程序，並應該只在主題中所述，異動複寫拓撲中還原資料庫發行時才使用[Backing Up and Restoring 的策略快照式和異動複寫](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
+>  **sp_replrestart**是內部複寫預存程式, 應該只在還原事務複寫拓撲中發行的資料庫時使用, 如[備份和還原快照集的策略中所述。異動複寫](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,13 +40,13 @@ sp_replrestart
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_replrestart**可在散發者端最高的記錄序號 (lsn) 值符合在 「 發行者 」 的最大 LSN 值。  
+ 當「散發者」端的最高記錄序號 (LSN) 值不符合「發行者」端的最高 LSN 值時, 就會使用**sp_replrestart** 。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_replrestart**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_replrestart**。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
