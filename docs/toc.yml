@@ -7396,6 +7396,8 @@
       items:
         - name: 建立連結的伺服器
           href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+        - name: 建立連結的伺服器提供者
+          href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: 全文檢索搜尋
       href: relational-databases/search/full-text-search.md
       items:
