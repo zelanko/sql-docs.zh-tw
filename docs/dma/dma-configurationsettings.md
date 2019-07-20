@@ -1,6 +1,6 @@
 ---
-title: 設定 Data Migration assistant (SQL Server) |Microsoft Docs
-description: 了解如何設定的更新組態檔中的值設定 Data Migration Assistant
+title: 設定 Data Migration Assistant (SQL Server) 的設定 |Microsoft Docs
+description: 瞭解如何藉由更新設定檔中的值, 來設定 Data Migration Assistant 的設定
 ms.custom: ''
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058868"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345243"
 ---
-# <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration assistant
+# <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration Assistant 的設定
 
-您可以微調特定行為的資料移轉小幫手 dma.exe.config 檔案中設定組態值。 這篇文章描述的索引鍵的組態值。
+您可以藉由在 cmd.exe .config 檔案中設定設定值, 微調 Data Migration Assistant 的特定行為。 本文說明主要設定值。
 
-您可以在您的電腦上的下列資料夾中，Data Migration Assistant 的桌面應用程式和命令列公用程式中，找到 dma.exe.config 檔案。
+您可以在電腦上的下列資料夾中, 找到 Data Migration Assistant 桌面應用程式和命令列公用程式的 cmd.exe .config 檔案。
 
 - 桌面應用程式
 
-  %Programfiles%\\Microsoft Data Migration Assistant\\dma.exe.config
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\cmd.exe .config
 
 - 命令列公用程式
 
-  %Programfiles%\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd 
 
-請務必儲存一份原始的組態檔進行任何修改之前的時間。 完成變更之後，重新啟動資料移轉小幫手做為新的組態值才會生效。
+請務必先儲存原始設定檔案的複本, 再進行任何修改。 進行變更之後, 請重新開機 Data Migration Assistant, 新的設定值才會生效。
 
-## <a name="number-of-databases-to-assess-in-parallel"></a>要評估以平行方式的資料庫數目
+## <a name="number-of-databases-to-assess-in-parallel"></a>要平行評估的資料庫數目
 
-Data Migration Assistant 評估多個資料庫，以平行方式。 在評估期間 Data Migration Assistant 中擷取資料層應用程式 (dacpac) 以了解資料庫結構描述。 這項作業可以逾時，如果相同的伺服器上的多個資料庫以平行方式來評估。 
+Data Migration Assistant 會以平行方式評估多個資料庫。 在評估期間 Data Migration Assistant 會將資料層應用程式 (dacpac) 解壓縮, 以瞭解資料庫架構。 如果同一部伺服器上的多個資料庫以平行方式進行評估, 此作業可能會超時。 
 
-開始使用 Data Migration Assistant v2.0，您可以控制這藉由設定 parallelDatabases 組態值。 預設值為 8。
+從 Data Migration Assistant v2.0 開始, 您可以藉由設定 parallelDatabases 設定值來控制此項。 預設值為8。
 
 ```
 <advisorGroup>
@@ -58,11 +58,11 @@ Data Migration Assistant 評估多個資料庫，以平行方式。 在評估期
 
 
 
-## <a name="number-of-databases-to-migrate-in-parallel"></a>若要以平行方式移轉的資料庫數目
+## <a name="number-of-databases-to-migrate-in-parallel"></a>要平行遷移的資料庫數目
 
-Data Migration Assistant 移轉多個資料庫，以平行方式，之前移轉的登入。 在移轉期間，Data Migration Assistant 將進行來源資料庫的備份，選擇性地複製備份，並再將其還原目標伺服器上。 多個資料庫選取進行移轉時，您可能會發生逾時失敗。 
+Data Migration Assistant 在遷移登入之前, 平行遷移多個資料庫。 在遷移期間, Data Migration Assistant 會建立源資料庫的備份, 並選擇性地複本備份, 然後在目標伺服器上將它還原。 當您選取數個資料庫進行遷移時, 可能會遇到逾時錯誤。 
 
-您可以使用 Data Migration Assistant v2.0，從開始，如果您遇到這個問題減少 parallelDatabases 組態值。 您可以增加要縮短整體的移轉時間的值。
+從 Data Migration Assistant v2.0 開始, 如果您遇到這個問題, 您可以減少 parallelDatabases 設定值。 您可以增加此值, 以減少整體的遷移時間。
 
 ```
 <advisorGroup>
@@ -79,22 +79,22 @@ Data Migration Assistant 移轉多個資料庫，以平行方式，之前移轉�
 
 ## <a name="dacfx-settings"></a>DacFX 設定
 
-在評估期間 Data Migration Assistant 中擷取資料層應用程式 (dacpac) 以了解資料庫結構描述。 這項作業可能會因逾時的極大型資料庫，或如果伺服器是在負載之下。 從開始資料移轉 v1.0，您可以修改下列設定值，以避免發生錯誤。 
+在評估期間, Data Migration Assistant 會將資料層應用程式 (dacpac) 解壓縮, 以瞭解資料庫架構。 這種作業可能會因為非常大型的資料庫而失敗, 或伺服器是否處於負載中。 從資料移轉 v1.0 開始, 您可以修改下列設定值, 以避免發生錯誤。 
 
 > [!NOTE]
-> 將整個&lt;dacfx&gt;加上預設註解項目。 移除註解，然後再視需要修改值。
+> 根據預設&lt;,&gt;整個 dacfx 專案都會加上批註。 移除批註, 然後視需要修改值。
 
 - commandTimeout
 
-   此參數中設定 IDbCommand.CommandTimeout 屬性*秒*。 (預設值 = 60)
+   這個參數會設定 IDbCommand. CommandTimeout 屬性 *(以秒為單位)* 。 (預設值 = 60)
 
 - databaseLockTimeout
 
-   此參數相當於[設定的鎖定\_逾時等候逾時\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (預設 = 5000)
+   這個參數相當於[設定鎖定\_超時\_時間長度](../t-sql/statements/set-lock-timeout-transact-sql.md)(以*毫秒為單位)* 。 (預設值 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  此參數會設定要使用的 SQL 連接集區連線的數目。 (預設值 = 8)
+  此參數會設定要使用的 SQL 連接集區連接數目。 (預設值 = 8)
 
 ```
 <advisorGroup>
@@ -109,11 +109,11 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:建議的臨界值
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:建議閾值
 
-具有[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)，您可以動態延展暖資料與冷交易資料從 Microsoft SQL Server 2016 至 Azure。 Stretch Database 交易資料庫為目標與大量的冷資料。 Stretch Database 的建議事項，在儲存體功能建議，首先會找出資料表，它會認為將受益於這項功能，然後它會識別要啟用這項功能的資料表所需的變更。
+使用[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), 您可以將暖和冷交易資料從 Microsoft SQL Server 2016 動態延展到 Azure。 Stretch Database 以具有大量冷資料的交易式資料庫為目標。 [Stretch Database 建議] 下的 [儲存體功能建議] 會先識別其認為將受益于此功能的資料表, 然後識別需要進行的變更, 才能啟用此功能的資料表。
 
-您可以從開始使用 Data Migration Assistant v2.0，來控制此臨界值的資料表，以符合使用 recommendedNumberOfRows 組態值的 Stretch Database 功能。 預設值為 100,000 個資料列。 如果您想要分析變得更小的資料表的延展功能，然後據以降低的值。
+從 Data Migration Assistant v2.0 開始, 您可以使用 recommendedNumberOfRows 設定值來控制資料表的此閾值, 以符合 Stretch Database 功能。 預設值為100000個數據列。 如果您想要分析較小的資料表的延展功能, 請據以降低值。
 
 ```
 <advisorGroup>
@@ -130,7 +130,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="sql-connection-timeout"></a>SQL 連接逾時
 
-您可以控制[SQL 連線逾時](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)來源和目標執行個體同時執行評定或移轉，將連接逾時值設定為指定的秒數。 預設值為 15 秒。
+藉由將連接逾時值設定為指定的秒數, 您可以在執行評量或遷移時, 控制來源和目標實例的[SQL 連接逾時](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)。 預設值為 15 秒。
 
 ```
 <appSettings>
@@ -140,7 +140,18 @@ maxDataReaderDegreeOfParallelism="8"/>
 </appSettings>
 ```
 
+## <a name="ignore-error-codes"></a>忽略錯誤代碼
+
+每個規則的標題都有錯誤碼。 如果您不需要規則, 而且想要忽略它們, 請使用 ignoreErrorCodes 屬性。 您可以指定忽略單一錯誤或多個錯誤。 若要忽略多個錯誤, 請使用分號, 例如, ignoreErrorCodes = "46010; 71501"。 預設值為 71501, 這會與物件參考系統物件 (例如程式、視圖等) 時所識別的未解析參考相關聯。
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## <a name="see-also"></a>另請參閱
 
-[資料移轉小幫手下載](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant 下載](https://www.microsoft.com/download/details.aspx?id=53595)

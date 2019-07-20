@@ -1,38 +1,38 @@
 ---
-title: 儲存和載入 R 物件，從 SQL Server 使用 ODBC-SQL Server Machine Learning 服務
+title: 使用 ODBC 從 SQL Server 儲存和載入 R 物件
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6556602e080587b9be1ff8c02fafb378b4497606
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70c290d494f7dcb97dd197c057e11dfcc38ada0a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962462"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345048"
 ---
-# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>儲存並從 SQL Server 使用 ODBC 載入 R 物件
+# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>使用 ODBC 從 SQL Server 儲存和載入 R 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server R Services 可以將序列化的 R 物件儲存到資料表中，並視需要從資料表載入物件；您不必重新執行 R 程式碼，或是重新定型模型。 這項可在資料庫中儲存 R 物件的功能，對下列案例來說至關重要：定型和儲存模型，以於稍後用來進行評分或分析等案例。
 
-為了改善這項重要步驟的效能， **RevoScaleR** 套件現已包含新的序列化和還原序列化函式，可大幅改善效能，並更精簡地儲存物件。 本文會說明這些函式，以及如何使用它們。
+為了改善這項重要步驟的效能， **RevoScaleR** 套件現已包含新的序列化和還原序列化函式，可大幅改善效能，並更精簡地儲存物件。 本文將說明這些函式以及如何使用這些功能。
 
 ## <a name="overview"></a>總覽
 
-**RevoScaleR** 套件現已包含新的函式，可讓您更輕鬆地將 R 物件儲存到 SQL Server，然後從 SQL Server 資料表中讀取物件。 一般情況下，每個函式呼叫會使用簡單的金鑰值存放區中，索引鍵的物件的名稱和索引鍵相關聯的值是要移入或移出資料表的 varbinary R 物件。
+**RevoScaleR** 套件現已包含新的函式，可讓您更輕鬆地將 R 物件儲存到 SQL Server，然後從 SQL Server 資料表中讀取物件。 一般來說, 每個函式呼叫都會使用簡單的索引鍵值存放區, 其中索引鍵是物件的名稱, 而與索引鍵相關聯的值是要移入或移出資料表的 Varbinary R 物件。
 
-若要將 R 物件儲存至 SQL Server，直接從 R 環境，您必須：
+若要直接從 R 環境將 R 物件儲存到 SQL Server, 您必須:
 
-+ 建立使用 SQL Server 驗證連接*RxOdbcData*資料來源。
-+ 透過 ODBC 連線呼叫新的函式
-+ （選擇性） 您可以指定不序列化物件。 然後，選擇新的壓縮演算法，而不是預設的壓縮演算法使用。
++ 已使用*RxOdbcData*資料來源建立與 SQL Server 的連接。
++ 透過 ODBC 連接呼叫新的函式
++ (選擇性) 您可以指定不要序列化物件。 然後, 選擇要使用的新壓縮演算法, 而不是預設的壓縮演算法。
 
 根據預設，您從 R 呼叫要移至 SQL Server 的任何物件，皆會受到序列化與壓縮處理。 反之，當您從 SQL Server 資料表載入物件以用於 R 程式碼時，即會將物件還原序列化與解壓縮。
 
-## <a name="list-of-new-functions"></a>新的函式的清單
+## <a name="list-of-new-functions"></a>新函數的清單
 
 - `rxWriteObject` 可使用 ODBC 資料來源，將 R 物件寫入 SQL Server。
 
@@ -42,7 +42,7 @@ SQL Server R Services 可以將序列化的 R 物件儲存到資料表中，並�
 
 - `rxListKeys` 會以索引鍵/值組的格式列出所有可用物件。 這可協助您決定 R 物件的名稱和版本。
 
-如需每個函式語法的詳細說明，請參閱 R 說明。 詳細資料中也會有[ScaleR 參考](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)。
+如需每個函式語法的詳細說明，請參閱 R 說明。 您也可以在[ScaleR 參考](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)中取得詳細資料。
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>如何使用 ODBC 將 R 物件儲存到 SQL Server 中
 

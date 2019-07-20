@@ -1,6 +1,6 @@
 ---
-title: 取得 R 和 Python 套件的資訊-SQL Server Machine Learning 服務
-description: 判斷 R 和 Python 套件版本、 確認安裝，並取得一份 SQL Server R Services 或 Machine Learning 服務上已安裝的套件。
+title: 取得 R 和 Python 套件資訊
+description: 判斷 R 和 Python 套件版本、確認安裝, 並取得 SQL Server R Services 或 Machine Learning 服務上已安裝的套件清單。
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 961d55237af75c0ef169332068c91e7d2341a542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962780"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343424"
 ---
 #  <a name="get-r-and-python-package-information"></a>取得 R 和 Python 套件資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-有時當您正在使用多個環境或安裝的 R 或 Python，您需要確認您正在執行的程式碼使用適用於 Python 或正確的工作區的預期的環境進行。例如，如果您有[升級 R 或 Python](../install/upgrade-r-and-python.md)，R 程式庫的路徑可能會在與預設值不同的資料夾。 此外，如果您安裝 R Client 或獨立伺服器執行個體，您可能必須多個 R 程式庫在您的電腦上。
+有時候當您使用多個環境或 R 或 Python 的安裝時, 您必須確認您執行的程式碼使用 Python 的預期環境, 或 R 的正確工作區。例如, 如果您已[升級 r 或 Python](../install/upgrade-r-and-python.md), r 程式庫的路徑可能位於與預設值不同的資料夾中。 此外, 如果您安裝 R 用戶端或獨立伺服器的實例, 您的電腦上可能會有多個 R 程式庫。
 
-這篇文章中的 R 和 Python 指令碼範例會示範如何取得的路徑和版本的 SQL Server 所使用的套件。
+本文中的 R 和 Python 腳本範例會示範如何取得 SQL Server 所使用之封裝的路徑和版本。
 
 ## <a name="get-the-r-library-location"></a>取得 R 程式庫位置
 
-如需 SQL Server 任何版本，執行下列陳述式，以確認目前的執行個體的預設 R 套件程式庫：
+針對任何版本的 SQL Server, 執行下列語句來確認目前實例的預設 R 封裝程式庫:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +34,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-或者，您可以使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)較新版本的 SQL Server 2017 Machine Learning 服務中的 RevoScaleR 中或[R Services 至少升級到的 R RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)。 執行個體的程式庫路徑，以及 SQL Server 所使用的 RevoScaleR 的版本，則會傳回此預存程序：
+(選擇性) 您可以在較新版本的 RevoScaleR 中使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) , SQL Server 2017 Machine Learning 服務或[R Services 升級 r 到至少 RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)。 這個預存程式會傳回實例程式庫的路徑, 以及 SQL Server 所使用的 RevoScaleR 版本:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -47,7 +47,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)可以只在本機電腦上執行函式。 此函數無法傳回遠端連線程式庫的路徑。
+> [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)函數只能在本機電腦上執行。 函數無法傳回遠端連線的程式庫路徑。
 
 **結果**
 
@@ -59,7 +59,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>取得 Python 程式庫位置
 
-針對**Python**在 SQL Server 2017 中，執行下列陳述式，以確認目前的執行個體的預設程式庫。 這個範例會傳回包含在 Python 中的資料夾清單`sys.path`變數。 此清單包含目前的目錄，以及標準程式庫路徑。
+針對 SQL Server 2017 中的**Python** , 請執行下列語句來確認目前實例的預設程式庫。 這個範例會傳回 Python `sys.path`變數中包含的資料夾清單。 此清單包含目前的目錄和標準程式庫路徑。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -82,15 +82,15 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-如需有關變數`sys.path`以及如何它用來設定模組的解譯器搜尋路徑，請參閱[Python 文件](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+如需變數`sys.path`的詳細資訊, 以及如何使用它來設定解譯器的模組搜尋路徑, 請參閱[Python 檔](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
-## <a name="list-all-packages"></a>列出所有封裝
+## <a name="list-all-packages"></a>列出所有套件
 
-有多種方式，您可以取得目前安裝的套件的完整清單。 從 sp_execute_external_script 中執行套件清單命令的其中一個優點是，您一定會取得執行個體文件庫中安裝的套件。
+有多種方法可讓您取得目前已安裝之套件的完整清單。 從 sp_execute_external_script 執行封裝清單命令的其中一個優點是, 您保證會取得安裝在實例程式庫中的封裝。
 
 ### <a name="r"></a>R
 
-下列範例使用 R 函式`installed.packages()`在[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序，若要取得的已安裝在目前的執行個體的 R_SERVICES 程式庫中的封裝矩陣。 此指令碼會傳回封裝名稱 和 版本 欄位，DESCRIPTION 檔案中，只傳回名稱。
+下列範例會[!INCLUDE[tsql](../../includes/tsql-md.md)]在預存程式`installed.packages()`中使用 R 函數, 以取得已安裝在目前實例之 R_SERVICES 程式庫中的封裝矩陣。 此腳本會傳回描述檔案中的 [封裝名稱] 和 [版本] 欄位, 而只會傳回名稱。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -104,11 +104,11 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-如需詳細的選擇性資訊和 R 套件的描述欄位的預設欄位，請參閱[ https://cran.r-project.org ](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)。
+如需 [R 封裝描述] 欄位之選擇性和預設欄位的詳細資訊, [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)請參閱。
 
 ### <a name="python"></a>Python
 
-`pip`模組安裝預設的情況下，並且可支援列出安裝套件，除了標準的 Python 支援的許多作業。 您可以執行`pip`的 python 命令提示字元中，當然，但您也可以呼叫某些 pip 函式，從`sp_execute_external_script`。
+此`pip`模組預設會安裝, 而且除了標準 Python 支援的套件之外, 還支援許多作業來列出已安裝的封裝。 當然, 您`pip`可以從 Python 命令提示字元執行, 但是您也可以從`sp_execute_external_script`呼叫一些 pip 函數。
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -124,15 +124,15 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
-執行時`pip`從命令列中，有許多其他有用的功能：`pip list`取得已安裝的所有封裝，而`pip freeze`列出所安裝的套件`pip`，並不會列出 pip 本身的套件而定。 您也可以使用`pip freeze`產生相依性檔案。
+從命令列執行時, 有許多其他有用的函式: `pip list`取得已安裝的所有封裝, 而`pip freeze`列出所安裝`pip`的套件, 且不會列出 pip 本身的封裝`pip`視而定。 您也可以使用`pip freeze`來產生相依性檔案。
 
-## <a name="find-a-single-package"></a>找到單一套件
+## <a name="find-a-single-package"></a>尋找單一套件
 
-如果您安裝的套件，並想要確定它可供特定的 SQL Server 執行個體，您可以執行下列預存程序呼叫來載入封裝，並傳回只有訊息。
+如果您已安裝封裝, 而且想要確定它可用於特定的 SQL Server 實例, 您可以執行下列預存程序呼叫, 以載入封裝並只傳回訊息。
 
 ### <a name="r"></a>R
 
-此範例會尋找並載入 RevoScaleR 程式庫中，如果有的話。
+這個範例會尋找並載入 RevoScaleR 程式庫 (如果有的話)。
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -141,13 +141,13 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ 如果找到封裝，則會傳回一則訊息：「 命令已順利完成 」。
++ 如果找到封裝, 則會傳回訊息:「命令已順利完成。」
 
-+ 如果無法找到或載入封裝，您會取得包含文字的錯誤: 「 沒有任何套件，稱為 'MissingPackageName' 」
++ 如果找不到或無法載入封裝, 您會收到包含下列文字的錯誤: 「沒有名為 ' MissingPackageName ' 的套件」
 
 ### <a name="python"></a>Python
 
-適用於 Python 的相等檢查可以執行來自 Python 殼層，使用`conda`或`pip`命令。 或者，在預存程序中執行此陳述式：
+您可以使用`conda`或`pip`命令, 從 python shell 執行 python 的對等檢查。 或者, 在預存程式中執行此語句:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,13 +163,13 @@ EXECUTE sp_execute_external_script
 
 <a name="get-package-vers"></a>
 
-## <a name="get-package-version"></a>取得封裝版本
+## <a name="get-package-version"></a>取得套件版本
 
-您可以取得 R 和 Python 套件使用 Management Studio 的版本資訊。
+您可以使用 Management Studio 來取得 R 和 Python 套件版本資訊。
 
-### <a name="r-package-version"></a>R 套件版本
+### <a name="r-package-version"></a>R 封裝版本
 
-這個陳述式會傳回 RevoScaleR 套件版本與基底的 R 版本。
+此語句會傳回 RevoScaleR 封裝版本和基底 R 版本。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -182,7 +182,7 @@ print(packageDescription("base"))
 
 ### <a name="python-package-version"></a>Python 套件版本
 
-此陳述式會傳回 revoscalepy 套件版本和 Python 的版本。
+此語句會傳回 revoscalepy 套件版本和 Python 版本。
 
 ```sql
 EXECUTE sp_execute_external_script

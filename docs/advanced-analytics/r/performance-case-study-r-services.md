@@ -1,44 +1,44 @@
 ---
-title: SQL Server R Services-「 結果 」 和 「 資源 」-SQL Server Machine Learning 服務的效能
+title: SQL Server R Services 的效能-結果和資源
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08d1fd367572561aaa7235fd037371e30f5b270e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962552"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345287"
 ---
-# <a name="performance-for-r-services-results-and-resources"></a>R services 的效能： 結果和資源
+# <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能: 結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章是第四個，並說明 R services 效能最佳化的最後一個數列中。 本文摘要說明的方法、 發現和測試各種最佳化方法的兩個案例研究的結論。
+本文是一系列中的第四個和最後一個, 描述 R 服務的效能優化。 本文摘要說明兩個測試各種優化方法之個案研究的方法、結果和結論。
 
-兩個案例研究有不同的目標：
+這兩個案例研究有不同的目標:
 
-+ 第一個案例研究中，R Services 開發小組所要搜尋來測量特定的最佳化技術的影響
-+ 第二個案例研究中，資料科學家小組，透過實驗使用多種方法以判斷最佳的最佳化，為特定的高容量評分的案例。
++ 第一次使用 R Services 開發小組的案例研究, 以測量特定優化技巧的影響
++ 第二個案例研究 (由資料科學家小組實驗) 會使用多種方法來判斷特定大量評分案例的最佳優化。
 
-本主題列出第一個案例研究的詳細的結果。 針對第二個案例研究，摘要說明整體的結果。 在本主題結尾處是連結至所有指令碼和範例資料，以及原始作者所使用的資源。
+本主題列出第一個案例研究的詳細結果。 針對第二個案例研究, 摘要說明整體結果。 本主題的結尾是所有腳本和範例資料的連結, 以及原始作者所使用的資源。
 
-## <a name="performance-case-study-airline-dataset"></a>效能案例研究：航班資料集
+## <a name="performance-case-study-airline-dataset"></a>效能案例研究:航空公司資料集
 
-此案例研究，由 SQL Server R Services 開發小組測試各種最佳化的效果。 建立單一 rxLogit 模型和計分方式航線資料集上執行。 在訓練和評分來評估個別影響的程序期間套用最佳化。
+SQL Server R Services 開發小組的這種案例研究已測試各種優化的效果。 建立單一 rxLogit 模型, 並對航空公司資料集執行評分。 優化會在定型和評分程式期間套用, 以評估個別的影響。
 
-- Github:[範例資料和指令碼](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)如 SQL Server 最佳化研究
+- GithubSQL Server 優化研究的[範例資料和腳本](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
 ### <a name="test-methods"></a>測試方法
 
-1. 航班資料集包含 10 億個資料列的單一資料表。 它下載並大量載入到 SQL Server。
-2. 已進行的六份資料表。
-3. 各種修改已套用至資料表 （若要測試 SQL Server 功能，例如頁面壓縮，資料列壓縮，編製索引、 單欄式資料存放區等） 的複本。
-4. 已套用每個最佳化之前和之後，就被測量效能。
+1. 航空公司資料集包含單一資料表的1千萬個列。 它已下載並大量載入 SQL Server。
+2. 已製作資料表的六份複本。
+3. 已將各種修改套用到資料表的複本, 以測試 SQL Server 的功能, 例如頁面壓縮、資料列壓縮、索引、單欄式資料存放區等。
+4. 效能是在套用每個優化之前和之後測量。
 
-| 資料表名稱| 描述|
+| 資料表名稱| 說明|
 |------|------|
 | *airline* | 使用 `rxDataStep` 從原始 xdf 檔案轉換的資料|                          |
 | *airlineWithIntCol*   | 轉換成整數而不是字串的 *DayOfWeek*。 會一併新增 *rowNum* 資料行。|
@@ -47,19 +47,19 @@ ms.locfileid: "67962552"
 | *airlineWithRowComp*  | 與 *airlineWithIndex* 資料表的資料相同，但是已啟用資料列壓縮。 會一併新增 *CRSDepHour* 和 *Late* 這兩個資料行，這些是從 *CRSDepTime* 和 *ArrDelay* 計算而得。 |
 | *airlineColumnar*     | 具有單一叢集索引的單欄式存放區。 此資料表中會填入來自已清除之 csv 檔案的資料。|
 
-每項測試是由下列步驟所組成：
+每項測試都是由下列步驟組成:
 
 1. 在每次測試之前都引發了 R 記憶體回收。
-2. 羅吉斯迴歸模型是根據資料表資料所建立。 每個測試的 *rowsPerRead* 的值是設定為 500000。
-3. 使用定型的模型產生分數
-4. 每個測試都執行六次。 第一次執行 （冷執行） 的時間已卸除。 若要偶爾的極端值，允許**最大**剩餘五次執行之間的時間也捨棄不用。 系統取剩餘四次執行的平均值，來計算每個測試的平均經過執行時間。
-5. 使用已執行測試*reportProgress*參數的值是 3 （= 報表執行時間和進度）。 每個輸出檔案包含有關在 IO、 轉換階段及運算階段所花費的時間資訊。 這些時間對於進行疑難排解和診斷相當有用。
-6. 主控台輸出也被導向到輸出目錄中的檔案。
-7. 測試指令碼處理這些檔案，以透過執行計算的平均時間的時間。
+2. 羅吉斯回歸模型是根據資料表資料所建立。 每個測試的 *rowsPerRead* 的值是設定為 500000。
+3. 分數是使用定型的模型產生的
+4. 每項測試都執行六次。 第一次執行的時間 (「冷執行」) 已卸載。 若要允許偶爾的極端值, 剩餘五次執行的時間**上限**也會一併卸載。 系統取剩餘四次執行的平均值，來計算每個測試的平均經過執行時間。
+5. 測試是使用*reportProgress*參數來執行, 其值為 3 (= 報告時間和進度)。 每個輸出檔都包含關於 IO、轉換時間和計算時間所花費之時間的資訊。 這些時間對於進行疑難排解和診斷相當有用。
+6. 主控台輸出也會導向至輸出目錄中的檔案。
+7. 測試腳本會處理這些檔案中的時間, 以計算執行的平均時間。
 
-例如，下列的結果會是從單一測試的時間。 主要的相關時間為「總讀取時間」  (IO 時間) 和「轉換時間」  (在設定處理序以進行計算方面的負擔)。
+例如, 下列結果是來自單一測試的時間。 主要的相關時間為「總讀取時間」  (IO 時間) 和「轉換時間」  (在設定處理序以進行計算方面的負擔)。
 
-**範例時間**
+**取樣時間**
 
 ```text
 Running IntCol Test. Using airlineWithIntCol table.
@@ -79,15 +79,15 @@ metric time pct
 5 Total non IO time 0.3134 9.10
 ```
 
-我們建議您下載並修改測試指令碼，可協助您疑難排解問題和 R Services，或使用 RevoScaleR 函式。
+我們建議您下載並修改測試腳本, 以協助您針對 R Services 或 RevoScaleR 函數的問題進行疑難排解。
 
-### <a name="test-results-all"></a>測試結果 （全部）
+### <a name="test-results-all"></a>測試結果 (全部)
 
-本節將比較針對每個測試之前和之後的結果。
+本節會比較每個測試的前後結果。
 
-#### <a name="data-size-with-compression-and-a-columnar-table-store"></a>使用壓縮和單欄式資料表存放區的資料大小
+#### <a name="data-size-with-compression-and-a-columnar-table-store"></a>具有壓縮和單欄式資料表存放區的資料大小
 
-第一項測試會比較使用壓縮和單欄式資料表，以減少資料的大小。
+第一項測試會比較使用壓縮和單欄式資料表來減少資料的大小。
 
 | 資料表名稱            | 資料列     | 已保留   | Data       | index_size | 未使用  | 節省 % (已保留) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
@@ -98,11 +98,11 @@ metric time pct
 
 **結論**
 
-資料大小的最大減少已所套用的資料行存放區索引，後面接著頁面壓縮而達成的。
+藉由套用資料行存放區索引, 然後再進行頁面壓縮, 即可達到最大的資料大小縮減。
 
 #### <a name="effects-of-compression"></a>壓縮的效果
 
-這項測試會比較資料列壓縮、 頁面壓縮和未壓縮的優點。 使用定型模型`rxLinMod`三個不同資料表的資料。 針對所有資料表都使用了相同的公式和查詢。
+這項測試會比較資料列壓縮、頁面壓縮和無壓縮的優點。 已使用從三個`rxLinMod`不同資料表的資料來定型模型。 針對所有資料表都使用了相同的公式和查詢。
 
 | 資料表名稱            | 測試名稱       | numTasks | 平均時間 |
 |-----------------------|-----------------|----------|--------------|
@@ -115,7 +115,7 @@ metric time pct
 
 **結論**
 
-僅使用壓縮似乎並沒有幫助。 在此範例中，增加的 CPU 處理壓縮會減少 IO 時間的補償。
+壓縮本身似乎不會提供協助。 在此範例中, 用來處理壓縮的 CPU 增加會補償 IO 時間降低的情況。
 
 不過，當透過將 *numTasks* 設定為 4 來平行執行測試時，平均時間就會減少。
 
@@ -123,9 +123,9 @@ metric time pct
 
 ### <a name="effect-of-windows-power-plan-options"></a>Windows 電源計劃選項的效果
 
-在此實驗中，`rxLinMod` 是與 *airlineWithIntCol* 資料表搭配使用。 Windows 電源計劃設定為**平衡**或是**高效能**。 所有測試的 *numTasks* 都是設定為 1。 測試都執行六次，並執行兩次這兩種電源選項下調查結果的變化性。
+在此實驗中，`rxLinMod` 是與 *airlineWithIntCol* 資料表搭配使用。 Windows 電源計劃已設定為 [**平衡**] 或 [**高效**能]。 所有測試的 *numTasks* 都是設定為 1。 測試執行了六次, 並在這兩個電源選項下執行兩次, 以調查結果的變化性。
 
-**高效能**電源選項：
+**高效**能電源選項:
 
 | 測試名稱 | 執行 \# | 經過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|
@@ -165,15 +165,15 @@ metric time pct
 
 **結論**
 
-執行時間會更一致且更快使用 Windows 時**高效能**電源計劃。
+使用 Windows**高效**能電源計劃時, 執行時間會更一致且更快。
 
-#### <a name="using-integer-vs-strings-in-formulas"></a>在公式中使用整數和字串比較
+#### <a name="using-integer-vs-strings-in-formulas"></a>在公式中使用整數和字串
 
-這項測試會評估修改 R 程式碼，以避免常見的問題，具有字串因數的影響。 具體來說，使用定型模型`rxLinMod`使用兩個資料表： 在第一個因素都會儲存為字串，在第二個資料表中，因素會儲存為整數。
+這項測試已評估修改 R 程式碼的影響, 以避免字串因數的常見問題。 具體而言, 模型已使用`rxLinMod`兩個數據表來定型: 第一個中的因素會儲存為字串; 在第二個數據表中, 因素會儲存為整數。
 
-+ 針對*airline*資料表中，[DayOfWeek] 資料行包含字串。 _ColInfo_參數用來指定因數層級 （星期一、 星期二、...）
++ 針對*航班*資料表, [DayOfWeek] 資料行包含字串。 _ColInfo_參數是用來指定因數層級 (星期一、星期二、...)
 
-+  針對*airlineWithIndex*資料表，[DayOfWeek] 是一個整數。 _ColInfo_未指定參數。
++  對於*airlineWithIndex*資料表, [DayOfWeek] 是一個整數。 未指定_colInfo_參數。
 
 + 在這兩個案例中，使用了相同的公式：`ArrDelay ~ CRSDepTime + DayOfWeek`。
 
@@ -184,14 +184,14 @@ metric time pct
 
 **結論**
 
-使用的因素的整數，而不是字串時，沒有明顯的好處。
+使用整數而非字串做為因素時, 有一個明顯的好處。
 
-### <a name="avoiding-transformation-functions"></a>避免轉換函式
+### <a name="avoiding-transformation-functions"></a>避免轉換函數
 
-在此測試中，已訓練模型使用`rxLinMod`，但兩個回合已變更的程式碼：
+在此測試中, 模型已使用`rxLinMod`定型, 但程式碼在兩個回合之間已變更:
 
-+ 在初次執行時，轉換函式套用做為模型建立的一部分。 
-+ 如果您在第二個執行中，功能值已預先計算和可用的因此沒有任何轉換函式所需。
++ 第一次執行時, 會將轉換函式套用為模型建立的一部分。 
++ 在第二次執行時, 會預先計算並提供功能值, 因此不需要任何轉換函數。
 
 | 測試名稱             | 平均時間 |
 |-----------------------|--------------|
@@ -200,16 +200,16 @@ metric time pct
 
 **結論**
 
-定型時間已縮短時**不**使用轉換函數。 換句話說，此模型定型速度時使用已預先計算並保存在資料表的資料行。
+定型時間較短, 但**不**使用轉換函數。 換句話說, 使用在資料表中預先計算並保存的資料行時, 模型的定型速度較快。
 
-省下的預期會更高，如果沒有更多轉換且資料集是較大 (\> 100m)。
+如果有更多的轉換, 且資料集較大 (\> 100M), 則節省的成本應該會更高。
 
 ### <a name="using-columnar-store"></a>使用單欄式存放區
 
-這項測試來評估使用單欄式資料存放區和索引的效能優勢。 相同的模型定型使用`rxLinMod`和任何資料轉換。
+這項測試已評估使用單欄式資料存放區和索引的效能優勢。 相同的模型已使用`rxLinMod`定型, 而且沒有任何資料轉換。
 
-+ 在初次執行時，資料表會使用標準的資料列存放區。
-+ 如果您在第二個執行中，使用資料行存放區。
++ 在第一次執行時, 資料表使用的是標準資料列存放區。
++ 第二次執行時, 會使用資料行存放區。
 
 | 資料表名稱         | 測試名稱 | 平均時間 |
 |--------------------|-----------|--------------|
@@ -218,17 +218,17 @@ metric time pct
 
 **結論**
 
-效能是透過比標準的資料列存放區使用的單欄式存放區更趨完美。 在較大的資料集上的預期效能有顯著差異 (\> 100m)。
+單欄式存放區的效能優於標準資料列存放區。 較大的資料集 (\> 100 M) 可能會有顯著的效能差異。
 
 ### <a name="effect-of-using-the-cube-parameter"></a>使用 cube 參數的效果
 
-這項測試的目的是要判斷是否 RevoScaleR 中的選項，即可使用預先計算**cube**參數可提升效能。 使用定型模型`rxLinMod`，使用下列公式：
+這項測試的目的是要判斷 RevoScaleR 中使用預先計算**cube**參數的選項是否可以改善效能。 模型是使用來`rxLinMod`定型, 使用下列公式:
 
 ```R
 ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 ```
 
-在資料表中，的因素*DayOfWeek*儲存為字串。
+在資料表中, *DayOfWeek*因數會儲存為字串。
 
 | 測試名稱     | Cube 參數 | numTasks | 平均時間 | 單一資料列預測 (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
@@ -239,11 +239,11 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 **結論**
 
-Cube 參數引數使用明顯改善效能。
+使用 cube 參數引數可清楚改善效能。
 
-### <a name="effect-of-changing-maxdepth-for-rxdtree-models"></a>變更模型 rxDTree 的 maxDepth 效果
+### <a name="effect-of-changing-maxdepth-for-rxdtree-models"></a>變更 rxDTree 模型之 maxDepth 的效果
 
-在此實驗中，`rxDTree`演算法用來在建立模型*airlineColumnar*資料表。 此測試的 *numTasks* 是設定為 4。 數個不同的值，如*maxDepth*來示範如何修改樹狀結構深度會影響執行的階段。
+在此實驗中, `rxDTree`演算法是用來在*airlineColumnar*資料表上建立模型。 此測試的 *numTasks* 是設定為 4。 *MaxDepth*有數個不同的值, 用來示範改變樹狀結構深度會如何影響執行時間。
 
 | 測試名稱       | maxDepth | 平均時間 |
 |-----------------|----------|--------------|
@@ -255,13 +255,13 @@ Cube 參數引數使用明顯改善效能。
 
 **結論**
 
-樹狀結構深度增加時，會以指數方式增加的節點總數。 建立模型所經過時間也大幅增加。
+當樹狀結構的深度增加時, 節點總數會以指數方式增加。 建立模型所經過的時間也會大幅增加。
 
 ### <a name="prediction-on-a-stored-model"></a>預存模型的預測
 
-這項測試的目的是要判斷在評分定型的模型儲存至 SQL Server 資料表時的效能影響，而不是目前正在執行的程式碼中產生。 計分，預存的模型從資料庫載入，並使用 記憶體 （本機計算內容） 中的 單一資料列資料框架建立預測。
+這項測試的目的是要判斷當定型模型儲存至 SQL Server 資料表而不是當做目前執行程式碼的一部分產生時, 評分的效能影響。 針對計分, 會從資料庫載入預存模型, 並使用記憶體中的單一資料列資料框架 (本機計算內容) 來建立預測。
 
-測試結果會顯示將儲存模型及載入模型並進行預測所花費的時間。
+測試結果會顯示儲存模型的時間, 以及載入模型和預測所花費的時間。
 
 | 資料表名稱 | 測試名稱 | 平均時間 (用於訓練模型) | 儲存/載入模型的時間|
 |------------|------------|------------|------------|
@@ -270,103 +270,103 @@ Cube 參數引數使用明顯改善效能。
 
 **結論**
 
-從資料表載入定型的模型，顯然是更快的方法，來進行預測。 我們建議您避免建立模型，以及執行評分全都放在相同的指令碼。
+從資料表載入定型的模型, 顯然是執行預測的更快速方式。 我們建議您避免在相同的腳本中建立模型並執行評分。
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究：繼續比對工作的最佳化
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究:繼續比對工作的優化
 
-繼續比對的模型開發由 Microsoft 資料科學家 Ke Huang 來測試 SQL Server 中的 R 程式碼的效能和進行如此說明資料科學家建立可調整的企業級解決方案。
+繼續比對模型是由 Microsoft 資料科學家 Ke Huang 所開發, 可在 SQL Server 中測試 R 程式碼的效能, 並藉此協助資料科學家建立可調整的企業級解決方案。
 
 ### <a name="methods"></a>方法
 
-RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決方案，牽涉到大型資料集。 SQL 查詢和 R 程式碼是相同的所有測試。 SQL server 安裝在單一 Azure VM 上進行測試。 作者接著會比較評分的時間，而 SQL Server 所提供的下列最佳化：
+RevoScaleR 和 MicrosoftML 封裝都是用來在涉及大型資料集的複雜 R 方案中定型預測模型。 所有測試中的 SQL 查詢和 R 程式碼都相同。 測試是在已安裝 SQL Server 的單一 Azure VM 上執行。 然後, 作者會比較計分時間與和, 而不會 SQL Server 所提供的下列優化:
 
-- 記憶體中的資料表
+- 記憶體內部資料表
 - ssNoVersion
 - [資源管理員]
 
-若要評估軟體 NUMA 的 R 指令碼執行的效果，資料科學小組測試 20 個實體核心 Azure 虛擬機器上的解決方案。 這些實體的核心，在四個軟體 NUMA 節點已自動建立，使每個節點包含五個核心。
+為了評估 R 腳本執行的軟體 NUMA 效果, 資料科學小組在具有20個實體核心的 Azure 虛擬機器上測試了解決方案。 在這些實體核心上, 會自動建立四個軟體 NUMA 節點, 讓每個節點都包含五個核心。
 
-在繼續比對的情況下，評估對 R 作業的影響，已強制執行 CPU 分配。 四個**SQL 資源集區**和第四個**外部資源集區**所建立，並確保 Cpu 的同一組會用於每個節點指定 CPU 親和性。
+CPU affinitization 是在繼續比對案例中強制執行, 以評估對 R 作業的影響。 已建立四個**SQL 資源**集區和四個**外部資源**集區, 並指定 CPU 親和性, 以確保每個節點都使用同一組 cpu。
 
-每個資源集區已指派給不同的工作負載群組，以最佳化的硬體使用率。 原因是該軟體式 NUMA 和 CPU 親和性無法分割實體的 NUMA 節點; 中的實體記憶體因此，根據定義根據相同的實體 NUMA 節點的所有軟體 NUMA 節點必須使用記憶體中的相同作業系統記憶體區塊。 換句話說，是沒有記憶體對處理器親和性。
+每個資源集區都已指派給不同的工作負載群組, 以優化硬體使用率。 原因是軟體 NUMA 和 CPU 親和性無法分割實體 NUMA 節點中的實體記憶體;因此, 根據定義, 所有以相同實體 NUMA 節點為基礎的軟 NUMA 節點, 都必須在相同的 OS 記憶體區塊中使用記憶體。 換句話說, 沒有記憶體對處理器的親和性。
 
-下列程序可用來建立此組態：
+下列進程是用來建立此設定:
 
-1. 降低預設配置給 SQL Server 的記憶體的數量。
+1. 將預設配置的記憶體數量減少為 SQL Server。
 
-2. 建立四個新的集區以平行方式執行 R 作業。
+2. 建立四個新的集區, 以平行方式執行 R 作業。
 
-3. 每個工作負載群組是資源集區相關聯，請建立四個工作負載群組。
+3. 建立四個工作負載群組, 讓每個工作負載群組與資源集區相關聯。
 
-4. 重新啟動 Resource Governor，以使用新的工作負載群組和指派。
+4. 使用新的工作負載群組和指派重新開機 Resource Governor。
 
-5. 建立使用者定義分類函數 (UDF) 來指派不同的工作負載群組的不同工作。
+5. 建立使用者定義的分類函數 (UDF), 以在不同的工作負載群組上指派不同的作業。
 
-6. 更新資源管理員的組態使用適當的工作負載群組的函數。
+6. 更新 Resource Governor 設定, 以針對適當的工作負載群組使用函數。
 
 ### <a name="results"></a>結果
 
-有最佳效能的繼續符合研究的組態如下所示：
+在繼續比對研究中具有最佳效能的設定如下所示:
 
--   （適用於 SQL Server) 的四個內部資源集區
+-   四個內部資源集區 (適用于 SQL Server)
 
--   （適用於外部指令碼工作） 的四個外部資源集區
+-   四個外部資源集區 (適用于外部腳本作業)
 
--   每個資源集區是與特定的工作負載群組相關聯
+-   每個資源集區都與特定的工作負載群組相關聯
 
--   每個資源集區指派給不同的 Cpu
+-   每個資源集區都會指派給不同的 Cpu
 
--   內部記憶體使用量上限 （適用於 SQL Server) = 30%
+-   最大內部記憶體使用量 (適用于 SQL Server) = 30%
 
--   R 工作階段所使用的最大記憶體 = 70%
+-   R 會話使用的最大記憶體 = 70%
 
-繼續比對模型中，外部指令碼的用途是大量，而且已沒有其他資料庫引擎服務執行。 因此，配置給外部指令碼的資源已增加到 70%，已證明指令碼效能的最佳組態。
+對於繼續比對模型, 外部腳本使用很繁重, 而且沒有其他資料庫引擎服務正在執行。 因此, 配置給外部腳本的資源已增加至 70%, 這證明了最佳的腳本效能設定。
 
-藉由試驗不同的值，這個組態已抵達。 如果您使用不同的硬體或不同的解決方案，最佳的組態可能會不同。 一律體驗來尋找適合您案例的最佳組態 ！
+這項設定是藉由試驗不同的值來到達。 如果您使用不同的硬體或不同的解決方案, 最佳設定可能會不同。 請一律試驗以尋找適合您案例的最佳設定!
 
-在最佳化解決方案中，在 20 個核心電腦上的 8.5 秒內計分 1.1 一百萬個 （含 100 的功能） 的資料列。 最佳化大幅改善了效能評分的時間。
+在優化解決方案中, 1100000 個數據列 (含100功能) 在20核心電腦的8.5 秒內進行評分。 優化在計分時間方面大幅提升了效能。
 
-結果也建議所**功能的數字**評分時間上有重大影響。 更多的功能用於預測模型時，甚至更為顯著改進。
+結果也會建議**功能數目**對評分時間有顯著的影響。 當預測模型中使用更多的功能時, 改善效果更明顯。
 
-我們建議您先閱讀此部落格文章及隨附的教學課程中詳細討論。
+我們建議您閱讀這篇 blog 文章和隨附的教學課程, 以取得詳細的討論。
 
--   [最佳化的秘訣和訣竅，SQL Server 中的機器學習](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+-   [SQL Server 中機器學習服務的優化秘訣和訣竅](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-許多使用者已記下會有小型的暫停 R （或 Python） 的執行階段載入第一次。 基於這個理由，這些測試，所述的第一次執行時間是通常長達，但之後捨棄。 後續快取可能會造成顯著的效能差異第一個和第二個執行。 另外還有一些額外負荷當資料移動會與 SQL Server 外部執行階段中，尤其是透過網路，而不是直接從 SQL Server 載入傳遞資料。
+許多使用者都注意到, 第一次載入 R (或 Python) 執行時間時, 會有短暫的暫停。 基於這個理由, 如這些測試中所述, 第一次執行的時間通常會測量, 但稍後會被捨棄。 後續的快取可能會導致第一個和第二次執行之間有顯著的效能差異。 在 SQL Server 和外部執行時間之間移動資料時, 也會有一些額外負荷, 特別是當資料是透過網路傳遞, 而不是直接從 SQL Server 載入時。
 
-基於這些理由，沒有單一解決方案來降低此初始載入期間，因為工作而大幅有所不同的效能影響。 例如，快取執行的單一資料列批次; 中的評分因此，後續的計分作業更快而且模型和 R 執行階段都不會重新載入。 您也可以使用[原生評分](../sql-native-scoring.md)以避免完全載入的 R 執行階段。
+基於上述所有原因, 沒有單一解決方案可減輕此初始載入時間, 因為效能影響會因工作而有很大的差異。 例如, 針對批次中的單一資料列評分執行快取;因此, 後續評分作業的速度會更快, 而且不會重載模型或 R 執行時間。 您也可以使用[原生評分](../sql-native-scoring.md)來避免完全載入 R 執行時間。
 
-對於訓練大型模型，或以大型批次評分，額外負荷可能微小的提升，避免資料移動或串流處理和平行處理。 請參閱此部落格文章的其他效能指導方針：
+若要定型大型模型, 或以大型批次評分, 相較于避免資料移動或串流處理和平行處理的增益, 額外負荷可能會比較少。 如需其他效能指引, 請參閱這篇文章:
 
-+ [使用 R 來偵測詐騙在 1 百萬個每秒交易數](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
++ [使用 R 偵測每秒1000000筆交易的詐騙](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>資源
 
-以下是資訊、 工具和開發的這些測試中使用指令碼的連結。
+以下是在開發這些測試時所使用的資訊、工具和腳本的連結。
 
-+ 效能測試指令碼和資料的連結：[範例資料和 SQL Server 最佳化研究的指令碼](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ 效能測試腳本和資料的連結:[SQL Server 優化研究的範例資料和腳本](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ 描述繼續比對解決方案的文章：[最佳化提示和訣竅 SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ 描述繼續比對解決方案的文章:[SQL Server R Services 的優化秘訣和訣竅](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ 用於繼續比對方案最佳化 SQL 指令碼：[GitHub 存放庫](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ 用於繼續比對解決方案的 SQL 優化中的腳本:[GitHub 存放庫](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
-### <a name="learn-about-windows-server-management"></a>深入了解 Windows server 管理
+### <a name="learn-about-windows-server-management"></a>瞭解 Windows server 管理
 
 + [如何判斷適用於 64 位元版本 Windows 的適當分頁檔大小](https://support.microsoft.com/kb/2860880)
 
-+ [了解 NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [瞭解 NUMA](https://technet.microsoft.com/library/ms178144.aspx)
 
 + [SQL Server 如何支援 NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
 + [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
-### <a name="learn-about-sql-server-optimizations"></a>深入了解 SQL Server 最佳化
+### <a name="learn-about-sql-server-optimizations"></a>瞭解 SQL Server 優化
 
 + [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [記憶體最佳化的資料表簡介](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [記憶體優化資料表簡介](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [示範：記憶體中 OLTP 的效能改善](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [示範：記憶體內部 OLTP 的效能改善](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [資料壓縮](../../relational-databases/data-compression/data-compression.md)
 
@@ -374,19 +374,19 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 
 + [停用資料表或索引的壓縮](../../relational-databases/data-compression/disable-compression-on-a-table-or-index.md)
 
-### <a name="learn-about-managing-sql-server"></a>了解如何管理 SQL Server
+### <a name="learn-about-managing-sql-server"></a>瞭解如何管理 SQL Server
 
 + [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
 + [資源管理員](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [資源管理員簡介](https://technet.microsoft.com/library/bb895232.aspx)
++ [Resource Governor 簡介](https://technet.microsoft.com/library/bb895232.aspx)
 
 + [的資源管理](resource-governance-for-r-services.md)
 
 + [如何建立 R 的資源集區](how-to-create-a-resource-pool-for-r.md)
 
-+ [設定資源管理員的範例](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
++ [設定 Resource Governor 的範例](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
 ### <a name="tools"></a>工具
 
@@ -395,12 +395,12 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 + [FSUtil 公用程式參考 (英文)](https://technet.microsoft.com/library/cc753059.aspx)
 
 
-## <a name="other-articles-in-this-series"></a>在這一系列其他文章
+## <a name="other-articles-in-this-series"></a>本系列的其他文章
 
-[效能微調的 R-簡介](sql-server-r-services-performance-tuning.md)
+[R 效能微調-簡介](sql-server-r-services-performance-tuning.md)
 
-[R-SQL Server 組態的效能微調](sql-server-configuration-r-services.md)
+[R SQL Server 設定的效能微調](sql-server-configuration-r-services.md)
 
-[R-R 效能微調程式碼和資料最佳化](r-and-data-optimization-r-services.md)
+[R-R 程式碼和資料優化的效能微調](r-and-data-optimization-r-services.md)
 
 [效能微調-案例研究結果](performance-case-study-r-services.md)

@@ -1,48 +1,48 @@
 ---
-title: 建立新的 SQL Server 資料表使用 RevoScaleR rxDataStep-SQL Server Machine Learning
-description: 教學課程逐步解說如何建立 SQL Server 上使用 R 語言的 SQL Server 資料表。
+title: 使用 RevoScaleR rxDataStep 建立新的 SQL Server 資料表
+description: 有關如何在 SQL Server 上使用 R 語言建立 SQL Server 資料表的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 484f238e53db21030b04cdf46b86271236509989
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f5d65bf3b57f40ca881aa9e6f0285fab0432a1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962260"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344787"
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>新 SQL Server 使用 rxDataStep 建立資料表 （SQL Server 和 RevoScaleR 教學課程）
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 建立新的 SQL Server 資料表 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在這一課，您了解如何在記憶體中的資料框架之間移動資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]內容，以及本機檔案。
+在這一課, 您將瞭解如何在記憶體中的資料框架、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]內容和本機檔案之間移動資料。
 
 > [!NOTE]
-> 這一課使用不同的資料集。 航班延遲資料集是廣泛用於機器學習服務實驗的公用資料集。 此範例中使用的資料檔案可與其他產品範例相同的目錄中。
+> 本課程使用不同的資料集。 航空公司延遲資料集是廣泛用於機器學習實驗的公用資料集。 此範例中使用的資料檔案可在與其他產品範例相同的目錄中取得。
 
 ## <a name="load-data-from-a-local-xdf-file"></a>從本機 XDF 檔案載入資料
 
-在本教學課程的第一個部分，您已使用**RxTextData**函式，從文字檔中，R 將資料匯入，並接著使用**RxDataStep**函式來將資料移入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+在本教學課程的前半部, 您已使用**RxTextData**函式, 將資料從文字檔匯入 R, 然後使用**RxDataStep**函數將資料移入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-這一課會採用不同的方式，並使用資料，從檔案儲存在[XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)。 執行一些輕量型轉換使用 XDF 檔案對資料之後，您必須儲存已轉換的資料到新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。
+這一課會採用不同的方法, 並使用以[XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)儲存之檔案中的資料。 使用 XDF 檔案對資料執行一些輕量轉換之後, 您會將轉換的資料儲存至新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表。
 
 **什麼是 XDF？**
 
-XDF 格式是針對高維度資料開發的 XML 標準，而且原生檔案格式是由[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)。 它是最佳化資料列和資料行處理與分析之 R 介面的二進位檔案格式。  您可以使用它來移動資料以及儲存對分析有用的資料子集。
+XDF 格式是針對高維度資料所開發的 XML 標準, 而且是[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)所使用的原生檔案格式。 它是最佳化資料列和資料行處理與分析之 R 介面的二進位檔案格式。  您可以使用它來移動資料以及儲存對分析有用的資料子集。
 
-1. 將計算內容設為您的本機工作站。 **在此步驟會需要 DDL 權限。**
+1. 將計算內容設為您的本機工作站。 **此步驟需要 DDL 許可權。**
 
     ```R
     rxSetComputeContext("local")
     ```
   
-2. 使用 **RxXdfData** 函數，來定義新的資料來源物件。 若要定義 XDF 資料來源，指定資料檔案的路徑。  
+2. 使用 **RxXdfData** 函數，來定義新的資料來源物件。 若要定義 XDF 資料來源, 請指定資料檔案的路徑。  
 
-    您可以指定使用文字變數檔案的路徑。 不過，在此情況下，有一個很好用捷徑，就是使用**rxGetOption**函式，並從範例資料目錄中取得檔案 (AirlineDemoSmall.xdf)。
+    您可以使用文字變數指定檔案的路徑。 不過, 在這種情況下, 有一個方便的快捷方式, 也就是使用**rxGetOption**函式, 並從範例資料目錄取得檔案 (airlinedemosmall.xdf. xdf)。
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
@@ -64,25 +64,25 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> 是否注意到不需要呼叫任何其他函數就可以將資料載入至 XDF 檔案，而且可以立即對資料呼叫 **rxGetVarInfo** 嗎？ 這是因為 XDF 是預設暫時儲存方法**RevoScaleR**。 XDF 檔案，除了**rxGetVarInfo**函式現在支援多個來源的類型。
+> 是否注意到不需要呼叫任何其他函數就可以將資料載入至 XDF 檔案，而且可以立即對資料呼叫 **rxGetVarInfo** 嗎？ 這是因為 XDF 是**RevoScaleR**的預設過渡儲存方法。 除了 XDF 檔案外, **rxGetVarInfo**函式現在也支援多個來源類型。
 
-## <a name="move-contents-to-sql-server"></a>將內容移到 SQL Server
+## <a name="move-contents-to-sql-server"></a>將內容移至 SQL Server
 
-與在本機 R 工作階段中建立 XDF 資料來源，您現在可以繼續這項資料到資料庫資料表時，儲存*DayOfWeek*作為值從 1 到 7 的整數。
+使用在本機 R 會話中建立的 XDF 資料來源時, 您現在可以將此資料移至資料庫資料表, 並將*DayOfWeek*儲存為值為1到7的整數。
 
-1. 定義 SQL Server 資料來源物件，指定要包含資料，以及遠端伺服器連接的資料表。
+1. 定義 SQL Server 的資料來源物件、指定要包含資料的資料表, 以及與遠端伺服器的連接。
   
     ```R
     sqlServerAirDemo <- RxSqlServerData(table = "AirDemoSmallTest", connectionString = sqlConnString)
     ```
   
-2. 為求安全起見，包含一個步驟，以檢查是否具有相同名稱的資料表已經存在，而且如果存在的話，請刪除資料表。 相同名稱的現有資料表可防止建立新的資源。
+2. 作為預防措施, 請加入一個步驟來檢查是否已有相同名稱的資料表存在, 並刪除資料表 (如果有的話)。 具有相同名稱的現有資料表會防止建立新的資料表。
   
     ```R
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-3. 將資料載入至使用表**rxDataStep**。 此函式會移動資料兩個已定義資料來源，並可以選擇性地轉換資料移動。
+3. 使用**rxDataStep**將資料載入資料表。 此函式會在兩個已定義的資料來源之間移動資料, 而且可以選擇性地轉換資料的路由。
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -91,13 +91,13 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         overwrite = TRUE )
     ```
   
-    這是相當大的資料表，，因此請等候直至您看見類似這一個最終狀態訊息：*Rows Read:200000，total 處理的資料列：600000*。
+    這是相當大的資料表, 因此請等候直到看到如下的最終狀態消息:*讀取的資料列:200000, 已處理的資料列總數:600000*。
      
 ## <a name="load-data-from-a-sql-table"></a>從 SQL 資料表載入資料
 
-一旦資料存在於資料表中，您可以使用簡單 SQL 查詢來載入。 
+一旦資料存在於資料表中, 您就可以使用簡單的 SQL 查詢來加以載入。 
 
-1. 建立新的 SQL Server 資料來源。 輸入是您剛建立並載入資料的新資料表上的查詢。 此定義加入因數層級*DayOfWeek*資料行中，使用*colInfo*引數**RxSqlServerData**。
+1. 建立新的 SQL Server 資料來源。 輸入是您剛建立並載入資料的新資料表上的查詢。 這個定義會使用**RxSqlServerData**的*colInfo*引數, 加入*DayOfWeek*資料行的因數層級。
   
     ```R
     sqlServerAirDemo2 <- RxSqlServerData(
@@ -107,7 +107,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-2. 呼叫**rxSummary**一次，以檢閱您的查詢中的資料摘要。
+2. 再次呼叫**rxSummary**以檢查查詢中的資料摘要。
   
     ```R
     rxSummary(~., data = sqlServerAirDemo2)

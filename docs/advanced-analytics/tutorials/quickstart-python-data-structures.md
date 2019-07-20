@@ -1,41 +1,41 @@
 ---
-title: 使用 Python-SQL Server Machine Learning 中的資料結構的快速入門
-description: 在本快速入門中的 Python 指令碼，在 SQL Server 中，了解如何使用資料結構 sp_execute_external_script 的系統預存程序。
+title: 在 Python 中使用資料結構的快速入門
+description: 在 SQL Server 的 Python 腳本快速入門中, 瞭解如何搭配 sp_execute_external_script 系統預存程式來使用資料結構。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d841314bd2bf167c4c40f5786a116b7bc8f73c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962085"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344558"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>快速入門：SQL Server 中的 Python 資料結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本快速入門示範如何使用 Python 中 SQL Server Machine Learning 服務時，資料結構。
+本快速入門說明如何在 SQL Server Machine Learning 服務中使用 Python 時, 使用資料結構。
 
-SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資料。 不過，您無法從 Python 中將 SQL Server 的純量，並預期它 「 只是工作 」。 在本快速入門中，我們將檢閱一些基本資料型別定義，若要準備您的 Python 和 SQL Server 之間傳遞的表格式資料時，可能發生的其他問題。
+SQL Server 依賴 Python **pandas**套件, 這非常適合用來處理表格式資料。 不過, 您無法將純量從 Python 傳遞至 SQL Server, 並預期它「只是工作」。 在本快速入門中, 我們將探討一些基本的資料類型定義, 以準備您在 Python 和 SQL Server 之間傳遞表格式資料時, 可能會遇到的其他問題。
 
-+ 為資料框架是使用資料表_多個_資料行。
-+ 單一資料行的資料框架是呼叫一系列的類似清單中的物件。
-+ 單一的值是資料框架的資料格，而且必須由索引呼叫。
++ 資料框架是包含_多個_資料行的資料表。
++ 資料框架的單一資料行是一種類似清單的物件, 稱為「數列」 (Series)。
++ 單一值是資料框架的儲存格, 必須由 index 呼叫。
 
-如何會您公開 （expose) 單一的結果做為資料框架中，計算的如果 data.frame 需要表格式結構？ 答案是代表單一純量值為一系列，輕鬆地轉換成資料框架。 
+如果資料框架需要表格式結構, 您要如何將計算的單一結果公開為數據框架？ 其中一個答案是以數列的形式來表示單一純量值, 這可以輕鬆地轉換成資料框架。 
 
 ## <a name="prerequisites"></a>先決條件
 
-先前的快速入門中，[確認 Python 存在於 SQL Server](quickstart-python-verify.md)，提供資訊並連結設定本快速入門所需的 Python 環境。
+先前的快速入門中, 請[確認 Python 存在於 SQL Server](quickstart-python-verify.md)中, 提供設定本快速入門所需之 python 環境的相關資訊和連結。
 
-## <a name="scalar-value-as-a-series"></a>以一系列的純量值
+## <a name="scalar-value-as-a-series"></a>以純量值作為數列
 
-此範例沒有簡單的運算，並將轉換成一系列的純量。
+這個範例會執行一些簡單的數學運算, 並將純量轉換成數列。
 
-1. 一系列需要索引，以便您可以指派以手動方式，如此處所示，或以程式設計的方式。
+1. 數列需要索引, 您可以手動指派, 如這裡所示, 或以程式設計方式指派。
 
     ```sql
     execute sp_execute_external_script 
@@ -50,7 +50,7 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     '
     ```
 
-2. 因為數列尚未被轉換成 data.frame，會在訊息視窗中，傳回的值，但您可以看到結果會以更表格。
+2. 因為數列尚未轉換成資料框架, 所以這些值會在 [訊息] 視窗中傳回, 但是您可以看到結果是以更表格式的格式顯示。
 
     **結果**
 
@@ -61,7 +61,7 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     dtype: float64
     ```
 
-3. 若要增加序列的長度，您可以加入新的值，使用陣列。 
+3. 若要增加數列的長度, 您可以使用陣列來加入新的值。 
 
     ```sql
     execute sp_execute_external_script 
@@ -76,7 +76,7 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     '
     ```
 
-    如果您未指定的索引，索引會產生具有值從 0 開始和結尾陣列的長度。
+    如果您未指定索引, 則會產生值開頭為0且結尾為數組長度的索引。
 
     **結果**
 
@@ -87,7 +87,7 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     dtype: float64
     ```
 
-4. 如果您增加的數目**索引**值，但不要加上新**資料**值、 資料值會重複來填滿數列。
+4. 如果您增加**索引**值的數目, 但不加入新的**資料**值, 則會重復資料值來填滿數列。
 
     ```sql
     execute sp_execute_external_script 
@@ -111,11 +111,11 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     dtype: float64
     ```
 
-## <a name="convert-series-to-data-frame"></a>將序列轉換成資料框架
+## <a name="convert-series-to-data-frame"></a>將數列轉換成資料框架
 
-我們需要轉換成表格式結構時我們純量的數學運算的結果，仍然需要將它們轉換成 SQL Server 可以處理的格式。 
+將純量數學運算結果轉換成表格式結構, 我們仍然需要將它們轉換成 SQL Server 可以處理的格式。 
 
-1. 若要將一系列轉換成 data.frame，呼叫 pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
+1. 若要將數列轉換成資料框架, 請呼叫 pandas[資料框架](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
 
     ```sql
     execute sp_execute_external_script 
@@ -134,7 +134,7 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. 結果如下所示。 即使您使用索引來從 data.frame 取得特定的值時，索引值不是輸出的一部分。
+2. 結果如下所示。 即使您使用索引來取得資料中的特定值, 索引值也不是輸出的一部分。
 
     **結果**
 
@@ -143,11 +143,11 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     |0.5|
     |2|
 
-## <a name="output-values-into-dataframe"></a>Data.frame 輸出值
+## <a name="output-values-into-dataframe"></a>將值輸出至資料框架
 
-我們來看看如何轉換成 data.frame 搭配兩個系列包含簡單的數學運算的結果。 第一個具有 Python 所產生的順序值的索引。 第二個會使用任意字串值的索引。
+讓我們看看如何轉換成資料。框架會與我們的兩個包含簡單數學運算結果的數列搭配運作。 第一個具有由 Python 產生之順序值的索引。 第二個使用字串值的任意索引。
 
-1. 此範例會取得值，從使用整數索引的數列。
+1. 這個範例會從序列中取得使用整數索引的值。
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -166,9 +166,9 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    請記住，自動產生索引 0 開始。 請嘗試使用超出範圍的索引值，並看看結果如何。
+    請記住, 自動產生的索引會從0開始。 請嘗試使用超出範圍的索引值, 並查看會發生什麼事。
 
-2. 現在讓我們從其他具有字串索引的資料框架中取得單一值。 
+2. 現在讓我們從另一個具有字串索引的資料框架取得單一值。 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -192,11 +192,11 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
     |------|
     |0.5|
 
-    如果您嘗試使用數值索引取得值，此系列中，您會收到錯誤。
+    如果您嘗試使用數值索引來取得此數列中的值, 就會收到錯誤。
 
 ## <a name="next-steps"></a>後續步驟
 
-接下來，您將建置預測模型，在 SQL Server 中使用 Python。
+接下來, 您將在 SQL Server 中使用 Python 建立預測模型。
 
 > [!div class="nextstepaction"]
-> [建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型](quickstart-python-train-score-in-tsql.md)
+> [在 SQL Server 中使用預存程式來建立、定型和使用 Python 模型](quickstart-python-train-score-in-tsql.md)

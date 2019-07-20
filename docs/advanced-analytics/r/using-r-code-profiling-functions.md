@@ -1,34 +1,34 @@
 ---
-title: 使用 R 程式碼剖析函式-SQL Server Machine Learning 服務
-description: 改善效能，並取得更快的結果，在 SQL Server 上的 R 計算，使用 R 程式碼剖析函式來傳回內部函式呼叫的相關資訊。
+title: 使用 R 程式碼剖析函式
+description: 使用 R 程式碼剖析函式來傳回內部函式呼叫的相關資訊, 以改善效能並在 SQL Server 上取得 R 計算的更快結果。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a68c19813b31164947f6d04a8c54c2a54eec34
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962362"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345686"
 ---
-# <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 程式碼剖析函式來改善效能
+# <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 程式碼剖析功能來改善效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 除了使用 SQL Server 資源和工具來監視 R 指令碼執行之外，您還可以使用由其他 R 套件提供的效能工具，來取得內部函式呼叫的相關詳細資訊。 
 
 > [!TIP]
-> 本文提供基本的資源，以協助您開始使用。 如需專家指導，我們建議您*效能*一節[Hadley Wickham 所著的 《 進階 R"](http://adv-r.had.co.nz)。
+> 本文提供基本資源説明您開始使用。 如需專家指引, 建議您[Hadley wickham 針對的「Advanced R](http://adv-r.had.co.nz)」中的*Performance*區段。
 
 ## <a name="using-rprof"></a>使用 RPROF
 
-[*rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)是包含在基底套件函式[ **utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)，根據預設，它會載入。 
+[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)是基底封裝[**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)中包含的函式, 預設會載入此功能。 
 
-一般而言，*rprof* 函式的運作方式，是在指定的時間間隔將呼叫堆疊寫出至檔案。 然後您可以使用[ *summaryRprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof)函式來處理輸出檔。 *rprof* 的其中一個優點，在於它會執行取樣，因此降低監視的效能負擔。
+一般而言，*rprof* 函式的運作方式，是在指定的時間間隔將呼叫堆疊寫出至檔案。 接著, 您可以使用[*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof)函式來處理輸出檔案。 *rprof* 的其中一個優點，在於它會執行取樣，因此降低監視的效能負擔。
 
-若要在您的程式碼中使用 R 程式碼剖析，您必須呼叫此函式並指定其參數，包含將寫入之記錄檔的位置名稱。 程式碼剖析可在您的程式碼中開啟或關閉。 下列語法會說明基本的使用方式： 
+若要在您的程式碼中使用 R 程式碼剖析，您必須呼叫此函式並指定其參數，包含將寫入之記錄檔的位置名稱。 程式碼剖析可在您的程式碼中開啟或關閉。 下列語法說明基本用法: 
 
 ```R
 # Specify profiling output file.
@@ -58,9 +58,9 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>在 R 中進行偵錯與程式碼剖析
 
-Microsoft R Open，但預設安裝的文件包含開發討論的 R 語言擴充功能的手冊[分析和偵錯](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)在詳細資料。 您可以在 C:\Program Files\Microsoft SQL Server\MSSQL13 對電腦上找到的相同文件。MSSQLSERVER\R_SERVICES\doc\manual。
+Microsoft R Open 的檔 (預設會安裝) 包含手動開發 R 語言的擴充功能, 以詳細討論[分析和調試](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)程式。 您可以在 C:\Program Files\Microsoft SQL Server\MSSQL13. 的電腦上找到相同的檔MSSQLSERVER\R_SERVICES\doc\manual.
 
 ## <a name="see-also"></a>另請參閱
 
-+ [utils R 套件](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ [Hadley Wickham 所著的 「 進階的 R"](http://adv-r.had.co.nz)
++ [utils R 封裝](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
++ [「Advanced R」 by Hadley Wickham 針對](http://adv-r.had.co.nz)

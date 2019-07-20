@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2019-SQL Server Machine Learning 服務中的差異
-description: 了解 R 和 Python 的 SQL Server 機器學習服務擴充功能在 SQL Server 2019 的預覽版本的最新消息。
+title: SQL Server 2019 中的差異
+description: 在 SQL Server 2019 preview 版本中, 瞭解 R 和 Python 的新功能 SQL Server 機器學習服務延伸模組。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/22/2019
@@ -8,60 +8,60 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 017dd29a8dc3077ea7c91b6cd3e49699855f987e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8996d47c58841f668813c8ff344683150e456fb3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962831"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345002"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>在 SQL Server Machine Learning 服務安裝在 SQL Server 2019 的差異  
+# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 中 SQL Server Machine Learning 服務安裝的差異  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 Windows、 SQL Server 2019 安裝程式會變更外部處理序隔離機制。 這項變更會取代本機的背景工作帳戶[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)，隔離技術，在 Windows 上執行的用戶端應用程式。 
+在 Windows 上, SQL Server 2019 安裝程式會變更外部進程的隔離機制。 這項變更會以[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)取代本機背景工作帳戶, 這是在 Windows 上執行的用戶端應用程式的隔離技術。 
 
-沒有特定的動作項目，因為修改系統管理員。 在新的或已升級伺服器，所有外部指令碼和程式碼從執行[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自動遵循新的隔離模型。 
+系統管理員沒有任何特定的動作專案, 因此無法進行修改。 在新的或升級的伺服器上, 從[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)執行的所有外部腳本和程式碼都會自動遵循新的隔離模式。 
 
-摘要說明，在此版本中的主要差異如下：
+總結而言, 此版本的主要差異如下:
 
-+ 本機使用者帳戶之下**SQL 限制使用者群組 (SQLRUserGroup)** 不會再建立或用來執行外部處理序。 AppContainers 取代它們。
-+ **SQLRUserGroup**成員資格有所變更。 而不是多個本機使用者帳戶，成員資格包含只是 SQL Server Launchpad 服務帳戶。 R 和 Python 處理程序現在在 Launchpad 服務身分識別，透過 AppContainers 隔離下執行。
++ **SQL 受限使用者群組 (SQLRUserGroup)** 下的本機使用者帳戶不再建立或用來執行外部進程。 AppContainers 取代它們。
++ **SQLRUserGroup**成員資格已變更。 成員資格只包含 SQL Server Launchpad 服務帳戶, 而不是多個本機使用者帳戶。 R 和 Python 進程現在會在啟動列服務身分識別下執行, 並透過 AppContainers 隔離。
 
-雖然隔離模型已變更時，安裝精靈和命令列參數會保持相同的 SQL Server 2019。 如需安裝的說明，請參閱[安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)。
+雖然隔離模式已變更, 但安裝精靈和命令列參數在 SQL Server 2019 中保持不變。 如需安裝的說明, 請參閱[安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)。
 
 ## <a name="about-appcontainer-isolation"></a>關於 AppContainer 隔離
 
-在舊版中， **SQLRUserGroup**所包含的本機 Windows 使用者帳戶 (MSSQLSERVER00 MSSQLSERVER20) 可用來隔離及執行外部處理序集區。 當外部處理序已有需要時 SQL Server Launchpad 服務會使用可用的帳戶，並且使用它來執行處理程序。 
+在舊版中, **SQLRUserGroup**包含了用來隔離和執行外部進程的本機 Windows 使用者帳戶 (MSSQLSERVER00-MSSQLSERVER20) 集區。 當需要外部進程時, SQL Server Launchpad 服務會取得可用的帳戶, 並使用它來執行處理常式。 
 
-在 SQL Server 2019，安裝程式不會再建立本機的背景工作帳戶。 相反地，透過來達成隔離[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)。 在執行階段，當內嵌指令碼或程式碼中偵測到預存程序或查詢，在 SQL Server 會呼叫啟動控制板，並要求延伸模組特定程式啟動器。 啟動控制板叫用其身分的處理序中的適當的執行階段環境，並包含該 AppContainer 具現化。 這項變更是有幫助，因為不再需要本機帳戶和密碼管理。 此外，其中禁止使用本機使用者帳戶的安裝，刪除本機使用者帳戶相依性表示您現在可以使用這項功能。
+在 SQL Server 2019 中, 安裝程式不會再建立本機背景工作帳戶。 相反地, 隔離是透過[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)來達成。 在執行時間, 在預存程式或查詢中偵測到內嵌腳本或程式碼時, SQL Server 會使用延伸模組特定啟動器的要求來呼叫啟動控制板。 啟動列會在其身分識別的進程中叫用適當的執行時間環境, 並具現化 AppContainer 以包含它。 這種變更很有用, 因為已不再需要本機帳戶和密碼管理。 此外, 在禁止本機使用者帳戶的安裝上, 刪除本機使用者帳戶相依性表示您現在可以使用這項功能。
 
-實作 SQL server 時，AppContainers 會是內部的機制。 雖然您不會看到 AppContainers Process Monitor 中的實體的辨識項，您可以找到它們，以防止處理程序進行網路呼叫的安裝程式所建立的輸出防火牆規則中。
+AppContainers 由 SQL Server 實作為內部機制。 雖然您不會在進程監視器中看到 AppContainers 的實體辨識項, 但是您可以在安裝程式所建立的輸出防火牆規則中找到它們, 以避免進程進行網路呼叫。
 
 ## <a name="firewall-rules-created-by-setup"></a>安裝程式所建立的防火牆規則
 
-根據預設，SQL Server 會停用輸出連線，藉由建立防火牆規則。 在過去，這些規則以本機使用者帳戶，安裝程式建立的一項輸出規則的所在**SQLRUserGroup** ，拒絕網路存取其成員 （每個背景工作帳戶已列為 rule_ 受到本機原則。 
+根據預設, SQL Server 會藉由建立防火牆規則來停用輸出連線。 在過去, 這些規則是以本機使用者帳戶為基礎, 其中安裝程式為**SQLRUserGroup**拒絕對其成員進行網路存取的一個輸出規則 (每個背景工作帳戶都列為 rule_ 的本機原則。 
 
-移至 AppContainers 的一部分，有新 AppContainer Sid 為基礎的防火牆規則： 一個用於每個 20 AppContainers 建立 SQL Server 安裝程式。 防火牆規則名稱的命名慣例**AppContainer 00 封鎖網路存取 SQL Server 執行個體 MSSQLSERVER 中**其中 00 AppContainer (00-20 預設)，數目，是 MSSQLSERVER 是 SQL 的名稱伺服器執行個體。 
+在移至 AppContainers 的過程中, 有一個以 AppContainer Sid 為基礎的新防火牆規則: 一個是針對 SQL Server 安裝程式所建立的20個 AppContainers 中的每一個。 防火牆規則名稱的命名慣例是**SQL Server 實例 MSSQLSERVER 中的 appcontainer-00 封鎖網路存取**, 其中00是 appcontainer 的數目 (預設為 00-20), 而 MSSQLSERVER 是 SQL Server 實例的名稱。 
 
 > [!Note]
-> 如果需要網路呼叫，您可以停用 Windows 防火牆中的輸出規則。
+> 如果需要網路呼叫, 您可以停用 Windows 防火牆中的輸出規則。
 
-## <a name="program-file-permissions"></a>程式檔案的權限
+## <a name="program-file-permissions"></a>程式檔案許可權
 
-如同舊版本中， **SQLRUserGroup**會繼續提供讀取和執行 SQL Server 中的可執行檔的權限**Binn**， **R_SERVICES**，和**PYTHON_SERVICES**目錄。 在這一版的唯一成員**SQLRUserGroup**是 SQL Server Launchpad 服務帳戶。  Launchpad 服務啟動時 R 或 Python 執行環境，LaunchPad 服務會執行此程序。
+如同先前的版本, **SQLRUserGroup**會繼續提供 SQL Server **Binn**、 **R_SERVICES**和**PYTHON_SERVICES**目錄中可執行檔的讀取和執行許可權。 在此版本中, **SQLRUserGroup**的唯一成員是 SQL Server Launchpad 服務帳戶。  當啟動列服務啟動 R 或 Python 執行環境時, 進程會以啟動控制服務的方式執行。
 
 ## <a name="implied-authentication"></a>隱含驗證
 
-因為之前，其他設定仍然需要*隱含的驗證*的指令碼或程式碼有具有連回 SQL Server 擷取資料或資源使用受信任的驗證。 額外的設定牽涉到建立的資料庫登入**SQLRUserGroup**，其唯一的成員現在是單一的 SQL Server Launchpad 服務帳戶，而不是多個背景工作帳戶。 如需有關這項工作的詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)。
+如先前所述, 當腳本或程式碼 SQL Server 必須使用受信任的驗證來抓取資料或資源時,*隱含驗證*仍然需要進行其他設定, 才能進行其他設定。 額外的設定牽涉到建立**SQLRUserGroup**的資料庫登入, 其唯一成員現在是單一 SQL Server Launchpad 服務帳戶, 而不是多個背景工作帳戶。 如需這項工作的詳細資訊, 請參閱[將 SQLRUserGroup 新增為資料庫使用者](../security/create-a-login-for-sqlrusergroup.md)。
 
 
 ## <a name="symbolic-link-created-by-setup"></a>安裝程式所建立的符號連結
 
-為目前的預設值建立符號連結**R_SERVICES**並**PYTHON_SERVICES**做為 SQL Server 安裝程式的一部分。 如果您不想要建立此連結，或者是 'all application packages' 的讀取權限授與至資料夾階層。
+在 SQL Server 安裝程式中, 會建立與目前預設**R_SERVICES**和**PYTHON_SERVICES**的符號連結。 如果您不想要建立此連結, 替代方法是將「所有應用程式套件」讀取權限授與給資料夾的階層。
 
 
 ## <a name="see-also"></a>另請參閱
 
-+ [安裝 SQL Server Machine Learning 在 Windows 上的服務](sql-machine-learning-services-windows-install.md)
++ [在 Windows 上安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)
 
 + [在 Linux 上安裝 SQL Server 2019 Machine Learning 服務](../../linux/sql-server-linux-setup-machine-learning.md)

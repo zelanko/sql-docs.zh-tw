@@ -1,37 +1,37 @@
 ---
-title: R-SQL 資料類型轉換為 SQL Server Machine Learning 服務
-description: 檢閱隱含與明確的資料型別 converstions R 與 SQL Server 之間的資料科學和機器學習服務解決方案中。
+title: R 到 SQL 的資料類型轉換
+description: 在資料科學和機器學習解決方案中, 檢查 R 和 SQL Server 之間的隱含和明確資料類型 converstions。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 93a0e15d8fdca31971cd16d187ae88a180fb481f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 255342113a17b0fb2af58eb6bc173cb6c50aac6d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962536"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344932"
 ---
-# <a name="data-type-mappings-between-r-and-sql-server"></a>R 與 SQL Server 之間的資料類型對應
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R 和 SQL Server 之間的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 SQL Server Machine Learning 服務中的 R 整合功能上執行的 R 解決方案，請檢閱清單不支援的資料類型和資料類型轉換的 R 程式庫與 SQL Server 之間傳遞資料時可能會隱含地執行。
+針對在 SQL Server Machine Learning 服務的 R 整合功能上執行的 R 方案, 請參閱不支援的資料類型清單, 以及在 R 程式庫和 SQL Server 之間傳遞資料時, 可能會隱含執行的資料類型轉換。
 
 ## <a name="base-r-version"></a>基底 R 版本
 
-SQL Server 2016 R Services 和 SQL Server 2017 Machine Learning 服務使用 R、 對齊特定版本的 Microsoft R Open。 例如，建置在 Microsoft R Open 的最新版本中，SQL Server 2017 Machine Learning 服務，3.3.3。
+SQL Server 2016 R Services 和 SQL Server 2017 Machine Learning Services 與 R, 會與 Microsoft R Open 的特定版本一致。 例如, 最新版本 SQL Server 2017 Machine Learning 服務, 是以 Microsoft R Open 3.3.3 為基礎。
 
-若要檢視 SQL Server 的特定執行個體相關聯的 R 版本，請開啟**RGui**。 預設執行個體的路徑會是，如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+若要查看與特定 SQL Server 實例相關聯的 R 版本, 請開啟**rgui.exe**。 若為預設實例, 路徑會如下所示:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-此工具會載入基底 R 和其他程式庫。 在通知中，針對每個在工作階段啟動時載入的封裝提供封裝版本資訊。 
+此工具會載入基底 R 和其他程式庫。 在會話啟動時載入的每個封裝, 都會在通知中提供封裝版本資訊。 
 
 ## <a name="r-and-sql-data-types"></a>R 和 SQL 資料類型
 
-而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援數個數十種資料類型，R 會具有有限的純量資料類型 (數字、 整數、 複雜、 邏輯、 字元、 日期/時間和未經處理)。 如此一來，每當您使用來自[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]R 指令碼中的資料可能會隱含地轉換成相容的資料類型。 不過，通常的確切轉換無法自動執行，而且會傳回錯誤，例如 「 未處理的 SQL 資料類型 」。
+雖然[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援數十種資料類型, 但 R 的純量資料類型 (數位、整數、複雜、邏輯、字元、日期/時間和原始) 數量有限。 因此, 每當您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 R 腳本中使用資料時, 資料可能會隱含地轉換成相容的資料類型。 不過, 通常無法自動執行精確的轉換, 而且會傳回錯誤, 例如「未處理的 SQL 資料類型」。
 
-此區段會列出並未提供，但會列出不支援的資料類型的隱含轉換。 提供的一些指引將 R 與 SQL Server 之間的資料類型對應。
+本節列出所提供的隱含轉換, 並列出不支援的資料類型。 在 R 與 SQL Server 之間對應資料類型時, 會提供一些指導方針。
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R 與 SQL Server 之間的隱含資料類型轉換
 
@@ -65,7 +65,7 @@ SQL Server 2016 R Services 和 SQL Server 2017 Machine Learning 服務使用 R�
 
 在 [SQL Server 類型系統](../../t-sql/data-types/data-types-transact-sql.md)所支援的資料類型類別中，以下幾個類型在傳遞到 R 程式碼時很有可能會造成問題：
 
-+ 中所列的資料類型**其他**的 SQL 類型系統的發行項的區段：**游標**，**時間戳記**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**資料表**
++ SQL 類型系統的**其他**區段中所列的資料類型: **cursor**、 **timestamp**、 **hierarchyid**、 **uniqueidentifier**、 **SQL_variant**、 **xml**、 **table**
 + 所有空間類型
 + **image**
 
@@ -92,7 +92,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 包含資料類型轉
 
 一般而言，當您不清楚如何在 R 中使用特定的資料類型或資料結構時，皆可使用  `str()` 函數以取得 R 物件的內部結構和類型。 函數的結果會列印到 R 主控台，也會顯示在 **的 [訊息]** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]索引標籤查詢結果中。 
 
-當從 R 程式碼中使用的資料庫中擷取資料，您應該一律刪除無法用在 R 中的資料行，以及不適合用於分析，例如 GUIDS (uniqueidentifier)、 時間戳記和其他用於稽核的資料行或歷程的資料行ETL 程序所建立的資訊。 
+在 R 程式碼中抓取資料庫的資料以供使用時, 您應該一律排除無法在 R 中使用的資料行, 以及不適合用于分析的資料行, 例如 GUID (uniqueidentifier)、時間戳記以及用於進行審核的其他資料行, 或歷程ETL 進程所建立的資訊。 
 
 請注意，包含不必要的資料行可能會大幅降低 R 程式碼的效能，尤其是使用高基數資料行做為因素的時候。 因此，我們建議您事先使用 SQL Server 系統預存程序和資訊檢視取得特定資料表的資料類型，並刪除或轉換不相容的資料行。 如需詳細資訊，請參閱 [Transact-SQL 中的資訊結構描述檢視](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
@@ -108,7 +108,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 包含資料類型轉
 
 以下範例示範資料在 SQL Server 和 R 之間進行來回行程時的轉換方式。
 
-查詢會取得一系列的值從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表，並使用預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)輸出使用 R 執行階段的值。
+此查詢會從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表取得一系列的值, 並使用預存程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)來輸出使用 R 執行時間的值。
 
 ```sql
 CREATE TABLE MyTable (    
@@ -166,7 +166,7 @@ outputDataSet <- inputDataSet'
 -   **資料行 C4**。 資料行包含由 R 指令碼產生且不存在於原始資料的值。
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>範例 2：使用 R 的動態資料行選取範圍
+## <a name="example-2-dynamic-column-selection-using-r"></a>範例 2：使用 R 的動態資料行選取
 
 以下範例示範如何使用 R 程式碼來檢查無效的資料行類型。 程式碼會使用 SQL Server 系統檢視來取得指定資料表的結構描述，並移除任何具有指定無效類型的資料行。
 

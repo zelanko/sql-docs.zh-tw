@@ -1,37 +1,37 @@
 ---
-title: Python 到 SQL 資料類型轉換為 SQL Server Machine Learning
-description: 檢閱 Python 與 SQL Server 之間的資料科學和機器學習服務解決方案中隱含與明確的資料型別 converstions。
+title: Python 到 SQL 的資料類型轉換
+description: 請參閱資料科學和機器學習服務解決方案中的 Python 和 SQL Server 之間的隱含和明確資料類型 converstions。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 652824e4b038e629cf9b998dd6fae64465426d0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 043a27cc53c2dca955eb0bea1ed07433bc9183b8
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962763"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345503"
 ---
-# <a name="data-type-mappings-between-python-and-sql-server"></a>在 Python 和 SQL Server 之間的資料類型對應
+# <a name="data-type-mappings-between-python-and-sql-server"></a>Python 和 SQL Server 之間的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 SQL Server Machine Learning 服務中的 Python 整合功能上執行的 Python 解決方案，請檢閱不支援的資料類型和 Python 與 SQL Server 之間傳遞資料時可能會以隱含方式執行的資料類型轉換的清單。
+針對在 SQL Server Machine Learning 服務的 Python 整合功能上執行的 Python 解決方案, 請參閱不支援的資料類型清單, 以及在 Python 與 SQL Server 之間傳遞資料時, 可能會隱含執行的資料類型轉換。
 
 ## <a name="python-version"></a>Python 版本
 
-SQL Server 2017 Anaconda 4.2 發佈和 Python 3.6。
+SQL Server 2017 Anaconda 4.2 散發和 Python 3.6。
 
-RevoScaleR 功能的子集 (rxLinMod，rxLogit，rxPredict，rxDTrees，rxBTrees，可能是其他一些) 使用 使用新的 Python 套件的 Python Api 來提供**revoscalepy**。 您可以使用此套件使用 Pandas 資料框架、 XDF 檔案或 SQL 資料查詢的資料搭配使用。
+RevoScaleR 功能的子集 (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees 等) 是使用 Python Api (使用新的 Python 套件**revoscalepy**) 所提供。 您可以使用此封裝, 使用 Pandas 資料框架、XDF 檔案或 SQL 資料查詢來處理資料。
 
-如需詳細資訊，請參閱 < [SQL Server 中的 revoscalepy 模組](ref-py-revoscalepy.md)並[revoscalepy 函式參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)。
+如需詳細資訊, 請參閱 SQL Server 和[revoscalepy 函數參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)[中的 revoscalepy 模組](ref-py-revoscalepy.md)。
 
-Python 支援有限的數目的資料類型，相較於 SQL Server。 如此一來，每當您使用 Python 指令碼中的資料從 SQL Server 時，資料可能會隱含地轉換成相容的資料類型。 不過，通常的確切轉換無法自動執行，而且會傳回錯誤。
+與 SQL Server 相比, Python 支援的資料類型數量有限。 因此, 每當您在 Python 腳本中使用來自 SQL Server 的資料時, 資料可能會隱含地轉換成相容的資料類型。 不過, 通常無法自動執行精確的轉換, 而且會傳回錯誤。
 
 ## <a name="python-and-sql-data-types"></a>Python 和 SQL 資料類型
 
-下表列出所提供的隱含轉換。 不支援其他資料型別。
+下表列出所提供的隱含轉換。 不支援其他資料類型。
 
 |SQLtype|Python 類型|
 |-------|-----------|

@@ -1,38 +1,38 @@
 ---
-title: "\"Hello World\"基本 R 程式碼執行 T-SQL-SQL Server Machine Learning 中的快速入門"
-description: SQL Server 中的 R 指令碼的快速入門。 了解呼叫 R 指令碼在 hello world 練習使用 sp_execute_external_script 的系統預存程序的基本概念。
+title: 在 T-sql 中執行「Hello World」基本 R 程式碼的快速入門
+description: SQL Server 中 R 腳本的快速入門。 瞭解在 hello world 練習中使用 sp_execute_external_script 系統預存程式呼叫 R 腳本的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961981"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345980"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門：SQL Server 中的"Hello world"R 指令碼 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門：SQL Server 中的 "Hello world" R 腳本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本快速入門中，您將了解重要的概念，透過執行"Hello World"R 指令碼 inT SQL，簡介**sp_execute_external_script**系統預存程序。 
+在本快速入門中, 您可以藉由執行「Hello World」 R 腳本 inT-SQL 來瞭解重要概念, 其中包含**sp_execute_external_script**系統預存程式的簡介。 
 
 ## <a name="prerequisites"></a>先決條件
 
-先前的快速入門中，[確認 R 存在於 SQL Server](quickstart-r-verify.md)，提供資訊並連結設定本快速入門所需的 R 環境。
+先前的快速入門[中, 驗證 R 存在於 SQL Server 中](quickstart-r-verify.md), 提供設定本快速入門所需之 R 環境的相關資訊和連結。
 
-## <a name="basic-r-interaction"></a>基本的 R 互動
+## <a name="basic-r-interaction"></a>基本 R 互動
 
-有兩種方式，您可以在 SQL Database 中執行 R 程式碼：
+有兩種方式可以在 SQL Database 中執行 R 程式碼:
 
-+ 做為引數的系統預存程序中，新增 R 指令碼[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。
-+ 從[遠端 R 用戶端](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)、 連接到您的 SQL database，並執行作為計算內容中使用 SQL Database 的程式碼。
++ 將 R 腳本新增為系統預存程式[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)的引數。
++ 從[遠端 R 用戶端](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client), 連接到您的 SQL 資料庫, 然後使用 SQL Database 作為計算內容來執行程式碼。
 
-下列練習著重於第一次的互動模型： 如何將 R 程式碼傳遞至預存程序。
+下列練習著重于第一個互動模型: 如何將 R 程式碼傳遞至預存程式。
 
-1. 執行簡單的指令碼，以查看 R 指令碼如何執行您的 SQL database 中。
+1. 執行簡單的腳本, 以查看 R 腳本如何在您的 SQL 資料庫中執行。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -46,7 +46,7 @@ ms.locfileid: "67961981"
     '
     ```
 
-2. 假設您有正確的正確結果所設定的所有項目會計算，以及 R`print`函式會傳回結果**訊息**視窗。
+2. 假設您已正確設定正確的結果, 且 R `print`函式將結果傳回至 [**訊息**] 視窗。
 
     **結果**
 
@@ -55,13 +55,13 @@ ms.locfileid: "67961981"
     0.5 2
     ```
 
-    取得時發生**stdout**訊息非常有用，測試您的程式碼時，通常您需要以表格式格式傳回結果，以便您可以在應用程式中使用它，或寫入資料表。 請參閱[快速入門：處理輸入及輸出在 SQL Server 中使用 R](rtsql-working-with-inputs-and-outputs.md)如需詳細資訊。
+    在測試您的程式碼時, 取得**stdout**訊息很有用, 但您通常需要以表格格式傳回結果, 以便在應用程式中使用它或將其寫入資料表。 請[參閱快速入門:在 SQL Server](rtsql-working-with-inputs-and-outputs.md)中使用 R 來處理輸入和輸出, 以取得詳細資訊。
 
-請記住，所有東西放在`@script`引數必須是有效的 R 程式碼。
+請記住, 引數`@script`內的所有專案都必須是有效的 R 程式碼。
 
-## <a name="run-a-hello-world-script"></a>執行 Hello World 指令碼
+## <a name="run-a-hello-world-script"></a>執行 Hello World 腳本
 
-下列練習會執行另一個簡單的 R 指令碼。
+下列練習會執行另一個簡單的 R 腳本。
 
 ```sql
 EXEC sp_execute_external_script
@@ -72,22 +72,22 @@ EXEC sp_execute_external_script
 GO
 ```
 
-這個預存程序的輸入包括：
+此預存程式的輸入包括:
 
-+ *@language* 參數會定義要呼叫，在此情況下，r 語言擴充功能
-+ *@script* 參數會定義傳遞至 R 執行階段的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至 **nvarchar** 類型的變數，並呼叫該變數。
-+ *@input_data_1* 會傳回查詢所傳遞至 R 執行階段，將資料傳回給 SQL Server 做為資料框架的資料。
-+ 結果集子句會定義傳回的資料表的結構描述 SQL Server，將"Hello World"新增為資料行名稱，如**int**資料類型。
++ *@language* 參數會定義要呼叫的語言擴充功能, 在此案例中為 R。
++ *@script* 參數會定義傳遞至 R 執行時間的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至 **nvarchar** 類型的變數，並呼叫該變數。
++ *@input_data_1* 這是查詢所傳回的資料, 傳遞至 R 執行時間, 會將資料傳回 SQL Server 做為資料框架。
++ WITH RESULT SETS 子句會定義所傳回之資料表的架構, 以供 SQL Server, 並加入 "Hello World" 做為資料行名稱, **int**作為資料類型。
 
 **結果**
 
-| Hello World |
+| 世界您好 |
 |-------------|
 | 1 |
 
 ## <a name="next-steps"></a>後續步驟
 
-現在您已經執行數個簡單的 R 指令碼，看看建構輸入和輸出。
+現在您已執行幾個簡單的 R 腳本, 請仔細查看結構化輸入和輸出。
 
 > [!div class="nextstepaction"]
-> [快速入門：處理輸入和輸出](quickstart-r-inputs-and-outputs.md)
+> [入門處理輸入和輸出](quickstart-r-inputs-and-outputs.md)

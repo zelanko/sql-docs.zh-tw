@@ -1,34 +1,34 @@
 ---
-title: 訓練及儲存使用 T-SQL-SQL Server Machine Learning Python 模型
-description: 示範如何訓練及儲存模型，使用 TRANSACT-SQL 在 SQL Server 上的 Python 教學課程。
+title: 使用 T-sql 定型及儲存 Python 模型
+description: Python 教學課程顯示如何在 SQL Server 上使用 Transact-sql 來定型和儲存模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbe5bcb39ddbcc2b4968beccb9363a92cf6e8817
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961856"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345880"
 ---
-# <a name="train-and-save-a-python-model-using-t-sql"></a>訓練及儲存使用 T-SQL Python 模型
+# <a name="train-and-save-a-python-model-using-t-sql"></a>使用 T-sql 定型及儲存 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章是教學課程中，部分[適用於 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
+本文屬於[適用于 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)教學課程的一部分。 
 
-在此步驟中，了解如何使用來定型機器學習服務模型的 Python 套件**scikit-learn-了解**並**revoscalepy**。 使用 SQL Server 機器學習服務，必須已經安裝這些 Python 程式庫。
+在此步驟中, 您將瞭解如何使用 Python 套件 scikit-learn 來訓練機器學習模型 **-學習**和**revoscalepy**。 這些 Python 程式庫已經與 SQL Server Machine Learning 服務一起安裝。
 
-您載入的模組，並呼叫所需的函式，來建立和使用 SQL Server 預存程序來定型模型。 模型需要您在先前課程所設計的資料功能。 最後，您將儲存為定型的模型以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。
+您可以載入模組, 並呼叫所需的函式, 以使用 SQL Server 預存程式來建立和定型模型。 此模型需要您在先前課程中設計的資料功能。 最後, 您會將定型的模型儲存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至資料表。
  
 
-## <a name="split-the-sample-data-into-training-and-testing-sets"></a>將範例資料分割成定型和測試集
+## <a name="split-the-sample-data-into-training-and-testing-sets"></a>將範例資料分割成定型集和測試集
 
-1. 建立呼叫預存程序**PyTrainTestSplit**將 nyctaxi_sample 資料表中的資料分成兩個部分： nyctaxi_sample_training 和 nyctaxi_sample_testing。 
+1. 建立名為**PyTrainTestSplit**的預存程式, 將 nyctaxi_sample 資料表中的資料分割成兩個部分: nyctaxi_sample_training 和 nyctaxi_sample_testing。 
 
-    這個預存程序應該已建立，但您可以執行下列程式碼來建立它：
+    應該已經為您建立這個預存程式, 但是您可以執行下列程式碼來建立它:
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
@@ -46,27 +46,27 @@ ms.locfileid: "67961856"
     GO
     ```
 
-2. 若要將使用自訂的分割資料，請執行預存程序中，並輸入整數，表示至定型集的資料配置的百分比。 例如，下列陳述式會配置 60%的定型集的資料。
+2. 若要使用自訂分割來分割您的資料, 請執行預存程式, 然後輸入一個整數, 代表配置給定型集的資料百分比。 例如, 下列語句會將 60% 的資料配置到定型集。
 
     ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
 
-## <a name="build-a-logistic-regression-model"></a>建立羅吉斯迴歸模型
+## <a name="build-a-logistic-regression-model"></a>建立羅吉斯回歸模型
 
-已備妥資料後，您可以使用它來定型模型。 您可以呼叫預存程序，執行一些 Python 程式碼，將作為輸入的定型資料的資料表。 本教學課程中，您會建立兩個模型，這兩種二元分類模型：
+準備好資料之後, 您就可以用它來定型模型。 若要這麼做, 您可以呼叫執行一些 Python 程式碼的預存程式, 並接受定型資料表的輸入。 在本教學課程中, 您會建立兩個模型, 兩個都是二元分類模型:
 
-+ 預存程序**PyTrainScikit**建立提示預測模型 using **scikit-learn-了解**封裝。
-+ 預存程序**TrainTipPredictionModelRxPy**建立提示預測模型 using **revoscalepy**封裝。
++ 預存程式**PyTrainScikit**會使用**scikit-learn-學習**封裝來建立 tip 預測模型。
++ 預存程式**TrainTipPredictionModelRxPy**會使用**revoscalepy**封裝來建立 tip 預測模型。
 
-每個預存程序會使用輸入的資料您提供給建立並定型的羅吉斯迴歸模型。 所有的 Python 程式碼會包裝在系統預存程序中， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+每個預存程式都會使用您所提供的輸入資料來建立和定型羅吉斯回歸模型。 所有 Python 程式碼都會包裝在系統預存程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)中。
 
-為了讓您更輕鬆地重新定型新的資料模型，您可以將 sp_execute_exernal_script 的呼叫包裝在另一個預存程序，並傳入新的定型資料，做為參數。 本節將逐步引導您完成該程序。
+為了讓您更輕鬆地針對新資料重新定型模型, 您可以將 sp_execute_exernal_script 的呼叫包裝在另一個預存程式中, 並以參數的形式傳入新的定型資料。 本節將逐步引導您完成該程式。
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
-1.  在  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，開啟新**查詢**視窗，然後執行下列陳述式來建立預存程序**PyTrainScikit**。  預存程序包含輸入資料，的定義，因此您不必提供輸入的查詢。
+1.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中, 開啟新的**查詢**視窗, 並執行下列語句來建立預存程式**PyTrainScikit**。  預存套裝程式含輸入資料的定義, 因此您不需要提供輸入查詢。
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
@@ -105,7 +105,7 @@ ms.locfileid: "67961856"
     GO
     ```
 
-2. 執行下列 SQL 陳述式來插入到定型的模型資料表 nyc\_taxi_models。
+2. 執行下列 SQL 語句, 將定型的模型插入資料表 nyc\_taxi_models 中。
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -113,10 +113,10 @@ ms.locfileid: "67961856"
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    資料處理和模型調整可能需要幾分鐘。 會使用管線傳送至 Python 的訊息**stdout**串流會顯示在**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如:
+    處理資料並調整模型, 可能需要幾分鐘的時間。 將輸送到 Python **stdout**資料流程的訊息會顯示在的 [**訊息**] 視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。 例如:
 
-    *來自外部指令碼的 STDOUT 訊息︰* 
-  *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *來自外部腳本的 STDOUT 訊息:* 
+   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 開啟資料表*nyc\_taxi_models*。 您可以看到當中已新增一個新的資料列，其 _model_資料行中包含序列化的模型。
 
@@ -124,11 +124,11 @@ ms.locfileid: "67961856"
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
-這個預存程序會使用新**revoscalepy**封裝，也就是適用於 Python 的新封裝。 它包含的物件、 轉換及所提供的 R 語言的類似的演算法**RevoScaleR**封裝。 
+這個預存程式使用新的**revoscalepy**套件, 這是適用于 Python 的新套件。 它包含物件、轉換和演算法, 類似于提供給 R 語言的**RevoScaleR**套件。 
 
-藉由使用**revoscalepy**，您可以建立遠端計算內容之間移動資料計算內容，轉換資料，並訓練預測模型使用熱門的演算法，例如羅吉斯和線性迴歸、 決策樹和更多。 如需詳細資訊，請參閱 < [SQL Server 中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)並[revoscalepy 函式參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)。
+藉由使用**revoscalepy**, 您可以建立遠端計算內容、在計算內容之間移動資料、轉換資料, 以及使用常用的演算法 (例如羅吉斯和線性回歸、決策樹等等) 來定型預測模型。 如需詳細資訊, 請參閱 SQL Server 和[revoscalepy 函數參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)[中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)。
 
-1. 在  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，開啟新**查詢**視窗，然後執行下列陳述式來建立預存程序_TrainTipPredictionModelRxPy_。  預存程序已經包含輸入資料的定義，因為您不必提供輸入的查詢。
+1. 在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中, 開啟新的**查詢**視窗, 並執行下列語句來建立預存程式_TrainTipPredictionModelRxPy_。  因為預存程式已經包含輸入資料的定義, 所以您不需要提供輸入查詢。
 
     ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -163,13 +163,13 @@ ms.locfileid: "67961856"
     GO
     ```
 
-    這個預存程序做為模型定型的一部分，執行下列步驟：
+    這個預存程式會執行下列步驟, 做為模型定型的一部分:
 
-    - SELECT 查詢適用於自訂的純量函式_fnCalculateDistance_來計算上車和下車位置之間的直線距離。 查詢的結果會儲存在預設 Python 輸入變數， `InputDataset`。
-    - 二進位變數_tipped_作為*標籤*或結果資料行，與模型就適合使用這些特徵資料行： _passenger_count_， _trip_距離_， _trip_time_in_secs_，以及_direct_distance_。
-    - 定型的模型會序列化並儲存在 Python 變數`logitObj`。 藉由新增 T-SQL 關鍵字輸出，您可以新增變數做為預存程序的輸出。 在下一個步驟中，該變數用來將模型的二進位程式碼插入資料庫資料表_nyc_taxi_models_。 這個機制可讓您輕鬆地儲存和重複使用的模型。
+    - SELECT 查詢會套用自訂純量函數_fnCalculateDistance_ , 以計算挑選和捨棄位置之間的直線距離。 查詢的結果會儲存在預設的 Python 輸入變數`InputDataset`中。
+    - 二元變數的_附屬_項會當做*標籤*或結果資料行使用, 而模型則是使用下列功能資料行: _passenger_count_、 _trip_distance_、 _trip_time_in_secs_和_direct_distance_。
+    - 定型的模型會序列化並儲存在 Python 變數`logitObj`中。 藉由新增 T-sql 關鍵字輸出, 您可以加入變數做為預存程式的輸出。 在下一個步驟中, 該變數是用來將模型的二進位代碼插入資料庫資料表_nyc_taxi_models_中。 這種機制可讓您輕鬆地儲存及重複使用模型。
 
-2. 執行預存程序，如下所示插入定型**revoscalepy**模型到資料表*nyc_taxi_models*。
+2. 執行預存程式, 如下所示, 將定型的**revoscalepy**模型插入資料表*nyc_taxi_models*中。
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -177,20 +177,20 @@ ms.locfileid: "67961856"
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    資料處理和模型調整可能需要一段時間。 會使用管線傳送至 Python 的訊息**stdout**串流會顯示在**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如:
+    處理資料並對模型進行調整可能需要一段時間。 將輸送到 Python **stdout**資料流程的訊息會顯示在的 [**訊息**] 視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。 例如:
 
-    *來自外部指令碼的 STDOUT 訊息︰* 
-  *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *來自外部腳本的 STDOUT 訊息:* 
+   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 開啟 *nyc_taxi_models*資料表。 您可以看到當中已新增一個新的資料列，其 _model_資料行中包含序列化的模型。
 
     *revoscalepy_model* *0x8003637265766F7363616c....*
 
-在下一個步驟中，您可以使用定型的模型來建立預測。
+在下一個步驟中, 您會使用定型的模型來建立預測。
 
 ## <a name="next-step"></a>下一步
 
-[執行預測使用內嵌在預存程序中的 Python](sqldev-py6-operationalize-the-model.md)
+[在預存程式中使用 Python 內嵌執行預測](sqldev-py6-operationalize-the-model.md)
 
 ## <a name="previous-step"></a>上一個步驟
 

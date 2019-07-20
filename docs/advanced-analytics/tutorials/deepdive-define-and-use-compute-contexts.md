@@ -1,44 +1,44 @@
 ---
-title: 定義及使用 RevoScaleR 計算內容-SQL Server Machine Learning
-description: 有關如何定義計算內容，在 SQL Server 上使用 R 語言的教學課程逐步解說。
+title: 定義和使用 RevoScaleR 計算內容
+description: 有關如何在 SQL Server 上使用 R 語言定義計算內容的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3131dfc65d8964232073d37aba697f62de9fcc2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f7d4911257d583126986cd4079ebe763aae2024
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962233"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344775"
 ---
-# <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定義及使用計算內容 （SQL Server 和 RevoScaleR 教學課程）
+# <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定義和使用計算內容 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在上一課，您已使用**RevoScaleR**函式來檢查資料的物件。 本課程中介紹[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)函式，可讓您為遠端的 SQL Server 中定義的計算內容。 使用遠端計算內容，您可以在伺服器上轉移從本機工作階段的 R 執行遠端工作階段。 
+在上一課中, 您使用了**RevoScaleR**函數來檢查資料物件。 本課程介紹[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)函式, 此函數可讓您定義遠端 SQL Server 的計算內容。 使用遠端計算內容, 您可以將 R 執行從本機會話轉移到伺服器上的遠端會話。 
 
 > [!div class="checklist"]
-> * 了解的項目，遠端 SQL server 計算內容
+> * 瞭解遠端 SQL Server 計算內容的元素
 > * 啟用計算內容物件的追蹤
 
-**RevoScaleR**支援多個計算內容：Hadoop、 Spark 在 HDFS 與 SQL Server 資料庫。 SQL server **RxInSqlServer**函式用於伺服器連接和本機電腦和遠端執行內容之間傳遞物件。
+**RevoScaleR**支援多個計算內容:Hadoop、HDFS 上的 Spark, 以及資料庫中的 SQL Server。 若為 SQL Server, **RxInSqlServer**函數會用於伺服器連接, 並在本機電腦與遠端執行內容之間傳遞物件。
 
 ## <a name="create-and-set-a-compute-context"></a>建立和設定計算內容
 
-**RxInSqlServer**建立 SQL Server 計算內容的函式會使用下列資訊：
+建立 SQL Server 計算內容的**RxInSqlServer**函數會使用下列資訊:
 
-+ 連接字串[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體
-+ 輸出應該如何處理的規格
-+ 共用的資料目錄的選用規格
-+ 啟用追蹤，或指定追蹤層級的選擇性引數
++ 實例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接字串
++ 應如何處理輸出的規格
++ 選擇性的共用資料目錄規格
++ 啟用追蹤或指定追蹤層級的選擇性引數
 
-本節會引導您完成每個組件。
+本節將逐步引導您完成每個部分。
 
-1. 指定執行計算的執行個體的連接字串。 您可以重複使用您稍早建立的連接字串。
+1. 針對執行計算的實例指定連接字串。 您可以重複使用您稍早建立的連接字串。
 
     **使用 SQL 登入**
 
@@ -52,7 +52,7 @@ ms.locfileid: "67962233"
     sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=RevoDeepDive;Trusted_Connection=True"
     ```
     
-2. 指定您要如何處理輸出。 下列指令碼會指示等候 R 工作結果在伺服器上處理下一個作業之前，先在本機 R 工作階段。 它也會隱藏輸出，從遠端計算不會出現在本機工作階段。
+2. 指定您要如何處理輸出。 下列腳本會指示本機 R 會話在處理下一個作業之前, 等候伺服器上的 R 工作結果。 它也會抑制遠端計算的輸出不會出現在本機會話中。
   
     ```R
     sqlWait <- TRUE
@@ -61,23 +61,23 @@ ms.locfileid: "67962233"
   
     *RxInSqlServer* 的 **wait** 引數支援下列選項：
   
-    -   **TRUE**： 作業會設定為封鎖，並不會傳回直到完成或失敗為止。  如需詳細資訊，請參閱 <<c0> [ 分散式和 Machine Learning Server 的 parallel computing](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
+    -   **TRUE**： 作業會設定為封鎖, 且在完成或失敗之前不會傳回。  如需詳細資訊, 請參閱[Machine Learning Server 中的分散式和平行計算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
   
-    -   **FALSE**： 作業會設定為非封鎖式，並立即傳回，讓您繼續執行其他的 R 程式碼。 不過，即使在非封鎖模式中，也必須在執行工作時保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與用戶端的連線。
+    -   **FALSE**： 作業會設定為非封鎖並立即返回, 讓您繼續執行其他 R 程式碼。 不過，即使在非封鎖模式中，也必須在執行工作時保持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與用戶端的連線。
 
-3. （選擇性） 指定的本機目錄為本機的 R 工作階段以及遠端共用位置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]電腦和其帳戶。
+3. (選擇性) 指定本機 R 會話以及遠端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]電腦及其帳戶的共用使用本機目錄的位置。
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
     ```
     
-   如果您想要以手動方式建立共用的特定目錄，您可以新增一行，如下所示：
+   如果您想要手動建立要共用的特定目錄, 您可以新增類似下列的程式程式碼:
 
     ```R
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. 引數傳遞給**RxInSqlServer**建構函式建立*計算內容物件*。
+4. 將引數傳遞至**RxInSqlServer**的函式, 以建立*計算內容物件*。
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -86,11 +86,11 @@ ms.locfileid: "67962233"
          consoleOutput = sqlConsoleOutput)
     ```
     
-    語法**RxInSqlServer**看起來幾乎完全相同的**RxSqlServerData**您稍早用來定義資料來源的函式。 但是，有一些重要的差異。
+    **RxInSqlServer**的語法看起來幾乎與您稍早用來定義資料來源的**RxSqlServerData**函數相同。 但是，有一些重要的差異。
       
     - 資料來源物件 (使用 [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)函數所定義) 指定資料的儲存位置。
     
-    - 相反地，計算內容中，使用定義的函式[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)表示進行彙總和其他計算的進行。
+    - 相反地, 使用函式[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)所定義的計算內容, 表示要進行匯總和其他計算的位置。
     
     定義計算內容不會影響您可能會在工作站上執行的任何其他泛型 R 計算，而且不會變更資料的來源。 例如，您可以將本機文字檔定義為資料來源，但將計算內容變更為 SQL Server，並且執行 SQL Server 電腦上資料的所有讀取和摘要。
 
@@ -100,13 +100,13 @@ ms.locfileid: "67962233"
     rxSetComputeContext(sqlCompute)
     ```
 
-6. 傳回計算內容，包括其屬性的詳細資訊。
+6. 傳回計算內容的相關資訊, 包括其屬性。
 
     ```R
     rxGetComputeContext()
     ```
 
-7. 計算內容來重新設定本機電腦指定"local"關鍵字 （下一課示範如何使用遠端計算內容）。
+7. 指定 "local" 關鍵字 (下一課示範使用遠端計算內容), 將計算內容重設回本機電腦。
 
     ```R
     rxSetComputeContext("local")
@@ -117,9 +117,9 @@ ms.locfileid: "67962233"
 
 ## <a name="enable-tracing"></a>啟用追蹤
 
-有時候作業可在您的本機內容上運作，但在遠端計算內容中執行時則發生問題。 如果您想要分析問題，或監視效能，您可以啟用追蹤，在計算內容中，以支援執行階段疑難排解。
+有時候作業可在您的本機內容上運作，但在遠端計算內容中執行時則發生問題。 如果您想要分析問題或監視效能, 您可以在計算內容中啟用追蹤, 以支援執行時間疑難排解。
 
-1. 建立新的計算內容，會使用相同的連接字串，但加入引數*traceEnabled*並*traceLevel*來**RxInSqlServer**建構函式。
+1. 建立使用相同連接字串的新計算內容, 但將*traceEnabled*和*traceLevel*引數新增至**RxInSqlServer**的函式。
 
     ```R
     sqlComputeTrace <- RxInSqlServer(
@@ -133,7 +133,7 @@ ms.locfileid: "67962233"
   
    在此範例中，*traceLevel* 屬性設定為 7，表示「顯示所有追蹤資訊」。
 
-2. 使用[rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)依名稱指定啟用追蹤的計算內容的函式。
+2. 使用[rxSetComputeCoNtext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)函數, 依名稱指定啟用追蹤的計算內容。
 
     ```R
     rxSetComputeContext(sqlComputeTrace)
@@ -141,7 +141,7 @@ ms.locfileid: "67962233"
 
 ## <a name="next-steps"></a>後續步驟
 
-了解如何切換計算內容執行伺服器上的 R 程式碼，或在本機。
+瞭解如何切換計算內容, 以在伺服器或本機上執行 R 程式碼。
 
 > [!div class="nextstepaction"]
-> [計算摘要統計資料，在本機和遠端計算內容](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [計算本機和遠端計算內容中的摘要統計資料](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

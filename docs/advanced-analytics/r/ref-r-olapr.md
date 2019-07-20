@@ -1,56 +1,56 @@
 ---
-title: olapR R 函式程式庫-SQL Server Machine Learning 服務
-description: 在 SQL Server 2016 R Services 和 SQL Server 2017 Machine Learning 服務 olapR 函式程式庫簡介
+title: olapR R 函數程式庫
+description: 簡介 SQL Server 2016 R Services 中的 olapR 函式程式庫和使用 R 的 SQL Server 2017 Machine Learning Services。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 431fddf870b5755691cad92e576c95d0d3a83890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2363b9ba69f914f828d7445a88d6ee1c784bb096
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962490"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344883"
 ---
-# <a name="olapr-r-library-in-sql-server"></a>olapR （SQL Server 中的 R 程式庫）
+# <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server 中的 R 程式庫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**olapR**是 Microsoft 程式庫，用於對 SQL Server Analysis Services OLAP cube 的 MDX 查詢的 R 函數。 函式不支援所有 MDX 作業，但您可以建立查詢，該配量，骰子，向下鑽研、 彙總套件，並在維度上進行樞紐分析。 
+**olapR**是 R 函數的 Microsoft 程式庫, 用於針對 SQL Server Analysis Services OLAP CUBE 的 MDX 查詢。 函式不支援所有 MDX 作業, 但是您可以在維度上建立配量、骰子、明細、匯總和資料透視的查詢。 
 
-此套件不會預先載入至 R 工作階段。 執行下列命令以載入程式庫。
+此套件未預先載入 R 會話中。 執行下列命令以載入程式庫。
 
 ```R
 library(olapR)
 ```
 
-您可以使用此程式庫連接到 Analysis Services OLAP cube 上所有支援的 SQL Server 版本上。 連接到表格式模型不支援這一次。
+您可以使用此程式庫連接到所有支援的 SQL Server 版本上的 Analysis Services OLAP Cube。 目前不支援連接到表格式模型。
 
 ## <a name="package-version"></a>套件版本
 
-目前版本為 1.0.0 中僅限 Windows 的所有產品，並下載提供的程式庫。
+目前的版本在所有僅限 Windows 的產品和提供程式庫的下載中都是1.0.0。
 
-## <a name="full-reference-documentation"></a>完整的參考文件
+## <a name="full-reference-documentation"></a>完整參考檔
 
-**Olapr**程式庫會分散在多個 Microsoft 產品中，但不論您取得 SQL Server 或另一個產品中的程式庫使用方式都相同。 函式是相同的因為[個別 sqlrutils 函式文件](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)發行到下一個位置[R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)的 Microsoft Machine Learning Server。 應該任何產品專屬行為存在時，差異會記錄在函式說明頁面。
+**Olapr**程式庫是散發在多個 Microsoft 產品中, 但不論您是在 SQL Server 或其他產品中取得程式庫, 使用方式都相同。 因為函式相同, 所以[個別 sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)函式的檔集只會發佈到[R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)的一個位置, 以供 Microsoft Machine Learning Server。 若有任何產品特定行為存在, 則函式說明頁面中會注明不一致的情況。
 
 ## <a name="availability-and-location"></a>可用性和位置
 
-此套件會提供在下列的產品，以及在 Azure 上的數個虛擬機器映像。 封裝位置隨之而異。
+下列產品提供此套件, 以及 Azure 上的數個虛擬機器映射。 套件位置也會隨之改變。
 
 產品 | Location |
 --------|----------|
-SQL Server 2017 Machine Learning 服務 （使用 R 整合） | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server 2017 Machine Learning 服務 (使用 R 整合) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
-Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
+Microsoft Machine Learning Server (R 伺服器) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
-資料科學虛擬機器 （位於 Azure) | C:\Program Files\Microsoft\R Client\R_SERVER\library |
-SQL Server 虛擬機器 （位於 Azure) <sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+資料科學虛擬機器 (在 Azure 上) | C:\Program Files\Microsoft\R Client\R_SERVER\library |
+SQL Server 虛擬機器 (在 Azure 上) <sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 
-<sup>1</sup> R 整合是選擇性的 SQL Server。 當您將機器學習或 R 功能新增 VM 組態期間，將會安裝 olapR 程式庫。
+<sup>1</sup>在 SQL Server 中, R 整合是選擇性的。 當您在 VM 設定期間新增 Machine Learning 或 R 功能時, 將會安裝 olapR 程式庫。
 
 
 ## <a name="see-also"></a>另請參閱
 
-[如何建立使用 olapR MDX 查詢](how-to-create-mdx-queries-using-olapr.md)
+[如何使用 olapR 建立 MDX 查詢](how-to-create-mdx-queries-using-olapr.md)

@@ -1,44 +1,44 @@
 ---
-title: 使用預測 T-SQL 陳述式-SQL Server Machine Learning 服務的原生評分
-description: 產生使用預測 T-SQL 函式，評分 dta 的輸入，針對 SQL Server 上以 R 或 Python 撰寫的預先定型模型的預測。
+title: 使用 PREDICT T-SQL 語句的原生評分
+description: 使用預測 T-sql 函數來產生預測, 並針對在 SQL Server 上以 R 或 Python 撰寫的預先定型模型評分 dta 輸入。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962316"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344763"
 ---
-# <a name="native-scoring-using-the-predict-t-sql-function"></a>使用預測 T-SQL 函式的原生評分
+# <a name="native-scoring-using-the-predict-t-sql-function"></a>使用 PREDICT T-sql 函數的原生評分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-原生評分使用[預測 T-SQL 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 原生C++SQL Server 2017 中的擴充功能，來產生預測值或*分數*近乎即時的時間在新的資料輸入。 這種方法提供最快可以處理的速度預測和預測的工作負載，但隨附平台和程式庫的需求： 只從 RevoScaleR 與 revoscalepy 函式具有C++實作。
+原生計分會使用[預測 t-sql 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 SQL Server 2017 C++中的原生擴充功能, 以近乎即時的方式為新的資料輸入產生預測值或*分數*。 此方法提供預測和預測工作負載的最快可能處理速度, 但隨附于平臺和程式庫需求: 只有來自 RevoScaleR 和 revoscalepy C++的函式具有實作為。
 
-原生評分，您需要已定型的模型。 在 SQL Server 2017 Windows 或 Linux，或 Azure SQL Database 中，您可以呼叫 PREDICT 函數中 TRANSACT-SQL 來叫用原生對您提供做為輸入參數的新資料評分。 PREDICT 函式會傳回分數，透過您提供的資料輸入。
+原生評分需要您擁有已定型的模型。 在 SQL Server 2017 Windows 或 Linux, 或 Azure SQL Database 中, 您可以在 Transact-sql 中呼叫 PREDICT 函式, 以針對您提供做為輸入參數的新資料叫用原生計分。 PREDICT 函式會傳回您所提供資料輸入的分數。
 
 ## <a name="how-native-scoring-works"></a>原生評分的運作方式
 
-原生評分使用原生C++程式庫可以讀取已定型的 Microsoft 模型，先前儲存在特殊的二進位格式或儲存至磁碟以原始位元組資料流，然後產生新的資料輸入您所提供的分數。 已定型的模型，因為已發行，並儲存，它可以用於評分不必呼叫 R 或 Python 解譯器。 因此，多個處理程序互動的額外負荷已降低，導致更快的預測效能，在生產環境的企業案例。
+原生計分會C++使用 Microsoft 的原生程式庫, 其可讀取已定型的模型、先前以特殊的二進位格式儲存, 或以原始位元組資料流程的形式儲存至磁片, 並為您提供的新資料輸入產生分數。 因為模型已定型、發行和儲存, 所以它可以用於計分, 而不需要呼叫 R 或 Python 解譯器。 因此, 多個進程互動的額外負荷會減少, 讓企業生產環境中的預測效能更快。
 
-若要使用原生評分，呼叫預測 T-SQL 函數並傳遞下列必要的輸入：
+若要使用原生評分, 請呼叫 PREDICT T-sql 函數並傳遞下列必要的輸入:
 
-+ 相容的模型，用來根據支援的演算法。
-+ 輸入的資料，通常會定義為 SQL 查詢。
++ 以支援的演算法為基礎的相容模型。
++ 輸入資料, 通常會定義為 SQL 查詢。
 
-此函數會傳回輸入資料，以及您想要通過的來源資料的任何資料行的預測。
+函式會傳回輸入資料的預測, 以及您想要通過的任何來源資料行。
 
 ## <a name="prerequisites"></a>先決條件
 
-預測所有版本的 SQL Server 2017 資料庫引擎上可用並已啟用，根據預設，包括 SQL Server 2017 Machine Learning 服務在 Windows、 SQL Server 2017 (Windows)、 SQL Server 2017 (Linux) 或 Azure SQL Database。 您不需要安裝 R、 Python、 或啟用其他功能。
+PREDICT 適用于所有版本的 SQL Server 2017 資料庫引擎, 且預設為啟用, 包括 Windows 上的 SQL Server 2017 Machine Learning 服務、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL Database。 您不需要安裝 R、Python 或啟用其他功能。
 
-+ 必須事先使用其中一個支援訓練模型**rx**下面所列的演算法。
++ 您必須使用下列其中一種支援的**rx**演算法, 事先訓練此模型。
 
-+ 模型使用序列化[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)針對 R，以及[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)適用於 Python。 這些序列化函式已經過最佳化，支援快速評分。
++ 使用適用于 R 的[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)和適用于 Python 的[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)來序列化模型。 這些序列化函數已經過優化, 可支援快速計分。
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -60,22 +60,22 @@ ms.locfileid: "67962316"
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-如果您需要使用從 MicrosoftML 或 microsoftml 的模型，使用[即時評分 sp_rxPredict](real-time-scoring.md)。
+如果您需要使用 MicrosoftML 或 MicrosoftML 的模型, 請搭配[sp_rxPredict 使用即時評分](real-time-scoring.md)。
 
-不支援的模型類型包括下列類型：
+不支援的模型類型包含下列類型:
 
-+ 模型包含其他轉換
-+ 模型使用`rxGlm`或`rxNaiveBayes`RevoScaleR 或 revoscalepy 對等項目中的演算法
++ 包含其他轉換的模型
++ 在 RevoScaleR 或`rxGlm` revoscalepy `rxNaiveBayes`對等專案中使用或演算法的模型
 + PMML 模型
-+ 使用其他開放原始碼或協力廠商程式庫所建立的模型
++ 使用其他開放原始碼或協力廠商程式庫建立的模型
 
-## <a name="example-predict-t-sql"></a>範例預測 (T-SQL)
+## <a name="example-predict-t-sql"></a>範例PREDICT (T-SQL)
 
-在此範例中，您可以建立模型時，並接著從 T-SQL 呼叫即時的預測函數。
+在此範例中, 您會建立模型, 然後從 T-sql 呼叫即時預測函數。
 
-### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備和儲存模型
+### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備並儲存模型
 
-執行下列的程式碼，以建立範例資料庫和必要的資料表。
+執行下列程式碼, 以建立範例資料庫和必要的資料表。
 
 ```sql
 CREATE DATABASE NativeScoringTest;
@@ -92,7 +92,7 @@ CREATE TABLE iris_rx_data (
 GO
 ```
 
-使用下列陳述式來填入資料的資料表**鳶尾花**資料集。
+使用下列語句, 以**鳶尾花**資料集的資料填入資料表。
 
 ```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
@@ -104,7 +104,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-現在，建立儲存模型的資料表。
+現在, 建立用來儲存模型的資料表。
 
 ```sql
 DROP TABLE IF EXISTS ml_models;
@@ -115,7 +115,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-下列程式碼會建立模型，根據**鳶尾花**資料集並將它儲存到名為資料表**模型**。
+下列程式碼會建立以**鳶尾花**資料集為基礎的模型, 並將它儲存  至名為 model 的資料表。
 
 ```sql
 DECLARE @model varbinary(max);
@@ -133,18 +133,18 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> 請務必使用[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)從儲存模型的 RevoScaleR 函式。 標準 R`serialize`函式無法產生所需的格式。
+> 請務必使用 RevoScaleR 中的[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)函數來儲存模型。 標準 R `serialize`函數無法產生所需的格式。
 
-您可以執行下列命令來檢視預存的模型，以二進位格式等陳述式：
+您可以執行如下所示的語句, 以二進位格式來查看儲存的模型:
 
 ```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>步驟 2： 在模型上執行預測
+### <a name="step-2-run-predict-on-the-model"></a>步驟 2： 在模型上執行 PREDICT
 
-下列簡單的預測陳述式從決策樹模型使用取得分類**原生評分**函式。 它可預測的鳶尾花品種根據您提供的屬性、 花瓣長度和寬度。
+下列簡單的 PREDICT 語句會使用**原生計分**函數, 從決策樹模型取得分類。 它會根據您提供的屬性、花瓣長度和寬度來預測鳶尾花物種。
 
 ```sql
 DECLARE @model varbinary(max) = (
@@ -158,14 +158,14 @@ SELECT d.*, p.*
 go
 ```
 
-如果您收到錯誤，「 執行期間發生錯誤的函式 PREDICT。 模型已損毀或無效 」，通常表示您的查詢未傳回模型。 請檢查是否輸入模型名稱正確，或如果是空的模型資料表。
+如果您收到錯誤: 「函數預測執行期間發生錯誤。 Model 已損毀或無效」, 通常表示您的查詢未傳回模型。 請檢查您輸入的模型名稱是否正確, 或模型資料表是否為空白。
 
 > [!NOTE]
-> 因為所傳回的資料行和值**PREDICT**可能會因模型類型，您必須使用來定義傳回資料的結構描述**WITH**子句。
+> 因為**PREDICT**所傳回的資料行和值可能會因模型類型而異, 所以您必須使用**WITH**子句來定義傳回資料的架構。
 
 ## <a name="next-steps"></a>後續步驟
 
-完整的解決方案，其中包含原生評分，請參閱 SQL Server 開發小組的這些範例：
+如需包含原生評分的完整解決方案, 請參閱 SQL Server 開發小組的這些範例:
 
-+ 部署您的 ML 指令碼：[使用 Python 模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ 部署您的 ML 指令碼：[使用 R 模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ 部署您的 ML 腳本:[使用 Python 模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ 部署您的 ML 腳本:[使用 R 模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

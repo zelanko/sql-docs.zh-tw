@@ -1,67 +1,67 @@
 ---
-title: 適用於 SQL 開發人員-SQL Server 機器學習服務的資料庫內 Python 分析的教學課程
-description: 了解如何在 SQL Server 預存程序和 T-SQL 函式中內嵌 Python 程式碼。
+title: 適用于 SQL 開發人員的資料庫內 Python 分析教學課程
+description: 瞭解如何在 SQL Server 預存程式和 T-sql 函數中內嵌 Python 程式碼。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed8008bbda76bfc8a194897e9389c9d5dc6bb031
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961919"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345934"
 ---
-# <a name="tutorial-python-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 Python 資料分析
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>教學課程：適用于 SQL 開發人員的 Python 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本教學課程中的 SQL 程式設計人員，透過建置和部署以 Python 為基礎的機器學習解決方案使用了解 Python 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 您將使用 T-SQL、 SQL Server Management Studio，並使用 database engine 執行個體[Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)和 Python 語言支援。
+在適用于 SQL 程式設計人員的本教學課程中, 瞭解如何使用 SQL Server 上的[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)資料庫來建立及部署以 python 為基礎的機器學習服務解決方案, 以瞭解 python 整合。 您將使用 T-sql、SQL Server Management Studio, 以及具有[Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)和 Python 語言支援的資料庫引擎實例。
 
-本教學課程會向您介紹的資料模型化工作流程中使用的 Python 函式。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您會使用從 New York City 計程車和 Limosine 佣金，範例資料，您將建置的模型會預測一趟車程是否可能會造成提示，根據的時間、 歷經一段，距離和上車位置中。 
+本教學課程將為您介紹資料模型化工作流程中使用的 Python 函式。 步驟包括資料探索、建立和定型二元分類模型, 以及模型部署。 您將使用來自紐約計程車和 Limosine 委員會的範例資料, 而您將建立的模型會預測旅程是否可能會根據當天時間、距離行駛和挑選位置來產生秘訣。 
 
-在本教學課程中使用的 Python 程式碼的所有包裝在您建立和在 Management Studio 中執行的預存程序。
+本教學課程中使用的所有 Python 程式碼都會包裝在您建立並在 Management Studio 中執行的預存程式中。
 
 > [!NOTE]
-> 本教學課程適用於 R 和 Python。 R 版本，請參閱[資料庫內分析適用於 R 開發人員](sqldev-in-database-r-for-sql-developers.md)。
+> 本教學課程適用于 R 和 Python。 如需 R 版本, 請參閱[適用于 r 開發人員的資料庫內分析](sqldev-in-database-r-for-sql-developers.md)。
 
 ## <a name="overview"></a>總覽
 
-建置機器學習服務解決方案的程序很複雜，可包含多個工具和專家協調跨數個階段：
+建立機器學習解決方案的程式是一種複雜的程式, 其中可能牽涉到多項工具, 並協調主題專家跨越數個階段:
 
 + 取得和清除資料
-+ 瀏覽資料及建置適用於模型化功能
-+ 定型和微調模型
++ 探索資料和建立適用于模型化的功能
++ 定型和調整模型
 + 部署至生產環境
 
-實際的程式碼的開發和測試是最適合執行使用專用的開發環境。 不過，指令碼經過完整測試之後，您可以輕鬆部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序在熟悉的環境中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 外部程式碼包裝在預存程序是運用 SQL Server 中的程式碼的主要機制。
+實際程式碼的開發和測試, 最好是使用專用的開發環境來執行。 不過, 在腳本經過完整測試之後, 您就可以輕鬆地將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它[!INCLUDE[tsql](../../includes/tsql-md.md)]部署到熟悉的環境[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中使用預存程式。 將外部程式碼包裝在預存程式中, 是在 SQL Server 中運用程式碼的主要機制。
 
-不論您是剛接觸 Python 或 Python 開發人員熟悉 SQL 的 SQL 程式設計人員，此多部分的教學課程會介紹進行 Python 和 SQL Server 資料庫內分析的一般工作流程。 
+無論您是 Python 的 SQL 程式設計人員新手, 或 SQL 的 Python developer 新手, 這個多部分的教學課程都會介紹使用 Python 和 SQL Server 進行資料庫內分析的一般工作流程。 
 
-+ [第 1 課：瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
++ [第 1 課：使用 Python 探索資料並加以視覺化](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [第 2 課：使用自訂 SQL 函式建立資料特徵](sqldev-py4-create-data-features-using-t-sql.md)
++ [第 2 課：使用自訂 SQL 函數建立資料特徵](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [第 3 課：訓練及儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [第 3 課：使用 T-sql 定型及儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [第 4 課：預測潛在的預存程序中使用 Python 模型的結果](sqldev-py6-operationalize-the-model.md)
++ [第 4 課：在預存程式中使用 Python 模型來預測潛在結果](sqldev-py6-operationalize-the-model.md)
 
-模型儲存到資料庫之後，您可以呼叫模型的預測[!INCLUDE[tsql](../../includes/tsql-md.md)]使用預存程序。
+將模型儲存至資料庫之後, 您可以使用預存程式, 從[!INCLUDE[tsql](../../includes/tsql-md.md)]呼叫模型以取得預測。
 
 ## <a name="prerequisites"></a>必要條件
 
-+ [SQL Server 2017 Machine Learning 服務與 Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [使用 Python SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [Permissions](../security/user-permission.md)
 
 + [NYC 計程車示範資料庫](demo-data-nyctaxi-in-sql.md)
 
-所有的工作可使用[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+所有工作都可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]預存程式來完成。
 
-本教學課程假設您熟悉基本資料庫作業，例如建立資料庫和資料表、 匯入資料，以及撰寫 SQL 查詢。 它不會假設您知道 Python。 此情況下，會提供所有的 Python 程式碼。 
+本教學課程假設您已熟悉基本資料庫作業, 例如建立資料庫和資料表、匯入資料, 以及撰寫 SQL 查詢。 它不會假設您知道 Python。 因此, 會提供所有 Python 程式碼。 
 
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
+> [使用 Python 探索資料並加以視覺化](sqldev-py3-explore-and-visualize-the-data.md)

@@ -1,5 +1,5 @@
 ---
-title: R 和 Python 的 machine learning 文件-SQL Server 機器學習服務
+title: R 和 Python 機器學習服務檔
 description: SQL Server 中的 R 和 Python，內建資料科學模型和機器學習服務演算法，可大規模地進行企業資料分析。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb391ac4b64c93de255214d748c77f44dccb1b3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962300"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344736"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server 機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning 服務 （R 和 Python） 文件
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning Services (R 和 Python) 檔
 
-使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 中的 R 和 Python 程式庫[SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)包括基底散發套件、 資料科學模型、 機器學習演算法，以及函式，而不需要進行大規模的高效能分析透過網路傳送資料。
+使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 [SQL Server Machine Learning 服務](what-is-sql-server-machine-learning.md)中的 R 和 Python 程式庫包含基本散發、資料科學模型、機器學習服務演算法, 以及可大規模進行高效能分析的函式, 而不需要在中傳輸資料網路.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> 如需 Java 的文件，請參閱 < [SQL Server 語言擴充功能文件](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
+> 如需 JAVA 的相關檔, 請參閱[SQL Server 語言延伸模組檔](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 ::: moniker-end
 
 |   |   |
@@ -41,7 +41,7 @@ ms.locfileid: "67962300"
 
 ## <a name="step-by-step-tutorials"></a>逐步教學課程
 
-- [如何安裝 SQL Server Machine Learning 服務](install/sql-machine-learning-services-windows-install.md)
+- [如何將 Machine Learning 服務安裝到 SQL Server](install/sql-machine-learning-services-windows-install.md)
 
 - [如何從 T-SQL 和預存程序執行 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67962300"
 
 ## <a name="reference"></a>參考資料
 
-| 套件 | 語言 | 描述 |
+| 套件 | 語言 | 說明 |
 |:--------|:---------|:------------|
 | [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | 下列 R 工作的分散式和平行處理：資料轉換、探索、視覺效果、統計和預測性分析。 |
 | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | 以 Microsoft AI 演算法為基礎的函式，適用於 R。 |

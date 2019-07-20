@@ -1,39 +1,39 @@
 ---
-title: 部署 SQL Server-SQL Server 機器學習服務預測的 R 模型
-description: 示範如何部署 SQL 伺服器上的 R 模型的資料庫內分析的教學課程。
+title: 在 SQL Server 上部署 R 模型以進行預測
+description: 本教學課程示範如何在資料庫內部分析的 SQL Server 上部署 R 模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2cb6bf28fa849e2015d111c564bb0af84f103d19
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961690"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345854"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型，並將它用於 SQL Server （逐步解說）
+# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型, 並在 SQL Server 中使用 (逐步解說)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在這一課中，了解如何藉由呼叫預存程序的定型的模型部署在生產環境中的 R 模型。 您可以叫用預存程序，從 R 或任何支援的應用程式設計語言[!INCLUDE[tsql](../../includes/tsql-md.md)](例如C#，Java、 Python 等)，並使用新的觀察值進行預測的模型。
+在這一課, 您將瞭解如何藉由從預存程式呼叫定型模型, 在生產環境中部署 R 模型。 您可以從 R 或任何支援[!INCLUDE[tsql](../../includes/tsql-md.md)]的應用程式設計語言 (例如C#JAVA、Python 等) 叫用預存程式, 並使用模型來對新的觀察進行預測。
 
-這篇文章會示範使用計分模型的兩個最常見方式：
+本文示範在計分中使用模型的兩個最常見方式:
 
 > [!div class="checklist"]
 > * **批次評分模式**會產生多個預測
-> * **個別計分模式**一次產生一個預測
+> * **個別評分模式**一次產生一個預測
 
 ## <a name="batch-scoring"></a>批次評分
 
-建立預存程序中， *PredictTipBatchMode*，產生多個預測，傳遞做為輸入的 SQL 查詢或資料表。 的結果會傳回資料表，您可能會直接插入資料表，或寫入檔案。
+建立一個預存程式*PredictTipBatchMode*, 它會產生多個預測, 並傳遞 SQL 查詢或資料表做為輸入。 傳回結果的資料表, 您可以直接插入資料表或寫入檔案。
 
 - 取一組輸入資料做為 SQL 查詢
 - 呼叫您在上一課中儲存的定型羅吉斯迴歸模型
-- 預測機率驅動程式取得任何非零的秘訣
+- 預測驅動程式取得任何非零提示的機率
 
-1. 在 Management Studio 中，開啟新的查詢視窗並執行下列 T-SQL 指令碼建立 PredictTipBatchMode 預存程序。
+1. 在 Management Studio 中, 開啟新的 [查詢] 視窗, 然後執行下列 T-sql 腳本來建立 PredictTipBatchMode 預存程式。
   
     ```sql
     USE [NYCTaxi_Sample]
@@ -70,15 +70,15 @@ ms.locfileid: "67961690"
     END
     ```
 
-    + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 從資料表擷取模型**varbinary （max)** 儲存在 SQL 變數的資料 _\@lmodel2_，並做為參數傳遞*mod*系統預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+    + 您可以使用 SELECT 語句, 從 SQL 資料表呼叫預存模型。 此模型會從資料表中取出為**Varbinary (max)** 資料, 並儲存在 SQL 變數 _\@lmodel2_中, 並當做參數*mod*傳遞至系統預存程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 計分是定義為 SQL 查詢，並儲存為字串，以在 SQL 變數，當做輸入使用的資料 _\@輸入_。 從資料庫擷取資料時，它會儲存在名為資料框架*InputDataSet*，這是預設名稱的輸入資料來[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義另一個變數的名稱視使用的參數 * _\@input_data_1_name_* 。
+    + 當做計分輸入使用的資料會定義為 SQL 查詢, 並在 sql 變數 _\@輸入_中儲存為字串。 從資料庫擷取資料時，它會儲存在名為資料框架*InputDataSet*，這是預設名稱的輸入資料來[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義另一個變數的名稱視使用的參數 *_\@input_data_1_name_* 。
 
-    + 若要產生分數，預存程序呼叫的 rxPredict 函式**RevoScaleR**程式庫。
+    + 為了產生分數, 預存程式會從**RevoScaleR**程式庫呼叫 rxPredict 函數。
 
-    + 傳回值，*分數*，是機率，在模型已知時，該驅動程式取得的小費。 （選擇性） 您可以輕鬆地套用某種篩選條件，傳回的值，以將傳回的值分類成 「 提示 」 和 「 沒小費 」 群組中。  例如，機率小於 0.5 表示提示不太可能。
+    + 傳回值 [*分數*] 是指定模型時, 該驅動程式會取得提示的機率。 (選擇性) 您可以輕鬆地將某種類型的篩選套用至傳回的值, 將傳回值分類為 "tip" 和 "no tip" 群組。  例如, 小於0.5 的機率表示不太可能出現提示。
   
-2.  若要以批次模式中呼叫預存程序，您可以定義的查詢需要做為預存程序的輸入。 以下是 SQL 查詢中，您可以執行 SSMS，確認它有效。
+2.  若要在批次模式中呼叫預存程式, 您可以將所需的查詢定義為預存程式的輸入。 以下是 SQL 查詢, 您可以在 SSMS 中執行它來確認它是否正常運作。
 
     ```sql
     SELECT TOP 10
@@ -99,32 +99,32 @@ ms.locfileid: "67961690"
       WHERE b.medallion is null
     ```
 
-3. 若要建立 SQL 查詢的輸入的字串中使用此 R 程式碼：
+3. 使用此 R 程式碼, 從 SQL 查詢建立輸入字串:
 
     ```R
     input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
     q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
     ```
 
-4. 若要從 R 中執行預存程序，請呼叫**sqlQuery**方法**RODBC**封裝，然後使用 SQL 連接`conn`您稍早定義：
+4. 若要從 R 執行預存程式, 請呼叫**RODBC**封裝的**sqlQuery**方法, 並使用您稍`conn`早定義的 SQL 連接:
 
     ```R
     sqlQuery (conn, q);
     ```
 
-    如果您取得發生 ODBC 錯誤，請檢查語法錯誤，以及是否有正確數目的引號。 
+    如果您收到 ODBC 錯誤, 請檢查是否有語法錯誤, 以及是否有正確的引號數目。 
     
-    如果您收到權限錯誤，請確定登入具有可執行預存程序。
+    如果您收到許可權錯誤, 請確定登入能夠執行預存程式。
 
-## <a name="single-row-scoring"></a>單一資料列評分
+## <a name="single-row-scoring"></a>單一資料列計分
 
-個別計分模式產生一個預測一次將一組個別的值傳遞至預存程序，做為輸入。 值會對應至功能，在模型中，由模型用來建立預測，或產生其他的結果，例如機率值。 您接著可以將該值傳回給應用程式或使用者。
+個別計分模式一次會產生一個預測, 將一組個別值當做輸入傳遞給預存程式。 這些值會對應至模型中的功能, 而模型會使用它來建立預測, 或產生另一個結果, 例如機率值。 然後, 您可以將該值傳回給應用程式或使用者。
 
-當呼叫以逐列為基礎的預測模型，您會傳遞一組值代表每個個別案例的功能。 單一預測或機率，則會傳回預存程序。 
+以逐列方式呼叫模型進行預測時, 您會傳遞一組值來代表每個個別案例的功能。 然後, 預存程式會傳回單一預測或機率。 
 
-預存程序*PredictTipSingleMode*示範此方法。 它會作為輸入多個參數代表特性值 （例如，乘客計數和車程距離）、 評分使用預存的 R 模型，這些功能，並將輸出的小費的機率。
+預存程式*PredictTipSingleMode*會示範這種方法。 它會接受多個代表功能值的參數 (例如, 乘客計數和行程距離)、使用預存 R 模型對這些功能評分, 並輸出 tip 機率。
 
-1. 執行下列 TRANSACT-SQL 陳述式來建立預存程序。
+1. 執行下列 Transact-sql 語句來建立預存程式。
 
     ```sql
     USE [NYCTaxi_Sample]
@@ -190,23 +190,23 @@ ms.locfileid: "67961690"
     END
     ```
 
-2. 在 SQL Server Management Studio，您可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC**程序 (或**EXECUTE**) 來呼叫預存程序中，並將它傳遞必要的輸入。 例如，嘗試在 Management Studio 中執行此陳述式：
+2. 在 SQL Server Management Studio 中, 您可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC**程式 (或**執行**) 來呼叫預存程式, 並將必要的輸入傳遞給它。 例如, 請嘗試在 Management Studio 中執行此語句:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    在這裡傳遞的值分別為變數_乘客\_計數_， _trip_distance_，_車程\_時間\_中\_秒_， _pickup\_緯度_， _pickup\_經度_，_下車\_緯度_，並_下車\_經度_。
+    此處傳入的值分別為變數 _\_乘客 count_、   _\_ \_trip_distance、旅程時間\_(秒_)、  _\_pickup 緯度_、 _pickup\_經度_、 _下車\_緯度_和_下車\_緯度_。
 
-3. 若要從 R 程式碼執行這個相同的呼叫，您只需定義 R 變數，其中包含整個預存程序呼叫中的，與下列類似：
+3. 若要從 R 程式碼執行這個相同的呼叫, 您只需要定義包含整個預存程序呼叫的 R 變數, 如下所示:
 
     ```R
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    在這裡傳遞的值分別為變數_乘客\_計數_， _trip\_距離_，_車程\_時間\_中\_秒_， _pickup\_緯度_， _pickup\_經度_，_下車\_緯度_，並_下車\_經度_。
+    此處傳入的值分別適用于變數_乘客\_計數_、_路程\_距離_、_旅程\_時間\_ \_(秒_)、_取貨\_緯度_、 _pickup\_經度_、_下車\_緯度_和_下車\__ 緯度。
 
-4. 呼叫`sqlQuery`(從**RODBC**封裝) 並傳遞連接字串，以及包含預存程序呼叫的字串變數。
+4. 呼叫`sqlQuery` (從**RODBC**封裝) 並傳遞連接字串, 以及包含預存程序呼叫的字串變數。
 
     ```R
     # predict with stored procedure in single mode
@@ -214,18 +214,18 @@ ms.locfileid: "67961690"
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS) 提供絕佳的整合，使用 SQL Server 和。請參閱本文中的 SQL Server 連接中使用 RODBC 的更多的範例：[使用 SQL Server 和 R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > Visual Studio R 工具 (RTVS) 提供與 SQL Server 和 R 的絕佳整合。如需更多使用 RODBC 與 SQL Server 連線的範例, 請參閱這篇文章:[使用 SQL Server 和 R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>後續步驟
 
-既然您已了解如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料，並將定型的 R 模型，以保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，它應該是您建立此資料集為基礎的新模型來說相對輕鬆。 例如，您可能會嘗試建立這些其他的模型：
+既然您已瞭解如何使用資料並將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定型的 R 模型保存至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 您就應該相對輕鬆地根據此資料集建立新的模型。 例如, 您可能會嘗試建立這些額外的模型:
 
 + 可預測小費金額的迴歸模型
-+ 預測小費大型、 中型或小型的多元分類模型
++ 多元分類模型, 可預測提示為大、中或小型
 
-您也可以探索這些其他範例和資源：
+您可能也會想要探索這些額外的範例和資源:
 
 + [資料科學案例和解決方案範本](data-science-scenarios-and-solution-templates.md)
 + [資料庫內的進階分析](sqldev-in-database-r-for-sql-developers.md)
-+ [Machine Learning Server 使用說明指南](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [機器學習服務伺服器的其他資源](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Machine Learning Server 操作指南](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server 其他資源](https://docs.microsoft.com//machine-learning-server/resources-more)

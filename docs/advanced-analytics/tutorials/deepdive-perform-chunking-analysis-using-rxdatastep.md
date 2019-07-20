@@ -1,34 +1,34 @@
 ---
-title: 執行區塊處理分析使用 RevoScaleR rxDataStep-SQL Server Machine Learning
-description: 教學課程逐步解說如何將 SQL Server 上使用 R 語言的分散式分析的資料。
+title: 使用 RevoScaleR rxDataStep 執行區塊處理分析
+description: 有關如何在 SQL Server 上使用 R 語言來為分散式分析區塊資料的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6ccc64c98f0519b33b6ba9da180c01e4478492f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3026fa03ff654079e355364587d694c9c3fe127f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962200"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344724"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>執行區塊處理分析使用 rxDataStep （SQL Server 和 RevoScaleR 教學課程）
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 執行區塊處理分析 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-在這一課，您可以使用**rxDataStep**函式的區塊，以處理資料，而不需要整個資料集是載入至記憶體，並一次處理像傳統 r 一樣**RxDataStep**函式讀取區塊中的資料會套用至每個資料區塊的 R 函數，並再將每個區塊的摘要結果儲存至通用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源。 當已經讀取所有資料時，結果會結合。
+在這一課, 您會使用**rxDataStep**函數來處理區塊中的資料, 而不需要將整個資料集載入記憶體並一次處理, 如同傳統的 R 一樣。**RxDataStep**函式會讀取區塊中的資料、依序將 R 函數套用至每個資料區塊, 然後將每個區塊的摘要結果儲存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用資料來源。 當所有資料都已讀取時, 會合並結果。
 
 > [!TIP]
-> 這一課，您必須計算列聯表利用**資料表**函式此範例適用於僅限教學用途。 
+> 在這一課, 您會使用 R 中的**table**函數來計算應變數據表。這個範例僅供教學之用。 
 > 
-> 如果您需要在真實世界的資料集製成表格，我們建議您使用**內**或**rxCube**中的函式**RevoScaleR**，其中最適合用於這種作業。
+> 如果您需要表格真實世界的資料集, 建議您在**RevoScaleR**中使用**rxCrossTabs**或**rxCube**函式, 這些函式已針對這類作業進行優化。
 
 ## <a name="partition-data-by-values"></a>依值分割資料
 
-1. 建立自訂的 R 函式呼叫 R**表格**函式上的資料，每個區塊，並命名新的函式**ProcessChunk**。
+1. 建立在每個資料區塊上呼叫 R**資料表**函數的自訂 r 函數, 並將新的函式命名為**ProcessChunk**。
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -53,7 +53,7 @@ ms.locfileid: "67962200"
     rxSetComputeContext(sqlCompute)
     ```
   
-3. 定義 SQL Server 資料來源來保存正在處理的資料。 一開始先指派 SQL 查詢給變數。 然後，使用該變數中的*sqlQuery*引數的新的 SQL Server 資料來源。
+3. 定義 SQL Server 的資料來源, 以保存您要處理的資料。 一開始先指派 SQL 查詢給變數。 然後, 在新 SQL Server 資料來源的*sqlQuery*引數中使用該變數。
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -64,9 +64,9 @@ ms.locfileid: "67962200"
             levels = as.character(1:7))))
     ```
 
-4. （選擇性） 您可以執行**rxGetVarInfo**上此資料來源。 到目前為止，它包含單一資料行：*Var 1:DayOfWeek，Type： 因數，沒有可用的因素層級*
+4. (選擇性) 您可以在此資料來源上執行**rxGetVarInfo** 。 此時, 它包含單一資料行:*Var 1:DayOfWeek, 類型: 因素, 沒有可用的因素層級*
      
-5. 將此因素變數套用至來源資料之前，請建立個別的資料表來保存中繼結果。 同樣地，您只使用**RxSqlServerData**函式定義的資料，確定刪除相同名稱的任何現有的資料表。
+5. 將此因素變數套用至來源資料之前，請建立個別的資料表來保存中繼結果。 同樣地, 您只需要使用**RxSqlServerData**函式定義資料, 請務必刪除任何同名的現有資料表。
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -74,13 +74,13 @@ ms.locfileid: "67962200"
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  呼叫自訂函數**ProcessChunk**來轉換資料，它是讀取，使用它作為*transformFunc*引數**rxDataStep**函式。
+7.  呼叫自訂函數**ProcessChunk** , 以在讀取資料時加以轉換, 方法是使用它作為**RxDataStep**函數的*transformFunc*引數。
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  若要檢視的中繼結果**ProcessChunk**，將指派的結果**rxImport**給變數，然後輸出至主控台的結果。
+8.  若要查看**ProcessChunk**的中繼結果, 請將**rxImport**的結果指派給變數, 然後將結果輸出至主控台。
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -107,7 +107,7 @@ ms.locfileid: "67962200"
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. 若要移除中繼結果資料表，請呼叫**rxSqlServerDropTable**。
+10. 若要移除中繼結果資料表, 請呼叫**rxSqlServerDropTable**。
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)

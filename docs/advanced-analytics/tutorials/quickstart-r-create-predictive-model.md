@@ -1,27 +1,27 @@
 ---
-title: 若要建立預測模型，使用 R-SQL Server Machine Learning 的快速入門
-description: 在本快速入門，了解如何建置在 R 中使用 SQL Server 資料來繪製預測模型。
+title: 使用 R 建立預測模型的快速入門
+description: 在本快速入門中, 您將瞭解如何使用 SQL Server 資料來繪製預測, 以在 R 中建立模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962032"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345482"
 ---
-# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>快速入門：建立預測模型，在 SQL Server 中使用 R
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>快速入門：在 SQL Server 中使用 R 建立預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本快速入門中，您將了解如何使用 R 來定型模型，並再將模型儲存至 SQL Server 中的資料表。 模型是簡單的廣義線性模型 (GLM)，可預測車輛手動傳輸，已調整大小的機率。 您將使用`mtcars`隨附 r 的資料集
+在本快速入門中, 您將瞭解如何使用 R 來定型模型, 然後將模型儲存至 SQL Server 中的資料表。 模型是簡單的一般化線性模型 (GLM), 可預測車輛已符合手動傳輸的機率。 您將使用 R `mtcars`隨附的資料集。
 
 ## <a name="prerequisites"></a>先決條件
 
-先前的快速入門中，[確認 R 存在於 SQL Server](quickstart-r-verify.md)，提供資訊並連結設定本快速入門所需的 R 環境。
+先前的快速入門[中, 驗證 R 存在於 SQL Server 中](quickstart-r-verify.md), 提供設定本快速入門所需之 R 環境的相關資訊和連結。
 
 ## <a name="create-the-source-data"></a>建立來源資料
 
@@ -43,7 +43,7 @@ CREATE TABLE dbo.MTCars(
 );
 ```
 
-接下來，將資料從資料集建置為插入`mtcars`。
+接下來, 從 [資料集`mtcars`] 中的組建插入資料。
 
 ```SQL
 INSERT INTO dbo.MTCars
@@ -54,15 +54,15 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'MTCars';
 ```
 
-+ 有些人喜歡使用暫存資料表，但請注意，有些 R 用戶端中斷連線工作階段之間的批次。
++ 有些人喜歡使用臨時表, 但請注意, 有些 R 用戶端會中斷批次之間的會話連線。
 
 + R 執行階段隨附許多大大小小的資料集。 若要取得隨 R 一起安裝的資料集清單，請從 R 命令提示字元處，輸入 `library(help="datasets")`。
 
 ## <a name="create-a-model"></a>建立模型
 
-汽車速度資料包含兩個資料行，這兩個數值、 馬力 (`hp`) 和重量 (`wt`)。 從這項資料，您將建立廣義線性模型 (GLM) 估計手動傳輸的一種工具，已納入的機率。
+汽車速度資料包含兩個數據行, 也就是`hp`數值、動力 (`wt`) 和權數 ()。 您將從這種資料建立一般化線性模型 (GLM), 以評估車輛已符合手動傳輸的機率。
 
-若要建立模型，您 R 程式碼內部定義的公式，並傳遞做為輸入參數的資料。
+若要建立模型, 請在您的 R 程式碼內定義公式, 並將資料當做輸入參數傳遞。
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -82,12 +82,12 @@ END;
 GO
 ```
 
-+ 第一個引數`glm`已*公式*參數，定義`am`為相依於`hp + wt`。
++ 的第一個自`glm`變數是*公式*參數, 其`hp + wt`定義`am`為相依于。
 + 輸入資料儲存在變數 `MTCarsData` 中，會由 SQL 查詢填入。 如果您沒有為輸入資料指定特定的名稱，預設變數名稱將會是 _InputDataSet_。
 
 ## <a name="create-a-table-for-the-model"></a>建立模型的資料表
 
-接下來，儲存模型，以便您可以重新定型或預測中使用它。 R 套件如果會建立模型，其輸出通常會是「二進位物件」  。 因此，將模型儲存的資料表必須提供的資料行**varbinary （max)** 型別。
+接下來, 儲存模型, 讓您可以重新定型或將它用於預測。 R 套件如果會建立模型，其輸出通常會是「二進位物件」  。 因此, 您用來儲存模型的資料表必須提供**Varbinary (max)** 類型的資料行。
 
 ```sql
 CREATE TABLE GLM_models (
@@ -105,7 +105,7 @@ INSERT INTO GLM_models(model)
 EXEC generate_GLM;
 ```
 
-請注意，是否第二次執行此程式碼，您會收到這個錯誤：
+請注意, 如果您第二次執行此程式碼, 就會收到此錯誤:
 
 ```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -121,7 +121,7 @@ WHERE model_name = 'default model'
 
 ## <a name="next-steps"></a>後續步驟
 
-現在，您就會以模型中，在最後的快速入門中，您將了解如何從它產生預測並繪製結果。
+既然您已有模型, 在最後一個快速入門中, 您將瞭解如何從它產生預測並繪製結果。
 
 > [!div class="nextstepaction"]
-> [快速入門：從模型預測並繪製](quickstart-r-predict-from-model.md)
+> [入門從模型預測及繪製](quickstart-r-predict-from-model.md)

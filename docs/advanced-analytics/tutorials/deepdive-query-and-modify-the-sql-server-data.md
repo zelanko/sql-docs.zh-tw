@@ -1,37 +1,37 @@
 ---
-title: 查詢及修改使用 RevoScaleR-SQL Server Machine Learning 的 SQL Server 資料
-description: 教學課程逐步解說如何查詢及修改 SQL Server 上使用 R 語言的資料。
+title: 使用 RevoScaleR 查詢和修改 SQL Server 資料
+description: 有關如何在 SQL Server 上使用 R 語言來查詢和修改資料的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 35583815be7c89707efcf9bb31488cd80e3836e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0784f10bfc4405ce17e365b6afcb596fa534202d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962181"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344663"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查詢及修改 SQL Server 資料 （SQL Server 和 RevoScaleR 教學課程）
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查詢和修改 SQL Server 資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-您可以在上一個課程中，載入將資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在此步驟中，您就可以探索並將資料使用下列方法修改**RevoScaleR**:
+在上一課中, 您已將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]載入。 在此步驟中, 您可以使用**RevoScaleR**來探索及修改資料:
 
 > [!div class="checklist"]
 > * 傳回變數的基本資訊
-> * 從原始資料建立類別目錄資料
+> * 從原始資料建立類別資料
 
-類別的資料，或是*因素變數*，適合用於探勘資料視覺效果。 您可以使用它們做為輸入長條圖若要了解哪些變數的資料看起來的樣子。
+類別資料或*因素變數*適用于探索式資料視覺效果。 您可以使用它們做為長條圖的輸入, 以瞭解變數資料看起來的樣子。
 
-## <a name="query-for-columns-and-types"></a>資料行和類型的查詢
+## <a name="query-for-columns-and-types"></a>查詢資料行和類型
 
-若要執行 R 指令碼中使用的 R IDE 或 RGui.exe。 
+使用 R IDE 或 Rgui.exe 來執行 R 腳本。 
 
-首先，取得一份資料行和其資料類型的清單。 您可以使用此函式[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)並指定您想要分析的資料來源。 版本而定**RevoScaleR**，您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
+首先，取得一份資料行和其資料類型的清單。 您可以使用函數[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , 並指定您想要分析的資料來源。 根據您的**RevoScaleR**版本而定, 您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -51,15 +51,15 @@ Var 8: creditLine, Type: integer
 Var 9: fraudRisk, Type: integer
 ```
 
-## <a name="create-categorical-data"></a>建立類別的資料
+## <a name="create-categorical-data"></a>建立類別資料
 
-所有變數會都儲存為整數，但某些變數代表類別的資料，稱為*因素變數*例如，資料行*狀態*包含當做識別項之 50 州再加上哥倫比亞特區的數字。 為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
+所有的變數都會儲存為整數, 但某些變數代表在 R 中稱為「*要素變數*」的類別資料。例如, 資料行*狀態*包含用來作為50狀態識別碼加上哥倫比亞特區的數位。 為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
 
-在此步驟中，您會建立包含縮寫的字串向量，並再將這些類別的值對應至原始的整數識別碼。 然後使用中的新變數*colInfo*引數，來指定此資料行視為因素。 每當您分析資料，或將它移，使用縮寫，以及資料行視為因素。
+在此步驟中, 您會建立包含縮寫的字串向量, 然後將這些類別值對應至原始的整數識別碼。 接著, 您可以在*colInfo*引數中使用新的變數, 以指定要將此資料行當做一個因素來處理。 每當您分析或移動資料時, 就會使用縮寫, 並以一個因素的形式來處理資料行。
 
-將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱 < [R 和資料最佳化](../r/r-and-data-optimization-r-services.md)。
+將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊, 請參閱[R 和資料優化](../r/r-and-data-optimization-r-services.md)。
 
-1. 一開始先建立 R 變數*stateAbb*，以及定義要加入，，如下所示的字串向量。
+1. 一開始先建立 R 變數*stateAbb*, 並定義要新增至其中的字串向量, 如下所示。
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -94,7 +94,7 @@ Var 9: fraudRisk, Type: integer
     )
     ```
   
-3. 若要建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用更新的資料，呼叫的資料來源**RxSqlServerData**函式和以前一樣，但新增*colInfo*引數。
+3. 若要建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用更新資料的資料來源, 請像之前一樣呼叫**RxSqlServerData**函數, 但新增*colInfo*引數。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

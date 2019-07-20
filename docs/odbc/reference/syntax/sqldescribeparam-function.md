@@ -1,7 +1,7 @@
 ---
 title: SQLDescribeParam 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLDescribeParam
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLDescribeParam
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 337ed5808b8eb3cf964977fcba70307984d1b2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1ba115766b820cdcc4f671eeacf9eeec90a894
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104709"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345444"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函數
-**合規性**  
- 導入的版本：ODBC 1.0 標準的合規性：ODBC  
+**標準**  
+ 引進的版本:ODBC 1.0 標準合規性:ODBC  
   
  **摘要**  
- **SQLDescribeParam**傳回已備妥的 SQL 陳述式相關聯的參數標記的描述。 這項資訊也會在 IPD 欄位中提供。  
+ **SQLDescribeParam**會傳回與備妥的 SQL 語句相關聯之參數標記的描述。 IPD 的欄位也提供這項資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,67 +49,67 @@ SQLRETURN SQLDescribeParam(
   
 ## <a name="argument"></a>引數  
  *StatementHandle*  
- [輸入]陳述式控制代碼。  
+ 源語句控制碼。  
   
  *ParameterNumber*  
- [輸入]參數的標記編號排序依序遞增的參數順序，從 1 開始。  
+ 源參數標記編號會以遞增的參數順序順序排序, 從1開始。  
   
  *DataTypePtr*  
- [輸出]在其中傳回參數的 SQL 資料類型的緩衝區指標。 這個值是讀取自 SQL_DESC_CONCISE_TYPE 記錄的欄位 IPD 中。 這會在值的其中一個[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節的附錄 d:資料類型或驅動程式專屬的 SQL 資料型別。  
+ 輸出要傳回參數的 SQL 資料類型之緩衝區的指標。 此值會從 IPD 的 [SQL_DESC_CONCISE_TYPE 記錄] 欄位讀取。 這會是附錄 D 的[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節中的其中一個值:資料類型, 或驅動程式特定的 SQL 資料類型。  
   
- 在 ODBC 3。*x*中,，則會傳回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP  *\*DataTypePtr*日期、 時間或時間戳記資料的 ODBC 2 中分別;。*x*、 SQL_DATE、 SQL_TIME、 或 SQL_TIMESTAMP 會傳回。 驅動程式管理員會執行必要的對應時的 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式正在使用的 ODBC 2。*x*驅動程式。  
+ 在 ODBC 3 中。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP 會分別在 *\*DataTypePtr*中傳回日期、時間或時間戳記資料; 在 ODBC 2 中則為。  將會傳回 x、SQL_DATE、SQL_TIME 或 SQL_TIMESTAMP。 當 ODBC 2 時, 驅動程式管理員會執行必要的對應。*x*應用程式正在使用 ODBC 3。*x*驅動程式或 ODBC 3。*x*應用程式正在使用 ODBC 2。*x*驅動程式。  
   
- 當*ColumnNumber*等於為 0 （表示書籤資料行中），傳回 SQL_BINARY  *\*DataTypePtr*可變長度的書籤。 （如果書籤由 ODBC 3，則傳回 SQL_INTEGER。*x*應用程式使用 ODBC 2。*x*驅動程式或 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式。)  
+ 當*ColumnNumber*等於 0 (針對書簽資料行) 時, 會在 *\*DataTypePtr*中針對可變長度書簽傳回 SQL_BINARY。 (如果 ODBC 3 使用書簽, 則會傳回 SQL_INTEGER。使用 ODBC 2 的*x*應用程式。*x*驅動程式或 ODBC 2。使用 ODBC 3 的*x*應用程式。*x*驅動程式)。  
   
- 如需詳細資訊，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d:資料類型。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。  
+ 如需詳細資訊, 請參閱附錄 D: 中的[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)。資料類型。 如需有關驅動程式特定 SQL 資料類型的詳細資訊, 請參閱驅動程式的檔。  
   
  *ParameterSizePtr*  
- [輸出]若要在其中傳回的大小，以字元為單位的資料行或運算式的對應參數標記，資料來源所定義的緩衝區的指標。 如需有關資料行大小的詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
+ 輸出緩衝區的指標, 要在其中傳回資料來源所定義之對應參數標記的資料行或運算式大小 (以字元為單位)。 如需有關資料行大小的詳細資訊, 請參閱資料[行大小、小數位數、傳輸八位長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
   
  *DecimalDigitsPtr*  
- [輸出]在其中傳回的資料行的小數位數或運算式的對應參數的數目，資料來源所定義之緩衝區的指標。 多個十進位數字的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
+ 輸出緩衝區的指標, 傳回資料來源所定義之對應參數的資料行或運算式的小數位數。 如需十進位數的詳細資訊, 請參閱資料[行大小、小數位數、傳輸八位長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
   
  *NullablePtr*  
- [輸出]若要在其中傳回值，指出參數是否允許 NULL 值的緩衝區的指標。 這個值會從 IPD SQL_DESC_NULLABLE 欄位讀取。 它有下列幾種：  
+ 輸出緩衝區的指標, 會在其中傳回值, 指出參數是否允許 Null 值。 此值會從 IPD 的 SQL_DESC_NullABLE 欄位讀取。 它有下列幾種：  
   
--   SQL_NO_NULLS:參數不允許 NULL 值 （這是預設值）。  
+-   SQL_NO_NULLS:參數不允許 Null 值 (這是預設值)。  
   
--   SQL_NULLABLE:此參數允許 NULL 值。  
+-   SQL_NULLABLE:參數允許 Null 值。  
   
--   SQL_NULLABLE_UNKNOWN:驅動程式無法判斷參數是否允許 NULL 值。  
+-   SQL_NULLABLE_UNKNOWN:驅動程式無法判斷參數是否允許 Null 值。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLDescribeParam**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值，可由呼叫**SQLGetDiagRec**具有*HandleType*的利用 SQL_HANDLE_STMT 並*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLDescribeParam** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
+ 當**SQLDescribeParam**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫 SQLGetDiagRec HandleType Handletype 來和  *StatementHandle*的*控制碼*來取得相關聯的 SQLSTATE 值。  下表列出通常由**SQLDescribeParam**所傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07009|描述項索引無效|(DM) 引數指定的值*Sqlbindparameter*小於 1。<br /><br /> 指定的引數的值*Sqlbindparameter*大於相關聯的 SQL 陳述式中的參數數目。<br /><br /> 參數標記為非 DML 陳述式的一部分。<br /><br /> 參數標記是一部分**選取**清單。|  
-|08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|21S01|插入的值清單不符合資料行清單|中的參數數目**插入**陳述式不符合陳述式中名為資料表中的資料行數目。|  
-|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
-|HY008|已取消作業|非同步處理已啟用*StatementHandle*。 呼叫函式，和之前執行，完成**SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*。 然後在上一次呼叫函式*StatementHandle*。<br /><br /> 呼叫函式，和之前已完成執行時， **SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
-|HY010|函數順序錯誤|(DM) 呼叫的函式呼叫之前，先**SQLPrepare**或是**SQLExecDirect** for *StatementHandle*。<br /><br /> (DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍在執行時**SQLDescribeParam**呼叫函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
-|HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
-|IM017|輪詢已停用非同步通知模式|每次使用通知模型時，會停用輪詢。|  
-|IM018|**SQLCompleteAsync**尚未完成先前的非同步作業，此控制代碼上呼叫。|如果控制代碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 和通知模式已啟用，如果**SQLCompleteAsync**必須在執行後置處理，並完成作業的控制代碼上呼叫。|  
+|01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
+|07009|不正確描述項索引|(DM) 為引數*ParameterNumber*指定的值小於1。<br /><br /> 為引數*ParameterNumber*指定的值大於相關聯 SQL 語句中的參數數目。<br /><br /> 參數標記是非 DML 語句的一部分。<br /><br /> 參數標記是**選取**清單的一部分。|  
+|08S01|通訊連結失敗|在函式完成處理之前, 驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
+|21S01|插入值清單與資料行清單不相符|**INSERT**語句中的參數數目, 與語句中名為的資料表中的資料行數目不符。|  
+|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中**的 SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 *\**|  
+|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
+|HY008|作業已取消|已啟用*StatementHandle*的非同步處理。 已呼叫函式, 在完成執行之前, 會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式, 並在完成執行之前, 從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
+|HY010|函數順序錯誤|(DM) 在呼叫*StatementHandle*的**SQLPrepare**或**SQLExecDirect**之前, 已呼叫函式。<br /><br /> (DM) 已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLDescribeParam**函數時, 這個非同步函式仍在執行中。<br /><br /> (DM) 已針對*StatementHandle*呼叫非同步執行的函式 (而非這個函式), 而且在呼叫這個函數時仍在執行中。<br /><br /> (DM) 已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** , 並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前, 已呼叫此函數。|  
+|HY013|記憶體管理錯誤|無法處理函數呼叫, 因為無法存取基礎記憶體物件, 可能是因為記憶體不足的狀況。|  
+|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|(DM) 如需暫停狀態的詳細資訊, 請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
+|HYT01|連接逾時已過期|在資料來源回應要求之前, 連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 來設定。|  
+|IM001|驅動程式不支援此功能|(DM) 與*StatementHandle*相關聯的驅動程式不支援此功能。|  
+|IM017|非同步通知模式中的輪詢已停用|每當使用通知模型時, 就會停用輪詢。|  
+|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING, 而且如果啟用通知模式, 則必須在控制碼上呼叫**SQLCompleteAsync** , 才能執行後置處理並完成作業。|  
   
 ## <a name="comments"></a>註解  
- 參數標記會以遞增的參數順序，從 1 開始，SQL 陳述式中出現的順序編號。  
+ 參數標記會以遞增的參數順序編號, 以在 SQL 語句中出現的順序從1開始。  
   
- **SQLDescribeParam** SQL 陳述式未傳回參數的型別 （輸入、 輸入/輸出或輸出）。 除了在呼叫程序，在 SQL 陳述式中的所有參數都是輸入的參數。 若要判斷程序呼叫中的每個參數的型別，應用程式會呼叫**SQLProcedureColumns**。  
+ **SQLDescribeParam**不會在 SQL 語句中傳回參數的類型 (輸入、輸入/輸出或輸出)。 除了對程式的呼叫以外, SQL 語句中的所有參數都是輸入參數。 為了判斷程式呼叫中每個參數的類型, 應用程式會呼叫**SQLProcedureColumns**。  
   
- 如需詳細資訊，請參閱 <<c0> [ 描述參數](../../../odbc/reference/develop-app/describing-parameters.md)。  
+ 如需詳細資訊, 請參閱[描述參數](../../../odbc/reference/develop-app/describing-parameters.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 下列範例會提示使用者輸入 SQL 陳述式，並接著準備該陳述式。 接著，它會呼叫**SQLNumParams**來判斷該陳述式是否包含任何參數。 如果陳述式包含參數，它會呼叫**SQLDescribeParam**來描述這些參數與**SQLBindParameter**來繫結它們。 最後，它會提示使用者提供任何參數的值，並接著執行陳述式。  
+ 下列範例會提示使用者輸入 SQL 語句, 然後準備該語句。 接下來, 它會呼叫**SQLNumParams**來判斷語句是否包含任何參數。 如果語句包含參數, 它會呼叫**SQLDescribeParam**來描述這些參數, 並**SQLBindParameter**以系結它們。 最後, 它會提示使用者輸入任何參數的值, 然後執行語句。  
   
 ```cpp  
 SQLCHAR       Statement[100];  
@@ -172,10 +173,10 @@ free(LenOrIndArray);
   
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
-|繫結至參數的緩衝區|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|取消陳述式處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|執行已備妥的 SQL 陳述式|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|準備執行陳述式|[SQLPrepare 函式](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|將緩衝區系結至參數|[SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|取消語句處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|執行備妥的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|準備語句以執行|[SQLPrepare 函式](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

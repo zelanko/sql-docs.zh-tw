@@ -1,33 +1,33 @@
 ---
-title: R 和 Python 指令碼執行-SQL Server Machine Learning 服務的 Grant 資料庫權限
-description: 如何授與資料庫使用者權限，以便在 SQL Server 機器學習服務上的 R 和 Python 指令碼執行。
+title: 授與 R 和 Python 腳本執行的資料庫許可權
+description: 如何在 SQL Server Machine Learning 服務上授與資料庫使用者權限以進行 R 和 Python 腳本的執行。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e24095b7ec5aafd3439a3d344123c0a7f9dae86d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6b2fb46cb2ee361d858fa460119e6960d78fda7
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962329"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345101"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的權限授與使用者
+# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>授與使用者 SQL Server Machine Learning 服務的許可權
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何您能給予使用者權限在 SQL Server Machine Learning 服務執行外部指令碼，並提供讀取、 寫入或資料定義語言 (DDL) 資料庫的權限。
+本文說明如何授與使用者在 SQL Server Machine Learning 服務中執行外部腳本的許可權, 並將讀取、寫入或資料定義語言 (DDL) 許可權授與資料庫。
 
-如需詳細資訊，請參閱中的 [權限] 區段[擴充性架構的安全性概觀](../../advanced-analytics/concepts/security.md#permissions)。
+如需詳細資訊, 請參閱擴充性[架構的安全性總覽](../../advanced-analytics/concepts/security.md#permissions)中的許可權一節。
 
 <a name="permissions-external-script"></a>
 
-## <a name="permission-to-run-scripts"></a>若要執行指令碼的權限
+## <a name="permission-to-run-scripts"></a>執行腳本的許可權
 
-如果您已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且您會在您自己的執行個體中執行 R 或 Python 指令碼，您通常會以系統管理員身分執行指令碼。 因此，您會有隱含權限不同作業和資料庫中的所有資料。
+如果您自行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝, 而且您在自己的實例中執行 R 或 Python 腳本, 您通常會以系統管理員身分執行腳本。 因此, 您對各種作業和資料庫中的所有資料具有隱含許可權。
 
-不過，大部分的使用者，不需要這類更高的權限。 例如，在組織中使用 SQL 登入通常存取資料庫的使用者沒有提高權限。 因此，對於每個使用者使用 R 或 Python，您必須授與使用者的機器學習服務會使用語言每個資料庫中執行外部指令碼的權限。 方法：
+不過, 大部分的使用者並沒有這麼高的許可權。 例如, 組織中使用 SQL 登入來存取資料庫的使用者, 通常不會有較高的許可權。 因此, 對於使用 R 或 Python 的每位使用者, 您必須授與 Machine Learning 服務的使用者在使用該語言的每個資料庫中執行外部腳本的許可權。 方法：
 
 ```sql
 USE <database_name>
@@ -36,17 +36,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> 不支援的指令碼語言特定的權限。 換句話說，沒有與 Python 指令碼的 R 指令碼的個別權限層級。 如果您需要維護這些語言的個別權限，請個別執行個體上安裝 R 和 Python。
+> 許可權並非特定于支援的指令碼語言。 換句話說, R 腳本與 Python 腳本並沒有個別的許可權層級。 如果您需要維護這些語言的個別許可權, 請在不同的實例上安裝 R 和 Python。
 
 <a name="permissions-db"></a> 
 
-## <a name="grant-databases-permissions"></a>Grant 資料庫權限
+## <a name="grant-databases-permissions"></a>授與資料庫許可權
 
-當使用者執行指令碼時，使用者可能需要讀取其他資料庫中的資料。 使用者可能也需要建立新的資料表來儲存結果，並將資料寫入至資料表。
+當使用者執行腳本時, 使用者可能需要讀取其他資料庫的資料。 使用者也可能需要建立新的資料表來儲存結果, 並將資料寫入資料表。
 
-對於每個 Windows 使用者帳戶或 SQL 登入執行 R 或 Python 指令碼，請確定它在特定資料庫上擁有適當的權限：`db_datareader`來讀取資料，`db_datawriter`若要將物件儲存到資料庫，或`db_ddladmin`建立物件例如，預存程序或資料表包含訓練和序列化資料。
+對於執行 R 或 Python 腳本的每個 Windows 使用者帳戶或 SQL 登入, 請確定它具有特定資料庫的適當許可權: `db_datareader`讀取資料、 `db_datawriter`將物件儲存至資料庫, 或`db_ddladmin`建立物件例如預存程式或包含定型和序列化資料的資料表。
 
-例如，下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式可提供 SQL 登入*MySQLLogin*執行的 T-SQL 查詢的權限*ML_Samples*資料庫。 SQL 登入必須存在於伺服器的安全性內容中，才能執行此陳述式。
+例如, 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]語句提供 SQL 登入*MySQLLogin*在*ML_Samples*資料庫中執行 t-SQL 查詢的許可權。 SQL 登入必須存在於伺服器的安全性內容中，才能執行此陳述式。
 
 ```sql
 USE ML_Samples
@@ -56,4 +56,4 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ## <a name="next-steps"></a>後續步驟
 
-如需包含在每個角色的權限的詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。
+如需每個角色中所包含之許可權的詳細資訊, 請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。

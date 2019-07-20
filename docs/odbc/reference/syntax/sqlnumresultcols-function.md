@@ -1,7 +1,7 @@
 ---
 title: SQLNumResultCols 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLNumResultCols
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLNumResultCols
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d42512c2d5d7671c35197c7968f317f688e304c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43c7f72869cf46fa12f942a3d31399cf3e316520
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005829"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343554"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols 函數
-**合規性**  
- 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
+**標準**  
+ 引進的版本:ODBC 1.0 標準合規性:ISO 92  
   
  **摘要**  
- **SQLNumResultCols**結果集中傳回的資料行數目。  
+ **SQLNumResultCols**會傳回結果集內的資料行數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,58 +45,58 @@ SQLRETURN SQLNumResultCols(
   
 ## <a name="arguments"></a>引數  
  *StatementHandle*  
- [輸入]陳述式控制代碼。  
+ 源語句控制碼。  
   
  *ColumnCountPtr*  
- [輸出]一組要在結果中傳回的資料行數目的緩衝區指標。 這個計數不包含繫結的書籤資料行。  
+ 輸出要在其中傳回結果集中之資料行數目的緩衝區指標。 此計數不包含系結的書簽資料行。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLNumResultCols**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值，可由呼叫**SQLGetDiagRec**具有*HandleType*的利用 SQL_HANDLE_STMT 並*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLNumResultCols** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
+ 當**SQLNumResultCols**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫 SQLGetDiagRec HandleType Handletype 來和  *StatementHandle*的*控制碼*來取得相關聯的 SQLSTATE 值。  下表列出**SQLNumResultCols**常傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
-|HY008|已取消作業|非同步處理已啟用*StatementHandle*。 呼叫函式，和之前已完成執行時， **SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*; 呼叫的函式已再一次*StatementHandle*。<br /><br /> 呼叫函式，和之前已完成執行時， **SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
-|HY010|函數順序錯誤|(DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍在執行時**SQLNumResultsCols**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可使用。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> (DM) 在呼叫之前呼叫的函式**SQLPrepare**或是**SQLExecDirect** for *StatementHandle*。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> 請參閱[SQLPrepare 函數](../../../odbc/reference/syntax/sqlprepare-function.md)如需有關何時可以釋放陳述式控制代碼。|  
-|HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
-|IM017|輪詢已停用非同步通知模式|每次使用通知模型時，會停用輪詢。|  
-|IM018|**SQLCompleteAsync**尚未完成先前的非同步作業，此控制代碼上呼叫。|如果控制代碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 和通知模式已啟用，如果**SQLCompleteAsync**必須在執行後置處理，並完成作業的控制代碼上呼叫。|  
+|01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
+|08S01|通訊連結失敗|在函式完成處理之前, 驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
+|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中**的 SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 *\**|  
+|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
+|HY008|作業已取消|已啟用*StatementHandle*的非同步處理。 已呼叫函式, 在完成執行之前, 會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** ;然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式, 並在完成執行之前, 從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
+|HY010|函數順序錯誤|(DM) 已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLNumResultsCols**函數時, 這個非同步函式仍在執行中。<br /><br /> (DM) 已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** , 並傳回 SQL_PARAM_DATA_AVAILABLE。 在抓取所有資料流程參數的資料之前, 會呼叫這個函式。<br /><br /> (DM) 在呼叫*StatementHandle*的**SQLPrepare**或**SQLExecDirect**之前, 已呼叫過函數。<br /><br /> (DM) 已針對*StatementHandle*呼叫非同步執行的函式 (而非這個函式), 而且在呼叫這個函數時仍在執行中。<br /><br /> (DM) 已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** , 並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前, 已呼叫此函數。<br /><br /> 如需何時可以釋放語句控制碼的詳細資訊, 請參閱[SQLPrepare 函數](../../../odbc/reference/syntax/sqlprepare-function.md)。|  
+|HY013|記憶體管理錯誤|無法處理函數呼叫, 因為無法存取基礎記憶體物件, 可能是因為記憶體不足的狀況。|  
+|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|(DM) 如需暫停狀態的詳細資訊, 請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
+|HYT01|連接逾時已過期|在資料來源回應要求之前, 連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 來設定。|  
+|IM001|驅動程式不支援此功能|(DM) 與*StatementHandle*相關聯的驅動程式不支援此功能。|  
+|IM017|非同步通知模式中的輪詢已停用|每當使用通知模型時, 就會停用輪詢。|  
+|IM018|尚未呼叫**SQLCompleteAsync**來完成這個控制碼上先前的非同步作業。|如果控制碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING, 而且如果啟用通知模式, 則必須在控制碼上呼叫**SQLCompleteAsync** , 才能執行後置處理並完成作業。|  
   
- **SQLNumResultCols**可以傳回任何可傳回的 SQLSTATE **SQLPrepare**或是**SQLExecute**之後呼叫**SQLPrepare** 之前**SQLExecute**，取決於資料來源時評估陳述式相關聯的 SQL 陳述式。  
+ 視資料來源評估 SQL 語句的時間而定, **SQLNumResultCols**可能會傳回**SQLPrepare**或**SQLExecute**在**SQLPrepare**和**SQLExecute**之前所能傳回的任何 SQLSTATE與語句相關聯的。  
   
 ## <a name="comments"></a>註解  
- **SQLNumResultCols**陳述式是在已備妥、 執行，或放置狀態時，才可成功呼叫。  
+ 只有當語句處於準備、執行或定位狀態時, 才能成功呼叫**SQLNumResultCols** 。  
   
- 如果陳述式相關聯*StatementHandle*不會傳回資料行**SQLNumResultCols**設定 **ColumnCountPtr*設為 0。  
+ 如果與*StatementHandle*相關聯的語句不會傳回資料行, **SQLNumResultCols**會將 **ColumnCountPtr*設定為0。  
   
- 所傳回的資料行數目**SQLNumResultCols** IRD SQL_DESC_COUNT 欄位的值相同。  
+ **SQLNumResultCols**所傳回的資料行數目與 IRD 的 SQL_DESC_COUNT 欄位具有相同的值。  
   
- 如需詳細資訊，請參閱[已設定建立結果嗎？](../../../odbc/reference/develop-app/was-a-result-set-created.md)並[計算方式是使用中繼資料？](../../../odbc/reference/develop-app/how-is-metadata-used.md)。  
+ 如需詳細資訊, 請參閱[Was 是否已建立結果集？](../../../odbc/reference/develop-app/was-a-result-set-created.md)和[如何使用中繼資料？](../../../odbc/reference/develop-app/how-is-metadata-used.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
-|繫結至結果集的資料行的緩衝區|[SQLBindCol 函式](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|取消陳述式處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|在結果集中傳回資料行的相關資訊|[SQLColAttribute 函式](../../../odbc/reference/syntax/sqlcolattribute-function.md)|  
-|在結果集中傳回資料行的相關資訊|[SQLDescribeCol 函式](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|執行 SQL 陳述式|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|執行已備妥的 SQL 陳述式|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|提取資料的區塊，或捲動結果集|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|擷取單一資料列或順向方向中的資料區塊|[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|正在擷取部分或全部的資料行|[SQLGetData 函式](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|準備執行的 SQL 陳述式|[SQLPrepare 函式](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|設定資料指標捲動選項|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|將緩衝區系結至結果集內的資料行|[SQLBindCol 函式](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|取消語句處理|[SQLCancel 函式](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|傳回結果集中資料行的相關資訊|[SQLColAttribute 函式](../../../odbc/reference/syntax/sqlcolattribute-function.md)|  
+|傳回結果集中資料行的相關資訊|[SQLDescribeCol 函式](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|執行 SQL 語句|[SQLExecDirect 函式](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|執行備妥的 SQL 語句|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|提取資料區塊或透過結果集進行滾動|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|以順向方向提取單一資料列或資料區塊|[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|正在提取部分或所有資料行|[SQLGetData 函式](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|準備要執行的 SQL 語句|[SQLPrepare 函式](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|設定資料指標滾動選項|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

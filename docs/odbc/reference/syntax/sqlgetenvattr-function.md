@@ -1,7 +1,7 @@
 ---
 title: SQLGetEnvAttr 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLGetEnvAttr
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLGetEnvAttr
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4e3bfc22e4205657107f11b4eec145028aee6397
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0940a5a2c70a7b670ca6a81521759fd08e60461e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911283"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345623"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函式
-**合規性**  
- 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
+**標準**  
+ 引進的版本:ODBC 3.0 標準合規性:ISO 92  
   
  **摘要**  
- **SQLGetEnvAttr**傳回環境屬性的目前設定。  
+ **SQLGetEnvAttr**會傳回環境屬性的目前設定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,58 +48,58 @@ SQLRETURN SQLGetEnvAttr(
   
 ## <a name="arguments"></a>引數  
  *EnvironmentHandle*  
- [輸入]環境控制代碼。  
+ 源環境控制碼。  
   
  *Attribute*  
- [輸入]要擷取的屬性。  
+ 源要取出的屬性。  
   
  *ValuePtr*  
- [輸出]在其中傳回所指定之屬性的目前值之緩衝區的指標*屬性*。  
+ 輸出緩衝區的指標, 要在其中傳回*屬性*所指定之屬性的目前值。  
   
- 如果*ValuePtr*為 NULL，就*StringLengthPtr*仍會傳回的總位元組數 （不含字元資料之 null 結束字元） 可用來傳回中指向緩衝區*ValuePtr*。  
+ 如果*valueptr 是*為 Null, *StringLengthPtr*仍會傳回*valueptr 是*所指向的緩衝區中可傳回的位元組總數 (不包括字元資料的 Null 終止字元)。  
   
  *BufferLength*  
- [輸入]如果*ValuePtr*指向的字元字串，這個引數應該是長度\* *ValuePtr*。 如果\* *ValuePtr*是一個整數， *Columnsize*會被忽略。 如果 *\*ValuePtr*是 Unicode 字串 (呼叫時**SQLGetEnvAttrW**)，則*Columnsize*引數必須是偶數。 如果屬性值不是字元字串， *Columnsize*未使用。  
+ 源如果*valueptr 是*指向字元字串, 這個引數應該是\* *valueptr 是*的長度。 如果\* *valueptr 是*是整數, 則會忽略*BufferLength* 。 *如果\*valueptr 是*是 Unicode 字串 (在呼叫**SQLGetEnvAttrW**時), 則*BufferLength*引數必須是偶數。 如果屬性值不是字元字串, 則不會使用*BufferLength* 。  
   
  *StringLengthPtr*  
- [輸出]在其中傳回的總位元組數 （不包括 null 結束字元） 緩衝區的指標來傳回在可用 *\*ValuePtr*。 如果*ValuePtr*為 null 指標，會傳回任何長度。 如果屬性值是字元字串，可用來傳回的位元組數目大於或等於*Columnsize*中的資料\* *ValuePtr*會被截斷成*BufferLength*減去 null 結束字元的長度，是以 null 終止的驅動程式。  
+ 輸出緩衝區的指標, 要在其中傳回 *\*valueptr 是*中可傳回的位元組總數 (不包括 null 終止字元)。 如果*valueptr 是*為 null 指標, 則不會傳回長度。 如果屬性值是字元字串, 而且可用來傳回的位元組數目大於或等於*BufferLength*, 則\* *valueptr 是*中的資料會截斷為*BufferLength*減去 null 終止的長度字元, 並由驅動程式終止。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetEnvAttr**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值，可由呼叫**SQLGetDiagRec**具有*HandleType*的 SQL_HANDLE_ENV 並*處理*的*EnvironmentHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetEnvAttr** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
+ 當**SQLGetEnvAttr**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫 SQLGetDiagRec HandleType SQL_HANDLE_ENV 和  *EnvironmentHandle*的*控制碼*來取得相關聯的 SQLSTATE 值。  下表列出**SQLGetEnvAttr**常傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|Error|說明|  
 |--------------|-----------|-----------------|  
-|01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01004|字串資料，右邊已截斷|中傳回的資料\* *ValuePtr*被截斷成會*Columnsize*減去之 null 結束字元。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
-|HY010|函數順序錯誤|(DM) **SQL_ATTR_ODBC_VERSION**尚未設定透過**SQLSetEnvAttr**。 您不需要設定**SQL_ATTR_ODBC_VERSION**如果您使用，明確**SQLAllocHandleStd**。|  
-|HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY092|屬性/選項識別碼無效|指定的引數的值*屬性*ODBC 驅動程式支援的版本無效。|  
-|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未實作選擇性功能|指定的引數的值*屬性*的驅動程式支援的 ODBC 版本，但不是支援此驅動程式是有效的 ODBC 環境屬性。|  
-|IM001|驅動程式不支援此函式|(DM) 對應的驅動程式*EnvironmentHandle*不支援此函式。|  
+|01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
+|01004|字串資料, 右邊已截斷|\* *Valueptr 是*中傳回的資料被截斷為*BufferLength*減去 null 終止字元。 Untruncated 字串值的長度會在 **StringLengthPtr*中傳回。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
+|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中**的 SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 *\**|  
+|HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
+|HY010|函數順序錯誤|(DM) **SQL_ATTR_ODBC_VERSION**尚未透過**SQLSetEnvAttr**設定。 如果您使用**SQLAllocHandleStd**, 則不需要明確設定**SQL_ATTR_ODBC_VERSION** 。|  
+|HY013|記憶體管理錯誤|無法處理函數呼叫, 因為無法存取基礎記憶體物件, 可能是因為記憶體不足的狀況。|  
+|HY092|不正確屬性/選項識別碼|為引數*屬性*指定的值對驅動程式支援的 ODBC 版本無效。|  
+|HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|(DM) 如需暫停狀態的詳細資訊, 請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
+|HYC00|未執行的選擇性功能|為引數*屬性*指定的值是驅動程式所支援之 odbc 版本的有效 odbc 環境屬性, 但驅動程式並不支援。|  
+|IM001|驅動程式不支援此功能|(DM) 對應至*EnvironmentHandle*的驅動程式不支援函數。|  
   
 ## <a name="comments"></a>註解  
- 如需屬性的清單，請參閱 < [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。 沒有驅動程式特有的環境屬性。 如果*屬性*指定的屬性會傳回字串， *ValuePtr*必須在其中傳回的字串緩衝區的指標。 將會包含 null 結束位元組的字串的最大長度*Columnsize*位元組。  
+ 如需屬性的清單, 請參閱[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。 沒有驅動程式特定的環境屬性。 如果*屬性*指定了傳回字串的屬性, *valueptr 是*就必須是要傳回字串之緩衝區的指標。 字串的最大長度 (包含 null 終止位元組) 將會是*BufferLength*個位元組。  
   
- **SQLGetEnvAttr**可在配置和釋放環境控制代碼之間的任何時間加以呼叫。 已成功設定環境的應用程式的所有環境屬性一直都保存到**SQLFreeHandle**上呼叫*EnvironmentHandle*使用*HandleType*SQL_HANDLE_ENV。 可以同時配置一個以上的環境控制代碼，在 ODBC 3 *.x*。 已配置另一個環境時，不會影響一個環境的環境屬性。  
+ **SQLGetEnvAttr**可以在配置和釋放環境控制碼之間的任何時間呼叫。 環境的應用程式成功設定的所有環境屬性都會持續, 直到在*EnvironmentHandle*上呼叫**SQLFreeHandle** , 且*HandleType*為 SQL_HANDLE_ENV 為止。 ODBC 3.x 中可以同時配置一個以上的環境控制碼  。 當另一個環境已配置時, 不會影響一個環境上的環境屬性。  
   
 > [!NOTE]
->  符合標準的應用程式支援 SQL_ATTR_OUTPUT_NTS 環境屬性。 當**SQLGetEnvAttr**呼叫時，ODBC 3 *.x*驅動程式管理員一定會傳回 SQL_TRUE 這個屬性。 SQL_ATTR_OUTPUT_NTS 可以只藉由呼叫設定為 SQL_TRUE **SQLSetEnvAttr**。  
+>  符合標準的應用程式支援 SQL_ATTR_OUTPUT_NTS 環境屬性。 呼叫**SQLGetEnvAttr**時, ODBC 3.X 驅動程式  管理員一律會傳回此屬性的 SQL_TRUE。 只有對**SQLSetEnvAttr**的呼叫, 才能將 SQL_ATTR_OUTPUT_NTS 設定為 SQL_TRUE。  
   
 ## <a name="related-functions"></a>相關函數  
   
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |傳回連接屬性的設定|[SQLGetConnectAttr 函式](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|傳回陳述式屬性的設定|[SQLGetStmtAttr 函式](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|傳回語句屬性的設定|[SQLGetStmtAttr 函式](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
 |設定連接屬性|[SQLSetConnectAttr 函式](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |設定環境屬性|[SQLSetEnvAttr 函式](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
-|設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|設定語句屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

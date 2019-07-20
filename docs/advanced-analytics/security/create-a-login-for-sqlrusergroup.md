@@ -1,66 +1,66 @@
 ---
-title: 建立 SQLRUserGroup-SQL Server Machine Learning 服務的登入
-description: 對於使用隱含的驗證的回送連線，登入 SQL Server 中建立的 SQLRUserGroup，使背景工作帳戶可以登入伺服器上，以傳回給呼叫使用者的身分識別轉換。
+title: 為 SQLRUserGroup 建立登入
+description: 針對使用隱含驗證的回送連線, 請在 SQL Server 中建立登入以進行 SQLRUserGroup, 讓背景工作帳戶可以登入伺服器, 以將身分識別轉換回呼叫的使用者。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7dafb4c9edfe830a354da61b72d330d800349781
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74330d37a037b0951c4964cafbd6e0c26b4fdea1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962350"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345635"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>為 SQLRUserGroup 建立登入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-建立[SQL Server 中的登入](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)for [SQLRUserGroup](../concepts/security.md#sqlrusergroup)時[循迴路連線](../../advanced-analytics/concepts/security.md#implied-authentication)指令碼中指定*信任連接*，用來執行物件的識別包含您的程式碼是 Windows 使用者帳戶。
+當腳本中的「迴圈執行」[連接](../../advanced-analytics/concepts/security.md#implied-authentication)指定*信任連接*, 而用來執行物件的身分識別是 Windows 使用者帳戶時, 請在[SQLRUserGroup](../concepts/security.md#sqlrusergroup)的[SQL Server 中建立登入](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)。
 
-受信任的連接是指`Trusted_Connection=True`連接字串中。 當 SQL Server 收到要求，指定受信任的連線時，它會檢查目前的 Windows 使用者的身分識別是否有登入。 執行為背景工作帳戶的外部處理序 (例如 MSSQLSERVER01 從**SQLRUserGroup**)，則要求會失敗，因為這些帳戶依預設沒有登入。
+信任的連線是`Trusted_Connection=True`在連接字串中的連接。 當 SQL Server 收到指定信任連接的要求時, 它會檢查目前 Windows 使用者的身分識別是否有登入。 針對以背景工作帳戶執行的外部進程 (例如從**SQLRUSERGROUP**MSSQLSERVER01), 要求會失敗, 因為這些帳戶預設沒有登入。
 
-您可以藉由建立的登入解決連線錯誤**SQLServerRUserGroup**。 如需身分識別和外部處理序的詳細資訊，請參閱[擴充性架構的安全性概觀](../concepts/security.md)。
+您可以藉由建立**SQLServerRUserGroup**的登入來解決連接錯誤。 如需有關身分識別和外部進程的詳細資訊, 請參閱擴充性[架構的安全性總覽](../concepts/security.md)。
 
 > [!Note]
-> 請確定**SQLRUserGroup**有 「 允許本機登入 」 權限。 根據預設，此權限提供給所有新的本機使用者，，但某些較嚴格的組織的群組原則可能會停用此權限。
+> 請確定**SQLRUserGroup**具有「允許本機登入」許可權。 根據預設, 此許可權會提供給所有新的本機使用者, 但某些組織更嚴格的群組原則可能會停用此許可權。
 
 ## <a name="create-a-login"></a>建立登入
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，展開 [安全性]  ，以滑鼠右鍵按一下 [登入]  ，然後選取 [新增登入]  。
 
-2. 在 **登入-新增**對話方塊中，選取**搜尋**。 (沒有任何項目 方塊中輸入尚未。）
+2. 在 [**登入-新增**] 對話方塊中, 選取 [**搜尋**]。 (還不要在方塊中輸入任何內容)。
     
-     ![按一下 [搜尋] 以新增新的登入 machine learning](media/implied-auth-login1.png "按一下 加入新的登入 machine learning 搜尋")
+     ![按一下 [搜尋], 為機器學習服務新增新的登]入(media/implied-auth-login1.png "按一下 [搜尋], 為機器學習服務新增新的登")入
 
-3. 在 [**選取使用者或群組**方塊中，按一下**物件類型**] 按鈕。
+3. 在 [**選取使用者或群組**] 方塊中, 按一下 [**物件類型**] 按鈕。
 
-     ![搜尋物件類型以加入新的登入 machine learning](media/implied-auth-login2.png "搜尋要加入新的登入 machine learning 的物件類型")
+     ![搜尋物件類型以新增機器學習服務的登]入(media/implied-auth-login2.png "搜尋物件類型以新增機器學習服務的登")入
 
-4. 在 **物件的型別**對話方塊中，選取**群組**。 清除所有其他核取方塊。
+4. 在 [**物件類型**] 對話方塊中, 選取 [**群組**]。 清除所有其他核取方塊。
 
-     ![在 [物件類型] 對話方塊中選取群組](media/implied-auth-login3.png "物件類型] 對話方塊中的 [選取群組")
+     ![選取物件類型中的群組對話方塊](media/implied-auth-login3.png "選取物件類型中的群組對話方塊")
 
-4. 按一下 **進階**，確認要搜尋的位置是目前的電腦，然後按一下**立即尋找**。
+4. 按一下 [ **Advanced**], 確認要搜尋的位置是目前的電腦, 然後按一下 [**立即尋找**]。
 
-     ![按一下 [立即尋找]，取得群組清單](media/implied-auth-login4.png "按一下 [立即尋找]，取得群組清單")
+     ![按一下 [立即尋找] 以取得群組清單](media/implied-auth-login4.png "按一下 [立即尋找] 以取得群組清單")
 
-5. 捲動清單，直到您找到一開始在伺服器上的群組帳戶的`SQLRUserGroup`。
+5. 流覽伺服器上的群組帳戶清單, 直到您找到一開始`SQLRUserGroup`為止。
     
-    + Launchpad 服務相關聯的群組名稱_預設執行個體_總是**SQLRUserGroup**，而不論您是否安裝了 R 或 Python 或兩者。 選取此帳戶只是預設執行個體。
-    + 如果您使用_具名執行個體_，執行個體名稱會附加至的預設背景工作群組名稱， `SQLRUserGroup`。 例如，如果您的執行個體名稱為"MLTEST 」，這個執行個體的預設使用者群組名稱會是**SQLRUserGroupMLTest**。
+    + 與_預設實例_的啟動列服務相關聯的組名一律是**SQLRUserGroup**, 不論您是否已安裝 R 或 Python 或兩者。 僅針對預設實例選取此帳戶。
+    + 如果您使用的是_已命名的實例_, 實例名稱會附加至預設背景工作組名`SQLRUserGroup`的名稱。 例如, 如果您的實例名稱為 "MLTEST", 這個實例的預設使用者組名會是**SQLRUserGroupMLTest**。
  
-    ![範例伺服器上的群組](media/implied-auth-login5.png "範例伺服器上的群組")
+    ![伺服器上的群組範例](media/implied-auth-login5.png "伺服器上的群組範例")
    
-5. 按一下 **確定**以關閉 進階的搜尋 對話方塊。
+5. 按一下 **[確定]** 以關閉 [高級搜尋] 對話方塊。
 
     > [!IMPORTANT]
-    > 請確定您已選取正確的帳戶，執行個體。 每個執行個體可以使用只有自己的 Launchpad 服務並為該服務建立的群組。 執行個體無法共用 Launchpad 服務或背景工作帳戶。
+    > 請確定您已為實例選取正確的帳戶。 每個實例只能使用它自己的啟動列服務, 以及為該服務建立的群組。 實例無法共用啟動列服務或背景工作帳戶。
 
-6. 按一下 [ **[確定]** 以關閉**選取使用者或群組**] 對話方塊。
+6. 再按一次 **[確定]** , 關閉 [**選取使用者或群組**] 對話方塊。
 
-7. 在 [**登入-新增**] 對話方塊中，按一下**確定**。 依預設，登入指派給 **公用** 角色，並有連接到資料庫引擎的權限。
+7. 在 [**登入-新增**] 對話方塊中, 按一下 **[確定]** 。 依預設，登入指派給 **公用** 角色，並有連接到資料庫引擎的權限。
 
 ## <a name="next-steps"></a>後續步驟
 

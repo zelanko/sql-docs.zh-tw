@@ -1,7 +1,7 @@
 ---
 title: SQLSetScrollOptions 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetScrollOptions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetScrollOptions
@@ -19,28 +20,28 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7ad13ef3d443e2c99a44ad1cbefbf9f08fa2e742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a85caefadb54c3db2716c4db18b504e02da996
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039675"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68342936"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 函式
-**合規性**  
- 導入的版本：ODBC 1.0 標準的合規性：已被取代  
+**標準**  
+ 引進的版本:ODBC 1.0 標準合規性:已被取代  
   
  **摘要**  
- 在 ODBC *3.x*，ODBC 2.0 函式**SQLSetScrollOptions**已取代呼叫**SQLGetInfo**並**SQLSetStmtAttr**。  
+ 在 ODBC  3.x 中, odbc 2.0 函數**SQLSetScrollOptions**已由**SQLGetInfo**和**SQLSetStmtAttr**的呼叫所取代。  
   
 > [!NOTE]
->  如需有關什麼驅動程式管理員會對應到此函式時 ODBC *2.x*應用程式使用 ODBC *3.x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附錄 g:為了與舊版相容的驅動程式指導方針。  
+>  如需 ODBC 2.x 應用程式使用 ODBC 3.x 驅動程式時, 驅動程式  管理員將此函式對應至哪個內容  的詳細資訊, 請參閱附錄 G: 中的對應已被[取代](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)的函式回溯相容性的驅動程式方針。  
 > 
 > [!NOTE]
->  當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC *3.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不是 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*中的引數**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**呼叫擷取多個資料列時無法由應用程式**SQLFetch**或是**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，才**SQLExtendedFetch**。  
+>  當驅動程式管理員對應到使用不支援**SQLSetScrollOptions**的 ODBC 3.x  驅動程式之應用程式的**SQLSetScrollOptions**時, 驅動程式管理員會設定 SQL_ROWSET_SIZE 語句選項, 而不是 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性, 指向**SQLSetScrollOption**中的*RowsetSize*引數。 因此, 在透過呼叫**SQLFetch**或**SQLFetchScroll**來提取多個資料列時, 應用程式無法使用**SQLSetScrollOptions** 。 只有在透過呼叫**SQLExtendedFetch**來提取多個資料列時, 才能使用此方法。  
   
 ## <a name="remarks"></a>備註  
- 如果您的應用程式將在 64 位元作業系統上執行，請參閱[ODBC 64 位元資訊](../../../odbc/reference/odbc-64-bit-information.md)。  
+ 如果您的應用程式將在64位的作業系統上執行, 請參閱[ODBC 64 位資訊](../../../odbc/reference/odbc-64-bit-information.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

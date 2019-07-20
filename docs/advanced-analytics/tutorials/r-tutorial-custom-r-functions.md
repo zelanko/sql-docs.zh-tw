@@ -1,43 +1,43 @@
 ---
-title: 使用 RevoScaleR rxExec-SQL Server Machine Learning 的 SQL Server 上執行自訂的 R 函式
-description: 教學課程逐步解說如何使用 RevoScaleR 函式的 SQL Server 上執行自訂的 R 指令碼。
+title: 使用 RevoScaleR rxExec 在 SQL Server 上執行自訂 R 函數
+description: 有關如何使用 RevoScaleR 函數在 SQL Server 上執行自訂 R 腳本的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961958"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345989"
 ---
-# <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 的 SQL Server 上執行自訂的 R 函式
+# <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 在 SQL Server 上執行自訂 R 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-您也可以傳遞您的函式，透過 SQL Server 的內容中執行自訂的 R 函數[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)，假設您的指令碼需要的任何程式庫也會安裝在伺服器上，而且這些程式庫相容基底R 的散發 
+您可以透過[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)傳遞函式, 在 SQL Server 的內容中執行自訂 R 函式, 假設您的腳本所需的任何程式庫也安裝在伺服器上, 而且這些程式庫與 R 的基底散發相容。 
 
-**RxExec**函式中**RevoScaleR**提供一個機制來執行您所需要的任何 R 指令碼。 此外， **rxExec**能夠明確地將工作分散到在單一伺服器中，加入為有限的原生的 R 引擎資源條件約束的指令碼的小數位數的多個核心。
+**RevoScaleR**中的**rxExec**函式提供了一種機制, 可讓您執行任何所需的 R 腳本。 此外, **rxExec**可以在單一伺服器中明確地將工作分散到多個核心, 並將擴充功能新增至僅限於原生 R 引擎的資源限制式的腳本。
 
-在本教學課程中，您將使用模擬的資料來示範的遠端伺服器執行的自訂 R 函式執行。
+在本教學課程中, 您將使用模擬資料來示範如何執行在遠端伺服器上執行的自訂 R 函數。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-+ [（使用 R) SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services （資料庫）](../install/sql-r-services-windows-install.md)
++ [SQL Server 2017 Machine Learning 服務 (使用 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)
   
-+ [資料庫權限](../security/user-permission.md)和 SQL Server 資料庫使用者登入
++ [資料庫許可權](../security/user-permission.md)和 SQL Server 資料庫使用者登入
 
-+ [在開發工作站使用 RevoScaleR 程式庫](../r/set-up-a-data-science-client.md)
++ [具有 RevoScaleR 程式庫的開發工作站](../r/set-up-a-data-science-client.md)
 
-R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教學課程中執行 R 指令碼。 您也可以使用 IDE，例如 RStudio 或 R Tools for Visual Studio。
+用戶端工作站上的 R 散發會提供內建的**rgui.exe**工具, 可讓您在本教學課程中用來執行 R 腳本。 您也可以使用 IDE, 例如 RStudio 或 Visual Studio R 工具。
 
 ## <a name="create-the-remote-compute-context"></a>建立遠端計算內容
 
-用戶端工作站上執行下列 R 命令。 例如，您會使用**Rgui**，從這個位置啟動它：C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
+在用戶端工作站上執行下列 R 命令。 例如, 您使用的是**rgui.exe**, 請從這個位置啟動它:C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
 
-1. 指定執行計算的 SQL Server 執行個體的連接字串。 伺服器必須設定的 R 整合。 在此練習中，未使用的資料庫名稱，但連接字串需要其中一個。 如果您有測試或範例資料庫，您可以使用的。
+1. 針對執行計算的 SQL Server 實例指定連接字串。 伺服器必須針對 R 整合進行設定。 此練習中不會使用資料庫名稱, 但是連接字串需要一個。 如果您有測試或範例資料庫, 您可以使用它。
 
     **使用 SQL 登入**
 
@@ -51,26 +51,26 @@ R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教�
     sqlConnString <- "Driver=SQL Server;Server=<SQL-Server-instance-name>;Database=<database-name>;Trusted_Connection=True"
     ```
 
-2. 建立遠端計算內容中的連接字串所參考的 SQL Server 執行個體。
+2. 建立遠端計算內容至連接字串中所參考的 SQL Server 實例。
 
     ```R
     sqlCompute <- RxInSqlServer(connectionString = sqlConnString)
     ```
 
-3. 啟用計算內容，然後傳回 物件定義，並確認步驟。 您應該會看到計算內容物件的屬性。
+3. 啟動計算內容, 然後傳回物件定義做為確認步驟。 您應該會看到 compute 內容物件的屬性。
 
     ```R
     rxSetComputeContext(sqlCompute)
     rxGetComputeContext()
     ```
 
-## <a name="create-the-custom-function"></a>建立自訂函式
+## <a name="create-the-custom-function"></a>建立自訂函數
 
-在此練習中，您將建立自訂的 R 函數，以模擬一般博奕，輪流骰子所組成。 遊戲規則會決定 win 或遺失的結果：
+在此練習中, 您將建立自訂的 R 函式, 以模擬由輪流一對骰子組成的一般賭場。 遊戲的規則決定了勝利或遺失的結果:
 
-+ 在回復 7 或 11，您就贏了。
-+ 向前復原 2、 3 或 12，您會遺失。
-+ 4、 5、 6、 8、 9，或 10，則該數字會變成您的點，而且您可以繼續擲到決勝點 （在此情況下您就算贏） 或向前復原為 7，在其中情況下，您會遺失。
++ 在最初的變換中, 將7或11變換為獲勝。
++ 第2、3或12卷會遺失。
++ 變換4、5、6、8、9或 10, 該數位就會變成您的點數, 而您會繼續進行迴圈, 直到您再次變換時間點 (在這種情況下獲勝) 或變換 7, 在這種情況下您會遺失。
 
 使用 R 時，您可以建立自訂函數，並接連執行多次，以輕鬆模擬出這樣的遊戲。
 
@@ -102,7 +102,7 @@ R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教�
     }
     ```
   
-2.  單一骰子遊戲藉由模擬執行函式。
+2.  藉由執行函式來模擬單骰子的遊戲。
   
     ```R
     rollDice()
@@ -110,13 +110,13 @@ R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教�
   
     您贏了還是輸了？
   
-既然您已操作的指令碼，我們來看看如何使用**rxExec**執行函式多次，以便建立模擬並協助判斷獲勝的機率。
+現在您已有操作腳本, 讓我們來瞭解如何使用**rxExec**多次執行函式, 以建立可協助判斷贏得機率的模擬。
 
-## <a name="pass-rolldice-in-rxexec"></a>RollDice() 傳入 rxExec
+## <a name="pass-rolldice-in-rxexec"></a>在 rxExec 中傳遞 rollDice ()
 
-若要在遠端 SQL 伺服器的內容中執行任意的函式，呼叫**rxExec**函式。
+若要在遠端 SQL Server 的內容中執行任意函數, 請呼叫**rxExec**函數。
 
-1. 呼叫自訂函數的引數作為**rxExec**，以及修改模擬其他參數。
+1. 呼叫自訂函式做為**rxExec**的引數, 以及用來修改模擬的其他參數。
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -127,7 +127,7 @@ R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教�
   
     + 引數 *RNGseed* 和 *RNGkind* 可以用來控制隨機數字的產生。 當 *RNGseed* 設為 [自動]  時，會在每一個背景工作上平行初始化隨機資料流。
   
-2. **rxExec** 函數會建立一份清單，其中每個回合都有一個項目；不過，在清單未完成時，您都不會察覺到任何影響。 當所有反覆項目都完成時，該行的開頭**長度**會傳回值。
+2. **rxExec** 函數會建立一份清單，其中每個回合都有一個項目；不過，在清單未完成時，您都不會察覺到任何影響。 當所有的反復專案都完成時, 以**length**開頭的行將會傳回值。
   
     您即可移至下一個步驟，以取得輸贏記錄的摘要。
   
@@ -139,18 +139,18 @@ R 散發，用戶端工作站上的提供內建**Rgui**工具可供您在本教�
   
     結果應該如下所示：
   
-     *輸贏* *12 8*
+     *勝利遺失* *12 8*
 
 ## <a name="conclusion"></a>結論
 
-雖然此練習是簡單的它會示範適用於整合 SQL Server 上執行的 R 指令碼中的任意 R 函數的重要機制。 若要彙整重點，讓這項技術：
+雖然此練習很簡單, 但它會示範在 SQL Server 上執行的 R 腳本中整合任意 R 函數的重要機制。 若要總結讓這項技術可行的重點:
 
-+ 必須設定 SQL Server machine learning 及 R 整合：[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)與 [R] 功能中，或是[SQL Server 2016 R Services （資料庫）](../install/sql-r-services-windows-install.md)。
++ 必須設定機器學習和 R 整合的 SQL Server:使用 R 功能[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md), 或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)。
 
-+ SQL Server 上必須安裝您的函式，包括任何相依性，所使用的開放原始碼或協力廠商程式庫。 如需詳細資訊，請參閱 <<c0> [ 安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
++ 您的函式中使用的開放原始碼或協力廠商程式庫 (包括任何相依性) 必須安裝在 SQL Server 上。 如需詳細資訊, 請參閱[安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
 
-+ 將指令碼從開發環境移至強化後的生產環境，可以導入防火牆和網路限制。 請仔細測試，以確保您的指令碼可如預期般執行。
++ 將腳本從開發環境移至強化的生產環境, 可能會引進防火牆和網路限制。 請小心測試, 以確定您的腳本能夠如預期般執行。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需更複雜的使用範例**rxExec**，請參閱這篇文章：[Foreach 與 rxExec 粗略資料粒度平行處理原則](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+如需使用**rxExec**的更複雜範例, 請參閱這篇文章:[使用 foreach 和 rxExec 的粗略細微性平行處理原則](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

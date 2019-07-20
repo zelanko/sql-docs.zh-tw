@@ -1,6 +1,6 @@
 ---
-title: 教學課程中建立、 定型和計分 R-SQL Server Machine Learning 服務中的資料分割為基礎的模型
-description: 了解如何建立模型、 定型和使用資料分割使用資料分割為基礎的模型化功能，SQL Server 機器學習時以動態方式建立的資料。
+title: 在 R 中建立、定型和評分以資料分割為基礎之模型的教學課程
+description: 瞭解如何在使用 SQL Server 機器學習服務的分割型模型化能力時, 針對動態建立的資料分割、定型和使用。
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,45 +9,45 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ceba61f4bdc22b4049453ed27245f09efe080b1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961976"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345954"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立分割區為基礎的模型
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立以資料分割為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-在 SQL Server 2019，分割區為基礎的模型會是能夠建立並定型模型對資料分割的資料。 分層資料自然地分割成指定的分類配置-例如地區、 日期和時間、 年齡或性別-您可以執行指令碼透過整個資料集，模型、 訓練及評分仍維持不變的資料分割上的能力透過上述所有作業。 
+在 SQL Server 2019 中, 分割型模型化是透過分割資料建立模型並將其定型的能力。 針對自然分割成指定分類配置的分層資料 (例如地理區域、日期和時間、年齡或性別), 您可以在整個資料集上執行腳本, 並能夠對維持不變的分割區進行模型、定型和評分所有這些作業。 
 
-資料分割為基礎的模型上啟用透過兩個新參數[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+以分割為基礎的模型會透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)上的兩個新參數來啟用:
 
-+ **input_data_1_partition_by_columns**，指定用於資料分割的資料行。
-+ **input_data_1_order_by_columns**指定要排序依據的資料行。 
++ **input_data_1_partition_by_columns**, 指定要做為分割依據的資料行。
++ **input_data_1_order_by_columns**指定排序依據的資料行。 
 
-在本教學課程，了解資料分割為基礎的模型，使用傳統的 NYC 計程車範例資料和 R 指令碼。 資料分割資料行是付款方法。
+在本教學課程中, 您將瞭解使用傳統 NYC 計程車範例資料和 R 腳本的資料分割型模型化。 資料分割資料行是付款方法。
 
 > [!div class="checklist"]
-> * 資料分割根據付款類型 (5)。
-> * 建立並定型的模型，每個磁碟分割，儲存在資料庫中的物件。
-> * 透過每個磁碟分割模型，使用針對該用途保留的範例資料預測小費的結果的機率。
+> * 磁碟分割是以付款類型 (5) 為基礎。
+> * 在每個資料分割上建立和定型模型, 並將物件儲存在資料庫中。
+> * 使用針對該用途保留的範例資料, 預測每個資料分割模型的 tip 結果機率。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
  
-若要完成本教學課程中，您必須擁有下列項目：
+若要完成本教學課程, 您必須具備下列各項:
 
-+ 足夠的系統資源。 資料集很大，並訓練作業相當耗費資源。 可能的話，請使用具有至少 8 GB RAM 的系統。 或者，您可以使用較小的資料集以解決資源限制。 減少資料集的指示會以內嵌方式。 
++ 足夠的系統資源。 資料集很大, 而定型作業會耗用大量資源。 可能的話, 請使用至少具有 8 GB RAM 的系統。 或者, 您可以使用較小的資料集來解決資源條件約束。 縮減資料集的指示是內嵌的。 
 
-+ T-SQL 的工具執行查詢，例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
++ 適用于 T-SQL 查詢執行的工具, 例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，您可以[下載並還原](demo-data-nyctaxi-in-sql.md)至您的本機資料庫引擎執行個體。 檔案大小大約是 90 MB。
++ [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), 您可以[下載並還原](demo-data-nyctaxi-in-sql.md)至您的本機資料庫引擎實例。 檔案大小大約是 90 MB。
 
-+ SQL Server 2019 預覽資料庫引擎執行個體，與機器學習服務和 R 的整合。
++ SQL Server 2019 preview 資料庫引擎實例, 具有 Machine Learning 服務和 R 整合。
 
-檢查版本，藉由執行 **`SELECT @@Version`** 為 T-SQL 查詢中的查詢工具。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
+藉由在查詢 **`SELECT @@Version`** 工具中以 t-SQL 查詢的形式執行來檢查版本。 輸出應該是 "Microsoft SQL Server 2019 (CTP 2.4)-15.0. x"。
 
-檢查可用性的 R 套件，藉由傳回格式正確的所有目前已安裝與您的資料庫引擎執行個體的 R 封裝清單：
+藉由傳回目前與您的 database engine 實例一起安裝的所有 R 套件格式正確的清單, 檢查 R 封裝的可用性:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -63,13 +63,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>連接到資料庫
 
-啟動 Management Studio 並連接到 database engine 執行個體。 在 [物件總管] 中，確認[NYCTaxi_Sample 資料庫](demo-data-nyctaxi-in-sql.md)存在。 
+啟動 Management Studio 並連接到 database engine 實例。 在物件總管中, 確認[NYCTaxi_Sample 資料庫](demo-data-nyctaxi-in-sql.md)存在。 
 
 ## <a name="create-calculatedistance"></a>建立 CalculateDistance
 
-示範資料庫，隨附於計算距離，但我們更好的預存程序適用於純量函數使用資料表值函式。 執行下列程式碼來建立**CalculateDistance**中所使用的函式[訓練步驟](#training-step)稍後。
+示範資料庫隨附用來計算距離的純量函數, 但我們的預存程式更適合使用資料表值函式。 執行下列腳本, 以建立稍後在[定型步驟](#training-step)中使用的**CalculateDistance**函數。
 
-若要確認已建立函式，請檢查 \Programmability\Functions\Table-valued 函式，在**NYCTaxi_Sample**物件總管 中的資料庫。
+若要確認已建立函式, 請在物件總管中, 檢查**NYCTaxi_Sample**資料庫下的 \Programmability\Functions\Table-valued 函數。
 
 ```sql
 USE NYCTaxi_sample
@@ -99,15 +99,15 @@ FROM (
 GO
  ```
 
-## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>定義用於建立和每個磁碟分割的定型模型的程序
+## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>定義建立和定型每個資料分割模型的程式
 
-本教學課程中包裝在預存程序中的 R 指令碼。 在此步驟中，您可以建立的預存程序來建立輸入資料集、 建立分類模型來預測小費的結果，使用 R，然後再將模型儲存在資料庫中。
+本教學課程會將 R 腳本包裝在預存程式中。 在此步驟中, 您會建立使用 R 建立輸入資料集的預存程式、建立用於預測 tip 結果的分類模型, 然後將模型儲存在資料庫中。
 
-此指令碼所使用的參數輸入，您會看到**input_data_1_partition_by_columns**並**input_data_1_order_by_columns**。 回想一下，這些參數是所機制分割模型就會發生。 將參數傳遞做為輸入[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)外部指令碼執行一次的每個資料分割的處理序資料分割。 
+在此腳本使用的參數輸入中, 您會看到**input_data_1_partition_by_columns**和**input_data_1_order_by_columns**。 回想一下, 這些參數是進行分割模型化所使用的機制。 參數會當做輸入傳遞至[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , 以處理每個分割區執行一次之外部腳本的資料分割。 
 
-這個預存程序，[使用平行處理原則](#parallel)更快的時間，以完成。
+針對此預存程式, 請[使用平行](#parallel)處理來加快完成的時間。
 
-執行此指令碼之後，您應該會看到**train_rxLogIt_per_partition**下方 \Programmability\Stored 程序中**NYCTaxi_Sample**物件總管 中的資料庫。 您也應該會看到新的資料表，用來儲存模型： **dbo.nyctaxi_models**。
+執行此腳本之後, 您應該會在物件總管的**NYCTaxi_Sample**資料庫下的 \Programmability\Stored 程式中看到**train_rxLogIt_per_partition** 。 您也應該會看到用來儲存模型的新資料表: **dbo. nyctaxi_models**。
 
 ```sql
 USE NYCTaxi_Sample
@@ -167,20 +167,20 @@ GO
 
 ### <a name="parallel-execution"></a>平行執行
 
-請注意， [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)輸入包括 **@parallel= 1**，用來平行處理。 相對於舊版，在 SQL Server 2019，設定 **@parallel= 1**來進行平行執行更有可能的結果，查詢最佳化工具提供更強的提示。
+請注意, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)輸入包括 **@parallel= 1**, 用來啟用平行處理。 與舊版不同的是, 在 SQL Server 2019 中, 設定 **@parallel= 1**會對查詢最佳化工具提供更強的提示, 讓平行執行更有可能的結果。
 
-根據預設，查詢最佳化工具通常會進行運作 **@parallel= 1**超過 256 個資料列，但如果您可以處理此明確設定的資料表上 **@parallel= 1**在此所示指令碼。
+根據預設, 查詢最佳化工具通常會在具有超過256個數據列的資料表上操作 **@parallel= 1** , 但如果您可以藉由設定 **@parallel= 1**明確處理此作業, 如此腳本所示。
 
 > [!Tip]
-> 您可以使用訓練 workoads **@parallel** 任何任意的訓練指令碼，甚至是使用非 Microsoft rx 演算法。 通常，只有 RevoScaleR 演算法 （具有 rx 前置詞） 會提供 SQL Server 中的定型案例中的平行處理原則。 但是，新的參數，您可以平行處理呼叫函式，包括開放原始碼 R 函數，不是明確地使用這項功能設計的指令碼。 這是因為資料分割有特定的執行緒親和性，因此以每個分割區為基礎，在指定的執行緒上執行的指令碼中呼叫的所有作業。
+> 針對定型 workoads, 您可以使用 **@parallel** 搭配任何任意定型腳本, 甚至是使用非 Microsoft rx 演算法的程式碼。 一般來說, 只有 RevoScaleR 演算法 (具有 rx 前置詞) 在 SQL Server 的定型案例中提供平行處理。 但是有了新的參數, 您就可以平行處理呼叫函式的腳本, 包括開放原始碼 R 函數, 而不是特別使用該功能進行設計。 這是因為分割區與特定執行緒具有相似性, 因此在腳本中呼叫的所有作業都會在指定的執行緒上以每個分割區為基礎執行。
 
 <a name="training-step"></a>
 
-## <a name="run-the-procedure-and-train-the-model"></a>執行程序和定型模型
+## <a name="run-the-procedure-and-train-the-model"></a>執行程式並訓練模型
 
-在本節中，指令碼來定型模型，您建立及儲存上一個步驟中。 下列範例會示範兩種方法來定型您的模型： 使用整個資料集或部分的資料。 
+在本節中, 腳本會訓練您在上一個步驟中建立並儲存的模型。 下列範例示範兩種用來定型模型的方法: 使用整個資料集或部分資料。 
 
-預期此步驟，需要一些時間。 定型會耗用大量運算資源，花幾分鐘才能完成。 如果系統資源，尤其是記憶體不足，無法載入，請使用 資料的子集。 第二個範例提供的語法。
+預期此步驟需要一些時間。 訓練需要大量運算, 花費數分鐘的時間才能完成。 如果系統資源 (特別是記憶體) 不足以進行負載, 請使用資料的子集。 第二個範例會提供語法。
 
 ```sql
 --Example 1: train on entire dataset
@@ -202,22 +202,22 @@ GO
 ```
 
 > [!NOTE]
-> 如果您正在執行其他工作負載，您可以將附加`OPTION(MAXDOP 2)`SELECT 陳述式，如果您想要限制為只是 2 個核心的查詢處理。
+> 如果您正在執行其他工作負載, 如果您`OPTION(MAXDOP 2)`想要將查詢處理限制為只有2個核心, 您可以附加至 SELECT 語句。
 
 ## <a name="check-results"></a>檢查結果
 
-在模型資料表中的結果應該是五個不同的模型，根據 依五個的付款類型的五個資料分割。 模型會位於**ml_models**資料來源。
+[模型] 資料表中的結果應該是五個不同的模型, 以五個付款類型分割的五個數據分割為基礎。 模型位於**ml_models**資料來源中。
 
 ```sql
 SELECT *
 FROM ml_models
 ```
  
-## <a name="define-a-procedure-for-predicting-outcomes"></a>定義預測結果的程序
+## <a name="define-a-procedure-for-predicting-outcomes"></a>定義預測結果的程式
 
-您可以使用相同的參數進行評分。 下列範例包含 R 指令碼，將目前正在處理的資料分割使用正確的模型進行評分。
+您可以使用相同的參數來進行計分。 下列範例包含 R 腳本, 它會針對目前正在處理的資料分割, 使用正確的模型進行評分。
 
-同樣地，建立預存的程序，以包裝您的 R 程式碼。
+如先前所述, 建立預存程式來包裝 R 程式碼。
 
 ```sql
 USE NYCTaxi_Sample
@@ -309,7 +309,7 @@ TRUNCATE TABLE prediction_results
 GO
 ```
 
-## <a name="run-the-procedure-and-save-predictions"></a>執行程序，並儲存預測
+## <a name="run-the-procedure-and-save-predictions"></a>執行程式並儲存預測
 
 ```sql
 INSERT INTO prediction_results (
@@ -325,9 +325,9 @@ EXECUTE [predict_per_partition]
 GO
 ```
 
-## <a name="view-predictions"></a>檢視預測
+## <a name="view-predictions"></a>查看預測
 
-因為儲存預測，您可以執行簡單的查詢，以傳回結果集。
+因為會儲存預測, 所以您可以執行簡單的查詢來傳回結果集。
 
 ```sql
 SELECT *
@@ -336,7 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)至資料分割的資料上反覆運算作業。 針對得更仔細看看呼叫預存程序的外部指令碼，並使用 RevoScaleR 函式，繼續下列教學課程。
+在本教學課程中, 您已使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)來反覆運算分割資料的作業。 如需深入瞭解如何在預存程式中呼叫外部腳本, 以及如何使用 RevoScaleR 函數, 請繼續進行下列教學課程。
 
 > [!div class="nextstepaction"]
 > [R 和 SQL Server 的逐步解說](walkthrough-data-science-end-to-end-walkthrough.md)

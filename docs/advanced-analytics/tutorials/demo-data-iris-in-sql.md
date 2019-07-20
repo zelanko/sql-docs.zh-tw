@@ -1,35 +1,35 @@
 ---
-title: 如需 Python 和 R 教學課程-SQL Server Machine Learning 的鳶尾花示範資料集
-Description: 建立資料庫，其中包含鳶尾花資料集和儲存模型的資料表。 練習示範如何在 SQL Server 預存程序中包裝 R 語言或 Python 程式碼中使用此資料集。
+title: 適用于 Python 和 R 教學課程的鳶尾花示範資料集
+Description: 建立包含鳶尾花資料集的資料庫, 以及用來儲存模型的資料表。 此資料集用於練習, 示範如何將 R 語言或 Python 程式碼包裝在 SQL Server 預存程式中。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 26358fea3b7d08d986a5078cf6484e7c4e0d3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5050fc0d0fcbb6c70b7aabea1b67d75cc686b96b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962119"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345229"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>如需 SQL Server 中的 Python 和 R 教學課程的鳶尾花示範資料 
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server 中的 Python 和 R 教學課程鳶尾花示範資料 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在此練習中，建立將資料從 SQL Server 資料庫[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)和相同的資料為基礎的模型。 鳶尾花資料包含在 SQL Server 所安裝的 R 和 Python 散發套件，並會在機器學習服務教學課程適用於 SQL Server。 
+在此練習中, 請建立 SQL Server 資料庫, 以根據相同的資料來儲存[鳶尾花花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)和模型中的資料。 鳶尾花資料會包含在 SQL Server 所安裝的 R 和 Python 散發套件中, 並用於 SQL Server 的機器學習教學課程中。 
 
-若要完成此練習中，您應該具備[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或其他工具，可執行 T-SQL 查詢。
+若要完成此練習, 您應該具有[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或可執行 t-SQL 查詢的其他工具。
 
-教學課程和快速入門使用此資料集包含下列項目：
+使用此資料集的教學課程和快速入門包括下列各項:
 
-+  [快速入門：建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型](quickstart-python-train-score-in-tsql.md)
++  [入門在 SQL Server 中使用預存程式來建立、定型和使用 Python 模型](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>建立資料庫
 
-1. 啟動 SQL Server Management Studio，並開啟新**查詢**視窗。  
+1. 啟動 SQL Server Management Studio, 然後開啟新的**查詢**視窗。  
 
-2. 建立新的資料庫，此專案中，並將內容變更您**查詢**視窗，以使用新的資料庫。
+2. 為此專案建立新的資料庫, 並將**查詢**視窗的內容變更為使用新的資料庫。
 
     ```sql
     CREATE DATABASE irissql
@@ -39,9 +39,9 @@ ms.locfileid: "67962119"
     ```
 
     > [!TIP] 
-    > 如果您還不熟悉 SQL Server，或使用您自己的伺服器上時，常見的錯誤是登入，並啟動工作，不會注意到您位於**主要**資料庫。 若要確定您使用的正確的資料庫，永遠指定內容中使用`USE <database name>`陳述式 (例如`use irissql`)。
+    > 如果您不熟悉 SQL Server, 或是在您擁有的伺服器上工作, 常見的錯誤是登入並開始工作, 而不會注意到您是在**master**資料庫中。 若要確定您使用的是正確的資料庫, 請一律使用`USE <database name>`語句指定內容 (例如, `use irissql`)。
 
-3. 新增一些空白的資料表： 一個用來儲存資料，以及一個用來儲存已定型的模型。 **Iris_models**資料表用於儲存在其他的練習中所產生的序列化的模型。
+3. 加入一些空白資料表: 一個用來儲存資料, 另一個用來儲存定型的模型。 **Iris_models**資料表是用來儲存在其他練習中產生的序列化模型。
 
     下列程式碼會建立定型資料的資料表。
 
@@ -57,9 +57,9 @@ ms.locfileid: "67962119"
     ```
 
     > [!TIP] 
-    > 如果您不熟悉 T-SQL，值得記住`DROP...IF`陳述式。 當您嘗試建立資料表，並已經存在時，SQL Server 會傳回錯誤：「 有已命名為 'iris_data' 資料庫中的物件。 」 若要避免這類錯誤的一個方式是刪除任何現有的資料表或其他物件做為您的程式碼的一部分。
+    > 如果您不熟悉 t-sql, 請務必記住`DROP...IF`語句。 當您嘗試建立資料表, 而且其中一個已經存在時, SQL Server 會傳回錯誤:「資料庫中已經有名為 ' iris_data ' 的物件。」 避免這類錯誤的其中一種方式, 就是刪除任何現有的資料表或其他物件當做程式碼的一部分。
 
-4. 執行下列程式碼來建立用來儲存已定型的模型資料表。 若要儲存 SQL Server 中的 Python （或 R） 模型，他們必須序列化及儲存在類型的資料行**varbinary （max)** 。 
+4. 執行下列程式碼, 以建立用來儲存定型模型的資料表。 若要在 SQL Server 中儲存 Python (或 R) 模型, 必須將它們序列化並儲存在**Varbinary (max)** 類型的資料行中。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
@@ -72,17 +72,17 @@ ms.locfileid: "67962119"
     GO
     ```
 
-    除了模型的內容，一般而言，您就也加入其他實用的中繼資料，例如模型的名稱、 已受過訓練，日期的來源演算法和參數，來源資料的資料行等等。 現在，我們會保持簡單，並使用模型名稱。
+    除了模型內容之外, 您通常也會加入其他有用中繼資料的資料行, 例如模型的名稱、定型的日期、來源演算法和參數、來源資料等等。 我們現在會將它保持簡單, 並只使用模型名稱。
 
 ## <a name="populate-the-table"></a>填入資料表
 
-您可以從 R 或 Python 來取得內建的鳶尾花資料。 您可以使用 Python 或 R 將資料載入至資料框架，並將它插入資料庫中的資料表。 將訓練資料從外部的工作階段移至 SQL Server 資料表是一個多步驟的程序：
+您可以從 R 或 Python 取得內建的鳶尾花資料。 您可以使用 Python 或 R 將資料載入資料框架, 然後將它插入資料庫中的資料表。 將定型資料從外部會話移至 SQL Server 資料表是多步驟的程式:
 
-+ 設計預存程序可取得您想要的資料。
-+ 執行預存程序，以取得實際資料。
-+ 建構的 INSERT 陳述式，來指定應儲存擷取的資料。
++ 設計可取得所需資料的預存程式。
++ 執行預存程式以實際取得資料。
++ 建立 INSERT 語句, 以指定應儲存已抓取之資料的位置。
 
-1. 在系統上使用 Python 整合，建立下列預存程序將資料載入使用 Python 程式碼。
+1. 在具有 Python 整合的系統上, 建立下列使用 Python 程式碼來載入資料的預存程式。
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -103,9 +103,9 @@ ms.locfileid: "67962119"
     GO
     ```
 
-    當您執行此程式碼時，您應該會收到訊息 「 命令成功完成。 」 這都表示為預存程序，已建立根據您的規格。
+    當您執行此程式碼時, 應該會出現「命令已順利完成」訊息。 這表示預存程式是根據您的規格建立的。
 
-2. 或者，在具有 R 整合的系統，建立改為使用 R 的程序。
+2. 或者, 在具有 R 整合的系統上, 改為建立使用 R 的程式。
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -125,26 +125,26 @@ ms.locfileid: "67962119"
     GO
     ```
 
-3. 若要實際填入資料表，執行預存程序，並指定寫入資料的位置的資料表。 當執行時，預存程序執行的 Python 或 R 程式碼載入內建的鳶尾花資料集，並再將資料插入**iris_data**資料表。
+3. 若要實際填入資料表, 請執行預存程式, 並指定應該在其中寫入資料的資料表。 執行時, 預存程式會執行 Python 或 R 程式碼, 以載入內建的鳶尾花資料集, 然後將資料插入**iris_data**資料表。
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")
     EXEC dbo.get_iris_dataset;
     ```
 
-    如果您還不熟悉 T-SQL，請注意，INSERT 陳述式只會將新的資料;它不會檢查有現有的資料，或刪除並重建此資料表。 若要避免在資料表中取得多份相同的資料，您可以先執行此陳述式： `TRUNCATE TABLE iris_data`。 T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql)陳述式會刪除現有的資料，但會保留資料表的結構保持不變。
+    如果您不熟悉 T-sql, 請注意 INSERT 語句只會加入新的資料。它不會檢查現有的資料, 也不會刪除和重建資料表。 若要避免在資料表中取得相同資料的多個複本, 您可以先執行此語句`TRUNCATE TABLE iris_data`:。 T-sql [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql)語句會刪除現有的資料, 但會保持資料表的結構不變。
 
     > [!TIP]
-    > 若要修改預存程序之後，您不需要卸除並重新建立它。 使用[ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)陳述式。 
+    > 若要稍後修改預存程式, 您不需要卸載再重新建立它。 使用[ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)語句。 
 
 
 ## <a name="query-the-data"></a>查詢資料
 
-驗證步驟中，執行查詢，以確認資料已上傳。
+執行查詢以確認資料已上傳, 做為驗證步驟。
 
-1. 在 [物件總管] 的資料庫，以滑鼠右鍵按一下**irissql**資料庫，然後開始新的查詢。
+1. 在物件總管的 [資料庫] 底下, 以滑鼠右鍵按一下 [ **irissql** ] 資料庫, 然後開始新的查詢。
 
-2. 執行一些簡單的查詢：
+2. 執行一些簡單的查詢:
 
     ```sql
     SELECT TOP(10) * FROM iris_data;
@@ -153,6 +153,6 @@ ms.locfileid: "67962119"
 
 ## <a name="next-steps"></a>後續步驟
 
-下列快速入門中，您會建立機器學習模型並將它儲存至資料表，，然後使用模型來產生預測的結果。
+在下列快速入門中, 您將建立機器學習模型, 並將它儲存至資料表, 然後使用模型來產生預測的結果。
 
-+ [快速入門：建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型](quickstart-python-train-score-in-tsql.md)
++ [入門在 SQL Server 中使用預存程式來建立、定型和使用 Python 模型](quickstart-python-train-score-in-tsql.md)

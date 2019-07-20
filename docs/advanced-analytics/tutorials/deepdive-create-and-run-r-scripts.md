@@ -1,64 +1,64 @@
 ---
-title: 計算摘要統計資料 RevoScaleR 教學課程-SQL Server Machine Learning
-description: 教學課程逐步解說，如何計算 SQL Server 上使用 R 語言的統計摘要統計資料。
+title: 計算摘要統計資料 RevoScaleR 教學課程
+description: 有關如何在 SQL Server 上使用 R 語言計算統計摘要統計資料的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 945b7cb32c64c343ca7bb5ab2aab4169fd7bea24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f90cc0e6101e168e15ed7c1145d286f799375ac
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962282"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344713"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>計算摘要統計資料，在 R 中 （SQL Server 和 RevoScaleR 教學課程）
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R 中的計算摘要統計資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-它會使用已建立的資料來源與先前的課程中建立的計算內容，在此影片中執行強大的 R 指令碼。 在這一課，您將使用本機和遠端伺服器計算內容，來執行下列工作：
+它會使用先前課程中建立的資料來源和計算內容, 在這一課中執行高驅動的 R 腳本。 在這一課, 您將使用本機和遠端伺服器計算內容來執行下列工作:
 
 > [!div class="checklist"]
 > * 將計算內容切換至 SQL Server
-> * 取得遠端資料物件上的摘要統計資料
+> * 取得遠端資料物件的摘要統計資料
 > * 計算本機摘要
 
-如果您已完成先前的課程，您應該有這些遠端計算內容： sqlCompute 和 sqlComputeTrace。 邁向未來，您使用將 sqlCompute 和本機計算內容在後續課程中。
+如果您已完成先前的課程, 您應該會有下列遠端計算內容: sqlCompute 和 sqlComputeTrace。 在未來的課程中, 您將使用 sqlCompute 和本機計算內容來繼續進行。
 
-使用 R IDE 或**Rgui**在這一課中執行 R 指令碼。
+使用 R IDE 或**rgui.exe**來執行本課程中的 r 腳本。
 
-## <a name="compute-summary-statistics-on-remote-data"></a>計算對遠端資料的摘要統計資料
+## <a name="compute-summary-statistics-on-remote-data"></a>計算遠端資料的摘要統計資料
 
-您可以從遠端執行所有 R 程式碼之前，您需要指定遠端計算內容。 所有後續的計算上進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中指定的電腦*sqlCompute*參數。
+您必須先指定遠端計算內容, 才可以從遠端執行任何 R 程式碼。 所有後續計算都是在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *sqlCompute*參數所指定的電腦上進行。
 
-計算內容保持作用中，直到您變更為止。 不過，任何 R 指令碼都*無法*執行遠端伺服器內容中的將會自動在本機執行。
+計算內容會維持作用中狀態, 直到您變更它為止。 不過, 任何*無法*在遠端伺服器內容中執行的 R 腳本都將自動在本機執行。
 
-若要查看計算內容的運作方式，產生 sqlFraudDS 資料來源上的遠端 SQL Server 上的摘要統計資料。 在建立此資料來源物件[兩個課程](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)和代表 ccFraudSmall 資料庫中的資料表 RevoDeepDive。 
+若要查看計算內容的運作方式, 請在遠端 SQL Server 上產生 sqlFraudDS 資料來源的摘要統計資料。 這個資料來源物件是在第[二課](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)建立的, 代表 RevoDeepDive 資料庫中的 ccFraudSmall 資料表。 
 
-1. 若要在上一課中建立的 sqlCompute 切換計算內容：
+1. 將計算內容切換至在上一課中建立的 sqlCompute:
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. 呼叫[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)函式，並傳遞必要引數，例如公式、 資料來源，並將結果指派給變數`sumOut`。
+2. 呼叫[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)函數並傳遞必要引數, 例如公式和資料來源, 然後將結果指派給變數`sumOut`。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 語言提供許多摘要函式，但**rxSummary**中**RevoScaleR**支援在各種遠端計算內容，包括上執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需類似函數的詳細資訊，請參閱[資料摘要使用 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
+    R 語言提供許多摘要功能, 但**RevoScaleR**中的**rxSummary**支援在各種遠端計算內容上執行, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包括。 如需類似功能的詳細資訊, 請參閱[使用 RevoScaleR 的資料摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
   
-3. 列印到主控台 sumOut 的內容。
+3. 將 sumOut 的內容列印到主控台。
   
     ```R
     sumOut
     ```
     > [!NOTE]
-    > 如果您收到錯誤，請等候幾分鐘的時間才能完成，然後再重試此命令執行。
+    > 如果您收到錯誤, 請等候幾分鐘讓執行完成, 然後再重試命令。
 
 **結果**
 
@@ -91,7 +91,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. 當從 SQL Server 擷取資料，通常就可以取得較佳的效能增加每個讀取，擷取的資料列數假設增加的區塊大小可以容納在記憶體中。 執行下列命令，以增加的值*rowsPerRead*資料來源上的參數。 之前， *rowsPerRead* 的值已設為 5000。
+2. 從 SQL Server 解壓縮資料時, 您通常可以藉由增加針對每個讀取所解壓縮的資料列數目來取得較佳的效能, 假設增加的區塊大小可在記憶體中容納。 執行下列命令, 以增加資料來源上*rowsPerRead*參數的值。 之前， *rowsPerRead* 的值已設為 5000。
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -101,7 +101,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. 呼叫**rxSummary**上新的資料來源。
+3. 在新的資料來源上呼叫**rxSummary** 。
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -109,7 +109,7 @@ Number of valid observations: 10000
   
    實際的結果應該與您在 **電腦的內容中執行** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時相同。 不過，作業可能會更快或更慢。 大部分取決於資料庫連線，因為正在將資料傳輸至本機電腦進行分析。
 
-4. 切換回遠端計算內容的 [下一步] 的數個課程。
+4. 在接下來的幾個課程中, 切換回遠端計算內容。
 
     ```R
     rxSetComputeContext(sqlCompute)
