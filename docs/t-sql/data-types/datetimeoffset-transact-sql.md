@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 636d6979451769151725ba1743ea8a1f3238ccc9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086764"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +84,7 @@ ms.locfileid: "56043169"
   
 時區位移範圍會遵循 XSD 結構描述定義的 W3C XML 標準，而且稍微與 SQL 2003 標準定義 (12:59 至 +14:00) 不同。
   
-選擇性的類型參數「毫秒精確度」會指定秒鐘小數部分的位數。 這個值可以是介於 0 至 7 (100 奈秒) 之間的整數。 預設的「毫秒精確度」為 100 奈秒 (秒鐘小數部分有七位數)。
+選擇性的類型參數「毫秒精確度」  會指定秒鐘小數部分的位數。 這個值可以是介於 0 至 7 (100 奈秒) 之間的整數。 預設的「毫秒精確度」  為 100 奈秒 (秒鐘小數部分有七位數)。
   
 這項資料會儲存於資料庫中，而且在伺服器中進行處理、比較、儲存和索引 (如同 UTC)。 時區位移將保留在資料庫中以便日後擷取。
   
@@ -131,7 +130,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-如果轉換成 **time(n)**，時、分、秒和毫秒都會複製。 時區值則會被截斷。 如果 **datetimeoffset(n)** 值的有效位數大於 **time(n)** 值的有效位數，此值將會四捨五入。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `time(3)` 值的結果。
+如果轉換成 **time(n)** ，時、分、秒和毫秒都會複製。 時區值則會被截斷。 如果 **datetimeoffset(n)** 值的有效位數大於 **time(n)** 值的有效位數，此值將會四捨五入。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `time(3)` 值的結果。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  

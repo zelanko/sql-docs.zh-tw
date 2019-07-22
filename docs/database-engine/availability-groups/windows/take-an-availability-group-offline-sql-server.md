@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 7a53e16032d2e90b4072d0f19939e4d9be0e7a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af8c94c6705578371fcb6b4d260da6313b73e4ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013837"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>讓可用性群組離線 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "66803505"
   
      ALTER AVAILABILITY GROUP *group_name* OFFLINE  
   
-     其中 <群組名稱> 是可用性群組的名稱。  
+     其中 <群組名稱>  是可用性群組的名稱。  
   
 ### <a name="example"></a>範例  
  下列範例會讓 `AccountsAG` 可用性群組離線。  

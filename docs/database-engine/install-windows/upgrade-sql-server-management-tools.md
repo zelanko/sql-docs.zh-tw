@@ -12,13 +12,12 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: acb334972a7d0fabf656fb5e34bff179f2c50f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 332c513c7c7d76956fc5647d7e4cb96eeac633d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934706"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>升級 SQL Server 管理工具
 

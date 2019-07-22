@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4367b4e4ae9c315bd8462b72cbac020294fecdcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03245a13f270990ff8a1307a10bad797fc155289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017480"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages 
 
@@ -43,8 +42,8 @@ ms.locfileid: "65715199"
 |Subcomponent_name|nvarchar(4000)|訊息來源的資料流程元件。<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 引擎傳回訊息時，SSIS.Pipeline 會出現在這個資料行中。|  
 |Package_path|nvarchar(max)|封裝中元件的唯一路徑。|  
 |Execution_path|nvarchar(max)|從父封裝到元件執行點的完整路徑。<br /><br /> 此路徑也會擷取元件的反覆運算。|  
-|threadID|ssNoversion|記錄訊息時執行之執行緒的識別碼。|  
-|Message_code|ssNoversion|與訊息相關聯的代碼。|  
+|threadID|INT|記錄訊息時執行之執行緒的識別碼。|  
+|Message_code|INT|與訊息相關聯的代碼。|  
   
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示下列訊息來源類型。  

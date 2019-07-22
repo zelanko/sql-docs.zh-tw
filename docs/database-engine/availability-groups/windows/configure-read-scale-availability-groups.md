@@ -4,18 +4,17 @@ description: 設定 Always On 可用性群組，供 Windows 上的讀取級別�
 ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 9f1fd75977e36407cdc70a0cb72cfcf48e36e523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff0064a228cb756614dec2ff54a91f4f03d374c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991160"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別
 

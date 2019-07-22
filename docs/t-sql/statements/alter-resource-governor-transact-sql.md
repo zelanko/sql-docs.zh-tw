@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927216"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  若要讓任何組態變更生效，必須先發出 ALTER RESOURCE GOVERNOR RECONFIGURE。  
   
- CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_ **.** _function_name_ | NULL }  
  註冊 *schema_name.function_name* 所指定的分類函數。 這個函數會將每個新的工作階段分類，然後將工作階段要求和查詢指派到工作負載群組。 使用 NULL 時，會將新的工作階段自動指派到預設的工作負載群組。  
   
  RESET STATISTICS  
@@ -106,7 +105,7 @@ ALTER RESOURCE GOVERNOR
   
  建議您在執行 DDL 陳述時前，先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

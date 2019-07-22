@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 05bfbddc135868644af2f624492d7c646fc3819d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8b7026b90766cb98335f1cbb626357ddc9c50718
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67684839"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265046"
 ---
 # <a name="about-sql-server-management-studio"></a>關於 SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

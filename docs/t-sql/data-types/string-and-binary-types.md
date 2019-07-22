@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bba0405b44e8f3f9ea8e8815b13959632a2365e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0d781b9f733a38b65f26d8995c0859879a9ba730
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000523"
 ---
 # <a name="string-and-binary-types"></a>字串與二進位類型
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

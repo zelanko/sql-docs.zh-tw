@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: a07fad827c7b255bd9f66c1da0acd1ec6ea777ff
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 60f322531f451ac0236cafc9d3d9d6b0cb361b30
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689721"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263224"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>停止查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

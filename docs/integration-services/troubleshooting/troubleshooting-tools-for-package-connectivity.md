@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8dbeb09c113dceb68996582d115169e1c50ff5ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebdbf30851cf15ff6bac392f1b6be01312e0f90b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945463"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>疑難排解封裝連接的工具
 

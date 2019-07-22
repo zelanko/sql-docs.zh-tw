@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948046"
 ---
 # <a name="xml-data-type-methods"></a>xml 資料類型方法
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  如果針對 NULL XML 執行個體執行，**xml** 資料類型方法 **query()**、**value()** 和 **exist()** 會傳回 NULL。 另外，**modify()** 並不會傳回任何內容，但是 **nodes()** 則會傳回資料列集以及含有 NULL 輸入的空資料列集。  
+>  如果針對 NULL XML 執行個體執行，**xml** 資料類型方法 **query()** 、**value()** 和 **exist()** 會傳回 NULL。 另外，**modify()** 並不會傳回任何內容，但是 **nodes()** 則會傳回資料列集以及含有 NULL 輸入的空資料列集。  
   
 ## <a name="see-also"></a>另請參閱  
  [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

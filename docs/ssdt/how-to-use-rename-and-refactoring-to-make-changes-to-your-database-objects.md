@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097467"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>如何：使用重新命名和重構，變更資料庫物件
 Transact\-SQL 編輯器的 [重構] 關聯式功能表可讓您重新命名物件或將物件移至其他結構描述，並且在認可變更之前預覽所有受影響的區域。 您也可以使用 [重構] 功能表，在資料庫專案中完整限定資料庫物件的所有參考，或是擴充 `SELECT` 陳述式內的任何萬用字元。  

@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a0bef11a16b939c4d169a3b2ee967d6b374f2eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1f6f2ae1e1d3043e7f505527599b7035c777cff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038766"
 ---
 # <a name="odbc-source"></a>ODBC 來源
 

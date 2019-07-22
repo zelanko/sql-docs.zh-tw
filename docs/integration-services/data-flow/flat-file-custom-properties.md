@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e2e2fffae3b6c57e0251fdd5b851160824de0f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f32ea9b76560eaa66f5e386d6343dfe922df472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941520"
 ---
 # <a name="flat-file-custom-properties"></a>一般檔案自訂屬性
 

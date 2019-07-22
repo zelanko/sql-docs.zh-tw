@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9532f3fc6cb3d21a5cff19b542f1f877827e6553
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 231458e7c49fbffebb5568a9dcb1c3663b8f0c3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006793"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例使用 XMLDATA 和 XMLSCHEMA 選項來要求結構描述作為結果
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別碼是由 **Schema**_**n**_ 所組成，其中 _**n**_ 是整數。  
+>  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別碼是由 **Schema** _**n**_ 所組成，其中 _**n**_ 是整數。  
   
  指定 `XMLSCHEMA` 選項，則可要求結果傳回 XSD 結構描述。  
   

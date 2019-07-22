@@ -29,14 +29,13 @@ helpviewer_keywords:
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065725"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -54,7 +53,7 @@ ms.locfileid: "67313985"
 
 > |||||
 > |---|---|---|---|
-> |** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1396,7 +1395,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\* SQL Database<br />單一資料庫/彈性集區 \*_ **&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2187,7 +2186,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\* SQL Database<br />受控執行個體 \*_ **&nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />受控執行個體 \*_** &nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2891,7 +2890,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _\* SQL 資料<br />倉儲 \*_ ** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;||||
 
 &nbsp;
 

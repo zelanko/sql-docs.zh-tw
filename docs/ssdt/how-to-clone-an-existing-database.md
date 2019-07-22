@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017624"
 ---
 # <a name="how-to-clone-an-existing-database"></a>如何：複製現有的資料庫
 這個工作將使用一些您在先前的程序中所學到的步驟，建立新的資料庫並移植現有的資料。 此外，它還使用[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中所述步驟，來同步處理來源和專案資料庫的結構描述。  

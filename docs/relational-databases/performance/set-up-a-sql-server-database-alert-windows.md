@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bb05731ef999e3e3ef6a15681cf36a610924b708
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f76c6f4f4d65273c35dffb1cb17e664fceac0328
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113339"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>設定 SQL Server 資料庫警示 (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,29 +26,29 @@ ms.locfileid: "53366950"
   
 ## <a name="set-up-a-sql-server-database-alert"></a>設定 SQL Server 資料庫警示  
   
-1. 在 [效能] 視窗的瀏覽樹狀目錄中，展開 [效能記錄檔及警示]。  
+1. 在 [效能]  視窗的瀏覽樹狀目錄中，展開 [效能記錄檔及警示]  。  
   
-2. 以滑鼠右鍵按一下 [警示]，然後選取 [New Alert Settings (新增警示設定)]。
+2. 以滑鼠右鍵按一下 [警示]  ，然後選取 [New Alert Settings (新增警示設定)]  。
   
-3. 在 [New Alert Settings (新增警示設定)] 對話方塊中，鍵入新警示的名稱，然後選取 [確定]。  
+3. 在 [New Alert Settings (新增警示設定)]  對話方塊中，鍵入新警示的名稱，然後選取 [確定]  。  
   
-4. 在新警示對話方塊的 [一般] 索引標籤上，新增 [註解]。 選取 [新增] 將計數器新增警示。  
+4. 在新警示對話方塊的 [一般]  索引標籤上，新增 [註解]  。 選取 [新增]  將計數器新增警示。  
   
      所有警示必須至少要有一個計數器。  
   
-5. 從 [新增計數器] 對話方塊的 [效能物件] 清單，選取一個 SQL Server 物件。 在 [從清單選取計數器] 中，選取一個計數器。  
+5. 從 [新增計數器]  對話方塊的 [效能物件]  清單，選取一個 SQL Server 物件。 在 [從清單選取計數器]  中，選取一個計數器。  
   
-6. 若要將計數器新增警示，請選取 [新增]。 您可以繼續新增計數器，也可以選取 [關閉] 返回新的警示對話方塊。  
+6. 若要將計數器新增警示，請選取 [新增]  。 您可以繼續新增計數器，也可以選取 [關閉]  返回新的警示對話方塊。  
   
-7. 在新警示對話方塊的 [達到這個值就發出警示] 清單中，選取 [超過] 或 [低於]。 然後在 [限制] 中輸入閾值。  
+7. 在新警示對話方塊的 [達到這個值就發出警示]  清單中，選取 [超過]  或 [低於]  。 然後在 [限制]  中輸入閾值。  
   
-     當計數器的值超過或低於閾值時，就會產生警示 (依據您之前選取 [超過] 或 [低於] 而定)。  
+     當計數器的值超過或低於閾值時，就會產生警示 (依據您之前選取 [超過]  或 [低於]  而定)。  
   
-8. 在 [Sample data every (依下列週期進行資料取樣)] 方塊中，設定取樣頻率。  
+8. 在 [Sample data every (依下列週期進行資料取樣)]  方塊中，設定取樣頻率。  
   
-9. 在 [動作] 索引標籤上，設定每次觸發警示時要採取的行動。  
+9. 在 [動作]  索引標籤上，設定每次觸發警示時要採取的行動。  
   
-10. 在 [排程] 索引標籤上，設定警示掃描的開始與停止排程。  
+10. 在 [排程]  索引標籤上，設定警示掃描的開始與停止排程。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server 資料庫警示](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  

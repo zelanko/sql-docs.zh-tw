@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 396e9b59f41ae31b7ae2a6f091dd540fa41afdcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0293a6b1be32c5b4b7dbb12ca3319f75859edf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057687"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 

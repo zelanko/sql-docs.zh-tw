@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403ce296913bfcfbf55aedb75e989dd5d296c6c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d9a9ba09bfcf3f5fb3d8b1f1b751ac58d01a34f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928189"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>選取維度資料表與索引鍵 (緩時變維度精靈)
 

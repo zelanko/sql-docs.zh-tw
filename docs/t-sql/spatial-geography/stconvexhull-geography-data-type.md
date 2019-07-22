@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c823f686909be54890b3c1686da615233c3e9da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042475"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 784bfc96edf7e3ed589dbafe6359529214a0c6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111677"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ ms.locfileid: "54130578"
   
 -   超過指定的延遲 (交易受發行者認可與對應交易受訂閱者認可之間所經過的時間)。  
   
-     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。  
+     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。  
   
 -   超過指定的同步處理時間。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]**。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]** 。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
   
 -   在給定時間內處理的資料列數達不到指定數目。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
   
  如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 757eebf28764c3332b54143424d525a0f2de9ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037218"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 單元測試設計工具的鍵盤快速鍵
 您可以使用下列鍵盤快速鍵，在 SQL Server 單元測試設計工具內瀏覽。  

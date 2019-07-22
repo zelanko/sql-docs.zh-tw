@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d76b84ec492203474f0da8839bfdfb0aa6be6a54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b180adec1eb2569da19f487f22b762d84aa9613
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052260"
 ---
 # <a name="building-packages-programmatically"></a>以程式設計方式建立封裝
 

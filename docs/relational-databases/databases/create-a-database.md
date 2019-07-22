@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4233a277fa20a4bd951b717bfad0039612b5e77e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037621"
 ---
 # <a name="create-a-database"></a>建立資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,16 +75,16 @@ ms.locfileid: "62861490"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [新增資料庫]。  
+2.  以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [新增資料庫]  。  
   
 3.  在 **[新增資料庫]** 中，輸入資料庫名稱。  
   
-4.  若要使用所有預設值來建立資料庫，請按一下 **[確定]**，否則繼續執行下列選擇性步驟。  
+4.  若要使用所有預設值來建立資料庫，請按一下 **[確定]** ，否則繼續執行下列選擇性步驟。  
   
-5.  若要變更擁有者名稱，請按一下 (**…**) 來選取其他擁有者。  
+5.  若要變更擁有者名稱，請按一下 ( **…** ) 來選取其他擁有者。  
   
     > [!NOTE]  
-    >  [使用全文檢索索引] 選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
+    >  [使用全文檢索索引]  選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
   
 6.  若要變更主要資料與交易記錄檔的預設值，請在 **[資料庫檔案]** 方格中按一下適當的資料格，並輸入新的值。 如需詳細資訊，請參閱 [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62861490"
   
     2.  在 **[值]** 資料行中，輸入擴充屬性文字。 例如，輸入一個或多個可說明資料庫的陳述。  
   
-12. 若要建立資料庫，請按一下 **[確定]**。  
+12. 若要建立資料庫，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -111,9 +110,9 @@ ms.locfileid: "62861490"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會建立 `Sales`資料庫。 因為未使用關鍵字 PRIMARY，所以第一個檔案 (`Sales_dat`) 會成為主要檔案。 因為 `Sales_dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales_log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會建立 `Sales`資料庫。 因為未使用關鍵字 PRIMARY，所以第一個檔案 (`Sales_dat`) 會成為主要檔案。 因為 `Sales_dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales_log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
   
 ```sql  
 USE master ;  

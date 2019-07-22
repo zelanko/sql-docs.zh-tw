@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8af6118eb546b2c5ebd9fe4eecf4c537f94f970e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86eefc940e54389ec823e1d1e3b2c0ae51836a7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913766"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 回溯相容性
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 032eaa357b601bfd72f018443725542ef2253592
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088940"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
 

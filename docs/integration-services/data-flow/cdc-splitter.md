@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 38a72f9628e621f5ed960a125800451badd180e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40f9fd60bcfd5e25f841d0cda05089da5f73e268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045357"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
 

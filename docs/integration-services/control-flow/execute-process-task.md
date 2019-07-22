@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af2cc62bd09dd2376c68ec5d66e4867369ef8b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d87dd85b63a669ae0d390ac83203889f78c5cbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043865"
 ---
 # <a name="execute-process-task"></a>執行處理工作
 
@@ -51,7 +50,7 @@ ms.locfileid: "65727753"
 ### <a name="property-settings"></a>屬性設定  
  當「執行處理」工作執行自訂應用程式時，此工作會透過下列一個或兩個方法提供輸入給應用程式：  
   
--   您在 [StandardInputVariable] 屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   您在 [StandardInputVariable]  屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 -   您在 **Arguments** 屬性設定中指定的引數。 (例如，如果工作使用 Word 開啟文件，則引數可能命名為 .doc 檔)。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "65727753"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
 ## <a name="execute-process-task-editor-general-page"></a>執行處理工作編輯器 (一般頁面)
-  使用 [執行處理工作編輯器] 對話方塊的 [一般] 頁面，來命名和描述執行處理工作。  
+  使用 [執行處理工作編輯器]  對話方塊的 [一般]  頁面，來命名和描述執行處理工作。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -117,15 +116,15 @@ ms.locfileid: "65727753"
  鍵入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **(...)** 並尋找資料夾。  
   
  **StandardInputVariable**  
- 選取變數來提供處理序的輸入，或按一下 [\<新增變數...>] 建立新的變數：  
+ 選取變數來提供處理序的輸入，或按一下 [\<新增變數...>]  建立新的變數：  
   
- **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：** [新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>] 建立新的變數。  
+ 選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>]  建立新的變數。  
   
  **StandardErrorVariable**  
- 選取變數來擷取處理器的錯誤輸出，或按一下 [\<新增變數...>] 建立新的變數。  
+ 選取變數來擷取處理器的錯誤輸出，或按一下 [\<新增變數...>]  建立新的變數。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指出如果處理序的結束碼和 **SuccessValue**中指定的值不同時，工作是否失敗。  

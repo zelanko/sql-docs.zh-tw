@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c73c9df155d1e09552fbf5774ac4599bf9cdbdf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d02967bfa258fda6a98bd6c86c39929af04d0d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65779151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114456"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
 

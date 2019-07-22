@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22dd86257529f3e872ec2a42c4439ba4518cb7ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0dd3b955ec678cf992c0631e7b1aa3de0bd038cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123392"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006355"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,13 +150,13 @@ ms.locfileid: "66795517"
  當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。 如果鏡像伺服器執行個體效能降低，主體伺服器執行個體不受影響，並且公開執行 (亦即沒有鏡像資料)。 如果遺失主體伺服器，就會暫停鏡像，不過可以將服務強制轉到鏡像伺服器 (可能會遺失資料)。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 具有自動容錯移轉的高安全性模式  
- 自動容錯移轉可確保某一台伺服器喪失之後，仍能繼續服務資料庫，藉以提供高度的可用性。 自動容錯移轉會要求工作階段包含第三個伺服器執行個體 ( *「見證」*)，而且此執行個體最好是位於第三部電腦上。 下圖將顯示支援自動容錯移轉之高安全性模式工作階段的組態。  
+ 自動容錯移轉可確保某一台伺服器喪失之後，仍能繼續服務資料庫，藉以提供高度的可用性。 自動容錯移轉會要求工作階段包含第三個伺服器執行個體 ( *「見證」* )，而且此執行個體最好是位於第三部電腦上。 下圖將顯示支援自動容錯移轉之高安全性模式工作階段的組態。  
   
  ![工作階段的見證和兩個夥伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "工作階段的見證和兩個夥伴")  
   
  與兩位夥伴不同的是，見證並不是為資料庫服務。 見證只是藉由確認主體伺服器是否已啟動而且可以正常運作，來支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
   
- 當見證設定完成後，工作階段就會要求「仲裁」(它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 當見證設定完成後，工作階段就會要求「仲裁」  (它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自動容錯移轉必須符合下列條件：  
   
@@ -173,7 +172,7 @@ ms.locfileid: "66795517"
   
 -   如果只有鏡像伺服器變得無法使用，主體及見證會繼續運作。  
   
- 如果工作階段失去見證，仲裁就會需要這兩個夥伴。 如果任一個夥伴失去仲裁，這兩個夥伴都會失去仲裁，因此資料庫將變成無法使用，直到重新建立仲裁。 此仲裁需求可確保在沒有見證的情況下，資料庫絕不會 *「公開」*(亦即，在沒有鏡像的情況下) 執行。  
+ 如果工作階段失去見證，仲裁就會需要這兩個夥伴。 如果任一個夥伴失去仲裁，這兩個夥伴都會失去仲裁，因此資料庫將變成無法使用，直到重新建立仲裁。 此仲裁需求可確保在沒有見證的情況下，資料庫絕不會 *「公開」* (亦即，在沒有鏡像的情況下) 執行。  
   
 > [!NOTE]  
 >  若要讓見證中斷連接維持一段較長的時間，我們建議您從工作階段中移除見證，直到它可用為止。  
