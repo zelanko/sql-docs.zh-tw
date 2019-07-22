@@ -1,38 +1,38 @@
 ---
-title: 建立 R 模型，並儲存至 SQL Server （逐步解說）-SQL Server Machine Learning
-description: 本教學課程示範如何建置用於 SQL Server 資料庫內分析的 R 語言模型。
+title: 建立 R 模型並儲存至 SQL Server (逐步解說)
+description: 此教學課程示範如何建立用於 SQL Server 資料庫內分析的 R 語言模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eec6d165b8e3aa4130246aae6d4aaf5b4102fc0f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961815"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345821"
 ---
-# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建立 R 模型，並儲存至 SQL Server （逐步解說）
+# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建立 R 模型並儲存至 SQL Server (逐步解說)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在此步驟中，了解如何建置機器學習模型，並儲存在模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 儲存模型，您可以呼叫它直接從[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼，使用系統預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[PREDICT (T-SQL) 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)。
+在此步驟中, 您將瞭解如何建立機器學習模型, 並將模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存在中。 藉由儲存模型, 您可以使用系統預存[!INCLUDE[tsql](../../includes/tsql-md.md)]程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[PREDICT (t-sql) 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql), 直接從程式碼呼叫它。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-這個步驟會假設根據先前在本逐步解說的步驟進行中的 R 工作階段。 它會使用連接字串和資料來源中建立的物件執行這些步驟。 下列工具和套件來執行指令碼。
+此步驟會根據本逐步解說中的先前步驟, 假設正在進行中的 R 會話。 它會使用在這些步驟中建立的連接字串和資料來源物件。 下列工具和封裝是用來執行腳本。
 
-+ 若要執行 R 命令的 Rgui.exe
-+ Management Studio 來執行 T-SQL
-+ ROCR 封裝
++ 執行 R 命令的 rgui.exe
++ 執行 T-sql 的 Management Studio
++ ROCR 套件
 + RODBC 套件
 
-### <a name="create-a-stored-procedure-to-save-models"></a>建立預存程序，將模型儲存
+### <a name="create-a-stored-procedure-to-save-models"></a>建立預存程式來儲存模型
 
-此步驟會用來將定型的模型儲存至 SQL Server 預存程序。 建立預存程序來執行這項作業，可讓工作更容易。
+此步驟會使用預存程式, 將定型的模型儲存至 SQL Server。 建立用來執行這項作業的預存程式, 可讓工作變得更容易。
 
-在 Management Studio 中建立預存程序的查詢視窗中執行下列 T-SQL 程式碼。
+在 Management Studio 的查詢視窗中執行下列 T-sql 程式碼, 以建立預存程式。
 
 ```sql
 USE [NYCTaxi_Sample]
@@ -59,11 +59,11 @@ GO
 ```
 
 > [!NOTE]
-> 如果您收到錯誤，請確定您的登入已建立物件的權限。 您可以授與明確的權限來執行如下的 T-SQL 陳述式建立物件： `exec sp_addrolemember 'db_owner', '<user_name>'`。
+> 如果您收到錯誤, 請確定您的登入具有建立物件的許可權。 您可以執行 T-sql 語句 (如下所示), 授與明確的許可權來建立`exec sp_addrolemember 'db_owner', '<user_name>'`物件:。
 
-## <a name="create-a-classification-model-using-rxlogit"></a>建立分類模型使用 rxLogit
+## <a name="create-a-classification-model-using-rxlogit"></a>使用 rxLogit 建立分類模型
 
-此模型是預測計程車司機是否可能獲得在特定車程小費的二元分類器。 您將使用羅吉斯迴歸，來定型小費分類器上, 一課建立的資料來源。
+模型是一個二元分類器, 可預測出租車驅動程式是否可能會在特定的訣竅上取得秘訣。 您將使用在上一課中建立的資料來源, 使用羅吉斯回歸來定型 tip 分類器。
 
 1. 呼叫 [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 函數 (包含在 **RevoScaleR** 封裝中) 來建立羅吉斯迴歸模型。 
 
@@ -73,7 +73,7 @@ GO
 
     建置模型的呼叫包含在 system.time 函數中。 這可讓您取得建置模型所需的時間。
 
-2. 建立模型之後，您可以檢查它使用`summary`函式，以及檢視係數。
+2. 建立模型之後, 您可以使用`summary`函數來檢查它, 並查看係數。
 
     ```R
     summary(logitObj);
@@ -107,7 +107,7 @@ GO
 
 現在，已建立模型，您可以用來預測司機是否可能在特定車程收到小費。
 
-1. 首先，使用[RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)函式來定義資料來源物件來儲存評分結果。
+1. 首先, 使用[RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)函數來定義資料來源物件, 以儲存評分結果。
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -115,11 +115,11 @@ GO
       table = "taxiScoreOutput"  )
     ```
 
-    + 為了簡化此範例中，羅吉斯迴歸模型的輸入是相同的功能資料來源 (`sql_feature_ds`)，您用來定型模型。  更常見的情況是，您可能會有一些要評分的新資料，也可能設定一些資料來進行測試與定型。
+    + 為了簡化這個範例, 羅吉斯回歸模型的輸入是您用來定型模型的相同功能資料`sql_feature_ds`源 ()。  更常見的情況是，您可能會有一些要評分的新資料，也可能設定一些資料來進行測試與定型。
   
-    + 預測結果會儲存在資料表中， _taxiscoreOutput_。 請注意當您使用 rxSqlServerData 建立它時，未定義此資料表的結構描述。 結構描述被取自 rxPredict 輸出。
+    + 預測結果將儲存在_taxiscoreOutput_資料表中。 請注意, 當您使用 rxSqlServerData 建立時, 不會定義此資料表的架構。 架構是從 rxPredict 輸出取得。
   
-    + 若要建立可儲存預測的值的資料表，執行 rxSqlServer 資料函式的 SQL 登入必須具有資料庫中的 DDL 權限。 如果登入無法建立資料表，則陳述式會失敗。
+    + 若要建立儲存預測值的資料表, 執行 rxSqlServer data 函數的 SQL 登入必須具有資料庫中的 DDL 許可權。 如果登入無法建立資料表, 語句就會失敗。
 
 2. 呼叫 [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 函數來產生結果。
 
@@ -132,30 +132,30 @@ GO
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    如果此陳述式成功，會花費一些時間才能執行。 完成時，您可以開啟 SQL Server Management Studio，並確認已建立資料表，而且它包含分數資料行和其他預期的輸出。
+    如果語句成功, 則需要一些時間來執行。 完成時, 您可以開啟 SQL Server Management Studio, 並確認資料表已建立, 而且它包含分數資料行和其他預期的輸出。
 
-## <a name="plot-model-accuracy"></a>繪製模型的精確度
+## <a name="plot-model-accuracy"></a>繪製模型精確度
 
-若要了解模型的精確度，您可以使用[rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc)函數來繪製接收者作業曲線。 因為 rxRoc 是 RevoScaleR 封裝所提供的新函數的其中一個支援遠端計算內容，您有兩個選項：
+若要瞭解模型的精確度, 您可以使用[rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc)函數來繪製接收者作業曲線。 因為 rxRoc 是支援遠端計算內容的 RevoScaleR 套件所提供的其中一個新函數, 所以您有兩個選項:
 
-+ 若要在遠端計算內容中執行繪圖，然後將繪圖傳回給您的本機用戶端，您可以使用 rxRoc 函式。
++ 您可以使用 rxRoc 函式, 在遠端計算內容中執行繪圖, 然後將繪圖傳回您的本機用戶端。
 
 + 您也可以將資料匯入至 R 用戶端電腦，並使用其他 R 繪製函數來建立效能圖形。
 
-在本節中，您將體驗這兩種技巧。
+在本節中, 您將會試驗這兩種技巧。
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>在遠端 (SQL Server) 電腦內容中執行繪圖
 
-1. 呼叫函式 rxRoc，並提供稍早定義做為輸入的資料。
+1. 呼叫 rxRoc 函式, 並提供稍早定義為輸入的資料。
 
     ```R
     scoredOutput = rxImport(scoredOutput);
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    這個呼叫會傳回用來計算 ROC 圖的值。 標籤資料行_tipped_，其中包含實際的結果，您想要預測，而_分數_資料行的預測。
+    此呼叫會傳回用來計算 ROC 圖表的值。 [標籤] 資料行是 [_附屬_], 其中包含您嘗試預測的實際結果, 而 [_分數_] 資料行則具有預測。
 
-2. 若要實際繪製圖表，您可以儲存 ROC 物件，然後將它繪製繪圖函式。 圖形會在遠端計算內容上建立，並傳回給 R 環境。
+2. 若要實際繪製圖表, 您可以儲存 ROC 物件, 然後使用繪圖函數繪製它。 圖形會在遠端計算內容上建立, 並傳回您的 R 環境。
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -163,28 +163,28 @@ GO
     plot(rocObjectOut);
     ```
 
-    開啟 R 圖形裝置，或按一下 檢視圖形**繪製**在 RStudio 中的視窗。
+    開啟 R 圖形裝置, 或按一下 [RStudio] 中的 [**繪圖**] 視窗, 以觀看圖形。
 
     ![模型的 ROC 繪圖](media/rsql-e2e-rocplot.png "模型的 ROC 繪圖")
 
 ### <a name="create-the-plots-in-the-local-compute-context-using-data-from-sql-server"></a>使用 SQL Server 中的資料在本機計算內容建立繪圖
 
-您可以確認執行本機計算內容是`rxGetComputeContext()`在命令提示字元。 傳回的值應該是 「 RxLocalSeq 計算內容 」。
+您可以`rxGetComputeContext()`在命令提示字元中執行, 以確認計算內容是本機的。 傳回值應為「RxLocalSeq 計算內容」。
 
-1. 針對本機計算內容中，程序是非常類似。 您使用[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)函式，將指定的資料帶入本機 R 環境。
+1. 針對本機計算內容, 此程式相當相同。 您可以使用[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)函數, 將指定的資料帶入本機 R 環境。
 
     ```R
     scoredOutput = rxImport(scoredOutput)
     ```
 
-2. 您使用的資料在本機記憶體中，載入**ROCR**套件，並使用該套件從預測函數來建立一些新的預測。
+2. 使用本機記憶體中的資料, 您可以載入**ROCR**封裝, 並使用該封裝中的預測函數來建立一些新的預測。
 
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
     ```
 
-3. 產生本機的繪圖，並根據輸出變數中儲存的值`pred`。
+3. 根據輸出變數`pred`中所儲存的值, 產生本機繪圖。
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -197,23 +197,23 @@ GO
     ![使用 R 繪製的模型效能](media/rsql-e2e-performanceplot.png "使用 R 繪製的模型效能")
 
 > [!NOTE]
-> 您的圖表看起來可能不同於這些項目，根據您所使用的資料點數目。
+> 根據您使用的資料點數目而定, 您的圖表看起來可能會與這些不同。
 
 ## <a name="deploy-the-model"></a>部署模型
 
-在您建置模型並確定它的運作狀況良好之後，您可能要將它部署至網站，其中使用者或組織中的人員可以將使用此模型，或可能是重新定型以及隨處可見以規則為基礎的模型。 此程序有時稱為*另尋高就*模型。 在 SQL Server 中，運算化之後，即可將 R 程式碼內嵌在預存程序。 因為程式碼所在的程序，它可以從任何可以連線到 SQL Server 的應用程式呼叫它。
+在您建立模型並確認它的執行狀況良好之後, 您可能會想要將它部署到組織中的使用者或人員可以使用模型的網站, 或可能定期重新定型和重新校準模型。 此程式有時稱為*運用*模型。 在 SQL Server 中, 運算化是藉由在預存程式中內嵌 R 程式碼來達成。 因為程式碼位於程式中, 所以可以從任何可連接到 SQL Server 的應用程式呼叫。
 
-您可以從外部應用程式呼叫模型之前，您必須將模型儲存至用於生產環境資料庫中。 定型的模型會儲存在類型的單一資料行中的二進位格式**varbinary （max)** 。
+您必須先將模型儲存至用於生產環境的資料庫, 才能從外部應用程式呼叫模型。 定型的模型會以二進位形式儲存在**Varbinary (max)** 類型的單一資料行中。
 
-一般部署工作流程包含下列步驟：
+典型的部署工作流程包含下列步驟:
 
-1. 將模型序列化成十六進位字串
-2. 傳輸資料庫到序列化的物件
-3. 將模型儲存在 varbinary （max） 資料行
+1. 將模型序列化為十六進位字串
+2. 將序列化物件傳送至資料庫
+3. 將模型儲存在 Varbinary (max) 資料行中
 
-在本節中，了解如何保存模型，並使其可供預測使用預存程序。 在本節中所用的預存程序是 PersistModel。 PersistModel 的定義位於[必要條件](#prerequisites)。
+在本節中, 您將瞭解如何使用預存程式來保存模型, 並使其可用於預測。 本節中使用的預存程式為 PersistModel。 PersistModel 的定義是在[必要條件](#prerequisites)中。
 
-1. 切換回本機 R 環境中，如果您不已使用它，序列化模型，並將它儲存在變數中。
+1. 如果您還未使用它, 請切換回本機 R 環境, 將模型序列化, 並將它儲存在變數中。
 
     ```R
     rxSetComputeContext("local");
@@ -221,27 +221,27 @@ GO
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. 開啟 ODBC 連接使用**RODBC**。 如果您已經載入的封裝，您可以省略 RODBC 的呼叫。
+2. 使用**RODBC**開啟 ODBC 連接。 如果您已載入封裝, 您可以省略 RODBC 的呼叫。
 
     ```R
     library(RODBC);
     conn <- odbcDriverConnect(connStr);
     ```
 
-3. 呼叫 PersistModel 預存程序在 SQL Server 上 transmite 序列化資料庫物件和儲存模型的二進位表示法的資料行。 
+3. 在 SQL Server 上呼叫 PersistModel 預存程式, 將序列化物件 transmite 至資料庫, 並將模型的二進位標記法儲存在資料行中。 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
     sqlQuery (conn, q);
     ```
 
-4. 使用 Management Studio，若要確認模型存在。 在 [物件總管] 中，以滑鼠右鍵按一下**nyc_taxi_models**資料表，然後按一下**選取前 1000 個資料列**。 在結果中，您應該會看到中的二進位表示法**模型**資料行。
+4. 使用 Management Studio 來驗證模型是否存在。 在物件總管中, 以滑鼠右鍵按一下**nyc_taxi_models**資料表, 然後按一下 [**選取前 1000**個數據列]。 在 [結果] 中, 您應該會在 [**模型**] 資料行中看到二進位標記法。
 
-只需要 INSERT 陳述式，就可以將模型儲存至資料表。 不過，通常會更容易，例如包裝在預存程序中，當*PersistModel*。
+只需要 INSERT 陳述式，就可以將模型儲存至資料表。 不過, 包裝在預存程式 (例如*PersistModel*) 時, 通常會比較容易。
 
 ## <a name="next-steps"></a>後續步驟
 
-在下一個和最後一課中，了解如何執行評分已儲存的模型使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+在下一個和最後一個課程中, 瞭解如何使用[!INCLUDE[tsql](../../includes/tsql-md.md)]針對儲存的模型執行評分。
 
 > [!div class="nextstepaction"]
-> [部署 R 模型，然後在 SQL 中使用](walkthrough-deploy-and-use-the-model.md)
+> [部署 R 模型並在 SQL 中使用](walkthrough-deploy-and-use-the-model.md)
